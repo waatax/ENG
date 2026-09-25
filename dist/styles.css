@@ -842,3 +842,62 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
   .track-grid { grid-template-columns: 1fr; }
   .metric-grid { grid-template-columns: 1fr; }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* 108 課綱與均一微課專用高解析樣式 (Enhanced Layout) */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.header-block {
+  margin-bottom: 24px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--blue-soft);
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--blue-border);
+}
+
+.grade-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+.grade-tabs::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+  }
+  .shell {
+    display: block !important;
+  }
+  .side, .top, .footer, .print-hide, .btn, .grade-tabs {
+    display: none !important;
+  }
+  .main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    page-break-after: always;
+    break-inside: avoid;
+  }
+  @page {
+    size: A4;
+    margin: 12mm 15mm;
+  }
+}

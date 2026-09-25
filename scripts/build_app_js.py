@@ -1,4 +1,21 @@
-// app.js - 全方位 108 課綱英語教育旗艦平台
+"""
+build_app_js.py
+Constructs the upgraded dist/app.js by incorporating:
+- Unified 108 Curriculum by Grade and Semester (6上, 6下, 7上, 7下, 8上, 8下, 9上, 9下, 10上, 10下, 11上, 11下)
+- Junyi Academy Mastery & Scaffolding Engine (Step 0, Hints, Traps, Badges, XP)
+- Sixth Project Full Port (8 Units, engNotes, engQuestions, audioData)
+- JH Project Full Port (16 Units, Language Cases, 109-115 CAP Analysis, Handouts)
+- Arch Project Full Port (5 Prerequisite Modules with Interactive Quizzes + 4 High School Semesters)
+- A4/PDF Printable Handouts Generator
+- Audio Speech Engine for all words, sentences, and dialogues
+"""
+
+import sys
+import os
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+app_code = r'''// app.js - 全方位 108 課綱英語教育旗艦平台
 // 深度整合：國小 (Sixth 專案)、國中 (JH 專案)、高中/技高 (Arch 專案)
 // 融入均一教育平台 (Junyi Academy) 鷹架微課、步驟0破題思維、致命陷阱診斷、A4 講義列印與原生語音館
 
@@ -1436,3 +1453,9 @@ root.addEventListener('click', e => {
 
 // 初始化啟動渲染
 render();
+'''
+
+with open(r"C:\Users\User\OneDrive\文件\Antigravity\ENG\dist\app.js", "w", encoding="utf-8") as f:
+    f.write(app_code)
+
+print("Upgraded dist/app.js successfully!")
