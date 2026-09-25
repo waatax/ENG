@@ -1,26 +1,26 @@
-// curriculum.mjs - 完整 21 個章節深度知識點、核心單字庫(含IPA與發音)、實用片語庫、情境會話庫與考制模組
+// curriculum.mjs - 國中會考(J1-J7)、高中學測(S1-S7)、高工職場(V1-V7) 與 國際考制(GEPT, TOEIC, SAT, GRE, GMAT, TOEFL) 深度教學庫
 
 export const curriculum = [
   {
     id: 'jhs',
     title: '國中英文｜會考能力線',
-    badge: '國中 7–9 年級 · 會考滿分主幹',
-    intro: '覆蓋國中會考核心 1200 詞、基礎句型、時態變化、閱讀定位與生活聽力辨識。每章皆附文法深度剖析、發音單字庫、必背片語與情境實戰會話。',
+    badge: '國中 7–9 年級 · 會考滿分主幹 (108 課綱精準對標)',
+    intro: '完整對應 108 課綱國民中小學英語文素養指標：涵蓋核心 1200–2000 詞彙、五大基本句型、四大核心時態、代名詞格位、數量詞規則、連接詞禁忌、生活應用閱讀與美語弱化連音聽力。每章均配備深度文法剖析、核心發音單字庫 (含 IPA)、大考必背片語與情境實戰會話。',
     chapters: [
       {
         id: 'j1',
         num: '01',
         title: '句子骨架與基本時態',
-        subtitle: '主詞・動詞・受詞與四大核心時態變化',
+        subtitle: '五大基本句型・四大時態・科學真理現在式例外',
         concepts: [
           {
-            heading: '英文句子的五大核心骨架',
-            body: '英文是「主詞＋動詞」為軸心的形合語言。五大基本句型包括：\n1. S + V（主詞＋完全不及物動詞，如 Birds fly.）\n2. S + V + SC（主詞＋不完全不及物動詞＋主詞補詞，如 She is happy.）\n3. S + V + O（主詞＋完全及物動詞＋受詞，如 Leo reads books.）\n4. S + V + IO + DO（主詞＋授與動詞＋間接受詞＋直接受詞，如 Dad gave me a watch.）\n5. S + V + O + OC（主詞＋不完全及物動詞＋受詞＋受詞補詞，如 We painted the wall green.）',
-            tip: '解題關鍵：先找出句中唯一的「主要動詞（Finite Verb）」，再檢查主詞與動詞之單複數一致性。'
+            heading: '英文句子的五大核心骨架 (Basic Sentence Patterns)',
+            body: '英文是「主詞＋動詞」為軸心的形合語言。108 課綱要求國中生必須熟練五大基本句型：\n1. S + V（主詞＋完全不及物動詞）：Birds fly. / The baby cried loudly.\n2. S + V + SC（主詞＋不完全不及物動詞＋主詞補詞）：She looks energetic. / Water feels cold.\n3. S + V + O（主詞＋完全及物動詞＋受詞）：Leo reads science magazines every evening.\n4. S + V + IO + DO（主詞＋授與動詞＋間接受詞＋直接受詞）：My father bought me a bicycle.（= bought a bicycle for me）\n5. S + V + O + OC（主詞＋不完全及物動詞＋受詞＋受詞補詞）：The news made everyone ecstatic. / We elected David class leader.',
+            tip: '解題關鍵：先找出句中唯一的「主要動詞（Finite Verb）」，再檢查主詞與動詞之單複數一致性（Subject-Verb Agreement）。'
           },
           {
             heading: '四大基礎時態的判斷與時間副詞標記',
-            body: '1. 現在簡單式：表示習慣、真理或目前狀態。標記詞：always, usually, every day。\n2. 過去簡單式：表示過去特定時間已結束之動作。動詞加 -ed 或不規則變化。標記詞：yesterday, ago, last night。\n3. 未來簡單式：表示將要發生的事。公式：will + V 原形 或 be going to + V 原形。標記詞：tomorrow, next week, soon。\n4. 現在進行式：表示此時此刻正進行之動作。公式：be動詞 (am/is/are) + V-ing。標記詞：now, listen!, look!, at the moment。',
+            body: '1. 現在簡單式：表示習慣、真理或目前狀態。動詞第三人稱單數加 -s/-es。標記詞：always, usually, often, every day。\n2. 過去簡單式：表示過去特定時間已結束之動作。動詞加 -ed 或不規則變化。標記詞：yesterday, two days ago, in 2020, last night。\n3. 未來簡單式：表示將要發生的事。公式：will + V 原形 或 be going to + V 原形。標記詞：tomorrow, next week, soon, in the future。\n4. 現在進行式：表示此時此刻正進行之動作。公式：be動詞 (am/is/are) + V-ing。標記詞：now, listen!, look!, at the moment。',
             tip: '會考陷阱：表示真理或科學事實時，即便句子前面是過去式，子句仍須維持現在式（例如 The teacher told us that water boils at 100°C.）。'
           }
         ],
@@ -50,17 +50,17 @@ export const curriculum = [
         id: 'j2',
         num: '02',
         title: '代名詞、限定詞與數量詞',
-        subtitle: '主格・受格・所有格與可數不可數量詞規則',
+        subtitle: '主格・受格・所有格・反身代名詞與可數不可數量詞',
         concepts: [
           {
-            heading: '代名詞的四性格位轉換與反身代名詞',
-            body: '人稱代名詞分為主格 (I, you, he, she, it, we, they)、受格 (me, you, him, her, it, us, them)、所有格形容詞 (my, your, his, her, its, our, their) 與所有格代名詞 (mine, yours, his, hers, ours, theirs)。\n反身代名詞 (myself, yourself, himself, herself, itself, ourselves, yourselves, themselves) 用於「主詞與受詞為同一個人」或「強調親自做某事」。',
+            heading: '代名詞的四性格位轉換與反身代名詞用法',
+            body: '人稱代名詞分為主格 (I, you, he, she, it, we, they)、受格 (me, you, him, her, it, us, them)、所有格形容詞 (my, your, his, her, its, our, their) 與所有格代名詞 (mine, yours, his, hers, ours, theirs)。\n反身代名詞 (myself, yourself, himself, herself, itself, ourselves, yourselves, themselves) 兩大功能：\n1. 作受詞：主詞與受詞為同一個人時必須使用反身代名詞（He looked at himself in the mirror.）。\n2. 表強調：放於主詞或受詞後表示親自（I prepared the meal myself.）。',
             tip: '易錯點：its（所有格，它的）與 it\'s（縮寫，it is / it has）絕不可混淆！'
           },
           {
             heading: '數量詞修飾可數 vs 不可數名詞口訣',
             body: '1. 僅修飾可數複數名詞：many, several, a few（有一些，表肯定）, few（幾乎沒有，表否定）。\n2. 僅修飾不可數名詞：much, a little（有一些，表肯定）, little（幾乎沒有，表否定）。\n3. 兩者皆可修飾：some, any, a lot of, plenty of。\n注意：some 常用於肯定句與表示禮貌請求之疑問句（Would you like some tea?）；any 常用於否定句與一般疑問句。',
-            tip: '會考關鍵：news, information, advice, furniture, bread, homework 皆為常見不可數名詞，絕不可加 -s！'
+            tip: '會考關鍵：news, information, advice, furniture, bread, homework, luggage 皆為常見不可數名詞，絕不可加 -s！'
           }
         ],
         vocab: [
@@ -88,18 +88,18 @@ export const curriculum = [
       {
         id: 'j3',
         num: '03',
-        title: '疑問句與生活溝通',
-        subtitle: '5W1H 疑問詞・邀請請求・日常情境應答',
+        title: '疑問句、情態助動詞與生活溝通',
+        subtitle: '5W1H・附加問句・情態助動詞與禮貌社交應答',
         concepts: [
           {
-            heading: '5W1H 疑問詞的資訊對焦',
-            body: '1. Who（問人物身份）/ Whose（問所有權）。\n2. What（問事物、職業、名稱）。\n3. When（問時間點或期間）。\n4. Where（問地點或方位）。\n5. Why（問原因，回答常伴隨 because）。\n6. How（問方式、感受、程度，衍生 How many/much/often/long/far）。',
-            tip: '解題關鍵：聽力與閱讀第一直覺是「鎖定題目要哪種資訊類型」，勿被選項中重複的生字誘騙。'
+            heading: '5W1H 疑問詞與附加問句 (Tag Questions) 規則',
+            body: '1. 5W1H 資訊對焦：Who/Whose（人物/所有權）、What（事物）、When（時間）、Where（地點）、Why（原因）、How（方式/程度，衍生 How often 頻率、How long 時間長度、How far 距離）。\n2. 附加問句口訣：「前肯後否，前否後肯；時態代名詞需一致」。\n例句：She is a doctor, isn\'t she? / Tom didn\'t call, did he?\n注意特例：Let\'s go, shall we? / Open the window, will you? / I am right, aren\'t I?',
+            tip: '解題關鍵：辨明問句需要的是哪種資訊維度，避免被選項中重複出現的相同單字誘騙。'
           },
           {
-            heading: '日常交際句型的禮貌原則',
-            body: '1. 請求幫忙：Could you please...? / Would you mind + V-ing...?\n2. 提出建議：Why not + V原形? / How about + V-ing? / Let\'s + V原形.\n3. 表達意願：I would like to + V原形.\n4. 應答禮儀：You\'re welcome. / My pleasure. / Never mind. / Don\'t mention it.',
-            tip: '會考必考：Would you mind opening the window? 回答若表示「不介意/可以打開」，必須回答 "No, not at all." 或 "Of course not."！'
+            heading: '情態助動詞語氣階梯與禮貌交際原則',
+            body: '1. 請求幫忙：Can you...? $\to$ Could you please...? $\to$ Would you mind + V-ing...?\n2. 義務與建議：must（必須，命令強制）$>$ should / ought to（應該，建議勸告）$>$ had better（最好，帶警告口吻）。\n3. 禮貌應答原則：Would you mind opening the door? 若同意開門，需回答 "No, not at all." 或 "Of course not."（表示不介意）；若回答 "Yes"，則表示反對開門！',
+            tip: '會考交際題每年必考：區別 You\'re welcome. / My pleasure. / Never mind. / Take it easy. 的適用場景。'
           }
         ],
         vocab: [
@@ -128,7 +128,7 @@ export const curriculum = [
         id: 'j4',
         num: '04',
         title: '連接詞與複句',
-        subtitle: '對等連接詞・因果轉折・時間條件副詞子句',
+        subtitle: '對等連接詞・因果轉折・時間與條件副詞子句',
         concepts: [
           {
             heading: '對等連接詞 vs 從屬連接詞的核心禁忌',
@@ -285,8 +285,8 @@ export const curriculum = [
   {
     id: 'sh',
     title: '高中英文｜學測與統測共通能力',
-    badge: '高中 10–12 年級 · 升學衝刺高分線',
-    intro: '深度剖析分詞構句、關係代名詞、倒裝假設、篇章結構四空五選、學術長篇雙文比較、7000 高階詞彙、中譯英產出與作文論述。',
+    badge: '高中 10–12 年級 · 升學衝刺高分線 (108 課綱與 115 新制)',
+    intro: '深度對標 108 課綱普通高中英語文：涵蓋高中 7000 核心詞彙與精確搭配、分詞構句與倒裝句型、115 學測四空五選篇章結構、科普長篇雙文比較、中譯英思維轉換、大考 20 分作文論證與 100 分鐘實戰配速。',
     chapters: [
       {
         id: 's1',
@@ -566,8 +566,8 @@ export const curriculum = [
   {
     id: 'voc',
     title: '高工英文｜技術與職場英語',
-    badge: '高工／技高專業情境 · 國際工匠實務線',
-    intro: '接軌工業現場與國際職場：工場安全、防護裝備、工具規格、標準作業程序 (SOP)、機電故障排除、技術圖表、商務書信與統測專業英文 (二)。',
+    badge: '高工／技高專業情境 · 國際工匠實務線 (108 課綱與外語群專二)',
+    intro: '深度對標 108 課綱技術型高級中等學校英語文：接軌工業車間與國際職場，涵蓋工場安全規章 (OSHA/ISO)、個人防護裝備 (PPE)、精密量具與尺寸公差、SOP 祈使句與故障排除流程圖、工程三視圖與爆炸圖、技術商務 Email (RFQ/交期催告)、以及統測外語群專業科目 (二) 科技長文與 50 字摘要寫作。',
     chapters: [
       {
         id: 'v1',
@@ -843,6 +843,248 @@ export const curriculum = [
         ]
       }
     ]
+  },
+  {
+    id: 'intl',
+    title: '國際英文檢定與留學考試｜官方規格精通',
+    badge: 'GEPT · TOEIC · SAT · GRE · GMAT · TOEFL iBT 2026',
+    intro: '深度研析並完整收錄全球六大權威測驗：全民英檢 (GEPT 全級別)、多益 (TOEIC L&R + S&W)、Digital SAT (雙模組適性與科學長文)、GRE (雙空三空邏輯反差與 Issue 立論)、GMAT Focus (批判推理五大模型與商業決策)、以及 TOEFL iBT 2026 最新改革新題型。每科均具備官方規格拆解、高頻核心詞彙發音庫、實戰必備語塊與學術商務情境對話。',
+    chapters: [
+      {
+        id: 'gept',
+        num: '01',
+        title: '全民英檢 GEPT 全級別實戰',
+        subtitle: '初級至優級對標・四技能評量規準・短文翻譯與申論答辯',
+        concepts: [
+          {
+            heading: 'GEPT 初級至優級對標與通過門檻',
+            body: '全民英檢 (GEPT) 是台灣最具信度的分級測驗，全面對標 CEFR 國際架構：\n1. 初級 (A2)：國中畢業程度。聽讀第一階段通過後始得考說寫（短句寫作與口說複誦）。\n2. 中級 (B1)：高中畢業程度。中譯英短文翻譯、生活經驗敘事寫作 (120字)、朗讀與回答問題。\n3. 中高級 (B2)：大學英語畢業門檻。長篇學術聽力、論述性寫作、口頭觀點闡述。\n4. 高級 (C1)：涉外商務與專業翻譯。圖表長篇評析、跨學科摘要、無主持小組討論。\n5. 優級 (C2)：最高語言境地。整合視聽資料長文研析、即席英文簡報與專業答辯。',
+            tip: '說寫第二階段高分關鍵：發音清晰度、重音節奏、任務完整度（Task Completion）與論證連貫性。'
+          },
+          {
+            heading: 'GEPT 寫作與口說評閱規準重點',
+            body: '口說三向度：發音與語調 (Pronunciation & Intonation)、文法與詞彙 (Grammar & Vocabulary)、語流與內容連貫 (Fluency & Coherence)。\n寫作兩大關鍵：切合題意、邏輯銜接。初中級著重句子文法正確；中高級以上著重段落轉折與論點深度。',
+            tip: '口試時若口誤，可自然修正（"Excuse me, I meant to say..."），考官不會扣分，反而體現自我監控能力。'
+          }
+        ],
+        vocab: [
+          { word: 'proficiency', ipa: '/prəˈfɪʃənsi/', pos: 'n.', def: '精通；熟練度', example: 'GEPT measures English language proficiency across listening, reading, writing, and speaking.' },
+          { word: 'certificate', ipa: '/sərˈtɪfɪkət/', pos: 'n.', def: '證書；合格證照', example: 'Passing both stages of the exam qualifies you for the official GEPT certificate.' },
+          { word: 'assessment', ipa: '/əˈsesmənt/', pos: 'n.', def: '評量；評估', example: 'Diagnostic assessment identifies targeted skill gaps before the official exam.' },
+          { word: 'competence', ipa: '/ˈkɑːmpɪtəns/', pos: 'n.', def: '勝任能力；技能', example: 'Communicative competence requires cultural awareness as well as grammatical accuracy.' },
+          { word: 'fluency', ipa: '/ˈfluːənsi/', pos: 'n.', def: '流利度；流暢', example: 'Regular conversational practice improves oral fluency and phonemic confidence.' },
+          { word: 'articulate', ipa: '/ɑːrˈtɪkjəleɪt/', pos: 'v./adj.', def: '清楚表達；善於言辭的', example: 'Candidates must articulate their viewpoints with structured supporting evidence.' }
+        ],
+        phrases: [
+          { phrase: 'in terms of', def: '就……而言', example: 'In terms of oral fluency, she performed exceptionally well in the interview.' },
+          { phrase: 'stand a chance of', def: '有……的機會/希望', example: 'With thorough preparation, you stand a great chance of passing the High-Intermediate level.' },
+          { phrase: 'cope with', def: '應對；處理', example: 'Active listening helps candidates cope with complex multi-speaker discussions.' },
+          { phrase: 'bring about', def: '引起；導致', example: 'Technological innovations bring about profound transformations in language learning.' }
+        ],
+        dialogue: [
+          { speaker: 'Examiner', text: 'Good morning. Could you explain how modern technology influences your daily study routine?' },
+          { speaker: 'Candidate', text: 'Good morning. In terms of vocabulary acquisition, mobile applications enable spaced repetition anytime, anywhere.' },
+          { speaker: 'Examiner', text: 'What is a potential drawback of relying excessively on automated translation tools?' },
+          { speaker: 'Candidate', text: 'It may undermine one\'s capacity to formulate idiomatic sentence structures independently.' },
+          { speaker: 'Examiner', text: 'Well articulated. Thank you very much.' }
+        ]
+      },
+      {
+        id: 'toeic',
+        num: '02',
+        title: 'TOEIC 多益國際商務測驗',
+        subtitle: 'L&R 聽讀 990 滿分配速・Part 1–7 各大題秒殺破綻・商務情境',
+        concepts: [
+          {
+            heading: 'L&R 200 題 120 分鐘實戰配速與防超時策略',
+            body: '聽力 100 題約 45 分鐘，閱讀 100 題 75 分鐘：\n1. Part 1 照片題 (6題)：先看人動作，無人看物位置；消去「被動語態已完成 (has been p.p.)」出現在無人照片的干擾項。\n2. Part 2 簡短應答 (25題)：聽清楚第一個單字（Wh- 疑問詞 vs 助動詞）；答非所問的委婉拒絕是現代高分答案！\n3. Part 3/4 對話與獨白 (69題)：利用音檔讀說明時間，提前畫線「下一題組 3 道題幹與選項核心詞」。\n4. Part 5 單句填空 (30題)：限時 10–12 分鐘，平均每題 20 秒，先辨詞性與文法。\n5. Part 6 段落填空 (16題)：限時 8–10 分鐘，句子插入題看前後邏輯鉤子。\n6. Part 7 閱讀理解 (54題)：限時 50–55 分鐘，雙篇與三篇閱讀必須進行「跨文本資訊交叉比對 (Cross-text Synthesis)」。',
+            tip: '考場硬性規則：聽力播放時嚴禁跨區翻看閱讀題；兩大 Section 之間不可折返劃記！'
+          },
+          {
+            heading: '多益高頻商務場景核心語塊 (Business Collocations)',
+            body: '採購物流 (procurement & logistics)、航班行程 (flight itinerary)、開立發票 (issue an invoice)、費用核銷 (expense reimbursement)、會議議程 (meeting agenda)、人事招募 (recruitment & onboarding)、廠房巡檢 (facility inspection)。',
+            tip: '同音/近音干擾陷阱：Part 2 常出現發音相近但意思無關的字（如 coffee vs copy, plan vs plant）誘騙考生，這類選項 99% 是陷阱！'
+          }
+        ],
+        vocab: [
+          { word: 'itinerary', ipa: '/aɪˈtɪnəreri/', pos: 'n.', def: '行程表；旅行路線', example: 'The travel coordinator emailed the finalized flight itinerary to all conference attendees.' },
+          { word: 'reimbursement', ipa: '/ˌriːɪmˈbɜːrsmənt/', pos: 'n.', def: '核銷；費用報銷', example: 'Submit your travel receipts to accounting for prompt travel reimbursement.' },
+          { word: 'negotiate', ipa: '/nɪˈɡoʊʃieɪt/', pos: 'v.', def: '談判；協商', example: 'The procurement team managed to negotiate a fifteen percent volume discount.' },
+          { word: 'procurement', ipa: '/prəˈkjʊrmənt/', pos: 'n.', def: '採購；取得', example: 'The director oversaw the procurement of energy-efficient manufacturing machinery.' },
+          { word: 'invoice', ipa: '/ˈɪnvɔɪs/', pos: 'n./v.', def: '發票；開立發票', example: 'Payment must be remitted within thirty days of the invoice date.' },
+          { word: 'inventory', ipa: '/ˈɪnvəntɔːri/', pos: 'n.', def: '庫存；存貨清單', example: 'The quarterly warehouse audit verified physical inventory counts against digital records.' }
+        ],
+        phrases: [
+          { phrase: 'follow up on', def: '追蹤；跟進（進度）', example: 'I am calling to follow up on the customized promotional brochures we requested.' },
+          { phrase: 'at your earliest convenience', def: '在您方便時儘速', example: 'Please review the attached contract and sign at your earliest convenience.' },
+          { phrase: 'in accordance with', def: '依照；符合（規定）', example: 'All operations are conducted in accordance with international safety protocols.' },
+          { phrase: 'run out of', def: '用盡；短缺', example: 'The assembly floor has run out of size-M industrial gaskets.' }
+        ],
+        dialogue: [
+          { speaker: 'Manager', text: 'Hello, Jason. Did the supplier confirm delivery for the new packaging units?' },
+          { speaker: 'Coordinator', text: 'Yes, Ms. Vance. They sent the updated invoice and guaranteed delivery by next Wednesday.' },
+          { speaker: 'Manager', text: 'Excellent. Please submit the paperwork to accounting for purchase reimbursement.' },
+          { speaker: 'Coordinator', text: 'Will do. I will also follow up on the shipment tracking number tomorrow morning.' },
+          { speaker: 'Manager', text: 'Thank you. Keep me posted on any logistical delays.' }
+        ]
+      },
+      {
+        id: 'sat',
+        num: '03',
+        title: 'Digital SAT Reading and Writing',
+        subtitle: '雙模組適性 (MST) 演算法・Craft & Structure・長難句修辭',
+        concepts: [
+          {
+            heading: 'Digital SAT 兩階段模組化適應性測驗 (MST) 機制',
+            body: 'Digital SAT 閱讀與寫作包含兩個 27 題、32 分鐘的模組 (Modules)：\n1. Module 1（路由模組）：難度均勻分佈。系統採用邊界最大似然估計 (BMLE) 計算考生能力值 $\hat{\theta}$。\n2. Module 2（自適應模組）：\n- 若 Module 1 表現優異，進入 Hard Module 2，解鎖最高 800 分滿分區間。\n- 若 Module 1 表現不佳，進入 Easy Module 2，分數天花板受限（通常不高於 600 分）。\n3. 最終成績以 EAP (Expected A Posteriori) 聯合反應向量精算，包含標準測量誤差 (SEM)。',
+            tip: '實戰策略：Module 1 前 15 題不容失誤，確保穩定打入 Hard Module 2！'
+          },
+          {
+            heading: '四大領域解題精義 (Construct Blueprint)',
+            body: '1. Craft and Structure (28%)：高難度語境詞彙精析（如 delineate, corroborate）、作者論證結構與修辭手法。\n2. Information and Ideas (26%)：中心主旨抓取、文本證據定位、科學數據圖表詮釋與隱含假設推論。\n3. Standard English Conventions (26%)：長句語法結構、主謂一致、標點符號 (分號連接兩獨立子句、冒號引導同位補充、破折號插入修飾)。\n4. Expression of Ideas (20%)：修辭修訂、段落銜接過渡詞、學生研究筆記整合 (Rhetorical Synthesis)。',
+            tip: '標點題秒殺法則：兩個獨立完整子句 (Independent Clauses) 之間，不可僅用逗號連接（Comma Splice 錯誤），必須使用分號 (;) 或逗號加對等連接詞 (, and)！'
+          }
+        ],
+        vocab: [
+          { word: 'delineate', ipa: '/dɪˈlɪnieɪt/', pos: 'v.', def: '描繪；詳細勾勒', example: 'The research paper clearly delineates the boundaries of the theoretical framework.' },
+          { word: 'corroborate', ipa: '/kəˈrɑːbəreɪt/', pos: 'v.', def: '證實；確證', example: 'Satellite telemetry corroborated the oceanographer\'s temperature anomaly calculations.' },
+          { word: 'juxtaposition', ipa: '/ˌdʒʌkstəpəˈzɪʃən/', pos: 'n.', def: '並置；並列對比', example: 'The poet uses the juxtaposition of urban decay and natural renewal to convey hope.' },
+          { word: 'pragmatic', ipa: '/præɡˈmætɪk/', pos: 'adj.', def: '務實的；實用主義的', example: 'The municipal government adopted a pragmatic approach to affordable housing construction.' },
+          { word: 'unequivocal', ipa: '/ˌʌnɪˈkwɪvəkəl/', pos: 'adj.', def: '明確無誤的；不容置疑的', example: 'The genetic evidence provided unequivocal proof of the species\' lineage.' },
+          { word: 'ambiguous', ipa: '/æmˈbɪɡjuəs/', pos: 'adj.', def: '含糊不清的；有歧義的', example: 'The statutory language was ambiguous, leaving room for divergent judicial interpretations.' }
+        ],
+        phrases: [
+          { phrase: 'shed light on', def: '闡明；解釋清楚', example: 'Recent neuroimaging studies shed light on how memories consolidate during deep sleep.' },
+          { phrase: 'take into account', def: '考慮到；顧及', example: 'The urban planning committee must take environmental sustainability into account.' },
+          { phrase: 'by the same token', def: '同理；基於同樣的理由', example: 'We must respect local customs, and by the same token, visitors should respect ours.' },
+          { phrase: 'play a pivotal role', def: '發揮關鍵樞紐作用', example: 'Renewable energy infrastructure plays a pivotal role in reducing global carbon emissions.' }
+        ],
+        dialogue: [
+          { speaker: 'Instructor', text: 'Let us examine question fourteen from SAT Module 2. Why is Option C the only defensible choice?' },
+          { speaker: 'Student', text: 'The text states that recent soil samples contradict the conventional volcanic hypothesis.' },
+          { speaker: 'Instructor', text: 'And which vocabulary term in Option C captures that contradiction?' },
+          { speaker: 'Student', text: '"Undermine"! It means to weaken the credibility of the prior conjecture.' },
+          { speaker: 'Instructor', text: 'Spot on. In Digital SAT Information and Ideas questions, precise vocabulary alignment with textual evidence is king.' }
+        ]
+      },
+      {
+        id: 'gre',
+        num: '04',
+        title: 'GRE General Exam 語意與論證',
+        subtitle: 'Verbal 130–170 雙空三空邏輯反差・Sentence Equivalence・Issue 立論',
+        concepts: [
+          {
+            heading: 'Text Completion 與 Sentence Equivalence 邏輯密碼',
+            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because $\to$ 空格語意與已知線索同義。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than $\to$ 空格語意與已知線索反義。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，通常是兩組近義詞。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
+            tip: 'GRE 邏輯陷阱：避免加入過多主觀世俗常識，嚴格依據題幹內的對應詞 (Pivot Words) 判定正負色彩。'
+          },
+          {
+            heading: 'Analytical Writing Issue 30 分鐘五步立論法',
+            body: 'GRE Issue 寫作要求針對複雜學術/社會議題提出深刻批判論證：\n1. 審題破題 (3分鐘)：辨析題目預設前提 (Premise) 與極端詞 (invariably, only)。\n2. 立場聲明 (Thesis)：提出具備複雜度之觀點（"While X offers tangible merits, uncritical adoption poses Y..."）。\n3. 正面論證 (Body 1 & 2)：舉出自然科學、歷史或社會學實證案例，推導因果機制。\n4. 承認反對意見與駁斥 (Counterargument & Refutation)：展現多視角思維深度。\n5. 結論昇華 (Conclusion)：總結主張並提出兼顧現實之政策/哲學建言。',
+            tip: 'Issue 評分量表 (0–6分)：4 分看論點完整，5 分看例子深刻，6 分看批判思維 (Critical Insight) 與語言駕馭的精準度。'
+          }
+        ],
+        vocab: [
+          { word: 'ephemeral', ipa: '/ɪˈfemərəl/', pos: 'adj.', def: '短暫的；轉瞬即逝的', example: 'Fame in modern digital media is often ephemeral, fading within a matter of weeks.' },
+          { word: 'equivocal', ipa: '/ɪˈkwɪvəkəl/', pos: 'adj.', def: '模稜兩可的；含糊不清的', example: 'The laboratory results were equivocal, preventing any definitive causal conclusion.' },
+          { word: 'paradigm', ipa: '/ˈpærədaɪm/', pos: 'n.', def: '典範；思維架構', example: 'The discovery of quantum mechanics precipitated a profound paradigm shift in modern physics.' },
+          { word: 'anomalous', ipa: '/əˈnɑːmələs/', pos: 'adj.', def: '反常的；異常的', example: 'The astronomer detected an anomalous radiation burst originating from a distant galaxy.' },
+          { word: 'mitigate', ipa: '/ˈmɪtɪɡeɪt/', pos: 'v.', def: '緩和；減輕', example: 'Aggressive reforestation programs help mitigate the catastrophic impacts of climate change.' },
+          { word: 'bolster', ipa: '/ˈboʊlstər/', pos: 'v.', def: '支持；加強', example: 'Empirical survey data bolstered the sociologist\'s argument regarding urban isolation.' }
+        ],
+        phrases: [
+          { phrase: 'in stark contrast to', def: '與……形成鮮明對比', example: 'The candidate\'s modest demeanor stood in stark contrast to his predecessor\'s flamboyance.' },
+          { phrase: 'weigh the pros and cons', def: '權衡利弊得失', example: 'Policymakers must weigh the pros and cons of implementing carbon taxation.' },
+          { phrase: 'give rise to', def: '引起；導致', example: 'Systemic economic disparities often give rise to widespread social discontent.' },
+          { phrase: 'attribute A to B', def: '將 A 歸因於 B', example: 'Biologists attribute the decline in coral reefs to elevated oceanic surface temperatures.' }
+        ],
+        dialogue: [
+          { speaker: 'Professor', text: 'Analyze this GRE text completion sentence: "Although the senator claimed her motives were entirely altruistic, her voting record revealed an unmistakably ________ agenda."' },
+          { speaker: 'Student', text: 'The pivot word is "Although," which sets up a contrast between "altruistic" and the blank!' },
+          { speaker: 'Professor', text: 'Excellent. What word with negative or self-serving meaning fits the blank?' },
+          { speaker: 'Student', text: '"Self-interested" or "mercenary"!' },
+          { speaker: 'Professor', text: 'Precisely. Grasping the directional polarity of transitional adverbs is the cornerstone of GRE Verbal reasoning.' }
+        ]
+      },
+      {
+        id: 'gmat',
+        num: '05',
+        title: 'GMAT Focus 批判推理與商業長文',
+        subtitle: 'Critical Reasoning 五大模型・Data Insights 語言理解・商學院決策',
+        concepts: [
+          {
+            heading: '批判推理 (Critical Reasoning) 核心五大題型模型',
+            body: 'GMAT 批判推理是商學院入學測驗的靈魂，考查嚴密邏輯思維：\n1. 假設題 (Assumption)：找尋作者推導結論時「未言明但必不可少的必要條件」。檢驗法：否定測試法 (Negation Technique)——將選項取非，若結論立刻崩塌，該選項必為正確答案！\n2. 削弱題 (Weaken)：找出一個新資訊，能證明「即使前提成立，結論也未必成立」（常考因果倒置、另有他因、樣本偏差）。\n3. 支持題 (Strengthen)：排除潛在他因、證實無因即無果、強化樣本代表性。\n4. 推論題 (Inference)：100% 依據題幹已知事實推導，嚴禁任何無端腦補。\n5. 評價題 (Evaluate)：找出若回答 Yes 或 No 會分別強烈支持或削弱結論的關鍵變數。',
+            tip: '現行 GMAT Focus 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，至多允許檢查修改 3 道題答案！'
+          },
+          {
+            heading: '商學長文精讀與 Data Insights 跨文本邏輯',
+            body: 'GMAT 閱讀篇幅長、句法密集，涉及企業管理戰略、金融市場、科技演進、反壟斷監管：\n- 略讀框架：每段只精讀第一句與轉折句，在草稿紙寫下段落功能（P1: 提出舊理論；P2: 實驗挑戰舊理論；P3: 提出新修正模型）。\n- Data Insights 語言整合：比對圖表趨勢與多來源文本陳述，找出邏輯矛盾與數據盲區。',
+            tip: '商業決策題常見陷阱：將「相關性 (Correlation)」誤當成「因果性 (Causation)」，或將「利潤增加」誤當成「銷售額增加」（忽略成本變量）。'
+          }
+        ],
+        vocab: [
+          { word: 'fallacy', ipa: '/ˈfæləsi/', pos: 'n.', def: '謬誤；荒謬推論', example: 'Assuming temporal succession equates to causal influence is a classic logical fallacy.' },
+          { word: 'substantiate', ipa: '/səbˈstænʃieɪt/', pos: 'v.', def: '證實；用實體證據支持', example: 'The chief financial officer failed to substantiate her bullish quarterly revenue forecast.' },
+          { word: 'viability', ipa: '/ˌvaɪəˈbɪləti/', pos: 'n.', def: '可行性；存續能力', example: 'Venture capitalists closely scrutinized the commercial viability of the electric aircraft startup.' },
+          { word: 'volatile', ipa: '/ˈvɑːlətl/', pos: 'adj.', def: '不穩定的；易波動的', example: 'Cryptocurrency markets are notoriously volatile, subject to sudden regulatory headwinds.' },
+          { word: 'leverage', ipa: '/ˈlevərɪdʒ/', pos: 'v./n.', def: '槓桿；利用；發揮作用', example: 'The enterprise aims to leverage cloud analytics to optimize its global supply chain.' },
+          { word: 'premise', ipa: '/ˈpremɪs/', pos: 'n.', def: '前提；假定', example: 'The consultant\'s recommendation rests on the premise that consumer spending will rebound.' }
+        ],
+        phrases: [
+          { phrase: 'on the assumption that', def: '在……的假定下', example: 'The financial projection was formulated on the assumption that interest rates remain stable.' },
+          { phrase: 'account for', def: '解釋原因；占比例', example: 'Operational inefficiencies account for a substantial fraction of production losses.' },
+          { phrase: 'pave the way for', def: '為……鋪平道路', example: 'Successful venture trials paved the way for a multibillion-dollar initial public offering.' },
+          { phrase: 'lead to', def: '導致；造成', example: 'Regulatory complacency can lead to severe systemic market vulnerabilities.' }
+        ],
+        dialogue: [
+          { speaker: 'Consultant', text: 'The client argues that lowering prices will inevitably increase market share and net profits.' },
+          { speaker: 'Associate', text: 'What is the flawed assumption in their reasoning?' },
+          { speaker: 'Consultant', text: 'They assume production costs per unit will remain constant even as production scales rapidly.' },
+          { speaker: 'Associate', text: 'And they also overlook competitor retaliation: rival firms might initiate an aggressive price war!' },
+          { speaker: 'Consultant', text: 'Exactly. Pinpointing those unstated assumptions is how we dismantle flawed business arguments in GMAT Critical Reasoning.' }
+        ]
+      },
+      {
+        id: 'toefl',
+        num: '06',
+        title: 'TOEFL iBT 2026 新制四技能',
+        subtitle: '2026 新制 1–6 量尺・學術在線討論寫作・聽後複誦與訪談',
+        concepts: [
+          {
+            heading: 'TOEFL iBT 2026 年最新考制改革剖析',
+            body: 'ETS 自 2026 年起正式推出 TOEFL iBT 全新適性題型與 1–6 分數制（每 0.5 分一級距）：\n1. 寫作新題型：\n- 句子建構 (Sentence Construction)：重組複雜學術長句。\n- 電子郵件寫作 (Email Task)：針對校園行政或工作情境進行快速精準書信應答。\n- 學術在線課堂討論 (Writing for an Academic Discussion, 10分鐘)：教授提出爭議問題，兩位學生提出對立觀點，考生必須在 10 分鐘內撰寫至少 100 字立論並對話其中一位同學。\n2. 口說新題型：\n- 聽後即時複誦與改述 (Listen & Repeat)：考查語音工作記憶與音素精準度。\n- 訪談式問答 (Interview Format)：模擬與學術導師之互動式面談。',
+            tip: '新制評分重視「溝通可理解度 (Communicative Intelligibility)」與「任務達成率」，不再鼓勵空洞堆砌生僻詞！'
+          },
+          {
+            heading: '學術討論寫作 (Academic Discussion) 高分架構',
+            body: '10 分鐘 100+ 字黃金攻略：\n1. 表達立場並呼應同學（1-2句）："While I acknowledge Sarah\'s concern regarding cost, I firmly align with David\'s perspective that..."\n2. 展開自己的核心論點（3-4句）：提出一個全新的視角或深化理由，切勿單純重複前面同學講過的話。\n3. 給出具體實證例證（3-4句）：舉出真實校園、科技或社會案例進行支撐。\n4. 總結句（1句）：有力扣回題目教授的核心提問。',
+            tip: '時間管理：前 2 分鐘讀題立意，5 分鐘打字完成草稿，最後 3 分鐘檢查動詞時態、主動詞一致與拼字。'
+          }
+        ],
+        vocab: [
+          { word: 'collaborate', ipa: '/kəˈlæbəreɪt/', pos: 'v.', def: '合作；協同工作', example: 'Students from diverse faculties collaborated on the interdisciplinary clean energy initiative.' },
+          { word: 'paraphrase', ipa: '/ˈpærəfreɪz/', pos: 'v./n.', def: '意譯；改述', example: 'In the integrated task, you should paraphrase the professor\'s arguments without quoting verbatim.' },
+          { word: 'academic', ipa: '/ˌækəˈdemɪk/', pos: 'adj./n.', def: '學術的；學者', example: 'Academic integrity requires citing external scholarly sources meticulously.' },
+          { word: 'articulate', ipa: '/ɑːrˈtɪkjəleɪt/', pos: 'v./adj.', def: '清晰闡明；善於說話的', example: 'The candidate articulated her research thesis clearly during the interview.' },
+          { word: 'synthesis', ipa: '/ˈsɪnθəsɪs/', pos: 'n.', def: '綜合；整合', example: 'The integrated writing response requires a cohesive synthesis of listening and reading passages.' },
+          { word: 'fluency', ipa: '/ˈfluːənsi/', pos: 'n.', def: '流利度；熟練度', example: 'Consistent oral practice develops natural rhythm and communicative fluency.' }
+        ],
+        phrases: [
+          { phrase: 'in terms of', def: '就……而言', example: 'In terms of feasibility, the proposed campus solar project is highly promising.' },
+          { phrase: 'come up with', def: '想出（解決方案）', example: 'Our study group came up with an innovative method to conserve laboratory energy.' },
+          { phrase: 'keep in mind', def: '牢記；記住', example: 'Keep in mind that the listening audio will only be played once during the test.' },
+          { phrase: 'figure out', def: '弄清楚；解決', example: 'Students must figure out the author\'s primary intent from contextual clues.' }
+        ],
+        dialogue: [
+          { speaker: 'Professor', text: 'Welcome to our online discussion board. Today\'s question: Should cities subsidize electric public transit to combat emissions?' },
+          { speaker: 'Student', text: 'I strongly support this measure, Professor. Subsidies lower the barrier to adoption and simultaneously reduce vehicular congestion.' },
+          { speaker: 'Professor', text: 'Interesting point. How would municipal authorities finance the initial capital expenditure without raising income taxes?' },
+          { speaker: 'Student', text: 'Municipalities can reallocate highway expansion budgets and leverage green municipal bonds to cover upfront infrastructure costs.' },
+          { speaker: 'Professor', text: 'A thoughtful and concrete fiscal solution. Well done!' }
+        ]
+      }
+    ]
   }
 ];
 
@@ -945,7 +1187,7 @@ export const examStudy = {
     ],
     vocab: [
       { word: 'collaborate', ipa: '/kəˈlæbəreɪt/', pos: 'v.', def: '合作；協同工作', example: 'Students from diverse faculties collaborated on the interdisciplinary clean energy initiative.' },
-      { word: 'fluency', ipa: '/ˈfluːənsi/', pos: 'n.', def: '流暢度；熟練度', example: 'The speaking module assesses communicative fluency and phonemic intelligibility.' },
+      { word: 'fluency', ipa: '/ˈfluːənsi/', pos: 'n.', def: '流利度；熟練度', example: 'The speaking module assesses communicative fluency and phonemic intelligibility.' },
       { word: 'paraphrase', ipa: '/ˈpærəfreɪz/', pos: 'v./n.', def: '意譯；改述', example: 'In the integrated task, you should paraphrase the professor\'s arguments without quoting verbatim.' }
     ],
     source: 'https://www.ets.org/toefl/test-takers/ibt/about/content.html'
