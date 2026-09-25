@@ -198,6 +198,15 @@ function chapterPage() {
       </div>
     </div>
 
+    <!-- 課綱與國際考制軌道切換標籤 -->
+    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px">
+      ${curriculum.map(tr => `
+        <button class="btn ${tr.id === c.id ? 'primary' : 'quiet'}" data-open-chapter="${tr.id}:${tr.chapters[0].id}" style="white-space:nowrap;font-size:13px;padding:6px 14px;font-weight:600">
+          ${tr.badge} · ${tr.title.split('｜')[0]}
+        </button>
+      `).join('')}
+    </div>
+
     <!-- 章節切換標籤 -->
     <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:12px;margin-bottom:20px">
       ${c.chapters.map(item => `
@@ -317,11 +326,23 @@ function chapterPage() {
       <aside class="aside">
         <section class="card" style="margin-bottom:20px">
           <span class="tag green">學習導航</span>
-          <h3>快速前往其他章節</h3>
+          <h3>${c.title.split('｜')[0]} 章節列表</h3>
           <div style="display:grid;gap:8px;margin-top:12px">
             ${c.chapters.map(item => `
               <button class="btn ${item.id === ch.id ? 'primary' : 'quiet'}" data-open-chapter="${c.id}:${item.id}" style="justify-content:flex-start;text-align:left;font-size:13px">
                 ${item.num}. ${item.title}
+              </button>
+            `).join('')}
+          </div>
+        </section>
+
+        <section class="card" style="margin-bottom:20px">
+          <div class="eyebrow">SWITCH TRACK</div>
+          <h3>切換其他學習軌道</h3>
+          <div style="display:grid;gap:6px;margin-top:10px">
+            ${curriculum.filter(tr => tr.id !== c.id).map(tr => `
+              <button class="btn secondary small" data-open-chapter="${tr.id}:${tr.chapters[0].id}" style="justify-content:flex-start;text-align:left">
+                → 前往 ${tr.badge} (${tr.chapters.length} 章)
               </button>
             `).join('')}
           </div>
@@ -371,11 +392,12 @@ function studioPage() {
     <section class="card" style="margin-bottom:20px">
       <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
         <input type="text" class="search-input" id="studio-search" placeholder="搜尋英文單字或中文釋義..." value="${esc(audioStudioSearch)}">
-        <div style="display:flex;gap:6px">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
           <button class="btn ${audioStudioFilter === 'all' ? 'primary' : 'quiet'}" data-studio-filter="all">全部</button>
           <button class="btn ${audioStudioFilter === 'jhs' ? 'primary' : 'quiet'}" data-studio-filter="jhs">國中會考</button>
           <button class="btn ${audioStudioFilter === 'sh' ? 'primary' : 'quiet'}" data-studio-filter="sh">高中學測</button>
           <button class="btn ${audioStudioFilter === 'voc' ? 'primary' : 'quiet'}" data-studio-filter="voc">高工技術</button>
+          <button class="btn ${audioStudioFilter === 'intl' ? 'primary' : 'quiet'}" data-studio-filter="intl">國際考制</button>
         </div>
       </div>
     </section>
@@ -419,7 +441,7 @@ function map() {
       <div>
         <div class="eyebrow">COMPLETE CURRICULUM BLUEPRINT</div>
         <h1 tabindex="-1">先扎穩主幹能力，再直攻升學與國際考試。</h1>
-        <p class="muted">全套課綱包含國中會考、高中學測、高工技術英文 21 個深度章節，每個章節皆配備文法筆記、單字發音、片語與情境會話。</p>
+        <p class="muted">全套課綱完整對應 108 課綱與國際考制標準，包含國中會考、高中學測、高工技術英文以及六大國際考制（GEPT、TOEIC、SAT、GRE、GMAT、TOEFL）共 27 個深度教學章節，每章皆備齊文法核心、音標單字發音、片語與情境實戰會話。</p>
       </div>
     </div>
     ${curriculum.map(c => `
@@ -710,7 +732,8 @@ function studyPage() {
               </div>
             </div>
           ` : ''}
-          <div class="actions" style="margin-top:16px">
+          <div class="actions" style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn primary small" data-open-chapter="intl:${id}">進入完整教學與發音頁 →</button>
             <a class="btn secondary small" href="${e.source}" target="_blank" rel="noopener">官方規格與指南 ↗</a>
           </div>
         </div>
