@@ -1,0 +1,283 @@
+// sources.mjs - 28 個年度科目包官方來源索引資料
+export const initialSources = [
+  {
+    "bundle_id": "TW-GSAT-109-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 109,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2020,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-109-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 109,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/109_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2020,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-109-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 109,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/109_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2020,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-109-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 109,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/109/109exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2020,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-110-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 110,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2021,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-110-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 110,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/110_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2021,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-110-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 110,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/110_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2021,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-110-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 110,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/110/110exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2021,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-111-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 111,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2022,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-111-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 111,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/111_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2022,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-111-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 111,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/111_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2022,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-111-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 111,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/111/111exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2022,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-112-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 112,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2023,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-112-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 112,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/112_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2023,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-112-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 112,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/112_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2023,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-112-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 112,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/112/112exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2023,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-113-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 113,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2024,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-113-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 113,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2024,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-113-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 113,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/113_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2024,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-113-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 113,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2024,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-114-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 114,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2025,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-114-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 114,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2025,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-114-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 114,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/114_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2025,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-114-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 114,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2025,
+    "title": "國中教育會考英語"
+  },
+  {
+    "bundle_id": "TW-GSAT-115-MAIN-ENG",
+    "exam": "GSAT",
+    "year_roc": 115,
+    "label": "ENG",
+    "source_page": "https://www.ceec.edu.tw/xmfile?quot=&xsmsid=0J052424829869345634",
+    "asset_status": "downloaded",
+    "year_ce": 2026,
+    "title": "大學學測英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-115-MAIN-COMMON-ENG",
+    "exam": "TCTE",
+    "year_roc": 115,
+    "label": "COMMON-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2026,
+    "title": "四技二專統測共同英文"
+  },
+  {
+    "bundle_id": "TW-TCTE-115-MAIN-SPECIALIST-ENG",
+    "exam": "TCTE",
+    "year_roc": 115,
+    "label": "SPECIALIST-ENG",
+    "source_page": "https://web1.tcte.edu.tw/EXAM/115_4y/",
+    "asset_status": "not_found",
+    "year_ce": 2026,
+    "title": "四技二專統測外語群專二（英語類）"
+  },
+  {
+    "bundle_id": "TW-CAP-115-MAIN-ENG",
+    "exam": "CAP",
+    "year_roc": 115,
+    "label": "ENG",
+    "source_page": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+    "asset_status": "not_found",
+    "year_ce": 2026,
+    "title": "國中教育會考英語"
+  }
+];
