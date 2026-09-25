@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "generated_at": "2026-09-26T00:25:00+08:00",
-  "total_questions": 6000,
+  "total_questions": 12000,
   "categories": {
     "jhs": {
       "name": "國中英文｜會考能力線",
@@ -32,6 +32,12 @@
       "name": "GMAT Focus 批判性推理與商業邏輯",
       "count": 1000,
       "file": "gmat.json"
+    },
+    "gaokao": {
+      "name": "歷年高考真題庫",
+      "count": 6000,
+      "file": "gaokao.json",
+      "description": "收錄歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題與等價題型"
     }
   }
 }
