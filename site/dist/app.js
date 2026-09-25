@@ -1,6 +1,7 @@
 // app.js - 核心互動邏輯、章節深度教學頁、全站單字片語會話語音播放系統
 import { tracks, exams } from './content.mjs';
 import { curriculum, examStudy } from './curriculum.mjs';
+import { initialSources } from './sources.mjs';
 import { initialState, createAttempt, recordResponse, finishAttempt, resultOf, remainingSeconds } from './core.mjs';
 import { speak, playWord, playSentence, playSequence, stopAudio, isAudioActive } from './audio.mjs';
 
@@ -18,7 +19,7 @@ try {
 let page = state.active ? 'session' : 'today';
 let selected = null;
 let resultId = null;
-let sourceRows = [];
+let sourceRows = Array.isArray(initialSources) ? [...initialSources] : [];
 let sourceError = false;
 let sourceFilter = 'all';
 let openChapterId = 'jhs:j1'; // 預設開啟國中第一章
@@ -655,44 +656,94 @@ function examPage() {
       <div class="filter-row">
         <label for="source-filter">篩選升學考別：</label>
         <select id="source-filter">
-          <option value="all">全部考別 (28 包)</option>
-          <option value="GSAT">大學學測英文</option>
-          <option value="CAP">國中教育會考英語</option>
-          <option value="TCTE_COMMON">四技二專統測共同英文</option>
-          <option value="TCTE_SPECIALIST">四技二專統測外語群專二</option>
+          <option value="all">全部考別 (28 個年度科目包)</option>
+          <option value="GSAT">大學學測英文 (7 包 · 109–115 年)</option>
+          <option value="CAP">國中教育會考英語 (7 包 · 109–115 年)</option>
+          <option value="TCTE_COMMON">四技二專統測共同英文 (7 包 · 109–115 年)</option>
+          <option value="TCTE_SPECIALIST">四技二專統測外語群專二 (7 包 · 109–115 年)</option>
         </select>
+        <span class="chip" id="source-count" style="font-size:12px">目前顯示：${getFilteredSources().length} / ${sourceRows.length} 包</span>
       </div>
       <div id="source-table">${sourceTable()}</div>
     </section>
   `;
 }
 
+function getExamTitle(r) {
+  if (r.title) return r.title;
+  if (r.exam === 'GSAT') return '大學學測英文';
+  if (r.exam === 'CAP') return '國中教育會考英語';
+  if (r.exam === 'TCTE') {
+    if (r.label === 'COMMON-ENG' || r.subject === 'COMMON-ENG') return '四技二專統測共同英文';
+    if (r.label === 'SPECIALIST-ENG' || r.subject === 'SPECIALIST-ENG') return '四技二專統測外語群專二（英語類）';
+  }
+  return `${r.exam} · ${r.label || r.subject || ''}`;
+}
+
+function getStatusBadge(status) {
+  if (status === 'downloaded') {
+    return '<span class="tag green" style="display:inline-flex;align-items:center;gap:4px;font-weight:600">✓ 原卷已收錄</span>';
+  }
+  return '<span class="tag" style="display:inline-flex;align-items:center;gap:4px;font-weight:600;background:#fef3c7;color:#92400e;border:1px solid #fde68a">⏳ 盤點校對中</span>';
+}
+
+function getFilteredSources() {
+  return sourceRows.filter(r => {
+    if (!sourceFilter || sourceFilter === 'all') return true;
+    if (sourceFilter === 'GSAT') return r.exam === 'GSAT';
+    if (sourceFilter === 'CAP') return r.exam === 'CAP';
+    if (sourceFilter === 'TCTE_COMMON') return r.exam === 'TCTE' && (r.label === 'COMMON-ENG' || r.subject === 'COMMON-ENG');
+    if (sourceFilter === 'TCTE_SPECIALIST') return r.exam === 'TCTE' && (r.label === 'SPECIALIST-ENG' || r.subject === 'SPECIALIST-ENG');
+    return r.exam === sourceFilter;
+  });
+}
+
 function sourceTable() {
-  if (sourceError) return '<p role="alert">來源資料暫時無法載入，請稍後重新整理。</p>';
-  if (!sourceRows.length) return '<p>正在載入 28 包歷屆試卷清單…</p>';
-  const rows = sourceRows.filter(r => sourceFilter === 'all' || r.exam === sourceFilter);
+  const rows = getFilteredSources();
+  if (!rows.length) {
+    return '<p class="muted" style="padding:24px;text-align:center">目前篩選條件下無符合的試卷資料。</p>';
+  }
   return `
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>年度 / 考科名稱</th>
-            <th>試題原檔狀態</th>
-            <th>內容雙審校對</th>
-            <th>作答開放狀態</th>
-            <th>官方原始出處</th>
+            <th style="min-width:180px">年度 / 考科名稱</th>
+            <th style="min-width:120px">試題原檔狀態</th>
+            <th style="min-width:140px">心理計量雙審校對</th>
+            <th style="min-width:120px">作答開放狀態</th>
+            <th style="min-width:120px">官方原始出處</th>
           </tr>
         </thead>
         <tbody>
-          ${rows.map(r => `
-            <tr>
-              <td><strong>${r.year_roc} 年 (${r.year_ce})</strong> · ${esc(r.label)}</td>
-              <td><span class="tag green">${esc(r.asset_status)}</span></td>
-              <td>雙人簽核</td>
-              <td>開放自主練習</td>
-              <td><a href="${esc(r.source_page)}" target="_blank" rel="noopener">官方歷屆試題 ↗</a></td>
-            </tr>
-          `).join('')}
+          ${rows.map(r => {
+            const yearCe = r.year_ce || (r.year_roc + 1911);
+            const examTitle = getExamTitle(r);
+            return `
+              <tr>
+                <td>
+                  <div style="font-weight:700;color:#0f172a;font-size:14px">民國 ${r.year_roc} 年 (${yearCe} 年)</div>
+                  <div style="font-size:12px;color:#0d9488;font-weight:600;margin-top:2px">${esc(examTitle)}</div>
+                </td>
+                <td>${getStatusBadge(r.asset_status)}</td>
+                <td>
+                  <span style="display:inline-flex;align-items:center;gap:4px;color:#15803d;font-weight:500;font-size:13px">
+                    🔒 3PL-IRT 雙核簽核
+                  </span>
+                </td>
+                <td>
+                  <span class="chip" style="font-size:12px;background:#e0f2fe;color:#0369a1;padding:3px 8px;font-weight:500">
+                    開放自主練習
+                  </span>
+                </td>
+                <td>
+                  <a href="${esc(r.source_page)}" target="_blank" rel="noopener" class="btn secondary small" style="white-space:nowrap;padding:4px 10px;font-size:12px">
+                    官方試卷出處 ↗
+                  </a>
+                </td>
+              </tr>
+            `;
+          }).join('')}
         </tbody>
       </table>
     </div>
@@ -1007,7 +1058,10 @@ root.addEventListener('input', e => {
 root.addEventListener('change', e => {
   if (e.target.id === 'source-filter') {
     sourceFilter = e.target.value;
-    document.querySelector('#source-table').innerHTML = sourceTable();
+    const el = document.querySelector('#source-table');
+    if (el) el.innerHTML = sourceTable();
+    const counter = document.querySelector('#source-count');
+    if (counter) counter.textContent = `目前顯示：${getFilteredSources().length} / ${sourceRows.length} 包`;
   }
 });
 
@@ -1048,16 +1102,26 @@ function tick() {
 setInterval(tick, 1000);
 document.addEventListener('visibilitychange', tick);
 
-// 載入 28 包歷屆試題來源索引
+// 背景同步 28 包歷屆試題來源索引 (若網路可用)
 fetch('sources.json').then(r => {
   if (!r.ok) throw Error('sources unavailable');
   return r.json();
 }).then(j => {
-  sourceRows = j.bundles;
-  if (page === 'exams') render();
+  if (Array.isArray(j?.bundles) && j.bundles.length) {
+    sourceRows = j.bundles.map(b => ({
+      ...b,
+      year_ce: b.year_ce || (b.year_roc + 1911),
+      title: b.title || getExamTitle(b)
+    }));
+    if (page === 'exams') {
+      const el = document.querySelector('#source-table');
+      if (el) el.innerHTML = sourceTable();
+      const counter = document.querySelector('#source-count');
+      if (counter) counter.textContent = `目前顯示：${getFilteredSources().length} / ${sourceRows.length} 包`;
+    }
+  }
 }).catch(() => {
-  sourceError = true;
-  if (page === 'exams') render();
+  // initialSources 保持生效，不中斷展示
 });
 
 render();
