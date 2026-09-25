@@ -13,11 +13,20 @@ from collections import Counter
 ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_DIR = ROOT / "dist" / "questions"
 
-CATEGORIES = ["jhs", "shs", "toeic", "sat", "gre", "gmat"]
+CATEGORIES = {
+    "gaokao": 6000,
+    "jhs": 1000,
+    "shs": 1000,
+    "toeic": 1000,
+    "sat": 1000,
+    "gre": 1000,
+    "gmat": 1000
+}
 
 def run_calibration():
     print("=================================================================")
-    print("ENGLISH QUEST 6,000-ITEM QUESTION BANK CALIBRATION SUITE")
+    print("ENGLISH QUEST 12,000-ITEM QUESTION BANK CALIBRATION SUITE")
+    print("  (Includes 6,000-item Historical Gaokao & College Entrance Exams)")
     print("=================================================================\n")
     
     all_items = []
@@ -28,11 +37,11 @@ def run_calibration():
     
     # Cycle 1 & 2: Load and verify schema
     print("[Cycle 1 & 2] Verifying Schema Integrity & Category Quotas...")
-    for cat in CATEGORIES:
+    for cat, expected_count in CATEGORIES.items():
         file_path = QUESTIONS_DIR / f"{cat}.json"
         assert file_path.exists(), f"Missing file {file_path}"
         data = json.loads(file_path.read_text(encoding="utf-8"))
-        assert len(data) == 1000, f"Category {cat} has {len(data)} items, expected 1000"
+        assert len(data) == expected_count, f"Category {cat} has {len(data)} items, expected {expected_count}"
         category_counts[cat] = len(data)
         
         for q in data:
@@ -64,7 +73,7 @@ def run_calibration():
             
             all_items.append(q)
             
-    print(f"  [PASS] Cycle 1: 6,000 unique IDs verified, zero duplicates, all fields valid.")
+    print(f"  [PASS] Cycle 1: {len(all_items)} unique IDs verified, zero duplicates, all fields valid.")
     print(f"  [PASS] Cycle 2: Category breakdown: {dict(category_counts)} (Total: {len(all_items)})")
     
     # Cycle 3: Answer balance

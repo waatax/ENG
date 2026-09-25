@@ -5,7 +5,8 @@ const DB_VERSION = 1;
 const STORE_NAME = 'questions';
 
 export const CATEGORY_META = {
-  all: { id: 'all', name: '全部考科綜合隨機', total: 6000, color: 'blue' },
+  all: { id: 'all', name: '全部考科綜合隨機', total: 12000, color: 'blue' },
+  gaokao: { id: 'gaokao', name: '歷年高考真題庫 (6,000 題)', total: 6000, color: 'emerald' },
   jhs: { id: 'jhs', name: '國中教育會考英語', total: 1000, color: 'green' },
   shs: { id: 'shs', name: '高中大學學測英文', total: 1000, color: 'purple' },
   toeic: { id: 'toeic', name: 'TOEIC 多益商務英語', total: 1000, color: 'amber' },
@@ -18,6 +19,7 @@ export class QuestionBankDB {
   constructor() {
     this.cache = new Map(); // id -> Question
     this.pools = {
+      gaokao: [],
       jhs: [],
       shs: [],
       toeic: [],
@@ -71,7 +73,7 @@ export class QuestionBankDB {
   // 載入指定分類題目 (優選 Memory -> IndexedDB -> Network Fetch)
   async loadCategory(cat) {
     if (cat === 'all') {
-      const allCats = ['jhs', 'shs', 'toeic', 'sat', 'gre', 'gmat'];
+      const allCats = ['gaokao', 'jhs', 'shs', 'toeic', 'sat', 'gre', 'gmat'];
       await Promise.all(allCats.map(c => this.loadCategory(c)));
       return this.getAllQuestions();
     }
@@ -125,7 +127,7 @@ export class QuestionBankDB {
   // 取得目前所有已載入之題目
   getAllQuestions() {
     const res = [];
-    for (const cat of ['jhs', 'shs', 'toeic', 'sat', 'gre', 'gmat']) {
+    for (const cat of ['gaokao', 'jhs', 'shs', 'toeic', 'sat', 'gre', 'gmat']) {
       if (this.pools[cat]) res.push(...this.pools[cat]);
     }
     return res;
@@ -173,7 +175,7 @@ export class QuestionBankDB {
       totalLoaded += items.length;
     }
     return {
-      totalQuestions: 6000,
+      totalQuestions: 12000,
       totalLoaded,
       categories: catStats
     };

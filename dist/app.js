@@ -28,8 +28,8 @@ let audioStudioFilter = 'all';
 let audioStudioSearch = '';
 let activePlayingDialogueIndex = -1;
 
-// 6,000 題隨選測驗狀態
-let quizCategory = 'all';
+// 題庫隨選測驗狀態（預設 6,000 題歷年高考真題庫）
+let quizCategory = 'gaokao';
 let quizCount = 20;
 
 const root = document.querySelector('#app');
@@ -158,7 +158,8 @@ function shell(body) {
 
 function customQuizWidget() {
   const categories = [
-    { id: 'all', label: '全部考科綜合', sub: '6,000 題隨機' },
+    { id: 'gaokao', label: '歷年高考真題', sub: '6,000 題庫' },
+    { id: 'all', label: '全部考科綜合', sub: '12,000 題隨機' },
     { id: 'jhs', label: '國中教育會考', sub: '1,000 題庫' },
     { id: 'shs', label: '高中大學學測', sub: '1,000 題庫' },
     { id: 'toeic', label: 'TOEIC 多益', sub: '1,000 題庫' },
@@ -178,9 +179,9 @@ function customQuizWidget() {
     <section class="card" style="margin-bottom:24px;border:2px solid #0d9488;background:linear-gradient(to bottom, #ffffff, #f0fdfa)">
       <div class="title-row" style="margin-bottom:12px">
         <div>
-          <span class="tag green" style="background:#0d9488;color:white;font-weight:700">6,000 題全考制題庫資料庫</span>
+          <span class="tag green" style="background:#0d9488;color:white;font-weight:700">12,000 題大考真題題庫（含 6,000 題歷年高考真題）</span>
           <h2 style="margin:4px 0 0">隨時隨選測試工作室</h2>
-          <p class="muted small" style="margin:2px 0 0">自由選擇目標考科與出題量，支援 1 題快測、20 題精練、30 題深度模考與 40 題高壓挑戰。</p>
+          <p class="muted small" style="margin:2px 0 0">收錄歷年新高考 I/II 卷、全國甲/乙卷、北京上海卷與台灣學測指考等 6,000 題高考真題，支援 1 題、20 題、30 題、40 題及自訂隨選。</p>
         </div>
         <span class="chip" style="font-weight:700;background:#ccfbf1;color:#0f766e">IndexedDB 本地持久化</span>
       </div>
