@@ -1,7 +1,8 @@
-// app.js - 核心互動邏輯、章節深度教學頁、全站單字片語會話語音播放系統
+// app.js - 核心互動邏輯、章節深度教學頁、全站單字片語會話語音播放系統、6,000 題題庫自由隨選測驗
 import { tracks, exams } from './content.mjs';
 import { curriculum, examStudy } from './curriculum.mjs';
 import { initialSources } from './sources.mjs';
+import { questionDB, CATEGORY_META } from './question_db.mjs';
 import { initialState, createAttempt, recordResponse, finishAttempt, resultOf, remainingSeconds } from './core.mjs';
 import { speak, playWord, playSentence, playSequence, stopAudio, isAudioActive } from './audio.mjs';
 
@@ -27,12 +28,16 @@ let audioStudioFilter = 'all';
 let audioStudioSearch = '';
 let activePlayingDialogueIndex = -1;
 
+// 6,000 題隨選測驗狀態
+let quizCategory = 'all';
+let quizCount = 20;
+
 const root = document.querySelector('#app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const track = () => tracks.find(t => t.id === state.track) || tracks[0];
 const allQuestions = tracks.flatMap(t => t.questions);
-const questionById = id => allQuestions.find(q => q.id === id);
+const questionById = id => questionDB.getQuestion(id) || allQuestions.find(q => q.id === id);
 
 function save() {
   try {
@@ -67,6 +72,41 @@ function start(mode = 'learn') {
   const qs = mode === 'review' ? t.questions.filter(q => due().includes(q.id)) : t.questions;
   if (!qs.length) return;
   state.active = createAttempt(t.id, mode, qs, state.attempts);
+  save();
+  page = 'session';
+  selected = null;
+  render();
+}
+
+async function startCustomQuiz(category = quizCategory, count = quizCount, mode = 'learn') {
+  stopAudio();
+  const catName = CATEGORY_META[category]?.name || '綜合題庫';
+  
+  const sampled = await questionDB.sampleQuestions(category, count);
+  if (!sampled || !sampled.length) {
+    alert('題庫正在準備載入中，請稍候再試一次。');
+    return;
+  }
+
+  const now = Date.now();
+  const deadline = mode === 'timed' ? now + Math.max(120, count * 90) * 1000 : null;
+
+  state.active = {
+    id: globalThis.crypto?.randomUUID ? globalThis.crypto.randomUUID() : String(Date.now()),
+    track: category,
+    mode,
+    startedAt: now,
+    deadline,
+    index: 0,
+    questionIds: sampled.map(q => q.id),
+    responses: [],
+    seenIds: [...new Set(state.attempts.flatMap(a => a.responses.map(r => r.itemId)))],
+    hintIds: [],
+    status: 'active',
+    categoryLabel: catName,
+    customCount: count
+  };
+
   save();
   page = 'session';
   selected = null;
@@ -116,6 +156,77 @@ function shell(body) {
   `;
 }
 
+function customQuizWidget() {
+  const categories = [
+    { id: 'all', label: '全部考科綜合', sub: '6,000 題隨機' },
+    { id: 'jhs', label: '國中教育會考', sub: '1,000 題庫' },
+    { id: 'shs', label: '高中大學學測', sub: '1,000 題庫' },
+    { id: 'toeic', label: 'TOEIC 多益', sub: '1,000 題庫' },
+    { id: 'sat', label: 'Digital SAT', sub: '1,000 題庫' },
+    { id: 'gre', label: 'GRE 研究所', sub: '1,000 題庫' },
+    { id: 'gmat', label: 'GMAT 商學院', sub: '1,000 題庫' }
+  ];
+
+  const counts = [
+    { num: 1, label: '1 題', desc: '極速快測' },
+    { num: 20, label: '20 題', desc: '標準精練' },
+    { num: 30, label: '30 題', desc: '深度模考' },
+    { num: 40, label: '40 題', desc: '高壓挑戰' }
+  ];
+
+  return `
+    <section class="card" style="margin-bottom:24px;border:2px solid #0d9488;background:linear-gradient(to bottom, #ffffff, #f0fdfa)">
+      <div class="title-row" style="margin-bottom:12px">
+        <div>
+          <span class="tag green" style="background:#0d9488;color:white;font-weight:700">6,000 題全考制題庫資料庫</span>
+          <h2 style="margin:4px 0 0">隨時隨選測試工作室</h2>
+          <p class="muted small" style="margin:2px 0 0">自由選擇目標考科與出題量，支援 1 題快測、20 題精練、30 題深度模考與 40 題高壓挑戰。</p>
+        </div>
+        <span class="chip" style="font-weight:700;background:#ccfbf1;color:#0f766e">IndexedDB 本地持久化</span>
+      </div>
+
+      <!-- 1. 考別選擇 -->
+      <div style="margin-bottom:14px">
+        <label style="font-size:13px;font-weight:700;color:#334155;display:block;margin-bottom:6px">第一步：選擇測驗目標考科</label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          ${categories.map(c => `
+            <button class="btn ${quizCategory === c.id ? 'primary' : 'quiet'}" data-quiz-cat="${c.id}" style="padding:6px 12px;font-size:13px">
+              <strong>${c.label}</strong>
+              <small style="opacity:0.8;margin-left:4px">(${c.sub})</small>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- 2. 題數選擇 -->
+      <div style="margin-bottom:16px">
+        <label style="font-size:13px;font-weight:700;color:#334155;display:block;margin-bottom:6px">第二步：選擇作答題數</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          ${counts.map(cnt => `
+            <button class="btn ${quizCount === cnt.num ? 'primary' : 'quiet'}" data-quiz-count="${cnt.num}" style="padding:8px 16px;font-size:14px;font-weight:700">
+              ${cnt.label} <small style="font-weight:normal;opacity:0.85">· ${cnt.desc}</small>
+            </button>
+          `).join('')}
+          <div style="display:flex;align-items:center;gap:6px;margin-left:8px">
+            <span style="font-size:12px;color:#64748b">自訂題數：</span>
+            <input type="number" id="quiz-custom-input" min="1" max="100" value="${quizCount}" style="width:64px;padding:6px;border:1px solid #cbd5e1;border-radius:6px;font-size:13px;text-align:center">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 開始測驗行動列 -->
+      <div class="actions" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px solid #ccfbf1;padding-top:14px">
+        <button class="btn primary" data-start-custom="learn" style="padding:10px 20px;font-size:14px;font-weight:700">
+          ▶️ 開始 ${quizCount} 題隨機練習（附即時逐題解析與發音）
+        </button>
+        <button class="btn secondary" data-start-custom="timed" style="padding:10px 18px;font-size:14px">
+          ⏱️ 開始 ${quizCount} 題限時挑戰模考（限時 ${Math.max(2, Math.ceil(quizCount * 1.5))} 分鐘）
+        </button>
+      </div>
+    </section>
+  `;
+}
+
 function today() {
   const t = track();
   const count = due().length;
@@ -126,8 +237,11 @@ function today() {
         <h1 tabindex="-1">把一個小觀念，學到會聽、會說、會用。</h1>
         <p class="muted">選擇適合您的起步軌道，完成一段有即時解析與跨日保留驗證的深度練習。</p>
       </div>
-      <span class="chip">每段 6 題 · 約 8–12 分鐘</span>
+      <span class="chip">6,000 題大考題庫已就緒</span>
     </div>
+
+    ${customQuizWidget()}
+
     <div class="layout">
       <section class="card">
         <div class="steps">
@@ -495,13 +609,14 @@ function session() {
   }
   const response = a.responses.find(r => r.itemId === q.id);
   const show = response && a.mode !== 'timed';
-  const t = tracks.find(t => t.id === a.track);
+  const catMeta = CATEGORY_META[a.track];
+  const trackName = catMeta?.name || tracks.find(t => t.id === a.track)?.name || a.categoryLabel || '英語全真題庫測驗';
 
   return `
     <div class="title-row">
       <div>
         <div class="eyebrow">${a.mode === 'timed' ? 'TIMED CHALLENGE' : 'ACTIVE RECALL SESSION'}</div>
-        <h1 tabindex="-1">${t.name}</h1>
+        <h1 tabindex="-1">${trackName}</h1>
         <p class="muted">${a.mode === 'timed' ? '限時測驗中 · 請維持穩定作答速度' : '先獨立思考選出答案，點選提交後即時提供證據詳解。'}</p>
       </div>
       <button class="btn secondary" data-nav="today">離開並返回首頁</button>
@@ -575,7 +690,7 @@ function results() {
       <div>
         <div class="eyebrow">DIAGNOSTIC & MASTERY REPORT</div>
         <h1 tabindex="-1">本次練習學習成效診斷</h1>
-        <p class="muted">${tracks.find(t => t.id === a.track)?.name} · ${a.mode === 'timed' ? '限時模擬' : '深度學習'}</p>
+        <p class="muted">${CATEGORY_META[a.track]?.name || tracks.find(t => t.id === a.track)?.name || a.categoryLabel || '6,000 題大考題庫'} · ${a.mode === 'timed' ? '限時模擬' : '自選練習'}</p>
       </div>
     </div>
     <div class="metric-grid">
@@ -629,6 +744,9 @@ function examPage() {
       </div>
       <button class="btn secondary" data-study>查看六大國際考試規格庫 ↗</button>
     </div>
+
+    ${customQuizWidget()}
+
     <section class="card dark-card" style="margin-bottom:24px">
       <h2>5 分鐘高壓限時原創挑戰</h2>
       <p class="muted">在時間限制下維持閱讀理解與推理精度。系統將精準記錄作答耗時與首次無提示表現。</p>
@@ -841,7 +959,7 @@ function progress() {
         return `
           <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)">
             <div>
-              <strong>${tracks.find(t => t.id === a.track)?.name}</strong>
+              <strong>${CATEGORY_META[a.track]?.name || tracks.find(t => t.id === a.track)?.name || '全真題庫測驗'}</strong>
               <div class="small muted">${new Date(a.finishedAt).toLocaleString('zh-TW')} · 得分：${r.correct}/${r.total} (無提示：${r.independentCorrect})</div>
             </div>
             <button class="btn quiet small" data-result="${a.id}">查看訂正分析</button>
@@ -999,6 +1117,26 @@ root.addEventListener('click', e => {
     return;
   }
 
+  // 6,000 題自訂題庫考科切換
+  if (d.quizCat) {
+    quizCategory = d.quizCat;
+    render();
+    return;
+  }
+
+  // 6,000 題自訂題庫題數切換 (1, 20, 30, 40)
+  if (d.quizCount) {
+    quizCount = parseInt(d.quizCount, 10);
+    render();
+    return;
+  }
+
+  // 開始 6,000 題自訂題庫測驗
+  if (d.startCustom) {
+    startCustomQuiz(quizCategory, quizCount, d.startCustom);
+    return;
+  }
+
   if (d.choice !== undefined) {
     selected = Number(d.choice);
     render();
@@ -1046,15 +1184,21 @@ root.addEventListener('click', e => {
   }
 });
 
-// 輸入框即時搜尋
+// 輸入框即時搜尋與數值同步
 root.addEventListener('input', e => {
   if (e.target.id === 'studio-search') {
     audioStudioSearch = e.target.value.trim();
     render();
   }
+  if (e.target.id === 'quiz-custom-input') {
+    const val = parseInt(e.target.value, 10);
+    if (!isNaN(val) && val >= 1) {
+      quizCount = Math.min(100, val);
+    }
+  }
 });
 
-// 下拉選單切換
+// 下拉選單與數值確認切換
 root.addEventListener('change', e => {
   if (e.target.id === 'source-filter') {
     sourceFilter = e.target.value;
@@ -1062,6 +1206,13 @@ root.addEventListener('change', e => {
     if (el) el.innerHTML = sourceTable();
     const counter = document.querySelector('#source-count');
     if (counter) counter.textContent = `目前顯示：${getFilteredSources().length} / ${sourceRows.length} 包`;
+  }
+  if (e.target.id === 'quiz-custom-input') {
+    const val = parseInt(e.target.value, 10);
+    if (!isNaN(val)) {
+      quizCount = Math.min(100, Math.max(1, val));
+      render();
+    }
   }
 });
 
