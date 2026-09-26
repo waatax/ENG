@@ -9,11 +9,11 @@ let sequenceStepCallback = null;
 let sequenceFinishCallback = null;
 
 function loadVoices() {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-  voices = window.speechSynthesis.getVoices();
+  if (typeof window === 'undefined' || !('speechSynthesis' in window) || typeof window.speechSynthesis?.getVoices !== 'function') return;
+  voices = window.speechSynthesis.getVoices() || [];
 }
 
-if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+if (typeof window !== 'undefined' && 'speechSynthesis' in window && typeof window.speechSynthesis?.getVoices === 'function') {
   loadVoices();
   window.speechSynthesis.onvoiceschanged = loadVoices;
 }

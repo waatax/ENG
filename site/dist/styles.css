@@ -1013,7 +1013,7 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-/* 108 課綱與均一微課專用高解析樣式 (Enhanced Layout) */
+/* 108 課綱與自學微課專用高解析樣式 (Enhanced Layout) */
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .header-block {
   margin-bottom: 24px;
@@ -1275,5 +1275,431 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
     page-break-inside: avoid;
   }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   🎮 DUOLINGO 遊戲化學習引擎專屬樣式 (Duolingo Gamified Engine)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.duo-hero-banner {
+  animation: duo-fade-in 0.3s ease-out;
+}
+
+@keyframes duo-fade-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.duo-launch-btn {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.duo-launch-btn:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+}
+
+.duo-launch-btn:active {
+  transform: scale(0.98) translateY(1px);
+}
+
+.duo-game-container {
+  animation: duo-slide-down 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 30px -5px rgba(16, 185, 129, 0.25);
+  position: relative;
+}
+
+@keyframes duo-slide-down {
+  from { opacity: 0; transform: scale(0.98) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.duo-heart {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.duo-heart.active {
+  animation: duo-heart-pop 0.3s ease;
+}
+
+.duo-heart.lost {
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+@keyframes duo-heart-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.duo-combo-badge {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+  animation: pulse-timer 1.2s infinite ease-in-out;
+}
+
+/* Duolingo 積木按鈕 (Chunky Word Chips) */
+.duo-chip {
+  background: #ffffff;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  border-bottom: 4px solid #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.duo-chip:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.duo-chip:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.duo-chip-placed {
+  background: #ecfdf5;
+  border-color: #10b981;
+  border-bottom: 4px solid #059669;
+  color: #065f46;
+}
+
+/* 連連看卡片網格 */
+.duo-match-tile {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-bottom: 4px solid #cbd5e1;
+  color: #1e293b;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.duo-match-tile:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+.duo-match-tile.is-selected {
+  border-color: #2563eb !important;
+  background: #dbeafe !important;
+  color: #1e40af !important;
+  transform: scale(1.03);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.duo-match-tile.is-matched {
+  border-color: #10b981 !important;
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  opacity: 0.75;
+  cursor: default;
+  border-bottom-width: 2px;
+}
+
+/* 底部滑入回饋抽屜 */
+.duo-drawer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 24px;
+  animation: duo-drawer-slide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+}
+
+@keyframes duo-drawer-slide {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.duo-drawer-correct {
+  background: #dcfce7;
+  border-top: 3px solid #10b981;
+  color: #14532d;
+}
+
+.duo-drawer-wrong {
+  background: #fee2e2;
+  border-top: 3px solid #ef4444;
+  color: #7f1d1d;
+}
+
+.duo-drawer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.duo-drawer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.duo-drawer-icon {
+  font-size: 32px;
+}
+
+.duo-drawer-title {
+  font-size: 18px;
+  display: block;
+}
+
+.duo-drawer-msg {
+  font-size: 13.5px;
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+.duo-drawer-btn {
+  background: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.duo-drawer-correct .duo-drawer-btn {
+  color: #15803d;
+}
+
+.duo-drawer-wrong .duo-drawer-btn {
+  color: #b91c1c;
+}
+
+.duo-drawer-btn:hover {
+  transform: scale(1.05);
+}
+
+.duo-audio-btn {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.duo-audio-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.duo-audio-btn.slow {
+  background: #fefce8;
+  color: #a16207;
+  border-color: #fef08a;
+}
+
+.duo-audio-btn.slow:hover {
+  background: #fef9c3;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   🏛️ 課綱與評量規範矩陣專屬樣式 (Curriculum Matrix Styles)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.matrix-table th {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.matrix-table tr:hover {
+  background: #eff6ff !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   🔤 自然拼讀與 🗂️ 記憶閃卡 3D 視覺樣式 (Phonics & 3D Flashcards)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.fc-card-stage {
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.fc-card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.fc-front {
+  transform: rotateY(0deg);
+}
+
+.fc-back {
+  transform: rotateY(180deg);
+}
+
+.lesson-visual-diagram svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.04));
+}
+
+.lesson-phonics-bridge:hover,
+.lesson-flashcard-bridge:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   教育階段快速直達標籤 (Stage Quick Navigation Bar)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.stage-quick-nav-bar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.stage-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stage-nav-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.stage-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.stage-tags-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stage-tag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: #f8fafc;
+  color: var(--text-primary);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stage-tag-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.stage-tag-elem:hover, .stage-tag-elem.is-active {
+  background: #f0fdf4;
+  color: #15803d;
+  border-color: #86efac;
+}
+
+.stage-tag-jh:hover, .stage-tag-jh.is-active {
+  background: #f0f9ff;
+  color: #0369a1;
+  border-color: #7dd3fc;
+}
+
+.stage-tag-sh:hover, .stage-tag-sh.is-active {
+  background: #faf5ff;
+  color: #6b21a8;
+  border-color: #d8b4fe;
+}
+
+.stage-tag-btn.is-active {
+  box-shadow: 0 0 0 2px currentColor;
+  font-weight: 700;
+}
+
+.stage-badge {
+  font-size: 11px;
+  opacity: 0.85;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.06);
+}
+
+.stage-tag-elem.is-active .stage-badge {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.stage-tag-jh.is-active .stage-badge {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.stage-tag-sh.is-active .stage-badge {
+  background: #f3e8ff;
+  color: #581c87;
+}
+
+.stage-hub-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stage-hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+}
+
+.hub-card-active {
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.4), 0 8px 16px rgba(0,0,0,0.08) !important;
+}
+
 
 

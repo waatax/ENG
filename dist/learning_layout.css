@@ -1,0 +1,58 @@
+/* Reading-first layout; tables scroll locally rather than widening the page. */
+.shell { grid-template-columns: 244px minmax(0,1fr); }
+.side { overflow-y:auto; padding:24px 16px; }
+.side .nav button { white-space:normal; text-align:left; line-height:1.5; min-height:44px; }
+.site-menu summary { cursor:pointer; padding:12px 0; color:inherit; font-weight:700; }
+.main-wrapper,.main { min-width:0; }
+.main { width:100%; box-sizing:border-box; }
+.reading-settings { padding:12px 24px; border-bottom:1px solid #d9e2ec; background:#fff; }
+.reading-settings>summary { cursor:pointer; min-height:32px; line-height:32px; color:#334155; }
+.knowledge-home { max-width:1160px; margin:auto; }
+.knowledge-home header { max-width:720px; margin-bottom:28px; }
+.knowledge-home h1,.knowledge-detail h1 { font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.35; }
+.knowledge-home input { display:block; width:100%; max-width:680px; min-height:48px; margin:8px 0 12px; padding:12px; border:1px solid #64748b; border-radius:10px; font:inherit; box-sizing:border-box; }
+.knowledge-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.knowledge-card { display:flex; flex-direction:column; gap:8px; padding:24px; border:1px solid #d5dfeb; border-radius:16px; background:#fff; color:#17324d; text-decoration:none; overflow-wrap:anywhere; }
+.knowledge-card:hover { border-color:#176c72; background:#f4fbfa; }
+.knowledge-card h2 { font-size:1.2rem; line-height:1.5; margin:0; }
+.knowledge-card p { margin:0 0 12px; line-height:1.7; }
+.knowledge-card>span:last-child { margin-top:auto; font-weight:700; }
+.knowledge-card .pill { align-self:flex-start; }
+.lesson-page { max-width:850px!important; width:100%; margin-inline:auto; overflow-wrap:anywhere; }
+.lesson-page p,.lesson-page li { line-height:1.9; }
+.lesson-page section { scroll-margin-top:24px; }
+.lesson-page .card { padding:clamp(18px,3vw,32px); }
+.lesson-page header { margin-bottom:24px; }
+.lesson-links { gap:10px; flex-wrap:wrap; }
+.lesson-links a { display:inline-flex; align-items:center; min-height:44px; padding:8px 14px; border-radius:8px; background:#e8f2f3; color:#174a51; text-decoration:none; box-sizing:border-box; }
+.lesson-page textarea { box-sizing:border-box; max-width:100%; font:inherit; }
+.lesson-page blockquote { margin:20px 0; padding:4px 18px; border-left:3px solid #13867f; background:#f1f8f7; }
+.lesson-page details summary { cursor:pointer; padding:12px 0; min-height:24px; }
+.lesson-page .lesson-option { min-height:48px; white-space:normal; text-align:left; }
+.lesson-option:disabled { opacity:1; color:#475569; }
+.kp-feedback:empty { display:none; }
+.kp-feedback { padding:16px; background:#edf6f6; border-radius:10px; }
+:is(a,button,input,textarea,summary,select):focus-visible { outline:3px solid #0e7490; outline-offset:3px; }
+@media(min-width:1500px){ .knowledge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:768px){
+ .shell { display:block; }
+ .side { height:auto; position:static; padding:12px 16px; overflow:visible; }
+ .side .brand { margin-bottom:0; font-size:22px; }
+ .side .user-xp-pill,.side .edition,.side .side-foot { display:none; }
+ .side .nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); overflow:visible; }
+ .side .nav button { width:100%; min-width:0; padding:10px; font-size:13px; }
+ .side .nav small { display:none; }
+ .main { padding:24px 16px 60px; }
+ .reading-settings { padding:8px 16px; }
+ .reading-settings .top-utility-bar,.reading-settings .top-utility-right { flex-wrap:wrap; }
+ .knowledge-grid { grid-template-columns:minmax(0,1fr); gap:14px; }
+ .knowledge-card { padding:20px; }
+ .lesson-page { font-size:16px; }
+ .lesson-page .card { margin-inline:0; padding:18px; }
+ .lesson-page select { width:100%; min-width:0; }
+ .lesson-links { display:flex; }
+ .lesson-links a { flex:1 1 auto; justify-content:center; }
+ .lesson-check { padding:12px; min-width:0; }
+ .lesson-check legend { max-width:100%; }
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important;} *,*::before,*::after{animation:none!important;transition:none!important;}}

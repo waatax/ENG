@@ -1,5 +1,6 @@
+import { knowledgeHome, knowledgePage, searchKnowledge, answerKnowledge } from './knowledge.mjs';
 // app.js - 全方位 108 課綱英語教育旗艦平台 (專家團隊 7 次深度大改造版)
-// 7 位跨領域專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、均一微課自學、大考測驗心理計量、語音聲學、技高ESP與全齡UX
+// 7 位跨領域專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考測驗心理計量、語音聲學、技高ESP與全齡UX
 // 深度整合：國小 (Sixth 專案 6上/6下)、國中 (JH 專案 7-9年級 16單元)、高中/技高 (Arch 專案 10-12年級大考先修與學期複習)
 // 包含：概念公式、音標單字、雙語會話、多模態跨領域閱讀、步驟0破題思維、雙階鷹架提示檢測、42項致命陷阱避雷雷達、12枚核心素養徽章與 A4 官方講義列印
 
@@ -25,6 +26,10 @@ import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine
 import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';
 import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
 import { renderDisplayToolbar, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
+import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
+import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
+import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
+import { renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput } from './flashcards.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -38,7 +43,8 @@ try {
 }
 
 // 導覽頁面狀態
-let page = 'curriculum108'; // 預設首頁為 108 課綱學年地圖
+let page = 'knowledge';
+let knowledgeId = ''; // 預設首頁為 108 課綱學年地圖
 let selected = null;
 let resultId = null;
 let sourceRows = Array.isArray(initialSources) ? [...initialSources] : [];
@@ -80,6 +86,7 @@ let quizSubmitted = false;
 let quizRevealedHints = {};
 let quizRevealedExplains = {};
 let quizLoading = false;
+let quizPendingMultiChoices = {}; // qid -> Array<number> for GRE Sentence Equivalence double selection
 
 const root = document.querySelector('#app') || document.body;
 
@@ -101,40 +108,89 @@ function navigate(p) {
   stopAudio();
   activePlayingDialogueIndex = -1;
   page = p;
+  const route = p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function renderStageQuickNav() {
+  const isElem = (activeGradeId === 'g6' || page === 'sixth') && page === 'curriculum108';
+  const isJh = (['g7', 'g8', 'g9'].includes(activeGradeId) || page === 'jh') && page === 'curriculum108';
+  const isSh = (['g10', 'g11', 'g12'].includes(activeGradeId) || page === 'arch') && page === 'curriculum108';
+
+  return `
+    <nav class="stage-quick-nav-bar" aria-label="教育階段快速直達導航">
+      <div class="stage-nav-inner">
+        <div class="stage-nav-title">
+          <span class="stage-pulse"></span>
+          <strong>快速直達課程：</strong>
+        </div>
+        <div class="stage-tags-group">
+          <!-- 🎒 國小英文 Tag -->
+          <button class="stage-tag-btn stage-tag-elem ${isElem ? 'is-active' : ''}" data-quick-stage="elementary" title="點擊直達國小六年級 6A / 6B 課程">
+            <span class="stage-emoji">🎒</span>
+            <span class="stage-name">國小英文</span>
+            <span class="stage-badge">G6 · Pre-A1~A1 (8單元)</span>
+          </button>
+
+          <!-- 🏫 國中英文 Tag -->
+          <button class="stage-tag-btn stage-tag-jh ${isJh ? 'is-active' : ''}" data-quick-stage="junior" title="點擊直達國中七至九年級會考課程">
+            <span class="stage-emoji">🏫</span>
+            <span class="stage-name">國中英文</span>
+            <span class="stage-badge">G7-G9 · A1~B1 (17單元)</span>
+          </button>
+
+          <!-- 🎓 高中英文 Tag -->
+          <button class="stage-tag-btn stage-tag-sh ${isSh ? 'is-active' : ''}" data-quick-stage="senior" title="點擊直達高中十至十二年級學測統測課程">
+            <span class="stage-emoji">🎓</span>
+            <span class="stage-name">高中英文</span>
+            <span class="stage-badge">G10-G12 · B1~C1 (36單元)</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  `;
+}
+
 function shell(body) {
   const nav = [
-    ['diagnostic', '00', '🎯 30題全階程度檢測 (小學至GMAT)'],
-    ['curriculum108', '01', '108課綱學年地圖 (7年級全貫通)'],
-    ['junyi', '02', '均一微課與鷹架館 (42陷阱雷達)'],
-    ['sixth', '03', 'Sixth 六年級小升初 (8單元講義)'],
-    ['jh', '04', 'JH 國中會考衝刺館 (16主題全案)'],
-    ['arch', '05', 'Arch 高中先修專題 (5大核心矩陣)'],
-    ['handouts', '06', 'A4 考前講義列印庫 (14學期全收)'],
-    ['chapter', '07', '考制核心課綱教學'],
-    ['studio', '08', '單字會話語音點讀館'],
-    ['exams', '09', '全考制模考題庫'],
-    ['today', '10', '每日精熟練習'],
-    ['progress', '11', '學習進度與徽章成就']
+    ['knowledge', '→', '知識點教室'],
+    ['diagnostic', '00', '程度檢測'],
+    ['curriculum108', '01', '學年課程地圖'],
+    ['phonics', '02', '自然拼讀與發音'],
+    ['matrix', '03', '課綱對照'],
+    ['junyi', '04', '單元微課'],
+    ['sixth', '05', '國小銜接教材'],
+    ['jh', '06', '國中閱讀與會考'],
+    ['arch', '07', '高中句法與閱讀'],
+    ['handouts', '08', '列印學習講義'],
+    ['chapter', '09', '核心教學章節'],
+    ['flashcards', '10', '單字與片語閃卡'],
+    ['studio', '11', '合成語音練習'],
+    ['exams', '12', '考試練習與資源'],
+    ['today', '13', '每日練習'],
+    ['progress', '14', '學習紀錄']
   ];
 
   const summary = junyi.getSummary();
 
   const pageTitles = {
+    knowledge: '知識點教室', knowledgePoint: '知識點教學',
     diagnostic: '30 題全階程度精準檢測 (小學至GMAT)',
     curriculum108: '108 課綱英語全學年課程地圖',
-    junyi: '均一微課與鷹架館 (42 致命陷阱避雷雷達)',
-    sixth: 'Sixth 六年級小升初 (8 單元名師講義)',
-    jh: 'JH 國中會考衝刺館 (16 主題全案精通)',
-    arch: 'Arch 高中先修專題 (5 大核心矩陣)',
+    phonics: '自然拼讀 (Phonics) 與發音規則全景大師課 (見字能讀·聽音能寫)',
+    flashcards: '多階層英語單字與核心片語記憶閃卡館 (3D翻轉·合成語音)',
+    matrix: '108 課綱與 CEFR 評量指引總體檢核矩陣 (88項對標)',
+    junyi: '自主微課與鷹架館 (42 致命陷阱避雷雷達)',
+    sixth: '國小六年級小升初 (8 單元名師講義)',
+    jh: '國中會考衝刺館 (16 主題全案精通)',
+    arch: '高中先修專題 (5 大核心矩陣)',
     handouts: 'A4 考前講義列印庫 (14 學期全收錄)',
-    chapter: '考制核心課綱與 CEFR 教學模組',
-    studio: '單字會話真人點讀語音館',
-    exams: '20,000 題全考制真題模擬測驗中心',
+    chapter: '考制核心課綱與 CEFR 教學模組 (Duolingo 示範章節 J1)',
+    studio: '單字會話合成語音點讀館',
+    exams: '考試練習與官方試題資源',
     today: '每日精熟挑戰練習',
     progress: '我的學習軌跡、經驗值與素養勳章'
   };
@@ -148,7 +204,7 @@ function shell(body) {
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
-            <span>✨ 均一經驗值 (XP)</span>
+            <span>✨ 精熟經驗值 (XP)</span>
             <strong style="color:var(--mint);font-size:15px">${summary.xp} XP</strong>
           </div>
           <div style="display:flex;gap:12px;font-size:11px;color:#cbd5e1">
@@ -157,22 +213,23 @@ function shell(body) {
           </div>
         </div>
 
-        <nav class="nav" aria-label="主要導覽">
+        <details class="site-menu" open><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
           ${nav.map(([id, num, label]) => `
             <button data-nav="${id}" class="${page === id ? 'active' : ''}">
               <small>${num}</small>${label}
             </button>
           `).join('')}
-        </nav>
+        </nav></details>
         <div class="side-foot">
           <strong>108課綱・專家委員會7次迭代</strong><br>
           國小國中高中 61 單元 · 內容倍增 100%+<br>
-          <span style="font-size:11px;color:#94a3b8">Junyi Academy × SLA Cognitive Engine</span>
+          <span style="font-size:11px;color:#94a3b8">Self-Paced Mastery × SLA Cognitive Engine</span>
         </div>
       </aside>
 
       <div class="main-wrapper">
-        ${renderDisplayToolbar(currentTitle)}
+        <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
+        ${['knowledge','knowledgePoint','chapter','junyi'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -216,8 +273,66 @@ function curriculum108Page() {
         <div style="text-align:center;background:rgba(255,255,255,0.08);padding:18px 24px;border-radius:12px;border:1px solid rgba(255,255,255,0.15)">
           <div style="font-size:32px">🪜</div>
           <div style="font-weight:700;color:var(--mint);font-size:15px;margin-top:4px">8 大難度階梯</div>
-          <div style="font-size:12px;color:#cbd5e1">1,000 題檢測專題庫</div>
+          <div style="font-size:12px;color:#cbd5e1">2,000 題全階題庫 (零重複)</div>
         </div>
+      </div>
+    </div>
+
+    <!-- 📋 108 課綱與 CEFR 評量指引總體檢核矩陣 & Duolingo 示範章節快速入口 -->
+    <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);border:1px solid #86efac;border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;box-shadow:var(--shadow-sm)">
+      <div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:22px">📋</span>
+          <strong style="font-size:16px;color:#166534">108 課綱與 CEFR 評量指引總體檢核矩陣</strong>
+          <span class="chip" style="background:#bbf7d0;color:#14532d;font-weight:700">100% 覆蓋對標</span>
+        </div>
+        <p style="margin:4px 0 0;font-size:13.5px;color:#15803d;line-height:1.5">
+          組織全站 61 個學年單元與 27 個大考章節，完整對標學習表現指標（聽說讀寫綜）、三面九項素養與官方雙向細目。
+        </p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" data-nav="matrix" style="background:#16a34a;color:#fff;font-weight:700;padding:8px 20px;border-radius:20px;border:none">
+          📋 開啟總體檢核矩陣 ➔
+        </button>
+        <button class="btn quiet" data-duo-action="open" style="border:1px solid #16a34a;color:#166534;font-weight:700;padding:8px 18px;border-radius:20px;background:#ffffff">
+          🎮 Duolingo 闖關 (示範章節 J1)
+        </button>
+    </div>
+
+    <!-- 🔤 自然拼讀大師課 & 🗂️ 全階記憶閃卡館 核心雙擎橫幅 -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:16px;margin-bottom:20px">
+      <!-- 自然拼讀大師課 -->
+      <div class="card" style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);border:2px solid #fde68a;display:flex;flex-direction:column;justify-content:space-between;border-radius:12px;padding:20px">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <span class="pill" style="background:#f59e0b;color:#fff;font-weight:700;font-size:11px">核心基礎 · 見字能讀</span>
+            <span style="font-size:24px">🔤</span>
+          </div>
+          <h3 style="margin:4px 0 6px;color:#92400e;font-size:18px">自然拼讀與發音規則全景大師課</h3>
+          <p style="font-size:13px;color:#78350f;margin:0 0 14px;line-height:1.5">
+            從 26 字母基礎音、CVC 短母音到 Magic E 長母音、母音團隊、Bossy R 與多音節直讀拆解法。附口腔發音器官圖示與長單字音節解碼器！
+          </p>
+        </div>
+        <button class="btn" data-nav="phonics" style="background:#d97706;color:#fff;font-weight:700;padding:10px 18px;border:none;border-radius:8px;box-shadow:0 3px 8px rgba(217,119,6,0.3)">
+          🔤 進入自然拼讀大師課 ➔
+        </button>
+      </div>
+
+      <!-- 全階記憶閃卡館 -->
+      <div class="card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);border:2px solid #bfdbfe;display:flex;flex-direction:column;justify-content:space-between;border-radius:12px;padding:20px">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <span class="pill" style="background:#2563eb;color:#fff;font-weight:700;font-size:11px">分級背誦 · 真人語音</span>
+            <span style="font-size:24px">🗂️</span>
+          </div>
+          <h3 style="margin:4px 0 6px;color:#1e40af;font-size:18px">全階英語單字與核心片語記憶閃卡館</h3>
+          <p style="font-size:13px;color:#1e3a8a;margin:0 0 14px;line-height:1.5">
+            小學 1,000 字、國中會考 2,000 字、高中學測 3,000 字與核心動詞片語、TOEIC、Digital SAT、GRE 與 GMAT。支援 3D 翻轉卡片、KK音標與自動輪播聽讀！
+          </p>
+        </div>
+        <button class="btn" data-nav="flashcards" style="background:#2563eb;color:#fff;font-weight:700;padding:10px 18px;border:none;border-radius:8px;box-shadow:0 3px 8px rgba(37,99,235,0.3)">
+          🗂️ 進入記憶閃卡館開始背誦 ➔
+        </button>
       </div>
     </div>
 
@@ -231,7 +346,7 @@ function curriculum108Page() {
             <span class="chip" style="background:rgba(52,211,153,0.2);color:#34d399;font-weight:700">7 次深度迭代改造完成</span>
           </div>
           <p style="margin:6px 0 0;font-size:13px;color:#cbd5e1;line-height:1.5">
-            課綱總體諮詢、第二語言習得 (SLA)、均一微課自學、大考測驗心理計量、語音聲學、技高專業英語 (ESP) 與全端 UX 共同打造。
+            課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考測驗心理計量、語音聲學、技高專業英語 (ESP) 與全端 UX 共同打造。
           </p>
         </div>
         <button class="btn small" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25)" data-toggle-expert="true">
@@ -253,13 +368,95 @@ function curriculum108Page() {
       ` : ''}
     </div>
 
+    <!-- 🎒 國小英文 · 🏫 國中英文 · 🎓 高中英文 三大學段核心直達標籤卡 -->
+    <div style="margin:24px 0 16px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="font-size:20px">🧭</span>
+        <strong style="font-size:16px;color:#0f172a">三大教育階段快速直達館（點擊按鍵切換對應課程）：</strong>
+      </div>
+      <div class="stage-hub-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px">
+        <!-- 國小卡 -->
+        <div class="card stage-hub-card ${activeGradeId === 'g6' ? 'hub-card-active' : ''}" style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);border:2px solid ${activeGradeId === 'g6' ? '#16a34a' : '#86efac'};border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="chip" style="background:#16a34a;color:#fff;font-weight:700">Pre-A1 ~ A1</span>
+              <span style="font-size:28px">🎒</span>
+            </div>
+            <h3 style="margin:8px 0 4px;color:#14532d;font-size:18px">國小英文 (Grade 6)</h3>
+            <p style="font-size:13px;color:#166534;margin:0 0 12px;line-height:1.5">
+              涵蓋 6上 (6A) 與 6下 (6B) 共 8 大核心單元、Sixth 小升初講義、日常生活情境與 1,000 必備單字。
+            </p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+              <button class="btn small" data-quick-grade="g6" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6A 上學期</button>
+              <button class="btn small" data-quick-grade="g6" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6B 下學期</button>
+              <button class="btn small" data-nav="sixth" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">Sixth 講義</button>
+            </div>
+          </div>
+          <button class="btn" data-quick-stage="elementary" style="background:#16a34a;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
+            直達 國小英文課程 ➔
+          </button>
+        </div>
+
+        <!-- 國中卡 -->
+        <div class="card stage-hub-card ${['g7','g8','g9'].includes(activeGradeId) ? 'hub-card-active' : ''}" style="background:linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);border:2px solid ${['g7','g8','g9'].includes(activeGradeId) ? '#0284c7' : '#7dd3fc'};border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="chip" style="background:#0284c7;color:#fff;font-weight:700">A1 ~ B1</span>
+              <span style="font-size:28px">🏫</span>
+            </div>
+            <h3 style="margin:8px 0 4px;color:#0369a1;font-size:18px">國中英文 (Grades 7–9)</h3>
+            <p style="font-size:13px;color:#075985;margin:0 0 12px;line-height:1.5">
+              橫跨 7年級、8年級與 9年級會考衝刺共 17 大單元、JH 國中會考 16 大主題全案與 2,000 參考單字。
+            </p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+              <button class="btn small" data-quick-grade="g7" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">七年級</button>
+              <button class="btn small" data-quick-grade="g8" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">八年級</button>
+              <button class="btn small" data-quick-grade="g9" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">九年級會考</button>
+              <button class="btn small" data-nav="jh" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">JH 會考館</button>
+            </div>
+          </div>
+          <button class="btn" data-quick-stage="junior" style="background:#0284c7;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
+            直達 國中英文課程 ➔
+          </button>
+        </div>
+
+        <!-- 高中卡 -->
+        <div class="card stage-hub-card ${['g10','g11','g12'].includes(activeGradeId) ? 'hub-card-active' : ''}" style="background:linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);border:2px solid ${['g10','g11','g12'].includes(activeGradeId) ? '#7c3aed' : '#d8b4fe'};border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="chip" style="background:#7c3aed;color:#fff;font-weight:700">B1 ~ C1</span>
+              <span style="font-size:28px">🎓</span>
+            </div>
+            <h3 style="margin:8px 0 4px;color:#581c87;font-size:18px">高中英文 (Grades 10–12)</h3>
+            <p style="font-size:13px;color:#6b21a8;margin:0 0 12px;line-height:1.5">
+              貫通 高一、高二與高三大考巔峰共 36 大單元、Arch 先修專題、學測統測篇章與 3,000 大考核心片語。
+            </p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+              <button class="btn small" data-quick-grade="g10" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高一 (G10)</button>
+              <button class="btn small" data-quick-grade="g11" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高二 (G11)</button>
+              <button class="btn small" data-quick-grade="g12" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高三大考</button>
+              <button class="btn small" data-nav="arch" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">Arch 先修</button>
+            </div>
+          </div>
+          <button class="btn" data-quick-stage="senior" style="background:#7c3aed;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
+            直達 高中英文課程 ➔
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- 年級切換 Pills -->
     <div class="grade-tabs" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin:20px 0;border-bottom:1px solid var(--line)">
-      ${UNIFIED_GRADES.map(g => `
-        <button class="btn ${g.gradeId === activeGradeId ? 'primary' : 'quiet'}" data-select-grade="${g.gradeId}" style="white-space:nowrap;padding:10px 18px;border-radius:24px;font-size:14px">
-          ${g.title}
-        </button>
-      `).join('')}
+      ${UNIFIED_GRADES.map(g => {
+        let prefix = '🎒 ';
+        if (['g7','g8','g9'].includes(g.gradeId)) prefix = '🏫 ';
+        else if (['g10','g11','g12'].includes(g.gradeId)) prefix = '🎓 ';
+        return `
+          <button class="btn ${g.gradeId === activeGradeId ? 'primary' : 'quiet'}" data-select-grade="${g.gradeId}" style="white-space:nowrap;padding:10px 18px;border-radius:24px;font-size:14px">
+            ${prefix}${g.title}
+          </button>
+        `;
+      }).join('')}
     </div>
 
     <!-- 當前年級卡片 -->
@@ -311,18 +508,20 @@ function curriculum108Page() {
             <!-- 單元頭部 -->
             <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px">
               <div>
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap">
                   <span class="chip" style="background:#f1f5f9;color:#334155;font-weight:700">${u.unitNo}</span>
                   <span class="chip" style="background:#e0e7ff;color:#3730a3">課綱: ${u.indicator}</span>
+                  <span class="chip" style="background:#eff6ff;color:#1e40af;font-weight:700">CEFR: ${u.cefr || 'A2'}</span>
                   <span class="chip" style="background:#ecfdf5;color:#047857">素養: ${u.competency || '三面九項核心素養'}</span>
                   <span class="chip" style="background:${masteryInfo.color}18;color:${masteryInfo.color};font-weight:700">
                     ${masteryInfo.icon} ${masteryInfo.label}
                   </span>
                 </div>
                 <h2 style="margin:6px 0;font-size:20px;color:#0f172a">${u.title}</h2>
+                ${u.guideline ? `<div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.45"><strong>📜 評量指引：</strong>${u.guideline}</div>` : ''}
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap">
-                <button class="btn small primary" data-open-junyi-unit="${u.id}">💡 均一微課深度模式</button>
+                <button class="btn small primary" data-open-junyi-unit="${u.id}">💡 自主微課深度模式</button>
                 <button class="btn small quiet" data-print-handout="${currentSem.semId}">🖨️ A4講義列印</button>
                 ${u.sourceRef?.startsWith('sixth:') ? `<button class="btn small quiet" data-open-sixth-unit="${u.sourceRef.split(':')[1]}">🎒 6年級講義</button>` : ''}
                 ${u.sourceRef?.startsWith('jh:') ? `<button class="btn small quiet" data-open-jh-unit="${u.sourceRef.split(':')[1]}">🎓 國中會考</button>` : ''}
@@ -494,9 +693,9 @@ function curriculum108Page() {
               </div>
             ` : ''}
 
-            <!-- 6. 均一步驟 0 破題思維 -->
+            <!-- 6. 步驟 0 破題思維 -->
             <div style="background:linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);border:1px solid #6ee7b7;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:14px;color:#065f46">
-              <strong style="font-size:15px">⚡ 均一步驟 0 破題思維（第一眼題眼）：</strong>
+              <strong style="font-size:15px">⚡ 步驟 0 破題思維（第一眼題眼判斷法）：</strong>
               <div style="margin-top:4px;line-height:1.6">${u.step0Clue}</div>
             </div>
 
@@ -552,7 +751,7 @@ function curriculum108Page() {
                     <!-- 完整詳解剖析 -->
                     ${isSolutionOpen || hints.includes('all') ? `
                       <div style="background:#ecfdf5;border:1px solid #a7f3d0;padding:10px 14px;border-radius:6px;font-size:13px;color:#065f46;margin-top:6px">
-                        <strong>⭐ 均一精熟解析：</strong> ${q.solution}
+                        <strong>⭐ 精熟思維解析：</strong> ${q.solution}
                       </div>
                     ` : ''}
                   </div>
@@ -595,7 +794,7 @@ function curriculum108Page() {
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// 2. 均一微課與鷹架學習館 (Junyi Micro-Lessons)
+// 2. 自學微課與鷹架學習館 (Self-Paced Micro-Lessons)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function junyiPage() {
   return microLesson(activeUnitId);
@@ -1098,7 +1297,7 @@ function handoutsPage() {
       <!-- 官方講義專屬抬頭 -->
       <div style="border-bottom:2px solid #091e32;padding-bottom:14px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:flex-end">
         <div>
-          <div style="font-size:12px;font-weight:700;color:#64748b;letter-spacing:1px;text-transform:uppercase">108 課綱英語文官方素養複習手冊 · 均一教育平台深度對標</div>
+          <div style="font-size:12px;font-weight:700;color:#64748b;letter-spacing:1px;text-transform:uppercase">108 課綱英語文官方素養複習手冊 · 自主精熟學習全深度對標</div>
           <h2 style="margin:6px 0 0;font-size:22px;color:#091e32">${currentTermObj.title}</h2>
         </div>
         <div style="text-align:right;font-size:12px;color:#475569">
@@ -1253,10 +1452,16 @@ function examPage() {
     const totalQ = currentQuizQuestions.length;
     const answeredCount = Object.keys(userQuizAnswers).length;
     const userChoice = userQuizAnswers[q.id];
-    const isAnswered = userChoice !== undefined;
-    const isCorrect = isAnswered && userChoice === q.answer;
+    const isMultiSelect = q.selectCount === 2 || Array.isArray(q.answer) || q.questionType === 'sentence_equivalence';
+    const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+    const isCorrect = isAnswered && (
+      isMultiSelect
+        ? (Array.isArray(userChoice) && userChoice.length === correctAnswers.length && userChoice.every(v => correctAnswers.includes(v)))
+        : userChoice === q.answer
+    );
     const showHint = !!quizRevealedHints[q.id];
     const showExplain = !!quizRevealedExplains[q.id] || isAnswered;
+    const pendingMulti = quizPendingMultiChoices[q.id] || [];
 
     return `
       <div class="header-block" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
@@ -1295,36 +1500,104 @@ function examPage() {
           ${esc(q.prompt)}
         </div>
 
+        ${isMultiSelect ? `
+          <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <span style="font-weight:700;color:#1e40af;font-size:14px">
+              🧩 【GRE 句子等價雙選題】請選出 2 個填入空格後使全句語意等價的同義詞 (Twin Synonyms)
+            </span>
+            <span class="pill" style="background:#dbeafe;color:#1e40af;font-weight:700">
+              已選取 ${isAnswered ? (Array.isArray(userChoice) ? userChoice.length : 1) : pendingMulti.length} / 2
+            </span>
+          </div>
+        ` : ''}
+
+        ${isAnswered && isMultiSelect ? `
+          <div style="background:${isCorrect ? '#ecfdf5' : '#fff1f2'};border:1px solid ${isCorrect ? '#a7f3d0' : '#fecdd3'};color:${isCorrect ? '#065f46' : '#9f1239'};padding:12px 16px;border-radius:8px;margin-bottom:16px;font-weight:600;display:flex;align-items:center;gap:8px">
+            <span>${isCorrect ? '🎉 雙選完全正確！(+25 XP)' : '⚠️ 雙選未完全命中！'}</span>
+            <span style="font-size:13px;font-weight:normal">
+              ${isCorrect ? '精準鎖定 GRE 孿生同義詞組，句意完全等價。' : 'GRE 六選二句子等價題需同時選出 2 個使句意完全等價之詞彙（全對才計分）。請參閱下方考點剖析與搭配用法。'}
+            </span>
+          </div>
+        ` : ''}
+
         <div style="display:grid;gap:10px;margin-bottom:20px">
           ${q.options.map((opt, oIdx) => {
             const optLetter = String.fromCharCode(65 + oIdx);
             let optStyle = 'background:var(--bg);border:1px solid var(--line);color:var(--text);';
             let icon = '';
 
-            if (isAnswered) {
-              if (oIdx === q.answer) {
-                optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
-                icon = ' ✅ 正確答案';
-              } else if (oIdx === userChoice) {
-                optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
-                icon = ' ❌ 您的選擇';
+            if (isMultiSelect) {
+              const isCorrectOpt = correctAnswers.includes(oIdx);
+              if (isAnswered) {
+                const userSelected = Array.isArray(userChoice) && userChoice.includes(oIdx);
+                if (isCorrectOpt && userSelected) {
+                  optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
+                  icon = ' ✅ 官方正確雙選';
+                } else if (isCorrectOpt && !userSelected) {
+                  optStyle = 'background:#f0fdf4;border:2px dashed #10b981;color:#065f46;font-weight:600;';
+                  icon = ' 💡 正確雙選 (遺漏)';
+                } else if (!isCorrectOpt && userSelected) {
+                  optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
+                  icon = ' ❌ 您的選擇 (非等價詞)';
+                } else {
+                  optStyle = 'opacity:0.5;border:1px solid var(--line);';
+                }
               } else {
-                optStyle = 'opacity:0.6;border:1px solid var(--line);';
+                const isPending = pendingMulti.includes(oIdx);
+                if (isPending) {
+                  optStyle = 'background:#eff6ff;border:2px solid #3b82f6;color:#1e40af;font-weight:600;';
+                  icon = ' 🔘 已選取';
+                } else {
+                  icon = ' ⚪ 點擊選取';
+                }
               }
-            }
 
-            return `
-              <button class="btn" data-quiz-answer="${oIdx}" ${isAnswered ? 'disabled' : ''}
-                style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
-                <div>
-                  <strong style="margin-right:10px">${optLetter}.</strong>
-                  <span>${esc(opt)}</span>
-                </div>
-                <span>${icon}</span>
-              </button>
-            `;
+              return `
+                <button class="btn" ${isAnswered ? '' : `data-quiz-toggle-multi="${oIdx}"`} ${isAnswered ? 'disabled' : ''}
+                  style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
+                  <div>
+                    <strong style="margin-right:10px">${optLetter}.</strong>
+                    <span>${esc(opt)}</span>
+                  </div>
+                  <span style="font-size:13px">${icon}</span>
+                </button>
+              `;
+            } else {
+              // Single Select (4 choices)
+              if (isAnswered) {
+                if (oIdx === q.answer) {
+                  optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
+                  icon = ' ✅ 正確答案';
+                } else if (oIdx === userChoice) {
+                  optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
+                  icon = ' ❌ 您的選擇';
+                } else {
+                  optStyle = 'opacity:0.6;border:1px solid var(--line);';
+                }
+              }
+
+              return `
+                <button class="btn" data-quiz-answer="${oIdx}" ${isAnswered ? 'disabled' : ''}
+                  style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
+                  <div>
+                    <strong style="margin-right:10px">${optLetter}.</strong>
+                    <span>${esc(opt)}</span>
+                  </div>
+                  <span>${icon}</span>
+                </button>
+              `;
+            }
           }).join('')}
         </div>
+
+        ${isMultiSelect && !isAnswered ? `
+          <div style="display:flex;justify-content:flex-end;margin-bottom:20px">
+            <button class="btn primary" data-submit-multi-quiz="true" ${pendingMulti.length === 2 ? '' : 'disabled'}
+              style="padding:10px 24px;font-size:15px;font-weight:700;border-radius:8px;${pendingMulti.length === 2 ? 'box-shadow:0 4px 12px rgba(37,99,235,0.3)' : 'opacity:0.5;cursor:not-allowed'}">
+              ${pendingMulti.length === 2 ? '✅ 確認提交雙選答案 (2/2)' : `請選取 2 個選項 (目前 ${pendingMulti.length}/2)`}
+            </button>
+          </div>
+        ` : ''}
 
         <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
           <button class="btn secondary" data-toggle-quiz-hint="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
@@ -1428,7 +1701,7 @@ function progress() {
   return `
     <div class="header-block">
       <div class="pill">📊 我的學習進度與徽章成就</div>
-      <h1 style="margin:8px 0">均一教育學習軌跡與能力雷達</h1>
+      <h1 style="margin:8px 0">自主精熟學習軌跡與能力雷達</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         即時檢視各年級單元精熟狀態、累計經驗值與已獲得的素養勳章。
       </p>
@@ -1474,8 +1747,12 @@ function progress() {
 
 function render() {
   const pages = {
+    knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
     diagnostic: diagnosticPage,
     curriculum108: curriculum108Page,
+    phonics: renderPhonicsMasteryView,
+    flashcards: renderFlashcardsStudioView,
+    matrix: renderCurriculumMatrixView,
     junyi: junyiPage,
     sixth: sixthPage,
     jh: jhPage,
@@ -1487,7 +1764,8 @@ function render() {
     today,
     progress
   };
-  root.innerHTML = shell((pages[page] || curriculum108Page)());
+  root.innerHTML = shell((pages[page] || knowledgeHome)());
+  if (window.matchMedia('(max-width: 768px)').matches) root.querySelector('.site-menu')?.removeAttribute('open');
   bindEvents();
 }
 
@@ -1508,11 +1786,31 @@ function bindEvents() {
     });
   }
 
+  const fcSearch = document.querySelector('#fc-search-input');
+  if (fcSearch) {
+    fcSearch.addEventListener('input', e => handleFlashcardInput(e.target, render));
+  }
+
   const examCatSelect = document.querySelector('#exam-cat-select');
   if (examCatSelect) {
     examCatSelect.addEventListener('change', e => {
       quizCategory = e.target.value;
     });
+  }
+
+  const matrixSearch = document.querySelector('#matrix-search');
+  if (matrixSearch) {
+    matrixSearch.addEventListener('input', e => handleMatrixEvents(e.target, render));
+  }
+
+  const matrixStage = document.querySelector('#matrix-stage-filter');
+  if (matrixStage) {
+    matrixStage.addEventListener('change', e => handleMatrixEvents(e.target, render));
+  }
+
+  const matrixCefr = document.querySelector('#matrix-cefr-filter');
+  if (matrixCefr) {
+    matrixCefr.addEventListener('change', e => handleMatrixEvents(e.target, render));
   }
 }
 
@@ -1521,8 +1819,31 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (answerKnowledge(b)) return;
   if (handleDisplayToolbarClick(b, render)) return;
   if (handleDiagnosticClick(b, render, navigate)) return;
+
+  // 自然拼讀與發音大師課互動
+  if (handlePhonicsEvents(b, render)) return;
+
+  // 全階記憶閃卡館互動
+  if (handleFlashcardEvents(b, render)) return;
+
+  if (d.scrollTo) {
+    const el = document.querySelector(d.scrollTo);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
+  // Duolingo 闖關模式入口 (限定第一章 J1)
+  if (d.duoAction === 'open') {
+    openChapterId = 'jhs:j1';
+    resetDuolingoGame();
+    duolingoState.isOpen = true;
+    navigate('chapter');
+    return;
+  }
+
   if (handleLessonClick(b, render)) return;
 
   // 專家資訊收合開關
@@ -1535,6 +1856,39 @@ root.addEventListener('click', e => {
   // 導覽列切換
   if (d.nav) {
     navigate(d.nav);
+    return;
+  }
+
+  // 快速學段切換 (國小 / 國中 / 高中)
+  if (d.quickStage) {
+    if (d.quickStage === 'elementary') {
+      activeGradeId = 'g6';
+      activeSemId = 'g6-s1';
+      activeUnitId = 'g6-s1-u1';
+    } else if (d.quickStage === 'junior') {
+      if (!['g7', 'g8', 'g9'].includes(activeGradeId)) activeGradeId = 'g7';
+      activeSemId = activeGradeId + '-s1';
+      activeUnitId = activeGradeId + '-s1-u1';
+    } else if (d.quickStage === 'senior') {
+      if (!['g10', 'g11', 'g12'].includes(activeGradeId)) activeGradeId = 'g10';
+      activeSemId = activeGradeId + '-s1';
+      activeUnitId = activeGradeId + '-s1-u1';
+    }
+    navigate('curriculum108');
+    return;
+  }
+
+  // 快速年級直達切換
+  if (d.quickGrade) {
+    activeGradeId = d.quickGrade;
+    const g = UNIFIED_GRADES.find(item => item.gradeId === activeGradeId);
+    if (g && g.semesters.length > 0) {
+      activeSemId = g.semesters[0].semId;
+      if (g.semesters[0].units.length > 0) {
+        activeUnitId = g.semesters[0].units[0].id;
+      }
+    }
+    navigate('curriculum108');
     return;
   }
 
@@ -1566,7 +1920,7 @@ root.addEventListener('click', e => {
     return;
   }
 
-  // 開啟均一微課單元
+  // 開啟自學微課單元
   if (d.openJunyiUnit) {
     activeUnitId = d.openJunyiUnit;
     navigate('junyi');
@@ -1614,14 +1968,14 @@ root.addEventListener('click', e => {
     return;
   }
 
-  // 均一標記精熟度
+  // 標記精熟度
   if (d.setMastery) {
     junyi.setUnitMastery(d.setMastery, d.level);
     render();
     return;
   }
 
-  // 均一答題檢測
+  // 單元答題檢測
   if (d.answerCheck) {
     if (d.answerCheck === 'correct') {
       alert('🎉 恭喜回答正確！獲得 +30 經驗值 (XP)！');
@@ -1717,6 +2071,7 @@ root.addEventListener('click', e => {
       currentQuizQuestions = qs;
       currentQuizIdx = 0;
       userQuizAnswers = {};
+      quizPendingMultiChoices = {};
       quizRevealedHints = {};
       quizRevealedExplains = {};
       quizSubmitted = false;
@@ -1731,6 +2086,7 @@ root.addEventListener('click', e => {
     return;
   }
 
+  // 單選題快速作答
   if (d.quizAnswer !== undefined) {
     const q = currentQuizQuestions[currentQuizIdx];
     if (q && userQuizAnswers[q.id] === undefined) {
@@ -1740,6 +2096,51 @@ root.addEventListener('click', e => {
         junyi.addXp(15);
       }
       render();
+    }
+    return;
+  }
+
+  // GRE 六選二雙選等價題：切換選項選取狀態
+  if (d.quizToggleMulti !== undefined) {
+    const q = currentQuizQuestions[currentQuizIdx];
+    if (q && userQuizAnswers[q.id] === undefined) {
+      const idx = Number(d.quizToggleMulti);
+      if (!quizPendingMultiChoices[q.id]) {
+        quizPendingMultiChoices[q.id] = [];
+      }
+      const list = quizPendingMultiChoices[q.id];
+      const pos = list.indexOf(idx);
+      if (pos >= 0) {
+        list.splice(pos, 1);
+      } else {
+        if (list.length < 2) {
+          list.push(idx);
+        } else {
+          // 已選 2 個時，替換第二個
+          list[1] = idx;
+        }
+      }
+      render();
+    }
+    return;
+  }
+
+  // GRE 六選二雙選等價題：確認提交雙選答案
+  if (d.submitMultiQuiz) {
+    const q = currentQuizQuestions[currentQuizIdx];
+    if (q && userQuizAnswers[q.id] === undefined) {
+      const list = quizPendingMultiChoices[q.id] || [];
+      if (list.length === 2) {
+        list.sort((a, b) => a - b);
+        userQuizAnswers[q.id] = list;
+        const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+        const isCor = list.length === correctAnswers.length && list.every(v => correctAnswers.includes(v));
+        if (isCor) {
+          junyi.addXp(25);
+        }
+        delete quizPendingMultiChoices[q.id];
+        render();
+      }
     }
     return;
   }
@@ -1777,6 +2178,7 @@ root.addEventListener('click', e => {
   if (d.exitQuiz) {
     currentQuizQuestions = [];
     userQuizAnswers = {};
+    quizPendingMultiChoices = {};
     render();
     return;
   }
@@ -1847,3 +2249,12 @@ root.addEventListener('input', e => handleLessonInput(e.target));
 // 初始化顯示縮放設定與啟動渲染
 initDisplaySettings();
 render();
+
+root.addEventListener('input', e => searchKnowledge(e.target));
+function readKnowledgeRoute() {
+  const parts = location.hash.slice(1).split('/');
+  if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
+  else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
+}
+window.addEventListener('hashchange', readKnowledgeRoute);
+readKnowledgeRoute();

@@ -1,5 +1,5 @@
-// junyi_engine.mjs - 均一教育平台 (Junyi Academy) 風格智慧自學引導引擎
-// 專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、均一微課自學、大考會考測驗、語音聲學、技高ESP與全齡UX
+// junyi_engine.mjs - 智慧自主精熟引導引擎 (Mastery Self-Paced Learning Engine)
+// 專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主學習架構、大考會考測驗、語音聲學、技高ESP與全齡UX
 // 包含技能精熟追蹤、鷹架提示 (Scaffolding Hints)、步驟 0 破題思維、42項致命陷阱 X 光機與 12 枚核心素養徽章系統
 
 const STORAGE_KEY = 'junyi-mastery-v2';
@@ -28,7 +28,7 @@ export const JUNYI_BADGES = [
   { id: 'badge-lifelong-odyssey', title: '終生自主雙語航海王', desc: '具備全英語授課聽講、英文簡報與終生自學飛輪能力', icon: '🌍', reqXp: 7500 }
 ];
 
-// 42 項均一致命陷阱避雷雷達 (台灣英語學習者最常犯失分點全圖譜)
+// 42 項核心致命陷阱避雷雷達 (台灣英語學習者最常犯失分點全圖譜)
 export const FATAL_TRAPS = [
   // === 國小與國中初階 (1-10) ===
   {
@@ -481,7 +481,7 @@ export class JunyiEngine {
       score.correct += 1;
       this.addXp(30);
     } else {
-      this.addXp(5); // 均一理念：嘗試也有經驗值激勵
+      this.addXp(5); // 精熟理念：嘗試也有經驗值激勵
     }
 
     // 依答對率判定精熟等級
