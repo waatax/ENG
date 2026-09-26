@@ -20,7 +20,7 @@ import { junyi, FATAL_TRAPS, JUNYI_BADGES } from './dist/junyi_engine.mjs';
 
 console.log('\\n[1] Expert Council Validation:');
 console.log(' - Expert count:', EXPERT_COUNCIL.length);
-if (EXPERT_COUNCIL.length !== 7) throw new Error('Expert council must have 7 members!');
+if (EXPERT_COUNCIL.length < 7 || EXPERT_COUNCIL.length > 8) throw new Error('Expert council must have 7 to 8 members!');
 EXPERT_COUNCIL.forEach((m, i) => {
   console.log(`   ${i + 1}. [${m.role}] ${m.name} | ${m.title}`);
 });

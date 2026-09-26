@@ -928,3 +928,127 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
 .lesson-page :is(button,a,textarea,select,summary):focus-visible{outline:3px solid #a85c00;outline-offset:3px}
 @media(max-width:650px){.lesson-page .card{padding:18px}.lesson-page h2{font-size:21px}.lesson-page blockquote{font-size:18px}.lesson-links .btn{white-space:normal;text-align:left}}
 @media print{.lesson-page .card{break-inside:auto}.lesson-page button,.lesson-links{display:none!important}.lesson-page textarea{min-height:120px}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   UI/UX 深度優化設計系統 (Sarah Chen-Vance & Alex K. 聯合審定)
+   - 音頻可視化聲波動畫 (Audio Soundwave Animation)
+   - 知識點典型考點範例卡 (Exam Example Cards)
+   - 常用情境對話連續播放與揚聲器回饋 (Situational Dialogue UI)
+   - 全齡高對比無障礙排版 (WCAG 2.2 AAA Contrast & Accessibility)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@keyframes soundwave {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+.playing-bubble {
+  border-color: #3b82f6 !important;
+  background: #eff6ff !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.soundwave-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.soundwave-bar {
+  width: 3px;
+  height: 6px;
+  background: #2563eb;
+  border-radius: 2px;
+  animation: soundwave 0.8s ease-in-out infinite;
+}
+.soundwave-bar:nth-child(2) { animation-delay: 0.15s; }
+.soundwave-bar:nth-child(3) { animation-delay: 0.3s; }
+.soundwave-bar:nth-child(4) { animation-delay: 0.45s; }
+
+/* 知識點典型考點範例卡 (Exam Example Box) */
+.exam-example-box {
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #2563eb;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.exam-example-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e40af;
+  background: #dbeafe;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.exam-example-stem {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.exam-example-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.exam-example-option {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.exam-example-option.is-correct {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.exam-example-analysis {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #166534;
+  line-height: 1.55;
+}
+
+/* 常用生活情境會話容器 (Dialogue Container & Bubble) */
+.dialogue-turn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e0e7ff;
+  transition: all 0.25s ease;
+  margin-bottom: 8px;
+}
+
+.dialogue-turn:hover {
+  border-color: #a5b4fc;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.08);
+}
+

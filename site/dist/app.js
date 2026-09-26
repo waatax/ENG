@@ -309,8 +309,29 @@ function curriculum108Page() {
                       ` : ''}
                       <p style="margin:0 0 6px;font-size:14px;color:#334155;line-height:1.6">${c.explanation}</p>
                       ${c.example ? `
-                        <div style="background:#eff6ff;padding:6px 10px;border-radius:6px;font-size:13px;color:#1e40af">
+                        <div style="background:#eff6ff;padding:6px 10px;border-radius:6px;font-size:13px;color:#1e40af;margin-bottom:8px">
                           <strong>💬 經典範例：</strong> <span lang="en">${c.example}</span>
+                        </div>
+                      ` : ''}
+                      ${c.examExample ? `
+                        <div class="exam-example-box">
+                          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+                            <span class="exam-example-badge">🎯 知識點典型題型範例</span>
+                            <span style="font-size:11px;color:#64748b">108 課綱與大考對標題型</span>
+                          </div>
+                          <div class="exam-example-stem" lang="en">
+                            ${c.examExample.stem}
+                          </div>
+                          <div class="exam-example-options">
+                            ${c.examExample.options.map((opt, oi) => `
+                              <div class="exam-example-option ${oi === c.examExample.answer ? 'is-correct' : ''}">
+                                ${String.fromCharCode(65 + oi)}) <span lang="en">${opt}</span> ${oi === c.examExample.answer ? '✔️' : ''}
+                              </div>
+                            `).join('')}
+                          </div>
+                          <div class="exam-example-analysis">
+                            <strong>💡 考點解析與解構：</strong>${c.examExample.analysis}
+                          </div>
                         </div>
                       ` : ''}
                     </div>
@@ -331,7 +352,10 @@ function curriculum108Page() {
                       <div>
                         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
                           <strong style="font-size:17px;color:#115e59" lang="en">${v.word}</strong>
-                          <button class="btn small quiet" style="padding:2px 8px;font-size:12px" data-speak-word="${esc(v.word)}">🔊 發音</button>
+                          <div style="display:flex;gap:4px">
+                            <button class="btn small quiet" style="padding:2px 8px;font-size:12px" data-speak-word="${esc(v.word)}">🔊 正常</button>
+                            <button class="btn small quiet" style="padding:2px 8px;font-size:12px" data-speak-word="${esc(v.word)}" data-slow="true">🐢 慢速</button>
+                          </div>
                         </div>
                         <div style="font-size:13px;color:#0f766e;margin-bottom:4px">
                           <span style="font-family:monospace;background:#fff;padding:1px 6px;border-radius:4px;border:1px solid #99f6e4">${v.ipa}</span>
@@ -350,26 +374,50 @@ function curriculum108Page() {
               </div>
             ` : ''}
 
-            <!-- 4. 情境雙語實戰會話 (Dual Dialogues) -->
+            <!-- 4. 情境雙語實戰會話 (Dual Dialogues with Full Audio) -->
             ${u.dialogue && u.dialogue.length > 0 ? `
               <div style="margin-bottom:18px">
-                <h3 style="margin:0 0 10px;font-size:15px;color:#4338ca;display:flex;align-items:center;gap:6px">
-                  <span>💬</span> 情境生活雙語對話實戰 (真實母語語料)
-                </h3>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+                  <h3 style="margin:0;font-size:15px;color:#4338ca;display:flex;align-items:center;gap:6px">
+                    <span>💬</span> 常用生活情境雙語會話 (${u.dialogue.length} 輪生活母語語料)
+                  </h3>
+                  <div style="display:flex;gap:6px;align-items:center">
+                    <button class="btn small primary" data-play-dialogue="${u.id}" style="font-size:12px;padding:3px 10px">
+                      ▶️ 全對話自動連播
+                    </button>
+                    <button class="btn small quiet" data-stop-audio="true" style="font-size:12px;padding:3px 10px">
+                      ⏹️ 停止播放
+                    </button>
+                  </div>
+                </div>
                 <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:14px;display:grid;gap:8px">
-                  ${u.dialogue.map(d => `
-                    <div style="display:flex;justify-content:space-between;align-items:flex-start;background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e0e7ff">
+                  ${u.dialogue.map((d, dIdx) => `
+                    <div class="dialogue-turn ${activePlayingDialogueIndex === dIdx ? 'playing-bubble' : ''}">
                       <div style="flex:1">
-                        <strong style="color:#3730a3;font-size:13px">${d.speaker}:</strong>
+                        <div style="display:flex;align-items:center;gap:6px">
+                          <strong style="color:#3730a3;font-size:13px">${d.speaker}</strong>
+                          ${activePlayingDialogueIndex === dIdx ? `
+                            <span class="soundwave-indicator">
+                              <span class="soundwave-bar"></span>
+                              <span class="soundwave-bar"></span>
+                              <span class="soundwave-bar"></span>
+                              <span class="soundwave-bar"></span>
+                            </span>
+                          ` : ''}
+                        </div>
                         <div style="font-size:14px;color:#1e1b4b;margin-top:2px" lang="en">${d.en}</div>
                         <div style="font-size:12px;color:#6b7280;margin-top:2px">${d.zh}</div>
                       </div>
-                      <button class="btn small quiet" style="margin-left:8px;padding:2px 8px;font-size:12px" data-speak-sentence="${esc(d.en)}">🔊 朗讀</button>
+                      <div style="display:flex;gap:4px;margin-left:8px;align-items:center">
+                        <button class="btn small quiet" style="padding:2px 8px;font-size:12px" data-speak-sentence="${esc(d.en)}">🔊 正常速</button>
+                        <button class="btn small quiet" style="padding:2px 8px;font-size:12px" data-speak-sentence="${esc(d.en)}" data-slow="true">🐢 慢速</button>
+                      </div>
                     </div>
                   `).join('')}
                 </div>
               </div>
             ` : ''}
+
 
             <!-- 5. 跨領域多模態閱讀文本 (Multimodal Reading) -->
             ${u.reading ? `
@@ -1685,6 +1733,44 @@ root.addEventListener('click', e => {
     return;
   }
 
+  // 連續播放整組情境生活會話
+  if (d.playDialogue) {
+    const unitId = d.playDialogue;
+    let targetUnit = null;
+    for (const g of UNIFIED_GRADES) {
+      for (const s of g.semesters) {
+        for (const u of s.units) {
+          if (u.id === unitId) {
+            targetUnit = u;
+            break;
+          }
+        }
+        if (targetUnit) break;
+      }
+      if (targetUnit) break;
+    }
+
+    if (targetUnit && targetUnit.dialogue && targetUnit.dialogue.length > 0) {
+      const items = targetUnit.dialogue.map(d => ({ text: d.en, slow: false }));
+      playSequence(items, (idx) => {
+        activePlayingDialogueIndex = idx;
+        render();
+      }, () => {
+        activePlayingDialogueIndex = -1;
+        render();
+      });
+    }
+    return;
+  }
+
+  // 停止所有音訊播放
+  if (d.stopAudio) {
+    stopAudio();
+    activePlayingDialogueIndex = -1;
+    render();
+    return;
+  }
+
   // 播放單字發音
   if (d.speakWord) {
     const slow = d.slow === 'true';
@@ -1698,7 +1784,8 @@ root.addEventListener('click', e => {
 
   // 播放句子發音
   if (d.speakSentence) {
-    playSentence(d.speakSentence, false, {
+    const slow = d.slow === 'true';
+    playSentence(d.speakSentence, slow, {
       onStart: () => b.classList.add('active'),
       onEnd: () => b.classList.remove('active'),
       onError: () => b.classList.remove('active')
