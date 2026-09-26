@@ -23,6 +23,7 @@ import {
 import { archSemesters, englishS1Review, englishS2Review, englishS3Review, englishS4Review } from './arch_semesters.mjs';
 import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine.mjs';
 import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';
+import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -106,6 +107,7 @@ function navigate(p) {
 
 function shell(body) {
   const nav = [
+    ['diagnostic', '00', '🎯 30題全階程度檢測 (小學至GMAT)'],
     ['curriculum108', '01', '108課綱學年地圖 (7年級全貫通)'],
     ['junyi', '02', '均一微課與鷹架館 (42陷阱雷達)'],
     ['sixth', '03', 'Sixth 六年級小升初 (8單元講義)'],
@@ -174,6 +176,29 @@ function curriculum108Page() {
         完整橫跨國小第三階段 (6上/6下)、國中第四階段 (7上至9下會考)、高中第五階段 (10上至12下學測/統測/國際認證)。
         由 7 位跨領域專家團隊指導，每個單元均配備：概念公式、音標單字、情境雙語會話、多模態跨領域閱讀、步驟0破題思維、雙階鷹架提示檢測、42項致命陷阱避雷雷達與考前自主檢核清單！
       </p>
+    </div>
+
+    <!-- 🎯 30題全階程度確認測驗醒目 Hero Banner -->
+    <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);color:#fff;border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.2);box-shadow:0 10px 25px -5px rgba(49,46,129,0.4)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+        <div style="max-width:700px">
+          <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700;font-size:12px;margin-bottom:8px">🎯 專家委員會 7 次迭代全階檢測</span>
+          <h2 style="margin:8px 0 10px;font-size:22px;color:#fff">30 題全階英語能力精準診斷測驗 (小學 Pre-A1 貫通至 GRE/GMAT C2+)</h2>
+          <p style="color:#c7d2fe;margin:0 0 16px;font-size:14px;line-height:1.6">
+            只需 20 分鐘，快速測定您的真實英語段位！涵蓋字彙、句法、篇章與批判邏輯五大維度。公布成績後提供<strong>每題名師五星級專業詳解</strong>與個人化微課補強清單。
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-weight:700;padding:10px 24px;border:none;border-radius:8px;box-shadow:0 4px 12px rgba(56,189,248,0.3)">
+              🚀 立即進入 30 題程度確認測驗
+            </button>
+          </div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.08);padding:18px 24px;border-radius:12px;border:1px solid rgba(255,255,255,0.15)">
+          <div style="font-size:32px">🪜</div>
+          <div style="font-weight:700;color:var(--mint);font-size:15px;margin-top:4px">8 大難度階梯</div>
+          <div style="font-size:12px;color:#cbd5e1">1,000 題檢測專題庫</div>
+        </div>
+      </div>
     </div>
 
     <!-- 7 位專家委員會諮詢橫幅 -->
@@ -1429,6 +1454,7 @@ function progress() {
 
 function render() {
   const pages = {
+    diagnostic: diagnosticPage,
     curriculum108: curriculum108Page,
     junyi: junyiPage,
     sixth: sixthPage,
@@ -1475,6 +1501,7 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (handleDiagnosticClick(b, render, navigate)) return;
   if (handleLessonClick(b, render)) return;
 
   // 專家資訊收合開關

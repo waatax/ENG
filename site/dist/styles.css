@@ -1052,3 +1052,59 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
   box-shadow: 0 2px 6px rgba(99, 102, 241, 0.08);
 }
 
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   🎯 30題全階英語能力精準診斷系統專屬視覺樣式 (Diagnostic Assessment Styles)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.diag-option-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.diag-option-btn:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.diag-option-btn.selected {
+  background: #ecfdf5 !important;
+  border: 2px solid #10b981 !important;
+  color: #065f46 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.18);
+}
+
+@keyframes pulse-timer {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.timer-urgent {
+  animation: pulse-timer 1s infinite ease-in-out;
+  color: #dc2626 !important;
+  background: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+}
+
+@media print {
+  .side, .nav, .user-xp-pill, .side-foot, [data-exit-diag], [data-restart-diag], [data-print-diag], [data-nav] {
+    display: none !important;
+  }
+  .shell {
+    display: block !important;
+  }
+  .main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+}
+
+

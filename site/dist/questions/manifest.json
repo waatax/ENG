@@ -39,5 +39,20 @@
       "file": "gaokao.json",
       "description": "收錄歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題與等價題型"
     }
+  },
+  "diagnostic_bank": {
+    "name": "English Quest 全階能力精準診斷題庫 (國小至GRE/GMAT)",
+    "count": 1000,
+    "file": "diagnostic_bank.json",
+    "tiers": {
+      "tier1_primary": 130,
+      "tier2_jhs_found": 130,
+      "tier3_jhs_mast": 140,
+      "tier4_shs_gsat": 140,
+      "tier5_toeic": 130,
+      "tier6_sat": 120,
+      "tier7_gre": 110,
+      "tier8_gmat": 100
+    }
   }
 }
