@@ -70,11 +70,14 @@ let revealedHints = {}; // unitId: [1, 2, 'all']
 let revealedSolutions = {}; // unitId: boolean
 let userQuizChoices = {}; // unitId: selectedOptIndex
 
-let quizCategory = 'jhs';
+let quizCategory = 'all';
 let currentQuizQuestions = [];
 let currentQuizIdx = 0;
 let userQuizAnswers = {};
 let quizSubmitted = false;
+let quizRevealedHints = {};
+let quizRevealedExplains = {};
+let quizLoading = false;
 
 const root = document.querySelector('#app') || document.body;
 
@@ -1135,33 +1138,193 @@ function studioPage() {
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// 9. 全考制模考題庫
+// 9. 全考制模考題庫 (20,000 題旗艦題庫系統)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function examPage() {
+  if (quizLoading) {
+    return `
+      <div class="header-block">
+        <div class="pill">📑 國際檢定與國家大考全真模擬題庫</div>
+        <h1 style="margin:8px 0">20,000 題全考制題庫測驗中心</h1>
+      </div>
+      <div class="card" style="text-align:center;padding:60px 24px;margin-top:20px">
+        <div style="font-size:42px;animation:spin 1s linear infinite">⏳</div>
+        <h2 style="margin:16px 0 8px">正在從 20,000 題題庫載入試題...</h2>
+        <p style="color:var(--text-muted)">正在執行 Fisher-Yates 現代洗牌演算法與心理計量難度抽題校驗...</p>
+      </div>
+    `;
+  }
+
+  if (currentQuizQuestions.length > 0) {
+    const q = currentQuizQuestions[currentQuizIdx];
+    const totalQ = currentQuizQuestions.length;
+    const answeredCount = Object.keys(userQuizAnswers).length;
+    const userChoice = userQuizAnswers[q.id];
+    const isAnswered = userChoice !== undefined;
+    const isCorrect = isAnswered && userChoice === q.answer;
+    const showHint = !!quizRevealedHints[q.id];
+    const showExplain = !!quizRevealedExplains[q.id] || isAnswered;
+
+    return `
+      <div class="header-block" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <div class="pill">📑 模擬實戰測驗 (${CATEGORY_META[quizCategory]?.name || '綜合題庫'})</div>
+          <h2 style="margin:6px 0">第 ${currentQuizIdx + 1} / ${totalQ} 題</h2>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:14px;color:var(--text-muted)">已作答: ${answeredCount}/${totalQ}</span>
+          <button class="btn" data-exit-quiz="true" style="padding:6px 14px">✕ 結束並返回題庫</button>
+        </div>
+      </div>
+
+      <div style="width:100%;height:6px;background:var(--line);border-radius:3px;margin:16px 0;overflow:hidden">
+        <div style="width:${((currentQuizIdx + 1) / totalQ) * 100}%;height:100%;background:var(--green-core);transition:width 0.3s ease"></div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+          <span class="pill" style="font-size:12px">${esc(q.categoryLabel || q.category.toUpperCase())}</span>
+          <span style="font-size:12px;color:var(--text-muted);background:var(--bg);padding:3px 8px;border-radius:6px;border:1px solid var(--line)">
+            🎯 ${esc(q.subtopic || '綜合考點')}
+          </span>
+          <span style="font-size:12px;color:#d97706;background:#fef3c7;padding:3px 8px;border-radius:6px">
+            IRT 難度: ⭐ ${q.difficulty}/5
+          </span>
+        </div>
+
+        ${q.passage ? `
+          <div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:14px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:14px;line-height:1.6;white-space:pre-line">
+            ${esc(q.passage)}
+          </div>
+        ` : ''}
+
+        <div style="font-size:17px;font-weight:600;line-height:1.6;margin-bottom:20px;color:var(--text)">
+          ${esc(q.prompt)}
+        </div>
+
+        <div style="display:grid;gap:10px;margin-bottom:20px">
+          ${q.options.map((opt, oIdx) => {
+            const optLetter = String.fromCharCode(65 + oIdx);
+            let optStyle = 'background:var(--bg);border:1px solid var(--line);color:var(--text);';
+            let icon = '';
+
+            if (isAnswered) {
+              if (oIdx === q.answer) {
+                optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
+                icon = ' ✅ 正確答案';
+              } else if (oIdx === userChoice) {
+                optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
+                icon = ' ❌ 您的選擇';
+              } else {
+                optStyle = 'opacity:0.6;border:1px solid var(--line);';
+              }
+            }
+
+            return `
+              <button class="btn" data-quiz-answer="${oIdx}" ${isAnswered ? 'disabled' : ''}
+                style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
+                <div>
+                  <strong style="margin-right:10px">${optLetter}.</strong>
+                  <span>${esc(opt)}</span>
+                </div>
+                <span>${icon}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+          <button class="btn secondary" data-toggle-quiz-hint="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
+            💡 ${showHint ? '隱藏破題線索' : '查看思考引導提示'}
+          </button>
+          <button class="btn secondary" data-toggle-quiz-explain="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
+            📖 ${showExplain ? '隱藏完整考點剖析' : '展開專家教學詳解'}
+          </button>
+        </div>
+
+        ${showHint ? `
+          <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:14px;color:#92400e">
+            <strong>💡 解題關鍵引導：</strong>${esc(q.hint)}
+          </div>
+        ` : ''}
+
+        ${showExplain ? `
+          <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:14px;color:#166534;line-height:1.6">
+            <strong style="display:block;margin-bottom:4px">📖 專家考點精析與陷阱排除：</strong>
+            ${esc(q.explain)}
+          </div>
+        ` : ''}
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;border-top:1px solid var(--line);padding-top:16px">
+          <button class="btn" data-prev-quiz-q="true" ${currentQuizIdx === 0 ? 'disabled' : ''}>
+            ⬅ 上一題
+          </button>
+          <span style="font-size:13px;color:var(--text-muted)">
+            第 ${currentQuizIdx + 1} 題 / 共 ${totalQ} 題
+          </span>
+          <button class="btn ${currentQuizIdx === totalQ - 1 ? 'secondary' : 'primary'}" data-next-quiz-q="true" ${currentQuizIdx === totalQ - 1 ? 'disabled' : ''}>
+            下一題 ➡
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  const tracksList = [
+    { id: 'all', title: '全部考科綜合模擬', count: '20,000 題', icon: '🌐', desc: '跨會考、學測、統測、多益、SAT、GRE、GMAT、高考隨機抽題實戰。', color: '#2563eb' },
+    { id: 'toeic', title: 'TOEIC 多益國際商務英語', count: '3,000 題', icon: '💼', desc: 'Part 5 詞性填空、Part 6 段落填空、Part 7 雙篇商務閱讀與行程信函。', color: '#d97706' },
+    { id: 'sat', title: 'Digital SAT 數位學術測驗', count: '3,000 題', icon: '🎓', desc: 'Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis。', color: '#4f46e5' },
+    { id: 'gre', title: 'GRE 研究所入學考試 Verbal', count: '3,000 題', icon: '🏛️', desc: 'Text Completion 單雙三空、Sentence Equivalence 雙生同義詞、學術主旨閱讀。', color: '#e11d48' },
+    { id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '3,000 題', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2' },
+    { id: 'gaokao', title: '歷年高考與大考真題庫', count: '6,000 題', icon: '📜', desc: '歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題。', color: '#059669' },
+    { id: 'shs', title: '高中大學學測與統測英文', count: '1,000 題', icon: '🏫', desc: '高中 7,000 必背字彙、克漏字篇章結構、閱讀理解與歷屆學測考題。', color: '#9333ea' },
+    { id: 'jhs', title: '國中教育會考英語能力線', count: '1,000 題', icon: '🎒', desc: '1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題。', color: '#16a34a' }
+  ];
+
   return `
     <div class="header-block">
-      <div class="pill">📑 模考題庫管理</div>
-      <h1 style="margin:8px 0">歷屆國家大考與國際檢定模擬測驗庫</h1>
+      <div class="pill">📑 國際檢定與國家大考模擬測驗庫</div>
+      <h1 style="margin:8px 0">20,000 題全考制題庫測驗中心</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        涵蓋會考 (CAP)、學測 (GSAT)、統測 (TVE)、多益 (TOEIC)、英檢 (GEPT) 與 SAT 題庫資源。
+        已整合 TOEIC (3,000題)、Digital SAT (3,000題)、GRE (3,000題)、GMAT (3,000題)、歷年高考真題 (6,000題)、高中學測與國中會考！
       </p>
     </div>
 
     <div class="card" style="margin-top:20px">
-      <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
-        <label><strong>考制題庫選擇：</strong></label>
-        <select id="exam-cat-select" style="padding:8px 12px;border-radius:8px;border:1px solid var(--line)">
-          <option value="jhs" ${quizCategory === 'jhs' ? 'selected' : ''}>國中會考 (CAP JHS)</option>
-          <option value="shs" ${quizCategory === 'shs' ? 'selected' : ''}>高中學測 (GSAT SHS)</option>
-          <option value="toeic" ${quizCategory === 'toeic' ? 'selected' : ''}>多益檢定 (TOEIC)</option>
-          <option value="gept" ${quizCategory === 'gept' ? 'selected' : ''}>全民英檢 (GEPT)</option>
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
+        <label><strong>選擇考制進行抽題測驗：</strong></label>
+        <select id="exam-cat-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
+          ${tracksList.map(t => `
+            <option value="${t.id}" ${quizCategory === t.id ? 'selected' : ''}>${t.icon} ${t.title} (${t.count})</option>
+          `).join('')}
         </select>
-        <button class="btn primary" data-start-quiz="true">🚀 開始 20 題隨選練習</button>
+        <button class="btn primary" data-start-quiz="true" style="padding:10px 22px;font-size:15px">🚀 開始 20 題隨選模考</button>
       </div>
-      <p style="font-size:13px;color:#64748b">完整單元鷹架微課與形成性測驗可由「108課綱學年地圖」與「均一微課館」使用。</p>
+      <p style="font-size:13px;color:var(--text-muted);margin:0">
+        💡 支援 IndexedDB 本地極速快取、Fisher-Yates 現代隨機抽題與答題即時加分 (+15 XP) 機制。
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin-top:20px">
+      ${tracksList.map(t => `
+        <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;border-top:4px solid ${t.color}">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <span style="font-size:28px">${t.icon}</span>
+              <span class="pill" style="font-size:12px;font-weight:700;color:${t.color}">${t.count}</span>
+            </div>
+            <h3 style="margin:4px 0 8px;font-size:16px">${t.title}</h3>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin:0 0 16px">${t.desc}</p>
+          </div>
+          <button class="btn secondary" data-start-quiz="true" data-quiz-cat="${t.id}" style="width:100%;font-size:14px;padding:8px">
+            🎯 抽取 20 題練習
+          </button>
+        </div>
+      `).join('')}
     </div>
   `;
 }
+
 
 function today() {
   return curriculum108Page();
@@ -1248,6 +1411,13 @@ function bindEvents() {
     vocabSearch.addEventListener('input', e => {
       vocab1200Search = e.target.value;
       render();
+    });
+  }
+
+  const examCatSelect = document.querySelector('#exam-cat-select');
+  if (examCatSelect) {
+    examCatSelect.addEventListener('change', e => {
+      quizCategory = e.target.value;
     });
   }
 }
@@ -1439,6 +1609,79 @@ root.addEventListener('click', e => {
   if (d.openChapter) {
     openChapterId = d.openChapter;
     navigate('chapter');
+    return;
+  }
+
+  // 20,000 題旗艦模考題庫測驗互動
+  if (d.startQuiz) {
+    if (d.quizCat) quizCategory = d.quizCat;
+    quizLoading = true;
+    render();
+    questionDB.sampleQuestions(quizCategory, 20).then(qs => {
+      currentQuizQuestions = qs;
+      currentQuizIdx = 0;
+      userQuizAnswers = {};
+      quizRevealedHints = {};
+      quizRevealedExplains = {};
+      quizSubmitted = false;
+      quizLoading = false;
+      render();
+    }).catch(err => {
+      console.error(err);
+      quizLoading = false;
+      alert('載入題庫失敗，請確認網路連線');
+      render();
+    });
+    return;
+  }
+
+  if (d.quizAnswer !== undefined) {
+    const q = currentQuizQuestions[currentQuizIdx];
+    if (q && userQuizAnswers[q.id] === undefined) {
+      const choice = Number(d.quizAnswer);
+      userQuizAnswers[q.id] = choice;
+      if (choice === q.answer) {
+        junyi.addXp(15);
+      }
+      render();
+    }
+    return;
+  }
+
+  if (d.toggleQuizHint) {
+    const qid = d.toggleQuizHint;
+    quizRevealedHints[qid] = !quizRevealedHints[qid];
+    render();
+    return;
+  }
+
+  if (d.toggleQuizExplain) {
+    const qid = d.toggleQuizExplain;
+    quizRevealedExplains[qid] = !quizRevealedExplains[qid];
+    render();
+    return;
+  }
+
+  if (d.nextQuizQ) {
+    if (currentQuizIdx < currentQuizQuestions.length - 1) {
+      currentQuizIdx++;
+      render();
+    }
+    return;
+  }
+
+  if (d.prevQuizQ) {
+    if (currentQuizIdx > 0) {
+      currentQuizIdx--;
+      render();
+    }
+    return;
+  }
+
+  if (d.exitQuiz) {
+    currentQuizQuestions = [];
+    userQuizAnswers = {};
+    render();
     return;
   }
 

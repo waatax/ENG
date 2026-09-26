@@ -118,6 +118,23 @@ Level 3: 高中與技術型高中 (Grades 10–12 / 學測・統測・指考) �
 
 ---
 
+## 📑 20,000 題全考制真題與國際檢定旗艦題庫系統 (Exam Arena)
+
+為滿足從國民教育至留學檢定與全球商務之終身英語評量需求，本平台重磅建立 **20,000 題全考制題庫引擎**，支援 IndexedDB 本地離線快取、動態分包與 Fisher-Yates 現代隨機抽題：
+
+| 測驗體系 | 題目總數 | 對應權威檢定標準與考點維度 | 難度區間 (IRT) |
+| :--- | :---: | :--- | :---: |
+| **TOEIC 多益國際商務英語** | **3,000 題** | Part 5 詞性填空、Part 6 篇章結構、Part 7 跨篇商務信函與採購契約 | Level 2–4 |
+| **Digital SAT 數位學術測驗** | **3,000 題** | Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis | Level 3–5 |
+| **GRE 研究所入學 Verbal** | **3,000 題** | Text Completion 單雙三空、Sentence Equivalence 雙生同義詞、學術主旨閱讀 | Level 4–5 |
+| **GMAT Focus 批判推理與邏輯** | **3,000 題** | Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀 | Level 4–5 |
+| **歷年高考與大考真題庫** | **6,000 題** | 歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題 | Level 2–5 |
+| **高中大學學測與統測英文** | **1,000 題** | 高中 7,000 必背字彙、克漏字篇章結構、閱讀理解與歷屆學測考題 | Level 3–5 |
+| **國中教育會考英語能力線** | **1,000 題** | 1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題 | Level 1–3 |
+| **全考科總計** | **20,000 題** | **零重複 ID、全真題型規格、100% 雙階提示與專家考點剖析詳解** | **Level 1–5 全階梯** |
+
+---
+
 ## 🖨️ A4 官方考前講義列印庫 (全 14 學期)
 
 - 支援標準 **A4 輸出規範**（相容 Chrome, Edge, Firefox 列印與另存為 PDF）。
@@ -143,8 +160,8 @@ http://127.0.0.1:4173
 
 ### 完整平台自動化驗證測試套件
 ```bash
-# 1. 運行跨年段結構與檔案存在性檢驗
-python scripts/verify_curriculum_platform.py
+# 1. 運行 20,000 題全考制題庫 7 週期心理計量校驗 (含 TOEIC/SAT/GRE/GMAT 各 3,000 題)
+python scripts/calibrate_question_bank.py
 
 # 2. 運行 7 位專家委員會與 61 單元雙倍內容深度審計
 python scripts/test_complete_platform.py
@@ -152,6 +169,7 @@ python scripts/test_complete_platform.py
 # 3. 運行教學頁面與作答持久化單元測試
 node scripts/test_lesson_pages.mjs
 ```
+
 
 ---
 

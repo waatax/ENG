@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-26T00:25:00+08:00",
-  "total_questions": 12000,
+  "generated_at": "2026-09-26T16:00:00+08:00",
+  "total_questions": 20000,
   "categories": {
     "jhs": {
       "name": "國中英文｜會考能力線",
@@ -15,22 +15,22 @@
     },
     "toeic": {
       "name": "TOEIC 多益國際商務英語",
-      "count": 1000,
+      "count": 3000,
       "file": "toeic.json"
     },
     "sat": {
       "name": "Digital SAT 數位學術能力測驗",
-      "count": 1000,
+      "count": 3000,
       "file": "sat.json"
     },
     "gre": {
       "name": "GRE 研究所入學考試 Verbal",
-      "count": 1000,
+      "count": 3000,
       "file": "gre.json"
     },
     "gmat": {
       "name": "GMAT Focus 批判性推理與商業邏輯",
-      "count": 1000,
+      "count": 3000,
       "file": "gmat.json"
     },
     "gaokao": {

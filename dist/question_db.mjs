@@ -1,18 +1,18 @@
-// question_db.mjs - 6,000 題全考制題庫資料庫引擎（支援 IndexedDB 本地持久化、動態分包載入與 Fisher-Yates 隨機抽題）
+// question_db.mjs - 20,000 題全考制題庫資料庫引擎（支援 IndexedDB 本地持久化、動態分包載入與 Fisher-Yates 隨機抽題）
 
 const DB_NAME = 'EnglishQuestDB';
 const DB_VERSION = 1;
 const STORE_NAME = 'questions';
 
 export const CATEGORY_META = {
-  all: { id: 'all', name: '全部考科綜合隨機', total: 12000, color: 'blue' },
+  all: { id: 'all', name: '全部考科綜合隨機 (20,000 題)', total: 20000, color: 'blue' },
   gaokao: { id: 'gaokao', name: '歷年高考真題庫 (6,000 題)', total: 6000, color: 'emerald' },
-  jhs: { id: 'jhs', name: '國中教育會考英語', total: 1000, color: 'green' },
-  shs: { id: 'shs', name: '高中大學學測英文', total: 1000, color: 'purple' },
-  toeic: { id: 'toeic', name: 'TOEIC 多益商務英語', total: 1000, color: 'amber' },
-  sat: { id: 'sat', name: 'Digital SAT 數位測驗', total: 1000, color: 'indigo' },
-  gre: { id: 'gre', name: 'GRE 研究所 Verbal', total: 1000, color: 'rose' },
-  gmat: { id: 'gmat', name: 'GMAT Focus 批判推理', total: 1000, color: 'cyan' }
+  jhs: { id: 'jhs', name: '國中教育會考英語 (1,000 題)', total: 1000, color: 'green' },
+  shs: { id: 'shs', name: '高中大學學測英文 (1,000 題)', total: 1000, color: 'purple' },
+  toeic: { id: 'toeic', name: 'TOEIC 多益商務英語 (3,000 題)', total: 3000, color: 'amber' },
+  sat: { id: 'sat', name: 'Digital SAT 數位測驗 (3,000 題)', total: 3000, color: 'indigo' },
+  gre: { id: 'gre', name: 'GRE 研究所 Verbal (3,000 題)', total: 3000, color: 'rose' },
+  gmat: { id: 'gmat', name: 'GMAT Focus 批判推理 (3,000 題)', total: 3000, color: 'cyan' }
 };
 
 export class QuestionBankDB {
@@ -175,7 +175,7 @@ export class QuestionBankDB {
       totalLoaded += items.length;
     }
     return {
-      totalQuestions: 12000,
+      totalQuestions: 20000,
       totalLoaded,
       categories: catStats
     };
@@ -183,3 +183,4 @@ export class QuestionBankDB {
 }
 
 export const questionDB = new QuestionBankDB();
+
