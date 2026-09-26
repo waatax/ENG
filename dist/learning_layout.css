@@ -31,6 +31,11 @@
 .lesson-page .lesson-option { min-height:48px; white-space:normal; text-align:left; }
 .lesson-option:disabled { opacity:1; color:#475569; }
 .kp-feedback:empty { display:none; }
+.resume-card { display:grid; gap:10px; padding:22px; margin-bottom:24px; border:1px solid #9bc8c6; border-radius:12px; background:#edf8f6; }
+.resume-card a { color:#125753; font-weight:700; }
+.knowledge-filters { display:grid; grid-template-columns:minmax(0,3fr) minmax(150px,1fr); gap:16px; align-items:start; }
+.knowledge-filters select { display:block; width:100%; min-height:48px; margin-top:8px; padding:12px; border:1px solid #64748b; border-radius:10px; font:inherit; background:white; }
+.lesson-links button { min-height:44px; }
 .kp-feedback { padding:16px; background:#edf6f6; border-radius:10px; }
 :is(a,button,input,textarea,summary,select):focus-visible { outline:3px solid #0e7490; outline-offset:3px; }
 @media(min-width:1500px){ .knowledge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
@@ -46,6 +51,7 @@
  .reading-settings { padding:8px 16px; }
  .reading-settings .top-utility-bar,.reading-settings .top-utility-right { flex-wrap:wrap; }
  .knowledge-grid { grid-template-columns:minmax(0,1fr); gap:14px; }
+ .knowledge-filters { grid-template-columns:minmax(0,1fr); gap:4px; }
  .knowledge-card { padding:20px; }
  .lesson-page { font-size:16px; }
  .lesson-page .card { margin-inline:0; padding:18px; }

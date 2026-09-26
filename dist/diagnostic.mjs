@@ -1,5 +1,5 @@
-// diagnostic.mjs - 30 題全階英語能力程度精準診斷系統 (小學至GRE/GMAT)
-// 由 7 位跨領域專家共同研發，嚴格對標 CEFR Pre-A1 至 C2+
+// diagnostic.mjs - 30 題全階英語能力程度練習檢核系統 (小學至GRE/GMAT)
+// 由 7 位跨領域專家共同研發，嚴格對標 CEFR Pre-A1 至 進階題型
 // 配備：自適應階梯抽樣、五維雷達圖、失速臨界點 (Stall Point) 判定、每一題名師黃金五維詳解與微課轉化直通車
 
 import { questionDB } from './question_db.mjs';
@@ -25,6 +25,7 @@ let diagTimerPaused = false;
 let diagEvaluation = null;
 let diagFilterView = 'all'; // 'all' | 'wrong' | 'correct'
 let diagLoading = false;
+let diagConfirmSubmit = false;
 let diagExpandedExplains = {}; // q.id -> boolean
 
 // 讀取歷史報告
@@ -102,14 +103,14 @@ export function diagnosticPage() {
   if (diagLoading) {
     return `
       <div class="header-block">
-        <div class="pill">🎯 30 題全階英語能力精準診斷系統</div>
+        <div class="pill">🎯 30 題全階英語能力練習檢核系統</div>
         <h1 style="margin:8px 0">正在為您抽取專屬分層階梯試卷...</h1>
       </div>
       <div class="card" style="text-align:center;padding:70px 24px;margin-top:20px">
         <div style="font-size:48px;animation:spin 1s linear infinite">⏳</div>
-        <h2 style="margin:16px 0 8px">正在從 1,000 題檢測專屬題庫進行分層保證抽樣...</h2>
+        <h2 style="margin:16px 0 8px">正在從 本站練習題庫進行分層抽題...</h2>
         <p style="color:var(--text-muted);max-width:550px;margin:0 auto">
-          嚴格按 8 大階梯 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ SAT ➔ GRE ➔ GMAT) 分層隨機抽取 30 題，並進行心理計量常模校準...
+          嚴格按 8 大階梯 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ SAT ➔ GRE ➔ GMAT) 分層隨機抽取 30 題，供自學練習使用…
         </p>
       </div>
     `;
@@ -132,26 +133,13 @@ function renderIntroView() {
   return `
     <div class="header-block">
       <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
-      <h1 style="margin:8px 0;font-size:28px">30 題全階英語能力精準診斷測驗 (小學 Pre-A1 至 GRE/GMAT C2+)</h1>
+      <h1 style="margin:8px 0;font-size:28px">30 題全階英語能力練習檢核測驗 (小學 Pre-A1 至 GRE/GMAT 進階題型)</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
-        只需 20~25 分鐘，快速確認目前真實英語程度！由 7 位跨領域評量與教學專家共同設計，以「分層階梯抽樣 (Stratified Ladder)」
-        涵蓋 8 大能力級別。測後生成五維能力雷達、能力失速臨界點 (Stall Point) 與<strong>每一題名師黃金五維專業詳解</strong>！
+        預留約 25 分鐘練習不同難度的題目。完成後檢查每題答案與解析，選擇需要補強的單元。
       </p>
     </div>
 
-    <!-- 專家委員會認證條 -->
-    <div class="card" style="background:linear-gradient(135deg, #091e32 0%, #1e293b 100%);color:#fff;border-left:6px solid #34d399;margin-bottom:24px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>
-          <strong style="color:var(--mint);font-size:15px">👑 7 位跨領域評量大師聯合研發背書</strong>
-          <div style="font-size:13px;color:#cbd5e1;margin-top:4px">
-            劍橋語言測評博士 Dr. Vance · 師大課審委員林昆翰教授 · 前 Princeton Review GRE名師 Sterling · 史丹佛認知心理學 Dr. Chen · 牛津語誤分析專家 Thornton · EdTech測量架構師曾浩軒 · 前端互動專家黃俊傑
-          </div>
-        </div>
-        <span class="pill" style="background:rgba(52,211,153,0.2);color:#34d399;font-weight:700">信度 α ≥ 0.88</span>
-      </div>
-    </div>
-
+    <aside class="card"><h2>把練習當作學習起點</h2><p>題目依本站難度分類抽取。這是自學工具，沒有正式測驗信度、常模或分數等化資料；請依錯題解析安排複習。</p></aside>
     <!-- 上次作答快速回顧 (若有) -->
     ${latestHistory ? `
       <div class="card" style="border:2px solid #a7f3d0;background:#f0fdf4;margin-bottom:24px">
@@ -159,10 +147,10 @@ function renderIntroView() {
           <div>
             <span class="pill" style="background:#10b981;color:#fff;font-size:12px">📋 最近一次測驗紀錄</span>
             <div style="font-size:16px;font-weight:700;color:#065f46;margin-top:6px">
-              榮譽段位：${esc(latestHistory.badge)} (${esc(latestHistory.cefr)})
+              上次作答紀錄
             </div>
             <div style="font-size:13px;color:#047857;margin-top:2px">
-              標準化成績：<strong>${latestHistory.scaledScore} / 100 分</strong> (答對 ${latestHistory.rawCorrect} 題) · 測驗時間：${latestHistory.date} · 失速臨界點：${esc(latestHistory.stallTier)}
+              本站加權練習分數：<strong>${latestHistory.scaledScore} / 100 分</strong> (答對 ${latestHistory.rawCorrect} 題) · 測驗時間：${latestHistory.date} · 建議回顧：${esc(latestHistory.stallTier)}
             </div>
           </div>
           <div style="display:flex;gap:10px">
@@ -235,13 +223,13 @@ function renderIntroView() {
         <div style="border:1px solid #e2e8f0;border-left:4px solid #0891b2;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0891b2">Tier 8: GMAT Focus 批判推理</strong>
-            <span class="pill" style="font-size:11px">2 題 (C2/C2+)</span>
+            <span class="pill" style="font-size:11px">2 題 (C2/進階題型)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Assumption 否定測試法、Weaken/Strengthen 商業決策論證</div>
         </div>
       </div>
       <div style="text-align:right;margin-top:10px;font-size:12px;color:var(--text-muted)">
-        合計：4 + 4 + 4 + 5 + 4 + 4 + 3 + 2 = <strong>整卷精準 30 題</strong>
+        合計：4 + 4 + 4 + 5 + 4 + 4 + 3 + 2 = <strong>預計抽取 30 題</strong>
       </div>
     </div>
 
@@ -249,17 +237,17 @@ function renderIntroView() {
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:28px">
       <div class="card" style="text-align:center">
         <div style="font-size:32px">⚡</div>
-        <h4 style="margin:8px 0 4px">極速定位 25 分鐘</h4>
-        <p style="font-size:13px;color:var(--text-muted);margin:0">以最短時間全面掃描從小學到研究所級別的能力邊界。</p>
+        <h4 style="margin:8px 0 4px">預留約 25 分鐘</h4>
+        <p style="font-size:13px;color:var(--text-muted);margin:0">練習不同主題的題目，找出需要回顧的觀念。</p>
       </div>
       <div class="card" style="text-align:center">
         <div style="font-size:32px">🎯</div>
-        <h4 style="margin:8px 0 4px">失速臨界點判定</h4>
-        <p style="font-size:13px;color:var(--text-muted);margin:0">精準找出您在第幾階遭遇理解瓶頸 (最近發展區 ZPD)。</p>
+        <h4 style="margin:8px 0 4px">選擇複習主題</h4>
+        <p style="font-size:13px;color:var(--text-muted);margin:0">找出這次需要回顧的題型。</p>
       </div>
       <div class="card" style="text-align:center">
         <div style="font-size:32px">📖</div>
-        <h4 style="margin:8px 0 4px">黃金五維名師詳解</h4>
+        <h4 style="margin:8px 0 4px">逐題解析與訂正</h4>
         <p style="font-size:13px;color:var(--text-muted);margin:0">公布成績後，每題均附雙語精譯、考點公式、生詞與致命陷阱剖析。</p>
       </div>
       <div class="card" style="text-align:center">
@@ -271,12 +259,12 @@ function renderIntroView() {
 
     <!-- 開始測驗按鈕 -->
     <div class="card" style="text-align:center;padding:36px 20px;background:linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);border:2px dashed #94a3b8">
-      <h2 style="margin:0 0 10px;font-size:22px">準備好檢驗您的真實英語實力了嗎？</h2>
+      <h2 style="margin:0 0 10px;font-size:22px">準備開始這次練習了嗎？</h2>
       <p style="color:var(--text-muted);max-width:540px;margin:0 auto 20px;font-size:14px">
-        點擊下方按鈕將從 1,000 題專屬題庫中隨機抽選 30 道題目，計時 25 分鐘。答題過程可隨時跳題、修改選擇。
+        點擊下方按鈕將從 本站練習題庫隨機抽取 30 道題目，計時 25 分鐘。答題過程可隨時跳題、修改選擇。
       </p>
       <button class="btn primary" data-start-diag="true" style="padding:14px 42px;font-size:17px;font-weight:700;border-radius:12px;box-shadow:0 6px 18px rgba(4,120,87,0.3)">
-        🚀 立即開始 30 題全階程度確認測驗
+        🚀 立即開始 30 題分層練習
       </button>
     </div>
   `;
@@ -304,7 +292,7 @@ function renderTestingView() {
     <div class="header-block" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px">
-          <span class="pill" style="font-weight:700;background:#091e32;color:#34d399">🎯 全階程度確認測驗</span>
+          <span class="pill" style="font-weight:700;background:#091e32;color:#34d399">🎯 分層練習</span>
           <span class="pill" style="background:#e0e7ff;color:#3730a3;font-size:12px">${esc(q.tierLabel)}</span>
           <span style="font-size:12px;color:var(--text-muted);background:var(--paper);padding:3px 8px;border-radius:6px;border:1px solid var(--line)">
             維度：${esc(q.dimension)}
@@ -417,8 +405,9 @@ function renderTestingView() {
       </div>
 
       <div style="text-align:center;margin-top:24px">
+        ${diagConfirmSubmit ? '<div role="alert"><p>仍有未作答題目。交卷後，未作答題會列入需要回顧的題目。</p><button class="btn primary" data-diag-confirm-submit="true">仍要交卷</button><button class="btn quiet" data-diag-cancel-submit="true">返回作答</button></div>' : ''}
         <button class="btn primary" data-diag-submit="true" style="padding:14px 40px;font-size:17px;font-weight:700;border-radius:12px;box-shadow:0 6px 18px rgba(4,120,87,0.35)">
-          🏆 完成作答，交卷並生成全維度能力診斷報告
+          🏆 完成作答，查看練習報告
         </button>
       </div>
     </div>
@@ -435,7 +424,9 @@ function renderReportView() {
 
   const ev = diagEvaluation;
   const filteredQuestions = diagQuestions.filter(q => {
-    const isCor = diagUserAnswers[q.id] === q.answer;
+    const isCor = Array.isArray(q.answer)
+      ? (Array.isArray(diagUserAnswers[q.id]) && diagUserAnswers[q.id].length === q.answer.length && diagUserAnswers[q.id].every(v => q.answer.includes(v)))
+      : diagUserAnswers[q.id] === q.answer;
     if (diagFilterView === 'wrong') return !isCor;
     if (diagFilterView === 'correct') return isCor;
     return true;
@@ -443,83 +434,17 @@ function renderReportView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 30 題全階程度精準檢測 · 深度能力診斷報告</div>
+      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 30 題全階程度練習檢核 · 深度能力診斷報告</div>
       <h1 style="margin:8px 0;font-size:28px">英語能力全面體檢成就報告與微課學習地圖</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        由 7 位專家委員會心理計量模型評定，精準計算您的標準化能力百分等級、CEFR國際級距與能力失速臨界點。
+        以下依本站規則整理本次作答，協助選擇複習主題；不是標準化能力評定。
       </p>
     </div>
 
-    <!-- 榮譽段位頭銜卡 (Honorary Badge Hero) -->
-    <div class="card" style="background:linear-gradient(135deg, #091e32 0%, #1e1b4b 60%, #312e81 100%);color:#fff;border-radius:16px;padding:30px;box-shadow:0 12px 30px rgba(0,0,0,0.15);margin-bottom:24px;border:1px solid rgba(255,255,255,0.15)">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
-        <div>
-          <span class="pill" style="background:rgba(52,211,153,0.25);color:#34d399;font-weight:700;font-size:13px;margin-bottom:8px">
-            ⭐ 認證段位等級：${esc(ev.cefr)}
-          </span>
-          <h2 style="margin:10px 0 8px;font-size:30px;color:#fff">${esc(ev.honoraryBadge.title)}</h2>
-          <p style="color:#cbd5e1;max-width:620px;margin:0 0 16px;font-size:15px;line-height:1.6">
-            ${esc(ev.honoraryBadge.desc)}
-          </p>
-          <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:14px">
-            <span style="background:rgba(255,255,255,0.1);padding:6px 12px;border-radius:8px">
-              🎯 答對題數：<strong style="color:#34d399">${ev.rawCorrect} / 30 題</strong>
-            </span>
-            <span style="background:rgba(255,255,255,0.1);padding:6px 12px;border-radius:8px">
-              📈 加權標準分數：<strong style="color:#fbbf24">${ev.scaledScore} / 100 分</strong>
-            </span>
-            <span style="background:rgba(255,255,255,0.1);padding:6px 12px;border-radius:8px">
-              ⚠️ 能力失速臨界點：<strong style="color:#f472b6">${esc(ev.stallTierLabel)}</strong>
-            </span>
-          </div>
-        </div>
-
-        <div style="text-align:center;background:rgba(255,255,255,0.06);padding:24px 30px;border-radius:14px;border:1px solid rgba(255,255,255,0.12)">
-          <div style="font-size:14px;color:#94a3b8;margin-bottom:4px">加權綜合實力指數</div>
-          <div style="font-size:56px;font-weight:900;color:var(--mint);line-height:1">${ev.scaledScore}</div>
-          <div style="font-size:13px;color:#cbd5e1;margin-top:6px">滿分 100 分量表</div>
-        </div>
-      </div>
-    </div>
-
+    <section class="card"><h2>本次答對 ${ev.rawCorrect} / ${diagQuestions.length} 題</h2><p>未作答也包含在總題數內。請在下方逐題檢查，找出需要訂正的觀念。</p></section>
     <!-- 雙欄架構：大考落點預估 vs 五大能力維度雷達 -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:20px;margin-bottom:24px">
-      <!-- 欄 1: 全考制落點預估對照表 -->
-      <div class="card">
-        <h3 style="margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px">
-          <span>🏛️ 全考制國內外大考落點預估 (Normative Projections)</span>
-        </h3>
-        <p style="font-size:13px;color:var(--text-muted);margin:0 0 16px">
-          依據 IRT 項目反應理論轉換，對標台灣與國際權威英檢考試標準：
-        </p>
-        <div style="display:grid;gap:10px">
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #16a34a">
-            <span style="font-size:14px">🎒 國中教育會考英語</span>
-            <strong style="color:#16a34a;font-size:15px">${ev.predicted.cap}</strong>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #7c3aed">
-            <span style="font-size:14px">🏫 高中大學學測英文</span>
-            <strong style="color:#7c3aed;font-size:15px">${ev.predicted.gsat}</strong>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #d97706">
-            <span style="font-size:14px">💼 TOEIC 多益國際商務</span>
-            <strong style="color:#d97706;font-size:15px">${ev.predicted.toeic}</strong>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #4f46e5">
-            <span style="font-size:14px">🎓 Digital SAT 數位測驗</span>
-            <strong style="color:#4f46e5;font-size:15px">${ev.predicted.sat}</strong>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #e11d48">
-            <span style="font-size:14px">🏛️ GRE 研究所 Verbal</span>
-            <strong style="color:#e11d48;font-size:15px">${ev.predicted.gre}</strong>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#f8fafc;border-radius:8px;border-left:4px solid #0891b2">
-            <span style="font-size:14px">📊 GMAT Focus 批判推理</span>
-            <strong style="color:#0891b2;font-size:15px">${ev.predicted.gmat}</strong>
-          </div>
-        </div>
-      </div>
-
+      <section class="card"><h3>這次練習能告訴你什麼？</h3><p>只反映本次抽到題目的表現。請查看答錯的題目、解析與推薦單元，重新練習。</p><p>這份練習未經正式常模校準，不能換算會考、學測、TOEIC、SAT、GRE、GMAT 分數，也不能作為 CEFR 認證。</p></section>
       <!-- 欄 2: 五大核心維度掌握率分析 -->
       <div class="card">
         <h3 style="margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px">
@@ -563,11 +488,11 @@ function renderReportView() {
         <span style="font-size:32px">💡</span>
         <div>
           <h3 style="margin:0 0 6px;color:#9f1239;font-size:17px">
-            專家委員會諮詢評語 · 您的英語能力「失速臨界點 (Stall Point)」診斷
+            本次答題回顧與練習建議
           </h3>
           <p style="margin:0;font-size:14px;color:#881337;line-height:1.6">
-            根據心理計量分析，您在 <strong>${esc(ev.stallTierLabel)}</strong> 遇到了理解與推論的失速臨界點。
-            ${getStallPointAdvice(ev.stallTier)}
+            根據本次作答，建議回顧 <strong>${esc(ev.stallTierLabel)}</strong> 的相關題型。
+            先回看相關例句，解釋自己為何選錯，再用不同情境練習。
           </p>
         </div>
       </div>
@@ -583,7 +508,7 @@ function renderReportView() {
               依據您本次測驗失速考點，系統自動對標 English Quest 最迫切需要強化的微課講義：
             </div>
           </div>
-          <span class="pill" style="background:#dbeafe;color:#1e40af;font-size:12px">${ev.remedialHooks.length} 門精準推薦</span>
+          <span class="pill" style="background:#dbeafe;color:#1e40af;font-size:12px">${ev.remedialHooks.length} 個複習單元</span>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px">
@@ -631,7 +556,9 @@ function renderReportView() {
       <div style="display:grid;gap:18px">
         ${filteredQuestions.map((q, filteredIdx) => {
           const userChoice = diagUserAnswers[q.id];
-          const isCorrect = userChoice === q.answer;
+          const isCorrect = Array.isArray(q.answer)
+            ? (Array.isArray(userChoice) && userChoice.length === q.answer.length && userChoice.every(v => q.answer.includes(v)))
+            : userChoice === q.answer;
           const origIdx = diagQuestions.findIndex(x => x.id === q.id);
           const showExp = diagExpandedExplains[q.id] !== false; // 預設展開
 
@@ -666,8 +593,8 @@ function renderReportView() {
               <div style="display:grid;gap:6px;margin-bottom:14px">
                 ${q.options.map((opt, oIdx) => {
                   const optLetter = String.fromCharCode(65 + oIdx);
-                  const isAns = oIdx === q.answer;
-                  const isUser = oIdx === userChoice;
+                  const isAns = Array.isArray(q.answer) ? q.answer.includes(oIdx) : oIdx === q.answer;
+                  const isUser = Array.isArray(userChoice) ? userChoice.includes(oIdx) : oIdx === userChoice;
                   let borderStyle = 'border:1px solid #e2e8f0;background:#fff;';
                   let tag = '';
 
@@ -794,6 +721,7 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
       diagQuestions = questions;
       diagCurrentIdx = 0;
       diagUserAnswers = {};
+      diagConfirmSubmit = false;
       diagTimerSeconds = 25 * 60;
       diagTimerPaused = false;
       diagMode = 'testing';
@@ -856,12 +784,13 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
   }
 
   // 交卷
+  if (d.diagCancelSubmit) { diagConfirmSubmit = false; renderCallback(); return true; }
+  if (d.diagConfirmSubmit && diagConfirmSubmit) { diagConfirmSubmit = false; finishDiagnostic(renderCallback); return true; }
   if (d.diagSubmit) {
     const answeredCount = Object.keys(diagUserAnswers).length;
     const totalQ = diagQuestions.length;
     if (answeredCount < totalQ) {
-      const confirmSubmit = confirm(`尚有 ${totalQ - answeredCount} 題未作答，確定要現在交卷生成程度診斷報告嗎？`);
-      if (!confirmSubmit) return true;
+      diagConfirmSubmit = true; renderCallback(); return true;
     }
     finishDiagnostic(renderCallback);
     return true;

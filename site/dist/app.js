@@ -178,7 +178,7 @@ function shell(body) {
 
   const pageTitles = {
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
-    diagnostic: '30 題全階程度精準檢測 (小學至GMAT)',
+    diagnostic: '30 題全階程度練習檢核 (小學至GMAT)',
     curriculum108: '108 課綱英語全學年課程地圖',
     phonics: '自然拼讀 (Phonics) 與發音規則全景大師課 (見字能讀·聽音能寫)',
     flashcards: '多階層英語單字與核心片語記憶閃卡館 (3D翻轉·合成語音)',
@@ -200,7 +200,7 @@ function shell(body) {
     <div class="shell">
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
-        <div class="edition">108課綱英語旗艦平台 · 專家重構版</div>
+        <div class="edition">英語自學 · 理解與應用</div>
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
@@ -221,8 +221,8 @@ function shell(body) {
           `).join('')}
         </nav></details>
         <div class="side-foot">
-          <strong>108課綱・專家委員會7次迭代</strong><br>
-          國小國中高中 61 單元 · 內容倍增 100%+<br>
+          <strong>108課綱・自學教材持續更新</strong><br>
+          國小、國中與高中教材<br>
           <span style="font-size:11px;color:#94a3b8">Self-Paced Mastery × SLA Cognitive Engine</span>
         </div>
       </aside>
@@ -247,7 +247,7 @@ function curriculum108Page() {
 
   return `
     <div class="header-block">
-      <div class="pill">🏫 108 課綱學年與學期導覽 · 專家委員會 7 次大改造</div>
+      <div class="pill">🏫 108 課綱學年與學期導覽 · 依程度選擇單元</div>
       <h1 style="margin:8px 0">教育部 108 課綱英語文全學年課程地圖 (雙倍優質內容版)</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         完整橫跨國小第三階段 (6上/6下)、國中第四階段 (7上至9下會考)、高中第五階段 (10上至12下學測/統測/國際認證)。
@@ -260,7 +260,7 @@ function curriculum108Page() {
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
         <div style="max-width:700px">
           <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700;font-size:12px;margin-bottom:8px">🎯 專家委員會 7 次迭代全階檢測</span>
-          <h2 style="margin:8px 0 10px;font-size:22px;color:#fff">30 題全階英語能力精準診斷測驗 (小學 Pre-A1 貫通至 GRE/GMAT C2+)</h2>
+          <h2 style="margin:8px 0 10px;font-size:22px;color:#fff">30 題全階英語能力練習檢核測驗 (小學 Pre-A1 貫通至 GRE/GMAT C2+)</h2>
           <p style="color:#c7d2fe;margin:0 0 16px;font-size:14px;line-height:1.6">
             只需 20 分鐘，快速測定您的真實英語段位！涵蓋字彙、句法、篇章與批判邏輯五大維度。公布成績後提供<strong>每題名師五星級專業詳解</strong>與個人化微課補強清單。
           </p>
@@ -336,38 +336,7 @@ function curriculum108Page() {
       </div>
     </div>
 
-    <!-- 7 位專家委員會諮詢橫幅 -->
-    <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg, #091e32 0%, #1e293b 100%);color:#fff;border-left:6px solid #34d399">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span style="font-size:22px">🏛️</span>
-            <strong style="font-size:16px;color:#34d399">7 位跨領域專家諮詢委員會指導</strong>
-            <span class="chip" style="background:rgba(52,211,153,0.2);color:#34d399;font-weight:700">7 次深度迭代改造完成</span>
-          </div>
-          <p style="margin:6px 0 0;font-size:13px;color:#cbd5e1;line-height:1.5">
-            課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考測驗心理計量、語音聲學、技高專業英語 (ESP) 與全端 UX 共同打造。
-          </p>
-        </div>
-        <button class="btn small" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25)" data-toggle-expert="true">
-          ${showExpertDetails ? '收合專家陣容 ▲' : '查看 7 位專家陣容與改造成果 ▼'}
-        </button>
-      </div>
-
-      ${showExpertDetails ? `
-        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15);display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:12px">
-          ${EXPERT_COUNCIL.map(m => `
-            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:12px;border-radius:8px">
-              <div style="font-size:11px;color:#34d399;font-weight:700;margin-bottom:2px">[${m.role}]</div>
-              <strong style="font-size:14px;color:#fff">${m.name}</strong>
-              <div style="font-size:12px;color:#94a3b8;margin:2px 0 4px">${m.title}</div>
-              <div style="font-size:11px;color:#cbd5e1;line-height:1.4">🎯 指導要旨：${m.specialty}</div>
-            </div>
-          `).join('')}
-        </div>
-      ` : ''}
-    </div>
-
+    <aside class="card"><h2>如何使用這份教材</h2><p>先閱讀概念與例句，再獨立作答，依解析訂正。課綱標籤是編排參考，尚需逐項核對；教材數量與點擊次數不代表能力精熟。</p><p>本站提供自學練習，不提供正式 CEFR 認證或考試成績預測。</p></aside>
     <!-- 🎒 國小英文 · 🏫 國中英文 · 🎓 高中英文 三大學段核心直達標籤卡 -->
     <div style="margin:24px 0 16px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
@@ -1442,7 +1411,7 @@ function examPage() {
       <div class="card" style="text-align:center;padding:60px 24px;margin-top:20px">
         <div style="font-size:42px;animation:spin 1s linear infinite">⏳</div>
         <h2 style="margin:16px 0 8px">正在從 20,000 題題庫載入試題...</h2>
-        <p style="color:var(--text-muted)">正在執行 Fisher-Yates 現代洗牌演算法與心理計量難度抽題校驗...</p>
+        <p style="color:var(--text-muted)">正在準備練習題目…</p>
       </div>
     `;
   }
@@ -2251,6 +2220,7 @@ initDisplaySettings();
 render();
 
 root.addEventListener('input', e => searchKnowledge(e.target));
+root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
   if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
