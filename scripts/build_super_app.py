@@ -1,4 +1,21 @@
-// app.js - 全方位 108 課綱英語教育旗艦平台 (專家團隊 7 次深度大改造版)
+"""
+build_super_app.py
+Generates the fully updated, doubled-content, expert-guided dist/app.js.
+Incorporates:
+- 7-Member Expert Council interactive banner and documentation
+- Doubled educational content across all 7 grade bands (G6 to G12, 61 units, 14 semesters)
+- Dynamic Junyi Micro-Lesson mode with interactive 2-tier scaffolding hints and 42 fatal traps radar
+- 12 Badges progression system
+- Complete A4 Handout print system for all 14 semesters
+- Audio point-and-read integration (words, sentences, dialogues)
+"""
+
+import sys
+import os
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+app_code = r'''// app.js - 全方位 108 課綱英語教育旗艦平台 (專家團隊 7 次深度大改造版)
 // 7 位跨領域專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、均一微課自學、大考測驗心理計量、語音聲學、技高ESP與全齡UX
 // 深度整合：國小 (Sixth 專案 6上/6下)、國中 (JH 專案 7-9年級 16單元)、高中/技高 (Arch 專案 10-12年級大考先修與學期複習)
 // 包含：概念公式、音標單字、雙語會話、多模態跨領域閱讀、步驟0破題思維、雙階鷹架提示檢測、42項致命陷阱避雷雷達、12枚核心素養徽章與 A4 官方講義列印
@@ -502,7 +519,215 @@ function curriculum108Page() {
 // 2. 均一微課與鷹架學習館 (Junyi Micro-Lessons)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function junyiPage() {
-  return microLesson(activeUnitId);
+  const allUnits = UNIFIED_GRADES.flatMap(g => g.semesters.flatMap(s => s.units));
+  const activeUnit = allUnits.find(u => u.id === activeUnitId) || allUnits[0];
+  const unitMastery = junyi.getUnitMastery(activeUnit.id);
+  const masteryCode = typeof unitMastery === 'string' ? unitMastery : (unitMastery?.code || 'unstarted');
+  const masteryInfo = MASTERY_LEVELS[masteryCode.toUpperCase()] || MASTERY_LEVELS.UNSTARTED;
+  const hints = revealedHints[activeUnit.id] || [];
+  const isSolutionOpen = !!revealedSolutions[activeUnit.id];
+
+  return `
+    <div class="header-block">
+      <div class="pill">💡 均一教育平台 (Junyi Academy) 風格微課程</div>
+      <h1 style="margin:8px 0">技能精熟・鷹架引導・思維破題微課堂 (雙倍內容大改造)</h1>
+      <p style="color:var(--text-muted);margin:0;font-size:15px">
+        全 7 年級 61 單元深度拆解！點擊「步驟 0」掌握秒解題眼，點擊「鷹架提示」逐步推導，右側隨時查閱 42 項考場致命陷阱避雷雷達！
+      </p>
+    </div>
+
+    <!-- 單元下拉選擇器 -->
+    <div class="filter-row" style="margin:20px 0;display:flex;gap:12px;align-items:center;background:#fff;padding:12px 18px;border-radius:12px;border:1px solid var(--line)">
+      <span style="font-weight:700;white-space:nowrap">📖 切換均一學習單元：</span>
+      <select id="junyi-unit-select" style="flex:1;padding:8px 12px;border-radius:8px;border:1px solid var(--line)">
+        ${UNIFIED_GRADES.map(g => `
+          <optgroup label="${g.title}">
+            ${g.semesters.flatMap(s => s.units.map(u => `
+              <option value="${u.id}" ${u.id === activeUnit.id ? 'selected' : ''}>[${u.unitNo}] ${u.title} (${u.indicator})</option>
+            `)).join('')}
+          </optgroup>
+        `).join('')}
+      </select>
+      <span class="chip" style="background:${masteryInfo.color}20;color:${masteryInfo.color};font-weight:700;white-space:nowrap">
+        ${masteryInfo.icon} ${masteryInfo.label}
+      </span>
+    </div>
+
+    <!-- 微課主要內容版面 -->
+    <div class="layout" style="display:grid;grid-template-columns:2fr 1fr;gap:24px">
+      <div>
+        <!-- 單元標題與課綱素養指標 -->
+        <div class="card" style="margin-bottom:20px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <span class="chip" style="background:#e0e7ff;color:#3730a3;font-weight:700">${activeUnit.unitNo}</span>
+            <span class="chip" style="background:#ecfdf5;color:#047857">108課綱指標: ${activeUnit.indicator}</span>
+            <span class="chip" style="background:#f1f5f9;color:#475569">素養: ${activeUnit.competency || '系統思考'}</span>
+          </div>
+          <h2 style="margin:4px 0 12px">${activeUnit.title}</h2>
+
+          <!-- 學習動機 -->
+          ${activeUnit.motivation ? `
+            <div style="background:#f0fdf4;border:1px solid #bbf7d0;padding:12px 14px;border-radius:8px;font-size:14px;color:#166534;margin-bottom:16px">
+              <strong>💡 學習動機：</strong> ${activeUnit.motivation}
+            </div>
+          ` : ''}
+          
+          <!-- 核心觀念要點卡 (Concepts & Formulas) -->
+          ${activeUnit.concepts && activeUnit.concepts.length > 0 ? `
+            <div style="background:#f8fafc;padding:16px;border-radius:10px;margin-bottom:16px;border:1px solid #e2e8f0">
+              <strong style="color:var(--text-primary);font-size:15px">🔑 概念結構矩陣與語法公式：</strong>
+              <div style="display:grid;gap:12px;margin-top:10px">
+                ${activeUnit.concepts.map(c => `
+                  <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #cbd5e1">
+                    <div style="font-weight:700;color:#1e3a8a;font-size:14px;margin-bottom:4px">${c.title}</div>
+                    ${c.formula ? `<div style="background:#eff6ff;padding:6px 10px;border-radius:6px;font-family:monospace;font-weight:700;color:#2563eb;font-size:13px;margin-bottom:6px">📐 公式：${c.formula}</div>` : ''}
+                    <p style="margin:0 0 6px;font-size:13px;color:#334155">${c.explanation}</p>
+                    ${c.example ? `<div style="font-size:12px;color:#059669;background:#ecfdf5;padding:4px 8px;border-radius:4px" lang="en">例：${c.example}</div>` : ''}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- 語音與核心單字卡 (Phonics & Vocab) -->
+          ${activeUnit.phonicsVocab && activeUnit.phonicsVocab.length > 0 ? `
+            <div style="margin-bottom:16px">
+              <strong style="color:#0f766e;font-size:15px">🔤 語音單字點讀卡：</strong>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));gap:8px;margin-top:8px">
+                ${activeUnit.phonicsVocab.map(v => `
+                  <div style="background:#f0fdfa;border:1px solid #ccfbf1;padding:10px;border-radius:8px;display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                      <strong style="color:#115e59" lang="en">${v.word}</strong>
+                      <span style="font-family:monospace;font-size:12px;color:#0f766e;margin-left:4px">${v.ipa}</span>
+                      <div style="font-size:12px;color:#334155">${v.pos} ${v.zh}</div>
+                    </div>
+                    <button class="btn small quiet" data-speak-word="${esc(v.word)}">🔊 發音</button>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- 均一步驟 0 破題思維卡 -->
+          <div style="background:linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);border:1px solid #6ee7b7;padding:16px;border-radius:12px;margin-bottom:18px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:20px">⚡</span>
+              <strong style="color:#065f46;font-size:15px">均一步驟 0 破題思維（第一眼題眼判斷法）：</strong>
+            </div>
+            <p style="margin:0;color:#047857;font-size:14px;line-height:1.6">
+              ${activeUnit.step0Clue}
+            </p>
+          </div>
+
+          <!-- 鷹架式引導答題與即時提示 (Formative Quiz) -->
+          ${activeUnit.formativeQuiz && activeUnit.formativeQuiz.length > 0 ? `
+            <div style="border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:18px;background:#f8fafc">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px">
+                <strong style="font-size:15px;color:var(--brand-dark)">🪜 鷹架漸進式思考題：</strong>
+                <div style="display:flex;gap:6px">
+                  <button class="btn small quiet" data-reveal-hint-unit="${activeUnit.id}" data-hint-tier="1">提示 1 (語法)</button>
+                  <button class="btn small quiet" data-reveal-hint-unit="${activeUnit.id}" data-hint-tier="2">提示 2 (排除)</button>
+                  <button class="btn small primary" data-toggle-solution-unit="${activeUnit.id}">
+                    ${isSolutionOpen ? '收起詳解 ▲' : '查看精熟解析 ▼'}
+                  </button>
+                </div>
+              </div>
+
+              ${activeUnit.formativeQuiz.map((q, qi) => `
+                <div style="background:#fff;border:1px solid #cbd5e1;padding:12px;border-radius:8px;margin-bottom:8px">
+                  <div style="font-size:14px;font-weight:600;margin-bottom:8px" lang="en">${qi + 1}. ${q.q}</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                    ${q.options.map((opt, oi) => {
+                      const isCorrect = oi === q.ans;
+                      return `
+                        <button class="btn small quiet" style="text-align:left;padding:8px 12px" data-answer-check="${isCorrect ? 'correct' : 'wrong'}">
+                          ${String.fromCharCode(65 + oi)}) <span lang="en">${opt}</span>
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+
+                  <!-- 動態展開提示 -->
+                  ${hints.includes(1) || hints.includes('all') ? `
+                    <div style="background:#fef3c7;border:1px solid #fde68a;padding:8px 12px;border-radius:6px;font-size:13px;color:#92400e;margin-top:8px">
+                      <strong>💡 提示 1 (語法規律)：</strong> ${q.hint1}
+                    </div>
+                  ` : ''}
+
+                  ${hints.includes(2) || hints.includes('all') ? `
+                    <div style="background:#fef3c7;border:1px solid #fde68a;padding:8px 12px;border-radius:6px;font-size:13px;color:#92400e;margin-top:8px">
+                      <strong>🔍 提示 2 (排除法則)：</strong> ${q.hint2}
+                    </div>
+                  ` : ''}
+
+                  ${isSolutionOpen || hints.includes('all') ? `
+                    <div style="background:#ecfdf5;border:1px solid #a7f3d0;padding:10px 14px;border-radius:6px;font-size:13px;color:#065f46;margin-top:8px">
+                      <strong>⭐ 精熟詳解：</strong> ${q.solution}
+                    </div>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
+          <!-- 精熟標記按鈕 -->
+          <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px;flex-wrap:wrap;gap:8px">
+            <span style="font-size:13px;color:var(--text-muted)">自評學習進度，獲得經驗值徽章：</span>
+            <div style="display:flex;gap:8px">
+              <button class="btn small quiet" data-set-mastery="${activeUnit.id}" data-level="practicing">🟡 標記練習中 (+50 XP)</button>
+              <button class="btn small primary" data-set-mastery="${activeUnit.id}" data-level="mastered">⭐ 標記為已精熟 (+100 XP)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：42 項致命陷阱雷達與 12 枚徽章庫 -->
+      <div>
+        <div class="card" style="margin-bottom:20px;border-top:4px solid #ef4444">
+          <h3 style="margin:0 0 8px;display:flex;align-items:center;gap:6px">
+            <span>🚨</span> 42 項考場致命陷阱避雷雷達
+          </h3>
+          <p style="font-size:12px;color:var(--text-muted);margin:0 0 12px">
+            涵蓋國小基礎、國中會考、高中學測與統測高頻失分地雷：
+          </p>
+
+          <div style="display:grid;gap:10px;max-height:550px;overflow-y:auto;padding-right:4px">
+            ${FATAL_TRAPS.map(trap => `
+              <div style="background:#fff1f2;border:1px solid #fecdd3;padding:10px 12px;border-radius:8px;font-size:12px">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
+                  <span class="chip" style="font-size:10px;padding:1px 6px;background:#ffe4e6;color:#9f1239">${trap.gradeBand}</span>
+                </div>
+                <div style="font-weight:700;color:#9f1239;margin:2px 0">${trap.topic}</div>
+                <div style="text-decoration:line-through;color:#e11d48;margin-bottom:2px">${trap.wrong}</div>
+                <div style="color:#047857;font-weight:600;margin-bottom:4px">${trap.correct}</div>
+                <div style="color:#475569;font-size:11px;line-height:1.4">${trap.explanation}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 12px;display:flex;align-items:center;gap:6px">
+            <span>🏅</span> 12 枚大考與自學核心素養徽章
+          </h3>
+          <div style="display:grid;gap:10px">
+            ${JUNYI_BADGES.map(b => {
+              const unlocked = junyi.data.earnedBadges.includes(b.id);
+              return `
+                <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:${unlocked ? '#ecfdf5' : '#f8fafc'};border:1px solid ${unlocked ? '#a7f3d0' : '#e2e8f0'}">
+                  <span style="font-size:24px">${b.icon}</span>
+                  <div>
+                    <strong style="font-size:13px;color:${unlocked ? '#047857' : '#64748b'}">${b.title}</strong>
+                    <div style="font-size:11px;color:#94a3b8">${b.desc} (${b.reqXp} XP)</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1468,3 +1693,9 @@ root.addEventListener('input', e => handleLessonInput(e.target));
 
 // 初始化啟動渲染
 render();
+'''
+
+with open("dist/app.js", "w", encoding="utf-8") as f:
+    f.write(app_code)
+
+print("Generated upgraded dist/app.js successfully!")

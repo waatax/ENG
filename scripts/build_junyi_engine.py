@@ -1,4 +1,14 @@
-// junyi_engine.mjs - 均一教育平台 (Junyi Academy) 風格智慧自學引導引擎
+"""
+build_junyi_engine.py
+Generates the fully expanded, 42-fatal-trap, 12-badge JunyiEngine module for dist/junyi_engine.mjs.
+"""
+
+import sys
+import json
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+code = r'''// junyi_engine.mjs - 均一教育平台 (Junyi Academy) 風格智慧自學引導引擎
 // 專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、均一微課自學、大考會考測驗、語音聲學、技高ESP與全齡UX
 // 包含技能精熟追蹤、鷹架提示 (Scaffolding Hints)、步驟 0 破題思維、42項致命陷阱 X 光機與 12 枚核心素養徽章系統
 
@@ -450,25 +460,8 @@ export class JunyiEngine {
   }
 
   getUnitMastery(unitId) {
-    return this.data.mastery[unitId] || 'unstarted';
-  }
-
-  getUnitMasteryInfo(unitId) {
     const code = this.data.mastery[unitId] || 'unstarted';
     return Object.values(MASTERY_LEVELS).find(l => l.code === code) || MASTERY_LEVELS.UNSTARTED;
-  }
-
-  setUnitMastery(unitId, level) {
-    this.data.mastery[unitId] = level;
-    this.saveState();
-  }
-
-  recordUnitAttempt(unitId, isCorrect) {
-    this.recordQuizResult(unitId, isCorrect);
-  }
-
-  getSummary() {
-    return this.getProgressStats();
   }
 
   recordQuizResult(unitId, isCorrect) {
@@ -520,7 +513,6 @@ export class JunyiEngine {
     const practicingCount = Object.values(this.data.mastery).filter(m => m === 'practicing').length;
     return {
       xp: this.data.xp,
-      streak: this.data.streak || 1,
       masteredCount,
       familiarCount,
       practicingCount,
@@ -552,5 +544,9 @@ export class JunyiEngine {
     `;
   }
 }
+'''
 
-export const junyi = new JunyiEngine();
+with open("dist/junyi_engine.mjs", "w", encoding="utf-8") as f:
+    f.write(code)
+
+print("Generated expanded dist/junyi_engine.mjs with 42 fatal traps and 12 badges!")

@@ -901,3 +901,30 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
     margin: 12mm 15mm;
   }
 }
+
+/* Reading-first lesson pages: full text, keyboard controls and print support. */
+.lesson-page{max-width:1080px;font-size:16px;line-height:1.85}
+.lesson-page .card{margin:20px 0;scroll-margin-top:20px}
+.lesson-page h1{font-size:clamp(25px,3vw,36px);line-height:1.4}
+.lesson-page h2{font-size:23px;margin:14px 0}
+.lesson-page h3{font-size:18px;margin:22px 0 9px}
+.lesson-page p{margin:12px 0;overflow-wrap:anywhere}
+.lesson-page li{margin:10px 0}
+.lesson-page blockquote,.lesson-tip{margin:20px 0;padding:16px 20px;border-left:4px solid #07825b;background:#edf8f3}
+.lesson-page blockquote{font-size:21px}
+.lesson-links{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.lesson-links a{padding:8px 12px;color:#065f46;background:#edf8f3;border-radius:7px}
+.lesson-page select{display:block;width:100%;max-width:100%;padding:12px;font:inherit}
+.lesson-page summary{cursor:pointer;font-weight:700;min-height:44px}
+.lesson-table{overflow-x:auto;max-width:100%}
+.lesson-table table{border-collapse:collapse;width:100%;min-width:480px}
+.lesson-table th,.lesson-table td{text-align:left;vertical-align:top;border:1px solid #d5e0e7;padding:12px;font-size:16px}
+.lesson-page pre{overflow:auto;padding:16px;background:#f1f5f9;font-size:14px}
+.lesson-page textarea{display:block;width:100%;margin:12px 0;padding:14px;border:1px solid #8798a6;border-radius:8px;resize:vertical;font:inherit;background:white;color:#142a3d}
+.lesson-check{min-width:0;border:1px solid #b8cdd8;border-radius:10px;padding:18px;margin:20px 0}
+.lesson-check legend{font-weight:700;font-size:18px;padding:0 7px;max-width:100%}
+.lesson-option{display:block!important;white-space:normal!important;width:100%;text-align:left;margin:9px 0;padding:12px!important;font-size:16px!important;min-height:44px}
+.lesson-option:disabled{opacity:1;color:#334155;cursor:default}
+.lesson-page :is(button,a,textarea,select,summary):focus-visible{outline:3px solid #a85c00;outline-offset:3px}
+@media(max-width:650px){.lesson-page .card{padding:18px}.lesson-page h2{font-size:21px}.lesson-page blockquote{font-size:18px}.lesson-links .btn{white-space:normal;text-align:left}}
+@media print{.lesson-page .card{break-inside:auto}.lesson-page button,.lesson-links{display:none!important}.lesson-page textarea{min-height:120px}}

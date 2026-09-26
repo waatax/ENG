@@ -15,13 +15,13 @@ export const curriculum = [
         concepts: [
           {
             heading: '英文句子的五大核心骨架 (Basic Sentence Patterns)',
-            body: '英文是「主詞＋動詞」為軸心的形合語言。108 課綱要求國中生必須熟練五大基本句型：\n1. S + V（主詞＋完全不及物動詞）：Birds fly. / The baby cried loudly.\n2. S + V + SC（主詞＋不完全不及物動詞＋主詞補詞）：She looks energetic. / Water feels cold.\n3. S + V + O（主詞＋完全及物動詞＋受詞）：Leo reads science magazines every evening.\n4. S + V + IO + DO（主詞＋授與動詞＋間接受詞＋直接受詞）：My father bought me a bicycle.（= bought a bicycle for me）\n5. S + V + O + OC（主詞＋不完全及物動詞＋受詞＋受詞補詞）：The news made everyone ecstatic. / We elected David class leader.',
-            tip: '解題關鍵：先找出句中唯一的「主要動詞（Finite Verb）」，再檢查主詞與動詞之單複數一致性（Subject-Verb Agreement）。'
+            body: '先用主詞、動詞、受詞與補語觀察句子。以下五種常見句型用來幫助解析：\n1. S + V（主詞＋完全不及物動詞）：Birds fly. / The baby cried loudly.\n2. S + V + SC（主詞＋不完全不及物動詞＋主詞補詞）：She looks energetic. / Water feels cold.\n3. S + V + O（主詞＋完全及物動詞＋受詞）：Leo reads science magazines every evening.\n4. S + V + IO + DO（主詞＋授與動詞＋間接受詞＋直接受詞）：My father bought me a bicycle.（= bought a bicycle for me）\n5. S + V + O + OC（主詞＋不完全及物動詞＋受詞＋受詞補詞）：The news made everyone ecstatic. / We elected David class leader.',
+            tip: '解題關鍵：先分辨主句與子句，分別找各子句的主詞和謂語，再檢查主詞與動詞是否一致。複句可以有多個限定動詞。'
           },
           {
             heading: '四大基礎時態的判斷與時間副詞標記',
             body: '1. 現在簡單式：表示習慣、真理或目前狀態。動詞第三人稱單數加 -s/-es。標記詞：always, usually, often, every day。\n2. 過去簡單式：表示過去特定時間已結束之動作。動詞加 -ed 或不規則變化。標記詞：yesterday, two days ago, in 2020, last night。\n3. 未來簡單式：表示將要發生的事。公式：will + V 原形 或 be going to + V 原形。標記詞：tomorrow, next week, soon, in the future。\n4. 現在進行式：表示此時此刻正進行之動作。公式：be動詞 (am/is/are) + V-ing。標記詞：now, listen!, look!, at the moment。',
-            tip: '會考陷阱：表示真理或科學事實時，即便句子前面是過去式，子句仍須維持現在式（例如 The teacher told us that water boils at 100°C.）。'
+            tip: '會考陷阱：表示真理或科學事實時，即便句子前面是過去式，若表達現在仍成立的事實，子句可以維持現在式（例如 The teacher told us that water boils at 100°C.）。'
           }
         ],
         vocab: [
@@ -335,8 +335,8 @@ export const curriculum = [
         concepts: [
           {
             heading: '115 學年度大考篇章結構改制核心因應',
-            body: '大考中心自 115 學年度起，將學測英文篇章結構題由「四個空格、四個選項」全面改制為「四個空格、五個選項（4空5選）」。\n這意味著必定會有一個「極具誘惑力之多餘干擾項（Distractor）」。\n破解策略：\n1. 閱讀前先讀五個選項，圈出每個選項的核心主題詞、轉折詞（However, Furthermore, Consequently）與代名詞（these, such, they, it）。\n2. 逐格分析前後文的「邏輯語意鉤子（Semantic Hooks）」：\n- 順承延伸：前後話題一致，尋找同義字替換或例證。\n- 轉折反駁：前後立場相反，必須有對比性字詞。\n- 因果推導：前句是原因，本句是結果，或反之。',
-            tip: '切記：代名詞指涉必須「性、數、格」完全吻合前文提及的名詞，這是排除干擾項最強的鐵證！'
+            body: '大考中心自 115 學年度起，學測英文篇章結構題採「四個空格、五個選項（4空5選）」。\n這意味著必定會有一個「極具誘惑力之多餘干擾項（Distractor）」。\n破解策略：\n1. 閱讀前先讀五個選項，圈出每個選項的核心主題詞、轉折詞（However, Furthermore, Consequently）與代名詞（these, such, they, it）。\n2. 逐格分析前後文的「邏輯語意鉤子（Semantic Hooks）」：\n- 順承延伸：前後話題一致，尋找同義字替換或例證。\n- 轉折反駁：前後立場相反，必須有對比性字詞。\n- 因果推導：前句是原因，本句是結果，或反之。',
+            tip: '切記：代名詞的人稱、數與指涉對象要合理；格位由代名詞在自己子句中的功能決定，不需與先行詞的格相同，這是排除干擾項最強的鐵證！'
           },
           {
             heading: '段落連貫性 (Cohesion) 與過渡副詞家族',
@@ -848,7 +848,7 @@ export const curriculum = [
     id: 'intl',
     title: '國際英文檢定與留學考試｜官方規格精通',
     badge: 'GEPT · TOEIC · SAT · GRE · GMAT · TOEFL iBT 2026',
-    intro: '深度研析並完整收錄全球六大權威測驗：全民英檢 (GEPT 全級別)、多益 (TOEIC L&R + S&W)、Digital SAT (雙模組適性與科學長文)、GRE (雙空三空邏輯反差與 Issue 立論)、GMAT Focus (批判推理五大模型與商業決策)、以及 TOEFL iBT 2026 最新改革新題型。每科均具備官方規格拆解、高頻核心詞彙發音庫、實戰必備語塊與學術商務情境對話。',
+    intro: '提供六種考試的教學與原創示例；完整官方題庫並未全部收錄。考試包括：全民英檢 (GEPT 全級別)、多益 (TOEIC L&R + S&W)、Digital SAT (雙模組適性與科學長文)、GRE (雙空三空邏輯反差與 Issue 立論)、GMAT (批判推理五大模型與商業決策)、以及 TOEFL iBT 2026 最新改革新題型。每科均具備官方規格拆解、高頻核心詞彙發音庫、實戰必備語塊與學術商務情境對話。',
     chapters: [
       {
         id: 'gept',
@@ -897,7 +897,7 @@ export const curriculum = [
         concepts: [
           {
             heading: 'L&R 200 題 120 分鐘實戰配速與防超時策略',
-            body: '聽力 100 題約 45 分鐘，閱讀 100 題 75 分鐘：\n1. Part 1 照片題 (6題)：先看人動作，無人看物位置；消去「被動語態已完成 (has been p.p.)」出現在無人照片的干擾項。\n2. Part 2 簡短應答 (25題)：聽清楚第一個單字（Wh- 疑問詞 vs 助動詞）；答非所問的委婉拒絕是現代高分答案！\n3. Part 3/4 對話與獨白 (69題)：利用音檔讀說明時間，提前畫線「下一題組 3 道題幹與選項核心詞」。\n4. Part 5 單句填空 (30題)：限時 10–12 分鐘，平均每題 20 秒，先辨詞性與文法。\n5. Part 6 段落填空 (16題)：限時 8–10 分鐘，句子插入題看前後邏輯鉤子。\n6. Part 7 閱讀理解 (54題)：限時 50–55 分鐘，雙篇與三篇閱讀必須進行「跨文本資訊交叉比對 (Cross-text Synthesis)」。',
+            body: '聽力 100 題約 45 分鐘，閱讀 100 題 75 分鐘：\n1. Part 1 照片題 (6題)：先看人動作，無人看物位置；依照片判斷狀態與動作；無人照片仍可能符合 has been p.p.，不能只憑無人就排除。\n2. Part 2 簡短應答 (25題)：聽清楚第一個單字（Wh- 疑問詞 vs 助動詞）；回應可直接回答，也可用理由或替代安排間接回應；須與問題的溝通目的相關。\n3. Part 3/4 對話與獨白 (69題)：利用音檔讀說明時間，提前畫線「下一題組 3 道題幹與選項核心詞」。\n4. Part 5 單句填空 (30題)：限時 10–12 分鐘，平均每題 20 秒，先辨詞性與文法。\n5. Part 6 段落填空 (16題)：限時 8–10 分鐘，句子插入題看前後邏輯鉤子。\n6. Part 7 閱讀理解 (54題)：限時 50–55 分鐘，雙篇與三篇閱讀必須進行「跨文本資訊交叉比對 (Cross-text Synthesis)」。',
             tip: '考場硬性規則：聽力播放時嚴禁跨區翻看閱讀題；兩大 Section 之間不可折返劃記！'
           },
           {
@@ -975,7 +975,7 @@ export const curriculum = [
         concepts: [
           {
             heading: 'Text Completion 與 Sentence Equivalence 邏輯密碼',
-            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because $\to$ 空格語意與已知線索同義。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than $\to$ 空格語意與已知線索反義。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，通常是兩組近義詞。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
+            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because $\to$ 判斷補充、因果或並列關係；不保證空格與前詞同義。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than $\to$ 檢查語意反差發生在哪兩個命題；不保證空格字詞必為反義。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，兩個選項都須符合句意，且填入後句意相近；不能只配對同義字。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
             tip: 'GRE 邏輯陷阱：避免加入過多主觀世俗常識，嚴格依據題幹內的對應詞 (Pivot Words) 判定正負色彩。'
           },
           {
@@ -1009,13 +1009,13 @@ export const curriculum = [
       {
         id: 'gmat',
         num: '05',
-        title: 'GMAT Focus 批判推理與商業長文',
+        title: 'GMAT 批判推理與商業長文',
         subtitle: 'Critical Reasoning 五大模型・Data Insights 語言理解・商學院決策',
         concepts: [
           {
             heading: '批判推理 (Critical Reasoning) 核心五大題型模型',
             body: 'GMAT 批判推理是商學院入學測驗的靈魂，考查嚴密邏輯思維：\n1. 假設題 (Assumption)：找尋作者推導結論時「未言明但必不可少的必要條件」。檢驗法：否定測試法 (Negation Technique)——將選項取非，若結論立刻崩塌，該選項必為正確答案！\n2. 削弱題 (Weaken)：找出一個新資訊，能證明「即使前提成立，結論也未必成立」（常考因果倒置、另有他因、樣本偏差）。\n3. 支持題 (Strengthen)：排除潛在他因、證實無因即無果、強化樣本代表性。\n4. 推論題 (Inference)：100% 依據題幹已知事實推導，嚴禁任何無端腦補。\n5. 評價題 (Evaluate)：找出若回答 Yes 或 No 會分別強烈支持或削弱結論的關鍵變數。',
-            tip: '現行 GMAT Focus 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，至多允許檢查修改 3 道題答案！'
+            tip: '現行 GMAT 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，可以檢查本節作答，但至多修改 3 道題答案！'
           },
           {
             heading: '商學長文精讀與 Data Insights 跨文本邏輯',
@@ -1053,7 +1053,7 @@ export const curriculum = [
         concepts: [
           {
             heading: 'TOEFL iBT 2026 年最新考制改革剖析',
-            body: 'ETS 自 2026 年起正式推出 TOEFL iBT 全新適性題型與 1–6 分數制（每 0.5 分一級距）：\n1. 寫作新題型：\n- 句子建構 (Sentence Construction)：重組複雜學術長句。\n- 電子郵件寫作 (Email Task)：針對校園行政或工作情境進行快速精準書信應答。\n- 學術在線課堂討論 (Writing for an Academic Discussion, 10分鐘)：教授提出爭議問題，兩位學生提出對立觀點，考生必須在 10 分鐘內撰寫至少 100 字立論並對話其中一位同學。\n2. 口說新題型：\n- 聽後即時複誦與改述 (Listen & Repeat)：考查語音工作記憶與音素精準度。\n- 訪談式問答 (Interview Format)：模擬與學術導師之互動式面談。',
+            body: 'ETS 自 2026 年起正式推出 TOEFL iBT 全新適性題型與 1–6 分數制（每 0.5 分一級距）：\n1. 寫作新題型：\n- 句子建構 (Sentence Construction)：重組複雜學術長句。\n- 電子郵件寫作 (Email Task)：針對校園行政或工作情境進行快速精準書信應答。\n- 學術討論 (Write for an Academic Discussion)：閱讀討論提示與同學發言後，提出與題目相關的立場、理由和支持細節；作答時間與字數指示以當次官方題目為準。\n2. 口說新題型：\n- 聽後逐句複誦 (Listen and Repeat)：考查語音工作記憶與音素精準度。\n- 訪談式問答 (Interview Format)：模擬與學術導師之互動式面談。',
             tip: '新制評分重視「溝通可理解度 (Communicative Intelligibility)」與「任務達成率」，不再鼓勵空洞堆砌生僻詞！'
           },
           {
@@ -1159,13 +1159,13 @@ export const examStudy = {
     source: 'https://www.ets.org/gre/score-users/about/general-test/content-structure.html'
   },
   gmat: {
-    name: 'GMAT Focus Edition',
+    name: 'GMAT',
     subtitle: 'Verbal Reasoning (23題/45分，量尺 60–90 分)',
     intro: '全球頂級商學院 MBA / MS 核心能力評估，強調商業邏輯推演與批判思維。',
     modules: [
       'Critical Reasoning (批判推理)：前提 (Premise) 與結論 (Conclusion) 拆解、假設檢驗 (Assumption)、削弱 (Weaken)、支持 (Strengthen)。',
       'Reading Comprehension (商學長文)：經濟學理論、企業管理個案、科技演進史長篇分析。',
-      '現行 GMAT Focus 規則：徹底移除舊制 Sentence Correction 與作文，作答完畢至多可修改 3 題答案。',
+      '現行 GMAT 規則：徹底移除舊制 Sentence Correction 與作文，作答完畢至多可修改 3 題答案。',
       'Data Insights 語言理解加強：圖表判讀、多來源資訊比對 (Multi-Source Reasoning)。'
     ],
     vocab: [
@@ -1180,10 +1180,10 @@ export const examStudy = {
     subtitle: '四技能適應性 · 新制 1–6 分數制 (0.5 級距)',
     intro: 'ETS 2026 年最新改革考制，注重學術與生活情境實時互動表達能力。',
     modules: [
-      'Reading Section (約30分鐘)：學術段落精讀、句子插入題、事實資訊定位、文章總結歸納題。',
+      'Reading：Complete the Words、Read in Daily Life、Read an Academic Passage；依官方現行版本練習。',
       'Listening Section (約29分鐘)：校園日常對話、學術講座 (Lecture) 筆記整合、教授語氣態度辨別。',
       'Writing Section (約23分鐘)：句子重組建構、商務電子郵件寫作、學術在線課堂討論 (Academic Discussion)。',
-      'Speaking Section (約8分鐘)：聽後即時複誦與改述 (Listen & Repeat)、訪談式情境問答。'
+      'Speaking Section (約8分鐘)：聽後逐句複誦 (Listen and Repeat)、訪談式情境問答。'
     ],
     vocab: [
       { word: 'collaborate', ipa: '/kəˈlæbəreɪt/', pos: 'v.', def: '合作；協同工作', example: 'Students from diverse faculties collaborated on the interdisciplinary clean energy initiative.' },

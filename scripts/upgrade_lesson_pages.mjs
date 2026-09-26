@@ -1,0 +1,43 @@
+// One-time, guarded integration of the complete lesson renderer.
+import {readFileSync,writeFileSync,copyFileSync} from 'node:fs';
+let app=readFileSync('dist/app.js','utf8');
+if(!app.includes("from './lesson_pages.mjs'")){
+ app=app.replace("import { tracks, exams }", "import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';\nimport { tracks, exams }");
+ const begin=app.indexOf('function junyiPage() {'),end=app.indexOf('function sixthPage() {',begin);
+ if(begin<0||end<0)throw Error('Missing micro-lesson boundary');
+ app=app.slice(0,begin)+"function junyiPage() { return microLesson(activeUnitId); }\n\n"+app.slice(end);
+ const cb=app.indexOf('function chapterPage() {'),ce=app.indexOf('function studioPage() {',cb);
+ if(cb<0||ce<0)throw Error('Missing chapter boundary');
+ app=app.slice(0,cb)+"function chapterPage() { return teachingChapter(openChapterId); }\n\n"+app.slice(ce);
+ app=app.replace('const d = b.dataset;','const d = b.dataset;\n  if (handleLessonClick(b, render)) return;');
+ app=app.replace('// 初始化啟動渲染',"root.addEventListener('input', e => handleLessonInput(e.target));\n\n// 初始化啟動渲染");
+ app=app.replace('支援標準真人發音 (en-US)','支援裝置合成語音 (en-US)');
+ app=app.replace('收錄 6,000+ 題真題題庫，即時檢驗作答實力並記錄答錯題點。','題庫練習與官方來源分開管理；本站練習不等同官方完整試卷。');
+ app=app.replace('🚀 開始 20 題隨選模考','🚀 開始 20 題隨選練習').replace('系統將自適應抽選 20 道具代表性的考題進行測驗，並自動計算得分率。','此頁題庫操作仍待驗收；完整章節的原創練習可由「考制核心課綱教學」使用。');
+ writeFileSync('dist/app.js',app);
+}
+let p=readFileSync('dist/lesson_pages.mjs','utf8');
+p=p.replace('l.fullContent||l.rawContent||l.markdown||','l.rawMarkdown||l.fullContent||l.rawContent||l.markdown||');
+writeFileSync('dist/lesson_pages.mjs',p);
+let c=readFileSync('dist/curriculum.mjs','utf8');
+c=c.replace('英文是「主詞＋動詞」為軸心的形合語言。108 課綱要求國中生必須熟練五大基本句型：','先用主詞、動詞、受詞與補語觀察句子。以下五種常見句型用來幫助解析：');
+c=c.replace('先找出句中唯一的「主要動詞（Finite Verb）」，再檢查主詞與動詞之單複數一致性（Subject-Verb Agreement）。','先分辨主句與子句，分別找各子句的主詞和謂語，再檢查主詞與動詞是否一致。複句可以有多個限定動詞。');
+c=c.replace('子句仍須維持現在式','若表達現在仍成立的事實，子句可以維持現在式');
+c=c.replace('by「四個空格、四個選項」','by「四個空格、四個選項」');
+c=c.replace('將學測英文篇章結構題由「四個空格、四個選項」全面改制為「四個空格、五個選項（4空5選）」。','學測英文篇章結構題採「四個空格、五個選項（4空5選）」。');
+c=c.replace('代名詞指涉必須「性、數、格」完全吻合前文提及的名詞','代名詞的人稱、數與指涉對象要合理；格位由代名詞在自己子句中的功能決定，不需與先行詞的格相同');
+c=c.replace('消去「被動語態已完成 (has been p.p.)」出現在無人照片的干擾項。','依照片判斷狀態與動作；無人照片仍可能符合 has been p.p.，不能只憑無人就排除。');
+c=c.replace('答非所問的委婉拒絕是現代高分答案！','回應可直接回答，也可用理由或替代安排間接回應；須與問題的溝通目的相關。');
+c=c.replace('空格語意與已知線索同義','判斷補充、因果或並列關係；不保證空格與前詞同義').replace('空格語意與已知線索反義','檢查語意反差發生在哪兩個命題；不保證空格字詞必為反義');
+c=c.replace('通常是兩組近義詞','兩個選項都須符合句意，且填入後句意相近；不能只配對同義字');
+c=c.replaceAll('GMAT Focus Edition','GMAT').replaceAll('GMAT Focus','GMAT');
+c=c.replace('至多允許檢查修改 3 道題答案','可以檢查本節作答，但至多修改 3 道題答案');
+c=c.replace('聽後即時複誦與改述 (Listen & Repeat)','聽後逐句複誦 (Listen and Repeat)');
+c=c.replaceAll('聽後即時複誦與改述 (Listen & Repeat)','聽後逐句複誦 (Listen and Repeat)');
+c=c.replace('教授提出爭議問題，兩位學生提出對立觀點，考生必須在 10 分鐘內撰寫至少 100 字立論並對話其中一位同學。','閱讀討論提示與同學發言後，提出與題目相關的立場、理由和支持細節；作答時間與字數指示以當次官方題目為準。');
+c=c.replace('學術在線課堂討論 (Writing for an Academic Discussion, 10分鐘)','學術討論 (Write for an Academic Discussion)');
+c=c.replace('Reading Section (約30分鐘)：學術段落精讀、句子插入題、事實資訊定位、文章總結歸納題。','Reading：Complete the Words、Read in Daily Life、Read an Academic Passage；依官方現行版本練習。');
+c=c.replace('深度研析並完整收錄全球六大權威測驗','提供六種考試的教學與原創示例；完整官方題庫並未全部收錄。考試包括');
+writeFileSync('dist/curriculum.mjs',c);
+for(const name of ['app.js','curriculum.mjs','lesson_pages.mjs','lesson_workshops.mjs','styles.css'])copyFileSync(`dist/${name}`,`site/dist/${name}`);
+console.log('Integrated chapter lessons and unit-specific source lessons into both public directories.');
