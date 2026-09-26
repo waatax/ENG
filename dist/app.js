@@ -24,6 +24,7 @@ import { archSemesters, englishS1Review, englishS2Review, englishS3Review, engli
 import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine.mjs';
 import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';
 import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
+import { renderDisplayToolbar, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -123,6 +124,22 @@ function shell(body) {
 
   const summary = junyi.getSummary();
 
+  const pageTitles = {
+    diagnostic: '30 題全階程度精準檢測 (小學至GMAT)',
+    curriculum108: '108 課綱英語全學年課程地圖',
+    junyi: '均一微課與鷹架館 (42 致命陷阱避雷雷達)',
+    sixth: 'Sixth 六年級小升初 (8 單元名師講義)',
+    jh: 'JH 國中會考衝刺館 (16 主題全案精通)',
+    arch: 'Arch 高中先修專題 (5 大核心矩陣)',
+    handouts: 'A4 考前講義列印庫 (14 學期全收錄)',
+    chapter: '考制核心課綱與 CEFR 教學模組',
+    studio: '單字會話真人點讀語音館',
+    exams: '20,000 題全考制真題模擬測驗中心',
+    today: '每日精熟挑戰練習',
+    progress: '我的學習軌跡、經驗值與素養勳章'
+  };
+  const currentTitle = pageTitles[page] || '108 課綱英語旗艦平台';
+
   return `
     <div class="shell">
       <aside class="side">
@@ -154,9 +171,12 @@ function shell(body) {
         </div>
       </aside>
 
-      <main class="main" id="main-content">
-        ${body}
-      </main>
+      <div class="main-wrapper">
+        ${renderDisplayToolbar(currentTitle)}
+        <main class="main" id="main-content">
+          ${body}
+        </main>
+      </div>
     </div>
   `;
 }
@@ -1501,6 +1521,7 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (handleDisplayToolbarClick(b, render)) return;
   if (handleDiagnosticClick(b, render, navigate)) return;
   if (handleLessonClick(b, render)) return;
 
@@ -1823,5 +1844,6 @@ root.addEventListener('click', e => {
 
 root.addEventListener('input', e => handleLessonInput(e.target));
 
-// 初始化啟動渲染
+// 初始化顯示縮放設定與啟動渲染
+initDisplaySettings();
 render();

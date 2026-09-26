@@ -344,32 +344,32 @@ function renderTestingView() {
       </div>
 
       ${q.passage ? `
-        <div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:16px 18px;border-radius:0 8px 8px 0;margin-bottom:18px;font-size:14px;line-height:1.7;white-space:pre-line">
+        <div style="background:#f8fafc;border-left:5px solid #3b82f6;padding:18px 22px;border-radius:0 10px 10px 0;margin-bottom:20px;font-size:15px;line-height:1.8;white-space:pre-line;color:#1e293b">
           ${esc(q.passage)}
         </div>
       ` : ''}
 
-      <div style="font-size:18px;font-weight:600;line-height:1.6;margin-bottom:24px;color:var(--text-primary)">
+      <div style="font-size:21px;font-weight:700;line-height:1.6;margin-bottom:26px;color:#0f172a;letter-spacing:-0.2px">
         ${esc(q.prompt)}
       </div>
 
-      <!-- 四個選項卡片 -->
-      <div style="display:grid;gap:12px;margin-bottom:24px">
+      <!-- 四個選項卡片 (4K/高解析度優化超大觸控與清晰點選區) -->
+      <div style="display:grid;gap:14px;margin-bottom:26px">
         ${q.options.map((opt, oIdx) => {
           const optLetter = String.fromCharCode(65 + oIdx);
           const isSelected = userChoice === oIdx;
           const optStyle = isSelected
-            ? 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:700;box-shadow:0 2px 8px rgba(16,185,129,0.15);'
+            ? 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:700;box-shadow:0 3px 12px rgba(16,185,129,0.2);transform:scale(1.005);'
             : 'background:var(--paper);border:1px solid var(--line);color:var(--text-primary);';
 
           return `
-            <button class="btn" data-diag-choice="${oIdx}"
-              style="text-align:left;padding:14px 18px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;font-size:15px;line-height:1.4;transition:all 0.15s ease;${optStyle}">
+            <button class="btn diag-option-btn" data-diag-choice="${oIdx}"
+              style="text-align:left;padding:16px 22px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;font-size:16px;line-height:1.5;transition:all 0.18s ease;${optStyle}">
               <div>
-                <strong style="margin-right:12px;display:inline-block;width:20px">${optLetter}.</strong>
+                <strong style="margin-right:14px;display:inline-block;width:24px;font-size:17px;color:${isSelected ? '#047857' : '#64748b'}">${optLetter}.</strong>
                 <span>${esc(opt)}</span>
               </div>
-              <span>${isSelected ? '✔ 已選' : ''}</span>
+              <span style="font-weight:700;color:#047857">${isSelected ? '✔ 已選擇' : ''}</span>
             </button>
           `;
         }).join('')}
@@ -399,25 +399,25 @@ function renderTestingView() {
           <span><span style="display:inline-block;width:10px;height:10px;border:2px solid #2563eb;border-radius:2px"></span> 當前題</span>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(38px, 1fr));gap:6px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(46px, 1fr));gap:8px">
         ${diagQuestions.map((ques, idx) => {
           const ans = diagUserAnswers[ques.id];
           const answered = ans !== undefined;
           const isCur = idx === diagCurrentIdx;
           let bg = answered ? '#10b981' : '#f1f5f9';
-          let color = answered ? '#fff' : '#475569';
-          let border = isCur ? '2px solid #2563eb' : '1px solid #cbd5e1';
+          let color = answered ? '#fff' : '#334155';
+          let border = isCur ? '2.5px solid #2563eb' : '1px solid #cbd5e1';
           return `
             <button class="btn" data-diag-jump="${idx}"
-              style="padding:6px 0;font-size:13px;font-weight:${isCur ? '800' : '600'};border-radius:6px;background:${bg};color:${color};border:${border};text-align:center">
+              style="padding:10px 0;font-size:15px;font-weight:${isCur ? '800' : '600'};border-radius:8px;background:${bg};color:${color};border:${border};text-align:center;transition:all 0.15s ease">
               ${idx + 1}
             </button>
           `;
         }).join('')}
       </div>
 
-      <div style="text-align:center;margin-top:20px">
-        <button class="btn primary" data-diag-submit="true" style="padding:12px 32px;font-size:16px;font-weight:700;border-radius:10px;box-shadow:0 4px 14px rgba(4,120,87,0.3)">
+      <div style="text-align:center;margin-top:24px">
+        <button class="btn primary" data-diag-submit="true" style="padding:14px 40px;font-size:17px;font-weight:700;border-radius:12px;box-shadow:0 6px 18px rgba(4,120,87,0.35)">
           🏆 完成作答，交卷並生成全維度能力診斷報告
         </button>
       </div>

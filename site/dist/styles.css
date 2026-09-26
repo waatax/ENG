@@ -25,6 +25,24 @@
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
+  --app-scale: 1;
+  --sidebar-width: 260px;
+  --main-max-width: 1560px;
+}
+
+/* 4K 與超高解析度自動適配媒體查詢 (4K UHD & 2K QHD Automated Scaling) */
+@media screen and (min-width: 2200px) {
+  :root {
+    --sidebar-width: 310px;
+    --main-max-width: 2050px;
+  }
+}
+
+@media screen and (min-width: 3200px) {
+  :root {
+    --sidebar-width: 380px;
+    --main-max-width: 2650px;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -37,6 +55,7 @@ body {
   background: var(--paper);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 button, input, select { font: inherit; }
@@ -53,7 +72,7 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 
 .shell {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: var(--sidebar-width, 260px) 1fr;
   min-height: 100vh;
 }
 
@@ -137,12 +156,162 @@ button:focus-visible, a:focus-visible, select:focus-visible {
   margin-bottom: 4px;
 }
 
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--paper);
+}
+
 .main {
   padding: 28px 40px 80px;
-  max-width: 1440px;
+  max-width: var(--main-max-width, 1560px);
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
+body.reading-wide-mode .main {
+  max-width: 96% !important;
+}
+
+/* 頂部通用顯示與字體縮放工具列 (Top Display & Font Scale Utility Bar) */
+.top-utility-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 32px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-size: 13px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  flex-wrap: wrap;
+}
+
+.top-utility-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-utility-badge {
+  background: #091e32;
+  color: var(--mint);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.top-utility-title {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.top-utility-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.font-scale-control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+.font-scale-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin-right: 2px;
+}
+
+.font-step-btn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.font-step-btn:hover {
+  background: #091e32;
+  color: var(--mint);
+  border-color: #091e32;
+}
+
+.scale-pills {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.scale-pill {
+  border: none;
+  background: none;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.scale-pill:hover {
+  color: #091e32;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.scale-pill.active {
+  background: #091e32;
+  color: var(--mint);
+  box-shadow: 0 1px 4px rgba(9, 30, 50, 0.25);
+  font-weight: 700;
+}
+
+.autofit-4k-btn, .width-toggle-btn {
+  border: 1px solid var(--line) !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  background: #fff !important;
+  color: #334155 !important;
+  transition: all 0.15s ease !important;
+}
+
+.autofit-4k-btn:hover, .width-toggle-btn:hover {
+  border-color: #2563eb !important;
+  color: #1d4ed8 !important;
+  background: #eff6ff !important;
+}
+
 
 .top {
   display: flex;
