@@ -1,3 +1,4 @@
+import {renderFullWordPractice,handleFullWordClick,handleFullWordChange,handleFullWordSubmit} from './full_word_practice.mjs';
 import { renderTeachingAid } from './teaching_aids.mjs';
 import { renderSchoolWords, handleSchoolWordClick, handleSchoolWordChange, handleSchoolWordSubmit } from './school_words.mjs';
 import { knowledgeHome, knowledgePage, searchKnowledge, answerKnowledge } from './knowledge.mjs';
@@ -114,7 +115,7 @@ function navigate(p) {
   stopAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  const route = ['wordpractice','flashcards'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
   if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -193,7 +194,8 @@ function shell(body) {
     ['arch', '09', '高中句法與閱讀'],
     ['handouts', '10', '列印學習講義'],
     ['chapter', '11', '核心教學章節'],
-    ['flashcards', '12', '單字與片語閃卡'],
+    ['wordpractice', '12', '7,700 張字卡學習'],
+    ['flashcards', '12a', '搜尋全部字卡'],
     ['studio', '13', '合成語音練習'],
     ['exams', '14', '考試練習與資源'],
     ['today', '15', '每日練習'],
@@ -204,6 +206,7 @@ function shell(body) {
 
   const pageTitles = {
     diagnostic: '🎯 英文程度測試 (全階程度練習檢核 · 小學至GRE/GMAT)',
+    wordpractice: '7,700 張字卡學習',
     schoolwords: '國小・國中單字複習',
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
     curriculum108: '108 課綱英語全學年課程地圖',
@@ -257,7 +260,7 @@ function shell(body) {
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
         ${renderEnglishLevelTestTopBanner(page)}
-        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords'].includes(page) ? '' : renderStageQuickNav()}
+        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -1810,6 +1813,7 @@ function progress() {
 
 function render() {
   const pages = {
+    wordpractice: renderFullWordPractice,
     schoolwords: renderSchoolWords,
     knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
     diagnostic: diagnosticPage,
@@ -1892,6 +1896,7 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (handleFullWordClick(b, render)) return;
   if (handleSchoolWordClick(b, render)) return;
   if (answerKnowledge(b)) return;
   if (handleDisplayToolbarClick(b, render)) return;
@@ -2329,7 +2334,8 @@ root.addEventListener('input', e => searchKnowledge(e.target));
 root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
-  if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
+  if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
+  else if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
@@ -2339,3 +2345,6 @@ readKnowledgeRoute();
 
 root.addEventListener('change', e => handleSchoolWordChange(e.target, render));
 root.addEventListener('submit', e => { if (e.target.matches('.word-search,.word-spelling')) { e.preventDefault(); handleSchoolWordSubmit(e.target, render); } });
+
+root.addEventListener('change', e => handleFullWordChange(e.target, render));
+root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.preventDefault();handleFullWordSubmit(e.target,render);} });

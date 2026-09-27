@@ -89,3 +89,5 @@
  .lesson-check legend { max-width:100%; }
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important;} *,*::before,*::after{animation:none!important;transition:none!important;}}
+
+.full-word-practice .wp-stats {display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.wp-stats span{padding:10px 14px;border:1px solid #cbd5e1;border-radius:10px}.wp-question h2{overflow-wrap:anywhere;font-size:clamp(1.5rem,5vw,2.5rem)}.wp-spelling{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.wp-spelling label{width:100%}.wp-spelling input{min-width:0;flex:1 1 180px;font-size:18px;padding:12px}.full-word-practice .word-controls{margin-bottom:16px}.full-word-practice button{min-height:44px}.full-word-practice .lesson-option{white-space:normal;text-align:left}

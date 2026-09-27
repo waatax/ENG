@@ -115592,7 +115592,7 @@ export function renderFlashcardsStudioView() {
   const masteryPercentage = allTierCards.length ? Math.round((totalTierMastered / allTierCards.length) * 100) : 0;
 
   return `
-    <section class="card"><h2>國小・國中單字記憶、複習與練習</h2><p>教材卡庫、字義檢核、拼字練習與到期排程。</p><button class="btn primary" data-nav="schoolwords">開啟國小・國中單字複習</button></section>
+    <section class="card"><h2>完整 7,700 張字卡，全數可練習</h2><p>國小 1,000 · 國中 2,000 · 高中 3,000 · TOEIC 700 · SAT 450 · GRE 350 · GMAT 200。每張皆提供字義、拼字與複習練習。</p><button class="btn primary" data-nav="wordpractice">開始 7,700 張字卡學習</button><button class="btn quiet" data-nav="schoolwords">國小・國中課本字彙複習</button></section>
     <div class="header-block">
       <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🗂️ 全階記憶閃卡館 · 雙重編碼與檢索練習</div>
       <h1 style="margin:8px 0;font-size:28px">多階層英語單字與核心片語記憶閃卡 (一面英文·一面中文與圖示)</h1>
@@ -115663,7 +115663,7 @@ export function renderFlashcardsStudioView() {
       </div>
     </div>
 
-    <p class="small" style="max-width:720px;margin:12px auto;line-height:1.7">教材校訂：${contentAudit.total} 張詞卡中，${contentAudit.flagged} 張含自動套版內容；已修訂其中 ${contentAudit.repaired} 張的例句。其餘套版例句及這批卡片的推測音標暫不顯示，待逐詞核對。未標記的卡片也不代表已全部驗證。</p>
+    <details class="small" style="max-width:720px;margin:12px auto;line-height:1.7"><summary>教材校訂說明（不影響 7,700 張學習與練習）</summary><p>教材校訂：${contentAudit.total} 張詞卡中，${contentAudit.flagged} 張含自動套版內容；已修訂其中 ${contentAudit.repaired} 張的例句。其餘套版例句及這批卡片的推測音標暫不顯示，待逐詞核對。未標記的卡片也不代表已全部驗證。</p></details>
     <!-- 🎴 3D 記憶閃卡主舞台 -->
     ${currentCard ? `
       <div style="perspective:1000px;max-width:720px;margin:0 auto 24px">
