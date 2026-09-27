@@ -78,7 +78,7 @@ test('1. Batch size selection and batch navigation UI rendering', async () => {
   // Verify voice mode switcher options
   assert.ok(html.includes('🎙️ 語音輪播順序：'), 'Must display voice mode switcher');
   assert.ok(html.includes('data-fc-voice-mode="word_zh"'), 'Must contain word + zh mode option');
-  assert.ok(html.includes('⚡ 簡易複習：英文 ➔ 中文（語音檔）'), 'Must display simple review option label');
+  assert.ok(html.includes('⚡ 簡易複習：英文 ➔ 中文'), 'Must display simple review option label');
   assert.ok(html.includes('data-fc-voice-mode="word_zh_sentence"'), 'Must contain word + zh + sentence mode option');
   assert.ok(html.includes('🌟 完整聽讀：英文 ➔ 中文 ➔ 完整例句'), 'Must display full listening option label');
 });

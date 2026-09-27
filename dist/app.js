@@ -35,7 +35,7 @@ import { renderDisplayToolbar, handleDisplayToolbarClick, initDisplaySettings } 
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
-import { renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput } from './flashcards.mjs';
+import { renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay } from './flashcards.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -112,7 +112,7 @@ function due() {
 }
 
 function navigate(p) {
-  stopAudio();
+  stopFlashcardAutoPlay();
   activePlayingDialogueIndex = -1;
   page = p;
   const route = ['wordpractice','flashcards'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';

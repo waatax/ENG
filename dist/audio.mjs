@@ -2,7 +2,6 @@
 
 let voices = [];
 const activeUtterances = new Set();
-let speechWatchdog = null;
 let currentUtterance = null;
 let sequencePlaying = false;
 let sequenceQueue = [];
@@ -18,25 +17,6 @@ function loadVoices() {
 if (typeof window !== 'undefined' && 'speechSynthesis' in window && typeof window.speechSynthesis?.getVoices === 'function') {
   loadVoices();
   window.speechSynthesis.onvoiceschanged = loadVoices;
-}
-
-function startWatchdog() {
-  if (speechWatchdog || typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-  speechWatchdog = setInterval(() => {
-    try {
-      if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-        window.speechSynthesis.pause();
-        window.speechSynthesis.resume();
-      }
-    } catch (e) {}
-  }, 10000);
-}
-
-function stopWatchdog() {
-  if (speechWatchdog) {
-    clearInterval(speechWatchdog);
-    speechWatchdog = null;
-  }
 }
 
 // 優先挑選自然的美式或英式英語發音
@@ -83,69 +63,48 @@ export function getBestChineseVoice() {
          voices.find(v => v.lang.startsWith('zh')) || null;
 }
 
-// 核心播放單一文字
-export function speak(text, { rate = 1.0, pitch = 1.0, lang = 'en-US', onStart, onEnd, onError } = {}) {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-    fallbackBeep();
-    if (onError) onError(new Error('SpeechSynthesis not supported'));
-    return;
+// Completion-driven chunks preserve the entire text without a timer cutting speech short.
+let speechGeneration = 0;
+export function speechChunks(text, limit = 110) {
+  const clean = String(text || '').replace(/\*\*|\*|__/g, '').replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
+  const result = [];let remaining=clean;
+  while (remaining.length>limit) {
+    let cut=remaining.lastIndexOf(' ',limit);
+    if(cut<=0){cut=remaining.indexOf(' ',limit);if(cut<0)break;}
+    result.push(remaining.slice(0,cut));remaining=remaining.slice(cut).trimStart();
   }
-
-  // 整理朗讀文本，消除 Markdown 語法標記或多餘空白，確保完整發音
-  const cleanText = String(text || '').replace(/\*\*/g, '').replace(/\*/g, '').replace(/__|_/g, ' ').replace(/\s+/g, ' ').trim();
-  if (!cleanText) {
-    if (onEnd) onEnd();
-    return;
+  if(remaining)result.push(remaining);
+  return result;
+}
+export function speak(text, {rate=1, pitch=1, lang='en-US', onStart, onEnd, onError}={}) {
+  const generation=++speechGeneration;
+  const chunks=speechChunks(text);
+  if(typeof window==='undefined'||!window.speechSynthesis){onError?.(new Error('SpeechSynthesis not supported'));return;}
+  const synth=window.speechSynthesis;
+  if(synth.speaking||synth.pending){try{synth.cancel();}catch{}}
+  activeUtterances.clear();currentUtterance=null;
+  if(!chunks.length){onEnd?.();return;}
+  let index=0,started=false,finished=false;
+  const valid=()=>generation===speechGeneration&&!finished;
+  const fail=e=>{if(!valid())return;finished=true;activeUtterances.clear();currentUtterance=null;onError?.(e);};
+  function next(){
+    if(!valid())return;
+    if(index===chunks.length){finished=true;onEnd?.();return;}
+    const utterance=new SpeechSynthesisUtterance(chunks[index]);
+    utterance.lang=lang;utterance.rate=Math.max(.5,Math.min(2,rate));utterance.pitch=Math.max(.5,Math.min(1.5,pitch));
+    const voice=lang.startsWith('zh')?getBestChineseVoice():getBestEnglishVoice();
+    if(voice)utterance.voice=voice;
+    let ended=false;
+    activeUtterances.add(utterance);currentUtterance=utterance;
+    utterance.onstart=()=>{if(valid()&&!started){started=true;onStart?.();}};
+    utterance.onend=()=>{
+      if(ended||!valid())return;ended=true;activeUtterances.delete(utterance);currentUtterance=null;
+      index++;next();
+    };
+    utterance.onerror=e=>{if(ended)return;ended=true;fail(e);};
+    try{synth.speak(utterance);}catch(e){fail(e);}
   }
-
-  // 若當前正有其他語音在播放，先取消避免重疊；若為靜止狀態則不呼叫 cancel 以免觸發 Chromium IPC 競爭取消新佇列
-  if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
-    try {
-      window.speechSynthesis.cancel();
-    } catch (e) {}
-  }
-
-  const utterance = new SpeechSynthesisUtterance(cleanText);
-  utterance.lang = lang || 'en-US';
-  utterance.rate = Math.max(0.5, Math.min(2.0, rate));
-  utterance.pitch = Math.max(0.5, Math.min(1.5, pitch));
-
-  const voice = (lang && lang.startsWith('zh')) ? getBestChineseVoice() : getBestEnglishVoice();
-  if (voice) utterance.voice = voice;
-
-  // V8 GC 保護：將 utterance 加入 Set 防止長時間朗讀或例句較長時被垃圾回收中斷
-  activeUtterances.add(utterance);
-  currentUtterance = utterance;
-  startWatchdog();
-
-  let hasEnded = false;
-  const finish = (callback, arg) => {
-    if (hasEnded) return;
-    hasEnded = true;
-    activeUtterances.delete(utterance);
-    if (currentUtterance === utterance) currentUtterance = null;
-    if (activeUtterances.size === 0) stopWatchdog();
-    if (callback) callback(arg);
-  };
-
-  utterance.onstart = () => {
-    currentUtterance = utterance;
-    if (onStart) onStart();
-  };
-
-  utterance.onend = () => {
-    finish(onEnd);
-  };
-
-  utterance.onerror = (e) => {
-    finish(onError, e);
-  };
-
-  try {
-    window.speechSynthesis.speak(utterance);
-  } catch (err) {
-    finish(onError, err);
-  }
+  next();
 }
 
 // 快速播放單字（支援慢速 0.75x）
@@ -160,69 +119,35 @@ export function playSentence(sentence, slow = false, callbacks = {}) {
 
 // 快速播放繁體中文（釋義或教學提示）
 export function playChinese(text, callbacks = {}) {
-  let clean = String(text || '').replace(/\(.*?\)|（.*?）/g, '').trim();
-  if (!clean) clean = String(text || '').replace(/[()（）]/g, '').trim();
-  clean = clean.replace(/[a-zA-Z0-9_.\/\\#@$%^&*~+=|]/g, ' ').replace(/\s+/g, ' ').trim();
-  speak(clean || text, { lang: 'zh-TW', rate: 0.95, ...callbacks });
+  speak(text, { lang: 'zh-TW', rate: 0.95, ...callbacks });
 }
 
-// 連續對話或單字隊列播放
-export function playSequence(items, onStep, onFinish) {
-  stopAudio();
-  if (!items || !items.length) {
-    if (onFinish) onFinish();
-    return;
-  }
-
-  sequenceQueue = items;
-  sequenceIndex = 0;
-  sequencePlaying = true;
-  sequenceStepCallback = onStep;
-  sequenceFinishCallback = onFinish;
-
-  playNextInSequence();
-}
-
-function playNextInSequence() {
-  if (!sequencePlaying || sequenceIndex >= sequenceQueue.length) {
-    stopSequence();
-    if (sequenceFinishCallback) sequenceFinishCallback();
-    return;
-  }
-
-  const currentItem = sequenceQueue[sequenceIndex];
-  const text = typeof currentItem === 'string' ? currentItem : currentItem.text;
-  const slow = currentItem.slow || false;
-
-  if (sequenceStepCallback) {
-    sequenceStepCallback(sequenceIndex, currentItem);
-  }
-
-  speak(text, {
-    rate: slow ? 0.75 : 0.95,
-    onEnd: () => {
-      if (!sequencePlaying) return;
-      sequenceIndex++;
-      setTimeout(playNextInSequence, 400); // 句間間歇 400ms 自然停頓
-    },
-    onError: () => {
-      if (!sequencePlaying) return;
-      sequenceIndex++;
-      setTimeout(playNextInSequence, 400);
-    }
+let sequenceToken=0,sequenceTimer=null;
+export function playSequence(items,onStep,onFinish){
+ stopAudio();const token=++sequenceToken;
+ sequenceQueue=items||[];sequenceIndex=0;sequencePlaying=true;
+ sequenceStepCallback=onStep;sequenceFinishCallback=onFinish;
+ function next(){
+  if(!sequencePlaying||token!==sequenceToken)return;
+  if(sequenceIndex>=sequenceQueue.length){const done=sequenceFinishCallback;stopSequence();done?.();return;}
+  const item=sequenceQueue[sequenceIndex];onStep?.(sequenceIndex,item);
+  speak(typeof item==='string'?item:item.text,{
+   lang:item.lang||'en-US',rate:item.slow?.75:.95,
+   onEnd:()=>{if(!sequencePlaying||token!==sequenceToken)return;sequenceIndex++;sequenceTimer=setTimeout(next,400);},
+   onError:e=>{if(token!==sequenceToken)return;const done=sequenceFinishCallback;stopSequence();done?.(e);}
   });
+ }
+ next();
 }
-
-export function stopSequence() {
-  sequencePlaying = false;
-  sequenceQueue = [];
-  sequenceIndex = 0;
-  if (sequenceStepCallback) sequenceStepCallback(-1, null);
+export function stopSequence(){
+ sequenceToken++;if(sequenceTimer!==null){clearTimeout(sequenceTimer);sequenceTimer=null;}
+ sequencePlaying=false;sequenceQueue=[];sequenceIndex=0;
+ const step=sequenceStepCallback;sequenceStepCallback=null;sequenceFinishCallback=null;step?.(-1,null);
 }
 
 export function stopAudio() {
+  speechGeneration++;
   stopSequence();
-  stopWatchdog();
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     try {
       window.speechSynthesis.cancel();

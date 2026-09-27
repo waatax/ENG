@@ -142539,6 +142539,7 @@ let isFlipped = false;
 let autoPlayToken = 0;
 let autoPlayStepTimer = null;
 let isAutoPlaying = false;
+let audioFailure = '';
 let autoPlayVoiceMode = 'word_zh_sentence'; // 'word_zh_sentence' (英文單字 > 中文 > 例句) | 'word_zh' (英文 > 中文) | 'word_sentence' (英文 > 例句)
 let practiceBatchSize = 20; // 10 | 20 | 30 | 50 | 100 | 0 (0 為全部)
 let currentBatchIndex = 0;
@@ -142706,8 +142707,8 @@ export function renderFlashcardsStudioView() {
           </button>
           <button class="btn ${autoPlayVoiceMode === 'word_zh' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_zh"
             style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_zh' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_zh' ? '2px solid #047857' : '1px solid #cbd5e1'}"
-            title="簡易高頻複習：英文單字（語音） ➔ 翻面 ➔ 中文釋義（語音檔就好，快速高效複習）">
-            ⚡ 簡易複習：英文 ➔ 中文（語音檔）
+            title="簡易高頻複習：英文單字（語音） ➔ 翻面 ➔ 中文釋義（語音，快速複習）">
+            ⚡ 簡易複習：英文 ➔ 中文（語音）
           </button>
           <button class="btn ${autoPlayVoiceMode === 'word_sentence' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_sentence"
             style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_sentence' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_sentence' ? '2px solid #047857' : '1px solid #cbd5e1'}"
@@ -142736,13 +142737,14 @@ export function renderFlashcardsStudioView() {
       ` : ''}
     </div>
 
+    ${audioFailure ? `<p role="alert" class="card">${esc(audioFailure)}</p>` : ''}
     <!-- 批次輪播完成慶祝面板 -->
     ${batchCompleted ? `
       <div class="card" style="background:#ecfdf5;border:2px solid #10b981;border-radius:14px;padding:16px 20px;margin-bottom:18px;text-align:center">
         <div style="font-size:32px;margin-bottom:6px">🎉</div>
         <strong style="font-size:17px;color:#065f46">本組 ${batchCards.length} 個單字已完成自動輪播聽讀練習！</strong>
         <p style="font-size:13px;color:#047857;margin:6px 0 14px">
-          語音模式：${autoPlayVoiceMode === 'word_zh_sentence' ? '🌟 完整聽讀（英文 ➔ 中文 ➔ 完整例句）' : (autoPlayVoiceMode === 'word_zh' ? '⚡ 簡易複習（英文 ➔ 中文語音檔）' : '🎧 純英沉浸（英文 ➔ 完整例句）')} · 雙重編碼記憶已深化
+          語音模式：${autoPlayVoiceMode === 'word_zh_sentence' ? '🌟 完整聽讀（英文 ➔ 中文 ➔ 完整例句）' : (autoPlayVoiceMode === 'word_zh' ? '⚡ 簡易複習（英文 ➔ 中文語音）' : '🎧 純英沉浸（英文 ➔ 完整例句）')} · 雙重編碼記憶已深化
         </p>
         <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
           <button class="btn primary" data-fc-replay-batch="true" style="font-size:13px;padding:8px 16px">
@@ -142988,7 +142990,8 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 變更每批次練習字數 (10, 20, 30, 50, 100, 0: 全部)
   if (d.fcBatchSize !== undefined) {
-    practiceBatchSize = parseInt(d.fcBatchSize, 10) || 0;
+    if(!['10','20','30','50','100','0'].includes(String(d.fcBatchSize))) return true;
+    practiceBatchSize = Number(d.fcBatchSize);
     currentBatchIndex = 0;
     currentCardIndex = 0;
     batchCompleted = false;
@@ -143000,6 +143003,9 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 變更輪播語音模式 (word_zh: 英文+中文 | word_zh_sentence: 英文+中文+例句)
   if (d.fcVoiceMode) {
+    if(!['word_zh_sentence','word_zh','word_sentence'].includes(d.fcVoiceMode)) return true;
+    stopFlashcardAutoPlay();
+    audioFailure = '';
     autoPlayVoiceMode = d.fcVoiceMode;
     renderCallback();
     return true;
@@ -143064,35 +143070,35 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 發音單字 (標準 1.0x)
   if (d.fcSpeakWord) {
-    if (isAutoPlaying) stopFlashcardAutoPlay();
+    if (isAutoPlaying) { stopFlashcardAutoPlay(); renderCallback(); }
     playWord(d.fcSpeakWord, false);
     return true;
   }
 
   // 慢速發音單字 (0.65x)
   if (d.fcSpeakWordSlow) {
-    if (isAutoPlaying) stopFlashcardAutoPlay();
+    if (isAutoPlaying) { stopFlashcardAutoPlay(); renderCallback(); }
     playWord(d.fcSpeakWordSlow, true);
     return true;
   }
 
   // 發音繁中釋義
   if (d.fcSpeakZh) {
-    if (isAutoPlaying) stopFlashcardAutoPlay();
+    if (isAutoPlaying) { stopFlashcardAutoPlay(); renderCallback(); }
     playChinese(d.fcSpeakZh);
     return true;
   }
 
   // 發音例句 (標準)
   if (d.fcSpeakSentence) {
-    if (isAutoPlaying) stopFlashcardAutoPlay();
+    if (isAutoPlaying) { stopFlashcardAutoPlay(); renderCallback(); }
     playSentence(d.fcSpeakSentence, false);
     return true;
   }
 
   // 慢速發音例句 (0.75x)
   if (d.fcSpeakSentenceSlow) {
-    if (isAutoPlaying) stopFlashcardAutoPlay();
+    if (isAutoPlaying) { stopFlashcardAutoPlay(); renderCallback(); }
     playSentence(d.fcSpeakSentenceSlow, true);
     return true;
   }
@@ -143192,8 +143198,17 @@ export function stopFlashcardAutoPlay() {
 export function startFlashcardAutoPlay(renderCallback) {
   stopFlashcardAutoPlay();
   isAutoPlaying = true;
+  audioFailure = '';
+  currentCardIndex = 0;
   batchCompleted = false;
   const currentToken = ++autoPlayToken;
+
+  function failAudio() {
+    if(!isAutoPlaying || autoPlayToken !== currentToken) return;
+    stopFlashcardAutoPlay();
+    audioFailure='語音未完整播放，已停在本張。請確認裝置的英文／中文語音可用，再按啟動從本組第一張重播；不會略過未播完的內容。';
+    renderCallback();
+  }
 
   function runCurrentCard() {
     if (!isAutoPlaying || autoPlayToken !== currentToken) return;
@@ -143233,11 +143248,7 @@ export function startFlashcardAutoPlay(renderCallback) {
                 if (!isAutoPlaying || autoPlayToken !== currentToken) return;
                 proceedToNextCard(800);
               },
-              onError: (e) => {
-                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
-                if (e?.error === 'interrupted' || e?.error === 'canceled') return;
-                proceedToNextCard(600);
-              }
+              onError: failAudio
             });
           } else {
             // 完整聽讀標準模式 (word_zh_sentence)：英文單字 ➔ 中文釋義 ➔ 完整例句英文語音
@@ -143246,12 +143257,7 @@ export function startFlashcardAutoPlay(renderCallback) {
                 if (!isAutoPlaying || autoPlayToken !== currentToken) return;
                 playSentenceStep();
               },
-              onError: (e) => {
-                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
-                if (e?.error === 'interrupted' || e?.error === 'canceled') return;
-                // 中文若因系統缺少繁中語音而報錯，仍繼續播放完整英文例句，不中斷學習流程
-                playSentenceStep();
-              }
+              onError: failAudio
             });
           }
 
@@ -143266,11 +143272,7 @@ export function startFlashcardAutoPlay(renderCallback) {
                     if (!isAutoPlaying || autoPlayToken !== currentToken) return;
                     proceedToNextCard(1000);
                   },
-                  onError: (e) => {
-                    if (!isAutoPlaying || autoPlayToken !== currentToken) return;
-                    if (e?.error === 'interrupted' || e?.error === 'canceled') return;
-                    proceedToNextCard(800);
-                  }
+                  onError: failAudio
                 });
               }, 500);
             } else {
@@ -143279,11 +143281,7 @@ export function startFlashcardAutoPlay(renderCallback) {
           }
         }, 600);
       },
-      onError: (e) => {
-        if (!isAutoPlaying || autoPlayToken !== currentToken) return;
-        if (e?.error === 'interrupted' || e?.error === 'canceled') return;
-        proceedToNextCard(800);
-      }
+      onError: failAudio
     });
   }
 
