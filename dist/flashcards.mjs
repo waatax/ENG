@@ -2,6 +2,7 @@
 // 完整依照程度編排：小學1,000字、國中2,000字、高中3,000字與核心片語、TOEIC、Digital SAT、GRE、GMAT
 // 配備：3D卡片翻轉動畫、自然拼讀音節拆解、KK音標、雙語例句、即時真人語音 (Web Speech API)、掌握度標記與自動輪播聽讀
 
+import { teachingCard, qualityCounts } from './flashcard_quality.mjs';
 import { playWord, playSentence, stopAudio } from './audio.mjs';
 
 function esc(str) {
@@ -115528,6 +115529,8 @@ export const FLASHCARD_DATABASE = [
   }
 ];
 
+const contentAudit = qualityCounts(FLASHCARD_DATABASE);
+
 // 閃卡互動內部狀態
 let currentTier = 'elem_1000';
 let currentCardIndex = 0;
@@ -115581,7 +115584,7 @@ export function renderFlashcardsStudioView() {
     currentCardIndex = Math.max(0, filteredCards.length - 1);
   }
 
-  const currentCard = filteredCards[currentCardIndex] || null;
+  const currentCard = filteredCards[currentCardIndex] ? teachingCard(filteredCards[currentCardIndex]) : null;
   const isMastered = currentCard ? masteryState[currentCard.id] === 'mastered' : false;
   const isNeedReview = currentCard ? masteryState[currentCard.id] === 'need_review' : false;
 
@@ -115623,7 +115626,7 @@ export function renderFlashcardsStudioView() {
         </div>
         <div style="text-align:right">
           <div style="font-size:13px;color:#475569">
-            已精熟：<strong style="color:#047857;font-size:16px">${totalTierMastered}</strong> / ${allTierCards.length} 張 (${masteryPercentage}%)
+            自評已記住：<strong style="color:#047857;font-size:16px">${totalTierMastered}</strong> / ${allTierCards.length} 張 (${masteryPercentage}%)
           </div>
         </div>
       </div>
@@ -115644,7 +115647,7 @@ export function renderFlashcardsStudioView() {
           🌱 需複習 (${allTierCards.filter(c => masteryState[c.id] === 'need_review').length})
         </button>
         <button class="btn ${cardFilterStatus === 'mastered' ? 'primary' : 'quiet'}" data-fc-filter="mastered" style="font-size:13px;padding:6px 12px">
-          ✅ 已精熟 (${totalTierMastered})
+          ✅ 自評已記住 (${totalTierMastered})
         </button>
       </div>
 
@@ -115660,6 +115663,7 @@ export function renderFlashcardsStudioView() {
       </div>
     </div>
 
+    <p class="small" style="max-width:720px;margin:12px auto;line-height:1.7">教材校訂：${contentAudit.total} 張詞卡中，${contentAudit.flagged} 張含自動套版內容；已修訂其中 ${contentAudit.repaired} 張的例句。其餘套版例句及這批卡片的推測音標暫不顯示，待逐詞核對。未標記的卡片也不代表已全部驗證。</p>
     <!-- 🎴 3D 記憶閃卡主舞台 -->
     ${currentCard ? `
       <div style="perspective:1000px;max-width:720px;margin:0 auto 24px">
@@ -115667,7 +115671,7 @@ export function renderFlashcardsStudioView() {
           style="min-height:380px;position:relative;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer;border-radius:18px;box-shadow:0 12px 30px -5px rgba(0,0,0,0.12);transform:${isFlipped ? 'rotateY(180deg)' : 'none'}">
 
           <!-- 卡片正面 (FRONT) - 嚴格純英文環境，促進檢索提取 (Retrieval Practice) -->
-          <div class="fc-card-face fc-front"
+          <div class="fc-card-face fc-front" ${isFlipped ? 'inert aria-hidden="true"' : ''}
             style="position:absolute;inset:0;background:#ffffff;border:2px solid ${isMastered ? '#10b981' : (isNeedReview ? '#f59e0b' : '#e2e8f0')};border-radius:18px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;backface-visibility:hidden;-webkit-backface-visibility:hidden">
             <div>
               <!-- 頂部級別與分類標籤 -->
@@ -115707,13 +115711,13 @@ export function renderFlashcardsStudioView() {
                 </button>
               </div>
               <div style="font-size:13px;color:#64748b;display:flex;align-items:center;gap:4px;font-weight:500">
-                <span>🔄 點擊卡片翻轉查看中文與圖示</span>
+                <button class="btn quiet" data-fc-flip="true">翻卡：查看中文與圖示</button>
               </div>
             </div>
           </div>
 
           <!-- 卡片背面 (BACK) - 繁體中文釋義、專屬主題視覺圖示與雙重編碼記憶 -->
-          <div class="fc-card-face fc-back"
+          <div class="fc-card-face fc-back" ${!isFlipped ? 'inert aria-hidden="true"' : ''}
             style="position:absolute;inset:0;background:linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);border:2px solid #3b82f6;border-radius:18px;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow-y:auto">
             <div>
               <!-- 背面頂部：核心概念圖示、詞性單字與中文釋義 -->
@@ -115740,7 +115744,7 @@ export function renderFlashcardsStudioView() {
               <!-- 搭配詞提示 -->
               ${currentCard.collocation ? `
                 <div style="margin-bottom:10px;font-size:13px;color:#92400e;background:#fef3c7;border:1px solid #fde68a;padding:5px 12px;border-radius:8px;font-weight:600;display:inline-block">
-                  💡 必考搭配：${currentCard.collocation}
+                  💡 搭配用法：${currentCard.collocation}
                 </div>
               ` : ''}
 
@@ -115748,13 +115752,13 @@ export function renderFlashcardsStudioView() {
               <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 14px;margin-bottom:10px">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
                   <div style="font-size:14px;color:#1e293b;line-height:1.5;font-weight:500" lang="en">
-                    "${currentCard.example}"
+                    ${esc(currentCard.example || currentCard.qualityNote)}
                   </div>
                   <div style="display:flex;gap:4px;flex-shrink:0">
-                    <button class="btn small primary" data-fc-speak-sentence="${esc(currentCard.example)}" style="padding:3px 8px;font-size:11px;white-space:nowrap">
+                    <button class="btn small primary" ${!currentCard.example ? 'disabled' : ''} data-fc-speak-sentence="${esc(currentCard.example)}" style="padding:3px 8px;font-size:11px;white-space:nowrap">
                       🔊 朗讀
                     </button>
-                    <button class="btn small quiet" data-fc-speak-sentence-slow="${esc(currentCard.example)}" style="padding:3px 6px;font-size:11px;white-space:nowrap;border:1px solid #cbd5e1">
+                    <button class="btn small quiet" ${!currentCard.example ? 'disabled' : ''} data-fc-speak-sentence-slow="${esc(currentCard.example)}" style="padding:3px 6px;font-size:11px;white-space:nowrap;border:1px solid #cbd5e1">
                       🐢 慢速
                     </button>
                   </div>
@@ -115797,7 +115801,7 @@ export function renderFlashcardsStudioView() {
           </button>
           <button class="btn ${isMastered ? 'primary' : 'quiet'}" data-fc-mark="mastered"
             style="padding:10px 20px;font-size:14px;border:1px solid #10b981;color:${isMastered ? '#fff' : '#047857'};font-weight:700;background:${isMastered ? '#10b981' : '#fff'}">
-            ${isMastered ? '✅ 已精熟掌握 (已標記)' : '✅ 標記已精熟'}
+            ${isMastered ? '✅ 自評已記住 (已標記)' : '✅ 標記自評已記住'}
           </button>
         </div>
 
@@ -115954,7 +115958,8 @@ function startFlashcardAutoPlay(renderCallback) {
             isFlipped = true;
             renderCallback();
             // 朗讀例句
-            playSentence(card.example);
+            const example = teachingCard(card).example;
+            if (example) playSentence(example);
           }, 800);
         }
       });
@@ -115986,9 +115991,14 @@ function stopFlashcardAutoPlay() {
 
 export function handleFlashcardInput(target, renderCallback) {
   if (target && target.id === 'fc-search-input') {
+    const caret = target.selectionStart;
     cardSearchKeyword = target.value;
     currentCardIndex = 0;
+    isFlipped = false;
     renderCallback();
+    const input = document.querySelector('#fc-search-input');
+    input?.focus();
+    if (caret !== null) input?.setSelectionRange(caret, caret);
     return true;
   }
   return false;

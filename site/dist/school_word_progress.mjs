@@ -7,6 +7,6 @@ export function createWordProgress(cards,storage=globalThis.localStorage,now=()=
   get warning(){return warning;},
   get(id){return records[id]?{...records[id]}:null;},
   isDue(id){return Boolean(records[id]&&records[id].due<=now());},
-  record(id,right){if(!ids.has(id)||typeof right!=='boolean')return false;const r=records[id]||{step:0,reviews:0,correct:0,misses:0};const step=right?Math.min(5,r.step+1):0;const days=[0,1,3,7,14,30];records[id]={step,reviews:r.reviews+1,correct:r.correct+(right?1:0),misses:r.misses+(right?0:1),due:now()+(right?days[step]*86400000:600000)};persist();return true;}
+  record(id,right){if(!ids.has(id)||typeof right!=='boolean')return false;const time=now();const previous=records[id];const r=previous||{step:0,reviews:0,correct:0,misses:0};const advance=!previous||r.due<=time;const step=right?(advance?Math.min(5,r.step+1):r.step):0;const days=[0,1,3,7,14,30];records[id]={step,reviews:r.reviews+1,correct:r.correct+(right?1:0),misses:r.misses+(right?0:1),due:right?(advance?time+days[step]*86400000:r.due):time+600000};persist();return true;}
  };
 }
