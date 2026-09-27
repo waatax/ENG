@@ -252,26 +252,23 @@ export class QuestionBankDB {
     return this.diagnosticPool;
   }
 
-  // 30 題分層階梯自適應抽題演算法 (Tier-balanced Stratified Sampling with Dual-Layer Deduplication)
-  // 配比：Tier 1 (4) + Tier 2 (4) + Tier 3 (4) + Tier 4 (5) + Tier 5 (4) + Tier 6 (4) + Tier 7 (3) + Tier 8 (2) = 30 題
+  // 分層階梯自適應抽題演算法 (支援 20 題快速、30 題標準、40 題精準深度)
   // 保證：
   // 1. 本次測驗中 100% 題號 (ID) 與題幹 (Prompt) 零重複 (seenIds, seenPrompts 雙層查驗)
   // 2. 跨測驗輪換記憶：讀取 localStorage 最近考過的題目 (最多記錄 300 題)，抽題時優先選取未曾出現之新題，避免短期重測遇到相同題目
-  async sampleDiagnostic30() {
+  async sampleDiagnostic(count = 30) {
     await this.initPromise;
     const pool = await this.loadDiagnosticBank();
     if (!pool || !pool.length) return [];
 
-    const tierQuotas = {
-      1: 4, // 國小基礎 (Pre-A1~A1)
-      2: 4, // 國中基礎 (A1~A2)
-      3: 4, // 國中精熟 (A2~B1)
-      4: 5, // 高中學測 (B1~B2)
-      5: 4, // TOEIC商務 (B2)
-      6: 4, // Digital SAT (B2~C1)
-      7: 3, // GRE Verbal (C1~C2)
-      8: 2  // GMAT CR (C2/C2+)
-    };
+    let tierQuotas;
+    if (count === 20) {
+      tierQuotas = { 1: 2, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 1 }; // 合計 20 題
+    } else if (count === 40) {
+      tierQuotas = { 1: 5, 2: 5, 3: 5, 4: 6, 5: 5, 6: 5, 7: 5, 8: 4 }; // 合計 40 題
+    } else {
+      tierQuotas = { 1: 4, 2: 4, 3: 4, 4: 5, 5: 4, 6: 4, 7: 3, 8: 2 }; // 合計 30 題
+    }
 
     // 讀取跨測驗歷史最近看過的題號，實現跨次測驗輪換不重複
     let recentIds = new Set();
@@ -337,10 +334,15 @@ export class QuestionBankDB {
     return sampledQuestions;
   }
 
+  // 向下相容 30 題呼叫別名
+  async sampleDiagnostic30() {
+    return this.sampleDiagnostic(30);
+  }
+
   // 診斷測驗專家級多維度成績與能力評估引擎
   evaluateDiagnostic(userAnswers, questions) {
     const weights = { 1: 1.0, 2: 1.5, 3: 2.0, 4: 2.5, 5: 3.0, 6: 3.5, 7: 4.0, 8: 4.5 };
-    const maxPossibleWeighted = (4*1.0) + (4*1.5) + (4*2.0) + (5*2.5) + (4*3.0) + (4*3.5) + (3*4.0) + (2*4.5); // 77.5
+    const maxPossibleWeighted = questions.reduce((sum, q) => sum + (weights[q.tier] || 1.0), 0) || 77.5;
 
     let rawCorrect = 0;
     let userWeightedScore = 0;

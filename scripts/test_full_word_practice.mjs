@@ -25,8 +25,8 @@ test('Short filtered banks never repeat words to pad a paper; settings generate 
  assert.equal(n,40);assert.match(p.render(),/40 \/ 40 張（100%）/);
  const sparse=createFullWordPractice(cards.slice(0,5),storage());sparse.setting('size','40');assert.match(sparse.render(),/目前只剩 5 個不同單字/);
 });
-test('Every one of 7,700 cards has a reachable four-choice meaning exercise',()=>{
- assert.equal(cards.length,7700);assert.equal(new Set(cards.map(c=>c.id)).size,7700);
+test('Every one of 9,500 cards has a reachable four-choice meaning exercise',()=>{
+ assert.equal(cards.length,9500);assert.equal(new Set(cards.map(c=>c.id)).size,9500);
  const pools=Object.groupBy(cards,c=>c.tier);
  for(const c of cards){const choices=wordChoices(c,pools[c.tier],()=>0.37);assert.equal(choices.length,4,c.id);assert.equal(new Set(choices.map(o=>o.text)).size,4,c.id);assert.equal(choices.filter(o=>o.right).length,1,c.id);assert.equal(choices.find(o=>o.right).text,c.zh);assert.ok(normalizeWord(c.word));}
 });

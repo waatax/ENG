@@ -23,11 +23,11 @@ globalThis.document = {
   body: {}
 };
 
-test('7,700 Flashcards Comprehensive Database Audit', async () => {
+test('9,500 Flashcards Comprehensive Database Audit', async () => {
   const fc = await import('../dist/flashcards.mjs');
   
   // 1. Total Count Verification
-  assert.equal(fc.FLASHCARD_DATABASE.length, 7700, 'Database must contain exactly 7,700 cards');
+  assert.equal(fc.FLASHCARD_DATABASE.length, 9500, 'Database must contain exactly 9,500 cards');
 
   // 2. Exact Tier Breakdown Verification
   const tierCounts = {};
@@ -39,9 +39,10 @@ test('7,700 Flashcards Comprehensive Database Audit', async () => {
   assert.equal(tierCounts['jhs_2000'], 2000, 'jhs_2000 must have exactly 2,000 cards');
   assert.equal(tierCounts['shs_3000'], 3000, 'shs_3000 must have exactly 3,000 cards');
   assert.equal(tierCounts['toeic'], 700, 'toeic must have exactly 700 cards');
-  assert.equal(tierCounts['sat'], 450, 'sat must have exactly 450 cards');
-  assert.equal(tierCounts['gre'], 350, 'gre must have exactly 350 cards');
-  assert.equal(tierCounts['gmat'], 200, 'gmat must have exactly 200 cards');
+  assert.equal(tierCounts['toefl'], 700, 'toefl must have exactly 700 cards');
+  assert.equal(tierCounts['sat'], 700, 'sat must have exactly 700 cards');
+  assert.equal(tierCounts['gre'], 700, 'gre must have exactly 700 cards');
+  assert.equal(tierCounts['gmat'], 700, 'gmat must have exactly 700 cards');
 
   // 3. Attribute Completeness & ID Sequence
   const seenIds = new Set();
@@ -52,6 +53,7 @@ test('7,700 Flashcards Comprehensive Database Audit', async () => {
     jhs_2000: 'fc-jh-',
     shs_3000: 'fc-sh-',
     toeic: 'fc-to-',
+    toefl: 'fc-tf-',
     sat: 'fc-sa-',
     gre: 'fc-gr-',
     gmat: 'fc-gm-'
@@ -75,11 +77,9 @@ test('7,700 Flashcards Comprehensive Database Audit', async () => {
   // 4. Studio UI Rendering Check
   const html = fc.renderFlashcardsStudioView();
   assert.ok(html.includes('全階記憶閃卡館'), 'Studio view must render title');
+  assert.ok(html.includes('完整 9,500 張字卡'), 'Studio view must show 9,500 total cards banner');
   assert.ok(html.includes('(1000)'), 'Studio view must show 1000 in tabs');
   assert.ok(html.includes('(2000)'), 'Studio view must show 2000 in tabs');
   assert.ok(html.includes('(3000)'), 'Studio view must show 3000 in tabs');
   assert.ok(html.includes('(700)'), 'Studio view must show 700 in tabs');
-  assert.ok(html.includes('(450)'), 'Studio view must show 450 in tabs');
-  assert.ok(html.includes('(350)'), 'Studio view must show 350 in tabs');
-  assert.ok(html.includes('(200)'), 'Studio view must show 200 in tabs');
 });

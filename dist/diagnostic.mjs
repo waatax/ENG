@@ -17,6 +17,7 @@ function esc(str) {
 
 // 診斷系統內部狀態
 let diagMode = 'intro'; // 'intro' | 'testing' | 'report'
+let diagQuestionCount = 30; // 20 | 30 | 40
 let diagQuestions = [];
 let diagCurrentIdx = 0;
 let diagUserAnswers = {}; // q.id -> optionIndex (0..3)
@@ -104,14 +105,14 @@ export function diagnosticPage() {
   if (diagLoading) {
     return `
       <div class="header-block">
-        <div class="pill">🎯 30 題全階英語能力練習檢核系統</div>
+        <div class="pill">🎯 全階英語能力練習檢核系統</div>
         <h1 style="margin:8px 0">正在為您抽取專屬分層階梯試卷...</h1>
       </div>
       <div class="card" style="text-align:center;padding:70px 24px;margin-top:20px">
         <div style="font-size:48px;animation:spin 1s linear infinite">⏳</div>
-        <h2 style="margin:16px 0 8px">正在從 本站練習題庫進行分層抽題...</h2>
+        <h2 style="margin:16px 0 8px">正在從本站練習題庫進行分層抽題...</h2>
         <p style="color:var(--text-muted);max-width:550px;margin:0 auto">
-          嚴格按 8 大階梯 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ SAT ➔ GRE ➔ GMAT) 分層隨機抽取 30 題，供自學練習使用…
+          嚴格按 8 大階梯 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ SAT ➔ GRE ➔ GMAT) 分層隨機抽取 ${diagQuestionCount || 30} 題，供自學練習使用…
         </p>
       </div>
     `;
@@ -130,17 +131,78 @@ export function diagnosticPage() {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function renderIntroView() {
   const latestHistory = diagHistory[0];
+  const tierQuotasDisplay = diagQuestionCount === 20
+    ? { 1: 2, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 1 }
+    : diagQuestionCount === 40
+    ? { 1: 5, 2: 5, 3: 5, 4: 6, 5: 5, 6: 5, 7: 5, 8: 4 }
+    : { 1: 4, 2: 4, 3: 4, 4: 5, 5: 4, 6: 4, 7: 3, 8: 2 };
+
+  const durationMin = diagQuestionCount === 20 ? 15 : diagQuestionCount === 40 ? 35 : 25;
 
   return `
     <div class="header-block">
       <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 英文程度測試 · 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
-      <h1 style="margin:8px 0;font-size:28px">🎯 英文程度測試 · 30 題全階能力練習檢核 (小學 Pre-A1 至 GRE/GMAT)</h1>
+      <h1 style="margin:8px 0;font-size:28px">🎯 英文程度檢定</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
-        預留約 25 分鐘練習不同難度的題目。完成後檢查每題答案與解析，選擇需要補強的單元。
+        提供 20 題快速檢定、30 題標準檢定與 40 題深度精準檢定。完成後檢查每題答案與解析，定位失速臨界點並獲取專屬補強微課。
       </p>
     </div>
 
     <aside class="card"><h2>預測英文程度，找到學習起點</h2><p>完成作答後，查看閱讀／文法程度、CEFR 參考區間與各考試參考落點，再按弱項選擇教材。預測使用本站規則，尚未經正式成績配對校準。</p></aside>
+
+    <!-- 檢定題數選項 (20 題快速 / 30 題標準 / 40 題深度精準) -->
+    <div class="card" style="margin-bottom:24px;border:2px solid #6366f1;background:linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div>
+          <h2 style="margin:0;font-size:18px;color:#1e1b4b;display:flex;align-items:center;gap:8px">
+            <span>⚙️ 選擇檢定題數與測驗長度 (Question Count & Test Mode)</span>
+          </h2>
+          <div style="font-size:13px;color:#475569;margin-top:4px">
+            支援 20 題快速檢定、30 題標準檢定與 40 題深度精準檢定，自由切換滿足不同衝刺與診斷需求：
+          </div>
+        </div>
+        <div class="pill" style="background:#4338ca;color:#fff;font-weight:700">目前選擇：${diagQuestionCount} 題 (${durationMin} 分鐘)</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:14px">
+        <!-- 20 題 -->
+        <button class="btn ${diagQuestionCount === 20 ? 'primary' : 'quiet'}" data-diag-select-count="20"
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 20 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 20 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 20 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <strong style="font-size:16px;color:#0f172a">⚡ 20 題 · 快速檢定</strong>
+            <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">約 15 分鐘</span>
+          </div>
+          <div style="font-size:12px;color:#64748b;line-height:1.5">
+            適合通勤、課間或考前快速自測，快速掌握全階能力輪廓與當前落點區間。
+          </div>
+        </button>
+
+        <!-- 30 題 (標準) -->
+        <button class="btn ${diagQuestionCount === 30 ? 'primary' : 'quiet'}" data-diag-select-count="30"
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 30 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 30 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 30 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <strong style="font-size:16px;color:#0f172a">🎯 30 題 · 標準檢定</strong>
+            <span class="pill" style="font-size:11px;background:#10b981;color:#fff;font-weight:700">推薦 · 約 25 分鐘</span>
+          </div>
+          <div style="font-size:12px;color:#64748b;line-height:1.5">
+            經典 8 階梯天梯平衡抽樣，精確鎖定失速臨界點 (Stall Point) 與 CEFR 等級錨定。
+          </div>
+        </button>
+
+        <!-- 40 題 -->
+        <button class="btn ${diagQuestionCount === 40 ? 'primary' : 'quiet'}" data-diag-select-count="40"
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 40 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 40 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 40 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <strong style="font-size:16px;color:#0f172a">🔬 40 題 · 深度精準檢定</strong>
+            <span class="pill" style="font-size:11px;background:#fae8ff;color:#86198f">約 35 分鐘</span>
+          </div>
+          <div style="font-size:12px;color:#64748b;line-height:1.5">
+            全維度最大樣本抽樣，深入探查 GRE 邏輯語意、GMAT 批判推理與學術篇章精細盲點。
+          </div>
+        </button>
+      </div>
+    </div>
+
     <!-- 上次作答快速回顧 (若有) -->
     ${latestHistory ? `
       <div class="card" style="border:2px solid #a7f3d0;background:#f0fdf4;margin-bottom:24px">
@@ -158,8 +220,8 @@ function renderIntroView() {
             <button class="btn secondary" data-view-last-report="true" style="font-size:14px;padding:8px 16px">
               📄 查看完整診斷報告
             </button>
-            <button class="btn primary" data-start-diag="true" style="font-size:14px;padding:8px 18px">
-              🔄 抽取全新 30 題再次挑戰
+            <button class="btn primary" data-start-diag="true" data-diag-count="${diagQuestionCount}" style="font-size:14px;padding:8px 18px">
+              🔄 抽取全新 ${diagQuestionCount} 題再次挑戰
             </button>
           </div>
         </div>
@@ -169,68 +231,68 @@ function renderIntroView() {
     <!-- 8 大難度階梯與考制對標天梯 -->
     <div class="card" style="margin-bottom:24px">
       <h3 style="margin:0 0 16px;display:flex;align-items:center;gap:8px">
-        <span>🪜 30 題全階難度天梯與題數配比 (8-Tier Ladder Architecture)</span>
+        <span>🪜 ${diagQuestionCount} 題全階難度天梯與題數配比 (8-Tier Ladder Architecture)</span>
       </h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:12px">
         <div style="border:1px solid #e2e8f0;border-left:4px solid #10b981;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#047857">Tier 1: 國小基礎生活英語</strong>
-            <span class="pill" style="font-size:11px">4 題 (Pre-A1~A1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[1]} 題 (Pre-A1~A1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">be動詞、名詞單複數、自然發音、日常時間與生活對話</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #059669;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#059669">Tier 2: 國中會考基礎實踐</strong>
-            <span class="pill" style="font-size:11px">4 題 (A1~A2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[2]} 題 (A1~A2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">過去簡單式、未來式、頻率副詞、比較級、情境會話</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #0284c7;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0284c7">Tier 3: 國中會考精熟躍升</strong>
-            <span class="pill" style="font-size:11px">4 題 (A2~B1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[3]} 題 (A2~B1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">現在完成式、被動語態、感官使役動詞、關係代名詞</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #6366f1;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#4f46e5">Tier 4: 高中學測核心素養</strong>
-            <span class="pill" style="font-size:11px">5 題 (B1~B2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[4]} 題 (B1~B2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">分詞構句、倒裝句、複合關係代名詞、篇章結構與高級詞彙</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #d97706;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#d97706">Tier 5: TOEIC 國際商務實戰</strong>
-            <span class="pill" style="font-size:11px">4 題 (B2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[5]} 題 (B2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Part 5 詞性辨析、商務書信、行程合約、職場語法一致性</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #8b5cf6;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#7c3aed">Tier 6: Digital SAT 學術思維</strong>
-            <span class="pill" style="font-size:11px">4 題 (B2~C1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[6]} 題 (B2~C1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Words in Context 語境詞義、學術長難句、論點支撐與修辭</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #e11d48;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#e11d48">Tier 7: GRE Verbal 語意邏輯</strong>
-            <span class="pill" style="font-size:11px">3 題 (C1~C2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[7]} 題 (C1~C2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">語意極性、反向對稱、雙重填空、哲學社科精微論述</div>
         </div>
         <div style="border:1px solid #e2e8f0;border-left:4px solid #0891b2;padding:12px 14px;border-radius:8px;background:#f8fafc">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0891b2">Tier 8: GMAT Focus 批判推理</strong>
-            <span class="pill" style="font-size:11px">2 題 (C2/進階題型)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[8]} 題 (C2/進階題型)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Assumption 否定測試法、Weaken/Strengthen 商業決策論證</div>
         </div>
       </div>
       <div style="text-align:right;margin-top:10px;font-size:12px;color:var(--text-muted)">
-        合計：4 + 4 + 4 + 5 + 4 + 4 + 3 + 2 = <strong>預計抽取 30 題</strong>
+        合計：${tierQuotasDisplay[1]} + ${tierQuotasDisplay[2]} + ${tierQuotasDisplay[3]} + ${tierQuotasDisplay[4]} + ${tierQuotasDisplay[5]} + ${tierQuotasDisplay[6]} + ${tierQuotasDisplay[7]} + ${tierQuotasDisplay[8]} = <strong>預計抽取 ${diagQuestionCount} 題</strong>
       </div>
     </div>
 
@@ -238,7 +300,7 @@ function renderIntroView() {
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:28px">
       <div class="card" style="text-align:center">
         <div style="font-size:32px">⚡</div>
-        <h4 style="margin:8px 0 4px">預留約 25 分鐘</h4>
+        <h4 style="margin:8px 0 4px">預留約 ${durationMin} 分鐘</h4>
         <p style="font-size:13px;color:var(--text-muted);margin:0">練習不同主題的題目，找出需要回顧的觀念。</p>
       </div>
       <div class="card" style="text-align:center">
@@ -260,13 +322,19 @@ function renderIntroView() {
 
     <!-- 開始測驗按鈕 -->
     <div class="card" style="text-align:center;padding:36px 20px;background:linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);border:2px dashed #94a3b8">
-      <h2 style="margin:0 0 10px;font-size:22px">準備開始這次練習了嗎？</h2>
+      <h2 style="margin:0 0 10px;font-size:22px">準備開始這次檢定了嗎？</h2>
       <p style="color:var(--text-muted);max-width:540px;margin:0 auto 20px;font-size:14px">
-        點擊下方按鈕將從 本站練習題庫隨機抽取 30 道題目，計時 25 分鐘。答題過程可隨時跳題、修改選擇。
+        點擊下方按鈕將從 本站練習題庫隨機抽取 ${diagQuestionCount} 道題目，計時 ${durationMin} 分鐘。答題過程可隨時跳題、修改選擇。
       </p>
-      <button class="btn primary" data-start-diag="true" style="padding:14px 42px;font-size:17px;font-weight:700;border-radius:12px;box-shadow:0 6px 18px rgba(4,120,87,0.3)">
-        🚀 立即開始 30 題分層練習
+      <button class="btn primary" data-start-diag="true" data-diag-count="${diagQuestionCount}" style="padding:14px 42px;font-size:17px;font-weight:700;border-radius:12px;box-shadow:0 6px 18px rgba(4,120,87,0.3)">
+        🚀 立即開始 ${diagQuestionCount} 題分層檢定
       </button>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <span style="font-size:13px;color:#64748b;align-self:center">或直接選擇題數開始：</span>
+        <button class="btn ${diagQuestionCount === 20 ? 'secondary' : 'quiet'}" data-start-diag="20" style="font-size:13px;padding:6px 14px">⚡ 20 題快速 (15分)</button>
+        <button class="btn ${diagQuestionCount === 30 ? 'secondary' : 'quiet'}" data-start-diag="30" style="font-size:13px;padding:6px 14px">🎯 30 題標準 (25分)</button>
+        <button class="btn ${diagQuestionCount === 40 ? 'secondary' : 'quiet'}" data-start-diag="40" style="font-size:13px;padding:6px 14px">🔬 40 題深度 (35分)</button>
+      </div>
     </div>
   `;
 }
@@ -381,7 +449,7 @@ function renderTestingView() {
     <!-- 30 題即時題號矩陣卡 -->
     <div class="card" style="margin-top:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <h4 style="margin:0;font-size:14px;color:var(--text-muted)">📝 30 題作答導航卡 (點選可直接跳題)</h4>
+        <h4 style="margin:0;font-size:14px;color:var(--text-muted)">📝 ${diagQuestions.length} 題作答導航卡 (點選可直接跳題)</h4>
         <div style="font-size:12px;display:flex;gap:12px">
           <span><span style="display:inline-block;width:10px;height:10px;background:#10b981;border-radius:2px"></span> 已答</span>
           <span><span style="display:inline-block;width:10px;height:10px;background:#e2e8f0;border-radius:2px"></span> 未答</span>
@@ -435,7 +503,7 @@ function renderReportView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 30 題全階程度練習檢核 · 深度能力診斷報告</div>
+      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 ${diagQuestions.length} 題全階程度練習檢核 · 深度能力診斷報告</div>
       <h1 style="margin:8px 0;font-size:28px">英語能力全面體檢成就報告與微課學習地圖</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         以下依本站規則整理本次作答，協助選擇複習主題；不是標準化能力評定。
@@ -529,11 +597,11 @@ function renderReportView() {
       </div>
     ` : ''}
 
-    <!-- 30 題名師五星級專業詳解 (All 30 Questions Pedagogical Review) -->
+    <!-- 全卷逐題專業詳解 (Pedagogical Review) -->
     <div class="card" style="margin-bottom:24px">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px">
         <div>
-          <h3 style="margin:0;font-size:18px">📖 30 題名師五星級專業考點解析 (全卷公布)</h3>
+          <h3 style="margin:0;font-size:18px">📖 ${diagQuestions.length} 題名師五星級專業考點解析 (全卷公布)</h3>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px">
             每一題皆配備「雙語精譯、核心考點、句構拆解、高頻單字、致命陷阱剖析」五大教學維度。
           </div>
@@ -542,7 +610,7 @@ function renderReportView() {
         <!-- 檢視篩選標籤 -->
         <div style="display:flex;gap:6px">
           <button class="btn ${diagFilterView === 'all' ? 'primary' : 'secondary'}" data-diag-filter="all" style="font-size:13px;padding:6px 12px">
-            全部 30 題 (30)
+            全部 ${diagQuestions.length} 題 (${diagQuestions.length})
           </button>
           <button class="btn ${diagFilterView === 'wrong' ? 'primary' : 'secondary'}" data-diag-filter="wrong" style="font-size:13px;padding:6px 12px">
             ❌ 僅看錯題 (${diagQuestions.length - ev.rawCorrect})
@@ -671,7 +739,7 @@ function renderReportView() {
     <!-- 底部操作按鈕 -->
     <div class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <button class="btn secondary" data-restart-diag="true" style="padding:10px 20px;font-size:15px">
-        🔄 抽取全新 30 題再次測試
+        🔄 抽取全新 ${diagQuestions.length || 30} 題再次挑戰
       </button>
       <div style="display:flex;gap:10px">
         <button class="btn secondary" data-print-diag="true" style="padding:10px 20px;font-size:15px">
@@ -714,16 +782,34 @@ function getStallPointAdvice(tier) {
 export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
   const d = btn.dataset;
 
+  // 選擇題數 (20 / 30 / 40)
+  if (d.diagSelectCount) {
+    const count = parseInt(d.diagSelectCount, 10);
+    if ([20, 30, 40].includes(count)) {
+      diagQuestionCount = count;
+      renderCallback();
+    }
+    return true;
+  }
+
   // 開始測驗
   if (d.startDiag) {
+    const parsedCount = parseInt(d.startDiag, 10) || parseInt(d.diagCount, 10);
+    if ([20, 30, 40].includes(parsedCount)) {
+      diagQuestionCount = parsedCount;
+    }
+    const count = diagQuestionCount || 30;
+    const durationMin = count === 20 ? 15 : count === 40 ? 35 : 25;
     diagLoading = true;
-    renderCallback();
-    questionDB.sampleDiagnostic30().then(questions => {
+    const fetchFn = (count === 30 && typeof questionDB.sampleDiagnostic30 === 'function')
+      ? questionDB.sampleDiagnostic30()
+      : questionDB.sampleDiagnostic(count);
+    fetchFn.then(questions => {
       diagQuestions = questions;
       diagCurrentIdx = 0;
       diagUserAnswers = {};
       diagConfirmSubmit = false;
-      diagTimerSeconds = 25 * 60;
+      diagTimerSeconds = durationMin * 60;
       diagTimerPaused = false;
       diagMode = 'testing';
       diagLoading = false;

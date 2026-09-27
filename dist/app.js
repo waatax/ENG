@@ -194,7 +194,7 @@ function shell(body) {
     ['arch', '09', '高中句法與閱讀'],
     ['handouts', '10', '列印學習講義'],
     ['chapter', '11', '核心教學章節'],
-    ['wordpractice', '12', '7,700 張字卡學習'],
+    ['wordpractice', '12', '9,500 張字卡學習'],
     ['flashcards', '12a', '搜尋全部字卡'],
     ['studio', '13', '合成語音練習'],
     ['exams', '14', '考試練習與資源'],
@@ -205,8 +205,8 @@ function shell(body) {
   const summary = junyi.getSummary();
 
   const pageTitles = {
-    diagnostic: '🎯 英文程度測試 (全階程度練習檢核 · 小學至GRE/GMAT)',
-    wordpractice: '7,700 張字卡學習',
+    diagnostic: '🎯 英文程度檢定',
+    wordpractice: '9,500 張字卡學習',
     schoolwords: '國小・國中單字複習',
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
     curriculum108: '108 課綱英語全學年課程地圖',
