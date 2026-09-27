@@ -9,6 +9,37 @@ import { curriculum } from './curriculum.mjs';
 
 const entries = new Map();
 
+const SCHOOL_WORD_ICONS = {
+  family: '👨‍👩‍👧', father: '👨', mother: '👩', brother: '👦', sister: '👧', grandfather: '👴', grandmother: '👵',
+  uncle: '🧔', aunt: '👩‍🦰', cousin: '🧑‍🤝‍🧑', baby: '👶', friend: '🤝', teacher: '👩‍🏫', student: '🧑‍🎓',
+  doctor: '🧑‍⚕️', nurse: '🧑‍⚕️', police: '👮', cat: '🐱', dog: '🐶', bird: '🐦', fish: '🐟', elephant: '🐘',
+  lion: '🦁', tiger: '🐯', monkey: '🐒', bear: '🐻', rabbit: '🐰', apple: '🍎', banana: '🍌', orange: '🍊',
+  bread: '🍞', rice: '🍚', noodle: '🍜', soup: '🍲', milk: '🥛', water: '💧', school: '🏫', book: '📖',
+  pencil: '✏️', pen: '🖊️', desk: '🪑', chair: '🪑', bag: '🎒', clock: '⏰', computer: '💻', phone: '📱',
+  car: '🚗', bus: '🚌', train: '🚆', tree: '🌲', flower: '🌸', sun: '☀️', moon: '🌙', star: '⭐',
+  rain: '🌧️', eye: '👀', hand: '✋', red: '🔴', blue: '🔵', read: '📖', write: '✍️', listen: '👂', speak: '🗣️'
+};
+
+const SCHOOL_CATEGORY_ICONS = {
+  '家庭': '👨‍👩‍👧', '人物': '👤', '動物': '🐾', '食物': '🥗', '飲品': '🥛', '水果': '🍎',
+  '自然': '🌿', '地理': '⛰️', '學校': '🏫', '文具': '🎒', '家居': '🏡', '交通': '🚌',
+  '時間': '⏰', '天氣': '🌤️', '身體': '🩺', '服飾': '👕', '色彩': '🎨', '動詞': '⚡',
+  '形容詞': '✨', '科技': '💻', '情感': '💖', '不規則': '🔄'
+};
+
+export function resolveSchoolWordIcon(word, category) {
+  const w = String(word || '').toLowerCase().trim();
+  if (SCHOOL_WORD_ICONS[w]) return SCHOOL_WORD_ICONS[w];
+  for (const [k, v] of Object.entries(SCHOOL_WORD_ICONS)) {
+    if (w.includes(k) || k.includes(w)) return v;
+  }
+  const cat = String(category || '');
+  for (const [k, v] of Object.entries(SCHOOL_CATEGORY_ICONS)) {
+    if (cat.includes(k)) return v;
+  }
+  return '📌';
+}
+
 function add(stage, word, zh, example, ipa, category, source, unit = '', exampleZh = '', chunk = '', pos = '', collocation = '', memoryTip = '') {
   if (!word || !zh) return;
   const id = `${stage}:${word.trim().toLowerCase()}`;
@@ -22,6 +53,7 @@ function add(stage, word, zh, example, ipa, category, source, unit = '', example
     if (!old.pos && pos) old.pos = pos;
     if (!old.collocation && collocation) old.collocation = collocation;
     if (!old.memoryTip && memoryTip) old.memoryTip = memoryTip;
+    if (!old.icon) old.icon = resolveSchoolWordIcon(word, category);
     return;
   }
   entries.set(id, {
@@ -39,7 +71,8 @@ function add(stage, word, zh, example, ipa, category, source, unit = '', example
     chunk: chunk || word.trim(),
     pos: pos || 'n.',
     collocation: collocation || '',
-    memoryTip: memoryTip || ''
+    memoryTip: memoryTip || '',
+    icon: resolveSchoolWordIcon(word, category)
   });
 }
 
