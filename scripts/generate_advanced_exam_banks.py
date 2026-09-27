@@ -88,7 +88,7 @@ EXECUTIVES = [
     ("Ms. Fiona Gallagher", "Senior Logistics Coordinator")
 ]
 
-# Helper to balance options and correct answer index across A, B, C, D
+# Helper to balance options and correct answer index across choices (supporting both 4-choice single select and 6-choice GRE Sentence Equivalence)
 def balance_item(tpl, idx):
     subtopic = tpl[0]
     raw_prompt = tpl[1]
@@ -98,11 +98,21 @@ def balance_item(tpl, idx):
     raw_hint = tpl[5]
     diff = tpl[6] if len(tpl) > 6 else 3
 
-    correct_val = raw_options[raw_ans]
-    # Rotate options systematically so answers rotate through 0, 1, 2, 3 evenly
-    rot = (idx * 3 + raw_ans) % 4
-    new_opts = raw_options[rot:] + raw_options[:rot]
-    new_ans = new_opts.index(correct_val)
+    is_select_two = isinstance(raw_ans, list) or len(raw_options) == 6
+
+    if is_select_two:
+        # Sentence Equivalence: 6 options, select 2
+        correct_vals = [raw_options[i] for i in raw_ans]
+        rot = (idx * 2) % len(raw_options)
+        new_opts = raw_options[rot:] + raw_options[:rot]
+        new_ans = sorted([new_opts.index(v) for v in correct_vals])
+        select_count = 2
+    else:
+        correct_val = raw_options[raw_ans]
+        rot = (idx * 3 + raw_ans) % len(raw_options)
+        new_opts = raw_options[rot:] + raw_options[:rot]
+        new_ans = new_opts.index(correct_val)
+        select_count = 1
 
     passage = None
     prompt = raw_prompt
@@ -111,16 +121,20 @@ def balance_item(tpl, idx):
         passage = parts[0].strip()
         prompt = parts[1].strip()
 
-    return {
+    res = {
         "subtopic": subtopic,
         "difficulty": diff,
         "passage": passage,
         "prompt": prompt,
         "options": new_opts,
         "answer": new_ans,
+        "selectCount": select_count,
         "explain": raw_explain,
         "hint": raw_hint
     }
+    if is_select_two:
+        res["questionType"] = "sentence_equivalence"
+    return res
 
 # =========================================================================
 # 1. TOEIC GENERATOR (3,000 Items)
@@ -546,36 +560,36 @@ def generate_gre_3000():
          "三段式辯證：既非保守評論家嘲笑的「毫無創意的剽竊之作 (derivative)」，亦非諂媚支持者宣稱的「劃時代傑作 (epochal)」，而是微妙精準平衡傳統與前衛的「細膩精妙綜合體 (nuanced synthesis)」。",
          "掌握三段式辯證平衡：neither [批評者的貶低] nor [捧殺者的盛讚], instead a [中肯細膩的綜合評價]。", 5),
 
-        # Sentence Equivalence: Twin Synonyms
+        # Sentence Equivalence: Twin Synonyms (GRE Official 6-choice, Select-Two)
         ("Sentence Equivalence: Twin Synonyms - Burden & Difficulty",
          "Because the ancient cuneiform clay tablets were fragmented and obscured by vitrified mineral deposits, translating the royal economic decrees proved to be an extraordinarily ___ undertaking for the epigraphers.",
-         ["onerous", "burdensome", "facile", "perfunctory"], 0,
-         "泥板殘破且被礦物沉積物遮蔽，翻譯王室法令對碑銘學者而言是極其「繁重艱難的 (onerous / burdensome)」任務；兩者在學術脈絡中為精確同義詞。",
-         "Sentence Equivalence 尋找能替換且保持句意完全一致的同義詞組：onerous 與 burdensome 皆意為繁重艱辛的。", 4),
+         ["onerous", "burdensome", "facile", "perfunctory", "elementary", "cursory"], [0, 1],
+         "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：泥板殘破 (fragmented) 且被礦物沉積物遮蔽 (obscured)，說明翻譯王室法令對銘文學家而言是極端艱鉅繁重的任務。\n2. 雙選同義詞對：onerous（繁重的、艱難的）與 burdensome（沉重的、累人的）填入空格皆表極其繁重艱辛，句意完全等價。\n3. 干擾項排除：facile（輕易的、膚淺的）與 elementary（容易的、基礎的）方向相反；perfunctory（敷衍的）與 cursory（草率的）修飾態度而非事業本身的艱鉅度。\n4. 搭配考點 (Collocation)：undertaking 常與 onerous / burdensome 搭配（如 an onerous/burdensome undertaking），指耗費大量心力的艱鉅事業。",
+         "Sentence Equivalence 核心策略：尋找能替換且保持句意完全一致的孿生同義詞組 (Twin Synonyms)：onerous 與 burdensome 皆意為繁重艱辛的。", 5),
 
         ("Sentence Equivalence: Twin Synonyms - Whim & Volatility",
          "Throughout his volatile tenure, the monarch was notorious for his ___ governance, arbitrarily promoting junior favorites one morning only to banish them to distant border fortresses the next week.",
-         ["capricious", "fickle", "steadfast", "circumspect"], 0,
-         "前一天提拔親信、下一週無端流放，體現出統治者極度「反覆無常、任性多變 (capricious / fickle)」的行事風格。steadfast（堅定）與 circumspect（審慎）與文意完全相悖。",
-         "行為線索：arbitrarily promoting... only to banish next week，指多變無常，鎖定高頻同義詞對 capricious / fickle。", 5),
+         ["capricious", "fickle", "steadfast", "circumspect", "dogmatic", "equable"], [0, 1],
+         "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：前文 volatile tenure（動盪任期）與後文「早上隨意提拔親信、隔週便流放邊陲 fortresses」的荒謬反差，體現統治風格之極度任性反覆。\n2. 雙選同義詞對：capricious（任性善變的）與 fickle（反覆無常的、易變的）填入後皆能精確表達統治者無常且隨心所欲之行事風格。\n3. 干擾項排除：steadfast（堅定不移的）、circumspect（審慎周密的）、equable（沉著溫和的）均與語境相反；dogmatic（教條武斷的）無法體現頻繁變異的特質。\n4. 深度語言學搭配 (Collocation & Nuance)：在政治哲學與學術文獻中，「capricious governance」為極權專制任意裁量之標準學術搭配；而 fickle 亦常修飾心意或命運 (fickle public / fickle fortune)。在 GRE 官方 Sentence Equivalence 六選二體系中，兩者構成標準孿生詞對 (Twin Synonyms)。",
+         "行為線索：arbitrarily promoting... only to banish next week 指反覆多變無常，鎖定 GRE 高頻孿生同義詞對 capricious / fickle。", 5),
 
         ("Sentence Equivalence: Twin Synonyms - Clarity & Lucidity",
          "The theoretical physicist's monograph was widely acclaimed for its ___ exposition, reducing the baffling multidimensional equations of quantum gravity into concepts accessible to first-year researchers.",
-         ["pellucid", "limpid", "opaque", "turgid"], 0,
-         "將複雜多維的量子重力方程式化簡為一年級研究生皆能理解的觀念，說明其論述極為「清澈透明、清晰易懂 (pellucid / limpid)」。opaque（晦澀）與 turgid（浮誇晦澀）為反義詞。",
-         "線索：reducing baffling equations into accessible concepts，對應清澈明白的同義詞對 pellucid / limpid。", 5),
+         ["pellucid", "limpid", "opaque", "turgid", "convoluted", "abstruse"], [0, 1],
+         "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：將複雜難解的多維量子重力方程式化簡為一年級研究生皆能理解的淺白觀念 (reducing baffling equations into accessible concepts)。\n2. 雙選同義詞對：pellucid（清晰透徹的、清澈的）與 limpid（澄澈清晰的、簡潔明瞭的）均形容文風論述透明清澈，填入後句意完全等價。\n3. 干擾項排除：opaque（晦澀的）、turgid（浮誇晦澀的）、convoluted（盤根錯節的）、abstruse（深奧晦澀的）全為反義詞。\n4. 搭配考點 (Collocation)：pellucid exposition 與 limpid prose 均為學術英文中高度讚譽論述清明透徹之經典搭配。",
+         "線索：reducing baffling equations into accessible concepts，對應清澈明白之高階同義詞對 pellucid / limpid。", 5),
 
         ("Sentence Equivalence: Twin Synonyms - Flattery & Servility",
          "Disgusted by the ___ flatteries of court courtiers who praised his most disastrous decrees, the philosopher king banished all sycophants from the imperial palace.",
-         ["obsequious", "sycophantic", "trenchant", "imperious"], 0,
-         "由 courtiers who praised his most disastrous decrees（連災難政策都阿諛奉承）及 banished all sycophants 可知，形容詞修飾諂媚應填入「逢迎諂媚的 (obsequious / sycophantic)」。",
-         "直接鎖定名詞 sycophants 的形容詞對應詞：obsequious 與 sycophantic（逢迎諂媚的）。", 5),
+         ["obsequious", "sycophantic", "trenchant", "imperious", "assertive", "scornful"], [0, 1],
+         "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：宮廷廷臣連最災難的政令都無底線逢迎吹捧，且哲人王驅逐了所有諂媚之徒 (banished all sycophants)，空格修飾 flatteries 必為極度逢迎之詞。\n2. 雙選同義詞對：obsequious（逢迎諂媚的、低三下四的）與 sycophantic（阿諛奉承的、奴顏婢膝的）形成完美同義置換。\n3. 干擾項排除：trenchant（犀利尖銳的）、imperious（專橫霸道的）、assertive（堅定果斷的）、scornful（輕蔑不屑的）均與阿諛拍馬之語境完全相悖。\n4. 搭配考點 (Collocation)：obsequious flatteries / sycophantic praise 為古典修辭中刻畫奴才面孔之核心同義組。",
+         "直接鎖定名詞 sycophants 的形容詞對應同義詞組：obsequious 與 sycophantic（逢迎諂媚的）。", 5),
 
         ("Sentence Equivalence: Twin Synonyms - Eagerness & Zeal",
          "When the non-profit institute announced a fully funded fellowship for archival preservation in Florence, young scholars embraced the research opportunity with unprecedented ___.",
-         ["alacrity", "zeal", "indifference", "trepidation"], 0,
-         "全額資助的佛羅倫斯研究獎學金引發年輕學者以前所未有的「敏捷熱忱、欣然熱情 (alacrity / zeal)」爭相投入申請。indifference（漠不關心）與 trepidation（恐懼顫抖）不合語境。",
-         "把握正面爭取難得學術機會的語境，選取表示熱情欣然的同義詞對 alacrity / zeal。", 4),
+         ["alacrity", "zeal", "indifference", "trepidation", "apathy", "reluctance"], [0, 1],
+         "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：全額資助的佛羅倫斯歷史檔案維護獎學金極具吸引力，年輕學者以前所未有之姿態積極爭取擁抱此機會。\n2. 雙選同義詞對：alacrity（敏捷欣然、熱忱渴望）與 zeal（熱情狂熱、熱烈投入）填入後皆表示以無比欣喜渴望的心情迎接研究機會。\n3. 干擾項排除：indifference（漠不關心）、apathy（麻木冷漠）、reluctance（勉強不情願）為負向反義詞；trepidation（惶恐恐懼）不合爭取榮譽獎學金之語境。\n4. 搭配考點 (Collocation)：with alacrity / with zeal 為高頻副詞搭配，生動刻畫學者或志願者欣然爭先恐後的熱忱神態。",
+         "把握正面爭取難得學術機會的語境，選取表示熱情欣然、敏捷渴望的同義詞對 alacrity / zeal。", 5),
 
         # Reading Comprehension: Academic Discourse
         ("Reading Comprehension: Primary Purpose & Historiography",
@@ -765,7 +779,22 @@ def main():
         "schema_version": "2.0",
         "generated_at": "2026-09-26T16:00:00+08:00",
         "total_questions": 20000,
-        "categories": manifest_categories
+        "categories": manifest_categories,
+        "diagnostic_bank": {
+            "name": "English Quest 全階能力精準診斷題庫 (國小至GRE/GMAT · 2000題零重複)",
+            "count": 2000,
+            "file": "diagnostic_bank.json",
+            "tiers": {
+                "tier1_primary": 250,
+                "tier2_jhs_found": 250,
+                "tier3_jhs_mast": 250,
+                "tier4_shs_gsat": 250,
+                "tier5_toeic": 250,
+                "tier6_sat": 250,
+                "tier7_gre": 250,
+                "tier8_gmat": 250
+            }
+        }
     }
 
     for cat, (label, gen_fn) in generators.items():

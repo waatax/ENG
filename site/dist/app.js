@@ -1,3 +1,5 @@
+import { renderTeachingAid } from './teaching_aids.mjs';
+import { renderSchoolWords, handleSchoolWordClick, handleSchoolWordChange, handleSchoolWordSubmit } from './school_words.mjs';
 import { knowledgeHome, knowledgePage, searchKnowledge, answerKnowledge } from './knowledge.mjs';
 // app.js - 全方位 108 課綱英語教育旗艦平台 (專家團隊 7 次深度大改造版)
 // 7 位跨領域專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考測驗心理計量、語音聲學、技高ESP與全齡UX
@@ -108,7 +110,7 @@ function navigate(p) {
   stopAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  const route = p === 'schoolwords' ? '#schoolwords' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
   if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -157,6 +159,7 @@ function renderStageQuickNav() {
 function shell(body) {
   const nav = [
     ['knowledge', '→', '知識點教室'],
+    ['schoolwords', '字', '國小・國中單字複習'],
     ['diagnostic', '00', '英文程度預測'],
     ['curriculum108', '01', '學年課程地圖'],
     ['phonics', '02', '自然拼讀與發音'],
@@ -177,6 +180,7 @@ function shell(body) {
   const summary = junyi.getSummary();
 
   const pageTitles = {
+    schoolwords: '國小・國中單字複習',
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
     diagnostic: '30 題全階程度練習檢核 (小學至GMAT)',
     curriculum108: '108 課綱英語全學年課程地圖',
@@ -229,7 +233,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
-        ${['knowledge','knowledgePoint','chapter','junyi'].includes(page) ? '' : renderStageQuickNav()}
+        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -801,6 +805,7 @@ function sixthPage() {
 
     <div class="layout" style="display:grid;grid-template-columns:2fr 1fr;gap:24px">
       <div>
+        ${renderTeachingAid(lesson.title, lesson.concepts || [])}
         <!-- 單元講義卡片 -->
         <div class="card" style="margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -968,7 +973,7 @@ function jhPage() {
                 <span class="chip" style="background:#e0e7ff;color:#3730a3;font-weight:700">${u.termCode} (${u.termEn})</span>
                 <span style="font-size:12px;color:var(--text-muted)">${u.unitId}</span>
               </div>
-              <h3 style="margin:0 0 8px;font-size:17px">${u.title}</h3>
+              <h3 style="margin:0 0 8px;font-size:17px">${u.title}</h3><details><summary>觀念圖解與對照表</summary>${renderTeachingAid(u.title, [], [u.exampleSentence])}</details>
               <p style="font-size:14px;color:#475569;margin:0 0 12px;line-height:1.6">${u.summary}</p>
             </div>
             <div>
@@ -1049,7 +1054,7 @@ function archPage() {
     { id: 'complex-sentences', title: '2. 複合句與連接詞核心 (Complex Sentences)' },
     { id: 'parts-of-speech', title: '3. 八大詞性與詞綴轉換 (Parts of Speech)' },
     { id: 'phonetics-dictionary', title: '4. KK音標與查字典指南 (Phonetics & Dictionary)' },
-    { id: 'vocab-1200', title: '5. 核心 1200 單字互動庫 (Vocab 1200 Core Explorer)' },
+    { id: 'vocab-1200', title: '5. 基礎詞彙互動庫 (Vocab 1200 Core Explorer)' },
     { id: 'semesters', title: '6. 高中/技高 4 個學期深度講義 (High School Semesters)' }
   ];
 
@@ -1071,6 +1076,7 @@ function archPage() {
       `).join('')}
     </div>
 
+    ${renderTeachingAid(modules.find(m=>m.id===activeArchModule)?.title || '高中複習')}
     ${activeArchModule === 'basic-tenses-passive' ? `
       <div class="card" style="margin-bottom:20px">
         <h2 style="margin:0 0 12px">五大核心時態與被動語態矩陣</h2>
@@ -1164,7 +1170,7 @@ function archPage() {
     ${activeArchModule === 'vocab-1200' ? `
       <div class="card" style="margin-bottom:20px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-          <h2 style="margin:0">教育部核心 1200 基礎必備單字庫</h2>
+          <h2 style="margin:0">本站基礎詞彙集</h2>
           <input type="text" id="vocab-search" placeholder="🔍 搜尋單字或中文..." value="${vocab1200Search}" style="padding:6px 12px;border-radius:8px;border:1px solid var(--line)">
         </div>
 
@@ -1716,6 +1722,7 @@ function progress() {
 
 function render() {
   const pages = {
+    schoolwords: renderSchoolWords,
     knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
     diagnostic: diagnosticPage,
     curriculum108: curriculum108Page,
@@ -1788,6 +1795,7 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (handleSchoolWordClick(b, render)) return;
   if (answerKnowledge(b)) return;
   if (handleDisplayToolbarClick(b, render)) return;
   if (handleDiagnosticClick(b, render, navigate)) return;
@@ -2223,8 +2231,12 @@ root.addEventListener('input', e => searchKnowledge(e.target));
 root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
-  if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
+  if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
+  else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
 }
 window.addEventListener('hashchange', readKnowledgeRoute);
 readKnowledgeRoute();
+
+root.addEventListener('change', e => handleSchoolWordChange(e.target, render));
+root.addEventListener('submit', e => { if (e.target.matches('.word-search,.word-spelling')) { e.preventDefault(); handleSchoolWordSubmit(e.target, render); } });

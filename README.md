@@ -3,7 +3,7 @@
 [![Deploy to GitHub Pages](https://github.com/waatax/ENG/actions/workflows/pages.yml/badge.svg)](https://github.com/waatax/ENG/actions/workflows/pages.yml)
 [![Live Site](https://img.shields.io/badge/Live%20Demo-waatax.github.io%2FENG-emerald?style=flat&logo=github)](https://waatax.github.io/ENG/)
 [![108 Curriculum](https://img.shields.io/badge/Curriculum-108%E8%AA%B2%E7%B6%B1%E5%85%A8%E5%AD%B8%E5%B9%B4-blue)](https://waatax.github.io/ENG/)
-[![Junyi Inspired](https://img.shields.io/badge/Pedagogy-%E5%9D%87%E4%B8%80%E6%95%99%E8%82%B2%E5%B9%B3%E5%8F%B0%E9%B7%B9%E6%9E%B6-orange)](https://waatax.github.io/ENG/)
+[![Mastery Pedagogy](https://img.shields.io/badge/Pedagogy-%E8%87%AA%E4%B8%BB%E7%B2%BE%E7%86%9F%E9%B7%B9%E6%9E%B6-orange)](https://waatax.github.io/ENG/)
 [![7-Member Expert Council](https://img.shields.io/badge/Expert%20Council-7%20Disciplines-purple)](https://waatax.github.io/ENG/)
 [![7 Transformation Cycles](https://img.shields.io/badge/Transformations-7%20Full%20Cycles-success)](ITERATION-70X7-MASTERY.md)
 
@@ -16,10 +16,10 @@
 因應用戶深度改造需求，本專案特別組織 **8 位跨領域權威專家委員會**，從課綱標準、認知科學、自學微課、心理計量、語音聲學、技術專業英語與現代 UI/UX 全維度把關指導：
 
 | 編號 | 專家身分 | 姓名與現職 | 領域專業與指導責任 |
-| :---: | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **01** | **課綱總體諮詢首席** | **Prof. Lin (林教授)**<br>臺師大英語系客座教授 / 108 課綱諮詢委員 | 三面九項核心素養縱向貫通、聽說讀寫綜合評量對標 |
 | **02** | **第二語言習得 (SLA) 認知科學家** | **Dr. Chen (陳博士)**<br>哈佛教育研究所認知心理學博士 / 學習科學主任 | 認知負荷理論 (CLT)、雙階鷹架提示 (Scaffolding Hints) 設計 |
-| **03** | **均一教育平台自學與微課專家** | **Teacher Wu (吳老師)**<br>均一資深英語文架構師 / 全國自學社群總監 | 微觀概念結構矩陣、步驟 0 破題思維、XP 徽章激勵 |
+| **03** | **自主學習與微課架構專家** | **Teacher Wu (吳老師)**<br>資深英語文架構師 / 全國自學社群總監 | 微觀概念結構矩陣、步驟 0 破題思維、XP 徽章激勵 |
 | **04** | **大考會考測驗心理計量專家** | **Dr. Huang (黃博士)**<br>大考中心與心測中心資深研究員 | 109–115 國中會考 (CAP) 與學測 (GSAT) 命題雙向細目表 |
 | **05** | **雙語教學與語音聲學專家** | **Prof. Evans (埃文斯教授)**<br>倫敦大學語音聲學博士 / IPA 國際語音學會專家 | 自然拼讀 (Phonics)、國際音標 (IPA/KK) 與原生點讀語音 |
 | **06** | **技高專業英語 (ESP) 與跨學科融合主任** | **Engineer Tsai (蔡工程師)**<br>國際建築工程與技術英文講師 / 科技大廠技術文膽 | 技高統測專業英語 (二)、AI 科技論文閱讀、ESG 永續論證 |
@@ -39,7 +39,7 @@
 週期二 (Cycle 2) ── 認知負荷理論與雙階鷹架提示導入 (Dr. Chen)
   └─ 每單元新增「提示 1 (語法指標)」與「提示 2 (排除法則)」，落實最小認知介入自主引導
 
-週期三 (Cycle 3) ── 均一步驟 0 思維與 42 項考場致命陷阱雷達 (Teacher Wu)
+週期三 (Cycle 3) ── 步驟 0 破題思維與 42 項考場致命陷阱雷達 (Teacher Wu)
   └─ 提煉每單元「第一眼題眼判斷法」，擴充建置涵蓋國小至高中 42 項考場避雷指南
 
 週期四 (Cycle 4) ── 國家大考 (CAP / GSAT / TVE) 多模態評量深化 (Dr. Huang)
@@ -106,7 +106,28 @@ Level 3: 高中與技術型高中 (Grades 10–12 / 學測・統測・指考) �
 
 ---
 
-## 💡 均一教育平台自學引擎 (Junyi Academy Engine)
+## 🧭 三大教育階段快速直達標籤 (Stage Quick-Navigation Tags)
+
+為協助不同學習階段的學員與考生迅速定位教材，平台特別架構**學段快速直達標籤（Stage Quick-Nav Tags & Direct Hub）**，設置於全域頂部導航列與課程首頁：
+
+1. **🎒 國小英文 (Elementary English · Grade 6)**：
+   - **目標能力**：CEFR Pre-A1 至 A1 基礎打底。
+   - **收錄課程**：6上 (6A) 與 6下 (6B) 共 8 大完整單元、Sixth 小升初名師複習講義、小學必背 1,000 核心單字與點讀發音。
+   - **快捷跳轉鍵**：支援一鍵直達 `6A 上學期`、`6B 下學期` 與 `Sixth 小升初講義`。
+
+2. **🏫 國中英文 (Junior High English · Grades 7–9 / 國中教育會考)**：
+   - **目標能力**：CEFR A1 至 B1 獨立運用。
+   - **收錄課程**：七年級 (7A/7B)、八年級 (8A/8B) 與九年級 (9A/9B 會考衝刺) 共 17 大單元、JH 國中會考 16 大主題全案、會考常用 2,000 單字。
+   - **快捷跳轉鍵**：支援一鍵直達 `七年級`、`八年級`、`九年級會考` 與 `JH 會考館`。
+
+3. **🎓 高中英文 (Senior High English · Grades 10–12 / 學測・統測・指考)**：
+   - **目標能力**：CEFR B1 至 C1 學術與專業英文。
+   - **收錄課程**：高一 (10A/10B)、高二 (11A/11B) 與高三大考巔峰 (12A/12B) 共 36 大單元、Arch 高中先修 5 大核心矩陣、大考核心 3,000 單字與關鍵動詞片語。
+   - **快捷跳轉鍵**：支援一鍵直達 `高一 (G10)`、`高二 (G11)`、`高三大考 (G12)` 與 `Arch 先修專題`。
+
+---
+
+## 💡 智慧自主精熟學習引擎 (Mastery Learning Engine)
 
 1. **⚡ 步驟 0 破題思維 (Step 0 Thinking)**：
    - 教授「做題第一眼看哪裡」的直覺思維模式。例如：看到空格前有逗號 `(,)`，立刻排除關係代名詞 `that`；看到 `Unless` 子句，動詞從現代未絕不可加 `will`。
@@ -121,7 +142,172 @@ Level 3: 高中與技術型高中 (Grades 10–12 / 學測・統測・指考) �
 
 ---
 
-## 📑 20,000 題全考制真題與國際檢定旗艦題庫系統 (Exam Arena)
+## 🎮 Duolingo 遊戲學習闖關引擎 (示範章節 J1 專屬)
+
+依據第二語言習得（SLA）認知減負原則，本專案**深度參考 Duolingo、Quizlet 與 Memrise 之遊戲化學習機制**，並嚴格落實「**僅限於一個章節（J1 句子骨架與基本時態）示範使用**」，既提供生動有趣的遊戲化破冰體驗，又保持全體 26 大高階章節深厚、專注之學術講義規格：
+
+1. **❤️❤️❤️❤️❤️ 5 條命愛心體力系統**：
+   - 答錯扣心伴隨震動警示與音效；愛心耗盡可免費補充並重新挑戰，養成自主訂正習慣。
+2. **🔥 Combo 連擊倍率與 XP 激勵**：
+   - 連續答對觸發燃燒火花 `2x, 3x COMBO`，即時獎勵經驗值並自動同步至全域精熟引擎。
+3. **🧩 五大高互動遊戲關卡型態**：
+   - **關卡 1 · 單字積木組裝 (Duolingo Word Bank)**：點擊單字積木依五大句型拼出「行動勝於空談 (Actions speak louder than words.)」，排查主詞單複數與時態。
+   - **關卡 2 · 連連看急速配對 (Quizlet & Duolingo Match)**：12 塊打亂卡片網格，點擊配對 J1 核心字彙與中文釋義，觸發水晶音效消除。
+   - **關卡 3 · 盲聽組裝拼句 (Listen & Tap)**：原生美語發音（正常速 1.0x 與烏龜慢速 0.6x），辨析「水在 100°C 沸騰」客觀真理現在式例外。
+   - **關卡 4 · 考場地雷急速射擊 (Rapid Trap Buster)**：一秒識破會考歷年誘答陷阱（受主句 told 干擾誤選 melted 陷阱）。
+   - **關卡 5 · 情境對話接龍 (Duolingo Stories Roleplay)**：與 Alex 展開真實雙語對話，扮演 Beth 選擇語境時態最和諧之回答氣泡。
+4. **📢 Duolingo 經典滑動抽屜回饋 (Sliding Drawer)**：
+   - 綠色成功抽屜「🎉 太棒了！」+ 經典雙音和弦；紅色訂正抽屜「❌ 需要注意喔！」+ 避雷詳解。
+5. **🏆 通關彩帶結算典禮 (Victory Celebration)**：
+   - 粒子特效噴灑、準確率結算、最高連對統計與 +50 XP 結算。
+
+---
+
+---
+
+## 🗣️ 自然拼讀與發音規則大師課 (Phonics & Pronunciation Rules Masterclass)
+
+為落實「**見字能讀、聽音能寫**」的自學核心根基，本平台由**語音聲學專家 Prof. Evans** 深度打造自然拼讀與發音規則大師課：
+
+1. **8 大黃金自然拼讀模組**：
+   - **模組 1 · 26 字母名 vs. 字母音 (Letter Names vs. Letter Sounds)**：26 個字母與 KK/IPA 基礎發音、口腔發音口訣與點讀範例字。
+   - **模組 2 · 短母音與 CVC 拼讀家族 (Short Vowels & CVC Families)**：-at, -en, -ig, -ot, -un 押韻詩句與三字組裝直讀。
+   - **模組 3 · Magic E (Silent E) 靜音 E 魔法規則**：CVC 到 CVCe 長母音轉變對照（如 `cap` ➔ `cape`, `kit` ➔ `kite`, `hop` ➔ `hope`, `cut` ➔ `cute`）。
+   - **模組 4 · 母音團隊組合 (Vowel Teams)**：雙母音走在一起第一個發長音（`ai/ay`, `ee/ea`, `oa/ow`, `oo` 長短音, `oi/oy`, `ou/ow`）。
+   - **模組 5 · 雙字母子音與子音連音 (Digraphs & Blends)**：清濁音對比（`sh`, `ch`, `th` 清音 /θ/ 與濁音 /ð/, `wh`, `ph`, `ck`, `ng`）與開頭連音（`bl`, `cl`, `fl`, `tr`, `st` 等）。
+   - **模組 6 · Bossy R 霸道捲舌音 (R-Controlled Vowels)**：`ar` /ɑːr/, `or` /ɔːr/ 以及 `er / ir / ur` 同發 /ɜːr/ 捲舌長母音。
+   - **模組 7 · 軟硬 C 與 G 規律 (Soft & Hard C / G)**：遇 `e, i, y` 軟化發 /s/ 與 /dʒ/；遇 `a, o, u` 發硬音 /k/ 與 /ɡ/。
+   - **模組 8 · 音節劃分與長單字直讀拆解法 (Syllable Division & Chunking)**：VC/CV 雙子音切開、V/CV 開音節前切、-C-le 結尾倒數三字母切法，與弱讀央母音 Schwa (/ə/) 辨別。
+2. **🫁 SVG 發音器官聲學結構解剖圖 (Articulatory Anatomy)**：
+   - 原生向量繪製嘴唇、上下齒、硬顎、軟顎、舌尖/舌身/舌根與聲帶振動示意圖，視覺化呈現語音共振腔。
+3. **🧩 智能長單字音節拆解器 (Interactive Multisyllable Phonics Decoder)**：
+   - 學習者可自由輸入任何英文單字（如 `fantastic`, `watermelon`, `communication`），系統即時自動切分音節塊、標註適用拼讀規則，並提供 1.0x 正常速與 0.6x 慢速發音。
+
+---
+
+## 🗂️ 全階程度單字與核心片語記憶閃卡館 (Graded Memory Flashcards Studio)
+
+依照學生程度與國際標準全面編排設計，支援 3D 卡片立體翻轉、自然拼讀音節拆解、KK/IPA 音標、權威語音點讀與記憶追蹤：
+
+| 程度分級編號 | 分級名稱與範圍 | CEFR 階梯 | 核心能力目標與字彙範疇 |
+| :--- | :--- | :---: | :--- |
+| **elem_1000** | **🎒 小學必備 1,000 字** | Pre-A1 ~ A1 | 日常生活、學校家庭、顏色數字、動物飲食基礎詞彙 |
+| **jhs_2000** | **🏫 國中會考 2,000 字** | A1 ~ B1 | 教育部常用 2,000 參考字彙、會考情境例句、詞性與音標 |
+| **shs_3000** | **🎓 高中學測 3,000 字與核心片語** | B1 ~ B2 | 大考 4,500/7,000 關鍵詞、高頻動詞片語與學術搭配詞 |
+| **toeic** | **💼 TOEIC 國際商務實戰** | B2 | 商務合約談判、採購預算、差旅行程、辦公通訊高頻詞 |
+| **sat** | **🏛️ Digital SAT 語境學術詞** | B2 ~ C1 | Words in Context 語境辨析、學術對比、社科閱讀必備詞 |
+| **gre** | **🏛️ GRE Verbal 孿生詞群** | C1 ~ C2 | 句子等價題孿生同義詞對 (Twin Synonyms)、精微哲學哲思詞 |
+| **gmat** | **📊 GMAT 批判邏輯推理詞** | C2 | Assumption, Weaken, Strengthen, Corroborate 等決策詞 |
+
+- **🔄 3D 立體翻轉體驗**：正面展示單字、音節切分標註（如 `con - tem - po - rar - y`）、IPA 音標與例句；背面揭露中文釋義、道地搭配詞、例句翻譯與記憶法（Memory Tip）。
+- **🔊 真人點讀語音**：配備單字朗讀與例句朗讀獨立發音按鈕。
+- **🌱 自主精熟追蹤**：學習者可自主切換「🌱 需複習」與「✅ 已精熟」，本機自動持久化儲存並動態更新精熟進度條。
+- **🔍 檢索與自動輪播**：具備關鍵字即時篩選、隨機洗牌，以及定時自動翻轉輪播聽讀功能。
+
+---
+
+## 📊 知識點視覺化插畫圖表與微課整合 (Pedagogical Visual Diagrams)
+
+為了徹底消弭枯燥文字，本平台在全體 **61 個學期微課** 與 **27 個教學大章** 中全面注入專屬知識點插畫與圖表：
+
+- **🕒 12 大時態時間軸全景圖 (12-Tense Timeline Map)**： Past、Present (NOW)、Future 三態四大時區向量波浪圖，直觀對比進行式點狀發生與完成式經驗積累。
+- **🔄 主被動語態交叉重組圖 (Passive Voice Cross-over Diagram)**：主詞受詞交叉易位、動詞 `be + p.p.` 轉化與動作執行者 `by...` 之力學圖解。
+- **🌲 條件句假設語氣決策樹 (Conditional Decision Tree)**：Zero, First, Second, Third Conditionals 條件判斷分支圖與時態「退一步」法則。
+- **⚓ 關係子句結構錨定圖 (Relative Clause Linkage Diagram)**：先行詞 ➔ 關係代名詞（who/which/that）➔ 形容詞子句之修飾定錨鏈條。
+- **🔺 空間與時間介系詞金字塔 (Prepositions Pyramid: In > On > At)**：大範圍籠統 `In` ➔ 中範圍路段日子 `On` ➔ 極小精確點位 `At` 之倒立立體金字塔。
+- **🌉 智慧雙向橋樑**：每個微課底部皆自動掛載「自然拼讀小撇步」與「單字閃卡練習建議」，無縫鏈結發音課與閃卡庫。
+
+---
+
+## 🎯 2,000 題自適應診斷評量系統 (Diagnostic Assessment System)
+
+為精準診斷學習者真確程度，平台建置了高達 **2,000 題完整題庫** 之自適應分層診斷系統：
+
+- **8 大階梯難度分層 (Tier 1 到 Tier 8 各 250 題，共 2,000 題)**：涵蓋國小初階至 GRE/GMAT 終極批判邏輯，保證全題庫 100% 題目無重複。
+- **100 次連續測驗零重複隨機抽題算法**：以階梯隨機取樣 30 題（基礎 6 題 ➔ 進階 14 題 ➔ 巔峰 10 題），保證單次評量 0 重複，且連續多次測驗均無重複。
+- **精準能力畫像與分數投射**：完成 30 題診斷後，即時輸出：
+  - CEFR 精準等級（Pre-A1 至 C2）。
+  - 專屬榮譽稱號（如「高中學測精銳士」、「GRE 巔峰學者」）。
+  - 國家考試與國際檢定分數投射（國中會考 CAP、大學學測 GSAT 級分、多益 TOEIC 預估分數）。
+  - 弱項停滯點分析與精準補救微課指引（自動掛載 61 單元中對應的補救單元）。
+
+---
+
+## 🏛️ GRE 句子等價題 (Sentence Equivalence) 原生六選二雙選題型
+
+針對 GRE 考試專有的「Sentence Equivalence（句子等價題）」，平台提供**原生 6 選項選 2 雙選題型架構**，徹底排查將雙選誤改成單選的命題瑕疵：
+- **六選二雙選介面**：使用者必須勾選恰好 2 個選項，系統動態提示「已選 1/2」並防止多選或少選。
+- **孿生同義詞對 (Twin Synonyms) 邏輯解析**：如 `capricious` 與 `fickle`（反覆無常）、`onerous` 與 `burdensome`（繁重艱鉅）、`pellucid` 與 `limpid`（清晰透徹），深度剖析語意等價與搭配詞（Collocation）微細差異。
+
+---
+
+## 📊 視覺化教學圖表與深度比較表格系統 (Visual Diagrams & Comparative Tables Engine)
+
+為徹底落實認知負荷理論（Cognitive Load Theory）與多模態直觀教學，本平台全體 **97 個核心教學頁面**（27 個考綱章節、61 個學期微課單元、9 大文法知識點）全面內嵌**視覺化圖表與比較對照表格**：
+
+1. **18+ 專業 SVG 與結構化視覺圖解**：
+   - **時態全景時間軸圖 (Tenses Timeline Map)**：過去、現在、未來座標與進行/完成跨度弧線。
+   - **主被動語態「交叉變身」黃金結構圖**：S + V + O ➔ O + be p.p. + by S 動作承受者移位與時態一致規律。
+   - **五大基本句型成分拆解圖 (Five Sentence Pillars)**：S+Vi, S+LV+SC, S+Vt+O, S+Vt+IO+DO, S+Vt+O+OC 色塊對比。
+   - **條件句與假設語氣決策分流樹**：Type 0 (真理) / Type 1 (可能) / Type 2 (與現在相反) / Type 3 (與過去相反)。
+   - **關係代名詞先行詞錨定與子句橋樑圖**：先行詞、關係詞與形容詞子句指涉路徑。
+   - **時間與空間介系詞 In ➔ On ➔ At 金字塔法則**：由大範圍包覆到特定精準定位點。
+   - **分詞構句三步化簡流程圖**：主詞核對、連接詞刪減、動詞 V-ing/p.p. 化簡與防懸垂分詞。
+   - **動名詞 (V-ing) vs. 不定詞 (to V) 搭配決策矩陣**：接 V-ing、接 to V 及語意截然不同之常考動詞辨析。
+   - **倒裝句型結構還原對照圖**：否定副詞前移、助動詞提取與直述句語序還原。
+   - **高工工場安全規程與 PPE 防護裝備圖解**：護目鏡、安全帽、防割手套、鋼頭鞋與斷電掛牌 (LOTO)。
+   - **工程尺寸標註、公差與規格判讀圖**：基本尺寸 50.00 mm 與 ±0.05 mm 上下極限公差。
+   - **設備故障排除 (Troubleshooting) SOP 五步驟**：症狀確認 ➔ 訊號檢測 ➔ 模組隔離 ➔ 更換校準 ➔ 驗證。
+   - **TOEIC 國際商務採購與通信生命週期圖**：Inquiry ➔ Quotation ➔ PO ➔ Shipment ➔ Invoice 閉環。
+   - **GMAT / GRE 批判邏輯推理三要素架構圖**：Premise (前提) + Assumption (假設) ➔ Conclusion (結論) 及取非否定測試。
+   - **篇章連貫與路標轉折詞全景地圖**：Addition, Contrast, Cause-Effect, Exemplification 訊號字。
+   - **形容詞與副詞比較級刻度尺**：原級 (as... as) ➔ 比較級 (-er / more than) ➔ 最高級 (the -est / most)。
+   - **自然拼讀母音光譜圖**：CVC 短母音 vs. Magic E 開音節長母音。
+   - **多模態圖表數據判讀圖 (Multimodal Data Chart)**：差額數量 vs. 成長比例之本質區分。
+
+2. **97 頁觀念地圖 (`aid-flow`) 與結構化比較表格 (`caption`)**：
+   - 包含「判斷重點 / 考點」、「示例與語法規則」、「如何理解與解題思考」、「會考與大考常犯地雷」。
+
+---
+
+## 🗂️ 國小與國中完整單字卡系統 (Elementary & Junior High Flashcards Studio)
+
+為徹底打通「**記憶 ➔ 複習 ➔ 練習**」的完整學習閉環，平台提供涵蓋 **800+ 核心詞彙** 之國小與國中專屬單字卡系統：
+
+1. **教育部 108 課綱字庫全收錄**：
+   - **🎒 國小常用詞彙庫 (350+ 詞)**：人物家庭、校園文具、日常作息、飲食餐點、動物自然、數字時間、衣物家居、常見形容詞。
+   - **🏫 國中會考核心詞彙庫 (560+ 詞)**：高頻不規則動詞三態、人際個性、學業教育、數位科技、環境保育、公共事務、心智思維、會考高頻轉折詞、易混淆字組。
+   - **全維度字卡資訊**：英文單字拼寫、自然拼讀音節拆解 (`chunk`)、KK 音標 (`ipa`)、詞性標籤 (`pos`)、繁體中文標準釋義 (`zh`)、常用搭配詞 (`collocation`)、雙語生活例句 (`example` / `exampleZh`)、記憶口訣與考點提醒 (`memoryTip`)。
+
+2. **三大功能：幫助記憶、複習與練習**：
+   - **🧠 記憶 (Memorization)**：
+     - 3D 翻轉卡片、正面英文與音標、背面中文與情境例句。
+     - 🔊 美式標準真人發音點讀 + 🐢 0.65x 慢速自然拼讀發音（針對初學者與國小學童）。
+     - 單字與雙語例句獨立點讀按鈕。
+     - 自動輪播讀卡模式 (Auto-Play Slideshow)。
+   - **⏳ 複習 (Spaced Repetition Review)**：
+     - FSRS 間隔複習排程演算法：遺忘 (10分鐘後重現)、模糊 (1天後)、掌握 (3天後)、精熟 (7–30天後)。
+     - 智慧清單過濾：「全部單字」、「到期複習」、「尚未練習」、「已掌握精熟」。
+     - 即時學習進度條與掌握率百分比儀表板。
+     - 瀏覽器本地安全持久化保存 (localStorage)。
+   - **✍️ 練習 (Interactive Practice)**：
+     - **翻卡記憶模式 (Learn)**：經典自評回想。
+     - **四選一字義測驗 (Meaning)**：即時測驗辨識能力，答錯自動納入待加強複習清單。
+     - **看中文拼英文練習 (Spell)**：鍵盤拼寫輸入，支援「💡 顯示首字母與音節提示 (Hint)」。
+
+---
+
+## 📋 108 課綱與 CEFR 評量指引總體檢核矩陣 (Curriculum Matrix)
+
+為確保全平台所有教材**100% 嚴謹對齊教育部 108 課綱、核心素養三面九項、CEFR 語言階梯與國家大考雙向細目表**，平台特設總體檢核矩陣：
+
+- **61 個全學年學期單元 (G6–G12)**：每單元完整配備 108 課綱指標編號（如 `1-Ⅳ-2 / Ac-Ⅳ-1`）、學習階段、CEFR 等級（A1 至 C1）與官方命題指引。
+- **27 個考制核心教學章節 (J1–V7, 國際)**：完整配備 108 課綱代碼、學習表現指標、學習內容細目、三面九項核心素養對應與大考雙向細目。
+- **全維度多條件篩選導航**：支援關鍵字即時檢索、學習階段過濾（國小、國中、高中、技高、國際）、CEFR 六階篩選（A1–C2），並提供一鍵跳轉進入教材學習。
+
+---
+
+## 🎯 歷屆高考與全考制 20,000 題題庫引擎 (Comprehensive Exam Bank)
 
 為滿足從國民教育至留學檢定與全球商務之終身英語評量需求，本平台重磅建立 **20,000 題全考制題庫引擎**，支援 IndexedDB 本地離線快取、動態分包與 Fisher-Yates 現代隨機抽題：
 
@@ -163,14 +349,23 @@ http://127.0.0.1:4173
 
 ### 完整平台自動化驗證測試套件
 ```bash
-# 1. 運行 20,000 題全考制題庫 7 週期心理計量校驗 (含 TOEIC/SAT/GRE/GMAT 各 3,000 題)
+# 1. 運行 2,000 題自適應診斷評量系統 100 次抽題零重複與 CEFR 投射校驗
+python scripts/test_diagnostic_system.py
+
+# 2. 運行自然拼讀大師課、全階記憶閃卡館與視覺化插畫圖表整合驗證 (5/5 通過)
+node scripts/test_phonics_and_flashcards.mjs
+
+# 3. 運行 Duolingo 遊戲化學習 (限定第一章) 與 108 課綱/CEFR 評量指引矩陣驗證 (7/7 通過)
+node scripts/test_gamification_and_guidelines.mjs
+
+# 4. 運行教學頁面與作答持久化單元測試 (5/5 通過)
+node scripts/test_lesson_pages.mjs
+
+# 5. 運行 20,000 題全考制題庫 7 週期心理計量校驗 (含 TOEIC/SAT/GRE/GMAT 各 3,000 題)
 python scripts/calibrate_question_bank.py
 
-# 2. 運行 7 位專家委員會與 61 單元雙倍內容深度審計
+# 6. 運行 8 位專家委員會與 61 單元雙倍內容深度審計
 python scripts/test_complete_platform.py
-
-# 3. 運行教學頁面與作答持久化單元測試
-node scripts/test_lesson_pages.mjs
 ```
 
 
@@ -178,5 +373,5 @@ node scripts/test_lesson_pages.mjs
 
 ## 📄 專案授權與致謝
 
-本專案深度整合自 Arch 專案、Sixth 專案與 JH 專案之開源教學成果，並依據教育部 108 課綱英語文課程綱要及均一教育平台自學精熟理念編排。
-由 **7 位跨領域專家委員會** 指導完成 7 次深度大改造，為全台灣所有學子與自學者打造最強大、最嚴謹、終身受用的英語學習平台。
+本專案深度整合自 Arch 專案、Sixth 專案與 JH 專案之開源教學成果，並依據教育部 108 課綱英語文課程綱要及自主精熟學習理念編排。
+由 **8 位跨領域專家委員會** 指導完成 7 次深度大改造，為全台灣所有學子與自學者打造最強大、最嚴謹、終身受用的英語學習平台。

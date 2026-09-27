@@ -36,6 +36,30 @@
 .knowledge-filters { display:grid; grid-template-columns:minmax(0,3fr) minmax(150px,1fr); gap:16px; align-items:start; }
 .knowledge-filters select { display:block; width:100%; min-height:48px; margin-top:8px; padding:12px; border:1px solid #64748b; border-radius:10px; font:inherit; background:white; }
 .lesson-links button { min-height:44px; }
+.aid-flow { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; list-style:none; padding:0; margin:20px 0; }
+.aid-flow li { position:relative; border:1px solid #9fc6cb; background:#eef8f8; border-radius:12px; padding:16px; color:#17424a; }
+.aid-flow li:not(:last-child)::after { content:'→'; position:absolute; right:-19px; top:40%; font-weight:800; }
+.aid-number { display:block; font-weight:800; font-size:1.2rem; color:#08756f; margin-bottom:8px; }
+.aid-chart { margin:20px 0; }
+.aid-chart figcaption { font-weight:700; margin-bottom:12px; }
+.aid-bar-row { display:grid; grid-template-columns:70px minmax(0,1fr) 32px; gap:8px; align-items:center; margin:8px 0; }
+.aid-bar-track { background:#e4ecf1; height:22px; border-radius:4px; }
+.aid-bar { display:block; background:#168078; height:22px; border-radius:4px; }
+.teaching-aid { overflow-wrap:anywhere; }
+.teaching-aid .lesson-table { overflow-x:auto; max-width:100%; }
+.teaching-aid table { width:100%; border-collapse:collapse; min-width:480px; }
+.teaching-aid caption { text-align:left; font-size:.9rem; color:#475569; padding:10px 0; }
+.teaching-aid :is(td,th) { padding:12px; border-bottom:1px solid #d9e2ec; text-align:left; vertical-align:top; }
+.teaching-aid th { background:#eaf2f7; }
+.word-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.school-words :is(input,select) { font:inherit; display:block; width:100%; min-height:48px; padding:10px; border:1px solid #64748b; border-radius:8px; box-sizing:border-box; margin:6px 0 12px; background:#fff; }
+.school-words label { display:block; font-weight:600; }
+.word-search,.word-spelling { margin:20px 0; }
+.word-face>h2 { font-size:clamp(1.8rem,4vw,2.7rem); overflow-wrap:anywhere; }
+.word-back { border-top:2px solid #abd3ce; margin-top:24px; padding-top:20px; }
+.word-feedback { border-left:4px solid #16756a; background:#edf8f6; padding:16px; margin:16px 0; }
+.school-words .lesson-option { display:block; width:100%; margin:8px 0; }
+.school-words .btn { white-space:normal; min-height:44px; }
 .kp-feedback { padding:16px; background:#edf6f6; border-radius:10px; }
 :is(a,button,input,textarea,summary,select):focus-visible { outline:3px solid #0e7490; outline-offset:3px; }
 @media(min-width:1500px){ .knowledge-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
@@ -52,6 +76,9 @@
  .reading-settings .top-utility-bar,.reading-settings .top-utility-right { flex-wrap:wrap; }
  .knowledge-grid { grid-template-columns:minmax(0,1fr); gap:14px; }
  .knowledge-filters { grid-template-columns:minmax(0,1fr); gap:4px; }
+ .aid-flow,.word-controls { grid-template-columns:minmax(0,1fr); }
+ .aid-flow li:not(:last-child)::after { content:'↓'; right:50%; top:auto; bottom:-24px; }
+ .teaching-aid .card { padding:12px; }
  .knowledge-card { padding:20px; }
  .lesson-page { font-size:16px; }
  .lesson-page .card { margin-inline:0; padding:18px; }

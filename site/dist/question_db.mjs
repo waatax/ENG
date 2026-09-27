@@ -179,14 +179,14 @@ export class QuestionBankDB {
       totalQuestions: 20000,
       totalLoaded,
       categories: catStats,
-      diagnosticTotal: 1000,
+      diagnosticTotal: 2000,
       diagnosticLoaded: this.diagnosticPool.length
     };
   }
 
-  // 載入 1,000 題全階能力診斷題庫 (國小至GRE/GMAT)
+  // 載入 2,000 題全階能力診斷題庫 (國小至GRE/GMAT)
   async loadDiagnosticBank() {
-    if (this.diagnosticPool.length >= 1000) {
+    if (this.diagnosticPool.length >= 2000) {
       return this.diagnosticPool;
     }
 
@@ -218,7 +218,7 @@ export class QuestionBankDB {
           };
           req.onerror = () => resolve([]);
         });
-        if (items.length >= 500) {
+        if (items.length >= 1000) {
           this.diagnosticPool = items;
           items.forEach(q => this.cache.set(q.id, q));
           return items;
@@ -231,8 +231,11 @@ export class QuestionBankDB {
     return this.diagnosticPool;
   }
 
-  // 30 題分層階梯自適應抽題演算法 (Tier-balanced Stratified Sampling)
+  // 30 題分層階梯自適應抽題演算法 (Tier-balanced Stratified Sampling with Dual-Layer Deduplication)
   // 配比：Tier 1 (4) + Tier 2 (4) + Tier 3 (4) + Tier 4 (5) + Tier 5 (4) + Tier 6 (4) + Tier 7 (3) + Tier 8 (2) = 30 題
+  // 保證：
+  // 1. 本次測驗中 100% 題號 (ID) 與題幹 (Prompt) 零重複 (seenIds, seenPrompts 雙層查驗)
+  // 2. 跨測驗輪換記憶：讀取 localStorage 最近考過的題目 (最多記錄 300 題)，抽題時優先選取未曾出現之新題，避免短期重測遇到相同題目
   async sampleDiagnostic30() {
     await this.initPromise;
     const pool = await this.loadDiagnosticBank();
@@ -249,22 +252,66 @@ export class QuestionBankDB {
       8: 2  // GMAT CR (C2/C2+)
     };
 
+    // 讀取跨測驗歷史最近看過的題號，實現跨次測驗輪換不重複
+    let recentIds = new Set();
+    try {
+      const rawRecent = typeof localStorage !== 'undefined' ? localStorage.getItem('eq_diag_recent_qids') : null;
+      if (rawRecent) {
+        const parsed = JSON.parse(rawRecent);
+        if (Array.isArray(parsed)) {
+          recentIds = new Set(parsed);
+        }
+      }
+    } catch (e) {
+      // 忽視 storage 錯誤
+    }
+
     const sampledQuestions = [];
+    const seenIds = new Set();
+    const seenPrompts = new Set();
+    const normalizePrompt = (p) => (p || '').trim().toLowerCase().replace(/\s+/g, ' ');
 
     for (let t = 1; t <= 8; t++) {
       const quota = tierQuotas[t] || 4;
-      const candidates = pool.filter(q => q.tier === t);
-      if (!candidates.length) continue;
+      const tierCandidates = pool.filter(q => q.tier === t);
+      if (!tierCandidates.length) continue;
 
-      // Fisher-Yates 洗牌
-      const shuffled = [...candidates];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      // 分為「近期未出現」與「近期已出現」兩群組，優先抽取近期未出現者
+      const freshCandidates = tierCandidates.filter(q => !recentIds.has(q.id));
+      const backupCandidates = tierCandidates.filter(q => recentIds.has(q.id));
+
+      const shuffle = (arr) => {
+        const copy = [...arr];
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+      };
+
+      const prioritizedList = [...shuffle(freshCandidates), ...shuffle(backupCandidates)];
+      let tierPicked = 0;
+
+      for (const cand of prioritizedList) {
+        if (tierPicked >= quota) break;
+        const norm = normalizePrompt(cand.prompt);
+        if (seenIds.has(cand.id) || seenPrompts.has(norm)) {
+          continue; // 嚴格排除任何 ID 或 題幹 衝突
+        }
+        seenIds.add(cand.id);
+        seenPrompts.add(norm);
+        sampledQuestions.push(cand);
+        tierPicked++;
       }
-
-      sampledQuestions.push(...shuffled.slice(0, quota));
     }
+
+    // 更新最近題號記憶 (最多保留最近 300 題)
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const newRecentList = [...seenIds, ...Array.from(recentIds)].slice(0, 300);
+        localStorage.setItem('eq_diag_recent_qids', JSON.stringify(newRecentList));
+      }
+    } catch (e) {}
 
     return sampledQuestions;
   }
@@ -300,7 +347,9 @@ export class QuestionBankDB {
 
     questions.forEach((q) => {
       const userChoice = userAnswers[q.id];
-      const isCorrect = userChoice === q.answer;
+      const isCorrect = Array.isArray(q.answer)
+        ? (Array.isArray(userChoice) && userChoice.length === q.answer.length && userChoice.every(v => q.answer.includes(v)))
+        : userChoice === q.answer;
 
       if (isCorrect) {
         rawCorrect++;

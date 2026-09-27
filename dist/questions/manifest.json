@@ -41,18 +41,18 @@
     }
   },
   "diagnostic_bank": {
-    "name": "English Quest 全階能力精準診斷題庫 (國小至GRE/GMAT)",
-    "count": 1000,
+    "name": "English Quest 全階能力精準診斷題庫 (國小至GRE/GMAT · 2000題零重複)",
+    "count": 2000,
     "file": "diagnostic_bank.json",
     "tiers": {
-      "tier1_primary": 130,
-      "tier2_jhs_found": 130,
-      "tier3_jhs_mast": 140,
-      "tier4_shs_gsat": 140,
-      "tier5_toeic": 130,
-      "tier6_sat": 120,
-      "tier7_gre": 110,
-      "tier8_gmat": 100
+      "tier1_primary": 250,
+      "tier2_jhs_found": 250,
+      "tier3_jhs_mast": 250,
+      "tier4_shs_gsat": 250,
+      "tier5_toeic": 250,
+      "tier6_sat": 250,
+      "tier7_gre": 250,
+      "tier8_gmat": 250
     }
   }
 }
