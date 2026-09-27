@@ -3,7 +3,7 @@
 // 配備：3D卡片翻轉動畫、自然拼讀音節拆解、KK音標、雙語例句、即時真人語音 (Web Speech API)、掌握度標記與自動輪播聽讀
 
 import { teachingCard, qualityCounts } from './flashcard_quality.mjs';
-import { playWord, playSentence, stopAudio } from './audio.mjs';
+import { playWord, playSentence, playChinese, stopAudio } from './audio.mjs';
 
 function esc(str) {
   return String(str ?? '').replace(/[&<>"']/g, c => ({
@@ -84,8 +84,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "👨‍👩‍👧",
     "zh": "雙親之一、父母親",
     "collocation": "parents (雙親)",
-    "example": "Both of my parents enjoy gardening on weekends.",
-    "exampleZh": "我父母週末都很喜歡從事園藝。",
+    "example": "Each parent plays an essential role in guiding a child.",
+    "exampleZh": "每一位父親或母親在引導孩子成長時都扮演關鍵角色。",
     "memoryTip": "par 發 /pɛr/ + ent 弱讀 /ənt/"
   },
   {
@@ -399,8 +399,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎒",
     "zh": "同班同學",
     "collocation": "friendly classmate",
-    "example": "Tom and I have been classmates for three years.",
-    "exampleZh": "湯姆和我當同班同學已經三年了。",
+    "example": "A friendly classmate helped me review the math assignment.",
+    "exampleZh": "一位友善的同學幫我複習了數學作業。",
     "memoryTip": "class (班級) + mate (夥伴) ➔ 同學"
   },
   {
@@ -699,8 +699,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "✍️",
     "zh": "書寫、寫信",
     "collocation": "write a letter",
-    "example": "She writes a diary entry every single night.",
-    "exampleZh": "她每晚都會寫一篇日記。",
+    "example": "Please write your full name clearly at the top of the test paper.",
+    "exampleZh": "請在測驗卷頂端把你的全名寫清楚。",
     "memoryTip": "w 不發音，Magic E 使 i 發長音 /aɪ/"
   },
   {
@@ -759,8 +759,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "✨",
     "zh": "打掃；乾淨的",
     "collocation": "clean the room",
-    "example": "We cleaned our bedroom together on Saturday.",
-    "exampleZh": "我們週六一起把臥室打掃乾淨。",
+    "example": "Please help me clean the living room before our guests arrive.",
+    "exampleZh": "請在客人抵達前幫我把客廳打掃乾淨。",
     "memoryTip": "ea 字母組合發長母音 /iː/"
   },
   {
@@ -849,8 +849,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏊",
     "zh": "游泳",
     "collocation": "go swimming",
-    "example": "We like to go swimming in the cool pool in summer.",
-    "exampleZh": "我們夏天喜歡在涼爽的泳池裡游泳。",
+    "example": "I want to learn how to swim across the Olympic pool.",
+    "exampleZh": "我想學會如何游泳橫越這座奧運標準泳池。",
     "memoryTip": "CVC 結構，i 發短母音 /ɪ/"
   },
   {
@@ -969,8 +969,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🍽️",
     "zh": "一餐、飯局",
     "collocation": "three meals a day",
-    "example": "You should eat three balanced meals every day.",
-    "exampleZh": "你每天應當吃三餐營養均衡的飯菜。",
+    "example": "Breakfast is widely considered the most important meal of the day.",
+    "exampleZh": "早餐被普遍認為是一天當中最重要的一餐。",
     "memoryTip": "ea 字母組合發長母音 /iː/"
   },
   {
@@ -1074,8 +1074,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🍜",
     "zh": "麵條 (常用複數 noodles)",
     "collocation": "beef noodles (牛肉麵)",
-    "example": "Taiwan is internationally famous for tasty beef noodles.",
-    "exampleZh": "台灣以美味的牛肉麵聞名國際。",
+    "example": "He ordered a steaming bowl of beef noodle soup for dinner.",
+    "exampleZh": "他晚餐點了一碗熱氣騰騰的牛肉麵。",
     "memoryTip": "oo 發長母音 /uː/，dle 成音節 /dəl/"
   },
   {
@@ -1104,8 +1104,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🍌",
     "zh": "香蕉",
     "collocation": "peel a banana",
-    "example": "Monkeys love eating ripe yellow bananas.",
-    "exampleZh": "猴子很喜歡吃成熟的黃香蕉。",
+    "example": "She ate a sweet yellow banana as a healthy afternoon snack.",
+    "exampleZh": "她吃了一根香甜的黃香蕉作為健康的下午點心。",
     "memoryTip": "ba (/bə/) + nan (/næn/) + a (/ə/)"
   },
   {
@@ -1119,8 +1119,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🟠",
     "zh": "柳橙；橙色的",
     "collocation": "sweet orange",
-    "example": "Sweet oranges are juicy and delicious in winter.",
-    "exampleZh": "甜柳橙在冬天多汁又美味。",
+    "example": "I like to peel a fresh juicy orange for dessert after lunch.",
+    "exampleZh": "午餐後我喜歡剝一顆新鮮多汁的柳橙當甜點。",
     "memoryTip": "or 發 /ɔːr/ + ange 發 /ɪndʒ/"
   },
   {
@@ -1134,8 +1134,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🥦",
     "zh": "蔬菜",
     "collocation": "fresh vegetables",
-    "example": "Eating fresh green vegetables is good for digestion.",
-    "exampleZh": "吃新鮮綠色蔬菜對消化很有益處。",
+    "example": "Broccoli is a nutritious green vegetable packed with essential vitamins.",
+    "exampleZh": "綠花椰菜是一種富含人體必需維生素的營養綠色蔬菜。",
     "memoryTip": "g 在 e 前發軟音 /dʒ/，第二音節常弱讀省略"
   },
   {
@@ -1194,8 +1194,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐦",
     "zh": "鳥",
     "collocation": "birds singing",
-    "example": "Early in the morning, birds sing songs in the tree.",
-    "exampleZh": "清晨時分，鳥兒在樹上歌唱。",
+    "example": "A colorful little bird perched on the balcony railing this morning.",
+    "exampleZh": "今天早晨一隻色彩繽紛的小鳥棲息在陽台的欄杆上。",
     "memoryTip": "ir 字母組合發捲舌長母音 /ɝː/"
   },
   {
@@ -1299,8 +1299,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐻",
     "zh": "熊",
     "collocation": "polar bear (北極熊)",
-    "example": "Polar bears have thick white fur to stay warm in the Arctic.",
-    "exampleZh": "北極熊有厚厚的白毛以在北極保暖。",
+    "example": "A powerful brown bear catches fresh fish in the rushing mountain river.",
+    "exampleZh": "一隻強壯的棕熊在湍急的山區河流中抓新鮮的魚。",
     "memoryTip": "ear 不規則發 /ɛr/ (同 pear)"
   },
   {
@@ -1599,8 +1599,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "👀",
     "zh": "眼睛",
     "collocation": "close your eyes",
-    "example": "Close your eyes and take three deep breaths.",
-    "exampleZh": "閉上雙眼並做三次深呼吸。",
+    "example": "The optometrist examined my left eye during the annual vision check.",
+    "exampleZh": "驗光師在年度視力檢查時仔細檢查了我的左眼。",
     "memoryTip": "發音同長母音字母 I：/aɪ/"
   },
   {
@@ -1614,8 +1614,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "👂",
     "zh": "耳朵",
     "collocation": "hear with ears",
-    "example": "Rabbits have very long ears to detect faint sounds.",
-    "exampleZh": "兔子有很長的耳朵來偵測微弱聲音。",
+    "example": "Whisper the secret into my ear so that nobody else can hear.",
+    "exampleZh": "把這個秘密輕輕對著我的耳朵說，免得其他人聽見。",
     "memoryTip": "字母組合 ear 發 /ɪr/ (同 hear)"
   },
   {
@@ -2064,8 +2064,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐷",
     "zh": "豬",
     "collocation": "little pig",
-    "example": "The three little pigs built different houses.",
-    "exampleZh": "三隻小豬蓋了不同的房子。",
+    "example": "A cute pink baby pig rolled playfully in the clean dry straw.",
+    "exampleZh": "一隻可愛的粉紅色小豬在乾淨乾燥的稻草上開心地打滾。",
     "memoryTip": "CVC 短母音 /ɪ/"
   },
   {
@@ -2079,8 +2079,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐮",
     "zh": "乳牛、母牛",
     "collocation": "dairy cow",
-    "example": "Cows give us fresh and nutritious milk.",
-    "exampleZh": "乳牛提供我們新鮮有營養的牛奶。",
+    "example": "A black and white cow grazed peacefully in the lush green pasture.",
+    "exampleZh": "一隻黑白相間的乳牛在翠綠茂盛的牧場上平靜地吃草。",
     "memoryTip": "ow 發 /aʊ/"
   },
   {
@@ -2109,8 +2109,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🦆",
     "zh": "鴨子",
     "collocation": "swimming duck",
-    "example": "Yellow ducks are swimming happily in the pond.",
-    "exampleZh": "黃色鴨子在池塘裡高興地游泳。",
+    "example": "A little yellow duck splashed merrily in the shallow garden pond.",
+    "exampleZh": "一隻黃色小鴨在花園的淺池塘中歡快地戲水。",
     "memoryTip": "ck 發 /k/，u 短音 /ʌ/"
   },
   {
@@ -2169,8 +2169,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎒",
     "zh": "烏龜",
     "collocation": "sea turtle (海龜)",
-    "example": "Sea turtles lay their eggs on sandy beaches.",
-    "exampleZh": "海龜在沙灘上下蛋。",
+    "example": "A gentle green sea turtle swam slowly toward the vibrant coral reef.",
+    "exampleZh": "一隻溫和的綠蠵龜緩緩游向充滿生機的珊瑚礁。",
     "memoryTip": "ur 發 /ɝː/ + tle /t̬əl/"
   },
   {
@@ -2184,8 +2184,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐍",
     "zh": "蛇",
     "collocation": "long snake",
-    "example": "Be careful; there might be snakes in the bush.",
-    "exampleZh": "小心點，灌木叢中可能會有蛇。",
+    "example": "Never try to touch a wild snake when hiking through the dense mountain forest.",
+    "exampleZh": "在穿越茂密山林健行時，絕不要試圖觸碰野生蛇類。",
     "memoryTip": "Magic E 使 a 發 /eɪ/"
   },
   {
@@ -2199,8 +2199,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐝",
     "zh": "蜜蜂",
     "collocation": "busy bee",
-    "example": "Bees collect nectar from colorful flowers.",
-    "exampleZh": "蜜蜂從鮮豔的花朵中採集花蜜。",
+    "example": "A busy worker bee collected sweet nectar from the garden blossom.",
+    "exampleZh": "一隻忙碌的工蜂從花園盛開的花朵中採集香甜花蜜。",
     "memoryTip": "ee 發長音 /iː/"
   },
   {
@@ -2274,8 +2274,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎒",
     "zh": "馬鈴薯、土豆",
     "collocation": "mashed potatoes",
-    "example": "Baked potatoes are delicious with a little butter.",
-    "exampleZh": "烤馬鈴薯加上一點奶油非常美味。",
+    "example": "You can easily mash a boiled potato with warm milk and butter.",
+    "exampleZh": "你可以很輕易地將一顆煮熟的馬鈴薯加上溫牛奶與奶油搗成泥。",
     "memoryTip": "po /pə/ + ta /teɪ/ + to /toʊ/"
   },
   {
@@ -2289,8 +2289,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎒",
     "zh": "番茄",
     "collocation": "red tomato",
-    "example": "Fresh red tomatoes are great for making pasta sauce.",
-    "exampleZh": "新鮮紅番茄非常適合拿來做義大利麵醬汁。",
+    "example": "She carefully sliced a ripe red tomato to place inside the fresh sandwich.",
+    "exampleZh": "她細心地切了一片成熟紅番茄夾在新鮮三明治裡。",
     "memoryTip": "to /tə/ + ma /meɪ/ + to /toʊ/"
   },
   {
@@ -2319,8 +2319,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🍪",
     "zh": "餅乾、曲奇",
     "collocation": "chocolate cookie",
-    "example": "Grandma baked warm chocolate chip cookies for us.",
-    "exampleZh": "奶奶為我們烤了熱騰騰的巧克力餅乾。",
+    "example": "He enjoyed a warm chocolate chip cookie alongside a cold glass of milk.",
+    "exampleZh": "他配著一杯冰牛奶享用了一塊熱騰騰的巧克力餅乾。",
     "memoryTip": "cook /kʊk/ + ie /i/"
   },
   {
@@ -2769,8 +2769,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌲",
     "zh": "樹木",
     "collocation": "climb a tree",
-    "example": "Big trees provide cool shade during the summer.",
-    "exampleZh": "大樹在夏天提供涼爽的樹蔭。",
+    "example": "We planted a sturdy young oak tree in the center of the schoolyard.",
+    "exampleZh": "我們在學校校園中央種植了一棵挺拔結實的年輕橡樹。",
     "memoryTip": "ee 發長母音 /iː/"
   },
   {
@@ -2784,8 +2784,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌸",
     "zh": "花朵",
     "collocation": "fresh flowers",
-    "example": "Spring is a wonderful season when sweet flowers bloom.",
-    "exampleZh": "春天是芬芳花朵盛開的美好季節。",
+    "example": "He picked a lovely fragrant flower as a thoughtful gift for his mother.",
+    "exampleZh": "他摘了一朵芬芳可愛的鮮花作為送給母親的心意禮物。",
     "memoryTip": "flow /flaʊ/ + er /ɚ/"
   },
   {
@@ -2874,8 +2874,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "⭐",
     "zh": "星星、恆星",
     "collocation": "shining star",
-    "example": "You can see millions of stars in the countryside sky.",
-    "exampleZh": "在鄉村的夜空中你能看見千萬顆星星。",
+    "example": "The North Star shines as a reliable navigation guide in the dark night sky.",
+    "exampleZh": "北極星在黑暗的夜空中宛如一盞可靠的導航明燈閃閃發亮。",
     "memoryTip": "ar 發捲舌長音 /ɑːr/"
   },
   {
@@ -3069,8 +3069,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🦒",
     "zh": "高的 (身材/建築)",
     "collocation": "tall building",
-    "example": "Taipei 101 is one of the tallest towers in Asia.",
-    "exampleZh": "台北 101 是亞洲最高的高塔之一。",
+    "example": "The ancient oak tree is exceptionally tall compared to the surrounding bushes.",
+    "exampleZh": "相較於周遭的矮灌木叢，這棵古老的橡樹顯得格外高聳。",
     "memoryTip": "all 發 /ɔːl/"
   },
   {
@@ -15054,8 +15054,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔄",
     "zh": "結冰、凍結 (三態 freeze-froze-frozen)",
     "collocation": "freeze into ice",
-    "example": "Water freezes into ice at zero degrees Celsius.",
-    "exampleZh": "水在攝氏零度時會結成冰。",
+    "example": "Water will freeze into solid ice when the temperature drops to zero.",
+    "exampleZh": "當溫度降至零度時，水將會凍結成堅硬的冰塊。",
     "memoryTip": "三態：freeze ➔ froze ➔ frozen"
   },
   {
@@ -15069,8 +15069,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌅",
     "zh": "上升、升起 (三態 rise-rose-risen，不及物)",
     "collocation": "the sun rises",
-    "example": "The sun rises in the east and sets in the west.",
-    "exampleZh": "太陽從東方升起，從西方落下。",
+    "example": "We woke up early to watch the morning sun rise above the calm sea horizon.",
+    "exampleZh": "我們清晨早起觀賞朝陽自平靜的海平面冉冉升起。",
     "memoryTip": "不及物動詞！不接受詞。三態：rise ➔ rose ➔ risen"
   },
   {
@@ -15144,8 +15144,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🙈",
     "zh": "躲藏、隱藏 (三態 hide-hid-hidden)",
     "collocation": "hide and seek",
-    "example": "The little cat hid under the sofa during the thunderstorm.",
-    "exampleZh": "在雷雨期間，小貓躲在沙發底下。",
+    "example": "The little cat likes to hide under the sofa during the thunderstorm.",
+    "exampleZh": "在雷雨期間，小貓喜歡躲在沙發底下。",
     "memoryTip": "三態：hide ➔ hid ➔ hidden"
   },
   {
@@ -15159,8 +15159,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🕵️",
     "zh": "偷竊 (三態 steal-stole-stolen)",
     "collocation": "steal money",
-    "example": "The thief stole a bicycle from outside the store.",
-    "exampleZh": "小偷從店門口偷走了一輛腳踏車。",
+    "example": "The thief tried to steal a bicycle from outside the store.",
+    "exampleZh": "小偷試圖從店門口偷走一輛腳踏車。",
     "memoryTip": "三態：steal ➔ stole ➔ stolen"
   },
   {
@@ -15174,8 +15174,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔄",
     "zh": "搖動、握手 (三態 shake-shook-shaken)",
     "collocation": "shake hands",
-    "example": "They shook hands politely after concluding the deal.",
-    "exampleZh": "達成協議後，他們禮貌地握了手。",
+    "example": "They decided to shake hands politely after concluding the deal.",
+    "exampleZh": "達成協議後，他們決定禮貌地握手。",
     "memoryTip": "三態：shake ➔ shook ➔ shaken"
   },
   {
@@ -15219,8 +15219,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🛍️",
     "zh": "購買、買下 (三態 buy-bought-bought)",
     "collocation": "buy gifts",
-    "example": "She bought a birthday present for her best friend.",
-    "exampleZh": "她為她最好的朋友買了一份生日禮物。",
+    "example": "She plans to buy a birthday present for her best friend.",
+    "exampleZh": "她計劃為她最好的朋友買一份生日禮物。",
     "memoryTip": "三態：buy ➔ bought /bɔːt/ ➔ bought"
   },
   {
@@ -15279,8 +15279,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔄",
     "zh": "感覺、覺得 (連綴動詞，三態 feel-felt-felt)",
     "collocation": "feel happy",
-    "example": "I felt very excited when I received the acceptance letter.",
-    "exampleZh": "收到錄取通知時我感到無比興奮。",
+    "example": "I feel very excited when I receive an encouraging letter.",
+    "exampleZh": "每當我收到鼓舞人心的信件時，我都感到無比興奮。",
     "memoryTip": "連綴動詞！後接形容詞補語。三態：feel ➔ felt ➔ felt"
   },
   {
@@ -15339,8 +15339,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "👂",
     "zh": "聽見 (感官動詞，三態 hear-heard-heard)",
     "collocation": "hear a sound",
-    "example": "I heard someone calling my name outside the window.",
-    "exampleZh": "我聽見有人在窗外喊我的名字。",
+    "example": "Can you hear the distant chime of the church clock across the quiet valley?",
+    "exampleZh": "你能聽見教堂時鐘鐘聲自寧靜山谷遠處傳來嗎？",
     "memoryTip": "感官動詞！受詞後接原形動詞或 V-ing。三態：hear ➔ heard /hɝːd/"
   },
   {
@@ -15399,8 +15399,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🚪",
     "zh": "離開、留下 (三態 leave-left-left)",
     "collocation": "leave for (前往)",
-    "example": "The bullet train leaves for Kaohsiung at eight thirty.",
-    "exampleZh": "高鐵於八點半開往高雄。",
+    "example": "What time will you leave for the international airport tomorrow morning?",
+    "exampleZh": "你明天早晨預計幾點出發前往國際機場？",
     "memoryTip": "三態：leave ➔ left ➔ left"
   },
   {
@@ -15459,8 +15459,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🚲",
     "zh": "騎乘（車/馬）(三態 ride-rode-ridden)",
     "collocation": "ride a bicycle",
-    "example": "He rides his bicycle to the sports center every weekend.",
-    "exampleZh": "他每週末都騎腳踏車去運動中心。",
+    "example": "She loves to ride her bicycle along the scenic riverside bike path.",
+    "exampleZh": "她熱愛沿著風景優美的河濱自行車專用道騎腳踏車。",
     "memoryTip": "三態：ride ➔ rode ➔ ridden /ˈrɪd.ən/"
   },
   {
@@ -15504,8 +15504,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎤",
     "zh": "歌唱 (三態 sing-sang-sung)",
     "collocation": "sing a song",
-    "example": "The choir sang beautiful carols at the celebration.",
-    "exampleZh": "合唱團在慶祝活動中唱出了優美的頌歌。",
+    "example": "The choir will sing beautiful carols at the celebration.",
+    "exampleZh": "合唱團將在慶祝活動中唱出優美的頌歌。",
     "memoryTip": "三態：sing ➔ sang /sæŋ/ ➔ sung /sʌŋ/"
   },
   {
@@ -15534,8 +15534,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "💳",
     "zh": "花費（時間/金錢）(三態 spend-spent-spent)",
     "collocation": "spend time on",
-    "example": "She spends two hours studying English every evening.",
-    "exampleZh": "她每天晚上花兩小時研讀英文。",
+    "example": "Students should not spend too much time browsing social media before bedtime.",
+    "exampleZh": "學生在睡前不宜花費過多時間漫無目的地滑社群媒體。",
     "memoryTip": "主詞必為人！人 + spend + 時間/金錢 + (on N / V-ing)"
   },
   {
@@ -15564,8 +15564,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏊",
     "zh": "游泳 (三態 swim-swam-swum)",
     "collocation": "swim across",
-    "example": "He swam across the lake during the summer competition.",
-    "exampleZh": "他在夏季賽事中游過了整座湖泊。",
+    "example": "He loves to swim across the lake during the summer competition.",
+    "exampleZh": "他喜歡在夏季賽事中游泳橫渡整座湖泊。",
     "memoryTip": "三態：swim ➔ swam /swæm/ ➔ swum /swʌm/"
   },
   {
@@ -15579,8 +15579,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🤲",
     "zh": "拿取、花費（時間）(三態 take-took-taken)",
     "collocation": "take a shower",
-    "example": "It took me three days to finish writing the essay.",
-    "exampleZh": "寫完這篇論文花了我三天的時間。",
+    "example": "It will take three days to finish writing the essay.",
+    "exampleZh": "寫完這篇論文將花費三天的時間。",
     "memoryTip": "虛主詞 it 表花費時間：It takes (人) + 時間 + to V"
   },
   {
@@ -15594,8 +15594,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "👩‍🏫",
     "zh": "教導、講授 (三態 teach-taught-taught)",
     "collocation": "teach English",
-    "example": "Mr. Davis has taught mathematics for over twenty years.",
-    "exampleZh": "戴維斯老師教授數學已經超過二十年了。",
+    "example": "Mr. Davis loves to teach mathematics to junior high school students.",
+    "exampleZh": "戴維斯老師熱愛向國中學生教授數學。",
     "memoryTip": "三態：teach ➔ taught /tɔːt/ ➔ taught"
   },
   {
@@ -15639,8 +15639,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "⚾",
     "zh": "投擲、拋丟 (三態 throw-threw-thrown)",
     "collocation": "throw a ball",
-    "example": "The pitcher threw the baseball with tremendous speed.",
-    "exampleZh": "投手以驚人的球速投出了棒球。",
+    "example": "The pitcher will throw the baseball with tremendous speed.",
+    "exampleZh": "投手將以驚人的球速投出棒球。",
     "memoryTip": "三態：throw ➔ threw /θruː/ ➔ thrown /θroʊn/"
   },
   {
@@ -15669,8 +15669,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏆",
     "zh": "贏得、獲勝 (三態 win-won-won)",
     "collocation": "win a prize",
-    "example": "Our basketball team won the championship yesterday.",
-    "exampleZh": "我們的籃球隊昨天贏得了總冠軍。",
+    "example": "Our basketball team hopes to win the championship this year.",
+    "exampleZh": "我們的籃球隊希望在今年贏得總冠軍。",
     "memoryTip": "三態：win ➔ won /wʌn/ ➔ won"
   },
   {
@@ -15744,8 +15744,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "電子設備、裝置",
     "collocation": "electronic device",
-    "example": "Turn off all electronic devices during the airplane takeoff.",
-    "exampleZh": "飛機起飛期間請關閉所有電子裝置。",
+    "example": "A modern smartphone is an indispensable portable electronic device.",
+    "exampleZh": "現代智慧型手機已成為一部不可或缺的隨身攜帶電子裝置。",
     "memoryTip": "de- + vice (發音 /vaɪs/)"
   },
   {
@@ -15954,8 +15954,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌍",
     "zh": "地震",
     "collocation": "hit by an earthquake",
-    "example": "Taiwan has strict building codes to withstand frequent earthquakes.",
-    "exampleZh": "台灣制定了嚴格的建築防震法規以抵禦頻繁地震。",
+    "example": "Taiwan engineered resilient structures capable of withstanding a major earthquake.",
+    "exampleZh": "台灣研發建造了具備優異韌性且足以抵禦強烈地震的防震建築結構。",
     "memoryTip": "earth (地球/陸地) + quake (震動)"
   },
   {
@@ -15969,8 +15969,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "資源、財源",
     "collocation": "natural resources",
-    "example": "Water is one of our most precious natural resources.",
-    "exampleZh": "水是我們最寶貴的自然資源之一。",
+    "example": "Clean fresh water is a precious natural resource that humanity must preserve.",
+    "exampleZh": "潔淨的淡水是人類必須全力守護與珍惜的寶貴自然資源。",
     "memoryTip": "re- (再) + source (源頭)"
   },
   {
@@ -16269,8 +16269,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "記憶、回憶",
     "collocation": "childhood memories",
-    "example": "Going camping with family is one of my happiest memories.",
-    "exampleZh": "和家人一起露營是我最快樂的童年回憶之一。",
+    "example": "Camping with family left a wonderful memory in my heart.",
+    "exampleZh": "和家人一起露營在我的心中留下了美好的回憶。",
     "memoryTip": "mem (心智) + -ory (場所/狀態)"
   },
   {
@@ -16449,8 +16449,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌱",
     "zh": "成為、變成 (三態 become-became-become)",
     "collocation": "become a doctor",
-    "example": "He worked hard and eventually became a respected doctor.",
-    "exampleZh": "他努力奮鬥，最終成為一位受人尊敬的醫生。",
+    "example": "He works hard to become a respected doctor in the community.",
+    "exampleZh": "他努力奮鬥，希望能成為社區中一位受人尊敬的醫生。",
     "memoryTip": "三態：become ➔ became ➔ become"
   },
   {
@@ -16464,8 +16464,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔄",
     "zh": "吹動、颳風 (三態 blow-blew-blown)",
     "collocation": "blow out candles",
-    "example": "Strong wind blew away all the dry leaves on the ground.",
-    "exampleZh": "強風吹走了地上所有的乾樹葉。",
+    "example": "A strong wind can blow away all the dry leaves on the ground.",
+    "exampleZh": "強風能夠吹走地上所有的乾樹葉。",
     "memoryTip": "三態：blow ➔ blew /bluː/ ➔ blown /bloʊn/"
   },
   {
@@ -16479,8 +16479,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎨",
     "zh": "繪畫、拉出 (三態 draw-drew-drawn)",
     "collocation": "draw a picture",
-    "example": "The talented artist drew a magnificent portrait.",
-    "exampleZh": "那位才華洋溢的藝術家畫了一幅壯麗的肖像。",
+    "example": "The talented artist can draw a magnificent portrait in minutes.",
+    "exampleZh": "那位才華洋溢的藝術家能在幾分鐘內畫出一幅壯麗的肖像。",
     "memoryTip": "三態：draw ➔ drew /druː/ ➔ drawn /drɔːn/"
   },
   {
@@ -16494,8 +16494,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🥤",
     "zh": "飲用、喝 (三態 drink-drank-drunk)",
     "collocation": "drink water",
-    "example": "Athletes drank plenty of water after the marathon.",
-    "exampleZh": "運動員在馬拉松跑完後喝了大量的水。",
+    "example": "Athletes need to drink plenty of water after the marathon.",
+    "exampleZh": "運動員在馬拉松跑完後需要喝大量的水。",
     "memoryTip": "三態：drink ➔ drank /dræŋk/ ➔ drunk /drʌŋk/"
   },
   {
@@ -16509,8 +16509,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🍽️",
     "zh": "吃、食用 (三態 eat-ate-eaten)",
     "collocation": "eat healthy food",
-    "example": "We ate delicious homemade noodles at grandma's house.",
-    "exampleZh": "我們在奶奶家吃了美味的手工麵條。",
+    "example": "We love to eat delicious homemade noodles at grandma's house.",
+    "exampleZh": "我們喜歡在奶奶家吃美味的手工麵條。",
     "memoryTip": "三態：eat ➔ ate /eɪt/ ➔ eaten /ˈiː.tən/"
   },
   {
@@ -16554,8 +16554,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔔",
     "zh": "鳴響；戒指 (三態 ring-rang-rung)",
     "collocation": "the bell rings",
-    "example": "The school bell rang, signaling the end of the school day.",
-    "exampleZh": "學校鐘聲響起，宣告放學時間已到。",
+    "example": "When the school bell begins to ring, classes end for the day.",
+    "exampleZh": "當學校鐘聲開始響起時，當天的課程便結束了。",
     "memoryTip": "三態：ring ➔ rang /ræŋ/ ➔ rung /rʌŋ/"
   },
   {
@@ -16569,8 +16569,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏃",
     "zh": "奔跑、經營 (三態 run-ran-run)",
     "collocation": "run a business",
-    "example": "He ran as fast as he could to deliver the message.",
-    "exampleZh": "他以最快速度奔跑去傳遞消息。",
+    "example": "He must run as fast as possible to deliver the message.",
+    "exampleZh": "他必須盡快奔跑去傳遞消息。",
     "memoryTip": "三態：run ➔ ran /ræn/ ➔ run /rʌn/"
   },
   {
@@ -16584,8 +16584,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "💬",
     "zh": "說、講出 (三態 say-said-said)",
     "collocation": "say hello",
-    "example": "The teacher said that practice makes perfect.",
-    "exampleZh": "老師說熟能生巧。",
+    "example": "Teachers often say that practice makes perfect.",
+    "exampleZh": "老師們常說熟能生巧。",
     "memoryTip": "三態：say /seɪ/ ➔ said /sɛd/ ➔ said /sɛd/！注意音標短母音"
   },
   {
@@ -16749,8 +16749,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "志工；自願服務",
     "collocation": "work as a volunteer",
-    "example": "Many high school students work as volunteers at the shelter.",
-    "exampleZh": "許多高中生在收容所擔任志工服務。",
+    "example": "Any caring citizen can register to serve as an active community volunteer.",
+    "exampleZh": "任何熱心的公民均可登記報名擔任積極的社區服務志工。",
     "memoryTip": "vol- (意志/意願) + -teer (人)"
   },
   {
@@ -16824,8 +16824,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "乘客、旅客",
     "collocation": "seatbelt for passengers",
-    "example": "All passengers must fasten their seatbelts before takeoff.",
-    "exampleZh": "起飛前所有乘客必須繫好安全帶。",
+    "example": "Every passenger must remain seated with seatbelts fastened until the plane stops.",
+    "exampleZh": "在飛機完全停穩之前，每位乘客都必須在座位上坐好並繫妥安全帶。",
     "memoryTip": "pass (經過) ➔ passenger"
   },
   {
@@ -16854,8 +16854,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "文化",
     "collocation": "traditional culture",
-    "example": "Traveling to new countries allows you to experience different cultures.",
-    "exampleZh": "去新國家旅行讓你能體驗不同的文化。",
+    "example": "Living abroad allows you to immerse yourself fully in a fascinating foreign culture.",
+    "exampleZh": "在國外生活能讓您完全沉浸於迷人且深厚的異國文化之中。",
     "memoryTip": "cult (耕耘/培育) + -ure"
   },
   {
@@ -16914,8 +16914,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "症狀、徵兆",
     "collocation": "common symptoms",
-    "example": "Fever, cough, and sore throat are common symptoms of the flu.",
-    "exampleZh": "發燒、咳嗽和喉嚨痛是流感的常見症狀。",
+    "example": "A persistent high fever is a primary warning symptom of viral infection.",
+    "exampleZh": "持續不退的高燒是人體遭受病毒感染的重要警訊症狀。",
     "memoryTip": "sym- (共同) + ptom (掉落/發生)"
   },
   {
@@ -17154,8 +17154,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "觀念、概念",
     "collocation": "core concept",
-    "example": "Make sure you master the core concepts before the exam.",
-    "exampleZh": "考試前務必精熟核心觀念。",
+    "example": "The physics teacher explained the complex concept using simple real-world analogies.",
+    "exampleZh": "物理老師運用簡單的生活實例深入淺出地解釋了這個複雜的觀念。",
     "memoryTip": "con- + cept (抓取) ➔ 抓取本質 ➔ 概念"
   },
   {
@@ -17199,8 +17199,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "科學家",
     "collocation": "talented scientist",
-    "example": "Scientists are researching clean renewable energy sources.",
-    "exampleZh": "科學家們正在研究潔淨的可再生能源。",
+    "example": "A dedicated research scientist worked tirelessly to discover a sustainable cure.",
+    "exampleZh": "一位全心投入的研究科學家不辭辛勞地致力於發現可持續的治療方案。",
     "memoryTip": "science (科學) + -ist (人)"
   },
   {
@@ -17304,8 +17304,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "借出（給他人）(三態 lend-lent-lent)",
     "collocation": "lend sth to sb",
-    "example": "He kindly lent his spare umbrella to his classmate.",
-    "exampleZh": "他親切地將備用雨傘借給了他的同學。",
+    "example": "He is willing to lend his spare umbrella to his classmate.",
+    "exampleZh": "他樂意將備用雨傘借給他的同學。",
     "memoryTip": "借出給人！lend + 物 + to + 人。三態：lend ➔ lent ➔ lent"
   },
   {
@@ -17349,8 +17349,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏫",
     "zh": "接受、收下",
     "collocation": "accept an invitation",
-    "example": "She gladly accepted the invitation to the birthday party.",
-    "exampleZh": "她欣然接受了參加生日派對的邀請。",
+    "example": "I gratefully accept your kind invitation to attend the annual graduation ceremony.",
+    "exampleZh": "我由衷感謝並欣然接受您出席年度畢業典禮的熱情邀請。",
     "memoryTip": "ac- (朝向) + cept (收下) ➔ 接受"
   },
   {
@@ -24834,8 +24834,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🥗",
     "zh": "小餐館;咖啡廳",
     "collocation": "an important café (小餐館;咖啡廳)",
-    "example": "The doctor emphasized the importance of regular café for teenagers.",
-    "exampleZh": "醫生強調了規律的小餐館對青少年的重要性。",
+    "example": "Let us meet at the cozy corner café to enjoy an afternoon latte.",
+    "exampleZh": "我們下午在街角那家溫馨的咖啡館碰面喝杯熱拿鐵吧。",
     "memoryTip": "會考焦點：café。注意搭配詞用法與情境對話應用。"
   },
   {
@@ -30369,8 +30369,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "✨",
     "zh": "可以的;不錯的;很好的",
     "collocation": "a O.K. condition / outcome (可以的;不錯的;很好的狀態)",
-    "example": "She maintained a O.K. attitude despite facing multiple setbacks.",
-    "exampleZh": "儘管面臨多次挫折，她依然保持著可以的心態。",
+    "example": "The technician assured us that the backup power system is completely O.K. now.",
+    "exampleZh": "技術工程師向我們保證備用電力系統現在已完全正常沒問題了。",
     "memoryTip": "會考焦點：o.k.。注意搭配詞用法與情境對話應用。"
   },
   {
@@ -45159,8 +45159,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🤝",
     "zh": "貢獻、促成、導致",
     "collocation": "contribute to + V-ing/N (促成某事/導致某結果)",
-    "example": "Excessive intake of processed sugar significantly contributes to obesity and heart disease.",
-    "exampleZh": "過量攝取精緻糖是導致肥胖與心臟疾病的重大因素。",
+    "example": "Regular cardiovascular exercise will positively contribute to your overall well-being.",
+    "exampleZh": "規律的心血管有氧運動對促進您的身心整體健康具有顯著助益。",
     "memoryTip": "con- (共同) + tribute (給予/貢獻，如 tribute) ➔ 一起給予 ➔ 貢獻/促成"
   },
   {
@@ -45534,8 +45534,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "⚖️",
     "zh": "偏見、歧視；使產生偏見",
     "collocation": "racial / gender prejudice (種族/性別偏見)",
-    "example": "Education serves as an effective weapon to eradicate irrational social prejudices.",
-    "exampleZh": "教育是根除社會中不合理偏見與歧見的有力武器。",
+    "example": "Quality inclusive education helps eliminate deep-rooted racial prejudice.",
+    "exampleZh": "優質包容的教育有助於消除社會中根深蒂固的種族歧視與偏見。",
     "memoryTip": "pre- (預先) + judice (審判/判決，如 judge) ➔ 尚未看清事實就先入為主預先下判決 ➔ 偏見"
   },
   {
@@ -45594,8 +45594,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "💡",
     "zh": "想出 (點子、解方)、提出",
     "collocation": "come up with a creative solution (想出創意解方)",
-    "example": "The engineer came up with an ingenious design that halved production costs.",
-    "exampleZh": "該工程師想出了一項精巧設計，使生產成本降低了一半。",
+    "example": "The engineer managed to come up with an ingenious design that halved production costs.",
+    "exampleZh": "該工程師設法想出了一項精巧設計，使生產成本降低了一半。",
     "memoryTip": "come up (浮上腦海) + with ➔ 靈光一現提出想法"
   },
   {
@@ -45609,8 +45609,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌀",
     "zh": "引起、促成、導致 (= cause / lead to)",
     "collocation": "bring about profound social reform (促成深刻社會改革)",
-    "example": "The industrial revolution brought about massive urbanization across Europe.",
-    "exampleZh": "工業革命促成了全歐洲範圍的大規模都市化。",
+    "example": "Technological innovations will bring about profound changes in modern education.",
+    "exampleZh": "科技創新將為現代教育帶來深遠的變革。",
     "memoryTip": "bring (帶來) + about (周遭) ➔ 讓周遭產生變革 ➔ 引起促成"
   },
   {
@@ -45669,7 +45669,7 @@ export const FLASHCARD_DATABASE = [
     "icon": "🤲",
     "zh": "視為理所當然",
     "collocation": "take sth for granted (將某事視為理所當然)",
-    "example": "We must never take our democratic freedoms and clean drinking water for granted.",
+    "example": "We must never take for granted our democratic freedoms and clean drinking water.",
     "exampleZh": "我們絕不可將民主自由與純淨飲用水視為理所當然。",
     "memoryTip": "grant (天賜/核准) ➔ 自認理應享受 ➔ 視為理所當然"
   },
@@ -45699,8 +45699,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "📋",
     "zh": "貫徹、執行 (計畫、實驗、命令)",
     "collocation": "carry out scientific experiments (執行科學實驗)",
-    "example": "The laboratory carried out rigorous clinical trials to ensure medication safety.",
-    "exampleZh": "該實驗室執行了嚴謹的臨床試驗以確保藥物安全性。",
+    "example": "The research team will carry out rigorous clinical trials to ensure medication safety.",
+    "exampleZh": "研究團隊將執行嚴謹的臨床試驗以確保藥物安全性。",
     "memoryTip": "carry (搬運) + out (出來) ➔ 將紙上計畫搬出來實行 ➔ 貫徹執行"
   },
   {
@@ -45714,8 +45714,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "⚡",
     "zh": "引起、招致、導致",
     "collocation": "give rise to intense debate (引發激烈論戰)",
-    "example": "The controversial new zoning policy gave rise to heated protests in city hall.",
-    "exampleZh": "引發爭議的新土地分區政策在市議會激起了激烈的抗議。",
+    "example": "The controversial new zoning policy may give rise to heated protests in city hall.",
+    "exampleZh": "引發爭議的新土地分區政策可能會在市議會激起激烈的抗議。",
     "memoryTip": "give (給予) + rise (上升機會) ➔ 讓爭端冒出頭 ➔ 引起促成"
   },
   {
@@ -45729,8 +45729,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏛️",
     "zh": "代表、象徵；支持 (理念)",
     "collocation": "stand for justice and equity (代表並捍衛正義與公平)",
-    "example": "The acronym UNESCO stands for United Nations Educational, Scientific and Cultural Organization.",
-    "exampleZh": "縮寫 UNESCO 代表聯合國教科文組織。",
+    "example": "What does the acronym stand for in this official document?",
+    "exampleZh": "在這份官方文件中，這個縮寫代表什麼意思？",
     "memoryTip": "stand (站立) + for (為了) ➔ 為某理念挺身而立 ➔ 代表/支持"
   },
   {
@@ -45774,8 +45774,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🧠",
     "zh": "有道理、合乎邏輯、講得通",
     "collocation": "make good sense (十分有道理)",
-    "example": "After re-evaluating the financial forecast, the CEO's austerity plan makes complete sense.",
-    "exampleZh": "在重新評估財務預測後，執行長的緊縮開支計畫完全說得通。",
+    "example": "After re-evaluating the financial forecast, the plan begins to make sense.",
+    "exampleZh": "在重新評估財務預測後，這項計畫開始顯得完全說得通。",
     "memoryTip": "sense (感覺/道理) ➔ 製造出道理 ➔ 合乎邏輯"
   },
   {
@@ -77049,8 +77049,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "📚",
     "zh": "未婚夫",
     "collocation": "an important fiancé (未婚夫)",
-    "example": "Her analytical essay explores the historical significance of modern fiancé.",
-    "exampleZh": "她撰寫的分析散文深入探討了現代未婚夫的歷史深遠意涵。",
+    "example": "She happily introduced her handsome fiancé to all her relatives at the dinner.",
+    "exampleZh": "她在晚宴上開心地向所有親戚介紹了她英俊的未婚夫。",
     "memoryTip": "【大考字根】音節分解 fiancé。核心意義指向「未婚夫」，常出現在篇章閱讀與學術論述中。"
   },
   {
@@ -90039,8 +90039,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🤝",
     "zh": "談判、協商、交涉",
     "collocation": "contract negotiations (合約談判)",
-    "example": "After weeks of intensive negotiations, both multinational corporations signed the merger agreement.",
-    "exampleZh": "經過數週的密集協商，兩家跨國企業終於簽署了合併協議。",
+    "example": "Diplomats initiated a bilateral trade negotiation to resolve the tariff dispute.",
+    "exampleZh": "各國外交官啟動了雙邊經貿協商談判，以圓滿化解關稅爭端。",
     "memoryTip": "ti 在母音前發軟音 /ʃi/，tion 發 /ʃən/。TOEIC 聽力 Part 3/4 極高頻！"
   },
   {
@@ -90069,8 +90069,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "💳",
     "zh": "核銷、報銷、補償 (款項)",
     "collocation": "reimburse travel expenses (報銷出差費用)",
-    "example": "Employees must submit original itemized receipts within thirty days to be reimbursed for meal expenses.",
-    "exampleZh": "員工必須在三十天內提交原始明細收據，以利核銷差旅餐飲費用。",
+    "example": "The accounting department will promptly reimburse all approved business expenses.",
+    "exampleZh": "會計部門將迅速核銷並如數補償所有經核准的公務差旅開支。",
     "memoryTip": "re- (回) + im- (入) + purse (錢包) ➔ 把墊付的錢放回錢包 ➔ 報銷"
   },
   {
@@ -90384,8 +90384,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏪",
     "zh": "供應商、售貨廠商、攤販",
     "collocation": "approved vendor list (合格供應商名錄)",
-    "example": "The corporate procurement team only contracts with vendors who guarantee green manufacturing practices.",
-    "exampleZh": "企業採購團隊僅與保證符合綠色製造規範的供應商簽訂合約。",
+    "example": "The procurement officer negotiated favorable bulk pricing with an authorized software vendor.",
+    "exampleZh": "採購主管與一家授權軟體供應商協商了優惠的大宗採購價格。",
     "memoryTip": "vend (販賣，如 vending machine 自動販賣機) + -or (人/機構) ➔ 供應商"
   },
   {
@@ -90459,8 +90459,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🌐",
     "zh": "附屬機構、分公司；使隸屬",
     "collocation": "regional corporate affiliate (區域分公司/關係企業)",
-    "example": "The media conglomerate distributes streaming content through its overseas European affiliates.",
-    "exampleZh": "該媒體巨頭透過其海外歐洲分公司與關係機構發行串流影音內容。",
+    "example": "The international company established a regional affiliate to oversee Asian distribution.",
+    "exampleZh": "該跨國企業設立了一家區域關係附屬機構以統籌亞洲的分銷業務。",
     "memoryTip": "af- (朝向) + fili (兒子，如 filial 孝順的) + -ate ➔ 收為子機構 ➔ 附屬機構/分會"
   },
   {
@@ -90549,8 +90549,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🏢",
     "zh": "子公司；次要的、附屬的",
     "collocation": "wholly owned subsidiary (百分之百持股子公司)",
-    "example": "The conglomerate operates fifty subsidiaries in over twenty countries worldwide.",
-    "exampleZh": "該企業集團在全球二十多個國家經營著五十家子公司。",
+    "example": "The corporation decided to establish a subsidiary in Europe.",
+    "exampleZh": "該企業決定在歐洲建立一家子公司。",
     "memoryTip": "sub- (在下方) + sid (坐著，同 reside) ➔ 坐在母公司底下 ➔ 子公司"
   },
   {
@@ -90579,8 +90579,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🎁",
     "zh": "激勵措施、獎勵誘因、獎金",
     "collocation": "financial / sales incentive (財務激勵/業務銷售獎金)",
-    "example": "The corporation offers performance incentives to top sales representatives every quarter.",
-    "exampleZh": "該企業每季為頂尖業務代表提供豐厚的績效獎勵獎金。",
+    "example": "A competitive performance bonus serves as a compelling financial incentive for the sales team.",
+    "exampleZh": "具競爭力的績效獎金是激勵業務團隊全力以赴的強大財務誘因。",
     "memoryTip": "in- (進入) + cant/cent (唱歌/歌詠，同 chant) ➔ 唱起號角鼓舞士氣 ➔ 誘因激勵"
   },
   {
@@ -90624,8 +90624,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "⚠️",
     "zh": "產品缺陷、瑕疵；背叛叛逃",
     "collocation": "manufacturing defect (製造瑕疵缺損)",
-    "example": "All returned smartphones are inspected by quality engineers for microscopic screen defects.",
-    "exampleZh": "所有退貨的智慧型手機均由品管工程師檢驗微觀的螢幕瑕疵。",
+    "example": "Quality engineers identified a microscopic manufacturing defect on the microchip circuit.",
+    "exampleZh": "品管工程師在微晶片電路上發現了一處微觀的生產製造瑕疵。",
     "memoryTip": "de- (欠缺) + fect (做，同 factor/perfect) ➔ 沒做好的地方 ➔ 瑕疵"
   },
   {
@@ -90639,8 +90639,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "📉",
     "zh": "價格/匯率波動、上下起伏",
     "collocation": "currency exchange fluctuation (外幣匯率波動)",
-    "example": "Export businesses must hedge against unexpected fluctuations in crude oil prices.",
-    "exampleZh": "出口貿易企業必須針對原油價格的意外波動進行避險操作。",
+    "example": "Financial analysts warned that sharp market fluctuation could impact quarterly earnings.",
+    "exampleZh": "財務分析師提出預警，指出劇烈的市場行情起伏波動可能會衝擊季度獲利。",
     "memoryTip": "fluct (流水/水波) + -ation ➔ 潮起潮落 ➔ 波動"
   },
   {
@@ -90699,8 +90699,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🚀",
     "zh": "創業者、企業家",
     "collocation": "aspiring tech entrepreneur (有抱負的科技創業者)",
-    "example": "Venture capital firms invest heavily in promising tech entrepreneurs with disruptive visions.",
-    "exampleZh": "創投基金大手筆投資於擁有顛覆性遠見的潛力科技創業者。",
+    "example": "A visionary tech entrepreneur secured funding to build an innovative clean energy platform.",
+    "exampleZh": "一位具備遠見的科技創業家成功募得資金，打造創新的潔淨能源平台。",
     "memoryTip": "法語借詞 entre (在...之間) + preneur (抓取者) ➔ 勇於承擔商業風險開拓新局之人 ➔ 企業家"
   },
   {
@@ -111039,8 +111039,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔍",
     "zh": "證實、確證、提供客觀證據支持",
     "collocation": "corroborate the scientific hypothesis (證實該科學假說)",
-    "example": "Subsequent radiometric dating corroborated the archaeological timeline uncovered at the excavation site.",
-    "exampleZh": "隨後的放射性碳定年法證實了發掘現場出土文物的考古年代時序。",
+    "example": "Independent laboratory analyses will corroborate the historical timeline of the discovery.",
+    "exampleZh": "獨立實驗室的複驗分析將能確證並佐證這項重大歷史發現的年代時序。",
     "memoryTip": "cor- (加強) + robor (強壯/穩固，同 robust) + -ate ➔ 使論據更穩固 ➔ 證實"
   },
   {
@@ -111129,8 +111129,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "✍️",
     "zh": "強調、突顯、在底下劃線 (= emphasize)",
     "collocation": "underscore the urgent need for reform (突顯改革的迫切需求)",
-    "example": "The recent seismic event underscores the necessity of reinforcing municipal bridge structures.",
-    "exampleZh": "最近發生的地震事件突顯了加固市區橋樑結構的迫切必要性。",
+    "example": "The findings serve to underscore the critical importance of public health infrastructure.",
+    "exampleZh": "這些研究成果進一步突顯了加強公共衛生基礎設施建設的極度重要性。",
     "memoryTip": "under (在...底下) + score (劃線記號) ➔ 在重點底下劃重點線 ➔ 強調突顯"
   },
   {
@@ -111369,8 +111369,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "❌",
     "zh": "使喪失信譽、懷疑其真實性",
     "collocation": "discredit the false rumor (破除不實謠言使其不可信)",
-    "example": "Rigorous investigative journalism completely discredited the company's misleading environmental claims.",
-    "exampleZh": "嚴謹的調查報導徹底推翻了該公司具誤導性的環保宣言，使其名譽掃地。",
+    "example": "Rigorous scientific trials will discredit the unsubstantiated claims made by the vendor.",
+    "exampleZh": "嚴謹的科學臨床試驗將徹底駁倒並推翻廠商所做出的缺乏根據宣稱。",
     "memoryTip": "dis- (去除) + credit (信用) ➔ 剝奪其信用 ➔ 使不可信"
   },
   {
@@ -111384,8 +111384,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "📈",
     "zh": "增加、擴充、強化",
     "collocation": "augment memory / capacity (擴充記憶體/增強產能)",
-    "example": "Surgeons use augmented reality headsets to guide delicate microsurgical incisions.",
-    "exampleZh": "外科醫師使用擴增實境頭戴裝置來引導精細的顯微手術切口。",
+    "example": "Advanced automation tools will augment human capabilities rather than replace workers.",
+    "exampleZh": "先進的自動化工具將擴增並提升人類的專業能力，而非完全取代勞工。",
     "memoryTip": "aug- (增加，同 auction 拍賣/august 尊貴) ➔ 擴充強化"
   },
   {
@@ -111414,8 +111414,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🧬",
     "zh": "綜合、合成、統整各方觀點",
     "collocation": "synthesize diverse perspectives (統整多元視角觀點)",
-    "example": "The concluding chapter synthesizes findings from forty separate international field trials.",
-    "exampleZh": "結論章節綜合統整了來自四十項獨立國際田野試驗的研究成果。",
+    "example": "The researcher will synthesize diverse theoretical frameworks into a unified cohesive model.",
+    "exampleZh": "該研究員將把多元的理論框架綜合統整為一套前後一致的統一模型。",
     "memoryTip": "syn- (共同) + the (放置) + -ize ➔ 放到一起融會貫通 ➔ 綜合合成"
   },
   {
@@ -111444,8 +111444,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🚫",
     "zh": "預先排除、防堵、使不可能發生",
     "collocation": "preclude the possibility of error (杜絕發生錯誤的可能性)",
-    "example": "A severe wrist injury precluded the tennis prodigy from competing in the national tournament.",
-    "exampleZh": "嚴重的手腕傷勢使這位網球神童無法參加全國錦標賽。",
+    "example": "Financial constraints should never preclude talented students from pursuing higher education.",
+    "exampleZh": "經濟上的拮据限制絕不應阻礙或妨礙有才華的學子追求高等教育。",
     "memoryTip": "pre- (預先) + clud (關閉，同 exclude) ➔ 預先關上大門 ➔ 排除阻止"
   },
   {
@@ -111474,8 +111474,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔥",
     "zh": "使惡化、加劇、雪上加霜 (反義詞 ameliorate / mitigate)",
     "collocation": "exacerbate existing shortages (加劇既有物資短缺危機)",
-    "example": "Prolonged agricultural drought exacerbated food scarcity across the developing nation.",
-    "exampleZh": "長期的農業乾旱加劇了整個開發中國家的糧食短缺危機。",
+    "example": "Extreme temperature spikes will further exacerbate regional drought conditions.",
+    "exampleZh": "極端高溫飆升將進一步加劇該區域的乾旱缺水災情。",
     "memoryTip": "ex- (加強) + acerb (酸苦辛辣，同 acerbic) + -ate ➔ 使酸苦惡化 ➔ 加劇惡化"
   },
   {
@@ -121929,8 +121929,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🛡️",
     "zh": "排除、消除、使不再需要",
     "collocation": "obviate the need for surgery (免除動手術的需要)",
-    "example": "Early diagnostic detection often obviates the need for invasive chemotherapy treatments.",
-    "exampleZh": "早期診斷發現往往能免除病患進行侵入性化學治療的需要。",
+    "example": "Regular preventative maintenance will obviate the need for costly emergency structural repairs.",
+    "exampleZh": "定期落實預防性維護將能免除日後進行代價高昂的緊急結構修繕之必要。",
     "memoryTip": "【GRE 孿生同義詞】：obviate = preclude。ob- (反對) + via (道路) ➔ 阻擋在半路免去麻煩。"
   },
   {
@@ -132054,8 +132054,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🔨",
     "zh": "削弱 (論證說服力、打破因果鏈)",
     "collocation": "seriously weaken the argument (嚴重削弱該論證)",
-    "example": "Which of the following findings, if true, most seriously weakens the mayor's municipal economic claim?",
-    "exampleZh": "下列何項調查發現若為真，最嚴重削弱了市長對市政經濟前景的主張？",
+    "example": "Which piece of new evidence would most directly weaken the credibility of the argument?",
+    "exampleZh": "哪一項全新的調查事證最能直接削弱該論點的可信度與說服力？",
     "memoryTip": "【GMAT 削弱三大途徑】：1. 引入他因 (Alternative Cause)；2. 因果倒置 (Reverse Causality)；3. 割裂論據與結論之必然關聯。"
   },
   {
@@ -132234,8 +132234,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🥊",
     "zh": "對立反駁論點、反面主張",
     "collocation": "address potential counterarguments (回應潛在的反對主張)",
-    "example": "The proposal anticipated industry counterarguments by providing verified safety audit certifications.",
-    "exampleZh": "該提案透過提供經認證的安全審計證明，預先回應了業界可能提出的反駁主張。",
+    "example": "The attorney formulated a persuasive counterargument to challenge the prosecution testimony.",
+    "exampleZh": "辯護律師擬定了一個極具說服力的反駁論點，有力質疑檢方的證詞。",
     "memoryTip": "counter (反對) + argument (論點) ➔ 對立方的論點"
   },
   {
@@ -142536,8 +142536,13 @@ const contentAudit = qualityCounts(FLASHCARD_DATABASE);
 let currentTier = 'elem_1000';
 let currentCardIndex = 0;
 let isFlipped = false;
-let autoPlayInterval = null;
+let autoPlayToken = 0;
+let autoPlayStepTimer = null;
 let isAutoPlaying = false;
+let autoPlayVoiceMode = 'word_zh_sentence'; // 'word_zh_sentence' (英文單字 > 中文 > 例句) | 'word_zh' (英文 > 中文) | 'word_sentence' (英文 > 例句)
+let practiceBatchSize = 20; // 10 | 20 | 30 | 50 | 100 | 0 (0 為全部)
+let currentBatchIndex = 0;
+let batchCompleted = false;
 let cardFilterStatus = 'all'; // 'all' | 'need_review' | 'mastered'
 let cardSearchKeyword = '';
 
@@ -142575,17 +142580,40 @@ function getFilteredCards() {
   return list;
 }
 
+// 計算當前分類下的總組數
+function getTotalBatches() {
+  const filtered = getFilteredCards();
+  return practiceBatchSize > 0 ? Math.max(1, Math.ceil(filtered.length / practiceBatchSize)) : 1;
+}
+
+// 取得當前分組的卡片清單
+function getBatchCards() {
+  const filtered = getFilteredCards();
+  const total = getTotalBatches();
+  if (currentBatchIndex >= total) {
+    currentBatchIndex = Math.max(0, total - 1);
+  }
+  if (currentBatchIndex < 0) {
+    currentBatchIndex = 0;
+  }
+  return practiceBatchSize > 0
+    ? filtered.slice(currentBatchIndex * practiceBatchSize, (currentBatchIndex + 1) * practiceBatchSize)
+    : filtered;
+}
+
 // 閃卡館主頁渲染函數
 export function renderFlashcardsStudioView() {
   const tierInfo = FLASHCARD_TIERS.find(t => t.id === currentTier) || FLASHCARD_TIERS[0];
   const allTierCards = FLASHCARD_DATABASE.filter(c => c.tier === currentTier);
   const filteredCards = getFilteredCards();
+  const totalBatches = getTotalBatches();
+  const batchCards = getBatchCards();
 
-  if (currentCardIndex >= filteredCards.length) {
-    currentCardIndex = Math.max(0, filteredCards.length - 1);
+  if (currentCardIndex >= batchCards.length) {
+    currentCardIndex = Math.max(0, batchCards.length - 1);
   }
 
-  const currentCard = filteredCards[currentCardIndex] ? teachingCard(filteredCards[currentCardIndex]) : null;
+  const currentCard = batchCards[currentCardIndex] ? teachingCard(batchCards[currentCardIndex]) : null;
   const isMastered = currentCard ? masteryState[currentCard.id] === 'mastered' : false;
   const isNeedReview = currentCard ? masteryState[currentCard.id] === 'need_review' : false;
 
@@ -142638,6 +142666,101 @@ export function renderFlashcardsStudioView() {
       </div>
     </div>
 
+    <!-- 練習字數與自動輪播設定面板 (Practice Batch & Auto-Play Control Panel) -->
+    <div class="card" style="margin-bottom:16px;background:#f8fafc;border:2px solid #04785730;border-radius:14px;padding:16px 20px;box-shadow:0 3px 12px rgba(0,0,0,0.04)">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:12px">
+        <!-- 一次練習字數選項 (10, 20, 30, 50, 100, 全部) -->
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:14px;font-weight:700;color:#0f172a;white-space:nowrap">🎯 一次練習字數：</span>
+          <div style="display:inline-flex;gap:5px;flex-wrap:wrap">
+            ${[10, 20, 30, 50, 100, 0].map(sz => {
+              const isCur = practiceBatchSize === sz;
+              const text = sz === 0 ? `全部 (${filteredCards.length}字)` : `${sz} 個字`;
+              return `
+                <button class="btn ${isCur ? 'primary' : 'quiet'}" data-fc-batch-size="${sz}"
+                  style="font-size:13px;padding:6px 14px;border-radius:8px;font-weight:${isCur ? '700' : '500'};border:${isCur ? '2px solid #047857' : '1px solid #cbd5e1'}">
+                  ${text}
+                </button>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- 輪播主啟動按鈕 -->
+        <div>
+          <button class="btn ${isAutoPlaying ? 'primary' : 'secondary'}" data-fc-toggle-autoplay="true"
+            style="padding:9px 20px;font-size:14px;font-weight:700;border-radius:10px;background:${isAutoPlaying ? '#e11d48' : '#047857'};color:#fff;border:none;box-shadow:0 3px 10px rgba(4,120,87,0.25);cursor:pointer;display:inline-flex;align-items:center;gap:6px">
+            ${isAutoPlaying ? '⏸ 停止自動輪播' : `▶ 啟動自動聽讀輪播 (${practiceBatchSize > 0 ? `${batchCards.length}字 / 第${currentBatchIndex + 1}組` : `全量 ${batchCards.length}字`})`}
+          </button>
+        </div>
+      </div>
+
+      <!-- 自動輪播語音順序選項 -->
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:10px;border-top:1px dashed #cbd5e1">
+        <span style="font-size:13px;font-weight:700;color:#334155;white-space:nowrap">🎙️ 語音輪播順序：</span>
+        <div style="display:inline-flex;gap:6px;flex-wrap:wrap">
+          <button class="btn ${autoPlayVoiceMode === 'word_zh_sentence' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_zh_sentence"
+            style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_zh_sentence' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_zh_sentence' ? '2px solid #047857' : '1px solid #cbd5e1'}"
+            title="依序完整朗讀：英文單字（語音） ➔ 翻面 ➔ 中文釋義（語音） ➔ 完整英文例句（語音）">
+            🌟 完整聽讀：英文 ➔ 中文 ➔ 完整例句
+          </button>
+          <button class="btn ${autoPlayVoiceMode === 'word_zh' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_zh"
+            style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_zh' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_zh' ? '2px solid #047857' : '1px solid #cbd5e1'}"
+            title="簡易高頻複習：英文單字（語音） ➔ 翻面 ➔ 中文釋義（語音檔就好，快速高效複習）">
+            ⚡ 簡易複習：英文 ➔ 中文（語音檔）
+          </button>
+          <button class="btn ${autoPlayVoiceMode === 'word_sentence' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_sentence"
+            style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_sentence' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_sentence' ? '2px solid #047857' : '1px solid #cbd5e1'}"
+            title="純英語境沉浸：英文單字（語音） ➔ 翻面 ➔ 完整英文例句（語音）">
+            🎧 純英沉浸：英文 ➔ 完整例句
+          </button>
+        </div>
+      </div>
+
+      <!-- 分組導覽欄（當字數有限制且有多組時） -->
+      ${practiceBatchSize > 0 && totalBatches > 1 ? `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px dashed #cbd5e1;flex-wrap:wrap;gap:8px">
+          <div style="font-size:13px;color:#475569">
+            📑 當前分組：<strong>第 ${currentBatchIndex + 1} / ${totalBatches} 組</strong>
+            （第 ${currentBatchIndex * practiceBatchSize + 1} ~ ${Math.min((currentBatchIndex + 1) * practiceBatchSize, filteredCards.length)} 字 · 本組共 ${batchCards.length} 字 / 該類別共 ${filteredCards.length} 字）
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="btn quiet small" data-fc-batch-prev="true" ${currentBatchIndex === 0 ? 'disabled' : ''} style="padding:5px 12px;font-size:13px">
+              ⏮ 上一組
+            </button>
+            <button class="btn quiet small" data-fc-batch-next="true" ${currentBatchIndex >= totalBatches - 1 ? 'disabled' : ''} style="padding:5px 12px;font-size:13px">
+              下一組 ⏭
+            </button>
+          </div>
+        </div>
+      ` : ''}
+    </div>
+
+    <!-- 批次輪播完成慶祝面板 -->
+    ${batchCompleted ? `
+      <div class="card" style="background:#ecfdf5;border:2px solid #10b981;border-radius:14px;padding:16px 20px;margin-bottom:18px;text-align:center">
+        <div style="font-size:32px;margin-bottom:6px">🎉</div>
+        <strong style="font-size:17px;color:#065f46">本組 ${batchCards.length} 個單字已完成自動輪播聽讀練習！</strong>
+        <p style="font-size:13px;color:#047857;margin:6px 0 14px">
+          語音模式：${autoPlayVoiceMode === 'word_zh_sentence' ? '🌟 完整聽讀（英文 ➔ 中文 ➔ 完整例句）' : (autoPlayVoiceMode === 'word_zh' ? '⚡ 簡易複習（英文 ➔ 中文語音檔）' : '🎧 純英沉浸（英文 ➔ 完整例句）')} · 雙重編碼記憶已深化
+        </p>
+        <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
+          <button class="btn primary" data-fc-replay-batch="true" style="font-size:13px;padding:8px 16px">
+            🔄 重新輪播本組
+          </button>
+          ${currentBatchIndex < totalBatches - 1 ? `
+            <button class="btn secondary" data-fc-batch-next="true" style="font-size:13px;padding:8px 16px;background:#047857;color:#fff">
+              ➡ 進行下一組 (${practiceBatchSize} 字)
+            </button>
+          ` : `
+            <button class="btn secondary" data-fc-restart-first-batch="true" style="font-size:13px;padding:8px 16px">
+              ⏮ 從第 1 組重新開始
+            </button>
+          `}
+        </div>
+      </div>
+    ` : ''}
+
     <!-- 篩選與搜尋工具列 -->
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px">
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -142683,7 +142806,7 @@ export function renderFlashcardsStudioView() {
                   </span>
                   <span class="pill" style="background:#f1f5f9;color:#475569;font-size:12px;font-weight:600">${currentCard.category}</span>
                 </div>
-                <span style="font-size:13px;color:#64748b;font-weight:500">卡片 ${currentCardIndex + 1} / ${filteredCards.length}</span>
+                <span style="font-size:13px;color:#64748b;font-weight:500">卡片 ${currentCardIndex + 1} / ${batchCards.length}${practiceBatchSize > 0 ? ` (第 ${currentBatchIndex + 1}/${totalBatches} 組)` : ''}</span>
               </div>
 
               <!-- 單字與音節拆解 (正面絕無中文釋義，以利檢索回想) -->
@@ -142736,12 +142859,18 @@ export function renderFlashcardsStudioView() {
                       <span class="pill" style="font-size:11px;font-weight:700;background:#ecfdf5;color:#047857">${currentCard.pos} ${currentCard.word}</span>
                       <span style="font-size:12px;font-weight:600;color:#64748b">${currentCard.category}</span>
                     </div>
-                    <span style="font-size:12px;color:#94a3b8">卡片 ${currentCardIndex + 1} / ${filteredCards.length}</span>
+                    <span style="font-size:12px;color:#94a3b8">卡片 ${currentCardIndex + 1} / ${batchCards.length}${practiceBatchSize > 0 ? ` (第 ${currentBatchIndex + 1}/${totalBatches} 組)` : ''}</span>
                   </div>
-                  <!-- 中文核心釋義 -->
-                  <h2 style="margin:0;font-size:22px;color:#0f172a;font-weight:800;letter-spacing:-0.3px">
-                    ${currentCard.zh}
-                  </h2>
+                  <!-- 中文核心釋義與繁中語音朗讀 -->
+                  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                    <h2 style="margin:0;font-size:22px;color:#0f172a;font-weight:800;letter-spacing:-0.3px">
+                      ${currentCard.zh}
+                    </h2>
+                    <button class="btn quiet small" data-fc-speak-zh="${esc(currentCard.zh)}" title="聽繁體中文釋義朗讀"
+                      style="padding:3px 8px;font-size:12px;border:1px solid #047857;border-radius:6px;color:#047857;background:#ecfdf5;font-weight:600">
+                      🔊 聽中文
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -142814,9 +142943,19 @@ export function renderFlashcardsStudioView() {
           </button>
         </div>
 
-        <button class="btn primary" data-fc-next="true" ${currentCardIndex === filteredCards.length - 1 ? 'disabled' : ''} style="padding:10px 20px;font-weight:700">
-          下一張 ➡
-        </button>
+        ${currentCardIndex < batchCards.length - 1 ? `
+          <button class="btn primary" data-fc-next="true" style="padding:10px 20px;font-weight:700">
+            下一張 ➡
+          </button>
+        ` : (currentBatchIndex < totalBatches - 1 ? `
+          <button class="btn primary" data-fc-batch-next="true" style="padding:10px 20px;font-weight:700;background:#047857">
+            下一組 (${practiceBatchSize} 字) ⏭
+          </button>
+        ` : `
+          <button class="btn primary" disabled style="padding:10px 20px;font-weight:700">
+            下一張 ➡
+          </button>
+        `)}
       </div>
     ` : `
       <div class="card" style="text-align:center;padding:50px 20px;max-width:600px;margin:0 auto">
@@ -142838,15 +142977,86 @@ export function handleFlashcardEvents(target, renderCallback) {
   // 切換級別
   if (d.fcTier) {
     currentTier = d.fcTier;
+    currentBatchIndex = 0;
     currentCardIndex = 0;
+    batchCompleted = false;
     isFlipped = false;
     stopFlashcardAutoPlay();
     renderCallback();
     return true;
   }
 
+  // 變更每批次練習字數 (10, 20, 30, 50, 100, 0: 全部)
+  if (d.fcBatchSize !== undefined) {
+    practiceBatchSize = parseInt(d.fcBatchSize, 10) || 0;
+    currentBatchIndex = 0;
+    currentCardIndex = 0;
+    batchCompleted = false;
+    isFlipped = false;
+    stopFlashcardAutoPlay();
+    renderCallback();
+    return true;
+  }
+
+  // 變更輪播語音模式 (word_zh: 英文+中文 | word_zh_sentence: 英文+中文+例句)
+  if (d.fcVoiceMode) {
+    autoPlayVoiceMode = d.fcVoiceMode;
+    renderCallback();
+    return true;
+  }
+
+  // 分組切換：上一組
+  if (d.fcBatchPrev) {
+    if (currentBatchIndex > 0) {
+      currentBatchIndex--;
+      currentCardIndex = 0;
+      batchCompleted = false;
+      isFlipped = false;
+      stopFlashcardAutoPlay();
+      renderCallback();
+    }
+    return true;
+  }
+
+  // 分組切換：下一組
+  if (d.fcBatchNext) {
+    const totalBatches = getTotalBatches();
+    if (currentBatchIndex < totalBatches - 1) {
+      currentBatchIndex++;
+      currentCardIndex = 0;
+      batchCompleted = false;
+      isFlipped = false;
+      stopFlashcardAutoPlay();
+      renderCallback();
+    }
+    return true;
+  }
+
+  // 重新輪播當前組
+  if (d.fcReplayBatch) {
+    currentCardIndex = 0;
+    batchCompleted = false;
+    isFlipped = false;
+    startFlashcardAutoPlay(renderCallback);
+    renderCallback();
+    return true;
+  }
+
+  // 從第 1 組重新開始輪播
+  if (d.fcRestartFirstBatch) {
+    currentBatchIndex = 0;
+    currentCardIndex = 0;
+    batchCompleted = false;
+    isFlipped = false;
+    startFlashcardAutoPlay(renderCallback);
+    renderCallback();
+    return true;
+  }
+
   // 翻轉卡片
   if (d.fcFlip) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
+    else stopAudio();
     isFlipped = !isFlipped;
     renderCallback();
     return true;
@@ -142854,30 +143064,43 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 發音單字 (標準 1.0x)
   if (d.fcSpeakWord) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
     playWord(d.fcSpeakWord, false);
     return true;
   }
 
   // 慢速發音單字 (0.65x)
   if (d.fcSpeakWordSlow) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
     playWord(d.fcSpeakWordSlow, true);
+    return true;
+  }
+
+  // 發音繁中釋義
+  if (d.fcSpeakZh) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
+    playChinese(d.fcSpeakZh);
     return true;
   }
 
   // 發音例句 (標準)
   if (d.fcSpeakSentence) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
     playSentence(d.fcSpeakSentence, false);
     return true;
   }
 
   // 慢速發音例句 (0.75x)
   if (d.fcSpeakSentenceSlow) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
     playSentence(d.fcSpeakSentenceSlow, true);
     return true;
   }
 
   // 上一張卡片
   if (d.fcPrev) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
+    else stopAudio();
     if (currentCardIndex > 0) {
       currentCardIndex--;
       isFlipped = false;
@@ -142888,8 +143111,10 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 下一張卡片
   if (d.fcNext) {
-    const list = getFilteredCards();
-    if (currentCardIndex < list.length - 1) {
+    if (isAutoPlaying) stopFlashcardAutoPlay();
+    else stopAudio();
+    const batchCards = getBatchCards();
+    if (currentCardIndex < batchCards.length - 1) {
       currentCardIndex++;
       isFlipped = false;
       renderCallback();
@@ -142899,8 +143124,8 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 標記掌握狀態
   if (d.fcMark) {
-    const list = getFilteredCards();
-    const card = list[currentCardIndex];
+    const batchCards = getBatchCards();
+    const card = batchCards[currentCardIndex];
     if (card) {
       if (masteryState[card.id] === d.fcMark) {
         delete masteryState[card.id];
@@ -142916,17 +143141,22 @@ export function handleFlashcardEvents(target, renderCallback) {
   // 切換卡片篩選 (all, need_review, mastered)
   if (d.fcFilter) {
     cardFilterStatus = d.fcFilter;
+    currentBatchIndex = 0;
     currentCardIndex = 0;
+    batchCompleted = false;
     isFlipped = false;
+    stopFlashcardAutoPlay();
     renderCallback();
     return true;
   }
 
   // 洗牌隨機重排
   if (d.fcShuffle) {
-    const list = getFilteredCards();
-    if (list.length > 1) {
-      currentCardIndex = Math.floor(Math.random() * list.length);
+    if (isAutoPlaying) stopFlashcardAutoPlay();
+    else stopAudio();
+    const batchCards = getBatchCards();
+    if (batchCards.length > 1) {
+      currentCardIndex = Math.floor(Math.random() * batchCards.length);
       isFlipped = false;
       renderCallback();
     }
@@ -142947,63 +143177,148 @@ export function handleFlashcardEvents(target, renderCallback) {
   return false;
 }
 
-// 自動輪播聽讀定時器
-function startFlashcardAutoPlay(renderCallback) {
-  stopFlashcardAutoPlay();
-  isAutoPlaying = true;
-
-  autoPlayInterval = setInterval(() => {
-    const list = getFilteredCards();
-    if (!list.length) return;
-
-    const card = list[currentCardIndex];
-    if (!card) return;
-
-    if (!isFlipped) {
-      // 朗讀單字，隨後翻面
-      playWord(card.word, false, {
-        onEnd: () => {
-          setTimeout(() => {
-            isFlipped = true;
-            renderCallback();
-            // 朗讀例句
-            const example = teachingCard(card).example;
-            if (example) playSentence(example);
-          }, 800);
-        }
-      });
-    } else {
-      // 已經在背面，翻回正面並切換下一張
-      isFlipped = false;
-      if (currentCardIndex < list.length - 1) {
-        currentCardIndex++;
-      } else {
-        currentCardIndex = 0;
-      }
-      renderCallback();
-      const nextCard = list[currentCardIndex];
-      if (nextCard) {
-        playWord(nextCard.word);
-      }
-    }
-  }, 4800);
-}
-
-function stopFlashcardAutoPlay() {
-  if (autoPlayInterval) {
-    clearInterval(autoPlayInterval);
-    autoPlayInterval = null;
+// 停止自動輪播聽讀
+export function stopFlashcardAutoPlay() {
+  autoPlayToken++;
+  if (autoPlayStepTimer) {
+    clearTimeout(autoPlayStepTimer);
+    autoPlayStepTimer = null;
   }
   isAutoPlaying = false;
   stopAudio();
+}
+
+// 啟動自動輪播聽讀（依序列：英文單字 ➔ 翻面 ➔ 繁中釋義 ➔ [可選英文例句] ➔ 自動下一張）
+export function startFlashcardAutoPlay(renderCallback) {
+  stopFlashcardAutoPlay();
+  isAutoPlaying = true;
+  batchCompleted = false;
+  const currentToken = ++autoPlayToken;
+
+  function runCurrentCard() {
+    if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+
+    const batchCards = getBatchCards();
+    if (!batchCards.length || currentCardIndex >= batchCards.length) {
+      stopFlashcardAutoPlay();
+      renderCallback();
+      return;
+    }
+
+    const card = teachingCard(batchCards[currentCardIndex]);
+
+    // 階段 1：卡片顯示正面純英文，完整朗讀英文單字
+    isFlipped = false;
+    renderCallback();
+
+    playWord(card.word, false, {
+      onEnd: () => {
+        if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+
+        // 英文單字結束後停頓 600ms（提供大腦回想檢索的黃金時間）
+        autoPlayStepTimer = setTimeout(() => {
+          if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+
+          // 階段 2：翻至背面顯示繁中核心釋義與主題圖示
+          isFlipped = true;
+          renderCallback();
+
+          if (autoPlayVoiceMode === 'word_sentence') {
+            // 純英例句模式：不朗讀中文，直接朗讀完整英文例句
+            playSentenceStep();
+          } else if (autoPlayVoiceMode === 'word_zh') {
+            // 簡易快速複習模式：僅朗讀英文單字 + 繁中釋義（無例句，快速高效複習）
+            playChinese(card.zh, {
+              onEnd: () => {
+                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                proceedToNextCard(800);
+              },
+              onError: (e) => {
+                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                if (e?.error === 'interrupted' || e?.error === 'canceled') return;
+                proceedToNextCard(600);
+              }
+            });
+          } else {
+            // 完整聽讀標準模式 (word_zh_sentence)：英文單字 ➔ 中文釋義 ➔ 完整例句英文語音
+            playChinese(card.zh, {
+              onEnd: () => {
+                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                playSentenceStep();
+              },
+              onError: (e) => {
+                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                if (e?.error === 'interrupted' || e?.error === 'canceled') return;
+                // 中文若因系統缺少繁中語音而報錯，仍繼續播放完整英文例句，不中斷學習流程
+                playSentenceStep();
+              }
+            });
+          }
+
+          function playSentenceStep() {
+            const example = card.example;
+            if (example) {
+              autoPlayStepTimer = setTimeout(() => {
+                if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+
+                playSentence(example, false, {
+                  onEnd: () => {
+                    if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                    proceedToNextCard(1000);
+                  },
+                  onError: (e) => {
+                    if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                    if (e?.error === 'interrupted' || e?.error === 'canceled') return;
+                    proceedToNextCard(800);
+                  }
+                });
+              }, 500);
+            } else {
+              proceedToNextCard(800);
+            }
+          }
+        }, 600);
+      },
+      onError: (e) => {
+        if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+        if (e?.error === 'interrupted' || e?.error === 'canceled') return;
+        proceedToNextCard(800);
+      }
+    });
+  }
+
+  function proceedToNextCard(delay = 1000) {
+    if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+    const batchCards = getBatchCards();
+
+    // 依模式保留停頓時間，進行深度記憶沉澱
+    autoPlayStepTimer = setTimeout(() => {
+      if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+
+      if (currentCardIndex < batchCards.length - 1) {
+        currentCardIndex++;
+        runCurrentCard();
+      } else {
+        // 完成當前組練習！
+        batchCompleted = true;
+        isAutoPlaying = false;
+        renderCallback();
+      }
+    }, delay);
+  }
+
+  runCurrentCard();
 }
 
 export function handleFlashcardInput(target, renderCallback) {
   if (target && target.id === 'fc-search-input') {
     const caret = target.selectionStart;
     cardSearchKeyword = target.value;
+    currentBatchIndex = 0;
     currentCardIndex = 0;
+    batchCompleted = false;
     isFlipped = false;
+    stopFlashcardAutoPlay();
     renderCallback();
     const input = document.querySelector('#fc-search-input');
     input?.focus();
