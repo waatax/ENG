@@ -1,3 +1,4 @@
+import { renderLevelEstimate } from './level_estimate.mjs';
 // diagnostic.mjs - 30 題全階英語能力程度練習檢核系統 (小學至GRE/GMAT)
 // 由 7 位跨領域專家共同研發，嚴格對標 CEFR Pre-A1 至 進階題型
 // 配備：自適應階梯抽樣、五維雷達圖、失速臨界點 (Stall Point) 判定、每一題名師黃金五維詳解與微課轉化直通車
@@ -139,7 +140,7 @@ function renderIntroView() {
       </p>
     </div>
 
-    <aside class="card"><h2>把練習當作學習起點</h2><p>題目依本站難度分類抽取。這是自學工具，沒有正式測驗信度、常模或分數等化資料；請依錯題解析安排複習。</p></aside>
+    <aside class="card"><h2>預測英文程度，找到學習起點</h2><p>完成作答後，查看閱讀／文法程度、CEFR 參考區間與各考試參考落點，再按弱項選擇教材。預測使用本站規則，尚未經正式成績配對校準。</p></aside>
     <!-- 上次作答快速回顧 (若有) -->
     ${latestHistory ? `
       <div class="card" style="border:2px solid #a7f3d0;background:#f0fdf4;margin-bottom:24px">
@@ -443,8 +444,8 @@ function renderReportView() {
 
     <section class="card"><h2>本次答對 ${ev.rawCorrect} / ${diagQuestions.length} 題</h2><p>未作答也包含在總題數內。請在下方逐題檢查，找出需要訂正的觀念。</p></section>
     <!-- 雙欄架構：大考落點預估 vs 五大能力維度雷達 -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:20px;margin-bottom:24px">
-      <section class="card"><h3>這次練習能告訴你什麼？</h3><p>只反映本次抽到題目的表現。請查看答錯的題目、解析與推薦單元，重新練習。</p><p>這份練習未經正式常模校準，不能換算會考、學測、TOEIC、SAT、GRE、GMAT 分數，也不能作為 CEFR 認證。</p></section>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr));gap:20px;margin-bottom:24px">
+      ${renderLevelEstimate(diagUserAnswers, diagQuestions)}
       <!-- 欄 2: 五大核心維度掌握率分析 -->
       <div class="card">
         <h3 style="margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px">

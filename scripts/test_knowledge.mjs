@@ -17,7 +17,7 @@ test('Stage filtering gives elementary learners a real starting point',()=>{
 test('Practice reports omit unsupported credentials and official score conversions',()=>{
  const d=readFileSync('dist/diagnostic.mjs','utf8');
  for(const claim of ['信度 α','IRT 項目反應理論轉換','${ev.predicted.','${esc(ev.cefr)}','聯合研發背書'])assert.ok(!d.includes(claim),claim);
- assert.ok(d.includes('不能換算會考'));
+ assert.ok(d.includes('renderLevelEstimate(diagUserAnswers, diagQuestions)'));
 });
 test('Published and preview assets match',()=>{for(const f of ['knowledge.mjs','learning_layout.css','app.js','index.html','lesson_pages.mjs'])assert.equal(readFileSync('dist/'+f,'utf8'),readFileSync('site/dist/'+f,'utf8'),f);});
 

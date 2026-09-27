@@ -17,6 +17,18 @@ test('Unanswered submission can be cancelled, then confirmed without blocking di
   click({diagSubmit:'true'});assert.match(diagnosticPage(),/data-diag-confirm-submit/);
   click({diagCancelSubmit:'true'});assert.ok(!diagnosticPage().includes('data-diag-confirm-submit'));
   click({diagSubmit:'true'});click({diagConfirmSubmit:'true'});
-  const report=diagnosticPage();assert.match(report,/本次答對 0 \/ 30 題/);assert.match(report,/不能換算會考/);assert.ok(!report.includes('認證段位'));assert.ok(!report.includes('undefined'));
+  const report=diagnosticPage();assert.match(report,/本次答對 0 \/ 30 題/);assert.match(report,/样本不足|樣本不足/);assert.ok(!report.includes('認證段位'));assert.ok(!report.includes('undefined'));
  } finally { click({diagConfirmSubmit:'true'}); }
+});
+test('Completed diagnostic displays the restored prediction tool',async()=>{
+ const bank=JSON.parse(readFileSync('dist/questions/diagnostic_bank.json','utf8'));
+ const selected=Array.from({length:30},(_,i)=>bank.find(q=>q.tier===i%8+1&&Number.isInteger(q.answer)));
+ assert.ok(selected.every(Boolean));
+ const questions=selected.map((q,i)=>({...q,id:`fixture-${i}`}));
+ questionDB.sampleDiagnostic30=async()=>questions;
+ const click=dataset=>handleDiagnosticClick({dataset},()=>{},()=>{});
+ click({startDiag:'true'});await new Promise(resolve=>setImmediate(resolve));
+ for(let i=0;i<questions.length;i++){click({diagJump:String(i)});click({diagChoice:String(questions[i].answer)});}
+ click({diagSubmit:'true'});
+ const report=diagnosticPage();assert.match(report,/英文程度預測/);assert.match(report,/C1–C2/);assert.match(report,/GMAT Verbal/);assert.ok(!report.includes('樣本不足'));
 });

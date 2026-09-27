@@ -157,7 +157,7 @@ function renderStageQuickNav() {
 function shell(body) {
   const nav = [
     ['knowledge', '→', '知識點教室'],
-    ['diagnostic', '00', '程度檢測'],
+    ['diagnostic', '00', '英文程度預測'],
     ['curriculum108', '01', '學年課程地圖'],
     ['phonics', '02', '自然拼讀與發音'],
     ['matrix', '03', '課綱對照'],
@@ -336,7 +336,7 @@ function curriculum108Page() {
       </div>
     </div>
 
-    <aside class="card"><h2>如何使用這份教材</h2><p>先閱讀概念與例句，再獨立作答，依解析訂正。課綱標籤是編排參考，尚需逐項核對；教材數量與點擊次數不代表能力精熟。</p><p>本站提供自學練習，不提供正式 CEFR 認證或考試成績預測。</p></aside>
+    <aside class="card"><h2>如何使用這份教材</h2><p>先閱讀概念與例句，再獨立作答，依解析訂正。課綱標籤是編排參考，尚需逐項核對；教材數量與點擊次數不代表能力精熟。</p><p>本站提供自學練習與初步程度預測；預估落點供備考參考，不是正式 CEFR 認證。</p></aside>
     <!-- 🎒 國小英文 · 🏫 國中英文 · 🎓 高中英文 三大學段核心直達標籤卡 -->
     <div style="margin:24px 0 16px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
