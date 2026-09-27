@@ -265,23 +265,11 @@ def generate_collocation(word, pos, zh):
     else:
         return f"an important {w} ({zh_first})"
 
+from sentence_engine import generate_example_sentence
+
 # 5. 情境例句生成器 (Contextual Example Generator)
-def generate_example(word, pos, zh, category=""):
-    w = word.strip()
-    zh_first = zh.split('、')[0].split('；')[0].split('（')[0].strip()
-    if pos.startswith('v'):
-        en = f"Professionals should {w} all relevant data before making a decision."
-        zh_s = f"專業人士在做出決策前應當妥善{zh_first}所有相關數據。"
-    elif pos.startswith('adj'):
-        en = f"The team presented a {w} strategy that addressed key challenges."
-        zh_s = f"該團隊提出了一項應對關鍵挑戰的{zh_first}策略。"
-    elif pos.startswith('adv'):
-        en = f"The experimental results {w} confirmed the primary scientific hypothesis."
-        zh_s = f"實驗結果{zh_first}證實了最初的科學假說。"
-    else:
-        en = f"Understanding the concept of {w} is essential for continuous progress."
-        zh_s = f"理解「{zh_first}」的概念對於持續進步至關重要。"
-    return en, zh_s
+def generate_example(word, pos, zh, category="", tier="elem_1000"):
+    return generate_example_sentence(word, pos, zh, category=category, tier=tier)
 
 # 6. 認知記憶技巧生成器 (Cognitive Memory Tip Generator)
 def generate_memory_tip(word, pos, chunk, tier, zh):
@@ -316,7 +304,7 @@ def build_card(tier, id_prefix, index, word, pos, zh, category,
     if example and exampleZh:
         c_ex, c_ex_zh = example, exampleZh
     else:
-        c_ex, c_ex_zh = generate_example(w_clean, pos, zh, category)
+        c_ex, c_ex_zh = generate_example(w_clean, pos, zh, category, tier=tier)
     c_tip = memoryTip or generate_memory_tip(w_clean, pos, c_chunk, tier, zh)
     
     card_id = f"fc-{id_prefix}-{index:04d}"
