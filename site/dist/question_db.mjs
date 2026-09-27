@@ -139,8 +139,8 @@ export class QuestionBankDB {
     return this.cache.get(id) || null;
   }
 
-  // Fisher-Yates 現代洗牌隨機抽題演算法
-  async sampleQuestions(category = 'all', count = 20) {
+  // Fisher-Yates 現代洗牌隨機抽題演算法 (支援 subtopic 題型過濾)
+  async sampleQuestions(category = 'all', count = 20, subtopic = 'all') {
     await this.initPromise;
     await this.loadCategory(category);
 
@@ -149,6 +149,14 @@ export class QuestionBankDB {
       candidates = this.getAllQuestions();
     } else {
       candidates = this.pools[category] || [];
+    }
+
+    if (subtopic && subtopic !== 'all') {
+      const s = String(subtopic).toLowerCase().trim();
+      const filtered = candidates.filter(q => q.subtopic && q.subtopic.toLowerCase().includes(s));
+      if (filtered.length) {
+        candidates = filtered;
+      }
     }
 
     if (!candidates.length) {
@@ -165,6 +173,19 @@ export class QuestionBankDB {
 
     const n = Math.min(Math.max(1, count), pool.length);
     return pool.slice(0, n);
+  }
+
+  // 取得指定考科之所有題型子分類 (Subtopics)
+  async getSubtopics(category) {
+    if (!category || category === 'all') return [];
+    await this.initPromise;
+    await this.loadCategory(category);
+    const pool = this.pools[category] || [];
+    const subs = new Set();
+    for (const q of pool) {
+      if (q.subtopic) subs.add(q.subtopic);
+    }
+    return Array.from(subs);
   }
 
   // 取得題庫統計資訊

@@ -1150,8 +1150,18 @@ export const curriculum = [
         concepts: [
           {
             heading: 'Text Completion 與 Sentence Equivalence 邏輯密碼',
-            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because $\to$ 判斷補充、因果或並列關係；不保證空格與前詞同義。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than $\to$ 檢查語意反差發生在哪兩個命題；不保證空格字詞必為反義。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，兩個選項都須符合句意，且填入後句意相近；不能只配對同義字。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
+            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because, colon (:) $\\to$ 判斷補充、因果或並列關係；空格為已知修飾詞之同向延伸。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than, belie $\\to$ 檢查語意反差發生在哪兩個命題；注意雙重否定抵消。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，兩個選項都須符合句意，且填入後句意相近；不能只配對同義字。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
             tip: 'GRE 邏輯陷阱：避免加入過多主觀世俗常識，嚴格依據題幹內的對應詞 (Pivot Words) 判定正負色彩。'
+          },
+          {
+            heading: 'GRE Text Completion 雙空與三空「確定性錨點」破題矩陣',
+            body: '雙空與三空題切忌從第一格硬猜，必須運用「線索獨立空格先解 (Anchor Blank First)」法則：\n1. 尋找語意錨點：先掃描全句，尋找修飾成分最完整、語意最明確的那個空格作為破題突破口。\n2. 讓步與反差辨析：識別 "for all"、"notwithstanding"、"hardly... when" 的語意翻轉點；分清作者主句主張與讓步從句的層次。\n3. 辯證結構推進：學術長句常呈現「正題 (Thesis) $\\to$ 反題 (Antithesis) $\\to$ 合題 (Synthesis)」三層推進，三空格常各自對應這三個哲學階段。\n4. 標點符號邏輯功能：分號 (;) 代表語意平行或對比延伸；冒號 (:) 代表前句主張的具體解釋或同義重述；破折號 (—) 代表插敘補強或轉折例外。',
+            tip: '雙空題連鎖反應：第二空格通常是第一空格推論成立的邏輯前提，兩空格之間往往互為線索，不可割裂解讀。'
+          },
+          {
+            heading: 'GRE 學術長篇閱讀「翻案文」結構與作者認知立場',
+            body: 'GRE 閱讀篇章源自權威學術期刊，以「翻案文 (Historiographical Revisionism)」為最具代表性題型：\n1. 翻案文經典三部曲：\n   - 第一階段：提出傳統歷史學界或科學界普遍接受的主流舊說 (Traditional Historiographical Consensus)。\n   - 第二階段：引述新出土考古文獻、新計量統計模型或異常實驗數據 (Anomalous Evidence)，挑戰舊說盲區。\n   - 第三階段：作者提出修訂版綜合框架 (Nuanced Synthesis)，非全然推翻，而是界定適用邊界。\n2. 作者認知態度 (Author\'s Epistemic Stance) 判讀：\n   - unqualified endorsement：無保留全力支持（極少出現）。\n   - guarded skepticism：審慎懷疑（最常作為正確答案）。\n   - measured optimism：適度審慎的樂觀。\n   - scathing repudiation：嚴厲斥責抨擊。\n3. 排除干擾項金律：凡出現 completely, infallible, unequivocally, wholly discredited 等極端化詞彙之選項，95% 以上為命題陷阱。',
+            tip: '長篇閱讀定位法：主旨題先抓第一段末句或第二段首句轉折；細節題務必回到原文錨定對應行數，以「同義改寫 (Paraphrase)」為唯一判定標準。'
           },
           {
             heading: 'Analytical Writing Issue 30 分鐘五步立論法',
@@ -1200,8 +1210,23 @@ export const curriculum = [
             tip: '現行 GMAT 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，可以檢查本節作答，但至多修改 3 道題答案！'
           },
           {
+            heading: 'Critical Reasoning 因果論證三大致命漏洞與攻防向量',
+            body: 'GMAT CR 80% 以上論證屬於因果推論（Premise: 事件 A 發生，Conclusion: A 導致 B）：\n1. 另有他因 (Alternative Cause)：忽視可能同時存在的外部變量 C 才是造成 B 的真因（例如：延長營業時間銷售上升，實際是因為同期實施了五折清倉促銷）。\n2. 因果倒置 (Reverse Causality)：將結果與原因順序搞反（例如：經常閱讀財經雜誌的投資人收益更高，可能是高收益者才有閒暇閱讀，而非閱讀帶來高收益）。\n3. 樣本選擇偏差 (Selection Bias / Sampling Bias)：由自願參與者或特殊群體樣本推論全體母體行為（例如：以高科技園區員工使用無人駕駛計程車的意願推論全國居民）。\n4. 削弱與加強的對偶性：\n   - 削弱題：主動引入另有他因、因果倒置可能、或指出樣本偏差。\n   - 加強題：主動排除混淆變量、證實「無 A 則無 B」、或提供平行行業類似操作的成功驗證。',
+            tip: '區分事實與推論：題幹中給定的 Premise 為不可爭辯的事實，絕不可質疑 Premise 本身之真實性，攻擊點永遠在 Premise 到 Conclusion 的推導邏輯漏洞！'
+          },
+          {
+            heading: 'CR 假設題 (Assumption)「否定測試法」決策流程',
+            body: '假設（Assumption）是讓論證結論得以成立的「未明言必要條件 (Sine Qua Non)」：\n1. 否定測試法 (Negation Technique) 三步 SOP：\n   - 步驟一：選取待測選項，將其動詞取非（將肯定的選項加 NOT，或將含有 NOT 的選項去掉 NOT）。\n   - 步驟二：將取非後的命題帶回原題幹，檢視原論證結論是否受到實質衝擊。\n   - 步驟三：若結論因此立即瓦解崩潰（Argument Falls Apart），該選項就是正確答案！\n2. 充分條件 vs 必要條件陷阱：假設必須是「必要條件」，不可將題目推向過度嚴苛的充分條件（例如：結論只需降低成本，選項不需保證降低所有產品的成本）。\n3. 排除無關資訊：涉及個人喜好、招牌顏色、過往無關年份之描述，皆為典型干擾項。',
+            tip: '否定測試口訣：「取非即死」——選項取反若能一劍封喉擊潰作者結論，該選項必為作者心底默認的底層假設！'
+          },
+          {
+            heading: 'CR 黑體字角色題 (Method of Reasoning / Boldface) 解題決策樹',
+            body: '黑體字題考查對學術與商業論證內部各組件功能角色的抽象結構認知：\n1. 判定組件屬性 (Fact vs. Claim)：\n   - 客觀事實 (Evidence / Premise / Finding / Data)：歷史數據、實驗測量結果、既成事實。\n   - 主觀主張 (Claim / Judgment / Hypothesis / Position)：作者或反對派提出的判斷、預測或結論。\n2. 判定立場陣營 (Support vs. Oppose)：\n   - 該黑體字是站在作者立場，還是站在作者反對的立場（Opponent\'s argument）？\n3. 判定結論層級：\n   - 是中間過渡結論 (Intermediate / Subsidiary Conclusion)，還是全篇最終推論 (Main Conclusion)？\n4. 排除技巧：快速掃描選項前半句與後半句的功能關鍵字，只要一處不符合立即排除，無需全文細讀選項。',
+            tip: '黑體字定位關鍵詞：However, But, Clearly, Therefore, Hence 往往是立場轉換與最終結論的旗幟標誌。'
+          },
+          {
             heading: '商學長文精讀與 Data Insights 跨文本邏輯',
-            body: 'GMAT 閱讀篇幅長、句法密集，涉及企業管理戰略、金融市場、科技演進、反壟斷監管：\n- 略讀框架：每段只精讀第一句與轉折句，在草稿紙寫下段落功能（P1: 提出舊理論；P2: 實驗挑戰舊理論；P3: 提出新修正模型）。\n- Data Insights 語言整合：比對圖表趨勢與多來源文本陳述，找出邏輯矛盾與數據盲區。',
+            body: 'GMAT 閱讀篇幅長、句法密集，涉及企業管理戰略、雙邊平台網路效應、金融市場、科技演進、反壟斷監管：\n- 略讀框架：每段只精讀第一句與轉折句，在草稿紙寫下段落功能（P1: 提出舊商業理論；P2: 實證數據挑戰舊理論；P3: 提出新平台經濟模型）。\n- Data Insights 語言整合：比對圖表趨勢與多來源文本陳述，找出邏輯矛盾與數據盲區。\n- 雙邊平台動態 (Two-Sided Platforms)：跨邊網路外部性 (Cross-Side Network Effects) 與補貼策略。',
             tip: '商業決策題常見陷阱：將「相關性 (Correlation)」誤當成「因果性 (Causation)」，或將「利潤增加」誤當成「銷售額增加」（忽略成本變量）。'
           }
         ],

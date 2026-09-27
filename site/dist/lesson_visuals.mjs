@@ -558,9 +558,130 @@ export function renderMultimodalDataChart() {
   `;
 }
 
+// 19. GRE Verbal 填空雙空三空語意極性矩陣與等價詞簇圖 (GRE Semantic Polarity Matrix & Twin Synonyms)
+export function renderGRESemanticPolarityChart() {
+  return `
+    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🔠 GRE Verbal 填空雙空三空語意極性矩陣與等價詞簇 (Directionality & Twin Synonyms)</strong>
+        <span class="pill" style="font-size:11px;background:#ffe4e6;color:#be123c;font-weight:700">Verbal 160+ 破題核心</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px;margin-bottom:14px">
+        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px">
+          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#166534;font-size:13px">
+            <span>➕</span> 語意同向信號 (Positive Directionality)
+          </div>
+          <div style="font-size:12px;color:#1e293b;margin:6px 0">
+            <strong>標記：</strong><code>and, therefore, consequently, moreover, similarly, colon (:)</code>
+          </div>
+          <div style="font-size:11px;color:#475569;line-height:1.5">
+            <strong>法則：</strong>前後命題極性相同 (P1 ➔ P2)，空格必為修飾線索之同向延伸或進一步因果推進。
+          </div>
+        </div>
+        <div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:8px;padding:12px">
+          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#9f1239;font-size:13px">
+            <span>🔄</span> 語意反轉信號 (Contrast & Concession)
+          </div>
+          <div style="font-size:12px;color:#1e293b;margin:6px 0">
+            <strong>標記：</strong><code>although, however, paradoxically, despite, belie, far from</code>
+          </div>
+          <div style="font-size:11px;color:#475569;line-height:1.5">
+            <strong>法則：</strong>前後命題極性相反 (P1 ≠ P2)。注意隱形反差動詞（如 <code>belie, mask, obscure, contradict</code>）。
+          </div>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;margin-bottom:12px">
+        <div style="font-weight:700;font-size:13px;color:#0f172a;margin-bottom:6px">
+          🎯 Sentence Equivalence (SE) 雙生同義詞六選二「雙重鎖定」決策流程：
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:#334155">
+          <span style="background:#e0e7ff;color:#3730a3;padding:4px 8px;border-radius:4px;font-weight:700">1. 抓取題幹 Pivot</span> ➔
+          <span style="background:#f1f5f9;padding:4px 8px;border-radius:4px">2. 預測空格正負向極性</span> ➔
+          <span style="background:#ecfdf5;color:#065f46;padding:4px 8px;border-radius:4px;font-weight:700">3. 六選中分組雙生詞 (Twin Pairs)</span> ➔
+          <span style="background:#fef3c7;color:#92400e;padding:4px 8px;border-radius:4px;font-weight:700">4. 帶回全句驗證語意一致性</span>
+        </div>
+        <div style="font-size:11px;color:#64748b;margin-top:6px">
+          ⚠️ 避坑：切勿只看選項中哪兩個是同義詞！若該組同義詞無法回應題幹精確線索，即為典型雙重陷阱！
+        </div>
+      </div>
+      <div style="font-size:12px;color:#475569;background:#f1f5f9;padding:8px 12px;border-radius:6px">
+        💡 <strong>三空題策略：</strong>「不依序做、找錨點破題」——先解線索最充足無歧義的空格（Anchor Blank），以其結果作為推導其餘兩空的堅實前提！
+      </div>
+    </div>
+  `;
+}
+
+// 20. GMAT Focus 批判推理因果鏈與否定測試決策樹 (GMAT CR Causal Chain & Negation Tree)
+export function renderGMATCriticalReasoningTree() {
+  return `
+    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">⚖️ GMAT Focus Edition 批判推理因果鏈與否定測試決策樹 (CR Causal Chain & Negation Tree)</strong>
+        <span class="pill" style="font-size:11px;background:#cffafe;color:#0e7490;font-weight:700">商學院邏輯靈魂</span>
+      </div>
+      <!-- 核心論證鏈架構圖 -->
+      <div style="display:grid;grid-template-columns:1fr auto 1.2fr auto 1fr;gap:8px;align-items:center;font-size:12px;text-align:center;margin-bottom:14px">
+        <div style="background:#eff6ff;border:1px solid #93c5fd;padding:10px;border-radius:8px">
+          <strong style="color:#1e40af">Premise (客觀事實)</strong>
+          <div style="font-size:11px;color:#64748b;margin-top:2px">不可質疑的實證數據</div>
+        </div>
+        <div style="font-size:16px;color:#64748b">➔</div>
+        <div style="background:#fef3c7;border:2px dashed #f59e0b;padding:10px;border-radius:8px">
+          <strong style="color:#b45309">Assumption (隱含假設)</strong>
+          <div style="font-size:11px;color:#78350f;margin-top:2px">作者未言明之必要橋樑 (脆弱點)</div>
+        </div>
+        <div style="font-size:16px;color:#64748b">➔</div>
+        <div style="background:#ecfdf5;border:1px solid #86efac;padding:10px;border-radius:8px">
+          <strong style="color:#065f46">Conclusion (主觀主張)</strong>
+          <div style="font-size:11px;color:#64748b;margin-top:2px">作者欲證明的推論結論</div>
+        </div>
+      </div>
+      <!-- 五大核心攻防矩陣 -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:10px;margin-bottom:12px;font-size:12px">
+        <div style="background:#fef2f2;border:1px solid #fecaca;padding:10px;border-radius:8px">
+          <strong style="color:#b91c1c">1. 削弱題 (Weaken) ⬇️</strong>
+          <div style="color:#475569;margin-top:4px">
+            • <strong>另有他因 (Alt Cause)</strong><br>
+            • <strong>因果倒置 (Reverse Causality)</strong><br>
+            • <strong>樣本偏差 (Selection Bias)</strong>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:8px">
+          <strong style="color:#15803d">2. 加強題 (Strengthen) ⬆️</strong>
+          <div style="color:#475569;margin-top:4px">
+            • <strong>排除混淆變量 (Confounder)</strong><br>
+            • <strong>證實無因則無果 (No Cause No Effect)</strong><br>
+            • <strong>平行操作實證 (Analogous Proof)</strong>
+          </div>
+        </div>
+        <div style="background:#fffbeb;border:1px solid #fde68a;padding:10px;border-radius:8px">
+          <strong style="color:#b45309">3. 假設題 (Assumption) 🎯</strong>
+          <div style="color:#475569;margin-top:4px">
+            • <strong>否定測試法 (Negation Technique)</strong><br>
+            • <strong>將選項取非 (Add NOT)</strong><br>
+            • <strong>若結論立即瓦解即為正解！</strong>
+          </div>
+        </div>
+        <div style="background:#f5f3ff;border:1px solid #ddd6fe;padding:10px;border-radius:8px">
+          <strong style="color:#6d28d9">4. 評價與黑體字 ⚖️</strong>
+          <div style="color:#475569;margin-top:4px">
+            • <strong>Evaluate:</strong> 雙向變數測試 (Variance)<br>
+            • <strong>Boldface:</strong> 辨析證據 (Evidence) vs 中間結論 vs 主張 (Claim)
+          </div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#64748b;line-height:1.5">
+        💡 <strong>商學思維警告：</strong>題目涉及利潤 (Profit) 時，注意 Profit = Revenue - Cost，切勿將「銷售額增加」直接推導為「利潤增加」！
+      </div>
+    </div>
+  `;
+}
+
 // 智能匹配主題最佳視覺圖表
 export function renderTopicVisualChart(title = '') {
   const t = String(title ?? '');
+  if (/gre\b|gre general|語意與論證/i.test(t)) return renderGRESemanticPolarityChart();
+  if (/gmat\b|gmat focus|批判推理/i.test(t)) return renderGMATCriticalReasoningTree();
   if (/被動|passive/i.test(t)) return renderPassiveVoiceDiagram();
   if (/五大句型|句子骨架|sentence pattern|基本句型/i.test(t)) return renderFiveSentencePatternsDiagram();
   if (/條件|假設|unless|conditional|subjunctive/i.test(t)) return renderConditionalDecisionTree();

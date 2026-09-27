@@ -10,6 +10,9 @@ import { tracks, exams } from './content.mjs';
 import { curriculum, examStudy } from './curriculum.mjs';
 import { initialSources } from './sources.mjs';
 import { questionDB, CATEGORY_META } from './question_db.mjs';
+if (typeof window !== 'undefined') {
+  window.questionDB = questionDB;
+}
 import { initialState, createAttempt, recordResponse, finishAttempt, resultOf, remainingSeconds } from './core.mjs';
 import { speak, playWord, playSentence, playSequence, stopAudio, isAudioActive } from './audio.mjs';
 
@@ -81,6 +84,7 @@ let revealedSolutions = {}; // unitId: boolean
 let userQuizChoices = {}; // unitId: selectedOptIndex
 
 let quizCategory = 'all';
+let quizSubtopic = 'all';
 let currentQuizQuestions = [];
 let currentQuizIdx = 0;
 let userQuizAnswers = {};
@@ -1635,12 +1639,66 @@ function examPage() {
     { id: 'all', title: '全部考科綜合模擬', count: '20,000 題', icon: '🌐', desc: '跨會考、學測、統測、多益、SAT、GRE、GMAT、高考隨機抽題實戰。', color: '#2563eb' },
     { id: 'toeic', title: 'TOEIC 多益國際商務英語', count: '3,000 題', icon: '💼', desc: 'Part 5 詞性填空、Part 6 段落填空、Part 7 雙篇商務閱讀與行程信函。', color: '#d97706' },
     { id: 'sat', title: 'Digital SAT 數位學術測驗', count: '3,000 題', icon: '🎓', desc: 'Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis。', color: '#4f46e5' },
-    { id: 'gre', title: 'GRE 研究所入學考試 Verbal', count: '3,000 題', icon: '🏛️', desc: 'Text Completion 單雙三空、Sentence Equivalence 雙生同義詞、學術主旨閱讀。', color: '#e11d48' },
-    { id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '3,000 題', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2' },
+    { 
+      id: 'gre', title: 'GRE 研究所入學考試 Verbal', count: '3,000 題', icon: '🏛️', desc: 'Text Completion 單雙三空、Sentence Equivalence 雙生同義詞、學術主旨閱讀。', color: '#e11d48',
+      subtopics: [
+        { label: '🔠 TC 單/雙/三空', filter: 'Text Completion' },
+        { label: '👯 SE 雙選等價', filter: 'Sentence Equivalence' },
+        { label: '📖 RC 學術閱讀', filter: 'Reading Comprehension' }
+      ]
+    },
+    { 
+      id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '3,000 題', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2',
+      subtopics: [
+        { label: '🛡️ CR 削弱/加強', filter: 'the Argument' },
+        { label: '🔍 CR 假設/評價', filter: 'Assumption' },
+        { label: '🏷️ CR 矛盾/黑體字', filter: 'Reasoning' },
+        { label: '📊 RC 商業長文', filter: 'Reading Comprehension' }
+      ]
+    },
     { id: 'gaokao', title: '歷年高考與大考真題庫', count: '6,000 題', icon: '📜', desc: '歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題。', color: '#059669' },
     { id: 'shs', title: '高中大學學測與統測英文', count: '1,000 題', icon: '🏫', desc: '高中 7,000 必背字彙、克漏字篇章結構、閱讀理解與歷屆學測考題。', color: '#9333ea' },
     { id: 'jhs', title: '國中教育會考英語能力線', count: '1,000 題', icon: '🎒', desc: '1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題。', color: '#16a34a' }
   ];
+
+  let subtopicSelectorHtml = '';
+  if (quizCategory === 'gre') {
+    const greSubs = [
+      { id: 'all', label: '🌟 全部 GRE 題型綜合隨選 (3,000 題)' },
+      { id: 'Single Blank', label: '🔠 TC 單空題 (Single Blank)' },
+      { id: 'Double Blank', label: '🔀 TC 雙空題 (Double Blank)' },
+      { id: 'Triple Blank', label: '🧩 TC 三空題 (Triple Blank)' },
+      { id: 'Sentence Equivalence', label: '👯 SE 雙選等價六選二 (Sentence Equivalence)' },
+      { id: 'Reading Comprehension', label: '📖 RC 學術閱讀 (Historiography / Epistemic)' }
+    ];
+    subtopicSelectorHtml = `
+      <div style="display:inline-flex;align-items:center;gap:6px">
+        <label><strong>題型篩選：</strong></label>
+        <select id="exam-subtopic-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--bg)">
+          ${greSubs.map(s => `<option value="${s.id}" ${quizSubtopic === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
+        </select>
+      </div>
+    `;
+  } else if (quizCategory === 'gmat') {
+    const gmatSubs = [
+      { id: 'all', label: '🌟 全部 GMAT 題型綜合隨選 (3,000 題)' },
+      { id: 'Weaken the Argument', label: '🛡️ CR 削弱題 (Alternative Causes)' },
+      { id: 'Strengthen the Argument', label: '🎯 CR 加強題 (Ruling Out Confounders)' },
+      { id: 'Find the Assumption', label: '🔍 CR 假設題 (Negation Test)' },
+      { id: 'Evaluate the Argument', label: '⚖️ CR 評價題 (Two-Way Variance)' },
+      { id: 'Explain the Discrepancy', label: '💡 CR 矛盾解釋 (Paradox)' },
+      { id: 'Method of Reasoning', label: '🏷️ CR 黑體字角色 (Boldface Roles)' },
+      { id: 'Reading Comprehension', label: '📊 RC 商業與環境長文' }
+    ];
+    subtopicSelectorHtml = `
+      <div style="display:inline-flex;align-items:center;gap:6px">
+        <label><strong>題型篩選：</strong></label>
+        <select id="exam-subtopic-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--bg)">
+          ${gmatSubs.map(s => `<option value="${s.id}" ${quizSubtopic === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
+        </select>
+      </div>
+    `;
+  }
 
   return `
     <div class="header-block">
@@ -1659,6 +1717,7 @@ function examPage() {
             <option value="${t.id}" ${quizCategory === t.id ? 'selected' : ''}>${t.icon} ${t.title} (${t.count})</option>
           `).join('')}
         </select>
+        ${subtopicSelectorHtml}
         <button class="btn primary" data-start-quiz="true" style="padding:10px 22px;font-size:15px">🚀 開始 20 題隨選模考</button>
       </div>
       <p style="font-size:13px;color:var(--text-muted);margin:0">
@@ -1675,7 +1734,16 @@ function examPage() {
               <span class="pill" style="font-size:12px;font-weight:700;color:${t.color}">${t.count}</span>
             </div>
             <h3 style="margin:4px 0 8px;font-size:16px">${t.title}</h3>
-            <p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin:0 0 16px">${t.desc}</p>
+            <p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin:0 0 12px">${t.desc}</p>
+            ${t.subtopics ? `
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px">
+                ${t.subtopics.map(sub => `
+                  <button type="button" class="btn quiet small" data-start-quiz="true" data-quiz-cat="${t.id}" data-quiz-subtopic="${sub.filter}" style="font-size:11px;padding:4px 8px;border-radius:12px;background:#f1f5f9;border:1px solid #cbd5e1">
+                    ${sub.label}
+                  </button>
+                `).join('')}
+              </div>
+            ` : ''}
           </div>
           <button class="btn secondary" data-start-quiz="true" data-quiz-cat="${t.id}" style="width:100%;font-size:14px;padding:8px">
             🎯 抽取 20 題練習
@@ -1791,6 +1859,15 @@ function bindEvents() {
   if (examCatSelect) {
     examCatSelect.addEventListener('change', e => {
       quizCategory = e.target.value;
+      quizSubtopic = 'all';
+      render();
+    });
+  }
+
+  const examSubtopicSelect = document.querySelector('#exam-subtopic-select');
+  if (examSubtopicSelect) {
+    examSubtopicSelect.addEventListener('change', e => {
+      quizSubtopic = e.target.value;
     });
   }
 
@@ -2062,9 +2139,10 @@ root.addEventListener('click', e => {
   // 20,000 題旗艦模考題庫測驗互動
   if (d.startQuiz) {
     if (d.quizCat) quizCategory = d.quizCat;
+    quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || quizSubtopic || 'all';
     quizLoading = true;
     render();
-    questionDB.sampleQuestions(quizCategory, 20).then(qs => {
+    questionDB.sampleQuestions(quizCategory, 20, quizSubtopic).then(qs => {
       currentQuizQuestions = qs;
       currentQuizIdx = 0;
       userQuizAnswers = {};

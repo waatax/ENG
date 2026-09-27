@@ -1,0 +1,258 @@
+// exam_drill_data.mjs - GRE & GMAT 高階題型實戰演練錨定資料庫與題型映射表
+
+export const GRE_DRILL_TYPES = [
+  { id: 'all', label: '🌟 全部題型 (綜合隨選 3,000 題)', filter: '' },
+  { id: 'tc-single', label: '🔠 TC 單空題 (Single Blank)', filter: 'Single Blank' },
+  { id: 'tc-double', label: '🔀 TC 雙空題 (Double Blank)', filter: 'Double Blank' },
+  { id: 'tc-triple', label: '🧩 TC 三空題 (Triple Blank)', filter: 'Triple Blank' },
+  { id: 'se', label: '👯 SE 雙選等價 (Sentence Equivalence)', filter: 'Sentence Equivalence' },
+  { id: 'rc', label: '📖 RC 學術閱讀 (Historiography / Purpose)', filter: 'Reading Comprehension' }
+];
+
+export const GMAT_DRILL_TYPES = [
+  { id: 'all', label: '🌟 全部題型 (綜合隨選 3,000 題)', filter: '' },
+  { id: 'cr-weaken', label: '🛡️ CR 削弱題 (Alternative Causes)', filter: 'Weaken the Argument' },
+  { id: 'cr-strengthen', label: '🎯 CR 加強題 (Ruling Out Confounders)', filter: 'Strengthen the Argument' },
+  { id: 'cr-assumption', label: '🔍 CR 假設題 (Negation Test)', filter: 'Find the Assumption' },
+  { id: 'cr-evaluate', label: '⚖️ CR 評價題 (Two-Way Variance)', filter: 'Evaluate the Argument' },
+  { id: 'cr-discrepancy', label: '💡 CR 矛盾解釋 (The Paradox of Safety Gear)', filter: 'Explain the Discrepancy' },
+  { id: 'cr-boldface', label: '🏷️ CR 黑體字角色 (Method of Reasoning)', filter: 'Method of Reasoning' },
+  { id: 'rc', label: '📊 RC 商業長文 (Platform Dynamics / Permits)', filter: 'Reading Comprehension' }
+];
+
+export const ANCHOR_DRILL_QUESTIONS = [
+  {
+    "subtopic": "Text Completion: Single Blank - Semantic Polarity",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "Far from being ___, the young philosopher's disquisition on phenomenology was remarkably lucid, unraveling labyrinthine metaphysical puzzles with effortless clarity that enthralled both undergraduates and senior fellows.",
+    "options": [
+      "trenchant",
+      "inscrutable",
+      "eloquent",
+      "perspicuous"
+    ],
+    "answer": 1,
+    "selectCount": 1,
+    "explain": "句首 Far from being（遠非…）創造了強烈的否定反差，後文以 remarkably lucid（極其清晰易讀）與 effortless clarity（毫不費力的清晰）修飾其論述，故空格必須填入反義詞 inscrutable（難以理解的、深奧莫測的）。",
+    "hint": "識別否定反差引導結構 Far from being，空格需要填入 lucid / clarity 的反義詞。",
+    "id": "gre-0001",
+    "category": "gre",
+    "categoryLabel": "GRE 研究所入學考試 Verbal"
+  },
+  {
+    "subtopic": "Text Completion: Double Blank - Concession & Paradox",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "Although the municipal administration's austerity regime was initially lauded for its ___, rigorous independent audits subsequently revealed that the severe capital expenditure reductions had precipitated ___ infrastructural decay.",
+    "options": [
+      "prudence; catastrophic",
+      "extravagance; negligible",
+      "audacity; superficial",
+      "parsimony; transient"
+    ],
+    "answer": 0,
+    "selectCount": 1,
+    "explain": "前半句 Although... initially lauded for 指出緊縮政策起初因「謹慎審慎 (prudence)」獲譽；後半句轉折 audits subsequently revealed 揭露大幅削減資本支出造成了「災難性的 (catastrophic)」基礎設施衰敗，語義邏輯嚴密對稱。",
+    "hint": "注意 Although 的讓步轉折結構：第一空為被讚許的美德 (prudence)，第二空為審計揭發的嚴重災難後果 (catastrophic)。",
+    "id": "gre-0004",
+    "category": "gre",
+    "categoryLabel": "GRE 研究所入學考試 Verbal"
+  },
+  {
+    "subtopic": "Text Completion: Triple Blank - Dialectical Thesis",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "The literary critic argued that the avant-garde novelist's latest prose was neither wholly ___ as reactionary reviewers had sneered, nor entirely ___ as obsequious partisans had proclaimed; instead, it represented a ___ synthesis that delicately balanced classical tropes with disruptive stylistic experiments.",
+    "options": [
+      "banal; derivative; superficial",
+      "visionary; sublime; archaic",
+      "derivative; epochal; nuanced",
+      "original; pedestrian; clumsy"
+    ],
+    "answer": 2,
+    "selectCount": 1,
+    "explain": "三段式辯證：既非保守評論家嘲笑的「毫無創意的剽竊之作 (derivative)」，亦非諂媚支持者宣稱的「劃時代傑作 (epochal)」，而是微妙精準平衡傳統與前衛的「細膩精妙綜合體 (nuanced synthesis)」。",
+    "hint": "掌握三段式辯證平衡：neither [批評者的貶低] nor [捧殺者的盛讚], instead a [中肯細膩的綜合評價]。",
+    "id": "gre-0006",
+    "category": "gre",
+    "categoryLabel": "GRE 研究所入學考試 Verbal"
+  },
+  {
+    "subtopic": "Sentence Equivalence: Twin Synonyms - Burden & Difficulty",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "Because the ancient cuneiform clay tablets were fragmented and obscured by vitrified mineral deposits, translating the royal economic decrees proved to be an extraordinarily ___ undertaking for the epigraphers.",
+    "options": [
+      "facile",
+      "perfunctory",
+      "elementary",
+      "cursory",
+      "onerous",
+      "burdensome"
+    ],
+    "answer": [
+      4,
+      5
+    ],
+    "selectCount": 2,
+    "explain": "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：泥板殘破 (fragmented) 且被礦物沉積物遮蔽 (obscured)，說明翻譯王室法令對銘文學家而言是極端艱鉅繁重的任務。\n2. 雙選同義詞對：onerous（繁重的、艱難的）與 burdensome（沉重的、累人的）填入空格皆表極其繁重艱辛，句意完全等價。\n3. 干擾項排除：facile（輕易的、膚淺的）與 elementary（容易的、基礎的）方向相反；perfunctory（敷衍的）與 cursory（草率的）修飾態度而非事業本身的艱鉅度。\n4. 搭配考點 (Collocation)：undertaking 常與 onerous / burdensome 搭配（如 an onerous/burdensome undertaking），指耗費大量心力的艱鉅事業。",
+    "hint": "Sentence Equivalence 核心策略：尋找能替換且保持句意完全一致的孿生同義詞組 (Twin Synonyms)：onerous 與 burdensome 皆意為繁重艱辛的。",
+    "questionType": "sentence_equivalence",
+    "id": "gre-0007",
+    "category": "gre",
+    "categoryLabel": "GRE 研究所入學考試 Verbal"
+  },
+  {
+    "subtopic": "Reading Comprehension: Primary Purpose & Historiography",
+    "difficulty": 5,
+    "passage": "Passage:\nIn examining the economic divergence between Western Europe and East Asia during the eighteenth century, institutional historians have historically attributed the rise of mechanized manufacturing exclusively to the advent of steam locomotion. However, recent quantitative cliometric analyses demonstrate that regional disparities in capital interest rates and legal enforcement of artisanal property rights were already driving technological differentiation decades prior to the widespread commercialization of coal engines.",
+    "prompt": "The primary purpose of the passage is to:",
+    "options": [
+      "reappraise the causal mechanisms underlying historical economic divergence by foregrounding institutional determinants",
+      "refute all quantitative methods currently employed in the field of economic cliometrics",
+      "prove that the development of coal-powered steam engines hindered global technological innovation",
+      "demonstrate that legal contracts were entirely non-existent in eighteenth-century manufacturing"
+    ],
+    "answer": 0,
+    "selectCount": 1,
+    "explain": "文章指出過往史學界將工業崛起唯一歸因於蒸汽機，而最新量化計量史學則揭示資本利率與產權法律等制度因素在此前數十年即推動了分流，因此主旨是「透過強調制度決定因素重新審視歷史經濟分流的因果機制」。",
+    "hint": "分析作者寫作意圖：質疑單一技術決定論，引入法律產權等制度因素 -> reappraise causal mechanisms by foregrounding institutions。",
+    "id": "gre-0012",
+    "category": "gre",
+    "categoryLabel": "GRE 研究所入學考試 Verbal"
+  },
+  {
+    "subtopic": "Critical Reasoning: Weaken the Argument - Alternative Causes",
+    "difficulty": 5,
+    "passage": "Premise: Six months ago, Metropolitan Transit installed 400 self-service contactless ticketing kiosks to eliminate commuter ticketing queues.\nConclusion: The average waiting time for commuters purchasing transit tickets has significantly decreased.",
+    "prompt": "Which of the following, if true, most seriously weakens the argument?",
+    "options": [
+      "The transit authority expanded evening subway train frequencies on its two busiest trunk lines.",
+      "Frequent software crashes on the new kiosks force commuters to wait in long lines for manual station agent assistance.",
+      "The contactless kiosks accept digital mobile wallet payments as well as physical credit cards.",
+      "Two neighboring transit authorities are currently reviewing procurement bids for identical kiosks."
+    ],
+    "answer": 1,
+    "selectCount": 1,
+    "explain": "結論主張自動售票機減少了排隊時間；若自動售票機軟體頻繁當機死機，反而迫使乘客大排長龍等待人工站務員協助處理，直接打破了投入設備導致時間縮短的因果推論，構成致命削弱。",
+    "hint": "削弱題尋找否定因果鏈的實質反例：新技術故障導致乘客排隊時間不減反增。",
+    "id": "gmat-0001",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Critical Reasoning: Strengthen the Argument - Ruling Out Confounders",
+    "difficulty": 4,
+    "passage": "Premise: Agricultural scientists applied a newly synthesized microbial bio-stimulant to experimental soybean plots, observing a 28% increase in pod yield compared to adjacent control plots.\nConclusion: The microbial bio-stimulant is solely responsible for the observed harvest increase.",
+    "prompt": "Which of the following, if true, most strongly supports the conclusion?",
+    "options": [
+      "Soybeans harvested from the treated plot commanded premium prices at international export auctions.",
+      "The microbial bio-stimulant was synthesized from naturally occurring marine bacterial strains.",
+      "The researchers plan to test the bio-stimulant on wheat and barley during the subsequent growing season.",
+      "Soil composition, sunlight exposure, irrigation volume, and pest incidence were rigorously monitored and held identical across both plots."
+    ],
+    "answer": 3,
+    "selectCount": 1,
+    "explain": "結論宣稱該微生物刺激素是產量提升的「唯一原因」；若土壤、日照、灌溉與蟲害等一切潛在混淆變因皆受到嚴格控制且完全相同（排除他因），最能強烈支持該刺激素確實是產量增長的決定性因素。",
+    "hint": "加強因果論證的黃金法則：嚴格排除其他混淆變因 (Ruling out confounding factors)。",
+    "id": "gmat-0003",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Critical Reasoning: Find the Assumption - Negation Test",
+    "difficulty": 5,
+    "passage": "Plan: To curtail fossil fuel consumption, the municipality will offer a $4,000 subsidy to residents who scrap combustion vehicles and purchase battery electric vehicles (BEVs).\nGoal: Significantly reduce citywide vehicular tailpipe greenhouse gas emissions over the next three years.",
+    "prompt": "The municipal plan relies on which of the following assumptions?",
+    "options": [
+      "All public transit buses operating in the city have already achieved 100 percent zero-emission electrification.",
+      "The financial subsidy will motivate a significant number of car owners who would not have otherwise transitioned to electric vehicles.",
+      "Electric vehicles require zero maintenance expenses throughout their functional operating lifespan.",
+      "Gasoline prices will skyrocket by over 50 percent within the municipal borders over the next year."
+    ],
+    "answer": 1,
+    "selectCount": 1,
+    "explain": "使用否定測試 (Negation Test)：若否定該選項——「這筆補助無法激勵那些原本不打算換車的車主換購電動車」，那麼補助政策將毫無額外減碳效益，計畫目標徹底崩潰，證明此為不可或缺的必要假設。",
+    "hint": "假設題使用否定測試法 (Negation Test)：若假設不成立，整個減碳政策邏輯立刻瓦解。",
+    "id": "gmat-0005",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Critical Reasoning: Evaluate the Argument - Decisive Two-Way Variance",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "Company Alpha plans to replace its human customer care specialists with a generative AI chatbot to reduce annual payroll overhead by $12 million.\n\nWhich of the following questions is most critical to evaluate whether the proposed transition will enhance Alpha's overall profitability?",
+    "options": [
+      "Are competitors in the telecommunications industry investing in similar natural language processing systems?",
+      "How many keystrokes per minute can human customer service representatives execute on mechanical keyboards?",
+      "Will the financial revenue lost from dissatisfied customers defecting due to chatbot errors exceed the $12 million saved in payroll?",
+      "Does Company Alpha's chief technology officer possess an advanced degree in computational linguistics?"
+    ],
+    "answer": 2,
+    "selectCount": 1,
+    "explain": "要評估是否提升「整體利潤」，關鍵在於權衡節省的成本與潛在的代價：如果因為機器人客服引發顧客不滿而造成的營收損失大於 1,200 萬美元，則專案虧損；反之若損失極小，則專案獲利。此問題具備雙向決定性影響。",
+    "hint": "Evaluate 題型尋找能夠「雙向決定生死」的核心衡量指針：成本節省額 vs 顧客流失損失額。",
+    "id": "gmat-0006",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Critical Reasoning: Explain the Discrepancy - The Paradox of Safety Gear",
+    "difficulty": 5,
+    "passage": null,
+    "prompt": "Premise 1: Last year, City X passed a municipal ordinance legally mandating that all urban cyclists wear high-visibility reflective vests.\nPremise 2: Following the law's enactment, the total annual hospital admission rate for cyclists injured in traffic collisions rose by 22%.\n\nWhich of the following, if true, best resolves the apparent discrepancy?",
+    "options": [
+      "The reflective vests were manufactured using lightweight breathable mesh fabrics.",
+      "Several cycling advocacy organizations initially organized peaceful protests against the mandatory vest law.",
+      "City X constructed three miles of designated off-road bicycle paths in an outlying suburban park.",
+      "Drivers seeing cyclists in reflective gear perceive them as highly protected and consequently pass significantly closer to them at higher speeds."
+    ],
+    "answer": 3,
+    "selectCount": 1,
+    "explain": "反常現象：強制穿反光背心後，受傷住院率反而上升 22%。若駕駛看到穿反光背心的騎士時，心理上主觀認為其十分安全，因而以更近的車距和更快的車速超車（風險補償效應），合理解釋了事故與受傷率反常升高的矛盾。",
+    "hint": "解釋矛盾題：尋找能合理解釋反常結果的心理或行為機制（駕駛因對方穿戴防護而降低警戒，引發更多危險近距離超車）。",
+    "id": "gmat-0007",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Critical Reasoning: Method of Reasoning - Boldface Roles",
+    "difficulty": 5,
+    "passage": "Corporate governance critics frequently claim that **instituting mandatory worker representation on enterprise supervisory boards stifles managerial decision-making efficiency**. However, extensive longitudinal empirical data across European industrial firms demonstrate that **such representation substantially mitigates catastrophic labor walkouts and aligns long-term investment horizons**. Therefore, the contention that mandated employee governance harms enterprise competitiveness is unconvincing.",
+    "prompt": "In the argument above, the two boldface portions play which of the following roles?",
+    "options": [
+      "The first is an assertion that the argument seeks to refute; the second is empirical evidence adduced to support that refutation.",
+      "The first is the main conclusion of the argument; the second is a premise offered in support of that conclusion.",
+      "The first is background context accepted by the author; the second is the author's primary concluding judgment.",
+      "Both boldface portions are intermediate conclusions that support an identical corporate strategy."
+    ],
+    "answer": 0,
+    "selectCount": 1,
+    "explain": "梳理論證脈絡：第一個粗體是批評者的主張，也是作者通篇致力於反駁的論調 (assertion that the argument seeks to refute)；第二個粗體是歐洲企業的客觀統計證據，用來支持作者對該主張的反駁 (empirical evidence to support refutation)。",
+    "hint": "注意轉折詞 However 與結論詞 Therefore：第一粗體為被駁斥的反方主張，第二粗體為支持作者反駁的客觀經驗證據。",
+    "id": "gmat-0008",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  },
+  {
+    "subtopic": "Reading Comprehension: Business Economics - Two-Sided Platform Dynamics",
+    "difficulty": 5,
+    "passage": "Passage:\nIn digital platform economics, two-sided networks exhibit cross-side network externalities where the value experienced by users on one margin (e.g., app developers) scales proportionally with the installed user base on the opposite margin (e.g., smartphone owners). Early strategic literature posited that platform operators must subsidize the more price-sensitive side indefinitely to preserve critical mass. However, empirical investigations of ridesharing and app ecosystems suggest that once platform dominance is established, operators face an inevitable tension between maintaining multi-homing deterrents and capturing monopoly surplus, frequently leading to developer revolts.",
+    "prompt": "According to the passage, why do dominant digital platforms experience tension with third-party developers?",
+    "options": [
+      "Two-sided networks inherently prevent developers from distributing software across multiple competing platforms.",
+      "Efforts by established platforms to extract economic rents often clash with developers' economic viability.",
+      "Smartphone users refuse to download applications developed by third-party software engineers.",
+      "Government regulators legally mandate that platform operators subsidize developers forever."
+    ],
+    "answer": 1,
+    "selectCount": 1,
+    "explain": "文章指出平台在建立壟斷優勢後，會在維持防止開發者多平台跨棲 (multi-homing) 與攫取壟斷盈餘 (capturing monopoly surplus) 之間陷入緊張，導致開發者反彈，即平台企圖榨取租金直接侵害了開發者的經濟生存空間。",
+    "hint": "定位文章末尾衝突原因：operators face tension between multi-homing deterrents and capturing monopoly surplus -> developer revolts。",
+    "id": "gmat-0009",
+    "category": "gmat",
+    "categoryLabel": "GMAT Focus 批判性推理與商業邏輯"
+  }
+];
