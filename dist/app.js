@@ -110,7 +110,7 @@ function navigate(p) {
   stopAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'schoolwords' ? '#schoolwords' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  const route = p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
   if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -156,33 +156,52 @@ function renderStageQuickNav() {
   `;
 }
 
+function renderEnglishLevelTestTopBanner(currentPage) {
+  if (currentPage === 'diagnostic') return '';
+  return `
+    <div class="level-test-top-banner" style="background:linear-gradient(90deg,#0f172a 0%,#1e3a8a 50%,#0369a1 100%);color:#ffffff;padding:12px 18px;border-radius:10px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border:1px solid #38bdf8;box-shadow:0 4px 14px rgba(14,165,233,0.25)">
+      <div style="display:flex;align-items:center;gap:12px;font-size:14px;flex:1;min-width:260px">
+        <span style="font-size:22px;line-height:1">🎯</span>
+        <div>
+          <strong style="color:#7dd3fc;font-size:15px">【英文程度測試】全階程度自適應檢核：</strong>
+          <span style="color:#e2e8f0;font-size:13px">學習前建議先測出英語能力落點 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ GRE/GMAT)！</span>
+        </div>
+      </div>
+      <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-weight:700;font-size:13px;padding:8px 18px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.25);display:inline-flex;align-items:center;gap:6px">
+        <span>立即測驗</span>
+        <span>→</span>
+      </button>
+    </div>
+  `;
+}
+
 function shell(body) {
   const nav = [
-    ['knowledge', '→', '知識點教室'],
-    ['schoolwords', '字', '國小・國中單字複習'],
-    ['diagnostic', '00', '英文程度預測'],
-    ['curriculum108', '01', '學年課程地圖'],
-    ['phonics', '02', '自然拼讀與發音'],
-    ['matrix', '03', '課綱對照'],
-    ['junyi', '04', '單元微課'],
-    ['sixth', '05', '國小銜接教材'],
-    ['jh', '06', '國中閱讀與會考'],
-    ['arch', '07', '高中句法與閱讀'],
-    ['handouts', '08', '列印學習講義'],
-    ['chapter', '09', '核心教學章節'],
-    ['flashcards', '10', '單字與片語閃卡'],
-    ['studio', '11', '合成語音練習'],
-    ['exams', '12', '考試練習與資源'],
-    ['today', '13', '每日練習'],
-    ['progress', '14', '學習紀錄']
+    ['diagnostic', '00', '🎯 英文程度測試'],
+    ['knowledge', '01', '知識點教室'],
+    ['schoolwords', '02', '國小・國中單字複習'],
+    ['curriculum108', '03', '學年課程地圖'],
+    ['phonics', '04', '自然拼讀與發音'],
+    ['matrix', '05', '課綱對照'],
+    ['junyi', '06', '單元微課'],
+    ['sixth', '07', '國小銜接教材'],
+    ['jh', '08', '國中閱讀與會考'],
+    ['arch', '09', '高中句法與閱讀'],
+    ['handouts', '10', '列印學習講義'],
+    ['chapter', '11', '核心教學章節'],
+    ['flashcards', '12', '單字與片語閃卡'],
+    ['studio', '13', '合成語音練習'],
+    ['exams', '14', '考試練習與資源'],
+    ['today', '15', '每日練習'],
+    ['progress', '16', '學習紀錄']
   ];
 
   const summary = junyi.getSummary();
 
   const pageTitles = {
+    diagnostic: '🎯 英文程度測試 (全階程度練習檢核 · 小學至GRE/GMAT)',
     schoolwords: '國小・國中單字複習',
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
-    diagnostic: '30 題全階程度練習檢核 (小學至GMAT)',
     curriculum108: '108 課綱英語全學年課程地圖',
     phonics: '自然拼讀 (Phonics) 與發音規則全景大師課 (見字能讀·聽音能寫)',
     flashcards: '多階層英語單字與核心片語記憶閃卡館 (3D翻轉·合成語音)',
@@ -233,6 +252,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
+        ${renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
@@ -2232,6 +2252,7 @@ root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') sea
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
   if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
+  else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
 }

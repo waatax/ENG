@@ -24,7 +24,41 @@ export function knowledgeResults(search = query, selectedStage = stage) {
 export function knowledgeHome() {
   const last = points.find(p => p.id === progress.lastVisited);
   const review = points.filter(p => progress.summary(p.id).needsReview);
-  return `<section class="knowledge-home"><header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
+  return `<section class="knowledge-home">
+    <div class="level-test-hero-card" style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 60%,#0f2e59 100%);color:#f8fafc;border:2px solid #38bdf8;border-radius:14px;padding:22px 24px;margin-bottom:24px;box-shadow:0 8px 24px -4px rgba(56,189,248,0.22)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
+        <div style="flex:1;min-width:280px">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(56,189,248,0.18);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;margin-bottom:10px">
+            <span>🎯 學習前必測 · 個人化落點診斷</span>
+          </div>
+          <h2 style="font-size:23px;font-weight:800;color:#ffffff;margin:0 0 8px 0;letter-spacing:-0.01em">
+            🎯 英文程度測試 (English Level Test & Diagnostic)
+          </h2>
+          <p style="font-size:14px;color:#cbd5e1;margin:0 0 12px 0;line-height:1.6">
+            開始自學前，先花 10–15 分鐘完成 <strong>30 題全階適性程度檢核</strong>！系統將精準診斷你的語法、句型與詞彙落點，並推薦最適合你的起點章節。
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#94a3b8;margin-bottom:14px">
+            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🎒 國小 Pre-A1</span>
+            <span style="color:#64748b">➔</span>
+            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🏫 國中會考 A1-A2</span>
+            <span style="color:#64748b">➔</span>
+            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🎓 高中學測 B1-B2</span>
+            <span style="color:#64748b">➔</span>
+            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">💼 TOEIC / SAT B2+</span>
+            <span style="color:#64748b">➔</span>
+            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🏛️ GRE / GMAT C1-C2</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px">
+          <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-size:15px;font-weight:700;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(56,189,248,0.35);display:inline-flex;align-items:center;gap:6px">
+            <span>🚀 立即開始 30 題程度測試</span>
+            <span style="font-size:17px">→</span>
+          </button>
+          <span style="font-size:11px;color:#94a3b8;text-align:center;width:100%">分層自適應抽題 · 附完整詳解與落點分析</span>
+        </div>
+      </div>
+    </div>
+    <header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
     ${last?`<aside class="resume-card"><strong>接續上次學習</strong><a href="#knowledge/${last.id}">${e(last.title)} →</a><small>${e(statusLabel(last.id))}</small></aside>`:''}
     ${review.length?`<details class="card"><summary>待訂正的知識點（${review.length}）</summary><ul>${review.map(p=>`<li><a href="#knowledge/${p.id}">${e(p.title)}</a></li>`).join('')}</ul><p>先解釋錯誤，再按「再練一次」。首次紀錄會保留。</p></details>`:''}
     <div class="knowledge-filters"><div><label for="knowledge-search">搜尋主題或英文關鍵字</label><input type="search" id="knowledge-search" value="${e(query)}" placeholder="例如：被動、閱讀、完成式"></div><div><label for="knowledge-stage">選擇學習階段</label><select id="knowledge-stage">${stages.map(s=>`<option ${stage===s?'selected':''}>${s}</option>`).join('')}</select></div></div>

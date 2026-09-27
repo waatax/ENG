@@ -133,8 +133,8 @@ function renderIntroView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
-      <h1 style="margin:8px 0;font-size:28px">30 題全階英語能力練習檢核測驗 (小學 Pre-A1 至 GRE/GMAT 進階題型)</h1>
+      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 英文程度測試 · 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
+      <h1 style="margin:8px 0;font-size:28px">🎯 英文程度測試 · 30 題全階能力練習檢核 (小學 Pre-A1 至 GRE/GMAT)</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
         預留約 25 分鐘練習不同難度的題目。完成後檢查每題答案與解析，選擇需要補強的單元。
       </p>
