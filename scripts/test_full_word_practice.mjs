@@ -2,9 +2,29 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {FLASHCARD_DATABASE as cards} from '../dist/flashcards.mjs';
-import {createFullWordPractice,wordChoices,normalizeWord,FULL_WORD_STORE} from '../dist/full_word_practice.mjs';
+import {createFullWordPractice,drawWordSession,wordChoices,normalizeWord,FULL_WORD_STORE} from '../dist/full_word_practice.mjs';
 import {WORD_STORE} from '../dist/school_word_progress.mjs';
 const storage=()=>({data:new Map(),getItem(k){return this.data.get(k)||null;},setItem(k,v){this.data.set(k,v);}});
+const seeded=seed=>()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+test('Every tier has enough unique words for 20/40 questions, with no repeats within or between consecutive papers',()=>{
+ const pools={all:cards,...Object.groupBy(cards,c=>c.tier)};
+ for(const [tier,pool] of Object.entries(pools))for(const size of [20,40]){
+  assert.ok(new Set(pool.map(c=>normalizeWord(c.word))).size>=size*2,tier);
+  const first=drawWordSession(pool,size,seeded(12)),second=drawWordSession(pool,size,seeded(13),first);
+  assert.equal(first.length,size);assert.equal(second.length,size);
+  assert.equal(new Set([...first,...second].map(c=>normalizeWord(c.word))).size,size*2,tier);
+  assert.notDeepEqual(first.map(c=>c.id),drawWordSession(pool,size,seeded(99)).map(c=>c.id));
+ }
+});
+test('Short filtered banks never repeat words to pad a paper; settings generate full 40-question results',()=>{
+ const duplicate={...cards[0],id:'another-tier',word:cards[0].word.toUpperCase()};
+ const short=drawWordSession([...cards.slice(0,5),duplicate],40,seeded(1));assert.equal(short.length,5);
+ const p=createFullWordPractice(cards,storage(),()=>100000,seeded(9));assert.equal(p.setting('size','40'),true);assert.equal(p.setting('size','999'),false);
+ assert.match(p.render(),/40 題完整測驗/);p.action({wpStart:true});let n=0;
+ while(p.current()){p.answer(p.choices().findIndex(o=>o.right));p.action({wpNext:true});n++;}
+ assert.equal(n,40);assert.match(p.render(),/40 \/ 40 張（100%）/);
+ const sparse=createFullWordPractice(cards.slice(0,5),storage());sparse.setting('size','40');assert.match(sparse.render(),/目前只剩 5 個不同單字/);
+});
 test('Every one of 7,700 cards has a reachable four-choice meaning exercise',()=>{
  assert.equal(cards.length,7700);assert.equal(new Set(cards.map(c=>c.id)).size,7700);
  const pools=Object.groupBy(cards,c=>c.tier);
