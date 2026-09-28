@@ -1,3 +1,5 @@
+import { renderLessonAudio } from './lesson_audio.mjs';
+import './listening.mjs';
 import { renderTeachingAid } from './teaching_aids.mjs';
 import { curriculum } from './curriculum.mjs';
 import { escapeText as e } from './lesson_pages.mjs';
@@ -35,7 +37,7 @@ export function knowledgeHome() {
             🎯 英文程度測試 (English Level Test & Diagnostic)
           </h2>
           <p style="font-size:14px;color:#cbd5e1;margin:0 0 12px 0;line-height:1.6">
-            開始自學前，先花 10–15 分鐘完成 <strong>30 題全階適性程度檢核</strong>！系統將精準診斷你的語法、句型與詞彙落點，並推薦最適合你的起點章節。
+            開始自學前，可選<strong>指定程度 20 題測驗</strong>，或進行全階綜合練習。完成後查看解析，找出需要補強的語法、句型與詞彙。
           </p>
           <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#94a3b8;margin-bottom:14px">
             <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🎒 國小 Pre-A1</span>
@@ -51,13 +53,14 @@ export function knowledgeHome() {
         </div>
         <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px">
           <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-size:15px;font-weight:700;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(56,189,248,0.35);display:inline-flex;align-items:center;gap:6px">
-            <span>🚀 立即開始 30 題程度測試</span>
+            <span>🚀 選擇程度並開始測驗</span>
             <span style="font-size:17px">→</span>
           </button>
           <span style="font-size:11px;color:#94a3b8;text-align:center;width:100%">分層自適應抽題 · 附完整詳解與落點分析</span>
         </div>
       </div>
     </div>
+    <section class="card learning-new-tools"><h2>🎧 用聽的學單元，用圖表懂文法</h2><p>國小、國中、高中與高工：中文解說、英文例句、停頓回想。</p><div class="audio-controls"><a class="btn primary" href="#listening">通勤聽課教室</a><a class="btn" href="#grammar">圖解文法專區</a></div></section>
     <header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
     ${last?`<aside class="resume-card"><strong>接續上次學習</strong><a href="#knowledge/${last.id}">${e(last.title)} →</a><small>${e(statusLabel(last.id))}</small></aside>`:''}
     ${review.length?`<details class="card"><summary>待訂正的知識點（${review.length}）</summary><ul>${review.map(p=>`<li><a href="#knowledge/${p.id}">${e(p.title)}</a></li>`).join('')}</ul><p>先解釋錯誤，再按「再練一次」。首次紀錄會保留。</p></details>`:''}
@@ -88,6 +91,7 @@ export function knowledgePage(id) {
   progress.visit(id);
   const index = points.indexOf(p), next = points[index+1];
   return `<article class="lesson-page knowledge-detail"><a href="#knowledge">← 回知識點教室</a><header><p class="pill">${e(p.stage)} · 原創教學</p><h1>${e(p.title)}</h1><p>${e(p.goal)}</p><p class="small">先備知識：${e(p.prior)}</p></header>
+    ${renderLessonAudio('knowledge:'+p.id)}
     <nav class="lesson-links" aria-label="本頁段落">${[['concept','觀念'],['examples','例句'],['practice','練習'],['output','應用']].map(([id,label])=>`<button class="btn quiet" data-scroll-to="#kp-${id}">${label}</button>`).join('')}</nav>
     <section class="card" id="kp-concept"><h2>1. 理解核心觀念</h2><p>${e(p.rule)}</p><ol>${p.steps.map(s=>`<li>${e(s)}</li>`).join('')}</ol></section>
     ${renderTeachingAid(p.title, [], p.pairs.map(pair=>pair[0]))}<section class="card" id="kp-examples"><h2>2. 對照例句與錯誤</h2>${p.pairs.map(([en,zh])=>`<blockquote><p lang="en">${e(en)}</p><button class="btn quiet small" data-speak-sentence="${e(en)}" aria-label="朗讀例句：${e(en)}">朗讀例句</button><p>${e(zh)}</p></blockquote>`).join('')}<p class="small">朗讀使用裝置合成語音。</p><aside class="lesson-tip">${e(p.trap)}</aside></section>

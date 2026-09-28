@@ -1721,3 +1721,34 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
 .diag-level-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:10px; margin:16px 0; }
 .diag-level-grid .btn { display:flex; flex-direction:column; gap:6px; white-space:normal; padding:14px; }
 .diag-level-grid span { font-size:13px; }
+
+/* Listening lessons and grammar maps */
+.lesson-audio { border:2px solid #93c5fd; background:linear-gradient(120deg,#eff6ff,#f0fdfa); }
+.audio-controls,.audio-settings { display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0; }
+.audio-controls .btn,.audio-settings .btn { min-height:44px; }
+.audio-settings label { display:flex;gap:8px;align-items:center; }
+.lesson-audio blockquote { margin:14px 0;padding:16px;background:#fff;border-left:4px solid #0d9488;color:#0f172a;line-height:1.8; }
+.audio-track-list { max-height:300px;overflow:auto;padding-left:26px; }
+.audio-track-list .btn { text-align:left;white-space:normal;line-height:1.6;margin:3px 0; }
+#listening-unit { width:100%;max-width:100%;margin:12px 0;padding:12px; }
+.grammar-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin-top:20px; }
+.grammar-flow { display:flex;gap:12px;flex-wrap:wrap;padding:0;list-style:none;counter-reset:flow; }
+.grammar-flow li { flex:1 1 150px;padding:18px;background:#e0f2fe;border:1px solid #7dd3fc;border-radius:12px;color:#0c4a6e;line-height:1.8; }
+.grammar-flow li:before { counter-increment:flow;content:counter(flow) ' → ';font-weight:bold; }
+.sentence-map { display:flex;flex-wrap:wrap;gap:10px;margin:22px 0; }
+.sentence-map span { flex:1 1 150px;border:2px solid #a5b4fc;background:#eef2ff;padding:16px;border-radius:12px;color:#312e81;font-weight:700; }
+.sentence-map small { display:block;margin-top:10px;font-weight:400; }
+.grammar-timeline { margin:16px 0;padding:20px;background:#f0fdfa;border-radius:12px;overflow:auto; }
+.grammar-timeline div { white-space:nowrap;color:#115e59;font-size:1.1em; }
+.grammar-timeline figcaption { margin-top:14px;line-height:1.7; }
+.grammar-table { width:100%;overflow-x:auto;margin:18px 0;border:1px solid #cbd5e1;border-radius:8px; }
+.grammar-table table { border-collapse:collapse;width:100%;min-width:540px; }
+.grammar-table caption { text-align:left;padding:12px;font-weight:700;background:#f8fafc; }
+.grammar-table th,.grammar-table td { text-align:left;vertical-align:top;padding:14px;border-bottom:1px solid #cbd5e1;line-height:1.7; }
+.grammar-table thead th { background:#e0f2fe;color:#0c4a6e; }
+.grammar-table tbody tr:nth-child(even) { background:#f8fafc; }
+.grammar-choices { display:grid;gap:10px;margin:16px 0; }
+.grammar-choices .btn { text-align:left;white-space:normal;min-height:44px; }
+.grammar-detail fieldset { border:0;padding:0;min-width:0; }
+@media(max-width:600px) { .audio-controls .btn { flex:1 1 40%; } .audio-settings label { width:100%;justify-content:space-between; } .lesson-audio { padding:16px; } }
+@media print { .lesson-audio { display:none; } .grammar-table { overflow:visible; } }

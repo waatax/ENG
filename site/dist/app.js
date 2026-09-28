@@ -1,3 +1,6 @@
+import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syncLessonAudio, pauseLessonAudio } from './lesson_audio.mjs';
+import { listeningPage, handleListeningClick, handleListeningChange } from './listening.mjs';
+import { grammarPage, grammarRoute, setGrammarTopic, handleGrammarClick } from './grammar.mjs';
 import {renderFullWordPractice,handleFullWordClick,handleFullWordChange,handleFullWordSubmit} from './full_word_practice.mjs';
 import { renderTeachingAid } from './teaching_aids.mjs';
 import { renderSchoolWords, handleSchoolWordClick, handleSchoolWordChange, handleSchoolWordSubmit } from './school_words.mjs';
@@ -113,9 +116,10 @@ function due() {
 
 function navigate(p) {
   stopFlashcardAutoPlay();
+  pauseLessonAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = ['wordpractice','flashcards'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
   if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -163,6 +167,7 @@ function renderStageQuickNav() {
 
 function renderEnglishLevelTestTopBanner(currentPage) {
   if (currentPage === 'diagnostic') return '';
+  if (['listening','grammar'].includes(currentPage)) return '';
   return `
     <div class="level-test-top-banner" style="background:linear-gradient(90deg,#0f172a 0%,#1e3a8a 50%,#0369a1 100%);color:#ffffff;padding:12px 18px;border-radius:10px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border:1px solid #38bdf8;box-shadow:0 4px 14px rgba(14,165,233,0.25)">
       <div style="display:flex;align-items:center;gap:12px;font-size:14px;flex:1;min-width:260px">
@@ -183,6 +188,8 @@ function renderEnglishLevelTestTopBanner(currentPage) {
 function shell(body) {
   const nav = [
     ['diagnostic', '00', '🎯 英文程度測試'],
+    ['listening', '🎧', '通勤聽課'],
+    ['grammar', '🧩', '圖解文法專區'],
     ['knowledge', '01', '知識點教室'],
     ['schoolwords', '02', '國小・國中單字複習'],
     ['curriculum108', '03', '學年課程地圖'],
@@ -205,6 +212,8 @@ function shell(body) {
   const summary = junyi.getSummary();
 
   const pageTitles = {
+    listening: '🎧 通勤聽課教室',
+    grammar: '🧩 圖解文法專區',
     diagnostic: '🎯 英文程度檢定',
     wordpractice: '9,500 張字卡學習',
     schoolwords: '國小・國中單字複習',
@@ -261,7 +270,7 @@ function shell(body) {
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
         ${['knowledge', 'curriculum108'].includes(page) ? renderFlashcardQuickPlay() : ''}
         ${renderEnglishLevelTestTopBanner(page)}
-        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice'].includes(page) ? '' : renderStageQuickNav()}
+        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','grammar','listening'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -522,6 +531,7 @@ function curriculum108Page() {
                 ${u.guideline ? `<div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.45"><strong>📜 評量指引：</strong>${u.guideline}</div>` : ''}
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn small primary" data-listen-unit="${u.id}">🎧 播放本單元教學</button>
                 <button class="btn small primary" data-open-junyi-unit="${u.id}">💡 自主微課深度模式</button>
                 <button class="btn small quiet" data-print-handout="${currentSem.semId}">🖨️ A4講義列印</button>
                 ${u.sourceRef?.startsWith('sixth:') ? `<button class="btn small quiet" data-open-sixth-unit="${u.sourceRef.split(':')[1]}">🎒 6年級講義</button>` : ''}
@@ -819,6 +829,7 @@ function sixthPage() {
       </p>
     </div>
 
+    ${renderLessonAudio('unit:' + (UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units)).find(u=>u.sourceRef === 'sixth:' + activeSixthUnit)?.id || ''))}
     <!-- 8 單元橫向切換列 -->
     <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin:20px 0;border-bottom:1px solid var(--line)">
       ${Object.keys(sixthLessons).map(key => {
@@ -1817,6 +1828,8 @@ function render() {
     wordpractice: renderFullWordPractice,
     schoolwords: renderSchoolWords,
     knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
+    listening: listeningPage,
+    grammar: grammarPage,
     diagnostic: diagnosticPage,
     curriculum108: curriculum108Page,
     phonics: renderPhonicsMasteryView,
@@ -1836,6 +1849,7 @@ function render() {
   root.innerHTML = shell((pages[page] || knowledgeHome)());
   if (window.matchMedia('(max-width: 768px)').matches) root.querySelector('.site-menu')?.removeAttribute('open');
   bindEvents();
+  syncLessonAudio();
 }
 
 function bindEvents() {
@@ -1843,7 +1857,7 @@ function bindEvents() {
   if (junyiSelect) {
     junyiSelect.addEventListener('change', e => {
       activeUnitId = e.target.value;
-      render();
+      navigate('junyi');
     });
   }
 
@@ -1897,6 +1911,18 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (d.listenUnit) {
+    if (UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===d.listenUnit)))) {
+      activeUnitId=d.listenUnit; navigate('junyi');
+      const playButton=root.querySelector('[data-lesson-audio-panel] [data-la="play"]');
+      if (playButton) handleLessonAudioClick(playButton);
+    }
+    return;
+  }
+  if (handleLessonAudioClick(b)) return;
+  if (handleListeningClick(b, render)) return;
+  if (handleGrammarClick(b, render)) return;
+  if (d.speakSentence || d.speakWord || d.playDialogue || d.stopAudio) pauseLessonAudio();
   if (d.fcQuickPlay) {
     navigate('flashcards');
     startFlashcardQuickPlay(d.fcQuickPlay, render);
@@ -2340,7 +2366,10 @@ root.addEventListener('input', e => searchKnowledge(e.target));
 root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
-  if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
+  if (parts[0] === 'grammar') { setGrammarTopic(parts[1] || ''); navigate('grammar'); }
+  else if (parts[0] === 'listening') { navigate('listening'); }
+  else if (parts[0] === 'unit' && UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===parts[1])))) { activeUnitId=parts[1]; navigate('junyi'); }
+  else if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
   else if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
@@ -2354,3 +2383,6 @@ root.addEventListener('submit', e => { if (e.target.matches('.word-search,.word-
 
 root.addEventListener('change', e => handleFullWordChange(e.target, render));
 root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.preventDefault();handleFullWordSubmit(e.target,render);} });
+
+root.addEventListener('change', e => { if (handleLessonAudioChange(e.target)) return; handleListeningChange(e.target, render); });
+window.addEventListener('pagehide', pauseLessonAudio);
