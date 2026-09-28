@@ -17,6 +17,25 @@ function esc(str) {
 
 // 診斷系統內部狀態
 let diagMode = 'intro'; // 'intro' | 'testing' | 'report'
+export const DIAGNOSTIC_LEVELS = [
+  { id: 1, name: '國小基礎', cefr: 'Pre-A1–A1' },
+  { id: 2, name: '國中基礎', cefr: 'A1–A2' },
+  { id: 3, name: '國中進階／會考', cefr: 'A2–B1' },
+  { id: 4, name: '高中／學測', cefr: 'B1–B2' },
+  { id: 5, name: 'TOEIC 多益', cefr: 'B2' },
+  { id: 6, name: 'Digital SAT', cefr: 'C1' },
+  { id: 7, name: 'GRE', cefr: 'C2' },
+  { id: 8, name: 'GMAT', cefr: '進階挑戰' }
+];
+let diagSelectedTier = null;
+let diagSessionTier = null;
+const levelName = tier => DIAGNOSTIC_LEVELS.find(level => level.id === tier)?.name || '全階綜合';
+function renderLevelSelector() {
+  return `<section class="card"><h2>選擇測驗程度</h2><p>指定程度：只抽該程度的 20 題，限時 15 分鐘。若想了解跨程度表現，可選全階綜合。</p>
+    <div class="diag-level-grid" role="group" aria-label="測驗程度">
+      ${[{id: null, name: '全階綜合', cefr: '20／30／40 題'}, ...DIAGNOSTIC_LEVELS].map(level => `<button class="btn ${diagSelectedTier === level.id ? 'primary' : 'quiet'}" data-diag-tier="${level.id ?? 'all'}" aria-pressed="${diagSelectedTier === level.id}"><strong>${level.name}</strong><span>${level.cefr}</span></button>`).join('')}
+    </div></section>`;
+}
 let diagQuestionCount = 30; // 20 | 30 | 40
 let diagQuestions = [];
 let diagCurrentIdx = 0;
@@ -81,11 +100,14 @@ function finishDiagnostic(renderCallback) {
   try {
     const summaryRecord = {
       date: new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }),
-      scaledScore: diagEvaluation.scaledScore,
+      mode: diagSessionTier === null ? 'all' : 'targeted',
+      tier: diagSessionTier,
+      total: diagQuestions.length,
+      scaledScore: diagSessionTier === null ? diagEvaluation.scaledScore : Math.round(diagEvaluation.rawCorrect / diagQuestions.length * 100),
       rawCorrect: diagEvaluation.rawCorrect,
-      cefr: diagEvaluation.cefr,
-      badge: diagEvaluation.honoraryBadge.title,
-      stallTier: diagEvaluation.stallTierLabel
+      cefr: diagSessionTier === null ? diagEvaluation.cefr : levelName(diagSessionTier),
+      badge: diagSessionTier === null ? diagEvaluation.honoraryBadge.title : '指定程度練習',
+      stallTier: diagSessionTier === null ? diagEvaluation.stallTierLabel : levelName(diagSessionTier)
     };
     diagHistory.unshift(summaryRecord);
     if (diagHistory.length > 10) diagHistory.pop();
@@ -112,7 +134,7 @@ export function diagnosticPage() {
         <div style="font-size:48px;animation:spin 1s linear infinite">⏳</div>
         <h2 style="margin:16px 0 8px">正在從本站練習題庫進行分層抽題...</h2>
         <p style="color:var(--text-muted);max-width:550px;margin:0 auto">
-          嚴格按 8 大階梯 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ SAT ➔ GRE ➔ GMAT) 分層隨機抽取 ${diagQuestionCount || 30} 題，供自學練習使用…
+          ${diagSessionTier === null ? '按 8 大階梯分層' : '只從「' + levelName(diagSessionTier) + '」程度'}隨機抽取 ${diagQuestionCount || 30} 題，供自學練習使用…
         </p>
       </div>
     `;
@@ -130,6 +152,10 @@ export function diagnosticPage() {
 // 1. 引導前導頁 (Intro View)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function renderIntroView() {
+  if (diagSelectedTier !== null) return `
+    <div class="header-block"><h1>指定程度 · 20 題測驗</h1><p>選好程度再開始，完成後可查看成績、錯題與逐題解析。</p></div>
+    ${renderLevelSelector()}
+    <section class="card"><h2>本次測驗：${levelName(diagSelectedTier)}</h2><p>20 題選擇題 · 15 分鐘 · 每題 5 分 · 未作答以錯題計算</p><p>可跳題、修改答案與暫停計時；交卷後提供解析。同程度重測會優先抽取近期未作答的題目。</p><button class="btn primary" data-start-diag="20">開始「${levelName(diagSelectedTier)}」20 題測驗</button></section>`;
   const latestHistory = diagHistory[0];
   const tierQuotasDisplay = diagQuestionCount === 20
     ? { 1: 2, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 1 }
@@ -150,6 +176,7 @@ function renderIntroView() {
 
     <aside class="card"><h2>預測英文程度，找到學習起點</h2><p>完成作答後，查看閱讀／文法程度、CEFR 參考區間與各考試參考落點，再按弱項選擇教材。預測使用本站規則，尚未經正式成績配對校準。</p></aside>
 
+    ${renderLevelSelector()}
     <!-- 檢定題數選項 (20 題快速 / 30 題標準 / 40 題深度精準) -->
     <div class="card" style="margin-bottom:24px;border:2px solid #6366f1;background:linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
@@ -361,7 +388,7 @@ function renderTestingView() {
     <div class="header-block" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px">
-          <span class="pill" style="font-weight:700;background:#091e32;color:#34d399">🎯 分層練習</span>
+          <span class="pill" style="font-weight:700;background:#091e32;color:#34d399">🎯 ${levelName(diagSessionTier)} · ${totalQ} 題</span>
           <span class="pill" style="background:#e0e7ff;color:#3730a3;font-size:12px">${esc(q.tierLabel)}</span>
           <span style="font-size:12px;color:var(--text-muted);background:var(--paper);padding:3px 8px;border-radius:6px;border:1px solid var(--line)">
             維度：${esc(q.dimension)}
@@ -503,8 +530,8 @@ function renderReportView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 ${diagQuestions.length} 題全階程度練習檢核 · 深度能力診斷報告</div>
-      <h1 style="margin:8px 0;font-size:28px">英語能力全面體檢成就報告與微課學習地圖</h1>
+      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 ${diagQuestions.length} 題${levelName(diagSessionTier)}練習檢核 · 深度能力診斷報告</div>
+      <h1 style="margin:8px 0;font-size:28px">${diagSessionTier === null ? '英語能力全面體檢成就報告與微課學習地圖' : levelName(diagSessionTier) + ' · 測驗結果與解析'}</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         以下依本站規則整理本次作答，協助選擇複習主題；不是標準化能力評定。
       </p>
@@ -513,7 +540,7 @@ function renderReportView() {
     <section class="card"><h2>本次答對 ${ev.rawCorrect} / ${diagQuestions.length} 題</h2><p>未作答也包含在總題數內。請在下方逐題檢查，找出需要訂正的觀念。</p></section>
     <!-- 雙欄架構：大考落點預估 vs 五大能力維度雷達 -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr));gap:20px;margin-bottom:24px">
-      ${renderLevelEstimate(diagUserAnswers, diagQuestions)}
+      ${diagSessionTier === null ? renderLevelEstimate(diagUserAnswers, diagQuestions) : `<section class="card"><h2>${Math.round(ev.rawCorrect / diagQuestions.length * 100)} 分／100 分</h2><p>答對率 ${Math.round(ev.rawCorrect / diagQuestions.length * 100)}% · 未作答 ${diagQuestions.length - Object.keys(diagUserAnswers).length} 題</p><p>本次只測「${levelName(diagSessionTier)}」，不推估整體 CEFR 或其他考試分數。先訂正錯題，再挑戰同程度的新題。</p></section>`}
       <!-- 欄 2: 五大核心維度掌握率分析 -->
       <div class="card">
         <h3 style="margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px">
@@ -523,7 +550,7 @@ function renderReportView() {
           細緻評估您在單字、句法、篇章與批判思維的個別成熟度：
         </p>
         <div style="display:grid;gap:14px">
-          ${Object.entries(ev.dimensionBreakdown).map(([dim, stat]) => {
+          ${Object.entries(ev.dimensionBreakdown).filter(([, stat]) => stat.total > 0).map(([dim, stat]) => {
             const pct = stat.total > 0 ? Math.round((stat.correct / stat.total) * 100) : 0;
             let barColor = '#10b981';
             let labelBadge = '🌟 卓越精熟';
@@ -560,7 +587,7 @@ function renderReportView() {
             本次答題回顧與練習建議
           </h3>
           <p style="margin:0;font-size:14px;color:#881337;line-height:1.6">
-            根據本次作答，建議回顧 <strong>${esc(ev.stallTierLabel)}</strong> 的相關題型。
+            根據本次作答，建議回顧 <strong>${esc(diagSessionTier === null ? ev.stallTierLabel : levelName(diagSessionTier))}</strong> 的相關題型。
             先回看相關例句，解釋自己為何選錯，再用不同情境練習。
           </p>
         </div>
@@ -782,6 +809,16 @@ function getStallPointAdvice(tier) {
 export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
   const d = btn.dataset;
 
+  if (d.diagTier !== undefined) {
+    if (diagLoading || diagMode !== 'intro') return true;
+    const tier = d.diagTier === 'all' ? null : Number(d.diagTier);
+    if (tier === null || DIAGNOSTIC_LEVELS.some(level => level.id === tier)) {
+      diagSelectedTier = tier;
+      if (tier !== null) diagQuestionCount = 20;
+      renderCallback();
+    }
+    return true;
+  }
   // 選擇題數 (20 / 30 / 40)
   if (d.diagSelectCount) {
     const count = parseInt(d.diagSelectCount, 10);
@@ -794,17 +831,25 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
 
   // 開始測驗
   if (d.startDiag) {
+    if (diagLoading) return true;
+    stopTimer();
+    diagSessionTier = diagSelectedTier;
     const parsedCount = parseInt(d.startDiag, 10) || parseInt(d.diagCount, 10);
     if ([20, 30, 40].includes(parsedCount)) {
       diagQuestionCount = parsedCount;
     }
+    if (diagSessionTier !== null) diagQuestionCount = 20;
     const count = diagQuestionCount || 30;
     const durationMin = count === 20 ? 15 : count === 40 ? 35 : 25;
     diagLoading = true;
-    const fetchFn = (count === 30 && typeof questionDB.sampleDiagnostic30 === 'function')
+    const fetchFn = diagSessionTier !== null ? questionDB.sampleDiagnostic(20, diagSessionTier) : (count === 30 && typeof questionDB.sampleDiagnostic30 === 'function')
       ? questionDB.sampleDiagnostic30()
       : questionDB.sampleDiagnostic(count);
+    renderCallback();
     fetchFn.then(questions => {
+      if (questions.length !== count) throw new Error('題庫不足');
+      diagFilterView = 'all';
+      diagExpandedExplains = {};
       diagQuestions = questions;
       diagCurrentIdx = 0;
       diagUserAnswers = {};
@@ -819,7 +864,7 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
     }).catch(err => {
       console.error(err);
       diagLoading = false;
-      alert('題庫載入失敗，請確認網路連線。');
+      alert('無法取得完整試卷，請確認網路連線後重試。');
       renderCallback();
     });
     return true;

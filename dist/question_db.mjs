@@ -256,7 +256,9 @@ export class QuestionBankDB {
   // 保證：
   // 1. 本次測驗中 100% 題號 (ID) 與題幹 (Prompt) 零重複 (seenIds, seenPrompts 雙層查驗)
   // 2. 跨測驗輪換記憶：讀取 localStorage 最近考過的題目 (最多記錄 300 題)，抽題時優先選取未曾出現之新題，避免短期重測遇到相同題目
-  async sampleDiagnostic(count = 30) {
+  async sampleDiagnostic(count = 30, tier = null) {
+    if (tier !== null && (!Number.isInteger(tier) || tier < 1 || tier > 8)) throw new Error("無效的程度");
+    if (tier !== null) count = 20;
     await this.initPromise;
     const pool = await this.loadDiagnosticBank();
     if (!pool || !pool.length) return [];
@@ -269,6 +271,8 @@ export class QuestionBankDB {
     } else {
       tierQuotas = { 1: 4, 2: 4, 3: 4, 4: 5, 5: 4, 6: 4, 7: 3, 8: 2 }; // 合計 30 題
     }
+
+    if (tier !== null) tierQuotas = { [tier]: 20 };
 
     // 讀取跨測驗歷史最近看過的題號，實現跨次測驗輪換不重複
     let recentIds = new Set();
@@ -290,7 +294,8 @@ export class QuestionBankDB {
     const normalizePrompt = (p) => (p || '').trim().toLowerCase().replace(/\s+/g, ' ');
 
     for (let t = 1; t <= 8; t++) {
-      const quota = tierQuotas[t] || 4;
+      const quota = tierQuotas[t] || 0;
+      if (!quota) continue;
       const tierCandidates = pool.filter(q => q.tier === t);
       if (!tierCandidates.length) continue;
 
@@ -322,6 +327,8 @@ export class QuestionBankDB {
         tierPicked++;
       }
     }
+
+    if (sampledQuestions.length !== count) throw new Error("題庫不足，無法產生完整試卷");
 
     // 更新最近題號記憶 (最多保留最近 300 題)
     try {
