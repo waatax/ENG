@@ -35,7 +35,7 @@ import { renderDisplayToolbar, handleDisplayToolbarClick, initDisplaySettings } 
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
-import { renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay } from './flashcards.mjs';
+import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay } from './flashcards.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -259,6 +259,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
+        ${['knowledge', 'curriculum108'].includes(page) ? renderFlashcardQuickPlay() : ''}
         ${renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
@@ -1896,6 +1897,11 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (d.fcQuickPlay) {
+    navigate('flashcards');
+    startFlashcardQuickPlay(d.fcQuickPlay, render);
+    return;
+  }
   if (handleFullWordClick(b, render)) return;
   if (handleSchoolWordClick(b, render)) return;
   if (answerKnowledge(b)) return;

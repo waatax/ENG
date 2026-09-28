@@ -142603,6 +142603,32 @@ function getBatchCards() {
 }
 
 // 閃卡館主頁渲染函數
+const quickTierLabels = { elem_1000: '國小', jhs_2000: '國中', shs_3000: '高中', toeic: 'TOEIC 多益', toefl: 'TOEFL 托福', sat: 'SAT', gre: 'GRE', gmat: 'GMAT' };
+export function renderFlashcardQuickPlay() {
+  return `<section class="card flashcard-quick-play" aria-labelledby="flashcard-quick-title">
+    <div class="pill">單字複習 · 自動播放</div>
+    <h2 id="flashcard-quick-title">9,500 張閃卡，點選就開始聽讀</h2>
+    <p>選擇想複習的類別，自動朗讀英文、中文與例句。每組 20 張，進入後可調整字數、語音模式或暫停。</p>
+    <div class="flashcard-quick-grid">${FLASHCARD_TIERS.map(t => `<button class="btn" data-fc-quick-play="${t.id}" aria-label="自動播放${quickTierLabels[t.id]}閃卡"><strong>▶ ${quickTierLabels[t.id]}</strong><span>${FLASHCARD_DATABASE.filter(c => c.tier === t.id).length.toLocaleString('en-US')} 張</span></button>`).join('')}</div>
+    <button class="btn quiet" data-nav="flashcards">搜尋字卡與自訂複習</button>
+  </section>`;
+}
+export function startFlashcardQuickPlay(tier, renderCallback) {
+  if (!FLASHCARD_TIERS.some(t => t.id === tier)) return false;
+  stopFlashcardAutoPlay();
+  currentTier = tier;
+  cardSearchKeyword = '';
+  cardFilterStatus = 'all';
+  currentBatchIndex = 0;
+  currentCardIndex = 0;
+  practiceBatchSize = 20;
+  autoPlayVoiceMode = 'word_zh_sentence';
+  isFlipped = false;
+  batchCompleted = false;
+  startFlashcardAutoPlay(renderCallback);
+  return true;
+}
+
 export function renderFlashcardsStudioView() {
   const tierInfo = FLASHCARD_TIERS.find(t => t.id === currentTier) || FLASHCARD_TIERS[0];
   const allTierCards = FLASHCARD_DATABASE.filter(c => c.tier === currentTier);

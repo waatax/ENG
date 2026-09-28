@@ -1703,3 +1703,17 @@ th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
 
 
 
+
+/* Homepage flashcard shortcuts */
+.flashcard-quick-play { margin: 16px 24px; background: linear-gradient(125deg, #eff6ff, #ecfdf5); border: 1px solid #93c5fd; }
+.flashcard-quick-play h2 { margin: 10px 0; color: #1e3a8a; }
+.flashcard-quick-play p { color: #334155; line-height: 1.7; }
+.flashcard-quick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+.flashcard-quick-grid .btn { display: flex; flex-direction: column; gap: 6px; padding: 16px 10px; background: #fff; color: #1e40af; border: 1px solid #93c5fd; white-space: normal; }
+.flashcard-quick-grid .btn:hover { background: #dbeafe; }
+.flashcard-quick-grid .btn:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.flashcard-quick-grid span { font-size: 13px; color: #475569; }
+@media (max-width: 600px) {
+  .flashcard-quick-play { margin: 12px; padding: 16px; }
+  .flashcard-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

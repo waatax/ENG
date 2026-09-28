@@ -205,3 +205,19 @@ test('7. 100% of cards in database have example sentences that include their tar
 
   assert.equal(missingWordCount, 0, 'Every card example sentence must pronounce the target word');
 });
+
+
+test('8. Homepage shortcuts start the selected tier despite an old search', async () => {
+  const fc = await import('../dist/flashcards.mjs');
+  const html = fc.renderFlashcardQuickPlay();
+  for (const tier of fc.FLASHCARD_TIERS) {
+    assert.ok(html.includes('data-fc-quick-play="' + tier.id + '"'));
+    fc.handleFlashcardInput({ id: 'fc-search-input', value: 'no-matching-word-xyz' }, () => {});
+    speechCalls.length = 0;
+    assert.equal(fc.startFlashcardQuickPlay(tier.id, () => {}), true);
+    const firstCard = fc.FLASHCARD_DATABASE.find(card => card.tier === tier.id);
+    assert.ok(speechCalls.some(call => call.text === firstCard.word), tier.id + ' starts its first word');
+    fc.stopFlashcardAutoPlay();
+  }
+  assert.equal(fc.startFlashcardQuickPlay('missing-tier', () => {}), false);
+});
