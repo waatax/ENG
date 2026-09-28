@@ -1062,8 +1062,23 @@ export const curriculum = [
             tip: '考場硬性規則：聽力播放時嚴禁跨區翻看閱讀題；兩大 Section 之間不可折返劃記！'
           },
           {
-            heading: '多益高頻商務場景核心語塊 (Business Collocations)',
-            body: '採購物流 (procurement & logistics)、航班行程 (flight itinerary)、開立發票 (issue an invoice)、費用核銷 (expense reimbursement)、會議議程 (meeting agenda)、人事招募 (recruitment & onboarding)、廠房巡檢 (facility inspection)。',
+            heading: '題型一・Part 5 單句填空：詞性秒殺法與商務高頻句構 (Incomplete Sentences - POS & Grammar Mastery)',
+            body: '【核心構念 (Construct Essence)】\nPart 5 共 30 題，是多益閱讀奪取金色證書的速度引擎。官方命題嚴格鎖定於國際商務語境下的精確詞性搭配、時態語態與動詞補語結構。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n視線先看四個選項字根是否相同：\n1. 同字根題（詞性題）：直接看空格前後 2–3 個單字定位文法功能。\n   - 若空格位於冠詞與名詞之間，必填形容詞 (e.g., an [impressive] portfolio)。\n   - 若空格位於及物動詞之後且已有完整受詞，必填副詞修飾該動作 (e.g., reviewed the proposal [thoroughly])。\n   - 若空格在介系詞之後：後方若有受詞，必填及物動名詞 V-ing；後方若無受詞且前方有冠詞 the，必填名詞。\n2. 異字根題（商務語塊題）：先看主詞與動詞、或動詞與受詞的固定搭配 (Collocations，如 implement a policy, conduct an audit, negotiate terms)。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：動名詞 (Gerund) vs 動作名詞 (Action Noun)。例如：for ______ the budget 需填入及物性的 approving (有受詞 the budget)；若為 the ______ of the budget 則需填入 approval。\n• 陷阱 2：分詞修飾語的主動與被動。進行或主動狀態用 V-ing (an increasing number of clients)；被動或完成狀態用 p.p. (damaged goods)。\n• 陷阱 3：省略 should 的假設語氣。demand / recommend / require that S + (should) + 原形動詞 V (e.g., The CEO insisted that everyone attend the briefing)。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：The board of directors requested that the finance committee submit the revised quarterly budget ______ than originally scheduled.\n選項：(A) early  (B) earlier  (C) earliest  (D) earliness\n【大師解剖】：看到空格後方的標竿詞「than」，直接鎖定比較級形式；修飾動詞片語 submit the revised quarterly budget 需要副詞比較級，故秒殺 (B) earlier！此題作答耗時應在 10 秒以內。',
+            tip: '秒殺口訣：先看選項定題型，同根比詞尾 (-tion 名詞, -tive 形容詞, -ly 副詞)，前後 3 字定乾坤，20 秒交卷！'
+          },
+          {
+            heading: '題型二・Part 6 段落填空：上下文語意錨點與句子插入題 (Text Completion - Cohesion & Sentence Insertion)',
+            body: '【核心構念 (Construct Essence)】\nPart 6 共 4 篇短文、16 題，包含商務電郵、備忘錄、新聞通告與內部公告。每篇 4 題中必含 1 題「句子插入題 (Sentence Insertion)」，考查篇章連貫性 (Cohesion) 與邏輯推展。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 單字與轉折詞題：切忌孤立閱讀該句，必須讀完該句及其前一句，判定上下文邏輯關係：\n   - 因果：Consequently, Therefore, As a result\n   - 轉折：However, Nevertheless, Nonetheless\n   - 補充遞進：Furthermore, In addition, Moreover\n   - 時間序列：Subsequently, Meanwhile, In the meantime\n2. 句子插入題破題三步 SOP：\n   - 步驟 A：先掃描空格前一句的「末端主詞或概念」與空格後一句的「開端主詞」。\n   - 步驟 B：尋找指示代名詞 (this, these, such, that) 或重複概念作為「邏輯鉤子 (Logical Hooks)」。\n   - 步驟 C：檢驗插入句是否符合整段的時間線（Chronological Timeline）與商務溝通情境。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：時態突變。整篇描述過去出差報銷流程，干擾項卻突兀出現未來的促銷承諾。\n• 陷阱 2：假性代名詞。選項中的 "These results" 看似合理，但前句根本沒有提到任何實驗或統計數字，屬於偽關聯干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n情境：前句提及「The updated IT infrastructure will undergo server maintenance on Friday night.」，後句提到「Consequently, please save all active files before leaving the office on Friday afternoon.」\n待插入句必為：「During this window, company intranet servers will be completely inaccessible.」，該句完美承接維護說明，並合理解釋為何下午必須提前儲存檔案！',
+            tip: '句子插入題定位法則：前後代名詞與因果轉折副詞是最佳定錨點；凡是帶有 "such + 名詞" 的句子，前句必有該名詞的具體對應！'
+          },
+          {
+            heading: '題型三・Part 7 閱讀測驗：單雙篇跨文本交叉比對秒殺矩陣 (Reading Comprehension - Cross-text Synthesis & Indirect Inference)',
+            body: '【核心構念 (Construct Essence)】\nPart 7 總計 54 題（單篇 29 題、雙篇 10 題、三篇 15 題），是邁向 860–990 金色證書的決勝主戰場。雙篇與三篇閱讀核心考點在於「跨文本交叉比對 (Cross-text Synthesis)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 雙篇/三篇切忌逐字死讀！先看文本標題類型（如 Text 1: 研討會議程表 Schedule + Text 2: 講者電子郵件 Email）。\n2. 閱讀題幹關鍵字（人名、專案名稱、具體時間），辨識題型是單篇細節題還是「跨文本關聯題 (Cross-reference Question)」。\n3. 跨文本題定位公式：\n   - 題目問：「某人將在下午參加哪一場演講？」題幹只給人名。\n   - 先到 Text 2 找出此人感興趣的主題或專業職稱（如 Data Security）。\n   - 再折返 Text 1 查找 Data Security 對應的時間與會議室（如 Room 302, 2:00 PM）。\n   - 答案永遠存在於兩篇文本的「交集點」！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：過期舊資訊陷阱 (Outdated Information)。第一篇文本（原訂單或初步會議行程）提到了日期 A，但在第二篇文本（更正通知或延期電郵）中明確將日期改為日期 B。題目若問「實際會議日期」，選日期 A 即落入命題陷阱。\n• 陷阱 2：直接照抄字面但語意偷換 (Verbatim Trap)。多益正確答案 90% 以上採用「同義改寫 (Paraphrasing)」，選項如果完全複製文章原字但更換了主詞或修飾詞，往往是精心設計的干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n母題示範：Text 1 為設備租賃價目表（Full-size Van: $60/day, GPS add-on: $12/day）；Text 2 為客戶確認單（租用 Full-size Van 3 天並勾選 GPS）。題目問：客戶結算發票總金額為何？\n大師解剖：需跨篇計算：($60 + $12) * 3 = $216。此為標準跨文本資訊提取與數學合成題！',
+            tip: '多益雙篇三篇心法：題組 5 題中，通常第 1–2 題查第 1 篇，第 3 題查第 2 篇，第 4–5 題必為跨文本交叉比對題！'
+          },
+          {
+            heading: '多益高頻商務場景核心語塊與易混淆詞 (Business Collocations & Confusables)',
+            body: '採購物流 (procurement & logistics)、航班行程 (flight itinerary)、開立發票 (issue an invoice)、費用核銷 (expense reimbursement)、會議議程 (meeting agenda)、人事招募 (recruitment & onboarding)、廠房巡檢 (facility inspection)。\n易混淆字：complement (補充) vs compliment (稱讚)；comprise (包含) vs compose (組成)；access (使用權限) vs assess (評估)。',
             tip: '同音/近音干擾陷阱：Part 2 常出現發音相近但意思無關的字（如 coffee vs copy, plan vs plant）誘騙考生，這類選項 99% 是陷阱！'
           }
         ],
@@ -1103,14 +1118,29 @@ export const curriculum = [
         guideline: 'College Board Digital SAT 官方評量標準與難度適性跳轉門檻規範。',
         concepts: [
           {
-            heading: 'Digital SAT 兩階段模組化適應性測驗 (MST) 機制',
-            body: 'Digital SAT 閱讀與寫作包含兩個 27 題、32 分鐘的模組 (Modules)：\n1. Module 1（路由模組）：難度均勻分佈。系統採用邊界最大似然估計 (BMLE) 計算考生能力值 $\hat{\theta}$。\n2. Module 2（自適應模組）：\n- 若 Module 1 表現優異，進入 Hard Module 2，解鎖最高 800 分滿分區間。\n- 若 Module 1 表現不佳，進入 Easy Module 2，分數天花板受限（通常不高於 600 分）。\n3. 最終成績以 EAP (Expected A Posteriori) 聯合反應向量精算，包含標準測量誤差 (SEM)。',
+            heading: 'Digital SAT 兩階段模組化適應性測驗 (MST) 機制與算分藍圖',
+            body: 'Digital SAT 閱讀與寫作包含兩個 27 題、32 分鐘的模組 (Modules)：\n1. Module 1（路由模組）：難度均勻分佈。系統採用邊界最大似然估計 (BMLE) 計算考生能力值 $\\hat{\\theta}$。\n2. Module 2（自適應模組）：\n- 若 Module 1 表現優異，進入 Hard Module 2，解鎖最高 800 分滿分區間。\n- 若 Module 1 表現不佳，進入 Easy Module 2，分數天花板受限（通常不高於 600 分）。\n3. 最終成績以 EAP (Expected A Posteriori) 聯合反應向量精算，包含標準測量誤差 (SEM)。',
             tip: '實戰策略：Module 1 前 15 題不容失誤，確保穩定打入 Hard Module 2！'
           },
           {
-            heading: '四大領域解題精義 (Construct Blueprint)',
-            body: '1. Craft and Structure (28%)：高難度語境詞彙精析（如 delineate, corroborate）、作者論證結構與修辭手法。\n2. Information and Ideas (26%)：中心主旨抓取、文本證據定位、科學數據圖表詮釋與隱含假設推論。\n3. Standard English Conventions (26%)：長句語法結構、主謂一致、標點符號 (分號連接兩獨立子句、冒號引導同位補充、破折號插入修飾)。\n4. Expression of Ideas (20%)：修辭修訂、段落銜接過渡詞、學生研究筆記整合 (Rhetorical Synthesis)。',
+            heading: '三大核心題型解題架構藍圖 (Construct Blueprint)',
+            body: '1. Craft and Structure (28%)：Words in Context 高難度語境詞彙精析（如 delineate, corroborate）、作者論證結構與修辭目的。\n2. Information and Ideas (26%)：Command of Evidence 文本與數據證據定位、Inferences 邏輯完形結論推論。\n3. Standard English Conventions (26%)：長句語法結構、Boundaries 標點符號、主謂一致、懸垂修飾語 (Dangling Modifiers)。\n4. Expression of Ideas (20%)：修辭修訂、段落銜接過渡詞、學生研究筆記整合 (Rhetorical Synthesis)。',
             tip: '標點題秒殺法則：兩個獨立完整子句 (Independent Clauses) 之間，不可僅用逗號連接（Comma Splice 錯誤），必須使用分號 (;) 或逗號加對等連接詞 (, and)！'
+          },
+          {
+            heading: '題型一・Craft & Structure: Words in Context 高階語境詞彙與修辭目的 (Contextual Nuance & Rhetorical Purpose)',
+            body: '【核心構念 (Construct Essence)】\nDigital SAT 徹底拋棄死記硬背生僻詞套路，聚焦於大學學術文獻、自然科學報告、歷史文獻中「高階學術詞彙（Tier 2 Academic Words）在極度精確語境下的修辭功能與意圖辨析」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 嚴禁憑中文翻譯套入後「覺得通順」主觀猜測！Digital SAT 題幹文本極其凝練，命題團隊在空格前後必然埋設了 100% 絕對客觀的「同義指針 (Synonym Pointer)」或「反義對照標記 (Contrast Marker)」。\n2. 尋找轉折樞紐詞：However, yet, far from, rather than, whereas 指向空格必須與文中已知形容詞/動詞構成精確反義；In addition, moreover, indeed, colon (:) 則指向空格為前句觀點的精確深化或同義置換。\n3. 預測空格語意極性（+/-/中性）與詞義核心，再去四個選項中精確打擊！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：字面常見義項干擾 (Familiar Sense Trap)。例如 compromise 常見義為「妥協」，但在學術安全語境中指「危害、使受損 (undermine / jeopardize)」；table 作動詞指「擱置延後討論」而非「擺在桌上」。\n• 陷阱 2：感情色彩過度極端 (Overly Extreme Tone)。學術論述追求嚴謹客觀，非特殊修辭文本中，過度情緒化的詞彙（如 disastrous, miraculous, definitive）往往是干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Far from being a monolithic movement, modern environmentalism is characterized by ______ viewpoints, ranging from radical ecocentrism to pragmatic market-based policies.\n選項：(A) homogeneous  (B) disparate  (C) dogmatic  (D) obsolete\n【大師解剖】：看到句首樞紐結構「Far from being [monolithic]」（絕非單一鐵板一塊的），後文又列舉了從極端生態中心主義到實用市場政策的廣泛跨度，空格必須填入表達「多元、紛繁多樣」的精確學術詞彙。秒選 (B) disparate！(A) homogeneous 恰好反義，(C)(D) 與題幹語境無關。',
+            tip: '語境詞彙破題律：空格答案必由題幹中另一個詞或句子成分嚴格保證，切勿帶入個人主觀偏好！'
+          },
+          {
+            heading: '題型二・Information & Ideas: Command of Evidence & Logical Inferences 論據鎖定與完形推論 (Evidence Anchoring & Valid Conclusions)',
+            body: '【核心構念 (Construct Essence)】\n包含四大高分題型：Textual Evidence（文本引文論據）、Quantitative Evidence（圖表數據論據）、Inferences（完形邏輯結論推導）、Central Idea & Details（主旨與細節）。考查從學術實證資料推導合法結論的能力。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 論據支持/削弱題（Which finding, if true, would most strongly support/weaken the claim?）：\n   - 第一步：迅速用括號圈出文章中研究人員的核心假說 (Hypothesis) 或主張 (Claim)，將其抽象為因果公式：自變量 X 導致 因變量 Y。\n   - 第二步：審讀四個選項。若為「支持題」，選項必須證實 X 與 Y 之間的正相關/因果機制，或證明「沒有 X 則沒有 Y」，或排除潛在替代解釋；若為「削弱題」，選項必須指出異常數據 (Anomalous Evidence) 或提出變量 Z 才是導致 Y 的真因。\n2. 完形推論題（Which choice most logically completes the text?）：\n   - 結論必須「嚴格由已知前提推出」，不可外推跨出文章設定的邊界（嚴守 Scope of the Argument）。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：範疇漂移 (Scope Shift)。選項內容本身是客觀科學真理，但它所論述的對象超出了本實驗特定物種、特定地理區域或特定時間範疇。\n• 陷阱 2：相關性誤當因果 (Correlation as Causation)。選項僅證明兩者同時發生，但題幹要求支持「前者引發後者」的機制。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目情境：某古生物學家假設某古代鳥類的長羽毛是用於「求偶展示」而非「飛行輔助」。問哪項發現最支持此假設？\n大師解剖：支持項必須呈現求偶特異性，例如發現該羽毛僅在成熟雄性化石中出現，且其羽軸強度不足以支撐空氣動力學負荷。這直接驗證了求偶假說並排除了飛行功能！',
+            tip: '圖表題黃金法則：先讀圖表標題、座標軸單位 (Units)、圖例 (Legend)，再回題幹定位數值，嚴防百分比 (Percentage) 與絕對數 (Absolute Value) 偷換！'
+          },
+          {
+            heading: '題型三・Standard English Conventions: 句子邊界標點、修飾語與平行結構 (Boundaries, Modifiers & Syntactic Symmetry)',
+            body: '【核心構念 (Construct Essence)】\n考查 100% 客觀的標準書面英文法規，也是 Module 1 與 Module 2 中最具「確定性秒殺」特性的高分題型。核心涵蓋：Boundaries（句界標點）、Form, Structure, and Sense（主謂一致、動詞時態語態、代名詞指涉、修飾語懸垂、對等平行結構）。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 第一步：抓全句主幹！迅速挑出句子主要主詞 (Subject) 與主要限定動詞 (Finite Verb)，將所有介系詞片語、關係子句、同位語括號隔離。\n2. 第二步：標點邊界三大鐵律（Punctuation Golden Rules）：\n   - 鐵律 A（分號 ;）：兩邊必須均為能獨立成句的獨立子句（Independent Clause; Independent Clause）。分號功能等同句號。\n   - 鐵律 B（逗號加對等連接詞 , FANBOYS）：IC, and/but/so/or IC。絕不能只用逗號連接兩獨立子句（此為 Comma Splice 致命錯誤！）。\n   - 鐵律 C（冒號 : 與破折號 —）：冒號前方必須是語法完整的獨立子句（Complete IC），後方可以接單字、片語或子句，用作同位解釋、列表或結果。\n3. 懸垂修飾 (Dangling Modifiers) 秒殺法：句首分詞片語或介系詞片語（如 Having completed the trials, ...），逗號後面緊接的主詞必須是「完成臨床試驗的那個邏輯主體」（如 the researchers）！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：主謂遠距離阻隔 (Intervening Prepositional Phrases)。主詞與動詞之間夾雜長達 15 字的介系詞修飾，誘騙考生用最靠近動詞的複數名詞來決定動詞單複數。\n• 陷阱 2：雙主詞贅肉 (Redundant Subject)。The scientist who led the expedition she discovered...（scientist 與 she 重複）。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Using laser spectroscopy to analyze ancient terracotta vessels, ______\n選項：(A) significant chemical residues of cacao were detected by the archaeologists.\n(B) the archaeologists detected significant chemical residues of cacao.\n(C) cacao\'s chemical residues were significantly detected.\n(D) detection of chemical residues was achieved by the archaeologists.\n【大師解剖】：句首現在分詞片語 Using laser spectroscopy...，使用儀器的人必須是「考古學家 (the archaeologists)」，因此逗號後第一個字必為 the archaeologists！秒殺 (B)，排除 (A)(C)(D) 懸垂修飾錯誤！',
+            tip: '標點題秒殺心法：見到選項包含「分號 (;)」與「句號 (.)」，若兩者周圍詞彙完全相同，則兩者必同時錯誤（因兩者語法功能等價）；直接在逗號與連接詞間定奪！'
           }
         ],
         vocab: [
@@ -1149,18 +1179,18 @@ export const curriculum = [
         guideline: 'ETS GRE General Test Verbal Reasoning 官方評量標準與雙向細目。',
         concepts: [
           {
-            heading: 'Text Completion 與 Sentence Equivalence 邏輯密碼',
-            body: 'GRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」：\n1. 同向信號詞：and, therefore, consequently, moreover, similarly, because, colon (:) $\\to$ 判斷補充、因果或並列關係；空格為已知修飾詞之同向延伸。\n2. 反向信號詞：although, however, nevertheless, paradoxically, ironically, far from, rather than, belie $\\to$ 檢查語意反差發生在哪兩個命題；注意雙重否定抵消。\n3. Sentence Equivalence（句子等價題）：六選二，兩個正確選項填入後必須讓全句語意完全一致，兩個選項都須符合句意，且填入後句意相近；不能只配對同義字。\n4. 三空題策略：從最具確定性線索的那個空格破題，切勿死板從第一空格硬猜！',
-            tip: 'GRE 邏輯陷阱：避免加入過多主觀世俗常識，嚴格依據題幹內的對應詞 (Pivot Words) 判定正負色彩。'
-          },
-          {
-            heading: 'GRE Text Completion 雙空與三空「確定性錨點」破題矩陣',
-            body: '雙空與三空題切忌從第一格硬猜，必須運用「線索獨立空格先解 (Anchor Blank First)」法則：\n1. 尋找語意錨點：先掃描全句，尋找修飾成分最完整、語意最明確的那個空格作為破題突破口。\n2. 讓步與反差辨析：識別 "for all"、"notwithstanding"、"hardly... when" 的語意翻轉點；分清作者主句主張與讓步從句的層次。\n3. 辯證結構推進：學術長句常呈現「正題 (Thesis) $\\to$ 反題 (Antithesis) $\\to$ 合題 (Synthesis)」三層推進，三空格常各自對應這三個哲學階段。\n4. 標點符號邏輯功能：分號 (;) 代表語意平行或對比延伸；冒號 (:) 代表前句主張的具體解釋或同義重述；破折號 (—) 代表插敘補強或轉折例外。',
+            heading: '題型一・Text Completion 與 Sentence Equivalence 邏輯密碼 (TC & SE Logical Directionality)',
+            body: '【核心構念 (Construct Essence)】\nGRE Verbal 考的不是生僻詞本身，而是「邏輯正反向關係 (Logical Directionality)」與高階思維。雙空與三空題切忌從第一格硬猜，必須運用「線索獨立空格先解 (Anchor Blank First)」法則。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 尋找語意錨點：先掃描全句，尋找修飾成分最完整、語意最明確的那個空格作為破題突破口。\n2. 讓步與反差辨析：識別 although, however, nevertheless, paradoxically, ironically, far from, rather than, belie 的語意翻轉點；分清作者主句主張與讓步從句的層次。\n3. 辯證結構推進：學術長句常呈現「正題 (Thesis) $\\to$ 反題 (Antithesis) $\\to$ 合題 (Synthesis)」三層推進，三空格常各自對應這三個哲學階段。\n4. 標點符號邏輯功能：分號 (;) 代表語意平行或對比延伸；冒號 (:) 代表前句主張的具體解釋或同義重述。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：主觀世俗常識腦補。嚴格依據題幹內的對應詞 (Pivot Words) 判定正負色彩，切勿引入未提及的外部背景知識。\n• 陷阱 2：雙空題連鎖反應。第二空格通常是第一空格推論成立的邏輯前提，兩空格之間往往互為線索，不可割裂解讀。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Although the senator claimed her motives were entirely altruistic, her voting record revealed an unmistakably ______ agenda.\n大師解剖：樞紐詞「Although」引導讓步從句，主句的空格必與從句的「altruistic (利他的)」形成鮮明反義！空格必須具有「自私的、追逐私利的」色彩，秒殺 mercenary 或 self-serving！',
             tip: '雙空題連鎖反應：第二空格通常是第一空格推論成立的邏輯前提，兩空格之間往往互為線索，不可割裂解讀。'
           },
           {
-            heading: 'GRE 學術長篇閱讀「翻案文」結構與作者認知立場',
-            body: 'GRE 閱讀篇章源自權威學術期刊，以「翻案文 (Historiographical Revisionism)」為最具代表性題型：\n1. 翻案文經典三部曲：\n   - 第一階段：提出傳統歷史學界或科學界普遍接受的主流舊說 (Traditional Historiographical Consensus)。\n   - 第二階段：引述新出土考古文獻、新計量統計模型或異常實驗數據 (Anomalous Evidence)，挑戰舊說盲區。\n   - 第三階段：作者提出修訂版綜合框架 (Nuanced Synthesis)，非全然推翻，而是界定適用邊界。\n2. 作者認知態度 (Author\'s Epistemic Stance) 判讀：\n   - unqualified endorsement：無保留全力支持（極少出現）。\n   - guarded skepticism：審慎懷疑（最常作為正確答案）。\n   - measured optimism：適度審慎的樂觀。\n   - scathing repudiation：嚴厲斥責抨擊。\n3. 排除干擾項金律：凡出現 completely, infallible, unequivocally, wholly discredited 等極端化詞彙之選項，95% 以上為命題陷阱。',
+            heading: '題型二・GRE Text Completion 雙空與三空「確定性錨點」破題矩陣 (Anchor Blank First Matrix)',
+            body: '【核心構念 (Construct Essence)】\n句子等價題要求在 6 個選項中選出恰好 2 個答案，填入後不僅兩者各自語法正確，更必須使全句所表達的「語意與修辭意圖完全等價 (Produce sentences that are alike in meaning)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 步驟 A：先分析題幹邏輯骨架，確定空格的語意方向（正向/負向/特定學術屬性）。\n2. 步驟 B：掃描 6 個選項，進行「同義詞組對 (Twin Synonym Grouping)」；通常 6 個選項會分成兩組同義詞與兩個孤立干擾詞。\n3. 步驟 C：將成對同義詞帶入題幹檢驗，確保填入後的兩句話在學術語意層次上無微小歧異。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：孤立詞語意完美但無孿生詞對。某個選項填入句意極佳，但在其餘 5 個選項中找不到第二個同義詞，此為最致命的誘答陷阱！\n• 陷阱 2：同義但感情色彩或適用語境偏離。例如 superficial (膚淺的) 與 cursory (草率倉促的) 在某些字典列為同義，但在學術批判語境中一者指深度不足，一者指時間匆忙，不可混用。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Because of the team\'s ______ efforts, the historic cathedral was restored to its pristine condition ahead of schedule.\n選項：(A) sporadic (B) relentless (C) perfunctory (D) unflagging (E) tentative (F) futile\n大師解剖：題幹「Because of」表因果，結果是提早恢復原貌，因此努力必須是堅持不懈的。(B) relentless 與 (D) unflagging 構成完美孿生同義詞組，填入後全句語意完全一致！',
+            tip: 'SE 六選二心法：無同義詞組對的選項直接排除；兩詞必須填入後全句語意等價，不可僅憑單字表面近義就草率勾選！'
+          },
+          {
+            heading: '題型三・GRE 學術長篇閱讀「翻案文」結構與作者認知立場 (Revisionist Structure & Epistemic Stance)',
+            body: '【核心構念 (Construct Essence)】\nGRE 閱讀篇章源自權威學術期刊，以「翻案文 (Historiographical Revisionism)」為最具代表性題型。考查學術長篇密集論證、因果機制推導與異常數據反證。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 翻案文經典三部曲：\n   - 第一階段：提出傳統歷史學界或科學界普遍接受的主流舊說 (Traditional Historiographical Consensus)。\n   - 第二階段：引述新出土考古文獻、新計量統計模型或異常實驗數據 (Anomalous Evidence)，挑戰舊說盲區。\n   - 第三階段：作者提出修訂版綜合框架 (Nuanced Synthesis)，非全然推翻，而是界定適用邊界。\n2. 作者認知態度 (Author\'s Epistemic Stance) 判讀：\n   - unqualified endorsement：無保留全力支持（極少出現）。\n   - guarded skepticism：審慎懷疑（最常作為正確答案）。\n   - measured optimism：適度審慎的樂觀。\n   - scathing repudiation：嚴厲斥責抨擊。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：極端化詞彙干擾項。凡出現 completely, infallible, unequivocally, wholly discredited 等極端化詞彙之選項，95% 以上為命題陷阱。\n• 陷阱 2：細節偷換主詞。將學者 A 的主張安插到學者 B 頭上。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n文章首句：「Historians long assumed that urban migration in 19th-century Europe uniformly degraded living standards...」\n第二句：「However, recent parish records examined by Dubois suggest...」\n大師解剖：看到「long assumed」直接預判下文必有「翻案」！作者隨後引述 Dubois 的新資料，態度屬於「qualified revision (有保留的修正)」，主旨題直接鎖定 challenge a prevailing historical assumption！',
             tip: '長篇閱讀定位法：主旨題先抓第一段末句或第二段首句轉折；細節題務必回到原文錨定對應行數，以「同義改寫 (Paraphrase)」為唯一判定標準。'
           },
           {
@@ -1210,22 +1240,22 @@ export const curriculum = [
             tip: '現行 GMAT 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，可以檢查本節作答，但至多修改 3 道題答案！'
           },
           {
-            heading: 'Critical Reasoning 因果論證三大致命漏洞與攻防向量',
-            body: 'GMAT CR 80% 以上論證屬於因果推論（Premise: 事件 A 發生，Conclusion: A 導致 B）：\n1. 另有他因 (Alternative Cause)：忽視可能同時存在的外部變量 C 才是造成 B 的真因（例如：延長營業時間銷售上升，實際是因為同期實施了五折清倉促銷）。\n2. 因果倒置 (Reverse Causality)：將結果與原因順序搞反（例如：經常閱讀財經雜誌的投資人收益更高，可能是高收益者才有閒暇閱讀，而非閱讀帶來高收益）。\n3. 樣本選擇偏差 (Selection Bias / Sampling Bias)：由自願參與者或特殊群體樣本推論全體母體行為（例如：以高科技園區員工使用無人駕駛計程車的意願推論全國居民）。\n4. 削弱與加強的對偶性：\n   - 削弱題：主動引入另有他因、因果倒置可能、或指出樣本偏差。\n   - 加強題：主動排除混淆變量、證實「無 A 則無 B」、或提供平行行業類似操作的成功驗證。',
-            tip: '區分事實與推論：題幹中給定的 Premise 為不可爭辯的事實，絕不可質疑 Premise 本身之真實性，攻擊點永遠在 Premise 到 Conclusion 的推導邏輯漏洞！'
+            heading: '題型一・CR Weaken & Strengthen 因果論證三大致命漏洞與攻防向量 (Causal Argument Vulnerabilities)',
+            body: '【核心構念 (Construct Essence)】\nGMAT CR 80% 以上論證屬於因果推論（Premise: 事件 A 發生，Conclusion: A 導致 B）。商學院評估候選人是否能敏銳識別商業決策中的歸因謬誤。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 區分事實與推論：題幹中給定的 Premise 為不可爭辯的既成事實，絕不可質疑 Premise 本身之真實性，攻擊點永遠在 Premise 到 Conclusion 的推導邏輯漏洞！\n2. 識別三大漏洞：\n   - 另有他因 (Alternative Cause)：忽視可能同時存在的外部變量 C 才是造成 B 的真因。\n   - 因果倒置 (Reverse Causality)：將結果與原因順序搞反。\n   - 樣本選擇偏差 (Selection Bias)：由特殊自願群體推論全體母體。\n3. 削弱與加強的對偶性：\n   - 削弱題：主動引入另有他因、因果倒置可能、或指出樣本偏差。\n   - 加強題：主動排除混淆變量、證實「無 A 則無 B」、或提供平行行業類似操作的成功驗證。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：質疑前提事實。選項若企圖反駁題幹已給出的統計數據，直接排除！\n• 陷阱 2：無關信息混淆。涉及產品外包裝顏色、公司成立歷史等無關商業細節，皆為經典干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：某連鎖超市延長每晚營業時間 2 小時後，該季度銷售額增長了 15%。經理因此宣稱，延長營業時間是銷售增長的原因。問哪項最削弱？\n大師解剖：另有他因攻擊！正確選項：該季度該超市同時啟動了全店 7 折會員促銷活動。這直接說明 15% 的增長極可能是促銷帶來的，而非延長營業時間！',
+            tip: '因果攻防金律：削弱找「他因/倒置/偏差」；加強找「排他因/無因無果/同因同果」！'
           },
           {
-            heading: 'CR 假設題 (Assumption)「否定測試法」決策流程',
-            body: '假設（Assumption）是讓論證結論得以成立的「未明言必要條件 (Sine Qua Non)」：\n1. 否定測試法 (Negation Technique) 三步 SOP：\n   - 步驟一：選取待測選項，將其動詞取非（將肯定的選項加 NOT，或將含有 NOT 的選項去掉 NOT）。\n   - 步驟二：將取非後的命題帶回原題幹，檢視原論證結論是否受到實質衝擊。\n   - 步驟三：若結論因此立即瓦解崩潰（Argument Falls Apart），該選項就是正確答案！\n2. 充分條件 vs 必要條件陷阱：假設必須是「必要條件」，不可將題目推向過度嚴苛的充分條件（例如：結論只需降低成本，選項不需保證降低所有產品的成本）。\n3. 排除無關資訊：涉及個人喜好、招牌顏色、過往無關年份之描述，皆為典型干擾項。',
+            heading: '題型二・CR Assumption 假設題「否定測試法」決策樹 (Negation Decision Tree)',
+            body: '【核心構念 (Construct Essence)】\n假設（Assumption）是讓論證結論得以成立的「未明言必要條件 (Sine Qua Non)」。沒有這個假設，作者的推理大廈將瞬間坍塌。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n否定測試法 (Negation Technique) 三步 SOP：\n1. 步驟一：選取待測選項，將其動詞取非（將肯定的選項加 NOT，或將含有 NOT 的選項去掉 NOT）。\n2. 步驟二：將取非後的命題帶回原題幹，檢視原論證結論是否受到實質致命衝擊。\n3. 步驟三：若結論因此立即瓦解崩潰（Argument Falls Apart），該選項就是正確答案！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：充分條件陷阱。假設必須是「必要條件」，不可將題目推向過度嚴苛的充分條件（例如：結論只需降低成本，選項不需保證降低所有產品的成本）。\n• 陷阱 2：極端絕對語氣。帶有 all, completely, impossible 等絕對詞的選項，往往是充分條件而非作者心底默認的底層必要假設。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目結論：透過採用全自動組裝機器人，本工廠將能降低每台汽車的生產總成本。\n假設檢驗：\n選項：機器人的維護與折舊成本不會超過節省下來的人工工資。\n取非測試：若機器人的維護折舊成本「超過」節省下來的人工工資，則生產總成本不僅不會降低，反而會上升！結論徹底瓦解！取非即死，驗證此選項必為正確假設！',
             tip: '否定測試口訣：「取非即死」——選項取反若能一劍封喉擊潰作者結論，該選項必為作者心底默認的底層假設！'
           },
           {
-            heading: 'CR 黑體字角色題 (Method of Reasoning / Boldface) 解題決策樹',
-            body: '黑體字題考查對學術與商業論證內部各組件功能角色的抽象結構認知：\n1. 判定組件屬性 (Fact vs. Claim)：\n   - 客觀事實 (Evidence / Premise / Finding / Data)：歷史數據、實驗測量結果、既成事實。\n   - 主觀主張 (Claim / Judgment / Hypothesis / Position)：作者或反對派提出的判斷、預測或結論。\n2. 判定立場陣營 (Support vs. Oppose)：\n   - 該黑體字是站在作者立場，還是站在作者反對的立場（Opponent\'s argument）？\n3. 判定結論層級：\n   - 是中間過渡結論 (Intermediate / Subsidiary Conclusion)，還是全篇最終推論 (Main Conclusion)？\n4. 排除技巧：快速掃描選項前半句與後半句的功能關鍵字，只要一處不符合立即排除，無需全文細讀選項。',
+            heading: '題型三・CR Method of Reasoning / Boldface 黑體字角色題判定決策樹 (Boldface Role Architecture)',
+            body: '【核心構念 (Construct Essence)】\n黑體字題考查對學術與商業論證內部各組件功能角色的抽象結構認知。考生必須抽離具體商業細節，精確識別各句的邏輯功能。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 判定組件屬性 (Fact vs. Claim)：\n   - 客觀事實 (Evidence / Premise / Finding / Data)：歷史數據、實驗測量結果、既成事實。\n   - 主觀主張 (Claim / Judgment / Hypothesis / Position)：作者或反對派提出的判斷、預測或結論。\n2. 判定立場陣營 (Support vs. Oppose)：\n   - 該黑體字是站在作者立場，還是站在作者反對的立場（Opponent\'s argument）？\n3. 判定結論層級：\n   - 是中間過渡結論 (Intermediate / Subsidiary Conclusion)，還是全篇最終推論 (Main Conclusion)？\n4. 排除技巧：快速掃描選項前半句與後半句的功能關鍵字，只要一處不符合立即排除，無需全文細讀選項。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：混淆中間結論與最終結論。中間結論後方往往還有 However 或 Therefore 引導全篇最終立場。\n• 陷阱 2：立場張冠李戴。將作者用來駁斥的對手前提誤當成作者自己的支持論據。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n句型結構：[Many analysts claim that company X will dominate the EV sector.] (BF 1) However, because rare earth raw material costs have doubled, [this projection is largely overoptimistic.] (BF 2)\n大師解剖：BF 1 是作者反對的主張 (a claim that the argument seeks to challenge)；BF 2 是作者提出的最終主要結論 (the main conclusion of the argument)。直接在選項中精準匹配！',
             tip: '黑體字定位關鍵詞：However, But, Clearly, Therefore, Hence 往往是立場轉換與最終結論的旗幟標誌。'
           },
           {
-            heading: '商學長文精讀與 Data Insights 跨文本邏輯',
+            heading: '題型四・商學長文精讀與 Data Insights 跨文本邏輯 (Two-Sided Platforms & Multi-Source Synthesis)',
             body: 'GMAT 閱讀篇幅長、句法密集，涉及企業管理戰略、雙邊平台網路效應、金融市場、科技演進、反壟斷監管：\n- 略讀框架：每段只精讀第一句與轉折句，在草稿紙寫下段落功能（P1: 提出舊商業理論；P2: 實證數據挑戰舊理論；P3: 提出新平台經濟模型）。\n- Data Insights 語言整合：比對圖表趨勢與多來源文本陳述，找出邏輯矛盾與數據盲區。\n- 雙邊平台動態 (Two-Sided Platforms)：跨邊網路外部性 (Cross-Side Network Effects) 與補貼策略。',
             tip: '商業決策題常見陷阱：將「相關性 (Correlation)」誤當成「因果性 (Causation)」，或將「利潤增加」誤當成「銷售額增加」（忽略成本變量）。'
           }

@@ -8,7 +8,7 @@ import { archSemesters } from './arch_semesters.mjs';
 import { archTenseModules, archSentencePillars, archPartsOfSpeech, archPhoneticItems, archDictCodes } from './arch_prerequisites.mjs';
 import { renderDuolingoHeroBanner, renderDuolingoGameView, duolingoState, handleDuolingoClick, isDuolingoEligible } from './duolingo_game.mjs';
 import { getSmartVisualDiagram, renderPhonicsTipBox, renderFlashcardBridgeBox } from './lesson_visuals.mjs';
-import { ANCHOR_DRILL_QUESTIONS, GRE_DRILL_TYPES, GMAT_DRILL_TYPES } from './exam_drill_data.mjs';
+import { ANCHOR_DRILL_QUESTIONS, TOEIC_DRILL_TYPES, SAT_DRILL_TYPES, GRE_DRILL_TYPES, GMAT_DRILL_TYPES } from './exam_drill_data.mjs';
 
 export const escapeText=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const e=escapeText;
@@ -19,6 +19,8 @@ try{const p=JSON.parse(localStorage.getItem(STORE)||'null');if(p&&p.answers&&p.d
 function persist(){try{localStorage.setItem(STORE,JSON.stringify(progress));}catch{storageWarning='儲存失敗，請先複製你的作答。';}}
 
 export const examDrillState = {
+  toeic: { activeType: 'all', currentQ: null, userAnswer: null, pendingMulti: [], showHint: false, showExplain: false, totalAttempted: 0, totalCorrect: 0 },
+  sat: { activeType: 'all', currentQ: null, userAnswer: null, pendingMulti: [], showHint: false, showExplain: false, totalAttempted: 0, totalCorrect: 0 },
   gre: { activeType: 'all', currentQ: null, userAnswer: null, pendingMulti: [], showHint: false, showExplain: false, totalAttempted: 0, totalCorrect: 0 },
   gmat: { activeType: 'all', currentQ: null, userAnswer: null, pendingMulti: [], showHint: false, showExplain: false, totalAttempted: 0, totalCorrect: 0 }
 };
@@ -26,33 +28,72 @@ export const examDrillState = {
 const DRILL_STORE = 'english-quest-exam-drills-v1';
 try {
   const savedDrills = JSON.parse(localStorage.getItem(DRILL_STORE) || 'null');
-  if (savedDrills && savedDrills.gre && savedDrills.gmat) {
-    if (savedDrills.gre.totalAttempted !== undefined) {
-      examDrillState.gre.totalAttempted = savedDrills.gre.totalAttempted;
-      examDrillState.gre.totalCorrect = savedDrills.gre.totalCorrect;
-    }
-    if (savedDrills.gmat.totalAttempted !== undefined) {
-      examDrillState.gmat.totalAttempted = savedDrills.gmat.totalAttempted;
-      examDrillState.gmat.totalCorrect = savedDrills.gmat.totalCorrect;
+  if (savedDrills) {
+    for (const k of ['toeic', 'sat', 'gre', 'gmat']) {
+      if (savedDrills[k] && savedDrills[k].totalAttempted !== undefined) {
+        examDrillState[k].totalAttempted = savedDrills[k].totalAttempted;
+        examDrillState[k].totalCorrect = savedDrills[k].totalCorrect;
+      }
     }
   }
 } catch {}
 
 function persistDrills() {
   try {
-    localStorage.setItem(DRILL_STORE, JSON.stringify({
-      gre: { totalAttempted: examDrillState.gre.totalAttempted, totalCorrect: examDrillState.gre.totalCorrect },
-      gmat: { totalAttempted: examDrillState.gmat.totalAttempted, totalCorrect: examDrillState.gmat.totalCorrect }
-    }));
+    const payload = {};
+    for (const k of ['toeic', 'sat', 'gre', 'gmat']) {
+      payload[k] = { totalAttempted: examDrillState[k].totalAttempted, totalCorrect: examDrillState[k].totalCorrect };
+    }
+    localStorage.setItem(DRILL_STORE, JSON.stringify(payload));
   } catch {}
+}
+
+export function getExamDrillMeta(cid) {
+  switch (cid) {
+    case 'toeic':
+      return {
+        types: TOEIC_DRILL_TYPES,
+        themeColor: '#d97706',
+        themeLight: '#fef3c7',
+        title: '🏢 TOEIC 多益商務核心題型實戰演練專區',
+        badge: 'Part 5–7 題庫 3,000 題動態抽測'
+      };
+    case 'sat':
+      return {
+        types: SAT_DRILL_TYPES,
+        themeColor: '#6366f1',
+        themeLight: '#e0e7ff',
+        title: '🎓 Digital SAT 學術核心題型實戰演練專區',
+        badge: 'Craft / Evidence / Conventions 題庫 3,000 題'
+      };
+    case 'gre':
+      return {
+        types: GRE_DRILL_TYPES,
+        themeColor: '#e11d48',
+        themeLight: '#fff1f2',
+        title: '🏛️ GRE Verbal 核心題型實戰演練專區',
+        badge: 'TC / SE / RC 題庫 3,000 題動態抽測'
+      };
+    case 'gmat':
+      return {
+        types: GMAT_DRILL_TYPES,
+        themeColor: '#0891b2',
+        themeLight: '#ecfeff',
+        title: '⚖️ GMAT Focus 核心題型實戰演練專區',
+        badge: 'CR / Data Insights 題庫 3,000 題動態抽測'
+      };
+    default:
+      return null;
+  }
 }
 
 export function ensureDrillQuestion(cid) {
   const st = examDrillState[cid];
   if (!st) return null;
   if (!st.currentQ) {
-    const types = cid === 'gre' ? GRE_DRILL_TYPES : GMAT_DRILL_TYPES;
-    const curType = types.find(t => t.id === st.activeType) || types[0];
+    const meta = getExamDrillMeta(cid);
+    const types = meta ? meta.types : [];
+    const curType = types.find(t => t.id === st.activeType) || types[0] || { filter: '' };
     const pool = ANCHOR_DRILL_QUESTIONS.filter(q => q.category === cid);
     const matched = curType.filter ? pool.find(q => q.subtopic && q.subtopic.includes(curType.filter)) : pool[0];
     st.currentQ = matched || pool[0];
@@ -63,12 +104,14 @@ export function ensureDrillQuestion(cid) {
 export function renderExamDrillSuite(cid) {
   const st = examDrillState[cid];
   if (!st) return '';
+  const meta = getExamDrillMeta(cid);
+  if (!meta) return '';
   const q = ensureDrillQuestion(cid);
   if (!q) return '';
-  const types = cid === 'gre' ? GRE_DRILL_TYPES : GMAT_DRILL_TYPES;
+  const types = meta.types;
   const isMulti = q.selectCount === 2 || (Array.isArray(q.answer) && q.answer.length === 2);
-  const themeColor = cid === 'gre' ? '#e11d48' : '#0891b2';
-  const themeLight = cid === 'gre' ? '#fff1f2' : '#ecfeff';
+  const themeColor = meta.themeColor;
+  const themeLight = meta.themeLight;
   const isAnswered = st.userAnswer !== null;
 
   let isCorrect = false;
@@ -94,10 +137,10 @@ export function renderExamDrillSuite(cid) {
         <div>
           <div style="display:flex;align-items:center;gap:8px">
             <h3 style="margin:0;font-size:18px;color:#0f172a">
-              ${cid === 'gre' ? '🏛️ GRE Verbal' : '⚖️ GMAT Focus'} 核心題型實戰演練專區
+              ${e(meta.title)}
             </h3>
             <span class="pill" style="font-size:11px;background:${themeLight};color:${themeColor};font-weight:700">
-              題庫 3,000 題動態抽測
+              ${e(meta.badge)}
             </span>
           </div>
           <p style="margin:4px 0 0;font-size:13px;color:#64748b">
@@ -237,8 +280,9 @@ export function handleExamDrillClick(button, rerender) {
     st.showHint = false;
     st.showExplain = false;
 
-    const types = examId === 'gre' ? GRE_DRILL_TYPES : GMAT_DRILL_TYPES;
-    const curType = types.find(t => t.id === st.activeType) || types[0];
+    const meta = getExamDrillMeta(examId);
+    const types = meta ? meta.types : [];
+    const curType = types.find(t => t.id === st.activeType) || types[0] || { filter: '' };
     const filter = curType.filter || '';
 
     if (typeof window !== 'undefined' && window.questionDB) {
@@ -330,8 +374,9 @@ export function handleExamDrillClick(button, rerender) {
       st.showHint = false;
       st.showExplain = false;
 
-      const types = examId === 'gre' ? GRE_DRILL_TYPES : GMAT_DRILL_TYPES;
-      const curType = types.find(t => t.id === st.activeType) || types[0];
+      const meta = getExamDrillMeta(examId);
+      const types = meta ? meta.types : [];
+      const curType = types.find(t => t.id === st.activeType) || types[0] || { filter: '' };
       const filter = curType.filter || '';
 
       if (typeof window !== 'undefined' && window.questionDB) {
@@ -367,7 +412,7 @@ export function teachingChapter(key){const [tid,cid]=key.split(':');const t=curr
 const alignmentBox=`<div class="card lesson-alignment-box" style="margin:14px 0 18px;background:#f8fafc;border-left:4px solid #2563eb;padding:14px 18px;border-radius:10px"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px"><span class="chip" style="background:#e0e7ff;color:#3730a3;font-weight:700">課綱: ${e(c.curriculumCode||'108課綱對標')}</span><span class="chip" style="background:#eff6ff;color:#1e40af;font-weight:700">CEFR: ${e(c.cefr||'A2-B2')}</span><span class="chip" style="background:#ecfdf5;color:#047857">素養: ${e(c.competency||'核心素養')}</span><span style="font-size:12px;color:#64748b">${e(c.stage||'國家考制與標準課程階段')}</span></div>${c.learningPerformance?`<div style="font-size:13px;color:#1e293b;margin-top:4px"><strong>🎯 學習表現指標：</strong>${e(c.learningPerformance)}</div>`:''}${c.learningContent?`<div style="font-size:12px;color:#475569;margin-top:3px"><strong>📖 學習內容細目：</strong>${e(c.learningContent)}</div>`:''}${c.guideline?`<div style="font-size:12px;color:#475569;margin-top:4px;line-height:1.5"><strong>📜 評量指引與雙向細目：</strong>${e(c.guideline)}</div>`:''}</div>`;
 let duoContent='';if(isJ1){duoContent=duolingoState.isOpen?renderDuolingoGameView():renderDuolingoHeroBanner(c.id);}
 const visualsBlock = `${renderPhonicsTipBox(c.title)}${renderFlashcardBridgeBox(t.id, t.title)}`;
-return `<article class="lesson-page"><header class="header-block"><div class="pill">${e(t.title)} · 原創示範與練習</div><h1>${e(c.title)}</h1><p>${e(w.goal)}</p></header><details class="card"><summary>課程對應資訊</summary>${alignmentBox}</details><details class="card"><summary>全部教學章節 · 國中、高中、高工與國際考試</summary>${lessonCatalog()}</details><nav class="lesson-links" aria-label="本章目錄"><button class="btn quiet" data-scroll-to="#lesson-explain">概念</button><button class="btn quiet" data-scroll-to="#lesson-example">例題拆解</button><button class="btn quiet" data-scroll-to="#lesson-vocab">字詞與對話</button><button class="btn quiet" data-scroll-to="#lesson-practice">檢核</button><button class="btn quiet" data-scroll-to="#lesson-output">自己寫</button></nav><section class="card" id="lesson-explain"><h2>1. 把觀念弄清楚</h2><p>${e(w.rule)}</p>${c.concepts.map(x=>`<h3>${e(x.heading)}</h3>${textBlocks(x.body)}${x.tip?`<aside class="lesson-tip">${e(x.tip)}</aside>`:''}`).join('')}</section><section class="card" id="lesson-example"><h2>2. 一步步看懂例子</h2>${renderTeachingAid(c.title, c.concepts, [w.example])}<blockquote>${e(w.example)}</blockquote><ol>${w.steps.map(x=>`<li>${e(x)}</li>`).join('')}</ol><h3>常見錯誤與修正</h3><p>${e(w.trap)}</p></section><section class="card" id="lesson-vocab"><h2>3. 在句子裡學單字與片語</h2><div class="lesson-table"><table><thead><tr><th>字詞／發音</th><th>意義</th><th>例句</th></tr></thead><tbody>${c.vocab.map(v=>`<tr><td lang="en">${e(v.word)}<br>${e(v.ipa)} ${speech(v.word)}</td><td>${e(v.pos)} ${e(v.def)}</td><td lang="en">${e(v.example)} ${speech(v.example)}</td></tr>`).join('')}</tbody></table></div>${c.phrases.map(p=>`<p><strong lang="en">${e(p.phrase)}</strong>：${e(p.def)}<br><span lang="en">${e(p.example)}</span> ${speech(p.example)}</p>`).join('')}<h3>放進情境對話</h3>${c.dialogue.map(d=>`<p><strong>${e(d.speaker)}：</strong><span lang="en">${e(d.text)}</span> ${speech(d.text)}</p>`).join('')}<p class="small">朗讀使用裝置合成語音。看著文字理解，不等同完成聽力評量。</p></section><section class="card" id="lesson-practice"><h2>4. 關起解析，自己判斷</h2>${duoContent}${checkBlock(w.question)}${(cid==='gre'||cid==='gmat')?renderExamDrillSuite(cid):''}</section><section class="card" id="lesson-output"><h2>5. 換個情境，自己使用</h2><label for="lesson-draft">${e(w.task)}</label><textarea id="lesson-draft" data-lesson-draft="${c.id}" rows="5" placeholder="在這裡寫下你的答案…">${e(progress.drafts[c.id]||'')}</textarea><p class="small" id="lesson-save-status" role="status">${e(storageWarning||'草稿只儲存在這個瀏覽器。')}</p><button class="btn quiet" data-lesson-model="${c.id}">查看參考答案／檢核規準</button><div aria-live="polite">${progress.revealed[c.id]?`<p>${e(w.model)}</p><p class="small">比較訊息、句法和搭配；你的答案可以與範例不同。這一題未自動評分。</p>`:''}</div><details><summary>延伸工具：圖解、發音與閃卡</summary>${visualsBlock}</details><h3>明天再確認一次</h3><p>先不看例句，用自己的話說出「${e(w.goal)}」，再換人物或情境重寫。若需回看，回到上方例題拆解。</p>${next?`<button class="btn primary" data-open-chapter="${t.id}:${next.id}">下一章：${e(next.title)}</button>`:''}</section></article>`;}
+return `<article class="lesson-page"><header class="header-block"><div class="pill">${e(t.title)} · 原創示範與練習</div><h1>${e(c.title)}</h1><p>${e(w.goal)}</p></header><details class="card"><summary>課程對應資訊</summary>${alignmentBox}</details><details class="card"><summary>全部教學章節 · 國中、高中、高工與國際考試</summary>${lessonCatalog()}</details><nav class="lesson-links" aria-label="本章目錄"><button class="btn quiet" data-scroll-to="#lesson-explain">概念</button><button class="btn quiet" data-scroll-to="#lesson-example">例題拆解</button><button class="btn quiet" data-scroll-to="#lesson-vocab">字詞與對話</button><button class="btn quiet" data-scroll-to="#lesson-practice">檢核</button><button class="btn quiet" data-scroll-to="#lesson-output">自己寫</button></nav><section class="card" id="lesson-explain"><h2>1. 把觀念弄清楚</h2><p>${e(w.rule)}</p>${c.concepts.map(x=>`<h3>${e(x.heading)}</h3>${textBlocks(x.body)}${x.tip?`<aside class="lesson-tip">${e(x.tip)}</aside>`:''}`).join('')}</section><section class="card" id="lesson-example"><h2>2. 一步步看懂例子</h2>${renderTeachingAid(c.title, c.concepts, [w.example])}<blockquote>${e(w.example)}</blockquote><ol>${w.steps.map(x=>`<li>${e(x)}</li>`).join('')}</ol><h3>常見錯誤與修正</h3><p>${e(w.trap)}</p></section><section class="card" id="lesson-vocab"><h2>3. 在句子裡學單字與片語</h2><div class="lesson-table"><table><thead><tr><th>字詞／發音</th><th>意義</th><th>例句</th></tr></thead><tbody>${c.vocab.map(v=>`<tr><td lang="en">${e(v.word)}<br>${e(v.ipa)} ${speech(v.word)}</td><td>${e(v.pos)} ${e(v.def)}</td><td lang="en">${e(v.example)} ${speech(v.example)}</td></tr>`).join('')}</tbody></table></div>${c.phrases.map(p=>`<p><strong lang="en">${e(p.phrase)}</strong>：${e(p.def)}<br><span lang="en">${e(p.example)}</span> ${speech(p.example)}</p>`).join('')}<h3>放進情境對話</h3>${c.dialogue.map(d=>`<p><strong>${e(d.speaker)}：</strong><span lang="en">${e(d.text)}</span> ${speech(d.text)}</p>`).join('')}<p class="small">朗讀使用裝置合成語音。看著文字理解，不等同完成聽力評量。</p></section><section class="card" id="lesson-practice"><h2>4. 關起解析，自己判斷</h2>${duoContent}${checkBlock(w.question)}${['toeic', 'sat', 'gre', 'gmat'].includes(cid)?renderExamDrillSuite(cid):''}</section><section class="card" id="lesson-output"><h2>5. 換個情境，自己使用</h2><label for="lesson-draft">${e(w.task)}</label><textarea id="lesson-draft" data-lesson-draft="${c.id}" rows="5" placeholder="在這裡寫下你的答案…">${e(progress.drafts[c.id]||'')}</textarea><p class="small" id="lesson-save-status" role="status">${e(storageWarning||'草稿只儲存在這個瀏覽器。')}</p><button class="btn quiet" data-lesson-model="${c.id}">查看參考答案／檢核規準</button><div aria-live="polite">${progress.revealed[c.id]?`<p>${e(w.model)}</p><p class="small">比較訊息、句法和搭配；你的答案可以與範例不同。這一題未自動評分。</p>`:''}</div><details><summary>延伸工具：圖解、發音與閃卡</summary>${visualsBlock}</details><h3>明天再確認一次</h3><p>先不看例句，用自己的話說出「${e(w.goal)}」，再換人物或情境重寫。若需回看，回到上方例題拆解。</p>${next?`<button class="btn primary" data-open-chapter="${t.id}:${next.id}">下一章：${e(next.title)}</button>`:''}</section></article>`;}
 export function microLesson(unitId){const units=UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units));const u=units.find(u=>u.id===unitId)||units[0];const [kind,key]=u.sourceRef.split(':');let content='',questions=[];
 if(kind==='sixth'){const l=sixthLessons[key];content=l?textBlocks(l.rawMarkdown||l.fullContent||l.rawContent||l.markdown||l.concepts.map(c=>`### ${c.title}\n${c.content}`).join('\n')):'';questions=(sixthQuestions[key]||sixthQuestions[`u${l?.unit}`]||[]).map(q=>({id:`micro-${q.id}`,prompt:q.question,options:q.options,answer:q.answerIndex,explanation:q.explanation}));}
 else if(kind==='jh'&&jhCases[key]){const parts=jhCases[key].split('|');content=`<h2>理解觀念</h2>${textBlocks(parts[0])}<h2>動手試試</h2>${textBlocks(parts[1])}<details><summary>查看逐步解說</summary>${textBlocks((parts[2]||'').split('~').join('\n'))}</details><h2>換個情境</h2>${textBlocks(parts[3]||'')}`;}

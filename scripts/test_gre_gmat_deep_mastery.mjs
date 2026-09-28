@@ -73,7 +73,7 @@ test('3. Exam Drill Data Structure & Subtopic Mappings Audit', async () => {
   
   assert.equal(GRE_DRILL_TYPES.length, 6, 'GRE drill types must have 6 categories');
   assert.equal(GMAT_DRILL_TYPES.length, 8, 'GMAT drill types must have 8 categories');
-  assert.equal(ANCHOR_DRILL_QUESTIONS.length, 12, 'Anchor questions must contain 12 questions');
+  assert.ok(ANCHOR_DRILL_QUESTIONS.length >= 12, 'Anchor questions must contain at least 12 questions');
 
   // GRE SE Anchor Verification
   const seQ = ANCHOR_DRILL_QUESTIONS.find(q => q.subtopic && q.subtopic.includes('Sentence Equivalence'));

@@ -1,4 +1,9 @@
-// exam_drill_data.mjs - TOEIC, SAT, GRE & GMAT 高階題型實戰演練錨定資料庫與題型映射表
+// scripts/update_exam_drill_data.mjs
+// 擴充 exam_drill_data.mjs，加入完整之 TOEIC, SAT, GRE, GMAT 四大考制題型分類與高擬真錨定題庫
+
+import fs from 'node:fs';
+
+const content = `// exam_drill_data.mjs - TOEIC, SAT, GRE & GMAT 高階題型實戰演練錨定資料庫與題型映射表
 
 export const TOEIC_DRILL_TYPES = [
   { id: 'all', label: '🌟 全部題型 (綜合隨選 3,000 題)', filter: '' },
@@ -59,7 +64,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 2,
     selectCount: 1,
     hint: "【步驟0秒殺破題】空格位於所有格 (their) 與名詞 (contribution) 之間，語法結構必為形容詞 (Adj.) 修飾後方名詞。",
-    explain: "【大師級專業詳解·Part 5 詞性題秒殺方程式】\n1. 結構剖析：their (所有格形容詞) + [ ___ ] + contribution (抽象名詞受詞) + to...\n2. 詞性判斷：空格必然填入形容詞用以修飾名詞 contribution。\n3. 選項詞性辨析：\n   (A) signify：動詞（象徵、表示）\n   (B) signification：名詞（含義、意義）\n   (C) significant：形容詞（重大的、顯著的）➔ 正解\n   (D) significantly：副詞（顯著地、重大地）\n4. 商務高頻搭配：make a significant contribution to (對…做出重大貢獻)。"
+    explain: "【大師級專業詳解·Part 5 詞性題秒殺方程式】\\n1. 結構剖析：their (所有格形容詞) + [ ___ ] + contribution (抽象名詞受詞) + to...\\n2. 詞性判斷：空格必然填入形容詞用以修飾名詞 contribution。\\n3. 選項詞性辨析：\\n   (A) signify：動詞（象徵、表示）\\n   (B) signification：名詞（含義、意義）\\n   (C) significant：形容詞（重大的、顯著的）➔ 正解\\n   (D) significantly：副詞（顯著地、重大地）\\n4. 商務高頻搭配：make a significant contribution to (對…做出重大貢獻)。"
   },
   {
     id: "toeic-0002",
@@ -78,7 +83,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 0,
     selectCount: 1,
     hint: "【步驟0秒殺破題】空格後方接名詞受詞 submission (提交)，空格必須填入具介系詞功能的片語引導時間名詞。",
-    explain: "【大師級專業詳解·Part 5 介系詞與商務搭配方程式】\n1. 結構剖析：主句完整 (All requests must be signed...)，空格後接名詞 submission (名詞) + to the accounting office。\n2. 選項功能辨析：\n   (A) prior to：複合介系詞（等同 before），後接名詞或動名詞 V-ing，意為「在…之前」➔ 正解\n   (B) in order that：連接詞（表目的），後方必須接完整子句 (S + V)\n   (C) subsequent：形容詞（隨後的），不能直接作介系詞連接後方名詞\n   (D) as long：殘缺片語，表條件需為 as long as 並後接子句\n3. 商務場景：prior to submission / departure / arrival 為多益聽力與閱讀之極高頻慣用語。"
+    explain: "【大師級專業詳解·Part 5 介系詞與商務搭配方程式】\\n1. 結構剖析：主句完整 (All requests must be signed...)，空格後接名詞 submission (名詞) + to the accounting office。\\n2. 選項功能辨析：\\n   (A) prior to：複合介系詞（等同 before），後接名詞或動名詞 V-ing，意為「在…之前」➔ 正解\\n   (B) in order that：連接詞（表目的），後方必須接完整子句 (S + V)\\n   (C) subsequent：形容詞（隨後的），不能直接作介系詞連接後方名詞\\n   (D) as long：殘缺片語，表條件需為 as long as 並後接子句\\n3. 商務場景：prior to submission / departure / arrival 為多益聽力與閱讀之極高頻慣用語。"
   },
   {
     id: "toeic-0003",
@@ -86,7 +91,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     categoryLabel: "TOEIC 多益國際商務測驗",
     subtopic: "Part 6 段落填空 - 句子插入連貫題",
     difficulty: 4,
-    passage: "To: All Engineering Staff\nFrom: Facilities Management\nSubject: Server Room Air-Conditioning Upgrade\nDate: October 12\n\nPlease be advised that the primary cooling units in the central server facility will undergo scheduled overhaul this Saturday between 8:00 A.M. and 2:00 P.M. [ ___ ] Technicians will monitor system core temperatures on-site throughout the entire maintenance window to guarantee uninterrupted cloud service.",
+    passage: "To: All Engineering Staff\\nFrom: Facilities Management\\nSubject: Server Room Air-Conditioning Upgrade\\nDate: October 12\\n\\nPlease be advised that the primary cooling units in the central server facility will undergo scheduled overhaul this Saturday between 8:00 A.M. and 2:00 P.M. [ ___ ] Technicians will monitor system core temperatures on-site throughout the entire maintenance window to guarantee uninterrupted cloud service.",
     prompt: "Which sentence most logically completes the text in the bracketed space [ ___ ]?",
     options: [
       "Consequently, the cafeteria will expand its lunch menu options.",
@@ -97,7 +102,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 1,
     selectCount: 1,
     hint: "【步驟0篇章定位】前句提到主冷卻設備將於週六停機檢修，後句提到技術人員將監控溫度以確保服務不中斷；空格必為「檢修期間如何維持冷卻」的連貫方案。",
-    explain: "【大師級專業詳解·Part 6 篇章句子插入四大錨點法】\n1. 篇章因果邏輯鏈：\n   前句：中央伺服器機房的主冷卻單元週六進行大修 (undergo overhaul)\n   空格：[ ___ ] 應填入過渡保障機制！\n   後句：技術人員現場監控溫度以「確保雲端服務不中斷」 (guarantee uninterrupted service)\n2. 選項邏輯吻合度：\n   (A) 食堂午餐菜單擴充：毫無關聯的離題干擾項。\n   (B) A dual redundant backup chiller will operate...（雙備援冷卻機組將於此期間自動運轉）：完美銜接前句停機與後句維持低溫不中斷的因果，時間錨點 this period 亦呼應 Saturday。➔ 正解\n   (C) 員工通勤方式：完全偏離伺服器機房檢修主題。\n   (D) 年終考績會議改期：離題干擾項。"
+    explain: "【大師級專業詳解·Part 6 篇章句子插入四大錨點法】\\n1. 篇章因果邏輯鏈：\\n   前句：中央伺服器機房的主冷卻單元週六進行大修 (undergo overhaul)\\n   空格：[ ___ ] 應填入過渡保障機制！\\n   後句：技術人員現場監控溫度以「確保雲端服務不中斷」 (guarantee uninterrupted service)\\n2. 選項邏輯吻合度：\\n   (A) 食堂午餐菜單擴充：毫無關聯的離題干擾項。\\n   (B) A dual redundant backup chiller will operate...（雙備援冷卻機組將於此期間自動運轉）：完美銜接前句停機與後句維持低溫不中斷的因果，時間錨點 this period 亦呼應 Saturday。➔ 正解\\n   (C) 員工通勤方式：完全偏離伺服器機房檢修主題。\\n   (D) 年終考績會議改期：離題干擾項。"
   },
   {
     id: "toeic-0004",
@@ -105,7 +110,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     categoryLabel: "TOEIC 多益國際商務測驗",
     subtopic: "Part 7 雙篇關聯閱讀 - 貨損投訴與客服主管回信",
     difficulty: 4,
-    passage: "【Document 1: Customer Invoice & Damage Report】\nOrder #8831 | Order Date: Sept 4 | Delivery Date: Sept 8\nItem: 50 Ergonomic Executive Chairs (Model EC-200)\nUnit Price: $120 | Total: $6,000\nCustomer Note: Upon inspection at our loading dock, 6 chairs suffered severely damaged armrests during transit.\n\n【Document 2: Email from Supplier Customer Support】\nDear Ms. Vance,\nThank you for notifying us regarding Order #8831. Per our corporate warranty, we provide replacement parts within 48 hours or offer an immediate credit memo for the full purchase price of any defective units upon receiving photographic proof. We have received your photos and processed the refund credit for the six damaged chairs.\nSincerely, Mark Dawson, Support Manager",
+    passage: "【Document 1: Customer Invoice & Damage Report】\\nOrder #8831 | Order Date: Sept 4 | Delivery Date: Sept 8\\nItem: 50 Ergonomic Executive Chairs (Model EC-200)\\nUnit Price: $120 | Total: $6,000\\nCustomer Note: Upon inspection at our loading dock, 6 chairs suffered severely damaged armrests during transit.\\n\\n【Document 2: Email from Supplier Customer Support】\\nDear Ms. Vance,\\nThank you for notifying us regarding Order #8831. Per our corporate warranty, we provide replacement parts within 48 hours or offer an immediate credit memo for the full purchase price of any defective units upon receiving photographic proof. We have received your photos and processed the refund credit for the six damaged chairs.\\nSincerely, Mark Dawson, Support Manager",
     prompt: "How much credit will be refunded to Ms. Vance's account according to the documents?",
     options: [
       "$120",
@@ -116,7 +121,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 2,
     selectCount: 1,
     hint: "【步驟0跨篇交叉比對】定位 Document 1 之單價與受損數量，交叉運算 Document 2 承諾之全額退款金額。",
-    explain: "【大師級專業詳解·Part 7 多篇閱讀交叉數據運算】\n1. 資訊交叉定位：\n   - Document 1 載明：每張人體工學椅單價為 $120 (Unit Price: $120)，回報受損數量為 6 張 (6 chairs suffered damaged armrests)。\n   - Document 2 載明：Mark Dawson 確認針對這 6 張受損椅子處理全額退款信用額度 (processed the refund credit for the six damaged chairs per full purchase price)。\n2. 運算推導：6 張 × $120/張 = $720。\n3. 陷阱排除：\n   (A) $120 為單張椅子價格。\n   (B) $600 為計算錯誤干擾項（誤乘 5 張）。\n   (D) $6,000 為整筆訂單全部 50 張椅子的總額，非受損退款額。"
+    explain: "【大師級專業詳解·Part 7 多篇閱讀交叉數據運算】\\n1. 資訊交叉定位：\\n   - Document 1 載明：每張人體工學椅單價為 $120 (Unit Price: $120)，回報受損數量為 6 張 (6 chairs suffered damaged armrests)。\\n   - Document 2 載明：Mark Dawson 確認針對這 6 張受損椅子處理全額退款信用額度 (processed the refund credit for the six damaged chairs per full purchase price)。\\n2. 運算推導：6 張 × $120/張 = $720。\\n3. 陷阱排除：\\n   (A) $120 為單張椅子價格。\\n   (B) $600 為計算錯誤干擾項（誤乘 5 張）。\\n   (D) $6,000 為整筆訂單全部 50 張椅子的總額，非受損退款額。"
   },
 
   // ==================== SAT 核心錨定示範題 ====================
@@ -137,7 +142,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 0,
     selectCount: 1,
     hint: "【步驟0語境反差與線索解碼】句首 Although... severely degraded（儘管嚴重受損）構成讓步對比，後文 decipher with minimal guesswork（毫不費力即可解讀）要求填入「清澈易讀」的精確學術詞。",
-    explain: "【大師級專業詳解·SAT Words in Context 雙向語境約束法】\n1. 語意推導路徑：\n   - 邏輯樞紐 (Pivot)：Although 引導讓步反差。前半句指手稿受黴菌侵蝕嚴重降解 (severely degraded by mold)；\n   - 核心線索：後文 astonished to find... decipher with minimal guesswork（震驚地發現...僅需極少猜測即可解讀）。\n   - 預測詞 (Prediction)：空格必填入「清晰易認、一目了然 (clear / legible)」之高階詞彙。\n2. 選項精確度辨析：\n   (A) pellucid：形容詞，指文筆或筆跡極其清澈明瞭的 (translucently clear, easily understood) ➔ 完美契合語境！\n   (B) ephemeral：短暫短命的 (fleeting, short-lived)，與解讀難易度無涉。\n   (C) ambiguous：模糊不清有歧義的，與後文 minimal guesswork 完全矛盾。\n   (D) archaic：古老的，手稿本為中世紀物件，填入為廢話同義反覆，無法形成 astonished 的驚艷反差。"
+    explain: "【大師級專業詳解·SAT Words in Context 雙向語境約束法】\\n1. 語意推導路徑：\\n   - 邏輯樞紐 (Pivot)：Although 引導讓步反差。前半句指手稿受黴菌侵蝕嚴重降解 (severely degraded by mold)；\\n   - 核心線索：後文 astonished to find... decipher with minimal guesswork（震驚地發現...僅需極少猜測即可解讀）。\\n   - 預測詞 (Prediction)：空格必填入「清晰易認、一目了然 (clear / legible)」之高階詞彙。\\n2. 選項精確度辨析：\\n   (A) pellucid：形容詞，指文筆或筆跡極其清澈明瞭的 (translucently clear, easily understood) ➔ 完美契合語境！\\n   (B) ephemeral：短暫短命的 (fleeting, short-lived)，與解讀難易度無涉。\\n   (C) ambiguous：模糊不清有歧義的，與後文 minimal guesswork 完全矛盾。\\n   (D) archaic：古老的，手稿本為中世紀物件，填入為廢話同義反覆，無法形成 astonished 的驚艷反差。"
   },
   {
     id: "sat-0002",
@@ -145,7 +150,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     categoryLabel: "Digital SAT 數位測驗",
     subtopic: "Information and Ideas: Command of Evidence - Textual",
     difficulty: 5,
-    passage: "Ecologist Dr. Elena Rostova hypothesized that mutualistic mycorrhizal fungi networks in boreal forest soils do not merely distribute phosphorus uniformly; rather, they actively allocate resources preferentially to tree saplings that are experiencing severe photosynthetic stress from heavy canopy shading.\n\nWhich finding, if true, would most directly support Dr. Rostova's hypothesis?",
+    passage: "Ecologist Dr. Elena Rostova hypothesized that mutualistic mycorrhizal fungi networks in boreal forest soils do not merely distribute phosphorus uniformly; rather, they actively allocate resources preferentially to tree saplings that are experiencing severe photosynthetic stress from heavy canopy shading.\\n\\nWhich finding, if true, would most directly support Dr. Rostova's hypothesis?",
     prompt: "Which choice most directly supports the researcher's hypothesis?",
     options: [
       "Boreal forest soils contain higher overall concentrations of nitrogen than do tropical rainforest soils.",
@@ -156,7 +161,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 2,
     selectCount: 1,
     hint: "【步驟0假說鎖定】假說核心：菌根網絡並非均勻分配養分，而是「優先分配給遭受林冠遮蔭逆境的幼苗 (preferentially allocate to shaded saplings)」。支持項必須直接給出該差別待遇之量化實證！",
-    explain: "【大師級專業詳解·SAT Command of Evidence 實證匹配律】\n1. 假說因果鏈：\n   - 假說陳述：Fungi actively allocate resources preferentially to saplings experiencing photosynthetic stress from canopy shading.\n   - 證明要求：尋找實證數據證明「遮蔭逆境幼苗獲得顯著更多養分資源」。\n2. 選項嚴密檢驗：\n   (A) 北方森林土壤與熱帶雨林土壤氮含量比較：無關巨觀地理比較，未觸及遮蔭分配。\n   (B) 成熟樹木種子產量與暖冬關係：無關物種繁殖現象。\n   (C) 同等生物量下，放射性同位素標記的磷元素轉移至受遮蔭幼苗的速率是全日照幼苗的四倍 (fourfold higher rate to shaded saplings)：精確匹配「優先定向輸送養分給遮蔭逆境個體」之假說！➔ 正解\n   (D) 甲蟲食用菌絲體：無關昆蟲生態干擾項。"
+    explain: "【大師級專業詳解·SAT Command of Evidence 實證匹配律】\\n1. 假說因果鏈：\\n   - 假說陳述：Fungi actively allocate resources preferentially to saplings experiencing photosynthetic stress from canopy shading.\\n   - 證明要求：尋找實證數據證明「遮蔭逆境幼苗獲得顯著更多養分資源」。\\n2. 選項嚴密檢驗：\\n   (A) 北方森林土壤與熱帶雨林土壤氮含量比較：無關巨觀地理比較，未觸及遮蔭分配。\\n   (B) 成熟樹木種子產量與暖冬關係：無關物種繁殖現象。\\n   (C) 同等生物量下，放射性同位素標記的磷元素轉移至受遮蔭幼苗的速率是全日照幼苗的四倍 (fourfold higher rate to shaded saplings)：精確匹配「優先定向輸送養分給遮蔭逆境個體」之假說！➔ 正解\\n   (D) 甲蟲食用菌絲體：無關昆蟲生態干擾項。"
   },
   {
     id: "sat-0003",
@@ -175,7 +180,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     answer: 0,
     selectCount: 1,
     hint: "【步驟0句子邊界四大金科玉律】前後皆為獨立完整子句 (Independent Clause)，連接兩子句必須使用「分號 (;)」或「逗號 + 對等連接詞 (Comma + FANBOYS)」。",
-    explain: "【大師級專業詳解·SAT 標點符號與子句邊界分流術】\n1. 結構切分：\n   子句 1：During the late nineteenth century, Nikola Tesla conducted experiments at his Colorado Springs facility (完整獨立子句，S + V + O)。\n   子句 2：his laboratory notebooks meticulously documented wireless transmission phenomena... (完整獨立子句，S + V + O)。\n2. 規範準則：\n   - 規則：兩個獨立子句不能僅用單一逗號拼接 (Comma Splice 致命錯誤)。\n   - 正確連結方式：\n     ① `;` (分號)\n     ② `,` + FANBOYS (for, and, nor, but, or, yet, so)\n3. 選項逐一甄別：\n   (A) facility, and：逗號 + 對等連接詞 and 完美合法連接兩獨立子句。➔ 正解\n   (B) facility; and,：分號後不可緊接 and 再加多餘逗號。\n   (C) facility, while：while 後接進行態或對比，此處前後為並列遞進事實，且逗號 while 易生歧義。\n   (D) facility; there,：there 為副詞非連接詞，加逗號形成非法懸掛。"
+    explain: "【大師級專業詳解·SAT 標點符號與子句邊界分流術】\\n1. 結構切分：\\n   子句 1：During the late nineteenth century, Nikola Tesla conducted experiments at his Colorado Springs facility (完整獨立子句，S + V + O)。\\n   子句 2：his laboratory notebooks meticulously documented wireless transmission phenomena... (完整獨立子句，S + V + O)。\\n2. 規範準則：\\n   - 規則：兩個獨立子句不能僅用單一逗號拼接 (Comma Splice 致命錯誤)。\\n   - 正確連結方式：\\n     ① \`;\` (分號)\\n     ② \`,\` + FANBOYS (for, and, nor, but, or, yet, so)\\n3. 選項逐一甄別：\\n   (A) facility, and：逗號 + 對等連接詞 and 完美合法連接兩獨立子句。➔ 正解\\n   (B) facility; and,：分號後不可緊接 and 再加多餘逗號。\\n   (C) facility, while：while 後接進行態或對比，此處前後為並列遞進事實，且逗號 while 易生歧義。\\n   (D) facility; there,：there 為副詞非連接詞，加逗號形成非法懸掛。"
   },
 
   // ==================== GRE 核心錨定示範題 ====================
@@ -251,7 +256,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     ],
     answer: [4, 5],
     selectCount: 2,
-    explain: "【GRE 六選二·句子等價雙選解析】\n1. 題幹線索：泥板殘破 (fragmented) 且被礦物沉積物遮蔽 (obscured)，說明翻譯王室法令對銘文學家而言是極端艱鉅繁重的任務。\n2. 雙選同義詞對：onerous（繁重的、艱難的）與 burdensome（沉重的、累人的）填入空格皆表極其繁重艱辛，句意完全等價。\n3. 干擾項排除：facile（輕易的）與 elementary（容易的）方向相反；perfunctory（敷衍的）與 cursory（草率的）修飾態度而非事業本身的艱鉅度。",
+    explain: "【GRE 六選二·句子等價雙選解析】\\n1. 題幹線索：泥板殘破 (fragmented) 且被礦物沉積物遮蔽 (obscured)，說明翻譯王室法令對銘文學家而言是極端艱鉅繁重的任務。\\n2. 雙選同義詞對：onerous（繁重的、艱難的）與 burdensome（沉重的、累人的）填入空格皆表極其繁重艱辛，句意完全等價。\\n3. 干擾項排除：facile（輕易的）與 elementary（容易的）方向相反；perfunctory（敷衍的）與 cursory（草率的）修飾態度而非事業本身的艱鉅度。",
     hint: "Sentence Equivalence 核心策略：尋找能替換且保持句意完全一致的孿生同義詞組 (Twin Synonyms)：onerous 與 burdensome 皆意為繁重艱辛的。",
     questionType: "sentence_equivalence",
     id: "gre-0007",
@@ -261,7 +266,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
   {
     subtopic: "Reading Comprehension: Primary Purpose & Historiography",
     difficulty: 5,
-    passage: "Passage:\nIn examining the economic divergence between Western Europe and East Asia during the eighteenth century, institutional historians have historically attributed the rise of mechanized manufacturing exclusively to the advent of steam locomotion. However, recent quantitative cliometric analyses demonstrate that regional disparities in capital interest rates and legal enforcement of artisanal property rights were already driving technological differentiation decades prior to the widespread commercialization of coal engines.",
+    passage: "Passage:\\nIn examining the economic divergence between Western Europe and East Asia during the eighteenth century, institutional historians have historically attributed the rise of mechanized manufacturing exclusively to the advent of steam locomotion. However, recent quantitative cliometric analyses demonstrate that regional disparities in capital interest rates and legal enforcement of artisanal property rights were already driving technological differentiation decades prior to the widespread commercialization of coal engines.",
     prompt: "The primary purpose of the passage is to:",
     options: [
       "reappraise the causal mechanisms underlying historical economic divergence by foregrounding institutional determinants",
@@ -282,7 +287,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
   {
     subtopic: "Critical Reasoning: Weaken the Argument - Alternative Causes",
     difficulty: 5,
-    passage: "Premise: Six months ago, Metropolitan Transit installed 400 self-service contactless ticketing kiosks to eliminate commuter ticketing queues.\nConclusion: The average waiting time for commuters purchasing transit tickets has significantly decreased.",
+    passage: "Premise: Six months ago, Metropolitan Transit installed 400 self-service contactless ticketing kiosks to eliminate commuter ticketing queues.\\nConclusion: The average waiting time for commuters purchasing transit tickets has significantly decreased.",
     prompt: "Which of the following, if true, most seriously weakens the argument?",
     options: [
       "The transit authority expanded evening subway train frequencies on its two busiest trunk lines.",
@@ -301,7 +306,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
   {
     subtopic: "Critical Reasoning: Strengthen the Argument - Ruling Out Confounders",
     difficulty: 4,
-    passage: "Premise: Agricultural scientists applied a newly synthesized microbial bio-stimulant to experimental soybean plots, observing a 28% increase in pod yield compared to adjacent control plots.\nConclusion: The microbial bio-stimulant is solely responsible for the observed harvest increase.",
+    passage: "Premise: Agricultural scientists applied a newly synthesized microbial bio-stimulant to experimental soybean plots, observing a 28% increase in pod yield compared to adjacent control plots.\\nConclusion: The microbial bio-stimulant is solely responsible for the observed harvest increase.",
     prompt: "Which of the following, if true, most strongly supports the conclusion?",
     options: [
       "Soybeans harvested from the treated plot commanded premium prices at international export auctions.",
@@ -320,7 +325,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
   {
     subtopic: "Critical Reasoning: Find the Assumption - Negation Test",
     difficulty: 5,
-    passage: "Plan: To curtail fossil fuel consumption, the municipality will offer a $4,000 subsidy to residents who scrap combustion vehicles and purchase battery electric vehicles (BEVs).\nGoal: Significantly reduce citywide vehicular tailpipe greenhouse gas emissions over the next three years.",
+    passage: "Plan: To curtail fossil fuel consumption, the municipality will offer a $4,000 subsidy to residents who scrap combustion vehicles and purchase battery electric vehicles (BEVs).\\nGoal: Significantly reduce citywide vehicular tailpipe greenhouse gas emissions over the next three years.",
     prompt: "The municipal plan relies on which of the following assumptions?",
     options: [
       "All public transit buses operating in the city have already achieved 100 percent zero-emission electrification.",
@@ -358,7 +363,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
   {
     subtopic: "Reading Comprehension: Business Economics - Two-Sided Platform Dynamics",
     difficulty: 5,
-    passage: "Passage:\nIn digital platform economics, two-sided networks exhibit cross-side network externalities where the value experienced by users on one margin (e.g., app developers) scales proportionally with the installed user base on the opposite margin (e.g., smartphone owners). Early strategic literature posited that platform operators must subsidize the more price-sensitive side indefinitely to preserve critical mass. However, empirical investigations of ridesharing and app ecosystems suggest that once platform dominance is established, operators face an inevitable tension between maintaining multi-homing deterrents and capturing monopoly surplus, frequently leading to developer revolts.",
+    passage: "Passage:\\nIn digital platform economics, two-sided networks exhibit cross-side network externalities where the value experienced by users on one margin (e.g., app developers) scales proportionally with the installed user base on the opposite margin (e.g., smartphone owners). Early strategic literature posited that platform operators must subsidize the more price-sensitive side indefinitely to preserve critical mass. However, empirical investigations of ridesharing and app ecosystems suggest that once platform dominance is established, operators face an inevitable tension between maintaining multi-homing deterrents and capturing monopoly surplus, frequently leading to developer revolts.",
     prompt: "According to the passage, why do dominant digital platforms experience tension with third-party developers?",
     options: [
       "Two-sided networks inherently prevent developers from distributing software across multiple competing platforms.",
@@ -375,3 +380,7 @@ export const ANCHOR_DRILL_QUESTIONS = [
     categoryLabel: "GMAT Focus 批判性推理與商業邏輯"
   }
 ];
+`;
+
+fs.writeFileSync('dist/exam_drill_data.mjs', content, 'utf8');
+console.log('Successfully updated dist/exam_drill_data.mjs with TOEIC, SAT, GRE, GMAT drill suites.');
