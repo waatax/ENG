@@ -36,7 +36,7 @@ import { archSemesters, englishS1Review, englishS2Review, englishS3Review, engli
 import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine.mjs';
 import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';
 import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
-import { renderDisplayToolbar, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
+import { renderDisplayToolbar, renderReadingDrawer, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
@@ -187,6 +187,38 @@ function renderEnglishLevelTestTopBanner(currentPage) {
   `;
 }
 
+function renderMobileBottomNav(currentPage) {
+  const isCurriculum = ['curriculum108', 'junyi', 'sixth', 'jh', 'arch', 'chapter', 'handouts'].includes(currentPage);
+  const isKnowledge = ['knowledge', 'knowledgePoint', 'grammar', 'listening'].includes(currentPage);
+  const isDiag = currentPage === 'diagnostic';
+  const isWords = ['wordpractice', 'flashcards', 'schoolwords', 'affixes', 'phonics', 'studio'].includes(currentPage);
+
+  return `
+    <nav class="mobile-bottom-nav" aria-label="手機直式快速導航">
+      <button class="mobile-nav-btn ${isCurriculum ? 'active' : ''}" data-nav="curriculum108" aria-label="前往學年課程地圖">
+        <span class="mobile-nav-icon">🏫</span>
+        <span class="mobile-nav-label">課程</span>
+      </button>
+      <button class="mobile-nav-btn ${isKnowledge ? 'active' : ''}" data-nav="knowledge" aria-label="前往知識點教室">
+        <span class="mobile-nav-icon">🧩</span>
+        <span class="mobile-nav-label">知識點</span>
+      </button>
+      <button class="mobile-nav-btn ${isDiag ? 'active' : ''}" data-nav="diagnostic" aria-label="前往程度落點測試">
+        <span class="mobile-nav-icon">🎯</span>
+        <span class="mobile-nav-label">測驗</span>
+      </button>
+      <button class="mobile-nav-btn ${isWords ? 'active' : ''}" data-nav="wordpractice" aria-label="前往單字字卡練習">
+        <span class="mobile-nav-icon">🗂️</span>
+        <span class="mobile-nav-label">單字</span>
+      </button>
+      <button class="mobile-nav-btn" data-toggle-reading-drawer="true" aria-label="開啟閱讀色調與字體設定">
+        <span class="mobile-nav-icon">⚙️</span>
+        <span class="mobile-nav-label">閱讀設定</span>
+      </button>
+    </nav>
+  `;
+}
+
 function shell(body) {
   const nav = [
     ['diagnostic', '00', '🎯 英文程度測試'],
@@ -285,6 +317,8 @@ function shell(body) {
         </main>
       </div>
     </div>
+    ${renderMobileBottomNav(page)}
+    ${renderReadingDrawer(currentTitle)}
   `;
 }
 
@@ -344,7 +378,7 @@ function curriculum108Page() {
         <button class="btn" data-nav="matrix" style="background:#16a34a;color:#fff;font-weight:700;padding:8px 20px;border-radius:20px;border:none">
           📋 開啟總體檢核矩陣 ➔
         </button>
-        <button class="btn quiet" data-duo-action="open" style="border:1px solid #16a34a;color:#166534;font-weight:700;padding:8px 18px;border-radius:20px;background:#ffffff">
+        <button class="btn quiet" data-duo-action="open" style="border:1px solid #16a34a;color:#166534;font-weight:700;padding:8px 18px;border-radius:20px;background:var(--card-bg, #ffffff)">
           🎮 Duolingo 闖關 (示範章節 J1)
         </button>
     </div>
@@ -406,9 +440,9 @@ function curriculum108Page() {
               涵蓋 6上 (6A) 與 6下 (6B) 共 8 大核心單元、Sixth 小升初講義、日常生活情境與 1,000 必備單字。
             </p>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
-              <button class="btn small" data-quick-grade="g6" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6A 上學期</button>
-              <button class="btn small" data-quick-grade="g6" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6B 下學期</button>
-              <button class="btn small" data-nav="sixth" style="background:#ffffff;color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">Sixth 講義</button>
+              <button class="btn small" data-quick-grade="g6" style="background:var(--card-bg, #ffffff);color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6A 上學期</button>
+              <button class="btn small" data-quick-grade="g6" style="background:var(--card-bg, #ffffff);color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">6B 下學期</button>
+              <button class="btn small" data-nav="sixth" style="background:var(--card-bg, #ffffff);color:#15803d;border:1px solid #86efac;font-size:12px;padding:4px 10px">Sixth 講義</button>
             </div>
           </div>
           <button class="btn" data-quick-stage="elementary" style="background:#16a34a;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
@@ -428,10 +462,10 @@ function curriculum108Page() {
               橫跨 7年級、8年級與 9年級會考衝刺共 17 大單元、JH 國中會考 16 大主題全案與 2,000 參考單字。
             </p>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
-              <button class="btn small" data-quick-grade="g7" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">七年級</button>
-              <button class="btn small" data-quick-grade="g8" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">八年級</button>
-              <button class="btn small" data-quick-grade="g9" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">九年級會考</button>
-              <button class="btn small" data-nav="jh" style="background:#ffffff;color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">JH 會考館</button>
+              <button class="btn small" data-quick-grade="g7" style="background:var(--card-bg, #ffffff);color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">七年級</button>
+              <button class="btn small" data-quick-grade="g8" style="background:var(--card-bg, #ffffff);color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">八年級</button>
+              <button class="btn small" data-quick-grade="g9" style="background:var(--card-bg, #ffffff);color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">九年級會考</button>
+              <button class="btn small" data-nav="jh" style="background:var(--card-bg, #ffffff);color:#0369a1;border:1px solid #7dd3fc;font-size:12px;padding:4px 10px">JH 會考館</button>
             </div>
           </div>
           <button class="btn" data-quick-stage="junior" style="background:#0284c7;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
@@ -451,10 +485,10 @@ function curriculum108Page() {
               貫通 高一、高二與高三大考巔峰共 36 大單元、Arch 先修專題、學測統測篇章與 3,000 大考核心片語。
             </p>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
-              <button class="btn small" data-quick-grade="g10" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高一 (G10)</button>
-              <button class="btn small" data-quick-grade="g11" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高二 (G11)</button>
-              <button class="btn small" data-quick-grade="g12" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高三大考</button>
-              <button class="btn small" data-nav="arch" style="background:#ffffff;color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">Arch 先修</button>
+              <button class="btn small" data-quick-grade="g10" style="background:var(--card-bg, #ffffff);color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高一 (G10)</button>
+              <button class="btn small" data-quick-grade="g11" style="background:var(--card-bg, #ffffff);color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高二 (G11)</button>
+              <button class="btn small" data-quick-grade="g12" style="background:var(--card-bg, #ffffff);color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">高三大考</button>
+              <button class="btn small" data-nav="arch" style="background:var(--card-bg, #ffffff);color:#6b21a8;border:1px solid #d8b4fe;font-size:12px;padding:4px 10px">Arch 先修</button>
             </div>
           </div>
           <button class="btn" data-quick-stage="senior" style="background:#7c3aed;color:#fff;font-weight:700;border:none;border-radius:8px;padding:9px;width:100%">
@@ -564,14 +598,14 @@ function curriculum108Page() {
                 </h3>
                 <div style="display:grid;gap:12px">
                   ${u.concepts.map(c => `
-                    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px">
-                      <div style="font-weight:700;color:#0f172a;font-size:15px;margin-bottom:6px">📌 ${c.title}</div>
+                    <div style="background:var(--paper, #f8fafc);border:1px solid var(--line, #e2e8f0);border-radius:10px;padding:14px">
+                      <div style="font-weight:700;color:var(--ink, #0f172a);font-size:15px;margin-bottom:6px">📌 ${c.title}</div>
                       ${c.formula ? `
-                        <div style="background:#fff;border:1px solid #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-weight:700;color:#2563eb;margin-bottom:8px;font-size:13px">
+                        <div style="background:var(--card-bg, #fff);border:1px solid var(--line-strong, #cbd5e1);padding:8px 12px;border-radius:6px;font-family:monospace;font-weight:700;color:#2563eb;margin-bottom:8px;font-size:13px">
                           📐 語法公式：${c.formula}
                         </div>
                       ` : ''}
-                      <p style="margin:0 0 6px;font-size:14px;color:#334155;line-height:1.6">${c.explanation}</p>
+                      <p style="margin:0 0 6px;font-size:14px;color:var(--text-primary, #334155);line-height:1.6">${c.explanation}</p>
                       ${c.example ? `
                         <div style="background:#eff6ff;padding:6px 10px;border-radius:6px;font-size:13px;color:#1e40af;margin-bottom:8px">
                           <strong>💬 經典範例：</strong> <span lang="en">${c.example}</span>
@@ -613,7 +647,7 @@ function curriculum108Page() {
                 <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:10px">
                   ${u.phonicsVocab.map(v => `
                     <div style="background:#f0fdfa;border:1px solid #ccfbf1;padding:12px;border-radius:10px;display:flex;flex-direction:column;justify-content:space-between">
-                      <div>
+                       <div>
                         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
                           <strong style="font-size:17px;color:#115e59" lang="en">${v.word}</strong>
                           <div style="display:flex;gap:4px">
@@ -622,13 +656,13 @@ function curriculum108Page() {
                           </div>
                         </div>
                         <div style="font-size:13px;color:#0f766e;margin-bottom:4px">
-                          <span style="font-family:monospace;background:#fff;padding:1px 6px;border-radius:4px;border:1px solid #99f6e4">${v.ipa}</span>
+                          <span style="font-family:monospace;background:var(--card-bg, #fff);padding:1px 6px;border-radius:4px;border:1px solid #99f6e4">${v.ipa}</span>
                           <span class="chip" style="font-size:11px;padding:1px 6px">${v.pos}</span>
                           <strong>${v.zh}</strong>
                         </div>
                       </div>
                       ${v.sentence ? `
-                        <div style="background:#fff;padding:6px 8px;border-radius:6px;border:1px solid #e6fffa;font-size:12px;color:#334155;margin-top:6px" lang="en">
+                        <div style="background:var(--card-bg, #fff);padding:6px 8px;border-radius:6px;border:1px solid #e6fffa;font-size:12px;color:var(--text-primary, #334155);margin-top:6px" lang="en">
                           "${v.sentence}"
                         </div>
                       ` : ''}
@@ -702,7 +736,7 @@ function curriculum108Page() {
                     <div style="border-top:1px solid #fef08a;padding-top:10px;display:grid;gap:6px">
                       <strong style="font-size:13px;color:#854d0e">素養檢核問題：</strong>
                       ${u.reading.questions.map((rq, ri) => `
-                        <div style="font-size:13px;color:#713f12;background:#fff;padding:8px 12px;border-radius:6px;border:1px solid #fef08a">
+                        <div style="font-size:13px;color:#713f12;background:var(--card-bg, #fff);padding:8px 12px;border-radius:6px;border:1px solid #fef08a">
                           <div><strong>Q${ri + 1}:</strong> ${rq.q}</div>
                           <div style="color:#059669;margin-top:2px"><strong>A:</strong> ${rq.ans}</div>
                         </div>
@@ -721,9 +755,9 @@ function curriculum108Page() {
 
             <!-- 7. 鷹架式形成性檢測題 (Scaffolding Formative Quiz) -->
             ${u.formativeQuiz && u.formativeQuiz.length > 0 ? `
-              <div style="border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px;background:#f8fafc">
+              <div style="border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px;background:var(--paper, #f8fafc)">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
-                  <strong style="font-size:15px;color:#0f172a">🪜 鷹架式形成性評量檢測：</strong>
+                  <strong style="font-size:15px;color:var(--ink, #0f172a)">🪜 鷹架式形成性評量檢測：</strong>
                   <div style="display:flex;gap:6px">
                     <button class="btn small quiet" data-reveal-hint-unit="${u.id}" data-hint-tier="1">💡 提示 1 (語法)</button>
                     <button class="btn small quiet" data-reveal-hint-unit="${u.id}" data-hint-tier="2">🔍 提示 2 (排除)</button>
@@ -734,15 +768,15 @@ function curriculum108Page() {
                 </div>
 
                 ${u.formativeQuiz.map((q, qi) => `
-                  <div style="background:#fff;border:1px solid #cbd5e1;padding:12px 14px;border-radius:8px;margin-bottom:8px">
-                    <div style="font-size:14px;font-weight:600;color:#1e293b;margin-bottom:8px">
+                  <div style="background:var(--card-bg, #fff);border:1px solid var(--line-strong, #cbd5e1);padding:12px 14px;border-radius:8px;margin-bottom:8px">
+                    <div style="font-size:14px;font-weight:600;color:var(--text-primary, #1e293b);margin-bottom:8px">
                       ${qi + 1}. <span lang="en">${q.q}</span>
                     </div>
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
                       ${q.options.map((opt, oi) => {
                         const isChosen = userChoice === oi;
                         const isCorrect = oi === q.ans;
-                        let btnStyle = 'background:#f8fafc;border:1px solid #e2e8f0;text-align:left;padding:8px 12px';
+                        let btnStyle = 'background:var(--paper, #f8fafc);border:1px solid var(--line, #e2e8f0);text-align:left;padding:8px 12px;color:var(--text-primary)';
                         if (isChosen) {
                           btnStyle = isCorrect ? 'background:#ecfdf5;border:2px solid #10b981;color:#047857;font-weight:700' : 'background:#fff1f2;border:2px solid #f43f5e;color:#be123c;font-weight:700';
                         }
@@ -903,7 +937,7 @@ function sixthPage() {
               <h3 style="margin:0 0 10px;color:#9f1239;font-size:16px">⚠️ 學生常犯三大迷思概念與避雷指南</h3>
               <div style="display:grid;gap:10px">
                 ${lesson.traps.map(t => `
-                  <div style="background:#fff;padding:10px 14px;border-radius:8px;border:1px solid #ffe4e6;font-size:13px;line-height:1.6;white-space:pre-line">
+                  <div style="background:var(--card-bg, #fff);padding:10px 14px;border-radius:8px;border:1px solid #ffe4e6;font-size:13px;line-height:1.6;white-space:pre-line;color:var(--text-primary)">
                     ${t}
                   </div>
                 `).join('')}
@@ -926,7 +960,7 @@ function sixthPage() {
               const userAns = sixthQuizAnswers[q.id];
               const isCorrect = userAns === q.answerIndex;
               return `
-                <div style="padding:14px;border:1px solid ${sixthQuizSubmitted ? (isCorrect ? '#10b981' : '#f43f5e') : 'var(--line)'};border-radius:10px;background:${sixthQuizSubmitted ? (isCorrect ? '#ecfdf5' : '#fff1f2') : '#fff'}">
+                <div style="padding:14px;border:1px solid ${sixthQuizSubmitted ? (isCorrect ? '#10b981' : '#f43f5e') : 'var(--line)'};border-radius:10px;background:${sixthQuizSubmitted ? (isCorrect ? '#ecfdf5' : '#fff1f2') : 'var(--card-bg, #fff)'}">
                   <div style="font-weight:600;margin-bottom:8px">
                     ${idx + 1}. <span lang="en">${q.question}</span>
                   </div>
@@ -954,14 +988,14 @@ function sixthPage() {
       <!-- 右側：速記筆記與語音朗讀 -->
       <div>
         <!-- 考前 10 分鐘速記筆記卡 -->
-        <div class="card" style="margin-bottom:20px;background:#f8fafc">
+        <div class="card" style="margin-bottom:20px;background:var(--paper, #f8fafc)">
           <h3 style="margin:0 0 12px;color:var(--brand-dark)">📌 考前 10 分鐘速記筆記</h3>
           ${notes ? `
             <div style="display:grid;gap:12px">
               ${notes.keyPoints.map(p => `
-                <div style="background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px">
+                <div style="background:var(--card-bg, #fff);padding:10px 12px;border-radius:8px;border:1px solid var(--line, #e2e8f0);font-size:13px">
                   <strong style="color:#1d4ed8;display:block;margin-bottom:4px">${p.title}</strong>
-                  <div style="color:#334155;white-space:pre-line">${p.summary}</div>
+                  <div style="color:var(--text-muted, #334155);white-space:pre-line">${p.summary}</div>
                 </div>
               `).join('')}
             </div>
@@ -1130,18 +1164,18 @@ function archPage() {
         <h2 style="margin:0 0 12px">五大核心時態與被動語態矩陣</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:16px">
           ${(archTenseModules || []).map(m => `
-            <div style="border:1px solid var(--line);border-radius:12px;padding:14px;background:#f8fafc">
+            <div style="border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
                 <strong style="font-size:16px;color:#1e3a8a">${m.nameZh} (${m.nameEn})</strong>
                 <span class="chip" style="font-size:11px">${m.badge}</span>
               </div>
-              <div style="background:#fff;padding:8px 10px;border-radius:6px;border:1px solid #e2e8f0;font-family:monospace;font-weight:700;color:#2563eb;margin-bottom:8px">
+              <div style="background:var(--card-bg, #fff);padding:8px 10px;border-radius:6px;border:1px solid var(--line, #e2e8f0);font-family:monospace;font-weight:700;color:#2563eb;margin-bottom:8px">
                 公式：${m.formula}
               </div>
-              <p style="font-size:13px;color:#475569;margin:0 0 10px">${m.description}</p>
+              <p style="font-size:13px;color:var(--text-muted, #475569);margin:0 0 10px">${m.description}</p>
               <div style="display:grid;gap:4px">
                 ${(m.rules || []).slice(0, 2).map(r => `
-                  <div style="font-size:12px;color:#334155;background:#f1f5f9;padding:6px 8px;border-radius:4px">
+                  <div style="font-size:12px;color:var(--text-primary, #334155);background:var(--tag-bg, #f1f5f9);padding:6px 8px;border-radius:4px">
                     • <strong>${r.title}</strong>: ${r.content}
                   </div>
                 `).join('')}
@@ -1157,16 +1191,16 @@ function archPage() {
         <h2 style="margin:0 0 12px">複合句三大核心支柱 (Complex Sentences Pillars)</h2>
         <div style="display:grid;gap:16px">
           ${(archSentencePillars || []).map(p => `
-            <div style="border:1px solid var(--line);border-radius:12px;padding:16px;background:#f8fafc">
+            <div style="border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
                 <h3 style="margin:0;color:#1e40af;font-size:17px">${p.title} (${p.titleEn})</h3>
                 <span class="chip" style="background:#e0e7ff;color:#3730a3">${p.badge}</span>
               </div>
-              <p style="font-size:14px;color:#334155;margin:0 0 10px">${p.description}</p>
-              <div style="background:#fff;padding:10px 14px;border-radius:8px;border:1px solid #cbd5e1;font-family:monospace;margin-bottom:10px">
+              <p style="font-size:14px;color:var(--text-primary, #334155);margin:0 0 10px">${p.description}</p>
+              <div style="background:var(--card-bg, #fff);padding:10px 14px;border-radius:8px;border:1px solid var(--line-strong, #cbd5e1);font-family:monospace;margin-bottom:10px">
                 <strong>結構公式：</strong> ${p.formula}
               </div>
-              <div style="font-size:13px;color:#475569">
+              <div style="font-size:13px;color:var(--text-muted, #475569)">
                 <strong>關鍵引導詞：</strong> ${(p.signals || []).join(', ')}
               </div>
             </div>
@@ -1180,12 +1214,12 @@ function archPage() {
         <h2 style="margin:0 0 12px">八大詞性與字尾衍生構詞法</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:14px">
           ${(archPartsOfSpeech || []).map(pos => `
-            <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff">
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card-bg, #fff)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-                <strong style="color:#0f172a;font-size:15px">${pos.nameZh} (${pos.code})</strong>
+                <strong style="color:var(--ink, #0f172a);font-size:15px">${pos.nameZh} (${pos.code})</strong>
                 <span class="chip" style="background:#e0e7ff;color:#3730a3">${pos.nameEn}</span>
               </div>
-              <p style="font-size:13px;color:#475569;margin:0 0 8px">${pos.definition}</p>
+              <p style="font-size:13px;color:var(--text-muted, #475569);margin:0 0 8px">${pos.definition}</p>
               <div style="font-size:12px;color:#2563eb">
                 <strong>句中主要功能：</strong> ${(pos.functions || []).join(', ')}
               </div>
@@ -1200,13 +1234,13 @@ function archPage() {
         <h2 style="margin:0 0 12px">KK 音標發音符號體系與查字典核心代碼</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:12px">
           ${(archPhoneticItems || []).slice(0, 12).map(ph => `
-            <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:#f8fafc">
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
                 <span style="font-size:20px;font-family:monospace;font-weight:700;color:#2563eb">${ph.ipa}</span>
                 <span class="chip" style="font-size:11px">${ph.type}</span>
               </div>
-              <div style="font-size:12px;color:#475569;margin-bottom:6px">${ph.desc}</div>
-              <div style="background:#fff;padding:4px 8px;border-radius:4px;font-size:12px;color:#334155">
+              <div style="font-size:12px;color:var(--text-muted, #475569);margin-bottom:6px">${ph.desc}</div>
+              <div style="background:var(--card-bg, #fff);padding:4px 8px;border-radius:4px;font-size:12px;color:var(--text-primary, #334155)">
                 例字：<strong lang="en">${ph.examples.join(', ')}</strong>
               </div>
             </div>
@@ -1232,11 +1266,11 @@ function archPage() {
 
         <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:10px">
           ${(archVocabCategories || []).flatMap(c => c.words).slice(0, 36).map(w => `
-            <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:#fff;display:flex;justify-content:space-between;align-items:center">
+            <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card-bg, #fff);display:flex;justify-content:space-between;align-items:center">
               <div>
-                <strong style="color:#0f172a" lang="en">${w.word}</strong>
-                <span style="font-size:11px;color:#64748b;margin-left:4px">${w.pos}</span>
-                <div style="font-size:12px;color:#475569">${w.zh}</div>
+                <strong style="color:var(--ink, #0f172a)" lang="en">${w.word}</strong>
+                <span style="font-size:11px;color:var(--text-muted, #64748b);margin-left:4px">${w.pos}</span>
+                <div style="font-size:12px;color:var(--text-muted, #475569)">${w.zh}</div>
               </div>
               <button class="btn small quiet" data-speak-word="${esc(w.word)}">🔊</button>
             </div>
@@ -1979,6 +2013,10 @@ root.addEventListener('click', e => {
   // 導覽列切換
   if (d.nav) {
     navigate(d.nav);
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      const siteMenu = document.querySelector('.site-menu');
+      if (siteMenu) siteMenu.removeAttribute('open');
+    }
     return;
   }
 
