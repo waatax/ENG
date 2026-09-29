@@ -1,3 +1,5 @@
+import { renderAffixGuide } from './affix_guide.mjs';
+import { handleAffixInput, handleAffixClick } from './affix_library.mjs';
 import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syncLessonAudio, pauseLessonAudio } from './lesson_audio.mjs';
 import { listeningPage, handleListeningClick, handleListeningChange } from './listening.mjs';
 import { grammarPage, grammarRoute, setGrammarTopic, handleGrammarClick } from './grammar.mjs';
@@ -119,7 +121,7 @@ function navigate(p) {
   pauseLessonAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
+  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
   if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -203,6 +205,7 @@ function shell(body) {
     ['chapter', '11', '核心教學章節'],
     ['wordpractice', '12', '9,500 張字卡學習'],
     ['flashcards', '12a', '搜尋全部字卡'],
+    ['affixes', '12b', '字首・字尾學習館'],
     ['studio', '13', '合成語音練習'],
     ['exams', '14', '考試練習與資源'],
     ['today', '15', '每日練習'],
@@ -215,6 +218,7 @@ function shell(body) {
     listening: '🎧 通勤聽課教室',
     grammar: '🧩 圖解文法專區',
     diagnostic: '🎯 英文程度檢定',
+    affixes: '字首・字尾學習館',
     wordpractice: '9,500 張字卡學習',
     schoolwords: '國小・國中單字複習',
     knowledge: '知識點教室', knowledgePoint: '知識點教學',
@@ -253,11 +257,16 @@ function shell(body) {
         </div>
 
         <details class="site-menu" open><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
-          ${nav.map(([id, num, label]) => `
-            <button data-nav="${id}" class="${page === id ? 'active' : ''}">
-              <small>${num}</small>${label}
-            </button>
-          `).join('')}
+          ${nav.map(([id, num, label], idx) => {
+            let header = '';
+            if (idx === 0) header = '<div class="nav-group-header">🌟 程度檢定與引導</div>';
+            else if (idx === 1) header = '<div class="nav-group-header">🧩 觀念圖解與知識點</div>';
+            else if (idx === 4) header = '<div class="nav-group-header">🎒 課綱學年與發音微課</div>';
+            else if (idx === 9) header = '<div class="nav-group-header">🏫 升學會考與先修講義</div>';
+            else if (idx === 14) header = '<div class="nav-group-header">🗂️ 核心單字與構詞閃卡</div>';
+            else if (idx === 17) header = '<div class="nav-group-header">🎯 題庫實戰與學習紀錄</div>';
+            return `${header}<button data-nav="${id}" class="${page === id ? 'active' : ''}"><small>${num}</small>${label}</button>`;
+          }).join('')}
         </nav></details>
         <div class="side-foot">
           <strong>108課綱・自學教材持續更新</strong><br>
@@ -270,7 +279,7 @@ function shell(body) {
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
         ${['knowledge', 'curriculum108'].includes(page) ? renderFlashcardQuickPlay() : ''}
         ${renderEnglishLevelTestTopBanner(page)}
-        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','grammar','listening'].includes(page) ? '' : renderStageQuickNav()}
+        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -1525,6 +1534,7 @@ function examPage() {
           </div>
         ` : ''}
 
+        ${isAnswered ? `<div class="answer-toolbar"><span role="status">${isCorrect ? "✓ 答對了" : "再看一次答案，找出關鍵"}</span><button class="btn primary" data-next-quiz-q="true" ${currentQuizIdx === totalQ - 1 ? "disabled" : ""}>${currentQuizIdx === totalQ - 1 ? "已是最後一題" : "下一題 →"}</button></div>` : ""}
         ${isAnswered && isMultiSelect ? `
           <div style="background:${isCorrect ? '#ecfdf5' : '#fff1f2'};border:1px solid ${isCorrect ? '#a7f3d0' : '#fecdd3'};color:${isCorrect ? '#065f46' : '#9f1239'};padding:12px 16px;border-radius:8px;margin-bottom:16px;font-weight:600;display:flex;align-items:center;gap:8px">
             <span>${isCorrect ? '🎉 雙選完全正確！(+25 XP)' : '⚠️ 雙選未完全命中！'}</span>
@@ -1825,6 +1835,7 @@ function progress() {
 
 function render() {
   const pages = {
+    affixes: renderAffixGuide,
     wordpractice: renderFullWordPractice,
     schoolwords: renderSchoolWords,
     knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
@@ -1911,6 +1922,7 @@ root.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const d = b.dataset;
+  if (handleAffixClick(b, render)) return;
   if (d.listenUnit) {
     if (UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===d.listenUnit)))) {
       activeUnitId=d.listenUnit; navigate('junyi');
@@ -2357,6 +2369,8 @@ root.addEventListener('click', e => {
 });
 
 root.addEventListener('input', e => handleLessonInput(e.target));
+root.addEventListener('input', e => { if(e.target.id==='affix-query')handleAffixInput(e.target,render); });
+root.addEventListener('change', e => { if(e.target.id==='affix-kind')handleAffixInput(e.target,render); });
 
 // 初始化顯示縮放設定與啟動渲染
 initDisplaySettings();
@@ -2366,9 +2380,15 @@ root.addEventListener('input', e => searchKnowledge(e.target));
 root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
+  if (['affix-prefixes','affix-suffixes','affix-library'].includes(parts[0])) {
+    if (page !== 'affixes') { page='affixes'; render(); }
+    document.getElementById(parts[0])?.scrollIntoView();
+    return;
+  }
   if (parts[0] === 'grammar') { setGrammarTopic(parts[1] || ''); navigate('grammar'); }
   else if (parts[0] === 'listening') { navigate('listening'); }
   else if (parts[0] === 'unit' && UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===parts[1])))) { activeUnitId=parts[1]; navigate('junyi'); }
+  else if (parts[0] === 'affixes') { navigate('affixes'); }
   else if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
   else if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
@@ -2386,3 +2406,93 @@ root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.p
 
 root.addEventListener('change', e => { if (handleLessonAudioChange(e.target)) return; handleListeningChange(e.target, render); });
 window.addEventListener('pagehide', pauseLessonAudio);
+
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('keydown', e => {
+    if (e.target && e.target.matches && e.target.matches('input, textarea, select')) return;
+    const key = (e.key || '').toLowerCase();
+
+    // 🎴 閃卡工作室快捷鍵
+    if (page === 'flashcards') {
+      if (e.code === 'Space' || key === 'enter') {
+        e.preventDefault();
+        const flipBtn = document.querySelector('[data-fc-flip="true"]');
+        if (flipBtn) flipBtn.click();
+        else {
+          const nextBtn = document.querySelector('[data-fc-next="true"]') || document.querySelector('[data-fc-batch-next="true"]');
+          if (nextBtn) nextBtn.click();
+        }
+      } else if (e.code === 'ArrowRight' || key === 'l') {
+        const nextBtn = document.querySelector('[data-fc-next="true"]') || document.querySelector('[data-fc-batch-next="true"]');
+        if (nextBtn) { e.preventDefault(); nextBtn.click(); }
+      } else if (e.code === 'ArrowLeft' || key === 'h') {
+        const prevBtn = document.querySelector('[data-fc-prev="true"]') || document.querySelector('[data-fc-batch-prev="true"]');
+        if (prevBtn) { e.preventDefault(); prevBtn.click(); }
+      } else if (key === 's') {
+        const speakBtn = document.querySelector('[data-fc-speak-word]');
+        if (speakBtn) { e.preventDefault(); speakBtn.click(); }
+      }
+    }
+
+    // 📝 9500字卡練習快捷鍵
+    if (page === 'wordpractice') {
+      if (['1','2','3','4','a','b','c','d'].includes(key)) {
+        const idx = ['1','a'].includes(key) ? 0 : ['2','b'].includes(key) ? 1 : ['3','c'].includes(key) ? 2 : 3;
+        const opt = document.querySelector(`[data-wp-choice="${idx}"]`);
+        if (opt && !opt.disabled) { e.preventDefault(); opt.click(); }
+        const rateBtn = key === '1' ? document.querySelector('[data-wp-rate="no"]') : key === '2' ? document.querySelector('[data-wp-rate="yes"]') : null;
+        if (rateBtn) { e.preventDefault(); rateBtn.click(); }
+      } else if (e.code === 'Space' || key === 'enter' || e.code === 'ArrowRight') {
+        const nextBtn = document.querySelector('[data-wp-next="true"]');
+        if (nextBtn) { e.preventDefault(); nextBtn.click(); }
+        else {
+          const revBtn = document.querySelector('[data-wp-reveal="true"]');
+          if (revBtn) { e.preventDefault(); revBtn.click(); }
+        }
+      }
+    }
+
+    // 🎯 程度測驗快捷鍵
+    if (page === 'diagnostic') {
+      if (['1','2','3','4','a','b','c','d'].includes(key)) {
+        const idx = ['1','a'].includes(key) ? 0 : ['2','b'].includes(key) ? 1 : ['3','c'].includes(key) ? 2 : 3;
+        const opt = document.querySelector(`[data-diag-choice="${idx}"]`);
+        if (opt) { e.preventDefault(); opt.click(); }
+      } else if (e.code === 'ArrowRight' || key === 'enter') {
+        const nextBtn = document.querySelector('[data-diag-next="true"]');
+        if (nextBtn) { e.preventDefault(); nextBtn.click(); }
+      } else if (e.code === 'ArrowLeft') {
+        const prevBtn = document.querySelector('[data-diag-prev="true"]');
+        if (prevBtn && !prevBtn.disabled) { e.preventDefault(); prevBtn.click(); }
+      }
+    }
+
+    // 🏫 國小國中單字練習快捷鍵
+    if (page === 'schoolwords') {
+      if (['1','2','3','4','a','b','c','d'].includes(key)) {
+        const idx = ['1','a'].includes(key) ? 0 : ['2','b'].includes(key) ? 1 : ['3','c'].includes(key) ? 2 : 3;
+        const opt = document.querySelector(`[data-word-choice="${idx}"]`);
+        if (opt && !opt.disabled) { e.preventDefault(); opt.click(); }
+      } else if (e.code === 'Space' || key === 'enter' || e.code === 'ArrowRight') {
+        const nextBtn = document.querySelector('[data-word-action="next"]');
+        if (nextBtn) { e.preventDefault(); nextBtn.click(); }
+        else {
+          const revBtn = document.querySelector('[data-word-action="reveal"]');
+          if (revBtn) { e.preventDefault(); revBtn.click(); }
+        }
+      }
+    }
+
+    // 🏛️ 題型測驗快捷鍵
+    if (page === 'exams') {
+      if (['1','2','3','4','a','b','c','d'].includes(key)) {
+        const idx = ['1','a'].includes(key) ? 0 : ['2','b'].includes(key) ? 1 : ['3','c'].includes(key) ? 2 : 3;
+        const opt = document.querySelector(`[data-quiz-choice="${idx}"]`);
+        if (opt && !opt.disabled) { e.preventDefault(); opt.click(); }
+      } else if (key === 'enter' || e.code === 'ArrowRight') {
+        const nextBtn = document.querySelector('[data-next-quiz-q="true"]');
+        if (nextBtn && !nextBtn.disabled) { e.preventDefault(); nextBtn.click(); }
+      }
+    }
+  });
+}

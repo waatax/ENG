@@ -1,3 +1,4 @@
+import {renderWordStructure} from './word_structure.mjs';
 // flashcards.mjs - 全階程度單字與片語記憶閃卡館 (Graded Memory Flashcards Studio)
 // 完整依照程度編排：小學1,000字、國中2,000字、高中3,000字與核心片語、TOEIC、Digital SAT、GRE、GMAT
 // 配備：3D卡片翻轉動畫、自然拼讀音節拆解、KK音標、雙語例句、即時真人語音 (Web Speech API)、掌握度標記與自動輪播聽讀
@@ -4359,8 +4360,8 @@ export const FLASHCARD_DATABASE = [
     "icon": "🐟",
     "zh": "水母",
     "collocation": "an important jellyfish (水母)",
-    "example": "She gently placed the lovely jellyfish beside her bed.",
-    "exampleZh": "她輕輕地把這隻可愛的水母放在床邊。",
+    "example": "We saw a jellyfish swimming in the aquarium.",
+    "exampleZh": "我們看到一隻水母在水族箱裡游動。",
     "memoryTip": "自然拼讀：jel - ly - fish。留意字母拼讀節奏與生活發音。"
   },
   {
@@ -142648,10 +142649,10 @@ export function renderFlashcardsStudioView() {
   const masteryPercentage = allTierCards.length ? Math.round((totalTierMastered / allTierCards.length) * 100) : 0;
 
   return `
-    <section class="card"><h2>完整 9,500 張字卡，全數可練習</h2><p>國小 1,000 · 國中 2,000 · 高中 3,000 · TOEIC 700 · TOEFL 700 · SAT 700 · GRE 700 · GMAT 700。每張皆提供字義、拼字與複習練習。</p><button class="btn primary" data-nav="wordpractice">開始 9,500 張字卡學習</button><button class="btn quiet" data-nav="schoolwords">國小・國中課本字彙複習</button></section>
+    <div class="flashcard-studio"><section class="card"><h2>聽發音、想意思，再翻卡確認</h2><p>完整 9,500 張字卡，依程度練習。</p><a href="#affixes">探索字首・字尾與構詞範例 →</a><p>國小 1,000 · 國中 2,000 · 高中 3,000 · TOEIC 700 · TOEFL 700 · SAT 700 · GRE 700 · GMAT 700。每張皆提供字義、拼字與複習練習。</p><button class="btn primary" data-nav="wordpractice">開始 9,500 張字卡學習</button><button class="btn quiet" data-nav="schoolwords">國小・國中課本字彙複習</button></section>
     <div class="header-block">
       <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🗂️ 全階記憶閃卡館 · 雙重編碼與檢索練習</div>
-      <h1 style="margin:8px 0;font-size:28px">多階層英語單字與核心片語記憶閃卡 (一面英文·一面中文與圖示)</h1>
+      <h1 style="margin:8px 0;font-size:28px">單字記憶工作室</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
         依據第二語言習得 (SLA) 之「雙重編碼理論 (Dual-Coding Theory)」與「檢索練習 (Retrieval Practice)」深層設計：
         <strong>正面純英文</strong>（音節拆解、KK音標、詞性與發音），激發大腦主動提取；<strong>背面繁中與主題圖示</strong>（圖示錨點、核心釋義、高頻搭配、情境例句與記憶秘訣）。
@@ -142804,7 +142805,7 @@ export function renderFlashcardsStudioView() {
       </div>
 
       <div style="display:flex;gap:8px;align-items:center">
-        <input type="text" id="fc-search-input" placeholder="🔍 搜尋單字或中文..." value="${esc(cardSearchKeyword)}"
+        <input type="text" id="fc-search-input" aria-label="搜尋英文、中文或主題" placeholder="🔍 搜尋單字或中文..." value="${esc(cardSearchKeyword)}"
           style="padding:8px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:13px;width:180px" />
         <button class="btn quiet" data-fc-shuffle="true" style="font-size:13px;padding:8px 12px" title="隨機洗牌重排順序">
           🔀 洗牌
@@ -142819,7 +142820,7 @@ export function renderFlashcardsStudioView() {
     <!-- 🎴 3D 記憶閃卡主舞台 -->
     ${currentCard ? `
       <div style="perspective:1000px;max-width:720px;margin:0 auto 24px">
-        <div class="fc-card-stage" data-fc-flip="true"
+        <div class="fc-card-stage"
           style="min-height:380px;position:relative;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer;border-radius:18px;box-shadow:0 12px 30px -5px rgba(0,0,0,0.12);transform:${isFlipped ? 'rotateY(180deg)' : 'none'}">
 
           <!-- 卡片正面 (FRONT) - 嚴格純英文環境，促進檢索提取 (Retrieval Practice) -->
@@ -142861,7 +142862,7 @@ export function renderFlashcardsStudioView() {
                 <button class="btn quiet" data-fc-speak-word-slow="${esc(currentCard.word)}" style="padding:8px 14px;font-size:13px;font-weight:600;border-radius:8px;border:1px solid #cbd5e1">
                   🐢 慢速拼讀 0.65x
                 </button>
-                <button class="btn quiet" data-fc-speak-sentence="${esc(currentCard.example)}" title="聽例句朗讀語音 (盲聽訓練)" style="padding:8px 14px;font-size:13px;font-weight:600;border-radius:8px;border:1px solid #3b82f6;color:#1d4ed8;background:#eff6ff">
+                <button class="btn quiet" ${!currentCard.example ? 'disabled' : ''} data-fc-speak-sentence="${esc(currentCard.example)}" title="聽例句朗讀語音 (盲聽訓練)" style="padding:8px 14px;font-size:13px;font-weight:600;border-radius:8px;border:1px solid #3b82f6;color:#1d4ed8;background:#eff6ff">
                   🎧 聽例句語音
                 </button>
               </div>
@@ -142875,6 +142876,7 @@ export function renderFlashcardsStudioView() {
           <div class="fc-card-face fc-back" ${!isFlipped ? 'inert aria-hidden="true"' : ''}
             style="position:absolute;inset:0;background:linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);border:2px solid #3b82f6;border-radius:18px;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow-y:auto">
             <div>
+              ${currentCardIndex < batchCards.length - 1 ? `<div class="answer-toolbar"><span>核對意思與用法</span><button class="btn primary" data-fc-next="true">下一張 →</button></div>` : currentBatchIndex < totalBatches - 1 ? `<div class="answer-toolbar"><span>本組最後一張</span><button class="btn primary" data-fc-batch-next="true">下一組 →</button></div>` : `<p role="status">已到清單最後一張</p>`}
               <!-- 背面頂部：核心概念圖示、詞性單字與中文釋義 -->
               <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;background:#ffffff;padding:10px 14px;border-radius:14px;border:1px solid #e2e8f0;box-shadow:0 2px 6px rgba(0,0,0,0.03)">
                 <!-- 醒目主題圖示徽章 (Visual Anchor Icon) -->
@@ -142902,6 +142904,7 @@ export function renderFlashcardsStudioView() {
                 </div>
               </div>
 
+              ${renderWordStructure(currentCard)}
               <!-- 搭配詞提示 -->
               ${currentCard.collocation ? `
                 <div style="margin-bottom:10px;font-size:13px;color:#92400e;background:#fef3c7;border:1px solid #fde68a;padding:5px 12px;border-radius:8px;font-weight:600;display:inline-block">
@@ -142944,7 +142947,7 @@ export function renderFlashcardsStudioView() {
 
             <!-- 背面底部：翻回正面按鈕 -->
             <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e2e8f0;padding-top:10px;margin-top:6px">
-              <span style="font-size:12px;color:#94a3b8">🔄 點擊卡片翻回正面</span>
+              <span style="font-size:12px;color:#94a3b8">回想一次，再決定是否需要複習</span>
               <button class="btn quiet small" data-fc-flip="true" style="padding:4px 10px;font-size:12px;border-radius:6px">
                 返回英文單字面
               </button>
@@ -142995,7 +142998,7 @@ export function renderFlashcardsStudioView() {
         <button class="btn primary" data-fc-filter="all">重設篩選條件 (查看全部卡片)</button>
       </div>
     `}
-  `;
+  </div>`;
 }
 
 // 閃卡事件處理

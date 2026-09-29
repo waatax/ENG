@@ -60,6 +60,42 @@ export function knowledgeHome() {
         </div>
       </div>
     </div>
+    <!-- 🌟 初學者自學起跑線與四階學習公路 -->
+    <div class="beginner-highway" id="beginner-highway">
+      <div class="beginner-highway-head">
+        <h2><span>🧭 初學者自學導航</span> · 四階學習公路</h2>
+        <span class="pill" style="background:#dcfce7;color:#166534;font-weight:700">循序漸進 · 零基礎通關</span>
+      </div>
+      <p style="font-size:13.5px;color:#334155;margin:0 0 16px;line-height:1.6">
+        英文弱底或不熟悉的同學，請勿盲目刷題！請依下方四階階梯循序漸進：<strong>先掌握發音與句型骨架，再攻時態與從屬子句，最後融會貫通大考解題</strong>。
+      </p>
+      <div class="highway-grid">
+        <a class="highway-card stage-1" href="#knowledge/be-sentences">
+          <span class="highway-stage-badge">第一階 · 國小奠基 (Pre-A1)</span>
+          <h3>人稱與 be 動詞句型</h3>
+          <p>學會第一個完整英文句子，弄懂 I am、you are、she is 與一般動詞三單變化。</p>
+          <span class="highway-action">從第一句開始 ➔</span>
+        </a>
+        <a class="highway-card stage-2" href="#knowledge/past-perfect">
+          <span class="highway-stage-badge">第二階 · 國中會考 (A1-B1)</span>
+          <h3>過去式 vs 現在完成式</h3>
+          <p>看懂時間軸是「已結束」還是「連到現在」，掌握五大句型與會考關鍵題眼。</p>
+          <span class="highway-action">突破核心時態 ➔</span>
+        </a>
+        <a class="highway-card stage-3" href="#knowledge/relative-clauses">
+          <span class="highway-stage-badge">第三階 · 高中學測 (B1-B2)</span>
+          <h3>關係子句與篇章邏輯</h3>
+          <p>學會「先找缺口，再選代名詞」，破解長句修飾語、分詞構句與段落轉折詞。</p>
+          <span class="highway-action">精進長句分析 ➔</span>
+        </a>
+        <a class="highway-card stage-4" href="#knowledge/reading-evidence">
+          <span class="highway-stage-badge">第四階 · 國際檢定 (B2-C2)</span>
+          <h3>閱讀證據與批判推理</h3>
+          <p>區分文本直接資訊與無端猜測，掌握 SAT / GRE / GMAT 論證假設與題型思維。</p>
+          <span class="highway-action">鍛鍊批判邏輯 ➔</span>
+        </a>
+      </div>
+    </div>
     <section class="card learning-new-tools"><h2>🎧 用聽的學單元，用圖表懂文法</h2><p>國小、國中、高中與高工：中文解說、英文例句、停頓回想。</p><div class="audio-controls"><a class="btn primary" href="#listening">通勤聽課教室</a><a class="btn" href="#grammar">圖解文法專區</a></div></section>
     <header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
     ${last?`<aside class="resume-card"><strong>接續上次學習</strong><a href="#knowledge/${last.id}">${e(last.title)} →</a><small>${e(statusLabel(last.id))}</small></aside>`:''}
@@ -83,7 +119,7 @@ export function searchKnowledge(target) {
 function checkHtml(p, i) {
   const q = p.questions[i], a = progress.answer(p.id,i), answered = a && a.latest !== null;
   return `<fieldset class="lesson-check" id="kp-check-${i}"><legend>${i+1}. ${e(q[0])}</legend>${q[1].map((o,j)=>`<button class="btn quiet lesson-option" data-kp-answer="${p.id}:${i}:${j}" ${answered?'disabled':''}>${String.fromCharCode(65+j)}. ${e(o)}</button>`).join('')}
-    <div class="kp-feedback" role="status" tabindex="-1">${answered?`<p><strong>${a.latest===q[2]?'答對':'需要訂正'}</strong> · 你的答案：${e(q[1][a.latest])}<br>正解：${e(q[1][q[2]])}</p><p>${e(q[3])}</p><p class="small">首次答案：${e(q[1][a.first])} · 已作答 ${a.attempts} 次。重做不會覆蓋首次紀錄。</p><button class="btn quiet" data-kp-retry="${p.id}:${i}">再練一次</button>`:''}</div></fieldset>`;
+    <div class="kp-feedback" role="status" tabindex="-1">${answered?`<p><strong>${a.latest===q[2]?'答對':'需要訂正'}</strong> · 你的答案：${e(q[1][a.latest])}<br>正解：${e(q[1][q[2]])}</p><div class="clue-box"><strong>💡 題眼分析與破題思維：</strong><br>${e(q[3])}</div><p class="small">首次答案：${e(q[1][a.first])} · 已作答 ${a.attempts} 次。重做不會覆蓋首次紀錄。</p><button class="btn quiet" data-kp-retry="${p.id}:${i}">再練一次</button>`:''}</div></fieldset>`;
 }
 export function knowledgePage(id) {
   const p = points.find(x=>x.id===id);
@@ -92,9 +128,10 @@ export function knowledgePage(id) {
   const index = points.indexOf(p), next = points[index+1];
   return `<article class="lesson-page knowledge-detail"><a href="#knowledge">← 回知識點教室</a><header><p class="pill">${e(p.stage)} · 原創教學</p><h1>${e(p.title)}</h1><p>${e(p.goal)}</p><p class="small">先備知識：${e(p.prior)}</p></header>
     ${renderLessonAudio('knowledge:'+p.id)}
-    <nav class="lesson-links" aria-label="本頁段落">${[['concept','觀念'],['examples','例句'],['practice','練習'],['output','應用']].map(([id,label])=>`<button class="btn quiet" data-scroll-to="#kp-${id}">${label}</button>`).join('')}</nav>
+    <nav class="lesson-links" aria-label="本頁段落">${[['concept','觀念'],['examples','例句'],['steps','解題三步法'],['practice','練習'],['output','應用']].map(([id,label])=>`<button class="btn quiet" data-scroll-to="#kp-${id}">${label}</button>`).join('')}</nav>
     <section class="card" id="kp-concept"><h2>1. 理解核心觀念</h2><p>${e(p.rule)}</p><ol>${p.steps.map(s=>`<li>${e(s)}</li>`).join('')}</ol></section>
     ${renderTeachingAid(p.title, [], p.pairs.map(pair=>pair[0]))}<section class="card" id="kp-examples"><h2>2. 對照例句與錯誤</h2>${p.pairs.map(([en,zh])=>`<blockquote><p lang="en">${e(en)}</p><button class="btn quiet small" data-speak-sentence="${e(en)}" aria-label="朗讀例句：${e(en)}">朗讀例句</button><p>${e(zh)}</p></blockquote>`).join('')}<p class="small">朗讀使用裝置合成語音。</p><aside class="lesson-tip">${e(p.trap)}</aside></section>
+    <section class="card solving-steps-card" id="kp-steps"><h3>🎯 大考解題三步法 · 考場實戰本能</h3><p style="font-size:13px;color:#0369a1;margin:0 0 14px">面對題目不再靠感覺盲猜！依照以下三步驟，有條理破解考題：</p><ul class="solving-steps-list"><li class="solving-step-item"><span class="step-num-badge">步驟 1</span><strong>🔍 圈題眼 (Locate Clue)</strong><p>先看空格前後詞、時間副詞或句法連詞，找出命題關鍵訊號。</p></li><li class="solving-step-item"><span class="step-num-badge">步驟 2</span><strong>📐 想規則 (Apply Rule)</strong><p>根據題眼啟動本課核心語法公式，鎖定正確的句型結構。</p></li><li class="solving-step-item"><span class="step-num-badge">步驟 3</span><strong>🚫 排陷阱 (Eliminate Traps)</strong><p>逐一檢驗選項，排除主謂不一致、時態混淆等干擾項。</p></li></ul></section>
     <section class="card" id="kp-practice"><h2>3. 先作答，再看解析</h2><p>答錯後先回看規則，再重做。此處記錄練習表現，不換算正式考試分數。</p>${p.questions.map((_,i)=>checkHtml(p,i)).join('')}</section>
     <section class="card" id="kp-output"><h2>4. 換個情境使用</h2><label for="kp-draft">${e(p.task)}</label><textarea id="kp-draft" data-kp-draft="${p.id}" rows="5" maxlength="10000" placeholder="請先寫下自己的答案，再展開範例。">${e(progress.draft(p.id))}</textarea><p class="small" id="kp-save-status" role="status">${e(savedMessage())}</p><details><summary>參考答案與自查</summary><p>${e(p.model)}</p><p>先核對意思，再核對句型。寫作練習沒有自動評分；不同答案也可能正確。</p></details><h3>明天再回想</h3><p>不看本文說出規則，重新造一個句子，再檢查本頁的常見錯誤。</p></section>
     <nav class="lesson-links" aria-label="接續學習"><a href="#knowledge">回知識點教室</a>${next?`<a href="#knowledge/${next.id}">下一頁：${e(next.title)} →</a>`:''}</nav></article>`;

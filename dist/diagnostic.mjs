@@ -681,6 +681,7 @@ function renderReportView() {
                 </div>
               ` : ''}
 
+              <div class="clue-tag" style="margin-bottom:8px">⚡ 考點題眼：${esc(q.subtopic)}</div>
               <div style="font-size:16px;font-weight:600;line-height:1.5;margin-bottom:12px;color:var(--text-primary)">
                 ${esc(q.prompt)}
               </div>
@@ -714,6 +715,11 @@ function renderReportView() {
               <!-- 展開的名師黃金五維詳解區塊 -->
               ${showExp ? `
                 <div style="background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:16px;margin-top:14px;display:grid;gap:12px;font-size:14px;line-height:1.65">
+                  <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;padding:10px 14px;color:#0369a1;font-size:13px;line-height:1.5">
+                    <strong>🎯 解題思維三部曲：</strong>
+                    <span>1. 圈題眼【${esc(q.subtopic)}】 ➔ 2. 套語法【${esc(q.coreConcept)}】 ➔ 3. 排除干擾【${esc(q.trapExplanation.replace(/^【[^】]+】/,'').slice(0, 45))}...】</span>
+                  </div>
+
                   <div style="color:#0f766e">
                     <strong style="color:#047857">🎯 【核心考點剖析】</strong><br>
                     ${esc(q.coreConcept)}
@@ -765,9 +771,16 @@ function renderReportView() {
 
     <!-- 底部操作按鈕 -->
     <div class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <button class="btn secondary" data-restart-diag="true" style="padding:10px 20px;font-size:15px">
-        🔄 抽取全新 ${diagQuestions.length || 30} 題再次挑戰
-      </button>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn secondary" data-restart-diag="true" style="padding:10px 20px;font-size:15px">
+          🔄 抽取全新 ${diagQuestions.length || 30} 題再次挑戰
+        </button>
+        ${diagQuestions.length - ev.rawCorrect > 0 ? `
+          <button class="btn primary" data-retry-wrong-diag="true" style="padding:10px 20px;font-size:15px;background:#dc2626;border-color:#dc2626">
+            🎯 僅重測本次 ${diagQuestions.length - ev.rawCorrect} 題錯題 (靶向精練)
+          </button>
+        ` : ''}
+      </div>
       <div style="display:flex;gap:10px">
         <button class="btn secondary" data-print-diag="true" style="padding:10px 20px;font-size:15px">
           🖨️ 列印/儲存診斷報告 (PDF)
@@ -980,6 +993,28 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
     diagUserAnswers = {};
     renderCallback();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    return true;
+  }
+
+  // 重測本次錯題 (靶向精練)
+  if (d.retryWrongDiag) {
+    const wrongQs = diagQuestions.filter(q => {
+      const u = diagUserAnswers[q.id];
+      return Array.isArray(q.answer)
+        ? (!Array.isArray(u) || u.length !== q.answer.length || !u.every(v => q.answer.includes(v)))
+        : u !== q.answer;
+    });
+    if (wrongQs.length) {
+      diagQuestions = wrongQs;
+      diagUserAnswers = {};
+      diagCurrentIdx = 0;
+      diagExpandedExplains = {};
+      diagTimerSeconds = wrongQs.length * 60;
+      diagMode = 'testing';
+      startTimer(renderCallback);
+      renderCallback();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     return true;
   }
 

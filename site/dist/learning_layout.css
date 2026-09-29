@@ -91,3 +91,122 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important;} *,*::before,*::after{animation:none!important;transition:none!important;}}
 
 .full-word-practice .wp-stats {display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.wp-stats span{padding:10px 14px;border:1px solid #cbd5e1;border-radius:10px}.wp-question h2{overflow-wrap:anywhere;font-size:clamp(1.5rem,5vw,2.5rem)}.wp-spelling{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.wp-spelling label{width:100%}.wp-spelling input{min-width:0;flex:1 1 180px;font-size:18px;padding:12px}.full-word-practice .word-controls{margin-bottom:16px}.full-word-practice button{min-height:44px}.full-word-practice .lesson-option{white-space:normal;text-align:left}
+
+/* Reading-first cards: content determines height, with one page scrollbar. */
+.flashcard-studio { max-width:1100px; margin-inline:auto; }
+.flashcard-studio .header-block h1 { font-size:clamp(1.6rem,4vw,2.2rem)!important; }
+.flashcard-studio .fc-card-stage { transform:none!important; transform-style:flat!important; transition:none!important; cursor:default!important; min-height:0!important; }
+.flashcard-studio .fc-card-face { position:relative!important; inset:auto!important; transform:none!important; overflow:visible!important; min-height:380px; height:auto; }
+.flashcard-studio .fc-card-face[aria-hidden="true"] { display:none!important; }
+.flashcard-studio .fc-card-face div { min-width:0; overflow-wrap:anywhere; }
+.flashcard-studio .fc-card-face .btn { white-space:normal; }
+.flashcard-studio .btn { min-height:44px; }
+.answer-toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; background:#edf8f5; color:#145447; border:1px solid #b9ddd2; border-radius:14px; padding:14px 18px; margin:16px 0; }
+.answer-toolbar .btn { flex-shrink:0; min-height:44px; }
+.answer-toolbar span { font-weight:650; }
+.study-progress { display:block; width:100%; height:8px; accent-color:#047857; border:0; margin-bottom:20px; }
+.word-structure { text-align:left; padding:20px; margin:18px 0; background:#f2f6fd; color:#24364e; border:1px solid #cbd9ed; border-radius:14px; }
+.word-structure h3 { margin:0 0 14px; font-size:1.05rem; }
+.word-structure h3 span { font-size:.8rem; font-weight:500; color:#536480; margin-left:8px; }
+.word-structure p { font-size:.95rem; line-height:1.75; margin:10px 0 0; }
+.morpheme-grid { display:flex; flex-wrap:wrap; align-items:stretch; gap:8px; }
+.morpheme { flex:1 1 100px; padding:12px; border:1px solid #cbd9ed; background:white; border-radius:10px; }
+.morpheme>span { font-size:.75rem; color:#536480; display:block; }
+.morpheme strong { display:block; font-size:1.4rem; color:#234a83; }
+.morpheme-plus { align-self:center; color:#536480; }
+.structure-note { font-size:.85rem!important; color:#536480; }
+.whole-word { background:#f8fafc; border-color:#e2e8f0; }
+.affix-guide { max-width:1120px; margin:auto; }
+.affix-hero { padding:32px; border:1px solid #b9ddd2; border-radius:22px; background:linear-gradient(125deg,#edf8f5,#eff5ff); margin-bottom:24px; }
+.affix-hero h1 { font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.3; max-width:22ch; }
+.affix-basics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.affix-basics>div { border-left:3px solid #4b8eaa; padding-left:16px; }
+.affix-section { margin-block:40px; scroll-margin-top:24px; }
+.affix-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.affix-grid .affix-card { margin:0; padding:24px; min-width:0; }
+.affix-card h3 { font-size:1.75rem; color:#145447; margin:12px 0 4px; }
+.affix-meaning { font-weight:700; color:#1e293b; }
+.affix-examples { list-style:none; margin:20px 0; padding:0; }
+.affix-examples li { border-top:1px solid #e2e8f0; padding:12px 0; }
+.affix-examples li>div { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; }
+.affix-examples .btn { margin-left:auto; min-height:44px; font-size:.8rem; }
+.affix-formula { display:block; color:#536480; font-size:.85rem; margin-bottom:6px; overflow-wrap:anywhere; }
+.affix-examples strong { overflow-wrap:anywhere; }
+.affix-card details { background:#f8fafc; border-radius:10px; padding:12px; }
+.affix-card summary,.affix-review summary { cursor:pointer; min-height:32px; font-weight:650; }
+.affix-review { padding:16px 0; border-bottom:1px solid #e2e8f0; }
+.full-word-practice .word-feedback { border-radius:14px; padding:24px; }
+.full-word-practice .wp-stats span { background:#fff; flex:1 1 120px; }
+.full-word-practice .wp-stats strong { display:block; font-size:1.6rem; color:#145447; }
+.practice-active>header>p:not(.pill),.practice-active>header>.wp-stats { display:none; }
+.practice-active>header h1 { font-size:1.4rem; margin-block:10px; }
+.practice-active>header { margin-bottom:20px; }
+.affix-library { scroll-margin-top:20px; }
+.affix-library input { width:100%; min-width:0; border:1px solid #b5c6d8; padding:12px; border-radius:10px; background:white; }
+.affix-entry { border:1px solid #d6e1ea; padding:22px; border-radius:14px; min-width:0; background:#fbfcfe; }
+.affix-entry h3 { font-size:1.6rem; overflow-wrap:anywhere; margin:10px 0; color:#145447; }
+.affix-entry dt { font-weight:700; margin-top:10px; }
+.affix-entry dd { margin:2px 0; color:#475569; }
+.affix-entry details { margin-top:12px; }
+@media(max-width:700px){
+ .affix-grid,.affix-basics { grid-template-columns:minmax(0,1fr); }
+ .affix-hero { padding:22px 18px; }
+ .flashcard-studio .fc-card-face { padding:18px!important; }
+ .flashcard-studio .fc-back div[style*="display:flex"] { flex-wrap:wrap; }
+ .word-structure { padding:14px; }
+ .answer-toolbar { padding:12px; gap:10px; }
+ .answer-toolbar .btn { margin-left:auto; }
+ .flashcard-studio input { max-width:100%; }
+ .flashcard-studio>div { max-width:100%; }
+}
+
+/* 🌟 初學者學習公路 (Beginner Learning Highway) */
+.beginner-highway { margin-bottom:28px; background:linear-gradient(135deg,#f8fafc 0%,#f0fdf4 100%); border:1px solid #86efac; border-radius:16px; padding:24px; box-shadow:0 4px 16px -2px rgba(16,185,129,0.12); }
+.beginner-highway-head { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px; }
+.beginner-highway-head h2 { margin:0; font-size:1.35rem; color:#065f46; display:flex; align-items:center; gap:8px; }
+.highway-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.highway-card { display:flex; flex-direction:column; background:#ffffff; border:1px solid #cbd5e1; border-radius:12px; padding:16px; text-decoration:none; color:#1e293b; transition:all 0.2s ease; box-shadow:0 2px 6px rgba(0,0,0,0.03); }
+.highway-card:hover { border-color:#10b981; transform:translateY(-2px); box-shadow:0 6px 18px rgba(16,185,129,0.16); }
+.highway-stage-badge { align-self:flex-start; font-size:11px; font-weight:700; padding:3px 8px; border-radius:6px; margin-bottom:8px; }
+.stage-1 .highway-stage-badge { background:#e0f2fe; color:#0369a1; }
+.stage-2 .highway-stage-badge { background:#fef3c7; color:#92400e; }
+.stage-3 .highway-stage-badge { background:#ede9fe; color:#5b21b6; }
+.stage-4 .highway-stage-badge { background:#ffe4e6; color:#9f1239; }
+.highway-card h3 { font-size:1.05rem; margin:0 0 6px; color:#0f172a; font-weight:750; }
+.highway-card p { font-size:12.5px; line-height:1.55; color:#64748b; margin:0 0 12px; flex-grow:1; }
+.highway-card .highway-action { font-size:12.5px; font-weight:700; color:#059669; display:flex; align-items:center; gap:4px; }
+
+/* 🎯 題眼與解題三步法 (3-Step Problem Solving Method) */
+.solving-steps-card { margin:20px 0; border:2px solid #38bdf8; border-radius:14px; background:linear-gradient(135deg,#f0f9ff 0%,#ffffff 100%); padding:20px 22px; box-shadow:0 4px 14px rgba(56,189,248,0.12); }
+.solving-steps-card h3 { font-size:1.15rem; color:#0369a1; margin:0 0 12px; display:flex; align-items:center; gap:8px; }
+.solving-steps-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:0; padding:0; list-style:none; }
+.solving-step-item { background:#ffffff; border:1px solid #bae6fd; border-radius:10px; padding:12px 14px; }
+.step-num-badge { display:inline-block; font-size:11px; font-weight:800; padding:2px 8px; border-radius:4px; background:#0284c7; color:#ffffff; margin-bottom:6px; }
+.solving-step-item strong { display:block; font-size:13.5px; color:#0c4a6e; margin-bottom:4px; }
+.solving-step-item p { margin:0; font-size:12px; color:#475569; line-height:1.5; }
+
+/* 題眼與陷阱高亮標記 */
+.clue-tag { display:inline-flex; align-items:center; gap:4px; background:#fef08a; color:#854d0e; font-weight:700; padding:2px 8px; border-radius:4px; border:1px solid #facc15; font-size:12px; }
+.clue-box { background:#fefce8; border-left:4px solid #eab308; padding:12px 16px; border-radius:8px; margin:12px 0; font-size:13.5px; color:#713f12; line-height:1.6; }
+.trap-warning-box { background:#fef2f2; border-left:4px solid #ef4444; padding:12px 16px; border-radius:8px; margin:12px 0; font-size:13px; color:#991b1b; line-height:1.6; }
+.formula-highlight-box { background:#f0fdf4; border:1px solid #86efac; border-radius:10px; padding:14px 18px; margin:14px 0; }
+.formula-highlight-box code { font-size:14.5px; font-weight:700; color:#15803d; }
+
+/* 導航側欄分組標題 */
+.nav-group-header { grid-column:1 / -1; width:100%; box-sizing:border-box; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; color:#94a3b8; padding:12px 10px 4px; margin-top:8px; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; gap:6px; }
+
+/* 診斷報告弱點補強直通車 */
+.diag-remediation-box { margin-top:20px; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:18px; }
+.diag-remediation-title { font-size:15px; font-weight:750; color:#0f172a; margin:0 0 10px; display:flex; align-items:center; gap:6px; }
+.diag-remediation-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:10px; }
+.diag-remediation-item { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; text-decoration:none; color:#1e293b; font-size:13px; transition:border-color 0.2s; }
+.diag-remediation-item:hover { border-color:#0284c7; background:#f0f9ff; color:#0369a1; }
+
+@media(max-width:900px){
+ .highway-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .solving-steps-list { grid-template-columns:minmax(0,1fr); }
+}
+@media(max-width:600px){
+ .highway-grid { grid-template-columns:minmax(0,1fr); }
+}
+
