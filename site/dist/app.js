@@ -1979,7 +1979,7 @@ function bindEvents() {
 
 // 監聽全局點擊事件
 root.addEventListener('click', e => {
-  const b = e.target.closest('button');
+  const b = e.target.closest('button, [data-close-reading-drawer], [data-toggle-reading-drawer]');
   if (!b) return;
   const d = b.dataset;
   if (handleAffixClick(b, render)) return;

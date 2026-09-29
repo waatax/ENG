@@ -188,13 +188,13 @@ function renderIntroView() {
 
     ${renderLevelSelector()}
     <!-- 檢定題數選項 (10 題極速 / 20 題快速 / 30 題標準 / 40 題深度精準) -->
-    <div class="card" style="margin-bottom:24px;border:2px solid #6366f1;background:linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%)">
+    <div class="card" style="margin-bottom:24px;border:2px solid var(--blue-border);background:var(--card-bg)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
         <div>
-          <h2 style="margin:0;font-size:18px;color:#1e1b4b;display:flex;align-items:center;gap:8px">
+          <h2 style="margin:0;font-size:18px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
             <span>⚙️ 選擇檢定題數與測驗長度 (Question Count & Test Mode)</span>
           </h2>
-          <div style="font-size:13px;color:#475569;margin-top:4px">
+          <div style="font-size:13px;color:var(--text-muted);margin-top:4px">
             支援 10 題極速、20 題快速、30 題標準與 40 題深度精準檢定，自由切換滿足不同衝刺與診斷需求：
           </div>
         </div>
@@ -204,48 +204,48 @@ function renderIntroView() {
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px">
         <!-- 10 題 -->
         <button class="btn ${diagQuestionCount === 10 ? 'primary' : 'quiet'}" data-diag-select-count="10"
-          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 10 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 10 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 10 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 10 ? '2px solid var(--green-core)' : '1px solid var(--line)'};background:${diagQuestionCount === 10 ? 'var(--mint-light)' : 'var(--card-bg)'};box-shadow:${diagQuestionCount === 10 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <strong style="font-size:16px;color:#0f172a">⚡ 10 題 · 極速快測</strong>
+            <strong style="font-size:16px;color:var(--text-primary)">⚡ 10 題 · 極速快測</strong>
             <span class="pill" style="font-size:11px;background:#fef3c7;color:#92400e;font-weight:700">新登場 · 約 8 分鐘</span>
           </div>
-          <div style="font-size:12px;color:#64748b;line-height:1.5">
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
             零碎時間首選！每階 1~2 題迅速摸底，超高效率掃描個人實力分布。
           </div>
         </button>
 
         <!-- 20 題 -->
         <button class="btn ${diagQuestionCount === 20 ? 'primary' : 'quiet'}" data-diag-select-count="20"
-          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 20 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 20 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 20 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 20 ? '2px solid var(--green-core)' : '1px solid var(--line)'};background:${diagQuestionCount === 20 ? 'var(--mint-light)' : 'var(--card-bg)'};box-shadow:${diagQuestionCount === 20 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <strong style="font-size:16px;color:#0f172a">⚡ 20 題 · 快速檢定</strong>
+            <strong style="font-size:16px;color:var(--text-primary)">⚡ 20 題 · 快速檢定</strong>
             <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">約 15 分鐘</span>
           </div>
-          <div style="font-size:12px;color:#64748b;line-height:1.5">
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
             適合通勤、課間或考前快速自測，快速掌握全階能力輪廓與當前落點區間。
           </div>
         </button>
 
         <!-- 30 題 (標準) -->
         <button class="btn ${diagQuestionCount === 30 ? 'primary' : 'quiet'}" data-diag-select-count="30"
-          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 30 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 30 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 30 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 30 ? '2px solid var(--green-core)' : '1px solid var(--line)'};background:${diagQuestionCount === 30 ? 'var(--mint-light)' : 'var(--card-bg)'};box-shadow:${diagQuestionCount === 30 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <strong style="font-size:16px;color:#0f172a">🎯 30 題 · 標準檢定</strong>
+            <strong style="font-size:16px;color:var(--text-primary)">🎯 30 題 · 標準檢定</strong>
             <span class="pill" style="font-size:11px;background:#10b981;color:#fff;font-weight:700">推薦 · 約 25 分鐘</span>
           </div>
-          <div style="font-size:12px;color:#64748b;line-height:1.5">
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
             經典 8 階梯天梯平衡抽樣，精確鎖定失速臨界點 (Stall Point) 與 CEFR 等級錨定。
           </div>
         </button>
 
         <!-- 40 題 -->
         <button class="btn ${diagQuestionCount === 40 ? 'primary' : 'quiet'}" data-diag-select-count="40"
-          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 40 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 40 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 40 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 40 ? '2px solid var(--green-core)' : '1px solid var(--line)'};background:${diagQuestionCount === 40 ? 'var(--mint-light)' : 'var(--card-bg)'};box-shadow:${diagQuestionCount === 40 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <strong style="font-size:16px;color:#0f172a">🔬 40 題 · 深度精準檢定</strong>
+            <strong style="font-size:16px;color:var(--text-primary)">🔬 40 題 · 深度精準檢定</strong>
             <span class="pill" style="font-size:11px;background:#fae8ff;color:#86198f">約 35 分鐘</span>
           </div>
-          <div style="font-size:12px;color:#64748b;line-height:1.5">
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
             全維度最大樣本抽樣，深入探查 GRE 邏輯語意、GMAT 批判推理與學術篇章精細盲點。
           </div>
         </button>
@@ -283,56 +283,56 @@ function renderIntroView() {
         <span>🪜 ${diagQuestionCount} 題全階難度天梯與題數配比 (8-Tier Ladder Architecture)</span>
       </h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:12px">
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #10b981;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #10b981;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#047857">Tier 1: 國小基礎生活英語</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[1]} 題 (Pre-A1~A1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">be動詞、名詞單複數、自然發音、日常時間與生活對話</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #059669;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #059669;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#059669">Tier 2: 國中會考基礎實踐</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[2]} 題 (A1~A2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">過去簡單式、未來式、頻率副詞、比較級、情境會話</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #0284c7;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #0284c7;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0284c7">Tier 3: 國中會考精熟躍升</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[3]} 題 (A2~B1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">現在完成式、被動語態、感官使役動詞、關係代名詞</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #6366f1;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #6366f1;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#4f46e5">Tier 4: 高中學測核心素養</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[4]} 題 (B1~B2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">分詞構句、倒裝句、複合關係代名詞、篇章結構與高級詞彙</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #d97706;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #d97706;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#d97706">Tier 5: TOEIC 國際商務實戰</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[5]} 題 (B2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Part 5 詞性辨析、商務書信、行程合約、職場語法一致性</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #8b5cf6;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #8b5cf6;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#7c3aed">Tier 6: Digital SAT 學術思維</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[6]} 題 (B2~C1)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Words in Context 語境詞義、學術長難句、論點支撐與修辭</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #e11d48;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #e11d48;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#e11d48">Tier 7: GRE Verbal 語意邏輯</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[7]} 題 (C1~C2)</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">語意極性、反向對稱、雙重填空、哲學社科精微論述</div>
         </div>
-        <div style="border:1px solid #e2e8f0;border-left:4px solid #0891b2;padding:12px 14px;border-radius:8px;background:#f8fafc">
+        <div style="border:1px solid var(--line);border-left:4px solid #0891b2;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0891b2">Tier 8: GMAT Focus 批判推理</strong>
             <span class="pill" style="font-size:11px">${tierQuotasDisplay[8]} 題 (C2/進階題型)</span>

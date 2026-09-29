@@ -8,6 +8,16 @@
   --reading-font-scale: 1;
 }
 
+html {
+  font-size: calc(16px * var(--app-scale, 1));
+}
+
+body {
+  line-height: var(--reading-line-height, 1.68);
+  color: var(--text-primary);
+  background-color: var(--paper);
+}
+
 [data-theme="light"], :root {
   color-scheme: light;
   --ink: #0f1e2e;
@@ -727,7 +737,43 @@ body.reading-wide-mode .main {
   }
 
   .main {
-    padding-bottom: 84px !important;
+    padding-bottom: 88px !important;
+  }
+
+  /* 手機直式防溢出與閱讀排版優化 (Mobile Portrait Protection) */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .main-wrapper, .main {
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* 觸控熱區友善化 (Touch Target Ergonomics >= 44px) */
+  button, select, input, .btn, .lesson-option {
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  /* 手機直式自適應排版與流體標題 */
+  h1 { font-size: clamp(1.4rem, 4.5vw, 2rem) !important; line-height: 1.3 !important; }
+  h2 { font-size: clamp(1.2rem, 3.8vw, 1.6rem) !important; line-height: 1.35 !important; }
+
+  /* 閱讀抽屜底部安全區適配 */
+  .reading-drawer-sheet {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 12px));
+  }
+
+  /* 表格內部順暢滑動不破版 */
+  .lesson-table, .teaching-aid .lesson-table, table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

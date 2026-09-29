@@ -210,3 +210,131 @@
  .highway-grid { grid-template-columns:minmax(0,1fr); }
 }
 
+/* 🎨 跨主題色彩舒適度適配 (Multi-Theme Contrast Harmony) */
+[data-theme="dark"] .beginner-highway {
+  background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+  border-color: #065f46;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.5);
+}
+[data-theme="dark"] .beginner-highway-head h2 { color: #34d399; }
+[data-theme="dark"] .clue-box {
+  background: #242010;
+  border-left-color: #eab308;
+  color: #fef08a;
+}
+[data-theme="dark"] .trap-warning-box {
+  background: #2a1215;
+  border-left-color: #f87171;
+  color: #fecaca;
+}
+[data-theme="dark"] .formula-highlight-box {
+  background: #062a1e;
+  border-color: #059669;
+}
+[data-theme="dark"] .formula-highlight-box code { color: #34d399; }
+[data-theme="dark"] .solving-steps-card {
+  border-color: #1e3a8a;
+}
+[data-theme="dark"] .solving-steps-card h3 { color: #38bdf8; }
+[data-theme="dark"] .solving-step-item {
+  background: #0e1726;
+  border-color: #1e293b;
+}
+[data-theme="dark"] .solving-step-item strong { color: #7dd3fc; }
+[data-theme="dark"] .solving-step-item p { color: #94a3b8; }
+[data-theme="dark"] .aid-flow li {
+  background: #132238;
+  border-color: #1e3a8a;
+  color: #f1f5f9;
+}
+[data-theme="dark"] .aid-number { color: #38bdf8; }
+[data-theme="dark"] .teaching-aid th {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+[data-theme="dark"] .teaching-aid :is(td,th) { border-bottom-color: #22324b; }
+
+[data-theme="warm"] .beginner-highway {
+  background: linear-gradient(135deg, #f7efe1 0%, #fdf8ef 100%);
+  border-color: #dfd0bb;
+  box-shadow: 0 4px 16px -2px rgba(45, 36, 30, 0.08);
+}
+[data-theme="warm"] .beginner-highway-head h2 { color: #78350f; }
+[data-theme="warm"] .clue-box {
+  background: #fdf3d7;
+  border-left-color: #b45309;
+  color: #78350f;
+}
+[data-theme="warm"] .trap-warning-box {
+  background: #fbeae8;
+  border-left-color: #dc2626;
+  color: #991b1b;
+}
+[data-theme="warm"] .formula-highlight-box {
+  background: #f5eedf;
+  border-color: #dfd0bb;
+}
+[data-theme="warm"] .formula-highlight-box code { color: #92400e; }
+[data-theme="warm"] .solving-steps-card {
+  border-color: #dfd0bb;
+}
+[data-theme="warm"] .solving-steps-card h3 { color: #78350f; }
+[data-theme="warm"] .solving-step-item {
+  background: #fbf7ee;
+  border-color: #e8dfcf;
+}
+[data-theme="warm"] .solving-step-item strong { color: #451a03; }
+[data-theme="warm"] .aid-flow li {
+  background: #fbf7ee;
+  border-color: #dfd0bb;
+  color: #2d241e;
+}
+[data-theme="warm"] .aid-number { color: #92400e; }
+[data-theme="warm"] .teaching-aid th {
+  background: #f5eedf;
+  color: #2d241e;
+}
+[data-theme="warm"] .teaching-aid :is(td,th) { border-bottom-color: #e8dfcf; }
+
+[data-theme="sage"] .beginner-highway {
+  background: linear-gradient(135deg, #eaf3ed 0%, #f4faf6 100%);
+  border-color: #bfe0c7;
+  box-shadow: 0 4px 16px -2px rgba(20, 39, 26, 0.06);
+}
+[data-theme="sage"] .beginner-highway-head h2 { color: #065f46; }
+[data-theme="sage"] .clue-box {
+  background: #fdf7e7;
+  border-left-color: #ca8a04;
+  color: #713f12;
+}
+[data-theme="sage"] .trap-warning-box {
+  background: #fef0ef;
+  border-left-color: #e11d48;
+  color: #9f1239;
+}
+[data-theme="sage"] .formula-highlight-box {
+  background: #eaf4ed;
+  border-color: #bfe0c7;
+}
+[data-theme="sage"] .formula-highlight-box code { color: #047857; }
+[data-theme="sage"] .solving-steps-card {
+  border-color: #bfe0c7;
+}
+[data-theme="sage"] .solving-steps-card h3 { color: #065f46; }
+[data-theme="sage"] .solving-step-item {
+  background: #f0f5f1;
+  border-color: #d2e0d5;
+}
+[data-theme="sage"] .solving-step-item strong { color: #14271a; }
+[data-theme="sage"] .aid-flow li {
+  background: #eaf3ed;
+  border-color: #bfe0c7;
+  color: #15291b;
+}
+[data-theme="sage"] .aid-number { color: #047857; }
+[data-theme="sage"] .teaching-aid th {
+  background: #eaf3ed;
+  color: #15291b;
+}
+[data-theme="sage"] .teaching-aid :is(td,th) { border-bottom-color: #d2e0d5; }
+

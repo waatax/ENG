@@ -168,8 +168,9 @@ export function applyDisplayScale(scale, save = true) {
     // 1. 設定標準 CSS zoom (現代 Chrome、Edge、Safari、Firefox 126+ 原生向量清晰無損縮放)
     document.documentElement.style.zoom = currentScale;
 
-    // 2. 設定 CSS 變數供相對尺寸精算
+    // 2. 設定 CSS 變數供相對尺寸精算與根字體縮放
     document.documentElement.style.setProperty('--app-scale', currentScale);
+    document.documentElement.style.fontSize = `calc(16px * ${currentScale})`;
     document.documentElement.setAttribute('data-app-scale', currentScale);
 
     // 3. 更新介面上所有標記
