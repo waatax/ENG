@@ -252,19 +252,21 @@ export class QuestionBankDB {
     return this.diagnosticPool;
   }
 
-  // 分層階梯自適應抽題演算法 (支援 20 題快速、30 題標準、40 題精準深度)
+  // 分層階梯自適應抽題演算法 (支援 10 題極速、20 題快速、30 題標準、40 題精準深度)
   // 保證：
   // 1. 本次測驗中 100% 題號 (ID) 與題幹 (Prompt) 零重複 (seenIds, seenPrompts 雙層查驗)
   // 2. 跨測驗輪換記憶：讀取 localStorage 最近考過的題目 (最多記錄 300 題)，抽題時優先選取未曾出現之新題，避免短期重測遇到相同題目
   async sampleDiagnostic(count = 30, tier = null) {
     if (tier !== null && (!Number.isInteger(tier) || tier < 1 || tier > 8)) throw new Error("無效的程度");
-    if (tier !== null) count = 20;
+    if (tier !== null) count = count === 10 ? 10 : 20;
     await this.initPromise;
     const pool = await this.loadDiagnosticBank();
     if (!pool || !pool.length) return [];
 
     let tierQuotas;
-    if (count === 20) {
+    if (count === 10) {
+      tierQuotas = { 1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1 }; // 合計 10 題
+    } else if (count === 20) {
       tierQuotas = { 1: 2, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 1 }; // 合計 20 題
     } else if (count === 40) {
       tierQuotas = { 1: 5, 2: 5, 3: 5, 4: 6, 5: 5, 6: 5, 7: 5, 8: 4 }; // 合計 40 題
@@ -272,7 +274,7 @@ export class QuestionBankDB {
       tierQuotas = { 1: 4, 2: 4, 3: 4, 4: 5, 5: 4, 6: 4, 7: 3, 8: 2 }; // 合計 30 題
     }
 
-    if (tier !== null) tierQuotas = { [tier]: 20 };
+    if (tier !== null) tierQuotas = { [tier]: count };
 
     // 讀取跨測驗歷史最近看過的題號，實現跨次測驗輪換不重複
     let recentIds = new Set();
@@ -339,6 +341,11 @@ export class QuestionBankDB {
     } catch (e) {}
 
     return sampledQuestions;
+  }
+
+  // 10 題極速快測呼叫別名
+  async sampleDiagnostic10() {
+    return this.sampleDiagnostic(10);
   }
 
   // 向下相容 30 題呼叫別名

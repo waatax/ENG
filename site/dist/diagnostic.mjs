@@ -31,12 +31,12 @@ let diagSelectedTier = null;
 let diagSessionTier = null;
 const levelName = tier => DIAGNOSTIC_LEVELS.find(level => level.id === tier)?.name || '全階綜合';
 function renderLevelSelector() {
-  return `<section class="card"><h2>選擇測驗程度</h2><p>指定程度：只抽該程度的 20 題，限時 15 分鐘。若想了解跨程度表現，可選全階綜合。</p>
+  return `<section class="card"><h2>選擇測驗程度</h2><p>指定程度：可選 10 題極速 (8分) 或 20 題標準 (15分)。若想了解跨程度表現，可選全階綜合。</p>
     <div class="diag-level-grid" role="group" aria-label="測驗程度">
-      ${[{id: null, name: '全階綜合', cefr: '20／30／40 題'}, ...DIAGNOSTIC_LEVELS].map(level => `<button class="btn ${diagSelectedTier === level.id ? 'primary' : 'quiet'}" data-diag-tier="${level.id ?? 'all'}" aria-pressed="${diagSelectedTier === level.id}"><strong>${level.name}</strong><span>${level.cefr}</span></button>`).join('')}
+      ${[{id: null, name: '全階綜合', cefr: '10／20／30／40 題'}, ...DIAGNOSTIC_LEVELS].map(level => `<button class="btn ${diagSelectedTier === level.id ? 'primary' : 'quiet'}" data-diag-tier="${level.id ?? 'all'}" aria-pressed="${diagSelectedTier === level.id}"><strong>${level.name}</strong><span>${level.cefr}</span></button>`).join('')}
     </div></section>`;
 }
-let diagQuestionCount = 30; // 20 | 30 | 40
+let diagQuestionCount = 30; // 10 | 20 | 30 | 40
 let diagQuestions = [];
 let diagCurrentIdx = 0;
 let diagUserAnswers = {}; // q.id -> optionIndex (0..3)
@@ -81,6 +81,9 @@ function startTimer(renderCallback) {
       }
     }
   }, 1000);
+  if (diagTimerInterval && typeof diagTimerInterval.unref === 'function') {
+    diagTimerInterval.unref();
+  }
 }
 
 function stopTimer() {
@@ -153,31 +156,38 @@ export function diagnosticPage() {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function renderIntroView() {
   if (diagSelectedTier !== null) return `
-    <div class="header-block"><h1>指定程度 · 20 題測驗</h1><p>選好程度再開始，完成後可查看成績、錯題與逐題解析。</p></div>
+    <div class="header-block"><h1>指定程度 · ${diagQuestionCount === 10 ? '10' : '20'} 題測驗</h1><p>選好程度再開始，完成後可查看成績、錯題與逐題解析。</p></div>
     ${renderLevelSelector()}
-    <section class="card"><h2>本次測驗：${levelName(diagSelectedTier)}</h2><p>20 題選擇題 · 15 分鐘 · 每題 5 分 · 未作答以錯題計算</p><p>可跳題、修改答案與暫停計時；交卷後提供解析。同程度重測會優先抽取近期未作答的題目。</p><button class="btn primary" data-start-diag="20">開始「${levelName(diagSelectedTier)}」20 題測驗</button></section>`;
+    <section class="card"><h2>本次測驗：${levelName(diagSelectedTier)}</h2><p>${diagQuestionCount === 10 ? '10 題選擇題 · 8 分鐘 · 每題 10 分' : '20 題選擇題 · 15 分鐘 · 每題 5 分'} · 未作答以錯題計算</p><p>可跳題、修改答案與暫停計時；交卷後提供解析。同程度重測會優先抽取近期未作答的題目。</p>
+    <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+      <button class="btn ${diagQuestionCount === 10 ? 'primary' : 'quiet'}" data-diag-select-count="10">⚡ 10 題極速快測 (8分)</button>
+      <button class="btn ${diagQuestionCount === 20 ? 'primary' : 'quiet'}" data-diag-select-count="20">🎯 20 題標準測驗 (15分)</button>
+    </div>
+    <button class="btn primary" data-start-diag="${diagQuestionCount}">開始「${levelName(diagSelectedTier)}」${diagQuestionCount} 題測驗</button></section>`;
   const latestHistory = diagHistory[0];
-  const tierQuotasDisplay = diagQuestionCount === 20
+  const tierQuotasDisplay = diagQuestionCount === 10
+    ? { 1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 1, 7: 1, 8: 1 }
+    : diagQuestionCount === 20
     ? { 1: 2, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 1 }
     : diagQuestionCount === 40
     ? { 1: 5, 2: 5, 3: 5, 4: 6, 5: 5, 6: 5, 7: 5, 8: 4 }
     : { 1: 4, 2: 4, 3: 4, 4: 5, 5: 4, 6: 4, 7: 3, 8: 2 };
 
-  const durationMin = diagQuestionCount === 20 ? 15 : diagQuestionCount === 40 ? 35 : 25;
+  const durationMin = diagQuestionCount === 10 ? 8 : diagQuestionCount === 20 ? 15 : diagQuestionCount === 40 ? 35 : 25;
 
   return `
     <div class="header-block">
       <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 英文程度測試 · 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
       <h1 style="margin:8px 0;font-size:28px">🎯 英文程度檢定</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
-        提供 20 題快速檢定、30 題標準檢定與 40 題深度精準檢定。完成後檢查每題答案與解析，定位失速臨界點並獲取專屬補強微課。
+        提供 10 題極速快測、20 題快速檢定、30 題標準檢定與 40 題深度精準檢定。完成後檢查每題答案與解析，定位失速臨界點並獲取專屬補強微課。
       </p>
     </div>
 
     <aside class="card"><h2>預測英文程度，找到學習起點</h2><p>完成作答後，查看閱讀／文法程度、CEFR 參考區間與各考試參考落點，再按弱項選擇教材。預測使用本站規則，尚未經正式成績配對校準。</p></aside>
 
     ${renderLevelSelector()}
-    <!-- 檢定題數選項 (20 題快速 / 30 題標準 / 40 題深度精準) -->
+    <!-- 檢定題數選項 (10 題極速 / 20 題快速 / 30 題標準 / 40 題深度精準) -->
     <div class="card" style="margin-bottom:24px;border:2px solid #6366f1;background:linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
         <div>
@@ -185,13 +195,25 @@ function renderIntroView() {
             <span>⚙️ 選擇檢定題數與測驗長度 (Question Count & Test Mode)</span>
           </h2>
           <div style="font-size:13px;color:#475569;margin-top:4px">
-            支援 20 題快速檢定、30 題標準檢定與 40 題深度精準檢定，自由切換滿足不同衝刺與診斷需求：
+            支援 10 題極速、20 題快速、30 題標準與 40 題深度精準檢定，自由切換滿足不同衝刺與診斷需求：
           </div>
         </div>
         <div class="pill" style="background:#4338ca;color:#fff;font-weight:700">目前選擇：${diagQuestionCount} 題 (${durationMin} 分鐘)</div>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:14px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px">
+        <!-- 10 題 -->
+        <button class="btn ${diagQuestionCount === 10 ? 'primary' : 'quiet'}" data-diag-select-count="10"
+          style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 10 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 10 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 10 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <strong style="font-size:16px;color:#0f172a">⚡ 10 題 · 極速快測</strong>
+            <span class="pill" style="font-size:11px;background:#fef3c7;color:#92400e;font-weight:700">新登場 · 約 8 分鐘</span>
+          </div>
+          <div style="font-size:12px;color:#64748b;line-height:1.5">
+            零碎時間首選！每階 1~2 題迅速摸底，超高效率掃描個人實力分布。
+          </div>
+        </button>
+
         <!-- 20 題 -->
         <button class="btn ${diagQuestionCount === 20 ? 'primary' : 'quiet'}" data-diag-select-count="20"
           style="text-align:left;padding:16px 18px;border-radius:12px;border:${diagQuestionCount === 20 ? '2px solid #047857' : '1px solid #cbd5e1'};background:${diagQuestionCount === 20 ? '#ecfdf5' : '#ffffff'};box-shadow:${diagQuestionCount === 20 ? '0 4px 12px rgba(4,120,87,0.15)' : 'none'}">
@@ -358,6 +380,7 @@ function renderIntroView() {
       </button>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
         <span style="font-size:13px;color:#64748b;align-self:center">或直接選擇題數開始：</span>
+        <button class="btn ${diagQuestionCount === 10 ? 'secondary' : 'quiet'}" data-start-diag="10" style="font-size:13px;padding:6px 14px">⚡ 10 題極速 (8分)</button>
         <button class="btn ${diagQuestionCount === 20 ? 'secondary' : 'quiet'}" data-start-diag="20" style="font-size:13px;padding:6px 14px">⚡ 20 題快速 (15分)</button>
         <button class="btn ${diagQuestionCount === 30 ? 'secondary' : 'quiet'}" data-start-diag="30" style="font-size:13px;padding:6px 14px">🎯 30 題標準 (25分)</button>
         <button class="btn ${diagQuestionCount === 40 ? 'secondary' : 'quiet'}" data-start-diag="40" style="font-size:13px;padding:6px 14px">🔬 40 題深度 (35分)</button>
@@ -832,10 +855,10 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
     }
     return true;
   }
-  // 選擇題數 (20 / 30 / 40)
+  // 選擇題數 (10 / 20 / 30 / 40)
   if (d.diagSelectCount) {
     const count = parseInt(d.diagSelectCount, 10);
-    if ([20, 30, 40].includes(count)) {
+    if ([10, 20, 30, 40].includes(count)) {
       diagQuestionCount = count;
       renderCallback();
     }
@@ -848,14 +871,16 @@ export function handleDiagnosticClick(btn, renderCallback, navigateCallback) {
     stopTimer();
     diagSessionTier = diagSelectedTier;
     const parsedCount = parseInt(d.startDiag, 10) || parseInt(d.diagCount, 10);
-    if ([20, 30, 40].includes(parsedCount)) {
+    if ([10, 20, 30, 40].includes(parsedCount)) {
       diagQuestionCount = parsedCount;
     }
-    if (diagSessionTier !== null) diagQuestionCount = 20;
+    if (diagSessionTier !== null) diagQuestionCount = diagQuestionCount === 10 ? 10 : 20;
     const count = diagQuestionCount || 30;
-    const durationMin = count === 20 ? 15 : count === 40 ? 35 : 25;
+    const durationMin = count === 10 ? 8 : count === 20 ? 15 : count === 40 ? 35 : 25;
     diagLoading = true;
-    const fetchFn = diagSessionTier !== null ? questionDB.sampleDiagnostic(20, diagSessionTier) : (count === 30 && typeof questionDB.sampleDiagnostic30 === 'function')
+    const fetchFn = diagSessionTier !== null ? questionDB.sampleDiagnostic(count, diagSessionTier) : (count === 10 && typeof questionDB.sampleDiagnostic10 === 'function')
+      ? questionDB.sampleDiagnostic10()
+      : (count === 30 && typeof questionDB.sampleDiagnostic30 === 'function')
       ? questionDB.sampleDiagnostic30()
       : questionDB.sampleDiagnostic(count);
     renderCallback();

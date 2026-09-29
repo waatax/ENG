@@ -23,7 +23,11 @@ test('Every level produces exactly 20 unique in-level questions and rotates rece
     assert.ok(second.every(q=> !first.some(prev=>prev.id===q.id)));
   }
   await assert.rejects(questionDB.sampleDiagnostic(20,9));
-  for (const count of [20,30,40]) assert.equal((await questionDB.sampleDiagnostic(count)).length,count);
+  for (const count of [10,20,30,40]) assert.equal((await questionDB.sampleDiagnostic(count)).length,count);
+  assert.equal((await questionDB.sampleDiagnostic10()).length, 10);
+  const t1_10 = await questionDB.sampleDiagnostic(10, 1);
+  assert.equal(t1_10.length, 10);
+  assert.ok(t1_10.every(q => q.tier === 1));
   questionDB.loadDiagnosticBank = async () => bank.slice(0,5);
   await assert.rejects(questionDB.sampleDiagnostic(20,1));
   questionDB.loadDiagnosticBank = async () => bank;
@@ -54,5 +58,10 @@ test('Targeted test covers selection, answers, 100-point scoring, explanations, 
     click({restartDiag:'true'});
   }
   click({diagTier:'all'});
+  assert.match(diagnosticPage(),/data-diag-select-count="10"/);
   assert.match(diagnosticPage(),/data-diag-select-count="30"/);
+  click({diagSelectCount:'10'});
+  click({startDiag:'10'});
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(questions.length, 10);
 });

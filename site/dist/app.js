@@ -91,6 +91,7 @@ let userQuizChoices = {}; // unitId: selectedOptIndex
 
 let quizCategory = 'all';
 let quizSubtopic = 'all';
+let quizQuestionCount = 20;
 let currentQuizQuestions = [];
 let currentQuizIdx = 0;
 let userQuizAnswers = {};
@@ -1777,10 +1778,19 @@ function examPage() {
           `).join('')}
         </select>
         ${subtopicSelectorHtml}
-        <button class="btn primary" data-start-quiz="true" style="padding:10px 22px;font-size:15px">🚀 開始 20 題隨選模考</button>
+        <div style="display:inline-flex;align-items:center;gap:6px">
+          <label><strong>測驗長度：</strong></label>
+          <select id="quiz-count-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
+            <option value="10" ${quizQuestionCount === 10 ? 'selected' : ''}>⚡ 10 題極速快測 (約 8 分鐘)</option>
+            <option value="20" ${quizQuestionCount === 20 ? 'selected' : ''}>🎯 20 題標準模考 (約 15 分鐘)</option>
+            <option value="30" ${quizQuestionCount === 30 ? 'selected' : ''}>📐 30 題進階測驗 (約 25 分鐘)</option>
+            <option value="40" ${quizQuestionCount === 40 ? 'selected' : ''}>🔬 40 題深度精練 (約 35 分鐘)</option>
+          </select>
+        </div>
+        <button class="btn primary" data-start-quiz="true" style="padding:10px 22px;font-size:15px">🚀 開始 ${quizQuestionCount} 題隨選模考</button>
       </div>
       <p style="font-size:13px;color:var(--text-muted);margin:0">
-        💡 支援 IndexedDB 本地極速快取、Fisher-Yates 現代隨機抽題與答題即時加分 (+15 XP) 機制。
+        💡 支援 10 題零碎時間極速快測、IndexedDB 本地極速快取、Fisher-Yates 現代隨機抽題與答題即時加分 (+15 XP) 機制。
       </p>
     </div>
 
@@ -1804,9 +1814,14 @@ function examPage() {
               </div>
             ` : ''}
           </div>
-          <button class="btn secondary" data-start-quiz="true" data-quiz-cat="${t.id}" style="width:100%;font-size:14px;padding:8px">
-            🎯 抽取 20 題練習
-          </button>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn quiet small" data-start-quiz="true" data-quiz-cat="${t.id}" data-quiz-count="10" style="flex:1;font-size:13px;padding:8px">
+              ⚡ 10 題快測
+            </button>
+            <button class="btn secondary small" data-start-quiz="true" data-quiz-cat="${t.id}" data-quiz-count="20" style="flex:1;font-size:13px;padding:8px">
+              🎯 20 題模考
+            </button>
+          </div>
         </div>
       `).join('')}
     </div>
@@ -1932,6 +1947,17 @@ function bindEvents() {
   if (examSubtopicSelect) {
     examSubtopicSelect.addEventListener('change', e => {
       quizSubtopic = e.target.value;
+    });
+  }
+
+  const quizCountSelect = document.querySelector('#quiz-count-select');
+  if (quizCountSelect) {
+    quizCountSelect.addEventListener('change', e => {
+      const val = parseInt(e.target.value, 10);
+      if ([10, 20, 30, 40].includes(val)) {
+        quizQuestionCount = val;
+        render();
+      }
     });
   }
 
@@ -2227,9 +2253,14 @@ root.addEventListener('click', e => {
   if (d.startQuiz) {
     if (d.quizCat) quizCategory = d.quizCat;
     quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || quizSubtopic || 'all';
+    const parsedCount = parseInt(d.quizCount || (document.querySelector('#quiz-count-select')?.value), 10);
+    if ([10, 20, 30, 40].includes(parsedCount)) {
+      quizQuestionCount = parsedCount;
+    }
+    const count = quizQuestionCount || 20;
     quizLoading = true;
     render();
-    questionDB.sampleQuestions(quizCategory, 20, quizSubtopic).then(qs => {
+    questionDB.sampleQuestions(quizCategory, count, quizSubtopic).then(qs => {
       currentQuizQuestions = qs;
       currentQuizIdx = 0;
       userQuizAnswers = {};
