@@ -8,7 +8,7 @@ export const points = [
     title: '過去式與現在完成式：時間如何選？',
     goal: '看懂「已結束的過去」與「連到現在的經驗或狀態」，徹底擺脫中文「已經」的干擾。',
     prior: '先會動詞過去式、過去分詞與 have / has 的基本搭配。',
-    rule: '過去式把事件放在已結束的過去時間；現在完成式用 have / has + 過去分詞，連結過去與現在。不是看到中文「已經」就選完成式。過去簡單式將事件鎖定在已結束的過去斷點（如 yesterday, last week, in 2020），與現在脫鉤；現在完成式站在現在回望過去，表達經驗、持續至現在的狀態，或剛完成且影響現在的動作。',
+    rule: '過去式把事件放在已結束的過去時間；現在完成式用 have / has + 過去分詞，連結過去與現在。不是看到中文「已經」就選完成式。過去簡單式將事件鎖定在已結束的過去斷點（如 yesterday, last week, in 2020）；這種時態本身不交代結果是否延續至今；現在完成式站在現在回望過去，表達經驗、持續至現在的狀態，或剛完成且影響現在的動作。',
     pairs: [
       ['I lost my key yesterday.', '昨天弄丟：時間已結束，用 lost。'],
       ['I have lost my key.', '現在還受到影響，例如目前沒鑰匙可用。'],
@@ -19,7 +19,7 @@ export const points = [
       '再問是否持續到現在：since + 起點；for + 時間長度。for 也能搭配過去式，不能單靠它判斷。',
       '比較 He lived here for three years（那段居住已結束）與 He has lived here for three years（延續至今）。'
     ],
-    trap: '錯：I have seen her yesterday. → I saw her yesterday. 完成式與明確結束的 yesterday 不相配。錯：She has arrived since two hours. ➔ since 接時間起點，時間長度用 for。',
+    trap: '錯：I have seen her yesterday. → I saw her yesterday. 完成式與明確結束的 yesterday 不相配。錯：She has arrived since two hours. → She arrived two hours ago. 或 She has been here for two hours. since 接起點，for 接長度；arrive 是抵達的瞬間動作，不能只改成 has arrived for two hours 來表示持續停留。',
     questions: [
       ['We ___ the museum last Sunday.', ['visited', 'have visited', 'have visit'], 0, 'last Sunday 是結束的過去；visited 是過去式。have visited 不搭這個時間，have visit 缺過去分詞。'],
       ['Mia still works here. She ___ here since 2022.', ['worked', 'has worked', 'is work'], 1, 'still 和 since 指向延續至今，選 has worked。單純 worked 無法表達此處的持續關係；is work 結構錯誤。']
@@ -44,7 +44,7 @@ export const points = [
       '檢查子句：___ won the race 缺主詞；I bought ___ 缺受詞。',
       '最後檢查逗號：非限定子句的代名詞不能省略；地點詞也不必然選 where，仍要看缺口。'
     ],
-    trap: '錯：The book that I bought it is useful. → 刪除 it；that 已代表 bought 的受詞。The city which I visited 用 which，因 visited 缺受詞。逗號後禁止使用 that。',
+    trap: '錯：The book that I bought it is useful. → 刪除 it；that 已代表 bought 的受詞。The city which I visited 用 which，因 visited 缺受詞。此處非限定關係子句不用 that；不能推廣成所有逗號後都禁止 that。',
     questions: [
       ['The student ___ helped me is Leo.', ['who', 'whom', 'where'], 0, '缺 helped 的主詞，用 who。whom 是受詞形式；where 表地點關係，不能當此處主詞。'],
       ['Which sentence is correct?', ['The movie that I watched it was moving.', 'The movie I watched was moving.', 'The movie, that I watched, was moving.'], 1, '限定子句中 watched 的受詞代名詞可省略。第一句 it 重複；第三句非限定用法不能使用 that。']
@@ -108,10 +108,10 @@ export const points = [
     title: '閱讀推論：答案必須有文本證據',
     goal: '區分直接資訊、合理推論與無法證實的猜測，破解範圍擴大與因果倒置。',
     prior: '能讀懂簡單過去式與 because / although。',
-    rule: '推論是將文本線索接成最小而必要的結論，不能加入自己的背景故事。SAT、GRE、TOEFL 等閱讀練習都需要證據判斷；本頁是原創共通能力教材，不是官方試題。推論絕不可超出文本邊界：不能將 some 擴大為 all，也不能將先後順序直接等同於因果關係。',
+    rule: '閱讀推論要選擇文本充分支持、沒有多加假設的結論，不能加入自己的背景故事。SAT、GRE、TOEFL 等閱讀練習都需要證據判斷；本頁是原創共通能力教材，不是官方試題。推論絕不可超出文本邊界：不能將 some 擴大為 all，也不能將先後順序直接等同於因果關係。',
     pairs: [
-      ['The library extended its evening hours after students requested more study space.', '直接資訊：學生提出需求，圖書館延長晚間開放。'],
-      ['The change responded to student demand.', '合理推論：改變回應了需求。'],
+      ['Responding to student requests for more study space, the library extended its evening hours.', '直接資訊：圖書館為回應學生需求，延長晚間開放。'],
+      ['Students can now use the library later in the evening.', '原文 Responding to 已明示回應需求；可推論學生晚間可使用圖書館的時間增加。'],
       ['Every student now gets higher grades.', '無法證實：沒有所有學生、成績或因果效果的資料。']
     ],
     steps: [
@@ -125,7 +125,7 @@ export const points = [
       ['Sales rose after a new ad appeared. What can we conclude from this alone?', ['The ad caused the rise.', 'The rise happened after the ad appeared.', 'No other factor affected sales.'], 1, '原文僅支持時間先後。因果與排除其他因素都需要額外證據。']
     ],
     task: '針對圖書館短文，寫一項直接資訊、一項合理推論，以及一項目前無法知道的資訊。',
-    model: '直接資訊：延長晚間開放。推論：改變回應學生需求。未知：成績是否提升。檢查每個結論是否超出文中人數、範圍或因果。'
+    model: '直接資訊：延長晚間開放。推論：學生晚間可使用圖書館的時間增加。未知：成績是否提升。檢查每個結論是否超出文中人數、範圍或因果。'
   },
   {
     id: 'argument-assumptions',
@@ -133,7 +133,7 @@ export const points = [
     title: '論證假設：找出理由與結論之間的缺口',
     goal: '辨認結論、證據與必要假設，熟練取非檢驗法，評估批判邏輯嚴密性。',
     prior: '先能區分事實敘述與作者主張。',
-    rule: '證據是作者提供的理由，結論是作者要你接受的主張。必要假設是論證成立所依賴、卻未說明的條件。GMAT 與 GRE 相關閱讀練習可運用這個方法；題目問必要假設或加強論證時，判準不同。運用取非檢驗法：若將該選項否定後，作者的結論必然瓦解崩潰，則該選項即為不可或缺的必要假設。',
+    rule: '證據是作者提供的理由，結論是作者要你接受的主張。必要假設是論證成立所依賴、卻未說明的條件。GMAT 與 GRE 相關閱讀練習可運用這個方法；題目問必要假設或加強論證時，判準不同。運用取非檢驗法：否定該選項後，若前提不再足以支持原本推論，便找到了必要連結；這不表示結論本身必定為假。否定量詞時也要小心：all 的否定是 not all，而不是 none。',
     pairs: [
       ['A bus service proposes adding trips because current buses are crowded. It predicts the extra trips will reduce crowding.', '證據：現有班次擁擠。結論：新增班次能減少擁擠。'],
       ['The extra trips can serve at least some of the passengers who currently crowd the buses.', '必要的連結：新增服務要能承接原本擁擠的需求。'],

@@ -27,39 +27,12 @@ export function knowledgeHome() {
   const last = points.find(p => p.id === progress.lastVisited);
   const review = points.filter(p => progress.summary(p.id).needsReview);
   return `<section class="knowledge-home">
-    <div class="level-test-hero-card" style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 60%,#0f2e59 100%);color:#f8fafc;border:2px solid #38bdf8;border-radius:14px;padding:22px 24px;margin-bottom:24px;box-shadow:0 8px 24px -4px rgba(56,189,248,0.22)">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
-        <div style="flex:1;min-width:280px">
-          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(56,189,248,0.18);color:#38bdf8;border:1px solid rgba(56,189,248,0.4);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;margin-bottom:10px">
-            <span>🎯 學習前必測 · 個人化落點診斷</span>
-          </div>
-          <h2 style="font-size:23px;font-weight:800;color:#ffffff;margin:0 0 8px 0;letter-spacing:-0.01em">
-            🎯 英文程度測試 (English Level Test & Diagnostic)
-          </h2>
-          <p style="font-size:14px;color:#cbd5e1;margin:0 0 12px 0;line-height:1.6">
-            開始自學前，可選<strong>指定程度 20 題測驗</strong>，或進行全階綜合練習。完成後查看解析，找出需要補強的語法、句型與詞彙。
-          </p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#94a3b8;margin-bottom:14px">
-            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🎒 國小 Pre-A1</span>
-            <span style="color:#64748b">➔</span>
-            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🏫 國中會考 A1-A2</span>
-            <span style="color:#64748b">➔</span>
-            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🎓 高中學測 B1-B2</span>
-            <span style="color:#64748b">➔</span>
-            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">💼 TOEIC / SAT B2+</span>
-            <span style="color:#64748b">➔</span>
-            <span style="background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.12)">🏛️ GRE / GMAT C1-C2</span>
-          </div>
-        </div>
-        <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px">
-          <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-size:15px;font-weight:700;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(56,189,248,0.35);display:inline-flex;align-items:center;gap:6px">
-            <span>🚀 選擇程度並開始測驗</span>
-            <span style="font-size:17px">→</span>
-          </button>
-          <span style="font-size:11px;color:#94a3b8;text-align:center;width:100%">分層自適應抽題 · 附完整詳解與落點分析</span>
-        </div>
-      </div>
-    </div>
+    <header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
+    ${last?`<aside class="resume-card"><strong>接續上次學習</strong><a href="#knowledge/${last.id}">${e(last.title)} →</a><small>${e(statusLabel(last.id))}</small></aside>`:''}
+    ${review.length?`<details class="card"><summary>待訂正的知識點（${review.length}）</summary><ul>${review.map(p=>`<li><a href="#knowledge/${p.id}">${e(p.title)}</a></li>`).join('')}</ul><p>先解釋錯誤，再按「再練一次」。首次紀錄會保留。</p></details>`:''}
+    <div class="knowledge-filters"><div><label for="knowledge-search">搜尋主題或英文關鍵字</label><input type="search" id="knowledge-search" value="${e(query)}" placeholder="例如：被動、閱讀、完成式"></div><div><label for="knowledge-stage">選擇學習階段</label><select id="knowledge-stage">${stages.map(s=>`<option ${stage===s?'selected':''}>${s}</option>`).join('')}</select></div></div>
+
+    <details class="learning-options"><summary>不確定從哪裡開始？選擇測驗、學習路線或聽課</summary><div class="learning-options-body"><section class="card"><h2>用練習找出補強方向</h2><p>可選擇 20 題程度練習，再依解析回到教材。這是本站練習結果，不是正式考試或 CEFR 認證。</p><button class="btn" data-nav="diagnostic">選擇程度並開始測驗 →</button></section>
     <!-- 🌟 初學者自學起跑線與四階學習公路 -->
     <div class="beginner-highway" id="beginner-highway">
       <div class="beginner-highway-head">
@@ -67,7 +40,7 @@ export function knowledgeHome() {
         <span class="pill" style="background:#dcfce7;color:#166534;font-weight:700">循序漸進 · 零基礎通關</span>
       </div>
       <p style="font-size:13.5px;color:var(--text-primary);margin:0 0 16px;line-height:1.6">
-        英文弱底或不熟悉的同學，請勿盲目刷題！請依下方四階階梯循序漸進：<strong>先掌握發音與句型骨架，再攻時態與從屬子句，最後融會貫通大考解題</strong>。
+        如果還不熟悉英文，可以從第一階開始，按自己的進度練習：<strong>先掌握發音與句型骨架，再攻時態與從屬子句，最後融會貫通大考解題</strong>。
       </p>
       <div class="highway-grid">
         <a class="highway-card stage-1" href="#knowledge/be-sentences">
@@ -95,12 +68,125 @@ export function knowledgeHome() {
           <span class="highway-action">鍛鍊批判邏輯 ➔</span>
         </a>
       </div>
+
+      <!-- 🧭 四階英語學習公路全景架構圖 (SVG Diagram) -->
+      <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:20px 0;border-radius:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+          <strong style="color:#0f172a;font-size:15px">🛣️ 四階英語學習公路進階導航圖 (Pre-A1 ➔ C2)</strong>
+          <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">能力階梯式躍升</span>
+        </div>
+        <svg viewBox="0 0 760 140" style="width:100%;height:auto;display:block" aria-label="四階英語學習公路進階架構圖">
+          <defs>
+            <linearGradient id="hwGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#1d4ed8" />
+            </linearGradient>
+            <linearGradient id="hwGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#047857" />
+            </linearGradient>
+            <linearGradient id="hwGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#b45309" />
+            </linearGradient>
+            <linearGradient id="hwGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#6d28d9" />
+            </linearGradient>
+          </defs>
+
+          <!-- 階段 1 -->
+          <rect x="10" y="20" width="165" height="100" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2" />
+          <rect x="20" y="28" width="80" height="20" rx="4" fill="url(#hwGrad1)" />
+          <text x="60" y="42" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Stage 1 · Pre-A1</text>
+          <text x="22" y="68" fill="#1e3a8a" font-size="12" font-weight="700">句型骨架與自然發音</text>
+          <text x="22" y="86" fill="#475569" font-size="10">人稱代名詞 · be 動詞</text>
+          <text x="22" y="104" fill="#64748b" font-size="9.5">日常生活動作 · 三單 -s</text>
+
+          <!-- 連接箭頭 1->2 -->
+          <path d="M 180,70 L 195,70" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)" />
+          <polygon points="195,65 205,70 195,75" fill="#94a3b8" />
+
+          <!-- 階段 2 -->
+          <rect x="205" y="20" width="165" height="100" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2" />
+          <rect x="215" y="28" width="80" height="20" rx="4" fill="url(#hwGrad2)" />
+          <text x="255" y="42" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Stage 2 · A1~B1</text>
+          <text x="217" y="68" fill="#065f46" font-size="12" font-weight="700">時態軸與複句連接</text>
+          <text x="217" y="86" fill="#475569" font-size="10">過去式 vs 現在完成式</text>
+          <text x="217" y="104" fill="#64748b" font-size="9.5">五大句型 · 會考 A++ 題眼</text>
+
+          <!-- 連接箭頭 2->3 -->
+          <polygon points="375,65 385,70 375,75" fill="#94a3b8" />
+
+          <!-- 階段 3 -->
+          <rect x="385" y="20" width="165" height="100" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="2" />
+          <rect x="395" y="28" width="80" height="20" rx="4" fill="url(#hwGrad3)" />
+          <text x="435" y="42" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Stage 3 · B1~B2</text>
+          <text x="397" y="68" fill="#92400e" font-size="12" font-weight="700">長難句與篇章邏輯</text>
+          <text x="397" y="86" fill="#475569" font-size="10">關係子句 · 分詞構句</text>
+          <text x="397" y="104" fill="#64748b" font-size="9.5">倒裝句 · 學測頂標篇章</text>
+
+          <!-- 連接箭頭 3->4 -->
+          <polygon points="555,65 565,70 555,75" fill="#94a3b8" />
+
+          <!-- 階段 4 -->
+          <rect x="565" y="20" width="185" height="100" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2" />
+          <rect x="575" y="28" width="85" height="20" rx="4" fill="url(#hwGrad4)" />
+          <text x="617" y="42" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Stage 4 · B2~C2</text>
+          <text x="577" y="68" fill="#5b21b6" font-size="12" font-weight="700">批判推理與國際檢定</text>
+          <text x="577" y="86" fill="#475569" font-size="10">論證結構 · 否定假設測試</text>
+          <text x="577" y="104" fill="#64748b" font-size="9.5">SAT / GRE / GMAT 商業實戰</text>
+        </svg>
+      </div>
+
+      <!-- 📋 四階學習核心素養與避雷對照表 -->
+      <div class="lesson-table" tabindex="0" role="region" aria-label="四階英語學習公路核心素養與避雷對照表" style="margin-top:16px">
+        <table>
+          <caption>四階學習核心素養、語法結構與考場避雷總覽表</caption>
+          <thead>
+            <tr>
+              <th scope="col">進階階段</th>
+              <th scope="col">核心目標與 CEFR</th>
+              <th scope="col">關鍵語法與句型</th>
+              <th scope="col">考場高頻易錯陷阱</th>
+              <th scope="col">解題思維判斷</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">第一階 · 國小奠基</th>
+              <td>建立完整句子概念 (Pre-A1)</td>
+              <td>人稱代名詞、be 動詞、現在簡單式三單 -s/-es</td>
+              <td>主謂不一致 (如 *He play...)、be動詞與一般動詞混用 (*She is like...)</td>
+              <td>先找動作發出者是誰，判斷為身分狀態 (be) 或實際動作 (一般動詞)</td>
+            </tr>
+            <tr>
+              <th scope="row">第二階 · 國中會考</th>
+              <td>時間維度與複句串連 (A1~B1)</td>
+              <td>四大基礎時態、現在完成式、等立/從屬連接詞、五大基本句型</td>
+              <td>完成式與明確過去時間副詞混用 (*I have seen him yesterday)；Because 與 so 雙重連接</td>
+              <td>在時間軸上鎖定基準點；從屬連接詞引導修飾句，不可雙重使用轉折/因果詞</td>
+            </tr>
+            <tr>
+              <th scope="row">第三階 · 高中學測</th>
+              <td>長難句剝洋蔥解構 (B1~B2)</td>
+              <td>關係子句 (限定/非限定)、分詞構句、倒裝句型、假設語氣</td>
+              <td>懸垂分詞 (主詞不一致)、關係代名詞逗號後誤用 that、假設語氣時態未倒退</td>
+              <td>先提取主幹主謂語，括號括起修飾片語；檢查分詞隱含主詞是否與主句主詞同一</td>
+            </tr>
+            <tr>
+              <th scope="row">第四階 · 國際檢定</th>
+              <td>學術批判與邏輯推理 (B2~C2)</td>
+              <td>文本細節證據定位、論證核心假設、削弱加強、語意極性對立</td>
+              <td>常識腦補非文本資訊；偷換概念；混淆結論與論據</td>
+              <td>區分前提 (Premise) 與結論 (Conclusion)；使用否定測試法 (Negation Test) 驗證必要假設</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <section class="card learning-new-tools"><h2>🎧 用聽的學單元，用圖表懂文法</h2><p>國小、國中、高中與高工：中文解說、英文例句、停頓回想。</p><div class="audio-controls"><a class="btn primary" href="#listening">通勤聽課教室</a><a class="btn" href="#grammar">圖解文法專區</a></div></section>
-    <header><p class="pill">理解 → 看例子 → 自己做 → 複習</p><h1>今天想弄懂哪個知識點？</h1><p>初學者從「國小」開始；已學過的主題，先做檢核，再針對錯誤回看例句。</p></header>
-    ${last?`<aside class="resume-card"><strong>接續上次學習</strong><a href="#knowledge/${last.id}">${e(last.title)} →</a><small>${e(statusLabel(last.id))}</small></aside>`:''}
-    ${review.length?`<details class="card"><summary>待訂正的知識點（${review.length}）</summary><ul>${review.map(p=>`<li><a href="#knowledge/${p.id}">${e(p.title)}</a></li>`).join('')}</ul><p>先解釋錯誤，再按「再練一次」。首次紀錄會保留。</p></details>`:''}
-    <div class="knowledge-filters"><div><label for="knowledge-search">搜尋主題或英文關鍵字</label><input type="search" id="knowledge-search" value="${e(query)}" placeholder="例如：被動、閱讀、完成式"></div><div><label for="knowledge-stage">選擇學習階段</label><select id="knowledge-stage">${stages.map(s=>`<option ${stage===s?'selected':''}>${s}</option>`).join('')}</select></div></div>
+</div></details>
     <p class="small">學段標籤是本站學習建議。現有教材仍在補齊，並不代表已完整涵蓋課綱或考試。</p><div id="knowledge-results">${knowledgeResults()}</div></section>`;
 }
 export function searchKnowledge(target) {
@@ -127,7 +213,7 @@ export function knowledgePage(id) {
   progress.visit(id);
   const index = points.indexOf(p), next = points[index+1];
   return `<article class="lesson-page knowledge-detail"><a href="#knowledge">← 回知識點教室</a><header><p class="pill">${e(p.stage)} · 原創教學</p><h1>${e(p.title)}</h1><p>${e(p.goal)}</p><p class="small">先備知識：${e(p.prior)}</p></header>
-    ${renderLessonAudio('knowledge:'+p.id)}
+    <details class="lesson-audio-disclosure"><summary>聆聽本課 · 語音與跟讀設定</summary>${renderLessonAudio('knowledge:'+p.id)}</details>
     <nav class="lesson-links" aria-label="本頁段落">${[['concept','觀念'],['examples','例句'],['steps','解題三步法'],['practice','練習'],['output','應用']].map(([id,label])=>`<button class="btn quiet" data-scroll-to="#kp-${id}">${label}</button>`).join('')}</nav>
     <section class="card" id="kp-concept"><h2>1. 理解核心觀念</h2><p>${e(p.rule)}</p><ol>${p.steps.map(s=>`<li>${e(s)}</li>`).join('')}</ol></section>
     ${renderTeachingAid(p.title, [], p.pairs.map(pair=>pair[0]))}<section class="card" id="kp-examples"><h2>2. 對照例句與錯誤</h2>${p.pairs.map(([en,zh])=>`<blockquote><p lang="en">${e(en)}</p><button class="btn quiet small" data-speak-sentence="${e(en)}" aria-label="朗讀例句：${e(en)}">朗讀例句</button><p>${e(zh)}</p></blockquote>`).join('')}<p class="small">朗讀使用裝置合成語音。</p><aside class="lesson-tip">${e(p.trap)}</aside></section>

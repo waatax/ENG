@@ -32,7 +32,7 @@ test('1. Curriculum GRE & GMAT Deep Concepts & Pedagogical Rigor Audit', async (
   assert.equal(greChapter.concepts.length, 4, 'GRE must feature 4 deep pedagogical concepts');
   const greHeadings = greChapter.concepts.map(c => c.heading);
   assert.ok(greHeadings.some(h => h.includes('邏輯密碼')));
-  assert.ok(greHeadings.some(h => h.includes('確定性錨點')));
+  assert.ok(greHeadings.some(h => h.includes('語境配對')));
   assert.ok(greHeadings.some(h => h.includes('翻案文')));
   assert.ok(greHeadings.some(h => h.includes('30 分鐘五步立論法')));
 
@@ -111,7 +111,8 @@ test('4. QuestionBankDB Subtopic Filtering & Sampling Audit', async () => {
   assert.ok(seSample.every(q => q.subtopic.includes('Sentence Equivalence')), 'All sampled questions must match SE subtopic');
 
   const weakenSample = await questionDB.sampleQuestions('gmat', 5, 'Weaken the Argument');
-  assert.equal(weakenSample.length, 5);
+  assert.equal(weakenSample.length, 4, 'Only four distinct items exist; do not pad with duplicates');
+  assert.equal(new Set(weakenSample.map(q=>JSON.stringify([q.passage,q.prompt,q.options]))).size, weakenSample.length);
   assert.ok(weakenSample.every(q => q.subtopic.includes('Weaken')), 'All sampled questions must match Weaken subtopic');
 });
 

@@ -17,11 +17,11 @@ export const foundations = [
     steps: [
       '步驟 1 鎖定主詞：先圈出主詞，精確判斷是第一人稱 I、單數第三人稱，還是 you / 複數名詞。',
       '步驟 2 匹配動詞：依人稱配對 am / is / are，接身分名詞時注意單數可數名詞需加 a / an 等限定詞。',
-      '步驟 3 句型轉換：改否定直接在 be 後加 not；改疑問將 be 提到主詞前方。若動詞本身已是一般動詞（如 play、like），絕不可重複疊加 be。'
+      '步驟 3 句型轉換：改否定直接在 be 後加 not；改疑問將 be 提到主詞前方。若動詞本身已是一般動詞（如 play、like），不可把 be 直接加在原形動詞前；進行式 be + V-ing 與被動式 be + 過去分詞則是另外的合法結構。'
     ],
     trap: '常見考場陷阱 ➔ 錯：She happy.（漏掉 be 動詞，形容詞不可單獨作謂語）➔ 正確：She is happy。錯：They is students.（主謂不一致）➔ 正確：They are students。錯：I am agree with you.（agree 本身已是動詞，不可加 am）➔ 正確：I agree with you。肯定簡答注意：Yes, I am.（不可寫 Yes, I’m.）。',
     questions: [
-      ['My brother ___ in the classroom.', ['am', 'is', 'are'], 1, 'My brother 是單數第三人稱，用 is。am 只與 I 搭配；are 用於複數主詞。'],
+      ['My brother ___ in the classroom.', ['am', 'is', 'are'], 1, 'My brother 是單數第三人稱，用 is。am 只與 I 搭配；are 用於 you（單數或複數）及複數主詞。'],
       ['Which question is correct?', ['Are they ready?', 'Do they are ready?', 'They ready?'], 0, '原句 They are ready. 為含有 be 動詞的句子，提問時直接將 are 移到主詞 they 前即可，不加助動詞 do，也不能省略 be 動詞。']
     ],
     task: '介紹自己，再寫一句描述兩位朋友特質的句子，最後將其中一句改成疑問句並寫出簡答。',
@@ -33,7 +33,7 @@ export const foundations = [
     title: '日常動作：第三人稱與 do / does 問句',
     goal: '描述日常習慣、客觀事實與規律動作，熟練動詞三單變化，並正確運用 do / does 進行提問與否定。',
     prior: '先能分辨主詞，以及 be 動詞與一般動詞的本質差異。',
-    rule: '現在簡單式（Simple Present）用於表達日常習慣、反覆發生的動作或不變的客觀真理。肯定句中，當主詞為第三人稱單數（he / she / it 或單數名詞）時，動詞須進行三單變化（多數加 -s；結尾為 -s, -sh, -ch, -x, -o 加 -es；子音 + y 改 -ies；不規則 have 變 has）。形成疑問句或否定句時，必須請助動詞「神隊友」Do / Does 協助：第三人稱單數用 Does / does not，此時第三人稱變化已被 does 吸收，後方的主要動詞必須徹底「還原為原形動詞（V）」。',
+    rule: '現在簡單式（Simple Present）用於表達日常習慣、反覆發生的動作或不變的客觀真理。肯定句中，當主詞為第三人稱單數（he / she / it 或單數名詞）時，動詞須進行三單變化（多數加 -s；結尾為 -s, -sh, -ch, -x 常加 -es；go / do 加 -es，但不是所有 -o 結尾都如此（如 radio → radios）；子音 + y 改 -ies；不規則 have 變 has）。一般動詞的是非問句與否定句通常用 do / does；主詞問句如 Who lives here? 不加 do / does：第三人稱單數用 Does / does not，此時第三人稱變化已被 does 吸收，後方的主要動詞必須徹底「還原為原形動詞（V）」。',
     pairs: [
       ['Mina walks to school every day.', 'Mina 是單數第三人稱，肯定句一般動詞 walk 須加 s。'],
       ['Does Mina walk to school?', '助動詞 does 已負責第三人稱標記，主要動詞 walk 必須還原成原形。'],
@@ -58,7 +58,7 @@ export const foundations = [
     title: '段落連貫：連接語與代名詞要接得上',
     goal: '精準辨析篇章語意邏輯（轉折、因果、順序），正確區分連接詞與連接副詞之標點結構，並追蹤代名詞之明確指涉。',
     prior: '能讀懂簡單句，分辨原因、結果與對比等基本句型關係。',
-    rule: '篇章連貫（Cohesion 與 Coherence）是大考與學術寫作的靈魂。連接詞與轉折語表達句與句之間的邏輯關係。關鍵語法分界：從屬/對等連接詞（如 but, although, because, so）能直接連接兩個子句；而連接副詞（Conjunctive Adverbs，如 however, therefore, moreover, nevertheless, furthermore）本質上是副詞，不能只用一個逗號連接兩句（此為典型 Comma Splice 錯誤），必須使用「句號 + However,」或「分號 ; however,」。此外，指示代名詞（this, these, such + noun）與代名詞（it, they）必須在上下文中有明確、無歧義的指涉對象。',
+    rule: '篇章連貫（Cohesion 與 Coherence）是大考與學術寫作的靈魂。連接詞與轉折語表達句與句之間的邏輯關係。關鍵語法分界：從屬/對等連接詞（如 but, although, because, so）能直接連接兩個子句；而連接副詞（Conjunctive Adverbs，如 however, therefore, moreover, nevertheless, furthermore）本質上是副詞，不能只用一個逗號連接兩句（此為典型 Comma Splice 錯誤），必須使用「句號 + However,」或「分號 ; however,」。此外，指示詞（this, these）、such + 名詞及代名詞（it, they）必須在上下文中有明確、無歧義的指涉對象。',
     pairs: [
       ['The app is convenient. However, it requires an internet connection.', '便利是優點，需連網是限制；however 標示轉折，前後以句號與逗號隔開；it 指 app。'],
       ['The road was flooded. Therefore, the school bus took another route.', '淹水造成改道；therefore 標示因果結果。'],
@@ -67,9 +67,9 @@ export const foundations = [
     steps: [
       '步驟 1 釐清兩句邏輯：在心中先用中文釐清前後句關係是轉折（雖然/但是）、因果（因為/所以）、遞進（此外）還是舉例。',
       '步驟 2 檢查句法標點結構：若為獨立兩句，使用句號加大寫連接副詞（如 It rained. However, we...）；絕不可寫成「Sentence A, however, Sentence B」（Comma Splice）。',
-      '步驟 3 驗證代名詞指涉鏈：圈出 this / that / they / it，確認前一句有單複數與性別完全相符的先行名詞，避免懸空指涉。'
+      '步驟 3 驗證代名詞指涉鏈：圈出 this / that / they / it，確認上下文中的指涉對象與數的一致；this 也可指前面的整件事，不限於前一句的名詞。單數 they 可用於性別未知或使用 they 的人。'
     ],
-    trap: '常見考場陷阱 ➔ 錯：It rained, however we went out.（Comma Splice 標點錯誤）➔ 正確：It rained. However, we went out. 或 It rained, but we went out. 另外：although 與 but 絕不可在同一複合金句重複使用（受中文「雖然……但是……」影響之典型中式英文）。',
+    trap: '常見考場陷阱 ➔ 錯：It rained, however we went out.（Comma Splice 標點錯誤）➔ 正確：It rained. However, we went out. 或 It rained, but we went out. 另外：不要用 although 與 but 重複連接同一組主從子句（受中文「雖然……但是……」影響之典型中式英文）。',
     questions: [
       ['The course was demanding. ___, Mei enjoyed the challenge.', ['However', 'Therefore', 'For example'], 0, '課程困難卻享受挑戰，形成對比。therefore 需要因果；for example 需要後句作前句例子，這裡都不合。'],
       ['In “Students revised their essays. This process took two hours,” what does “This process” refer to?', ['Taking a bus', 'Revising the essays', 'The students themselves'], 1, 'process 表過程，接前句修改文章的動作，不是學生本人。原文也沒有提到搭公車。']

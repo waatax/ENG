@@ -1,18 +1,18 @@
-// question_db.mjs - 20,000 題全考制題庫資料庫引擎（支援 IndexedDB 本地持久化、動態分包載入與 Fisher-Yates 隨機抽題）
+// question_db.mjs - 題庫資料載入與抽題。CATEGORY_META.total 表示資料筆數，並非不同題面數。
 
 const DB_NAME = 'EnglishQuestDB';
 const DB_VERSION = 1;
 const STORE_NAME = 'questions';
 
 export const CATEGORY_META = {
-  all: { id: 'all', name: '全部考科綜合隨機 (20,000 題)', total: 20000, color: 'blue' },
-  gaokao: { id: 'gaokao', name: '歷年高考真題庫 (6,000 題)', total: 6000, color: 'emerald' },
-  jhs: { id: 'jhs', name: '國中教育會考英語 (1,000 題)', total: 1000, color: 'green' },
-  shs: { id: 'shs', name: '高中大學學測英文 (1,000 題)', total: 1000, color: 'purple' },
-  toeic: { id: 'toeic', name: 'TOEIC 多益商務英語 (3,000 題)', total: 3000, color: 'amber' },
-  sat: { id: 'sat', name: 'Digital SAT 數位測驗 (3,000 題)', total: 3000, color: 'indigo' },
-  gre: { id: 'gre', name: 'GRE 研究所 Verbal (3,000 題)', total: 3000, color: 'rose' },
-  gmat: { id: 'gmat', name: 'GMAT Focus 批判推理 (3,000 題)', total: 3000, color: 'cyan' }
+  all: { id: 'all', name: '全部考科綜合練習', total: 20000, uniqueStems: 482, color: 'blue' },
+  gaokao: { id: 'gaokao', name: '高考方向原創練習', total: 6000, uniqueStems: 60, color: 'emerald' },
+  jhs: { id: 'jhs', name: '國中教育會考英語', total: 1000, uniqueStems: 183, color: 'green' },
+  shs: { id: 'shs', name: '高中大學學測英文', total: 1000, uniqueStems: 8, color: 'purple' },
+  toeic: { id: 'toeic', name: 'TOEIC 多益商務英語', total: 3000, uniqueStems: 148, color: 'amber' },
+  sat: { id: 'sat', name: 'Digital SAT 數位測驗', total: 3000, uniqueStems: 16, color: 'indigo' },
+  gre: { id: 'gre', name: 'GRE 研究所 Verbal', total: 3000, uniqueStems: 47, color: 'rose' },
+  gmat: { id: 'gmat', name: 'GMAT Focus 批判推理', total: 3000, uniqueStems: 20, color: 'cyan' }
 };
 
 export class QuestionBankDB {
@@ -154,18 +154,19 @@ export class QuestionBankDB {
     if (subtopic && subtopic !== 'all') {
       const s = String(subtopic).toLowerCase().trim();
       const filtered = candidates.filter(q => q.subtopic && q.subtopic.toLowerCase().includes(s));
-      if (filtered.length) {
-        candidates = filtered;
-      }
+      candidates = filtered;
     }
 
-    if (!candidates.length) {
-      // 容錯備援
-      return [];
-    }
+    if (!candidates.length) return [];
 
     // 複製陣列進行 Fisher-Yates 洗牌
-    const pool = [...candidates];
+    // IDs may differ while passage, question and options are identical.
+    const unique = new Map();
+    for (const q of candidates) {
+      const key = JSON.stringify([q.passage ?? null, q.prompt, q.options]);
+      if (!unique.has(key)) unique.set(key, q);
+    }
+    const pool = [...unique.values()];
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
@@ -197,7 +198,8 @@ export class QuestionBankDB {
       totalLoaded += items.length;
     }
     return {
-      totalQuestions: 20000,
+      totalQuestions: 20000, // legacy field: row count, not distinct question stems
+      uniqueQuestionStems: 482,
       totalLoaded,
       categories: catStats,
       diagnosticTotal: 2000,
@@ -353,7 +355,7 @@ export class QuestionBankDB {
     return this.sampleDiagnostic(30);
   }
 
-  // 診斷測驗專家級多維度成績與能力評估引擎
+  // 本次作答與主題回顧；不進行正式分數預測
   evaluateDiagnostic(userAnswers, questions) {
     const weights = { 1: 1.0, 2: 1.5, 3: 2.0, 4: 2.5, 5: 3.0, 6: 3.5, 7: 4.0, 8: 4.5 };
     const maxPossibleWeighted = questions.reduce((sum, q) => sum + (weights[q.tier] || 1.0), 0) || 77.5;
@@ -423,54 +425,13 @@ export class QuestionBankDB {
       }
     }
 
-    // CEFR 等級與榮譽段位
-    let cefr = 'Pre-A1';
-    let honoraryBadge = { title: '🌱 語言啟蒙拓荒者', desc: '英語學習起步階段，正快速建立基礎語感與核心詞彙。' };
-    let predicted = {
-      cap: 'C (待加強)',
-      gsat: '1~4 級分 (底標)',
-      toeic: '220 ~ 380 分',
-      sat: '400 ~ 480 分',
-      gre: '130 ~ 140 分',
-      gmat: '400 ~ 485 分'
-    };
-
-    if (scaledScore >= 92) {
-      cefr = 'C2 (大師巨擘級)';
-      honoraryBadge = { title: '👑 英語頂尖巨擘 (Grandmaster of English)', desc: '具備國際頂尖學者與商業決策層級的深奧語意辨析與批判推理能力！' };
-      predicted = { cap: 'A++ (精熟滿級)', gsat: '15 級分 (頂標頂峰)', toeic: '960 ~ 990 分 (金色證書)', sat: '750 ~ 800 分', gre: '165 ~ 170 分', gmat: '715 ~ 805 分' };
-    } else if (scaledScore >= 80) {
-      cefr = 'C1 (進階學術精熟)';
-      honoraryBadge = { title: '🏛️ 語意邏輯思辨家 (Verbal Strategist)', desc: '精熟學術長難句、反向邏輯修辭，能勝任海外名校研究生與高端職場要求。' };
-      predicted = { cap: 'A++ (精熟)', gsat: '14 ~ 15 級分 (頂標)', toeic: '900 ~ 955 分 (金色證書)', sat: '690 ~ 740 分', gre: '158 ~ 164 分', gmat: '655 ~ 705 分' };
-    } else if (scaledScore >= 68) {
-      cefr = 'B2 (高階流暢溝通)';
-      honoraryBadge = { title: '💼 國際商務實戰家 (Global Communicator)', desc: '具備優秀跨文化溝通與高中學測頂尖水準，能自如處理複雜商務文件與論述。' };
-      predicted = { cap: 'A+ (精熟)', gsat: '12 ~ 13 級分 (前標)', toeic: '785 ~ 895 分 (藍金雙證)', sat: '620 ~ 680 分', gre: '150 ~ 157 分', gmat: '595 ~ 645 分' };
-    } else if (scaledScore >= 52) {
-      cefr = 'B1 (中級獨立運用)';
-      honoraryBadge = { title: '🏹 高中學測精銳士 (GSAT Vanguard)', desc: '扎實掌握國中會考核心時態、被動與子句結構，正大步邁入高中學術篇章領域。' };
-      predicted = { cap: 'A (精熟基礎)', gsat: '9 ~ 11 級分 (均標/前標)', toeic: '600 ~ 780 分 (綠藍證書)', sat: '530 ~ 610 分', gre: '144 ~ 149 分', gmat: '515 ~ 585 分' };
-    } else if (scaledScore >= 36) {
-      cefr = 'A2 (基礎生活自理)';
-      honoraryBadge = { title: '⚔️ 國中會考領航員 (JHS Navigator)', desc: '熟悉日常問答、過去簡單式與頻率副詞，正處於會考衝刺 A 級關鍵躍升期。' };
-      predicted = { cap: 'B+ ~ B++ (基礎良好)', gsat: '6 ~ 8 級分 (後標)', toeic: '450 ~ 595 分', sat: '470 ~ 520 分', gre: '138 ~ 143 分', gmat: '465 ~ 505 分' };
-    } else if (scaledScore >= 20) {
-      cefr = 'A1 (基礎語法奠基)';
-      honoraryBadge = { title: '🌿 基礎語法奠基者 (Grammar Builder)', desc: '已掌握字母拼讀、名詞單複數與基本 be 動詞，持續透過微課鞏固文法框架。' };
-      predicted = { cap: 'B (基礎入門)', gsat: '4 ~ 5 級分', toeic: '320 ~ 445 分', sat: '420 ~ 460 分', gre: '132 ~ 137 分', gmat: '425 ~ 455 分' };
-    }
-
     return {
       rawCorrect,
       totalQuestions: questions.length,
       userWeightedScore: Math.round(userWeightedScore * 10) / 10,
       scaledScore,
       stallTier,
-      stallTierLabel: tierBreakdown[stallTier]?.name || '未達失速點 (已達頂峰)',
-      cefr,
-      honoraryBadge,
-      predicted,
+      stallTierLabel: tierBreakdown[stallTier]?.name || '本次各層級均有作答',
       tierBreakdown,
       dimensionBreakdown,
       remedialHooks: remedialHooks.slice(0, 6)

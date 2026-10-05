@@ -2,10 +2,10 @@
 // 支援 4 種護眼主題、多檔位字體無損縮放、行距微調、閱讀版寬切換與手機底部抽屜面板
 
 export const THEMES = [
-  { id: 'light', name: '☀️ 晨曦明眸', icon: '☀️', desc: '純白高對比日間閱讀 (WCAG 2.2 AAA)' },
-  { id: 'warm', name: '📜 羊皮暖陽', icon: '📜', desc: '溫潤羊皮紙色，護眼防眩光與藍光疲勞 (長時間自學推薦)' },
-  { id: 'dark', name: '🌙 墨夜星空', icon: '🌙', desc: '深色無眩光，夜間專注 (OLED & 低光源友善)' },
-  { id: 'sage', name: '🍃 青木沉思', icon: '🍃', desc: '淡雅草木茶青，舒緩放鬆 (專注減壓護眼)' }
+  { id: 'light', name: '☀️ 晨曦明眸', icon: '☀️', desc: '淺灰背景與深色文字，適合明亮環境' },
+  { id: 'warm', name: '📜 羊皮暖陽', icon: '📜', desc: '柔和米色背景，可依環境與個人偏好選擇' },
+  { id: 'dark', name: '🌙 墨夜星空', icon: '🌙', desc: '深色背景與柔白文字，適合低光環境' },
+  { id: 'sage', name: '🍃 青木沉思', icon: '🍃', desc: '低彩度灰綠背景，提供另一種閱讀選擇' }
 ];
 
 export const LINE_HEIGHTS = [
@@ -18,7 +18,7 @@ export const SCALE_PRESETS = [
   { scale: 0.90, label: '緊湊 90%', desc: '適合高密度排版與小螢幕全覽' },
   { scale: 1.0, label: '標準 100%', desc: '適合 1080p 一般筆電螢幕' },
   { scale: 1.15, label: '舒適 115%', desc: '適合 2K / 1440p 或大螢幕閱讀' },
-  { scale: 1.30, label: '大字 130%', desc: '字體清晰大氣，長時間閱讀不疲勞' },
+  { scale: 1.30, label: '大字 130%', desc: '放大文字，依個人需求選擇' },
   { scale: 1.50, label: '4K特大 150%', desc: '4K (3840x2160) 100% 顯示黃金比例' },
   { scale: 1.75, label: '4K巨屏 175%', desc: '適合 4K 大尺寸螢幕、投影或高可讀性' }
 ];
@@ -31,10 +31,12 @@ let currentLineHeight = 'relaxed';
 let currentReadingWidth = 'standard'; // 'standard' (focus) | 'wide'
 let isDrawerOpen = false;
 let isInitialized = false;
+let drawerTrigger = null;
+let backgroundStates = [];
 
 // 初始化設定 (自動讀取 LocalStorage 或智慧偵測 4K 螢幕)
 export function initDisplaySettings() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || isInitialized) return;
 
   try {
     const savedTheme = localStorage.getItem('eq_reading_theme');
@@ -94,9 +96,21 @@ export function initDisplaySettings() {
 function setupKeyboardShortcuts() {
   if (typeof window === 'undefined') return;
   window.addEventListener('keydown', (e) => {
+    if (isDrawerOpen && e.key === 'Escape') {
+      e.preventDefault();
+      closeReadingDrawer();
+      return;
+    }
+    if (isDrawerOpen && e.key === 'Tab') {
+      const sheet = document.querySelector('.reading-drawer-sheet');
+      const items = [...(sheet?.querySelectorAll('button:not(:disabled), [href], input, select, textarea, [tabindex="0"]') || [])];
+      const first = items[0], last = items.at(-1);
+      if (first && e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (last && !e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
     // 避免在輸入框中攔截快捷鍵
     const tag = e.target?.tagName?.toLowerCase();
-    if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+    if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target?.isContentEditable) return;
 
     if (e.key === '[' && !e.ctrlKey && !e.metaKey && !e.altKey) {
       // 縮小字體
@@ -156,7 +170,7 @@ export function cycleTheme() {
 
 // 套用顯示與字體縮放
 export function applyDisplayScale(scale, save = true) {
-  currentScale = Math.min(2.2, Math.max(0.85, Math.round(scale * 100) / 100));
+  currentScale = Number.isFinite(Number(scale)) ? Math.min(2, Math.max(0.85, Math.round(Number(scale) * 100) / 100)) : 1;
 
   if (save) {
     try {
@@ -166,7 +180,7 @@ export function applyDisplayScale(scale, save = true) {
 
   if (typeof document !== 'undefined' && document.documentElement) {
     // 1. 設定標準 CSS zoom (現代 Chrome、Edge、Safari、Firefox 126+ 原生向量清晰無損縮放)
-    document.documentElement.style.zoom = currentScale;
+    document.documentElement.style.zoom = 1;
 
     // 2. 設定 CSS 變數供相對尺寸精算與根字體縮放
     document.documentElement.style.setProperty('--app-scale', currentScale);
@@ -295,11 +309,16 @@ export function autoDetect4K() {
 
 // 手機直式專用閱讀設定抽屜控制
 export function openReadingDrawer() {
-  isDrawerOpen = true;
   const drawer = document.querySelector('.reading-drawer-overlay');
   if (drawer) {
+    if (!isDrawerOpen) drawerTrigger = document.activeElement;
+    isDrawerOpen = true;
     drawer.classList.add('open');
     drawer.setAttribute('aria-hidden', 'false');
+    backgroundStates = [...document.querySelectorAll('.shell, .mobile-bottom-nav')].map(el => [el, el.inert]);
+    backgroundStates.forEach(([el]) => { el.inert = true; });
+    document.body.classList.add('reading-drawer-open');
+    drawer.querySelector('button')?.focus();
   }
 }
 
@@ -310,6 +329,10 @@ export function closeReadingDrawer() {
     drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden', 'true');
   }
+  backgroundStates.forEach(([el, inert]) => { el.inert = inert; });
+  backgroundStates = [];
+  document.body.classList.remove('reading-drawer-open');
+  drawerTrigger?.focus?.();
 }
 
 export function toggleReadingDrawer() {
@@ -333,12 +356,12 @@ export function renderDisplayToolbar(pageTitle = '108 課綱英語全學年教�
 
       <div class="top-utility-right">
         <!-- 色彩風格主題切換組 -->
-        <div class="theme-control-group" role="radiogroup" aria-label="閱讀色彩模式">
+        <div class="theme-control-group" role="group" aria-label="閱讀色彩模式">
           <span class="toolbar-section-label">🎨 舒適色調:</span>
           <div class="theme-pills">
             ${THEMES.map(t => `
               <button class="theme-pill ${t.id === currentTheme ? 'active' : ''}"
-                data-set-theme="${t.id}" title="${t.desc}" aria-label="${t.name}">
+                aria-pressed="${t.id === currentTheme}" data-set-theme="${t.id}" title="${t.desc}" aria-label="${t.name}">
                 <span class="theme-pill-icon">${t.icon}</span>
                 <span class="theme-pill-name">${t.name.split(' ')[1]}</span>
               </button>
@@ -351,10 +374,10 @@ export function renderDisplayToolbar(pageTitle = '108 課綱英語全學年教�
           <span class="font-scale-label">🔤 字體大小:</span>
           <button class="font-step-btn" data-scale-step="-1" title="縮小字體 (快捷鍵: [ )" aria-label="縮小字體">A-</button>
           
-          <div class="scale-pills" role="radiogroup" aria-label="字體縮放預設檔位">
+          <div class="scale-pills" role="group" aria-label="字體縮放預設檔位">
             ${SCALE_PRESETS.map(p => `
               <button class="scale-pill ${Math.abs(p.scale - currentScale) < 0.04 ? 'active' : ''}"
-                data-set-scale="${p.scale}" title="${p.desc}">
+                aria-pressed="${Math.abs(p.scale - currentScale) < 0.04}" data-set-scale="${p.scale}" title="${p.desc}">
                 ${p.label}
               </button>
             `).join('')}
@@ -367,10 +390,10 @@ export function renderDisplayToolbar(pageTitle = '108 課綱英語全學年教�
         <!-- 行距調整控制組 -->
         <div class="line-height-control-group">
           <span class="toolbar-section-label">📏 行距:</span>
-          <div class="line-height-pills" role="radiogroup" aria-label="行距密度">
+          <div class="line-height-pills" role="group" aria-label="行距密度">
             ${LINE_HEIGHTS.map(lh => `
               <button class="line-height-pill ${lh.id === currentLineHeight ? 'active' : ''}"
-                data-set-line-height="${lh.id}" title="${lh.desc}">
+                aria-pressed="${lh.id === currentLineHeight}" data-set-line-height="${lh.id}" title="${lh.desc}">
                 ${lh.label}
               </button>
             `).join('')}
@@ -396,7 +419,7 @@ export function renderDisplayToolbar(pageTitle = '108 課綱英語全學年教�
 export function renderReadingDrawer(pageTitle = '閱讀設定') {
   return `
     <div class="reading-drawer-overlay ${isDrawerOpen ? 'open' : ''}" data-close-reading-drawer="true" aria-hidden="${!isDrawerOpen}">
-      <div class="reading-drawer-sheet" role="dialog" aria-modal="true" aria-label="閱讀排版與快適色調設定" onclick="event.stopPropagation()">
+      <div class="reading-drawer-sheet" role="dialog" aria-modal="true" aria-label="閱讀排版與快適色調設定">
         <div class="drawer-header">
           <div class="drawer-title-block">
             <span class="drawer-title-icon">📖</span>
@@ -409,12 +432,12 @@ export function renderReadingDrawer(pageTitle = '閱讀設定') {
           <!-- 1. 色彩主題 -->
           <div class="drawer-section">
             <div class="drawer-section-title">
-              <span>🎨 護眼色調模式</span>
-              <small>長時閱讀推薦「羊皮暖陽」</small>
+              <span>🎨 閱讀色調模式</span>
+              <small>依環境與偏好選擇</small>
             </div>
             <div class="drawer-theme-grid">
               ${THEMES.map(t => `
-                <button class="drawer-theme-card ${t.id === currentTheme ? 'active' : ''}" data-set-theme="${t.id}">
+                <button class="drawer-theme-card ${t.id === currentTheme ? 'active' : ''}" aria-pressed="${t.id === currentTheme}" data-set-theme="${t.id}">
                   <span class="theme-card-icon">${t.icon}</span>
                   <strong class="theme-card-name">${t.name.split(' ')[1]}</strong>
                   <span class="theme-card-desc">${t.desc.split('(')[0]}</span>
@@ -434,7 +457,7 @@ export function renderReadingDrawer(pageTitle = '閱讀設定') {
               <div class="drawer-scale-pills">
                 ${SCALE_PRESETS.map(p => `
                   <button class="scale-pill ${Math.abs(p.scale - currentScale) < 0.04 ? 'active' : ''}"
-                    data-set-scale="${p.scale}">
+                    aria-pressed="${Math.abs(p.scale - currentScale) < 0.04}" data-set-scale="${p.scale}">
                     ${p.label.split(' ')[1]}
                   </button>
                 `).join('')}
@@ -451,7 +474,7 @@ export function renderReadingDrawer(pageTitle = '閱讀設定') {
             <div class="drawer-lh-row">
               ${LINE_HEIGHTS.map(lh => `
                 <button class="line-height-pill-large ${lh.id === currentLineHeight ? 'active' : ''}"
-                  data-set-line-height="${lh.id}">
+                  aria-pressed="${lh.id === currentLineHeight}" data-set-line-height="${lh.id}">
                   ${lh.label}
                 </button>
               `).join('')}
@@ -487,7 +510,7 @@ export function handleDisplayToolbarClick(target, renderCallback) {
   // 設定主題色彩
   if (d.setTheme !== undefined) {
     applyTheme(d.setTheme, true);
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 
@@ -495,7 +518,7 @@ export function handleDisplayToolbarClick(target, renderCallback) {
   if (d.setScale !== undefined) {
     const scale = parseFloat(d.setScale);
     applyDisplayScale(scale, true);
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 
@@ -503,28 +526,28 @@ export function handleDisplayToolbarClick(target, renderCallback) {
   if (d.scaleStep !== undefined) {
     const step = parseInt(d.scaleStep, 10);
     stepScale(step);
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 
   // 設定行距
   if (d.setLineHeight !== undefined) {
     applyLineHeight(d.setLineHeight, true);
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 
   // 4K 智慧適配
   if (d.auto4k) {
     autoDetect4K();
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 
   // 切換閱讀寬度
   if (d.toggleWidth) {
     toggleWidth();
-    if (typeof renderCallback === 'function') renderCallback();
+
     return true;
   }
 

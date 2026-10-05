@@ -1,25 +1,28 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const filesToSync = [
-  'exam_drill_data.mjs',
-  'lesson_visuals.mjs',
-  'curriculum.mjs',
-  'lesson_pages.mjs'
-];
-
-for (const file of filesToSync) {
-  const src = path.join('dist', file);
-  const dest = path.join('site', 'dist', file);
-
-  const srcBuf = fs.readFileSync(src);
-  fs.writeFileSync(dest, srcBuf);
-
-  const destBuf = fs.readFileSync(dest);
-  if (srcBuf.compare(destBuf) !== 0) {
-    throw new Error(`Sync parity failed for ${file}`);
+function syncDirectory(srcDir, destDir) {
+  if (!fs.existsSync(destDir)) {
+    fs.mkdirSync(destDir, { recursive: true });
   }
-  console.log(`Synced ${file}: ${srcBuf.length} bytes (100% parity verified)`);
+
+  const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(srcDir, entry.name);
+    const destPath = path.join(destDir, entry.name);
+
+    if (entry.isDirectory()) {
+      syncDirectory(srcPath, destPath);
+    } else if (entry.isFile()) {
+      const srcBuf = fs.readFileSync(srcPath);
+      fs.writeFileSync(destPath, srcBuf);
+      const destBuf = fs.readFileSync(destPath);
+      if (srcBuf.compare(destBuf) !== 0) {
+        throw new Error(`Sync parity failed for ${srcPath} -> ${destPath}`);
+      }
+    }
+  }
 }
 
-console.log('All files synced to site/dist/ successfully!');
+syncDirectory('dist', path.join('site', 'dist'));
+console.log('All files synced from dist/ to site/dist/ successfully with 100% byte parity!');

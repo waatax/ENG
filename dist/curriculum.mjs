@@ -119,7 +119,7 @@ export const curriculum = [
           },
           {
             heading: '情態助動詞語氣階梯與禮貌交際原則',
-            body: '1. 請求幫忙：Can you...? $\to$ Could you please...? $\to$ Would you mind + V-ing...?\n2. 義務與建議：must（必須，命令強制）$>$ should / ought to（應該，建議勸告）$>$ had better（最好，帶警告口吻）。\n3. 禮貌應答原則：Would you mind opening the door? 若同意開門，需回答 "No, not at all." 或 "Of course not."（表示不介意）；若回答 "Yes"，則表示反對開門！',
+            body: '1. 請求幫忙：Can you...? → Could you please...? → Would you mind + V-ing...?\n2. 義務與建議：must 表義務；should / ought to 表建議；had better 是針對特定情境的強烈建議，常暗示不照做的負面後果，不能排成固定強弱階梯。\n3. 禮貌應答原則：Would you mind opening the door? 若同意開門，需回答 "No, not at all." 或 "Of course not."（表示不介意）；若回答 "Yes"，則表示反對開門！',
             tip: '會考交際題每年必考：區別 You\'re welcome. / My pleasure. / Never mind. / Take it easy. 的適用場景。'
           }
         ],
@@ -165,7 +165,7 @@ export const curriculum = [
           },
           {
             heading: '副詞子句中「現在式代替未來式」規則',
-            body: '在由 if（如果）、when（當……時）、as soon as（一……就）所引導的時間或條件副詞子句中，若主要子句使用未來式，副詞子句內必須使用「現在簡單式代替未來式」。\n例句：We will go hiking tomorrow if it does not rain.（條件子句用 does not rain，不可用 will not rain）。',
+            body: '在由 if（如果）、when（當……時）、as soon as（一……就）所引導的時間或條件副詞子句中，若主要子句使用未來式，副詞子句通常以現在式表未來；也可能使用現在完成式表先完成。此規則不適用於表意願的 will，或 I wonder if he will come 中表示「是否」的名詞子句。\n例句：We will go hiking tomorrow if it does not rain.（條件子句用 does not rain，不可用 will not rain）。',
             tip: '會考每年必考重點！請辨明 if 是引導名詞子句（是否）還是副詞子句（如果）。'
           }
         ],
@@ -357,7 +357,7 @@ export const curriculum = [
           },
           {
             heading: '否定副詞置首倒裝與假設語氣倒裝',
-            body: '1. 否定副詞倒裝：當 Not only, Seldom, Rarely, Scarcely, Never, Under no circumstances 置於句首時，句子須採疑問句語序倒裝。\n例句：Seldom has she encountered such an intricate scientific problem.\n2. 假設語氣 If 省略倒裝：\n- 與現在事實相反：Were I you, I would take the offer. (原 If I were you...)\n- 與過去事實相反：Had he studied harder, he would have passed. (原 If he had studied...)\n- 與未來極不可能發生：Should it rain tomorrow, the ceremony will be held indoors.',
+            body: '1. 否定副詞倒裝：當否定或限制副詞修飾整個子句並前置時，助動詞置於主詞前；若 not only 只修飾主詞，則不倒裝：Not only Amy but also Leo came.\n例句：Seldom has she encountered such an intricate scientific problem.\n2. 假設語氣 If 省略倒裝：\n- 與現在事實相反：Were I you, I would take the offer. (原 If I were you...)\n- 與過去事實相反：Had he studied harder, he would have passed. (原 If he had studied...)\n- 較正式、較不確定的未來條件：Should it rain tomorrow, the ceremony will be held indoors.',
             tip: '學測翻譯與綜合測驗特高頻考點！'
           }
         ],
@@ -495,7 +495,7 @@ export const curriculum = [
           },
           {
             heading: '大考決勝關鍵：動名與介系詞搭配詞 (Collocations)',
-            body: '學測綜合測驗（克漏字）與文意選填，70% 考點在於固定的詞語搭配（Collocations）：\n- 動詞＋名詞：conduct an experiment（進行實驗，不說 do an experiment）、reach a consensus（達成共識）、draw a conclusion（得出結論）、pose a threat（構成威脅）。\n- 形容詞＋名詞：a heavy smoker（老菸槍，不說 big smoker）、fierce competition（激烈競爭）、substantial evidence（充分證據）。\n- 專屬介系詞搭配：be prone to + N/V-ing（易於……）、interfere with（干擾）、conform to（符合；遵守）。',
+            body: '學測綜合測驗與文意選填可練習詞語搭配（Collocations），仍須合併文法及上下文判斷：\n- 動詞＋名詞：conduct / do / carry out an experiment（進行實驗；conduct 較正式，do 也正確）、reach a consensus（達成共識）、draw a conclusion（得出結論）、pose a threat（構成威脅）。\n- 形容詞＋名詞：a heavy smoker（老菸槍，不說 big smoker）、fierce competition（激烈競爭）、substantial evidence（充分證據）。\n- 專屬介系詞搭配：be prone to + N/V-ing（易於……）、interfere with（干擾）、conform to（符合；遵守）。',
             tip: '背單字務必連同動詞搭配詞與介系詞整塊記憶（Chunking），寫作與翻譯才能自然地道！'
           }
         ],
@@ -536,7 +536,7 @@ export const curriculum = [
         concepts: [
           {
             heading: '中英文思維結構的本質差異與無主句轉換',
-            body: '中文重「意合（Parataxis）」，常無主詞或以主題為首（例如「隨著科技進步，人們的生活變得更便利」）；\n英文重「形合（Hypotaxis）」，必須有形式主詞與法定動詞，句子主幹結構分明。\n翻譯核心三步驟：\n1. 尋找靈魂：找出整句話真正的「邏輯主詞」與「核心動詞」。\n2. 決定骨架：決定主要子句型態（主動、被動、It is + adj. + to V、There is/are）。\n3. 補齊修飾：將時間、地點、原因、條件等修飾語轉化為介系詞片語或副詞子句。',
+            body: '中文重「意合（Parataxis）」，常無主詞或以主題為首（例如「隨著科技進步，人們的生活變得更便利」）；\n英文完整敘述句通常需要主詞與限定動詞；主詞不一定是形式主詞 it，祈使句則常省略 you。\n翻譯核心三步驟：\n1. 尋找靈魂：找出整句話真正的「邏輯主詞」與「核心動詞」。\n2. 決定骨架：決定主要子句型態（主動、被動、It is + adj. + to V、There is/are）。\n3. 補齊修飾：將時間、地點、原因、條件等修飾語轉化為介系詞片語或副詞子句。',
             tip: '大考陷阱：「隨著……」不可直譯 "Follow with..."，標準寫法是 With the advancement of... 或 As technology advances...'
           },
           {
@@ -582,12 +582,12 @@ export const curriculum = [
         concepts: [
           {
             heading: '學測大考非選作文四大向度評分標準',
-            body: '學測英文作文滿分 20 分，評閱由兩位教授盲打，四大向度各占 5 分：\n1. 內容 (Content, 5分)：切合題意、論點具說服力、情節豐富完整。\n2. 組織 (Organization, 5分)：首尾呼應、段落分明、轉折銜接詞運用自然。\n3. 文法句構 (Grammar, 5分)：長短句交錯、無嚴重時態與主謂一致錯誤、句型多樣性（包含倒裝、分詞、關係子句）。\n4. 字彙拼寫 (Vocabulary & Mechanics, 5分)：用字精準恰當（使用 CEFR B2/C1 詞彙）、拼字標點正確。',
+            body: '學測英文作文滿分 20 分；以下依內容、組織、文法句構、字彙拼字四個向度自查，實際評閱依當年度大考中心原則：\n1. 內容 (Content, 5分)：切合題意、論點具說服力、情節豐富完整。\n2. 組織 (Organization, 5分)：首尾呼應、段落分明、轉折銜接詞運用自然。\n3. 文法句構 (Grammar, 5分)：長短句交錯、無嚴重時態與主謂一致錯誤、句型多樣性（包含倒裝、分詞、關係子句）。\n4. 字彙拼寫 (Vocabulary & Mechanics, 5分)：用字精準恰當（不以堆疊艱深詞彙取代清楚表達）、拼字標點正確。',
             tip: '千萬不可套用空洞的萬用模板！大考閱卷教授對陳腔濫調（如 Every coin has two sides）非常反感，分數通常壓在及格邊緣。'
           },
           {
             heading: '論說文經典段落黃金架構（Claim - Reason - Evidence - Warrant）',
-            body: '每一個支持段落 (Body Paragraph) 必須具備四元素：\n1. Claim（主題句/主張）：明確提出該段支持的核心觀點。\n2. Reason（理由推導）：深入解釋為何這項主張成立。\n3. Evidence（具體例證）：舉出真實世界案例、數據或個人親身經歷。\n4. Warrant / Concluding Hook（論證連結/總結）：將例證拉回主題，呼應全文主旨。',
+            body: '論說段落可用以下四元素檢查支持是否充分；這是練習架構，不是所有文體的固定格式：\n1. Claim（主題句/主張）：明確提出該段支持的核心觀點。\n2. Reason（理由推導）：深入解釋為何這項主張成立。\n3. Evidence（具體例證）：舉出真實世界案例、數據或個人親身經歷。\n4. Warrant / Concluding Hook（論證連結/總結）：將例證拉回主題，呼應全文主旨。',
             tip: '寫作完畢務必保留 3–4 分鐘檢查：單複數名詞、冠詞 a/an/the、動詞時態一致性、以及代名詞指涉。'
           }
         ],
@@ -628,12 +628,12 @@ export const curriculum = [
         concepts: [
           {
             heading: '學測 100 分鐘實戰秒殺配速計畫',
-            body: '學測英文科總測驗時間 100 分鐘，共 100 分原始分。建議配速時間表：\n- 00–12 分鐘：詞彙題 1–10 題（秒殺，每題平均 1 分鐘以內）。\n- 12–25 分鐘：綜合測驗 11–20 題（依上下文詞組與文法判斷）。\n- 25–35 分鐘：文意選填 21–30 題（先在題本各選項標詞性：N, V, adj, adv）。\n- 35–45 分鐘：篇章結構 31–34 題（四空五選，細緻檢核指涉與邏輯鉤子）。\n- 45–70 分鐘：閱讀測驗與混合題（共 4 篇長文，每篇 6 分鐘精讀作答）。\n- 70–82 分鐘：中譯英（2 題共 8 分，打草稿並檢查時態拼字）。\n- 82–97 分鐘：英文作文（120–150 字，落實三段或四段論證）。\n- 97–100 分鐘：全卷全面快速複核卡片劃記與非選填答欄位。',
+            body: '學測英文科總測驗時間 100 分鐘，共 100 分原始分。建議配速時間表：\n- 00–12 分鐘：詞彙題 1–10 題（秒殺，每題平均 1 分鐘以內）。\n- 12–25 分鐘：綜合測驗 11–20 題（依上下文詞組與文法判斷）。\n- 25–35 分鐘：文意選填 21–30 題（先在題本各選項標詞性：N, V, adj, adv）。\n- 35–45 分鐘：篇章結構 31–34 題（四空五選，細緻檢核指涉與邏輯鉤子）。\n- 45–70 分鐘：閱讀測驗與混合題（共 4 篇長文，每篇 6 分鐘精讀作答）。\n- 70–82 分鐘：中譯英（2 題共 8 分，打草稿並檢查時態拼字）。\n- 82–97 分鐘：英文作文（依題目指定字數與段落；115 學年度題目要求至少 120 字、分兩段，不可硬套三或四段）。\n- 97–100 分鐘：全卷全面快速複核卡片劃記與非選填答欄位。',
             tip: '混合題手寫規範：題目若要求 "Fill in the blank with words from the passage"，必須原詞照抄，千萬不可擅自改寫時態或加字！'
           },
           {
             heading: '高分群考前 14 天心理與答題盲點清單',
-            body: '1. 題目問 "Which is LEAST likely..." 或 "All of the following EXCEPT..."：務必在題本將 LEAST 或 EXCEPT 用黑筆大力圈起，避免順眼選成正確項！\n2. 篇章長文出現陌生學術詞彙時，切忌恐慌：大考中心命題原則明確指出，超出 7000 詞之專業生字必定在上下文有同位語或舉例說明釋義。\n3. 非選書寫手寫工整性：英文字母字距適中，大小寫分明，句點切勿點成 comma，整潔度直接影響閱卷印象分。',
+            body: '1. 題目問 "Which is LEAST likely..." 或 "All of the following EXCEPT..."：務必在題本將 LEAST 或 EXCEPT 用黑筆大力圈起，避免順眼選成正確項！\n2. 篇章長文出現陌生學術詞彙時，切忌恐慌：遇到陌生詞可找上下文、同位語或例子，但不能假定每個詞都附有釋義；先判斷該詞是否影響作答。\n3. 非選書寫手寫工整性：英文字母字距適中，大小寫分明，句點切勿點成 comma，整潔度直接影響閱卷印象分。',
             tip: '原始分與級分關係：近年學測英文 15 級分門檻約在原始分 86–90 分區間浮動。保證客觀題全對，非選拿下 22+ 分即穩上 15 級分！'
           }
         ],
@@ -682,12 +682,12 @@ export const curriculum = [
         concepts: [
           {
             heading: '工業現場個人防護裝備 (PPE) 核心術語',
-            body: '進入工廠車間必須穿戴之 PPE (Personal Protective Equipment)：\n1. Safety goggles / Face shield：防護眼鏡/面罩，防飛濺切屑或化學液體。\n2. Earplugs / Earmuffs：耳塞/耳罩，防止高分貝噪音聽力損害。\n3. Steel-toe boots：鋼頭安全鞋，防止重物掉落砸傷腳趾。\n4. Heavy-duty gloves：耐磨防割手套；注意操作旋轉機具（車床、銑床）時嚴禁配戴手套以免捲入！\n5. Respirator / Dust mask：防塵口罩/呼吸器，過濾有毒氣體與粉塵。',
+            body: '以下為 PPE (Personal Protective Equipment) 英語詞彙；實際選用依現場危害評估、設備手冊與受訓程序：\n1. Safety goggles / Face shield：防護眼鏡/面罩，防飛濺切屑或化學液體。\n2. Earplugs / Earmuffs：耳塞/耳罩，防止高分貝噪音聽力損害。\n3. Steel-toe boots：鋼頭安全鞋，防止重物掉落砸傷腳趾。\n4. Heavy-duty gloves：耐磨防割手套；注意操作旋轉機具（車床、銑床）時嚴禁配戴手套以免捲入！\n5. Respirator / Dust mask：呼吸防護具／防塵口罩。顆粒過濾型不防護氣體或蒸氣；須由專業人員依污染物與環境選擇合適防護具。',
             tip: '職場情境關鍵：must（必須）、must not / prohibited（嚴禁）、should（建議）之語氣差異攸關工安責任！'
           },
           {
             heading: '國際安全警語等級 (OSHA / ISO Standards)',
-            body: '1. DANGER（危險 - 紅底白字）：表示極度迫切的致命危險，若不避開將導致死亡或重傷。\n2. WARNING（警告 - 橘底黑字）：表示中度潛在危害，若不避開可能導致嚴重傷害。\n3. CAUTION（注意 - 黃底黑字）：表示輕微或中度傷害，或設備損壞風險。\n4. NOTICE（須知 - 藍底白字）：傳達與人身安全無直接關係的重要程序與政策說明。',
+            body: "閱讀安全標示時，同時查看訊號詞、圖示與完整文字，不能只憑顏色決定操作。\nDANGER：危險；WARNING：警告；CAUTION：注意；NOTICE：須知。\n不同制度的定義與版式可能不同，本頁僅教英文辨識，不把 OSHA、ISO 與其他標示制度混為同一套規格；實際作業依設備手冊、現場標示與受訓程序。",
             tip: '緊急應變動詞：evacuate immediately（立即疏散）、pull emergency stop button（拍下緊急停機鈕）、shut off power supply（切斷電源）。'
           }
         ],
@@ -728,12 +728,12 @@ export const curriculum = [
         concepts: [
           {
             heading: '現場必備量具與加工機具英文',
-            body: '1. Vernier caliper（游標卡尺）：用以精準量測外徑、內徑與深度。\n2. Micrometer（分厘卡/螺旋測微器）：量測小於 0.01 mm 之精密厚度。\n3. Torque wrench（扭力扳手）：確保螺栓鎖緊至規定之扭矩 (Nm)。\n4. Lathe（車床）/ Milling machine（銑床）/ CNC machine（數值控制工具機）。\n5. Soldering iron（烙鐵）：用於電子電路板焊接。',
+            body: '1. Vernier caliper（游標卡尺）：用以精準量測外徑、內徑與深度。\n2. Micrometer（分厘卡／螺旋測微器）：用於精密尺寸量測，解析度與量測範圍依型號而定。\n3. Torque wrench（扭力扳手）：確保螺栓鎖緊至規定之扭矩 (Nm)。\n4. Lathe（車床）/ Milling machine（銑床）/ CNC machine（數值控制工具機）。\n5. Soldering iron（烙鐵）：用於電子電路板焊接。',
             tip: '測量名詞搭配：take measurements（進行量測）、measure within tolerance（在公差範圍內量測）。'
           },
           {
             heading: '工程材料物理性質與公差規格 (Tolerance)',
-            body: '1. 材料特性 (Material Properties)：\n- Tensile strength：抗拉強度\n- Ductility：延展性\n- Hardness vs Toughness：硬度 vs 韌性\n- Corrosion-resistant alloy：耐腐蝕合金（如不銹鋼 Stainless steel）\n2. 規格與公差 (Specifications & Tolerance)：\n- Dimensions：length（長）, width（寬）, height（高）, diameter（直徑 $\varnothing$）\n- Tolerance：$\pm 0.05\text{ mm}$ 表示容許誤差範圍在正負 0.05 毫米之間。',
+            body: '1. 材料特性 (Material Properties)：\n- Tensile strength：抗拉強度\n- Ductility：延展性\n- Hardness vs Toughness：硬度 vs 韌性\n- Corrosion-resistant alloy：耐腐蝕合金（如不銹鋼 Stainless steel）\n2. 規格與公差 (Specifications & Tolerance)：\n- Dimensions：length（長）, width（寬）, height（高）, diameter（直徑 Ø）\n- Tolerance：± 0.05 mm 表示容許誤差範圍在正負 0.05 毫米之間。',
             tip: '單位陷阱：注意英制 (inch, feet, psi) 與公制 (mm, meter, bar, MPa) 之換算。'
           }
         ],
@@ -774,13 +774,13 @@ export const curriculum = [
         concepts: [
           {
             heading: '標準作業程序 (SOP) 的英文語言特徵',
-            body: '工廠標準作業程序書 (Standard Operating Procedure) 為確保操作零失誤，具備三大特色：\n1. 採用祈使句 (Imperative Sentences)：動詞原形置於句首（例：Inspect the hydraulic seal before powering on.）。\n2. 嚴謹的順序副詞 (Sequential Markers)：First / Prior to operation（首先/操作前）$\to$ Next / Subsequently（接下來）$\to$ Meanwhile / In the interim（同時）$\to$ Finally / Upon completion（最後/完成後）。\n3. 警示條件子句：If the pressure gauge exceeds 150 psi, immediately engage the emergency pressure relief valve.',
+            body: '工廠標準作業程序書 (Standard Operating Procedure) 為確保操作零失誤，具備三大特色：\n1. 採用祈使句 (Imperative Sentences)：動詞原形置於句首（例：Inspect the hydraulic seal before powering on.）。\n2. 嚴謹的順序副詞 (Sequential Markers)：First / Prior to operation（首先/操作前）→ Next / Subsequently（接下來）→ Meanwhile / In the interim（同時）→ Finally / Upon completion（最後/完成後）。\n3. 警示條件子句：If the pressure gauge exceeds 150 psi, immediately engage the emergency pressure relief valve.',
             tip: '統測英語類專二常考題型：重組混亂的步驟句子，還原正確 SOP 先後次序！'
           },
           {
             heading: '機電與設備常見故障排除 (Troubleshooting) 術語',
             body: '1. 症狀描述 (Symptoms)：\n- Overheating（過熱）/ Strange rattling noise（異常喀喀雜音）\n- Fluid leakage（液體洩漏）/ Voltage fluctuation（電壓波動）\n- Belt slippage（皮帶打滑）/ Paper/Material jamming（卡紙/卡料）\n2. 檢測動作 (Actions)：\n- Isolate the faulty circuit（隔離故障電路）\n- Replace worn-out bearings（更換磨損軸承）\n- Lubricate moving parts（潤滑活動機件）\n- Reset to factory defaults（重置為原廠預設值）。',
-            tip: '報告公式：Problem statement（問題陳述）$\to$ Root cause（根本原因）$\to$ Corrective action（矯正措施）$\to$ Preventive measure（預防再發措施）。'
+            tip: '報告公式：Problem statement（問題陳述）→ Root cause（根本原因）→ Corrective action（矯正措施）→ Preventive measure（預防再發措施）。'
           }
         ],
         vocab: [
@@ -820,7 +820,7 @@ export const curriculum = [
         concepts: [
           {
             heading: '工程圖面三大必考視圖與圖例標示',
-            body: '1. Orthographic Projection（正投影三視圖）：Front view（前視圖）、Top view（俯視圖）、Side view（側視圖）。\n2. Exploded View（爆炸圖/分解圖）：將機械內部零件依裝配順序炸開排列，標註各零件料號 (Part Number, P/N) 與裝配方向。\n3. Schematic / Wiring Diagram（電路/配線圖）：展示電阻 (resistor)、電容 (capacitor)、二極體 (diode)、接地 (ground $\frac{1}{=}$) 等符號之電氣連接關係。',
+            body: '1. Orthographic Projection（正投影三視圖）：Front view（前視圖）、Top view（俯視圖）、Side view（側視圖）。\n2. Exploded View（爆炸圖/分解圖）：將機械內部零件依裝配順序炸開排列，標註各零件料號 (Part Number, P/N) 與裝配方向。\n3. Schematic / Wiring Diagram（電路/配線圖）：展示電阻 (resistor)、電容 (capacitor)、二極體 (diode)、接地 (ground 接地符號，依圖例辨識) 等符號之電氣連接關係。',
             tip: '圖表題技巧：先讀圖面右下角標題欄 (Title Block) 中的材料名稱、比例尺 (Scale) 與繪圖日期。'
           },
           {
@@ -912,13 +912,13 @@ export const curriculum = [
         concepts: [
           {
             heading: '統測外語群專二（英文閱讀與寫作）卷面結構',
-            body: '四技二專統測外語群英語類專業科目（二）滿分 100 分，考試時間 100 分鐘：\n1. 第一部分：閱讀測驗（選擇題，約占 40–50 分）\n涵蓋科技發展、全球化商務、跨文化溝通、現代管理學等跨領域長篇閱讀。\n2. 第二部分：非選擇題（寫作與翻譯，約占 50–60 分）\n- 句子改寫與句子合併（考關係子句、分詞構句、倒裝句、連接詞）。\n- 短文摘要寫作（Summary Writing）：將 250 字之技術短文，以 50–70 字精準濃縮其核心論點。\n- 主題寫作：針對科技趨勢（如 AI 倫理、電動車、智慧工廠）進行立場闡述與解決方案提案。',
+            body: "本章提供外語群英語類「英文閱讀與寫作」的能力延伸練習，不代表所有高工群科共同考科。\n先依當年度試題本確認題型、配分、字數與作答時間；本站的技術摘要與科技主題寫作是原創延伸任務，不能當成官方固定題型或配分。\n準備時可依序練習：辨識文章主旨與細節、還原句子結構、依題意翻譯或寫作、檢查時態與篇章連貫。",
             tip: '專二與共同英文之別：專二詞彙量要求達 CEFR B2 水準，文章長度與句法複雜度皆顯著高於共同英文！'
           },
           {
             heading: '技術摘要 (Summary) 與短文寫作評分要訣',
             body: '摘要寫作三要三不要：\n- 要：提取原文各段主題句；使用自己的詞彙改寫 (Paraphrase)；維持客觀視角。\n- 不要：照抄原文整句句子；加入原文未提及之個人主觀偏見；抄錄過多瑣碎次要數據。\n短文寫作重點：首段清楚破題，第二段提出具體兩項策略，末段有力總結。',
-            tip: '改寫神技：將動詞改為名詞化（e.g., The machine operates efficiently $\to$ The efficient operation of the machine）。'
+            tip: '改寫神技：將動詞改為名詞化（e.g., The machine operates efficiently → The efficient operation of the machine）。'
           }
         ],
         vocab: [
@@ -958,7 +958,7 @@ export const curriculum = [
         concepts: [
           {
             heading: '國際品質認證標準 (ISO / CE / RoHS) 英文規範',
-            body: '外銷導向工程必須符合國際規範：\n1. ISO 9001（品質管理系統）：強調客訴處理、持續改善 (Continuous Improvement) 與文件管制。\n2. ISO 14001（環境管理系統）：控管碳排放、廢水處理與環境友善製程。\n3. CE Mark（歐洲合格認證）：符合歐盟健康、安全與環境保護標準。\n4. RoHS（危害性物質限制指令）：嚴禁電子產品中含有鉛 (Pb)、鎘 (Cd)、汞 (Hg) 等有毒重金屬。',
+            body: '外銷導向工程必須符合國際規範：\n1. ISO 9001（品質管理系統）：強調客訴處理、持續改善 (Continuous Improvement) 與文件管制。\n2. ISO 14001（環境管理系統）：控管碳排放、廢水處理與環境友善製程。\n3. CE marking（CE 標誌）：製造商聲明產品符合適用的歐盟法規；不等於歐盟機關授予品質認證。\n4. RoHS（危害性物質限制指令）：限制適用電機電子設備中特定物質的濃度，含適用範圍與豁免條件，並非所有產品一律零含量。',
             tip: '合規關鍵字：compliance audit（合規稽核）、certify（認證）、non-conformity report（不合格報告）。'
           },
           {
@@ -1012,7 +1012,7 @@ export const curriculum = [
         concepts: [
           {
             heading: 'GEPT 初級至優級對標與通過門檻',
-            body: '全民英檢 (GEPT) 是台灣最具信度的分級測驗，全面對標 CEFR 國際架構：\n1. 初級 (A2)：國中畢業程度。聽讀第一階段通過後始得考說寫（短句寫作與口說複誦）。\n2. 中級 (B1)：高中畢業程度。中譯英短文翻譯、生活經驗敘事寫作 (120字)、朗讀與回答問題。\n3. 中高級 (B2)：大學英語畢業門檻。長篇學術聽力、論述性寫作、口頭觀點闡述。\n4. 高級 (C1)：涉外商務與專業翻譯。圖表長篇評析、跨學科摘要、無主持小組討論。\n5. 優級 (C2)：最高語言境地。整合視聽資料長文研析、即席英文簡報與專業答辯。',
+            body: '全民英檢 (GEPT) 是分級英語能力測驗，全面對標 CEFR 國際架構：\n1. 初級 (A2)：國中畢業程度。聽讀第一階段通過後始得考說寫（短句寫作與口說複誦）。\n2. 中級 (B1)：高中畢業程度。中譯英短文翻譯、生活經驗敘事寫作 (120字)、朗讀與回答問題。\n3. 中高級 (B2)：常作為部分學校的能力參考，是否符合畢業門檻依各校規定。長篇學術聽力、論述性寫作、口頭觀點闡述。\n4. 高級 (C1)：涉外商務與專業翻譯。圖表長篇評析、跨學科摘要、無主持小組討論。\n5. 優級 (C2)：最高語言境地。整合視聽資料長文研析、即席英文簡報與專業答辯。',
             tip: '說寫第二階段高分關鍵：發音清晰度、重音節奏、任務完整度（Task Completion）與論證連貫性。'
           },
           {
@@ -1063,7 +1063,7 @@ export const curriculum = [
           },
           {
             heading: '題型一・Part 5 單句填空：詞性秒殺法與商務高頻句構 (Incomplete Sentences - POS & Grammar Mastery)',
-            body: '【核心構念 (Construct Essence)】\nPart 5 共 30 題，是多益閱讀奪取金色證書的速度引擎。官方命題嚴格鎖定於國際商務語境下的精確詞性搭配、時態語態與動詞補語結構。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n視線先看四個選項字根是否相同：\n1. 同字根題（詞性題）：直接看空格前後 2–3 個單字定位文法功能。\n   - 若空格位於冠詞與名詞之間，必填形容詞 (e.g., an [impressive] portfolio)。\n   - 若空格位於及物動詞之後且已有完整受詞，必填副詞修飾該動作 (e.g., reviewed the proposal [thoroughly])。\n   - 若空格在介系詞之後：後方若有受詞，必填及物動名詞 V-ing；後方若無受詞且前方有冠詞 the，必填名詞。\n2. 異字根題（商務語塊題）：先看主詞與動詞、或動詞與受詞的固定搭配 (Collocations，如 implement a policy, conduct an audit, negotiate terms)。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：動名詞 (Gerund) vs 動作名詞 (Action Noun)。例如：for ______ the budget 需填入及物性的 approving (有受詞 the budget)；若為 the ______ of the budget 則需填入 approval。\n• 陷阱 2：分詞修飾語的主動與被動。進行或主動狀態用 V-ing (an increasing number of clients)；被動或完成狀態用 p.p. (damaged goods)。\n• 陷阱 3：省略 should 的假設語氣。demand / recommend / require that S + (should) + 原形動詞 V (e.g., The CEO insisted that everyone attend the briefing)。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：The board of directors requested that the finance committee submit the revised quarterly budget ______ than originally scheduled.\n選項：(A) early  (B) earlier  (C) earliest  (D) earliness\n【大師解剖】：看到空格後方的標竿詞「than」，直接鎖定比較級形式；修飾動詞片語 submit the revised quarterly budget 需要副詞比較級，故秒殺 (B) earlier！此題作答耗時應在 10 秒以內。',
+            body: '【核心構念 (Construct Essence)】\nPart 5 共 30 題，是多益閱讀奪取金色證書的速度引擎。官方命題嚴格鎖定於國際商務語境下的精確詞性搭配、時態語態與動詞補語結構。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n視線先看四個選項字根是否相同：\n1. 同字根題（詞性題）：直接看空格前後 2–3 個單字定位文法功能。\n   - 冠詞與名詞之間常有形容詞，但也可能有名詞修飾語或其他結構，須看完整片語 (e.g., an [impressive] portfolio)。\n   - 完整受詞後可能接修飾動作的副詞，也可能接受詞補語（如 made him happy）；須先辨動詞句型 (e.g., reviewed the proposal [thoroughly])。\n   - 介系詞後常接名詞片語、代名詞或動名詞；例如 for approving the budget 與 for the approval of the budget，須檢查整體結構。\n2. 異字根題（商務語塊題）：先看主詞與動詞、或動詞與受詞的固定搭配 (Collocations，如 implement a policy, conduct an audit, negotiate terms)。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：動名詞 (Gerund) vs 動作名詞 (Action Noun)。例如：for ______ the budget 需填入及物性的 approving (有受詞 the budget)；若為 the ______ of the budget 則需填入 approval。\n• 陷阱 2：分詞修飾語的主動與被動。進行或主動狀態用 V-ing (an increasing number of clients)；被動或完成狀態用 p.p. (damaged goods)。\n• 陷阱 3：省略 should 的假設語氣。demand / recommend / require that S + (should) + 原形動詞 V (e.g., The CEO insisted that everyone attend the briefing)。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：The board of directors requested that the finance committee submit the revised quarterly budget ______ than originally scheduled.\n選項：(A) early  (B) earlier  (C) earliest  (D) earliness\n【大師解剖】：看到空格後方的標竿詞「than」，直接鎖定比較級形式；修飾動詞片語 submit the revised quarterly budget 需要副詞比較級，故秒殺 (B) earlier！此題作答耗時應在 10 秒以內。',
             tip: '秒殺口訣：先看選項定題型，同根比詞尾 (-tion 名詞, -tive 形容詞, -ly 副詞)，前後 3 字定乾坤，20 秒交卷！'
           },
           {
@@ -1073,7 +1073,7 @@ export const curriculum = [
           },
           {
             heading: '題型三・Part 7 閱讀測驗：單雙篇跨文本交叉比對秒殺矩陣 (Reading Comprehension - Cross-text Synthesis & Indirect Inference)',
-            body: '【核心構念 (Construct Essence)】\nPart 7 總計 54 題（單篇 29 題、雙篇 10 題、三篇 15 題），是邁向 860–990 金色證書的決勝主戰場。雙篇與三篇閱讀核心考點在於「跨文本交叉比對 (Cross-text Synthesis)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 雙篇/三篇切忌逐字死讀！先看文本標題類型（如 Text 1: 研討會議程表 Schedule + Text 2: 講者電子郵件 Email）。\n2. 閱讀題幹關鍵字（人名、專案名稱、具體時間），辨識題型是單篇細節題還是「跨文本關聯題 (Cross-reference Question)」。\n3. 跨文本題定位公式：\n   - 題目問：「某人將在下午參加哪一場演講？」題幹只給人名。\n   - 先到 Text 2 找出此人感興趣的主題或專業職稱（如 Data Security）。\n   - 再折返 Text 1 查找 Data Security 對應的時間與會議室（如 Room 302, 2:00 PM）。\n   - 答案永遠存在於兩篇文本的「交集點」！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：過期舊資訊陷阱 (Outdated Information)。第一篇文本（原訂單或初步會議行程）提到了日期 A，但在第二篇文本（更正通知或延期電郵）中明確將日期改為日期 B。題目若問「實際會議日期」，選日期 A 即落入命題陷阱。\n• 陷阱 2：直接照抄字面但語意偷換 (Verbatim Trap)。多益正確答案 90% 以上採用「同義改寫 (Paraphrasing)」，選項如果完全複製文章原字但更換了主詞或修飾詞，往往是精心設計的干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n母題示範：Text 1 為設備租賃價目表（Full-size Van: $60/day, GPS add-on: $12/day）；Text 2 為客戶確認單（租用 Full-size Van 3 天並勾選 GPS）。題目問：客戶結算發票總金額為何？\n大師解剖：需跨篇計算：($60 + $12) * 3 = $216。此為標準跨文本資訊提取與數學合成題！',
+            body: '【核心構念 (Construct Essence)】\nPart 7 總計 54 題（單篇 29 題、雙篇 10 題、三篇 15 題），是邁向 860–990 金色證書的決勝主戰場。雙篇與三篇閱讀核心考點在於「跨文本交叉比對 (Cross-text Synthesis)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 雙篇/三篇切忌逐字死讀！先看文本標題類型（如 Text 1: 研討會議程表 Schedule + Text 2: 講者電子郵件 Email）。\n2. 閱讀題幹關鍵字（人名、專案名稱、具體時間），辨識題型是單篇細節題還是「跨文本關聯題 (Cross-reference Question)」。\n3. 跨文本題定位公式：\n   - 題目問：「某人將在下午參加哪一場演講？」題幹只給人名。\n   - 先到 Text 2 找出此人感興趣的主題或專業職稱（如 Data Security）。\n   - 再折返 Text 1 查找 Data Security 對應的時間與會議室（如 Room 302, 2:00 PM）。\n   - 跨文本題需整合相關文本；有些細節題只需一篇，仍以題幹要求為準。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：過期舊資訊陷阱 (Outdated Information)。第一篇文本（原訂單或初步會議行程）提到了日期 A，但在第二篇文本（更正通知或延期電郵）中明確將日期改為日期 B。題目若問「實際會議日期」，選日期 A 即落入命題陷阱。\n• 陷阱 2：直接照抄字面但語意偷換 (Verbatim Trap)。多益閱讀常以「同義改寫 (Paraphrasing)」檢查理解，選項如果完全複製文章原字但更換了主詞或修飾詞，往往是精心設計的干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n母題示範：Text 1 為設備租賃價目表（Full-size Van: $60/day, GPS add-on: $12/day）；Text 2 為客戶確認單（租用 Full-size Van 3 天並勾選 GPS）。題目問：客戶結算發票總金額為何？\n大師解剖：需跨篇計算：($60 + $12) * 3 = $216。此為標準跨文本資訊提取與數學合成題！',
             tip: '多益雙篇三篇心法：題組 5 題中，通常第 1–2 題查第 1 篇，第 3 題查第 2 篇，第 4–5 題必為跨文本交叉比對題！'
           },
           {
@@ -1119,27 +1119,27 @@ export const curriculum = [
         concepts: [
           {
             heading: 'Digital SAT 兩階段模組化適應性測驗 (MST) 機制與算分藍圖',
-            body: 'Digital SAT 閱讀與寫作包含兩個 27 題、32 分鐘的模組 (Modules)：\n1. Module 1（路由模組）：難度均勻分佈。系統採用邊界最大似然估計 (BMLE) 計算考生能力值 $\\hat{\\theta}$。\n2. Module 2（自適應模組）：\n- 若 Module 1 表現優異，進入 Hard Module 2，解鎖最高 800 分滿分區間。\n- 若 Module 1 表現不佳，進入 Easy Module 2，分數天花板受限（通常不高於 600 分）。\n3. 最終成績以 EAP (Expected A Posteriori) 聯合反應向量精算，包含標準測量誤差 (SEM)。',
+            body: "Digital SAT 閱讀與寫作共 54 題、64 分鐘，分成兩個各 32 分鐘的模組。第一模組包含不同難度；第二模組的難度依第一模組表現調整。不要由進入哪個模組自行推算固定分數上限，也不要把本站練習正確率換算成官方分數。考試結構以 College Board 公告為準。",
             tip: '實戰策略：Module 1 前 15 題不容失誤，確保穩定打入 Hard Module 2！'
           },
           {
-            heading: '三大核心題型解題架構藍圖 (Construct Blueprint)',
+            heading: '四大內容領域與解題架構 (Construct Blueprint)',
             body: '1. Craft and Structure (28%)：Words in Context 高難度語境詞彙精析（如 delineate, corroborate）、作者論證結構與修辭目的。\n2. Information and Ideas (26%)：Command of Evidence 文本與數據證據定位、Inferences 邏輯完形結論推論。\n3. Standard English Conventions (26%)：長句語法結構、Boundaries 標點符號、主謂一致、懸垂修飾語 (Dangling Modifiers)。\n4. Expression of Ideas (20%)：修辭修訂、段落銜接過渡詞、學生研究筆記整合 (Rhetorical Synthesis)。',
             tip: '標點題秒殺法則：兩個獨立完整子句 (Independent Clauses) 之間，不可僅用逗號連接（Comma Splice 錯誤），必須使用分號 (;) 或逗號加對等連接詞 (, and)！'
           },
           {
             heading: '題型一・Craft & Structure: Words in Context 高階語境詞彙與修辭目的 (Contextual Nuance & Rhetorical Purpose)',
-            body: '【核心構念 (Construct Essence)】\nDigital SAT 徹底拋棄死記硬背生僻詞套路，聚焦於大學學術文獻、自然科學報告、歷史文獻中「高階學術詞彙（Tier 2 Academic Words）在極度精確語境下的修辭功能與意圖辨析」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 嚴禁憑中文翻譯套入後「覺得通順」主觀猜測！Digital SAT 題幹文本極其凝練，命題團隊在空格前後必然埋設了 100% 絕對客觀的「同義指針 (Synonym Pointer)」或「反義對照標記 (Contrast Marker)」。\n2. 尋找轉折樞紐詞：However, yet, far from, rather than, whereas 指向空格必須與文中已知形容詞/動詞構成精確反義；In addition, moreover, indeed, colon (:) 則指向空格為前句觀點的精確深化或同義置換。\n3. 預測空格語意極性（+/-/中性）與詞義核心，再去四個選項中精確打擊！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：字面常見義項干擾 (Familiar Sense Trap)。例如 compromise 常見義為「妥協」，但在學術安全語境中指「危害、使受損 (undermine / jeopardize)」；table 作動詞指「擱置延後討論」而非「擺在桌上」。\n• 陷阱 2：感情色彩過度極端 (Overly Extreme Tone)。學術論述追求嚴謹客觀，非特殊修辭文本中，過度情緒化的詞彙（如 disastrous, miraculous, definitive）往往是干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Far from being a monolithic movement, modern environmentalism is characterized by ______ viewpoints, ranging from radical ecocentrism to pragmatic market-based policies.\n選項：(A) homogeneous  (B) disparate  (C) dogmatic  (D) obsolete\n【大師解剖】：看到句首樞紐結構「Far from being [monolithic]」（絕非單一鐵板一塊的），後文又列舉了從極端生態中心主義到實用市場政策的廣泛跨度，空格必須填入表達「多元、紛繁多樣」的精確學術詞彙。秒選 (B) disparate！(A) homogeneous 恰好反義，(C)(D) 與題幹語境無關。',
+            body: '【核心構念 (Construct Essence)】\nDigital SAT 徹底拋棄死記硬背生僻詞套路，聚焦於大學學術文獻、自然科學報告、歷史文獻中「高階學術詞彙（Tier 2 Academic Words）在極度精確語境下的修辭功能與意圖辨析」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 嚴禁憑中文翻譯套入後「覺得通順」主觀猜測！Digital SAT 題幹文本極其凝練，應結合全文線索辨義，線索不一定是明示的同義詞或反義詞。\n2. 尋找轉折樞紐詞：However, yet, far from, rather than, whereas 提示語意可能有對比，不代表空格必須是某個詞的字典反義詞；In addition, moreover, indeed, colon (:) 則指向空格為前句觀點的精確深化或同義置換。\n3. 預測空格語意極性（+/-/中性）與詞義核心，再去四個選項中精確打擊！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：字面常見義項干擾 (Familiar Sense Trap)。例如 compromise 常見義為「妥協」，但在學術安全語境中指「危害、使受損 (undermine / jeopardize)」；table 作動詞在美式英文常指「擱置」，英式英文常指「提交討論」，須依語境判斷。\n• 陷阱 2：感情色彩過度極端 (Overly Extreme Tone)。學術論述追求嚴謹客觀，非特殊修辭文本中，過度情緒化的詞彙（如 disastrous, miraculous, definitive）往往是干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Far from being a monolithic movement, modern environmentalism is characterized by ______ viewpoints, ranging from radical ecocentrism to pragmatic market-based policies.\n選項：(A) homogeneous  (B) disparate  (C) dogmatic  (D) obsolete\n【大師解剖】：看到句首樞紐結構「Far from being [monolithic]」（絕非單一鐵板一塊的），後文又列舉了從極端生態中心主義到實用市場政策的廣泛跨度，空格必須填入表達「多元、紛繁多樣」的精確學術詞彙。秒選 (B) disparate！(A) homogeneous 恰好反義，(C)(D) 與題幹語境無關。',
             tip: '語境詞彙破題律：空格答案必由題幹中另一個詞或句子成分嚴格保證，切勿帶入個人主觀偏好！'
           },
           {
             heading: '題型二・Information & Ideas: Command of Evidence & Logical Inferences 論據鎖定與完形推論 (Evidence Anchoring & Valid Conclusions)',
-            body: '【核心構念 (Construct Essence)】\n包含四大高分題型：Textual Evidence（文本引文論據）、Quantitative Evidence（圖表數據論據）、Inferences（完形邏輯結論推導）、Central Idea & Details（主旨與細節）。考查從學術實證資料推導合法結論的能力。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 論據支持/削弱題（Which finding, if true, would most strongly support/weaken the claim?）：\n   - 第一步：迅速用括號圈出文章中研究人員的核心假說 (Hypothesis) 或主張 (Claim)，將其抽象為因果公式：自變量 X 導致 因變量 Y。\n   - 第二步：審讀四個選項。若為「支持題」，選項必須證實 X 與 Y 之間的正相關/因果機制，或證明「沒有 X 則沒有 Y」，或排除潛在替代解釋；若為「削弱題」，選項必須指出異常數據 (Anomalous Evidence) 或提出變量 Z 才是導致 Y 的真因。\n2. 完形推論題（Which choice most logically completes the text?）：\n   - 結論必須「嚴格由已知前提推出」，不可外推跨出文章設定的邊界（嚴守 Scope of the Argument）。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：範疇漂移 (Scope Shift)。選項內容本身是客觀科學真理，但它所論述的對象超出了本實驗特定物種、特定地理區域或特定時間範疇。\n• 陷阱 2：相關性誤當因果 (Correlation as Causation)。選項僅證明兩者同時發生，但題幹要求支持「前者引發後者」的機制。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目情境：某古生物學家假設某古代鳥類的長羽毛是用於「求偶展示」而非「飛行輔助」。問哪項發現最支持此假設？\n大師解剖：支持項必須呈現求偶特異性，例如發現該羽毛僅在成熟雄性化石中出現，且其羽軸強度不足以支撐空氣動力學負荷。這直接驗證了求偶假說並排除了飛行功能！',
+            body: '【核心構念 (Construct Essence)】\n包含四大高分題型：Textual Evidence（文本引文論據）、Quantitative Evidence（圖表數據論據）、Inferences（完形邏輯結論推導）、Central Idea & Details（主旨與細節）。考查從學術實證資料推導合法結論的能力。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 論據支持/削弱題（Which finding, if true, would most strongly support/weaken the claim?）：\n   - 第一步：迅速用括號圈出文章中研究人員的核心假說 (Hypothesis) 或主張 (Claim)，將其抽象為因果公式：自變量 X 導致 因變量 Y。\n   - 第二步：審讀四個選項。若為「支持題」，選項必須證實 X 與 Y 之間的正相關/因果機制，或證明「沒有 X 則沒有 Y」，或排除潛在替代解釋；若為「削弱題」，選項必須指出異常數據 (Anomalous Evidence) 或提出變量 Z 才是導致 Y 的真因。\n2. 完形推論題（Which choice most logically completes the text?）：\n   - 結論必須「嚴格由已知前提推出」，不可外推跨出文章設定的邊界（嚴守 Scope of the Argument）。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：範疇漂移 (Scope Shift)。選項內容本身是客觀科學真理，但它所論述的對象超出了本實驗特定物種、特定地理區域或特定時間範疇。\n• 陷阱 2：相關性誤當因果 (Correlation as Causation)。選項僅證明兩者同時發生，但題幹要求支持「前者引發後者」的機制。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目情境：某古生物學家假設某古代鳥類的長羽毛是用於「求偶展示」而非「飛行輔助」。問哪項發現最支持此假設？\n大師解剖：支持項必須呈現求偶特異性，例如發現該羽毛僅在成熟雄性化石中出現，且其羽軸強度不足以支撐空氣動力學負荷。這能增加求偶假說的可信度、削弱飛行解釋，但不能只憑這些線索證明唯一用途。',
             tip: '圖表題黃金法則：先讀圖表標題、座標軸單位 (Units)、圖例 (Legend)，再回題幹定位數值，嚴防百分比 (Percentage) 與絕對數 (Absolute Value) 偷換！'
           },
           {
             heading: '題型三・Standard English Conventions: 句子邊界標點、修飾語與平行結構 (Boundaries, Modifiers & Syntactic Symmetry)',
-            body: '【核心構念 (Construct Essence)】\n考查 100% 客觀的標準書面英文法規，也是 Module 1 與 Module 2 中最具「確定性秒殺」特性的高分題型。核心涵蓋：Boundaries（句界標點）、Form, Structure, and Sense（主謂一致、動詞時態語態、代名詞指涉、修飾語懸垂、對等平行結構）。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 第一步：抓全句主幹！迅速挑出句子主要主詞 (Subject) 與主要限定動詞 (Finite Verb)，將所有介系詞片語、關係子句、同位語括號隔離。\n2. 第二步：標點邊界三大鐵律（Punctuation Golden Rules）：\n   - 鐵律 A（分號 ;）：兩邊必須均為能獨立成句的獨立子句（Independent Clause; Independent Clause）。分號功能等同句號。\n   - 鐵律 B（逗號加對等連接詞 , FANBOYS）：IC, and/but/so/or IC。絕不能只用逗號連接兩獨立子句（此為 Comma Splice 致命錯誤！）。\n   - 鐵律 C（冒號 : 與破折號 —）：冒號前方必須是語法完整的獨立子句（Complete IC），後方可以接單字、片語或子句，用作同位解釋、列表或結果。\n3. 懸垂修飾 (Dangling Modifiers) 秒殺法：句首分詞片語或介系詞片語（如 Having completed the trials, ...），逗號後面緊接的主詞必須是「完成臨床試驗的那個邏輯主體」（如 the researchers）！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：主謂遠距離阻隔 (Intervening Prepositional Phrases)。主詞與動詞之間夾雜長達 15 字的介系詞修飾，誘騙考生用最靠近動詞的複數名詞來決定動詞單複數。\n• 陷阱 2：雙主詞贅肉 (Redundant Subject)。The scientist who led the expedition she discovered...（scientist 與 she 重複）。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Using laser spectroscopy to analyze ancient terracotta vessels, ______\n選項：(A) significant chemical residues of cacao were detected by the archaeologists.\n(B) the archaeologists detected significant chemical residues of cacao.\n(C) cacao\'s chemical residues were significantly detected.\n(D) detection of chemical residues was achieved by the archaeologists.\n【大師解剖】：句首現在分詞片語 Using laser spectroscopy...，使用儀器的人必須是「考古學家 (the archaeologists)」，因此逗號後第一個字必為 the archaeologists！秒殺 (B)，排除 (A)(C)(D) 懸垂修飾錯誤！',
+            body: '【核心構念 (Construct Essence)】\n考查 100% 客觀的標準書面英文法規，也是 Module 1 與 Module 2 中最具「確定性秒殺」特性的高分題型。核心涵蓋：Boundaries（句界標點）、Form, Structure, and Sense（主謂一致、動詞時態語態、代名詞指涉、修飾語懸垂、對等平行結構）。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 第一步：抓全句主幹！迅速挑出句子主要主詞 (Subject) 與主要限定動詞 (Finite Verb)，將所有介系詞片語、關係子句、同位語括號隔離。\n2. 第二步：標點邊界三大鐵律（Punctuation Golden Rules）：\n   - 鐵律 A（分號 ;）：連接子句時，兩邊須能獨立成句；分號也可分隔含逗號的複雜清單項目，並非所有分號兩側都是子句。\n   - 鐵律 B（逗號加對等連接詞 , FANBOYS）：IC, and/but/so/or IC。絕不能只用逗號連接兩獨立子句（此為 Comma Splice 致命錯誤！）。\n   - 鐵律 C（冒號 : 與破折號 —）：冒號前方必須是語法完整的獨立子句（Complete IC），後方可以接單字、片語或子句，用作同位解釋、列表或結果。\n3. 懸垂修飾 (Dangling Modifiers) 秒殺法：句首分詞片語或介系詞片語（如 Having completed the trials, ...），逗號後面緊接的主詞必須是「完成臨床試驗的那個邏輯主體」（如 the researchers）！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：主謂遠距離阻隔 (Intervening Prepositional Phrases)。主詞與動詞之間夾雜長達 15 字的介系詞修飾，誘騙考生用最靠近動詞的複數名詞來決定動詞單複數。\n• 陷阱 2：雙主詞贅肉 (Redundant Subject)。The scientist who led the expedition she discovered...（scientist 與 she 重複）。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Using laser spectroscopy to analyze ancient terracotta vessels, ______\n選項：(A) significant chemical residues of cacao were detected by the archaeologists.\n(B) the archaeologists detected significant chemical residues of cacao.\n(C) cacao\'s chemical residues were significantly detected.\n(D) detection of chemical residues was achieved by the archaeologists.\n【大師解剖】：句首現在分詞片語 Using laser spectroscopy...，使用儀器的人必須是「考古學家 (the archaeologists)」，因此逗號後第一個字必為 the archaeologists！秒殺 (B)，排除 (A)(C)(D) 懸垂修飾錯誤！',
             tip: '標點題秒殺心法：見到選項包含「分號 (;)」與「句號 (.)」，若兩者周圍詞彙完全相同，則兩者必同時錯誤（因兩者語法功能等價）；直接在逗號與連接詞間定奪！'
           }
         ],
@@ -1184,13 +1184,13 @@ export const curriculum = [
             tip: '雙空題連鎖反應：第二空格通常是第一空格推論成立的邏輯前提，兩空格之間往往互為線索，不可割裂解讀。'
           },
           {
-            heading: '題型二・GRE Text Completion 雙空與三空「確定性錨點」破題矩陣 (Anchor Blank First Matrix)',
-            body: '【核心構念 (Construct Essence)】\n句子等價題要求在 6 個選項中選出恰好 2 個答案，填入後不僅兩者各自語法正確，更必須使全句所表達的「語意與修辭意圖完全等價 (Produce sentences that are alike in meaning)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 步驟 A：先分析題幹邏輯骨架，確定空格的語意方向（正向/負向/特定學術屬性）。\n2. 步驟 B：掃描 6 個選項，進行「同義詞組對 (Twin Synonym Grouping)」；通常 6 個選項會分成兩組同義詞與兩個孤立干擾詞。\n3. 步驟 C：將成對同義詞帶入題幹檢驗，確保填入後的兩句話在學術語意層次上無微小歧異。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：孤立詞語意完美但無孿生詞對。某個選項填入句意極佳，但在其餘 5 個選項中找不到第二個同義詞，此為最致命的誘答陷阱！\n• 陷阱 2：同義但感情色彩或適用語境偏離。例如 superficial (膚淺的) 與 cursory (草率倉促的) 在某些字典列為同義，但在學術批判語境中一者指深度不足，一者指時間匆忙，不可混用。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Because of the team\'s ______ efforts, the historic cathedral was restored to its pristine condition ahead of schedule.\n選項：(A) sporadic (B) relentless (C) perfunctory (D) unflagging (E) tentative (F) futile\n大師解剖：題幹「Because of」表因果，結果是提早恢復原貌，因此努力必須是堅持不懈的。(B) relentless 與 (D) unflagging 構成完美孿生同義詞組，填入後全句語意完全一致！',
+            heading: '題型二・GRE Sentence Equivalence 句子等價與語境配對 (Contextual Equivalence)',
+            body: '【核心構念 (Construct Essence)】\n句子等價題要求在 6 個選項中選出恰好 2 個答案，填入後不僅兩者各自語法正確，更必須使全句所表達的「語意與修辭意圖完全等價 (Produce sentences that are alike in meaning)」。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 步驟 A：先分析題幹邏輯骨架，確定空格的語意方向（正向/負向/特定學術屬性）。\n2. 步驟 B：掃描 6 個選項，進行「同義詞組對 (Twin Synonym Grouping)」；可先找意思接近的選項，但選項沒有固定分組；正解須讓整句意思相近，不要求兩字在所有語境都是同義詞。\n3. 步驟 C：將成對同義詞帶入題幹檢驗，確保填入後的兩句話在學術語意層次上無微小歧異。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：孤立詞語意完美但無孿生詞對。某個選項填入句意極佳，但在其餘 5 個選項中找不到第二個同義詞，此為最致命的誘答陷阱！\n• 陷阱 2：同義但感情色彩或適用語境偏離。例如 superficial (膚淺的) 與 cursory (草率倉促的) 在某些字典列為同義，但在學術批判語境中一者指深度不足，一者指時間匆忙，不可混用。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：Because of the team\'s ______ efforts, the historic cathedral was restored to its pristine condition ahead of schedule.\n選項：(A) sporadic (B) relentless (C) perfunctory (D) unflagging (E) tentative (F) futile\n大師解剖：題幹「Because of」表因果，結果是提早恢復原貌，因此努力必須是堅持不懈的。(B) relentless 與 (D) unflagging 構成完美孿生同義詞組，填入後全句語意完全一致！',
             tip: 'SE 六選二心法：無同義詞組對的選項直接排除；兩詞必須填入後全句語意等價，不可僅憑單字表面近義就草率勾選！'
           },
           {
             heading: '題型三・GRE 學術長篇閱讀「翻案文」結構與作者認知立場 (Revisionist Structure & Epistemic Stance)',
-            body: '【核心構念 (Construct Essence)】\nGRE 閱讀篇章源自權威學術期刊，以「翻案文 (Historiographical Revisionism)」為最具代表性題型。考查學術長篇密集論證、因果機制推導與異常數據反證。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 翻案文經典三部曲：\n   - 第一階段：提出傳統歷史學界或科學界普遍接受的主流舊說 (Traditional Historiographical Consensus)。\n   - 第二階段：引述新出土考古文獻、新計量統計模型或異常實驗數據 (Anomalous Evidence)，挑戰舊說盲區。\n   - 第三階段：作者提出修訂版綜合框架 (Nuanced Synthesis)，非全然推翻，而是界定適用邊界。\n2. 作者認知態度 (Author\'s Epistemic Stance) 判讀：\n   - unqualified endorsement：無保留全力支持（極少出現）。\n   - guarded skepticism：審慎懷疑（最常作為正確答案）。\n   - measured optimism：適度審慎的樂觀。\n   - scathing repudiation：嚴厲斥責抨擊。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：極端化詞彙干擾項。凡出現 completely, infallible, unequivocally, wholly discredited 等極端化詞彙之選項，95% 以上為命題陷阱。\n• 陷阱 2：細節偷換主詞。將學者 A 的主張安插到學者 B 頭上。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n文章首句：「Historians long assumed that urban migration in 19th-century Europe uniformly degraded living standards...」\n第二句：「However, recent parish records examined by Dubois suggest...」\n大師解剖：看到「long assumed」直接預判下文必有「翻案」！作者隨後引述 Dubois 的新資料，態度屬於「qualified revision (有保留的修正)」，主旨題直接鎖定 challenge a prevailing historical assumption！',
+            body: '【核心構念 (Construct Essence)】\nGRE 閱讀涵蓋多種學術主題與篇章結構；以下用「翻案文」作為一種練習範例，不代表所有題目的固定模式。考查學術長篇密集論證、因果機制推導與異常數據反證。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 翻案文經典三部曲：\n   - 第一階段：提出傳統歷史學界或科學界普遍接受的主流舊說 (Traditional Historiographical Consensus)。\n   - 第二階段：引述新出土考古文獻、新計量統計模型或異常實驗數據 (Anomalous Evidence)，挑戰舊說盲區。\n   - 第三階段：作者提出修訂版綜合框架 (Nuanced Synthesis)，非全然推翻，而是界定適用邊界。\n2. 作者認知態度 (Author\'s Epistemic Stance) 判讀：\n   - unqualified endorsement：無保留全力支持（極少出現）。\n   - guarded skepticism：審慎懷疑；是否合適須看作者措辭與證據。\n   - measured optimism：適度審慎的樂觀。\n   - scathing repudiation：嚴厲斥責抨擊。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：極端化詞彙干擾項。出現 completely, infallible 等強烈措辭時，核對原文是否足以支持；不能只因語氣強就排除。\n• 陷阱 2：細節偷換主詞。將學者 A 的主張安插到學者 B 頭上。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n文章首句：「Historians long assumed that urban migration in 19th-century Europe uniformly degraded living standards...」\n第二句：「However, recent parish records examined by Dubois suggest...」\n大師解剖：看到「long assumed」直接預判下文必有「翻案」！作者隨後引述 Dubois 的新資料，態度屬於「qualified revision (有保留的修正)」，主旨題直接鎖定 challenge a prevailing historical assumption！',
             tip: '長篇閱讀定位法：主旨題先抓第一段末句或第二段首句轉折；細節題務必回到原文錨定對應行數，以「同義改寫 (Paraphrase)」為唯一判定標準。'
           },
           {
@@ -1236,17 +1236,17 @@ export const curriculum = [
         concepts: [
           {
             heading: '批判推理 (Critical Reasoning) 核心五大題型模型',
-            body: 'GMAT 批判推理是商學院入學測驗的靈魂，考查嚴密邏輯思維：\n1. 假設題 (Assumption)：找尋作者推導結論時「未言明但必不可少的必要條件」。檢驗法：否定測試法 (Negation Technique)——將選項取非，若結論立刻崩塌，該選項必為正確答案！\n2. 削弱題 (Weaken)：找出一個新資訊，能證明「即使前提成立，結論也未必成立」（常考因果倒置、另有他因、樣本偏差）。\n3. 支持題 (Strengthen)：排除潛在他因、證實無因即無果、強化樣本代表性。\n4. 推論題 (Inference)：100% 依據題幹已知事實推導，嚴禁任何無端腦補。\n5. 評價題 (Evaluate)：找出若回答 Yes 或 No 會分別強烈支持或削弱結論的關鍵變數。',
+            body: 'GMAT 批判推理是商學院入學測驗的靈魂，考查嚴密邏輯思維：\n1. 假設題 (Assumption)：找尋作者推導結論時「未言明但必不可少的必要條件」。檢驗法：否定測試法 (Negation Technique)——否定選項後，檢查前提對結論的必要支持是否斷裂，不需證明結論本身為假。\n2. 削弱題 (Weaken)：找出一個新資訊，能證明「即使前提成立，結論也未必成立」（常考因果倒置、另有他因、樣本偏差）。\n3. 支持題 (Strengthen)：排除潛在他因、證實無因即無果、強化樣本代表性。\n4. 推論題 (Inference)：100% 依據題幹已知事實推導，嚴禁任何無端腦補。\n5. 評價題 (Evaluate)：找出若回答 Yes 或 No 會分別強烈支持或削弱結論的關鍵變數。',
             tip: '現行 GMAT 規則：徹底排除舊版文法改錯 (Sentence Correction)；完成全卷 23 題後，若有剩餘時間，可以檢查本節作答，但至多修改 3 道題答案！'
           },
           {
             heading: '題型一・CR Weaken & Strengthen 因果論證三大致命漏洞與攻防向量 (Causal Argument Vulnerabilities)',
-            body: '【核心構念 (Construct Essence)】\nGMAT CR 80% 以上論證屬於因果推論（Premise: 事件 A 發生，Conclusion: A 導致 B）。商學院評估候選人是否能敏銳識別商業決策中的歸因謬誤。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 區分事實與推論：題幹中給定的 Premise 為不可爭辯的既成事實，絕不可質疑 Premise 本身之真實性，攻擊點永遠在 Premise 到 Conclusion 的推導邏輯漏洞！\n2. 識別三大漏洞：\n   - 另有他因 (Alternative Cause)：忽視可能同時存在的外部變量 C 才是造成 B 的真因。\n   - 因果倒置 (Reverse Causality)：將結果與原因順序搞反。\n   - 樣本選擇偏差 (Selection Bias)：由特殊自願群體推論全體母體。\n3. 削弱與加強的對偶性：\n   - 削弱題：主動引入另有他因、因果倒置可能、或指出樣本偏差。\n   - 加強題：主動排除混淆變量、證實「無 A 則無 B」、或提供平行行業類似操作的成功驗證。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：質疑前提事實。選項若企圖反駁題幹已給出的統計數據，直接排除！\n• 陷阱 2：無關信息混淆。涉及產品外包裝顏色、公司成立歷史等無關商業細節，皆為經典干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：某連鎖超市延長每晚營業時間 2 小時後，該季度銷售額增長了 15%。經理因此宣稱，延長營業時間是銷售增長的原因。問哪項最削弱？\n大師解剖：另有他因攻擊！正確選項：該季度該超市同時啟動了全店 7 折會員促銷活動。這直接說明 15% 的增長極可能是促銷帶來的，而非延長營業時間！',
+            body: '【核心構念 (Construct Essence)】\n因果推論是 GMAT CR 可練習的一類論證（Premise: 事件 A 發生，Conclusion: A 導致 B）。商學院評估候選人是否能敏銳識別商業決策中的歸因謬誤。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n1. 區分事實與推論：題幹中給定的 Premise 為不可爭辯的既成事實，絕不可質疑 Premise 本身之真實性，攻擊點永遠在 Premise 到 Conclusion 的推導邏輯漏洞！\n2. 識別三大漏洞：\n   - 另有他因 (Alternative Cause)：忽視可能同時存在的外部變量 C 才是造成 B 的真因。\n   - 因果倒置 (Reverse Causality)：將結果與原因順序搞反。\n   - 樣本選擇偏差 (Selection Bias)：由特殊自願群體推論全體母體。\n3. 削弱與加強的對偶性：\n   - 削弱題：主動引入另有他因、因果倒置可能、或指出樣本偏差。\n   - 加強題：主動排除混淆變量、證實「無 A 則無 B」、或提供平行行業類似操作的成功驗證。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：質疑前提事實。選項若企圖反駁題幹已給出的統計數據，直接排除！\n• 陷阱 2：無關信息混淆。涉及產品外包裝顏色、公司成立歷史等無關商業細節，皆為經典干擾項。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目：某連鎖超市延長每晚營業時間 2 小時後，該季度銷售額增長了 15%。經理因此宣稱，延長營業時間是銷售增長的原因。問哪項最削弱？\n大師解剖：另有他因攻擊！正確選項：該季度該超市同時啟動了全店 7 折會員促銷活動。促銷提供替代解釋，削弱把增長全歸因於營業時間的推論，但不能據此斷定營業時間完全沒有影響。',
             tip: '因果攻防金律：削弱找「他因/倒置/偏差」；加強找「排他因/無因無果/同因同果」！'
           },
           {
             heading: '題型二・CR Assumption 假設題「否定測試法」決策樹 (Negation Decision Tree)',
-            body: '【核心構念 (Construct Essence)】\n假設（Assumption）是讓論證結論得以成立的「未明言必要條件 (Sine Qua Non)」。沒有這個假設，作者的推理大廈將瞬間坍塌。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n否定測試法 (Negation Technique) 三步 SOP：\n1. 步驟一：選取待測選項，將其動詞取非（將肯定的選項加 NOT，或將含有 NOT 的選項去掉 NOT）。\n2. 步驟二：將取非後的命題帶回原題幹，檢視原論證結論是否受到實質致命衝擊。\n3. 步驟三：若結論因此立即瓦解崩潰（Argument Falls Apart），該選項就是正確答案！\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：充分條件陷阱。假設必須是「必要條件」，不可將題目推向過度嚴苛的充分條件（例如：結論只需降低成本，選項不需保證降低所有產品的成本）。\n• 陷阱 2：極端絕對語氣。帶有 all, completely, impossible 等絕對詞的選項，往往是充分條件而非作者心底默認的底層必要假設。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目結論：透過採用全自動組裝機器人，本工廠將能降低每台汽車的生產總成本。\n假設檢驗：\n選項：機器人的維護與折舊成本不會超過節省下來的人工工資。\n取非測試：若機器人的維護折舊成本「超過」節省下來的人工工資，則生產總成本不僅不會降低，反而會上升！結論徹底瓦解！取非即死，驗證此選項必為正確假設！',
+            body: '【核心構念 (Construct Essence)】\n假設（Assumption）是讓論證結論得以成立的「未明言必要條件 (Sine Qua Non)」。沒有這個假設，作者的推理大廈將瞬間坍塌。\n\n【步驟 0 破題思維 (Step 0 Mindset)】\n否定測試法 (Negation Technique) 三步 SOP：\n1. 步驟一：選取待測選項，否定整個命題而不改變範圍（all 的否定是 not all；some 的否定是 none），不能只機械增刪 NOT。\n2. 步驟二：將取非後的命題帶回原題幹，檢視原論證結論是否受到實質致命衝擊。\n3. 步驟三：若否定後，前提對結論的必要支持連結斷裂，該選項符合必要假設；不需要證明結論本身為假。\n\n【致命陷阱診斷 (Traps Diagnosis)】\n• 陷阱 1：充分條件陷阱。假設必須是「必要條件」，不可將題目推向過度嚴苛的充分條件（例如：結論只需降低成本，選項不需保證降低所有產品的成本）。\n• 陷阱 2：極端絕對語氣。遇到 all, completely, impossible 等詞須檢查範圍，但不可只靠語氣排除；必要性取決於該題的論證。\n\n【大師經典示範題精析 (Master Worked Demonstration)】\n題目條件：每台車的其他成本不變，機器人的新增成本只有維護與折舊。結論：節省人工後，每台車的生產總成本會下降。\n假設檢驗：\n選項：每台車分攤的機器人維護與折舊成本小於節省的人工工資。\n取非測試：若每台車新增成本「大於或等於」省下的工資，在其他成本不變的條件下，總成本就不會下降。注意「小於」的否定包含相等；缺少其他成本不變的條件時，不能只靠這一項保證總成本方向。',
             tip: '否定測試口訣：「取非即死」——選項取反若能一劍封喉擊潰作者結論，該選項必為作者心底默認的底層假設！'
           },
           {

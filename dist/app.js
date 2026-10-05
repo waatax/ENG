@@ -22,7 +22,7 @@ if (typeof window !== 'undefined') {
 import { initialState, createAttempt, recordResponse, finishAttempt, resultOf, remainingSeconds } from './core.mjs';
 import { speak, playWord, playSentence, playSequence, stopAudio, isAudioActive } from './audio.mjs';
 
-import { UNIFIED_GRADES, EXPERT_COUNCIL } from './curriculum_unified.mjs';
+import { UNIFIED_GRADES } from './curriculum_unified.mjs';
 import { sixthLessons, sixthNotes, sixthQuestions, sixthAudioData } from './sixth_assets.mjs';
 import { jhUnits, jhCases, jhHandouts, jhCapAnalysis } from './jh_assets.mjs';
 import { 
@@ -92,6 +92,7 @@ let userQuizChoices = {}; // unitId: selectedOptIndex
 let quizCategory = 'all';
 let quizSubtopic = 'all';
 let quizQuestionCount = 20;
+let quizNotice = '';
 let currentQuizQuestions = [];
 let currentQuizIdx = 0;
 let userQuizAnswers = {};
@@ -127,6 +128,434 @@ function navigate(p) {
   selected = null;
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 輔助教學圖表與對照表組件 (Visual Diagrams & Reference Tables)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// 1. 108 課綱三大學習階段里程碑與素養進階全景圖 (SVG Diagram)
+function render108ProgressionDiagram() {
+  return `
+    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:20px 0;border-radius:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🏫 108 課綱英語文三大學習階段里程碑與素養進階全景圖</strong>
+        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">學段無縫銜接</span>
+      </div>
+      <svg viewBox="0 0 760 130" style="width:100%;height:auto;display:block" aria-label="108課綱三大學習階段里程碑進階圖">
+        <defs>
+          <linearGradient id="g6Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#16a34a" />
+            <stop offset="100%" stop-color="#15803d" />
+          </linearGradient>
+          <linearGradient id="jhGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0284c7" />
+            <stop offset="100%" stop-color="#0369a1" />
+          </linearGradient>
+          <linearGradient id="shGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7c3aed" />
+            <stop offset="100%" stop-color="#6d28d9" />
+          </linearGradient>
+        </defs>
+
+        <!-- 第三學習階段 (國小 6年級) -->
+        <rect x="10" y="15" width="225" height="95" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="2" />
+        <rect x="20" y="24" width="105" height="20" rx="4" fill="url(#g6Grad)" />
+        <text x="72" y="38" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">第三學習階段 · G6</text>
+        <text x="22" y="62" fill="#14532d" font-size="13" font-weight="700">🎒 基礎奠基與生活會話</text>
+        <text x="22" y="80" fill="#166534" font-size="10.5">字母發音 · be動詞 · 現在簡單式</text>
+        <text x="22" y="96" fill="#64748b" font-size="9.5">CEFR Pre-A1~A1 ｜ 核心 300-1,000 字</text>
+
+        <!-- 箭頭 1->2 -->
+        <polygon points="242,57 252,62 242,67" fill="#94a3b8" />
+
+        <!-- 第四學習階段 (國中 7-9年級) -->
+        <rect x="258" y="15" width="235" height="95" rx="8" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+        <rect x="268" y="24" width="115" height="20" rx="4" fill="url(#jhGrad)" />
+        <text x="325" y="38" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">第四學習階段 · G7-G9</text>
+        <text x="270" y="62" fill="#0369a1" font-size="13" font-weight="700">🏫 語法結構與會考衝刺</text>
+        <text x="270" y="80" fill="#0284c7" font-size="10.5">四大時態 · 五大句型 · 從屬子句</text>
+        <text x="270" y="96" fill="#64748b" font-size="9.5">CEFR A1~B1 ｜ 核心 1,200-2,000 字 ｜ 會考 A++</text>
+
+        <!-- 箭頭 2->3 -->
+        <polygon points="500,57 510,62 500,67" fill="#94a3b8" />
+
+        <!-- 第五學習階段 (高中 10-12年級) -->
+        <rect x="516" y="15" width="235" height="95" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2" />
+        <rect x="526" y="24" width="125" height="20" rx="4" fill="url(#shGrad)" />
+        <text x="588" y="38" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">第五學習階段 · G10-G12</text>
+        <text x="528" y="62" fill="#5b21b6" font-size="13" font-weight="700">🎓 長難句拆解與學術批判</text>
+        <text x="528" y="80" fill="#6d28d9" font-size="10.5">分詞構句 · 倒裝句 · 多文本閱讀</text>
+        <text x="528" y="96" fill="#64748b" font-size="9.5">CEFR B1~C1 ｜ 核心 4,500-7,000 字 ｜ 學測頂標</text>
+      </svg>
+    </div>
+  `;
+}
+
+// 2. 108 課綱各學年英語學習指標與升學考試對照總表
+function render108GradesTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="108 課綱各學年英語學習指標與升學考試對照總表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">📊 108 課綱各學年英語學習指標與升學考試對照總表</strong>
+        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">G6–G12 全景圖</span>
+      </div>
+      <table>
+        <caption>教育部 108 課綱英語各年級學習重點、單字量規準與大考升學對標</caption>
+        <thead>
+          <tr>
+            <th scope="col">學段與年級</th>
+            <th scope="col">CEFR 階梯</th>
+            <th scope="col">核心句型與語法焦點</th>
+            <th scope="col">單字量規準</th>
+            <th scope="col">升學與評量對標</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">國小六年級 (G6)</th>
+            <td>Pre-A1 ~ A1</td>
+            <td>人稱代名詞、be 動詞、現在簡單式三單、時間介系詞、問路情境</td>
+            <td>300 – 1,000 字</td>
+            <td>小升初能力檢測、國中先修銜接</td>
+          </tr>
+          <tr>
+            <th scope="row">國中七年級 (G7)</th>
+            <td>A1 ~ A2</td>
+            <td>基本句型骨架、指示代名詞、現在進行式、頻率副詞、There is/are 存在句</td>
+            <td>1,200 基礎字</td>
+            <td>國中第一次段考奠基</td>
+          </tr>
+          <tr>
+            <th scope="row">國中八年級 (G8)</th>
+            <td>A2 ~ A2+</td>
+            <td>過去簡單式、未來式 (will/be going to)、形容詞比較級/最高級、動名詞與不定詞</td>
+            <td>1,200 – 1,500 字</td>
+            <td>國中二段考與模擬考進階</td>
+          </tr>
+          <tr>
+            <th scope="row">國中九年級 (G9)</th>
+            <td>A2+ ~ B1</td>
+            <td>現在完成式、被動語態、形容詞子句 (關係代名詞)、副詞子句 (because/although)、附加問句</td>
+            <td>1,500 – 2,000 字</td>
+            <td>國中教育會考 (CAP) 英語 A++ 決勝</td>
+          </tr>
+          <tr>
+            <th scope="row">高中十年級 (G10)</th>
+            <td>B1 ~ B1+</td>
+            <td>五大基本句型深究、名詞子句、限定與非限定關係子句、篇章轉折連接詞</td>
+            <td>4,000 核心字</td>
+            <td>高中段考、全民英檢中級初試</td>
+          </tr>
+          <tr>
+            <th scope="row">高中十一年級 (G11)</th>
+            <td>B1+ ~ B2</td>
+            <td>分詞構句、假設語氣 (與現在/過去事實相反)、否定副詞倒裝、So/Such倒裝、ESP專業閱讀</td>
+            <td>5,500 進階字</td>
+            <td>學測模考前哨戰、TOEIC 750+</td>
+          </tr>
+          <tr>
+            <th scope="row">高三十二年級 (G12)</th>
+            <td>B2 ~ C1</td>
+            <td>學測文意選填極速破題、多文本綜合閱讀、雙面論證英文寫作、國際檢定實戰</td>
+            <td>7,000 高標字</td>
+            <td>大學學測 (GSAT) 15級分頂標、統測、TOEIC 900+、SAT/GRE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// 3. 小升初 6 大核心時態與基礎語法銜接總覽表
+function renderSixthBridgeTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="小升初 6 大核心時態與基礎語法銜接總覽表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🎒 小升初 (國小銜接國中) 6 大核心時態與基礎語法銜接總覽表</strong>
+        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">國一免恐慌</span>
+      </div>
+      <table>
+        <caption>國小升國中必備 6 大核心時態、句型公式與避雷指南</caption>
+        <thead>
+          <tr>
+            <th scope="col">語法項目</th>
+            <th scope="col">結構公式</th>
+            <th scope="col">肯定句範例</th>
+            <th scope="col">疑問句與否定句</th>
+            <th scope="col">升國中關鍵題眼與易錯防呆</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1. be 動詞現在式</th>
+            <td>S + am / is / are + SC</td>
+            <td>She is a diligent student.</td>
+            <td>Is she a student? / She is not a student.</td>
+            <td>主格單複數配合：I am, You are, He/She/It is, We/They are</td>
+          </tr>
+          <tr>
+            <th scope="row">2. 現在簡單式 (三單)</th>
+            <td>S + V(s/es)</td>
+            <td>He plays basketball every day.</td>
+            <td>Does he play? / He does not play.</td>
+            <td>遇到 does/do 提問或否定，後方主動詞一律打回原形動詞！</td>
+          </tr>
+          <tr>
+            <th scope="row">3. 現在進行式</th>
+            <td>S + am/is/are + V-ing</td>
+            <td>They are reading books now.</td>
+            <td>Are they reading? / They aren't reading.</td>
+            <td>缺一不可！不能寫 *They reading 或 *They are read</td>
+          </tr>
+          <tr>
+            <th scope="row">4. 過去簡單式</th>
+            <td>S + V-ed (或不規則)</td>
+            <td>I visited Grandma yesterday.</td>
+            <td>Did you visit? / I didn't visit.</td>
+            <td>did 已經交代過去時間，後面動詞恢復原形！不規則動詞如 go➔went</td>
+          </tr>
+          <tr>
+            <th scope="row">5. 未來式表達</th>
+            <td>will + 原形 / be going to + 原形</td>
+            <td>We will travel to Tainan next week.</td>
+            <td>Will you travel? / We won't travel.</td>
+            <td>will 後接原形；be going to 的 be 需隨主詞變化 (am/is/are)</td>
+          </tr>
+          <tr>
+            <th scope="row">6. 情態助動詞</th>
+            <td>S + can / may / must / should + 原形</td>
+            <td>You must finish your homework.</td>
+            <td>Can you swim? / You must not run.</td>
+            <td>情態助動詞無人稱單複數變化，後方動詞絕對使用「原形動詞」</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// 4. 國中教育會考英語科 A++ 滿分考點雙向細目總覽表
+function renderJhCapMasteryTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="國中教育會考英語科 A++ 滿分考點雙向細目總覽表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">👑 國中教育會考 (CAP) 英語科 A++ 滿分考點雙向細目總覽表</strong>
+        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">會考頂標秘笈</span>
+      </div>
+      <table>
+        <caption>心測中心教育會考題型分佈、素養考察方向與秒殺破題心訣</caption>
+        <thead>
+          <tr>
+            <th scope="col">考點板塊</th>
+            <th scope="col">題數佔比</th>
+            <th scope="col">核心語法與考察能力</th>
+            <th scope="col">典型命題題型</th>
+            <th scope="col">考場秒殺技巧與避坑指南</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">單選基礎語法 (1-15題)</th>
+            <td>約 35% (15 題)</td>
+            <td>時態判定、授與動詞、感官動詞、代名詞格位、反身代名詞、名詞子句</td>
+            <td>單句填空、時態配對</td>
+            <td>先圈時間副詞與主詞單複數；30 秒內秒殺，為後續閱讀爭取時間</td>
+          </tr>
+          <tr>
+            <th scope="row">生活情境圖表題組</th>
+            <td>約 20% (8-10 題)</td>
+            <td>非連續性文本轉譯：火車時刻表、展覽地圖、餐廳帳單折價券、氣象圖</td>
+            <td>資訊查找、條件篩選</td>
+            <td>先讀題目要問的人與條件，再回圖表精準定位，不需通讀所有無關文字</td>
+          </tr>
+          <tr>
+            <th scope="row">克漏字篇章題組</th>
+            <td>約 15% (6-8 題)</td>
+            <td>篇章邏輯連貫性、轉折副詞 (However/Besides)、時態推進、關係代名詞</td>
+            <td>故事敘事、科普說明</td>
+            <td>讀空格前後各一句，確認上下文因果或轉折關係；切忌單看空格孤立判斷</td>
+          </tr>
+          <tr>
+            <th scope="row">長篇閱讀測驗題組</th>
+            <td>約 30% (12-14 題)</td>
+            <td>跨學科議題、文化習俗、寓言哲理、作者寫作目的與細節推論</td>
+            <td>主旨大意、推論題、代名詞指涉</td>
+            <td>嚴防「常識腦補」非文本內容！正解必定能在文章中找到同義替換 (Paraphrase) 證據</td>
+          </tr>
+          <tr>
+            <th scope="row">聽力測驗 (21 題)</th>
+            <td>單獨評量 (21 題)</td>
+            <td>辨識句意 (單句圖片)、基本問答 (生活情境反饋)、言談理解 (長對話/廣播)</td>
+            <td>聽力三部曲</td>
+            <td>播放前利用間隙先掃視題目選項；留意連音、弱讀與說話者語調 (升降調暗示意圖)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// 5. 高中先修 5 大核心矩陣速查表
+function renderArchPrerequisiteTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="高中先修 5 大核心矩陣速查表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🏛️ 高中先修 5 大核心矩陣速查表 (High School Prerequisite Matrix)</strong>
+        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">銜接高中學測頂標</span>
+      </div>
+      <table>
+        <caption>高中先修核心模組、學測指標與自主檢核規準</caption>
+        <thead>
+          <tr>
+            <th scope="col">先修模組</th>
+            <th scope="col">核心句型與規則</th>
+            <th scope="col">高中課堂與大考要求</th>
+            <th scope="col">自學檢核規準 (自我檢視)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1. 時態與被動語態</th>
+            <td>五大時態矩陣 + be p.p. 被動變身法則</td>
+            <td>熟練現在完成進行式、過去完成式與情態被動語態在論文中的應用</td>
+            <td>能否在 5 秒內判斷動詞時態與主被動語態？</td>
+          </tr>
+          <tr>
+            <th scope="row">2. 複合句與連接詞</th>
+            <td>等立連接詞 (FANBOYS) vs 從屬副詞子句 (because/although/if)</td>
+            <td>杜絕中文「因為…所以…」雙重連接病句，精準掌握標點符號與子句結構</td>
+            <td>能否正確書寫帶逗號的複雜主從複合句？</td>
+          </tr>
+          <tr>
+            <th scope="row">3. 八大詞性與詞綴</th>
+            <td>詞綴 (un-, dis-, -tion, -ment, -ful, -ize) 衍生詞族轉換</td>
+            <td>高中單字倍增必備！看到生詞能依據字首字根字尾推測詞性與詞義</td>
+            <td>能否將一個基底詞衍生出名詞、形容詞與副詞？</td>
+          </tr>
+          <tr>
+            <th scope="row">4. 音標與發音規律</th>
+            <td>44 個 KK 音標發音、母音長短音、雙音節/多音節重音規則</td>
+            <td>見字直讀、聽音拼寫，擺脫逐字母死背；口語朗讀具備適當節奏與語調</td>
+            <td>能否依據音標正確發出重音節並查閱字典？</td>
+          </tr>
+          <tr>
+            <th scope="row">5. 核心詞彙網絡</th>
+            <td>高中必背動詞搭配詞 (Collocations) 與專屬介系詞綁定</td>
+            <td>學測綜合測驗克漏字得分關鍵！背單字需打包「動詞 + 名詞 + 介系詞」</td>
+            <td>能否流暢使用 make an effort, pay attention to 等搭配？</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// 6. 大考題目三層排雷與秒殺思維流程圖
+function renderExamSolvingFlowchartDiagram() {
+  return `
+    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:20px 0;border-radius:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🎯 大考實戰解題「三層排雷」黃金思維流程圖</strong>
+        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">答題命中率提升 40%</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px">
+        <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px">
+          <div style="font-weight:700;color:#1e40af;font-size:13px;margin-bottom:6px">【第 1 層：圈出題眼】</div>
+          <div style="font-size:12px;color:#334155;line-height:1.5">
+            先看空格前後詞、時間副詞 (yesterday, since)、主詞單複數或連接詞，3 秒內鎖定命題考點！
+          </div>
+        </div>
+        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px">
+          <div style="font-weight:700;color:#92400e;font-size:13px;margin-bottom:6px">【第 2 層：排除干擾】</div>
+          <div style="font-size:12px;color:#334155;line-height:1.5">
+            運用語法排雷法：剔除主謂不一致項、時態錯配項、無被動標記項，快速將四選一縮減至二選一。
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px">
+          <div style="font-weight:700;color:#166534;font-size:13px;margin-bottom:6px">【第 3 層：語境驗證】</div>
+          <div style="font-size:12px;color:#334155;line-height:1.5">
+            將選定答案代回原句通讀一遍，確認句意邏輯是否通暢、搭配詞是否自然，完成雙重驗收！
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// 7. 七大考制題型難度、命題核心與解題破局策略全景對照表
+function renderExamTracksComparisonTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="七大考制題型難度、命題核心與解題破局策略全景對照表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">📊 七大考制題型難度、命題核心與解題破局策略全景對照表</strong>
+        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">考科全景速覽</span>
+      </div>
+      <table>
+        <caption>國際考制與國家大考核心結構、考察能力與答題致勝關鍵</caption>
+        <thead>
+          <tr>
+            <th scope="col">考科考制</th>
+            <th scope="col">適用對象與目標</th>
+            <th scope="col">核心題型架構</th>
+            <th scope="col">命題思維與能力考察</th>
+            <th scope="col">破局思維與答題策略</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">國中會考 (CAP)</th>
+            <td>國三畢業生 · 升高中職</td>
+            <td>單選語法 (15題) + 題組閱讀 (28題) + 聽力 (21題)</td>
+            <td>1,200 基礎文法時態、生活情境非連續圖表</td>
+            <td>文法題 30 秒秒殺；圖表題先看題幹關鍵字再回文定位</td>
+          </tr>
+          <tr>
+            <th scope="row">高中學測 (GSAT)</th>
+            <td>高三畢業生 · 大學多元入學</td>
+            <td>詞彙題 + 綜合測驗 + 文意選填 + 篇章結構 + 閱讀 + 混合題 + 作文</td>
+            <td>高中 4,500-7,000 單字精準搭配、篇章組織邏輯、跨文本論證</td>
+            <td>掌握「先判斷詞性再選填」；篇章結構緊抓段首代名詞與 However 等轉折詞</td>
+          </tr>
+          <tr>
+            <th scope="row">技專統測 (TVE)</th>
+            <td>技術型高三生 · 科技大學</td>
+            <td>共同科目英文 + 專業科目(二) 英文閱讀與寫作</td>
+            <td>職場商務英文、圖表說明書、工程安全規範、中翻英</td>
+            <td>熟記技術規格詞彙與商務書信固定格式；翻譯力求主謂緊鄰無錯拼</td>
+          </tr>
+          <tr>
+            <th scope="row">多益測驗 (TOEIC)</th>
+            <td>大學畢業門檻 · 跨國職場晉升</td>
+            <td>Part 5 單句填空 + Part 6 段落填空 + Part 7 雙篇/三篇長文閱讀</td>
+            <td>高頻商務情境 (合約、會議、物流、差旅)、極速閱讀反應</td>
+            <td>Part 5 看到空格前後 3 秒判斷詞性；Part 7 注意交叉對照兩篇信件日期與附款</td>
+          </tr>
+          <tr>
+            <th scope="row">Digital SAT</th>
+            <td>美加名校大學申請</td>
+            <td>Module 1/2 自適應：Craft & Structure, Info & Ideas, Standard English</td>
+            <td>高級學術詞彙語境義、短篇論證假設、修辭綜合題</td>
+            <td>文法題遵循最簡原則 (Economy of Expression)；修辭題嚴格對應題目明確目標</td>
+          </tr>
+          <tr>
+            <th scope="row">GRE Verbal</th>
+            <td>全球頂尖研究所碩博士</td>
+            <td>Text Completion (單雙三空) + Sentence Equivalence (雙選等價) + RC</td>
+            <td>極高階學術詞彙、語意正反極性判斷、邏輯矛盾與讓步</td>
+            <td>等價題先找「孿生同義詞組」；填空題根據轉折詞 (despite, whereas) 鎖定正負極性</td>
+          </tr>
+          <tr>
+            <th scope="row">GMAT Focus</th>
+            <td>全球頂級商學院 MBA/MS</td>
+            <td>Critical Reasoning (削弱/加強/假設/黑體字) + RC 商業長文</td>
+            <td>商業決策邏輯、因果推論破綻、隱含未言假設、利益關係分析</td>
+            <td>假設題必用「否定測試法」；警惕偷換概念與因果倒置等經典邏輯謬誤</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
 }
 
 function renderStageQuickNav() {
@@ -176,12 +605,12 @@ function renderEnglishLevelTestTopBanner(currentPage) {
       <div style="display:flex;align-items:center;gap:12px;font-size:14px;flex:1;min-width:260px">
         <span style="font-size:22px;line-height:1">🎯</span>
         <div>
-          <strong style="color:#7dd3fc;font-size:15px">【英文程度測試】全階程度自適應檢核：</strong>
-          <span style="color:#e2e8f0;font-size:13px">學習前建議先測出英語能力落點 (小學 Pre-A1 ➔ 會考 ➔ 學測 ➔ TOEIC ➔ GRE/GMAT)！</span>
+          <strong style="color:#7dd3fc;font-size:15px">【英語練習檢核】跨主題作答回顧：</strong>
+          <span style="color:#e2e8f0;font-size:13px">從基礎句型到進階閱讀抽題練習，作答後依錯題選擇複習單元。</span>
         </div>
       </div>
       <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-weight:700;font-size:13px;padding:8px 18px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.25);display:inline-flex;align-items:center;gap:6px">
-        <span>立即測驗</span>
+        <span>開始練習</span>
         <span>→</span>
       </button>
     </div>
@@ -204,7 +633,7 @@ function renderMobileBottomNav(currentPage) {
         <span class="mobile-nav-icon">🧩</span>
         <span class="mobile-nav-label">知識點</span>
       </button>
-      <button class="mobile-nav-btn ${isDiag ? 'active' : ''}" data-nav="diagnostic" aria-label="前往程度落點測試">
+      <button class="mobile-nav-btn ${isDiag ? 'active' : ''}" data-nav="diagnostic" aria-label="前往英語練習檢核">
         <span class="mobile-nav-icon">🎯</span>
         <span class="mobile-nav-label">測驗</span>
       </button>
@@ -222,7 +651,7 @@ function renderMobileBottomNav(currentPage) {
 
 function shell(body) {
   const nav = [
-    ['diagnostic', '00', '🎯 英文程度測試'],
+    ['diagnostic', '00', '🎯 英語練習檢核'],
     ['listening', '🎧', '通勤聽課'],
     ['grammar', '🧩', '圖解文法專區'],
     ['knowledge', '01', '知識點教室'],
@@ -289,7 +718,7 @@ function shell(body) {
           </div>
         </div>
 
-        <details class="site-menu" open><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
+        <details class="site-menu" ${typeof window !== 'undefined' && window.innerWidth <= 768 ? '' : 'open'}><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
           ${nav.map(([id, num, label], idx) => {
             let header = '';
             if (idx === 0) header = '<div class="nav-group-header">🌟 程度檢定與引導</div>';
@@ -310,8 +739,8 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
-        ${['knowledge', 'curriculum108'].includes(page) ? renderFlashcardQuickPlay() : ''}
-        ${renderEnglishLevelTestTopBanner(page)}
+        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options"><summary>單字複習 · 選擇字卡與自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
+        ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' ? '' : renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
@@ -336,7 +765,7 @@ function curriculum108Page() {
       <h1 style="margin:8px 0">教育部 108 課綱英語文全學年課程地圖 (雙倍優質內容版)</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         完整橫跨國小第三階段 (6上/6下)、國中第四階段 (7上至9下會考)、高中第五階段 (10上至12下學測/統測/國際認證)。
-        由 7 位跨領域專家團隊指導，每個單元均配備：概念公式、音標單字、情境雙語會話、多模態跨領域閱讀、步驟0破題思維、雙階鷹架提示檢測、42項致命陷阱避雷雷達與考前自主檢核清單！
+        依年級與主題整理概念、例句、閱讀與練習；請從目前需要複習的單元開始，作答後依解析訂正。
       </p>
     </div>
 
@@ -344,10 +773,10 @@ function curriculum108Page() {
     <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);color:#fff;border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.2);box-shadow:0 10px 25px -5px rgba(49,46,129,0.4)">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
         <div style="max-width:700px">
-          <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700;font-size:12px;margin-bottom:8px">🎯 專家委員會 7 次迭代全階檢測</span>
-          <h2 style="margin:8px 0 10px;font-size:22px;color:#fff">30 題全階英語能力練習檢核測驗 (小學 Pre-A1 貫通至 GRE/GMAT C2+)</h2>
+          <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700;font-size:12px;margin-bottom:8px">🎯 跨主題練習檢核</span>
+          <h2 style="margin:8px 0 10px;font-size:22px;color:#fff">30 題英語練習檢核（基礎語法至進階閱讀題型）</h2>
           <p style="color:#c7d2fe;margin:0 0 16px;font-size:14px;line-height:1.6">
-            只需 20 分鐘，快速測定您的真實英語段位！涵蓋字彙、句法、篇章與批判邏輯五大維度。公布成績後提供<strong>每題名師五星級專業詳解</strong>與個人化微課補強清單。
+            用約 25 分鐘練習不同主題；作答後查看逐題解析與複習建議。結果是本站練習回饋，不換算正式考試分數。
           </p>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn" data-nav="diagnostic" style="background:#38bdf8;color:#0f172a;font-weight:700;padding:10px 24px;border:none;border-radius:8px;box-shadow:0 4px 12px rgba(56,189,248,0.3)">
@@ -369,10 +798,10 @@ function curriculum108Page() {
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:22px">📋</span>
           <strong style="font-size:16px;color:#166534">108 課綱與 CEFR 評量指引總體檢核矩陣</strong>
-          <span class="chip" style="background:#bbf7d0;color:#14532d;font-weight:700">100% 覆蓋對標</span>
+          <span class="chip" style="background:#bbf7d0;color:#14532d;font-weight:700">主題對照索引</span>
         </div>
         <p style="margin:4px 0 0;font-size:13.5px;color:#15803d;line-height:1.5">
-          組織全站 61 個學年單元與 27 個大考章節，完整對標學習表現指標（聽說讀寫綜）、三面九項素養與官方雙向細目。
+          彙整全站 61 個學年單元與 27 個考試主題章節，供選課與自我檢核參考；對照標籤仍需逐項核實。
         </p>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -421,7 +850,10 @@ function curriculum108Page() {
       </div>
     </div>
 
-    <aside class="card"><h2>如何使用這份教材</h2><p>先閱讀概念與例句，再獨立作答，依解析訂正。課綱標籤是編排參考，尚需逐項核對；教材數量與點擊次數不代表能力精熟。</p><p>本站提供自學練習與初步程度預測；預估落點供備考參考，不是正式 CEFR 認證。</p></aside>
+    ${render108ProgressionDiagram()}
+    ${render108GradesTable()}
+
+    <aside class="card"><h2>如何使用這份教材</h2><p>先閱讀概念與例句，再獨立作答，依解析訂正。課綱標籤是編排參考，尚需逐項核對；教材數量與點擊次數不代表能力精熟。</p><p>本站的測驗僅提供練習回饋，不換算 CEFR 或正式考試分數。</p></aside>
     <!-- 🎒 國小英文 · 🏫 國中英文 · 🎓 高中英文 三大學段核心直達標籤卡 -->
     <div style="margin:24px 0 16px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
@@ -889,6 +1321,7 @@ function sixthPage() {
     <div class="layout" style="display:grid;grid-template-columns:2fr 1fr;gap:24px">
       <div>
         ${renderTeachingAid(lesson.title, lesson.concepts || [])}
+        ${renderSixthBridgeTable()}
         <!-- 單元講義卡片 -->
         <div class="card" style="margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1035,7 +1468,7 @@ function jhPage() {
       <div class="pill">🎓 JH 專案完整移植</div>
       <h1 style="margin:8px 0">國中 7–9 年級 108 課綱英語教育與會考題庫</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        完整移植自 JH 國中教育專案！涵蓋 16 大課綱核心單元、16 個語言生活溝通案例、109–115 歷屆會考英聽與閱讀大數據考點解析與 16 份主題大會考手冊。
+        涵蓋 16 個國中主題單元、生活溝通案例、英語聽讀練習與考前複習資料。歷屆試題請以正式考試機構公布版本為準。
       </p>
     </div>
 
@@ -1048,6 +1481,7 @@ function jhPage() {
     </div>
 
     ${activeJhTab === 'units' ? `
+      ${renderJhCapMasteryTable()}
       <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:16px">
         ${jhUnits.map(u => `
           <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
@@ -1160,6 +1594,7 @@ function archPage() {
     </div>
 
     ${renderTeachingAid(modules.find(m=>m.id===activeArchModule)?.title || '高中複習')}
+    ${renderArchPrerequisiteTable()}
     ${activeArchModule === 'basic-tenses-passive' ? `
       <div class="card" style="margin-bottom:20px">
         <h2 style="margin:0 0 12px">五大核心時態與被動語態矩陣</h2>
@@ -1331,10 +1766,10 @@ function handoutsPage() {
 
   return `
     <div class="header-block print-hide">
-      <div class="pill">🖨️ A4 官方講義下載與列印中心</div>
+      <div class="pill">🖨️ A4 自學講義列印中心</div>
       <h1 style="margin:8px 0">108 課綱各學期考前 10 分鐘精華複習講義 (全 14 學期)</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        針對段考、教育會考、統測與學測量身打造。包含官方講義標頭、名師速記公式、考前 10 分鐘必備檢核清單與避雷指南，符合標準 A4 輸出規範。
+        依段考、教育會考、統測與學測方向整理的自學複習資料，提供概念速記、檢核清單與訂正提示，可用 A4 紙張列印。
       </p>
     </div>
 
@@ -1355,7 +1790,7 @@ function handoutsPage() {
       <!-- 官方講義專屬抬頭 -->
       <div style="border-bottom:2px solid #091e32;padding-bottom:14px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:flex-end">
         <div>
-          <div style="font-size:12px;font-weight:700;color:#64748b;letter-spacing:1px;text-transform:uppercase">108 課綱英語文官方素養複習手冊 · 自主精熟學習全深度對標</div>
+          <div style="font-size:12px;font-weight:700;color:#64748b;letter-spacing:1px;text-transform:uppercase">English Quest 英語文自學複習手冊 · 原創整理</div>
           <h2 style="margin:6px 0 0;font-size:22px;color:#091e32">${currentTermObj.title}</h2>
         </div>
         <div style="text-align:right;font-size:12px;color:#475569">
@@ -1494,12 +1929,12 @@ function examPage() {
   if (quizLoading) {
     return `
       <div class="header-block">
-        <div class="pill">📑 國際檢定與國家大考全真模擬題庫</div>
-        <h1 style="margin:8px 0">20,000 題全考制題庫測驗中心</h1>
+        <div class="pill">📑 考試方向練習題庫</div>
+        <h1 style="margin:8px 0">分科題庫練習中心</h1>
       </div>
       <div class="card" style="text-align:center;padding:60px 24px;margin-top:20px">
         <div style="font-size:42px;animation:spin 1s linear infinite">⏳</div>
-        <h2 style="margin:16px 0 8px">正在從 20,000 題題庫載入試題...</h2>
+        <h2 style="margin:16px 0 8px">正在準備本回合題目…</h2>
         <p style="color:var(--text-muted)">正在準備練習題目…</p>
       </div>
     `;
@@ -1510,6 +1945,7 @@ function examPage() {
     const totalQ = currentQuizQuestions.length;
     const answeredCount = Object.keys(userQuizAnswers).length;
     const userChoice = userQuizAnswers[q.id];
+    const isAnswered = userChoice !== undefined;
     const isMultiSelect = q.selectCount === 2 || Array.isArray(q.answer) || q.questionType === 'sentence_equivalence';
     const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
     const isCorrect = isAnswered && (
@@ -1532,6 +1968,7 @@ function examPage() {
           <button class="btn" data-exit-quiz="true" style="padding:6px 14px">✕ 結束並返回題庫</button>
         </div>
       </div>
+      ${quizNotice ? `<p class="quiz-notice" role="status">${esc(quizNotice)}</p>` : ''}
 
       <div style="width:100%;height:6px;background:var(--line);border-radius:3px;margin:16px 0;overflow:hidden">
         <div style="width:${((currentQuizIdx + 1) / totalQ) * 100}%;height:100%;background:var(--green-core);transition:width 0.3s ease"></div>
@@ -1544,7 +1981,7 @@ function examPage() {
             🎯 ${esc(q.subtopic || '綜合考點')}
           </span>
           <span style="font-size:12px;color:#d97706;background:#fef3c7;padding:3px 8px;border-radius:6px">
-            IRT 難度: ⭐ ${q.difficulty}/5
+            題庫標示難度: ⭐ ${q.difficulty}/5
           </span>
         </div>
 
@@ -1591,7 +2028,7 @@ function examPage() {
                 const userSelected = Array.isArray(userChoice) && userChoice.includes(oIdx);
                 if (isCorrectOpt && userSelected) {
                   optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
-                  icon = ' ✅ 官方正確雙選';
+                  icon = ' ✅ 正確雙選';
                 } else if (isCorrectOpt && !userSelected) {
                   optStyle = 'background:#f0fdf4;border:2px dashed #10b981;color:#065f46;font-weight:600;';
                   icon = ' 💡 正確雙選 (遺漏)';
@@ -1663,7 +2100,7 @@ function examPage() {
             💡 ${showHint ? '隱藏破題線索' : '查看思考引導提示'}
           </button>
           <button class="btn secondary" data-toggle-quiz-explain="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
-            📖 ${showExplain ? '隱藏完整考點剖析' : '展開專家教學詳解'}
+            📖 ${showExplain ? '隱藏考點解析' : '展開考點解析'}
           </button>
         </div>
 
@@ -1675,7 +2112,7 @@ function examPage() {
 
         ${showExplain ? `
           <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:14px;color:#166534;line-height:1.6">
-            <strong style="display:block;margin-bottom:4px">📖 專家考點精析與陷阱排除：</strong>
+            <strong style="display:block;margin-bottom:4px">📖 考點解析與選項檢查：</strong>
             ${esc(q.explain)}
           </div>
         ` : ''}
@@ -1696,11 +2133,11 @@ function examPage() {
   }
 
   const tracksList = [
-    { id: 'all', title: '全部考科綜合模擬', count: '20,000 題', icon: '🌐', desc: '跨會考、學測、統測、多益、SAT、GRE、GMAT、高考隨機抽題實戰。', color: '#2563eb' },
-    { id: 'toeic', title: 'TOEIC 多益國際商務英語', count: '3,000 題', icon: '💼', desc: 'Part 5 詞性填空、Part 6 段落填空、Part 7 雙篇商務閱讀與行程信函。', color: '#d97706' },
-    { id: 'sat', title: 'Digital SAT 數位學術測驗', count: '3,000 題', icon: '🎓', desc: 'Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis。', color: '#4f46e5' },
+    { id: 'all', title: '全部考科綜合模擬', count: '482 道不同題面', icon: '🌐', desc: '跨會考、學測、統測、多益、SAT、GRE、GMAT、高考隨機抽題實戰。', color: '#2563eb' },
+    { id: 'toeic', title: 'TOEIC 多益國際商務英語', count: '148 道不同題面', icon: '💼', desc: 'Part 5 詞性填空、Part 6 段落填空、Part 7 雙篇商務閱讀與行程信函。', color: '#d97706' },
+    { id: 'sat', title: 'Digital SAT 數位學術測驗', count: '16 道不同題面', icon: '🎓', desc: 'Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis。', color: '#4f46e5' },
     { 
-      id: 'gre', title: 'GRE 研究所入學考試 Verbal', count: '3,000 題', icon: '🏛️', desc: 'Text Completion 單雙三空、Sentence Equivalence 雙生同義詞、學術主旨閱讀。', color: '#e11d48',
+      id: 'gre', title: 'GRE 研究所入學考試 Verbal', count: '47 道不同題面', icon: '🏛️', desc: 'Text Completion 單雙三空、Sentence Equivalence 句子等價、學術主旨閱讀。', color: '#e11d48',
       subtopics: [
         { label: '🔠 TC 單/雙/三空', filter: 'Text Completion' },
         { label: '👯 SE 雙選等價', filter: 'Sentence Equivalence' },
@@ -1708,7 +2145,7 @@ function examPage() {
       ]
     },
     { 
-      id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '3,000 題', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2',
+      id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '20 道不同題面', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2',
       subtopics: [
         { label: '🛡️ CR 削弱/加強', filter: 'the Argument' },
         { label: '🔍 CR 假設/評價', filter: 'Assumption' },
@@ -1716,15 +2153,15 @@ function examPage() {
         { label: '📊 RC 商業長文', filter: 'Reading Comprehension' }
       ]
     },
-    { id: 'gaokao', title: '歷年高考與大考真題庫', count: '6,000 題', icon: '📜', desc: '歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題。', color: '#059669' },
-    { id: 'shs', title: '高中大學學測與統測英文', count: '1,000 題', icon: '🏫', desc: '高中 7,000 必背字彙、克漏字篇章結構、閱讀理解與歷屆學測考題。', color: '#9333ea' },
-    { id: 'jhs', title: '國中教育會考英語能力線', count: '1,000 題', icon: '🎒', desc: '1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題。', color: '#16a34a' }
+    { id: 'gaokao', title: '高考方向原創練習', count: '60 道不同題面', icon: '📜', desc: '原創語法與閱讀練習；不標作官方歷屆試題。', color: '#059669' },
+    { id: 'shs', title: '高中大學學測與統測英文', count: '8 道不同題面', icon: '🏫', desc: '高中詞彙、篇章與閱讀題型練習；不標作官方歷屆試題。', color: '#9333ea' },
+    { id: 'jhs', title: '國中教育會考英語能力線', count: '183 道不同題面', icon: '🎒', desc: '1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題。', color: '#16a34a' }
   ];
 
   let subtopicSelectorHtml = '';
   if (quizCategory === 'gre') {
     const greSubs = [
-      { id: 'all', label: '🌟 全部 GRE 題型綜合隨選 (3,000 題)' },
+      { id: 'all', label: '全部 GRE 題型練習' },
       { id: 'Single Blank', label: '🔠 TC 單空題 (Single Blank)' },
       { id: 'Double Blank', label: '🔀 TC 雙空題 (Double Blank)' },
       { id: 'Triple Blank', label: '🧩 TC 三空題 (Triple Blank)' },
@@ -1741,7 +2178,7 @@ function examPage() {
     `;
   } else if (quizCategory === 'gmat') {
     const gmatSubs = [
-      { id: 'all', label: '🌟 全部 GMAT 題型綜合隨選 (3,000 題)' },
+      { id: 'all', label: '全部 GMAT 題型練習' },
       { id: 'Weaken the Argument', label: '🛡️ CR 削弱題 (Alternative Causes)' },
       { id: 'Strengthen the Argument', label: '🎯 CR 加強題 (Ruling Out Confounders)' },
       { id: 'Find the Assumption', label: '🔍 CR 假設題 (Negation Test)' },
@@ -1763,11 +2200,12 @@ function examPage() {
   return `
     <div class="header-block">
       <div class="pill">📑 國際檢定與國家大考模擬測驗庫</div>
-      <h1 style="margin:8px 0">20,000 題全考制題庫測驗中心</h1>
+      <h1 style="margin:8px 0">分科題庫練習中心</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        已整合 TOEIC (3,000題)、Digital SAT (3,000題)、GRE (3,000題)、GMAT (3,000題)、歷年高考真題 (6,000題)、高中學測與國中會考！
+        提供 TOEIC、SAT、GRE、GMAT、高考、學測與會考方向的練習。資料含重複題目，筆數不等於獨立題數；每回合會排除完全重複題目；可用題數少於所選長度時會明確提示。來源未逐題核實者不視為官方真題。
       </p>
     </div>
+    ${quizNotice ? `<p class="quiz-notice" role="status">${esc(quizNotice)}</p>` : ''}
 
     <div class="card" style="margin-top:20px">
       <div style="display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
@@ -1793,6 +2231,9 @@ function examPage() {
         💡 支援 10 題零碎時間極速快測、IndexedDB 本地極速快取、Fisher-Yates 現代隨機抽題與答題即時加分 (+15 XP) 機制。
       </p>
     </div>
+
+    ${renderExamSolvingFlowchartDiagram()}
+    ${renderExamTracksComparisonTable()}
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin-top:20px">
       ${tracksList.map(t => `
@@ -1981,6 +2422,7 @@ function bindEvents() {
 root.addEventListener('click', e => {
   const b = e.target.closest('button, [data-close-reading-drawer], [data-toggle-reading-drawer]');
   if (!b) return;
+  if (b.classList.contains('reading-drawer-overlay') && e.target !== b) return;
   const d = b.dataset;
   if (handleAffixClick(b, render)) return;
   if (d.listenUnit) {
@@ -2252,15 +2694,18 @@ root.addEventListener('click', e => {
   // 20,000 題旗艦模考題庫測驗互動
   if (d.startQuiz) {
     if (d.quizCat) quizCategory = d.quizCat;
-    quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || quizSubtopic || 'all';
+    quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || 'all';
     const parsedCount = parseInt(d.quizCount || (document.querySelector('#quiz-count-select')?.value), 10);
     if ([10, 20, 30, 40].includes(parsedCount)) {
       quizQuestionCount = parsedCount;
     }
     const count = quizQuestionCount || 20;
+    quizNotice = '';
     quizLoading = true;
     render();
     questionDB.sampleQuestions(quizCategory, count, quizSubtopic).then(qs => {
+      if (!qs.length) quizNotice = '此分類目前沒有可用的獨立題目，請改選其他題型。';
+      else if (qs.length < count) quizNotice = `此分類只有 ${qs.length} 道不同題面，已按實際數量組卷。`;
       currentQuizQuestions = qs;
       currentQuizIdx = 0;
       userQuizAnswers = {};

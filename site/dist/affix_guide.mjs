@@ -1,3 +1,4 @@
+import { renderWordFormationMorphologyDiagram } from './lesson_visuals.mjs';
 import {renderAffixLibrary} from './affix_library.mjs';
 const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Examples are explicit vocabulary, not generated combinations.
@@ -39,11 +40,85 @@ export const AFFIX_LESSONS = [
  ['字尾','-s / -es / -ed / -ing','複數；三單；過去；分詞','這一組主要標示文法形式。','book + s|books|書（複數）;watch + es|watches|手錶（複數）／觀看（三單）;walk + ed|walked|走過／走了;read + ing|reading|閱讀中／閱讀這件事','-ed、-s 有不同發音；-ing 也可作名詞或形容詞用，依句子判斷。']
 ].map(([type,affix,meaning,memory,examples,trap])=>({type,affix,meaning,memory,examples:examples.split(';').map(x=>{const [split,word,zh]=x.split('|');return {split,word,zh};}),trap}));
 
+export function renderAffixMatrixTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="大考高頻核心字首字尾構詞黃金矩陣表" style="margin:20px 0;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">📊 大考高頻核心字首字尾構詞黃金矩陣表</strong>
+        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">單字倍增利器</span>
+      </div>
+      <table>
+        <caption>英語構詞核心前綴後綴分類、詞性轉換與高頻詞族速查</caption>
+        <thead>
+          <tr>
+            <th scope="col">構詞分類</th>
+            <th scope="col">代表性字綴</th>
+            <th scope="col">核心語義</th>
+            <th scope="col">詞性與功能轉換</th>
+            <th scope="col">大考高頻詞族範例</th>
+            <th scope="col">考場辨析與避雷</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1. 否定與反向前綴</th>
+            <td>un-, in-/im-/il-/ir-, dis-, non-, mis-</td>
+            <td>不、相反、非、錯誤</td>
+            <td>不改變詞性 (通常保留原詞性)</td>
+            <td>unhappy (不快樂), impossible (不可能), disagree (不同意), misunderstand (誤解)</td>
+            <td>im- 接在 m/p 前；mis- 表做錯 (misspell)，un- 表反轉或否定</td>
+          </tr>
+          <tr>
+            <th scope="row">2. 時間與空間前綴</th>
+            <td>pre-, post-, inter-, trans-, sub-, super-</td>
+            <td>在前、在後、在…之間、跨越、在下、在上</td>
+            <td>語義空間/時間定向</td>
+            <td>preview (預覽), postwar (戰後), international (國際的), subway (地鐵)</td>
+            <td>prepay 是預先付款，repay 是償還；inter- 是兩者之間，intra- 是同組織內部</td>
+          </tr>
+          <tr>
+            <th scope="row">3. 抽象名詞後綴</th>
+            <td>-tion/-sion, -ment, -ness, -ity, -ship</td>
+            <td>動作、過程、狀態、身分</td>
+            <td>動詞/形容詞 ➔ 抽象名詞</td>
+            <td>education (教育), development (發展), kindness (善良), responsibility (責任)</td>
+            <td>子音 + y 接 -ness 時變 i (happiness)；-ment 通常不改變動詞拼字</td>
+          </tr>
+          <tr>
+            <th scope="row">4. 動作執行者後綴</th>
+            <td>-er/-or, -ist, -ian, -ee</td>
+            <td>做某事的人、專家、受動者</td>
+            <td>動詞/名詞 ➔ 人/職業名詞</td>
+            <td>teacher (教師), inventor (發明家), scientist (科學家), employee (員工)</td>
+            <td>-er/-or 為主動執行者；-ee 為動作接受者 (interviewer 面試官 vs. interviewee 應試者)</td>
+          </tr>
+          <tr>
+            <th scope="row">5. 形容詞特質後綴</th>
+            <td>-ful, -less, -able/-ible, -ous, -al/-ic</td>
+            <td>充滿、缺乏、能夠、具有…性質</td>
+            <td>名詞/動詞 ➔ 形容詞</td>
+            <td>careful (小心), careless (粗心), readable (可讀), dangerous (危險), national (國家)</td>
+            <td>-ful 字尾只有一個 l (helpful)；economic 經濟的 vs. economical 節儉的</td>
+          </tr>
+          <tr>
+            <th scope="row">6. 動詞轉化後綴</th>
+            <td>-ize/-ise, -en, -ify</td>
+            <td>使成為、使…化、變得</td>
+            <td>形容詞/名詞 ➔ 動詞</td>
+            <td>modernize (現代化), sharpen (削尖), simplify (簡化), purify (淨化)</td>
+            <td>-ize 常為美式拼法，-ise 為英式；-ify 常伴隨去 e 或詞根變化</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 export function renderAffixGuide(){
  const count=AFFIX_LESSONS.reduce((n,l)=>n+l.examples.length,0);
  return `<article class="lesson-page affix-guide"><header class="affix-hero"><p class="pill">WORD BUILDING · 構詞學習</p><h1>拆開理解，串起一整組單字</h1><p>從常見字首、字尾的代表意思開始，用 ${AFFIX_LESSONS.length} 組規則、${count} 個範例練習推測詞義，再回到句子確認。</p><div class="lesson-links"><a class="btn primary" href="#affix-prefixes">先學字首 ↓</a><a class="btn" href="#affix-suffixes">再學字尾 ↓</a><a class="btn quiet" href="#wordpractice">回字卡練習 →</a></div></header>
  <section class="card"><h2>先分清楚：位置、意思與詞性</h2><div class="affix-basics"><div><h3>字首 Prefix</h3><p>加在基底前面，常調整意思。</p><strong>un + happy → unhappy</strong><p>不 + 快樂 → 不快樂的</p></div><div><h3>基底詞與字根</h3><p>基底是加字首或字尾的起點。字根承載核心意思，有時不能單獨使用，例如 spect（看）。</p><strong>inspect → 檢查</strong></div><div><h3>字尾 Suffix</h3><p>接在後面，常提示詞性，也可能標示文法變化。</p><strong>teach + er → teacher</strong><p>教導 + 做事的人 → 教師</p></div></div><p class="structure-note">「+」表示構詞關係；「→」表示詞形轉換，可能需要刪字、改字或雙寫。構詞不是發音音節切分。</p></section>
- <section class="card"><h2>一個詞族，分四步記</h2><ol><li><strong>讀基底：</strong>care 關心／小心。</li><li><strong>加字尾：</strong>careful 小心的；careless 粗心的。</li><li><strong>換詞性：</strong>carefully 小心地；carelessness 粗心（名詞）。</li><li><strong>放進句子：</strong><span lang="en">Please read the instructions carefully.</span> 請仔細閱讀說明。</li></ol><p>每天選 3 組，先遮住中文猜意思，再說一個自己的句子；隔天從英文回想一次。</p></section>
+ ${renderWordFormationMorphologyDiagram()}${renderAffixMatrixTable()}<section class="card"><h2>一個詞族，分四步記</h2><ol><li><strong>讀基底：</strong>care 關心／小心。</li><li><strong>加字尾：</strong>careful 小心的；careless 粗心的。</li><li><strong>換詞性：</strong>carefully 小心地；carelessness 粗心（名詞）。</li><li><strong>放進句子：</strong><span lang="en">Please read the instructions carefully.</span> 請仔細閱讀說明。</li></ol><p>每天選 3 組，先遮住中文猜意思，再說一個自己的句子；隔天從英文回想一次。</p></section>
  ${['字首','字尾'].map((type,i)=>`<section id="affix-${i?'suffixes':'prefixes'}" class="affix-section"><h2>${i?'02 字尾：看詞性與狀態':'01 字首：看方向與意思'}</h2><p>${i?'先學名詞、形容詞、副詞與動詞字尾，再比較文法結尾。':'把否定、時間、程度、位置與數量連成有意義的家族。'}</p><div class="affix-grid">${AFFIX_LESSONS.filter(l=>l.type===type).map(l=>`<section class="card affix-card"><p class="pill">${e(l.type)}</p><h3 lang="en">${e(l.affix)}</h3><p class="affix-meaning">${e(l.meaning)}</p><p>${e(l.memory)}</p><ul class="affix-examples">${l.examples.map(x=>`<li><span class="affix-formula" lang="en">${e(x.split)}</span><div><strong lang="en">${e(x.word)}</strong><span>${e(x.zh)}</span><button class="btn quiet small" data-speak-word="${e(x.word)}" aria-label="朗讀 ${e(x.word)}">聽發音</button></div></li>`).join('')}</ul><details><summary>易混淆提醒</summary><p>${e(l.trap)}</p></details></section>`).join('')}</div></section>`).join('')}
  ${renderAffixLibrary()}
  <section class="card"><h2>快速回想：先猜，再展開核對</h2>${[['unfair 的 un- 是什麼意思？','不；相反。fair 公平 → unfair 不公平。'],['careless 與 carefully 的詞性有何不同？','careless 是形容詞「粗心的」；carefully 是副詞「小心地」。注意兩者意思也不同。'],['teacher 和 taller 都以 er 結尾，意思一樣嗎？','不同。teacher 的 -er 表做事的人；taller 的 -er 表比較級。'],['family 可以拆成 fam + 副詞字尾 ly 嗎？','不可以。字母相同不等於構詞相同，family 要當完整單字學。'],['為什麼 happy + ness 變成 happiness？','子音 + y 結尾接 -ness 時，常先把 y 改成 i。'],['預熱與重新加熱如何分辨？','preheat 是預熱；reheat 是重新加熱。']].map(([q,a])=>`<details class="affix-review"><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join('')}<p>推測後還要查核：字首字尾不一定只有一種意思，也不能任意拼接造字。</p><a class="btn primary" href="#wordpractice">用字卡測試回想 →</a></section>

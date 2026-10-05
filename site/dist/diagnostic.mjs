@@ -1,7 +1,6 @@
 import { renderLevelEstimate } from './level_estimate.mjs';
 // diagnostic.mjs - 30 題全階英語能力程度練習檢核系統 (小學至GRE/GMAT)
-// 由 7 位跨領域專家共同研發，嚴格對標 CEFR Pre-A1 至 進階題型
-// 配備：自適應階梯抽樣、五維雷達圖、失速臨界點 (Stall Point) 判定、每一題名師黃金五維詳解與微課轉化直通車
+// 站內分層抽題與作答回顧；不等同標準化能力認證。
 
 import { questionDB } from './question_db.mjs';
 
@@ -18,14 +17,14 @@ function esc(str) {
 // 診斷系統內部狀態
 let diagMode = 'intro'; // 'intro' | 'testing' | 'report'
 export const DIAGNOSTIC_LEVELS = [
-  { id: 1, name: '國小基礎', cefr: 'Pre-A1–A1' },
-  { id: 2, name: '國中基礎', cefr: 'A1–A2' },
-  { id: 3, name: '國中進階／會考', cefr: 'A2–B1' },
-  { id: 4, name: '高中／學測', cefr: 'B1–B2' },
-  { id: 5, name: 'TOEIC 多益', cefr: 'B2' },
-  { id: 6, name: 'Digital SAT', cefr: 'C1' },
-  { id: 7, name: 'GRE', cefr: 'C2' },
-  { id: 8, name: 'GMAT', cefr: '進階挑戰' }
+  { id: 1, name: '國小基礎', cefr: '日常問答' },
+  { id: 2, name: '國中基礎', cefr: '基本句型' },
+  { id: 3, name: '國中進階／會考', cefr: '閱讀與文法' },
+  { id: 4, name: '高中／學測', cefr: '篇章理解' },
+  { id: 5, name: 'TOEIC 多益', cefr: '商務情境' },
+  { id: 6, name: 'Digital SAT', cefr: '學術閱讀' },
+  { id: 7, name: 'GRE', cefr: '語意推論' },
+  { id: 8, name: 'GMAT', cefr: '論證分析' }
 ];
 let diagSelectedTier = null;
 let diagSessionTier = null;
@@ -177,14 +176,14 @@ function renderIntroView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 英文程度測試 · 跨考制全階能力錨定 · 專家委員會 7 次迭代升級</div>
-      <h1 style="margin:8px 0;font-size:28px">🎯 英文程度檢定</h1>
+      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🎯 分層英語練習 · 作答後逐題回顧</div>
+      <h1 style="margin:8px 0;font-size:28px">🎯 英語練習檢核</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
-        提供 10 題極速快測、20 題快速檢定、30 題標準檢定與 40 題深度精準檢定。完成後檢查每題答案與解析，定位失速臨界點並獲取專屬補強微課。
+        可選 10、20、30 或 40 題。完成後檢查答案與解析，依答錯題目選擇複習單元。
       </p>
     </div>
 
-    <aside class="card"><h2>預測英文程度，找到學習起點</h2><p>完成作答後，查看閱讀／文法程度、CEFR 參考區間與各考試參考落點，再按弱項選擇教材。預測使用本站規則，尚未經正式成績配對校準。</p></aside>
+    <aside class="card"><h2>找到下一個複習主題</h2><p>作答結果只反映這次抽到的題目；本站加權指標未經正式成績配對校準，不能換算 CEFR 或其他考試分數。</p></aside>
 
     ${renderLevelSelector()}
     <!-- 檢定題數選項 (10 題極速 / 20 題快速 / 30 題標準 / 40 題深度精準) -->
@@ -234,7 +233,7 @@ function renderIntroView() {
             <span class="pill" style="font-size:11px;background:#10b981;color:#fff;font-weight:700">推薦 · 約 25 分鐘</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);line-height:1.5">
-            經典 8 階梯天梯平衡抽樣，精確鎖定失速臨界點 (Stall Point) 與 CEFR 等級錨定。
+            從八個站內題庫層級抽題，作答後查看各主題表現與錯題。
           </div>
         </button>
 
@@ -286,56 +285,56 @@ function renderIntroView() {
         <div style="border:1px solid var(--line);border-left:4px solid #10b981;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#047857">Tier 1: 國小基礎生活英語</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[1]} 題 (Pre-A1~A1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[1]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">be動詞、名詞單複數、自然發音、日常時間與生活對話</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #059669;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#059669">Tier 2: 國中會考基礎實踐</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[2]} 題 (A1~A2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[2]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">過去簡單式、未來式、頻率副詞、比較級、情境會話</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #0284c7;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0284c7">Tier 3: 國中會考精熟躍升</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[3]} 題 (A2~B1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[3]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">現在完成式、被動語態、感官使役動詞、關係代名詞</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #6366f1;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#4f46e5">Tier 4: 高中學測核心素養</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[4]} 題 (B1~B2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[4]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">分詞構句、倒裝句、複合關係代名詞、篇章結構與高級詞彙</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #d97706;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#d97706">Tier 5: TOEIC 國際商務實戰</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[5]} 題 (B2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[5]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Part 5 詞性辨析、商務書信、行程合約、職場語法一致性</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #8b5cf6;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#7c3aed">Tier 6: Digital SAT 學術思維</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[6]} 題 (B2~C1)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[6]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Words in Context 語境詞義、學術長難句、論點支撐與修辭</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #e11d48;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#e11d48">Tier 7: GRE Verbal 語意邏輯</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[7]} 題 (C1~C2)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[7]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">語意極性、反向對稱、雙重填空、哲學社科精微論述</div>
         </div>
         <div style="border:1px solid var(--line);border-left:4px solid #0891b2;padding:12px 14px;border-radius:8px;background:var(--paper)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <strong style="color:#0891b2">Tier 8: GMAT Focus 批判推理</strong>
-            <span class="pill" style="font-size:11px">${tierQuotasDisplay[8]} 題 (C2/進階題型)</span>
+            <span class="pill" style="font-size:11px">${tierQuotasDisplay[8]} 題</span>
           </div>
           <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Assumption 否定測試法、Weaken/Strengthen 商業決策論證</div>
         </div>
@@ -443,7 +442,7 @@ function renderTestingView() {
     <div class="card" style="margin-top:16px;border-top:4px solid #10b981">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
         <span style="font-size:13px;color:var(--text-muted)">
-          目標考科：<strong>${esc(q.targetExam)}</strong> · CEFR 級距：<strong>${esc(q.cefr)}</strong> · 難度：⭐ ${q.difficulty}/5
+          題庫考科方向：<strong>${esc(q.targetExam)}</strong> · 題庫標示難度：⭐ ${q.difficulty}/5
         </span>
         <span style="font-size:13px;color:${isAnswered ? '#059669' : '#d97706'}">
           ${isAnswered ? '● 本題已選擇' : '○ 尚未作答'}
@@ -553,7 +552,7 @@ function renderReportView() {
 
   return `
     <div class="header-block">
-      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">🏆 ${diagQuestions.length} 題${levelName(diagSessionTier)}練習檢核 · 深度能力診斷報告</div>
+      <div class="pill" style="background:#ecfdf5;color:#065f46;font-weight:700">${diagQuestions.length} 題${levelName(diagSessionTier)}練習檢核 · 作答回顧</div>
       <h1 style="margin:8px 0;font-size:28px">${diagSessionTier === null ? '英語能力全面體檢成就報告與微課學習地圖' : levelName(diagSessionTier) + ' · 測驗結果與解析'}</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
         以下依本站規則整理本次作答，協助選擇複習主題；不是標準化能力評定。
@@ -570,7 +569,7 @@ function renderReportView() {
           <span>📊 五維核心英語能力量化指標 (Five Dimensions)</span>
         </h3>
         <p style="font-size:13px;color:var(--text-muted);margin:0 0 16px">
-          細緻評估您在單字、句法、篇章與批判思維的個別成熟度：
+          顯示本次抽到的各主題答對情形；樣本少時請勿推論整體能力：
         </p>
         <div style="display:grid;gap:14px">
           ${Object.entries(ev.dimensionBreakdown).filter(([, stat]) => stat.total > 0).map(([dim, stat]) => {
@@ -651,7 +650,7 @@ function renderReportView() {
     <div class="card" style="margin-bottom:24px">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px">
         <div>
-          <h3 style="margin:0;font-size:18px">📖 ${diagQuestions.length} 題名師五星級專業考點解析 (全卷公布)</h3>
+          <h3 style="margin:0;font-size:18px">📖 ${diagQuestions.length} 題考點解析與訂正</h3>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px">
             每一題皆配備「雙語精譯、核心考點、句構拆解、高頻單字、致命陷阱剖析」五大教學維度。
           </div>

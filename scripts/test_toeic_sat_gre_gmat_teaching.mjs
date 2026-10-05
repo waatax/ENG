@@ -22,7 +22,7 @@ test('1. Curriculum 4 Flagship Exams (TOEIC, SAT, GRE, GMAT) Question-Type Pedag
     {
       id: 'gre',
       minQTypes: 3,
-      expectedKeywords: ['Text Completion', 'Sentence Equivalence', '翻案文', '邏輯密碼', '確定性錨點']
+      expectedKeywords: ['Text Completion', 'Sentence Equivalence', '翻案文', '邏輯密碼', '語境配對']
     },
     {
       id: 'gmat',

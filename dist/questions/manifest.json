@@ -34,10 +34,10 @@
       "file": "gmat.json"
     },
     "gaokao": {
-      "name": "歷年高考真題庫",
+      "name": "高考方向原創練習",
       "count": 6000,
       "file": "gaokao.json",
-      "description": "收錄歷年新高考I/II卷、全國甲/乙卷、北京、上海、浙江卷及台灣學測指考真題與等價題型"
+      "description": "原創題型練習；來源與官方原題未逐題核實。"
     }
   },
   "diagnostic_bank": {

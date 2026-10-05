@@ -1,808 +1,18 @@
-// lesson_visuals.mjs - 英語知識點教學視覺化圖表與自然拼讀/閃卡鷹架模組
-// 依據教育部 108 課綱與國際 ESL 教學標準，提供豐富的 SVG 語法時態時間軸、主被動結構圖、五大句型柱、條件句決策樹、高工工程規格圖與邏輯論證地圖
+import fs from 'node:fs';
+import path from 'node:path';
 
-import { playWord, playSentence } from './audio.mjs';
+const ROOT = process.cwd();
 
-function esc(str) {
-  return String(str ?? '').replace(/[&<>"']/g, c => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  }[c]));
-}
+// =========================================================================
+// 1. UPDATE dist/lesson_visuals.mjs
+// =========================================================================
+let visualsPath = path.join(ROOT, 'dist', 'lesson_visuals.mjs');
+let visualsContent = fs.readFileSync(visualsPath, 'utf8');
 
-// 1. 時態時間軸視覺圖 (Timeline Chart)
-export function renderTenseTimelineChart() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <strong style="color:#0f172a;font-size:15px">📊 英語核心 12 時態全景時間軸圖 (Tenses Timeline Map)</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">視覺化時空座標</span>
-      </div>
-      <svg viewBox="0 0 760 170" style="width:100%;height:auto;display:block">
-        <!-- 主時間軸軸線 -->
-        <line x1="40" y1="95" x2="720" y2="95" stroke="#475569" stroke-width="4" stroke-linecap="round" />
-        <polygon points="720,90 735,95 720,100" fill="#475569" />
-
-        <!-- 過去 (Past) -->
-        <circle cx="200" cy="95" r="9" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3" />
-        <text x="200" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">過去 (PAST)</text>
-        <rect x="120" y="115" width="160" height="42" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
-        <text x="200" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">過去簡單式 / V-ed</text>
-        <text x="200" y="148" text-anchor="middle" font-size="10" fill="#64748b">Yesterday, Last night</text>
-
-        <!-- 現在 (Present / NOW) -->
-        <circle cx="400" cy="95" r="11" fill="#10b981" stroke="#047857" stroke-width="4" />
-        <line x1="400" y1="25" x2="400" y2="95" stroke="#10b981" stroke-width="2" stroke-dasharray="3,3" />
-        <text x="400" y="20" text-anchor="middle" font-size="15" font-weight="800" fill="#047857">現在 (NOW)</text>
-        <rect x="320" y="115" width="160" height="42" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
-        <text x="400" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">現在簡單式 / V-(e)s</text>
-        <text x="400" y="148" text-anchor="middle" font-size="10" fill="#64748b">Always, Usually, Every day</text>
-
-        <!-- 未來 (Future) -->
-        <circle cx="600" cy="95" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="3" />
-        <text x="600" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">未來 (FUTURE)</text>
-        <rect x="520" y="115" width="160" height="42" rx="6" fill="#fffbeb" stroke="#fde68a" />
-        <text x="600" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">未來式 / will + V</text>
-        <text x="600" y="148" text-anchor="middle" font-size="10" fill="#64748b">Tomorrow, Next week</text>
-
-        <!-- 進行式與完成式跨度弧線 -->
-        <path d="M 370,80 Q 400,65 430,80" fill="none" stroke="#059669" stroke-width="3" />
-        <text x="400" y="60" text-anchor="middle" font-size="10" font-weight="600" fill="#059669">be + V-ing (正在發生)</text>
-
-        <path d="M 210,90 C 260,35 340,35 390,90" fill="none" stroke="#7c3aed" stroke-width="3" />
-        <text x="300" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="#6d28d9">現在完成式 have/has + p.p. (自過去持續至現在)</text>
-      </svg>
-      <div style="font-size:12px;color:#64748b;margin-top:6px;line-height:1.5">
-        💡 <strong>解題思考法：</strong>判斷時態時，先在時間軸上找出「基準點（NOW）」在哪裡，再尋找時間副詞提示，瞬間鎖定正確動詞形式！
-      </div>
-    </div>
-  `;
-}
-
-// 2. 主動轉被動語態結構圖 (Active to Passive Cross Transformation)
-export function renderPassiveVoiceDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🔄 主被動語態「交叉變身」黃金結構圖</strong>
-        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">S + V + O ➔ O + be p.p. + by S</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:12px">
-        <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px">
-          <div style="font-size:12px;color:#1e40af;font-weight:700;margin-bottom:6px">【主動句 Active Voice】：主詞親自執行動作</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:15px;flex-wrap:wrap">
-            <span style="background:#3b82f6;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">The chef (主詞 S)</span>
-            <span style="font-weight:bold;color:#475569">+</span>
-            <span style="background:#10b981;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">prepares (及物動詞 V)</span>
-            <span style="font-weight:bold;color:#475569">+</span>
-            <span style="background:#f59e0b;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">the dinner (受詞 O)</span>
-          </div>
-        </div>
-        <div style="text-align:center;font-size:18px;color:#2563eb;font-weight:bold">
-          ⬇ 動作承受者受詞移至句首 · 動詞變身為 [be + 過去分詞 p.p.] ⬇
-        </div>
-        <div style="background:#f0fdf4;border:2px solid #86efac;border-radius:8px;padding:12px 16px">
-          <div style="font-size:12px;color:#166534;font-weight:700;margin-bottom:6px">【被動句 Passive Voice】：受詞變新主詞，主詞退居 by 之後</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:15px;flex-wrap:wrap">
-            <span style="background:#f59e0b;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">The dinner (新主詞)</span>
-            <span style="font-weight:bold;color:#475569">+</span>
-            <span style="background:#059669;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">is prepared (be + p.p.)</span>
-            <span style="font-weight:bold;color:#475569">+</span>
-            <span style="background:#64748b;color:#fff;padding:4px 10px;border-radius:6px;font-weight:700">by the chef (動作發出者)</span>
-          </div>
-        </div>
-      </div>
-      <div style="font-size:12px;color:#475569;margin-top:10px">
-        ⚠️ <strong>避坑指南：</strong>be 動詞的時態必須與原句動詞時態一致，單複數必須配合「新主詞」！不及物動詞（happen, occur, die）沒有被動語態！
-      </div>
-    </div>
-  `;
-}
-
-// 3. 條件句與假設語氣分歧決策樹 (Conditional Decision Tree)
-export function renderConditionalDecisionTree() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fffbeb;border:1px solid #fde68a;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#92400e;font-size:15px">🌳 條件句與假設語氣「真實 vs. 與事實相反」決策分流樹</strong>
-        <span class="pill" style="font-size:11px;background:#fef3c7;color:#b45309">時態倒退一步法則</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:12px">
-        <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px">
-          <div class="pill" style="font-size:11px;background:#f1f5f9;color:#334155;margin-bottom:6px">Type 0: 科學真理</div>
-          <div style="font-weight:700;color:#0f172a;font-size:13px">If + 現在式, 現在式</div>
-          <div style="font-size:12px;color:#64748b;margin-top:4px"><em>If you heat ice, it melts.</em> (加熱冰塊必融化)</div>
-        </div>
-        <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 12px">
-          <div class="pill" style="font-size:11px;background:#eff6ff;color:#1e40af;margin-bottom:6px">Type 1: 未來可能真實</div>
-          <div style="font-weight:700;color:#1e40af;font-size:13px">If + 現在式 (表未來), will + V</div>
-          <div style="font-size:12px;color:#64748b;margin-top:4px"><em>If it rains tomorrow, we will stay home.</em></div>
-        </div>
-        <div style="background:#fff;border:1px solid #ddd6fe;border-radius:8px;padding:10px 12px">
-          <div class="pill" style="font-size:11px;background:#f5f3ff;color:#6d28d9;margin-bottom:6px">Type 2: 與現在事實相反</div>
-          <div style="font-weight:700;color:#6d28d9;font-size:13px">If + 過去式 (were), would + V</div>
-          <div style="font-size:12px;color:#64748b;margin-top:4px"><em>If I were a bird, I would fly to you.</em></div>
-        </div>
-        <div style="background:#fff;border:1px solid #fecaca;border-radius:8px;padding:10px 12px">
-          <div class="pill" style="font-size:11px;background:#fef2f2;color:#991b1b;margin-bottom:6px">Type 3: 與過去事實相反 (後悔)</div>
-          <div style="font-weight:700;color:#991b1b;font-size:13px">If + had p.p., would have p.p.</div>
-          <div style="font-size:12px;color:#64748b;margin-top:4px"><em>If you had studied, you would have passed.</em></div>
-        </div>
-      </div>
-      <div style="font-size:12px;color:#92400e;margin-top:10px">
-        💡 <strong>黃金口訣：</strong>「若與現在相反，動詞倒退成過去式；若與過去相反，動詞倒退成過去完成式 (had p.p.)」！
-      </div>
-    </div>
-  `;
-}
-
-// 4. 關係代名詞指涉路徑圖 (Relative Pronoun Anchor Diagram)
-export function renderRelativeClauseDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🔗 關係代名詞先行詞錨定與子句橋樑圖</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">形容詞子句本質</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px;margin-bottom:12px">
-        <div style="background:#fff;border:2px solid #2563eb;padding:10px 14px;border-radius:8px;text-align:center">
-          <div style="font-size:11px;color:#2563eb;font-weight:700">先行詞 (人或物)</div>
-          <strong style="font-size:16px;color:#0f172a">The teacher</strong>
-        </div>
-        <div style="font-size:24px;color:#2563eb;font-weight:bold">➔</div>
-        <div style="background:#ecfdf5;border:2px solid #10b981;padding:10px 14px;border-radius:8px;text-align:center">
-          <div style="font-size:11px;color:#047857;font-weight:700">關係代名詞 (替換先行詞)</div>
-          <strong style="font-size:16px;color:#047857">who / that</strong>
-        </div>
-        <div style="font-size:24px;color:#10b981;font-weight:bold">➔</div>
-        <div style="background:#fff;border:1px solid #cbd5e1;padding:10px 14px;border-radius:8px;flex:1;min-width:200px">
-          <div style="font-size:11px;color:#64748b;font-weight:700">形容詞子句 (修飾先行詞)</div>
-          <span style="color:#1e293b;font-style:italic">teaches us English is very kind.</span>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:8px;font-size:12px">
-        <div style="background:#fff;padding:8px;border-radius:6px;border:1px solid #e2e8f0">
-          👤 <strong>先行詞為人：</strong>主格用 who/that，受格用 whom/who/that，所有格用 whose
-        </div>
-        <div style="background:#fff;padding:8px;border-radius:6px;border:1px solid #e2e8f0">
-          📦 <strong>先行詞為物：</strong>主格與受格用 which/that，所有格用 whose / of which
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 5. 介系詞空間概念金字塔圖 (In-On-At Pyramid)
-export function renderPrepositionsPyramid() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🔺 時間與空間介系詞 In ➔ On ➔ At 金字塔法則</strong>
-        <span class="pill" style="font-size:11px;background:#fef3c7;color:#92400e">由大範圍到特定點</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:8px">
-        <div style="background:#eff6ff;border:1px solid #93c5fd;border-radius:8px;padding:12px;text-align:center">
-          <strong style="color:#1e40af;font-size:16px">IN (最大範疇 / 包裹在內)</strong>
-          <div style="font-size:12px;color:#475569;margin-top:2px">
-            時間：年、月、世紀、季節 (in 2026, in summer, in May) ｜ 空間：國家、城市、封閉空間 (in Taiwan, in the room)
-          </div>
-        </div>
-        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px;text-align:center;width:85%;margin:0 auto">
-          <strong style="color:#166534;font-size:16px">ON (特定日期 / 表面接觸)</strong>
-          <div style="font-size:12px;color:#475569;margin-top:2px">
-            時間：具體日期、星期 (on Monday, on October 10th) ｜ 空間：平面、大眾交通工具 (on the table, on the bus)
-          </div>
-        </div>
-        <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px;text-align:center;width:65%;margin:0 auto">
-          <strong style="color:#991b1b;font-size:16px">AT (精準時刻 / 精確定位點)</strong>
-          <div style="font-size:12px;color:#475569;margin-top:2px">
-            時間：精準鐘點 (at 8:30 PM, at noon) ｜ 空間：特定地點與門牌 (at the station, at 101 Main Street)
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 6. 五大基本句型成分拆解結構表 (Five Basic Sentence Patterns)
-export function renderFiveSentencePatternsDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🧱 英語五大基本句型骨架全解圖 (Five Sentence Pillars)</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">文法積木組裝法</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:10px">
-        <div style="background:#fff;border-left:5px solid #3b82f6;padding:10px 14px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-          <strong>1. S + Vi (主詞 + 完全不及物動詞)</strong>
-          <div style="color:#475569;font-size:13px;margin-top:2px"><em>The sun rises in the east.</em> (不需受詞，意思即完整)</div>
-        </div>
-        <div style="background:#fff;border-left:5px solid #10b981;padding:10px 14px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-          <strong>2. S + LV + SC (主詞 + 連綴動詞 + 主詞補語)</strong>
-          <div style="color:#475569;font-size:13px;margin-top:2px"><em>She looks happy today.</em> (補語形容主詞狀態，不可用副詞修飾！)</div>
-        </div>
-        <div style="background:#fff;border-left:5px solid #f59e0b;padding:10px 14px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-          <strong>3. S + Vt + O (主詞 + 完全及物動詞 + 受詞)</strong>
-          <div style="color:#475569;font-size:13px;margin-top:2px"><em>Students study English every day.</em> (動作直接施加於受詞)</div>
-        </div>
-        <div style="background:#fff;border-left:5px solid #8b5cf6;padding:10px 14px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-          <strong>4. S + Vt + IO + DO (主詞 + 授與動詞 + 人 + 物)</strong>
-          <div style="color:#475569;font-size:13px;margin-top:2px"><em>Dad bought me a bicycle. = Dad bought a bicycle for me.</em></div>
-        </div>
-        <div style="background:#fff;border-left:5px solid #ec4899;padding:10px 14px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05)">
-          <strong>5. S + Vt + O + OC (主詞 + 及物動詞 + 受詞 + 受詞補語)</strong>
-          <div style="color:#475569;font-size:13px;margin-top:2px"><em>The good news made everyone excited.</em> (補語補充說明受詞)</div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 7. 分詞構句化簡三步流程圖 (Participle Clause Reduction)
-export function renderParticipleClauseFlowchart() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">✂️ 分詞構句長難句化簡「黃金三步法」</strong>
-        <span class="pill" style="font-size:11px;background:#fce7f3;color:#9d174d">大考必考化簡術</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;text-align:center">
-        <div style="background:#eff6ff;padding:12px;border-radius:8px;border:1px solid #bfdbfe">
-          <div style="font-weight:700;color:#1e40af">步驟 1：檢查主詞</div>
-          <div style="font-size:12px;color:#475569;margin-top:4px">前後兩子句主詞相同？相同則省略從屬句主詞；不同則保留 (獨立分詞)</div>
-        </div>
-        <div style="background:#ecfdf5;padding:12px;border-radius:8px;border:1px solid #a7f3d0">
-          <div style="font-weight:700;color:#065f46">步驟 2：去除連接詞</div>
-          <div style="font-size:12px;color:#475569;margin-top:4px">刪除 When, Because, After (若欲強調時間邏輯亦可保留)</div>
-        </div>
-        <div style="background:#fffbeb;padding:12px;border-radius:8px;border:1px solid #fde68a">
-          <div style="font-weight:700;color:#92400e">步驟 3：動詞化簡</div>
-          <div style="font-size:12px;color:#475569;margin-top:4px">主動動作變 V-ing，被動動作變 p.p.，否定前置加 Not</div>
-        </div>
-      </div>
-      <div style="margin-top:12px;background:#fef2f2;border:1px solid #fca5a5;padding:10px 14px;border-radius:8px;font-size:12px;color:#991b1b">
-        ⚠️ <strong>避坑警報：</strong>絕對不可出現「懸垂分詞 (Dangling Participle)」！例如：<em>Walking home, the rain began. (錯！雨不會走路！)</em>
-      </div>
-    </div>
-  `;
-}
-
-// 8. 動名詞 vs. 不定詞決策矩陣 (Gerund vs. Infinitive Matrix)
-export function renderGerundInfinitiveMatrixDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🧩 動名詞 (V-ing) vs. 不定詞 (to V) 搭配決策矩陣</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">動詞搭配分水嶺</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px">
-        <div style="background:#eff6ff;padding:12px;border-radius:8px;border:1px solid #bfdbfe">
-          <strong style="color:#1e40af">🎯 僅接動名詞 (V-ing)</strong>
-          <div style="font-size:12px;color:#334155;margin-top:4px">
-            enjoy, finish, practice, avoid, mind, consider, keep
-            <div style="color:#64748b;margin-top:4px">例：<em>She enjoys reading novels.</em></div>
-          </div>
-        </div>
-        <div style="background:#ecfdf5;padding:12px;border-radius:8px;border:1px solid #a7f3d0">
-          <strong style="color:#065f46">🎯 僅接不定詞 (to V)</strong>
-          <div style="font-size:12px;color:#334155;margin-top:4px">
-            decide, hope, plan, refuse, promise, agree, afford
-            <div style="color:#64748b;margin-top:4px">例：<em>They decided to study abroad.</em></div>
-          </div>
-        </div>
-        <div style="background:#fff7ed;padding:12px;border-radius:8px;border:1px solid #ffedd5">
-          <strong style="color:#9a3412">⚠️ 兩者皆可但語意不同</strong>
-          <div style="font-size:12px;color:#334155;margin-top:4px">
-            • stop to V (停下去做) vs. stop V-ing (停止做)<br>
-            • remember to V (記得要做) vs. remember V-ing (記得曾做過)
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 9. 倒裝句法結構圖 (Inversion Sentence Architecture)
-export function renderInversionStructureDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">↔️ 倒裝句型結構還原對照圖</strong>
-        <span class="pill" style="font-size:11px;background:#f3e8ff;color:#6b21a8">否定副詞前移</span>
-      </div>
-      <div style="background:#fff;border:2px dashed #9333ea;padding:14px;border-radius:8px;margin-bottom:10px">
-        <div style="font-size:13px;color:#6b21a8;font-weight:700">【黃金倒裝公式】：否定副詞 + 助動詞 (do/does/did/have/will) + 主詞 + 原形動詞</div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px">
-        <div style="background:#f1f5f9;padding:10px;border-radius:6px">
-          <strong>原句直述語序：</strong><br>
-          <em>I have never seen such a stunning view.</em>
-        </div>
-        <div style="background:#faf5ff;padding:10px;border-radius:6px;border:1px solid #d8b4fe">
-          <strong>否定副詞倒裝：</strong><br>
-          <strong style="color:#7e22ce">Never have I seen</strong> such a stunning view.
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 10. 高工工場安全指令與 PPE 圖 (Workshop Safety & PPE)
-export function renderWorkshopSafetyPPEDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🛡️ 高工工場安全規程與 PPE 防護裝備圖解</strong>
-        <span class="pill" style="font-size:11px;background:#fee2e2;color:#991b1b">安全第一零災害</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:10px;text-align:center">
-        <div style="background:#eff6ff;padding:10px;border-radius:8px;border:1px solid #bfdbfe">
-          <div style="font-size:24px">🥽</div>
-          <strong style="font-size:12px;color:#1e40af">Eye Protection</strong>
-          <div style="font-size:11px;color:#64748b">護目鏡 (防飛屑)</div>
-        </div>
-        <div style="background:#fef3c7;padding:10px;border-radius:8px;border:1px solid #fde68a">
-          <div style="font-size:24px">⛑️</div>
-          <strong style="font-size:12px;color:#92400e">Hard Hat</strong>
-          <div style="font-size:11px;color:#64748b">安全帽 (防墜物)</div>
-        </div>
-        <div style="background:#ecfdf5;padding:10px;border-radius:8px;border:1px solid #a7f3d0">
-          <div style="font-size:24px">🧤</div>
-          <strong style="font-size:12px;color:#065f46">Safety Gloves</strong>
-          <div style="font-size:11px;color:#64748b">防割絕緣手套</div>
-        </div>
-        <div style="background:#f5f3ff;padding:10px;border-radius:8px;border:1px solid #ddd6fe">
-          <div style="font-size:24px">🥾</div>
-          <strong style="font-size:12px;color:#6d28d9">Steel-Toe Boots</strong>
-          <div style="font-size:11px;color:#64748b">鋼頭安全鞋</div>
-        </div>
-      </div>
-      <div style="margin-top:10px;font-size:12px;color:#475569">
-        ⚠️ <strong>指令句型：</strong>祈使句 <em>"Always disconnect main power before maintenance."</em>
-      </div>
-    </div>
-  `;
-}
-
-// 11. 高工工程尺寸與公差規格圖 (Engineering Tolerance & Specs)
-export function renderEngineeringToleranceSpecsDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">📐 工程尺寸標註、公差與規格判讀圖</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">50 ± 0.05 mm 規格解析</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:10px">
-        <div style="background:#fff;border:1px solid #94a3b8;padding:12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-          <div>
-            <div style="font-size:12px;color:#64748b">基本尺寸 (Nominal Dimension)</div>
-            <strong style="font-size:20px;color:#0f172a">50.00 mm</strong>
-          </div>
-          <div>
-            <div style="font-size:12px;color:#dc2626">上限 (Upper Limit)</div>
-            <strong style="font-size:16px;color:#dc2626">50.05 mm (+0.05)</strong>
-          </div>
-          <div>
-            <div style="font-size:12px;color:#2563eb">下限 (Lower Limit)</div>
-            <strong style="font-size:16px;color:#2563eb">49.95 mm (-0.05)</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 12. 設備故障排除決策樹 (Troubleshooting Decision Flowchart)
-export function renderTroubleshootingFlowchartDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🛠️ 設備故障排除 (Troubleshooting) SOP 五步驟</strong>
-        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">標準維修演算法</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px">
-        <span style="background:#eff6ff;padding:6px 12px;border-radius:6px;border:1px solid #bfdbfe">1. 症狀確認</span> ➔
-        <span style="background:#eff6ff;padding:6px 12px;border-radius:6px;border:1px solid #bfdbfe">2. 電源訊號檢測</span> ➔
-        <span style="background:#ecfdf5;padding:6px 12px;border-radius:6px;border:1px solid #a7f3d0">3. 故障模組隔離</span> ➔
-        <span style="background:#fffbeb;padding:6px 12px;border-radius:6px;border:1px solid #fde68a">4. 零件更換校準</span> ➔
-        <span style="background:#fdf2f8;padding:6px 12px;border-radius:6px;border:1px solid #fbcfe8">5. 試運轉驗證</span>
-      </div>
-    </div>
-  `;
-}
-
-// 13. 商務多益電郵與交易流程圖 (Business Email & Cycle)
-export function renderBusinessEmailFlowDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">💼 TOEIC 國際商務採購與通信生命週期圖</strong>
-        <span class="pill" style="font-size:11px;background:#fef3c7;color:#92400e">商務閉環流程</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px">
-        <span style="background:#f1f5f9;padding:6px 10px;border-radius:6px">Inquiry (詢價)</span> ➔
-        <span style="background:#eff6ff;padding:6px 10px;border-radius:6px">Quotation (報價)</span> ➔
-        <span style="background:#ecfdf5;padding:6px 10px;border-radius:6px">PO (採購訂單)</span> ➔
-        <span style="background:#fff7ed;padding:6px 10px;border-radius:6px">Shipment (出貨通知)</span> ➔
-        <span style="background:#fdf4ff;padding:6px 10px;border-radius:6px">Invoice & Payment (款項核銷)</span>
-      </div>
-    </div>
-  `;
-}
-
-// 14. 留學考批判邏輯架構圖 (Critical Reasoning Framework)
-export function renderCriticalReasoningLogicDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🏛️ GMAT / GRE 批判邏輯推理三要素架構圖</strong>
-        <span class="pill" style="font-size:11px;background:#fee2e2;color:#991b1b">論證解構與否定測試</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:center;font-size:13px;text-align:center">
-        <div style="background:#eff6ff;border:1px solid #bfdbfe;padding:10px;border-radius:8px">
-          <strong>Premise (前提事實)</strong>
-          <div style="font-size:11px;color:#64748b">客觀不可爭辯之證據</div>
-        </div>
-        <div>➕</div>
-        <div style="background:#fef3c7;border:1px solid #fde68a;padding:10px;border-radius:8px">
-          <strong>Assumption (未明言假設)</strong>
-          <div style="font-size:11px;color:#92400e">隱形邏輯橋樑 (攻擊點)</div>
-        </div>
-        <div>➔</div>
-        <div style="background:#ecfdf5;border:1px solid #a7f3d0;padding:10px;border-radius:8px">
-          <strong>Conclusion (主觀結論)</strong>
-          <div style="font-size:11px;color:#065f46">作者最終欲證明之主張</div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 15. 篇章結構轉折訊號地圖 (Discourse Transitions Map)
-export function renderDiscourseTransitionsMap() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🗺️ 篇章連貫與路標轉折詞全景地圖</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">閱讀解題路標</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:10px;font-size:12px">
-        <div style="background:#fff;border-left:4px solid #10b981;padding:8px 12px;border-radius:6px">
-          <strong style="color:#065f46">同向補充 (Addition)</strong><br>
-          Furthermore, Moreover, In addition
-        </div>
-        <div style="background:#fff;border-left:4px solid #ef4444;padding:8px 12px;border-radius:6px">
-          <strong style="color:#991b1b">逆向轉折 (Contrast)</strong><br>
-          However, Nevertheless, In contrast
-        </div>
-        <div style="background:#fff;border-left:4px solid #3b82f6;padding:8px 12px;border-radius:6px">
-          <strong style="color:#1e40af">因果推論 (Cause-Effect)</strong><br>
-          Therefore, Consequently, As a result
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 16. 比較級與最高級刻度尺 (Comparatives Scale)
-export function renderComparativesScaleDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">⚖️ 形容詞與副詞：原級 ➔ 比較級 ➔ 最高級 刻度尺</strong>
-        <span class="pill" style="font-size:11px;background:#fef3c7;color:#92400e">程度遞增刻度</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;justify-content:space-around;font-size:13px;flex-wrap:wrap">
-        <div style="text-align:center;padding:10px;background:#eff6ff;border-radius:8px;min-width:140px">
-          <strong>原級 (as... as)</strong>
-          <div style="font-size:11px;color:#64748b">as tall as Ben</div>
-        </div>
-        <div style="font-size:20px;color:#2563eb">➔</div>
-        <div style="text-align:center;padding:10px;background:#ecfdf5;border-radius:8px;min-width:140px">
-          <strong>比較級 (-er / more than)</strong>
-          <div style="font-size:11px;color:#065f46">taller than Ben</div>
-        </div>
-        <div style="font-size:20px;color:#10b981">➔</div>
-        <div style="text-align:center;padding:10px;background:#fdf2f8;border-radius:8px;min-width:140px">
-          <strong>最高級 (the -est / most)</strong>
-          <div style="font-size:11px;color:#9d174d">the tallest in the class</div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 17. 自然拼讀母音光譜圖 (Phonics Vowel Spectrum)
-export function renderPhonicsVowelSpectrumDiagram() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <strong style="color:#0f172a;font-size:15px">🔊 自然拼讀母音光譜與 Magic E 規則</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">見字即讀密鑰</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px">
-        <div style="background:#eff6ff;padding:12px;border-radius:8px">
-          <strong style="color:#1e40af">短母音 (CVC 閉音節)</strong>
-          <div style="font-size:12px;color:#334155;margin-top:4px">
-            a /æ/ cat · e /ɛ/ bed · i /ɪ/ sit · o /ɑː/ hot · u /ʌ/ cup
-          </div>
-        </div>
-        <div style="background:#ecfdf5;padding:12px;border-radius:8px">
-          <strong style="color:#065f46">長母音 (Magic E 開音節)</strong>
-          <div style="font-size:12px;color:#334155;margin-top:4px">
-            a_e /eɪ/ cake · i_e /aɪ/ bike · o_e /oʊ/ home · u_e /juː/ cute
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// 18. 多模態圖表 (Multimodal Data Chart)
-export function renderMultimodalDataChart() {
-  return `
-    <figure class="aid-chart lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:16px;border-radius:12px;margin:16px 0">
-      <figcaption style="font-weight:700;margin-bottom:10px">📊 示範多模態圖表數據判讀（成長率 vs. 絕對數量）</figcaption>
-      ${[['A 組 原值', 20], ['A 組 新值', 30], ['B 組 原值', 40], ['B 組 新值', 45]].map(([label, n]) => `
-        <div class="aid-bar-row">
-          <span>${esc(label)}</span>
-          <span class="aid-bar-track"><span class="aid-bar" style="width:${n * 2}%"></span></span>
-          <strong>${n}</strong>
-        </div>
-      `).join('')}
-      <p style="font-size:12px;color:#64748b;margin-top:8px">共用 0–50 刻度。A 組增加 10 (+50%)，B 組增加 5 (+12.5%)。解題時注意差額與成長率之本質差異！</p>
-    </figure>
-  `;
-}
-
-// 19. GRE Verbal 填空雙空三空語意極性矩陣與等價詞簇圖 (GRE Semantic Polarity Matrix & Twin Synonyms)
-export function renderGRESemanticPolarityChart() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">🔠 GRE Verbal 填空雙空三空語意極性矩陣與等價詞簇 (Directionality & Twin Synonyms)</strong>
-        <span class="pill" style="font-size:11px;background:#ffe4e6;color:#be123c;font-weight:700">Verbal 160+ 破題核心</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px;margin-bottom:14px">
-        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#166534;font-size:13px">
-            <span>➕</span> 語意同向信號 (Positive Directionality)
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>標記：</strong><code>and, therefore, consequently, moreover, similarly, colon (:)</code>
-          </div>
-          <div style="font-size:11px;color:#475569;line-height:1.5">
-            <strong>法則：</strong>前後命題極性相同 (P1 ➔ P2)，空格必為修飾線索之同向延伸或進一步因果推進。
-          </div>
-        </div>
-        <div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#9f1239;font-size:13px">
-            <span>🔄</span> 語意反轉信號 (Contrast & Concession)
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>標記：</strong><code>although, however, paradoxically, despite, belie, far from</code>
-          </div>
-          <div style="font-size:11px;color:#475569;line-height:1.5">
-            <strong>法則：</strong>前後命題極性相反 (P1 ≠ P2)。注意隱形反差動詞（如 <code>belie, mask, obscure, contradict</code>）。
-          </div>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;margin-bottom:12px">
-        <div style="font-weight:700;font-size:13px;color:#0f172a;margin-bottom:6px">
-          🎯 Sentence Equivalence (SE) 雙生同義詞六選二「雙重鎖定」決策流程：
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:#334155">
-          <span style="background:#e0e7ff;color:#3730a3;padding:4px 8px;border-radius:4px;font-weight:700">1. 抓取題幹 Pivot</span> ➔
-          <span style="background:#f1f5f9;padding:4px 8px;border-radius:4px">2. 預測空格正負向極性</span> ➔
-          <span style="background:#ecfdf5;color:#065f46;padding:4px 8px;border-radius:4px;font-weight:700">3. 六選中分組雙生詞 (Twin Pairs)</span> ➔
-          <span style="background:#fef3c7;color:#92400e;padding:4px 8px;border-radius:4px;font-weight:700">4. 帶回全句驗證語意一致性</span>
-        </div>
-        <div style="font-size:11px;color:#64748b;margin-top:6px">
-          ⚠️ 避坑：切勿只看選項中哪兩個是同義詞！若該組同義詞無法回應題幹精確線索，即為典型雙重陷阱！
-        </div>
-      </div>
-      <div style="font-size:12px;color:#475569;background:#f1f5f9;padding:8px 12px;border-radius:6px">
-        💡 <strong>三空題策略：</strong>「不依序做、找錨點破題」——先解線索最充足無歧義的空格（Anchor Blank），以其結果作為推導其餘兩空的堅實前提！
-      </div>
-    </div>
-  `;
-}
-
-// 20. GMAT Focus 批判推理因果鏈與否定測試決策樹 (GMAT CR Causal Chain & Negation Tree)
-export function renderGMATCriticalReasoningTree() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">⚖️ GMAT Focus Edition 批判推理因果鏈與否定測試決策樹 (CR Causal Chain & Negation Tree)</strong>
-        <span class="pill" style="font-size:11px;background:#cffafe;color:#0e7490;font-weight:700">商學院邏輯靈魂</span>
-      </div>
-      <!-- 核心論證鏈架構圖 -->
-      <div style="display:grid;grid-template-columns:1fr auto 1.2fr auto 1fr;gap:8px;align-items:center;font-size:12px;text-align:center;margin-bottom:14px">
-        <div style="background:#eff6ff;border:1px solid #93c5fd;padding:10px;border-radius:8px">
-          <strong style="color:#1e40af">Premise (客觀事實)</strong>
-          <div style="font-size:11px;color:#64748b;margin-top:2px">不可質疑的實證數據</div>
-        </div>
-        <div style="font-size:16px;color:#64748b">➔</div>
-        <div style="background:#fef3c7;border:2px dashed #f59e0b;padding:10px;border-radius:8px">
-          <strong style="color:#b45309">Assumption (隱含假設)</strong>
-          <div style="font-size:11px;color:#78350f;margin-top:2px">作者未言明之必要橋樑 (脆弱點)</div>
-        </div>
-        <div style="font-size:16px;color:#64748b">➔</div>
-        <div style="background:#ecfdf5;border:1px solid #86efac;padding:10px;border-radius:8px">
-          <strong style="color:#065f46">Conclusion (主觀主張)</strong>
-          <div style="font-size:11px;color:#64748b;margin-top:2px">作者欲證明的推論結論</div>
-        </div>
-      </div>
-      <!-- 五大核心攻防矩陣 -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:10px;margin-bottom:12px;font-size:12px">
-        <div style="background:#fef2f2;border:1px solid #fecaca;padding:10px;border-radius:8px">
-          <strong style="color:#b91c1c">1. 削弱題 (Weaken) ⬇️</strong>
-          <div style="color:#475569;margin-top:4px">
-            • <strong>另有他因 (Alt Cause)</strong><br>
-            • <strong>因果倒置 (Reverse Causality)</strong><br>
-            • <strong>樣本偏差 (Selection Bias)</strong>
-          </div>
-        </div>
-        <div style="background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:8px">
-          <strong style="color:#15803d">2. 加強題 (Strengthen) ⬆️</strong>
-          <div style="color:#475569;margin-top:4px">
-            • <strong>排除混淆變量 (Confounder)</strong><br>
-            • <strong>證實無因則無果 (No Cause No Effect)</strong><br>
-            • <strong>平行操作實證 (Analogous Proof)</strong>
-          </div>
-        </div>
-        <div style="background:#fffbeb;border:1px solid #fde68a;padding:10px;border-radius:8px">
-          <strong style="color:#b45309">3. 假設題 (Assumption) 🎯</strong>
-          <div style="color:#475569;margin-top:4px">
-            • <strong>否定測試法 (Negation Technique)</strong><br>
-            • <strong>將選項取非 (Add NOT)</strong><br>
-            • <strong>若結論立即瓦解即為正解！</strong>
-          </div>
-        </div>
-        <div style="background:#f5f3ff;border:1px solid #ddd6fe;padding:10px;border-radius:8px">
-          <strong style="color:#6d28d9">4. 評價與黑體字 ⚖️</strong>
-          <div style="color:#475569;margin-top:4px">
-            • <strong>Evaluate:</strong> 雙向變數測試 (Variance)<br>
-            • <strong>Boldface:</strong> 辨析證據 (Evidence) vs 中間結論 vs 主張 (Claim)
-          </div>
-        </div>
-      </div>
-      <div style="font-size:11px;color:#64748b;line-height:1.5">
-        💡 <strong>商學思維警告：</strong>題目涉及利潤 (Profit) 時，注意 Profit = Revenue - Cost，切勿將「銷售額增加」直接推導為「利潤增加」！
-      </div>
-    </div>
-  `;
-}
-
-// TOEIC 多益核心題型破題心智地圖
-export function renderTOEICQuestionTypeStrategyMap() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">🏢 TOEIC 多益 Part 5–7 核心題型破題心智地圖 (TOEIC Master Strategy Blueprint)</strong>
-        <span class="pill" style="font-size:11px;background:#fef3c7;color:#b45309;font-weight:700">L&amp;R 990 滿分實戰策略</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px;margin-bottom:14px">
-        <!-- Part 5 -->
-        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#92400e;font-size:13px">
-            <span>⚡</span> Part 5 單句填空 (詞性秒殺 &amp; 高頻語法)
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>極速定位：</strong>20 秒/題 · 視線先看四個選項字根是否相同
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #d97706">
-            • <strong>同字根詞性題：</strong>直接看空格前後 2–3 個單字，判定主詞、受詞或修飾語位置<br>
-            • <strong>常考句構：</strong><code>Adv + Adj + N</code>、<code>be + p.p. + Prep</code>、<code>Prep + V-ing + N</code><br>
-            • <strong>致命陷阱：</strong>動名詞後接受詞 (approving the budget) vs 動作名詞不可直接承受詞 (approval of the budget)
-          </div>
-        </div>
-
-        <!-- Part 6 -->
-        <div style="background:#f0fdfa;border:1px solid #99f6e4;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#0f766e;font-size:13px">
-            <span>🧩</span> Part 6 段落填空 (語意錨點 &amp; 句子插入)
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>篇章連貫：</strong>8–10 分鐘完成 4 篇 16 題 · 抓取前後邏輯鉤子
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #0d9488">
-            • <strong>句子插入題：</strong>先讀該空格前一句與後一句的代名詞 (this/these/such) 與因果轉折<br>
-            • <strong>轉折副詞：</strong>However (反差)、Furthermore (遞進)、Consequently (因果)<br>
-            • <strong>致命陷阱：</strong>跳段硬套選項造成時態突變 (例如主篇章為過去經驗卻硬選 will be)
-          </div>
-        </div>
-
-        <!-- Part 7 -->
-        <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#1d4ed8;font-size:13px">
-            <span>📑</span> Part 7 閱讀理解 (跨文本交叉比對矩陣)
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>雙篇/三篇：</strong>50–55 分鐘極限配速 · 跨篇交叉綜合 (Synthesis)
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #2563eb">
-            • <strong>跨篇定位公式：</strong>文本 A (採購發票/行程) + 文本 B (客服投訴/變更通知) ➔ 答案在交集差額<br>
-            • <strong>意圖推論題：</strong>What does the author imply? 嚴防主觀腦補，必找同義改寫 (Paraphrase)<br>
-            • <strong>致命陷阱：</strong>文本 A 提及但文本 B 已經更新更正的「過期舊資訊干擾項」
-          </div>
-        </div>
-      </div>
-      <div style="font-size:11px;color:#64748b;line-height:1.5">
-        💡 <strong>多益黃金配速律：</strong>聽力完畢立即無縫接軌 Part 5 (10–12分) ➔ Part 6 (8–10分) ➔ Part 7 (50–55分)，確保最後 5 題三篇閱讀有充裕 7 分鐘作答！
-      </div>
-    </div>
-  `;
-}
-
-// Digital SAT 雙模組三大領域解題架構藍圖
-export function renderSATConstructBlueprint() {
-  return `
-    <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">🎓 Digital SAT 雙模組學術三大領域解題架構藍圖 (Digital SAT Blueprint)</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3;font-weight:700">Reading &amp; Writing 800 滿分構念</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px;margin-bottom:14px">
-        <!-- Craft & Structure -->
-        <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#5b21b6;font-size:13px">
-            <span>🔍</span> Words in Context 語境詞彙 &amp; 修辭目的
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>雙向語意指針：</strong>題幹必有 100% 絕對客觀之同義線索或反義對照
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #7c3aed">
-            • <strong>反差線索：</strong>However, far from, rather than ➔ 空格填入對比項之精確反義詞<br>
-            • <strong>同向線索：</strong>Furthermore, indeed, colon (:) ➔ 空格填入前述主張之精確同義詞<br>
-            • <strong>致命陷阱：</strong>代入中文憑「感覺通順」硬猜；忽略學術語境中的高階衍生義 (如 corroborate, delineate)
-          </div>
-        </div>
-
-        <!-- Information & Ideas -->
-        <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#1d4ed8;font-size:13px">
-            <span>📊</span> Command of Evidence &amp; Inferences 論據推論
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>假說因果驗證：</strong>將研究假說提煉成「變量 A 影響變量 B」的邏輯關係
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #2563eb">
-            • <strong>支持題 (Support)：</strong>實驗組數據顯著超越控制組，或排除關鍵潛在混淆變量<br>
-            • <strong>削弱題 (Weaken)：</strong>指出反常數據 (Anomalous data) 或發現變量 C 才是主因<br>
-            • <strong>致命陷阱：</strong>範疇漂移 (Scope Shift)——選項提及普遍真理但與本研究之具體因果假設無關
-          </div>
-        </div>
-
-        <!-- Standard English Conventions -->
-        <div style="background:#fdf2f8;border:1px solid #fbcfe8;border-radius:8px;padding:12px">
-          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:#9d174d;font-size:13px">
-            <span>📐</span> Standard English 句子邊界、標點與修飾語
-          </div>
-          <div style="font-size:12px;color:#1e293b;margin:6px 0">
-            <strong>句界三大鐵律：</strong>抓全句主要主詞與主動詞，切分獨立子句 (IC) 與從屬 (DC)
-          </div>
-          <div style="font-size:11px;color:#475569;background:#ffffff;padding:8px;border-radius:6px;border:1px dashed #db2777">
-            • <strong>分號 (;)：</strong>等同句號，兩側必須為完整獨立子句 (IC; IC)<br>
-            • <strong>冒號 (:)：</strong>前方必為完整獨立子句，後方引導同位解釋、列表或結果<br>
-            • <strong>懸垂分詞：</strong>句首分詞片語 <code>Walking home, ...</code>，主句主詞必須是執行動作的邏輯主體！
-          </div>
-        </div>
-      </div>
-      <div style="font-size:11px;color:#64748b;line-height:1.5">
-        💡 <strong>Digital SAT 適性測驗決勝法：</strong>Module 1 前 15 題絕不可失誤，方能穩健躍入 Hard Module 2 爭取 750–800 分滿分梯隊！
-      </div>
-    </div>
-  `;
-}
-
-
+const newVisualFunctions = `
 // 21. 疑問句語序與情態助動詞結構圖 (Question & Modals Blueprint)
 export function renderQuestionModalsBlueprint() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">❓ 疑問句語序 (5W1H) 與情態助動詞語氣強弱光譜</strong>
@@ -842,12 +52,12 @@ export function renderQuestionModalsBlueprint() {
         ⚠️ <strong>考場題眼：</strong>遇到 does / do / did 或情態助動詞 (can, will, must)，後方主動詞一律回歸「動詞原形」！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 22. 等立連接詞 (FANBOYS) 與從屬複句結構圖 (Conjunctions & Complex Sentences)
 export function renderConjunctionsComplexSentencesDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🪢 等立連接詞 (FANBOYS) vs. 從屬副詞子句結構對照圖</strong>
@@ -879,12 +89,12 @@ export function renderConjunctionsComplexSentencesDiagram() {
         🚫 <strong>致命語病警告：</strong>繁中常說「因為…所以…」、「雖然…但是…」，但英文 <code>Because ... so ...</code> 與 <code>Although ... but ...</code> 絕對不可同時存在於同一句中！二選一！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 23. 聽力辨識、連音與語音線索圖 (Listening Acoustic Cues)
 export function renderListeningConnectedSpeechDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🎧 英語母語者真實聽力解碼：連音、弱讀與語調起伏全景圖</strong>
@@ -920,12 +130,12 @@ export function renderListeningConnectedSpeechDiagram() {
         💡 <strong>聽力破題思維：</strong>聽力測驗不要試圖聽清每一個虛詞，把耳朵鎖定在「實詞（名詞、主要動詞、形容詞、否定詞）」的重音與語調轉折上！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 24. 大考衝刺極限配速與三層排雷圖 (Exam Pacing & Strategy)
 export function renderExamStrategyDiagnosisDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🎯 大考高分決勝：極限配速時間表與三層排雷訂正閉環</strong>
@@ -955,12 +165,12 @@ export function renderExamStrategyDiagnosisDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 25. 長難句五步拆解樹與主幹提取圖 (Long Sentence Parsing)
 export function renderLongSentenceParsingDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🧅 高中長難句五步「剝洋蔥」解構樹 (Sentence Parsing Tree)</strong>
@@ -990,12 +200,12 @@ export function renderLongSentenceParsingDiagram() {
         💡 <strong>拆解心得：</strong>長難句再長，拿掉所有修飾括號後，核心只有「The scrolls reveal details」！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 26. 高中核心搭配詞同心圓網絡圖 (Collocation Network)
 export function renderCollocationNetworkDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🌐 高中 7000 單 Collocation 搭配詞同心圓網絡圖</strong>
@@ -1034,12 +244,12 @@ export function renderCollocationNetworkDiagram() {
         💡 <strong>學測大考警示：</strong>詞彙題選項常考動詞與介系詞的固定搭配 (如 contribute <strong>to</strong>, rely <strong>on</strong>, consist <strong>of</strong>)，背單字務必成串打包！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 27. 中譯英思維轉譯架構圖 (Translation Cognitive Shift)
 export function renderTranslationCognitiveDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🔄 中譯英思維轉譯架構圖：擺脫中式直譯陷阱</strong>
@@ -1075,12 +285,12 @@ export function renderTranslationCognitiveDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 28. 技高專業英文讀寫與工程實務圖 (Vocational ESP Technical)
 export function renderVocationalESPTechnicalDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">📋 技高專業英文 (ESP) 文獻架構與跨國工程實務圖</strong>
@@ -1116,12 +326,12 @@ export function renderVocationalESPTechnicalDiagram() {
         ⚠️ <strong>ESP 語言風格：</strong>講求客觀精準、多用被動語態 (The test was conducted...) 與標準工程術語，避免口語模糊詞彙。
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 29. 全民英檢 GEPT 全級別進階階梯圖 (GEPT Ladder)
 export function renderGEPTMultiLevelLadderDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🏅 全民英檢 GEPT 全級別進階階梯與四技能雷達圖</strong>
@@ -1153,12 +363,12 @@ export function renderGEPTMultiLevelLadderDiagram() {
         💡 <strong>通關策略：</strong>初試聽讀通過後有 2 年保留期可報考複試；複試口說切勿沉默停頓，回答時掌握「主張 + 理由 + 實例」三段骨架！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 30. TOEFL iBT 120 滿分四技能整合圖 (TOEFL Blueprint)
 export function renderTOEFLIntegratedSkillsDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🗽 TOEFL iBT 120 滿分四技能整合型題型攻略藍圖</strong>
@@ -1198,12 +408,12 @@ export function renderTOEFLIntegratedSkillsDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 31. 時間時鐘指針與作息圖 (Daily Routines & Telling Time)
 export function renderDailyRoutinesTimeClockDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">⏰ 英文時間時鐘指針讀法 (Past vs. To) 與作息時間軸</strong>
@@ -1234,12 +444,12 @@ export function renderDailyRoutinesTimeClockDiagram() {
         <span style="background:#e0e7ff;color:#3730a3;padding:4px 8px;border-radius:4px;font-weight:700">at night</span> go to sleep
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 32. 健康飲食與症狀關懷圖 (Food, Health & Symptoms)
 export function renderFoodHealthPyramidDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🍎 健康飲食金字塔與身體症狀表達圖解</strong>
@@ -1267,12 +477,12 @@ export function renderFoodHealthPyramidDiagram() {
         💡 <strong>文法提醒：</strong>headache, toothache, stomachache 前面通常加不定冠詞 <code>a</code>；建議使用情態助動詞 <code>should</code> 提出關心。
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 33. 世界節慶日曆與文化特色圖 (Festivals Calendar)
 export function renderFestivalsCulturalCalendarDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🎉 世界重要節慶日曆與文化特色全景圖</strong>
@@ -1297,12 +507,12 @@ export function renderFestivalsCulturalCalendarDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 34. 頻率副詞百分比與 There is/are 圖 (Frequency Spectrum & Existence)
 export function renderFrequencySpectrumExistenceDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">📊 頻率副詞百分比刻度尺與 There is / are 存在句結構</strong>
@@ -1331,12 +541,12 @@ export function renderFrequencySpectrumExistenceDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 35. 過去進行式與 When/While 時間交錯軸 (Past Continuous Timeline)
 export function renderPastContinuousTimelineDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">⏳ 過去進行式 (was/were V-ing) 與 When / While 時間交錯軸</strong>
@@ -1363,12 +573,12 @@ export function renderPastContinuousTimelineDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 36. 附加問句反轉天平與間接問句直述語序圖 (Tag Questions & Indirect Questions)
 export function renderTagAndIndirectQuestionsDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">⚖️ 附加問句反轉天平與間接問句「直述語序」變身圖</strong>
@@ -1393,12 +603,12 @@ export function renderTagAndIndirectQuestionsDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 37. 分裂句強調聚光燈圖 (Cleft Sentences Spotlight)
 export function renderCleftSentenceSpotlightDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🔦 It is ... that 分裂句強光聚光燈強調結構</strong>
@@ -1421,12 +631,12 @@ export function renderCleftSentenceSpotlightDiagram() {
         💡 <strong>驗證秘笈：</strong>把 <code>It was ... that</code> 刪除，若剩下的文字能拼成完整句子，即為「分裂句」！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 38. 可數與不可數名詞天平圖 (Countability Balance)
 export function renderCountabilityBalanceDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">⚖️ 可數名詞 (Countable) vs. 不可數名詞 (Uncountable) 視覺天平</strong>
@@ -1454,12 +664,12 @@ export function renderCountabilityBalanceDiagram() {
         ⚠️ <strong>常見不可數大坑：</strong>information, advice, furniture, news, homework, luggage 在英文中均為不可數名詞！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 39. 人稱代名詞與 be 動詞積木圖 (Be-Verb Building Blocks)
 export function renderBeVerbBuildingBlocksDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🧱 人稱代名詞與 be 動詞黃金連線積木圖</strong>
@@ -1486,12 +696,12 @@ export function renderBeVerbBuildingBlocksDiagram() {
         💡 <strong>句型結構：</strong>主詞 + be 動詞 + [補語：身分名詞 / 狀態形容詞 / 地點介系詞片語] ＝ 完整有意義的一句話！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 40. 第三人稱單數動詞與 Do/Does 照妖鏡圖 (Present Simple Do/Does)
 export function renderPresentQuestionsDoDoesDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🔍 第三人稱單數現在簡單式與 Do / Does 照妖鏡圖</strong>
@@ -1519,12 +729,12 @@ export function renderPresentQuestionsDoDoesDiagram() {
         ⚠️ <strong>考場致命失誤：</strong>千萬不要寫出 <em>Does she watches?</em> 或 <em>He doesn't plays</em>！助動詞 does 出現，動詞必須立刻打回原形！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 41. 大學 EMI 全英語授課與學術簡報圖 (EMI Academic Presentation)
 export function renderEMIAcademicPresentationDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🎓 大學 EMI 全英語授課課堂筆記與學術簡報五階段架構圖</strong>
@@ -1556,12 +766,12 @@ export function renderEMIAcademicPresentationDiagram() {
         💡 <strong>康乃爾筆記法 (Cornell Notes)：</strong>左側欄記關鍵詞 (Cues/Keywords)、右側大區記課堂核心論述 (Notes)、底部留 2 行寫一分鐘精華摘要 (Summary)！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 42. 終生英語學習飛輪圖 (Lifelong Learning Flywheel)
 export function renderLifelongLearningFlywheelDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🚀 終生自主英語力成長飛輪與輸入輸出閉環模型</strong>
@@ -1586,12 +796,12 @@ export function renderLifelongLearningFlywheelDiagram() {
         </div>
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 43. 構詞學三段式解構圖 (Word Formation Morphology)
 export function renderWordFormationMorphologyDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🧩 英語構詞學三段式解構：字首 ＋ 字根 ＋ 字尾 衍生模型</strong>
@@ -1626,12 +836,12 @@ export function renderWordFormationMorphologyDiagram() {
         ⚠️ <strong>拼寫避雷：</strong>字尾接 -ness 時子音 y 改為 i (happy ➔ happiness)；看到相同字母開頭（如 uncle）不代表為否定字首 un-！
       </div>
     </div>
-  `;
+  \`;
 }
 
 // 44. 人稱代名詞五格轉換全景矩陣 (Pronouns Matrix)
 export function renderPronounsMatrixDiagram() {
-  return `
+  return \`
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">👤 人稱代名詞格位轉換全景矩陣 (Pronouns Matrix)</strong>
@@ -1664,23 +874,24 @@ export function renderPronounsMatrixDiagram() {
         ⚠️ <strong>大考超高頻陷阱：</strong><code>its</code> (代名詞所有格，它的) vs <code>it's</code> (= it is / it has 的縮寫)，千萬不可寫錯！
       </div>
     </div>
-  `;
+  \`;
 }
+`;
 
-// 智能匹配主題最佳視覺圖表
+const updatedRouter = `// 智能匹配主題最佳視覺圖表
 export function renderTopicVisualChart(title = '') {
   const t = String(title ?? '');
-  if (/toeic\b|多益|商務測驗/i.test(t)) return renderTOEICQuestionTypeStrategyMap();
-  if (/sat\b|digital sat|學術英語/i.test(t)) return renderSATConstructBlueprint();
-  if (/gre\b|gre general|語意與論證/i.test(t)) return renderGRESemanticPolarityChart();
-  if (/gmat\b|gmat focus|批判推理/i.test(t)) return renderGMATCriticalReasoningTree();
+  if (/toeic\\b|多益|商務測驗/i.test(t)) return renderTOEICQuestionTypeStrategyMap();
+  if (/sat\\b|digital sat|學術英語/i.test(t)) return renderSATConstructBlueprint();
+  if (/gre\\b|gre general|語意與論證/i.test(t)) return renderGRESemanticPolarityChart();
+  if (/gmat\\b|gmat focus|批判推理/i.test(t)) return renderGMATCriticalReasoningTree();
   if (/toefl|托福/i.test(t)) return renderTOEFLIntegratedSkillsDiagram();
   if (/gept|全民英檢/i.test(t)) return renderGEPTMultiLevelLadderDiagram();
   if (/被動|passive/i.test(t)) return renderPassiveVoiceDiagram();
   if (/五大句型|句子骨架|sentence pattern|基本句型|動詞分類/i.test(t)) return renderFiveSentencePatternsDiagram();
   if (/長難句|句法.*拆解|complex sentence/i.test(t)) return renderLongSentenceParsingDiagram();
   if (/中譯英|翻譯|句子產出/i.test(t)) return renderTranslationCognitiveDiagram();
-  if (/整卷衝刺|大考衝刺|學測.*統測|會考.*整合|訂正策略|會考.*a\+\+|cap a\+\+|頂標衝刺|素養總結|終極模擬|culminating|diagnostic trial|全真突破/i.test(t)) return renderExamStrategyDiagnosisDiagram();
+  if (/整卷衝刺|大考衝刺|學測.*統測|會考.*整合|訂正策略|會考.*a\\+\\+|cap a\\+\\+|頂標衝刺|素養總結|終極模擬|culminating|diagnostic trial|全真突破/i.test(t)) return renderExamStrategyDiagnosisDiagram();
   if (/核心詞彙|搭配詞|collocation|字彙網絡/i.test(t)) return renderCollocationNetworkDiagram();
   if (/篇章結構|四空五選|文意選填|discourse|cohesion/i.test(t)) return renderDiscourseTransitionsMap();
   if (/疑問句|情態|助動詞|問句|生活溝通/i.test(t)) return renderQuestionModalsBlueprint();
@@ -1700,67 +911,180 @@ export function renderTopicVisualChart(title = '') {
   if (/動名詞|不定詞|gerund|infinitive/i.test(t)) return renderGerundInfinitiveMatrixDiagram();
   if (/比較|最高級|comparison|comparative/i.test(t)) return renderComparativesScaleDiagram();
   if (/日常生活作息|時間表達|daily routine|telling time|動態時間/i.test(t)) return renderDailyRoutinesTimeClockDiagram();
-  if (/健康飲食|身體部位|醫療照護/i.test(t)) return renderFoodHealthPyramidDiagram();
+  if (/健康飲食|身體部位|醫療照護|food.*health/i.test(t)) return renderFoodHealthPyramidDiagram();
   if (/世界節慶|多元文化|festivals.*culture/i.test(t)) return renderFestivalsCulturalCalendarDiagram();
   if (/頻率副詞|there is|存在句|frequency/i.test(t)) return renderFrequencySpectrumExistenceDiagram();
   if (/過去進行|when.*while|過去式.*故事|過去式.*未來/i.test(t)) return renderPastContinuousTimelineDiagram();
   if (/附加問句|名詞子句|間接問句|tag question/i.test(t)) return renderTagAndIndirectQuestionsDiagram();
   if (/可數|不可數|量詞|countab|quantifier|名詞、冠詞與數量/i.test(t)) return renderCountabilityBalanceDiagram();
   if (/第一個完整句子|be 動詞.*句子|be-sentences|人稱代名詞/i.test(t)) return renderBeVerbBuildingBlocksDiagram();
-  if (/日常動作.*第三人稱|三單|do \/ does|be 動詞、一般動詞/i.test(t)) return renderPresentQuestionsDoDoesDiagram();
+  if (/日常動作.*第三人稱|三單|do \\/ does|be 動詞、一般動詞/i.test(t)) return renderPresentQuestionsDoDoesDiagram();
   if (/大學.*emi|全英語授課|口頭簡報|academic.*presentation|科技英語|ai 論文|綠色能源/i.test(t)) return renderEMIAcademicPresentationDiagram();
   if (/終生.*學習|英語力全景|自主學習|lifelong/i.test(t)) return renderLifelongLearningFlywheelDiagram();
   if (/字首字尾|構詞|word building|affix|morphology/i.test(t)) return renderWordFormationMorphologyDiagram();
   if (/發音|音標|拼讀|phonics|vowel/i.test(t)) return renderPhonicsVowelSpectrumDiagram();
   if (/代名詞|所有格|pronoun/i.test(t)) return renderPronounsMatrixDiagram();
-  if (/(?:時態|完成式|完成時|進行式|簡單式|未來|\btenses?\b|\bpast tense|\bfuture\b)/i.test(t) && !/food|health/i.test(t)) return renderTenseTimelineChart();
+  if (/(?:時態|完成式|完成時|進行式|簡單式|未來|\\btenses?\\b|\\bpast tense|\\bfuture\\b)/i.test(t) && !/food|health/i.test(t)) return renderTenseTimelineChart();
   if (/圖表|chart|multimodal/i.test(t)) return renderMultimodalDataChart();
   if (/論證|批判|假設|argument|critical/i.test(t)) return renderCriticalReasoningLogicDiagram();
   if (/作文|寫作|writing/i.test(t)) return renderBusinessEmailFlowDiagram();
   if (/篇章|段落|閱讀|reading/i.test(t)) return renderDiscourseTransitionsMap();
   return '';
+}`;
+
+// Insert new diagrams before export function renderTopicVisualChart
+const targetChartMatch = '// 智能匹配主題最佳視覺圖表';
+const endOfTargetChart = 'export function getSmartVisualDiagram';
+
+const idxStart = visualsContent.indexOf(targetChartMatch);
+const idxEnd = visualsContent.indexOf(endOfTargetChart);
+
+if (idxStart === -1 || idxEnd === -1) {
+  throw new Error('Could not find renderTopicVisualChart boundaries in lesson_visuals.mjs');
 }
 
-export function getSmartVisualDiagram(unitTitle) {
-  return renderTopicVisualChart(unitTitle);
+const before = visualsContent.slice(0, idxStart);
+const after = visualsContent.slice(idxEnd);
+
+visualsContent = before + newVisualFunctions + '\n' + updatedRouter + '\n\n' + after;
+fs.writeFileSync(visualsPath, visualsContent, 'utf8');
+console.log('✓ Updated dist/lesson_visuals.mjs');
+
+// =========================================================================
+// 2. UPDATE dist/teaching_aids.mjs
+// =========================================================================
+let aidsPath = path.join(ROOT, 'dist', 'teaching_aids.mjs');
+
+const newAidsContent = `import { renderTopicVisualChart } from './lesson_visuals.mjs';
+
+const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const profiles=[
+ [/被動|passive/i,'動作如何換主角？','🔄',['執行者：The chef','動作：cooks','接受者：the meal'],[['主動','The chef cooks the meal.','主詞執行動作'],['被動','The meal is cooked by the chef.','主詞接受動作；be + 過去分詞'],['必要要求','The meal must be cooked.','情態動詞 + be + 過去分詞']]],
+ [/完成式|完成時|perfect/i,'過去事件與現在的連結','⏳',['過去起點：2022','持續：has lived','現在：仍住這裡'],[['已結束的過去','She lived here in 2022.','已結束時間搭過去式'],['延續至今','She has lived here since 2022.','since + 起點'],['時間長度','She has lived here for four years.','for + 長度；是否持續仍看時態']]],
+ [/關係|代名詞.*受格|relative|形容詞子句|先行詞/i,'關係子句的缺口','🔗',['先行詞：the book','子句：I bought ___','合併：the book that I bought'],[['缺主詞','The girl who won is Amy.','who 不可省略'],['缺受詞','The book (that) I bought is new.','限定子句中可省略受詞關係代名詞'],['補充說明','My bike, which is red, is outside.','有逗號；不能用 that']]],
+ [/條件|假設|unless|conditional|subjunctive/i,'先看條件，再看結果','🔀',['條件：If it rains','條件成立？','結果：we will stay home'],[['可能的未來','If it rains, we will stay home.','條件子句用現在式'],['現在的假設','If I had time, I would help.','過去式表與現在事實有距離'],['過去的假設','If I had known, I would have helped.','had + p.p.／would have + p.p.']]],
+ [/比較|最高級|comparison|comparative|superlative/i,'比較對象要對齊','⚖️',['A 的同一特質','比較：-er / more','B 的同一特質'],[['兩者比較','Amy is taller than Ben.','形容詞比較級 + than'],['群體中最高','Amy is the tallest in her class.','the + 最高級 + 範圍'],['同等比較','Amy is as tall as Ben.','as + 原級 + as']]],
+ [/可數|不可數|數量|名詞單複|countab|quantifier|名詞、冠詞與數量/i,'先看名詞，再選量詞','🧺',['可數？ a book / books','不可數？ water','依語意選 many / much / some'],[['可數複數','many books / a few books','可一個個計數'],['不可數','much water / a little water','整體或材料'],['借助單位','two pieces of advice','advice 不直接加 s']]],
+ [/附加問句|間接問句|名詞子句|tag question|indirect|noun clause/i,'大句裡的小句','💬',['主句：Do you know','疑問詞：where','直述語序：she lives'],[['直接問句','Where does she live?','疑問語序'],['間接問句','Do you know where she lives?','子句改為主詞 + 動詞'],['附加問句','She lives here, doesn’t she?','檢查時態、主詞與肯否']]],
+ [/倒裝|inversion|inverted/i,'先還原，再倒裝','↔️',['原句：I have never seen it','前移：Never','倒裝：have I seen it'],[['原句','I have never seen it.','先看助動詞與主詞'],['否定副詞前移','Never have I seen it.','助動詞移到主詞前'],['無原有助動詞','Rarely does she complain.','加 does，主動詞還原']]],
+ [/分裂句|焦點強調|cleft/i,'It is ... that 強光聚光燈','🔦',['鎖定強調焦點 (主詞/受詞/副詞)','套入 It is/was [焦點] that','刪除測試：還原為完整原句'],[['強調主詞','It was Tom that won the prize.','Tom 是執行動作的主體'],['強調受詞','It was this book that I read.','this book 是被閱讀的客體'],['強調時間副詞','It was at midnight that rain began.','at midnight 交代關鍵時刻']]],
+ [/分詞|participle|participial|absolute/i,'化簡前先比對主詞','✂️',['原子句：Because she was tired','主詞同為 she','化簡：Being tired, she rested.'],[['主動關係','Walking home, Amy saw Ben.','Amy 是走路的人'],['被動關係','Written in English, the letter was clear.','letter 是被寫的物件'],['避免懸垂','Walking home, the rain started. → 改明主詞','不要讓雨成為走路的人']]],
+ [/動名詞|不定詞|gerund|infinitive/i,'動詞後面接哪種形式？','🧩',['找前面的動詞','查搭配與語意','選 to V 或 V-ing'],[['習慣搭配','enjoy reading / decide to read','搭配需連詞組記憶'],['停止原動作','stop talking','停止說話'],['停下來做另一件事','stop to talk','停下手邊的事去說話']]],
+ [/介系詞|問路|方位|directions|preposition/i,'空間與時間的定位','📍',['at：某個點','on：表面／某天','in：空間／較長時段'],[['時間點','at seven','鐘點'],['特定日期','on Monday / on June 1','星期或日期'],['範圍內','in the room / in July','空間或月份；不是所有用法都可直譯']]],
+ [/過去進行|when.*while/i,'時間交錯：背景長動作 vs 切入短動作','⏳',['長動作進行中 (was V-ing)','短動作切入 (V-ed)','由 when / while 錨定時序'],[['背景長動作','I was showering when phone rang.','進行中被突然中斷'],['短動作切入','The phone rang while I was showering.','when 引導短動作，while 引導進行'],['雙動作平行','Mom was cooking while Dad was reading.','過去某一時間段平行發生']]],
+ [/現在進行|進行式|continuous|progressive/i,'正在發生的動作','▶️',['主詞：They','be：are','V-ing：reading now'],[['現在進行','They are reading now.','be 隨主詞變化'],['過去進行','They were reading at eight.','過去某時正在進行'],['不同於習慣','They read every day.','習慣通常用現在簡單式']]],
+ [/過去|未來|時態|tense|future|narrative|簡單式/i,'把事件放上時間軸','🕒',['過去：yesterday','現在：now / every day','未來：tomorrow'],[['已結束事件','I visited her yesterday.','過去式'],['現在習慣','I visit her every Sunday.','現在簡單式'],['未來計畫','I am going to visit her tomorrow.','be going to + 原形']]],
+ [/五大句型|基本句型|句子骨架|動詞分類|sentence pattern|第一個完整句子|be 動詞.*句子|be-sentences|人稱/i,'句子由哪些積木組成？','🧱',['誰／什麼：She','動詞：is / reads','補充：happy / a book'],[['身分、狀態','She is happy.','主詞 + be + 補語'],['動作與受詞','She reads a book.','主詞 + 動詞 + 受詞'],['主詞一致','They are happy.','主詞改複數，be 也改變']]],
+ [/do \\/ does|第三人稱|三單|現在簡單|頻率|present simple/i,'把第三人稱變化交給 does','🔧',['肯定：She plays','疑問：Does she play?','否定：She doesn’t play.'],[['第三人稱肯定','He watches TV.','watch → watches'],['疑問句','Does he watch TV?','does 後用原形'],['頻率副詞','He often watches TV.','通常在一般動詞前、be 後']]],
+ [/疑問句|情態|助動詞|生活溝通/i,'疑問詞語序與情態語氣分級','❓',['找疑問詞 (5W1H)','看主詞與動詞','助動詞調前，動詞還原'],[['Wh- 特殊問句','Where does she live?','疑問詞 + 助動詞 + 主詞 + 原形'],['Yes/No 一般問句','Can you swim?','情態/助動詞移至主詞前'],['情態推測','She must be tired.','must (95% 必定) > may (50% 可能)'],['禮貌請求','Could you help me?','could / would 語氣比 can / will 客氣']]],
+ [/連接詞|複句|conjunction|副詞子句|因果轉折/i,'等立 vs 從屬連接詞兩大陣營','🪢',['判斷句子關係 (因果/轉折/時間)','選對連接詞類別','檢查標點逗號與主從子句'],[['等立連接 (FANBOYS)','I was tired, but I finished.','連接同等獨立子句；前有逗號'],['從屬原因 (because)','Because it rained, we stayed.','從屬句在句首加逗號；不可 because 與 so 連用'],['從屬讓步 (although)','Although it rained, we went.','不可 although 與 but 連用'],['時間從屬 (when/while)','While I was cooking, phone rang.','while 接進行式背景動作']]],
+ [/聽力|語音|連音|弱讀|listening|connected speech/i,'母語者真實語音四大解碼線索','🎧',['抓取句子重音與實詞','辨識連音與省音現象','由語調起伏推測說話者意圖'],[['連音 (Linking)','pick up → /pɪˈkʌp/','前字子音尾連後字母音起首'],['弱讀 (Weak Form)','bread and butter → bread /ən/ butter','虛詞 (and, of, to) 元音弱化為 /ə/'],['升調 (Rising)','Are you ready? ↗','Yes/No 問句或不確定確認語氣'],['降調 (Falling)','Where are you going? ↘','Wh- 特殊問句與確定陳述句']]],
+ [/長難句|句法.*拆解|complex sentence/i,'長難句五步剝洋蔥解構術','🧅',['抓主幹 (主要主詞與主要動詞)','括號括起介系詞片語','標記關係子句與分詞修飾語','重組主句核心邏輯'],[['主幹提取','The scientist [who discovered X] won the prize.','主詞 The scientist ... 動詞 won the prize'],['介系詞層層修飾','The book [on the desk] [in my room] is mine.','向後修飾前方名詞，不影響主動詞單複數'],['同位語補充','Dr. Smith, [a renowned surgeon], spoke.','逗號間同位語可暫時跳過不讀'],['多重從屬','He said [that if it rained, he would stay].','釐清名詞子句與條件子句的包容層級']]],
+ [/核心詞彙|搭配詞|collocation|字彙網絡/i,'高中核心搭配詞同心圓網絡','🌐',['背單字背「動詞 + 名詞」','注意專屬介系詞搭配','分辨近義詞語境色彩'],[['強烈搭配 (Strong)','make an effort / pay attention to','不可隨意替換為 do effort / give attention'],['介系詞綁定','depend on / contribute to / result in','動詞與介系詞打包成單一記憶單位'],['語境色彩 (Register)','childish (幼稚負面) vs youthful (青春正面)','依作者褒貶態度精準選詞'],['同字異義 (Polysemy)','address (地址 / 演說 / 著手處理問題)','學測高頻考動詞衍生義']]],
+ [/中譯英|翻譯|句子產出|translation/i,'中英思維轉譯與無主句破解術','🔄',['中翻英先給句子找合法主詞','主動詞緊鄰，修飾語後置','時態依照客觀事實或時間點確定'],[['中文流水無主句','這家餐廳生意很好 → The restaurant is doing well.','不可直譯 "This restaurant business is very good"'],['存在句 vs 擁有句','教室裡有許多學生 → There are many students in the classroom.','不可寫成 "The classroom has many students" 或 "Have many students"'],['修飾語後置','穿紅衣服的女孩 → the girl in red','英文長修飾語放被修飾詞之後'],['被動思維轉譯','問題被解決了 → The problem has been resolved.','使用適當完成式與被動語態']]],
+ [/整卷衝刺|大考衝刺|學測.*統測|會考.*整合|訂正策略|會考.*a\\+\\+|cap a\\+\\+|頂標衝刺|素養總結|終極模擬|culminating|diagnostic trial|全真突破/i,'大考高分決勝與三層排雷藍圖','🎯',['單題秒殺不超 40 秒','題組先看題目定位線索','標記不確定題回頭二次檢驗'],[['單選語法 (1-15題)','先圈時間副詞與主詞單複數','排除時態混淆與人稱陷阱'],['克漏字題組','先讀空格前後各一句連貫邏輯','注意轉折詞 However/Therefore'],['長篇閱讀題組','先讀題幹關鍵字 (Keyword)，再回文定位','嚴防「常識腦補」非文本訊息選項'],['錯題訂正本','記錄：考點、做錯原因、防呆心訣','同類型錯誤不犯第二次']]],
+ [/專業科目|跨國技術|現場實務|tve vocational|esp domain/i,'技高專二專業英文讀寫精準對標','📋',['掌握商務與工程專業術語','抓取圖表與說明書技術細節','撰寫標準商務書信與摘要'],[['技術文獻閱讀','讀取規格表、數據手冊與測試報告','注意數值單位與極限條件'],['商務書信架構','Opening (目的) ➔ Body (細節) ➔ Closing (行動要求)','語氣保持專業禮貌 (professional & courteous)'],['圖表描述詞彙','fluctuate (波動), plateau (持平), skyrocket (暴增)','客觀陳述數據趨勢'],['摘要寫作 (Summary)','提煉作者核心主張，不加入個人主觀意見','用自己詞彙重組 (Paraphrase)']]],
+ [/日常生活作息|時間表達|daily routine|telling time|動態時間/i,'時鐘讀法與一日生活作息流程','⏰',['看長針短針確認整點與半點','分辨 past (過幾分) 與 to (差幾分)','搭配一日作息動詞與時間介系詞'],[['整點表達','It is seven o\\'clock.','o\\'clock 僅用於整點'],['過幾分 (Past)','It is a quarter past seven. (7:15)','past 表經過的分鐘數 (1-30分)'],['差幾分 (To)','It is ten to eight. (7:50)','to 表距離下個整點差幾分 (31-59分)'],['一日時間介系詞','in the morning, at noon, at night','常態時間搭配固態介系詞']]],
+ [/健康飲食|身體部位|醫療照護|food.*health/i,'健康金字塔與身體症狀關懷表達','🍎',['辨識常見健康食物與不健康食物','表達身體哪裡不舒服 (have a ...)','給予同理心關懷與健康建議 (should/must)'],[['症狀表達','I have a headache / stomachache.','have a + 部位ache (疼痛)'],['喉嚨痛發燒','I have a sore throat / a fever.','sore 表紅腫發炎'],['生活建議','You should drink warm water and rest.','should + 原形動詞給予良性建議'],['飲食分類','fresh vegetables vs sugary drinks','健康均衡飲食觀念']]],
+ [/世界節慶|多元文化|festivals.*culture/i,'東西方節慶日曆與文化特色對照','🎉',['了解節慶由來與慶祝月份','學會節慶專屬活動與問候語','欣賞與尊重不同文化習俗'],[['農曆新年','Lunar New Year: red envelopes, family reunion','華人文化最重要團聚節慶'],['萬聖節','Halloween: trick or treat, pumpkin lanterns','10月31日盛裝打扮與要糖果'],['感恩節','Thanksgiving: roast turkey, giving thanks','11月第四個星期四表達感恩'],['聖誕節','Christmas: exchange gifts, decorate trees','12月25日溫馨分享與祝福']]],
+ [/頻率副詞|there is|存在句|frequency/i,'頻率副詞百分比與 There is/are 存在句','📊',['確認事情發生的次數比率','套入主謂前後合法位置律','掌握存在句單複數就近原則'],[['頻率刻度 100%','always (總是) / usually (通常 80%)','頻率副詞在 be 後、一般動詞前'],['頻率刻度 0%','never (從不 0%) / seldom (很少 20%)','內含否定語意'],['存在句單數','There is a book on the desk.','單數名詞或不可數名詞用 is'],['存在句複數','There are three dogs in the park.','複數名詞用 are；不可用 have']]],
+ [/大學.*emi|全英語授課|口頭簡報|academic.*presentation|科技英語|ai 論文|綠色能源/i,'大學 EMI 課堂筆記與學術簡報 5 段論','🎓',['學術課堂聽講採用 Cornell 筆記系統','簡報開場破題 (Hook & Roadmap)','以圖表論據支撐發現，流暢引導 Q&A'],[['簡報開場','Today, I will walk you through our findings on X.','明確勾勒主題與大綱地圖'],['數據轉折','As shown in Figure 2, the trend shifts dramatically.','指引聽眾視線聚焦圖表核心'],['學術限制','A notable limitation of this study is sample size.','展現客觀嚴謹學術反思能力'],['總結與提問','To conclude, X leads to Y. Thank you, questions are welcome.','乾脆俐落收尾並開放問答']]],
+ [/終生.*學習|英語力全景|自主學習|lifelong/i,'終生英語學習飛輪與輸入輸出閉環','🚀',['可理解性輸入 (i+1)：廣讀與聽力沉浸','間隔提取系統 (SRS)：抗遺忘記憶鞏固','實戰場域輸出：以教促學、跨國工作與寫作表達'],[['輸入沉浸 (Input)','挑選理解度 85-90% 的原汁原味材料 (Podcasts/News)','享受語言樂趣而非死背中文'],['記憶鞏固 (Spaced)','當天學 ➔ 隔天回想 ➔ 3天後做題 ➔ 1週後應用','以主動提取取代反覆重讀'],['實戰輸出 (Output)','撰寫英文日記、參與國際社群討論、做英語報告','讓語言成為解決現實問題的工具'],['元認知反思 (Metacognition)','定期透過題庫與自測診斷盲點並動態調整','成為終生自我驅動的語言大師']]],
+ [/字首字尾|構詞|word building|affix|morphology/i,'構詞學三段式解構：字首＋字根＋字尾','🧩',['拆分單字三要素 (前綴、詞根、後綴)','判斷詞性功能與方向變化','串連同根詞族成倍擴充詞彙量'],[['否定前綴 un-/in-','unhappy, incorrect, invisible','反轉原本語意或表示否定'],['動作名詞後綴 -ment/-tion','development, education, decision','動詞轉化為抽象名詞'],['形容詞後綴 -ful/-less','careful (小心) vs careless (粗心)','表示充滿某特質或缺乏某特質'],['動詞後綴 -ize/-en','modernize (現代化), sharpen (削尖)','使具有某種狀態或動作']]],
+ [/發音|音標|拼讀|phonics|phonetic|字典|vowel/i,'聲音與字形分開核對','🔊',['看字形與字母組合','查音標／聽發音','遮字聽寫，再核對'],[['短母音示例','cap /kæp/','注意 /æ/'],['長母音示例','cape /keɪp/','常見字尾 e 規則；仍有例外'],['不發音字母','listen /ˈlɪsən/','t 不發音；不能逐字母硬讀']]],
+ [/安全|工場|指令|safety|ppe/i,'安全指令要保留強度和順序','🛡️',['辨識危險與物件','讀 must / must not','核對 before / after'],[['必要','Wear eye protection.','祈使句：動詞原形起首'],['禁止','Do not touch the switch.','Do not + 原形'],['先後','Disconnect power before cleaning.','先斷電再清潔；操作以設備手冊為準']]],
+ [/尺寸|工具|規格|材料|technical|公差|tolerance|dimension/i,'讀規格時把數字和單位綁在一起','📐',['物件／欄位名稱','數值 + 單位','條件／允差'],[['長度','The pipe is 50 mm long.','50 與 mm 必須一起讀'],['上下限','between 48 and 52 mm','確認下限與上限'],['比較','This model uses less energy.','less energy 不等於所有性能都更好']]],
+ [/流程|故障|troubleshoot|process/i,'流程與故障排除','🛠️',['觀察症狀','核對條件與證據','選擇下一步／回報'],[['步驟','First, check the indicator.','first 表第一步'],['條件','If the light is off, check the connection.','不要忽略 if 的前提'],['報告','The device stopped after the update.','先後關係不等於已證明原因']]],
+ [/圖表|圖面|跨文本|chart|multimodal|規範/i,'圖表不是只看最大的數字','📊',['讀標題與單位','比相同時間／群體','用數據支持有限結論'],[['數值比較','A: 20 → 30; B: 40 → 45','A 增 10，B 增 5'],['變化比例','A: +50%; B: +12.5%','除以各自原值，不能只比較差額'],['結論範圍','A grew faster in this period.','限定在這段期間，不擴成永遠']]],
+ [/論證|假設|批判|gmat|gre|argument|critical/i,'證據到結論中間缺什麼？','🔎',['證據：公車很擠','假設：新增班次能承接需求','結論：增班會減少擁擠'],[['必要假設','新增班次能服務原本擁擠的乘客','否定此連結，理由就難支持結論'],['削弱','只在離峰時段增班','無法回應尖峰擁擠'],['無關資訊','公車是藍色的','與承接需求沒有直接關聯']]],
+ [/作文|寫作|email|郵件|簡報|writing/i,'寫作先規劃，再檢查','✍️',['目的與讀者','主張／重點 + 支持','核對意思、句法與語氣'],[['主張','The library should open later.','明確說出建議'],['支持','Students need a quiet place after class.','理由連結讀者需要'],['檢查','補證據、處理限制、避免絕對化','有理由不等於已有實證']]],
+ [/篇章|段落|閱讀|推論|reading|cohesion|sat|toeic|gept|toefl/i,'由線索到答案','📖',['找題目要問的事','定位原文證據','核對範圍與邏輯'],[['對比','However, the plan is costly.','前後通常有反向訊息'],['結果','Therefore, we changed the plan.','後句是前因產生的結果'],['指涉','Students revised essays. This process took time.','this process 指修改文章，不是學生本人']]]
+];
+export function aidProfile(title) { return profiles.find(p=>p[0].test(title)); }
+function dataChart(title) {
+ if(!/圖表|chart|multimodal/i.test(title))return '';
+ return '<figure class="aid-chart"><figcaption>示範數據：兩組在同一期間的變化（非真實研究）</figcaption>'+[['A 原值',20],['A 新值',30],['B 原值',40],['B 新值',45]].map(([label,n])=>'<div class="aid-bar-row"><span>'+label+'</span><span class="aid-bar-track"><span class="aid-bar" style="width:'+(n*2)+'%"></span></span><strong>'+n+'</strong></div>').join('')+'<p>共用 0–50 刻度。A 增加 10（50%），B 增加 5（12.5%）；數量差和成長率是兩個不同問題。</p></figure>';
+}
+export function renderTeachingAid(title, concepts=[], examples=[]) {
+ const p=aidProfile(title);
+ const rows=concepts.map(c=>[c.heading||c.title||'核心觀念',c.formula||c.explanation||c.body||c.content||'',c.example||c.tip||'回到本頁例句，說明如何使用。']).filter(r=>r[1]);
+ const flow=p?p[3]:['先看本頁主題','對照具體情境','用自己的例子檢查'];
+ const table=p?p[4]:rows.slice(0,6);
+ if(!table.length)table.push(['學習目標',title,'先用自己的話解釋，再做本頁練習。']);
+ const visualChart = renderTopicVisualChart(title) || dataChart(title);
+ return \`<section class="card teaching-aid lesson-visual-diagram" aria-label="\${e(title)}的圖解與對照"><h2><span aria-hidden="true">\${p?p[2]:'🗺️'}</span> \${e(p?p[1]:'本頁觀念地圖')}</h2><ol class="aid-flow">\${flow.map((s,i)=>\`<li><span class="aid-number">\${i+1}</span>\${e(s)}</li>\`).join('')}</ol>\${visualChart}<div class="lesson-table" tabindex="0" role="region" aria-label="可橫向捲動的比較表"><table><caption>\${e(title)} · \${p?'示範比較':'觀念整理'}</caption><thead><tr><th scope="col">判斷重點</th><th scope="col">示例／規則</th><th scope="col">如何理解</th></tr></thead><tbody>\${table.map(r=>\`<tr>\${r.map(s=>\`<td>\${e(s)}</td>\`).join('')}</tr>\`).join('')}</tbody></table></div>\${examples.length?\`<details><summary>把圖解用在本頁例句</summary><ul>\${examples.slice(0,3).map(s=>\`<li>\${e(s)}</li>\`).join('')}</ul><p>依序找出圖中的線索，說明這個例句如何符合規則；若不符合，指出例外。</p></details>\`:''}</section>\`;
+}
+`;
+
+fs.writeFileSync(aidsPath, newAidsContent, 'utf8');
+console.log('✓ Updated dist/teaching_aids.mjs');
+
+// =========================================================================
+// 3. UPDATE dist/grammar.mjs
+// =========================================================================
+let grammarPath = path.join(ROOT, 'dist', 'grammar.mjs');
+let grammarContent = fs.readFileSync(grammarPath, 'utf8');
+
+if (!grammarContent.includes("import { renderTopicVisualChart }")) {
+  grammarContent = "import { renderTopicVisualChart } from './lesson_visuals.mjs';\n" + grammarContent;
+  // In grammarPage():
+  grammarContent = grammarContent.replace(
+    "${['present-past','progressive','perfect','future'].includes(t.id)?timeline:''}",
+    "${renderTopicVisualChart(t.title) || (['present-past','progressive','perfect','future'].includes(t.id)?timeline:'')}"
+  );
+  fs.writeFileSync(grammarPath, grammarContent, 'utf8');
+  console.log('✓ Updated dist/grammar.mjs');
 }
 
-// 自然拼讀與發音提示方塊 (Phonics Bridge Box)
-export function renderPhonicsTipBox(unitTitle, sampleWords = []) {
-  return `
-    <div class="lesson-phonics-bridge" style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);border:1px solid #fde68a;border-radius:10px;padding:14px 18px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <div>
-        <div style="display:flex;align-items:center;gap:6px">
-          <span style="font-size:18px">🔤</span>
-          <strong style="color:#92400e;font-size:14px">自然拼讀與見字直讀重點提示 (Phonics & Pronunciation Tips)</strong>
-        </div>
-        <div style="font-size:13px;color:#78350f;margin-top:4px">
-          遇到符合規則的字，可透過「CVC 短母音」、「Magic E 長母音」或「音節拆解」直讀，搭配例句與間隔回想練習記憶！
-        </div>
-      </div>
-      <button class="btn" data-nav="phonics" style="background:#d97706;color:#fff;font-weight:700;font-size:13px;padding:8px 16px;border:none;border-radius:8px;box-shadow:0 2px 6px rgba(217,119,6,0.25)">
-        🔤 開啟自然拼讀全景大師課 ➔
-      </button>
-    </div>
-  `;
+// =========================================================================
+// 4. UPDATE dist/affix_guide.mjs
+// =========================================================================
+let affixPath = path.join(ROOT, 'dist', 'affix_guide.mjs');
+let affixContent = fs.readFileSync(affixPath, 'utf8');
+
+if (!affixContent.includes("import { renderWordFormationMorphologyDiagram }")) {
+  affixContent = "import { renderWordFormationMorphologyDiagram } from './lesson_visuals.mjs';\n" + affixContent;
+  affixContent = affixContent.replace(
+    '<section class="card"><h2>一個詞族，分四步記</h2>',
+    '${renderWordFormationMorphologyDiagram()}<section class="card"><h2>一個詞族，分四步記</h2>'
+  );
+  fs.writeFileSync(affixPath, affixContent, 'utf8');
+  console.log('✓ Updated dist/affix_guide.mjs');
 }
 
-// 記憶閃卡推薦橋樑方塊 (Flashcard Bridge Box)
-export function renderFlashcardBridgeBox(tierId = 'elem_1000', tierName = '國小基礎字詞') {
-  return `
-    <div class="lesson-flashcard-bridge" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);border:1px solid #bfdbfe;border-radius:10px;padding:14px 18px;margin:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <div>
-        <div style="display:flex;align-items:center;gap:6px">
-          <span style="font-size:18px">🗂️</span>
-          <strong style="color:#1e40af;font-size:14px">單字與片語 3D 記憶閃卡直通車 (Flashcards Studio)</strong>
-        </div>
-        <div style="font-size:13px;color:#1e3a8a;margin-top:4px">
-          用翻卡先回想意思，再練習拼字；國小、國中卡庫可安排到期複習。朗讀使用裝置合成語音。
-        </div>
-      </div>
-      <button class="btn" data-nav="${/^(g[6-9]|jhs|elem)/.test(tierId) ? 'schoolwords' : 'flashcards'}" style="background:#2563eb;color:#fff;font-weight:700;font-size:13px;padding:8px 16px;border:none;border-radius:8px;box-shadow:0 2px 6px rgba(37,99,235,0.25)">
-        🗂️ 進入記憶閃卡館開始背誦 ➔
-      </button>
-    </div>
-  `;
+// =========================================================================
+// 5. UPDATE dist/listening.mjs
+// =========================================================================
+let listeningPath = path.join(ROOT, 'dist', 'listening.mjs');
+let listeningContent = fs.readFileSync(listeningPath, 'utf8');
+
+if (!listeningContent.includes("import { renderListeningConnectedSpeechDiagram }")) {
+  listeningContent = "import { renderListeningConnectedSpeechDiagram } from './lesson_visuals.mjs';\n" + listeningContent;
+  listeningContent = listeningContent.replace(
+    '${lesson?`${renderLessonAudio(lesson.id)}',
+    '${renderListeningConnectedSpeechDiagram()}${lesson?`${renderLessonAudio(lesson.id)}'
+  );
+  fs.writeFileSync(listeningPath, listeningContent, 'utf8');
+  console.log('✓ Updated dist/listening.mjs');
 }
+
+// =========================================================================
+// 6. SYNC ALL CHANGED FILES TO site/dist/
+// =========================================================================
+const filesToSync = [
+  'lesson_visuals.mjs',
+  'teaching_aids.mjs',
+  'grammar.mjs',
+  'affix_guide.mjs',
+  'listening.mjs'
+];
+
+for (const file of filesToSync) {
+  const src = path.join(ROOT, 'dist', file);
+  const dest = path.join(ROOT, 'site', 'dist', file);
+  const buf = fs.readFileSync(src);
+  fs.writeFileSync(dest, buf);
+  console.log('✓ Synced ' + file + ' to site/dist/');
+}
+
+console.log('All updates and sync completed successfully!');

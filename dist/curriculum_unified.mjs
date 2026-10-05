@@ -1,5 +1,5 @@
-// curriculum_unified.mjs - 108 課綱英語文全學年上下學期深度教學旗艦庫 (專家團隊雙倍內容大改造版)
-// 專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考會考測驗、語音聲學、技高ESP、全端架構與全齡UI/UX體驗
+// curriculum_unified.mjs - 英語文分年級課程資料
+// 課程標籤供自學導航；不代表官方課綱或考試機構認證。
 // 涵蓋：國小 (Sixth 6上/6下)、國中 (JH 7-9年級 16單元)、高中/技高 (Arch 10-11年級先修與學期複習)、大考全考制
 
 import { sixthLessons, sixthNotes, sixthQuestions, sixthAudioData } from './sixth_assets.mjs';
@@ -12,57 +12,6 @@ import {
   archVocabCategories, archVocabQuiz
 } from './arch_prerequisites.mjs';
 import { archSemesters, englishS1Review, englishS2Review, englishS3Review, englishS4Review } from './arch_semesters.mjs';
-
-export const EXPERT_COUNCIL = [
-  {
-    "role": "課綱總體諮詢首席",
-    "name": "Prof. Lin (林教授)",
-    "title": "國立臺灣師範大學英語系客座教授 / 108 課綱英語諮詢委員",
-    "specialty": "三面九項核心素養縱向貫通、學習表現（聽說讀寫綜）與學習內容細目精準對標"
-  },
-  {
-    "role": "第二語言習得與認知心理學家",
-    "name": "Dr. Chen (陳博士)",
-    "title": "哈佛大學教育研究所認知心理學博士 / 學習科學實驗室主任",
-    "specialty": "認知負荷理論 (Cognitive Load Theory)、鷹架建構 (Scaffolding)、間隔重複與精熟提取"
-  },
-  {
-    "role": "自主學習與微課架構專家",
-    "name": "Teacher Wu (吳老師)",
-    "title": "資深英語自學內容架構師 / 全國自學社群總監",
-    "specialty": "微觀概念卡片分解、步驟 0 破題思維模式、致命陷阱 X 光機診斷與經驗值激勵機制"
-  },
-  {
-    "role": "國中會考與大學學測測驗心理計量專家",
-    "name": "Dr. Huang (黃博士)",
-    "title": "大考中心與師大心測中心資深研究員",
-    "specialty": "109–115 國中教育會考 (CAP) 與學測 (GSAT) 命題雙向細目表、多模態圖表題誘答分析"
-  },
-  {
-    "role": "雙語教學與語音聲學專家",
-    "name": "Prof. Evans (埃文斯教授)",
-    "title": "英國倫敦大學語音聲學博士 / 國際語音學會 (IPA) 諮詢專家",
-    "specialty": "自然拼讀 (Phonics)、國際音標 (IPA/KK)、美語弱化連音 (Connected Speech) 與點讀合成"
-  },
-  {
-    "role": "技高專業英語 (ESP) 與跨學科融合主任",
-    "name": "Engineer Tsai (蔡工程師)",
-    "title": "國際建築工程與技術英文特聘講師 / 科技大廠技術文膽",
-    "specialty": "建築工程現場安全 SOP、工商業圖表判讀、實用商務會話與統測專業英文 (二)"
-  },
-  {
-    "role": "全端架構與系統工程首席",
-    "name": "Alex K.",
-    "title": "Senior Front-End Architect & Universal Design Lead",
-    "specialty": "原生純現代 ESM 架構、零打包即時渲染、A4 官方高畫質排版、深淺護眼主題設計"
-  },
-  {
-    "role": "數位學習體驗與全齡 UI/UX 專家",
-    "name": "Sarah Chen-Vance (陳博士/顧問)",
-    "title": "Stanford University HCI 碩士 / W3C WAI 無障礙規範資深顧問",
-    "specialty": "認知減負互動介面 (CLT Interface)、全雙工語音互動回饋、WCAG 2.2 AAA 無障礙高對比與多模態音頻可視化"
-  }
-];
 
 export const UNIFIED_GRADES = [
   {
@@ -125,7 +74,7 @@ export const UNIFIED_GRADES = [
               },
               {
                 "title": "6 大頻率副詞與「Be後動前」黃金定律",
-                "formula": "always(100%) > usually(80%) > often(60%) > sometimes(40%) > seldom(10%) > never(0%)",
+                "formula": "always（總是）／usually（通常）／often（經常）／sometimes（有時）／seldom（很少）／never（從不）；中間頻率沒有固定百分比",
                 "explanation": "位置法則：放在 be 動詞或助動詞之後，一般動詞之前。never 與 seldom 本身帶有否定含意，不需再加 not。",
                 "example": "He is always punctual. / She never skips breakfast.",
                 "examExample": {
@@ -447,7 +396,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "空間方位介系詞黃金搭配",
                 "formula": "next to (旁邊) / across from (對面) / between A and B (在兩者之間) / on the corner of (轉角)",
-                "explanation": "between 後面必須有兩個地標（between the bank and the bookstore）；單一地標用 across from 或 next to。",
+                "explanation": "between A and B 可表兩個地標之間；between 也可用於多個分別明確的對象，並非只能接兩者。",
                 "example": "The bakery is on the corner of Main Street and Park Road.",
                 "examExample": {
                   "stem": "Our international science seminar will officially commence ___ 9:00 a.m. ___ Monday morning ___ early October.",
@@ -616,15 +565,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "注意 hurt 作為動詞時，主詞為第三人稱單數要加 -s (My leg hurts)。",
                 "example": "What's the matter with you? I have a bad cough and my chest hurts.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [看病醫病問答核心句型], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Doctor: What is the matter? Which reply describes a symptom?",
                   "options": [
-                    "What's the matter with you? I have a bad cough and my chest hurts.",
-                    "What's the matter with you? I have a bad cough and my chest hurts.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "I have a cough.",
+                    "It is Monday.",
+                    "My name is Leo."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「看病醫病問答核心句型」之核心公式：Doctor: What's wrong? / What's the matter? ➔ Patient: I have a... / My [body part] hurts.。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "cough 是咳嗽，回應身體症狀；另外兩句分別說日期與姓名。"
                 }
               },
               {
@@ -633,15 +581,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "情態助動詞 should 表「應該」，後方動詞絕對不能加 to 或 -ing。",
                 "example": "You should drink plenty of warm water and stay in bed.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [醫師衛教建議句型 should / shouldn't], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which sentence gives advice?",
                   "options": [
-                    "You should drink plenty of warm water and stay in bed.",
-                    "You should drink plenty of warm water and stay in bed.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "You should rests.",
+                    "You should rest.",
+                    "You should to rest."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「醫師衛教建議句型 should / shouldn't」之核心公式：You should + 原形動詞 / You shouldn't + 原形動詞。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "should 是情態助動詞，後接原形 rest，不加 s 或 to。"
                 }
               }
             ],
@@ -777,15 +724,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "專有名詞節慶首字母必須大寫。",
                 "example": "Families gather together to eat reunion dinner on Lunar New Year's Eve.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [東西方重要節慶英譯與飲食詞彙], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which food is commonly associated with the Moon Festival?",
                   "options": [
-                    "Families gather together to eat reunion dinner on Lunar New Year's Eve.",
-                    "Families gather together to eat reunion dinner on Lunar New Year's Eve.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "rice dumplings",
+                    "birthday cake",
+                    "mooncakes"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「東西方重要節慶英譯與飲食詞彙」之核心公式：Lunar New Year (dumplings), Dragon Boat Festival (rice dumplings), Moon Festival (mooncakes), Halloween (costumes), Christmas (turkey)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "mooncakes 是月餅；rice dumplings 常與端午節連結。節慶習俗仍會因家庭與地區不同。"
                 }
               },
               {
@@ -901,15 +847,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "pollute (v.) ➔ pollution (n.); care (n./v.) ➔ careful (adj.) ➔ carefully (adv.)。",
                 "example": "The architect planned the project carefully to avoid environmental pollution.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [三大高頻字尾詞性轉換魔法], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "She answered the question ___.",
                   "options": [
-                    "The architect planned the project carefully to avoid environmental pollution.",
-                    "The architect planned the project carefully to avoid environmental pollution.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "careful",
+                    "carefully",
+                    "care"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「三大高頻字尾詞性轉換魔法」之核心公式：-tion (名詞) / -ful (形容詞) / -ly (副詞)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "修飾 answered 這個動作用副詞 carefully；careful 是形容詞。並非所有 -ly 結尾都是副詞。"
                 }
               }
             ],
@@ -1008,15 +953,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "看天色烏雲密布有明顯跡象用 Look! It is going to rain. 即時幫忙用 I will help you.",
                 "example": "I am going to study architecture in the future. / Don't worry, I will support you.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [will 與 be going to 的精妙語意區別], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "I bought the tickets yesterday. I ___ visit Tainan next week.",
                   "options": [
-                    "I am going to study architecture in the future.",
-                    "I am going to study architecture in the future.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "am going to",
+                    "going to",
+                    "will to"
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「will 與 be going to 的精妙語意區別」之核心公式：will + 原形動詞 (即時決定、客觀預測) vs be going to + 原形動詞 (事先規劃、強烈跡象)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "am going to + 原形可表事先計畫；going to 缺 am，will 後不加 to。此句若選項是 will visit，也可能成立。"
                 }
               }
             ],
@@ -1112,7 +1056,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "單音節與雙音節形容詞比較級規則變化",
                 "formula": "一般加 -er (taller) / 字尾 e 加 -r (wider) / 短母音+單子音重複字尾 (bigger, hotter) / 子音+y 改 -ier (happier)",
-                "explanation": "看到 than 出現，前面百分之百要搭配「比較級」。",
+                "explanation": "than 常引出比較對象，但 rather than、other than 等結構不需要前接形容詞比較級；仍須辨認句型。",
                 "example": "Mount Everest is taller than Mount Fuji.",
                 "examExample": {
                   "stem": "Yesterday afternoon, Sarah ___ through the old family photo album and ___ her grandmother's graduation diploma.",
@@ -1238,20 +1182,19 @@ export const UNIFIED_GRADES = [
                 "explanation": "主詞是主角，動詞是靈魂。及物動詞後面一定要接受詞；不完全不及物動詞 (be動詞、連綴動詞) 後面需要主詞補詞 (SC)。",
                 "example": "Birds fly (S+V). / She is smart (S+V+SC). / Leo loves reading (S+V+O).",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [五大基本句型核心骨架 (Basic Sentence Patterns)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "In “Birds fly,” what is the sentence pattern?",
                   "options": [
-                    "Birds fly (S+V).",
-                    "Birds fly (S+V).",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "S + V + O",
+                    "S + V + SC",
+                    "S + V"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「五大基本句型核心骨架 (Basic Sentence Patterns)」之核心公式：1. S+V 2. S+V+SC 3. S+V+O 4. S+V+IO+DO 5. S+V+O+OC。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "Birds 是主詞，fly 是不及物動詞，句中沒有受詞或主詞補語。"
                 }
               },
               {
                 "title": "現在簡單式第三人稱單數動詞加 -s/-es 終極規則",
-                "formula": "一般加 -s; 字尾 s, sh, ch, x, o 加 -es; 子音+y 去y改 -ies",
+                "formula": "一般加 -s；s, sh, ch, x 常加 -es；go/ do 加 -es，radio 則是 radios；子音+y 改 -ies",
                 "explanation": "主詞是 He, She, It 或單數名詞時，肯定句動詞必須做三單現變化。此規則在會考改錯與選擇題命中率極高！",
                 "example": "He watches TV every night. / She studies hard.",
                 "examExample": {
@@ -1420,15 +1363,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "祈使句省略了主詞 you。切記否定一律用 Don't，絕對不可用 Not 或 No 接動詞原形。",
                 "example": "Please take off your shoes. / Don't touch the exhibits.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [祈使句核心公式與禮貌修飾語], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Choose the negative instruction.",
                   "options": [
-                    "Please take off your shoes.",
-                    "Please take off your shoes.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Do not run here.",
+                    "Not runs here.",
+                    "Does not run here."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「祈使句核心公式與禮貌修飾語」之核心公式：肯定：(Please) + 原形動詞... / 否定：(Please) Don't + 原形動詞... / Be + 形容詞。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "否定祈使句用 Do not + 原形動詞；通常省略主詞 you。"
                 }
               }
             ],
@@ -1527,15 +1469,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "雙母音如 /aɪ/, /aʊ/, /eɪ/, /oʊ/, /ɔɪ/ 是由前一個音滑向後一個音，滑動過程要飽滿。",
                 "example": "beat /biːt/ vs bit /bɪt/; pool /puːl/ vs pull /pʊl/",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [母音與子音音標對照表 (KK音標 vs IPA)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which word has /iː/ in the pronunciation shown?",
                   "options": [
-                    "beat",
-                    "beat",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "bit /bɪt/",
+                    "beat /biːt/",
+                    "bet /bet/"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「母音與子音音標對照表 (KK音標 vs IPA)」之核心公式：長母音 /iː/, /uː/, /ɔː/, /ɑː/, /ɜː/ vs 短母音 /ɪ/, /ʊ/, /ɒ/, /æ/, /ʌ/, /ə/。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "beat 的 /iː/ 與 bit 的 /ɪ/ 不同；辨音除了長短，也要注意母音音質。"
                 }
               }
             ],
@@ -1638,7 +1579,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "現在進行式完整公式",
                 "formula": "S + am/is/are + V-ing",
-                "explanation": "不可漏掉 be 動詞，也不可把原形動詞直接接在 be 後面。靜態動詞 (know, have擁有, like) 不用於進行式。",
+                "explanation": "不可漏掉 be 動詞，也不可把原形動詞直接接在 be 後面。know、have（擁有）等表一般狀態時通常不用進行式；同一動詞改表動作或暫時體驗時須另判斷。",
                 "example": "The children are playing soccer on the field right now.",
                 "examExample": {
                   "stem": "Listen! The baby birds in the oak tree ___ for their mother, so please do not disturb the nest.",
@@ -1741,15 +1682,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "中文說「那裡有一張桌子」，容易受中文影響寫成 There have ❌，英文必定用 There is / There are ✔️！",
                 "example": "There are forty students in our classroom.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [存在句 There is / There are 核心定律], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "There ___ two books on the desk.",
                   "options": [
-                    "There are forty students in our classroom.",
-                    "There are forty students in our classroom.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "is",
+                    "be",
+                    "are"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「存在句 There is / There are 核心定律」之核心公式：There is + 單數/不可數名詞 + 地點 / There are + 複數名詞 + 地點。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "two books 是複數，此處存在句使用 There are。"
                 }
               }
             ],
@@ -1957,15 +1897,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "時間副詞放在句首時，後面通常加逗號，引導下一個發生動作。",
                 "example": "First, we bought the ingredients. Then, we baked the cake together.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [時間順序連接副詞鏈 (Narrative Sequencing)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "First, wash the apples. ___, cut them into pieces.",
                   "options": [
-                    "First, we bought the ingredients. Then, we baked the cake together.",
-                    "First, we bought the ingredients. Then, we baked the cake together.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Then",
+                    "Because",
+                    "Although"
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「時間順序連接副詞鏈 (Narrative Sequencing)」之核心公式：First... Then... Next... After that... Finally...。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "Then 標示下一個步驟；Because 與 Although 不能單獨接成此句的順序副詞。"
                 }
               }
             ],
@@ -2154,7 +2093,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "條件副詞子句「從現代未」鐵律",
                 "formula": "If / unless + S + 現在簡單式, S + will + 原形動詞",
-                "explanation": "If 或 unless 引導的條件子句中，哪怕明天才發生，動詞也「絕對不可加 will」！",
+                "explanation": "一般未來條件子句通常用現在式；will 表意願或堅持時可能出現。if 表「是否」的名詞子句不適用這個口訣。",
                 "example": "If the weather is fine tomorrow, we will go on a hike.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [條件副詞子句「從現代未」鐵律], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -2261,7 +2200,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "三大必接動名詞巨頭 (Gerund Verbs)",
                 "formula": "enjoy / practice / finish + V-ing",
-                "explanation": "口訣：享受 (enjoy) 練習 (practice) 才能完成 (finish)！這三個動詞後面 100% 只能接 V-ing，絕不能接 to V。",
+                "explanation": "口訣：享受 (enjoy) 練習 (practice) 才能完成 (finish)！這三個動詞若直接接另一個動作作受詞，通常用 V-ing；也可接名詞，如 finish the work，不能說後面只有 V-ing 一種形式。",
                 "example": "She finished writing the report and enjoyed listening to music.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [三大必接動名詞巨頭 (Gerund Verbs)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -2364,15 +2303,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "連綴動詞後方接的是主詞補詞 (SC)，用來補充說明主詞性質，因此一律用「形容詞」，絕對不可用副詞！",
                 "example": "The soup tastes delicious (不是 deliciously ❌)!",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [五大感官連綴動詞 + 形容詞 (Linking Verbs)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The soup smells ___.",
                   "options": [
-                    "The soup tastes delicious (不是 deliciously ❌)!",
-                    "The soup tastes delicious (不是 deliciously ❌)!",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "wonderfully",
+                    "wonderful",
+                    "wonder"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「五大感官連綴動詞 + 形容詞 (Linking Verbs)」之核心公式：look (看), sound (聽), smell (聞), taste (嚐), feel (摸/感覺) + 形容詞。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "smells 在此為連綴動詞，後接形容詞 wonderful 描述 soup。"
                 }
               }
             ],
@@ -2676,7 +2614,7 @@ export const UNIFIED_GRADES = [
             "concepts": [
               {
                 "title": "關係代名詞主格 vs 受格省略辨別法",
-                "formula": "關代後接「主詞+動詞」➔ 關代為受格，可直接省略！關代後緊接「動詞」➔ 關代為主格，絕對不可省略！",
+                "formula": "先還原子句確認缺口；限定子句中作受詞的關係代名詞常可省略，非限定子句及前置介系詞後不可省略",
                 "explanation": "The book (which) you bought is good. vs The man who lives next door is a doctor.",
                 "example": "The song (that) she sang touched everyone's heart.",
                 "examExample": {
@@ -2787,15 +2725,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "間接問句嵌入主句後，不再用倒裝問句語序，必須恢復為直述句語序！",
                 "example": "Can you tell me what time the train departs (不是 does the train depart ❌)?",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [間接問句直述語序萬能公式], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Do you know ___?",
                   "options": [
-                    "Can you tell me what time the train departs (不是 does the train depart ❌)?",
-                    "Can you tell me what time the train departs (不是 does the train depart ❌)?",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "where is the bank",
+                    "where does the bank",
+                    "where the bank is"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「間接問句直述語序萬能公式」之核心公式：疑問詞 + 主詞 + 動詞 (Wh- + S + V)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "嵌入問句用 where + 主詞 + 動詞，不沿用直接問句倒裝。"
                 }
               }
             ],
@@ -2883,7 +2820,7 @@ export const UNIFIED_GRADES = [
             "concepts": [
               {
                 "title": "代名詞指代與推論三大鐵證",
-                "formula": "指代就近原則 + 文本客觀證據支持 + 排除過度推論",
+                "formula": "上下文指涉相容 + 文本證據支持 + 排除過度推論；最近的名詞不一定是指涉對象",
                 "explanation": "遇到 What does 'it' refer to? 先看前一句話的主詞或受詞，確認性別與單複數。",
                 "example": "The solar panel was broken. Replacing IT took three technicians a full day.",
                 "examExample": {
@@ -2895,7 +2832,7 @@ export const UNIFIED_GRADES = [
                     "Regardless of the evidence, the hypothesis were abruptly abandoned."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「代名詞指代與推論三大鐵證」之核心公式：指代就近原則 + 文本客觀證據支持 + 排除過度推論。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "【考點解構】本題精確考核「代名詞指代與推論三大鐵證」之核心公式：上下文指涉相容 + 文本證據支持 + 排除過度推論；最近的名詞不一定是指涉對象。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
                 }
               }
             ],
@@ -2987,15 +2924,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "克漏字注意篇章轉折詞 (However, Therefore, On the other hand, As a result)。",
                 "example": "The train leaves at 8:15, but ticket prices double after 8:00.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [跨文本多模態資訊交叉比對法], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The timetable says 4 p.m. A newer notice says the bus now leaves at 4:30 p.m. When does it leave?",
                   "options": [
-                    "The train leaves at 8:15, but ticket prices double after 8:00.",
-                    "The train leaves at 8:15, but ticket prices double after 8:00.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "4:30 p.m.",
+                    "4 p.m.",
+                    "3:30 p.m."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「跨文本多模態資訊交叉比對法」之核心公式：文本一 (時間限制) + 文本二 (預算或條件) ➔ 交集出唯一正確選項。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "更新通知明示更改時間，應用新資訊修正原時刻表。"
                 }
               }
             ],
@@ -3103,15 +3039,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "1. 完全不及物 (S+V): Birds fly. 2. 不完全不及物 (S+V+SC): She looks happy. 3. 完全及物 (S+V+O): We love music. 4. 授與動詞 (S+V+IO+DO): He gave me a pen. 5. 不完全及物 (S+V+O+OC): They made him captain.",
                 "example": "The committee found the proposed technological solution highly viable.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [五大句型結構矩陣 (The Five Sentence Structures)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "In “They made Amy captain,” what is “captain”?",
                   "options": [
-                    "The committee found the proposed technological solution highly viable.",
-                    "The committee found the proposed technological solution highly viable.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Direct object",
+                    "Object complement",
+                    "Subject"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「五大句型結構矩陣 (The Five Sentence Structures)」之核心公式：S+Vi | S+V+SC | S+Vt+O | S+Vt+IO+DO | S+Vt+O+OC。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "Amy 是受詞，captain 補充說明 Amy 的身分，是受詞補語。"
                 }
               },
               {
@@ -3120,15 +3055,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "受詞補語用來補充說明受詞的性質或狀態，必須是形容詞或名詞，絕不可受中文翻譯影響而誤用副詞。",
                 "example": "The warm tea kept the weary hikers awake (not: *wearily awake).",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [補語 (Complement) 的本質：形容詞 vs. 副詞], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The news made us ___.",
                   "options": [
-                    "The warm tea kept the weary hikers awake (not: *wearily awake).",
-                    "The warm tea kept the weary hikers awake (not: *wearily awake).",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "happily",
+                    "happiness",
+                    "happy"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「補語 (Complement) 的本質：形容詞 vs. 副詞」之核心公式：S + make/find/keep + O + Adj (OC) [不可用副詞]。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "make + 受詞 + 形容詞補語；happy 描述 us 的狀態，不是以副詞修飾 made。"
                 }
               }
             ],
@@ -3378,19 +3312,18 @@ export const UNIFIED_GRADES = [
               },
               {
                 "title": "無靈主詞 (Inanimate Subject) 的主動結構",
-                "formula": "Inanimate Noun + drive / reveal / force / enable + O + to V",
+                "formula": "Inanimate Noun + enable / force + O + to V；reveal + O 或 that 子句，不套用同一補語結構",
                 "explanation": "英文偏好以無生命的抽象名詞 (如 research, urgency, technology) 當主詞，中文常需轉譯為條件或原因。",
                 "example": "A lack of sleep impairs cognitive function. (睡眠不足會損害認知功能)",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [無靈主詞 (Inanimate Subject) 的主動結構], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which sentence uses an inanimate subject naturally?",
                   "options": [
-                    "A lack of sleep impairs cognitive function. (睡眠不足會損害認知功能)",
-                    "A lack of sleep impairs cognitive function. (睡眠不足會損害認知功能)",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "The heavy rain delayed the train.",
+                    "The train was delay by rain.",
+                    "The rain delaying the train."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「無靈主詞 (Inanimate Subject) 的主動結構」之核心公式：Inanimate Noun + drive / reveal / force / enable + O + to V。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "rain 是無生命主詞，delayed 是限定動詞；B 缺過去分詞，C 缺限定動詞。"
                 }
               }
             ],
@@ -3496,21 +3429,20 @@ export const UNIFIED_GRADES = [
                 "explanation": "間接問句作為名詞子句嵌入主句時，語序必須恢復為「疑問詞 + 主詞 + 動詞」，不可保留直接問句的倒裝結構。",
                 "example": "Direct: Where did they go? -> Indirect: I wonder where they went.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [間接問句平鋪直敘語序 (Declarative Word Order of Indirect Questions)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Please tell me ___.",
                   "options": [
-                    "Direct: Where did they go? -> Indirect: I wonder where they went.",
-                    "Direct: Where did they go? -> Indirect: I wonder where they went.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "why did she leave",
+                    "why she left",
+                    "why she did left"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「間接問句平鋪直敘語序 (Declarative Word Order of Indirect Questions)」之核心公式：Wh- / Whether / If + Subject + Verb [不可倒裝，無助動詞 do/does/did]。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "間接問句採主詞 she + 過去式 left；不倒裝，也不在 did 後再用 left。"
                 }
               },
               {
                 "title": "堅決建意命要動詞後 that 子句 (Subjunctive with Verbs of Demand/Suggestion)",
                 "formula": "S + demand/insist/suggest/order/require + that + S + (should) + V-原形",
-                "explanation": "表示「命令、建議、要求、堅持」的動詞後面引導的 that 名詞子句，助動詞 should 常省略，動詞一律回歸原形動詞！",
+                "explanation": "表要求或建議時，that 子句可用原形（美式常見）或 should + 原形；suggest 表「顯示」、insist 表「堅稱事實」時，須依語意選一般時態。",
                 "example": "The physician insisted that the patient (should) quit smoking immediately.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [堅決建意命要動詞後 that 子句 (Subjunctive with Verbs of Demand/Suggestion)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -3755,18 +3687,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "條件與時間副詞子句時態陷阱 (Present Tense for Future in Adverbial Clauses)",
                 "formula": "If / When / As soon as / Unless + S + V-現在式, S + will + V-原形",
-                "explanation": "在表「時間」與「條件」的副詞子句中，一律使用「現在簡單式代替未來式」，主句則維持未來式 will + V。",
+                "explanation": "表一般未來時間或條件時，子句通常用現在式，也可用現在完成式表先完成；主句亦可用情態助動詞或祈使句。",
                 "example": "As soon as the experiment yields definitive results tomorrow, the team will submit the paper.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [條件與時間副詞子句時態陷阱 (Present Tense for Future in Adverbial Clauses)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "I will call you when I ___ at the station.",
                   "options": [
-                    "As soon as the experiment yields definitive results tomorrow, the team will submit the paper.",
-                    "As soon as the experiment yields definitive results tomorrow, the team will submit the paper.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "will arrive",
+                    "arrived",
+                    "arrive"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「條件與時間副詞子句時態陷阱 (Present Tense for Future in Adverbial Clauses)」之核心公式：If / When / As soon as / Unless + S + V-現在式, S + will + V-原形。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "表未來時間的 when 副詞子句通常用現在式 arrive；不是所有含 when 的句子都如此。"
                 }
               },
               {
@@ -3893,7 +3824,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "非限定子句修飾整句或先行詞 (Comma + which / who)",
                 "formula": "S + V + O, which + V (which 代替前面整個句子或先行詞)",
-                "explanation": "逗號後的 which 不僅可指代前面的名詞，更常指代前面整個句子所陳述的事實，此時動詞一律視為單數！",
+                "explanation": "逗號後的 which 不僅可指代前面的名詞，更常指代前面整個句子所陳述的事實，which 指整件事時用單數；若指複數名詞，則須配合該名詞用複數。",
                 "example": "The factory reduced greenhouse emissions by 40%, which surprised regulatory authorities.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [非限定子句修飾整句或先行詞 (Comma + which / who)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -4155,18 +4086,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "篇章轉折副詞標點規範 (Punctuation of Transition Adverbs)",
                 "formula": "Sentence 1; therefore, Sentence 2.  OR  Sentence 1. In addition, Sentence 2.",
-                "explanation": "轉折副詞不是連接詞，不能用單一逗號連接兩個完整句子！前面必須是句號或分號，其後緊隨逗號。",
+                "explanation": "連接副詞不能只靠單一逗號連接兩個獨立子句。位於句首時常加逗號，也可放在句中：I therefore agree.，標點依位置判斷。",
                 "example": "The cost of lithium batteries has plummeted; consequently, electric vehicle adoption has surged.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [篇章轉折副詞標點規範 (Punctuation of Transition Adverbs)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Choose the correctly punctuated pair of independent clauses.",
                   "options": [
-                    "The cost of lithium batteries has plummeted; consequently, electric vehicle adoption has surged.",
-                    "The cost of lithium batteries has plummeted; consequently, electric vehicle adoption has surged.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "It rained; however, we continued.",
+                    "It rained, however we continued.",
+                    "It rained however we continued."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「篇章轉折副詞標點規範 (Punctuation of Transition Adverbs)」之核心公式：Sentence 1; therefore, Sentence 2.  OR  Sentence 1. In addition, Sentence 2.。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "however 是連接副詞；此處用分號分隔獨立子句，再以逗號接續。"
                 }
               },
               {
@@ -4289,15 +4219,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "描述數據變化時，善用精準動詞與副詞：grow steadily, decline marginally, peak at, drop to an all-time low.",
                 "example": "Renewable generation peaked in July, whereas coal dependency declined precipitously.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [圖表數據描述的核心動詞與趨勢用語 (Vocabulary for Data Description)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Sales rose from 100 to 120 units. Which description is accurate?",
                   "options": [
-                    "Renewable generation peaked in July, whereas coal dependency declined precipitously.",
-                    "Renewable generation peaked in July, whereas coal dependency declined precipitously.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Sales fell by 20 units.",
+                    "Sales increased by 20%.",
+                    "Sales doubled."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「圖表數據描述的核心動詞與趨勢用語 (Vocabulary for Data Description)」之核心公式：surge / skyrocket (急升) | plunge / plummet (急跌) | fluctuate (波動) | plateau (持平)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "增加 20，除以原值 100 得 20%；doubled 代表變成 200。"
                 }
               },
               {
@@ -4306,15 +4235,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "混合題常要求考生從文章中挑選一個字詞填空，或以簡答句說明 Text A 數據如何支持或反駁 Text B 的觀點。",
                 "example": "According to Figure 1, the data directly contradicts the author's claim in paragraph 2.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [雙文本觀點比對法則 (Cross-Text Comparative Protocol)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Text A supports remote work for flexibility. Text B supports it but asks for better training. What do both support?",
                   "options": [
-                    "According to Figure 1, the data directly contradicts the author's claim in paragraph 2.",
-                    "According to Figure 1, the data directly contradicts the author's claim in paragraph 2.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Removing all training",
+                    "Closing every office",
+                    "Remote work"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「雙文本觀點比對法則 (Cross-Text Comparative Protocol)」之核心公式：Text A (客觀數據/圖表) + Text B (個人投書/社論) -> 尋找矛盾點與支持證據。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "共同立場是支持 remote work；B 加上訓練需求，不等於反對遠距工作。"
                 }
               }
             ],
@@ -4420,15 +4348,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "情態助動詞後加 have + p.p. 表示對「過去事實」的推測或判斷。",
                 "example": "The streets are soaking wet; it must have rained cats and dogs last night.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [對過去事件的推測矩陣 (Modal Deduction about Past Events)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Her coat is gone and her desk is empty. Which expresses a deduction about the past?",
                   "options": [
-                    "The streets are soaking wet; it must have rained cats and dogs last night.",
-                    "The streets are soaking wet; it must have rained cats and dogs last night.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "She must have left.",
+                    "She must leave tomorrow.",
+                    "She should leave now."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「對過去事件的推測矩陣 (Modal Deduction about Past Events)」之核心公式：must have p.p. (必定做過) | can't/couldn't have p.p. (不可能做過) | may/might have p.p. (可能做過)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "must have + 過去分詞表示對過去的強烈推測；不是直接確認的事實。"
                 }
               },
               {
@@ -4437,15 +4364,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "表達與過去事實相反的批評或懊悔，為假設語氣的縮影。",
                 "example": "You should have double-checked the flight departure gate before sitting down.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [should have p.p. 的遺憾與責備 (Counterfactual Regret)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "I forgot my umbrella and got wet. “I should have brought it” expresses ___.",
                   "options": [
-                    "You should have double-checked the flight departure gate before sitting down.",
-                    "You should have double-checked the flight departure gate before sitting down.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "a future plan",
+                    "regret about a past action",
+                    "a present obligation only"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「should have p.p. 的遺憾與責備 (Counterfactual Regret)」之核心公式：should have p.p. (本來應該做卻沒做) vs. shouldn't have p.p. (本來不該做卻做了)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "此語境中 should have brought 表示本來應帶卻沒帶的遺憾；其他語境也可表預期。"
                 }
               }
             ],
@@ -4551,15 +4477,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "面對大考長達 400-500 字的高難度文本，不可從頭死記。先看問題要求找人名、地名、年份或名詞，直擊原文段落。",
                 "example": "Step 1 marks the question keyword 'thermal insulation'; Step 3 locates paragraph 4 line 3.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [長篇混合題五步解題心法 (GSAT 5-Step Hybrid Mastery)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A passage says “Only members can borrow laptops.” Who can borrow one according to this rule?",
                   "options": [
-                    "Step 1 marks the question keyword 'thermal insulation'; Step 3 locates paragraph 4 line 3.",
-                    "Step 1 marks the question keyword 'thermal insulation'; Step 3 locates paragraph 4 line 3.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Any visitor",
+                    "Only teachers",
+                    "Members"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「長篇混合題五步解題心法 (GSAT 5-Step Hybrid Mastery)」之核心公式：1. 審視題幹關鍵詞 -> 2. 略讀文章抓主旨 -> 3. 掃讀定位精準句 -> 4. 檢驗句構文法格位 -> 5. 謄寫抄錄無失誤。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "答案需保留 only 的限制，不可擴大為所有訪客，也未限定教師。"
                 }
               }
             ],
@@ -4698,15 +4623,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "令人興奮的比賽是 exciting match；感到興奮的觀眾是 excited spectators。指物通常用 V-ing，指人心情通常用 V-p.p.。",
                 "example": "The confusing explanation left all the confused students even more perplexed.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [分詞形容詞情緒動詞對比 (Emotive Participial Adjectives)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The lecture was ___. I felt ___.",
                   "options": [
-                    "The confusing explanation left all the confused students even more perplexed.",
-                    "The confusing explanation left all the confused students even more perplexed.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "boring / bored",
+                    "bored / boring",
+                    "bore / bored"
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「分詞形容詞情緒動詞對比 (Emotive Participial Adjectives)」之核心公式：V-ing (令人感到...的，指事物本質) vs. V-p.p. (某人感到...的，指內心狀態)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "boring 描述事物令人無聊；bored 描述人感到無聊。"
                 }
               }
             ],
@@ -4957,18 +4881,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "與現在相反之假設 (Subjunctive Unreal Present)",
                 "formula": "If + S + were / V-ed, S + would/could/should/might + V-原形",
-                "explanation": "與現在事實相反，子句動詞用過去式 (be 動詞一律用 were)；主要子句用助動詞過去式 + 原形動詞。",
+                "explanation": "與現在事實相反，子句動詞用過去式 (正式反事實用法常用 were，非正式語境也可見 was)；主要子句用助動詞過去式 + 原形動詞。",
                 "example": "If I were a billionaire, I would fund marine plastic cleanup operations globally.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [與現在相反之假設 (Subjunctive Unreal Present)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "If I had more time now, I ___ another language.",
                   "options": [
-                    "If I were a billionaire, I would fund marine plastic cleanup operations globally.",
-                    "If I were a billionaire, I would fund marine plastic cleanup operations globally.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "will learned",
+                    "would learn",
+                    "had learned"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「與現在相反之假設 (Subjunctive Unreal Present)」之核心公式：If + S + were / V-ed, S + would/could/should/might + V-原形。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "had 在此表現在假設，主句用 would + 原形 learn。"
                 }
               },
               {
@@ -4991,7 +4914,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "與未來相反之純假想 (Subjunctive Unreal Future)",
                 "formula": "If + S + were to / should + V-原形, S + would/could + V-原形",
-                "explanation": "were to 表「絕不可能發生的未來假想 (如太陽打西邊出來)」；should 表「萬一發生 (機率極低)」。",
+                "explanation": "were to 可提出較假設性的未來情境，不代表絕不可能；should 可表較正式、較不確定的條件，也不指定機率。",
                 "example": "If the sun were to rise in the west, I would still honor my promise.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [與未來相反之純假想 (Subjunctive Unreal Future)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -5784,18 +5707,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "科技詞彙構詞法：字根與字首拆解 (Affixation in Technical ESP)",
                 "formula": "neuro- (神經) | bio- (生物) | auto- (自動) | trans- (轉變/跨越) | -ification (名詞化)",
-                "explanation": "掌握常見希臘拉丁字根字首，面對陌生學術專業詞彙可瞬間推敲出 80% 以上語義。",
+                "explanation": "字根字首可提供推測線索，但不能保證推得詞義；仍需用上下文與字典核對。",
                 "example": "Autonomous neuromuscular synchronization allows bionic prosthetics to emulate natural limb movements.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [科技詞彙構詞法：字根與字首拆解 (Affixation in Technical ESP)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "What does “reusable” most directly mean?",
                   "options": [
-                    "Autonomous neuromuscular synchronization allows bionic prosthetics to emulate natural limb movements.",
-                    "Autonomous neuromuscular synchronization allows bionic prosthetics to emulate natural limb movements.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "unable to be used",
+                    "used only once",
+                    "able to be used again"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「科技詞彙構詞法：字根與字首拆解 (Affixation in Technical ESP)」之核心公式：neuro- (神經) | bio- (生物) | auto- (自動) | trans- (轉變/跨越) | -ification (名詞化)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "re- 表再一次，use + -able 表能被使用；仍須以實際詞義核對拆字推論。"
                 }
               }
             ],
@@ -5901,15 +5823,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "英文永續倡議文本通常遵循此四段論式結構。考生在寫作時亦可套用此模板以達結構嚴謹度。",
                 "example": "Transitioning from fossil fuels to offshore wind requires substantial grid modernization.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [永續發展論證高頻架構 (Argumentation in Environmental Discourse)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A small trial found lower energy use. Which claim stays within the evidence?",
                   "options": [
-                    "Transitioning from fossil fuels to offshore wind requires substantial grid modernization.",
-                    "Transitioning from fossil fuels to offshore wind requires substantial grid modernization.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Energy use fell in this trial.",
+                    "The method always saves energy everywhere.",
+                    "All environmental problems are solved."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「永續發展論證高頻架構 (Argumentation in Environmental Discourse)」之核心公式：Current Crisis (生態現況) -> Root Cause (人為成因) -> Proposed Solution (制度/科技方案) -> Call to Action (呼籲行動)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "只可描述本次試驗結果，不能外推到所有地方或所有環境問題。"
                 }
               },
               {
@@ -5918,15 +5839,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "大考克漏字與寫作評分特別偏好道地的專業搭配詞組，能大幅提升論述的專業說服力。",
                 "example": "The conglomerate pledged to achieve net-zero carbon neutrality across all operations by 2040.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [綠色經濟高頻搭配詞 (High-Frequency Collocations in Green Economy)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The city aims to ___ carbon emissions.",
                   "options": [
-                    "The conglomerate pledged to achieve net-zero carbon neutrality across all operations by 2040.",
-                    "The conglomerate pledged to achieve net-zero carbon neutrality across all operations by 2040.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "decline",
+                    "reduce",
+                    "fall"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「綠色經濟高頻搭配詞 (High-Frequency Collocations in Green Economy)」之核心公式：carbon neutral (碳中和) | circular economy (循環經濟) | ecological footprint (生態足跡) | sustainable agriculture (永續農業)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "reduce 可直接接 emissions 作受詞；decline 與 fall 表下降時通常不如此帶受詞。"
                 }
               }
             ],
@@ -6029,7 +5949,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "篇章連貫四大定錨法則 (Four Anchoring Principles of Discourse Cohesion)",
                 "formula": "1. 代名詞定錨 (they, this, such) -> 2. 定冠詞特定指稱 (the + N) -> 3. 轉折語流 (However, Thus) -> 4. 語意回響 (Lexical Reiteration)",
-                "explanation": "每個空格的答案，必定與其前一句和後一句有至少兩處「語意或文法黏著點」。找到代名詞先行詞是秒殺題目的最高法門。",
+                "explanation": "檢查空格前後的指涉與邏輯，必要時回看整段；線索數量不固定，也不一定出現代名詞。",
                 "example": "Sentence A mentions 'Dr. Evans launched a project.' Option C begins with 'This ambitious endeavor...'",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [篇章連貫四大定錨法則 (Four Anchoring Principles of Discourse Cohesion)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -6273,7 +6193,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "詞彙題語境三步定位法 (Three-Step Lexical Context Method)",
                 "formula": "1. 詞性判定 (判斷空格需要 N, V, Adj, Adv) -> 2. 正負向情感色彩 (+ / -) -> 3. 搭配詞精準鎖定 (Collocation)",
-                "explanation": "大考詞彙題從不考冷僻罕用字，而是考驗考生是否能依據前後文的形容詞修飾或受詞搭配，選出唯一道地的動詞或名詞。",
+                "explanation": "詞彙題應以實際語境辨義，而是考驗考生是否能依據前後文的形容詞修飾或受詞搭配，選出唯一道地的動詞或名詞。",
                 "example": "The scientist's pioneering research made a significant contribution to marine preservation.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [詞彙題語境三步定位法 (Three-Step Lexical Context Method)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -6290,7 +6210,7 @@ export const UNIFIED_GRADES = [
               {
                 "title": "綜合測驗四大必考題型 (Four Core Cloze Question Types)",
                 "formula": "Grammar (動詞時態/被動/分詞) | Vocabulary (語境名動形副) | Transitions (轉折副詞) | Prepositions (慣用片語介系詞)",
-                "explanation": "每篇綜合測驗固定配置一題轉折詞、一題動詞文法形式、一至兩題搭配詞與語境單字。",
+                "explanation": "文法、詞彙與銜接皆可練習；各篇題型分配不同，不要假定固定配額。",
                 "example": "He devoted his life to improving literacy; moreover, he established hundreds of rural mobile libraries.",
                 "examExample": {
                   "stem": "All sensitive personal data on our server ___ using AES-256 military-grade encryption before being transmitted.",
@@ -6404,35 +6324,33 @@ export const UNIFIED_GRADES = [
               {
                 "title": "文意選填標註詞性四色法 (The Four-Color POS Tagging Method)",
                 "formula": "Step 1: 先花 40 秒在選項 A-J 標註詞性 (V, Adj, N, Adv, Prep) -> Step 2: 掃描空格判斷所需詞性 -> Step 3: 語意過濾即選即劃",
-                "explanation": "標註詞性後，每個空格只需要在 2-3 個同詞性選項中做選擇，錯誤率直接下降 75% 以上！",
+                "explanation": "詞性可縮小候選範圍，但仍需核對語意、搭配及多詞性用法；不保證固定的候選數或正確率提升。",
                 "example": "Blank 21 needs an adjective before noun 'consequence'; only options (B) catastrophic and (F) negligible qualify.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [文意選填標註詞性四色法 (The Four-Color POS Tagging Method)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "The team needs an ___ solution.",
                   "options": [
-                    "Blank 21 needs an adjective before noun 'consequence'; only options (B) catastrophic and (F) negligible qualify.",
-                    "Blank 21 needs an adjective before noun 'consequence'; only options (B) catastrophic and (F) negligible qualify.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "effectively",
+                    "effectiveness",
+                    "effective"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「文意選填標註詞性四色法 (The Four-Color POS Tagging Method)」之核心公式：Step 1: 先花 40 秒在選項 A-J 標註詞性 (V, Adj, N, Adv, Prep) -> Step 2: 掃描空格判斷所需詞性 -> Step 3: 語意過濾即選即劃。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "冠詞 an 後、名詞 solution 前，此句需要形容詞 effective。"
                 }
               },
               {
                 "title": "篇章結構上下夾攻原則 (Double-Flank Verification in Discourse Structure)",
                 "formula": "Sentence (N-1) <== [Blank Target Sentence] ==> Sentence (N+1)",
-                "explanation": "正確選項必須同時滿足前句的因果承接，以及後句的主詞代名詞呼應，缺一不可。",
+                "explanation": "前後需保持語意與結構連貫，但關係可能是對比、例證或延伸，不一定同時具備因果與代名詞。",
                 "example": "If Sentence N+1 starts with 'These rigorous precautions', the blank MUST mention safety measures.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [篇章結構上下夾攻原則 (Double-Flank Verification in Discourse Structure)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "“The old battery lasted two hours. ___. This improvement helped travelers.” Which sentence fits?",
                   "options": [
-                    "If Sentence N+1 starts with 'These rigorous precautions', the blank MUST mention safety measures.",
-                    "If Sentence N+1 starts with 'These rigorous precautions', the blank MUST mention safety measures.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "The new one lasts ten hours.",
+                    "The battery was painted blue without other changes.",
+                    "Travelers disliked every improvement."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「篇章結構上下夾攻原則 (Double-Flank Verification in Discourse Structure)」之核心公式：Sentence (N-1) <== [Blank Target Sentence] ==> Sentence (N+1)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "十小時相較兩小時的續航增加，可讓後句 This improvement 有明確指涉。"
                 }
               }
             ],
@@ -6555,15 +6473,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "若題幹要求 'Find a word in paragraph 2'，考生自行更換單字詞性將直接被判零分！務必原詞摘錄。",
                 "example": "If text says 'substantive', do NOT write 'substance' when instructed to quote directly.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [混合題非選擇題作答三鐵律 (Three Golden Rules for Hybrid Non-MCQ)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A question asks for TWO reasons from the passage. What is the best response strategy?",
                   "options": [
-                    "If text says 'substantive', do NOT write 'substance' when instructed to quote directly.",
-                    "If text says 'substantive', do NOT write 'substance' when instructed to quote directly.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Give one personal opinion.",
+                    "State two supported reasons and follow the word limit.",
+                    "Copy the entire passage."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「混合題非選擇題作答三鐵律 (Three Golden Rules for Hybrid Non-MCQ)」之核心公式：Rule 1: 原文摘錄不可改變原詞拼字 | Rule 2: 填表格注意詞性一致性 | Rule 3: 簡答題寫出完整合乎文法主謂結構。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "須同時滿足數量、文本證據與題目字數要求，不能以個人意見取代證據。"
                 }
               }
             ],
@@ -6666,24 +6583,23 @@ export const UNIFIED_GRADES = [
               {
                 "title": "學測英文作文經典雙段式黃金架構 (Two-Paragraph Gold Standard)",
                 "formula": "Paragraph 1: Situation Description / Objective Prompt Analysis (約 60-70 字) | Paragraph 2: In-Depth Personal Reflection / Dual Perspective Argumentation (約 70-80 字)",
-                "explanation": "第一段精準描述圖表情境或現象本質；第二段提出個人深刻論述、批判反思與具體解方。總字數控制在 130-160 字為最理想區間。",
+                "explanation": "第一段精準描述圖表情境或現象本質；第二段提出個人深刻論述、批判反思與具體解方。先遵循該題指定段落與最低字數，內容充分且切題比固定字數區間更重要。",
                 "example": "P1 depicts the scenario; P2 introduces a personal encounter and draws a moral lesson.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [學測英文作文經典雙段式黃金架構 (Two-Paragraph Gold Standard)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A writing prompt explicitly requests TWO paragraphs. What should guide the structure?",
                   "options": [
-                    "P1 depicts the scenario; P2 introduces a personal encounter and draws a moral lesson.",
-                    "P1 depicts the scenario; P2 introduces a personal encounter and draws a moral lesson.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Always write four paragraphs.",
+                    "Write one long sentence.",
+                    "Follow the two-paragraph task and develop each purpose."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「學測英文作文經典雙段式黃金架構 (Two-Paragraph Gold Standard)」之核心公式：Paragraph 1: Situation Description / Objective Prompt Analysis (約 60-70 字) | Paragraph 2: In-Depth Personal Reflection / Dual Perspective Argumentation (約 70-80 字)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "以該題提示為準；不要硬套固定三段或四段模板。"
                 }
               },
               {
                 "title": "提升作文文法檔次的三大高階句型 (Three Elite Sentence Patterns for 18+ Scores)",
                 "formula": "1. 分詞構句 (Feeling..., she...) | 2. 假設語氣倒裝 (Had I known...) | 3. 分裂強調句 (It is ... that ...)",
-                "explanation": "在第二段反思中自然穿插 1-2 個高階句型，能向大考閱卷教授展示卓越的語法驾馭能力，直接躍升至 16-19 分級距！",
+                "explanation": "只在語意需要且能正確運用時使用較複雜句型；評分看內容、組織與語言整體表現，不能靠句型數量保證分數。",
                 "example": "It was this profound epiphany that fundamentally reshaped my perspective on failure.",
                 "examExample": {
                   "stem": "___ by the spectacular aurora borealis in northern Norway, the tourists stood in stunned silence for hours.",
@@ -6800,15 +6716,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "統測英文共同科目著重生活與職場實務溝通。掌握商務、旅遊、科技、飲食與服務業高頻情境用語。",
                 "example": "In business correspondence: 'Enclosed please find the invoice for your perusal.'",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [統測共同科目四大版塊破題速率 (TVE Common English Speed Strategy)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "How should you plan time for a new exam paper?",
                   "options": [
-                    "In business correspondence: 'Enclosed please find the invoice for your perusal.'",
-                    "In business correspondence: 'Enclosed please find the invoice for your perusal.'",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Check its sections and time limit, then allocate time.",
+                    "Use the same seconds for every question in every exam.",
+                    "Skip all reading instructions."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「統測共同科目四大版塊破題速率 (TVE Common English Speed Strategy)」之核心公式：字彙測驗 (8題 5分鐘) -> 對話測驗 (5題 3分鐘) -> 綜合測驗 (7題 7分鐘) -> 閱讀測驗 (10題 15分鐘)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "先核對實際卷面與時間，再依自身速度調整，本站配速只是練習建議。"
                 }
               },
               {
@@ -6817,15 +6732,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "專業科目包含中譯英、句子改寫 (利用關係詞、分詞構句、倒裝) 以及書信應用文 (Dear Sir/Madam, Yours sincerely)。",
                 "example": "Combine using a relative clause: The technician fixed the machine. It operates flawlessly now.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [外語群專業科目寫作四大評分標準 (TVE ESP Writing Rubric)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Combine: “The technician fixed the machine. It now works well.”",
                   "options": [
-                    "Combine using a relative clause: The technician fixed the machine. It operates flawlessly now.",
-                    "Combine using a relative clause: The technician fixed the machine. It operates flawlessly now.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "The technician fixed the machine it now works well.",
+                    "The machine that the technician fixed now works well.",
+                    "The machine that fixed the technician now works well."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「外語群專業科目寫作四大評分標準 (TVE ESP Writing Rubric)」之核心公式：Sentence Combining (句子合併與改寫) | Guided Writing (引導寫作與應用文書信信件格式)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "that 指 machine，作 fixed 的受詞；B 保留技師修機器的原意，A 逗接結構不完整，C 反轉施受關係。"
                 }
               }
             ],
@@ -6945,18 +6859,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "會考多文本圖表長難題交叉審查原則 (CAP Cross-Checking Protocol)",
                 "formula": "Chart Data (時刻/價格/年齡) + Email Text (特殊條件/優惠券) -> 交集處即唯一正解",
-                "explanation": "近年會考每份試卷必定包含 2-3 組長達兩頁的跨領域題組 (小說節錄、時刻表、地圖導航、廣告公告)，不可通篇逐字死讀，需善用檢索關鍵字。",
+                "explanation": "題組形式與長度依實際試卷而異；遇到時刻表、地圖或公告，可先定位題目要求，再核對細節與限制。",
                 "example": "Map shows ferry terminal; note warns about high tide cancellation after 4 p.m.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [會考多文本圖表長難題交叉審查原則 (CAP Cross-Checking Protocol)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A ferry runs at 5 p.m., but a notice cancels all trips after 4 p.m. today. Can you take it today?",
                   "options": [
-                    "Map shows ferry terminal; note warns about high tide cancellation after 4 p.m.",
-                    "Map shows ferry terminal; note warns about high tide cancellation after 4 p.m.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Yes, because the timetable lists it.",
+                    "Yes, because all notices are optional.",
+                    "No, the cancellation applies."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「會考多文本圖表長難題交叉審查原則 (CAP Cross-Checking Protocol)」之核心公式：Chart Data (時刻/價格/年齡) + Email Text (特殊條件/優惠券) -> 交集處即唯一正解。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "交叉比對日期與 after 4 p.m. 的限制，5 p.m. 班次在取消範圍內。"
                 }
               }
             ],
@@ -7083,18 +6996,17 @@ export const UNIFIED_GRADES = [
               {
                 "title": "英檢口說回答黃金時長與流暢節奏 (GEPT Speaking Rhythm Mastery)",
                 "formula": "Part 1: Answer Directly (5秒) -> Part 2: Elaborate with Two Concrete Details (15秒) -> Part 3: Personal Example (15秒)",
-                "explanation": "切忌停頓沉默 (Dead air) 超過 3 秒。善用填補詞 (Well, to be frank, in my personal experience) 爭取思考時間。",
+                "explanation": "允許短暫思考停頓，重點是回答切題且連貫，不必以三秒作為硬性扣分界線。善用填補詞 (Well, to be frank, in my personal experience) 爭取思考時間。",
                 "example": "Q: Do you prefer studying alone or in a group? A: Without hesitation, I find solitary study far more productive...",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [英檢口說回答黃金時長與流暢節奏 (GEPT Speaking Rhythm Mastery)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which reply answers “Why do you prefer studying alone?” with a reason?",
                   "options": [
-                    "Q: Do you prefer studying alone or in a group? A: Without hesitation, I find solitary study far more productive...",
-                    "Q: Do you prefer studying alone or in a group? A: Without hesitation, I find solitary study far more productive...",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "I can concentrate better without conversation.",
+                    "Studying alone.",
+                    "It is a preference."
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「英檢口說回答黃金時長與流暢節奏 (GEPT Speaking Rhythm Mastery)」之核心公式：Part 1: Answer Directly (5秒) -> Part 2: Elaborate with Two Concrete Details (15秒) -> Part 3: Personal Example (15秒)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "A 回答原因；B、C 只是重述題目，沒有支持細節。實際答題時長依題目規定。"
                 }
               }
             ],
@@ -7197,24 +7109,23 @@ export const UNIFIED_GRADES = [
               {
                 "title": "Part 5 單句填空 15 秒秒殺法則 (TOEIC Part 5 15-Second Blitz)",
                 "formula": "Grammar Question (前後單字定詞性，不看句意 5 秒選出) vs. Vocabulary Question (看動詞搭配詞 15 秒選出)",
-                "explanation": "Part 5 共 30 題，必須在 10 分鐘內全部作答完畢，為 Part 7 留下至少 55 分鐘！",
+                "explanation": "Part 5 可練習限時作答，但配速依程度與整體閱讀時間調整；不要把本站建議當成官方分段時限。",
                 "example": "Ms. Lin reviewed the financial spreadsheet ________ (thorough / thoroughly) before the board meeting. -> Adv modifies reviewed.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [Part 5 單句填空 15 秒秒殺法則 (TOEIC Part 5 15-Second Blitz)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Ms. Lin reviewed the spreadsheet ___.",
                   "options": [
-                    "Ms. Lin reviewed the financial spreadsheet ________ (thorough",
-                    "Ms. Lin reviewed the financial spreadsheet ________ (thorough",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "thorough",
+                    "thoroughly",
+                    "thoroughness"
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「Part 5 單句填空 15 秒秒殺法則 (TOEIC Part 5 15-Second Blitz)」之核心公式：Grammar Question (前後單字定詞性，不看句意 5 秒選出) vs. Vocabulary Question (看動詞搭配詞 15 秒選出)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "此處修飾 reviewed 動作用副詞 thoroughly；thorough 是形容詞，thoroughness 是名詞。"
                 }
               },
               {
                 "title": "Part 7 三文本交叉檢索題 (Triple Passage Cross-Referencing in Part 7)",
                 "formula": "Text 1 (網頁公告/產品型錄) + Text 2 (客戶訂購單/客訴電郵) + Text 3 (客服主管回覆) -> 尋找時間、型號與差價交叉點",
-                "explanation": "三文本題的第 3 題與第 5 題，答案必定需要同時整合兩份甚至三份文本的資訊。",
+                "explanation": "跨文本題需整合相關文件，但不能依題號判定；每題先確認要求的是單篇細節或跨篇資訊。",
                 "example": "Text 1 lists Model X400 at $200; Text 2 is an invoice for Model X400; Text 3 offers 10% discount on order.",
                 "examExample": {
                   "stem": "According to the core linguistic principle of [Part 7 三文本交叉檢索題 (Triple Passage Cross-Referencing in Part 7)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
@@ -7348,15 +7259,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "使用標準簡報標記語 (signposts)：'Now let us turn our attention to...', 'This brings me to my next point...', 'To summarize our primary findings...'",
                 "example": "Good morning esteemed colleagues. Today, our research team explores the geopolitical ramifications of semiconductor supply chains.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [學術口頭簡報標準開場與轉折三部曲 (Three-Stage Presentation Architecture)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "Which sentence signals a move to the next presentation section?",
                   "options": [
-                    "Good morning esteemed colleagues. Today, our research team explores the geopolitical ramifications of semiconductor supply chains.",
-                    "Good morning esteemed colleagues. Today, our research team explores the geopolitical ramifications of semiconductor supply chains.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Thank you; that ends my talk.",
+                    "Could you repeat the question?",
+                    "Now let us turn to the results."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「學術口頭簡報標準開場與轉折三部曲 (Three-Stage Presentation Architecture)」之核心公式：Hook & Roadmap (吸引注意並交代報告大綱) -> Signposting (清晰章節轉折語) -> Takeaway & Q&A (總結結論並開放提問)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 2,
+                  "analysis": "turn to the results 標示轉到結果；其他兩句分別是結束與要求重述問題。"
                 }
               }
             ],
@@ -7479,15 +7389,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "最高分的學術作文絕不對反對意見視而不見，而是主動提出反對論點並透過實證數據徹底予以反駁，展現客觀宏大的思辨器度。",
                 "example": "Admittedly, solar installations entail initial capital costs. However, life-cycle operational savings far surpass conventional alternatives.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [駁論結構三部曲 (The Anatomy of Counter-Argument and Rebuttal)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "“The system is costly to install. However, it reduces maintenance costs.” What is the second sentence doing?",
                   "options": [
-                    "Admittedly, solar installations entail initial capital costs. However, life-cycle operational savings far surpass conventional alternatives.",
-                    "Admittedly, solar installations entail initial capital costs. However, life-cycle operational savings far surpass conventional alternatives.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Offering a counterpoint to the cost concern",
+                    "Repeating the installation cost",
+                    "Proving there are no costs"
                   ],
                   "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「駁論結構三部曲 (The Anatomy of Counter-Argument and Rebuttal)」之核心公式：Acknowledge (承認反方觀點之合理性) -> Pivot (以 While / Although / Admittedly 轉折) -> Refute with Empirical Evidence (提出更有力之反駁證據)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "analysis": "第二句補上不同面向的成本優勢，並未證明所有成本都消失。"
                 }
               }
             ],
@@ -7593,15 +7502,14 @@ export const UNIFIED_GRADES = [
                 "explanation": "臨場大考比拼的不僅是記憶力，更是心理素質。面對沒看過的新穎生字與長文，保持深呼吸，利用詞根與上下文脈絡化繁為簡。",
                 "example": "Maintain steady breathing; parse complex sentences by finding the main predicate verb first.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [大考倒數全景心智調適矩陣 (Final Examination Psychological Protocol)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
+                  "stem": "A long sentence is hard to parse during practice. What helps identify its main structure?",
                   "options": [
-                    "Maintain steady breathing; parse complex sentences by finding the main predicate verb first.",
-                    "Maintain steady breathing; parse complex sentences by finding the main predicate verb first.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
+                    "Translate every word before finding any verb.",
+                    "Find the main subject and finite verb, then reconnect modifiers.",
+                    "Choose the longest answer automatically."
                   ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「大考倒數全景心智調適矩陣 (Final Examination Psychological Protocol)」之核心公式：Syntactic Confidence (文法自信) + Rapid Scanning (檢索速度) + Emotional Composure (臨場沉著)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                  "answer": 1,
+                  "analysis": "先找主詞與限定動詞，再接回修飾語；選項長短不是正確性證據。"
                 }
               }
             ],

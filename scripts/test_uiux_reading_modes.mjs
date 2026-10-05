@@ -51,7 +51,8 @@ test('1. THEMES and LINE_HEIGHTS presets exist and meet eye-care pedagogical sta
   // Check warm theme (sepia paper reading mode)
   const warm = THEMES.find(t => t.id === 'warm');
   assert.ok(warm.name.includes('羊皮暖陽'));
-  assert.ok(warm.desc.includes('護眼'));
+  assert.ok(warm.desc.includes('米色'));
+  assert.ok(!THEMES.some(t => /WCAG|藍光疲勞|無眩光/.test(t.desc)), 'Avoid unverified health and conformance claims');
 
   // Check dark theme
   const dark = THEMES.find(t => t.id === 'dark');
@@ -159,4 +160,21 @@ test('7. 100% Byte-for-Byte Deployment Parity across dist/ and site/dist/', () =
     const siteBuf = readFileSync(`site/dist/${f}`);
     assert.equal(distBuf.compare(siteBuf), 0, `${f} must be 100% byte-identical`);
   }
+});
+
+test('Text enlargement is single-pass, finite, bounded and preserves the current page', async () => {
+  const {applyDisplayScale, handleDisplayToolbarClick} = await import('../dist/display_settings.mjs');
+  applyDisplayScale(2);
+  assert.equal(document.documentElement.style.zoom,1);
+  assert.equal(document.documentElement.style.fontSize,'calc(16px * 2)');
+  for (const invalid of [NaN,Infinity,'broken']) {
+    applyDisplayScale(invalid);
+    assert.equal(domAttrs.get('data-app-scale'),1);
+  }
+  applyDisplayScale(99);
+  assert.equal(domAttrs.get('data-app-scale'),2);
+  let renders=0;
+  handleDisplayToolbarClick({dataset:{setScale:'1.5'}},()=>renders++);
+  assert.equal(renders,0,'Changing reading preferences must preserve drafts, focus and open sections');
+  assert.equal(storage.get('eq_display_scale'),'1.5');
 });

@@ -70,6 +70,89 @@ export function getAllCurriculumMaterials() {
   return list;
 }
 
+// 渲染核心素養與 CEFR 對照表
+export function renderCoreCompetenciesTable() {
+  return `
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="教育部 108 課綱三面九項素養與 CEFR 評量階梯總體對照表" style="margin-bottom:24px;padding:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+        <strong style="color:#0f172a;font-size:15px">🏛️ 教育部 108 課綱英語文三面九項核心素養與 CEFR 評量階梯總體對照表</strong>
+        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">課綱指標全貫通</span>
+      </div>
+      <table>
+        <caption>三面九項核心素養構面、英語文學習表現指標與 CEFR 階梯對標</caption>
+        <thead>
+          <tr>
+            <th scope="col">核心素養構面</th>
+            <th scope="col">項目代碼與名稱</th>
+            <th scope="col">英語文領域具體素養指標</th>
+            <th scope="col">對標 CEFR 階梯</th>
+            <th scope="col">平台對應模組與實踐</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">A. 自主行動</th>
+            <td>A1 身心素質與自我精進</td>
+            <td>運用自學策略，規劃個人英語學習進度與反思筆記</td>
+            <td>Pre-A1 ~ B1</td>
+            <td>單元微課自學鷹架、錯誤訂正回顧、學習進度追蹤</td>
+          </tr>
+          <tr>
+            <td>A2 系統思考與解決問題</td>
+            <td>掌握句型結構、文法規律與詞綴邏輯，推斷未知字義與句意</td>
+            <td>A2 ~ B2</td>
+            <td>解題三步法、構詞學字首字尾館、長難句剝洋蔥解構</td>
+          </tr>
+          <tr>
+            <td>A3 規劃執行與創新應變</td>
+            <td>能綜合多元文本資訊，進行段落組織、書信寫作與論證應用</td>
+            <td>B1 ~ C1</td>
+            <td>A4 講義列印、商務 Email 寫作、中譯英產出</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="3">B. 溝通互動</th>
+            <td>B1 符號運用與溝通表達</td>
+            <td>正確辨讀 IPA 音標、連音弱讀，並能以口語或文字流暢表達</td>
+            <td>Pre-A1 ~ B2</td>
+            <td>自然拼讀大師課、通勤聽課教室、核心會話實戰</td>
+          </tr>
+          <tr>
+            <td>B2 科技資訊與媒體素養</td>
+            <td>解讀圖表、時刻表、多文本對照，辨別資訊真實度與偏誤</td>
+            <td>A2 ~ C1</td>
+            <td>會考圖表素養題、學測多文本混合題、ESP 科技論文閱讀</td>
+          </tr>
+          <tr>
+            <td>B3 藝術涵養與美感素養</td>
+            <td>體會文學篇章、文化寓言、節慶故事之語言美感與意境</td>
+            <td>A1 ~ B2</td>
+            <td>世界節慶文化專題、歷險記閱讀、雙面論證寫作</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="3">C. 社會參與</th>
+            <td>C1 道德實踐與公民意識</td>
+            <td>能閱讀環境永續 (ESG)、職場安全規範與社會公益倡議英語文本</td>
+            <td>B1 ~ C1</td>
+            <td>工場安全與 PPE 指令、全球綠色能源與永續跨域論證</td>
+          </tr>
+          <tr>
+            <td>C2 人際關係與團隊合作</td>
+            <td>在職場或學術討論中運用得體的情態語氣，提出協商與建議</td>
+            <td>A2 ~ C1</td>
+            <td>情態助動詞禮貌請求、職場商務溝通、大學 EMI 口頭簡報</td>
+          </tr>
+          <tr>
+            <td>C3 多元文化與國際理解</td>
+            <td>尊重跨國文化差異，適應多元英語口音與國際學術論證規範</td>
+            <td>B1 ~ C2</td>
+            <td>GEPT 全民英檢、TOEIC、Digital SAT、GRE/GMAT 批判思維</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 // 渲染檢核矩陣主要 HTML
 export function renderCurriculumMatrixView() {
   const materials = getAllCurriculumMaterials();
@@ -128,6 +211,7 @@ export function renderCurriculumMatrixView() {
         </div>
       </div>
 
+      ${renderCoreCompetenciesTable()}
       <!-- 搜尋與篩選列 -->
       <div class="card" style="padding:16px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
         <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:280px">
