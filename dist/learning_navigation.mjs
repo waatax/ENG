@@ -7,7 +7,7 @@ export function enhanceLearningPage(root) {
   const title = main.querySelector('h1');
   if (title) document.title = title.textContent.trim() + '｜English Quest';
   const headings = [...main.querySelectorAll('h2')].filter(h=>!h.closest('details, nav, .knowledge-card, .knowledge-home'));
-  if (!headings.length || main.querySelector('.knowledge-home')) return;
+  if (!headings.length || main.querySelector('.knowledge-home, .word-mp3')) return;
   const panel = document.createElement('details');
   panel.className = 'reading-map';
   const summary = document.createElement('summary');

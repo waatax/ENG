@@ -1,0 +1,1215 @@
+{
+  "id": "junior-001",
+  "tier": "jhs_2000",
+  "label": "國中",
+  "start": 1,
+  "end": 50,
+  "file": "junior-001.mp3",
+  "signature": "07f6604bf408e3407315febe42ae9bcc68a49dcbdad99342b75f8843745d4bca",
+  "duration": 971.366,
+  "bytes": 4857458,
+  "wordCount": 50,
+  "words": [
+    {
+      "id": "fc-jh-0001",
+      "en": "choose",
+      "zh": "選擇、挑選 (三態 choose-chose-chosen)",
+      "start": 0.4,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 0.4,
+          "zh": 2.272
+        },
+        {
+          "round": 2,
+          "en": 6.936,
+          "zh": 8.808
+        },
+        {
+          "round": 3,
+          "en": 13.472,
+          "zh": 15.344
+        }
+      ],
+      "end": 20.508
+    },
+    {
+      "id": "fc-jh-0002",
+      "en": "freeze",
+      "zh": "結冰、凍結 (三態 freeze-froze-frozen)",
+      "start": 20.508,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 20.508,
+          "zh": 22.508
+        },
+        {
+          "round": 2,
+          "en": 27.119,
+          "zh": 29.119
+        },
+        {
+          "round": 3,
+          "en": 33.73,
+          "zh": 35.73
+        }
+      ],
+      "end": 40.842
+    },
+    {
+      "id": "fc-jh-0003",
+      "en": "rise",
+      "zh": "上升、升起 (三態 rise-rose-risen，不及物)",
+      "start": 40.842,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 40.842,
+          "zh": 42.828
+        },
+        {
+          "round": 2,
+          "en": 48.522,
+          "zh": 50.508
+        },
+        {
+          "round": 3,
+          "en": 56.203,
+          "zh": 58.189
+        }
+      ],
+      "end": 64.383
+    },
+    {
+      "id": "fc-jh-0004",
+      "en": "raise",
+      "zh": "舉起、撫養、籌募 (及物動詞)",
+      "start": 64.383,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 64.383,
+          "zh": 66.355
+        },
+        {
+          "round": 2,
+          "en": 71.439,
+          "zh": 73.411
+        },
+        {
+          "round": 3,
+          "en": 78.494,
+          "zh": 80.467
+        }
+      ],
+      "end": 86.05
+    },
+    {
+      "id": "fc-jh-0005",
+      "en": "lead",
+      "zh": "引導、帶領、導致 (三態 lead-led-led)",
+      "start": 86.05,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 86.05,
+          "zh": 87.883
+        },
+        {
+          "round": 2,
+          "en": 93.008,
+          "zh": 94.842
+        },
+        {
+          "round": 3,
+          "en": 99.967,
+          "zh": 101.8
+        }
+      ],
+      "end": 107.425
+    },
+    {
+      "id": "fc-jh-0006",
+      "en": "spread",
+      "zh": "傳播、蔓延 (三態同形 spread-spread-spread)",
+      "start": 107.425,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 107.425,
+          "zh": 109.355
+        },
+        {
+          "round": 2,
+          "en": 114.564,
+          "zh": 116.494
+        },
+        {
+          "round": 3,
+          "en": 121.703,
+          "zh": 123.633
+        }
+      ],
+      "end": 129.341
+    },
+    {
+      "id": "fc-jh-0007",
+      "en": "grow",
+      "zh": "成長、種植 (三態 grow-grew-grown)",
+      "start": 129.341,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 129.341,
+          "zh": 131.161
+        },
+        {
+          "round": 2,
+          "en": 135.73,
+          "zh": 137.55
+        },
+        {
+          "round": 3,
+          "en": 142.119,
+          "zh": 143.939
+        }
+      ],
+      "end": 149.008
+    },
+    {
+      "id": "fc-jh-0008",
+      "en": "hide",
+      "zh": "躲藏、隱藏 (三態 hide-hid-hidden)",
+      "start": 149.008,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 149.008,
+          "zh": 150.855
+        },
+        {
+          "round": 2,
+          "en": 155.258,
+          "zh": 157.105
+        },
+        {
+          "round": 3,
+          "en": 161.508,
+          "zh": 163.355
+        }
+      ],
+      "end": 168.258
+    },
+    {
+      "id": "fc-jh-0009",
+      "en": "steal",
+      "zh": "偷竊 (三態 steal-stole-stolen)",
+      "start": 168.258,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 168.258,
+          "zh": 170.203
+        },
+        {
+          "round": 2,
+          "en": 174.022,
+          "zh": 175.967
+        },
+        {
+          "round": 3,
+          "en": 179.786,
+          "zh": 181.73
+        }
+      ],
+      "end": 186.05
+    },
+    {
+      "id": "fc-jh-0010",
+      "en": "shake",
+      "zh": "搖動、握手 (三態 shake-shook-shaken)",
+      "start": 186.05,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 186.05,
+          "zh": 187.994
+        },
+        {
+          "round": 2,
+          "en": 192.425,
+          "zh": 194.369
+        },
+        {
+          "round": 3,
+          "en": 198.8,
+          "zh": 200.744
+        }
+      ],
+      "end": 205.675
+    },
+    {
+      "id": "fc-jh-0011",
+      "en": "break",
+      "zh": "打破、折斷 (三態 break-broke-broken)",
+      "start": 205.675,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 205.675,
+          "zh": 207.494
+        },
+        {
+          "round": 2,
+          "en": 212.05,
+          "zh": 213.869
+        },
+        {
+          "round": 3,
+          "en": 218.425,
+          "zh": 220.244
+        }
+      ],
+      "end": 225.3
+    },
+    {
+      "id": "fc-jh-0012",
+      "en": "bring",
+      "zh": "帶來、攜帶 (三態 bring-brought-brought)",
+      "start": 225.3,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 225.3,
+          "zh": 227.064
+        },
+        {
+          "round": 2,
+          "en": 231.425,
+          "zh": 233.189
+        },
+        {
+          "round": 3,
+          "en": 237.55,
+          "zh": 239.314
+        }
+      ],
+      "end": 244.175
+    },
+    {
+      "id": "fc-jh-0013",
+      "en": "buy",
+      "zh": "購買、買下 (三態 buy-bought-bought)",
+      "start": 244.175,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 244.175,
+          "zh": 245.967
+        },
+        {
+          "round": 2,
+          "en": 250.258,
+          "zh": 252.05
+        },
+        {
+          "round": 3,
+          "en": 256.342,
+          "zh": 258.133
+        }
+      ],
+      "end": 262.925
+    },
+    {
+      "id": "fc-jh-0014",
+      "en": "catch",
+      "zh": "捕捉、趕上（車）(三態 catch-caught-caught)",
+      "start": 262.925,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 262.925,
+          "zh": 264.814
+        },
+        {
+          "round": 2,
+          "en": 269.981,
+          "zh": 271.869
+        },
+        {
+          "round": 3,
+          "en": 277.036,
+          "zh": 278.925
+        }
+      ],
+      "end": 284.592
+    },
+    {
+      "id": "fc-jh-0015",
+      "en": "drive",
+      "zh": "駕駛、開車 (三態 drive-drove-driven)",
+      "start": 284.592,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 284.592,
+          "zh": 286.536
+        },
+        {
+          "round": 2,
+          "en": 291.203,
+          "zh": 293.147
+        },
+        {
+          "round": 3,
+          "en": 297.814,
+          "zh": 299.758
+        }
+      ],
+      "end": 304.925
+    },
+    {
+      "id": "fc-jh-0016",
+      "en": "fall",
+      "zh": "落下、跌倒 (三態 fall-fell-fallen)",
+      "start": 304.925,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 304.925,
+          "zh": 306.828
+        },
+        {
+          "round": 2,
+          "en": 311.244,
+          "zh": 313.147
+        },
+        {
+          "round": 3,
+          "en": 317.564,
+          "zh": 319.467
+        }
+      ],
+      "end": 324.383
+    },
+    {
+      "id": "fc-jh-0017",
+      "en": "feel",
+      "zh": "感覺、覺得 (連綴動詞，三態 feel-felt-felt)",
+      "start": 324.383,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 324.383,
+          "zh": 326.314
+        },
+        {
+          "round": 2,
+          "en": 332.133,
+          "zh": 334.064
+        },
+        {
+          "round": 3,
+          "en": 339.883,
+          "zh": 341.814
+        }
+      ],
+      "end": 348.133
+    },
+    {
+      "id": "fc-jh-0018",
+      "en": "find",
+      "zh": "尋獲、發現 (三態 find-found-found)",
+      "start": 348.133,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 348.133,
+          "zh": 350.092
+        },
+        {
+          "round": 2,
+          "en": 354.772,
+          "zh": 356.731
+        },
+        {
+          "round": 3,
+          "en": 361.411,
+          "zh": 363.369
+        }
+      ],
+      "end": 368.55
+    },
+    {
+      "id": "fc-jh-0019",
+      "en": "forget",
+      "zh": "忘記 (三態 forget-forgot-forgotten)",
+      "start": 368.55,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 368.55,
+          "zh": 370.508
+        },
+        {
+          "round": 2,
+          "en": 374.564,
+          "zh": 376.522
+        },
+        {
+          "round": 3,
+          "en": 380.578,
+          "zh": 382.536
+        }
+      ],
+      "end": 387.092
+    },
+    {
+      "id": "fc-jh-0020",
+      "en": "give",
+      "zh": "給予、贈送 (三態 give-gave-given)",
+      "start": 387.092,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 387.092,
+          "zh": 388.939
+        },
+        {
+          "round": 2,
+          "en": 393.342,
+          "zh": 395.189
+        },
+        {
+          "round": 3,
+          "en": 399.592,
+          "zh": 401.439
+        }
+      ],
+      "end": 406.342
+    },
+    {
+      "id": "fc-jh-0021",
+      "en": "hear",
+      "zh": "聽見 (感官動詞，三態 hear-heard-heard)",
+      "start": 406.342,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 406.342,
+          "zh": 408.147
+        },
+        {
+          "round": 2,
+          "en": 413.008,
+          "zh": 414.814
+        },
+        {
+          "round": 3,
+          "en": 419.675,
+          "zh": 421.48
+        }
+      ],
+      "end": 426.841
+    },
+    {
+      "id": "fc-jh-0022",
+      "en": "hold",
+      "zh": "握住、舉辦 (三態 hold-held-held)",
+      "start": 426.841,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 426.841,
+          "zh": 428.675
+        },
+        {
+          "round": 2,
+          "en": 433.064,
+          "zh": 434.897
+        },
+        {
+          "round": 3,
+          "en": 439.286,
+          "zh": 441.119
+        }
+      ],
+      "end": 446.008
+    },
+    {
+      "id": "fc-jh-0023",
+      "en": "keep",
+      "zh": "保持、持續 (三態 keep-kept-kept)",
+      "start": 446.008,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 446.008,
+          "zh": 447.786
+        },
+        {
+          "round": 2,
+          "en": 452.369,
+          "zh": 454.147
+        },
+        {
+          "round": 3,
+          "en": 458.731,
+          "zh": 460.508
+        }
+      ],
+      "end": 465.592
+    },
+    {
+      "id": "fc-jh-0024",
+      "en": "know",
+      "zh": "知道、認識 (三態 know-knew-known)",
+      "start": 465.592,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 465.592,
+          "zh": 467.397
+        },
+        {
+          "round": 2,
+          "en": 471.8,
+          "zh": 473.605
+        },
+        {
+          "round": 3,
+          "en": 478.008,
+          "zh": 479.814
+        }
+      ],
+      "end": 484.716
+    },
+    {
+      "id": "fc-jh-0025",
+      "en": "leave",
+      "zh": "離開、留下 (三態 leave-left-left)",
+      "start": 484.716,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 484.716,
+          "zh": 486.647
+        },
+        {
+          "round": 2,
+          "en": 491.161,
+          "zh": 493.092
+        },
+        {
+          "round": 3,
+          "en": 497.606,
+          "zh": 499.536
+        }
+      ],
+      "end": 504.55
+    },
+    {
+      "id": "fc-jh-0026",
+      "en": "lose",
+      "zh": "遺失、輸掉 (三態 lose-lost-lost)",
+      "start": 504.55,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 504.55,
+          "zh": 506.508
+        },
+        {
+          "round": 2,
+          "en": 511.106,
+          "zh": 513.064
+        },
+        {
+          "round": 3,
+          "en": 517.661,
+          "zh": 519.619
+        }
+      ],
+      "end": 524.717
+    },
+    {
+      "id": "fc-jh-0027",
+      "en": "meet",
+      "zh": "遇見、迎接 (三態 meet-met-met)",
+      "start": 524.717,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 524.717,
+          "zh": 526.55
+        },
+        {
+          "round": 2,
+          "en": 530.8,
+          "zh": 532.633
+        },
+        {
+          "round": 3,
+          "en": 536.883,
+          "zh": 538.717
+        }
+      ],
+      "end": 543.467
+    },
+    {
+      "id": "fc-jh-0028",
+      "en": "pay",
+      "zh": "支付、付款 (三態 pay-paid-paid)",
+      "start": 543.467,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 543.467,
+          "zh": 545.328
+        },
+        {
+          "round": 2,
+          "en": 549.814,
+          "zh": 551.675
+        },
+        {
+          "round": 3,
+          "en": 556.161,
+          "zh": 558.022
+        }
+      ],
+      "end": 563.008
+    },
+    {
+      "id": "fc-jh-0029",
+      "en": "ride",
+      "zh": "騎乘（車/馬）(三態 ride-rode-ridden)",
+      "start": 563.008,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 563.008,
+          "zh": 564.883
+        },
+        {
+          "round": 2,
+          "en": 569.814,
+          "zh": 571.689
+        },
+        {
+          "round": 3,
+          "en": 576.619,
+          "zh": 578.494
+        }
+      ],
+      "end": 583.925
+    },
+    {
+      "id": "fc-jh-0030",
+      "en": "see",
+      "zh": "看見 (感官動詞，三態 see-saw-seen)",
+      "start": 583.925,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 583.925,
+          "zh": 585.814
+        },
+        {
+          "round": 2,
+          "en": 590.717,
+          "zh": 592.606
+        },
+        {
+          "round": 3,
+          "en": 597.508,
+          "zh": 599.397
+        }
+      ],
+      "end": 604.8
+    },
+    {
+      "id": "fc-jh-0031",
+      "en": "send",
+      "zh": "寄發、派遣 (三態 send-sent-sent)",
+      "start": 604.8,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 604.8,
+          "zh": 606.786
+        },
+        {
+          "round": 2,
+          "en": 611.078,
+          "zh": 613.064
+        },
+        {
+          "round": 3,
+          "en": 617.356,
+          "zh": 619.342
+        }
+      ],
+      "end": 624.133
+    },
+    {
+      "id": "fc-jh-0032",
+      "en": "sing",
+      "zh": "歌唱 (三態 sing-sang-sung)",
+      "start": 624.133,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 624.133,
+          "zh": 626.036
+        },
+        {
+          "round": 2,
+          "en": 629.494,
+          "zh": 631.397
+        },
+        {
+          "round": 3,
+          "en": 634.856,
+          "zh": 636.758
+        }
+      ],
+      "end": 640.717
+    },
+    {
+      "id": "fc-jh-0033",
+      "en": "sit",
+      "zh": "坐下 (三態 sit-sat-sat)",
+      "start": 640.717,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 640.717,
+          "zh": 642.606
+        },
+        {
+          "round": 2,
+          "en": 646.189,
+          "zh": 648.078
+        },
+        {
+          "round": 3,
+          "en": 651.661,
+          "zh": 653.55
+        }
+      ],
+      "end": 657.633
+    },
+    {
+      "id": "fc-jh-0034",
+      "en": "spend",
+      "zh": "花費（時間/金錢）(三態 spend-spent-spent)",
+      "start": 657.633,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 657.633,
+          "zh": 659.661
+        },
+        {
+          "round": 2,
+          "en": 665.203,
+          "zh": 667.231
+        },
+        {
+          "round": 3,
+          "en": 672.772,
+          "zh": 674.8
+        }
+      ],
+      "end": 680.842
+    },
+    {
+      "id": "fc-jh-0035",
+      "en": "stand",
+      "zh": "站立、忍受 (三態 stand-stood-stood)",
+      "start": 680.842,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 680.842,
+          "zh": 682.897
+        },
+        {
+          "round": 2,
+          "en": 687.494,
+          "zh": 689.55
+        },
+        {
+          "round": 3,
+          "en": 694.147,
+          "zh": 696.203
+        }
+      ],
+      "end": 701.3
+    },
+    {
+      "id": "fc-jh-0036",
+      "en": "swim",
+      "zh": "游泳 (三態 swim-swam-swum)",
+      "start": 701.3,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 701.3,
+          "zh": 703.203
+        },
+        {
+          "round": 2,
+          "en": 706.897,
+          "zh": 708.8
+        },
+        {
+          "round": 3,
+          "en": 712.494,
+          "zh": 714.397
+        }
+      ],
+      "end": 718.592
+    },
+    {
+      "id": "fc-jh-0037",
+      "en": "take",
+      "zh": "拿取、花費（時間）(三態 take-took-taken)",
+      "start": 718.592,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 718.592,
+          "zh": 720.397
+        },
+        {
+          "round": 2,
+          "en": 725.828,
+          "zh": 727.633
+        },
+        {
+          "round": 3,
+          "en": 733.064,
+          "zh": 734.869
+        }
+      ],
+      "end": 740.8
+    },
+    {
+      "id": "fc-jh-0038",
+      "en": "teach",
+      "zh": "教導、講授 (三態 teach-taught-taught)",
+      "start": 740.8,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 740.8,
+          "zh": 742.73
+        },
+        {
+          "round": 2,
+          "en": 747.23,
+          "zh": 749.161
+        },
+        {
+          "round": 3,
+          "en": 753.661,
+          "zh": 755.592
+        }
+      ],
+      "end": 760.592
+    },
+    {
+      "id": "fc-jh-0039",
+      "en": "tell",
+      "zh": "告訴、辨別 (三態 tell-told-told)",
+      "start": 760.592,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 760.592,
+          "zh": 762.411
+        },
+        {
+          "round": 2,
+          "en": 766.897,
+          "zh": 768.717
+        },
+        {
+          "round": 3,
+          "en": 773.203,
+          "zh": 775.022
+        }
+      ],
+      "end": 780.008
+    },
+    {
+      "id": "fc-jh-0040",
+      "en": "think",
+      "zh": "思考、認為 (三態 think-thought-thought)",
+      "start": 780.008,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 780.008,
+          "zh": 781.786
+        },
+        {
+          "round": 2,
+          "en": 786.258,
+          "zh": 788.036
+        },
+        {
+          "round": 3,
+          "en": 792.508,
+          "zh": 794.286
+        }
+      ],
+      "end": 799.258
+    },
+    {
+      "id": "fc-jh-0041",
+      "en": "throw",
+      "zh": "投擲、拋丟 (三態 throw-threw-thrown)",
+      "start": 799.258,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 799.258,
+          "zh": 801.092
+        },
+        {
+          "round": 2,
+          "en": 805.564,
+          "zh": 807.397
+        },
+        {
+          "round": 3,
+          "en": 811.869,
+          "zh": 813.703
+        }
+      ],
+      "end": 818.675
+    },
+    {
+      "id": "fc-jh-0042",
+      "en": "wear",
+      "zh": "穿著、配戴 (三態 wear-wore-worn)",
+      "start": 818.675,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 818.675,
+          "zh": 820.522
+        },
+        {
+          "round": 2,
+          "en": 824.939,
+          "zh": 826.786
+        },
+        {
+          "round": 3,
+          "en": 831.203,
+          "zh": 833.05
+        }
+      ],
+      "end": 837.966
+    },
+    {
+      "id": "fc-jh-0043",
+      "en": "win",
+      "zh": "贏得、獲勝 (三態 win-won-won)",
+      "start": 837.966,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 837.966,
+          "zh": 839.73
+        },
+        {
+          "round": 2,
+          "en": 844.078,
+          "zh": 845.842
+        },
+        {
+          "round": 3,
+          "en": 850.189,
+          "zh": 851.953
+        }
+      ],
+      "end": 856.8
+    },
+    {
+      "id": "fc-jh-0044",
+      "en": "technology",
+      "zh": "科技、技術",
+      "start": 856.8,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 856.8,
+          "zh": 859.05
+        },
+        {
+          "round": 2,
+          "en": 861.869,
+          "zh": 864.119
+        },
+        {
+          "round": 3,
+          "en": 866.939,
+          "zh": 869.189
+        }
+      ],
+      "end": 872.508
+    },
+    {
+      "id": "fc-jh-0045",
+      "en": "internet",
+      "zh": "網際網路、網路",
+      "start": 872.508,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 872.508,
+          "zh": 874.522
+        },
+        {
+          "round": 2,
+          "en": 877.689,
+          "zh": 879.703
+        },
+        {
+          "round": 3,
+          "en": 882.869,
+          "zh": 884.883
+        }
+      ],
+      "end": 888.55
+    },
+    {
+      "id": "fc-jh-0046",
+      "en": "smartphone",
+      "zh": "智慧型手機",
+      "start": 888.55,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 888.55,
+          "zh": 890.772
+        },
+        {
+          "round": 2,
+          "en": 893.536,
+          "zh": 895.758
+        },
+        {
+          "round": 3,
+          "en": 898.522,
+          "zh": 900.744
+        }
+      ],
+      "end": 904.008
+    },
+    {
+      "id": "fc-jh-0047",
+      "en": "software",
+      "zh": "軟體 (不可數)",
+      "start": 904.008,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 904.008,
+          "zh": 906.175
+        },
+        {
+          "round": 2,
+          "en": 909.189,
+          "zh": 911.355
+        },
+        {
+          "round": 3,
+          "en": 914.369,
+          "zh": 916.536
+        }
+      ],
+      "end": 920.05
+    },
+    {
+      "id": "fc-jh-0048",
+      "en": "device",
+      "zh": "電子設備、裝置",
+      "start": 920.05,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 920.05,
+          "zh": 922.05
+        },
+        {
+          "round": 2,
+          "en": 925.383,
+          "zh": 927.383
+        },
+        {
+          "round": 3,
+          "en": 930.717,
+          "zh": 932.717
+        }
+      ],
+      "end": 936.55
+    },
+    {
+      "id": "fc-jh-0049",
+      "en": "application",
+      "zh": "應用程式 (App)、申請",
+      "start": 936.55,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 936.55,
+          "zh": 938.786
+        },
+        {
+          "round": 2,
+          "en": 942.633,
+          "zh": 944.869
+        },
+        {
+          "round": 3,
+          "en": 948.717,
+          "zh": 950.953
+        }
+      ],
+      "end": 955.3
+    },
+    {
+      "id": "fc-jh-0050",
+      "en": "connect",
+      "zh": "連接、連結",
+      "start": 955.3,
+      "repetitions": [
+        {
+          "round": 1,
+          "en": 955.3,
+          "zh": 957.363
+        },
+        {
+          "round": 2,
+          "en": 960.489,
+          "zh": 962.552
+        },
+        {
+          "round": 3,
+          "en": 965.677,
+          "zh": 967.741
+        }
+      ],
+      "end": 971.366
+    }
+  ],
+  "individualFallback": false
+}

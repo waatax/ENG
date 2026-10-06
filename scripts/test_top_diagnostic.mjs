@@ -45,7 +45,7 @@ test('2. Navigation sidebar puts practice check at index 0 (topmost)', () => {
 test('3. Top banner renders across pages and routes to #diagnostic', () => {
   const appJs = readFileSync('dist/app.js', 'utf8');
   assert.ok(appJs.includes('renderEnglishLevelTestTopBanner'), 'app.js should define renderEnglishLevelTestTopBanner');
-  assert.ok(appJs.includes("page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' ? '' : renderEnglishLevelTestTopBanner(page)"), 'main-wrapper should render the banner');
+  assert.ok(appJs.includes("page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)"), 'main-wrapper should render the banner');
   assert.ok(appJs.includes("else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }"), 'hash route should support diagnostic');
 });
 

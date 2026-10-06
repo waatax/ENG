@@ -1,3 +1,4 @@
+import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
 import { enhanceLearningPage } from './learning_navigation.mjs';
 import { renderAffixGuide } from './affix_guide.mjs';
 import { handleAffixInput, handleAffixClick } from './affix_library.mjs';
@@ -121,10 +122,11 @@ function due() {
 
 function navigate(p) {
   stopFlashcardAutoPlay();
+  stopWordAudio(root);
   pauseLessonAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '#'+p;
+  const route = p === 'wordaudio' ? wordAudioRoute() : p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '#'+p;
   if (location.hash !== route) history.pushState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
@@ -654,6 +656,7 @@ function shell(body) {
   const nav = [
     ['diagnostic', '00', '🎯 英語練習檢核'],
     ['listening', '🎧', '通勤聽課'],
+    ['wordaudio', '🎵', '單字 MP3 播放練習'],
     ['grammar', '🧩', '圖解文法專區'],
     ['knowledge', '01', '知識點教室'],
     ['schoolwords', '02', '國小・國中單字複習'],
@@ -678,6 +681,7 @@ function shell(body) {
   const summary = junyi.getSummary();
 
   const pageTitles = {
+    wordaudio: '單字 MP3 播放練習',
     listening: '🎧 通勤聽課教室',
     grammar: '🧩 圖解文法專區',
     diagnostic: '🎯 英文程度檢定',
@@ -724,10 +728,10 @@ function shell(body) {
             let header = '';
             if (idx === 0) header = '<div class="nav-group-header">🌟 程度檢定與引導</div>';
             else if (idx === 1) header = '<div class="nav-group-header">🧩 觀念圖解與知識點</div>';
-            else if (idx === 4) header = '<div class="nav-group-header">🎒 課綱學年與發音微課</div>';
-            else if (idx === 9) header = '<div class="nav-group-header">🏫 升學會考與先修講義</div>';
-            else if (idx === 14) header = '<div class="nav-group-header">🗂️ 核心單字與構詞閃卡</div>';
-            else if (idx === 17) header = '<div class="nav-group-header">🎯 題庫實戰與學習紀錄</div>';
+            else if (idx === 5) header = '<div class="nav-group-header">🎒 課綱學年與發音微課</div>';
+            else if (idx === 10) header = '<div class="nav-group-header">🏫 升學會考與先修講義</div>';
+            else if (idx === 15) header = '<div class="nav-group-header">🗂️ 核心單字與構詞閃卡</div>';
+            else if (idx === 18) header = '<div class="nav-group-header">🎯 題庫實戰與學習紀錄</div>';
             return `${header}<button data-nav="${id}" class="${page === id ? 'active' : ''}"><small>${num}</small>${label}</button>`;
           }).join('')}
         </nav></details>
@@ -741,8 +745,8 @@ function shell(body) {
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
         ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options"><summary>單字複習 · 選擇字卡與自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
-        ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' ? '' : renderEnglishLevelTestTopBanner(page)}
-        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening'].includes(page) ? '' : renderStageQuickNav()}
+        ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)}
+        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening','wordaudio'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -2325,11 +2329,13 @@ function progress() {
 }
 
 function render() {
+  prepareWordAudio(root);
   const pages = {
     affixes: renderAffixGuide,
     wordpractice: renderFullWordPractice,
     schoolwords: renderSchoolWords,
     knowledge: knowledgeHome, knowledgePoint: () => knowledgePage(knowledgeId),
+    wordaudio: () => renderWordAudio(() => { if(page==='wordaudio') render(); }),
     listening: listeningPage,
     grammar: grammarPage,
     diagnostic: diagnosticPage,
@@ -2353,6 +2359,7 @@ function render() {
   bindEvents();
   enhanceLearningPage(root);
   syncLessonAudio();
+  bindWordAudio(root,render);
 }
 
 function bindEvents() {
@@ -2426,6 +2433,7 @@ root.addEventListener('click', e => {
   if (!b) return;
   if (b.classList.contains('reading-drawer-overlay') && e.target !== b) return;
   const d = b.dataset;
+  if (handleWordAudioClick(b, render)) return;
   if (handleAffixClick(b, render)) return;
   if (d.listenUnit) {
     if (UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===d.listenUnit)))) {
@@ -2902,7 +2910,8 @@ function readKnowledgeRoute() {
     document.getElementById(parts[0])?.scrollIntoView();
     return;
   }
-  if (parts[0] === 'grammar') { setGrammarTopic(parts[1] || ''); navigate('grammar'); }
+  if (parts[0] === 'wordaudio') { setWordAudioGroup(parts[1]); navigate('wordaudio'); }
+  else if (parts[0] === 'grammar') { setGrammarTopic(parts[1] || ''); navigate('grammar'); }
   else if (parts[0] === 'listening') { navigate('listening'); }
   else if (parts[0] === 'unit' && UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===parts[1])))) { activeUnitId=parts[1]; navigate('junyi'); }
   else if (parts[0] === 'affixes') { navigate('affixes'); }
@@ -3015,3 +3024,6 @@ if (typeof window !== 'undefined' && window.addEventListener) {
     }
   });
 }
+
+root.addEventListener('change', e => handleWordAudioChange(e.target,render));
+window.addEventListener('pagehide',()=>stopWordAudio(root));

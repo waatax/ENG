@@ -1,0 +1,50 @@
+{
+  "tiers": [
+    {
+      "group": "elementary-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "junior-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "senior-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "toeic-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "toefl-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "sat-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "gre-001",
+      "paused": false,
+      "words": 50
+    },
+    {
+      "group": "gmat-001",
+      "paused": false,
+      "words": 50
+    }
+  ],
+  "mobileWidth": 390,
+  "mobileNoOverflow": true,
+  "autoNext": true,
+  "resume": true,
+  "speed": true,
+  "navigationStops": true
+}
