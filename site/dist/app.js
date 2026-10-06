@@ -1,3 +1,4 @@
+import { enhanceLearningPage } from './learning_navigation.mjs';
 import { renderAffixGuide } from './affix_guide.mjs';
 import { handleAffixInput, handleAffixClick } from './affix_library.mjs';
 import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syncLessonAudio, pauseLessonAudio } from './lesson_audio.mjs';
@@ -123,8 +124,8 @@ function navigate(p) {
   pauseLessonAudio();
   activePlayingDialogueIndex = -1;
   page = p;
-  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '';
-  if (location.hash !== route) history.replaceState(null, '', location.pathname + location.search + route);
+  const route = p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '#'+p;
+  if (location.hash !== route) history.pushState(null, '', location.pathname + location.search + route);
   selected = null;
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2350,6 +2351,7 @@ function render() {
   root.innerHTML = shell((pages[page] || knowledgeHome)());
   if (window.matchMedia('(max-width: 768px)').matches) root.querySelector('.site-menu')?.removeAttribute('open');
   bindEvents();
+  enhanceLearningPage(root);
   syncLessonAudio();
 }
 
@@ -2891,9 +2893,10 @@ initDisplaySettings();
 render();
 
 root.addEventListener('input', e => searchKnowledge(e.target));
-root.addEventListener('change', e => { if(e.target.id === 'knowledge-stage') searchKnowledge(e.target); });
+root.addEventListener('change', e => { if(['knowledge-stage','knowledge-domain'].includes(e.target.id)) searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
+  if (!parts[0]) { knowledgeId=''; page='knowledge'; render(); return; }
   if (['affix-prefixes','affix-suffixes','affix-library'].includes(parts[0])) {
     if (page !== 'affixes') { page='affixes'; render(); }
     document.getElementById(parts[0])?.scrollIntoView();
@@ -2905,9 +2908,11 @@ function readKnowledgeRoute() {
   else if (parts[0] === 'affixes') { navigate('affixes'); }
   else if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
   else if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
+  else if (parts[0] === 'matrix') { navigate('matrix'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
+  else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
 }
 window.addEventListener('hashchange', readKnowledgeRoute);
 readKnowledgeRoute();

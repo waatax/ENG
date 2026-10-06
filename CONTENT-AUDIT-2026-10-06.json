@@ -1,0 +1,56 @@
+{
+  "scope": "All listed data structurally scanned; not a full semantic certification.",
+  "counts": {
+    "questions": 22172,
+    "chapters": 27,
+    "chapterConcepts": 65,
+    "schoolUnits": 61,
+    "schoolConcepts": 107,
+    "focusedLessons": 9,
+    "grammarTopics": 20
+  },
+  "banks": [
+    {
+      "file": "diagnostic_bank.json",
+      "questions": 2000,
+      "duplicateItems": 0
+    },
+    {
+      "file": "gaokao.json",
+      "questions": 6000,
+      "duplicateItems": 5940
+    },
+    {
+      "file": "gmat.json",
+      "questions": 3000,
+      "duplicateItems": 2980
+    },
+    {
+      "file": "gre.json",
+      "questions": 3000,
+      "duplicateItems": 2953
+    },
+    {
+      "file": "jhs.json",
+      "questions": 1000,
+      "duplicateItems": 817
+    },
+    {
+      "file": "sat.json",
+      "questions": 3000,
+      "duplicateItems": 2984
+    },
+    {
+      "file": "shs.json",
+      "questions": 1000,
+      "duplicateItems": 992
+    },
+    {
+      "file": "toeic.json",
+      "questions": 3000,
+      "duplicateItems": 2852
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

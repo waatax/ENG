@@ -94,13 +94,9 @@ test('5. Specialized Pages (Affix Guide & Listening) render dedicated visual dia
   assert.ok(listenHtml.includes('閃音／彈舌 (Flap T)'));
 });
 
-test('6. knowledgeHome renders 4-Stage Learning Highway SVG Diagram and Comparison Table', async () => {
-  const { knowledgeHome } = await import('../dist/knowledge.mjs');
-  const html = knowledgeHome();
-  assert.ok(html.includes('四階英語學習公路進階導航圖'));
-  assert.ok(html.includes('四階學習核心素養、語法結構與考場避雷總覽表'));
-  assert.ok(html.includes('建立完整句子概念 (Pre-A1)'));
-  assert.ok(html.includes('學術批判與邏輯推理 (B2~C2)'));
+test('6. Landing uses progressive disclosure while keeping all four teaching formats discoverable',async()=>{
+ const {knowledgeHome}=await import('../dist/knowledge.mjs');const html=knowledgeHome();
+ for(const value of ['catalog-more','核心知識點','綜合教學章節','圖解文法','學年微課','更多學習工具與建議順序'])assert.ok(html.includes(value));
 });
 
 test('7. Curriculum Matrix renders 108 Curriculum 3 Dimensions 9 Items & CEFR Standards Table', async () => {

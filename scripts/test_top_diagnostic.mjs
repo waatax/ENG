@@ -24,10 +24,9 @@ test('1. knowledgeHome prioritizes search and retains optional diagnostic entry'
   const { knowledgeHome } = await import('../dist/knowledge.mjs');
   const html = knowledgeHome();
   assert.ok(html.includes('learning-options'), 'Learning options are collapsible');
-  assert.ok(html.includes('用練習找出補強方向'));
-  assert.ok(html.includes('data-nav="diagnostic"'), 'Should provide one-click diagnostic entry button');
-  assert.ok(html.includes('Pre-A1'), 'Should show ladder starting at Pre-A1');
-  assert.ok(html.includes('GRE / GMAT'), 'Should show ladder culminating at GRE / GMAT');
+  assert.ok(html.includes('用練習找補強方向'));
+  assert.ok(html.includes('href="#diagnostic"'), 'Should provide one-click diagnostic entry');
+  assert.ok(html.includes('從第一句英文開始'));
   
   // Verify it appears before the knowledge search and categories
   const heroIdx = html.indexOf('learning-options');

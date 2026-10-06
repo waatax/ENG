@@ -45,6 +45,6 @@ for(const name of fs.readdirSync('data/questions').filter(n=>n.endsWith('.json')
   }
 }
 const result={scope:'All listed data structurally scanned; not a full semantic certification.',counts,banks,errors,warnings};
-fs.writeFileSync('CONTENT-AUDIT-2026-10-04.json',JSON.stringify(result,null,2)+'\n');
+fs.writeFileSync(process.argv[2] || 'CONTENT-AUDIT-2026-10-04.json',JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({counts,banks,errors,warnings:warnings.length},null,2));
 if(errors.length)process.exitCode=1;

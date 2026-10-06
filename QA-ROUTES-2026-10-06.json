@@ -1,0 +1,1293 @@
+{
+  "desktop": [
+    {
+      "map": true,
+      "overflow": false,
+      "title": "第一個完整句子：I am、you are、she is",
+      "url": "#knowledge/be-sentences"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "日常動作：第三人稱與 do / does 問句",
+      "url": "#knowledge/present-questions"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "過去式與現在完成式：時間如何選？",
+      "url": "#knowledge/past-perfect"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "關係子句：先找缺口，再選代名詞",
+      "url": "#knowledge/relative-clauses"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "被動語態：讀懂操作步驟與安全要求",
+      "url": "#knowledge/passive-instructions"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "可數與不可數：量詞不是逐字翻譯",
+      "url": "#knowledge/countability"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "閱讀推論：答案必須有文本證據",
+      "url": "#knowledge/reading-evidence"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "論證假設：找出理由與結論之間的缺口",
+      "url": "#knowledge/argument-assumptions"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "段落連貫：連接語與代名詞要接得上",
+      "url": "#knowledge/paragraph-cohesion"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "句子骨架與基本時態",
+      "url": "#chapter/jhs/j1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "代名詞、限定詞與數量詞",
+      "url": "#chapter/jhs/j2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "疑問句、情態助動詞與生活溝通",
+      "url": "#chapter/jhs/j3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "連接詞與複句",
+      "url": "#chapter/jhs/j4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "短文閱讀與生活應用文本",
+      "url": "#chapter/jhs/j5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "聽力辨識與語音線索",
+      "url": "#chapter/jhs/j6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "會考英語整合與訂正策略",
+      "url": "#chapter/jhs/j7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "高中句法與長難句拆解",
+      "url": "#chapter/sh/s1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "篇章結構與四空五選策略",
+      "url": "#chapter/sh/s2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學術長篇閱讀與雙文比較",
+      "url": "#chapter/sh/s3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "高中核心詞彙與精確搭配詞",
+      "url": "#chapter/sh/s4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "中譯英與句子產出邏輯",
+      "url": "#chapter/sh/s5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "英文寫作與思維論證",
+      "url": "#chapter/sh/s6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測與統測整卷衝刺",
+      "url": "#chapter/sh/s7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "工場安全與指令",
+      "url": "#chapter/voc/v1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "工具、材料與尺寸規格",
+      "url": "#chapter/voc/v2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "流程與故障排除",
+      "url": "#chapter/voc/v3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "技術圖表與說明書",
+      "url": "#chapter/voc/v4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "職場溝通與技術電子郵件",
+      "url": "#chapter/voc/v5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "統測英語類專業科目 (二) 讀寫",
+      "url": "#chapter/voc/v6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "跨國技術現場實務整合",
+      "url": "#chapter/voc/v7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "全民英檢 GEPT 全級別實戰",
+      "url": "#chapter/intl/gept"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "TOEIC 多益國際商務測驗",
+      "url": "#chapter/intl/toeic"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "Digital SAT Reading and Writing",
+      "url": "#chapter/intl/sat"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "GRE General Exam 語意與論證",
+      "url": "#chapter/intl/gre"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "GMAT 批判推理與商業長文",
+      "url": "#chapter/intl/gmat"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "TOEFL iBT 2026 新制四技能",
+      "url": "#chapter/intl/toefl"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "句子骨架與五大句型",
+      "url": "#grammar/sentence"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "be 動詞、一般動詞與問句",
+      "url": "#grammar/be-do"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "名詞、冠詞與數量",
+      "url": "#grammar/nouns"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "代名詞與所有格",
+      "url": "#grammar/pronouns"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "時間與位置介系詞",
+      "url": "#grammar/prepositions"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "形容詞、副詞與比較",
+      "url": "#grammar/adjectives"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "現在簡單式與過去簡單式",
+      "url": "#grammar/present-past"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "進行式：當時正在發生",
+      "url": "#grammar/progressive"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "完成式：先前事件與參照點",
+      "url": "#grammar/perfect"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "未來表達：will、going to 與安排",
+      "url": "#grammar/future"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "助動詞：能力、義務與推測",
+      "url": "#grammar/modals"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "被動語態與操作流程",
+      "url": "#grammar/passive"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "不定詞與動名詞",
+      "url": "#grammar/infinitives"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "關係子句：把描述接到名詞後",
+      "url": "#grammar/relative"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "名詞子句與間接問句",
+      "url": "#grammar/noun-clauses"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "副詞子句與連接詞",
+      "url": "#grammar/connectors"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "條件句與假設語氣",
+      "url": "#grammar/conditionals"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "分詞修飾與分詞構句",
+      "url": "#grammar/participles"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "主詞一致、倒裝與強調",
+      "url": "#grammar/agreement"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "高工實用文法：安全、步驟與報告",
+      "url": "#grammar/technical"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "日常生活作息與時間表達 (Daily Routines & Telling Time)",
+      "url": "#unit/g6-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "過去式故事與冒險歷險記 (Past Tense Stories & Irregular Verbs)",
+      "url": "#unit/g6-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "城市探索與問路指路指南 (Places & Asking for Directions)",
+      "url": "#unit/g6-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "健康飲食、身體部位與醫療照護 (Food, Health & Care)",
+      "url": "#unit/g6-s1-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "世界節慶巡禮與多元文化 (Festivals & World Cultures)",
+      "url": "#unit/g6-s2-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "閱讀理解力、字首字尾與語篇導航 (Reading & Phonics Mastery)",
+      "url": "#unit/g6-s2-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "未來計畫與夢想志向 (Future Plans & Dream Careers)",
+      "url": "#unit/g6-s2-u7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "事物比較與世界之最 (Comparisons & World Wonders)",
+      "url": "#unit/g6-s2-u8"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "句子骨架、be 動詞與現在簡單式 (Sentence Patterns & Present Simple)",
+      "url": "#unit/g7-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "名詞單複數、指示代名詞與祈使句 (Nouns, Demonstratives & Imperatives)",
+      "url": "#unit/g7-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "國際音標 (IPA/KK) 與字典查閱全指南 (Phonetics & Dictionary Guide)",
+      "url": "#unit/g7-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "現在進行式與動態時間表達 (Present Continuous & Dynamic Time)",
+      "url": "#unit/g7-s2-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "頻率副詞、情態助動詞 can 與存在句 (Adverbs of Frequency & There is/are)",
+      "url": "#unit/g7-s2-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "時空方位介系詞與地圖導航指南 (Prepositions of Space & Directions)",
+      "url": "#unit/g7-s2-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "過去式、未來與敘事時間軸 (Past Simple, Future Tense & Narrative)",
+      "url": "#unit/g8-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "過去進行式、時間連接詞 when/while 與數量詞 (Past Continuous & Quantifiers)",
+      "url": "#unit/g8-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "條件副詞子句與情態假設語氣 If / Unless (Conditional Clauses)",
+      "url": "#unit/g8-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "比較級、不定詞 to V 與動名詞 V-ing (Comparatives, Infinitives & Gerunds)",
+      "url": "#unit/g8-s2-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "連綴動詞、感官動詞與最高級比較 (Linking & Sensory Verbs, Superlatives)",
+      "url": "#unit/g8-s2-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "完成式、被動與關係子句 (Present Perfect, Passive Voice, Rel Clauses)",
+      "url": "#unit/g9-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "授予動詞、使役動詞與完成式進階 (Dative & Causative Verbs)",
+      "url": "#unit/g9-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "關係代名詞受格省略與介系詞搭配 (Rel Pronoun Omission & Prepositions)",
+      "url": "#unit/g9-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "附加問句、名詞子句與間接問句 (Tag Questions & Indirect Questions)",
+      "url": "#unit/g9-s2-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "閱讀策略、情境溝通與指代推論 (Reading Strategies & Contextual Inference)",
+      "url": "#unit/g9-s2-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "跨文本圖表閱讀與素養克漏字 (Multimodal Texts & Cloze Mastery)",
+      "url": "#unit/g9-s2-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "五大基本句型與動詞分類 (Five Basic Sentence Patterns & Verb Classification)",
+      "url": "#unit/g10-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "動名詞與不定詞深度語義對決 (Gerunds vs. Infinitives: Semantic Nuances)",
+      "url": "#unit/g10-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "被動語態進階矩陣與無靈主詞 (Advanced Passives & Impersonal 'It')",
+      "url": "#unit/g10-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "名詞子句與間接問句 (Noun Clauses & Indirect Questions)",
+      "url": "#unit/g10-s1-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "形容詞子句與關係代名詞基礎 (Adjective Clauses & Relative Pronouns)",
+      "url": "#unit/g10-s1-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "副詞子句與邏輯因果轉折 (Adverb Clauses: Cause, Condition, Concession)",
+      "url": "#unit/g10-s1-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "限定與非限定關係子句對比 (Restrictive vs. Non-Restrictive Relatives)",
+      "url": "#unit/g10-s2-u7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "複合關係代名詞與準關係代名詞 (Compound & Quasi-Relatives)",
+      "url": "#unit/g10-s2-u8"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "現代論說文核心篇章標記 (Discourse Markers in Expository Essays)",
+      "url": "#unit/g10-s2-u9"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測圖表與多文本綜合剖析 (GSAT Multimodal Data & Chart Interpretation)",
+      "url": "#unit/g10-s2-u10"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "情態助動詞的推測與批判思考 (Modal Auxiliaries of Deduction)",
+      "url": "#unit/g10-s2-u11"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "高一全冊素養總結與混合題實戰 (G10 Culminating Exam & Cross-Textual Synthesis)",
+      "url": "#unit/g10-s2-u12"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "分詞構句與分詞形容詞全解 (Participle Constructions & Participial Adjectives)",
+      "url": "#unit/g11-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "獨立分詞構句與慣用懸置分詞 (Absolute Constructions & Idiomatic Participles)",
+      "url": "#unit/g11-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "假設語氣與條件句全景 (Subjunctive Mood: Unreal Present, Past & Future)",
+      "url": "#unit/g11-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "混合假設語氣與省略 if 倒裝 (Mixed Conditionals & Inverted Conditionals)",
+      "url": "#unit/g11-s1-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "否定副詞倒裝與地方副詞倒裝 (Inversion: Negative Adverbials & Locatives)",
+      "url": "#unit/g11-s1-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "So / Such / Nor / Neither 倒裝與平衡句型 (Balance & Parallel Inversion)",
+      "url": "#unit/g11-s1-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "分裂句與焦點強調結構 (Cleft Sentences: It is ... that ...)",
+      "url": "#unit/g11-s2-u7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "讓步子句倒裝與高級連接詞 (Concession Inversion & Complex Conjunctions)",
+      "url": "#unit/g11-s2-u8"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "ESP 科技英語與 AI 論文閱讀 (ESP: Artificial Intelligence & Academic Research)",
+      "url": "#unit/g11-s2-u9"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "ESP 全球永續與綠色能源跨域論證 (ESP: Global Sustainability & ESG Discourses)",
+      "url": "#unit/g11-s2-u10"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "篇章結構與段落填空破題密碼 (Discourse Cohesion & Textual Flow Mastery)",
+      "url": "#unit/g11-s2-u11"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "高二全冊融會貫通與頂標衝刺模擬 (G11 Culminating Synthesis & Diagnostic Trial)",
+      "url": "#unit/g11-s2-u12"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測英文詞彙與綜合測驗極速破題 (GSAT Cloze & Lexical Precision)",
+      "url": "#unit/g12-s1-u1"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測文意選填與篇章結構無懈可擊 (GSAT Blanks Filling & Discourse Logic)",
+      "url": "#unit/g12-s1-u2"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測閱讀測驗長篇與混合題滿分策略 (GSAT Extended Reading & Hybrid Response)",
+      "url": "#unit/g12-s1-u3"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "學測英文作文：看圖寫作與雙面論證 (GSAT Essay Writing: Image Prompt & Argumentation)",
+      "url": "#unit/g12-s1-u4"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "統測共同科目與專業科目(一)(二)全真突破 (TVE Vocational Joint Exam & ESP Domain English)",
+      "url": "#unit/g12-s1-u5"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "國中教育會考 A++ 決勝題型徹底破解 (CAP A++ Fatal Challenge & Reading Velocity)",
+      "url": "#unit/g12-s1-u6"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "GEPT 全民英檢中級/中高級高分全策 (GEPT Intermediate/High-Intermediate Blueprint)",
+      "url": "#unit/g12-s2-u7"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "TOEIC 多益 900+ 金色證書核心考點 (TOEIC Listening & Reading Gold Level Tactics)",
+      "url": "#unit/g12-s2-u8"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "大學 EMI 全英語授課銜接與口頭簡報 (EMI Academic Listening & Oral Presentation)",
+      "url": "#unit/g12-s2-u9"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "批判性思維與學術思辨寫作 (Critical Thinking, Fallacies & Academic Essay Architecture)",
+      "url": "#unit/g12-s2-u10"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "全真跨域綜合大考終極模擬 (Comprehensive Cross-Discipline Diagnostic Exam)",
+      "url": "#unit/g12-s2-u11"
+    },
+    {
+      "map": true,
+      "overflow": false,
+      "title": "終生自主學習與英語力全景指南 (Lifelong Autonomous English Mastery Roadmap)",
+      "url": "#unit/g12-s2-u12"
+    }
+  ],
+  "mobile": [
+    {
+      "overflow": false,
+      "title": "第一個完整句子：I am、you are、she is",
+      "url": "#knowledge/be-sentences"
+    },
+    {
+      "overflow": false,
+      "title": "日常動作：第三人稱與 do / does 問句",
+      "url": "#knowledge/present-questions"
+    },
+    {
+      "overflow": false,
+      "title": "過去式與現在完成式：時間如何選？",
+      "url": "#knowledge/past-perfect"
+    },
+    {
+      "overflow": false,
+      "title": "關係子句：先找缺口，再選代名詞",
+      "url": "#knowledge/relative-clauses"
+    },
+    {
+      "overflow": false,
+      "title": "被動語態：讀懂操作步驟與安全要求",
+      "url": "#knowledge/passive-instructions"
+    },
+    {
+      "overflow": false,
+      "title": "可數與不可數：量詞不是逐字翻譯",
+      "url": "#knowledge/countability"
+    },
+    {
+      "overflow": false,
+      "title": "閱讀推論：答案必須有文本證據",
+      "url": "#knowledge/reading-evidence"
+    },
+    {
+      "overflow": false,
+      "title": "論證假設：找出理由與結論之間的缺口",
+      "url": "#knowledge/argument-assumptions"
+    },
+    {
+      "overflow": false,
+      "title": "段落連貫：連接語與代名詞要接得上",
+      "url": "#knowledge/paragraph-cohesion"
+    },
+    {
+      "overflow": false,
+      "title": "句子骨架與基本時態",
+      "url": "#chapter/jhs/j1"
+    },
+    {
+      "overflow": false,
+      "title": "代名詞、限定詞與數量詞",
+      "url": "#chapter/jhs/j2"
+    },
+    {
+      "overflow": false,
+      "title": "疑問句、情態助動詞與生活溝通",
+      "url": "#chapter/jhs/j3"
+    },
+    {
+      "overflow": false,
+      "title": "連接詞與複句",
+      "url": "#chapter/jhs/j4"
+    },
+    {
+      "overflow": false,
+      "title": "短文閱讀與生活應用文本",
+      "url": "#chapter/jhs/j5"
+    },
+    {
+      "overflow": false,
+      "title": "聽力辨識與語音線索",
+      "url": "#chapter/jhs/j6"
+    },
+    {
+      "overflow": false,
+      "title": "會考英語整合與訂正策略",
+      "url": "#chapter/jhs/j7"
+    },
+    {
+      "overflow": false,
+      "title": "高中句法與長難句拆解",
+      "url": "#chapter/sh/s1"
+    },
+    {
+      "overflow": false,
+      "title": "篇章結構與四空五選策略",
+      "url": "#chapter/sh/s2"
+    },
+    {
+      "overflow": false,
+      "title": "學術長篇閱讀與雙文比較",
+      "url": "#chapter/sh/s3"
+    },
+    {
+      "overflow": false,
+      "title": "高中核心詞彙與精確搭配詞",
+      "url": "#chapter/sh/s4"
+    },
+    {
+      "overflow": false,
+      "title": "中譯英與句子產出邏輯",
+      "url": "#chapter/sh/s5"
+    },
+    {
+      "overflow": false,
+      "title": "英文寫作與思維論證",
+      "url": "#chapter/sh/s6"
+    },
+    {
+      "overflow": false,
+      "title": "學測與統測整卷衝刺",
+      "url": "#chapter/sh/s7"
+    },
+    {
+      "overflow": false,
+      "title": "工場安全與指令",
+      "url": "#chapter/voc/v1"
+    },
+    {
+      "overflow": false,
+      "title": "工具、材料與尺寸規格",
+      "url": "#chapter/voc/v2"
+    },
+    {
+      "overflow": false,
+      "title": "流程與故障排除",
+      "url": "#chapter/voc/v3"
+    },
+    {
+      "overflow": false,
+      "title": "技術圖表與說明書",
+      "url": "#chapter/voc/v4"
+    },
+    {
+      "overflow": false,
+      "title": "職場溝通與技術電子郵件",
+      "url": "#chapter/voc/v5"
+    },
+    {
+      "overflow": false,
+      "title": "統測英語類專業科目 (二) 讀寫",
+      "url": "#chapter/voc/v6"
+    },
+    {
+      "overflow": false,
+      "title": "跨國技術現場實務整合",
+      "url": "#chapter/voc/v7"
+    },
+    {
+      "overflow": false,
+      "title": "全民英檢 GEPT 全級別實戰",
+      "url": "#chapter/intl/gept"
+    },
+    {
+      "overflow": false,
+      "title": "TOEIC 多益國際商務測驗",
+      "url": "#chapter/intl/toeic"
+    },
+    {
+      "overflow": false,
+      "title": "Digital SAT Reading and Writing",
+      "url": "#chapter/intl/sat"
+    },
+    {
+      "overflow": false,
+      "title": "GRE General Exam 語意與論證",
+      "url": "#chapter/intl/gre"
+    },
+    {
+      "overflow": false,
+      "title": "GMAT 批判推理與商業長文",
+      "url": "#chapter/intl/gmat"
+    },
+    {
+      "overflow": false,
+      "title": "TOEFL iBT 2026 新制四技能",
+      "url": "#chapter/intl/toefl"
+    },
+    {
+      "overflow": false,
+      "title": "句子骨架與五大句型",
+      "url": "#grammar/sentence"
+    },
+    {
+      "overflow": false,
+      "title": "be 動詞、一般動詞與問句",
+      "url": "#grammar/be-do"
+    },
+    {
+      "overflow": false,
+      "title": "名詞、冠詞與數量",
+      "url": "#grammar/nouns"
+    },
+    {
+      "overflow": false,
+      "title": "代名詞與所有格",
+      "url": "#grammar/pronouns"
+    },
+    {
+      "overflow": false,
+      "title": "時間與位置介系詞",
+      "url": "#grammar/prepositions"
+    },
+    {
+      "overflow": false,
+      "title": "形容詞、副詞與比較",
+      "url": "#grammar/adjectives"
+    },
+    {
+      "overflow": false,
+      "title": "現在簡單式與過去簡單式",
+      "url": "#grammar/present-past"
+    },
+    {
+      "overflow": false,
+      "title": "進行式：當時正在發生",
+      "url": "#grammar/progressive"
+    },
+    {
+      "overflow": false,
+      "title": "完成式：先前事件與參照點",
+      "url": "#grammar/perfect"
+    },
+    {
+      "overflow": false,
+      "title": "未來表達：will、going to 與安排",
+      "url": "#grammar/future"
+    },
+    {
+      "overflow": false,
+      "title": "助動詞：能力、義務與推測",
+      "url": "#grammar/modals"
+    },
+    {
+      "overflow": false,
+      "title": "被動語態與操作流程",
+      "url": "#grammar/passive"
+    },
+    {
+      "overflow": false,
+      "title": "不定詞與動名詞",
+      "url": "#grammar/infinitives"
+    },
+    {
+      "overflow": false,
+      "title": "關係子句：把描述接到名詞後",
+      "url": "#grammar/relative"
+    },
+    {
+      "overflow": false,
+      "title": "名詞子句與間接問句",
+      "url": "#grammar/noun-clauses"
+    },
+    {
+      "overflow": false,
+      "title": "副詞子句與連接詞",
+      "url": "#grammar/connectors"
+    },
+    {
+      "overflow": false,
+      "title": "條件句與假設語氣",
+      "url": "#grammar/conditionals"
+    },
+    {
+      "overflow": false,
+      "title": "分詞修飾與分詞構句",
+      "url": "#grammar/participles"
+    },
+    {
+      "overflow": false,
+      "title": "主詞一致、倒裝與強調",
+      "url": "#grammar/agreement"
+    },
+    {
+      "overflow": false,
+      "title": "高工實用文法：安全、步驟與報告",
+      "url": "#grammar/technical"
+    },
+    {
+      "overflow": false,
+      "title": "日常生活作息與時間表達 (Daily Routines & Telling Time)",
+      "url": "#unit/g6-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "過去式故事與冒險歷險記 (Past Tense Stories & Irregular Verbs)",
+      "url": "#unit/g6-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "城市探索與問路指路指南 (Places & Asking for Directions)",
+      "url": "#unit/g6-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "健康飲食、身體部位與醫療照護 (Food, Health & Care)",
+      "url": "#unit/g6-s1-u4"
+    },
+    {
+      "overflow": false,
+      "title": "世界節慶巡禮與多元文化 (Festivals & World Cultures)",
+      "url": "#unit/g6-s2-u5"
+    },
+    {
+      "overflow": false,
+      "title": "閱讀理解力、字首字尾與語篇導航 (Reading & Phonics Mastery)",
+      "url": "#unit/g6-s2-u6"
+    },
+    {
+      "overflow": false,
+      "title": "未來計畫與夢想志向 (Future Plans & Dream Careers)",
+      "url": "#unit/g6-s2-u7"
+    },
+    {
+      "overflow": false,
+      "title": "事物比較與世界之最 (Comparisons & World Wonders)",
+      "url": "#unit/g6-s2-u8"
+    },
+    {
+      "overflow": false,
+      "title": "句子骨架、be 動詞與現在簡單式 (Sentence Patterns & Present Simple)",
+      "url": "#unit/g7-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "名詞單複數、指示代名詞與祈使句 (Nouns, Demonstratives & Imperatives)",
+      "url": "#unit/g7-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "國際音標 (IPA/KK) 與字典查閱全指南 (Phonetics & Dictionary Guide)",
+      "url": "#unit/g7-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "現在進行式與動態時間表達 (Present Continuous & Dynamic Time)",
+      "url": "#unit/g7-s2-u4"
+    },
+    {
+      "overflow": false,
+      "title": "頻率副詞、情態助動詞 can 與存在句 (Adverbs of Frequency & There is/are)",
+      "url": "#unit/g7-s2-u5"
+    },
+    {
+      "overflow": false,
+      "title": "時空方位介系詞與地圖導航指南 (Prepositions of Space & Directions)",
+      "url": "#unit/g7-s2-u6"
+    },
+    {
+      "overflow": false,
+      "title": "過去式、未來與敘事時間軸 (Past Simple, Future Tense & Narrative)",
+      "url": "#unit/g8-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "過去進行式、時間連接詞 when/while 與數量詞 (Past Continuous & Quantifiers)",
+      "url": "#unit/g8-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "條件副詞子句與情態假設語氣 If / Unless (Conditional Clauses)",
+      "url": "#unit/g8-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "比較級、不定詞 to V 與動名詞 V-ing (Comparatives, Infinitives & Gerunds)",
+      "url": "#unit/g8-s2-u4"
+    },
+    {
+      "overflow": false,
+      "title": "連綴動詞、感官動詞與最高級比較 (Linking & Sensory Verbs, Superlatives)",
+      "url": "#unit/g8-s2-u5"
+    },
+    {
+      "overflow": false,
+      "title": "完成式、被動與關係子句 (Present Perfect, Passive Voice, Rel Clauses)",
+      "url": "#unit/g9-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "授予動詞、使役動詞與完成式進階 (Dative & Causative Verbs)",
+      "url": "#unit/g9-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "關係代名詞受格省略與介系詞搭配 (Rel Pronoun Omission & Prepositions)",
+      "url": "#unit/g9-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "附加問句、名詞子句與間接問句 (Tag Questions & Indirect Questions)",
+      "url": "#unit/g9-s2-u4"
+    },
+    {
+      "overflow": false,
+      "title": "閱讀策略、情境溝通與指代推論 (Reading Strategies & Contextual Inference)",
+      "url": "#unit/g9-s2-u5"
+    },
+    {
+      "overflow": false,
+      "title": "跨文本圖表閱讀與素養克漏字 (Multimodal Texts & Cloze Mastery)",
+      "url": "#unit/g9-s2-u6"
+    },
+    {
+      "overflow": false,
+      "title": "五大基本句型與動詞分類 (Five Basic Sentence Patterns & Verb Classification)",
+      "url": "#unit/g10-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "動名詞與不定詞深度語義對決 (Gerunds vs. Infinitives: Semantic Nuances)",
+      "url": "#unit/g10-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "被動語態進階矩陣與無靈主詞 (Advanced Passives & Impersonal 'It')",
+      "url": "#unit/g10-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "名詞子句與間接問句 (Noun Clauses & Indirect Questions)",
+      "url": "#unit/g10-s1-u4"
+    },
+    {
+      "overflow": false,
+      "title": "形容詞子句與關係代名詞基礎 (Adjective Clauses & Relative Pronouns)",
+      "url": "#unit/g10-s1-u5"
+    },
+    {
+      "overflow": false,
+      "title": "副詞子句與邏輯因果轉折 (Adverb Clauses: Cause, Condition, Concession)",
+      "url": "#unit/g10-s1-u6"
+    },
+    {
+      "overflow": false,
+      "title": "限定與非限定關係子句對比 (Restrictive vs. Non-Restrictive Relatives)",
+      "url": "#unit/g10-s2-u7"
+    },
+    {
+      "overflow": false,
+      "title": "複合關係代名詞與準關係代名詞 (Compound & Quasi-Relatives)",
+      "url": "#unit/g10-s2-u8"
+    },
+    {
+      "overflow": false,
+      "title": "現代論說文核心篇章標記 (Discourse Markers in Expository Essays)",
+      "url": "#unit/g10-s2-u9"
+    },
+    {
+      "overflow": false,
+      "title": "學測圖表與多文本綜合剖析 (GSAT Multimodal Data & Chart Interpretation)",
+      "url": "#unit/g10-s2-u10"
+    },
+    {
+      "overflow": false,
+      "title": "情態助動詞的推測與批判思考 (Modal Auxiliaries of Deduction)",
+      "url": "#unit/g10-s2-u11"
+    },
+    {
+      "overflow": false,
+      "title": "高一全冊素養總結與混合題實戰 (G10 Culminating Exam & Cross-Textual Synthesis)",
+      "url": "#unit/g10-s2-u12"
+    },
+    {
+      "overflow": false,
+      "title": "分詞構句與分詞形容詞全解 (Participle Constructions & Participial Adjectives)",
+      "url": "#unit/g11-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "獨立分詞構句與慣用懸置分詞 (Absolute Constructions & Idiomatic Participles)",
+      "url": "#unit/g11-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "假設語氣與條件句全景 (Subjunctive Mood: Unreal Present, Past & Future)",
+      "url": "#unit/g11-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "混合假設語氣與省略 if 倒裝 (Mixed Conditionals & Inverted Conditionals)",
+      "url": "#unit/g11-s1-u4"
+    },
+    {
+      "overflow": false,
+      "title": "否定副詞倒裝與地方副詞倒裝 (Inversion: Negative Adverbials & Locatives)",
+      "url": "#unit/g11-s1-u5"
+    },
+    {
+      "overflow": false,
+      "title": "So / Such / Nor / Neither 倒裝與平衡句型 (Balance & Parallel Inversion)",
+      "url": "#unit/g11-s1-u6"
+    },
+    {
+      "overflow": false,
+      "title": "分裂句與焦點強調結構 (Cleft Sentences: It is ... that ...)",
+      "url": "#unit/g11-s2-u7"
+    },
+    {
+      "overflow": false,
+      "title": "讓步子句倒裝與高級連接詞 (Concession Inversion & Complex Conjunctions)",
+      "url": "#unit/g11-s2-u8"
+    },
+    {
+      "overflow": false,
+      "title": "ESP 科技英語與 AI 論文閱讀 (ESP: Artificial Intelligence & Academic Research)",
+      "url": "#unit/g11-s2-u9"
+    },
+    {
+      "overflow": false,
+      "title": "ESP 全球永續與綠色能源跨域論證 (ESP: Global Sustainability & ESG Discourses)",
+      "url": "#unit/g11-s2-u10"
+    },
+    {
+      "overflow": false,
+      "title": "篇章結構與段落填空破題密碼 (Discourse Cohesion & Textual Flow Mastery)",
+      "url": "#unit/g11-s2-u11"
+    },
+    {
+      "overflow": false,
+      "title": "高二全冊融會貫通與頂標衝刺模擬 (G11 Culminating Synthesis & Diagnostic Trial)",
+      "url": "#unit/g11-s2-u12"
+    },
+    {
+      "overflow": false,
+      "title": "學測英文詞彙與綜合測驗極速破題 (GSAT Cloze & Lexical Precision)",
+      "url": "#unit/g12-s1-u1"
+    },
+    {
+      "overflow": false,
+      "title": "學測文意選填與篇章結構無懈可擊 (GSAT Blanks Filling & Discourse Logic)",
+      "url": "#unit/g12-s1-u2"
+    },
+    {
+      "overflow": false,
+      "title": "學測閱讀測驗長篇與混合題滿分策略 (GSAT Extended Reading & Hybrid Response)",
+      "url": "#unit/g12-s1-u3"
+    },
+    {
+      "overflow": false,
+      "title": "學測英文作文：看圖寫作與雙面論證 (GSAT Essay Writing: Image Prompt & Argumentation)",
+      "url": "#unit/g12-s1-u4"
+    },
+    {
+      "overflow": false,
+      "title": "統測共同科目與專業科目(一)(二)全真突破 (TVE Vocational Joint Exam & ESP Domain English)",
+      "url": "#unit/g12-s1-u5"
+    },
+    {
+      "overflow": false,
+      "title": "國中教育會考 A++ 決勝題型徹底破解 (CAP A++ Fatal Challenge & Reading Velocity)",
+      "url": "#unit/g12-s1-u6"
+    },
+    {
+      "overflow": false,
+      "title": "GEPT 全民英檢中級/中高級高分全策 (GEPT Intermediate/High-Intermediate Blueprint)",
+      "url": "#unit/g12-s2-u7"
+    },
+    {
+      "overflow": false,
+      "title": "TOEIC 多益 900+ 金色證書核心考點 (TOEIC Listening & Reading Gold Level Tactics)",
+      "url": "#unit/g12-s2-u8"
+    },
+    {
+      "overflow": false,
+      "title": "大學 EMI 全英語授課銜接與口頭簡報 (EMI Academic Listening & Oral Presentation)",
+      "url": "#unit/g12-s2-u9"
+    },
+    {
+      "overflow": false,
+      "title": "批判性思維與學術思辨寫作 (Critical Thinking, Fallacies & Academic Essay Architecture)",
+      "url": "#unit/g12-s2-u10"
+    },
+    {
+      "overflow": false,
+      "title": "全真跨域綜合大考終極模擬 (Comprehensive Cross-Discipline Diagnostic Exam)",
+      "url": "#unit/g12-s2-u11"
+    },
+    {
+      "overflow": false,
+      "title": "終生自主學習與英語力全景指南 (Lifelong Autonomous English Mastery Roadmap)",
+      "url": "#unit/g12-s2-u12"
+    }
+  ]
+}

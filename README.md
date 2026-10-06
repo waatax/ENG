@@ -29,3 +29,7 @@ English Quest 是以繁體中文說明英語知識點、提供分年級課程與
 需要 Node.js。執行 `node scripts/preview_listening.cjs`，再開啟 `http://localhost:8080`。執行 `node --test scripts/test*.mjs` 檢查主要互動及內容規則；執行 `node scripts/audit_learning_content.mjs` 產生 [內容結構審查結果](CONTENT-AUDIT-2026-10-04.json)。
 
 本次改動、審查範圍、來源與待辦請見 [迭代審查紀錄](REVIEW-2026-10-04.md)。
+
+## 2026-10-06 學習體驗更新
+
+117 個教材入口現可依能力、學段與關鍵字一起搜尋；首頁提供接續與訂正入口，教材共用頁內目錄，長篇觀念可分段展開，微課範例先判斷再看解析。設計研究、驗證結果與內容品質界線見 [本次迭代紀錄](REVIEW-2026-10-06.md)。

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 globalThis.localStorage={getItem(){return null;},setItem(){}};
+const {learningCatalog,filterCatalog}=await import('../dist/learning_catalog.mjs');
 const {points,knowledgePage,knowledgeResults,answerKnowledge}=await import('../dist/knowledge.mjs');
 test('Nine lessons render complete content and eighteen valid questions',()=>{
  assert.equal(points.length,9);assert.equal(new Set(points.map(p=>p.id )).size,9);
@@ -9,10 +10,10 @@ test('Nine lessons render complete content and eighteen valid questions',()=>{
  assert.match(knowledgePage('missing'),/找不到/);
 });
 test('Search filters concepts, handles no results, and does not reflect markup',()=>{
- assert.match(knowledgeResults(''),/36 個教學頁面/);assert.match(knowledgeResults('被動'),/passive-instructions/);assert.match(knowledgeResults('not-a-real-concept'),/沒有相符/);assert.ok(!knowledgeResults('<img src=x>').includes('<img'));
+ assert.ok(knowledgeResults('').includes(learningCatalog(points).length+' 個教學頁面'));assert.match(knowledgeResults('被動'),/passive-instructions/);assert.match(knowledgeResults('not-a-real-concept'),/沒有相符/);assert.ok(!knowledgeResults('<img src=x>').includes('<img'));
 });
 test('Stage filtering gives elementary learners a real starting point',()=>{
- const html=knowledgeResults('', '國小');assert.match(html,/2 個教學頁面/);assert.ok(html.includes('be-sentences'));assert.ok(!html.includes('argument-assumptions'));
+ const html=knowledgeResults('', '國小');assert.ok(html.includes(filterCatalog(learningCatalog(points),'','國小').length+' 個教學頁面'));assert.ok(html.includes('be-sentences'));assert.ok(!html.includes('argument-assumptions'));
 });
 test('Practice reports omit unsupported credentials and official score conversions',()=>{
  const d=readFileSync('dist/diagnostic.mjs','utf8');

@@ -21,31 +21,13 @@ globalThis.document = {
   addEventListener() {}
 };
 
-test('1. knowledgeHome renders Beginner Learning Highway with 4 progressive stages', async () => {
-  const { knowledgeHome } = await import('../dist/knowledge.mjs');
-  const html = knowledgeHome();
-  assert.ok(html.includes('beginner-highway'), 'Must include beginner-highway container');
-  assert.ok(html.includes('四階學習公路'), 'Must include title 四階學習公路');
-  assert.ok(html.includes('stage-1'), 'Must include Stage 1');
-  assert.ok(html.includes('stage-2'), 'Must include Stage 2');
-  assert.ok(html.includes('stage-3'), 'Must include Stage 3');
-  assert.ok(html.includes('stage-4'), 'Must include Stage 4');
-  assert.ok(html.includes('#knowledge/be-sentences'), 'Stage 1 must route to be-sentences');
-  assert.ok(html.includes('#knowledge/past-perfect'), 'Stage 2 must route to past-perfect');
-  assert.ok(html.includes('#knowledge/relative-clauses'), 'Stage 3 must route to relative-clauses');
-  assert.ok(html.includes('#knowledge/reading-evidence'), 'Stage 4 must route to reading-evidence');
+test('1. Landing offers a beginner route, resume, review and capability filters', async () => {
+ const {knowledgeHome}=await import('../dist/knowledge.mjs');const html=knowledgeHome();
+ for(const value of ['#knowledge/be-sentences','knowledge-domain','knowledge-stage','今天的學習任務','你的學習足跡'])assert.ok(html.includes(value),value);
 });
-
-test('2. knowledgePage renders 3-Step Problem Solving Box and clue feedback', async () => {
-  const { knowledgePage, points } = await import('../dist/knowledge.mjs');
-  for (const p of points) {
-    const html = knowledgePage(p.id);
-    assert.ok(html.includes('solving-steps-card'), `${p.id} must include solving-steps-card`);
-    assert.ok(html.includes('大考解題三步法'), `${p.id} must mention 大考解題三步法`);
-    assert.ok(html.includes('圈題眼'), `${p.id} must mention 圈題眼`);
-    assert.ok(html.includes('想規則'), `${p.id} must mention 想規則`);
-    assert.ok(html.includes('排陷阱'), `${p.id} must mention 排陷阱`);
-  }
+test('2. Every focused lesson offers its own judgment steps and common mistake',async()=>{
+ const {knowledgePage,points}=await import('../dist/knowledge.mjs');
+ for(const p of points){const html=knowledgePage(p.id);assert.ok(html.includes('如何判斷與自查'));for(const step of p.steps)assert.ok(html.includes(step));assert.ok(html.includes(p.trap));}
 });
 
 test('3. grammarPage renders 3-second exam clue and solving scaffolding hint', async () => {
