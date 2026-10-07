@@ -710,7 +710,7 @@ function shell(body) {
     <div class="shell">
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
-        <div class="edition">英語自學 · 理解與應用</div>
+        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="EN/">English Academy ↗</a></div>
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">

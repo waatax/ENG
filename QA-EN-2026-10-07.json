@@ -1,0 +1,50 @@
+{
+  "report": [
+    {
+      "width": 320,
+      "englishRoutes": "pass",
+      "overflow": false,
+      "speech": "English word + definition + example",
+      "quizAndReview": "pass"
+    },
+    {
+      "width": 390,
+      "englishRoutes": "pass",
+      "overflow": false,
+      "speech": "English word + definition + example",
+      "quizAndReview": "pass"
+    },
+    {
+      "width": 768,
+      "englishRoutes": "pass",
+      "overflow": false,
+      "speech": "English word + definition + example",
+      "quizAndReview": "pass"
+    },
+    {
+      "width": 1280,
+      "englishRoutes": "pass",
+      "overflow": false,
+      "speech": "English word + definition + example",
+      "quizAndReview": "pass"
+    },
+    {
+      "width": 320,
+      "bilingualSets": "pass",
+      "adjacentAndPicker": "pass"
+    },
+    {
+      "width": 390,
+      "bilingualSets": "pass",
+      "adjacentAndPicker": "pass"
+    },
+    {
+      "allLessons": 20,
+      "englishOnlyModes": 80,
+      "correctAnswers": 40,
+      "narrowOverflow": false
+    }
+  ],
+  "errors": [],
+  "notes": "Headless speech stub verifies text and cancellation only. Actual audible voice depends on the device."
+}
