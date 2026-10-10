@@ -710,7 +710,7 @@ function shell(body) {
     <div class="shell">
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
-        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="EN/">English Academy ↗</a></div>
+        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="mnemonics/index.html">💡 1,000 字諧音圖示卡</a><a href="EN/">English Academy ↗</a></div>
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
@@ -734,6 +734,7 @@ function shell(body) {
             else if (idx === 18) header = '<div class="nav-group-header">🎯 題庫實戰與學習紀錄</div>';
             return `${header}<button data-nav="${id}" class="${page === id ? 'active' : ''}"><small>${num}</small>${label}</button>`;
           }).join('')}
+          <a href="mnemonics/index.html" class="btn">💡 1,000 字諧音圖示卡 · MP3</a>
         </nav></details>
         <div class="side-foot">
           <strong>108課綱・自學教材持續更新</strong><br>

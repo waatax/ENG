@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-10",
+  "checks": [
+    {
+      "distinctCards": 1000,
+      "mp3Files": 1000,
+      "written": 67
+    },
+    {
+      "width": 320,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "realBrowserMp3": "ambulance decoded, played and ended"
+    },
+    {
+      "word": "family",
+      "decodedDuration": 2.029
+    },
+    {
+      "word": "bone",
+      "decodedDuration": 1.852
+    },
+    {
+      "word": "environment",
+      "decodedDuration": 2.282
+    },
+    {
+      "customPersists": true,
+      "escaped": true,
+      "reviewDue": true
+    },
+    {
+      "pagination": true,
+      "typeFilter": true
+    },
+    {
+      "backupImportExport": true
+    },
+    {
+      "allMp3Decoded": 1000,
+      "nonSilent": 1000
+    },
+    {
+      "allCardsNarrowLayout": 1000,
+      "pages": 84
+    }
+  ],
+  "errors": []
+}
