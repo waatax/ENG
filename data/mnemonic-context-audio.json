@@ -1,0 +1,26 @@
+[
+  {
+    "word": "lead",
+    "context": "We lead the team.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.276666,
+    "duration": 0.407791,
+    "bytes": 2973
+  },
+  {
+    "word": "read",
+    "context": "I read books every day.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.235,
+    "duration": 0.435541,
+    "bytes": 3261
+  },
+  {
+    "word": "subject",
+    "context": "My favorite subject is science.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.7905409999999999,
+    "duration": 0.699458,
+    "bytes": 4845
+  }
+]

@@ -6,9 +6,15 @@ for line in (ROOT/'data/sources/cmudict.dict').read_text(encoding='utf8').splitl
     parts=line.split()
     if parts and '(' not in parts[0]: pron.setdefault(parts[0],parts[1:])
 ipa=dict(zip('AA AE AH AO AW AY B CH D DH EH ER EY F G HH IH IY JH K L M N NG OW OY P R S SH T TH UH UW V W Y Z ZH'.split(), 'ɑ æ ʌ ɔ aʊ aɪ b tʃ d ð ɛ ɝ eɪ f ɡ h ɪ i dʒ k l m n ŋ oʊ ɔɪ p r s ʃ t θ ʊ u v w j z ʒ'.split()))
-# Keywords are concrete Chinese objects/actions, approximating only part of a sound.
-hooks={'AA':('阿姨','👩'),'AE':('愛心','❤️'),'AH':('阿姨','👩'),'AO':('凹洞','🕳️'),'AW':('熬湯','🍲'),'AY':('愛心','❤️'),'EH':('欸聲','📣'),'ER':('耳朵','👂'),'EY':('欸聲','📣'),'IH':('衣服','👕'),'IY':('衣服','👕'),'OW':('藕片','🥣'),'OY':('喔咿聲','📣'),'UH':('烏鴉','🐦‍⬛'),'UW':('烏鴉','🐦‍⬛')}
-pair={'B IY':('壁虎','🦎'),'B IH':('筆','🖊️'),'B AE':('芭樂','🍐'),'B AH':('巴士','🚌'),'B OW':('菠蘿','🍍'),'P IY':('披風','🧣'),'P IH':('皮球','⚽'),'P AE':('派','🥧'),'P EY':('配菜','🥗'),'P OW':('坡道','⛰️'),'M IY':('米粒','🍚'),'M IH':('米粒','🍚'),'M AE':('麥子','🌾'),'M AH':('馬','🐎'),'M UW':('木頭','🪵'),'F AE':('發糕','🍰'),'F IY':('飛機','✈️'),'F IH':('飛機','✈️'),'F AO':('佛像','🗿'),'F UW':('斧頭','🪓'),'D IY':('地瓜','🍠'),'D IH':('地瓜','🍠'),'D AE':('大象','🐘'),'D EY':('袋子','🛍️'),'D OW':('豆子','🫘'),'T IY':('梯子','🪜'),'T IH':('梯子','🪜'),'T AE':('塔','🗼'),'T EY':('太陽','☀️'),'T UW':('兔子','🐇'),'N IY':('泥巴','🟤'),'N IH':('泥巴','🟤'),'N AE':('奶瓶','🍼'),'N OW':('鬧鐘','⏰'),'N UW':('弩','🏹'),'L IY':('梨子','🍐'),'L IH':('梨子','🍐'),'L AE':('蠟燭','🕯️'),'L EY':('雷聲','⚡'),'L OW':('樓梯','🪜'),'L UW':('鹿','🦌'),'K IY':('鑰匙 key','🔑'),'K IH':('奇異果','🥝'),'K AE':('咖啡','☕'),'K AH':('咖啡','☕'),'K OW':('口袋','👖'),'K UW':('褲子','👖'),'G IY':('吉他','🎸'),'G IH':('吉他','🎸'),'G AE':('蓋子','🥘'),'G OW':('狗','🐕'),'G UW':('鼓','🥁'),'HH AE':('哈欠','🥱'),'HH AH':('哈欠','🥱'),'HH IY':('吸管','🥤'),'HH IH':('吸管','🥤'),'HH OW':('厚被','🛏️'),'HH UW':('壺','🫖'),'S IY':('絲線','🧵'),'S IH':('絲線','🧵'),'S AE':('沙子','🏖️'),'S AH':('沙子','🏖️'),'S OW':('手','✋'),'S UW':('書','📚'),'SH IY':('西瓜','🍉'),'SH IH':('西瓜','🍉'),'SH AE':('沙子','🏖️'),'SH UW':('樹','🌳'),'CH IY':('氣球','🎈'),'CH IH':('氣球','🎈'),'CH AE':('茶','🍵'),'CH UW':('竹子','🎋'),'JH IY':('雞','🐔'),'JH IH':('雞','🐔'),'JH AE':('家','🏠'),'JH UW':('豬','🐖'),'R IY':('日曆','📅'),'R IH':('日曆','📅'),'R AE':('熱茶','🍵'),'R OW':('肉','🥩'),'R UW':('乳酪','🧀'),'W IY':('微風','🌬️'),'W IH':('微風','🌬️'),'W AA':('娃娃','🧸'),'W AH':('娃娃','🧸'),'W EY':('圍巾','🧣'),'V IY':('V 字手勢','✌️'),'V IH':('V 字手勢','✌️'),'Z IY':('紫菜','🥬'),'Z IH':('紫菜','🥬'),'TH IY':('絲線','🧵'),'TH IH':('絲線','🧵'),'DH AE':('大象','🐘'),'Y EH':('耶聲','🎉'),'Y IY':('衣服','👕')}
+# Select the CMU variant matching this card's meaning, rather than its first homograph.
+pron.update({'lead':['L','IY1','D'],'read':['R','IY1','D'],'wind':['W','IH1','N','D'],'subject':['S','AH1','B','JH','IH0','K','T']})
+editorial={}
+for line in (ROOT/'data/mnemonic_editorial.tsv').read_text(encoding='utf8').splitlines():
+    if not line.strip():continue
+    word,cue,scene=line.split('\t')
+    assert word not in editorial, f'Duplicate editorial word: {word}'
+    assert cue.strip() and scene.strip(), f'Empty editorial: {word}'
+    editorial[word]=(cue,scene)
 manual={
 'ambulance':('俺不能死','傷者喊「俺不能死！」，救護車立刻趕來救援。','🚑'),
 'family':('發米粒','全家人一起發米粒，把米粒分給每位家人。','👨‍👩‍👧'),
@@ -62,7 +68,7 @@ manual={
 'thank':('三克','送三克糖表示感謝。','🙏'),
 'hello':('哈囉','見面喊哈囉，揮手問好。','👋'),
 'goodbye':('顧的拜','照顧好自己，揮手拜拜說再見。','👋'),
-'hospital':('好四匹頭','四匹馬的頭都好了，因為送到醫院治療。','🏥'),
+'hospital':('好絲披頭','醫院玩偶披著好看的絲巾，在病房等醫師檢查。','🏥'),
 'doctor':('刀克特','醫生用特別的工具克服病痛；刀克特只是聲音線索。','🧑‍⚕️'),
 'nurse':('呢耳絲','護理師問「哪裡不舒服呢？」並整理耳邊髮絲。','🧑‍⚕️'),
 'bus':('巴士','巴士就是公車，想像站牌前的大巴士。','🚌'),
@@ -73,7 +79,7 @@ manual={
 'boat':('波特','波特划著小船，在波浪間前進。','⛵'),
 'ship':('西普','西普船長駕著大船出港。','🚢'),
 'plane':('頗累嗯','飛機飛了很遠，機長說「頗累，嗯」。','✈️'),
-'computer':('看屁優特','電腦螢幕跳出搞笑圖片，你看了笑到噴氣。','💻'),
+'computer':('康皮優特','康康用電腦設計優質特製皮衣，螢幕轉著衣服模型。','💻'),
 'phone':('風','電話把聲音像風一樣送到遠方。','📱'),
 'music':('謬日可','每天播放音樂，謬日可先生跟著跳舞。','🎵'),
 'dance':('蛋絲','舞者像蛋上細絲般輕巧地跳舞。','💃'),
@@ -124,21 +130,24 @@ for w in source:
     # This is explicitly an IPA sound sequence, not a syllabified dictionary transcription.
     phonetic=' / '.join(sounds)
     if word in manual:
-        cue,scene,icon=manual[word];kind='編寫聯想'
+        cue,scene,icon=manual[word];origin='原有聯想'
     else:
-        chosen=[]
-        for i,p in enumerate(plain):
-            if p in hooks:
-                key=(plain[i-1]+' '+p) if i else p
-                chosen.append(pair.get(key,hooks[p]))
-        chosen=chosen[:3]
-        cue='・'.join(x[0] for x in chosen)
-        icon=w['icon'] or '💡';objects='、'.join(x[0] for x in chosen)
-        scene=f'想像「{objects}」組成一個會動的招牌，招牌上寫著「{w["zh"]}」。把招牌放進「{w["category"]}」的場景，再聽 {word} 回想這個意思。'
-        kind='自動聲音聯想草稿'
-    cards.append({**w,'word':word,'sounds':phonetic,'arpabet':' '.join(phones),'cue':cue,'scene':scene,'icon':icon,'kind':kind,'audio':cues[w['id']]})
+        assert word in editorial, f'Missing completed mnemonic: {word}'
+        cue,scene=editorial[word];icon=w['icon'] or '💡';origin='本次補齊'
+    zh={'true':'真實的、正確的','free':'自由的、空閒的；免費的','heavy':'沉重的','dry':'乾燥的','fresh':'新鮮的','deep':'深的、深奧的','stale':'不新鮮的、陳舊的','lead':'引導、帶領（lead-led-led）','shorts':'短褲','shoes':'鞋子'}.get(word,w['zh'])
+    cards.append({**w,'zh':zh,'word':word,'sounds':phonetic,'arpabet':' '.join(phones),'cue':cue,'scene':scene,'icon':icon,'kind':'正式聯想','origin':origin,'editorialVersion':2,'audio':cues[w['id']]})
     if len(cards)==1000:break
 assert len(cards)==1000 and len(seen)==1000
+assert len(editorial)==933 and set(editorial)=={c['word'] for c in cards if c['origin']=='本次補齊'}
+notes=json.loads((ROOT/'data/mnemonic_sound_notes.json').read_text(encoding='utf8'))
+context_path=ROOT/'data/mnemonic-context-audio.json'
+contexts={r['word']:r for r in json.loads(context_path.read_text(encoding='utf8'))} if context_path.exists() else {}
+for card in cards:
+    card['soundNote']=notes.get(card['word'],'')
+    if card['word'] in contexts:
+        card['audioSource']='語境擷取'
+        card['audioContext']=contexts[card['word']]['context']
+    else:card['audioSource']='既有英文單字音檔'
 OUT=ROOT/'dist/mnemonics';OUT.mkdir(exist_ok=True)
 (OUT/'cards.json').write_text(json.dumps(cards,ensure_ascii=False,indent=2),encoding='utf8')
-print(json.dumps({'cards':len(cards),'written':sum(c['kind']=='編寫聯想' for c in cards),'drafts':sum(c['kind']!='編寫聯想' for c in cards),'mp3':len(cards)},ensure_ascii=False))
+print(json.dumps({'cards':len(cards),'completed':len(cards),'drafts':0,'newlyCompleted':len(editorial),'mp3':len(cards)},ensure_ascii=False))
