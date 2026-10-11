@@ -1,0 +1,19 @@
+{
+  "catalogPages": 117,
+  "pageViewportPairs": 234,
+  "homeWidths": [
+    320,
+    390,
+    768,
+    1280
+  ],
+  "overflow": false,
+  "saveReload": true,
+  "recallSchedule": true,
+  "searchAliases": true,
+  "resetAndDomainButtons": true,
+  "keyboardReset": true,
+  "darkAndLight": true,
+  "storageDenied": true,
+  "errors": []
+}

@@ -3028,3 +3028,5 @@ if (typeof window !== 'undefined' && window.addEventListener) {
 
 root.addEventListener('change', e => handleWordAudioChange(e.target,render));
 window.addEventListener('pagehide',()=>stopWordAudio(root));
+
+root.addEventListener('click', event => { const target=event.target.closest('[data-catalog-domain],[data-catalog-reset]'); if(target)searchKnowledge(target); });

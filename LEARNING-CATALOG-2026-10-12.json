@@ -1,0 +1,2411 @@
+[
+  {
+    "id": "be-sentences",
+    "title": "第一個完整句子：I am、you are、she is",
+    "stage": "國小",
+    "description": "用 be 動詞介紹人物身分、描述特質狀態和時空位置，並能正確改寫為否定句與疑問句。",
+    "link": "#knowledge/be-sentences",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "present-questions",
+    "title": "日常動作：第三人稱與 do / does 問句",
+    "stage": "國小",
+    "description": "描述日常習慣、客觀事實與規律動作，熟練動詞三單變化，並正確運用 do / does 進行提問與否定。",
+    "link": "#knowledge/present-questions",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "past-perfect",
+    "title": "過去式與現在完成式：時間如何選？",
+    "stage": "國中",
+    "description": "看懂「已結束的過去」與「連到現在的經驗或狀態」，徹底擺脫中文「已經」的干擾。",
+    "link": "#knowledge/past-perfect",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "relative-clauses",
+    "title": "關係子句：先找缺口，再選代名詞",
+    "stage": "高中",
+    "description": "分辨關係代名詞在子句中當主詞或受詞，掌握限定與非限定用法，避免重複代名詞。",
+    "link": "#knowledge/relative-clauses",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "passive-instructions",
+    "title": "被動語態：讀懂操作步驟與安全要求",
+    "stage": "高工",
+    "description": "在操作文件中辨認動作、執行者與必要條件，排除不及物動詞被動陷阱。",
+    "link": "#knowledge/passive-instructions",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "countability",
+    "title": "可數與不可數：量詞不是逐字翻譯",
+    "stage": "國中",
+    "description": "正確使用 a / an、many / much，以及資訊與建議的量詞，掌握大考不可數高頻詞。",
+    "link": "#knowledge/countability",
+    "kind": "核心知識點",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "reading-evidence",
+    "title": "閱讀推論：答案必須有文本證據",
+    "stage": "國際考試",
+    "description": "區分直接資訊、合理推論與無法證實的猜測，破解範圍擴大與因果倒置。",
+    "link": "#knowledge/reading-evidence",
+    "kind": "核心知識點",
+    "domain": "reading",
+    "skills": [
+      "reading"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "argument-assumptions",
+    "title": "論證假設：找出理由與結論之間的缺口",
+    "stage": "國際考試",
+    "description": "辨認結論、證據與必要假設，熟練取非檢驗法，評估批判邏輯嚴密性。",
+    "link": "#knowledge/argument-assumptions",
+    "kind": "核心知識點",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "paragraph-cohesion",
+    "title": "段落連貫：連接語與代名詞要接得上",
+    "stage": "高中",
+    "description": "精準辨析篇章語意邏輯（轉折、因果、順序），正確區分連接詞與連接副詞之標點結構，並追蹤代名詞之明確指涉。",
+    "link": "#knowledge/paragraph-cohesion",
+    "kind": "核心知識點",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "jhs:j1",
+    "title": "句子骨架與基本時態",
+    "stage": "國中",
+    "description": "英文句子的五大核心骨架 (Basic Sentence Patterns) · 四大基礎時態的判斷與時間副詞標記",
+    "link": "#chapter/jhs/j1",
+    "kind": "綜合教學章節",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "jhs:j2",
+    "title": "代名詞、限定詞與數量詞",
+    "stage": "國中",
+    "description": "代名詞的四性格位轉換與反身代名詞用法 · 數量詞修飾可數 vs 不可數名詞口訣",
+    "link": "#chapter/jhs/j2",
+    "kind": "綜合教學章節",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "jhs:j3",
+    "title": "疑問句、情態助動詞與生活溝通",
+    "stage": "國中",
+    "description": "5W1H 疑問詞與附加問句 (Tag Questions) 規則 · 情態助動詞語氣階梯與禮貌交際原則",
+    "link": "#chapter/jhs/j3",
+    "kind": "綜合教學章節",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "jhs:j4",
+    "title": "連接詞與複句",
+    "stage": "國中",
+    "description": "對等連接詞 vs 從屬連接詞的核心禁忌 · 副詞子句中「現在式代替未來式」規則",
+    "link": "#chapter/jhs/j4",
+    "kind": "綜合教學章節",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "jhs:j5",
+    "title": "短文閱讀與生活應用文本",
+    "stage": "國中",
+    "description": "生活應用文本的 Scanning 掃描定位術 · 文章主旨題 (Main Purpose / Idea) 的拆解",
+    "link": "#chapter/jhs/j5",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "jhs:j6",
+    "title": "聽力辨識與語音線索",
+    "stage": "國中",
+    "description": "美語語流中的弱化與連音規律 · 數字與混淆時間的聽力陷阱",
+    "link": "#chapter/jhs/j6",
+    "kind": "綜合教學章節",
+    "domain": "sounds",
+    "skills": [
+      "sounds"
+    ],
+    "framework": {
+      "prior": "能辨識字母與熟悉的基本單字；不熟時先練自然拼讀。",
+      "repair": "#phonics",
+      "repairLabel": "補聲音與拼讀基礎",
+      "goal": "聽出關鍵聲音、重音或語調，再用短句表達意思。",
+      "recall": "挑一個本課短句，先聽再遮住文字跟讀；指出重音或語音線索如何幫助理解。",
+      "transfer": "換一位說話者或一個生活情境，說出同樣意思，核對意思是否清楚。"
+    }
+  },
+  {
+    "id": "jhs:j7",
+    "title": "會考英語整合與訂正策略",
+    "stage": "國中",
+    "description": "會考全卷結構與 60 分鐘配速策略 · 高成效錯題訂正四步法（Reflective Remediation）",
+    "link": "#chapter/jhs/j7",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "sh:s1",
+    "title": "高中句法與長難句拆解",
+    "stage": "高中",
+    "description": "分詞構句 (Participle Clauses) 的化簡與還原 · 否定副詞置首倒裝與假設語氣倒裝",
+    "link": "#chapter/sh/s1",
+    "kind": "綜合教學章節",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "sh:s2",
+    "title": "篇章結構與四空五選策略",
+    "stage": "高中",
+    "description": "115 學年度大考篇章結構改制核心因應 · 段落連貫性 (Cohesion) 與過渡副詞家族",
+    "link": "#chapter/sh/s2",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "sh:s3",
+    "title": "學術長篇閱讀與雙文比較",
+    "stage": "高中",
+    "description": "學術長篇的主旨、細節與作者態度推論 · 雙篇文本與圖表跨文本整合題攻略",
+    "link": "#chapter/sh/s3",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "sh:s4",
+    "title": "高中核心詞彙與精確搭配詞",
+    "stage": "高中",
+    "description": "字根、字首與字尾 (Morphology) 快速倍增字彙量 · 大考決勝關鍵：動名與介系詞搭配詞 (Collocations)",
+    "link": "#chapter/sh/s4",
+    "kind": "綜合教學章節",
+    "domain": "words",
+    "skills": [
+      "words",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨識基本句子的主詞與動詞；學單字時一併看所在句子。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "理解詞義、搭配與語境，用例句區分相近用法。",
+      "recall": "挑一個詞，不看解釋說出句中的意思，再說一個常見搭配。",
+      "transfer": "用該詞造一個新句，檢查詞性、搭配與語境是否相容。"
+    }
+  },
+  {
+    "id": "sh:s5",
+    "title": "中譯英與句子產出邏輯",
+    "stage": "高中",
+    "description": "中英文思維結構的本質差異與無主句轉換 · 學測歷屆最常出現的五大翻譯金牌句型",
+    "link": "#chapter/sh/s5",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "sh:s6",
+    "title": "英文寫作與思維論證",
+    "stage": "高中",
+    "description": "學測大考非選作文四大向度評分標準 · 論說文經典段落黃金架構（Claim - Reason - Evidence - Warrant）",
+    "link": "#chapter/sh/s6",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "sh:s7",
+    "title": "學測與統測整卷衝刺",
+    "stage": "高中",
+    "description": "學測 100 分鐘實戰秒殺配速計畫 · 高分群考前 14 天心理與答題盲點清單",
+    "link": "#chapter/sh/s7",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "voc:v1",
+    "title": "工場安全與指令",
+    "stage": "高工",
+    "description": "工業現場個人防護裝備 (PPE) 核心術語 · 國際安全警語等級 (OSHA / ISO Standards)",
+    "link": "#chapter/voc/v1",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "voc:v2",
+    "title": "工具、材料與尺寸規格",
+    "stage": "高工",
+    "description": "現場必備量具與加工機具英文 · 工程材料物理性質與公差規格 (Tolerance)",
+    "link": "#chapter/voc/v2",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "voc:v3",
+    "title": "流程與故障排除",
+    "stage": "高工",
+    "description": "標準作業程序 (SOP) 的英文語言特徵 · 機電與設備常見故障排除 (Troubleshooting) 術語",
+    "link": "#chapter/voc/v3",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "voc:v4",
+    "title": "技術圖表與說明書",
+    "stage": "高工",
+    "description": "工程圖面三大必考視圖與圖例標示 · 使用者操作手冊 (User Manual) 與規格表閱讀",
+    "link": "#chapter/voc/v4",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application",
+      "reading"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "voc:v5",
+    "title": "職場溝通與技術電子郵件",
+    "stage": "高工",
+    "description": "國際技術商務電子郵件標準骨架 · 採購、交期與瑕疵索賠常用商業情境",
+    "link": "#chapter/voc/v5",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "voc:v6",
+    "title": "統測英語類專業科目 (二) 讀寫",
+    "stage": "高工",
+    "description": "統測外語群專二（英文閱讀與寫作）卷面結構 · 技術摘要 (Summary) 與短文寫作評分要訣",
+    "link": "#chapter/voc/v6",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "voc:v7",
+    "title": "跨國技術現場實務整合",
+    "stage": "高工",
+    "description": "國際品質認證標準 (ISO / CE / RoHS) 英文規範 · 跨國工程師遠端會議與專案驗收 (Acceptance Testing)",
+    "link": "#chapter/voc/v7",
+    "kind": "綜合教學章節",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "intl:gept",
+    "title": "全民英檢 GEPT 全級別實戰",
+    "stage": "國際考試",
+    "description": "GEPT 初級至優級對標與通過門檻 · GEPT 寫作與口說評閱規準重點",
+    "link": "#chapter/intl/gept",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "intl:toeic",
+    "title": "TOEIC 多益國際商務測驗",
+    "stage": "國際考試",
+    "description": "L&R 200 題 120 分鐘實戰配速與防超時策略 · 題型一・Part 5 單句填空：詞性秒殺法與商務高頻句構 (Incomplete Sentences - POS & Grammar Mastery) · 題型二・Part 6 段落填空：上下文語意錨點與句子插入題 (Text Completion - Cohesion & Sentence Insertion) · 題型三・Part 7 閱讀測驗：單雙篇跨文本交叉比對秒殺矩陣 (Reading Comprehension - Cross-text Synthesis & Indirect Inference) · 多益高頻商務場景核心語塊與易混淆詞 (Business Collocations & Confusables)",
+    "link": "#chapter/intl/toeic",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "intl:sat",
+    "title": "Digital SAT Reading and Writing",
+    "stage": "國際考試",
+    "description": "Digital SAT 兩階段模組化適應性測驗 (MST) 機制與算分藍圖 · 四大內容領域與解題架構 (Construct Blueprint) · 題型一・Craft & Structure: Words in Context 高階語境詞彙與修辭目的 (Contextual Nuance & Rhetorical Purpose) · 題型二・Information & Ideas: Command of Evidence & Logical Inferences 論據鎖定與完形推論 (Evidence Anchoring & Valid Conclusions) · 題型三・Standard English Conventions: 句子邊界標點、修飾語與平行結構 (Boundaries, Modifiers & Syntactic Symmetry)",
+    "link": "#chapter/intl/sat",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "intl:gre",
+    "title": "GRE General Exam 語意與論證",
+    "stage": "國際考試",
+    "description": "題型一・Text Completion 與 Sentence Equivalence 邏輯密碼 (TC & SE Logical Directionality) · 題型二・GRE Sentence Equivalence 句子等價與語境配對 (Contextual Equivalence) · 題型三・GRE 學術長篇閱讀「翻案文」結構與作者認知立場 (Revisionist Structure & Epistemic Stance) · Analytical Writing Issue 30 分鐘五步立論法",
+    "link": "#chapter/intl/gre",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "intl:gmat",
+    "title": "GMAT 批判推理與商業長文",
+    "stage": "國際考試",
+    "description": "批判推理 (Critical Reasoning) 核心五大題型模型 · 題型一・CR Weaken & Strengthen 因果論證三大致命漏洞與攻防向量 (Causal Argument Vulnerabilities) · 題型二・CR Assumption 假設題「否定測試法」決策樹 (Negation Decision Tree) · 題型三・CR Method of Reasoning / Boldface 黑體字角色題判定決策樹 (Boldface Role Architecture) · 題型四・商學長文精讀與 Data Insights 跨文本邏輯 (Two-Sided Platforms & Multi-Source Synthesis)",
+    "link": "#chapter/intl/gmat",
+    "kind": "綜合教學章節",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "intl:toefl",
+    "title": "TOEFL iBT 2026 新制四技能",
+    "stage": "國際考試",
+    "description": "TOEFL iBT 2026 年最新考制改革剖析 · 學術討論寫作 (Academic Discussion) 高分架構",
+    "link": "#chapter/intl/toefl",
+    "kind": "綜合教學章節",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "grammar:sentence",
+    "title": "句子骨架與五大句型",
+    "stage": "國小",
+    "description": "先找主詞（誰／什麼）和動詞（做什麼／是什麼），再辨認受詞與補語。補語描述主詞或受詞，受詞則承接動作。",
+    "link": "#grammar/sentence",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:be-do",
+    "title": "be 動詞、一般動詞與問句",
+    "stage": "國小",
+    "description": "描述身分或狀態用 be；描述動作用一般動詞。一般現在式的問句和否定，兩類的做法不同。",
+    "link": "#grammar/be-do",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:nouns",
+    "title": "名詞、冠詞與數量",
+    "stage": "國小",
+    "description": "先判斷可數或不可數，再決定單複數和限定詞。a / an 依後面發音，不是只看字母；the 表示語境中可辨識的人事物。",
+    "link": "#grammar/nouns",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:pronouns",
+    "title": "代名詞與所有格",
+    "stage": "國小",
+    "description": "用主格當主詞，受格當受詞；所有格形容詞後接名詞，所有代名詞可獨立使用。",
+    "link": "#grammar/pronouns",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:prepositions",
+    "title": "時間與位置介系詞",
+    "stage": "國小",
+    "description": "介系詞後通常接名詞片語或動名詞。先理解時間、位置或方向，再記常見搭配。",
+    "link": "#grammar/prepositions",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:adjectives",
+    "title": "形容詞、副詞與比較",
+    "stage": "國中",
+    "description": "形容詞修飾名詞或作補語，副詞可修飾動詞、形容詞或其他副詞。比較時先確定比較對象和程度。",
+    "link": "#grammar/adjectives",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:present-past",
+    "title": "現在簡單式與過去簡單式",
+    "stage": "國中",
+    "description": "現在簡單式描述習慣、一般事實；過去簡單式把事件放在已結束的過去。時間線索必須配合語意判斷。",
+    "link": "#grammar/present-past",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:progressive",
+    "title": "進行式：當時正在發生",
+    "stage": "國中",
+    "description": "進行式以 be + V-ing 表示某個時間點附近正在進行的動作；be 依時間和主詞變化。",
+    "link": "#grammar/progressive",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:perfect",
+    "title": "完成式：先前事件與參照點",
+    "stage": "國中",
+    "description": "完成式用 have + 過去分詞，將先前發生的事連到現在、過去或未來的參照點；不只是「做完」而已。",
+    "link": "#grammar/perfect",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:future",
+    "title": "未來表達：will、going to 與安排",
+    "stage": "國中",
+    "description": "英文可用多種形式談未來。依當下決定、事先計畫、已安排活動或時刻表選擇。",
+    "link": "#grammar/future",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:modals",
+    "title": "助動詞：能力、義務與推測",
+    "stage": "國中",
+    "description": "can、must、should、may 等情態助動詞後接原形動詞，藉語氣表達能力、建議、義務或可能性。",
+    "link": "#grammar/modals",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:passive",
+    "title": "被動語態與操作流程",
+    "stage": "高中／高工",
+    "description": "想聚焦承受動作的人事物時，用 be + 過去分詞。時態放在 be 上；需要時才加 by 說明執行者。",
+    "link": "#grammar/passive",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:infinitives",
+    "title": "不定詞與動名詞",
+    "stage": "國中",
+    "description": "to + 原形與 V-ing 可作名詞性成分，但動詞後接哪一種常由搭配決定。某些動詞兩者皆可但意思不同。",
+    "link": "#grammar/infinitives",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:relative",
+    "title": "關係子句：把描述接到名詞後",
+    "stage": "高中／高工",
+    "description": "關係子句修飾前面的名詞。先找先行詞，再判斷它在子句裡是主詞、受詞或所有關係。",
+    "link": "#grammar/relative",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:noun-clauses",
+    "title": "名詞子句與間接問句",
+    "stage": "高中／高工",
+    "description": "把一整個子句放進名詞的位置，可當主詞、受詞或補語。間接問句保留疑問詞，但子句採敘述句語序。",
+    "link": "#grammar/noun-clauses",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:connectors",
+    "title": "副詞子句與連接詞",
+    "stage": "高中／高工",
+    "description": "用連接詞呈現時間、原因、讓步或結果。先判斷後方是完整子句，還是名詞片語。",
+    "link": "#grammar/connectors",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:conditionals",
+    "title": "條件句與假設語氣",
+    "stage": "高中／高工",
+    "description": "條件句要同時看時間與真實可能性。用過去形談現在假設，並不代表事情發生在過去。",
+    "link": "#grammar/conditionals",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:participles",
+    "title": "分詞修飾與分詞構句",
+    "stage": "高中／高工",
+    "description": "現在分詞常表主動或進行，過去分詞常表被動或完成。分詞構句省略的主詞須與主要子句相容。",
+    "link": "#grammar/participles",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:agreement",
+    "title": "主詞一致、倒裝與強調",
+    "stage": "高中／高工",
+    "description": "先找真正的主詞，別讓插入的介系詞片語干擾動詞單複數。倒裝與強調結構則改變排列，但仍需完整語法。",
+    "link": "#grammar/agreement",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "grammar:technical",
+    "title": "高工實用文法：安全、步驟與報告",
+    "stage": "高中／高工",
+    "description": "把文法放回工作情境：祈使句交代步驟，情態助動詞區分義務與建議，被動句記錄流程，條件句說明操作條件。",
+    "link": "#grammar/technical",
+    "kind": "圖解文法",
+    "domain": "sentences",
+    "skills": [
+      "sentences"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g6-s1-u1",
+    "title": "日常生活作息與時間表達 (Daily Routines & Telling Time)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級上學期 (6上 · 6A)",
+    "link": "#unit/g6-s1-u1",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g6-s1-u2",
+    "title": "過去式故事與冒險歷險記 (Past Tense Stories & Irregular Verbs)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級上學期 (6上 · 6A)",
+    "link": "#unit/g6-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g6-s1-u3",
+    "title": "城市探索與問路指路指南 (Places & Asking for Directions)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級上學期 (6上 · 6A)",
+    "link": "#unit/g6-s1-u3",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g6-s1-u4",
+    "title": "健康飲食、身體部位與醫療照護 (Food, Health & Care)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級上學期 (6上 · 6A)",
+    "link": "#unit/g6-s1-u4",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g6-s2-u5",
+    "title": "世界節慶巡禮與多元文化 (Festivals & World Cultures)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級下學期 (6下 · 6B)",
+    "link": "#unit/g6-s2-u5",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g6-s2-u6",
+    "title": "閱讀理解力、字首字尾與語篇導航 (Reading & Phonics Mastery)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級下學期 (6下 · 6B)",
+    "link": "#unit/g6-s2-u6",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g6-s2-u7",
+    "title": "未來計畫與夢想志向 (Future Plans & Dream Careers)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級下學期 (6下 · 6B)",
+    "link": "#unit/g6-s2-u7",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g6-s2-u8",
+    "title": "事物比較與世界之最 (Comparisons & World Wonders)",
+    "stage": "高中",
+    "description": "國小六年級 (Grade 6) · 六年級下學期 (6下 · 6B)",
+    "link": "#unit/g6-s2-u8",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g7-s1-u1",
+    "title": "句子骨架、be 動詞與現在簡單式 (Sentence Patterns & Present Simple)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級上學期 (7上)",
+    "link": "#unit/g7-s1-u1",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g7-s1-u2",
+    "title": "名詞單複數、指示代名詞與祈使句 (Nouns, Demonstratives & Imperatives)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級上學期 (7上)",
+    "link": "#unit/g7-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g7-s1-u3",
+    "title": "國際音標 (IPA/KK) 與字典查閱全指南 (Phonetics & Dictionary Guide)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級上學期 (7上)",
+    "link": "#unit/g7-s1-u3",
+    "kind": "學年微課",
+    "domain": "sounds",
+    "skills": [
+      "sounds",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨識字母與熟悉的基本單字；不熟時先練自然拼讀。",
+      "repair": "#phonics",
+      "repairLabel": "補聲音與拼讀基礎",
+      "goal": "聽出關鍵聲音、重音或語調，再用短句表達意思。",
+      "recall": "挑一個本課短句，先聽再遮住文字跟讀；指出重音或語音線索如何幫助理解。",
+      "transfer": "換一位說話者或一個生活情境，說出同樣意思，核對意思是否清楚。"
+    }
+  },
+  {
+    "id": "g7-s2-u4",
+    "title": "現在進行式與動態時間表達 (Present Continuous & Dynamic Time)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級下學期 (7下)",
+    "link": "#unit/g7-s2-u4",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g7-s2-u5",
+    "title": "頻率副詞、情態助動詞 can 與存在句 (Adverbs of Frequency & There is/are)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級下學期 (7下)",
+    "link": "#unit/g7-s2-u5",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g7-s2-u6",
+    "title": "時空方位介系詞與地圖導航指南 (Prepositions of Space & Directions)",
+    "stage": "高中",
+    "description": "國中七年級 (Grade 7) · 七年級下學期 (7下)",
+    "link": "#unit/g7-s2-u6",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g8-s1-u1",
+    "title": "過去式、未來與敘事時間軸 (Past Simple, Future Tense & Narrative)",
+    "stage": "高中",
+    "description": "國中八年級 (Grade 8) · 八年級上學期 (8上)",
+    "link": "#unit/g8-s1-u1",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g8-s1-u2",
+    "title": "過去進行式、時間連接詞 when/while 與數量詞 (Past Continuous & Quantifiers)",
+    "stage": "高中",
+    "description": "國中八年級 (Grade 8) · 八年級上學期 (8上)",
+    "link": "#unit/g8-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g8-s1-u3",
+    "title": "條件副詞子句與情態假設語氣 If / Unless (Conditional Clauses)",
+    "stage": "高中",
+    "description": "國中八年級 (Grade 8) · 八年級上學期 (8上)",
+    "link": "#unit/g8-s1-u3",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g8-s2-u4",
+    "title": "比較級、不定詞 to V 與動名詞 V-ing (Comparatives, Infinitives & Gerunds)",
+    "stage": "高中",
+    "description": "國中八年級 (Grade 8) · 八年級下學期 (8下)",
+    "link": "#unit/g8-s2-u4",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g8-s2-u5",
+    "title": "連綴動詞、感官動詞與最高級比較 (Linking & Sensory Verbs, Superlatives)",
+    "stage": "高中",
+    "description": "國中八年級 (Grade 8) · 八年級下學期 (8下)",
+    "link": "#unit/g8-s2-u5",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g9-s1-u1",
+    "title": "完成式、被動與關係子句 (Present Perfect, Passive Voice, Rel Clauses)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級上學期 (9上)",
+    "link": "#unit/g9-s1-u1",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g9-s1-u2",
+    "title": "授予動詞、使役動詞與完成式進階 (Dative & Causative Verbs)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級上學期 (9上)",
+    "link": "#unit/g9-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g9-s1-u3",
+    "title": "關係代名詞受格省略與介系詞搭配 (Rel Pronoun Omission & Prepositions)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級上學期 (9上)",
+    "link": "#unit/g9-s1-u3",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g9-s2-u4",
+    "title": "附加問句、名詞子句與間接問句 (Tag Questions & Indirect Questions)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級下學期 (9下 / 會考總衝刺)",
+    "link": "#unit/g9-s2-u4",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g9-s2-u5",
+    "title": "閱讀策略、情境溝通與指代推論 (Reading Strategies & Contextual Inference)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級下學期 (9下 / 會考總衝刺)",
+    "link": "#unit/g9-s2-u5",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g9-s2-u6",
+    "title": "跨文本圖表閱讀與素養克漏字 (Multimodal Texts & Cloze Mastery)",
+    "stage": "高中",
+    "description": "國中九年級 (Grade 9 / 會考衝刺) · 九年級下學期 (9下 / 會考總衝刺)",
+    "link": "#unit/g9-s2-u6",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "integrated"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g10-s1-u1",
+    "title": "五大基本句型與動詞分類 (Five Basic Sentence Patterns & Verb Classification)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u1",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s1-u2",
+    "title": "動名詞與不定詞深度語義對決 (Gerunds vs. Infinitives: Semantic Nuances)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s1-u3",
+    "title": "被動語態進階矩陣與無靈主詞 (Advanced Passives & Impersonal 'It')",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u3",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s1-u4",
+    "title": "名詞子句與間接問句 (Noun Clauses & Indirect Questions)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u4",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s1-u5",
+    "title": "形容詞子句與關係代名詞基礎 (Adjective Clauses & Relative Pronouns)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u5",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s1-u6",
+    "title": "副詞子句與邏輯因果轉折 (Adverb Clauses: Cause, Condition, Concession)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一上學期 (10上)",
+    "link": "#unit/g10-s1-u6",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s2-u7",
+    "title": "限定與非限定關係子句對比 (Restrictive vs. Non-Restrictive Relatives)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u7",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s2-u8",
+    "title": "複合關係代名詞與準關係代名詞 (Compound & Quasi-Relatives)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u8",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s2-u9",
+    "title": "現代論說文核心篇章標記 (Discourse Markers in Expository Essays)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u9",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g10-s2-u10",
+    "title": "學測圖表與多文本綜合剖析 (GSAT Multimodal Data & Chart Interpretation)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u10",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g10-s2-u11",
+    "title": "情態助動詞的推測與批判思考 (Modal Auxiliaries of Deduction)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u11",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g10-s2-u12",
+    "title": "高一全冊素養總結與混合題實戰 (G10 Culminating Exam & Cross-Textual Synthesis)",
+    "stage": "高中",
+    "description": "高中一年級 (Grade 10) · 高一下學期 (10下)",
+    "link": "#unit/g10-s2-u12",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g11-s1-u1",
+    "title": "分詞構句與分詞形容詞全解 (Participle Constructions & Participial Adjectives)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u1",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s1-u2",
+    "title": "獨立分詞構句與慣用懸置分詞 (Absolute Constructions & Idiomatic Participles)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u2",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s1-u3",
+    "title": "假設語氣與條件句全景 (Subjunctive Mood: Unreal Present, Past & Future)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u3",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s1-u4",
+    "title": "混合假設語氣與省略 if 倒裝 (Mixed Conditionals & Inverted Conditionals)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u4",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s1-u5",
+    "title": "否定副詞倒裝與地方副詞倒裝 (Inversion: Negative Adverbials & Locatives)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u5",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s1-u6",
+    "title": "So / Such / Nor / Neither 倒裝與平衡句型 (Balance & Parallel Inversion)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二上學期 (11上)",
+    "link": "#unit/g11-s1-u6",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s2-u7",
+    "title": "分裂句與焦點強調結構 (Cleft Sentences: It is ... that ...)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u7",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s2-u8",
+    "title": "讓步子句倒裝與高級連接詞 (Concession Inversion & Complex Conjunctions)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u8",
+    "kind": "學年微課",
+    "domain": "sentences",
+    "skills": [
+      "sentences",
+      "application"
+    ],
+    "framework": {
+      "prior": "能找出句中「誰／什麼」與「做什麼／是什麼」；不熟時先回到句子骨架。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "根據意思與上下文選句型，說明形式為什麼改變。",
+      "recall": "挑一個例句，指出主詞與動詞，再解釋本課句型、時態或修飾語的作用。",
+      "transfer": "改變人物、時間或肯定／否定，寫一個新句並檢查相應的形式。"
+    }
+  },
+  {
+    "id": "g11-s2-u9",
+    "title": "ESP 科技英語與 AI 論文閱讀 (ESP: Artificial Intelligence & Academic Research)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u9",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g11-s2-u10",
+    "title": "ESP 全球永續與綠色能源跨域論證 (ESP: Global Sustainability & ESG Discourses)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u10",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g11-s2-u11",
+    "title": "篇章結構與段落填空破題密碼 (Discourse Cohesion & Textual Flow Mastery)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u11",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g11-s2-u12",
+    "title": "高二全冊融會貫通與頂標衝刺模擬 (G11 Culminating Synthesis & Diagnostic Trial)",
+    "stage": "高中",
+    "description": "高中二年級 (Grade 11) · 高二下學期 (11下)",
+    "link": "#unit/g11-s2-u12",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s1-u1",
+    "title": "學測英文詞彙與綜合測驗極速破題 (GSAT Cloze & Lexical Precision)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u1",
+    "kind": "學年微課",
+    "domain": "words",
+    "skills": [
+      "words",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨識基本句子的主詞與動詞；學單字時一併看所在句子。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補句子骨架",
+      "goal": "理解詞義、搭配與語境，用例句區分相近用法。",
+      "recall": "挑一個詞，不看解釋說出句中的意思，再說一個常見搭配。",
+      "transfer": "用該詞造一個新句，檢查詞性、搭配與語境是否相容。"
+    }
+  },
+  {
+    "id": "g12-s1-u2",
+    "title": "學測文意選填與篇章結構無懈可擊 (GSAT Blanks Filling & Discourse Logic)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u2",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g12-s1-u3",
+    "title": "學測閱讀測驗長篇與混合題滿分策略 (GSAT Extended Reading & Hybrid Response)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u3",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g12-s1-u4",
+    "title": "學測英文作文：看圖寫作與雙面論證 (GSAT Essay Writing: Image Prompt & Argumentation)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u4",
+    "kind": "學年微課",
+    "domain": "application",
+    "skills": [
+      "application"
+    ],
+    "framework": {
+      "prior": "能理解基本句子的意思；依任務補需要的字詞與句型。",
+      "repair": "#knowledge/be-sentences",
+      "repairLabel": "補基本表達",
+      "goal": "按人物、目的與情境選擇表達，讓對方知道如何回應。",
+      "recall": "說明本課情境中，誰對誰說、要達成什麼目的，以及一個關鍵表達。",
+      "transfer": "換一個對象或情境，寫兩句可實際使用的英文，核對訊息與語氣。"
+    }
+  },
+  {
+    "id": "g12-s1-u5",
+    "title": "統測共同科目與專業科目(一)(二)全真突破 (TVE Vocational Joint Exam & ESP Domain English)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u5",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s1-u6",
+    "title": "國中教育會考 A++ 決勝題型徹底破解 (CAP A++ Fatal Challenge & Reading Velocity)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三上學期 (12上 - 國家大考滿級分攻略)",
+    "link": "#unit/g12-s1-u6",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s2-u7",
+    "title": "GEPT 全民英檢中級/中高級高分全策 (GEPT Intermediate/High-Intermediate Blueprint)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u7",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s2-u8",
+    "title": "TOEIC 多益 900+ 金色證書核心考點 (TOEIC Listening & Reading Gold Level Tactics)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u8",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s2-u9",
+    "title": "大學 EMI 全英語授課銜接與口頭簡報 (EMI Academic Listening & Oral Presentation)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u9",
+    "kind": "學年微課",
+    "domain": "sounds",
+    "skills": [
+      "sounds",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨識字母與熟悉的基本單字；不熟時先練自然拼讀。",
+      "repair": "#phonics",
+      "repairLabel": "補聲音與拼讀基礎",
+      "goal": "聽出關鍵聲音、重音或語調，再用短句表達意思。",
+      "recall": "挑一個本課短句，先聽再遮住文字跟讀；指出重音或語音線索如何幫助理解。",
+      "transfer": "換一位說話者或一個生活情境，說出同樣意思，核對意思是否清楚。"
+    }
+  },
+  {
+    "id": "g12-s2-u10",
+    "title": "批判性思維與學術思辨寫作 (Critical Thinking, Fallacies & Academic Essay Architecture)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u10",
+    "kind": "學年微課",
+    "domain": "reading",
+    "skills": [
+      "reading",
+      "application"
+    ],
+    "framework": {
+      "prior": "能辨認基本句子與代名詞指涉；遇到長句先找主詞與主要動詞。",
+      "repair": "#grammar/sentence",
+      "repairLabel": "補長句閱讀前的句子基礎",
+      "goal": "區分文本明說與推論，指出支持判斷的具體證據。",
+      "recall": "回想本課一個判斷，說出支持它的文字線索；區分作者明說與你的推論。",
+      "transfer": "換一段文字，找出主旨、轉折或理由與結論，避免加入文中沒有的假設。"
+    }
+  },
+  {
+    "id": "g12-s2-u11",
+    "title": "全真跨域綜合大考終極模擬 (Comprehensive Cross-Discipline Diagnostic Exam)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u11",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  },
+  {
+    "id": "g12-s2-u12",
+    "title": "終生自主學習與英語力全景指南 (Lifelong Autonomous English Mastery Roadmap)",
+    "stage": "高中",
+    "description": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery) · 高三下學期 (12下 - 國際認證與終生英語力躍升)",
+    "link": "#unit/g12-s2-u12",
+    "kind": "學年微課",
+    "domain": "integrated",
+    "skills": [
+      "integrated",
+      "application"
+    ],
+    "framework": {
+      "prior": "先熟悉基本句型與閱讀找證據；練習結果可用來決定補強主題。",
+      "repair": "#knowledge/reading-evidence",
+      "repairLabel": "補閱讀證據與推論",
+      "goal": "整合字詞、句法與閱讀能力，根據錯誤決定下一個學習目標。",
+      "recall": "挑一道本課練習，說明判斷線索與排除錯誤選項的理由。",
+      "transfer": "把錯誤分類為字詞、句型、閱讀或時間分配，回到相應教材後再做一次。"
+    }
+  }
+]
