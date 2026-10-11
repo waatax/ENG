@@ -4,9 +4,7 @@
     {
       "distinctCards": 1000,
       "mp3Files": 1000,
-      "completed": 1000,
-      "newlyCompleted": 933,
-      "drafts": 0,
+      "revised": 1000,
       "uniqueScenes": 1000,
       "homographsCorrected": 3
     },
@@ -52,15 +50,15 @@
     },
     {
       "word": "family",
-      "decodedDuration": 7.412333
+      "decodedDuration": 8.842875
     },
     {
       "word": "bone",
-      "decodedDuration": 6.135333
+      "decodedDuration": 8.052
     },
     {
       "word": "environment",
-      "decodedDuration": 7.762667
+      "decodedDuration": 8.566125
     },
     {
       "customPersists": true,
@@ -69,7 +67,7 @@
     },
     {
       "pagination": true,
-      "typeFilter": true
+      "methodFilter": true
     },
     {
       "backupImportExport": true

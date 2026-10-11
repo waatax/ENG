@@ -7,7 +7,7 @@ export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=
  async function playIndex(next){
   if(next>=queue.length){finish();return;}
   const token=++epoch;index=next;status='loading';error='';emit();
-  audio.pause();stopOther();audio.src=new URL('audio-trio/'+encodeURIComponent(queue[index].word)+'.mp3',baseUrl).href;
+  audio.pause();stopOther();audio.src=new URL('audio-trio/'+encodeURIComponent(queue[index].word)+'.mp3?v=mandarin3',baseUrl).href;
   try{await audio.play();if(token!==epoch)return;status='playing';emit();}
   catch(e){if(token!==epoch)return;status='error';error='這張音檔暫時無法播放。可重試或跳到下一張。';emit();}
  }

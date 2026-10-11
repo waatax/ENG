@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "checks": [
+    {
+      "word": "son",
+      "method": "同音連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "sun",
+      "method": "同音連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "knee",
+      "method": "國語近音",
+      "visibleLink": false,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "teacher",
+      "method": "構詞連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "classroom",
+      "method": "構詞連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "wheelchair",
+      "method": "構詞連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "gloves",
+      "method": "對比聯想",
+      "visibleLink": false,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "mittens",
+      "method": "對比聯想",
+      "visibleLink": false,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "llama",
+      "method": "對比聯想",
+      "visibleLink": false,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "squid",
+      "method": "對比聯想",
+      "visibleLink": false,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "highway",
+      "method": "構詞連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "word": "freeway",
+      "method": "構詞連結",
+      "visibleLink": true,
+      "meaningCueAndIconMatch": true,
+      "overflow": false
+    },
+    {
+      "method": "國語近音",
+      "filterCount": 8
+    },
+    {
+      "method": "情境聯想",
+      "filterCount": 297
+    },
+    {
+      "method": "對比聯想",
+      "filterCount": 458
+    },
+    {
+      "method": "構詞連結",
+      "filterCount": 198
+    },
+    {
+      "method": "同音連結",
+      "filterCount": 12
+    },
+    {
+      "method": "熟悉借音",
+      "filterCount": 27
+    },
+    {
+      "word": "son",
+      "newMp3Plays": true,
+      "cacheVersion": true
+    },
+    {
+      "word": "knee",
+      "newMp3Plays": true,
+      "cacheVersion": true
+    },
+    {
+      "word": "wheelchair",
+      "newMp3Plays": true,
+      "cacheVersion": true
+    }
+  ],
+  "errors": []
+}

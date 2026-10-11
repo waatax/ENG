@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "fc-el-0552",
+    "word": "ambulance",
+    "icon": "🚑"
+  },
+  {
+    "id": "fc-el-0001",
+    "word": "family",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "id": "fc-el-0002",
+    "word": "father",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0003",
+    "word": "mother",
+    "icon": "👩"
+  },
+  {
+    "id": "fc-el-0004",
+    "word": "parent",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "id": "fc-el-0005",
+    "word": "brother",
+    "icon": "👬"
+  },
+  {
+    "id": "fc-el-0006",
+    "word": "sister",
+    "icon": "👭"
+  },
+  {
+    "id": "fc-el-0007",
+    "word": "grandfather",
+    "icon": "👴"
+  },
+  {
+    "id": "fc-el-0008",
+    "word": "grandmother",
+    "icon": "👵"
+  },
+  {
+    "id": "fc-el-0009",
+    "word": "uncle",
+    "icon": "🧔"
+  },
+  {
+    "id": "fc-el-0010",
+    "word": "aunt",
+    "icon": "👩‍🦰"
+  },
+  {
+    "id": "fc-el-0011",
+    "word": "cousin",
+    "icon": "🧑‍🤝‍🧑"
+  },
+  {
+    "id": "fc-el-0012",
+    "word": "son",
+    "icon": "📚"
+  },
+  {
+    "id": "fc-el-0013",
+    "word": "daughter",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "id": "fc-el-0014",
+    "word": "baby",
+    "icon": "👶"
+  },
+  {
+    "id": "fc-el-0015",
+    "word": "child",
+    "icon": "🧒"
+  },
+  {
+    "id": "fc-el-0016",
+    "word": "children",
+    "icon": "🧒"
+  },
+  {
+    "id": "fc-el-0017",
+    "word": "friend",
+    "icon": "🤝"
+  },
+  {
+    "id": "fc-el-0018",
+    "word": "neighbor",
+    "icon": "🏘️"
+  },
+  {
+    "id": "fc-el-0019",
+    "word": "person",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "id": "fc-el-0020",
+    "word": "people",
+    "icon": "👨‍👩‍👧"
+  },
+  {
+    "id": "fc-el-0021",
+    "word": "school",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-el-0022",
+    "word": "classroom",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-el-0023",
+    "word": "teacher",
+    "icon": "🧑‍🏫"
+  },
+  {
+    "id": "fc-el-0024",
+    "word": "student",
+    "icon": "🧑‍🎓"
+  },
+  {
+    "id": "fc-el-0025",
+    "word": "classmate",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0026",
+    "word": "blackboard",
+    "icon": "⚫"
+  },
+  {
+    "id": "fc-el-0027",
+    "word": "desk",
+    "icon": "🪑"
+  },
+  {
+    "id": "fc-el-0028",
+    "word": "chair",
+    "icon": "🪑"
+  },
+  {
+    "id": "fc-el-0029",
+    "word": "pencil",
+    "icon": "✏️"
+  },
+  {
+    "id": "fc-el-0030",
+    "word": "pen",
+    "icon": "🖊️"
+  },
+  {
+    "id": "fc-el-0031",
+    "word": "eraser",
+    "icon": "🧹"
+  },
+  {
+    "id": "fc-el-0032",
+    "word": "ruler",
+    "icon": "📏"
+  },
+  {
+    "id": "fc-el-0033",
+    "word": "notebook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0034",
+    "word": "textbook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0035",
+    "word": "backpack",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0036",
+    "word": "homework",
+    "icon": "📝"
+  },
+  {
+    "id": "fc-el-0037",
+    "word": "lesson",
+    "icon": "📚"
+  },
+  {
+    "id": "fc-el-0038",
+    "word": "library",
+    "icon": "📚"
+  },
+  {
+    "id": "fc-el-0039",
+    "word": "playground",
+    "icon": "🎮"
+  },
+  {
+    "id": "fc-el-0040",
+    "word": "question",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0041",
+    "word": "answer",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0042",
+    "word": "listen",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0043",
+    "word": "speak",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-el-0044",
+    "word": "read",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0045",
+    "word": "write",
+    "icon": "✍️"
+  },
+  {
+    "id": "fc-el-0046",
+    "word": "wash",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0047",
+    "word": "brush",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0048",
+    "word": "cook",
+    "icon": "👨‍🍳"
+  },
+  {
+    "id": "fc-el-0049",
+    "word": "clean",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0050",
+    "word": "sleep",
+    "icon": "😴"
+  },
+  {
+    "id": "fc-el-0051",
+    "word": "wake",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0052",
+    "word": "walk",
+    "icon": "🚶"
+  },
+  {
+    "id": "fc-el-0053",
+    "word": "run",
+    "icon": "🏃"
+  },
+  {
+    "id": "fc-el-0054",
+    "word": "jump",
+    "icon": "🦘"
+  },
+  {
+    "id": "fc-el-0055",
+    "word": "swim",
+    "icon": "🏊"
+  },
+  {
+    "id": "fc-el-0056",
+    "word": "help",
+    "icon": "🤝"
+  },
+  {
+    "id": "fc-el-0057",
+    "word": "smile",
+    "icon": "🙂"
+  },
+  {
+    "id": "fc-el-0058",
+    "word": "laugh",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0059",
+    "word": "cry",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0060",
+    "word": "breakfast",
+    "icon": "🍳"
+  },
+  {
+    "id": "fc-el-0061",
+    "word": "lunch",
+    "icon": "🍱"
+  },
+  {
+    "id": "fc-el-0062",
+    "word": "dinner",
+    "icon": "🍽️"
+  },
+  {
+    "id": "fc-el-0063",
+    "word": "meal",
+    "icon": "🍽️"
+  },
+  {
+    "id": "fc-el-0064",
+    "word": "water",
+    "icon": "💧"
+  },
+  {
+    "id": "fc-el-0065",
+    "word": "milk",
+    "icon": "🥛"
+  },
+  {
+    "id": "fc-el-0066",
+    "word": "tea",
+    "icon": "🍵"
+  },
+  {
+    "id": "fc-el-0067",
+    "word": "juice",
+    "icon": "🧃"
+  },
+  {
+    "id": "fc-el-0068",
+    "word": "bread",
+    "icon": "🍞"
+  },
+  {
+    "id": "fc-el-0069",
+    "word": "rice",
+    "icon": "🍚"
+  },
+  {
+    "id": "fc-el-0070",
+    "word": "noodle",
+    "icon": "🍜"
+  },
+  {
+    "id": "fc-el-0071",
+    "word": "apple",
+    "icon": "🍎"
+  },
+  {
+    "id": "fc-el-0072",
+    "word": "banana",
+    "icon": "🍌"
+  },
+  {
+    "id": "fc-el-0073",
+    "word": "orange",
+    "icon": "🍊"
+  },
+  {
+    "id": "fc-el-0074",
+    "word": "vegetable",
+    "icon": "🥦"
+  },
+  {
+    "id": "fc-el-0075",
+    "word": "fruit",
+    "icon": "🍎"
+  },
+  {
+    "id": "fc-el-0076",
+    "word": "dog",
+    "icon": "🐕"
+  },
+  {
+    "id": "fc-el-0077",
+    "word": "cat",
+    "icon": "🐈"
+  },
+  {
+    "id": "fc-el-0078",
+    "word": "bird",
+    "icon": "🐦"
+  },
+  {
+    "id": "fc-el-0079",
+    "word": "rabbit",
+    "icon": "🐇"
+  },
+  {
+    "id": "fc-el-0080",
+    "word": "elephant",
+    "icon": "🐘"
+  },
+  {
+    "id": "fc-el-0081",
+    "word": "monkey",
+    "icon": "🐒"
+  },
+  {
+    "id": "fc-el-0082",
+    "word": "tiger",
+    "icon": "🐅"
+  },
+  {
+    "id": "fc-el-0083",
+    "word": "lion",
+    "icon": "🦁"
+  },
+  {
+    "id": "fc-el-0084",
+    "word": "fish",
+    "icon": "🐟"
+  },
+  {
+    "id": "fc-el-0085",
+    "word": "bear",
+    "icon": "🐻"
+  },
+  {
+    "id": "fc-el-0086",
+    "word": "weather",
+    "icon": "🍽️"
+  },
+  {
+    "id": "fc-el-0087",
+    "word": "sunny",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0088",
+    "word": "rainy",
+    "icon": "🌧️"
+  },
+  {
+    "id": "fc-el-0089",
+    "word": "cloudy",
+    "icon": "☁️"
+  },
+  {
+    "id": "fc-el-0090",
+    "word": "windy",
+    "icon": "💨"
+  },
+  {
+    "id": "fc-el-0091",
+    "word": "snowy",
+    "icon": "❄️"
+  },
+  {
+    "id": "fc-el-0092",
+    "word": "season",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0093",
+    "word": "spring",
+    "icon": "🌸"
+  },
+  {
+    "id": "fc-el-0094",
+    "word": "summer",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0095",
+    "word": "autumn",
+    "icon": "🍂"
+  },
+  {
+    "id": "fc-el-0096",
+    "word": "winter",
+    "icon": "❄️"
+  },
+  {
+    "id": "fc-el-0097",
+    "word": "morning",
+    "icon": "🌅"
+  },
+  {
+    "id": "fc-el-0098",
+    "word": "afternoon",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0099",
+    "word": "evening",
+    "icon": "🌆"
+  },
+  {
+    "id": "fc-el-0100",
+    "word": "night",
+    "icon": "🌙"
+  },
+  {
+    "id": "fc-el-0101",
+    "word": "today",
+    "icon": "📅"
+  },
+  {
+    "id": "fc-el-0102",
+    "word": "yesterday",
+    "icon": "⏮️"
+  },
+  {
+    "id": "fc-el-0103",
+    "word": "tomorrow",
+    "icon": "⏭️"
+  },
+  {
+    "id": "fc-el-0104",
+    "word": "head",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-el-0105",
+    "word": "eye",
+    "icon": "👀"
+  },
+  {
+    "id": "fc-el-0106",
+    "word": "ear",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0107",
+    "word": "nose",
+    "icon": "👃"
+  },
+  {
+    "id": "fc-el-0108",
+    "word": "mouth",
+    "icon": "👄"
+  },
+  {
+    "id": "fc-el-0109",
+    "word": "hand",
+    "icon": "✋"
+  },
+  {
+    "id": "fc-el-0110",
+    "word": "foot",
+    "icon": "🦶"
+  },
+  {
+    "id": "fc-el-0111",
+    "word": "one",
+    "icon": "1️⃣"
+  },
+  {
+    "id": "fc-el-0112",
+    "word": "two",
+    "icon": "2️⃣"
+  },
+  {
+    "id": "fc-el-0113",
+    "word": "three",
+    "icon": "3️⃣"
+  },
+  {
+    "id": "fc-el-0114",
+    "word": "four",
+    "icon": "4️⃣"
+  },
+  {
+    "id": "fc-el-0115",
+    "word": "five",
+    "icon": "5️⃣"
+  },
+  {
+    "id": "fc-el-0116",
+    "word": "six",
+    "icon": "6️⃣"
+  },
+  {
+    "id": "fc-el-0117",
+    "word": "seven",
+    "icon": "7️⃣"
+  },
+  {
+    "id": "fc-el-0118",
+    "word": "eight",
+    "icon": "8️⃣"
+  },
+  {
+    "id": "fc-el-0119",
+    "word": "nine",
+    "icon": "9️⃣"
+  },
+  {
+    "id": "fc-el-0120",
+    "word": "ten",
+    "icon": "🔟"
+  },
+  {
+    "id": "fc-el-0121",
+    "word": "hundred",
+    "icon": "🔴"
+  },
+  {
+    "id": "fc-el-0122",
+    "word": "thousand",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0123",
+    "word": "first",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0124",
+    "word": "second",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0125",
+    "word": "third",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0126",
+    "word": "red",
+    "icon": "🔴"
+  },
+  {
+    "id": "fc-el-0127",
+    "word": "blue",
+    "icon": "🔵"
+  },
+  {
+    "id": "fc-el-0128",
+    "word": "yellow",
+    "icon": "🟡"
+  },
+  {
+    "id": "fc-el-0129",
+    "word": "green",
+    "icon": "🟢"
+  },
+  {
+    "id": "fc-el-0130",
+    "word": "white",
+    "icon": "⚪"
+  },
+  {
+    "id": "fc-el-0131",
+    "word": "black",
+    "icon": "⚫"
+  },
+  {
+    "id": "fc-el-0132",
+    "word": "pink",
+    "icon": "🌸"
+  },
+  {
+    "id": "fc-el-0133",
+    "word": "purple",
+    "icon": "🟣"
+  },
+  {
+    "id": "fc-el-0134",
+    "word": "brown",
+    "icon": "🟤"
+  },
+  {
+    "id": "fc-el-0135",
+    "word": "horse",
+    "icon": "🐎"
+  },
+  {
+    "id": "fc-el-0136",
+    "word": "pig",
+    "icon": "🐖"
+  },
+  {
+    "id": "fc-el-0137",
+    "word": "cow",
+    "icon": "🐮"
+  },
+  {
+    "id": "fc-el-0138",
+    "word": "sheep",
+    "icon": "🐑"
+  },
+  {
+    "id": "fc-el-0139",
+    "word": "duck",
+    "icon": "🦆"
+  },
+  {
+    "id": "fc-el-0140",
+    "word": "chicken",
+    "icon": "🐔"
+  },
+  {
+    "id": "fc-el-0141",
+    "word": "mouse",
+    "icon": "🐭"
+  },
+  {
+    "id": "fc-el-0142",
+    "word": "frog",
+    "icon": "🐸"
+  },
+  {
+    "id": "fc-el-0143",
+    "word": "turtle",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0144",
+    "word": "snake",
+    "icon": "🐍"
+  },
+  {
+    "id": "fc-el-0145",
+    "word": "bee",
+    "icon": "🐝"
+  },
+  {
+    "id": "fc-el-0146",
+    "word": "butterfly",
+    "icon": "✈️"
+  },
+  {
+    "id": "fc-el-0147",
+    "word": "egg",
+    "icon": "🥚"
+  },
+  {
+    "id": "fc-el-0148",
+    "word": "soup",
+    "icon": "🍲"
+  },
+  {
+    "id": "fc-el-0149",
+    "word": "salad",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0150",
+    "word": "potato",
+    "icon": "🥔"
+  },
+  {
+    "id": "fc-el-0151",
+    "word": "tomato",
+    "icon": "🍅"
+  },
+  {
+    "id": "fc-el-0152",
+    "word": "cake",
+    "icon": "🍰"
+  },
+  {
+    "id": "fc-el-0153",
+    "word": "cookie",
+    "icon": "🍪"
+  },
+  {
+    "id": "fc-el-0155",
+    "word": "pizza",
+    "icon": "🍕"
+  },
+  {
+    "id": "fc-el-0156",
+    "word": "shirt",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0157",
+    "word": "pants",
+    "icon": "👖"
+  },
+  {
+    "id": "fc-el-0158",
+    "word": "dress",
+    "icon": "👗"
+  },
+  {
+    "id": "fc-el-0159",
+    "word": "coat",
+    "icon": "🧥"
+  },
+  {
+    "id": "fc-el-0160",
+    "word": "jacket",
+    "icon": "🧥"
+  },
+  {
+    "id": "fc-el-0161",
+    "word": "shoes",
+    "icon": "👟"
+  },
+  {
+    "id": "fc-el-0162",
+    "word": "hat",
+    "icon": "🧢"
+  },
+  {
+    "id": "fc-el-0163",
+    "word": "home",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0164",
+    "word": "house",
+    "icon": "🏠"
+  },
+  {
+    "id": "fc-el-0165",
+    "word": "room",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0166",
+    "word": "door",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0167",
+    "word": "window",
+    "icon": "🪟"
+  },
+  {
+    "id": "fc-el-0168",
+    "word": "table",
+    "icon": "🪑"
+  },
+  {
+    "id": "fc-el-0169",
+    "word": "bed",
+    "icon": "🛏️"
+  },
+  {
+    "id": "fc-el-0170",
+    "word": "city",
+    "icon": "🏙️"
+  },
+  {
+    "id": "fc-el-0171",
+    "word": "park",
+    "icon": "🏞️"
+  },
+  {
+    "id": "fc-el-0172",
+    "word": "hospital",
+    "icon": "🏥"
+  },
+  {
+    "id": "fc-el-0173",
+    "word": "store",
+    "icon": "🏪"
+  },
+  {
+    "id": "fc-el-0174",
+    "word": "bus",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0175",
+    "word": "train",
+    "icon": "🚆"
+  },
+  {
+    "id": "fc-el-0176",
+    "word": "car",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0177",
+    "word": "beach",
+    "icon": "🏖️"
+  },
+  {
+    "id": "fc-el-0178",
+    "word": "mountain",
+    "icon": "⛰️"
+  },
+  {
+    "id": "fc-el-0179",
+    "word": "river",
+    "icon": "🏞️"
+  },
+  {
+    "id": "fc-el-0180",
+    "word": "lake",
+    "icon": "🛶"
+  },
+  {
+    "id": "fc-el-0181",
+    "word": "sea",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0182",
+    "word": "ocean",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0183",
+    "word": "tree",
+    "icon": "🌳"
+  },
+  {
+    "id": "fc-el-0184",
+    "word": "flower",
+    "icon": "🌸"
+  },
+  {
+    "id": "fc-el-0185",
+    "word": "grass",
+    "icon": "🌱"
+  },
+  {
+    "id": "fc-el-0186",
+    "word": "garden",
+    "icon": "🌷"
+  },
+  {
+    "id": "fc-el-0187",
+    "word": "sky",
+    "icon": "🌤️"
+  },
+  {
+    "id": "fc-el-0188",
+    "word": "sun",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0189",
+    "word": "moon",
+    "icon": "🌙"
+  },
+  {
+    "id": "fc-el-0190",
+    "word": "star",
+    "icon": "⭐"
+  },
+  {
+    "id": "fc-el-0191",
+    "word": "rainbow",
+    "icon": "🌈"
+  },
+  {
+    "id": "fc-el-0192",
+    "word": "clock",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0193",
+    "word": "lamp",
+    "icon": "💡"
+  },
+  {
+    "id": "fc-el-0194",
+    "word": "sofa",
+    "icon": "🛋️"
+  },
+  {
+    "id": "fc-el-0195",
+    "word": "computer",
+    "icon": "💻"
+  },
+  {
+    "id": "fc-el-0196",
+    "word": "box",
+    "icon": "📦"
+  },
+  {
+    "id": "fc-el-0197",
+    "word": "bag",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0198",
+    "word": "cup",
+    "icon": "☕"
+  },
+  {
+    "id": "fc-el-0199",
+    "word": "glass",
+    "icon": "🥛"
+  },
+  {
+    "id": "fc-el-0200",
+    "word": "bottle",
+    "icon": "🍾"
+  },
+  {
+    "id": "fc-el-0201",
+    "word": "big",
+    "icon": "🐘"
+  },
+  {
+    "id": "fc-el-0202",
+    "word": "small",
+    "icon": "🐭"
+  },
+  {
+    "id": "fc-el-0203",
+    "word": "tall",
+    "icon": "🦒"
+  },
+  {
+    "id": "fc-el-0204",
+    "word": "short",
+    "icon": "🩳"
+  },
+  {
+    "id": "fc-el-0205",
+    "word": "long",
+    "icon": "📏"
+  },
+  {
+    "id": "fc-el-0206",
+    "word": "fast",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0207",
+    "word": "slow",
+    "icon": "🐢"
+  },
+  {
+    "id": "fc-el-0208",
+    "word": "hot",
+    "icon": "🔥"
+  },
+  {
+    "id": "fc-el-0209",
+    "word": "cold",
+    "icon": "🧊"
+  },
+  {
+    "id": "fc-el-0210",
+    "word": "new",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0211",
+    "word": "old",
+    "icon": "📜"
+  },
+  {
+    "id": "fc-el-0212",
+    "word": "young",
+    "icon": "🌱"
+  },
+  {
+    "id": "fc-el-0213",
+    "word": "busy",
+    "icon": "🐝"
+  },
+  {
+    "id": "fc-el-0214",
+    "word": "easy",
+    "icon": "👌"
+  },
+  {
+    "id": "fc-el-0215",
+    "word": "hard",
+    "icon": "🧗"
+  },
+  {
+    "id": "fc-el-0216",
+    "word": "sweet",
+    "icon": "🍬"
+  },
+  {
+    "id": "fc-el-0217",
+    "word": "kitten",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0218",
+    "word": "puppy",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0219",
+    "word": "lamb",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0220",
+    "word": "foal",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0221",
+    "word": "calf",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0222",
+    "word": "chick",
+    "icon": "🐔"
+  },
+  {
+    "id": "fc-el-0223",
+    "word": "piglet",
+    "icon": "🐷"
+  },
+  {
+    "id": "fc-el-0224",
+    "word": "duckling",
+    "icon": "🦆"
+  },
+  {
+    "id": "fc-el-0225",
+    "word": "bunny",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0226",
+    "word": "cub",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0227",
+    "word": "goat",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0228",
+    "word": "rooster",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0229",
+    "word": "hen",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0230",
+    "word": "turkey",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0231",
+    "word": "goose",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0232",
+    "word": "swan",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0233",
+    "word": "pigeon",
+    "icon": "🐷"
+  },
+  {
+    "id": "fc-el-0234",
+    "word": "parrot",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0235",
+    "word": "crow",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0236",
+    "word": "sparrow",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0237",
+    "word": "peacock",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0238",
+    "word": "flamingo",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0239",
+    "word": "penguin",
+    "icon": "🖊️"
+  },
+  {
+    "id": "fc-el-0240",
+    "word": "seal",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0241",
+    "word": "walrus",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0242",
+    "word": "otter",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0243",
+    "word": "beaver",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0244",
+    "word": "squirrel",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0245",
+    "word": "chipmunk",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0246",
+    "word": "raccoon",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0247",
+    "word": "badger",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0248",
+    "word": "hedgehog",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0249",
+    "word": "mole",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0250",
+    "word": "bat",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0251",
+    "word": "lizard",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0252",
+    "word": "gecko",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0253",
+    "word": "chameleon",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0254",
+    "word": "tortoise",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0255",
+    "word": "alligator",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0256",
+    "word": "crocodile",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0257",
+    "word": "hippo",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0258",
+    "word": "rhino",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0259",
+    "word": "giraffe",
+    "icon": "🦒"
+  },
+  {
+    "id": "fc-el-0260",
+    "word": "zebra",
+    "icon": "🦓"
+  },
+  {
+    "id": "fc-el-0261",
+    "word": "camel",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0262",
+    "word": "llama",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0263",
+    "word": "deer",
+    "icon": "🦌"
+  },
+  {
+    "id": "fc-el-0264",
+    "word": "reindeer",
+    "icon": "🦌"
+  },
+  {
+    "id": "fc-el-0265",
+    "word": "moose",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0266",
+    "word": "kangaroo",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0267",
+    "word": "koala",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0268",
+    "word": "panda",
+    "icon": "🐼"
+  },
+  {
+    "id": "fc-el-0269",
+    "word": "leopard",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0270",
+    "word": "cheetah",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0271",
+    "word": "jaguar",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0272",
+    "word": "panther",
+    "icon": "🐜"
+  },
+  {
+    "id": "fc-el-0273",
+    "word": "wolf",
+    "icon": "🐺"
+  },
+  {
+    "id": "fc-el-0274",
+    "word": "coyote",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0275",
+    "word": "fox",
+    "icon": "🦊"
+  },
+  {
+    "id": "fc-el-0276",
+    "word": "hyena",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0277",
+    "word": "gorilla",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0278",
+    "word": "chimpanzee",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0279",
+    "word": "baboon",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0280",
+    "word": "sloth",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0281",
+    "word": "armadillo",
+    "icon": "💪"
+  },
+  {
+    "id": "fc-el-0282",
+    "word": "platypus",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0283",
+    "word": "whale",
+    "icon": "🐋"
+  },
+  {
+    "id": "fc-el-0284",
+    "word": "dolphin",
+    "icon": "🐬"
+  },
+  {
+    "id": "fc-el-0285",
+    "word": "porpoise",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0286",
+    "word": "shark",
+    "icon": "🦈"
+  },
+  {
+    "id": "fc-el-0287",
+    "word": "octopus",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0288",
+    "word": "squid",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0289",
+    "word": "jellyfish",
+    "icon": "🐟"
+  },
+  {
+    "id": "fc-el-0290",
+    "word": "starfish",
+    "icon": "🐟"
+  },
+  {
+    "id": "fc-el-0292",
+    "word": "crab",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0293",
+    "word": "lobster",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0294",
+    "word": "shrimp",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0295",
+    "word": "prawn",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0296",
+    "word": "clam",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0297",
+    "word": "oyster",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0298",
+    "word": "mussel",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0299",
+    "word": "snail",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0300",
+    "word": "slug",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0301",
+    "word": "worm",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0302",
+    "word": "caterpillar",
+    "icon": "🐱"
+  },
+  {
+    "id": "fc-el-0303",
+    "word": "moth",
+    "icon": "👩"
+  },
+  {
+    "id": "fc-el-0306",
+    "word": "firefly",
+    "icon": "🔥"
+  },
+  {
+    "id": "fc-el-0308",
+    "word": "grasshopper",
+    "icon": "🌱"
+  },
+  {
+    "id": "fc-el-0309",
+    "word": "cricket",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0310",
+    "word": "mantis",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0311",
+    "word": "cockroach",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0312",
+    "word": "beetle",
+    "icon": "🐝"
+  },
+  {
+    "id": "fc-el-0313",
+    "word": "ladybug",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0314",
+    "word": "mosquito",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0315",
+    "word": "wasp",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0316",
+    "word": "hornet",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0317",
+    "word": "cicada",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0318",
+    "word": "centipede",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0320",
+    "word": "scorpion",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0321",
+    "word": "spider",
+    "icon": "🕷️"
+  },
+  {
+    "id": "fc-el-0322",
+    "word": "strawberry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0323",
+    "word": "blueberry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0324",
+    "word": "raspberry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0325",
+    "word": "blackberry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0326",
+    "word": "cranberry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0327",
+    "word": "watermelon",
+    "icon": "💧"
+  },
+  {
+    "id": "fc-el-0328",
+    "word": "melon",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0329",
+    "word": "cantaloupe",
+    "icon": "🐜"
+  },
+  {
+    "id": "fc-el-0330",
+    "word": "pineapple",
+    "icon": "🍎"
+  },
+  {
+    "id": "fc-el-0331",
+    "word": "papaya",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0332",
+    "word": "mango",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0333",
+    "word": "guava",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0334",
+    "word": "peach",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0335",
+    "word": "pear",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0336",
+    "word": "plum",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0337",
+    "word": "cherry",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0338",
+    "word": "lemon",
+    "icon": "🍋"
+  },
+  {
+    "id": "fc-el-0339",
+    "word": "lime",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0340",
+    "word": "grapefruit",
+    "icon": "🍇"
+  },
+  {
+    "id": "fc-el-0341",
+    "word": "kiwi",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0342",
+    "word": "avocado",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0343",
+    "word": "coconut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0344",
+    "word": "pomegranate",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0345",
+    "word": "fig",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0346",
+    "word": "apricot",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0352",
+    "word": "carrot",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0353",
+    "word": "onion",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0354",
+    "word": "garlic",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0355",
+    "word": "ginger",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0356",
+    "word": "cucumber",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0357",
+    "word": "cabbage",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0358",
+    "word": "lettuce",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0359",
+    "word": "spinach",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0360",
+    "word": "broccoli",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0361",
+    "word": "cauliflower",
+    "icon": "🌸"
+  },
+  {
+    "id": "fc-el-0362",
+    "word": "celery",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0363",
+    "word": "asparagus",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0364",
+    "word": "eggplant",
+    "icon": "🐜"
+  },
+  {
+    "id": "fc-el-0365",
+    "word": "zucchini",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0366",
+    "word": "pumpkin",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0367",
+    "word": "squash",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0368",
+    "word": "corn",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0369",
+    "word": "bean",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0370",
+    "word": "pea",
+    "icon": "☮️"
+  },
+  {
+    "id": "fc-el-0371",
+    "word": "soybean",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0372",
+    "word": "lentil",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0374",
+    "word": "mushroom",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0375",
+    "word": "radish",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0376",
+    "word": "turnip",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0377",
+    "word": "beet",
+    "icon": "🐝"
+  },
+  {
+    "id": "fc-el-0379",
+    "word": "yam",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0382",
+    "word": "chili",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0383",
+    "word": "scallion",
+    "icon": "🦁"
+  },
+  {
+    "id": "fc-el-0384",
+    "word": "leek",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0385",
+    "word": "olive",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0386",
+    "word": "toast",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0387",
+    "word": "pancake",
+    "icon": "🍰"
+  },
+  {
+    "id": "fc-el-0388",
+    "word": "waffle",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0389",
+    "word": "muffin",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0390",
+    "word": "bagel",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0391",
+    "word": "croissant",
+    "icon": "🐜"
+  },
+  {
+    "id": "fc-el-0392",
+    "word": "biscuit",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0393",
+    "word": "cracker",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0394",
+    "word": "cereal",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0395",
+    "word": "oatmeal",
+    "icon": "🍽️"
+  },
+  {
+    "id": "fc-el-0396",
+    "word": "porridge",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0397",
+    "word": "dumpling",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0399",
+    "word": "bun",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0401",
+    "word": "hotdog",
+    "icon": "🐶"
+  },
+  {
+    "id": "fc-el-0402",
+    "word": "taco",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0403",
+    "word": "burrito",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0404",
+    "word": "spaghetti",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0405",
+    "word": "pasta",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0406",
+    "word": "steak",
+    "icon": "🍵"
+  },
+  {
+    "id": "fc-el-0407",
+    "word": "chop",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0408",
+    "word": "bacon",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0409",
+    "word": "sausage",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0410",
+    "word": "ham",
+    "icon": "🍔"
+  },
+  {
+    "id": "fc-el-0411",
+    "word": "butter",
+    "icon": "🧈"
+  },
+  {
+    "id": "fc-el-0412",
+    "word": "cheese",
+    "icon": "🧀"
+  },
+  {
+    "id": "fc-el-0413",
+    "word": "yogurt",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0414",
+    "word": "cream",
+    "icon": "🍦"
+  },
+  {
+    "id": "fc-el-0415",
+    "word": "mayonnaise",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0416",
+    "word": "ketchup",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0417",
+    "word": "mustard",
+    "icon": "⭐"
+  },
+  {
+    "id": "fc-el-0418",
+    "word": "sauce",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0419",
+    "word": "pepper",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0420",
+    "word": "vinegar",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0421",
+    "word": "oil",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0422",
+    "word": "honey",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0423",
+    "word": "syrup",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0424",
+    "word": "jam",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0425",
+    "word": "peanut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0426",
+    "word": "walnut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0427",
+    "word": "almond",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0428",
+    "word": "cashew",
+    "icon": "💵"
+  },
+  {
+    "id": "fc-el-0429",
+    "word": "hazelnut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0430",
+    "word": "chestnut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0431",
+    "word": "popcorn",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0432",
+    "word": "donut",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0433",
+    "word": "pudding",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0434",
+    "word": "jelly",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0435",
+    "word": "pie",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0436",
+    "word": "tart",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0437",
+    "word": "lollipop",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0438",
+    "word": "gum",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0439",
+    "word": "marshmallow",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0440",
+    "word": "soda",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0441",
+    "word": "cola",
+    "icon": "🍫"
+  },
+  {
+    "id": "fc-el-0442",
+    "word": "lemonade",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0444",
+    "word": "milkshake",
+    "icon": "🥛"
+  },
+  {
+    "id": "fc-el-0445",
+    "word": "cocoa",
+    "icon": "🥗"
+  },
+  {
+    "id": "fc-el-0446",
+    "word": "marker",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0448",
+    "word": "crayon",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0449",
+    "word": "chalk",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0450",
+    "word": "scissors",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0451",
+    "word": "glue",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0452",
+    "word": "tape",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0453",
+    "word": "stapler",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0454",
+    "word": "staple",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0455",
+    "word": "clip",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0456",
+    "word": "folder",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0457",
+    "word": "binder",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0458",
+    "word": "calculator",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0459",
+    "word": "compass",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0460",
+    "word": "globe",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0461",
+    "word": "microscope",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0462",
+    "word": "telescope",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0463",
+    "word": "bell",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0464",
+    "word": "subject",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0465",
+    "word": "math",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0466",
+    "word": "science",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0467",
+    "word": "history",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0468",
+    "word": "geography",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0469",
+    "word": "music",
+    "icon": "🎵"
+  },
+  {
+    "id": "fc-el-0470",
+    "word": "art",
+    "icon": "🤝"
+  },
+  {
+    "id": "fc-el-0471",
+    "word": "sports",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0472",
+    "word": "gym",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0473",
+    "word": "stadium",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0474",
+    "word": "court",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0475",
+    "word": "pool",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0476",
+    "word": "hall",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0477",
+    "word": "office",
+    "icon": "🏢"
+  },
+  {
+    "id": "fc-el-0478",
+    "word": "principal",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0479",
+    "word": "counselor",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0480",
+    "word": "librarian",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0481",
+    "word": "uniform",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0482",
+    "word": "diploma",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0483",
+    "word": "certificate",
+    "icon": "🐱"
+  },
+  {
+    "id": "fc-el-0484",
+    "word": "prize",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0485",
+    "word": "medal",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0486",
+    "word": "trophy",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0487",
+    "word": "ribbon",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0488",
+    "word": "recess",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0489",
+    "word": "vacation",
+    "icon": "🐱"
+  },
+  {
+    "id": "fc-el-0490",
+    "word": "semester",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0491",
+    "word": "term",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0492",
+    "word": "quiz",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0493",
+    "word": "exam",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0494",
+    "word": "score",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0495",
+    "word": "mistake",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0496",
+    "word": "rule",
+    "icon": "📏"
+  },
+  {
+    "id": "fc-el-0497",
+    "word": "habit",
+    "icon": "🎒"
+  },
+  {
+    "id": "fc-el-0498",
+    "word": "throat",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0499",
+    "word": "chest",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0500",
+    "word": "stomach",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0501",
+    "word": "belly",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0502",
+    "word": "waist",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0503",
+    "word": "hip",
+    "icon": "🚢"
+  },
+  {
+    "id": "fc-el-0504",
+    "word": "back",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0505",
+    "word": "spine",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0506",
+    "word": "shoulder",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0507",
+    "word": "elbow",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0508",
+    "word": "wrist",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0509",
+    "word": "palm",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0510",
+    "word": "finger",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0511",
+    "word": "thumb",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0512",
+    "word": "nail",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0513",
+    "word": "thigh",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0514",
+    "word": "knee",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0515",
+    "word": "ankle",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0516",
+    "word": "heel",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0517",
+    "word": "toe",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0518",
+    "word": "skin",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0519",
+    "word": "bone",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0520",
+    "word": "muscle",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0521",
+    "word": "blood",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0522",
+    "word": "brain",
+    "icon": "🧠"
+  },
+  {
+    "id": "fc-el-0523",
+    "word": "lung",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0524",
+    "word": "liver",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0525",
+    "word": "kidney",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0526",
+    "word": "forehead",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-el-0527",
+    "word": "eyebrow",
+    "icon": "👀"
+  },
+  {
+    "id": "fc-el-0528",
+    "word": "eyelash",
+    "icon": "👀"
+  },
+  {
+    "id": "fc-el-0529",
+    "word": "eyelid",
+    "icon": "👀"
+  },
+  {
+    "id": "fc-el-0530",
+    "word": "cheek",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0531",
+    "word": "chin",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0532",
+    "word": "jaw",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0533",
+    "word": "lip",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0534",
+    "word": "tongue",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0536",
+    "word": "headache",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-el-0538",
+    "word": "fever",
+    "icon": "🤒"
+  },
+  {
+    "id": "fc-el-0539",
+    "word": "cough",
+    "icon": "😷"
+  },
+  {
+    "id": "fc-el-0540",
+    "word": "sneeze",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0541",
+    "word": "bandage",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0542",
+    "word": "pill",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0543",
+    "word": "capsule",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0544",
+    "word": "tablet",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0545",
+    "word": "ointment",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0546",
+    "word": "thermometer",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0547",
+    "word": "stethoscope",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0548",
+    "word": "syringe",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0549",
+    "word": "wheelchair",
+    "icon": "💨"
+  },
+  {
+    "id": "fc-el-0550",
+    "word": "crutch",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0551",
+    "word": "stretcher",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0553",
+    "word": "dentist",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0554",
+    "word": "surgeon",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0555",
+    "word": "patient",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0556",
+    "word": "clinic",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0557",
+    "word": "pharmacy",
+    "icon": "💪"
+  },
+  {
+    "id": "fc-el-0558",
+    "word": "sweater",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0560",
+    "word": "cardigan",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0561",
+    "word": "vest",
+    "icon": "📈"
+  },
+  {
+    "id": "fc-el-0562",
+    "word": "suit",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0563",
+    "word": "tuxedo",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0564",
+    "word": "blouse",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0565",
+    "word": "jeans",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0566",
+    "word": "shorts",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0567",
+    "word": "trousers",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0568",
+    "word": "overalls",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0569",
+    "word": "pajamas",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0570",
+    "word": "robe",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0571",
+    "word": "raincoat",
+    "icon": "🌧️"
+  },
+  {
+    "id": "fc-el-0572",
+    "word": "swimsuit",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0573",
+    "word": "bikini",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0574",
+    "word": "trunks",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0575",
+    "word": "underwear",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0576",
+    "word": "boots",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0577",
+    "word": "sneakers",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0578",
+    "word": "sandals",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0579",
+    "word": "slippers",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0582",
+    "word": "gloves",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0583",
+    "word": "mittens",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0584",
+    "word": "scarf",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0585",
+    "word": "belt",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0586",
+    "word": "tie",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0588",
+    "word": "ring",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0589",
+    "word": "necklace",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0590",
+    "word": "bracelet",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0591",
+    "word": "earring",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0592",
+    "word": "purse",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0593",
+    "word": "wallet",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0594",
+    "word": "umbrella",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0596",
+    "word": "sunglasses",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0597",
+    "word": "glasses",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0598",
+    "word": "pocket",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0599",
+    "word": "button",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0600",
+    "word": "zipper",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0601",
+    "word": "shoelace",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0602",
+    "word": "collar",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0603",
+    "word": "sleeve",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-el-0604",
+    "word": "kitchen",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0605",
+    "word": "bedroom",
+    "icon": "🛏️"
+  },
+  {
+    "id": "fc-el-0606",
+    "word": "bathroom",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0609",
+    "word": "balcony",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0610",
+    "word": "porch",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0611",
+    "word": "hallway",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0612",
+    "word": "attic",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0613",
+    "word": "basement",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0614",
+    "word": "garage",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0615",
+    "word": "yard",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0616",
+    "word": "patio",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0617",
+    "word": "roof",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0618",
+    "word": "chimney",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0619",
+    "word": "ceiling",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0620",
+    "word": "floor",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0621",
+    "word": "wall",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0622",
+    "word": "fence",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0623",
+    "word": "gate",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0624",
+    "word": "doorbell",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0625",
+    "word": "mailbox",
+    "icon": "📦"
+  },
+  {
+    "id": "fc-el-0626",
+    "word": "pillow",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0627",
+    "word": "cushion",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0628",
+    "word": "blanket",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0629",
+    "word": "sheet",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0630",
+    "word": "quilt",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0631",
+    "word": "mattress",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0632",
+    "word": "wardrobe",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0633",
+    "word": "closet",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0634",
+    "word": "drawer",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0635",
+    "word": "cupboard",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0636",
+    "word": "cabinet",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0637",
+    "word": "shelf",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0638",
+    "word": "bookcase",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0639",
+    "word": "curtain",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0640",
+    "word": "blind",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0641",
+    "word": "carpet",
+    "icon": "🐾"
+  },
+  {
+    "id": "fc-el-0642",
+    "word": "rug",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0643",
+    "word": "refrigerator",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0644",
+    "word": "fridge",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0645",
+    "word": "freezer",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0646",
+    "word": "oven",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0647",
+    "word": "microwave",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0648",
+    "word": "stove",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0649",
+    "word": "toaster",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0650",
+    "word": "blender",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0651",
+    "word": "kettle",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0652",
+    "word": "pot",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0653",
+    "word": "pan",
+    "icon": "🏢"
+  },
+  {
+    "id": "fc-el-0654",
+    "word": "teapot",
+    "icon": "🍵"
+  },
+  {
+    "id": "fc-el-0655",
+    "word": "sink",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0656",
+    "word": "faucet",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0657",
+    "word": "bathtub",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0658",
+    "word": "shower",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0659",
+    "word": "toilet",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0660",
+    "word": "towel",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0661",
+    "word": "soap",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0662",
+    "word": "shampoo",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0663",
+    "word": "toothbrush",
+    "icon": "🦷"
+  },
+  {
+    "id": "fc-el-0664",
+    "word": "toothpaste",
+    "icon": "🦷"
+  },
+  {
+    "id": "fc-el-0665",
+    "word": "comb",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0667",
+    "word": "iron",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0669",
+    "word": "dryer",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0670",
+    "word": "vacuum",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0671",
+    "word": "broom",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-el-0672",
+    "word": "mop",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0674",
+    "word": "bucket",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0675",
+    "word": "sponge",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0677",
+    "word": "flashlight",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0678",
+    "word": "candle",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0679",
+    "word": "match",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0680",
+    "word": "lighter",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0681",
+    "word": "vehicle",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0682",
+    "word": "motorcycle",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0683",
+    "word": "scooter",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0684",
+    "word": "van",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0685",
+    "word": "truck",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0688",
+    "word": "taxi",
+    "icon": "🚕"
+  },
+  {
+    "id": "fc-el-0689",
+    "word": "cab",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0690",
+    "word": "subway",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0691",
+    "word": "metro",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0692",
+    "word": "tram",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0693",
+    "word": "monorail",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0694",
+    "word": "ferry",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0695",
+    "word": "yacht",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0696",
+    "word": "canoe",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0697",
+    "word": "kayak",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0698",
+    "word": "raft",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0699",
+    "word": "submarine",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0700",
+    "word": "helicopter",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0702",
+    "word": "rocket",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0703",
+    "word": "spaceship",
+    "icon": "🚀"
+  },
+  {
+    "id": "fc-el-0704",
+    "word": "harbor",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0705",
+    "word": "port",
+    "icon": "🛫"
+  },
+  {
+    "id": "fc-el-0706",
+    "word": "pier",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0707",
+    "word": "dock",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0708",
+    "word": "runway",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0709",
+    "word": "terminal",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0710",
+    "word": "platform",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0711",
+    "word": "avenue",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0712",
+    "word": "boulevard",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0713",
+    "word": "lane",
+    "icon": "🪐"
+  },
+  {
+    "id": "fc-el-0714",
+    "word": "alley",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0715",
+    "word": "highway",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0716",
+    "word": "freeway",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0717",
+    "word": "bridge",
+    "icon": "🌉"
+  },
+  {
+    "id": "fc-el-0718",
+    "word": "tunnel",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0719",
+    "word": "sidewalk",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0720",
+    "word": "crosswalk",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0721",
+    "word": "intersection",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0722",
+    "word": "corner",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0724",
+    "word": "sign",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0725",
+    "word": "bakery",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0726",
+    "word": "butcher",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0727",
+    "word": "bookstore",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0732",
+    "word": "laundromat",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0734",
+    "word": "cinema",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0735",
+    "word": "theater",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0736",
+    "word": "circus",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0738",
+    "word": "aquarium",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0739",
+    "word": "planetarium",
+    "icon": "🪐"
+  },
+  {
+    "id": "fc-el-0740",
+    "word": "factory",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0741",
+    "word": "temple",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0742",
+    "word": "church",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0743",
+    "word": "castle",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0744",
+    "word": "palace",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0745",
+    "word": "tower",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0746",
+    "word": "monument",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0747",
+    "word": "fountain",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0748",
+    "word": "square",
+    "icon": "🚌"
+  },
+  {
+    "id": "fc-el-0749",
+    "word": "yawn",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0750",
+    "word": "stretch",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0751",
+    "word": "shave",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0752",
+    "word": "bake",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0753",
+    "word": "fry",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0754",
+    "word": "boil",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0755",
+    "word": "steam",
+    "icon": "🍵"
+  },
+  {
+    "id": "fc-el-0756",
+    "word": "roast",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0757",
+    "word": "grill",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0758",
+    "word": "slice",
+    "icon": "🧊"
+  },
+  {
+    "id": "fc-el-0759",
+    "word": "peel",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0760",
+    "word": "pour",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0761",
+    "word": "stir",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0762",
+    "word": "mix",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0763",
+    "word": "taste",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0764",
+    "word": "smell",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0765",
+    "word": "chew",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0766",
+    "word": "swallow",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0767",
+    "word": "bite",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0768",
+    "word": "lick",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0769",
+    "word": "sip",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0770",
+    "word": "sweep",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0771",
+    "word": "wipe",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0772",
+    "word": "dust",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0773",
+    "word": "scrub",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0774",
+    "word": "fold",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0775",
+    "word": "hang",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0776",
+    "word": "organize",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0777",
+    "word": "pack",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0778",
+    "word": "unpack",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0779",
+    "word": "lock",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0780",
+    "word": "unlock",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0784",
+    "word": "push",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0785",
+    "word": "pull",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0786",
+    "word": "lift",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0787",
+    "word": "drop",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0788",
+    "word": "carry",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0789",
+    "word": "hold",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0790",
+    "word": "catch",
+    "icon": "🐱"
+  },
+  {
+    "id": "fc-el-0791",
+    "word": "throw",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0792",
+    "word": "kick",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0793",
+    "word": "hit",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0794",
+    "word": "clap",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0795",
+    "word": "wave",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0796",
+    "word": "point",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0797",
+    "word": "nod",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0798",
+    "word": "shake",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0799",
+    "word": "bow",
+    "icon": "🌈"
+  },
+  {
+    "id": "fc-el-0800",
+    "word": "hug",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0801",
+    "word": "kiss",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0802",
+    "word": "shout",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0803",
+    "word": "whisper",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0804",
+    "word": "sing",
+    "icon": "🎤"
+  },
+  {
+    "id": "fc-el-0805",
+    "word": "dance",
+    "icon": "💃"
+  },
+  {
+    "id": "fc-el-0806",
+    "word": "play",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0807",
+    "word": "draw",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0808",
+    "word": "paint",
+    "icon": "🩹"
+  },
+  {
+    "id": "fc-el-0809",
+    "word": "build",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0810",
+    "word": "climb",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0811",
+    "word": "crawl",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0812",
+    "word": "slide",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0813",
+    "word": "swing",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0814",
+    "word": "skip",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0815",
+    "word": "hop",
+    "icon": "🛍️"
+  },
+  {
+    "id": "fc-el-0816",
+    "word": "jog",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0817",
+    "word": "sprint",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0818",
+    "word": "skate",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0819",
+    "word": "ski",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0820",
+    "word": "surf",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0821",
+    "word": "sail",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0822",
+    "word": "row",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0823",
+    "word": "cheerful",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0824",
+    "word": "gentle",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0825",
+    "word": "polite",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0826",
+    "word": "rude",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0827",
+    "word": "honest",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0828",
+    "word": "brave",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0829",
+    "word": "shy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0830",
+    "word": "proud",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0831",
+    "word": "calm",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0832",
+    "word": "nervous",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0833",
+    "word": "lonely",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0834",
+    "word": "curious",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0835",
+    "word": "careful",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0836",
+    "word": "careless",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-el-0837",
+    "word": "lazy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0838",
+    "word": "hardworking",
+    "icon": "👑"
+  },
+  {
+    "id": "fc-el-0839",
+    "word": "smart",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0840",
+    "word": "clever",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0841",
+    "word": "foolish",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0842",
+    "word": "silly",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0843",
+    "word": "kind",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0844",
+    "word": "cruel",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0845",
+    "word": "friendly",
+    "icon": "🤝"
+  },
+  {
+    "id": "fc-el-0846",
+    "word": "lovely",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0847",
+    "word": "pretty",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0848",
+    "word": "ugly",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0849",
+    "word": "handsome",
+    "icon": "✋"
+  },
+  {
+    "id": "fc-el-0850",
+    "word": "fat",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0851",
+    "word": "thin",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0852",
+    "word": "strong",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0853",
+    "word": "weak",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0854",
+    "word": "healthy",
+    "icon": "🩺"
+  },
+  {
+    "id": "fc-el-0855",
+    "word": "sick",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0856",
+    "word": "rich",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0857",
+    "word": "poor",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0858",
+    "word": "expensive",
+    "icon": "🖊️"
+  },
+  {
+    "id": "fc-el-0859",
+    "word": "cheap",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0860",
+    "word": "heavy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0861",
+    "word": "light",
+    "icon": "⚡"
+  },
+  {
+    "id": "fc-el-0862",
+    "word": "soft",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0863",
+    "word": "smooth",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0864",
+    "word": "rough",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0865",
+    "word": "sharp",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0866",
+    "word": "blunt",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0867",
+    "word": "wide",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0868",
+    "word": "narrow",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0869",
+    "word": "thick",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0870",
+    "word": "deep",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0871",
+    "word": "shallow",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0872",
+    "word": "high",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0873",
+    "word": "low",
+    "icon": "🌸"
+  },
+  {
+    "id": "fc-el-0874",
+    "word": "safe",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0875",
+    "word": "dangerous",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0876",
+    "word": "dirty",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0877",
+    "word": "fresh",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0878",
+    "word": "stale",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0879",
+    "word": "delicious",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0880",
+    "word": "tasty",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0881",
+    "word": "sour",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0882",
+    "word": "bitter",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0883",
+    "word": "salty",
+    "icon": "🧂"
+  },
+  {
+    "id": "fc-el-0884",
+    "word": "spicy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0885",
+    "word": "warm",
+    "icon": "💪"
+  },
+  {
+    "id": "fc-el-0886",
+    "word": "cool",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0887",
+    "word": "dry",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0888",
+    "word": "wet",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0889",
+    "word": "foggy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0890",
+    "word": "stormy",
+    "icon": "⛈️"
+  },
+  {
+    "id": "fc-el-0891",
+    "word": "freezing",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0892",
+    "word": "bright",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0893",
+    "word": "dark",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0894",
+    "word": "colorful",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0895",
+    "word": "shiny",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0896",
+    "word": "loud",
+    "icon": "☁️"
+  },
+  {
+    "id": "fc-el-0897",
+    "word": "quiet",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0898",
+    "word": "noisy",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0899",
+    "word": "silent",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0900",
+    "word": "free",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0901",
+    "word": "quick",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0902",
+    "word": "early",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0903",
+    "word": "late",
+    "icon": "🍫"
+  },
+  {
+    "id": "fc-el-0904",
+    "word": "punctual",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0905",
+    "word": "correct",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0906",
+    "word": "wrong",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0907",
+    "word": "true",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0908",
+    "word": "false",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0909",
+    "word": "simple",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0910",
+    "word": "difficult",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0911",
+    "word": "special",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0912",
+    "word": "ordinary",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0913",
+    "word": "famous",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0914",
+    "word": "popular",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0915",
+    "word": "strange",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0916",
+    "word": "wonderful",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0917",
+    "word": "terrible",
+    "icon": "✨"
+  },
+  {
+    "id": "fc-el-0918",
+    "word": "century",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0919",
+    "word": "decade",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0920",
+    "word": "year",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-el-0921",
+    "word": "month",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0922",
+    "word": "week",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0923",
+    "word": "weekend",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0924",
+    "word": "weekday",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0925",
+    "word": "day",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0926",
+    "word": "midnight",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0927",
+    "word": "noon",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0928",
+    "word": "dawn",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0929",
+    "word": "dusk",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0930",
+    "word": "sunrise",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0931",
+    "word": "sunset",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0932",
+    "word": "twilight",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0933",
+    "word": "hour",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0934",
+    "word": "minute",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0935",
+    "word": "moment",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0936",
+    "word": "calendar",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0937",
+    "word": "schedule",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0938",
+    "word": "tonight",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0939",
+    "word": "now",
+    "icon": "❄️"
+  },
+  {
+    "id": "fc-el-0940",
+    "word": "then",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0941",
+    "word": "soon",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0942",
+    "word": "later",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0943",
+    "word": "already",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0944",
+    "word": "still",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0945",
+    "word": "always",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0946",
+    "word": "usually",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0947",
+    "word": "often",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0948",
+    "word": "sometimes",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0949",
+    "word": "seldom",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0950",
+    "word": "rarely",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0951",
+    "word": "never",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0952",
+    "word": "once",
+    "icon": "⏰"
+  },
+  {
+    "id": "fc-el-0953",
+    "word": "twice",
+    "icon": "🧊"
+  },
+  {
+    "id": "fc-el-0954",
+    "word": "thrice",
+    "icon": "🧊"
+  },
+  {
+    "id": "fc-el-0955",
+    "word": "fourth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0956",
+    "word": "fifth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0957",
+    "word": "sixth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0958",
+    "word": "seventh",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0959",
+    "word": "eighth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0960",
+    "word": "ninth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0961",
+    "word": "tenth",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0962",
+    "word": "million",
+    "icon": "🦁"
+  },
+  {
+    "id": "fc-el-0963",
+    "word": "billion",
+    "icon": "🦁"
+  },
+  {
+    "id": "fc-el-0964",
+    "word": "circle",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0965",
+    "word": "triangle",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0966",
+    "word": "rectangle",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0967",
+    "word": "oval",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0968",
+    "word": "diamond",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0969",
+    "word": "heart",
+    "icon": "❤️"
+  },
+  {
+    "id": "fc-el-0970",
+    "word": "line",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0971",
+    "word": "dot",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0972",
+    "word": "stripe",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0973",
+    "word": "pattern",
+    "icon": "🎨"
+  },
+  {
+    "id": "fc-el-0974",
+    "word": "workbook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0975",
+    "word": "storybook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0976",
+    "word": "handbook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0977",
+    "word": "cookbook",
+    "icon": "👨‍🍳"
+  },
+  {
+    "id": "fc-el-0978",
+    "word": "guidebook",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0979",
+    "word": "bookmark",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-el-0980",
+    "word": "sunlight",
+    "icon": "☀️"
+  },
+  {
+    "id": "fc-el-0981",
+    "word": "moonlight",
+    "icon": "🌙"
+  },
+  {
+    "id": "fc-el-0982",
+    "word": "daylight",
+    "icon": "🌿"
+  },
+  {
+    "id": "fc-el-0984",
+    "word": "headlight",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-el-0985",
+    "word": "candlelight",
+    "icon": "🏡"
+  },
+  {
+    "id": "fc-el-0986",
+    "word": "spotlight",
+    "icon": "⚽"
+  },
+  {
+    "id": "fc-el-0987",
+    "word": "snowball",
+    "icon": "❄️"
+  },
+  {
+    "id": "fc-el-0988",
+    "word": "snowman",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0989",
+    "word": "snowstorm",
+    "icon": "❄️"
+  },
+  {
+    "id": "fc-el-0991",
+    "word": "rainstorm",
+    "icon": "🌧️"
+  },
+  {
+    "id": "fc-el-0992",
+    "word": "raindrop",
+    "icon": "🌧️"
+  },
+  {
+    "id": "fc-el-0993",
+    "word": "seashore",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0994",
+    "word": "seafood",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0995",
+    "word": "seagull",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0996",
+    "word": "seashell",
+    "icon": "🌊"
+  },
+  {
+    "id": "fc-el-0997",
+    "word": "fishbowl",
+    "icon": "🐟"
+  },
+  {
+    "id": "fc-el-0998",
+    "word": "fisherman",
+    "icon": "👨"
+  },
+  {
+    "id": "fc-el-0999",
+    "word": "fishery",
+    "icon": "🐟"
+  },
+  {
+    "id": "fc-jh-0001",
+    "word": "choose",
+    "icon": "👉"
+  },
+  {
+    "id": "fc-jh-0002",
+    "word": "freeze",
+    "icon": "🔄"
+  },
+  {
+    "id": "fc-jh-0003",
+    "word": "rise",
+    "icon": "🌅"
+  },
+  {
+    "id": "fc-jh-0004",
+    "word": "raise",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0005",
+    "word": "lead",
+    "icon": "🔄"
+  },
+  {
+    "id": "fc-jh-0006",
+    "word": "spread",
+    "icon": "📖"
+  },
+  {
+    "id": "fc-jh-0007",
+    "word": "grow",
+    "icon": "🌿"
+  },
+  {
+    "id": "fc-jh-0008",
+    "word": "hide",
+    "icon": "🙈"
+  },
+  {
+    "id": "fc-jh-0009",
+    "word": "steal",
+    "icon": "🕵️"
+  },
+  {
+    "id": "fc-jh-0011",
+    "word": "break",
+    "icon": "🔨"
+  },
+  {
+    "id": "fc-jh-0012",
+    "word": "bring",
+    "icon": "🎁"
+  },
+  {
+    "id": "fc-jh-0013",
+    "word": "buy",
+    "icon": "🛍️"
+  },
+  {
+    "id": "fc-jh-0015",
+    "word": "drive",
+    "icon": "🚗"
+  },
+  {
+    "id": "fc-jh-0016",
+    "word": "fall",
+    "icon": "🍂"
+  },
+  {
+    "id": "fc-jh-0017",
+    "word": "feel",
+    "icon": "🔄"
+  },
+  {
+    "id": "fc-jh-0018",
+    "word": "find",
+    "icon": "🔍"
+  },
+  {
+    "id": "fc-jh-0019",
+    "word": "forget",
+    "icon": "💭"
+  },
+  {
+    "id": "fc-jh-0020",
+    "word": "give",
+    "icon": "🎁"
+  },
+  {
+    "id": "fc-jh-0021",
+    "word": "hear",
+    "icon": "👂"
+  },
+  {
+    "id": "fc-jh-0023",
+    "word": "keep",
+    "icon": "🔒"
+  },
+  {
+    "id": "fc-jh-0024",
+    "word": "know",
+    "icon": "💡"
+  },
+  {
+    "id": "fc-jh-0025",
+    "word": "leave",
+    "icon": "🚪"
+  },
+  {
+    "id": "fc-jh-0026",
+    "word": "lose",
+    "icon": "📉"
+  },
+  {
+    "id": "fc-jh-0027",
+    "word": "meet",
+    "icon": "🤝"
+  },
+  {
+    "id": "fc-jh-0028",
+    "word": "pay",
+    "icon": "💵"
+  },
+  {
+    "id": "fc-jh-0029",
+    "word": "ride",
+    "icon": "🚲"
+  },
+  {
+    "id": "fc-jh-0030",
+    "word": "see",
+    "icon": "👀"
+  },
+  {
+    "id": "fc-jh-0031",
+    "word": "send",
+    "icon": "✉️"
+  },
+  {
+    "id": "fc-jh-0033",
+    "word": "sit",
+    "icon": "🔄"
+  },
+  {
+    "id": "fc-jh-0034",
+    "word": "spend",
+    "icon": "💳"
+  },
+  {
+    "id": "fc-jh-0035",
+    "word": "stand",
+    "icon": "🔄"
+  },
+  {
+    "id": "fc-jh-0037",
+    "word": "take",
+    "icon": "🤲"
+  },
+  {
+    "id": "fc-jh-0038",
+    "word": "teach",
+    "icon": "👩‍🏫"
+  },
+  {
+    "id": "fc-jh-0039",
+    "word": "tell",
+    "icon": "🗣️"
+  },
+  {
+    "id": "fc-jh-0040",
+    "word": "think",
+    "icon": "🧠"
+  },
+  {
+    "id": "fc-jh-0042",
+    "word": "wear",
+    "icon": "👕"
+  },
+  {
+    "id": "fc-jh-0043",
+    "word": "win",
+    "icon": "🏆"
+  },
+  {
+    "id": "fc-jh-0044",
+    "word": "technology",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0045",
+    "word": "internet",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0046",
+    "word": "smartphone",
+    "icon": "📱"
+  },
+  {
+    "id": "fc-jh-0047",
+    "word": "software",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0048",
+    "word": "device",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0049",
+    "word": "application",
+    "icon": "🐱"
+  },
+  {
+    "id": "fc-jh-0050",
+    "word": "connect",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0051",
+    "word": "information",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0052",
+    "word": "online",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0053",
+    "word": "digital",
+    "icon": "🏫"
+  },
+  {
+    "id": "fc-jh-0054",
+    "word": "environment",
+    "icon": "🏫"
+  }
+]

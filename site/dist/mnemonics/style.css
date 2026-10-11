@@ -1,4 +1,5 @@
 @import url('../learning_layout.css');
+.word-link{background:#eef4f7;padding:10px 12px;border-radius:8px;font-size:14px;overflow-wrap:anywhere}.dictionary{font-size:13px}
 .sound-note{background:#f1f5ed;border-left:3px solid #91b6a0;border-radius:4px;padding:10px 12px;font-size:13px;line-height:1.8}
 .audio-order{font-size:13px;color:#526e60;margin:0 0 14px}
 .all-listening{margin:24px 0 0;padding:20px;border:1px solid #b9d4c1;border-radius:16px;background:#eaf2e8}.all-listening h2{font-size:21px;margin:0 0 8px}.all-controls{display:flex;gap:9px;flex-wrap:wrap}.all-controls .primary{background:#136c5b;color:white}.all-listening p{font-size:14px;margin:10px 0}.all-listening progress{width:100%;height:9px;accent-color:#136c5b}.word-card.is-playing{border:2px solid #136c5b}.all-controls button:disabled{opacity:.55}

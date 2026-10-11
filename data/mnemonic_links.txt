@@ -1,0 +1,210 @@
+grandfather|grand + father；上一代 + 爸爸
+grandmother|grand + mother；上一代 + 媽媽
+classroom|class + room；課堂 + 房間
+teacher|teach → teacher；教 → 教的人
+classmate|class + mate；班級 + 夥伴
+blackboard|black + board；黑色 + 板
+eraser|erase → eraser；擦除 → 擦除工具
+ruler|rule → ruler；規整刻度的尺（也可指統治者）
+notebook|note + book；筆記 + 本子
+textbook|text + book；課文 + 書
+backpack|back + pack；背 + 包
+homework|home + work；家 + 功課
+playground|play + ground；玩 + 場地
+breakfast|break + fast；打破 + 禁食（fast 在此不是快）
+sunny|sun → sunny；太陽 → 晴朗的
+rainy|rain → rainy；雨 → 多雨的
+cloudy|cloud → cloudy；雲 → 多雲的
+windy|wind → windy；風 → 多風的
+snowy|snow → snowy；雪 → 下雪的
+afternoon|after + noon；之後 + 正午
+rainbow|rain + bow；雨 + 弓形
+computer|compute → computer；計算 → 計算機器
+chick|chicken ↔ chick；雞 ↔ 小雞（詞形連結）
+piglet|pig + -let；豬 + 小的
+duckling|duck + -ling；鴨 + 幼小的
+jellyfish|jelly + fish；果凍 + 魚（名稱，不是魚類）
+starfish|star + fish；星 + 魚（名稱，不是魚類）
+firefly|fire + fly；光火 + 飛蟲
+grasshopper|grass + hopper；草 + 跳躍者
+ladybug|lady + bug；名稱聯結，bug 是小蟲
+centipede|centi- + -pede；百 + 腳（不是精確腳數）
+strawberry|straw + berry；berry 是莓（不硬解 straw 的字源）
+blueberry|blue + berry；藍 + 莓
+blackberry|black + berry；黑 + 莓
+watermelon|water + melon；水 + 瓜
+coconut|coco + nut；nut 是堅果
+cauliflower|cauli- + flower；莖的詞源線索 + 花
+eggplant|egg + plant；蛋 + 植物（有蛋形品種）
+soybean|soy + bean；大豆線索 + 豆
+pancake|pan + cake；平底鍋 + 餅
+oatmeal|oat + meal；燕麥 + 磨成的穀物（meal 在此不只餐）
+hotdog|hot + dog；固定食物名稱，不照字面解成動物
+peanut|pea + nut；豆 + 堅果（名稱，不是植物分類）
+chestnut|chestnut 的 nut 提示堅果；前半不解成胸口
+popcorn|pop + corn；爆開 + 玉米
+lemonade|lemon + -ade；檸檬 + 飲料
+milkshake|milk + shake；牛奶 + 搖
+marker|mark → marker；記號 → 做記號的工具
+stapler|staple → stapler；訂書針 → 訂書機
+folder|fold → folder；折 → 資料夾
+binder|bind → binder；固定裝訂 → 活頁夾
+calculator|calculate → calculator；計算 → 計算工具
+microscope|micro- + -scope；微小 + 觀察工具
+telescope|tele- + -scope；遠 + 觀察工具
+geography|geo- + -graphy；地球 + 記述
+counselor|counsel → counselor；諮詢 → 提供諮詢的人
+librarian|library → librarian；圖書館 → 圖書館員
+uniform|uni- + form；同一 + 形式
+mistake|mis- + take；錯誤 + 拿取
+forehead|fore + head；前面 + 頭
+eyebrow|eye + brow；眼 + 眉
+eyelash|eye + lash；眼 + 睫毛
+eyelid|eye + lid；眼 + 蓋
+headache|head + ache；頭 + 痛
+thermometer|thermo- + -meter；熱 + 測量
+stethoscope|stetho- + -scope；胸 + 觀察工具
+wheelchair|wheel + chair；輪 + 椅
+dentist|dent- + -ist；牙 + 專業人員
+sweater|sweat → sweater；汗 → 毛衣（詞形聯結）
+shorts|short → shorts；短 → 短褲
+raincoat|rain + coat；雨 + 外套
+swimsuit|swim + suit；游泳 + 衣服
+underwear|under + wear；下面 + 穿著
+sneakers|sneak → sneakers；輕悄移動 → 軟底鞋
+slippers|slip → slippers；滑入 → 拖鞋
+necklace|neck + lace；頸 + 帶
+earring|ear + ring；耳 + 環
+sunglasses|sun + glasses；太陽 + 眼鏡
+glasses|glass → glasses；鏡片材料 → 一對眼鏡
+shoelace|shoe + lace；鞋 + 帶
+bedroom|bed + room；床 + 房間
+bathroom|bath + room；洗浴 + 房間
+hallway|hall + way；大廳 + 通道
+basement|base → basement；底部 → 地下室
+doorbell|door + bell；門 + 鈴
+mailbox|mail + box；郵件 + 盒
+wardrobe|ward + robe；儲存 + 衣服（詞源線索）
+drawer|draw → drawer；拉 → 可拉出的抽屜
+cupboard|cup + board；杯 + 板架（b 通常不發音）
+bookcase|book + case；書 + 容器櫃體
+refrigerator|refrigerate → refrigerator；冷藏 → 冷藏裝置
+fridge|refrigerator → fridge；長詞 → 口語短詞
+freezer|freeze → freezer；冷凍 → 冷凍裝置
+microwave|micro- + wave；微小 + 波
+toaster|toast → toaster；烤吐司 → 烤吐司機
+blender|blend → blender；混合 → 攪拌裝置
+teapot|tea + pot；茶 + 壺
+bathtub|bath + tub；洗浴 + 大盆
+toothbrush|tooth + brush；牙 + 刷
+toothpaste|tooth + paste；牙 + 膏
+dryer|dry → dryer；乾 → 乾燥裝置
+flashlight|flash + light；閃光 + 光
+lighter|light → lighter；點燃 → 點火工具
+motorcycle|motor + cycle；馬達 + 單車
+subway|sub- + way；下面 + 路
+monorail|mono- + rail；單一 + 軌道
+submarine|sub- + marine；下面 + 海的
+spaceship|space + ship；太空 + 船
+runway|run + way；跑 + 路
+highway|high + way；固定道路名稱，不是高空道路
+freeway|free + way；通行道路，不保證免費
+sidewalk|side + walk；旁邊 + 步行
+crosswalk|cross + walk；穿越 + 步行
+intersection|inter- + section；相互 + 切分（交叉處）
+bakery|bake → bakery；烘烤 → 烘烤食品商店
+bookstore|book + store；書 + 商店
+laundromat|laundry + automat；洗衣 + 自動化場所（混成詞）
+aquarium|aqu- + -arium；水 + 場所
+planetarium|planet + -arium；星球 + 場所
+dust|dust 名詞 ↔ 動詞；灰塵 ↔ 除塵
+unpack|un- + pack；解除 + 打包
+unlock|un- + lock；解除 + 鎖
+cheerful|cheer + -ful；歡呼高興 + 充滿
+careful|care + -ful；留心 + 充滿
+careless|care + -less；留心 + 缺少
+hardworking|hard + working；努力 + 工作
+foolish|fool + -ish；傻瓜 + 像那樣的
+friendly|friend + -ly；朋友 + 像那樣的
+lovely|love + -ly；喜愛 + 形容結尾
+healthy|health → healthy；健康 → 健康的
+expensive|expense → expensive；費用 → 昂貴的
+dangerous|danger → dangerous；危險 → 危險的
+dirty|dirt → dirty；汙垢 → 骯髒的
+tasty|taste → tasty；滋味 → 好吃的
+salty|salt → salty；鹽 → 鹹的
+spicy|spice → spicy；香料 → 辛辣的
+foggy|fog → foggy；霧 → 有霧的
+stormy|storm → stormy；暴風雨 → 暴風雨的
+freezing|freeze → freezing；結冰 → 極冷的
+colorful|color + -ful；顏色 + 充滿
+shiny|shine → shiny；發光 → 閃亮的
+noisy|noise → noisy；噪音 → 吵雜的
+famous|fame → famous；名聲 → 著名的
+wonderful|wonder + -ful；驚嘆 + 充滿
+terrible|terror ↔ terrible；恐懼 ↔ 可怕的（詞家族）
+century|cent-；百的詞根線索
+decade|dec-；十的詞根線索
+weekend|week + end；週 + 末尾
+weekday|week + day；週 + 日（通常指平日）
+midnight|mid + night；中間 + 夜
+sunrise|sun + rise；太陽 + 上升
+sunset|sun + set；太陽 + 落下
+tonight|to- + night；固定時間詞：今晚
+later|late → later；晚 → 更晚、稍後
+sometimes|some + times；一些 + 時候
+rarely|rare + -ly；稀少 + 副詞結尾
+fourth|four + -th；四 → 第四
+fifth|five → fifth；五 → 第五（ve 變 f）
+sixth|six + -th；六 → 第六
+seventh|seven + -th；七 → 第七
+eighth|eight → eighth；八 → 第八（不再加一個 t）
+ninth|nine → ninth；九 → 第九（去 e）
+tenth|ten + -th；十 → 第十
+triangle|tri- + angle；三 + 角
+rectangle|rect- + angle；直 + 角
+workbook|work + book；練習工作 + 書
+storybook|story + book；故事 + 書
+handbook|hand + book；手 + 書
+cookbook|cook + book；烹飪 + 書
+guidebook|guide + book；導引 + 書
+bookmark|book + mark；書 + 標記
+sunlight|sun + light；太陽 + 光
+moonlight|moon + light；月亮 + 光
+daylight|day + light；白天 + 光
+headlight|head + light；前端 + 光
+candlelight|candle + light；蠟燭 + 光
+spotlight|spot + light；一小處 + 光
+snowball|snow + ball；雪 + 球
+snowman|snow + man；雪 + 人
+snowstorm|snow + storm；雪 + 暴風
+rainstorm|rain + storm；雨 + 暴風
+raindrop|rain + drop；雨 + 滴
+seashore|sea + shore；海 + 岸
+seafood|sea + food；海 + 食物
+seagull|sea + gull；海 + 鷗
+seashell|sea + shell；海 + 殼
+fishbowl|fish + bowl；魚 + 碗
+fisherman|fisher + man；捕魚者 + 人
+fishery|fish + -ery；魚 + 產業或場所
+teach|teach ↔ teacher；教導 ↔ 老師
+technology|techno- + -logy；技術 + 學問
+internet|inter- + net；相互 + 網
+smartphone|smart + phone；智慧 + 電話
+software|soft + ware；軟 + 製品（電腦中的程式）
+application|apply → application；應用、申請 → 名詞
+information|inform → information；告知 → 資訊
+online|on + line；在上 + 線路
+digital|digit → digital；數字 → 數位的
+son|son ↔ sun；兒子 ↔ 太陽（同音 /sʌn/）
+sun|sun ↔ son；太陽 ↔ 兒子（同音 /sʌn/）
+muscle|muscle ↔ mussel；肌肉 ↔ 淡菜（同音 /ˈmʌsəl/）
+pear|pear ↔ pair；梨 ↔ 一對（同音 /per/）
+beet|beet ↔ beat；甜菜 ↔ 敲打（同音 /bit/）
+week|week ↔ weak；週 ↔ 虛弱（同音 /wik/）
+hour|hour ↔ our；小時 ↔ 我們的（常見同音；our 也有其他讀法）
+hear|hear ↔ here；聽見 ↔ 這裡（同音 /hɪr/）
+know|know ↔ no；知道 ↔ 不（同音 /noʊ/）
+meet|meet ↔ meat；遇見 ↔ 肉（同音 /mit/）
+see|see ↔ sea；看見 ↔ 海（同音 /si/）
+sail|sail ↔ sale；船帆、航行 ↔ 販售（同音 /seɪl/）

@@ -8,9 +8,9 @@
   "allPartsNonSilent": true,
   "textAndOrderMatchCards": true,
   "hashesMatch": true,
-  "totalBytes": 42178574,
-  "shortestSeconds": 5.47,
-  "longestSeconds": 8.53,
+  "totalBytes": 51038116,
+  "shortestSeconds": 6.64,
+  "longestSeconds": 11.47,
   "example": {
     "id": "fc-el-0552",
     "word": "ambulance",
@@ -25,23 +25,23 @@
       },
       {
         "role": "cue",
-        "text": "俺不能死",
+        "text": "俺不能死，快叫救護車",
         "language": "zh-TW",
         "start": 2.813,
-        "end": 4.6852
+        "end": 6.1713
       },
       {
         "role": "meaning",
         "text": "救護車",
         "language": "zh-TW",
-        "start": 5.1352,
-        "end": 6.9269
+        "start": 6.6213,
+        "end": 8.413
       }
     ],
-    "duration": 7.178,
-    "bytes": 43850,
-    "signature": "75edc091508071546f12566cabfe647ca4c61a2407e92275b755801b76986937",
-    "sha256": "57685bb38150fa197e8fa5faf3d30e3e75986ea46fa276a41541ba208b3f22e8"
+    "duration": 8.663,
+    "bytes": 52646,
+    "signature": "aa9a5d37413949d34295202821427e38f78010af7e456f540b0a70de05d8f066",
+    "sha256": "5ca9eb4d069c3ceb0692b92d4792a997e53cfb5afb56a7918d68464b38a62f3a"
   },
   "notes": "Decoded audio and synthesis boundary alignment verified; not a claim of human listening review of every word."
 }
