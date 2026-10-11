@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-11",
+  "checks": [
+    {
+      "distinctCards": 1000,
+      "mp3Files": 1000,
+      "completed": 1000,
+      "newlyCompleted": 933,
+      "drafts": 0,
+      "uniqueScenes": 1000,
+      "homographsCorrected": 3
+    },
+    {
+      "trioFiles": 1000,
+      "spokenParts": 3000,
+      "orderAndTextMatch": true
+    },
+    {
+      "width": 320,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "search": true,
+      "reveal": true,
+      "overflow": false
+    },
+    {
+      "trioSource": true,
+      "pauseResumes": true
+    },
+    {
+      "realBrowserMp3": "ambulance English, Chinese cue, Chinese meaning played to end"
+    },
+    {
+      "trioDownload": true,
+      "downloadBytesMatch": true
+    },
+    {
+      "word": "family",
+      "decodedDuration": 7.412333
+    },
+    {
+      "word": "bone",
+      "decodedDuration": 6.135333
+    },
+    {
+      "word": "environment",
+      "decodedDuration": 7.762667
+    },
+    {
+      "customPersists": true,
+      "escaped": true,
+      "reviewDue": true
+    },
+    {
+      "pagination": true,
+      "typeFilter": true
+    },
+    {
+      "backupImportExport": true
+    },
+    {
+      "newEditorialExamples": "parent, subject, lead, environment",
+      "soundNotesVisible": true
+    },
+    {
+      "allMp3Decoded": 1000,
+      "nonSilent": 1000
+    },
+    {
+      "allCardsNarrowLayout": 1000,
+      "pages": 84
+    }
+  ],
+  "errors": []
+}
