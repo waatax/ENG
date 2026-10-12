@@ -10,7 +10,7 @@ healthy|c||有健康的，健康|每天運動吃蔬果，身體很健康。|heal
 sick|k|細咳|生病細細咳|生病躺在床上，細細地咳個不停。|s + ick；sickness 疾病|I am sick today.|我今天生病了。
 rich|k|日進|日進斗金好富有|富翁的生意日進斗金，金幣堆成山。|r + ich|He is a rich man.|他是個有錢人。
 poor|k|破|窮到衣服破|窮人家的孩子穿著破洞衣服。|p + oo + r；poor 也指可憐的|They are poor but happy.|他們窮但快樂。
-expensive|k|易使貧死|易使貧死，東西太昂貴|一個名牌包貴到買下去，容易讓人窮到不行。|ex + pens（錢、秤重）+ ive：要花很多錢的|This bag is too expensive.|這個包包太貴了。
+expensive|d||價格 expensive 昂貴，cheap 便宜|兩個相似背包有高低不同價格，對照昂貴與便宜。|expensive 昂貴的；cheap 便宜的；比較 more expensive|This bag is too expensive.|這個包包太貴了。
 cheap|k|七瓶|十元買七瓶，好便宜|夜市飲料十元買七瓶，便宜得不得了。|ch + ea + p；cheap ↔ cheep（鳥叫聲）同音|These shoes are cheap.|這雙鞋很便宜。
 heavy|k|黑肥|黑肥的大石好重|一顆又黑又肥的大石頭，重得搬不動。|hea + vy：ea 念 /ɛ/|This box is heavy.|這個箱子很重。
 light|k|萊特|萊特兄弟造輕盈飛機|萊特兄弟造出輕盈的飛機，迎著明亮陽光飛起。|l + igh + t：gh 不發音；light 也指光、燈|This bag is very light.|這個包包很輕。
@@ -62,9 +62,9 @@ wrong|k|弄|弄錯了|把鞋子左右腳穿反，弄錯了。|wr + ong：w 不�
 true|k|楚|說清楚，是真的|證據擺清楚，這件事是真的。|tr + ue；truth 真相|Is it true?|那是真的嗎？
 false|k|否了|否了！這消息是假的|記者查證後否了這則傳言：它是假的。|f + al + se；false 假；true 真|The news is false.|這則消息是假的。
 simple|k|心平了|簡單生活心平了|過簡單樸實的生活，心就平靜了。|sim + ple；simply 簡單地|The question is simple.|這題很簡單。
-difficult|k|地府苦了|困難得像在地府苦了|題目困難得要命，寫到像在地府受苦了。|dif + fi + cult：雙 f|This test is difficult.|這次考試很難。
+difficult|d||difficult 困難，easy 容易|一題需要多步解答，另一題一眼就能答出，對照困難與容易。|difficult 困難；difficulty 困難之處；不要把地府當字根|This test is difficult.|這次考試很難。
 special|k|是偏少|特別的東西是偏少|限量的特別版玩具，數量是偏少的。|spec（看、外觀）+ ial；specially 特別地|Today is a special day.|今天是特別的日子。
-ordinary|d||普通的；超出普通才是非凡|平凡的一天（ordinary）突然看見雙彩虹，就變成非凡的一天（extraordinary）。|or + di + nar + y；extra（超出）+ ordinary = extraordinary 非凡的|It was an ordinary day.|那是平凡的一天。
+ordinary|d||ordinary 普通，special 特別|一排普通白杯子中有一個金色杯子，對照普通與特別。|ordinary 普通的；special 特別的|It was an ordinary day.|那是平凡的一天。
 famous|c||充滿名聲的，有名|出名的歌手走到哪裡都被認出來。|fame（名聲）+ ous（充滿⋯的）：去 e 加 ous|She is a famous singer.|她是有名的歌手。
 popular|k|爆排了|受歡迎的店爆排了|新開的人氣飲料店，門口排隊人潮爆滿。|pop（人民）+ ular：受大眾喜愛的|This song is very popular.|這首歌很受歡迎。
 strange|k|是傳奇|奇怪的事是傳奇|村裡發生一件奇怪的事，後來成了傳奇。|str + ange；stranger 陌生人|I heard a strange sound.|我聽到奇怪的聲音。
@@ -79,7 +79,7 @@ weekend|c||一週的尾巴，週末|星期六日是一週的尾巴，全家出�
 weekday|c||一週裡上班上課的日子|星期一到五是平日，大家上班上課。|week（星期）+ day（日子）|I study on weekdays.|我平日讀書。
 day|k|待|在公園待一整天|白天在公園待一整天，玩到太陽下山。|d + ay；today、Sunday 都有 day|Have a nice day!|祝你有美好的一天！
 midnight|c||夜晚的正中間，午夜|時鐘指到十二點，夜晚的正中間。|mid（中間）+ night（夜）|He went to bed at midnight.|他午夜才睡。
-noon|k|暖|中午陽光最暖|正午十二點，太陽在頭頂，最暖。|n + oo + n：前後對稱，像時鐘指向正中|We eat lunch at noon.|我們中午吃午餐。
+noon|i||時鐘十二點，正午 noon|時鐘指向十二點，窗外陽光明亮，桌上準備午餐。|noon 正午；at noon；afternoon 是正午之後|We eat lunch at noon.|我們中午吃午餐。
 dawn|k|東|黎明東方亮|天剛破曉，東方的天空亮起魚肚白。|d + awn；dawn 黎明；dusk 黃昏|We left at dawn.|我們在黎明時出發。
 dusk|k|淡色|淡色，黃昏天色變淡|太陽下山後，天空的顏色漸漸變淡變暗。|d + usk；dusk 黃昏；dawn 黎明|The lights come on at dusk.|黃昏時燈亮了。
 sunrise|c||太陽升起，日出|海平面上，太陽慢慢升起。|sun（太陽）+ rise（升起）|We watched the sunrise.|我們看了日出。
@@ -88,8 +88,8 @@ twilight|c||日夜兩種光之間，暮光|太陽剛下山，天還沒全黑，�
 hour|h||我們的一小時，同音不同字|我們（our）一起寫作業一小時（hour）。|hour ↔ our（同音）；h 不發音，所以說 an hour|The movie is two hours long.|這部電影兩小時長。
 minute|k|迷你的|一分鐘，迷你的時間|一分鐘是很迷你的一小段時間。|min + ute；作名詞「分鐘」念 /ˈmɪnɪt/|Wait a minute.|等一下。
 moment|k|莫忙|莫忙，等片刻|「莫忙！等我片刻。」他抬起一根手指。|mo + ment；at the moment 目前|Just a moment, please.|請稍等片刻。
-calendar|k|看了等|看了等，看日曆等假期|撕一張日曆，看了又看，等著放假那天。|cal + en + dar：結尾 ar，不是 er|Mark it on the calendar.|把它標在日曆上。
-schedule|i||一天的事排進時間表|把上課、補習、練琴，一格一格排進時間表。|sched + ule：sch 念 /sk/（美式）|What's your schedule today?|你今天的行程是什麼？
+calendar|i||翻日曆，找到今天日期|桌上日曆圈出今天日期，旁邊列著要做的事。|calendar 日曆；末尾是 ar，不是 er|Mark it on the calendar.|把它標在日曆上。
+schedule|i||行程表列出時間和事情|行程表上有每個時間與對應活動，一位學生照表安排一天。|schedule 行程表／安排；英美起音不同，跟本卡美式音訊|What's your schedule today?|你今天的行程是什麼？
 tonight|c||今天的夜晚，今晚|今晚月亮好圓，全家在陽臺賞月。|to（在）+ night（夜）：像 today、tomorrow|What are you doing tonight?|你今晚要做什麼？
 now|k|鬧|鬧鐘響，現在就起|鬧鐘一響：現在、馬上、立刻起床！|n + ow；now 和 know 念法不同|Do it now.|現在就做。
 then|k|真|那時候真好|翻開舊相簿：「那時候真好。」|th + en；then 那時；than 比|I was ten then.|我那時十歲。

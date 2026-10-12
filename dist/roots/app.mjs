@@ -1,4 +1,4 @@
-import {createMnemonicPlaylist,AUDIO_VERSION} from '../mnemonics/mnemonic_playlist.mjs?v=keyword6';
+import {createMnemonicPlaylist,AUDIO_VERSION} from '../mnemonics/mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-word-families-v1',SIZE=12,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const TYPES=['複合詞字族','字首','字尾','字根'];
 let groups=[],timing=new Map(),progress={},page=0,order=null,cardWords=new Set();

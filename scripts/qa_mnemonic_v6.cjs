@@ -1,7 +1,7 @@
 // Real-browser QA for the v6 mnemonic cards (dist/mnemonics) and the 500 word families (dist/roots).
 const {chromium}=require('C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
-const repo=path.resolve(__dirname,'..'),root=path.join(repo,'dist'),PORT=8098,base=`http://127.0.0.1:${PORT}`,V='keyword6';
+const repo=path.resolve(__dirname,'..'),root=path.join(repo,'dist'),PORT=8098,base=`http://127.0.0.1:${PORT}`,V='keyword6r2';
 const report={date:'2026-10-12',pages:['dist/mnemonics/index.html','dist/roots/index.html'],widths:[320,390,768,1280],checks:[],pageErrors:[],consoleErrors:[],httpErrors:[],screenshots:[]};
 const cards=JSON.parse(fs.readFileSync(path.join(root,'mnemonics/cards.json'),'utf8')),groups=JSON.parse(fs.readFileSync(path.join(root,'roots/groups.json'),'utf8')).groups;
 const timing=new Map(JSON.parse(fs.readFileSync(path.join(root,'roots/audio-manifest.json'),'utf8')).records.map(r=>[r.id,r.parts]));
@@ -82,7 +82,7 @@ const waitGroups=page=>page.waitForFunction(()=>document.querySelectorAll('#fami
  await step('mnemonics: per-card play',async()=>{await page.goto(base+'/mnemonics/index.html');await waitCards(page);const b=page.locator('[data-play="fc-el-0552"]');await b.click();
   await page.waitForFunction(()=>window.__audios.some(a=>a.src.includes('/audio-trio/ambulance.mp3')&&!a.paused&&a.currentTime>.3),null,{timeout:15000});
   const st=await page.evaluate(()=>window.__audios.filter(a=>a.src.includes('/audio-trio/ambulance.mp3')).map(a=>({src:a.src,t:a.currentTime,paused:a.paused})));
-  check('mnemonics: per-card play src ends audio-trio/ambulance.mp3?v=keyword6 and progresses >0.3s',st.length===1&&st[0].src.endsWith(`audio-trio/ambulance.mp3?v=${V}`)&&st[0].t>.3&&(await b.getAttribute('aria-pressed'))==='true',{...st[0],button:await b.innerText()});
+  check('mnemonics: per-card play src ends audio-trio/ambulance.mp3?v=keyword6r2 and progresses >0.3s',st.length===1&&st[0].src.endsWith(`audio-trio/ambulance.mp3?v=${V}`)&&st[0].t>.3&&(await b.getAttribute('aria-pressed'))==='true',{...st[0],button:await b.innerText()});
   await b.click();check('mnemonics: per-card second click pauses',await page.evaluate(()=>window.__audios.every(a=>a.paused))&&(await b.innerText()).includes('繼續'),{button:await b.innerText()});});
  await step('mnemonics: play all',async()=>{await page.locator('#play-all').click();await page.waitForFunction(()=>/正在播放 · 第 1 \/ 1,?000/.test(document.querySelector('#all-status').textContent),null,{timeout:15000});
   const s1=await page.evaluate(()=>({src:window.__audios.find(a=>!a.paused)?.src,playing:document.querySelector('.word-card.is-playing')?.dataset.id,others:window.__audios.filter(a=>!a.paused).length}));

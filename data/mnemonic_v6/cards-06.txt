@@ -1,7 +1,7 @@
 bone|k|崩|骨頭崩一聲斷|狗狗用力一咬，骨頭崩一聲斷成兩截。|b + one：裡面有 one|The dog is chewing a bone.|狗在啃骨頭。
 muscle|k|猛縮|肌肉猛縮出力|舉起啞鈴，手臂肌肉猛縮鼓起來。|mus + cle：c 不發音；和 mussel（淡菜）同音|He has strong muscles.|他有強壯的肌肉。
 blood|k|爆了的|傷口爆了的血|膝蓋擦傷，傷口冒出紅紅的血。|bl + oo + d：oo 念 /ʌ/，像 flood|Blood is red.|血是紅色的。
-brain|k|不累|大腦不累，一直想|大腦不累，整天轉動思考。|br + ain：rain（雨）前加 b|Use your brain.|動動你的腦。
+brain|i||腦袋思考，brain 大腦|人正在解題，頭部示意圖標出大腦，連結思考與大腦。|brain 大腦；ai 念 /eɪ/；不要把不累當讀音|Use your brain.|動動你的腦。
 lung|k|冷|吸冷空氣進肺|冬天深吸一口冷空氣，涼涼地灌進肺裡。|l + ung；兩個肺 lungs|Smoking hurts your lungs.|抽菸傷肺。
 liver|k|力乏|肝累了，全身力乏|熬夜傷肝，第二天全身力乏；肝臟在右上腹。|live（活）+ r：肝讓人活下去|The liver cleans the blood.|肝臟會清潔血液。
 kidney|i||腰後兩顆像腰豆的腎臟|腰後左右各有一顆腎臟，形狀就像紅紅的腰豆（kidney bean）。|kid + ney：拼字裡有 kid（小孩）；kidney bean 腰豆|We have two kidneys.|我們有兩顆腎臟。
@@ -22,7 +22,7 @@ bandage|k|綁的擠|綁的擠，繃帶綁緊緊|護士用繃帶在手臂上綁�
 pill|k|片|吞一片藥|醫生說每天吃一片兒藥，配溫開水吞下。|p + ill：裡面有 ill（生病）——生病吃 pill|Take this pill after meals.|飯後吃這顆藥。
 capsule|i||兩半小殼套起來的膠囊|一顆膠囊由兩半小殼套在一起，裡面裝著藥粉。|cap（帽、蓋）+ sule：兩半像帽子套起來|Swallow the capsule with water.|用水吞下膠囊。
 tablet|k|太補了|藥片一吃，太補了|一小片維他命錠，吃了覺得太補了。|tab + let：小小的平板；也指平板電腦|Take one tablet a day.|一天吃一片藥。
-ointment|i||擠一點擦在患處的藥膏|蚊子咬的地方擠一點藥膏擦一擦，涼涼的就不癢了。|oint + ment：point 去掉 p 再加 ment；和 anoint（塗油）同源|Put some ointment on the bite.|在咬傷處擦一些藥膏。
+ointment|i||把藥膏塗在皮膚患處|擠出一小條藥膏，依指示塗在皮膚患處。|ointment 藥膏；用藥依指示，不把癢特悶當讀音|Put some ointment on the bite.|在咬傷處擦一些藥膏。
 thermometer|c||量熱度的器具，體溫計|把體溫計放在舌下量熱度。|thermo（熱）+ meter（量器）|Use a thermometer to check your fever.|用體溫計量是否發燒。
 stethoscope|c||聽胸口的器具，聽診器|醫生把聽診器放在胸口，聽心跳聲。|stetho（胸）+ scope（觀察器具）|The doctor uses a stethoscope.|醫生使用聽診器。
 syringe|k|射進|針筒把藥射進去|護士推動針筒，把藥水慢慢推進手臂。|sy + ringe：y 念 /ə/|The nurse used a syringe.|護士用了針筒。
@@ -31,9 +31,9 @@ crutch|k|跨去|撐著拐杖跨去|腳受傷的人撐著拐杖，一步一步跨
 stretcher|c||撐開躺平的擔架|救護人員把擔架撐開，讓傷者平躺抬走。|stretch（伸展、撐開）+ er：撐開的用具|They carried him on a stretcher.|他們用擔架抬他。
 dentist|c||看牙的人，牙醫|牙醫拿小鏡子檢查你的牙齒。|dent（牙）+ ist（人）|I see the dentist twice a year.|我一年看兩次牙醫。
 surgeon|k|手針|手針，外科醫生縫傷口|外科醫生戴手套，手持針線把傷口縫好。|sur + geon：g 念 /dʒ/；surgery 手術|The surgeon did the operation.|外科醫生做了手術。
-patient|i||病人要很有耐心地等|病人在候診室耐心地等，聽到叫號才走進診間。|pa + tient；patient 也作形容詞「有耐心的」|The patient is resting.|病人正在休息。
+patient|d||patient 病人，也可以是有耐心的|診間裡病人等待叫號，旁邊對照耐心等候的動作。|patient 名詞病人／形容詞有耐心的；patiently 是副詞|The patient is resting.|病人正在休息。
 clinic|k|看你咳|診所醫生看你咳|小診所裡，醫生聽你咳了幾聲，開了藥。|clin + ic；clinic 診所、hospital 醫院|I went to the clinic.|我去了診所。
-pharmacy|k|發麻些|發麻些，去藥局買藥|手腳發麻，到藥局買些藥。|pharm + a + cy：ph 念 /f/；pharmacist 藥師|The pharmacy is next to the clinic.|藥局在診所旁邊。
+pharmacy|i||到 pharmacy 藥局領藥|藥師在藥局櫃台交付藥袋，藥袋上標明使用方式。|pharmacy 藥局；pharmacist 藥師；ph 念 /f/|The pharmacy is next to the clinic.|藥局在診所旁邊。
 sweater|c||穿了會流汗的毛衣|穿上厚毛衣跑一圈，熱得流汗。|sweat（流汗）+ er：穿了會流汗的衣服|This sweater is warm.|這件毛衣很暖。
 cardigan|k|開的釦|前面開的釦，開襟毛衣|開襟羊毛衫前面一排開的釦子，好穿好脫。|car + di + gan；名稱來自英國卡迪根伯爵|She wears a gray cardigan.|她穿一件灰色開襟毛衣。
 vest|k|微濕的|運動背心微濕的|跑完步，運動背心微微濕了。|v + est；美式也指西裝背心|He wears a vest.|他穿著背心。
@@ -55,7 +55,7 @@ boots|k|步|穿靴子步步踩雪|穿上長靴，在雪地上一步一步踩。|
 sneakers|c||偷偷走沒聲音的球鞋|穿上膠底運動鞋，走路安靜，可以偷偷溜過去。|sneak（偷偷走）+ er：膠底走路沒聲音|My sneakers are white.|我的運動鞋是白色的。
 sandals|k|三帶|三帶，涼鞋三條帶|一雙涼鞋只有三條細帶子，腳趾露在外面。|san + dal + s|I wear sandals in summer.|我夏天穿涼鞋。
 slippers|c||輕鬆滑進去的拖鞋|腳一滑就穿進軟軟的室內拖鞋。|slip（滑、輕鬆穿上）+ per + s|Put on your slippers.|穿上你的拖鞋。
-gloves|k|鍋了扶|鍋了扶，戴手套扶熱鍋|端熱鍋前先戴上手套，扶著鍋把。|g + love + s：手套裡有 love|Wear gloves in the cold.|天冷要戴手套。
+gloves|d||五指手套 gloves，連指手套 mittens|一副手套五指分開，另一副手套只有拇指分開，並排比較。|gloves 指分指手套；mittens 指連指手套|Wear gloves in the cold.|天冷要戴手套。
 mittens|k|沒疼|沒疼，連指手套護手|雪地裡戴上四指相連的手套，手一點都沒凍疼。|mit + ten + s：雙 t；大拇指分開、四指在一起|The baby wears mittens.|寶寶戴著連指手套。
 scarf|k|絲卡服|絲卡服，圍巾卡在衣服上|一條毛線圍巾繞過脖子，尾端卡在外套上。|sc + arf；複數 scarves|Wear a scarf, it's cold.|戴上圍巾，天氣很冷。
 belt|k|被勒|被勒，皮帶勒緊肚子|吃太飽，肚子被皮帶勒得緊緊的。|b + elt；seat belt 安全帶|He wears a black belt.|他繫著黑色皮帶。
@@ -66,7 +66,7 @@ bracelet|c||戴在手臂的小環，手鍊|手腕上戴著一條小小的串珠�
 earring|c||耳朵上的環，耳環|耳垂上掛著一對亮亮的耳環。|ear（耳）+ ring（環）|She lost an earring.|她掉了一隻耳環。
 purse|k|破四|錢包破四個洞|舊錢包破了四個洞，零錢都掉出來。|p + urse：nurse（護士）的 n 換成 p|She keeps money in her purse.|她把錢放在錢包裡。
 wallet|k|我樂的|皮夾裝滿錢，我樂的|打開皮夾，裡面裝滿鈔票，我樂得笑開懷。|wal + let：雙 l|I lost my wallet.|我弄丟了皮夾。
-umbrella|k|俺不淋啦|撐傘，俺不淋啦|下大雨時撐開雨傘，雨滴落在傘外：「俺不淋啦！」|um + brel + la：雙 l；三音節，重音在 BREL|Take an umbrella with you.|帶一把傘。
+umbrella|i||張開雨傘，擋住落下的雨|下雨時張開一把雨傘，雨滴留在傘外，人站在傘下。|umbrella 雨傘；an umbrella；重音在第二音節|Take an umbrella with you.|帶一把傘。
 sunglasses|c||擋太陽的眼鏡|大太陽下戴上太陽眼鏡，不再瞇眼。|sun（太陽）+ glasses（眼鏡）|I wear sunglasses at the beach.|我在海灘戴太陽眼鏡。
 glasses|c||兩片玻璃，眼鏡|鼻樑上架著兩片玻璃鏡片。|glass（玻璃）+ es：恆為複數 a pair of glasses|He wears glasses.|他戴眼鏡。
 pocket|k|爆開|口袋塞太滿要爆開|口袋塞滿糖果，鼓得快要爆開了。|pock + et；pocket money 零用錢|Put the key in your pocket.|把鑰匙放進口袋。

@@ -1,0 +1,12 @@
+{
+  "checked": 2000,
+  "widths": [
+    320,
+    1280
+  ],
+  "reverseAnswerHidden": true,
+  "notes": "All 1000 reverse fronts per width match Chinese meanings without visible English answers.",
+  "separateProgress": true,
+  "reload": true,
+  "errors": []
+}

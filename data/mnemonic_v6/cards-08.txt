@@ -31,7 +31,7 @@ dust|k|打掃|打掃時撣掉灰塵|拿雞毛撢子打掃，把書架上的灰�
 scrub|k|絲瓜布|絲瓜布用力刷洗|拿絲瓜布用力刷洗，把鍋底的焦黑刷得發亮。|scr + ub|Scrub the pot.|用力刷鍋子。
 fold|k|服了|服了！衣服對摺好整齊|媽媽把衣服對摺得整整齊齊，大家都說：「服了！」|f + old；folder 資料夾|Fold your clothes.|把衣服摺好。
 hang|k|晃|掛著晃來晃去|衣服掛在曬衣架上，被風吹得晃來晃去。|h + ang；hang / hung；hanger 衣架|Hang your coat here.|把外套掛在這裡。
-organize|k|噢乾淨哉|整理好，噢乾淨哉|把書桌整理好，忍不住說：「噢，乾淨哉！」|organ（器官、組織）+ ize（使成）|Organize your desk.|整理你的書桌。
+organize|i||分門別類，把東西整理好|書、文具與衣物原本散落，整理後各自放進有標籤的箱子。|organize 整理／組織；organization 組織|Organize your desk.|整理你的書桌。
 pack|k|拍|行李拍緊打包|把行李塞進箱子，拍一拍壓緊再拉上。|p + ack；backpack 背包|Pack your bag.|把你的包包打包好。
 unpack|c||打包的相反，拆開行李|旅行回家，把行李箱打開，一件件拿出來。|un（相反）+ pack（打包）|Unpack your suitcase.|把行李箱的東西拿出來。
 lock|k|落扣|鎖頭落扣，鎖上|門鎖一落扣，喀一聲鎖上了。|l + ock；locker 置物櫃|Lock the door.|把門鎖上。

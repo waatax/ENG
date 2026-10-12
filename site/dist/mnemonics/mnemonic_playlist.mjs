@@ -1,5 +1,5 @@
 // A finite queue of MP3s, independent of search and pagination. Used by the 1,000 cards and the 500 word families.
-export const AUDIO_VERSION='keyword6';
+export const AUDIO_VERSION='keyword6r2';
 export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=()=>{},baseUrl,fileFor=item=>'audio-trio/'+encodeURIComponent(item.word)+'.mp3',version=AUDIO_VERSION}){
  let queue=[],index=-1,status='idle',epoch=0,error='';
  const state=()=>({status,index,total:queue.length,current:queue[index]||null,error});

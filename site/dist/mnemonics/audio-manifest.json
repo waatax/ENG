@@ -13,7 +13,7 @@
   },
   "rate": "-10%",
   "cards": 1000,
-  "totalBytes": 33737074,
+  "totalBytes": 33844326,
   "records": [
     {
       "id": "fc-el-0552",
@@ -68,30 +68,30 @@
         },
         {
           "role": "cue",
-          "text": "發米粒，全家一起吃飯",
+          "text": "一家人圍桌吃飯，就是 family",
           "language": "zh-TW",
           "start": 1.52,
-          "end": 4.05
+          "end": 4.25
         },
         {
           "role": "meaning",
           "text": "家庭，家人",
           "language": "zh-TW",
-          "start": 4.5,
-          "end": 6.05
+          "start": 4.7,
+          "end": 6.25
         },
         {
           "role": "english-repeat",
           "text": "family",
           "language": "en-US",
-          "start": 6.65,
-          "end": 7.57
+          "start": 6.85,
+          "end": 7.77
         }
       ],
-      "duration": 7.87,
-      "bytes": 39987,
-      "signature": "cba29bac6c14f3060c45918dd5953ca529b31a122946fd509febcfaa48f80638",
-      "sha256": "e994995fe24314fda686f29d36dac3a3d2b8a9f0f02ebb31878806b676d8f5a3"
+      "duration": 8.07,
+      "bytes": 41081,
+      "signature": "a8780131f3dc4a2479d0747e7572654e4bedb04fd32f698949749b586202594d",
+      "sha256": "935f19a9f5d47da0a9fdadaeb40c9c78584bf09b507bf36f905dbbb9c115baff"
     },
     {
       "id": "fc-el-0002",
@@ -107,30 +107,30 @@
         },
         {
           "role": "cue",
-          "text": "發達，爸爸努力養家",
+          "text": "爸爸是 father，媽媽是 mother",
           "language": "zh-TW",
           "start": 1.4,
-          "end": 3.62
+          "end": 3.8
         },
         {
           "role": "meaning",
           "text": "父親，爸爸",
           "language": "zh-TW",
-          "start": 4.07,
-          "end": 5.53
+          "start": 4.25,
+          "end": 5.71
         },
         {
           "role": "english-repeat",
           "text": "father",
           "language": "en-US",
-          "start": 6.13,
-          "end": 6.93
+          "start": 6.31,
+          "end": 7.11
         }
       ],
-      "duration": 7.23,
-      "bytes": 36865,
-      "signature": "8e03ff4d66450950ee92c5892e292e714b3bd5332fa7e05f1e1a5d6579e886f4",
-      "sha256": "69fc9a9d8b64c1336a7d7cc316f75cdcfca7eef2f01365ee7af2226d97a7729c"
+      "duration": 7.41,
+      "bytes": 37729,
+      "signature": "a0e2c8468e39bdd1ed024978e97d9c76d3bf9a7fd0a2785aa0019dc49333697f",
+      "sha256": "29930b26fb6a9455fa52b13f5b63b0fe4eb137a12580859d6312c141f9712df9"
     },
     {
       "id": "fc-el-0003",
@@ -536,30 +536,30 @@
         },
         {
           "role": "cue",
-          "text": "多特別！女兒是寶貝",
+          "text": "女兒 daughter，兒子 son",
           "language": "zh-TW",
           "start": 1.34,
-          "end": 3.64
+          "end": 3.17
         },
         {
           "role": "meaning",
           "text": "女兒",
           "language": "zh-TW",
-          "start": 4.09,
-          "end": 4.76
+          "start": 3.62,
+          "end": 4.3
         },
         {
           "role": "english-repeat",
           "text": "daughter",
           "language": "en-US",
-          "start": 5.36,
-          "end": 6.1
+          "start": 4.9,
+          "end": 5.64
         }
       ],
-      "duration": 6.4,
-      "bytes": 32663,
-      "signature": "6c423ff60c2aa29153da5c9014db83d0294d3bd83e17b39699fcfc9a2480f5dd",
-      "sha256": "b8db50e43c17bba21e5a95923b60f1bd08c920172e0564b5540746010df8440a"
+      "duration": 5.94,
+      "bytes": 30401,
+      "signature": "ae767d4303dfd480ed582013e45112c0af542b5d96e8a8ab8e5624bc8b597873",
+      "sha256": "5d7c01dfc2ade09f4a55fbb9a7a28719a9cc2500a4230518199bdb715f18993f"
     },
     {
       "id": "fc-el-0014",
@@ -731,30 +731,30 @@
         },
         {
           "role": "cue",
-          "text": "內伯伯，住隔壁的鄰居",
+          "text": "住在隔壁，互相打招呼的鄰居",
           "language": "zh-TW",
           "start": 1.39,
-          "end": 3.79
+          "end": 4.52
         },
         {
           "role": "meaning",
           "text": "鄰居",
           "language": "zh-TW",
-          "start": 4.24,
-          "end": 4.94
+          "start": 4.97,
+          "end": 5.68
         },
         {
           "role": "english-repeat",
           "text": "neighbor",
           "language": "en-US",
-          "start": 5.54,
-          "end": 6.33
+          "start": 6.28,
+          "end": 7.07
         }
       ],
-      "duration": 6.63,
-      "bytes": 33865,
-      "signature": "583ef7a06265ad5cc3c799408164a9f20ffd2869a2460791a221489cac0f0610",
-      "sha256": "c013a237a7ffb0f26f796d06fe6d0bba8e0f2cc3db313c227080d26523e16fbd"
+      "duration": 7.37,
+      "bytes": 37591,
+      "signature": "4fb412c3ad8d8284ae2406d8dc95e6f15833cce80676c935e1da55521950f629",
+      "sha256": "29f13d9ca5a4178bf64c1987e5a35e941e0062252e7f68d64fe7d58a87eb539a"
     },
     {
       "id": "fc-el-0019",
@@ -809,30 +809,30 @@
         },
         {
           "role": "cue",
-          "text": "批批，一批批人們",
+          "text": "一個 person，一群 people",
           "language": "zh-TW",
           "start": 1.32,
-          "end": 3.44
+          "end": 3.33
         },
         {
           "role": "meaning",
           "text": "人們",
           "language": "zh-TW",
-          "start": 3.89,
-          "end": 4.59
+          "start": 3.78,
+          "end": 4.48
         },
         {
           "role": "english-repeat",
           "text": "people",
           "language": "en-US",
-          "start": 5.19,
-          "end": 5.91
+          "start": 5.08,
+          "end": 5.8
         }
       ],
-      "duration": 6.21,
-      "bytes": 31697,
-      "signature": "9ef78e7ee4134cdb91671609fd60d144cdfd604e6d25550fe4762d3bda3d9e71",
-      "sha256": "bf45096d980932bedfe89f3c26d051c31ab2f47672de29c003fe81db6db621c3"
+      "duration": 6.1,
+      "bytes": 31239,
+      "signature": "78472e4565a9bf75c1f8077bead37df49e621b9dd8ec80d075cff501512da78f",
+      "sha256": "b84052349de2182d13a310c79d885fb0dd5862f306160d7f970001954bc08fc4"
     },
     {
       "id": "fc-el-0021",
@@ -848,30 +848,30 @@
         },
         {
           "role": "cue",
-          "text": "思酷，動腦好酷的學校",
+          "text": "背書包上學，走進 school",
           "language": "zh-TW",
           "start": 1.47,
-          "end": 4.06
+          "end": 4.0
         },
         {
           "role": "meaning",
           "text": "學校",
           "language": "zh-TW",
-          "start": 4.51,
-          "end": 5.31
+          "start": 4.45,
+          "end": 5.25
         },
         {
           "role": "english-repeat",
           "text": "school",
           "language": "en-US",
-          "start": 5.91,
-          "end": 6.78
+          "start": 5.85,
+          "end": 6.72
         }
       ],
-      "duration": 7.08,
-      "bytes": 36021,
-      "signature": "a2dcfe4c9626da146fa18ac9810e24f3d1520969adf0d9095ad07751a6d22c18",
-      "sha256": "597579f72903960e886adeb4c592608a9e4d8522309a2e275f115f9a574889ee"
+      "duration": 7.02,
+      "bytes": 35791,
+      "signature": "5d716417a3a7010b7d398764dd169f9d51649e9345f61a8d53bd3f3d629fc3c5",
+      "sha256": "69795a9cb8c34076ecce8c8befe58f51330dae39a5c8373c08f63481e36c01b4"
     },
     {
       "id": "fc-el-0022",
@@ -965,30 +965,30 @@
         },
         {
           "role": "cue",
-          "text": "是讀的，學生在讀書",
+          "text": "study 是學習，student 是學生",
           "language": "zh-TW",
           "start": 1.47,
-          "end": 3.92
+          "end": 4.41
         },
         {
           "role": "meaning",
           "text": "學生",
           "language": "zh-TW",
-          "start": 4.37,
-          "end": 5.12
+          "start": 4.86,
+          "end": 5.62
         },
         {
           "role": "english-repeat",
           "text": "student",
           "language": "en-US",
-          "start": 5.72,
-          "end": 6.59
+          "start": 6.22,
+          "end": 7.09
         }
       ],
-      "duration": 6.89,
-      "bytes": 35181,
-      "signature": "e6d1438df7ccc5f8066226eafd685b089ea863c4fbe642638b14cf880a932b08",
-      "sha256": "24ff78e8ac444993017947866fe9812440d77e572963d28f2f9ba709e38d9ae2"
+      "duration": 7.39,
+      "bytes": 37605,
+      "signature": "bf6c12f33eb20c8f277132fc0192111837361c05e7e975f0da32180fcda33481",
+      "sha256": "4635505463b4eb51d784615fbaed8bc04197a6f36d717184f378e4e454a2fe84"
     },
     {
       "id": "fc-el-0025",
@@ -1121,30 +1121,30 @@
         },
         {
           "role": "cue",
-          "text": "茄兒坐椅子",
+          "text": "拉開椅子，坐在 chair 上",
           "language": "zh-TW",
           "start": 1.36,
-          "end": 2.69
+          "end": 3.72
         },
         {
           "role": "meaning",
           "text": "椅子",
           "language": "zh-TW",
-          "start": 3.14,
-          "end": 3.82
+          "start": 4.17,
+          "end": 4.85
         },
         {
           "role": "english-repeat",
           "text": "chair",
           "language": "en-US",
-          "start": 4.42,
-          "end": 5.18
+          "start": 5.45,
+          "end": 6.21
         }
       ],
-      "duration": 5.48,
-      "bytes": 28089,
-      "signature": "b505c191d658a49979a701bb4d203c7ca2d1b994820a3624e911e6ee87a7f114",
-      "sha256": "d2d3412503e6f2da63bfe9f9f484f9f6805cb58dc7159eb33c30eb7048f9443f"
+      "duration": 6.51,
+      "bytes": 33269,
+      "signature": "6d0899ae96fef75852e35c85dc4d7320a97051910d0f77b1011d3afb5bd7c338",
+      "sha256": "223a34d8c1432b5d6e77759e40323dc1d4798e106ad814d04c0ff8b301b85e45"
     },
     {
       "id": "fc-el-0029",
@@ -1160,30 +1160,30 @@
         },
         {
           "role": "cue",
-          "text": "盆塞滿鉛筆",
+          "text": "鉛筆 pencil，原子筆 pen",
           "language": "zh-TW",
           "start": 1.41,
-          "end": 2.74
+          "end": 3.74
         },
         {
           "role": "meaning",
           "text": "鉛筆",
           "language": "zh-TW",
-          "start": 3.19,
-          "end": 3.87
+          "start": 4.19,
+          "end": 4.87
         },
         {
           "role": "english-repeat",
           "text": "pencil",
           "language": "en-US",
-          "start": 4.47,
-          "end": 5.28
+          "start": 5.47,
+          "end": 6.28
         }
       ],
-      "duration": 5.58,
-      "bytes": 28571,
-      "signature": "8d5d0bdde90910fb3eca011d2ce1530a89132b463966fbbf6d6aad5a3b132481",
-      "sha256": "2b7356402a61fbec8bc2759d9d9fb397645a246b2e5156b93c882eec599ad9e9"
+      "duration": 6.58,
+      "bytes": 33635,
+      "signature": "41297776e690587e5363ef4eb02b1c033ea696c720f529029b493da6e55ff695",
+      "sha256": "2a95d61bd83ecca28ba0170007ebe3811e9e1dda539bb90eea7812452e23202f"
     },
     {
       "id": "fc-el-0030",
@@ -1511,30 +1511,30 @@
         },
         {
           "role": "cue",
-          "text": "來不累哩，圖書館看書",
+          "text": "library 借書，librarian 管書",
           "language": "zh-TW",
           "start": 1.63,
-          "end": 4.24
+          "end": 4.31
         },
         {
           "role": "meaning",
           "text": "圖書館",
           "language": "zh-TW",
-          "start": 4.69,
-          "end": 5.66
+          "start": 4.76,
+          "end": 5.73
         },
         {
           "role": "english-repeat",
           "text": "library",
           "language": "en-US",
-          "start": 6.26,
-          "end": 7.29
+          "start": 6.33,
+          "end": 7.36
         }
       ],
-      "duration": 7.59,
-      "bytes": 38665,
-      "signature": "687788211d931a21d4b324bc47708f2bea2e198f9dde68c0d8ccacd2b40337b7",
-      "sha256": "95eda08bedc352b102ad0e4d28517a55278e3448a8cb7347b3d2d38e75843620"
+      "duration": 7.66,
+      "bytes": 39051,
+      "signature": "23855dac3331223324681b4de1a2cdcd8653d58323ce32aebdacd621ad47766c",
+      "sha256": "1fadbf10908cb05b960b627b6a6157362fb1518e4b67637e71efad213b949e58"
     },
     {
       "id": "fc-el-0039",
@@ -1589,30 +1589,30 @@
         },
         {
           "role": "cue",
-          "text": "快思沉，想通這個問題",
+          "text": "question 提問題，answer 給答案",
           "language": "zh-TW",
           "start": 1.47,
-          "end": 4.1
+          "end": 4.15
         },
         {
           "role": "meaning",
           "text": "問題，疑問",
           "language": "zh-TW",
-          "start": 4.55,
-          "end": 6.14
+          "start": 4.6,
+          "end": 6.2
         },
         {
           "role": "english-repeat",
           "text": "question",
           "language": "en-US",
-          "start": 6.74,
-          "end": 7.61
+          "start": 6.8,
+          "end": 7.67
         }
       ],
-      "duration": 7.91,
-      "bytes": 40231,
-      "signature": "9cf8f7cb53c68ed972e1e52873baccc767aca2acca688b93053eb859257ea3cb",
-      "sha256": "98640c03fb9a6cebaca294796a64d0a2f28f8cd692029e2a4087834c1d17edfb"
+      "duration": 7.97,
+      "bytes": 40617,
+      "signature": "1ac222f515fdff90010df47c9f5c88019feece9b9b479156dc82465a85a95b8c",
+      "sha256": "6a1454a2279c082e7d99683e7906a9c361f6a352ed11a07e6ae7378a18eabf31"
     },
     {
       "id": "fc-el-0041",
@@ -1628,30 +1628,30 @@
         },
         {
           "role": "cue",
-          "text": "按手搶答，說出答案",
+          "text": "舉手回答，說出 answer",
           "language": "zh-TW",
           "start": 1.37,
-          "end": 3.76
+          "end": 3.63
         },
         {
           "role": "meaning",
           "text": "回答，答案",
           "language": "zh-TW",
-          "start": 4.21,
-          "end": 5.65
+          "start": 4.08,
+          "end": 5.52
         },
         {
           "role": "english-repeat",
           "text": "answer",
           "language": "en-US",
-          "start": 6.25,
-          "end": 7.02
+          "start": 6.12,
+          "end": 6.89
         }
       ],
-      "duration": 7.32,
-      "bytes": 37225,
-      "signature": "10ae8ecb3613560ac6dd83b60b73feceb71c1c5603abde8afef04a7b28fa156d",
-      "sha256": "b6339734595da56e0c7e7e0994261fc9a3986cdd626e70de5d647eb5df4ae984"
+      "duration": 7.19,
+      "bytes": 36635,
+      "signature": "d57bd972a01c254f72129801d1e2dc69e27512ee1d864228c770fd289f47c697",
+      "sha256": "47ed90e158407a7c5e5fee9dcf6ecccd5f891d0cf145f31d31e96cd65fbaf68c"
     },
     {
       "id": "fc-el-0042",
@@ -1979,30 +1979,30 @@
         },
         {
           "role": "cue",
-          "text": "息裡鋪，鑽進床鋪睡",
+          "text": "睡著 sleep，醒來 wake up",
           "language": "zh-TW",
           "start": 1.41,
-          "end": 3.94
+          "end": 3.65
         },
         {
           "role": "meaning",
           "text": "睡覺，睡眠",
           "language": "zh-TW",
-          "start": 4.39,
-          "end": 6.09
+          "start": 4.1,
+          "end": 5.79
         },
         {
           "role": "english-repeat",
           "text": "sleep",
           "language": "en-US",
-          "start": 6.69,
-          "end": 7.5
+          "start": 6.39,
+          "end": 7.2
         }
       ],
-      "duration": 7.8,
-      "bytes": 39623,
-      "signature": "8cbf74a851d5537c097b5f2bfd81ea3b64fba5af7cdb3ba1e23eca8c833bf5ea",
-      "sha256": "d621cce00b3f87d6e8a22ae08829fa0ab3139c16b352115b245af828c0ad833f"
+      "duration": 7.5,
+      "bytes": 38203,
+      "signature": "8d80f85c3df0afece67768ec20070ddbaa753e5da2285844d3a880f647d4c6a1",
+      "sha256": "7ae77e1fec1090e6a46b45c5cd3d5bbf2e9b3199d14543a988f5f6257b64cf78"
     },
     {
       "id": "fc-el-0051",
@@ -2252,30 +2252,30 @@
         },
         {
           "role": "cue",
-          "text": "是買了！嘴角微笑",
+          "text": "微笑 smile，大笑 laugh",
           "language": "zh-TW",
           "start": 1.51,
-          "end": 3.69
+          "end": 3.49
         },
         {
           "role": "meaning",
           "text": "微笑",
           "language": "zh-TW",
-          "start": 4.14,
-          "end": 4.89
+          "start": 3.94,
+          "end": 4.68
         },
         {
           "role": "english-repeat",
           "text": "smile",
           "language": "en-US",
-          "start": 5.49,
-          "end": 6.4
+          "start": 5.28,
+          "end": 6.19
         }
       ],
-      "duration": 6.7,
-      "bytes": 34215,
-      "signature": "5f1baa383ade560427972e768c0502254c146be7ddd68292b0430f3d5d095c3b",
-      "sha256": "90993d49f6c9726333737ec9aaccf03a80f5ec2b47c0365f2b05e481b3dd5c54"
+      "duration": 6.49,
+      "bytes": 33153,
+      "signature": "189d3a01bc87aa583b9ba44461bfd1e252319253c4c975273079cc2b06d63053",
+      "sha256": "38a221a971e42d87437427bda970abc8a18cf0441a53429985d2bd868e4982d3"
     },
     {
       "id": "fc-el-0058",
@@ -2291,30 +2291,30 @@
         },
         {
           "role": "cue",
-          "text": "樂福滿滿，哈哈大笑",
+          "text": "聽到笑話，大家哈哈大笑",
           "language": "zh-TW",
           "start": 1.41,
-          "end": 3.8
+          "end": 4.22
         },
         {
           "role": "meaning",
           "text": "大笑，笑出聲",
           "language": "zh-TW",
-          "start": 4.25,
-          "end": 6.04
+          "start": 4.67,
+          "end": 6.46
         },
         {
           "role": "english-repeat",
           "text": "laugh",
           "language": "en-US",
-          "start": 6.64,
-          "end": 7.45
+          "start": 7.06,
+          "end": 7.87
         }
       ],
-      "duration": 7.75,
-      "bytes": 39385,
-      "signature": "d8e0bba38ea0fee9a23a54ee937e7096ff4c025ef40ecf1ffd5d5eea139b0ea5",
-      "sha256": "641414f06b8d984a650e7abfc2b14838a05d6c61e7d5d7026dab57048ab5f806"
+      "duration": 8.17,
+      "bytes": 41549,
+      "signature": "19be0dcc3af4fac4ef6ef8aba3311087b9b56c2b648a3d9e54234527c84982d2",
+      "sha256": "2b38cad76c87963a61f0076bf9daf09212a9f011db3bbaabdc4d89a1230b7608"
     },
     {
       "id": "fc-el-0059",
@@ -2564,30 +2564,30 @@
         },
         {
           "role": "cue",
-          "text": "咪了口，貓咪喝牛奶",
+          "text": "杯中白色牛奶，就是 milk",
           "language": "zh-TW",
           "start": 1.35,
-          "end": 3.63
+          "end": 3.86
         },
         {
           "role": "meaning",
           "text": "牛奶",
           "language": "zh-TW",
-          "start": 4.08,
-          "end": 4.78
+          "start": 4.31,
+          "end": 5.0
         },
         {
           "role": "english-repeat",
           "text": "milk",
           "language": "en-US",
-          "start": 5.38,
-          "end": 6.13
+          "start": 5.6,
+          "end": 6.35
         }
       ],
-      "duration": 6.43,
-      "bytes": 32775,
-      "signature": "0fd528acbfaeabb16dd432ded57250b5bc873d1a8348cd650279f6af16b481d1",
-      "sha256": "1a5092bad7446e95708b87b583ecb70b67bc9b9139b77d4f2a421e2d2bfe6059"
+      "duration": 6.65,
+      "bytes": 33985,
+      "signature": "0495e76bb3d82429298f2faa73f46f54d9a614adf5878f6a85e3041e341551bb",
+      "sha256": "7bdcc6d10dc0bdcca526c156bb846381745089534d157e60223e023f15d2f77c"
     },
     {
       "id": "fc-el-0066",
@@ -2876,30 +2876,30 @@
         },
         {
           "role": "cue",
-          "text": "噢冷汁，冰冷柳橙汁",
+          "text": "剝橙色柳橙，orange 有兩個意思",
           "language": "zh-TW",
           "start": 1.46,
-          "end": 3.7
+          "end": 4.54
         },
         {
           "role": "meaning",
           "text": "柳橙，橙色的",
           "language": "zh-TW",
-          "start": 4.15,
-          "end": 5.92
+          "start": 4.99,
+          "end": 6.76
         },
         {
           "role": "english-repeat",
           "text": "orange",
           "language": "en-US",
-          "start": 6.52,
-          "end": 7.38
+          "start": 7.36,
+          "end": 8.22
         }
       ],
-      "duration": 7.68,
-      "bytes": 39027,
-      "signature": "fa3d8e9b15b69298343fdaa968336d3706bb76d68c0e1a1c76a0c0feab191530",
-      "sha256": "e058b28deb8ea8c627ad59c64ca7de1628423c037d220222b107e20cc0f6e0f4"
+      "duration": 8.52,
+      "bytes": 43245,
+      "signature": "48572c088eae317163e71c477ec5406189eace8f1467aa8ecd5a524596ecb6f2",
+      "sha256": "34f8026d73367a24206af788bdead71a48dc1a6cc866d6027f8eb56a8795661a"
     },
     {
       "id": "fc-el-0074",
@@ -3149,30 +3149,30 @@
         },
         {
           "role": "cue",
-          "text": "餓了飯，大象飯量大",
+          "text": "長鼻大耳的大象，用鼻子捲草吃",
           "language": "zh-TW",
           "start": 1.44,
-          "end": 3.68
+          "end": 4.81
         },
         {
           "role": "meaning",
           "text": "大象",
           "language": "zh-TW",
-          "start": 4.13,
-          "end": 4.85
+          "start": 5.26,
+          "end": 5.98
         },
         {
           "role": "english-repeat",
           "text": "elephant",
           "language": "en-US",
-          "start": 5.45,
-          "end": 6.29
+          "start": 6.58,
+          "end": 7.42
         }
       ],
-      "duration": 6.59,
-      "bytes": 33623,
-      "signature": "3e508f7adc8917e36107d6c24b508562440e20bcaa87b1d5fbe1def4be57e5d0",
-      "sha256": "5d3784f9bc68841c377105fd6eb6fd229446e30f9cbe5297d484896770e23864"
+      "duration": 7.72,
+      "bytes": 39273,
+      "signature": "e5d000ce6e34d101e498daf1797b9f151717bfa9849ff87ad4c3c4da119a21b1",
+      "sha256": "ec1f5cfb081b3fe938daeafcfd43bd1fe910e85c4157193778aa2a78c78fe76a"
     },
     {
       "id": "fc-el-0081",
@@ -3383,30 +3383,30 @@
         },
         {
           "role": "cue",
-          "text": "外的，看外頭的天氣",
+          "text": "weather 天氣，whether 是否，同音",
           "language": "zh-TW",
           "start": 1.32,
-          "end": 3.6
+          "end": 4.26
         },
         {
           "role": "meaning",
           "text": "天氣",
           "language": "zh-TW",
-          "start": 4.05,
-          "end": 4.78
+          "start": 4.71,
+          "end": 5.42
         },
         {
           "role": "english-repeat",
           "text": "weather",
           "language": "en-US",
-          "start": 5.38,
-          "end": 6.1
+          "start": 6.02,
+          "end": 6.74
         }
       ],
-      "duration": 6.4,
-      "bytes": 32661,
-      "signature": "3f756cca43dafc45f8862dcfe3aafcd4777fe5732c479af331317a3027bab7ad",
-      "sha256": "0b836a14ea67626c75595b0b1f29ba09694db0c5876f83378e33907a1fbae6ed"
+      "duration": 7.04,
+      "bytes": 35931,
+      "signature": "3beaba4e64df74527b148b099f3acbe5da1b16b97244dfff18f2080c5fd9ee0d",
+      "sha256": "0821a8cc739edd458e274b002162e662603d7dff72b4d5d9f964b299d175b411"
     },
     {
       "id": "fc-el-0087",
@@ -3656,30 +3656,30 @@
         },
         {
           "role": "cue",
-          "text": "春天是不冷",
+          "text": "春天 spring，花開；秋天 autumn，葉落",
           "language": "zh-TW",
           "start": 1.4,
-          "end": 2.75
+          "end": 5.16
         },
         {
           "role": "meaning",
           "text": "春天，春季",
           "language": "zh-TW",
-          "start": 3.2,
-          "end": 4.75
+          "start": 5.61,
+          "end": 7.17
         },
         {
           "role": "english-repeat",
           "text": "spring",
           "language": "en-US",
-          "start": 5.35,
-          "end": 6.15
+          "start": 7.77,
+          "end": 8.57
         }
       ],
-      "duration": 6.45,
-      "bytes": 32897,
-      "signature": "717c8d4830c1b06a5784b45aa1acc76cef7796d20dc7eb64da2976a439e2bf80",
-      "sha256": "d5539b684d27907d354dffdc7260c2e9506a81c24d3ab78eacf6be719c4d754e"
+      "duration": 8.87,
+      "bytes": 45057,
+      "signature": "02273d23a38952eee783342c3cedb38fd941dc823a51a5fa6e705fe04e9412ff",
+      "sha256": "e16b4731062aa5a44b8f66535bc477d1105cf5543078be632c67f658cabe4def"
     },
     {
       "id": "fc-el-0094",
@@ -3695,30 +3695,30 @@
         },
         {
           "role": "cue",
-          "text": "沙嗎，夏天去沙灘嗎",
+          "text": "夏天 summer 炎熱，冬天 winter 寒冷",
           "language": "zh-TW",
           "start": 1.38,
-          "end": 3.74
+          "end": 4.54
         },
         {
           "role": "meaning",
           "text": "夏天，夏季",
           "language": "zh-TW",
-          "start": 4.19,
-          "end": 5.82
+          "start": 4.99,
+          "end": 6.62
         },
         {
           "role": "english-repeat",
           "text": "summer",
           "language": "en-US",
-          "start": 6.42,
-          "end": 7.2
+          "start": 7.22,
+          "end": 8.0
         }
       ],
-      "duration": 7.5,
-      "bytes": 38185,
-      "signature": "d1a09d8a72a13821292465366f9a9ae462ea786b7bdeb24a27900836a32be85e",
-      "sha256": "2569e16be955732146651b37b35876d33b3e9ecf1ee005ea7bd975769000f337"
+      "duration": 8.3,
+      "bytes": 42177,
+      "signature": "0a1a7ff43e9445e72c8cfa2fda02f1c77839b24840ab113b0e44f2327b145803",
+      "sha256": "c97f4bb7f03f5379b93beeaa604c57228bc789ac60822507e94866923c1cb408"
     },
     {
       "id": "fc-el-0095",
@@ -3890,30 +3890,30 @@
         },
         {
           "role": "cue",
-          "text": "已晚寧，傍晚好寧靜",
+          "text": "evening 傍晚，night 夜晚",
           "language": "zh-TW",
           "start": 1.37,
-          "end": 3.7
+          "end": 3.57
         },
         {
           "role": "meaning",
           "text": "傍晚，晚上",
           "language": "zh-TW",
-          "start": 4.15,
-          "end": 5.66
+          "start": 4.02,
+          "end": 5.53
         },
         {
           "role": "english-repeat",
           "text": "evening",
           "language": "en-US",
-          "start": 6.26,
-          "end": 7.03
+          "start": 6.13,
+          "end": 6.9
         }
       ],
-      "duration": 7.33,
-      "bytes": 37347,
-      "signature": "c863cb0460d1be4505c98775d791e49a55e79887136f75f133830455951a3fb2",
-      "sha256": "663d86346bd41e3c66a8b60ed76a997d2a61db3c6780493ed1c113f6af56746a"
+      "duration": 7.2,
+      "bytes": 36647,
+      "signature": "d45eca63203993e3a381557e0aa7d204f443506dd662952af99e43d40904c4d8",
+      "sha256": "661e8432756458e83d922cea5e21b7ac57b21fe87b8a2744e2ad9f65cd1d0b69"
     },
     {
       "id": "fc-el-0100",
@@ -4085,30 +4085,30 @@
         },
         {
           "role": "cue",
-          "text": "頭頂黑的，是頭髮",
+          "text": "帽子戴在 head 頭上",
           "language": "zh-TW",
           "start": 1.25,
-          "end": 3.44
+          "end": 2.96
         },
         {
           "role": "meaning",
           "text": "頭部",
           "language": "zh-TW",
-          "start": 3.89,
-          "end": 4.51
+          "start": 3.41,
+          "end": 4.03
         },
         {
           "role": "english-repeat",
           "text": "head",
           "language": "en-US",
-          "start": 5.11,
-          "end": 5.76
+          "start": 4.63,
+          "end": 5.28
         }
       ],
-      "duration": 6.06,
-      "bytes": 30973,
-      "signature": "b103c7ce49fcfc145ead1693d8b57a3e115f696429551f50166bd2d57cf5a6f6",
-      "sha256": "1f63b6456d9b64a803a1691f29b5f5d9d1b6da3709aafeee8781588db43ed047"
+      "duration": 5.58,
+      "bytes": 28581,
+      "signature": "e86f9e845182539da495b21a9ec9aaebd9aef046e43cc4efb5497c2ee50c7d11",
+      "sha256": "23f504b1a23b80820825e176be61d844948b6f028682869835b977aecd0495f8"
     },
     {
       "id": "fc-el-0105",
@@ -4241,30 +4241,30 @@
         },
         {
           "role": "cue",
-          "text": "貓嘶，貓張嘴巴嘶嘶叫",
+          "text": "張開 mouth 嘴巴，說一句話",
           "language": "zh-TW",
           "start": 1.36,
-          "end": 4.01
+          "end": 3.98
         },
         {
           "role": "meaning",
           "text": "嘴巴",
           "language": "zh-TW",
-          "start": 4.46,
-          "end": 5.14
+          "start": 4.43,
+          "end": 5.12
         },
         {
           "role": "english-repeat",
           "text": "mouth",
           "language": "en-US",
-          "start": 5.74,
-          "end": 6.5
+          "start": 5.72,
+          "end": 6.48
         }
       ],
-      "duration": 6.8,
-      "bytes": 34699,
-      "signature": "3652a9b58b2820a9a8b6795685efc36369d37470faee2da38c4b36adcfcfe98c",
-      "sha256": "90c619c5bf41afaa6596af98944ad0efa5ef1d4d5466a804a825ad19b47f171e"
+      "duration": 6.78,
+      "bytes": 34591,
+      "signature": "8f4ed3826c8bc1788486f08b34c85e46ca88977f6b68cb0dc7829a04eeecd8da",
+      "sha256": "741b10b25018fa48e24f9761c5d8665de37140667bdd0069168a6101316095b7"
     },
     {
       "id": "fc-el-0109",
@@ -7595,30 +7595,30 @@
         },
         {
           "role": "cue",
-          "text": "電腦程式看不透",
+          "text": "compute 計算，computer 是電腦",
           "language": "zh-TW",
           "start": 1.44,
-          "end": 3.23
+          "end": 4.08
         },
         {
           "role": "meaning",
           "text": "電腦",
           "language": "zh-TW",
-          "start": 3.68,
-          "end": 4.34
+          "start": 4.53,
+          "end": 5.19
         },
         {
           "role": "english-repeat",
           "text": "computer",
           "language": "en-US",
-          "start": 4.94,
-          "end": 5.78
+          "start": 5.79,
+          "end": 6.63
         }
       ],
-      "duration": 6.08,
-      "bytes": 31099,
-      "signature": "c6f7620f23c01ddd643db7f86492766642550e5addf877390aaa110f862fbfec",
-      "sha256": "1b4bc3ff8787bbddce45519bec4269a62d36529abb253c3e831a75f66bbb37c0"
+      "duration": 6.93,
+      "bytes": 35331,
+      "signature": "40a9afa28f1d23e9ef0b7381e7e508b36f78fc2935aea99219db235c5f0917db",
+      "sha256": "d7e482ec1c4fa66c0023d072330b9764df0a5b819e622a5aa882435348d78b9e"
     },
     {
       "id": "fc-el-0196",
@@ -10949,30 +10949,30 @@
         },
         {
           "role": "cue",
-          "text": "犰狳躲進阿嬤底樓",
+          "text": "穿甲的犰狳，身上有硬甲片",
           "language": "zh-TW",
           "start": 1.61,
-          "end": 3.51
+          "end": 4.71
         },
         {
           "role": "meaning",
           "text": "犰狳",
           "language": "zh-TW",
-          "start": 3.96,
-          "end": 4.67
+          "start": 5.16,
+          "end": 5.87
         },
         {
           "role": "english-repeat",
           "text": "armadillo",
           "language": "en-US",
-          "start": 5.27,
-          "end": 6.28
+          "start": 6.47,
+          "end": 7.48
         }
       ],
-      "duration": 6.58,
-      "bytes": 33623,
-      "signature": "b55ba3a2daa2466b9963c1e400c87a4895d07b9f41fe3d07ca6481926a824222",
-      "sha256": "bda2c0e51c6b8bd7f8ced2d3f5129640fb3c1540513e918af028f46adba73b91"
+      "duration": 7.78,
+      "bytes": 39631,
+      "signature": "68626d804d571d5492a968db7bee2c09efa9ceb24a678a31767db0404565cf94",
+      "sha256": "d778f1af5871615f6dd9a9e6a539174bd2c397783f0403b3efe351d5fe5b9ac3"
     },
     {
       "id": "fc-el-0282",
@@ -11105,30 +11105,30 @@
         },
         {
           "role": "cue",
-          "text": "鼠海豚吐泡泡",
+          "text": "porpoise 鼠海豚，短吻小型鯨豚",
           "language": "zh-TW",
           "start": 1.49,
-          "end": 3.18
+          "end": 4.66
         },
         {
           "role": "meaning",
           "text": "鼠海豚",
           "language": "zh-TW",
-          "start": 3.63,
-          "end": 4.73
+          "start": 5.11,
+          "end": 6.21
         },
         {
           "role": "english-repeat",
           "text": "porpoise",
           "language": "en-US",
-          "start": 5.33,
-          "end": 6.22
+          "start": 6.81,
+          "end": 7.7
         }
       ],
-      "duration": 6.52,
-      "bytes": 33259,
-      "signature": "0382cb259a58674db8f586a0ff56fe62691479d6948cdd1dccb43098ed97d689",
-      "sha256": "895b37fb07563bee9b0b908eb793cab1362bebd1bfcdd45aee23820786455495"
+      "duration": 8.0,
+      "bytes": 40725,
+      "signature": "dd48abc32a0c466e5ffda8dd14317541a4c0a8f4ee0e368c5e306d4570c79881",
+      "sha256": "e095b1049126b7026258a2faf6c179bee75b7ddd2453a0d60e99ecc0f0fc08bb"
     },
     {
       "id": "fc-el-0286",
@@ -11963,30 +11963,30 @@
         },
         {
           "role": "cue",
-          "text": "可惡去，趕走蟑螂",
+          "text": "蟑螂爬過廚房，長觸角晃動",
           "language": "zh-TW",
           "start": 1.59,
-          "end": 3.8
+          "end": 4.69
         },
         {
           "role": "meaning",
           "text": "蟑螂",
           "language": "zh-TW",
-          "start": 4.25,
-          "end": 4.93
+          "start": 5.14,
+          "end": 5.82
         },
         {
           "role": "english-repeat",
           "text": "cockroach",
           "language": "en-US",
-          "start": 5.53,
-          "end": 6.52
+          "start": 6.42,
+          "end": 7.41
         }
       ],
-      "duration": 6.82,
-      "bytes": 34823,
-      "signature": "8e93004adef3da9b0aea9e94151c142f694d0901f02011c578318f42c30c5a3d",
-      "sha256": "a7e4c6cf96e1e5a4a68e09cbbfcd03f71cae2added1e86bd2383b6653d5bccf7"
+      "duration": 7.71,
+      "bytes": 39271,
+      "signature": "889c6301035d0494948d40827f0f77cc0606c7c0ba98fc7a75ab6e97a18f16a5",
+      "sha256": "7e86b5cc1279355b0163b50aabf1befad2c54e826f0012fd18ad83f55332f839"
     },
     {
       "id": "fc-el-0312",
@@ -12080,30 +12080,30 @@
         },
         {
           "role": "cue",
-          "text": "沒死騎頭，蚊子騎頭叮",
+          "text": "蚊子叮皮膚，留下癢包",
           "language": "zh-TW",
           "start": 1.62,
-          "end": 4.22
+          "end": 4.23
         },
         {
           "role": "meaning",
           "text": "蚊子",
           "language": "zh-TW",
-          "start": 4.67,
-          "end": 5.38
+          "start": 4.68,
+          "end": 5.39
         },
         {
           "role": "english-repeat",
           "text": "mosquito",
           "language": "en-US",
-          "start": 5.98,
-          "end": 7.0
+          "start": 5.99,
+          "end": 7.01
         }
       ],
-      "duration": 7.3,
+      "duration": 7.31,
       "bytes": 37225,
-      "signature": "c89f8215ba241c96190530375006294c8755ab5738f17cdbaef03a2f98a052d5",
-      "sha256": "447f7847da57a732f45cbb62fcd2b9357d933d2308deaaaf64ba59995c7e089d"
+      "signature": "9fc90ac34fee071412c4b674c934ae3347c70c9120cb1005c38821a317ecadd8",
+      "sha256": "800d5f9db7301687cac883582e690821a05b15216968beab2e4cad23eca1f409"
     },
     {
       "id": "fc-el-0315",
@@ -12626,30 +12626,30 @@
         },
         {
           "role": "cue",
-          "text": "看他老婆抱哈密瓜",
+          "text": "切開網紋瓜，裡面橙色果肉",
           "language": "zh-TW",
           "start": 1.59,
-          "end": 3.53
+          "end": 4.7
         },
         {
           "role": "meaning",
           "text": "哈密瓜",
           "language": "zh-TW",
-          "start": 3.98,
-          "end": 4.87
+          "start": 5.15,
+          "end": 6.04
         },
         {
           "role": "english-repeat",
           "text": "cantaloupe",
           "language": "en-US",
-          "start": 5.47,
-          "end": 6.46
+          "start": 6.64,
+          "end": 7.63
         }
       ],
-      "duration": 6.76,
-      "bytes": 34467,
-      "signature": "9df74eb984346650f1a9471876201e1fcee0470dd6f4509ba915ee913887c31d",
-      "sha256": "3bfb865f0cb58def9c4bec1e83e85dd2dbe4e4e084dde694ed0f5eb6920023c7"
+      "duration": 7.93,
+      "bytes": 40355,
+      "signature": "5ff7b27ccba781eb3c111608e6201430427cf70bb948f162f6f12066a807040a",
+      "sha256": "ab68a65a448617407fce2264be22ab1525901e7e8ca0d39c0f6e8f51462aafdc"
     },
     {
       "id": "fc-el-0330",
@@ -13757,30 +13757,30 @@
         },
         {
           "role": "cue",
-          "text": "愛是爬拉高，蘆筍往上長",
+          "text": "長長嫩莖，一把蘆筍",
           "language": "zh-TW",
           "start": 1.71,
-          "end": 4.61
+          "end": 4.08
         },
         {
           "role": "meaning",
           "text": "蘆筍",
           "language": "zh-TW",
-          "start": 5.06,
-          "end": 5.8
+          "start": 4.53,
+          "end": 5.28
         },
         {
           "role": "english-repeat",
           "text": "asparagus",
           "language": "en-US",
-          "start": 6.4,
-          "end": 7.51
+          "start": 5.88,
+          "end": 6.99
         }
       ],
-      "duration": 7.81,
-      "bytes": 39749,
-      "signature": "4e9f3834584727f7004b3e53962251ed9c1bafeb3488fc93af8a012b5b6b1cdb",
-      "sha256": "56dd547cf21018f08d9556e1a6cad82534d1fb32ed343f7a38aa3e822cee6dd9"
+      "duration": 7.29,
+      "bytes": 37105,
+      "signature": "bb07fdd5e77f5055d8cab2e0c8f1a20881ff4233b48a9a4c5a7aaa9cdf4d5d7c",
+      "sha256": "f02f1db7b71c93b7410262553596e586047b220174e38785a620fd96de43f757"
     },
     {
       "id": "fc-el-0364",
@@ -16838,30 +16838,30 @@
         },
         {
           "role": "cue",
-          "text": "剪刀嘶喳喳",
+          "text": "兩片刀刃交叉，剪刀剪紙",
           "language": "zh-TW",
           "start": 1.58,
-          "end": 2.95
+          "end": 4.41
         },
         {
           "role": "meaning",
           "text": "剪刀",
           "language": "zh-TW",
-          "start": 3.4,
-          "end": 4.11
+          "start": 4.86,
+          "end": 5.57
         },
         {
           "role": "english-repeat",
           "text": "scissors",
           "language": "en-US",
-          "start": 4.71,
-          "end": 5.69
+          "start": 6.17,
+          "end": 7.15
         }
       ],
-      "duration": 5.99,
-      "bytes": 30615,
-      "signature": "7b8319921d4a734d02a13b23a48934fa127b1fde662dd06416e1f53784368aec",
-      "sha256": "a8661ecad9181d288918f29e00b1db8985149e6467e76c16f83f7ec35259029a"
+      "duration": 7.45,
+      "bytes": 37947,
+      "signature": "9dd20915068ca5260155f0eaccbaf249b0073c427b148796528014c16adab99d",
+      "sha256": "a407bb77d7244ab6859ad96e75e7dc61eaff6b63921941ea6cbd28b030bb1397"
     },
     {
       "id": "fc-el-0451",
@@ -17930,30 +17930,30 @@
         },
         {
           "role": "cue",
-          "text": "頻頻拍手的校長",
+          "text": "校長 principal，在校門歡迎學生",
           "language": "zh-TW",
           "start": 1.48,
-          "end": 3.22
+          "end": 4.63
         },
         {
           "role": "meaning",
           "text": "校長",
           "language": "zh-TW",
-          "start": 3.67,
-          "end": 4.45
+          "start": 5.08,
+          "end": 5.86
         },
         {
           "role": "english-repeat",
           "text": "principal",
           "language": "en-US",
-          "start": 5.05,
-          "end": 5.93
+          "start": 6.46,
+          "end": 7.34
         }
       ],
-      "duration": 6.23,
-      "bytes": 31821,
-      "signature": "4d9d5f80f2dd5cb5e8fe2d54510b8a98d8541ddfc275e1c0d67a78ba3f1b93b0",
-      "sha256": "1b97456bdc9c51cd06b9c164de3cd24926ff9c57996061a3dfa1f11b1cfe930d"
+      "duration": 7.64,
+      "bytes": 38927,
+      "signature": "0c058477ba13e30bfb61457d6662746dc7b2854b9858df2391262bfca923933b",
+      "sha256": "ca6b5786c3cb66fe2a198a65b6a87798144d77bb9b7df8a09898d6033912b0b3"
     },
     {
       "id": "fc-el-0479",
@@ -17969,30 +17969,30 @@
         },
         {
           "role": "cue",
-          "text": "看心了，輔導老師懂你",
+          "text": "counsel 提建議，counselor 是輔導員",
           "language": "zh-TW",
           "start": 1.46,
-          "end": 4.01
+          "end": 4.73
         },
         {
           "role": "meaning",
           "text": "輔導老師",
           "language": "zh-TW",
-          "start": 4.46,
-          "end": 5.6
+          "start": 5.18,
+          "end": 6.32
         },
         {
           "role": "english-repeat",
           "text": "counselor",
           "language": "en-US",
-          "start": 6.2,
-          "end": 7.06
+          "start": 6.92,
+          "end": 7.78
         }
       ],
-      "duration": 7.36,
-      "bytes": 37471,
-      "signature": "42835b48e103dfc7489bc6a9708c56b1c1ea119c73ee5ec8194b9485df387fc6",
-      "sha256": "ba0d6a99466531e1fc7cff049a9f5f2f37064f9b377391da66f3f747ecc25281"
+      "duration": 8.08,
+      "bytes": 41103,
+      "signature": "f0d98f194febe71c679580ab319d5c08911004168700a823f78aed81b11b14dd",
+      "sha256": "67df3148157293af8335fc52cc99029be973b2a079374cae42cbeb70ee453ea0"
     },
     {
       "id": "fc-el-0480",
@@ -18125,30 +18125,30 @@
         },
         {
           "role": "cue",
-          "text": "說特費苦得，證書得來不易",
+          "text": "完成課程，拿到結業證書",
           "language": "zh-TW",
           "start": 1.7,
-          "end": 4.69
+          "end": 4.5
         },
         {
           "role": "meaning",
           "text": "獎狀，證書",
           "language": "zh-TW",
-          "start": 5.14,
-          "end": 6.74
+          "start": 4.95,
+          "end": 6.54
         },
         {
           "role": "english-repeat",
           "text": "certificate",
           "language": "en-US",
-          "start": 7.34,
-          "end": 8.44
+          "start": 7.14,
+          "end": 8.24
         }
       ],
-      "duration": 8.74,
-      "bytes": 44441,
-      "signature": "cb4d8cdb333702feeea976cdd90ee47dc3adfd2bf55ca3d026bb8fb448332b74",
-      "sha256": "2132b513342f294decf8d33975f3298d7ad0736203a6d7d02ba116be26f9eaa2"
+      "duration": 8.54,
+      "bytes": 43359,
+      "signature": "855e089b3ab1eb2b2d9210974d117e85d3dc05944b6acf95eb0ababba5ede553",
+      "sha256": "1c9ae71bd447239b82f51d50b9d8d0d58ac5afd436c188d6fa32d60e17721d4d"
     },
     {
       "id": "fc-el-0484",
@@ -19646,30 +19646,30 @@
         },
         {
           "role": "cue",
-          "text": "大腦不累，一直想",
+          "text": "腦袋思考，brain 大腦",
           "language": "zh-TW",
           "start": 1.31,
-          "end": 3.28
+          "end": 3.4
         },
         {
           "role": "meaning",
           "text": "大腦",
           "language": "zh-TW",
-          "start": 3.73,
-          "end": 4.36
+          "start": 3.85,
+          "end": 4.48
         },
         {
           "role": "english-repeat",
           "text": "brain",
           "language": "en-US",
-          "start": 4.96,
-          "end": 5.67
+          "start": 5.08,
+          "end": 5.79
         }
       ],
-      "duration": 5.97,
-      "bytes": 30495,
-      "signature": "e8c48b6daa91c0e4d36024706c6f01c456a35869a8287744ad05dbba1dd11b48",
-      "sha256": "c1416ddc3f3d8f5a47e48bea93ba44f980a8b73798a5341d6a215652eb3d233e"
+      "duration": 6.09,
+      "bytes": 31105,
+      "signature": "ac3d94c1572a0283cd1d6d141adce45b65830239e39e3c873861de9fb5ab2666",
+      "sha256": "109d99909b38c9c270110ca37f0501efb32d740fdcb5fcecc2a7b430e5f91d2f"
     },
     {
       "id": "fc-el-0523",
@@ -20465,30 +20465,30 @@
         },
         {
           "role": "cue",
-          "text": "擠一點擦在患處的藥膏",
+          "text": "把藥膏塗在皮膚患處",
           "language": "zh-TW",
           "start": 1.36,
-          "end": 3.68
+          "end": 3.57
         },
         {
           "role": "meaning",
           "text": "藥膏",
           "language": "zh-TW",
-          "start": 4.13,
-          "end": 4.81
+          "start": 4.02,
+          "end": 4.7
         },
         {
           "role": "english-repeat",
           "text": "ointment",
           "language": "en-US",
-          "start": 5.41,
-          "end": 6.17
+          "start": 5.3,
+          "end": 6.06
         }
       ],
-      "duration": 6.47,
-      "bytes": 33025,
-      "signature": "37caca5ffdf93d8f20cc1cda60226854704cfb3fdaf78ca406957fef274fd6b4",
-      "sha256": "b4382f0b78a5eeead005f4238d8026b48215c95590b37806fb3f32b620ff1ebb"
+      "duration": 6.36,
+      "bytes": 32423,
+      "signature": "1c8f9b44e7be7b509efea7f1b60fb9575ddeccf841df3a1beaa1d042f9cd7000",
+      "sha256": "a47530fc8f7c34bac64973f41fee0af239d9c6280e29e1eb66df7ee28f779a3d"
     },
     {
       "id": "fc-el-0546",
@@ -20816,30 +20816,30 @@
         },
         {
           "role": "cue",
-          "text": "病人要很有耐心地等",
+          "text": "patient 病人，也可以是有耐心的",
           "language": "zh-TW",
           "start": 1.38,
-          "end": 3.42
+          "end": 4.3
         },
         {
           "role": "meaning",
           "text": "病人",
           "language": "zh-TW",
-          "start": 3.87,
-          "end": 4.56
+          "start": 4.75,
+          "end": 5.45
         },
         {
           "role": "english-repeat",
           "text": "patient",
           "language": "en-US",
-          "start": 5.16,
-          "end": 5.94
+          "start": 6.05,
+          "end": 6.83
         }
       ],
-      "duration": 6.24,
-      "bytes": 31821,
-      "signature": "7dada1232265c6184288f7f7fe92fb15a06c90c4d1fc39f95a03590ef1f58302",
-      "sha256": "21dff30cf69fa8b874503ba510ff4f761ac9e919a6d989e5f4c1e9509ef22ba2"
+      "duration": 7.13,
+      "bytes": 36401,
+      "signature": "9324953db0422615a4bceda79e65c14d526984ef2c1c9d0f983656ba02e01c26",
+      "sha256": "921f177e7848f3ec77d93599480a972004d42f62637ad8708eee8aaf621af112"
     },
     {
       "id": "fc-el-0556",
@@ -20894,30 +20894,30 @@
         },
         {
           "role": "cue",
-          "text": "發麻些，去藥局買藥",
+          "text": "到 pharmacy 藥局領藥",
           "language": "zh-TW",
           "start": 1.6,
-          "end": 3.92
+          "end": 3.43
         },
         {
           "role": "meaning",
           "text": "藥局",
           "language": "zh-TW",
-          "start": 4.37,
-          "end": 5.15
+          "start": 3.88,
+          "end": 4.66
         },
         {
           "role": "english-repeat",
           "text": "pharmacy",
           "language": "en-US",
-          "start": 5.75,
-          "end": 6.75
+          "start": 5.26,
+          "end": 6.26
         }
       ],
-      "duration": 7.05,
-      "bytes": 35903,
-      "signature": "2d0a176ca3d4b98e630310124dcc4ce3a9fc87d094076f9a9b7b7d4010e5dbb3",
-      "sha256": "23d3f6f9c16d3f6208edb1a9bacff5c7bc2677bf81f7aa3654c21c4c45d1026a"
+      "duration": 6.56,
+      "bytes": 33515,
+      "signature": "2faf8a75017907bd4a2da43cd29506a64d5d8b95211adbeb667c4b71fa731a7a",
+      "sha256": "7d867a4143781b453efd14537ee127736eb24266fcff588aa750ca128c784e2b"
     },
     {
       "id": "fc-el-0558",
@@ -21752,30 +21752,30 @@
         },
         {
           "role": "cue",
-          "text": "鍋了扶，戴手套扶熱鍋",
+          "text": "五指手套 gloves，連指手套 mittens",
           "language": "zh-TW",
           "start": 1.39,
-          "end": 3.9
+          "end": 4.43
         },
         {
           "role": "meaning",
           "text": "手套",
           "language": "zh-TW",
-          "start": 4.35,
-          "end": 5.15
+          "start": 4.88,
+          "end": 5.68
         },
         {
           "role": "english-repeat",
           "text": "gloves",
           "language": "en-US",
-          "start": 5.75,
-          "end": 6.54
+          "start": 6.28,
+          "end": 7.07
         }
       ],
-      "duration": 6.84,
-      "bytes": 34821,
-      "signature": "13899bc8cc4e16a7cdb2f8152e43cd3e461ebe7a7539fb582135c45c3a237b89",
-      "sha256": "7cd81f6b4eacdbccedddaf148e255d61f04fba652d56bbd3465c64b65ee2f72d"
+      "duration": 7.37,
+      "bytes": 37609,
+      "signature": "96105065d286bfa468359a92414de2845db7e822c9ab7e9139c158dffed17a73",
+      "sha256": "bfeecb7d6fbcf8670549ca81966652dc5ab1dd803b7dc4c6f2170e325f4ee061"
     },
     {
       "id": "fc-el-0583",
@@ -22181,30 +22181,30 @@
         },
         {
           "role": "cue",
-          "text": "撐傘，俺不淋啦",
+          "text": "張開雨傘，擋住落下的雨",
           "language": "zh-TW",
           "start": 1.45,
-          "end": 3.39
+          "end": 4.08
         },
         {
           "role": "meaning",
           "text": "雨傘",
           "language": "zh-TW",
-          "start": 3.84,
-          "end": 4.57
+          "start": 4.53,
+          "end": 5.26
         },
         {
           "role": "english-repeat",
           "text": "umbrella",
           "language": "en-US",
-          "start": 5.17,
-          "end": 6.02
+          "start": 5.86,
+          "end": 6.71
         }
       ],
-      "duration": 6.32,
-      "bytes": 32299,
-      "signature": "cd00bf90d6aef59ff9300055ecbc65c4a67eaefdde8bbac4963c014f5d28fa80",
-      "sha256": "379acb40f37502cb360edd73107024f3a808d31f5b6901c85ff46743b3340bb6"
+      "duration": 7.01,
+      "bytes": 35787,
+      "signature": "e41e5b3d8d67d094d69bbdb08b1ca2778a8160a32a065793e6a043a6252083a7",
+      "sha256": "6b844e812a45d7d3ec1fcb4ef890c51f96c9ee0018c44bdfa0190d30066c07a4"
     },
     {
       "id": "fc-el-0596",
@@ -28616,30 +28616,30 @@
         },
         {
           "role": "cue",
-          "text": "整理好，噢乾淨哉",
+          "text": "分門別類，把東西整理好",
           "language": "zh-TW",
           "start": 1.65,
-          "end": 3.76
+          "end": 4.33
         },
         {
           "role": "meaning",
           "text": "整理，組織",
           "language": "zh-TW",
-          "start": 4.21,
-          "end": 5.74
+          "start": 4.78,
+          "end": 6.32
         },
         {
           "role": "english-repeat",
           "text": "organize",
           "language": "en-US",
-          "start": 6.34,
-          "end": 7.39
+          "start": 6.92,
+          "end": 7.97
         }
       ],
-      "duration": 7.69,
-      "bytes": 39147,
-      "signature": "84baab1490a8714e2c934e4d434fb3c0dce95f4bbf41ed6619a50260348829bd",
-      "sha256": "7c925b6887203b9401bc2e9965d770c0d257a11b9665761fe4f5731d3277d7aa"
+      "duration": 8.27,
+      "bytes": 42033,
+      "signature": "5fb546b1bde5f08198bdc0f2bb03e860d14ddff66079cea7ce7211ebe644f84d",
+      "sha256": "7ea05b0e1f84c9f1d64f20a3935e55f7b095c7df24529fe0e0242e4cd2937fe8"
     },
     {
       "id": "fc-el-0777",
@@ -31697,30 +31697,30 @@
         },
         {
           "role": "cue",
-          "text": "易使貧死，東西太昂貴",
+          "text": "價格 expensive 昂貴，cheap 便宜",
           "language": "zh-TW",
           "start": 1.7,
-          "end": 4.26
+          "end": 4.52
         },
         {
           "role": "meaning",
           "text": "昂貴的",
           "language": "zh-TW",
-          "start": 4.71,
-          "end": 5.55
+          "start": 4.97,
+          "end": 5.81
         },
         {
           "role": "english-repeat",
           "text": "expensive",
           "language": "en-US",
-          "start": 6.15,
-          "end": 7.25
+          "start": 6.41,
+          "end": 7.51
         }
       ],
-      "duration": 7.55,
-      "bytes": 38429,
-      "signature": "f1168420dbd16c2b34be2fe6da543f2e5f1ea2ab22ad602c8c52e2b71f0d985c",
-      "sha256": "2dbcdb3b45e35ad3da5277f45db4e6cae8e606b76c3f2abb7e62d442d9bb2134"
+      "duration": 7.81,
+      "bytes": 39777,
+      "signature": "08053ddba74ddaca954f340600920e5ef8a537bc2abd61ff7f4e8efcc2afbf07",
+      "sha256": "ef2938d81ecde793dd577a2c196b5fc3053a0a0d47bbe2f7675d7df9e09fad15"
     },
     {
       "id": "fc-el-0859",
@@ -33725,30 +33725,30 @@
         },
         {
           "role": "cue",
-          "text": "困難得像在地府苦了",
+          "text": "difficult 困難，easy 容易",
           "language": "zh-TW",
           "start": 1.47,
-          "end": 3.5
+          "end": 3.75
         },
         {
           "role": "meaning",
           "text": "困難繁瑣的",
           "language": "zh-TW",
-          "start": 3.95,
-          "end": 5.25
+          "start": 4.2,
+          "end": 5.5
         },
         {
           "role": "english-repeat",
           "text": "difficult",
           "language": "en-US",
-          "start": 5.85,
-          "end": 6.72
+          "start": 6.1,
+          "end": 6.97
         }
       ],
-      "duration": 7.02,
-      "bytes": 35791,
-      "signature": "e96bae884786cf7abf5d6c44db0d81a893fc06fb9ce93f979c56ba5309ca58a6",
-      "sha256": "b17e3d58094a7f31f04679a24aff42704833432651875ef97e18b514ba7af660"
+      "duration": 7.27,
+      "bytes": 37013,
+      "signature": "5c8ca0c3bdcb7ded6b9f051cc3562e4cbea9122aa8f63b226c086d8b6252062f",
+      "sha256": "19e50f921ccba100208abe5587bbec57c3cabc51629b7ea80c6b591db03265e8"
     },
     {
       "id": "fc-el-0911",
@@ -33803,30 +33803,30 @@
         },
         {
           "role": "cue",
-          "text": "普通的；超出普通才是非凡",
+          "text": "ordinary 普通，special 特別",
           "language": "zh-TW",
           "start": 1.57,
-          "end": 4.65
+          "end": 4.03
         },
         {
           "role": "meaning",
           "text": "普通尋常的",
           "language": "zh-TW",
-          "start": 5.1,
-          "end": 6.47
+          "start": 4.48,
+          "end": 5.86
         },
         {
           "role": "english-repeat",
           "text": "ordinary",
           "language": "en-US",
-          "start": 7.07,
-          "end": 8.04
+          "start": 6.46,
+          "end": 7.43
         }
       ],
-      "duration": 8.34,
-      "bytes": 42395,
-      "signature": "0c7c5f655216c4d98c62647db6969f7e6b768b027848cef5e91b9027ad23b968",
-      "sha256": "cec4f89c2f4b46fb4d600528acf2696e5f46f3c3bf62eda5d6532e3040aa4ed9"
+      "duration": 7.73,
+      "bytes": 39415,
+      "signature": "7075d76bef5051c03b7e749bd8c7f0f792f9839cd80e78ee7670290a8c6c9654",
+      "sha256": "6435b07f6548f9b5f4f1d80ca0d6e504dd3a7154eda4d852c96117ac22a9db47"
     },
     {
       "id": "fc-el-0913",
@@ -34388,30 +34388,30 @@
         },
         {
           "role": "cue",
-          "text": "中午陽光最暖",
+          "text": "時鐘十二點，正午 noon",
           "language": "zh-TW",
           "start": 1.33,
-          "end": 2.89
+          "end": 3.72
         },
         {
           "role": "meaning",
           "text": "正午十二點",
           "language": "zh-TW",
-          "start": 3.34,
-          "end": 4.58
+          "start": 4.17,
+          "end": 5.41
         },
         {
           "role": "english-repeat",
           "text": "noon",
           "language": "en-US",
-          "start": 5.18,
-          "end": 5.91
+          "start": 6.01,
+          "end": 6.74
         }
       ],
-      "duration": 6.21,
-      "bytes": 31695,
-      "signature": "c490889de27860c280ba17c9cdf3292957aac81d76da623221f9823948966a84",
-      "sha256": "e4588b09515c473570d66dbf61d4b9bf56db9e655ba0b7f7d87ec9e27db1a09a"
+      "duration": 7.04,
+      "bytes": 35909,
+      "signature": "4cfc142ce5c66a5c0218532af930814574b9cf4566fe87da5c84cdd115dc3af5",
+      "sha256": "e531cb9ab81526b617f172018e754fbed29368b25a66d32f95e1409a54071e97"
     },
     {
       "id": "fc-el-0928",
@@ -34739,16 +34739,16 @@
         },
         {
           "role": "cue",
-          "text": "看了等，看日曆等假期",
+          "text": "翻日曆，找到今天日期",
           "language": "zh-TW",
           "start": 1.46,
-          "end": 4.01
+          "end": 4.03
         },
         {
           "role": "meaning",
           "text": "日曆，月曆",
           "language": "zh-TW",
-          "start": 4.46,
+          "start": 4.48,
           "end": 5.93
         },
         {
@@ -34761,8 +34761,8 @@
       ],
       "duration": 7.69,
       "bytes": 39151,
-      "signature": "004df4bd9c7af0908dd1f01dee2b57d6afd1f9a1527eef83be364d4f888f2d01",
-      "sha256": "318e0e797ac9a56f1e38d771f54451ca014545a1f75be08f8f36e8f708e50bc5"
+      "signature": "7d405097c9416715522fdf89efc1a8ac6c7ab1e89706fd7387f096f63e95247a",
+      "sha256": "fd85c8661b6dbb97f10d67014135ba2147ea41940bd26ff3b5ca4cb2c3ccaf3b"
     },
     {
       "id": "fc-el-0937",
@@ -34778,30 +34778,30 @@
         },
         {
           "role": "cue",
-          "text": "一天的事排進時間表",
+          "text": "行程表列出時間和事情",
           "language": "zh-TW",
           "start": 1.58,
-          "end": 3.69
+          "end": 4.25
         },
         {
           "role": "meaning",
           "text": "時間表，日程",
           "language": "zh-TW",
-          "start": 4.14,
-          "end": 6.04
+          "start": 4.7,
+          "end": 6.6
         },
         {
           "role": "english-repeat",
           "text": "schedule",
           "language": "en-US",
-          "start": 6.64,
-          "end": 7.62
+          "start": 7.2,
+          "end": 8.18
         }
       ],
-      "duration": 7.92,
-      "bytes": 40231,
-      "signature": "3704c27485b3d4f97809c36663eb1a24bb325cc1a8be8433fea48c08bc37467c",
-      "sha256": "f3f8721e834e8486a8743dfb4cfc8aff58d8649b950189997cc747c5b825feee"
+      "duration": 8.48,
+      "bytes": 43113,
+      "signature": "6573a451ec81580288a72a7999e0b733cd182d5c9a13ec763c99bf10defd5d0c",
+      "sha256": "18679fcdd74e25d767ebb74d1b3f8090fa493371c8d587584862eed157a3aa01"
     },
     {
       "id": "fc-el-0938",
@@ -35324,30 +35324,30 @@
         },
         {
           "role": "cue",
-          "text": "能否說謊？從不！",
+          "text": "never 從不，always 總是",
           "language": "zh-TW",
           "start": 1.39,
-          "end": 3.37
+          "end": 3.66
         },
         {
           "role": "meaning",
           "text": "從不，絕不",
           "language": "zh-TW",
-          "start": 3.82,
-          "end": 5.33
+          "start": 4.11,
+          "end": 5.62
         },
         {
           "role": "english-repeat",
           "text": "never",
           "language": "en-US",
-          "start": 5.93,
-          "end": 6.72
+          "start": 6.22,
+          "end": 7.01
         }
       ],
-      "duration": 7.02,
-      "bytes": 35781,
-      "signature": "dfa8a2170810fe079ae599018485d093a3fb3ad3d0957877948ad4e0149dc1e4",
-      "sha256": "77387debe407f4c22c7fed745e02357a5f21ba85243809a5daacf29213f451e6"
+      "duration": 7.31,
+      "bytes": 37241,
+      "signature": "6be63c90c33ecb934b83794a5efe1462c2e3287ab144e63fcfc52930f38e07aa",
+      "sha256": "da9d6df703c473518e10d8dc20c502485c4f5e400ec397a0c082d650b3b7372d"
     },
     {
       "id": "fc-el-0952",
@@ -38873,30 +38873,30 @@
         },
         {
           "role": "cue",
-          "text": "把消息傳進來，資訊",
+          "text": "inform 告知，information 是資訊",
           "language": "zh-TW",
           "start": 1.74,
-          "end": 4.11
+          "end": 4.67
         },
         {
           "role": "meaning",
           "text": "資訊，消息",
           "language": "zh-TW",
-          "start": 4.56,
-          "end": 6.13
+          "start": 5.12,
+          "end": 6.69
         },
         {
           "role": "english-repeat",
           "text": "information",
           "language": "en-US",
-          "start": 6.73,
-          "end": 7.87
+          "start": 7.29,
+          "end": 8.43
         }
       ],
-      "duration": 8.17,
-      "bytes": 41555,
-      "signature": "13a61064cab1009c1cf37c9063aed5ca2884f8ec129f73dbdf0027a2fbe351bc",
-      "sha256": "159734f0a97d0069dd40b0850ecd97806f3d350dcb48a04f4302f26521a19d8d"
+      "duration": 8.73,
+      "bytes": 44347,
+      "signature": "558e52f7922d99fc385bcc167c965ca1ba4bd3719bdbdbb8008e06fdfd0866d1",
+      "sha256": "a718e133a60edfd34760ba99d1fec5db08cc68a531966caeac110a0e1ebad4f5"
     },
     {
       "id": "fc-jh-0052",

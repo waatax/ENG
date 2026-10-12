@@ -78,11 +78,11 @@ gorilla|k|哥力拉|哥力拉，猩猩大哥力氣大|大猩猩大哥捶胸，�
 chimpanzee|k|金盤子|金盤子上的香蕉，黑猩猩來拿|動物園裡，黑猩猩伸手從金盤子上拿走一根香蕉。|chim + pan + zee；口語 chimp|A chimpanzee is a smart ape.|黑猩猩是聰明的猿類。
 baboon|k|爸奔|狒狒爸爸奔過來|狒狒爸爸露出長牙奔過來，紅屁股好顯眼。|ba + boon：oo 念 /u/|The baboon lives in a group.|狒狒群居生活。
 sloth|c||慢吞吞的樹懶|樹懶倒掛在樹枝上，一小時才移動一點點。|slow（慢）→ sloth（懶惰、樹懶），兩字同源|The sloth moves very slowly.|樹懶移動得很慢。
-armadillo|k|阿嬤底樓|犰狳躲進阿嬤底樓|一隻穿盔甲的犰狳，縮成球滾進阿嬤家底樓。|arma（盔甲）+ dillo（小）：西班牙文「披甲的小傢伙」|An armadillo has a hard shell.|犰狳有堅硬的外殼。
+armadillo|i||穿甲的犰狳，身上有硬甲片|犰狳在地上走，背上甲片形成護甲，鼻子細長。|armadillo 犰狳；不是阿嬤住哪一樓|An armadillo has a hard shell.|犰狳有堅硬的外殼。
 platypus|c||扁平腳的鴨嘴獸|鴨嘴獸有鴨子嘴、扁平尾巴和蹼腳，會下蛋。|platy（扁平）+ pus（腳）：希臘文「扁腳」|The platypus lays eggs.|鴨嘴獸會下蛋。
 whale|k|威了|威了，鯨魚好威風|一頭鯨魚躍出海面，噴出水柱，好威風。|wh + ale：h 不發音；whale ↔ wail（哭嚎）同音|The whale is huge.|鯨魚很巨大。
 dolphin|k|逗粉|海豚表演逗粉絲|海豚跳過圈圈，把觀眾粉絲逗得哈哈笑。|dol + phin：ph 念 /f/|Dolphins are smart.|海豚很聰明。
-porpoise|k|泡泡|鼠海豚吐泡泡|圓頭的鼠海豚在船邊吐泡泡，背鰭像小三角。|por + poise；和 purpose（目的）拼法不同|A porpoise is smaller than a dolphin.|鼠海豚比海豚小。
+porpoise|d||porpoise 鼠海豚，短吻小型鯨豚|鼠海豚浮出水面，畫面強調短而圓鈍的吻部，不是一般長吻海豚。|porpoise 鼠海豚；dolphin 海豚，名稱和分類不相同|A porpoise is smaller than a dolphin.|鼠海豚比海豚小。
 shark|k|沙克|沙克，沙灘外有鯊魚|沙灘外的海面，一片三角背鰭劃過，是鯊魚。|sh + ark；中文「鯊」本身就近音|The shark has sharp teeth.|鯊魚有尖利的牙齒。
 octopus|c||八隻腳的章魚|章魚揮動八隻腳，吸盤吸住岩石。|octo（八）+ pus（腳）|An octopus has eight arms.|章魚有八隻腳。
 squid|k|四塊的|魷魚切成四塊的|烤魷魚切成四塊的，香味四溢。|squ + id|We had grilled squid.|我們吃了烤魷魚。

@@ -29,7 +29,7 @@ cocoa|l|可可|熱可可暖手心|冬天捧一杯熱可可，暖暖手心。|co 
 marker|l|麥克|麥克筆畫粗線|拿麥克筆在海報上畫出粗粗的線。|mark（記號）+ er：做記號的筆|Write with a red marker.|用紅色麥克筆寫。
 crayon|k|快染|蠟筆快染色|小朋友拿蠟筆快快染色，把太陽塗成橘色。|cray + on；crayons 常用複數|The child draws with crayons.|那孩子用蠟筆畫畫。
 chalk|k|巧克|巧克力棒？是白粉筆|老師手上的白粉筆，看起來就像一根白色巧克力棒。|ch + alk：l 不發音，像 talk|The teacher writes with chalk.|老師用粉筆寫字。
-scissors|k|嘶喳喳|剪刀嘶喳喳|剪刀剪過紙張，嘶喳喳一路剪開。|sci + ssors：c 不發音；恆為複數 a pair of scissors|Be careful with scissors.|使用剪刀要小心。
+scissors|i||兩片刀刃交叉，剪刀剪紙|一把剪刀的兩片刀刃交叉，正在剪開紙張。|scissors 通常複數；a pair of scissors 一把剪刀|Be careful with scissors.|使用剪刀要小心。
 glue|k|咕嚕|膠水咕嚕擠出來|一擠膠水瓶，咕嚕冒出一坨膠水黏住紙。|gl + ue：ue 念 /u/，像 blue|Use glue to stick the paper.|用膠水黏紙。
 tape|k|貼|膠帶一貼|撕一段膠帶，把海報貼上牆。|t + ape：裡面有 ape（猿）|I need some tape.|我需要一些膠帶。
 stapler|c||釘訂書針的工具|按下訂書機，咔一聲把紙訂好。|staple（訂書針）+ r：用訂書針的器具|Can I use your stapler?|我可以用你的訂書機嗎？
@@ -57,12 +57,12 @@ court|k|扣它|球場上扣它進籃|球員在球場上跳起，扣它一個灌�
 pool|k|撲通|撲通，跳進游泳池|撲通一聲，跳進游泳池，水花四濺。|p + oo + l；swimming pool 游泳池|Let's swim in the pool.|我們去泳池游泳吧。
 hall|k|吼|禮堂裡一吼有回音|在大禮堂裡一吼，聲音迴盪不停。|h + all：雙 l；hallway 走廊|The concert is in the hall.|音樂會在禮堂舉行。
 office|k|哦費事|哦費事，辦公室文件多|辦公室桌上文件一大疊，處理起來好費事。|of + fice：雙 f|My mom works in an office.|我媽媽在辦公室工作。
-principal|k|頻頻拍|頻頻拍手的校長|朝會上，校長頻頻拍手，為得獎的同學鼓掌。|prin + ci + pal：pal（朋友）結尾——校長是學生的朋友|The principal gave a speech.|校長發表了演講。
-counselor|k|看心了|看心了，輔導老師懂你|輔導老師耐心聽你說話，好像看進你的心了。|counsel（勸告）+ or：給建議的人|I talked to the school counselor.|我和學校輔導老師談過了。
+principal|i||校長 principal，在校門歡迎學生|校長站在校門口迎接學生，胸前有校長名牌。|principal 校長／主要的；principle 原則，注意字尾|The principal gave a speech.|校長發表了演講。
+counselor|c||counsel 提建議，counselor 是輔導員|學生坐在輔導室，輔導員傾聽並提供建議。|counsel 勸告／建議 + or；英式常拼 counsellor|I talked to the school counselor.|我和學校輔導老師談過了。
 librarian|c||管理圖書館的人|圖書館員把書一本本放回書架。|library 的 y 改成 i，再加 an：librarian 圖書館的人|The librarian helped me find a book.|圖書館員幫我找到一本書。
 uniform|c||同一種形式，制服|全班穿同一款制服，整齊一致。|uni（一）+ form（形式）|We wear uniforms at school.|我們在學校穿制服。
 diploma|k|得抱摟媽|拿到證書，得抱摟媽媽|畢業典禮上拿到畢業證書，第一件事就是抱摟媽媽。|di + plo + ma|She got her diploma.|她拿到畢業證書。
-certificate|k|說特費苦得|說特費苦得，證書得來不易|努力一整年，才換到一張獎狀證書，真是特費苦才得。|cer + tif + i + cate|I got a certificate for reading.|我得到一張閱讀獎狀。
+certificate|i||完成課程，拿到結業證書|學員完成課程後拿到印有姓名與課程名稱的證書。|certificate 證書；certify 證明，相關詞|I got a certificate for reading.|我得到一張閱讀獎狀。
 prize|k|派獎|派獎，派發獎品|頒獎台上派發獎品給第一名。|pr + ize；prize ↔ pries 同音|She won first prize.|她得了第一名。
 medal|k|美得|獎牌美得閃閃亮|一面金牌掛在脖子上，美得閃閃發亮。|med + al；medal ↔ meddle（干涉）同音|He won a gold medal.|他贏得一面金牌。
 trophy|k|托飛|托飛，托起獎盃|冠軍隊長托起獎盃，高興得像要飛起來。|tro + phy：ph 念 /f/|Our team won the trophy.|我們隊贏得獎盃。

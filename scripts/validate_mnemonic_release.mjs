@@ -38,8 +38,8 @@ for(const [i,g] of groups.entries()){
 }
 for(const c of cards)for(const f of c.families||[])assert.ok(groups.some(g=>g.id===f.id),c.word);
 
-for(const file of ['dist/mnemonics/index.html','dist/mnemonics/app.mjs','dist/roots/index.html','dist/roots/app.mjs'])assert.ok(fs.readFileSync(file,'utf8').includes('keyword6'),file+' cache tag');
-assert.ok(fs.readFileSync('dist/mnemonics/mnemonic_playlist.mjs','utf8').includes("AUDIO_VERSION='keyword6'"));
+for(const file of ['dist/mnemonics/index.html','dist/mnemonics/app.mjs','dist/roots/index.html','dist/roots/app.mjs'])assert.ok(fs.readFileSync(file,'utf8').includes('keyword6r2'),file+' cache tag');
+assert.ok(fs.readFileSync('dist/mnemonics/mnemonic_playlist.mjs','utf8').includes("AUDIO_VERSION='keyword6r2'"));
 function bytesIn(folder){return fs.readdirSync(folder,{withFileTypes:true}).reduce((sum,e)=>sum+(e.isDirectory()?bytesIn(path.join(folder,e.name)):fs.statSync(path.join(folder,e.name)).size),0);}
 const totalBytes=bytesIn('dist');assert.ok(totalBytes<1_000_000_000,'Static site exceeds conservative 1 GB hosting budget');
 console.log(JSON.stringify({cards:1000,cardMp3s:1000,cardParts:4000,families:500,familyMp3s:500,familyParts:familyAudio.records.reduce((n,r)=>n+r.parts.length,0),hashes:true,matchingText:true,totalBytes}));

@@ -2,11 +2,11 @@ night|k|奶特|夜晚喝奶特別多|半夜寶寶醒來喝奶，媽媽在月光�
 today|k|特地|今天特地來看你|朋友今天特地帶蛋糕來看你。|to（在）+ day（天）：古英文「在這一天」|What day is it today?|今天星期幾？
 yesterday|k|也是特地|昨天也是特地來|朋友今天特地來，昨天也是特地來，連來兩天。|yes + ter + day：yes 開頭；過去式提示字|I saw him yesterday.|我昨天看到他。
 tomorrow|k|頭麻了|明天考試，頭麻了|想到明天要考試，頭就麻了。|to + mor + row：一個 m、雙 r|See you tomorrow.|明天見。
-head|k|黑的|頭頂黑的，是頭髮|從上往下看，頭頂黑黑的一片頭髮。|ea 念 /ɛ/，像 bread；headache 頭痛|Wear a helmet on your head.|頭上要戴安全帽。
+head|i||帽子戴在 head 頭上|一個人把帽子戴到頭上，箭頭指向整個頭部。|head 頭；ea 念 /ɛ/；不要把黑的誤當詞義|Wear a helmet on your head.|頭上要戴安全帽。
 eye|k|愛|愛看的眼睛|孩子愛看書，兩隻眼睛沿著書頁移動。|e + y + e：兩個 e 像兩隻眼睛，y 像鼻子|Close your eyes.|閉上你的眼睛。
 ear|k|一耳|一耳聽，一耳出|左耳進右耳出，兩隻耳朵分別在頭的兩側。|ear 藏在 hear（聽）裡|Rabbits have long ears.|兔子有長耳朵。
 nose|k|鬧死|鼻子過敏，鬧死人|花粉季鼻子一直打噴嚏，鬧死人了。|nose ↔ knows 同音；no + se|My nose is runny.|我在流鼻水。
-mouth|k|貓嘶|貓嘶，貓張嘴巴嘶嘶叫|生氣的貓張大嘴巴，露出尖牙嘶嘶叫。|mou + th：th 要咬舌；複數 mouths|Open your mouth, please.|請張開嘴巴。
+mouth|i||張開 mouth 嘴巴，說一句話|一個人張嘴說話，箭頭指向嘴巴。|mouth 嘴巴；th 是無聲 /θ/，不是中文嘶|Open your mouth, please.|請張開嘴巴。
 hand|k|汗的|手心汗的|緊張時攤開手，手心汗的濕答答。|hand / hands；handbag、handshake|Raise your hand.|請舉手。
 foot|k|福特|福特車，腳踩油門|開福特汽車，一隻腳踩下油門。|單數 foot，複數 feet（oo 變 ee）|My foot hurts.|我的腳很痛。
 one|k|碗|一個碗|桌上只放一個碗，代表數字一。|one ↔ won（贏的過去式）同音|I have one brother.|我有一個哥哥。
@@ -92,7 +92,7 @@ rainbow|c||雨後的彎弓，彩虹|下過雨，天空出現一道彩色的彎�
 clock|k|咔啦|時鐘咔啦咔啦走|牆上的時鐘咔啦咔啦地走，指向三點。|c + lock：鎖 lock 前面加 c|The clock says seven.|時鐘顯示七點。
 lamp|k|藍泡|檯燈裝藍泡|書桌上的檯燈裝著藍色燈泡。|l + amp；lamp 燈具；light 光|Turn on the lamp.|打開檯燈。
 sofa|l|沙發|沙發軟綿綿|一家人窩在軟綿綿的沙發上看電視。|so + fa；重音在第一音節|The cat is on the sofa.|貓在沙發上。
-computer|k|看不透|電腦程式看不透|盯著電腦螢幕一行行程式碼，怎麼看都看不透。|com + put + er：把資料 put 進去計算|I do my homework on the computer.|我用電腦寫功課。
+computer|c||compute 計算，computer 是電腦|電腦螢幕正在計算數字，連結 compute 和 computer。|compute 計算 + r → computer；不把看不透當讀音|I do my homework on the computer.|我用電腦寫功課。
 box|k|八顆|盒子裝八顆蛋|打開紙盒，裡面裝著八顆雞蛋。|b + ox：ox（牛）前加 b；複數 boxes|The box is empty.|這個箱子是空的。
 bag|k|背個|背個包包出門|出門前背個包包，裝好手機和鑰匙。|b + ag；handbag 手提包|My bag is red.|我的包包是紅色的。
 cup|k|咖杯|咖杯，咖啡裝一杯|早上倒一杯熱咖啡，捧在手心。|c + up；cupboard 碗櫥（p 不發音）|A cup of tea, please.|請給我一杯茶。

@@ -4,10 +4,10 @@ firefly|c||會發火光的飛蟲|夏夜草叢裡，螢火蟲一閃一閃發著�
 grasshopper|c||草地上的跳跳者|蚱蜢在草地上一跳一跳，後腿長長的。|grass（草）+ hopp（hop 跳，字尾 p 重複）+ er（者）|The grasshopper jumps high.|蚱蜢跳得很高。
 cricket|k|可立刻|蟋蟀可立刻叫|夜一黑，草叢裡的蟋蟀立刻唧唧叫起來。|crick + et；cricket 也是板球|I hear a cricket at night.|我晚上聽到蟋蟀叫。
 mantis|k|蠻提|蠻提，螳螂提起雙刀|一隻綠色螳螂好蠻橫，高高提起鐮刀般的前腳。|man + tis；praying mantis 祈禱螳螂|The mantis has big front legs.|螳螂有大大的前腳。
-cockroach|k|可惡去|可惡去，趕走蟑螂|廚房裡竄出一隻蟑螂，大喊「可惡，去！」拿拖鞋追。|cock + roach；口語常簡稱 roach|I saw a cockroach in the kitchen.|我在廚房看到一隻蟑螂。
+cockroach|i||蟑螂爬過廚房，長觸角晃動|一隻蟑螂沿著廚房地板爬行，長觸角與扁平身體清楚可見。|cockroach 蟑螂；不要拆 cock 與 roach 猜詞義|I saw a cockroach in the kitchen.|我在廚房看到一隻蟑螂。
 beetle|k|鼻頭|甲蟲鼻頭長角|獨角仙甲蟲的鼻頭長著一根大角。|bee + tle：不是蜜蜂 bee；披頭四 Beatles 樂團名由它變化|The beetle has a hard back.|甲蟲有堅硬的背。
 ladybug|c||穿圓點裙的小姐蟲|紅底黑點的瓢蟲，像穿圓點裙的小姐。|lady（小姐）+ bug（蟲）|A ladybug is red with black spots.|瓢蟲是紅底黑點。
-mosquito|k|沒死騎頭|沒死騎頭，蚊子騎頭叮|一巴掌沒打死蚊子，牠又騎到頭上叮一口。|mos + qui + to；複數 mosquitoes|A mosquito bit me.|一隻蚊子叮了我。
+mosquito|i||蚊子叮皮膚，留下癢包|蚊子正在手臂上吸血，旁邊畫出一個紅色癢包。|mosquito 蚊子；複數 mosquitoes / mosquitos|A mosquito bit me.|一隻蚊子叮了我。
 wasp|k|我是怕|黃蜂飛來，我是怕|一隻黃蜂嗡嗡繞頭飛，我是真怕被螫。|w + asp|A wasp can sting you.|黃蜂會螫人。
 hornet|k|虎呢|虎呢，虎頭蜂快跑|山路上有人大喊「虎頭蜂呢！」大家拔腿就跑。|horn + et；比 wasp 更大的蜂|Hornets are dangerous.|虎頭蜂很危險。
 cicada|k|似開大|蟬叫似開大喇叭|夏天樹上的蟬齊聲叫，吵得似開大喇叭。|ci + ca + da；三音節，重音在中間|Cicadas sing in summer.|蟬在夏天鳴叫。
@@ -21,7 +21,7 @@ blackberry|c||黑色的莓果，黑莓|一串串黑亮的黑莓長在帶刺的�
 cranberry|c||鶴頭花的莓果，蔓越莓|蔓越莓的花像鶴頭，結出酸酸的紅色小果。|cran（鶴，來自 crane）+ berry（莓果）|I drink cranberry juice.|我喝蔓越莓汁。
 watermelon|c||多水的瓜，西瓜|切開大西瓜，紅色果肉滴著水。|water（水）+ melon（瓜）|Watermelon is sweet and juicy.|西瓜又甜又多汁。
 melon|k|美濃|美濃瓜，香甜瓜|切開一顆美濃瓜，香甜的味道飄滿整個廚房。|mel + on；watermelon 是多水的 melon|This melon is sweet.|這顆甜瓜很甜。
-cantaloupe|k|看他老婆|看他老婆抱哈密瓜|市場裡，看他老婆抱著一顆網紋哈密瓜笑。|can + ta + loupe：結尾 e 不發音|Cantaloupe is orange inside.|哈密瓜裡面是橘色的。
+cantaloupe|i||切開網紋瓜，裡面橙色果肉|一顆網紋瓜被切開，橙色果肉與中間種籽清楚可見。|cantaloupe 常指橙肉甜瓜；不把看他老婆作英文讀音|Cantaloupe is orange inside.|哈密瓜裡面是橘色的。
 pineapple|c||像松果的蘋果，鳳梨|鳳梨外皮像大松果，切開香甜。|pine（松，松果）+ apple（蘋果）|Pineapple is sour and sweet.|鳳梨酸酸甜甜的。
 papaya|k|爸派呀|爸派呀，切木瓜|爸爸切開木瓜，派給大家一人一塊。|pa + pa + ya：兩個 pa|Papaya is good for you.|木瓜對你有益。
 mango|l|芒果|芒果，芒果香|夏天的芒果黃澄澄，香甜多汁。|man + go；複數 mangoes 或 mangos|I like mango ice.|我喜歡芒果冰。
@@ -50,7 +50,7 @@ spinach|k|是拼吃|大力水手是拼吃菠菜|大力水手一打開菠菜罐�
 broccoli|k|不可離|綠花椰營養不可離|健康便當裡，綠花椰菜一朵一朵不可少。|broc + co + li：雙 c|I eat broccoli for dinner.|我晚餐吃花椰菜。
 cauliflower|c||開白花的菜，白花椰|一顆白花椰菜，像一大朵白色的花。|cauli（菜莖、甘藍）+ flower（花）|Cauliflower is white.|白花椰菜是白色的。
 celery|k|塞了你|芹菜絲塞了你牙縫|啃一口芹菜，纖維絲塞了你的牙縫。|cel + er + y|Celery is crunchy.|芹菜很脆。
-asparagus|k|愛是爬拉高|愛是爬拉高，蘆筍往上長|田裡的蘆筍一根根往上冒，又直又高。|a + spar + a + gus：四音節，重音在 spar|Asparagus is a green vegetable.|蘆筍是綠色蔬菜。
+asparagus|i||長長嫩莖，一把蘆筍|一把蘆筍放在砧板上，嫩莖與緊密尖端清楚可見。|asparagus 蘆筍；先跟英文音訊分辨音節，不用愛是爬拉高|Asparagus is a green vegetable.|蘆筍是綠色蔬菜。
 eggplant|c||像蛋的植物，茄子|早期的白茄子形狀像蛋，所以叫蛋形植物。|egg（蛋）+ plant（植物）|Eggplant is purple.|茄子是紫色的。
 zucchini|k|租給你|菜園租給你種櫛瓜|農場把一小塊菜園租給你，種出一排綠櫛瓜。|zuc + chi + ni：cch 念 /k/|Zucchini looks like a cucumber.|櫛瓜看起來像小黃瓜。
 pumpkin|k|胖噗金|胖噗金，胖胖的金南瓜|萬聖節門口放著一顆胖噗噗的金黃南瓜燈。|pump + kin|We carve a pumpkin.|我們雕刻南瓜。

@@ -40,7 +40,7 @@
       "width": 320,
       "pass": true,
       "detail": {
-        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+        "hero": "1,000 個不同單字 · 諧音聯想 665 張 · 外來語借音 37 張 · 英文同音 13 張 · 構詞拆字 222 張 · 對比聯想 21 張 · 情境圖像 42 張 · 每張都有拼字鉤子與例句"
       }
     },
     {
@@ -51,7 +51,7 @@
         "kinds": [
           {
             "value": "諧音聯想",
-            "n": 710
+            "n": 665
           },
           {
             "value": "外來語借音",
@@ -59,19 +59,19 @@
           },
           {
             "value": "英文同音",
-            "n": 12
+            "n": 13
           },
           {
             "value": "構詞拆字",
-            "n": 218
+            "n": 222
           },
           {
             "value": "對比聯想",
-            "n": 4
+            "n": 21
           },
           {
             "value": "情境圖像",
-            "n": 19
+            "n": 42
           }
         ],
         "sum": 1000
@@ -201,7 +201,7 @@
       "width": 390,
       "pass": true,
       "detail": {
-        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+        "hero": "1,000 個不同單字 · 諧音聯想 665 張 · 外來語借音 37 張 · 英文同音 13 張 · 構詞拆字 222 張 · 對比聯想 21 張 · 情境圖像 42 張 · 每張都有拼字鉤子與例句"
       }
     },
     {
@@ -212,7 +212,7 @@
         "kinds": [
           {
             "value": "諧音聯想",
-            "n": 710
+            "n": 665
           },
           {
             "value": "外來語借音",
@@ -220,19 +220,19 @@
           },
           {
             "value": "英文同音",
-            "n": 12
+            "n": 13
           },
           {
             "value": "構詞拆字",
-            "n": 218
+            "n": 222
           },
           {
             "value": "對比聯想",
-            "n": 4
+            "n": 21
           },
           {
             "value": "情境圖像",
-            "n": 19
+            "n": 42
           }
         ],
         "sum": 1000
@@ -346,7 +346,7 @@
       "width": 768,
       "pass": true,
       "detail": {
-        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+        "hero": "1,000 個不同單字 · 諧音聯想 665 張 · 外來語借音 37 張 · 英文同音 13 張 · 構詞拆字 222 張 · 對比聯想 21 張 · 情境圖像 42 張 · 每張都有拼字鉤子與例句"
       }
     },
     {
@@ -357,7 +357,7 @@
         "kinds": [
           {
             "value": "諧音聯想",
-            "n": 710
+            "n": 665
           },
           {
             "value": "外來語借音",
@@ -365,19 +365,19 @@
           },
           {
             "value": "英文同音",
-            "n": 12
+            "n": 13
           },
           {
             "value": "構詞拆字",
-            "n": 218
+            "n": 222
           },
           {
             "value": "對比聯想",
-            "n": 4
+            "n": 21
           },
           {
             "value": "情境圖像",
-            "n": 19
+            "n": 42
           }
         ],
         "sum": 1000
@@ -491,7 +491,7 @@
       "width": 1280,
       "pass": true,
       "detail": {
-        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+        "hero": "1,000 個不同單字 · 諧音聯想 665 張 · 外來語借音 37 張 · 英文同音 13 張 · 構詞拆字 222 張 · 對比聯想 21 張 · 情境圖像 42 張 · 每張都有拼字鉤子與例句"
       }
     },
     {
@@ -502,7 +502,7 @@
         "kinds": [
           {
             "value": "諧音聯想",
-            "n": 710
+            "n": 665
           },
           {
             "value": "外來語借音",
@@ -510,19 +510,19 @@
           },
           {
             "value": "英文同音",
-            "n": 12
+            "n": 13
           },
           {
             "value": "構詞拆字",
-            "n": 218
+            "n": 222
           },
           {
             "value": "對比聯想",
-            "n": 4
+            "n": 21
           },
           {
             "value": "情境圖像",
-            "n": 19
+            "n": 42
           }
         ],
         "sum": 1000
@@ -656,8 +656,8 @@
         "res": [
           {
             "method": "諧音聯想",
-            "expected": 710,
-            "count": 710,
+            "expected": 665,
+            "count": 665,
             "shown": 12,
             "allMatch": true
           },
@@ -670,29 +670,29 @@
           },
           {
             "method": "英文同音",
-            "expected": 12,
-            "count": 12,
+            "expected": 13,
+            "count": 13,
             "shown": 12,
             "allMatch": true
           },
           {
             "method": "構詞拆字",
-            "expected": 218,
-            "count": 218,
+            "expected": 222,
+            "count": 222,
             "shown": 12,
             "allMatch": true
           },
           {
             "method": "對比聯想",
-            "expected": 4,
-            "count": 4,
-            "shown": 4,
+            "expected": 21,
+            "count": 21,
+            "shown": 12,
             "allMatch": true
           },
           {
             "method": "情境圖像",
-            "expected": 19,
-            "count": 19,
+            "expected": 42,
+            "count": 42,
             "shown": 12,
             "allMatch": true
           }
@@ -708,11 +708,11 @@
       }
     },
     {
-      "name": "mnemonics: per-card play src ends audio-trio/ambulance.mp3?v=keyword6 and progresses >0.3s",
+      "name": "mnemonics: per-card play src ends audio-trio/ambulance.mp3?v=keyword6r2 and progresses >0.3s",
       "pass": true,
       "detail": {
-        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6",
-        "t": 0.320683,
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6r2",
+        "t": 0.31713,
         "paused": false,
         "button": "Ⅱ 暫停"
       }
@@ -728,7 +728,7 @@
       "name": "mnemonics: play-all starts at card 1 (ambulance) and highlights it",
       "pass": true,
       "detail": {
-        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6",
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6r2",
         "playing": "fc-el-0552",
         "others": 1,
         "status": "正在播放 · 第 1 / 1,000 張 · ambulance → 俺不能死，快叫救護車 → 救護車"
@@ -738,9 +738,9 @@
       "name": "mnemonics: play-all next moves to card 2 (family)",
       "pass": true,
       "detail": {
-        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/family.mp3?v=keyword6",
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/family.mp3?v=keyword6r2",
         "playing": "fc-el-0001",
-        "status": "正在播放 · 第 2 / 1,000 張 · family → 發米粒，全家一起吃飯 → 家庭、家人"
+        "status": "正在播放 · 第 2 / 1,000 張 · family → 一家人圍桌吃飯，就是 family → 家庭、家人"
       }
     },
     {
@@ -831,8 +831,8 @@
         "englishStart": 6.69,
         "startedAt": 6.64,
         "chineseEnd": 8.55,
-        "stoppedAt": 8.738,
-        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6"
+        "stoppedAt": 8.727,
+        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6r2"
       }
     },
     {
@@ -843,8 +843,8 @@
         "englishStart": 11.11,
         "startedAt": 11.06,
         "chineseEnd": 13.37,
-        "stoppedAt": 13.681,
-        "src": "http://127.0.0.1:8098/roots/audio/wf-003.mp3?v=keyword6"
+        "stoppedAt": 13.665,
+        "src": "http://127.0.0.1:8098/roots/audio/wf-003.mp3?v=keyword6r2"
       }
     },
     {
@@ -854,7 +854,7 @@
         "group": "wf-002",
         "member": "0",
         "word": "notebook",
-        "t": 4.216465,
+        "t": 4.23214,
         "button": "Ⅱ 暫停"
       }
     },
@@ -891,7 +891,7 @@
         "stored": {
           "step": 1,
           "reviews": 1,
-          "due": 1791885365249
+          "due": 1791897411613
         },
         "status": "已練習 1 次 · 下次 2026/10/13"
       }
@@ -900,7 +900,7 @@
       "name": "roots: play-all starts at wf-001, highlights group and speaking member",
       "pass": true,
       "detail": {
-        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6",
+        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6r2",
         "playing": "wf-001",
         "status": "正在播放 · 第 1 / 500 組 · 複合詞字族 board：板、木板"
       }
@@ -909,7 +909,7 @@
       "name": "roots: play-all next moves to wf-002",
       "pass": true,
       "detail": {
-        "src": "http://127.0.0.1:8098/roots/audio/wf-002.mp3?v=keyword6"
+        "src": "http://127.0.0.1:8098/roots/audio/wf-002.mp3?v=keyword6r2"
       }
     },
     {
@@ -930,50 +930,50 @@
       "name": "decode: 40 random trio MP3s decode with duration > 3 s",
       "pass": true,
       "detail": {
-        "min": 5.2,
-        "max": 7.91,
+        "min": 5.05,
+        "max": 7.98,
         "bad": [],
         "files": [
-          "question.mp3",
-          "mole.mp3",
-          "catch.mp3",
-          "hot.mp3",
-          "sheep.mp3",
-          "puppy.mp3",
-          "run.mp3",
-          "eyelash.mp3",
-          "math.mp3",
-          "dangerous.mp3",
-          "person.mp3",
-          "sick.mp3",
-          "canoe.mp3",
-          "unpack.mp3",
-          "chop.mp3",
-          "fig.mp3",
+          "smooth.mp3",
+          "headache.mp3",
+          "score.mp3",
+          "thin.mp3",
+          "eye.mp3",
+          "swan.mp3",
+          "swim.mp3",
+          "buy.mp3",
+          "towel.mp3",
+          "zebra.mp3",
+          "rainbow.mp3",
+          "nail.mp3",
+          "slice.mp3",
+          "terrible.mp3",
+          "weak.mp3",
+          "mushroom.mp3",
+          "plum.mp3",
+          "hat.mp3",
+          "highway.mp3",
+          "pier.mp3",
+          "fever.mp3",
+          "dinner.mp3",
+          "jellyfish.mp3",
+          "lentil.mp3",
+          "temple.mp3",
+          "sunset.mp3",
+          "tree.mp3",
+          "low.mp3",
           "candlelight.mp3",
-          "hallway.mp3",
-          "jaw.mp3",
-          "desk.mp3",
-          "gym.mp3",
-          "tomato.mp3",
-          "heel.mp3",
-          "planetarium.mp3",
-          "handsome.mp3",
-          "crayon.mp3",
-          "summer.mp3",
-          "blue.mp3",
-          "stripe.mp3",
-          "finger.mp3",
-          "bright.mp3",
-          "curious.mp3",
-          "freeway.mp3",
-          "eighth.mp3",
-          "tall.mp3",
-          "late.mp3",
-          "coconut.mp3",
-          "spotlight.mp3",
-          "dog.mp3",
-          "hand.mp3"
+          "moonlight.mp3",
+          "calm.mp3",
+          "sink.mp3",
+          "stormy.mp3",
+          "seldom.mp3",
+          "throw.mp3",
+          "glasses.mp3",
+          "cinema.mp3",
+          "bottle.mp3",
+          "marshmallow.mp3",
+          "blind.mp3"
         ]
       }
     },
@@ -982,49 +982,49 @@
       "pass": true,
       "detail": {
         "min": 13.35,
-        "max": 21.73,
+        "max": 22.22,
         "bad": [],
         "files": [
-          "wf-193.mp3",
-          "wf-141.mp3",
-          "wf-054.mp3",
-          "wf-454.mp3",
-          "wf-064.mp3",
-          "wf-090.mp3",
-          "wf-390.mp3",
-          "wf-060.mp3",
-          "wf-240.mp3",
-          "wf-396.mp3",
-          "wf-286.mp3",
-          "wf-317.mp3",
-          "wf-167.mp3",
-          "wf-321.mp3",
-          "wf-268.mp3",
-          "wf-490.mp3",
-          "wf-109.mp3",
-          "wf-006.mp3",
-          "wf-274.mp3",
-          "wf-038.mp3",
-          "wf-295.mp3",
-          "wf-003.mp3",
-          "wf-138.mp3",
-          "wf-345.mp3",
-          "wf-075.mp3",
-          "wf-018.mp3",
-          "wf-468.mp3",
-          "wf-427.mp3",
-          "wf-007.mp3",
-          "wf-099.mp3",
-          "wf-221.mp3",
-          "wf-222.mp3",
-          "wf-335.mp3",
-          "wf-073.mp3",
-          "wf-303.mp3",
-          "wf-289.mp3",
+          "wf-043.mp3",
+          "wf-034.mp3",
+          "wf-082.mp3",
           "wf-137.mp3",
-          "wf-144.mp3",
-          "wf-388.mp3",
-          "wf-117.mp3"
+          "wf-241.mp3",
+          "wf-009.mp3",
+          "wf-426.mp3",
+          "wf-060.mp3",
+          "wf-324.mp3",
+          "wf-478.mp3",
+          "wf-042.mp3",
+          "wf-253.mp3",
+          "wf-244.mp3",
+          "wf-413.mp3",
+          "wf-117.mp3",
+          "wf-344.mp3",
+          "wf-460.mp3",
+          "wf-029.mp3",
+          "wf-046.mp3",
+          "wf-128.mp3",
+          "wf-283.mp3",
+          "wf-423.mp3",
+          "wf-257.mp3",
+          "wf-259.mp3",
+          "wf-311.mp3",
+          "wf-173.mp3",
+          "wf-466.mp3",
+          "wf-077.mp3",
+          "wf-175.mp3",
+          "wf-062.mp3",
+          "wf-011.mp3",
+          "wf-405.mp3",
+          "wf-183.mp3",
+          "wf-222.mp3",
+          "wf-468.mp3",
+          "wf-170.mp3",
+          "wf-500.mp3",
+          "wf-382.mp3",
+          "wf-493.mp3",
+          "wf-230.mp3"
         ]
       }
     },

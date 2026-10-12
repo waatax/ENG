@@ -3,7 +3,7 @@ often|k|哦煩|哦煩，常常被唸好煩|媽媽常常提醒寫功課，「哦�
 sometimes|c||有些時候，有時|有些時候晴天、有些時候下雨，天氣不一定。|some（一些）+ times（次、時候）|Sometimes I walk to school.|有時我走路上學。
 seldom|k|雪冬|臺灣雪冬很少見|臺灣平地的冬天，很少見到下雪。|sel + dom|It seldom snows here.|這裡很少下雪。
 rarely|c||稀有地，幾乎不|稀有的流星雨，很少看得到。|rare（稀有的）+ ly|He rarely eats meat.|他很少吃肉。
-never|k|能否|能否說謊？從不！|有人問他能否作弊？他說：「從不！」|n + ever：not + ever，一次都沒有|I never tell lies.|我從不說謊。
+never|d||never 從不，always 總是|日曆上每一天都有打卡是總是，另一張沒有一次打卡是從不。|never 從不；ever 曾經／任何時候；不把能否當詞義|I never tell lies.|我從不說謊。
 once|c||一次，從 one 變來|只試一次就成功了，一次就好。|one（一）→ once（一次）；念 /wʌns/|I have been to Japan once.|我去過日本一次。
 twice|c||兩次，從 two 變來|一天刷牙兩次，早晚各一次。|two（二）→ twice（兩次）|I brush my teeth twice a day.|我一天刷牙兩次。
 thrice|c||三次，從 three 變來|敲門三次，咚咚咚。|three（三）→ thrice（三次）；口語多說 three times|He knocked thrice.|他敲了三次門。
@@ -94,7 +94,7 @@ software|d||軟體是程式，硬體是設備|電腦螢幕裡跑的程式是軟�
 device|k|得外送|裝置壞了得外送修|平板電子設備壞了，得外送去維修。|de + vice：vice 念 /vaɪs/；devise（設計）是動詞|Turn off your device.|關掉你的裝置。
 application|c||應用到手機上的程式|手機桌面上一個個應用程式，點開就能用。|apply（應用、申請）→ application；口語簡稱 app|I downloaded a new application.|我下載了一個新的應用程式。
 connect|c||綁在一起，連接|兩條線綁在一起，電就連通了。|con（一起）+ nect（綁、連）|Connect the two wires.|把兩條電線連起來。
-information|c||把消息傳進來，資訊|新聞把消息傳進每個人腦中。|inform（通知、告知）+ ation；不可數|I need more information.|我需要更多資訊。
+information|c||inform 告知，information 是資訊|老師告知活動時間，學生把這些資訊記在公告欄上。|inform + ation；information 不可數，一則資訊 a piece of information|I need more information.|我需要更多資訊。
 online|c||在線上的，線上|戴上耳機，在線上和同學開會。|on（在上面）+ line（線）|We have online classes.|我們上線上課程。
 digital|c||用數字表示的，數位|手錶不用指針，只用數字顯示時間。|digit（數字、手指）+ al（⋯的）|I have a digital camera.|我有一臺數位相機。
 environment|k|因為人們|環境好壞，因為人們|垃圾撿乾淨，河流變清澈，環境好壞都因為人們。|en + viron（環繞）+ ment：環繞我們的一切|We must protect the environment.|我們必須保護環境。
