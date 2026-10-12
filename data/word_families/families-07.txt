@@ -1,0 +1,50 @@
+r|luc/lum/lumin|光|luc、lum 是「光」|lucid=清晰的=luc 光 + id，透亮;illuminate=照亮=il 進 + lumin 光 + ate;luminous=發光的=lumin 光 + ous;translucent=半透明的=trans 穿透 + luc 光 + ent
+r|magn|大|magn 是「大」|magnify=放大=magn 大 + ify 使;magnificent=壯麗的=magni 大 + ficent 做出;magnitude=規模、震級=magn 大 + itude;magnate=大亨=magn 大 + ate 人
+r|man/manu/mani|手|man、manu 是「手」：manual 是用手操作|manual=手冊、手動的=manu 手 + al;manufacture=製造=manu 手 + fact 做 + ure;manuscript=手稿=manu 手 + script 寫;manage=管理=man 手 + age，用手駕馭;manicure=修指甲=mani 手 + cure 照顧;maneuver=操縱=man 手 + euver 做
+r|mar/mari|海|mar 是「海」：marine 是海洋的|marine=海洋的=mar 海 + ine;submarine=潛水艇=sub 下 + marine 海;maritime=海事的=mari 海 + time;mariner=水手=marin 海 + er 人;aquamarine=海藍寶石=aqua 水 + marine 海
+r|mater/matr|母親|mater 是「母親」|maternal=母親的=matern 母 + al;maternity=產婦的、母性=matern 母 + ity;matron=女舍監、護理長=matr 母 + on;matrix=矩陣、母體=matr 母 + ix
+r|pater/patr/patri|父親、祖國|pater 是「父親」，引申為「祖國」|paternal=父親的=patern 父 + al;patriot=愛國者=patri 祖國 + ot 人;patriotic=愛國的=patriot 愛國者 + ic;patron=贊助人=patr 父 + on，像父親般支持;paternity=父親身分=patern 父 + ity
+r|med/medi|中間|med 是「中間」：medium 是中等|medium=中等的、媒介=medi 中 + um;media=媒體=medi 中間傳遞;medieval=中世紀的=medi 中 + eval 時代;mediate=調停=medi 中 + ate;intermediate=中級的=inter 之間 + medi 中 + ate
+r|mem/memor|記憶|mem 是「記住」：memory 就是記憶|memory=記憶=memor 記 + y;memorize=背誦=memor 記 + ize;memorial=紀念的=memor 記 + ial;remember=記得=re 再 + member 記;memo=備忘錄=mem 記 + o
+r|ment|心智|ment 放在字根表示「心、想」|mental=心理的=ment 心 + al;mention=提到=ment 心想 + ion;comment=評論=com 一起 + ment 想;mentor=導師=源自《奧德賽》人物 Mentor，名字和 ment 想 同源
+r|merg/mers|沉、浸|merg 是「沉入水中」|merge=合併=merg 沉在一起 + e;emerge=浮現=e 出 + merge 沉;emergency=緊急情況=emerg 浮現 + ency;submerge=淹沒=sub 下 + merge 沉;immerse=沉浸=im 進 + merse 浸
+r|meter/metr|測量|meter 是「測量」：一公尺是量長度的單位|thermometer=溫度計=thermo 熱 + meter 量;diameter=直徑=dia 穿過 + meter 量;centimeter=公分=centi 百分之一 + meter 公尺;symmetry=對稱=sym 同 + metry 量;geometry=幾何=geo 地 + metry 量;barometer=氣壓計=baro 壓力 + meter 量
+r|migr|遷移|migr 是「遷移」|migrate=遷徙=migr 遷 + ate;immigrant=移民=im 進 + migr 遷 + ant 人;emigrate=移出=e 出 + migr 遷 + ate;migration=遷徙=migrate 遷徙 + ion
+r|min|小|min 是「小」：mini 就是迷你|minute=分鐘=min 小 + ute，小單位;minor=次要的=min 小 + or;minimum=最小值=min 小 + imum 最;miniature=縮小模型=mini 小 + ature;minimize=減到最小=minim 最小 + ize;diminish=減少=di 向下 + min 小 + ish
+r|mit/miss|送、放出|mit、miss 是「送出」|mission=任務=miss 送 + ion，被派出去;missile=飛彈=miss 送 + ile;submit=提交=sub 下 + mit 送;transmit=傳送=trans 越過 + mit 送;dismiss=解散、開除=dis 分開 + miss 送;admit=承認=ad 朝 + mit 送
+r|mob/mot/mov|移動|mov、mot 是「動」：motor 讓車子動|move=移動=mov 動 + e;motion=動作=mot 動 + ion;motor=馬達=mot 動 + or;mobile=可移動的=mob 動 + ile;remove=移除=re 離開 + move 動;promote=促進=pro 向前 + mote 動
+r|mon/monit|提醒、警告|mon 是「提醒」：monument 提醒人記住|monitor=監控、螢幕=monit 提醒 + or;monument=紀念碑=monu 提醒 + ment;summon=召喚=sum 下 + mon 提醒;admonish=告誡=ad 朝 + mon 提醒 + ish;premonition=預感=pre 先 + monit 警告 + ion
+r|mort|死亡|mort 是「死」|mortal=會死的=mort 死 + al;immortal=不朽的=im 不 + mortal 會死;mortgage=房貸=mort 死 + gage 抵押，還清才「死」掉;mortality=死亡率=mortal 會死的 + ity
+r|mult/multi|多|mult 是「多」|multiply=乘、增加=multi 多 + ply 摺;multiple=多重的=multi 多 + ple 摺;multitude=大量=multi 多 + tude 狀態;multimedia=多媒體=multi 多 + media 媒體
+r|mut|改變|mut 是「改變」|mutate=突變=mut 變 + ate;mutation=突變=mutate 突變 + ion;commute=通勤=com 完全 + mute 換，來回交換;mutual=互相的=mut 交換 + ual
+r|nat|出生|nat 是「出生」：native 是本地出生的|nation=國家=nat 出生 + ion，同出生的人;native=本地的=nat 生 + ive;natural=自然的=nat 生 + ural;nature=自然=nat 生 + ure;prenatal=產前的=pre 前 + nat 生 + al;international=國際的=inter 之間 + nation 國家 + al
+r|nav|船|nav 是「船」：navy 是船隊|navy=海軍=nav 船 + y;navigate=航行=navig 船 + ate;naval=海軍的=nav 船 + al;navigation=導航=navigate 航行 + ion
+r|neg|否定|neg 是「否、不」|negative=負面的=neg 否 + ative;neglect=忽略=neg 不 + lect 選;negate=否定=neg 否 + ate;negotiate=談判=neg 不 + otiate 閒暇，不得閒地談
+r|nom/nym/onym|名字|nom、nym 是「名」：synonym 是同名的字|nominate=提名=nomin 名 + ate;synonym=同義字=syn 同 + onym 名;antonym=反義字=ant 反 + onym 名;anonymous=匿名的=an 無 + onym 名 + ous;nominee=被提名人=nomin 名 + ee 被⋯者
+r|nov|新|nov 是「新」：novel 原指新奇的故事|novel=小說、新穎的=nov 新 + el;novelty=新奇=novel 新 + ty;innovate=創新=in 進 + nov 新 + ate;renovate=翻新=re 再 + nov 新 + ate;novice=新手=nov 新 + ice
+r|oper|工作|oper 是「工作」：operator 是操作的人|operate=操作、動手術=oper 工作 + ate;operation=手術、運作=operate 操作 + ion;cooperate=合作=co 一起 + operate 工作;opera=歌劇=oper 作品 + a;operator=操作員=operat 操作 + or 人
+r|ped/pede/pod|腳|ped 是「腳」：pedal 是腳踏板|pedal=踏板=ped 腳 + al;pedestrian=行人=pedestr 步行 + ian 人;centipede=蜈蚣=centi 百 + pede 腳;tripod=三腳架=tri 三 + pod 腳;expedition=遠征=ex 出 + ped 腳 + ition;podium=講台=pod 腳 + ium，站腳的台
+r|pel/puls|推、驅動|pel 是「推」：propel 是往前推|propel=推進=pro 向前 + pel 推;expel=驅逐=ex 出 + pel 推;repel=擊退=re 回 + pel 推;compel=強迫=com 完全 + pel 推;pulse=脈搏=puls 推動 + e;impulse=衝動=im 進 + pulse 推
+r|pend/pens|掛、秤重付錢|pend 是「掛」；pens 是「秤重付錢」|depend=依賴=de 下 + pend 掛;suspend=懸掛、暫停=sus 下 + pend 掛;pendant=墜子=pend 掛 + ant;pending=懸而未決的=pend 掛 + ing;expensive=昂貴的=ex 出 + pens 付錢 + ive;pension=退休金=pens 付錢 + ion
+r|pet/peat|追求、尋求|pet 是「追求」|compete=競爭=com 一起 + pete 追求;competition=比賽=compet 競爭 + ition;repeat=重複=re 再 + peat 追;appetite=食慾=ap 朝 + pet 追 + ite;petition=請願=pet 尋求 + ition
+r|phil/philo|愛|phil 是「愛」：philosophy 是愛智慧|philosophy=哲學=philo 愛 + sophy 智慧;philosopher=哲學家=philo 愛 + sopher 智者;philanthropy=慈善=phil 愛 + anthropy 人類
+r|phon/phone|聲音|phon 是「聲音」：telephone 是遠方的聲音|telephone=電話=tele 遠 + phone 聲;microphone=麥克風=micro 小 + phone 聲;symphony=交響樂=sym 一起 + phony 聲;phonics=自然發音法=phon 聲 + ics 學;saxophone=薩克斯風=saxo 薩克斯 + phone 聲;headphone=耳機=head 頭 + phone 聲
+r|photo|光|photo 是「光」：photograph 是用光畫的圖|photo=照片=photo 光;photograph=照片=photo 光 + graph 畫;photographer=攝影師=photograph 照片 + er 人;photosynthesis=光合作用=photo 光 + synthesis 合成;photocopy=影印=photo 光 + copy 複製
+r|plic/ply/ple|摺、重疊|plic、ply 是「摺、層層疊」|multiply=乘=multi 多 + ply 摺;reply=回覆=re 回 + ply 摺;complicated=複雜的=com 一起 + plic 摺 + ated;apply=應用=ap 朝 + ply 摺;imply=暗示=im 進 + ply 摺，把意思摺在裡面;simple=簡單的=sim 一 + ple 摺
+r|pon/pos/pose|放置|pos 是「放」：position 是放的位置|position=位置=pos 放 + ition;deposit=存款=de 下 + pos 放 + it;compose=作曲=com 一起 + pose 放;expose=暴露=ex 出 + pose 放;postpone=延後=post 後 + pone 放;opponent=對手=op 對著 + pon 放 + ent
+r|port|搬運、港口|port 是「搬運」：transport 是把貨物運過去；「港口」port 來自另一個拉丁字 portus，兩者不是同一個字|port=港口=port 港口，源自拉丁文 portus（和搬運的 portare 不同字）;airport=機場=air 空 + port 港;passport=護照=pass 通過 + port 港;transport=運輸=trans 越過 + port 搬;export=出口=ex 出 + port 搬;portable=可攜帶的=port 搬 + able 可;report=報告=re 回 + port 帶
+r|prim/prin|第一|prim 是「第一」：primary school 是第一階段的學校|primary=主要的、初級的=prim 第一 + ary;prime=主要的=prim 第一 + e;primitive=原始的=prim 最初 + itive;prince=王子=prin 第一 + ce;principal=校長=prin 第一 + cipal;principle=原則=prin 第一 + ciple
+r|psych|心靈|psych 是「心、靈魂」|psychology=心理學=psycho 心 + logy 學;psychologist=心理學家=psycholog 心理學 + ist 人;psychic=通靈的=psych 心靈 + ic;psychiatrist=精神科醫生=psych 心 + iatr 醫治 + ist 人
+r|quer/quest/quir|問、尋求|quest 是「尋求、問」：question 是問題|question=問題=quest 問 + ion;request=請求=re 再 + quest 問;quest=探索=quest 尋求;conquer=征服=con 完全 + quer 求得;inquire=詢問=in 進 + quire 問;require=需要=re 再 + quire 尋求
+r|rect|直、正|rect 是「直、正」：rectangle 有四個直角|correct=正確的=cor 完全 + rect 正;direct=直接的=di 分開 + rect 直;rectangle=長方形=rect 直 + angle 角;erect=豎立=e 出 + rect 直;rectify=改正=rect 正 + ify 使
+r|reg|統治、規則|reg 是「統治、規則」：regular 是照規則的|regular=規律的=reg 規則 + ular;region=區域=reg 統治 + ion，被管理的地方;regulate=管理=regul 規則 + ate;regime=政權=reg 統治 + ime;regal=帝王的=reg 王 + al
+r|rupt|破裂|rupt 是「破」：interrupt 是從中間打破|interrupt=打斷=inter 之間 + rupt 破;erupt=爆發=e 出 + rupt 破;bankrupt=破產=bank 銀行 + rupt 破;corrupt=腐敗=cor 完全 + rupt 破;abrupt=突然的=ab 離 + rupt 破;disrupt=擾亂=dis 分 + rupt 破
+r|sci|知道|sci 是「知道」：science 是知識|science=科學=sci 知 + ence;scientist=科學家=scient 知識 + ist 人;conscious=有意識的=con 完全 + sci 知 + ous;conscience=良心=con 完全 + sci 知 + ence;unconscious=無意識的=un 不 + conscious 有意識
+r|scop/scope|看|scope 是「看的器具」|microscope=顯微鏡=micro 小 + scope 看;telescope=望遠鏡=tele 遠 + scope 看;periscope=潛望鏡=peri 周圍 + scope 看;horoscope=星座運勢=horo 時辰 + scope 看;scope=範圍=scope 看得到的地方
+r|scrib/script|寫|scrib、script 是「寫」|describe=描述=de 下 + scribe 寫;subscribe=訂閱=sub 下 + scribe 寫，在下面簽名;script=劇本=script 寫;prescription=處方=pre 先 + script 寫 + ion;manuscript=手稿=manu 手 + script 寫;postscript=附筆=post 後 + script 寫
+r|sect/sec|切|sect 是「切」：insect 的身體分成一節一節|section=部分=sect 切 + ion;insect=昆蟲=in 進 + sect 切，身體分節;intersection=十字路口=inter 互相 + sect 切 + ion;dissect=解剖=dis 分 + sect 切;sector=部門=sect 切 + or
+r|sens/sent|感覺|sens、sent 是「感覺」|sense=感覺=sens 感 + e;sensitive=敏感的=sens 感 + itive;sensor=感應器=sens 感 + or;consent=同意=con 一起 + sent 感覺;sentiment=情感=senti 感 + ment;nonsense=胡說=non 無 + sense 意義
+r|sequ/secu/sue|跟隨|sequ 是「跟隨」：sequence 是一個跟著一個|sequence=順序=sequ 跟 + ence;consequence=後果=con 一起 + sequ 跟 + ence;sequel=續集=sequ 跟 + el;subsequent=隨後的=sub 下 + sequ 跟 + ent;pursue=追求=pur 向前 + sue 跟
+r|serv|服務、保存|serv 有兩個來源：serve、servant 是「服侍」，conserve、preserve 是「保存」|serve=服務=serv 服務 + e;servant=僕人=serv 服務 + ant 人;service=服務=serv 服務 + ice;conserve=保存=con 完全 + serve 保存;preserve=保存=pre 先 + serve 保存;reserve=預訂=re 回 + serve 保存
+r|sign|記號|sign 是「記號、標誌」|sign=標誌=sign 記號;signal=信號=sign 記號 + al;signature=簽名=sign 記號 + ature;design=設計=de 下 + sign 記號;assign=指派=as 朝 + sign 記號;significant=重要的=signi 記號 + ficant 做出
+r|simil/simul/sembl|相似、一起|simil 是「相似」：similar 就是相似的|similar=相似的=simil 相似 + ar;simulate=模擬=simul 相似 + ate;simultaneous=同時的=simul 一起 + taneous;assemble=集合=as 朝 + semble 一起;resemble=相像=re 再 + semble 相似

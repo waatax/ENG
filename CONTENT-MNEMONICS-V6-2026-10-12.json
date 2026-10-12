@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "editorialVersion": 6,
+  "cards": {
+    "total": 1000,
+    "methods": {
+      "諧音聯想": 710,
+      "外來語借音": 37,
+      "英文同音": 12,
+      "構詞拆字": 218,
+      "對比聯想": 4,
+      "情境圖像": 19
+    },
+    "uniqueCues": 1000,
+    "uniqueScenes": 1000,
+    "linkedToFamilies": 250,
+    "repeatedHooks": {},
+    "traditionalChinese": true,
+    "stableIdsAndOrder": true
+  },
+  "families": {
+    "total": 500,
+    "counts": {
+      "複合詞字族": 150,
+      "字首": 70,
+      "字尾": 60,
+      "字根": 220
+    },
+    "members": 2581,
+    "uniqueWords": 2242,
+    "linkedCardWords": 184,
+    "spellingRulesChecked": true,
+    "traditionalChinese": true
+  },
+  "notes": "Editorial and structural checks; not a learning-effect measurement or external teacher review."
+}

@@ -1,0 +1,67 @@
+r|lev/liev|舉起、輕|lev 是「舉起、變輕」：elevator 把人舉上去|elevator=電梯=e 出 + lev 舉 + ator;elevate=舉高=e 出 + lev 舉 + ate;relieve=減輕=re 再 + lieve 變輕;lever=槓桿=lev 舉 + er;relevant=相關的=re 再 + lev 舉起 + ant
+r|lingu/langu|舌頭、語言|lingu 是「舌頭」，引申為「語言」|language=語言=langu 舌 + age;linguist=語言學家=lingu 語言 + ist 人;bilingual=雙語的=bi 二 + lingu 語言 + al;linguistics=語言學=linguist 語言學家 + ics
+r|liter/letter|文字、字母|liter 是「字母」：literature 是用文字寫成的作品|literature=文學=liter 文字 + ature;literacy=識字能力=liter 文字 + acy;literal=字面的=liter 字 + al;illiterate=不識字的=il 不 + liter 字 + ate;literary=文學的=liter 文字 + ary
+r|long|長|long 是「長」|along=沿著=a 對著 + long 長，順著長邊;prolong=延長=pro 向前 + long 長;longitude=經度=longi 長 + tude;elongate=拉長=e 出 + long 長 + ate;longevity=長壽=long 長 + evity 壽命
+r|mand/mend|命令|mand 是「命令」：command 是下令|command=命令=com 完全 + mand 命令;demand=要求=de 完全 + mand 命令;mandatory=強制的=mand 命令 + atory;commander=指揮官=command 命令 + er 人;recommend=推薦=re 再 + com 完全 + mend 託付
+r|mech/mach|機器|mech、mach 是「機器」|machine=機器=mach 機器 + ine;machinery=機械=machine 機器 + ry;mechanic=技工=mech 機器 + anic 人;mechanical=機械的=mechanic 機械 + al;mechanism=機制=mechan 機器 + ism
+r|merc/merch|買賣|merc 是「交易」：merchant 是做買賣的人|commerce=商業=com 一起 + merce 交易;merchant=商人=merch 交易 + ant 人;merchandise=商品=merch 交易 + andise;commercial=商業的、廣告=commerc 商業 + ial;mercenary=傭兵=merc 交易 + enary，拿錢打仗
+r|nect/nex|連結|nect 是「綁、連」|connect=連接=con 一起 + nect 綁;disconnect=斷開=dis 分 + connect 連接;connection=連接=connect 連 + ion;connector=連接器=connect 連接 + or
+r|norm|規範|norm 是「標準、規範」|normal=正常的=norm 標準 + al;abnormal=不正常的=ab 偏離 + normal 正常;enormous=巨大的=e 出 + norm 標準 + ous，大到超出標準;norm=標準=norm 規範
+r|nounce/nunci|宣告、說出|nounce 是「說出、宣布」|announce=宣布=an 朝 + nounce 宣告;pronounce=發音=pro 出 + nounce 說;pronunciation=發音=pro 出 + nunci 說 + ation;denounce=譴責=de 下 + nounce 宣告;renounce=放棄=re 回 + nounce 宣告
+r|ord/ordin|順序|ord 是「順序」：order 是排好順序|order=順序、點餐=ord 順序 + er;ordinary=普通的=ordin 順序 + ary，照常規的;coordinate=協調=co 一起 + ordin 順序 + ate;subordinate=下屬=sub 下 + ordin 順序 + ate;extraordinary=非凡的=extra 超出 + ordinary 普通
+r|pac/peac/peas|和平|pac、peace 是「和平」|peace=和平=peac 和平 + e;peaceful=和平的=peace 和平 + ful;pacify=安撫=pac 和平 + ify;pacific=平靜的、太平洋的=pac 和平 + ific;appease=安撫=ap 朝 + pease 和平
+r|par/pair|相等|par 是「相等」：pair 是兩個一對|compare=比較=com 一起 + pare 相等;pair=一對=pair 相等的兩個;par=標準桿、同等=par 相等;parity=同等=par 相等 + ity;disparity=差距=dis 不 + parity 相等
+r|part|部分|part 是「部分」：apartment 是分隔出來的空間|part=部分=part 部分;partner=夥伴=part 部分 + ner，各出一部分;particle=微粒=parti 部分 + cle 小;depart=離開=de 離 + part 分;apartment=公寓=a 朝 + part 分 + ment;participate=參加=parti 部分 + cip 拿 + ate
+r|path/pass/pati|感受、受苦|path（希臘文）和 pass、pati（拉丁文）都是「感受、受苦」：patient 原意是能忍受痛苦的人；「通過」的 pass 是另一個字|sympathy=同情=sym 同 + pathy 感受;empathy=同理心=em 進入 + pathy 感受;apathy=冷漠=a 無 + pathy 感受;pathetic=可悲的=path 受苦 + etic;passion=熱情=pass 強烈感受 + ion;patient=病人、耐心的=pati 忍受 + ent
+r|phys|自然、身體|phys 是「自然、身體」|physics=物理學=phys 自然 + ics 學;physical=身體的=phys 身體 + ical;physician=內科醫生=phys 身體 + ician 人;physique=體格=phys 身體 + ique
+r|plet/plen/ple|滿|plet 是「填滿」：complete 是完全填滿|complete=完成=com 完全 + plete 滿;plenty=大量=plen 滿 + ty;deplete=耗盡=de 去 + plete 滿;supplement=補充=sup 下 + ple 滿 + ment;replenish=補充=re 再 + plen 滿 + ish
+r|polit/polis/poli|城市|polis 是「城邦」：police 管理城市治安|police=警察=poli 城市 + ce;politics=政治=polit 城邦 + ics;political=政治的=polit 城邦 + ical;metropolis=大都市=metro 母 + polis 城;policy=政策=poli 城 + cy
+r|popul/pub|人民|popul 是「人民」：population 是人口|population=人口=popul 人民 + ation;popular=受歡迎的=popul 人民 + ar;public=公眾的=pub 人民 + lic;publish=出版=publ 公開 + ish;populous=人口稠密的=popul 人民 + ous
+r|press|壓|press 是「壓」：pressure 是壓力|press=按壓=press 壓;pressure=壓力=press 壓 + ure;express=表達=ex 出 + press 壓;impress=使印象深刻=im 進 + press 壓;depress=使沮喪=de 下 + press 壓;compress=壓縮=com 一起 + press 壓
+r|prob/prov/proof|測試、證明|prob、prov 是「測試、證明」|prove=證明=prov 證明 + e;probe=探查=prob 測試 + e;probable=可能的=prob 證明 + able，值得相信;approve=贊成=ap 朝 + prove 證明;proof=證據=proof 證明
+r|punct|點|punct 是「點、刺」|punctual=守時的=punct 點 + ual;punctuation=標點=punct 點 + uation;puncture=刺穿=punct 刺 + ure;acupuncture=針灸=acu 針 + puncture 刺
+r|pur/purg|純淨|pur 是「純」：pure 就是純的|pure=純的=pur 純 + e;purify=淨化=pur 純 + ify;purity=純淨=pur 純 + ity;purge=清除=purg 淨化 + e
+r|put|思考、計算|put 是「想、計算」（不是「放」的 put）|compute=計算=com 一起 + pute 算;computer=電腦=compute 計算 + er 機器;dispute=爭論=dis 分 + pute 想;reputation=名聲=re 再 + put 想 + ation;deputy=代理人=de 離 + put 想 + y
+r|radi|光線、半徑|radi 是「射線」：radio 是射出的電波|radio=收音機=radi 射線 + o;radiation=輻射=radi 射線 + ation;radius=半徑=radi 射線 + us;radiant=容光煥發的=radi 光 + ant;radiator=暖氣機、散熱器=radiat 發散 + or
+r|sed/sid/sess|坐|sid 是「坐」：president 是坐在最前面的人|president=總統=pre 前 + sid 坐 + ent 人;resident=居民=re 回 + sid 坐 + ent 人;session=會議、講習=sess 坐 + ion;possess=擁有=pos 有權 + sess 坐;sediment=沉澱物=sedi 坐下 + ment;preside=主持=pre 前 + side 坐
+r|soci|同伴|soci 是「同伴、社會」|social=社會的=soci 同伴 + al;society=社會=soci 同伴 + ety;associate=聯合=as 朝 + soci 同伴 + ate;sociology=社會學=socio 社會 + logy 學;antisocial=反社會的=anti 反 + social 社會的
+r|spher/sphere|球|sphere 是「球」|sphere=球體=sphere 球;hemisphere=半球=hemi 半 + sphere 球;atmosphere=大氣層=atmo 氣 + sphere 球;biosphere=生物圈=bio 生命 + sphere 球;spherical=球形的=spher 球 + ical
+r|strict/string|拉緊|strict 是「拉緊」：strict 就是規矩拉得很緊|strict=嚴格的=strict 拉緊;restrict=限制=re 回 + strict 拉緊;district=區域=di 分 + strict 劃界;constrict=收縮、勒緊=con 一起 + strict 拉緊;restriction=限制=restrict 限制 + ion;stringent=嚴格的=string 拉緊 + ent
+r|techn|技術|techn 是「技術、工藝」|technology=科技=techno 技術 + logy 學;technique=技巧=techn 技術 + ique;technical=技術的=techn 技術 + ical;technician=技術員=technic 技術 + ian 人;polytechnic=理工學院=poly 多 + technic 技術
+r|ton/tun|聲調|ton 是「聲音、調子」|tone=音調=ton 調 + e;monotone=單調=mono 單 + tone 調;intonation=語調=in 進 + ton 調 + ation;tune=曲調=tun 調 + e;baritone=男中音=bari 重 + tone 音
+r|us/ut|使用|us 是「使用」：user 是使用的人|use=使用=us 用 + e;useful=有用的=use 用 + ful;user=使用者=us 用 + er 人;usage=用法=us 用 + age;utensil=器具=ut 用 + ensil;utility=公用事業=ut 用 + ility
+r|var|變化|var 是「變化」：various 是各式各樣|vary=變化=var 變 + y;various=各種的=vari 變 + ous;variety=多樣性=vari 變 + ety;variable=變數=vari 變 + able 可;variation=變化=vari 變 + ation
+r|verb|字、話|verb 是「字、話」|verb=動詞=verb 字;verbal=口頭的=verb 話 + al;adverb=副詞=ad 加在 + verb 動詞旁;proverb=諺語=pro 公開 + verb 話;verbatim=逐字的=verb 字 + atim
+r|vot/vow|誓願|vot 是「發誓、許願」|vote=投票=vot 誓願 + e;voter=選民=vote 投票 + r 人;devote=奉獻=de 完全 + vote 誓;devotion=奉獻=devot 奉獻 + ion;vow=誓言=vow 誓
+r|aer/aero|空氣|aero 是「空氣」|aerospace=航太=aero 空氣 + space 太空;aerobic=有氧的=aero 空氣 + bic 生命;aerial=空中的=aer 空氣 + ial;aerosol=噴霧=aero 空氣 + sol 溶液
+r|alt|高|alt 是「高」：altitude 是高度|altitude=海拔=alt 高 + itude;alto=女低音=alt 高，原指高聲部;altar=祭壇=alt 高台 + ar;exalt=讚揚=ex 出 + alt 高
+r|am/amor/ami|愛|am 是「愛」：amateur 是因為愛而做的人|amateur=業餘愛好者=am 愛 + ateur 人;amiable=友善的=ami 友愛 + able;amorous=多情的=amor 愛 + ous;amicable=友好的=ami 友愛 + cable
+r|anim|生命、心靈|anim 是「生命、呼吸」：animal 是有生命的|animal=動物=anim 生命 + al;animate=使有生氣=anim 生命 + ate;animation=動畫=animat 賦予生命 + ion;unanimous=全體一致的=un 一 + anim 心 + ous
+r|ann/enn|年|ann 是「年」：anniversary 是每年轉回來的日子|annual=每年的=ann 年 + ual;anniversary=週年紀念=anni 年 + versary 轉;annually=每年=annual 每年的 + ly;centennial=百年紀念=cent 百 + enn 年 + ial;millennium=千禧年=mill 千 + enn 年 + ium;biennial=兩年一次的=bi 二 + enn 年 + ial
+r|arch|統治、首領|arch 是「統治、首領」|monarch=君主=mon 單一 + arch 統治;anarchy=無政府狀態=an 無 + arch 統治 + y;architect=建築師=archi 首 + tect 工匠;hierarchy=階級制度=hier 神聖 + arch 統治 + y;patriarch=族長=patri 父 + arch 首領
+r|art|技藝|art 是「技藝」|art=藝術=art 技藝;artist=藝術家=art 技藝 + ist 人;artificial=人工的=arti 技藝 + fici 做 + al;artisan=工匠=art 技藝 + isan 人;artwork=藝術品=art 藝術 + work 作品
+r|clar/clear|清楚|clar 是「清楚」：clear 也同一家族|clear=清楚的=clear 清;clarify=澄清=clar 清 + ify;declare=宣布=de 完全 + clare 清楚;clarity=清晰=clar 清 + ity
+r|flam/flamm|火焰|flam 是「火焰」：flamingo 的羽毛像火焰|flame=火焰=flam 火 + e;flammable=易燃的=flamm 火 + able;inflammation=發炎=in 進 + flamm 火 + ation;flamingo=紅鶴=flam 火焰 + ingo，羽毛火紅
+r|frig/fridg|冷|frig 是「冷」|refrigerator=冰箱=re 再 + friger 冷 + ator 機器;refrigerate=冷藏=re 再 + frig 冷 + erate;frigid=寒冷的=frig 冷 + id;fridge=冰箱=fridg 冷，refrigerator 的縮寫
+r|leg/legis|法律|leg 是「法律」|legal=合法的=leg 法 + al;illegal=違法的=il 不 + legal 合法;legislate=立法=legis 法 + late 帶;legitimate=合法的=legit 法 + imate;privilege=特權=privi 個人 + lege 法
+r|medic/medi|醫治|medic 是「醫治」|medicine=藥=medic 醫治 + ine;medical=醫學的=medic 醫 + al;medication=藥物治療=medic 醫 + ation;paramedic=急救員、救護技術員=para 輔助 + medic 醫
+r|nom/nomy|法則、管理|nomy 是「法則、管理」（和 name 的 nom 不同源）|economy=經濟=eco 家 + nomy 管理;astronomy=天文學=astro 星 + nomy 規律;autonomy=自治=auto 自己 + nomy 法則;gastronomy=美食學=gastro 胃 + nomy 法則
+r|plu/plus/plur|更多|plus 是「更多」|plus=加上=plus 更多;plural=複數的=plur 多 + al;surplus=剩餘=sur 超過 + plus 更多;plurality=多數=plural 多 + ity
+r|sal|鹽|sal 是「鹽」：salary 和鹽有關，相傳古羅馬士兵領錢買鹽（此說未有定論）|salt=鹽=和拉丁文 sal 同源的英文字;salad=沙拉=sal 鹽 + ad，古代用鹽調味的生菜;salary=薪水=sal 鹽 + ary;saline=含鹽的=sal 鹽 + ine
+r|soph|智慧|soph 是「智慧」|philosophy=哲學=philo 愛 + sophy 智慧;sophisticated=複雜精密的=soph 智慧 + isticated;sophomore=大二學生=soph 聰明 + more 愚笨，常見的趣味說法是「半懂不懂」;philosopher=哲學家=philo 愛 + sopher 智者
+r|spond/spons|回應、承諾|spond 是「回應、承諾」|respond=回應=re 回 + spond 承諾;response=回應=re 回 + sponse 承諾;responsible=負責的=respons 回應 + ible;correspond=通信、相符=cor 一起 + respond 回應;sponsor=贊助者=spons 承諾 + or 人
+r|sume/sump|拿取|sume 是「拿取」|consume=消費=con 完全 + sume 拿;assume=假設=as 朝 + sume 拿;resume=恢復=re 再 + sume 拿;consumption=消耗=con 完全 + sump 拿 + tion;presume=推測=pre 先 + sume 拿
+r|vad/vas|走、去|vad 是「走」|invade=侵略=in 進 + vade 走;evade=逃避=e 出 + vade 走;invasion=侵略=in 進 + vas 走 + ion;pervasive=普遍的=per 穿過 + vas 走 + ive
+r|cur|關心、照顧|cur 也是「照顧、關心」：cure 是照顧到好|cure=治癒=cur 照顧 + e;curious=好奇的=cur 關心 + ious;secure=安全的=se 免於 + cure 擔心;accurate=精確的=ac 朝 + cur 小心 + ate;manicure=修指甲=mani 手 + cure 照顧;curator=策展人、館長=cur 照顧 + ator 人
+r|mount|山、登上|mount 是「山、登上」|mount=登上=mount 山;mountain=山=mount 山 + ain;amount=總數=a 朝 + mount 山，堆成山;paramount=最重要的=para 經過 + mount 山頂
+r|dyn/dynam|力量|dynam 是「力量」|dynamic=有活力的=dynam 力量 + ic;dynamite=炸藥=dynam 力量 + ite;dynasty=朝代=dyn 權力 + asty;dynamo=發電機=dynam 力量 + o
+r|electr|電|electr 是「電」|electric=電的=electr 電 + ic;electricity=電=electric 電的 + ity;electron=電子=electr 電 + on;electronic=電子的=electron 電子 + ic;electrician=電工=electric 電 + ian 人
+r|scend|爬|scend 是「爬」|descend=下降=de 下 + scend 爬;ascend=上升=a 朝 + scend 爬;transcend=超越=trans 越過 + scend 爬;descendant=後代=descend 下降 + ant 人
+r|hosp/host|客人、款待|hosp、host 是「客人、主人」：hospital 原是收容旅人的地方|hospital=醫院=hosp 款待 + ital;host=主人=host 主;hostess=女主人=host 主人 + ess 女;hospitality=好客=hospit 款待 + ality;hostel=青年旅舍=host 款待 + el
+r|carn|肉|carn 是「肉」|carnivore=肉食動物=carni 肉 + vore 吃;carnival=嘉年華=carn 肉 + ival，大齋期前告別吃肉;carnation=康乃馨=carn 肉色 + ation;reincarnation=轉世=re 再 + in 進 + carn 肉身 + ation
+r|flor/flour|花|flor 是「花」：flour 麵粉原意是「小麥的精華花」|florist=花商=flor 花 + ist 人;floral=花的=flor 花 + al;flora=植物群=flor 花 + a;flour=麵粉=flour 花，精華;flourish=繁榮=flour 開花 + ish
+r|dorm|睡|dorm 是「睡」|dormitory=宿舍=dorm 睡 + itory 場所;dorm=宿舍=dorm 睡;dormant=休眠的=dorm 睡 + ant;dormouse=睡鼠=dor 睡 + mouse 鼠
+r|opt|眼睛、視覺|opt 是「看、眼睛」|optical=光學的=opt 看 + ical;optician=眼鏡商=opt 眼 + ician 人;optic=視覺的=opt 看 + ic;optometrist=驗光師=opto 眼 + metr 量 + ist 人
+r|rot|輪、轉|rot 是「輪子、轉動」|rotate=旋轉=rot 轉 + ate;rotation=旋轉、輪替=rotat 轉 + ion;rotary=旋轉的=rot 轉 + ary;rotor=旋翼=rot 轉 + or
+r|tox/toxic|毒|tox 是「毒」|toxic=有毒的=tox 毒 + ic;toxin=毒素=tox 毒 + in;detox=排毒=de 去 + tox 毒;intoxicate=使醉=in 進 + toxic 毒 + ate
+r|mir/mar|驚奇、看|mir 是「驚奇、看」：mirror 讓你看見自己|admire=欣賞=ad 朝 + mire 驚奇;miracle=奇蹟=mir 驚奇 + acle;mirror=鏡子=mirr 看 + or;mirage=海市蜃樓=mir 看 + age;marvel=奇蹟=mar 驚奇 + vel

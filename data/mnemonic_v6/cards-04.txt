@@ -1,0 +1,100 @@
+caterpillar|k|可得皮了|可得皮了，毛毛蟲要脫皮|毛毛蟲吃飽長大，可得脫一層皮了。|cat + er + pil + lar：拼字裡藏著 cat 和 pillar|The caterpillar becomes a butterfly.|毛毛蟲變成蝴蝶。
+moth|k|莫死|飛蛾撲火，莫死|一隻蛾繞著燈火飛，好想喊牠「莫死」。|mo + th；mother 去掉 er 就是 moth|A moth flies around the lamp.|一隻蛾繞著燈飛。
+firefly|c||會發火光的飛蟲|夏夜草叢裡，螢火蟲一閃一閃發著光。|fire（火）+ fly（飛蟲）|Fireflies glow at night.|螢火蟲在夜晚發光。
+grasshopper|c||草地上的跳跳者|蚱蜢在草地上一跳一跳，後腿長長的。|grass（草）+ hopp（hop 跳，字尾 p 重複）+ er（者）|The grasshopper jumps high.|蚱蜢跳得很高。
+cricket|k|可立刻|蟋蟀可立刻叫|夜一黑，草叢裡的蟋蟀立刻唧唧叫起來。|crick + et；cricket 也是板球|I hear a cricket at night.|我晚上聽到蟋蟀叫。
+mantis|k|蠻提|蠻提，螳螂提起雙刀|一隻綠色螳螂好蠻橫，高高提起鐮刀般的前腳。|man + tis；praying mantis 祈禱螳螂|The mantis has big front legs.|螳螂有大大的前腳。
+cockroach|k|可惡去|可惡去，趕走蟑螂|廚房裡竄出一隻蟑螂，大喊「可惡，去！」拿拖鞋追。|cock + roach；口語常簡稱 roach|I saw a cockroach in the kitchen.|我在廚房看到一隻蟑螂。
+beetle|k|鼻頭|甲蟲鼻頭長角|獨角仙甲蟲的鼻頭長著一根大角。|bee + tle：不是蜜蜂 bee；披頭四 Beatles 樂團名由它變化|The beetle has a hard back.|甲蟲有堅硬的背。
+ladybug|c||穿圓點裙的小姐蟲|紅底黑點的瓢蟲，像穿圓點裙的小姐。|lady（小姐）+ bug（蟲）|A ladybug is red with black spots.|瓢蟲是紅底黑點。
+mosquito|k|沒死騎頭|沒死騎頭，蚊子騎頭叮|一巴掌沒打死蚊子，牠又騎到頭上叮一口。|mos + qui + to；複數 mosquitoes|A mosquito bit me.|一隻蚊子叮了我。
+wasp|k|我是怕|黃蜂飛來，我是怕|一隻黃蜂嗡嗡繞頭飛，我是真怕被螫。|w + asp|A wasp can sting you.|黃蜂會螫人。
+hornet|k|虎呢|虎呢，虎頭蜂快跑|山路上有人大喊「虎頭蜂呢！」大家拔腿就跑。|horn + et；比 wasp 更大的蜂|Hornets are dangerous.|虎頭蜂很危險。
+cicada|k|似開大|蟬叫似開大喇叭|夏天樹上的蟬齊聲叫，吵得似開大喇叭。|ci + ca + da；三音節，重音在中間|Cicadas sing in summer.|蟬在夏天鳴叫。
+centipede|c||一百隻腳的蜈蚣|蜈蚣扭著身子爬，兩側長滿一排排腳。|centi（百）+ pede（腳）|A centipede has many legs.|蜈蚣有很多腳。
+scorpion|k|是可怕|真是可怕！蠍子翹毒尾|沙漠裡一隻蠍子高高翹起毒尾，真是可怕。|scor + pi + on|A scorpion has a long tail.|蠍子有長長的尾巴。
+spider|k|絲擺的|蜘蛛絲擺的網|蜘蛛吐絲擺出一張大網，等蟲飛進來。|spi + der；spider web 蜘蛛網|The spider makes a web.|蜘蛛結網。
+strawberry|c||鋪稻草的莓果，草莓|草莓田裡鋪著稻草，紅草莓躺在上面。|straw（稻草）+ berry（莓果）|I love strawberry ice cream.|我愛草莓冰淇淋。
+blueberry|c||藍色的莓果，藍莓|一小盒藍莓，顆顆藍紫色。|blue（藍）+ berry（莓果）|Blueberries are good for your eyes.|藍莓對眼睛好。
+raspberry|c||粒粒紅莓果，覆盆莓|一顆顆由小圓粒組成的紅色覆盆莓。|rasp + berry：p 不發音，念 /ˈræzbɛri/|She made raspberry jam.|她做了覆盆莓果醬。
+blackberry|c||黑色的莓果，黑莓|一串串黑亮的黑莓長在帶刺的枝上。|black（黑）+ berry（莓果）|Blackberries are dark purple.|黑莓是深紫色的。
+cranberry|c||鶴頭花的莓果，蔓越莓|蔓越莓的花像鶴頭，結出酸酸的紅色小果。|cran（鶴，來自 crane）+ berry（莓果）|I drink cranberry juice.|我喝蔓越莓汁。
+watermelon|c||多水的瓜，西瓜|切開大西瓜，紅色果肉滴著水。|water（水）+ melon（瓜）|Watermelon is sweet and juicy.|西瓜又甜又多汁。
+melon|k|美濃|美濃瓜，香甜瓜|切開一顆美濃瓜，香甜的味道飄滿整個廚房。|mel + on；watermelon 是多水的 melon|This melon is sweet.|這顆甜瓜很甜。
+cantaloupe|k|看他老婆|看他老婆抱哈密瓜|市場裡，看他老婆抱著一顆網紋哈密瓜笑。|can + ta + loupe：結尾 e 不發音|Cantaloupe is orange inside.|哈密瓜裡面是橘色的。
+pineapple|c||像松果的蘋果，鳳梨|鳳梨外皮像大松果，切開香甜。|pine（松，松果）+ apple（蘋果）|Pineapple is sour and sweet.|鳳梨酸酸甜甜的。
+papaya|k|爸派呀|爸派呀，切木瓜|爸爸切開木瓜，派給大家一人一塊。|pa + pa + ya：兩個 pa|Papaya is good for you.|木瓜對你有益。
+mango|l|芒果|芒果，芒果香|夏天的芒果黃澄澄，香甜多汁。|man + go；複數 mangoes 或 mangos|I like mango ice.|我喜歡芒果冰。
+guava|k|瓜瓦|瓜瓦，芭樂落瓦上|一顆綠芭樂從樹上掉下，落在瓦片上。|gu + a + va；臺灣常叫芭樂|Guava is popular in Taiwan.|芭樂在臺灣很受歡迎。
+peach|k|皮去|桃子皮去掉|把桃子的絨毛皮去掉，露出甜甜果肉。|pea + ch：和 teach 同韻|This peach is soft.|這顆桃子很軟。
+pear|h||一對梨子，同音不同字|盤子裡一對（pair）梨子（pear）並排放。|pear ↔ pair（同音 /pɛr/）；梨子有 ea|I eat a pear after dinner.|我晚餐後吃一顆梨子。
+plum|k|撲爛|李子掉地撲爛|熟透的紫李子從樹上掉下，撲一聲摔爛。|pl + um；prune 是李子乾（加州梅），不是梅乾|The plum is purple.|李子是紫色的。
+cherry|k|車裡|車裡一盒紅櫻桃|出遊時，車裡放著一盒紅通通的櫻桃，大家邊坐車邊吃。|cher + ry：雙 r；cherry blossom 櫻花|The cake has a cherry on top.|蛋糕上有一顆櫻桃。
+lemon|l|檸檬|檸檬酸溜溜|切一片檸檬放進嘴裡，酸得皺眉。|lem + on；lemonade 檸檬汁|Lemons are sour.|檸檬是酸的。
+lime|l|萊姆|萊姆綠綠小檸檬|萊姆像綠色小檸檬，擠在飲料裡。|l + ime；和 time 同韻|Add some lime juice.|加一點萊姆汁。
+grapefruit|c||一串串像葡萄的水果，葡萄柚|葡萄柚在樹上一串串長，像葡萄。|grape（葡萄）+ fruit（水果）|Grapefruit is a bit bitter.|葡萄柚有點苦。
+kiwi|l|奇異|奇異果，奇異好吃|切開毛茸茸的奇異果，綠色果肉配黑籽。|ki + wi；kiwi 也是紐西蘭的鳥|Kiwis are green inside.|奇異果裡面是綠色的。
+avocado|k|阿婆可多|阿婆可多，酪梨種好多|阿婆的果園種了好多酪梨，一顆顆像綠色的大梨。|a + vo + ca + do|Avocado toast is popular.|酪梨吐司很受歡迎。
+coconut|k|口渴難|口渴難耐，喝椰子水|海邊口渴難耐，剖開椰子大口喝椰子水。|coco + nut：nut 堅果|Coconut water is sweet.|椰子水很甜。
+pomegranate|c||多籽的果，石榴|剝開石榴，滿滿紅寶石般的籽。|pome（果）+ granate（多籽）：拉丁文「多籽的果」|A pomegranate has many seeds.|石榴有很多籽。
+fig|k|費解|沒見花就結果，費解|無花果看不見花就長出果實，真令人費解。|f + ig；dried figs 無花果乾|Figs are sweet and soft.|無花果又甜又軟。
+apricot|k|愛不可得|杏桃季短，愛不可得|杏桃產季很短，想吃卻常常買不到。|a + pri + cot：結尾 cot（嬰兒床）|Dried apricots are sweet.|杏桃乾很甜。
+carrot|k|克拉|一克拉換胡蘿蔔|兔子拿一克拉鑽石，換一根橘色胡蘿蔔。|car + rot：雙 r；carrot ↔ carat（克拉）近音|Rabbits like carrots.|兔子喜歡胡蘿蔔。
+onion|k|俺眼|切洋蔥，俺眼流淚|一切洋蔥，俺眼淚直流。|on + ion；o 念 /ʌ/|Onions make me cry.|洋蔥讓我流淚。
+garlic|k|咖哩可|咖哩可加大蒜|煮咖哩可加大蒜，蒜香四溢。|gar + lic|Garlic smells strong.|大蒜味道很重。
+ginger|k|薑汁|薑汁暖身|冬天喝一杯熱薑汁，全身暖起來。|gin + ger：兩個 g 都念 /dʒ/|Ginger tea is warm.|薑茶很暖。
+cucumber|k|球棍棒|黃瓜像根球棍棒|一根長長的綠黃瓜，像一根小球棍棒。|cu + cum + ber|I put cucumber in my salad.|我在沙拉裡加小黃瓜。
+cabbage|k|開包擠|開包擠，高麗菜葉層層擠|剝開高麗菜，葉子一層一層緊緊包擠在一起。|cab + bage：雙 b|Cabbage soup is healthy.|高麗菜湯很健康。
+lettuce|k|來特鮮|來特鮮，萵苣特新鮮|菜販捧來一顆萵苣，葉子脆綠特新鮮。|let + tuce：雙 t|Put some lettuce in the sandwich.|在三明治裡放一些萵苣。
+spinach|k|是拼吃|大力水手是拼吃菠菜|大力水手一打開菠菜罐頭，拚命吃，手臂馬上變粗。|spin + ach：spin（旋轉）+ ach|Spinach is good for you.|菠菜對你有益。
+broccoli|k|不可離|綠花椰營養不可離|健康便當裡，綠花椰菜一朵一朵不可少。|broc + co + li：雙 c|I eat broccoli for dinner.|我晚餐吃花椰菜。
+cauliflower|c||開白花的菜，白花椰|一顆白花椰菜，像一大朵白色的花。|cauli（菜莖、甘藍）+ flower（花）|Cauliflower is white.|白花椰菜是白色的。
+celery|k|塞了你|芹菜絲塞了你牙縫|啃一口芹菜，纖維絲塞了你的牙縫。|cel + er + y|Celery is crunchy.|芹菜很脆。
+asparagus|k|愛是爬拉高|愛是爬拉高，蘆筍往上長|田裡的蘆筍一根根往上冒，又直又高。|a + spar + a + gus：四音節，重音在 spar|Asparagus is a green vegetable.|蘆筍是綠色蔬菜。
+eggplant|c||像蛋的植物，茄子|早期的白茄子形狀像蛋，所以叫蛋形植物。|egg（蛋）+ plant（植物）|Eggplant is purple.|茄子是紫色的。
+zucchini|k|租給你|菜園租給你種櫛瓜|農場把一小塊菜園租給你，種出一排綠櫛瓜。|zuc + chi + ni：cch 念 /k/|Zucchini looks like a cucumber.|櫛瓜看起來像小黃瓜。
+pumpkin|k|胖噗金|胖噗金，胖胖的金南瓜|萬聖節門口放著一顆胖噗噗的金黃南瓜燈。|pump + kin|We carve a pumpkin.|我們雕刻南瓜。
+squash|k|四瓜洗|四瓜洗，四種瓜洗一洗|水槽裡洗著四種瓜：南瓜、櫛瓜、金瓜、葫蘆瓜。|squ + ash；squash 也指壁球、壓扁|Squash soup is sweet.|南瓜湯很甜。
+corn|k|啃|大口啃玉米|拿起一根烤玉米，一排一排大口啃。|c + orn；popcorn 爆米花|I like corn soup.|我喜歡玉米濃湯。
+bean|k|冰|紅豆冰，豆子多|一碗紅豆冰，滿滿的豆子。|b + ea + n；beans 常用複數|I like red bean soup.|我喜歡紅豆湯。
+pea|k|皮|剝開綠皮，豌豆滾|剝開綠色豆莢皮，豌豆一顆顆滾出來。|字母 P 同音；peanut 花生不是豆莢裡的 pea|Peas are small and green.|豌豆又小又綠。
+soybean|c||做醬油的豆，大豆|一大袋黃色大豆，可做醬油和豆漿。|soy（醬油）+ bean（豆）|Soy milk is made from soybeans.|豆漿是用大豆做的。
+lentil|c||扁扁像鏡片的豆|一把橘色小扁豆，顆顆扁圓像小鏡片。|lentil 和 lens（透鏡）同源：透鏡因形狀像扁豆而得名|Lentil soup is warm.|扁豆湯很暖。
+mushroom|k|麻薯|軟Q像麻薯的蘑菇|鍋裡的蘑菇吸飽湯汁，咬起來軟Q像麻薯。|mush + room：拼字記「軟軟的 + 小房子」|I like mushroom soup.|我喜歡蘑菇湯。
+radish|k|拉地起|拔蘿蔔，拉地起|大家排成一列，用力把大蘿蔔從地裡拉起來。|rad + ish|We eat radish soup in winter.|我們冬天喝蘿蔔湯。
+turnip|k|特嫩撥|特嫩撥，蕪菁一撥就開|圓圓的白紫蕪菁煮熟特嫩，一撥就開。|turn + ip：拼字記 turn（轉）+ ip|Turnips grow under the ground.|蕪菁長在地下。
+beet|h||甜菜打成汁，同音不同字|把深紅色甜菜放進果汁機打（beat）成汁。|beet ↔ beat（同音 /bit/）；甜菜用 ee|Beets are dark red.|甜菜是深紅色的。
+yam|k|養|山藥養身|一鍋山藥排骨湯，喝了養身。|y + am；yam 山藥／番薯，各地用法不同|Yam is good in soup.|山藥煮湯很好喝。
+chili|k|吃哩|吃哩！辣到噴火|咬一口紅辣椒，吃哩，辣得嘴巴噴火。|chil + i；chili ↔ chilly（寒冷的）同音|This chili is very hot.|這根辣椒很辣。
+scallion|k|撒個鹽|撒個鹽，再撒把青蔥|麵起鍋前撒個鹽，再撒一把青蔥花，香得大家嚥口水。|scal + lion：拼字裡有 lion（獅子）|Add some scallions to the soup.|在湯裡加一些青蔥。
+leek|k|立刻|韭蔥切好立刻下鍋|粗大的韭蔥切段，立刻下鍋炒香。|l + ee + k；leek ↔ leak（漏）同音|Leek soup is tasty.|韭蔥湯很好喝。
+olive|k|嘔了胃|生橄欖苦到嘔了胃|直接咬一顆生橄欖，苦得差點嘔了胃。|ol + ive；olive oil 橄欖油|Olive oil is healthy.|橄欖油很健康。
+toast|l|吐司|吐司烤得香脆|吐司放進烤麵包機，跳出來金黃香脆。|t + oa + st；toast 也指敬酒|I eat toast with jam.|我吃吐司配果醬。
+pancake|c||平底鍋煎的餅|平底鍋上煎著圓圓的鬆餅，淋上蜂蜜。|pan（平底鍋）+ cake（餅）|We have pancakes on Sunday.|我們星期天吃鬆餅。
+waffle|i||格子鬆餅，一格格裝蜂蜜|一片格子鬆餅，每個小方格裡都盛著蜂蜜和奶油。|waf + fle：雙 f|I like waffles with honey.|我喜歡格子鬆餅配蜂蜜。
+muffin|l|瑪芬|瑪芬杯子小蛋糕|紙杯裡的瑪芬鬆餅，頂端膨膨的。|muf + fin：雙 f|I had a blueberry muffin.|我吃了一個藍莓瑪芬。
+bagel|l|貝果|貝果中間一個洞|一個中間有洞的貝果，抹上奶油乳酪。|ba + gel：a 念 /eɪ/|I eat a bagel for breakfast.|我早餐吃貝果。
+croissant|l|可頌|可頌彎彎像月牙|一個彎彎像月牙的可頌，層層酥皮。|crois + sant：法文來源，美式重音在第二音節|She bought a croissant.|她買了一個可頌。
+biscuit|k|比四塊|餅乾比四塊，誰最大|桌上排出四塊餅乾，比比看哪一塊最大。|bis + cuit：u 不發音；英式指餅乾、美式指鬆軟小麵包|I had tea and a biscuit.|我喝了茶，吃了一塊餅乾。
+cracker|k|咔嚓|蘇打餅咔嚓脆|咬一口蘇打餅乾，咔嚓一聲好脆。|crack（裂開）+ er：一咬就裂的餅乾|I eat crackers with cheese.|我吃蘇打餅乾配起司。
+cereal|k|惜粒兒|惜粒兒，吃穀片|碗裡的早餐穀片倒入牛奶，一粒都不浪費。|ce + re + al；cereal ↔ serial（連續的）同音|I eat cereal with milk.|我吃穀片配牛奶。
+oatmeal|c||燕麥磨成的粗粉，燕麥片|一碗熱騰騰的燕麥粥，撒上葡萄乾。|oat（燕麥）+ meal（粗粉，不是「一餐」的 meal）|Oatmeal is a healthy breakfast.|燕麥片是健康的早餐。
+porridge|k|破粒汁|破粒汁，米粒煮破成粥|鍋裡的米粒煮到破開，變成濃稠的粥。|por + ridge：裡面有 ridge（山脊）|I eat porridge when I am sick.|我生病時吃粥。
+dumpling|c||小麵團包肉餡，水餃|一顆顆白胖水餃，小麵團裡包著肉餡。|dump（團塊）+ ling（小）：小小的麵團|We make dumplings for New Year.|我們過年包水餃。
+bun|k|半|包子掰一半|熱包子掰一半，冒出香香熱氣。|b + un；hamburger bun 漢堡麵包|I ate a pork bun.|我吃了一個肉包。
+hotdog|c||熱的狗，熱狗|麵包夾著熱香腸，名叫熱狗，其實沒有狗。|hot（熱）+ dog（狗）；常寫成 hot dog|I want a hot dog.|我想要一份熱狗。
+taco|l|塔可|塔可捲餅夾滿料|一片對折的塔可餅，夾滿肉和生菜。|ta + co；複數 tacos|Tacos are from Mexico.|塔可來自墨西哥。
+burrito|k|撥裡頭|撥裡頭，撥開捲餅看餡|撥開墨西哥捲餅，看裡頭包著飯、豆和肉。|bur + ri + to：雙 r；西班牙文「小驢子」|I ordered a chicken burrito.|我點了雞肉捲餅。
+spaghetti|k|是爸給的|這盤義大利麵是爸給的|爸爸端來一大盤義大利麵：「是爸給的！」|spa + ghet + ti：h 不發音，雙 t|I like spaghetti with meatballs.|我喜歡肉丸義大利麵。
+pasta|k|拔絲塔|拔絲塔，麵食疊成塔|各式義大利麵食疊成小塔：細麵、螺旋麵、筆管麵。|pas + ta；pasta 是麵食總稱，spaghetti 是其中一種|Pasta is from Italy.|義大利麵食來自義大利。
+steak|k|是鐵可|是鐵可，鐵板牛排好可口|滋滋作響的鐵板上，一塊牛排好可口。|st + ea + k：ea 念 /eɪ/，像 break|I ordered a steak.|我點了一份牛排。
+chop|k|超棒|豬排骨超棒|一大塊煎豬排骨，咬下去超棒。|ch + op；chop 也作動詞「剁、切」；pork chop 豬排|I had a pork chop for lunch.|我午餐吃了豬排。
+bacon|l|培根|培根煎得滋滋響|平底鍋上的培根煎得滋滋響，又香又脆。|ba + con|Bacon and eggs, please.|請給我培根和蛋。
+sausage|k|燒炙|夜市燒炙香腸|夜市攤位燒炙一排香腸，油亮冒煙。|sau + sage：sage（鼠尾草）是常見香料|I like grilled sausages.|我喜歡烤香腸。
+ham|k|漢|漢堡夾火腿|一個漢堡夾著一片粉紅色火腿。|h + am；hamburger 來自德國漢堡市，不是 ham 做的|I put ham in my sandwich.|我在三明治裡放火腿。
+butter|k|爸特|爸爸特愛抹奶油|爸爸在吐司上抹厚厚一層奶油，他特愛。|but + ter：雙 t；butterfly 也有 butter|Spread butter on the bread.|在麵包上抹奶油。
+cheese|l|起司|起司，拍照笑一個|拍照時大家喊「起司」，桌上還有一塊起司。|ch + ee + se；cheesecake 起司蛋糕|Mice love cheese.|老鼠愛吃起司。
+yogurt|l|優格|優格配水果|一杯優格加上草莓和藍莓。|yo + gurt；也可拼 yoghurt|I eat yogurt every morning.|我每天早上吃優格。
+cream|l|淇淋|冰淇淋的淇淋就是鮮奶油|冰淇淋上擠一圈白色鮮奶油。|cr + ea + m；ice cream 冰淇淋|I like coffee with cream.|我喜歡咖啡加鮮奶油。
+mayonnaise|l|美乃滋|美乃滋擠一圈|沙拉上擠一圈白色美乃滋。|may + on + naise；口語 mayo|Do you want mayonnaise?|你要美乃滋嗎？
+ketchup|k|茄汁噗|茄汁噗一聲擠出來|一按番茄醬瓶，紅色茄汁「噗」一聲擠到薯條上。|ket + chup；字源可能來自閩南語「鮭汁」|Put ketchup on the fries.|在薯條上加番茄醬。

@@ -1,0 +1,52 @@
+# type|key(variants)|meaning|tip|word=zh=breakdown;...
+# type: c 複合詞字族 · p 字首 · s 字尾 · r 字根
+c|board|板、木板|board 就是「一塊板」：前面加上用途，就變成各種板|blackboard=黑板=black 黑 + board 板;whiteboard=白板=white 白 + board 板;scoreboard=計分板=score 分數 + board 板;keyboard=鍵盤=key 鍵 + board 板;skateboard=滑板=skate 溜 + board 板;cardboard=硬紙板=card 卡紙 + board 板
+c|book|書、本子|book 是「書、本」：裝什麼內容，就是什麼書|notebook=筆記本=note 筆記 + book 本;textbook=課本=text 課文 + book 書;cookbook=食譜=cook 烹飪 + book 書;workbook=習作本=work 練習 + book 本;bookstore=書店=book 書 + store 店;bookcase=書櫃=book 書 + case 櫃
+c|room|房間|room 是「房間」：做什麼用，就是什麼房|bedroom=臥室=bed 床 + room 房;bathroom=浴室=bath 洗澡 + room 房;classroom=教室=class 課 + room 房;restroom=洗手間=rest 休息 + room 房;storeroom=儲藏室=store 儲存 + room 房;roommate=室友=room 房 + mate 夥伴
+c|ball|球|ball 是「球」：用什麼打、在哪裡玩，就是什麼球|football=足球=foot 腳 + ball 球;basketball=籃球=basket 籃子 + ball 球;baseball=棒球=base 壘 + ball 球;volleyball=排球=volley 截擊 + ball 球;snowball=雪球=snow 雪 + ball 球;eyeball=眼球=eye 眼 + ball 球
+c|man|人、男人|man 放在字尾，表示「做這件事的人」|fireman=消防員=fire 火 + man 人;postman=郵差=post 郵件 + man 人;fisherman=漁夫=fisher 捕魚者 + man 人;salesman=推銷員、業務員=sales 銷售 + man 人;businessman=商人=business 生意 + man 人;policeman=警察=police 警方 + man 人
+c|light|光、燈|light 是「光、燈」：光從哪裡來，就叫什麼光|sunlight=陽光=sun 太陽 + light 光;moonlight=月光=moon 月 + light 光;flashlight=手電筒=flash 閃光 + light 燈;headlight=車前大燈=head 前頭 + light 燈;spotlight=聚光燈=spot 點 + light 燈;lighthouse=燈塔=light 燈 + house 房子
+c|water|水|water 是「水」：水的樣子、水的用途|waterfall=瀑布=water 水 + fall 落下;watermelon=西瓜=water 水 + melon 瓜;waterproof=防水的=water 水 + proof 防;underwater=水中的=under 在下 + water 水;saltwater=鹹水=salt 鹽 + water 水;rainwater=雨水=rain 雨 + water 水
+c|sun|太陽|sun 是「太陽」：和太陽有關的東西|sunshine=陽光=sun 太陽 + shine 照耀;sunrise=日出=sun 太陽 + rise 升起;sunset=日落=sun 太陽 + set 落下;sunflower=向日葵=sun 太陽 + flower 花;sunglasses=太陽眼鏡=sun 太陽 + glasses 眼鏡;sunburn=曬傷=sun 太陽 + burn 燒
+c|rain|雨|rain 是「雨」：和下雨有關|rainbow=彩虹=rain 雨 + bow 弓;raincoat=雨衣=rain 雨 + coat 外套;raindrop=雨滴=rain 雨 + drop 滴;rainstorm=暴風雨=rain 雨 + storm 暴風;rainfall=降雨量=rain 雨 + fall 落下;rainforest=雨林=rain 雨 + forest 森林
+c|snow|雪|snow 是「雪」：雪做的、雪落的|snowman=雪人=snow 雪 + man 人;snowball=雪球=snow 雪 + ball 球;snowflake=雪花=snow 雪 + flake 薄片;snowstorm=暴風雪=snow 雪 + storm 暴風;snowfall=降雪=snow 雪 + fall 落下;snowboard=滑雪板=snow 雪 + board 板
+c|fire|火|fire 是「火」：和火有關的人與物|fireman=消防員=fire 火 + man 人;firework=煙火=fire 火 + work 作品;fireplace=壁爐=fire 火 + place 地方;firefly=螢火蟲=fire 火 + fly 飛蟲;campfire=營火=camp 露營 + fire 火;fireproof=防火的=fire 火 + proof 防
+c|house|房子|house 是「房子」：什麼樣的房子|lighthouse=燈塔=light 燈 + house 房;greenhouse=溫室=green 綠 + house 房;farmhouse=農舍=farm 農場 + house 房;housework=家事=house 家 + work 工作;household=家庭、一家人=house 家 + hold 持有;treehouse=樹屋=tree 樹 + house 房
+c|home|家|home 是「家」：和家有關|homework=家庭作業=home 家 + work 功課;hometown=家鄉=home 家 + town 城鎮;homesick=想家的=home 家 + sick 難受;homemade=自製的=home 家 + made 做的;homepage=首頁=home 家 + page 頁;homeland=祖國=home 家 + land 土地
+c|school|學校|school 是「學校」：學校裡的人、事、物|schoolbag=書包=school 學校 + bag 包;schoolwork=課業=school 學校 + work 工作;schoolyard=校園=school 學校 + yard 院子;preschool=幼兒園=pre 之前 + school 學校;schoolmate=同校同學=school 學校 + mate 夥伴;schoolteacher=學校老師=school 學校 + teacher 老師
+c|class|班、課、類|class 是「班、課、等級」|classroom=教室=class 課 + room 房;classmate=同班同學=class 班 + mate 夥伴;classwork=課堂作業=class 課 + work 作業;classify=分類=class 類 + ify 使成;classic=經典的=class 等級 + ic 的
+c|play|玩、比賽|play 是「玩」：玩的地方、人與物|playground=遊樂場=play 玩 + ground 場地;playmate=玩伴=play 玩 + mate 夥伴;player=玩家、球員=play 玩 + er 人;playtime=遊戲時間=play 玩 + time 時間;playful=愛玩的=play 玩 + ful 充滿;screenplay=劇本=screen 螢幕 + play 劇
+c|ship|船|ship 是「船」；放字尾的 -ship 另有「關係」之意，見字尾組|spaceship=太空船=space 太空 + ship 船;warship=軍艦=war 戰爭 + ship 船;shipyard=造船廠=ship 船 + yard 場;shipment=運送的貨物=ship 運送 + ment 名詞;shipwreck=船難=ship 船 + wreck 殘骸
+c|boat|小船|boat 是「小船」：用什麼動力就叫什麼船|sailboat=帆船=sail 帆 + boat 船;rowboat=划艇=row 划 + boat 船;lifeboat=救生艇=life 生命 + boat 船;steamboat=汽船=steam 蒸汽 + boat 船;houseboat=船屋=house 房屋 + boat 船
+c|way|路、方式|way 是「路」：什麼樣的路|highway=公路=high 主要 + way 路;subway=地下鐵=sub 下面 + way 路;railway=鐵路=rail 鐵軌 + way 路;hallway=走廊=hall 大廳 + way 路;doorway=門口=door 門 + way 路;runway=跑道=run 跑 + way 路
+c|road|道路|road 是「路」|railroad=鐵路=rail 鐵軌 + road 路;crossroads=十字路口=cross 交叉 + roads 路;roadside=路邊=road 路 + side 邊;roadblock=路障=road 路 + block 擋;roadwork=道路施工=road 路 + work 工程
+c|door|門|door 是「門」|doorbell=門鈴=door 門 + bell 鈴;doorway=門口=door 門 + way 路;doorstep=門階=door 門 + step 台階;outdoor=戶外的=out 外 + door 門;indoor=室內的=in 內 + door 門;doorknob=門把=door 門 + knob 圓把手
+c|foot|腳|foot 是「腳」|football=足球=foot 腳 + ball 球;footprint=腳印=foot 腳 + print 印;footstep=腳步=foot 腳 + step 步;barefoot=赤腳的=bare 光著 + foot 腳;footpath=小徑=foot 腳 + path 小路;footnote=註腳=foot 底部 + note 註
+c|hand|手|hand 是「手」|handbag=手提包=hand 手 + bag 包;handshake=握手=hand 手 + shake 搖;handwriting=筆跡=hand 手 + writing 寫;handmade=手工的=hand 手 + made 做的;handbook=手冊=hand 手 + book 書;handful=一把=hand 手 + ful 滿
+c|head|頭|head 是「頭、前面、首領」|headache=頭痛=head 頭 + ache 痛;headline=標題=head 頭 + line 行;headphones=頭戴式耳機=head 頭 + phones 聽筒;headlight=車前大燈=head 前頭 + light 燈;forehead=額頭=fore 前 + head 頭;headquarters=總部=head 首 + quarters 駐地
+c|eye|眼睛|eye 是「眼」|eyebrow=眉毛=eye 眼 + brow 眉;eyelash=睫毛=eye 眼 + lash 鞭;eyelid=眼皮=eye 眼 + lid 蓋;eyesight=視力=eye 眼 + sight 視;eyeball=眼球=eye 眼 + ball 球;eyewitness=目擊者=eye 眼 + witness 證人
+c|ear|耳朵|ear 是「耳」|earring=耳環=ear 耳 + ring 環;earphone=耳機=ear 耳 + phone 聽筒;earache=耳朵痛=ear 耳 + ache 痛;eardrum=耳膜=ear 耳 + drum 鼓;earmuffs=耳罩=ear 耳 + muffs 保暖套
+c|hair|頭髮|hair 是「頭髮」|haircut=理髮=hair 頭髮 + cut 剪;hairbrush=梳子=hair 頭髮 + brush 刷;hairstyle=髮型=hair 頭髮 + style 樣式;hairdresser=美髮師=hair 頭髮 + dresser 整理者;hairpin=髮夾=hair 頭髮 + pin 別針
+c|tooth|牙齒|tooth 是「牙」|toothbrush=牙刷=tooth 牙 + brush 刷;toothpaste=牙膏=tooth 牙 + paste 膏;toothache=牙痛=tooth 牙 + ache 痛;toothpick=牙籤=tooth 牙 + pick 挑
+c|back|背、後面|back 是「背、後面」|backpack=背包=back 背 + pack 包;background=背景=back 後 + ground 地面;backyard=後院=back 後 + yard 院;backbone=脊椎骨=back 背 + bone 骨;backward=向後的=back 後 + ward 向;feedback=回饋=feed 給 + back 回
+c|side|邊、側|side 是「邊」|inside=裡面=in 內 + side 邊;outside=外面=out 外 + side 邊;seaside=海邊=sea 海 + side 邊;sidewalk=人行道=side 邊 + walk 走;roadside=路邊=road 路 + side 邊;beside=在旁邊=be 在 + side 邊
+c|time|時間|time 是「時間、次」|bedtime=就寢時間=bed 床 + time 時間;lunchtime=午餐時間=lunch 午餐 + time 時間;overtime=加班=over 超過 + time 時間;timetable=時刻表=time 時間 + table 表;lifetime=一生=life 生命 + time 時間;sometimes=有時=some 一些 + times 次
+c|day|天、日|day 是「天」|birthday=生日=birth 出生 + day 天;holiday=假日=holi 神聖 + day 日;weekday=平日=week 週 + day 日;daylight=日光=day 白天 + light 光;daydream=白日夢=day 白天 + dream 夢;everyday=日常的=every 每 + day 天
+c|night|夜晚|night 是「夜」|midnight=午夜=mid 中 + night 夜;tonight=今晚=to 在，古英文介系詞 + night 夜;nightmare=惡夢=night 夜 + mare 夢魔;nightlife=夜生活=night 夜 + life 生活;overnight=過夜=over 越過 + night 夜;nighttime=夜間=night 夜 + time 時間
+c|birth|出生|birth 是「出生」|birthday=生日=birth 出生 + day 日;birthplace=出生地=birth 出生 + place 地方;birthmark=胎記=birth 出生 + mark 記號;rebirth=重生=re 再 + birth 出生;childbirth=分娩=child 小孩 + birth 出生
+c|sea|海|sea 是「海」|seafood=海鮮=sea 海 + food 食物;seashell=貝殼=sea 海 + shell 殼;seashore=海岸=sea 海 + shore 岸;seagull=海鷗=sea 海 + gull 鷗;seaweed=海藻=sea 海 + weed 草;seaside=海邊=sea 海 + side 邊
+c|air|空氣、空中|air 是「空氣、空中」|airport=機場=air 空 + port 港;airplane=飛機=air 空 + plane 機;airline=航空公司=air 空 + line 航線;aircraft=飛行器=air 空 + craft 船艇;airmail=航空郵件=air 空 + mail 郵件;airbag=安全氣囊=air 空氣 + bag 袋
+c|land|陸地、土地|land 是「陸地」|landmark=地標=land 地 + mark 標記;landslide=山崩=land 地 + slide 滑;island=島=is + land 陸地，s 不發音;homeland=祖國=home 家 + land 土地;wonderland=仙境=wonder 奇妙 + land 地;farmland=農田=farm 農場 + land 地
+c|earth|地球、泥土|earth 是「地球、泥土」|earthquake=地震=earth 地 + quake 震動;earthworm=蚯蚓=earth 土 + worm 蟲;earthly=塵世的=earth 地 + ly 的;unearth=挖出=un 反 + earth 土
+c|star|星星|star 是「星」|starfish=海星=star 星 + fish 魚;starlight=星光=star 星 + light 光;superstar=超級巨星=super 超 + star 星;starry=繁星點點的=star 星 + r + y 的，重複 r
+c|moon|月亮|moon 是「月」|moonlight=月光=moon 月 + light 光;honeymoon=蜜月=honey 蜜 + moon 月;moonwalk=月球漫步=moon 月 + walk 走;moonbeam=月光束=moon 月 + beam 光束
+c|wind|風|wind 是「風」|windmill=風車=wind 風 + mill 磨坊;window=窗戶=wind 風 + ow 眼，古字「風之眼」;windshield=擋風玻璃=wind 風 + shield 盾;windstorm=風暴=wind 風 + storm 暴;windy=多風的=wind 風 + y 的
+c|ice/ic|冰|ice 是「冰」|iceberg=冰山=ice 冰 + berg 山;icebox=冰箱舊稱=ice 冰 + box 箱;icicle=冰柱=ice 冰 + icle，來自古英文 gicel「冰柱」;icy=冰冷的=ic 冰 + y 的
+c|sand|沙|sand 是「沙」|sandbox=沙坑=sand 沙 + box 箱;sandcastle=沙堡=sand 沙 + castle 城堡;sandstorm=沙塵暴=sand 沙 + storm 暴;sandpaper=砂紙=sand 沙 + paper 紙;quicksand=流沙=quick 活動的 + sand 沙
+c|stone|石頭|stone 是「石頭」|milestone=里程碑=mile 英里 + stone 石;cornerstone=基石=corner 角 + stone 石;gemstone=寶石=gem 寶 + stone 石;limestone=石灰岩=lime 石灰 + stone 石
+c|wood|木頭、樹林|wood 是「木、林」|woodland=林地=wood 林 + land 地;woodpecker=啄木鳥=wood 木 + pecker 啄者;firewood=柴火=fire 火 + wood 木;hardwood=硬木=hard 硬 + wood 木;wooden=木製的=wood 木 + en 製的
+c|flower|花|flower 是「花」|sunflower=向日葵=sun 太陽 + flower 花;wildflower=野花=wild 野 + flower 花;flowerpot=花盆=flower 花 + pot 盆;cauliflower=白花椰菜=cauli 菜莖 + flower 花;flowerbed=花圃=flower 花 + bed 床
+c|bird|鳥|bird 是「鳥」|blackbird=黑鳥=black 黑 + bird 鳥;bluebird=藍鶇=blue 藍 + bird 鳥;birdhouse=鳥屋=bird 鳥 + house 房;birdcage=鳥籠=bird 鳥 + cage 籠;hummingbird=蜂鳥=humming 嗡嗡 + bird 鳥
+c|fish|魚|fish 是「魚」；有些名字有 fish 卻不是魚|goldfish=金魚=gold 金 + fish 魚;jellyfish=水母=jelly 果凍 + fish 魚;starfish=海星=star 星 + fish 魚;catfish=鯰魚=cat 貓 + fish 魚;shellfish=有殼海鮮=shell 殼 + fish 魚;swordfish=旗魚=sword 劍 + fish 魚
+c|horse|馬|horse 是「馬」|seahorse=海馬=sea 海 + horse 馬;horseback=馬背=horse 馬 + back 背;horseshoe=馬蹄鐵=horse 馬 + shoe 鞋;racehorse=賽馬=race 賽跑 + horse 馬;horsepower=馬力=horse 馬 + power 力
+c|dog|狗|dog 是「狗」|hotdog=熱狗=hot 熱 + dog 狗;bulldog=鬥牛犬=bull 公牛 + dog 狗;sheepdog=牧羊犬=sheep 羊 + dog 狗;doghouse=狗屋=dog 狗 + house 房;watchdog=看門狗、監督者=watch 看守 + dog 狗

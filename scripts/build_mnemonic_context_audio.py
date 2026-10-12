@@ -3,7 +3,8 @@ import asyncio,json,pathlib,subprocess,shutil
 import edge_tts
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CACHE=ROOT/'data/word_audio/cache';CACHE.mkdir(parents=True,exist_ok=True)
-CONTEXTS={'lead':'We lead the team.','read':'I read books every day.','subject':'My favorite subject is science.'}
+CONTEXTS={'lead':'We lead the team.','read':'I read books every day.','subject':'My favorite subject is science.',
+          'bow':'We bow politely.','row':'We row a boat.','minute':'I waited one minute.'}
 async def main():
     records=[]
     for word,text in CONTEXTS.items():

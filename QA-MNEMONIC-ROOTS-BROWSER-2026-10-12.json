@@ -1,0 +1,1067 @@
+{
+  "date": "2026-10-12",
+  "pages": [
+    "dist/mnemonics/index.html",
+    "dist/roots/index.html"
+  ],
+  "widths": [
+    320,
+    390,
+    768,
+    1280
+  ],
+  "checks": [
+    {
+      "name": "static: 1000 trio MP3 + 500 family MP3 files exist",
+      "pass": true,
+      "detail": {
+        "missingTrio": [],
+        "missingFam": []
+      }
+    },
+    {
+      "name": "static: card families reference existing groups",
+      "pass": true,
+      "detail": {
+        "cardsWithFamilies": 250,
+        "badFam": []
+      }
+    },
+    {
+      "name": "mnemonics: 12 cards on page 1",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "mnemonics: #hero-stats filled",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+      }
+    },
+    {
+      "name": "mnemonics: method filter counts sum to 1000",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "kinds": [
+          {
+            "value": "諧音聯想",
+            "n": 710
+          },
+          {
+            "value": "外來語借音",
+            "n": 37
+          },
+          {
+            "value": "英文同音",
+            "n": 12
+          },
+          {
+            "value": "構詞拆字",
+            "n": 218
+          },
+          {
+            "value": "對比聯想",
+            "n": 4
+          },
+          {
+            "value": "情境圖像",
+            "n": 19
+          }
+        ],
+        "sum": 1000
+      }
+    },
+    {
+      "name": "mnemonics: category filter populated",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "categories": 28
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (answers hidden)",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (all 12 answers revealed)",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "beyond": [],
+        "ok": true,
+        "revealed": 12
+      }
+    },
+    {
+      "name": "mnemonics: all 84 pages revealed, no page/card overflow",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "bad": []
+      }
+    },
+    {
+      "name": "roots: 12 groups on page 1",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "roots: #hero-stats filled",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "hero": "500 組字族 · 複合詞字族 150 組 · 字首 70 組 · 字尾 60 組 · 字根 220 組 · 2,581 個成員字"
+      }
+    },
+    {
+      "name": "roots: type filter counts sum to 500",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "types": [
+          {
+            "value": "複合詞字族",
+            "n": 150
+          },
+          {
+            "value": "字首",
+            "n": 70
+          },
+          {
+            "value": "字尾",
+            "n": 60
+          },
+          {
+            "value": "字根",
+            "n": 220
+          }
+        ],
+        "sum": 500
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow (quiz mode on)",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "roots: all 42 pages, no page/card overflow",
+      "width": 320,
+      "pass": true,
+      "detail": {
+        "bad": []
+      }
+    },
+    {
+      "name": "mnemonics: 12 cards on page 1",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "mnemonics: #hero-stats filled",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+      }
+    },
+    {
+      "name": "mnemonics: method filter counts sum to 1000",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "kinds": [
+          {
+            "value": "諧音聯想",
+            "n": 710
+          },
+          {
+            "value": "外來語借音",
+            "n": 37
+          },
+          {
+            "value": "英文同音",
+            "n": 12
+          },
+          {
+            "value": "構詞拆字",
+            "n": 218
+          },
+          {
+            "value": "對比聯想",
+            "n": 4
+          },
+          {
+            "value": "情境圖像",
+            "n": 19
+          }
+        ],
+        "sum": 1000
+      }
+    },
+    {
+      "name": "mnemonics: category filter populated",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "categories": 28
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (answers hidden)",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (all 12 answers revealed)",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "beyond": [],
+        "ok": true,
+        "revealed": 12
+      }
+    },
+    {
+      "name": "roots: 12 groups on page 1",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "roots: #hero-stats filled",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "hero": "500 組字族 · 複合詞字族 150 組 · 字首 70 組 · 字尾 60 組 · 字根 220 組 · 2,581 個成員字"
+      }
+    },
+    {
+      "name": "roots: type filter counts sum to 500",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "types": [
+          {
+            "value": "複合詞字族",
+            "n": 150
+          },
+          {
+            "value": "字首",
+            "n": 70
+          },
+          {
+            "value": "字尾",
+            "n": 60
+          },
+          {
+            "value": "字根",
+            "n": 220
+          }
+        ],
+        "sum": 500
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow (quiz mode on)",
+      "width": 390,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: 12 cards on page 1",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "mnemonics: #hero-stats filled",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+      }
+    },
+    {
+      "name": "mnemonics: method filter counts sum to 1000",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "kinds": [
+          {
+            "value": "諧音聯想",
+            "n": 710
+          },
+          {
+            "value": "外來語借音",
+            "n": 37
+          },
+          {
+            "value": "英文同音",
+            "n": 12
+          },
+          {
+            "value": "構詞拆字",
+            "n": 218
+          },
+          {
+            "value": "對比聯想",
+            "n": 4
+          },
+          {
+            "value": "情境圖像",
+            "n": 19
+          }
+        ],
+        "sum": 1000
+      }
+    },
+    {
+      "name": "mnemonics: category filter populated",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "categories": 28
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (answers hidden)",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (all 12 answers revealed)",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "beyond": [],
+        "ok": true,
+        "revealed": 12
+      }
+    },
+    {
+      "name": "roots: 12 groups on page 1",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "roots: #hero-stats filled",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "hero": "500 組字族 · 複合詞字族 150 組 · 字首 70 組 · 字尾 60 組 · 字根 220 組 · 2,581 個成員字"
+      }
+    },
+    {
+      "name": "roots: type filter counts sum to 500",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "types": [
+          {
+            "value": "複合詞字族",
+            "n": 150
+          },
+          {
+            "value": "字首",
+            "n": 70
+          },
+          {
+            "value": "字尾",
+            "n": 60
+          },
+          {
+            "value": "字根",
+            "n": 220
+          }
+        ],
+        "sum": 500
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow (quiz mode on)",
+      "width": 768,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: 12 cards on page 1",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "mnemonics: #hero-stats filled",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "hero": "1,000 個不同單字 · 諧音聯想 710 張 · 外來語借音 37 張 · 英文同音 12 張 · 構詞拆字 218 張 · 對比聯想 4 張 · 情境圖像 19 張 · 每張都有拼字鉤子與例句"
+      }
+    },
+    {
+      "name": "mnemonics: method filter counts sum to 1000",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "kinds": [
+          {
+            "value": "諧音聯想",
+            "n": 710
+          },
+          {
+            "value": "外來語借音",
+            "n": 37
+          },
+          {
+            "value": "英文同音",
+            "n": 12
+          },
+          {
+            "value": "構詞拆字",
+            "n": 218
+          },
+          {
+            "value": "對比聯想",
+            "n": 4
+          },
+          {
+            "value": "情境圖像",
+            "n": 19
+          }
+        ],
+        "sum": 1000
+      }
+    },
+    {
+      "name": "mnemonics: category filter populated",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "categories": 28
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (answers hidden)",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: no horizontal overflow (all 12 answers revealed)",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "beyond": [],
+        "ok": true,
+        "revealed": 12
+      }
+    },
+    {
+      "name": "roots: 12 groups on page 1",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "roots: #hero-stats filled",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "hero": "500 組字族 · 複合詞字族 150 組 · 字首 70 組 · 字尾 60 組 · 字根 220 組 · 2,581 個成員字"
+      }
+    },
+    {
+      "name": "roots: type filter counts sum to 500",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "types": [
+          {
+            "value": "複合詞字族",
+            "n": 150
+          },
+          {
+            "value": "字首",
+            "n": 70
+          },
+          {
+            "value": "字尾",
+            "n": 60
+          },
+          {
+            "value": "字根",
+            "n": 220
+          }
+        ],
+        "sum": 500
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "roots: no horizontal overflow (quiz mode on)",
+      "width": 1280,
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1280,
+        "innerWidth": 1280,
+        "beyond": [],
+        "ok": true
+      }
+    },
+    {
+      "name": "mnemonics: ambulance reveal shows hook badge, mark.hook 俺不能死, spell, example",
+      "pass": true,
+      "detail": {
+        "answer": true,
+        "hookBadge": true,
+        "badge": "諧音\n「俺不能死」",
+        "markHook": "俺不能死",
+        "spell": true,
+        "example": true
+      }
+    },
+    {
+      "name": "mnemonics: search \"俺不能死\" finds ambulance",
+      "pass": true,
+      "detail": {
+        "count": 1
+      }
+    },
+    {
+      "name": "mnemonics: search \"ambulance\" finds ambulance",
+      "pass": true,
+      "detail": {
+        "count": 1
+      }
+    },
+    {
+      "name": "mnemonics: method filter shows only that method with matching counts",
+      "pass": true,
+      "detail": {
+        "res": [
+          {
+            "method": "諧音聯想",
+            "expected": 710,
+            "count": 710,
+            "shown": 12,
+            "allMatch": true
+          },
+          {
+            "method": "外來語借音",
+            "expected": 37,
+            "count": 37,
+            "shown": 12,
+            "allMatch": true
+          },
+          {
+            "method": "英文同音",
+            "expected": 12,
+            "count": 12,
+            "shown": 12,
+            "allMatch": true
+          },
+          {
+            "method": "構詞拆字",
+            "expected": 218,
+            "count": 218,
+            "shown": 12,
+            "allMatch": true
+          },
+          {
+            "method": "對比聯想",
+            "expected": 4,
+            "count": 4,
+            "shown": 4,
+            "allMatch": true
+          },
+          {
+            "method": "情境圖像",
+            "expected": 19,
+            "count": 19,
+            "shown": 12,
+            "allMatch": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "mnemonics: ?q=board pre-fills search and filters",
+      "pass": true,
+      "detail": {
+        "value": "board",
+        "count": 6
+      }
+    },
+    {
+      "name": "mnemonics: per-card play src ends audio-trio/ambulance.mp3?v=keyword6 and progresses >0.3s",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6",
+        "t": 0.320683,
+        "paused": false,
+        "button": "Ⅱ 暫停"
+      }
+    },
+    {
+      "name": "mnemonics: per-card second click pauses",
+      "pass": true,
+      "detail": {
+        "button": "▶ 繼續播放"
+      }
+    },
+    {
+      "name": "mnemonics: play-all starts at card 1 (ambulance) and highlights it",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/ambulance.mp3?v=keyword6",
+        "playing": "fc-el-0552",
+        "others": 1,
+        "status": "正在播放 · 第 1 / 1,000 張 · ambulance → 俺不能死，快叫救護車 → 救護車"
+      }
+    },
+    {
+      "name": "mnemonics: play-all next moves to card 2 (family)",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:8098/mnemonics/audio-trio/family.mp3?v=keyword6",
+        "playing": "fc-el-0001",
+        "status": "正在播放 · 第 2 / 1,000 張 · family → 發米粒，全家一起吃飯 → 家庭、家人"
+      }
+    },
+    {
+      "name": "mnemonics: play-all stop pauses everything",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "mnemonics: every roots card-link word appears on results page 1",
+      "pass": true,
+      "detail": {
+        "linkedWords": 184,
+        "miss": []
+      }
+    },
+    {
+      "name": "mnemonics: blackboard family link wf-001 opens roots page with .target group",
+      "pass": true,
+      "detail": {
+        "href": "../roots/index.html#wf-001",
+        "url": "http://127.0.0.1:8098/roots/index.html#wf-001",
+        "inViewport": true
+      }
+    },
+    {
+      "name": "mnemonics: blackboard family link wf-110 opens roots page with .target group",
+      "pass": true,
+      "detail": {
+        "href": "../roots/index.html#wf-110",
+        "url": "http://127.0.0.1:8098/roots/index.html#wf-110",
+        "inViewport": true
+      }
+    },
+    {
+      "name": "roots: hashchange to #wf-381 opens that group (page 32) as .target",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "roots: search \"spect\" finds the spect group (wf-381)",
+      "pass": true,
+      "detail": {
+        "count": 4,
+        "display": "spec / spect / spic"
+      }
+    },
+    {
+      "name": "roots: type filter shows only that type with matching counts",
+      "pass": true,
+      "detail": {
+        "res": [
+          {
+            "type": "複合詞字族",
+            "expected": 150,
+            "count": 150,
+            "allMatch": true,
+            "shown": 12
+          },
+          {
+            "type": "字首",
+            "expected": 70,
+            "count": 70,
+            "allMatch": true,
+            "shown": 12
+          },
+          {
+            "type": "字尾",
+            "expected": 60,
+            "count": 60,
+            "allMatch": true,
+            "shown": 12
+          },
+          {
+            "type": "字根",
+            "expected": 220,
+            "count": 220,
+            "allMatch": true,
+            "shown": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "roots: member click wf-001#1 plays from its english start and stops near its chinese end",
+      "pass": true,
+      "detail": {
+        "word": "whiteboard",
+        "englishStart": 6.69,
+        "startedAt": 6.64,
+        "chineseEnd": 8.55,
+        "stoppedAt": 8.738,
+        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6"
+      }
+    },
+    {
+      "name": "roots: member click wf-003#3 plays from its english start and stops near its chinese end",
+      "pass": true,
+      "detail": {
+        "word": "restroom",
+        "englishStart": 11.11,
+        "startedAt": 11.06,
+        "chineseEnd": 13.37,
+        "stoppedAt": 13.681,
+        "src": "http://127.0.0.1:8098/roots/audio/wf-003.mp3?v=keyword6"
+      }
+    },
+    {
+      "name": "roots: group play highlights .member.speaking",
+      "pass": true,
+      "detail": {
+        "group": "wf-002",
+        "member": "0",
+        "word": "notebook",
+        "t": 4.216465,
+        "button": "Ⅱ 暫停"
+      }
+    },
+    {
+      "name": "roots: group play second click pauses",
+      "pass": true,
+      "detail": {
+        "button": "▶ 繼續播放"
+      }
+    },
+    {
+      "name": "roots: quiz hides every .member .zh",
+      "pass": true,
+      "detail": {
+        "count": 72,
+        "visible": 0
+      }
+    },
+    {
+      "name": "roots: clicking a member reveals only its .zh in quiz mode",
+      "pass": true,
+      "detail": {
+        "clicked": {
+          "g": "wf-004",
+          "i": "0",
+          "v": "visible"
+        }
+      }
+    },
+    {
+      "name": "roots: grade 記住了 writes localStorage and updates status",
+      "pass": true,
+      "detail": {
+        "stored": {
+          "step": 1,
+          "reviews": 1,
+          "due": 1791885365249
+        },
+        "status": "已練習 1 次 · 下次 2026/10/13"
+      }
+    },
+    {
+      "name": "roots: play-all starts at wf-001, highlights group and speaking member",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:8098/roots/audio/wf-001.mp3?v=keyword6",
+        "playing": "wf-001",
+        "status": "正在播放 · 第 1 / 500 組 · 複合詞字族 board：板、木板"
+      }
+    },
+    {
+      "name": "roots: play-all next moves to wf-002",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:8098/roots/audio/wf-002.mp3?v=keyword6"
+      }
+    },
+    {
+      "name": "roots: play-all stop clears playback and highlights",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "roots: .card-link opens mnemonics page with the target card in results",
+      "pass": true,
+      "detail": {
+        "href": "../mnemonics/index.html?q=blackboard#cards",
+        "url": "http://127.0.0.1:8098/mnemonics/index.html?q=blackboard#cards",
+        "count": 2
+      }
+    },
+    {
+      "name": "decode: 40 random trio MP3s decode with duration > 3 s",
+      "pass": true,
+      "detail": {
+        "min": 5.2,
+        "max": 7.91,
+        "bad": [],
+        "files": [
+          "question.mp3",
+          "mole.mp3",
+          "catch.mp3",
+          "hot.mp3",
+          "sheep.mp3",
+          "puppy.mp3",
+          "run.mp3",
+          "eyelash.mp3",
+          "math.mp3",
+          "dangerous.mp3",
+          "person.mp3",
+          "sick.mp3",
+          "canoe.mp3",
+          "unpack.mp3",
+          "chop.mp3",
+          "fig.mp3",
+          "candlelight.mp3",
+          "hallway.mp3",
+          "jaw.mp3",
+          "desk.mp3",
+          "gym.mp3",
+          "tomato.mp3",
+          "heel.mp3",
+          "planetarium.mp3",
+          "handsome.mp3",
+          "crayon.mp3",
+          "summer.mp3",
+          "blue.mp3",
+          "stripe.mp3",
+          "finger.mp3",
+          "bright.mp3",
+          "curious.mp3",
+          "freeway.mp3",
+          "eighth.mp3",
+          "tall.mp3",
+          "late.mp3",
+          "coconut.mp3",
+          "spotlight.mp3",
+          "dog.mp3",
+          "hand.mp3"
+        ]
+      }
+    },
+    {
+      "name": "decode: 40 random family MP3s decode with duration > 3 s",
+      "pass": true,
+      "detail": {
+        "min": 13.35,
+        "max": 21.73,
+        "bad": [],
+        "files": [
+          "wf-193.mp3",
+          "wf-141.mp3",
+          "wf-054.mp3",
+          "wf-454.mp3",
+          "wf-064.mp3",
+          "wf-090.mp3",
+          "wf-390.mp3",
+          "wf-060.mp3",
+          "wf-240.mp3",
+          "wf-396.mp3",
+          "wf-286.mp3",
+          "wf-317.mp3",
+          "wf-167.mp3",
+          "wf-321.mp3",
+          "wf-268.mp3",
+          "wf-490.mp3",
+          "wf-109.mp3",
+          "wf-006.mp3",
+          "wf-274.mp3",
+          "wf-038.mp3",
+          "wf-295.mp3",
+          "wf-003.mp3",
+          "wf-138.mp3",
+          "wf-345.mp3",
+          "wf-075.mp3",
+          "wf-018.mp3",
+          "wf-468.mp3",
+          "wf-427.mp3",
+          "wf-007.mp3",
+          "wf-099.mp3",
+          "wf-221.mp3",
+          "wf-222.mp3",
+          "wf-335.mp3",
+          "wf-073.mp3",
+          "wf-303.mp3",
+          "wf-289.mp3",
+          "wf-137.mp3",
+          "wf-144.mp3",
+          "wf-388.mp3",
+          "wf-117.mp3"
+        ]
+      }
+    },
+    {
+      "name": "no page errors",
+      "pass": true,
+      "detail": {
+        "pageErrors": []
+      }
+    },
+    {
+      "name": "no console errors (favicon ignored)",
+      "pass": true,
+      "detail": {
+        "consoleErrors": []
+      }
+    },
+    {
+      "name": "no HTTP 4xx/5xx responses (favicon ignored)",
+      "pass": true,
+      "detail": {
+        "httpErrors": []
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "screenshots": [
+    "QA-v6-mnemonics-390.png",
+    "QA-v6-roots-390.png",
+    "QA-v6-mnemonics-1280.png",
+    "QA-v6-roots-1280.png"
+  ],
+  "summary": {
+    "total": 80,
+    "passed": 80,
+    "failed": 0
+  }
+}

@@ -1,0 +1,69 @@
+p|kilo-|千|kilo 是「一千」：1 kilogram = 1000 gram|kilogram=公斤=kilo 千 + gram 克;kilometer=公里=kilo 千 + meter 公尺;kilowatt=千瓦=kilo 千 + watt 瓦;kilobyte=千位元組=kilo 千 + byte 位元組
+p|milli-|千分之一|milli 本意是「千」；放在單位前表示「千分之一」：1000 millimeters = 1 meter；millipede 的 milli 仍是「千」|millimeter=公釐=milli 千分之一 + meter 公尺;milligram=毫克=milli 千分之一 + gram 克;milliliter=毫升=milli 千分之一 + liter 公升;millisecond=毫秒=milli 千分之一 + second 秒;millipede=馬陸、千足蟲=milli 千 + pede 腳
+p|ob-/op-|對著、阻擋|ob 是「對著、擋住」；遇到 p 變成 op|objection=反對、異議=ob 對著 + ject 丟 + ion 名詞;obstacle=障礙=ob 擋 + stacle 站;oppose=反對=op 對著 + pose 放;obstruct=阻塞=ob 擋 + struct 建;obtain=獲得=ob 朝 + tain 拿
+p|intro-/intra-|向內|intro、intra 是「向內、在內」|introduce=介紹=intro 向內 + duce 引導;introvert=內向的人=intro 向內 + vert 轉;intranet=內部網路=intra 內 + net 網;introspection=內省=intro 向內 + spection 看
+p|retro-|向後|retro 是「向後、回溯」|retrospect=回顧=retro 向後 + spect 看;retroactive=有追溯力的=retro 向後 + active 生效;retrograde=倒退的=retro 後 + grade 走;retro=復古的=retro 回到過去
+p|equi-|相等|equi 是「相等」，和 equal 同源|equivalent=相等的=equi 相等 + valent 價值;equilateral=等邊的=equi 相等 + lateral 邊的;equinox=晝夜平分點=equi 相等 + nox 夜;equidistant=等距的=equi 相等 + distant 距離的
+p|dec-/deca-|十|deca 是「十」|decade=十年=dec 十 + ade 組;decathlon=十項全能=deca 十 + athlon 競賽;decagon=十邊形=deca 十 + gon 角;decimal=十進位的=decim 十分之一 + al 的
+p|oct-/octo-|八|octo 是「八」：octopus 有八隻腳|octopus=章魚=octo 八 + pus 腳;octagon=八邊形=octa 八 + gon 角;octave=八度音=oct 八 + ave;October=十月=Octo 八，古羅馬曆第八月
+p|eco-|家、生態|eco 原意「家」，引申為生態、經濟|ecology=生態學=eco 家 + logy 學問;ecosystem=生態系=eco 生態 + system 系統;economy=經濟=eco 家 + nomy 管理;economist=經濟學家=eco 家 + nomist 管理者
+s|-er|做⋯的人或東西|動詞加 er，就是「做這個動作的人或工具」|teacher=老師=teach 教 + er 人;singer=歌手=sing 唱 + er 人;driver=司機=drive 開車 + er 人;worker=工人=work 工作 + er 人;writer=作家=write 寫 + er 人;farmer=農夫=farm 農場 + er 人
+s|-or|做⋯的人|or 也是「做⋯的人」，多接拉丁來源的字|actor=演員=act 表演 + or 人;visitor=訪客=visit 拜訪 + or 人;inventor=發明家=invent 發明 + or 人;sailor=水手=sail 航行 + or 人;director=導演=direct 指導 + or 人;editor=編輯=edit 編輯 + or 人
+s|-ist|⋯專家、⋯者|ist 是「做某行、精通某事的人」|artist=藝術家=art 藝術 + ist 人;scientist=科學家=scient 知識 + ist 人;dentist=牙醫=dent 牙 + ist 人;pianist=鋼琴家=pian 鋼琴 + ist 人;tourist=觀光客=tour 旅遊 + ist 人;cyclist=騎單車的人=cycl 單車 + ist 人
+s|-ian|⋯的人、專家|ian 是「與⋯有關的人」|musician=音樂家=music 音樂 + ian 人;magician=魔術師=magic 魔術 + ian 人;librarian=圖書館員=librar 圖書館 + ian 人;historian=歷史學家=histor 歷史 + ian 人;comedian=喜劇演員=comed 喜劇 + ian 人;technician=技術員=technic 技術 + ian 人
+s|-ee|被⋯的人|ee 是「接受動作的人」，和 er 相對|employee=員工=employ 僱用 + ee 被⋯者;trainee=受訓者=train 訓練 + ee 被⋯者;interviewee=受訪者=interview 面試 + ee 被⋯者;refugee=難民=refug 避難 + ee 者;absentee=缺席者=absent 缺席 + ee 者;nominee=被提名人=nomin 提名 + ee 被⋯者
+s|-ant/-ent|做⋯的人|ant、ent 放在字尾，常指「做⋯的人」|assistant=助理=assist 協助 + ant 人;servant=僕人=serv 服務 + ant 人;participant=參加者=particip 參與 + ant 人;student=學生=stud 學習 + ent 人;resident=居民=resid 居住 + ent 人;president=總統=presid 主持 + ent 人
+s|-ess|女性|ess 放字尾表示「女性」|actress=女演員=actr 演員 + ess 女;princess=公主=princ 王子 + ess 女;waitress=女服務生=waitr 侍者 + ess 女;hostess=女主人=host 主人 + ess 女;lioness=母獅=lion 獅 + ess 母;goddess=女神=god 神 + ess 女
+s|-ful|充滿⋯的|ful 是「充滿」，只有一個 l|beautiful=美麗的=beauti 美 + ful 充滿;careful=小心的=care 注意 + ful 充滿;helpful=有幫助的=help 幫助 + ful 充滿;useful=有用的=use 用處 + ful 充滿;colorful=彩色的=color 顏色 + ful 充滿;thankful=感謝的=thank 感謝 + ful 充滿
+s|-less|沒有⋯的|less 是「沒有」，和 ful 相反|careless=粗心的=care 注意 + less 沒有;useless=沒用的=use 用處 + less 沒有;homeless=無家可歸的=home 家 + less 沒有;endless=無盡的=end 盡頭 + less 沒有;helpless=無助的=help 幫助 + less 沒有;wireless=無線的=wire 電線 + less 沒有
+s|-ness|性質、狀態|形容詞加 ness 變名詞：happy → happiness|happiness=快樂=happi 快樂 + ness 名詞;kindness=仁慈=kind 仁慈 + ness 名詞;darkness=黑暗=dark 暗 + ness 名詞;sadness=悲傷=sad 悲傷 + ness 名詞;illness=疾病=ill 病 + ness 名詞;weakness=弱點=weak 弱 + ness 名詞
+s|-ment|行為、結果|動詞加 ment 變名詞：move → movement|movement=動作、運動=move 移動 + ment 名詞;agreement=同意、協議=agree 同意 + ment 名詞;payment=付款=pay 付 + ment 名詞;enjoyment=樂趣=enjoy 享受 + ment 名詞;government=政府=govern 治理 + ment 名詞;development=發展=develop 發展 + ment 名詞
+s|-tion|行為、狀態|動詞加 tion 變名詞，念 /ʃən/|action=行動=act 行動 + ion 名詞;education=教育=educate 教育 + ion 名詞;invention=發明=invent 發明 + ion 名詞;collection=收藏=collect 收集 + ion 名詞;information=資訊=inform 告知 + ation 名詞;celebration=慶祝=celebrate 慶祝 + ion 名詞
+s|-sion|行為、狀態|sion 也是名詞字尾，多接 d、s 結尾的動詞|decision=決定=decide 決定 + sion 名詞;discussion=討論=discuss 討論 + ion 名詞;television=電視=tele 遠 + vision 看見;permission=許可=permit 允許 + sion 名詞;expression=表達=express 表達 + ion 名詞;explosion=爆炸=explode 爆炸 + sion 名詞
+s|-ity/-ty|性質|形容詞加 ity、ty 變成抽象名詞|ability=能力=able 能 + ity 名詞;activity=活動=active 活躍 + ity 名詞;reality=現實=real 真實 + ity 名詞;safety=安全=safe 安全 + ty 名詞;honesty=誠實=honest 誠實 + y 名詞;electricity=電=electric 電的 + ity 名詞
+s|-able|可以⋯的|able 就是「能夠」：washable 可以洗的|washable=可洗的=wash 洗 + able 可;comfortable=舒適的=comfort 舒適 + able 可;available=可用的=avail 利用 + able 可;enjoyable=令人愉快的=enjoy 享受 + able 可;reliable=可靠的=rely 依靠 + able 可;valuable=有價值的=value 價值 + able 可
+s|-ible|可以⋯的|ible 和 able 意思一樣，多接拉丁字根|possible=可能的=poss 能 + ible 可;visible=看得見的=vis 看 + ible 可;flexible=有彈性的=flex 彎 + ible 可;edible=可食用的=ed 吃 + ible 可;responsible=負責的=respons 回應 + ible 可;sensible=明智的=sens 感覺 + ible 可
+s|-ly|⋯地（副詞）|形容詞加 ly 變副詞，描述動作怎麼做|quickly=快速地=quick 快 + ly 地;slowly=慢慢地=slow 慢 + ly 地;happily=快樂地=happi 快樂 + ly 地;carefully=小心地=careful 小心 + ly 地;really=真正地=real 真 + ly 地;finally=最後=final 最後 + ly 地
+s|-ly|像⋯的、每⋯的|名詞加 ly 變形容詞：friend → friendly|friendly=友善的=friend 朋友 + ly 像⋯的;lovely=可愛的=love 愛 + ly 的;lonely=孤單的=lone 獨自 + ly 的;weekly=每週的=week 週 + ly 每;monthly=每月的=month 月 + ly 每;daily=每天的=dai 日 + ly 每
+s|-ous|充滿⋯的|ous 是「充滿⋯的」|famous=有名的=fam 名聲 + ous 充滿;dangerous=危險的=danger 危險 + ous 充滿;nervous=緊張的=nerv 神經 + ous 充滿;delicious=美味的=delici 美味 + ous 充滿;generous=慷慨的=gener 高貴 + ous 充滿;curious=好奇的=curi 關心 + ous 充滿
+s|-ive|有⋯性質的|ive 是「有⋯傾向、性質的」|active=活躍的=act 行動 + ive 的;creative=有創意的=create 創造 + ive 的;expensive=昂貴的=expens 花費 + ive 的;attractive=有吸引力的=attract 吸引 + ive 的;effective=有效的=effect 效果 + ive 的;talkative=健談的=talk 說話 + ative 的
+s|-al|⋯的（形容詞）|名詞加 al 變形容詞：nature → natural|natural=自然的=natur 自然 + al 的;national=國家的=nation 國家 + al 的;musical=音樂的=music 音樂 + al 的;personal=個人的=person 人 + al 的;traditional=傳統的=tradition 傳統 + al 的;digital=數位的=digit 數字 + al 的
+s|-al|⋯的行為（名詞）|動詞加 al 也能變名詞：arrive → arrival|arrival=到達=arrive 到達 + al 名詞;refusal=拒絕=refuse 拒絕 + al 名詞;approval=贊成=approve 贊成 + al 名詞;survival=倖存=survive 存活 + al 名詞;proposal=提議=propose 提議 + al 名詞;rehearsal=排練=rehearse 排練 + al 名詞
+s|-ic|⋯的、與⋯有關的|ic 是「⋯的」|scientific=科學的=scientif 科學 + ic 的;electric=電的=electr 電 + ic 的;artistic=藝術的=artist 藝術家 + ic 的;heroic=英勇的=hero 英雄 + ic 的;historic=歷史性的=histor 歷史 + ic 的;energetic=精力充沛的=energet 能量 + ic 的
+s|-ical|⋯的|ical 是 ic + al，意思一樣是「⋯的」|historical=歷史的=histor 歷史 + ical 的;logical=合邏輯的=log 邏輯 + ical 的;practical=實際的=pract 實行 + ical 的;typical=典型的=typ 類型 + ical 的;chemical=化學的=chem 化學 + ical 的;physical=身體的=phys 自然、身體 + ical 的
+s|-ize|使成為、使⋯化|ize 把形容詞或名詞變成動詞|realize=了解、實現=real 真實 + ize 使;organize=組織=organ 器官、組織 + ize 使;apologize=道歉=apolog 辯解 + ize 使;memorize=背誦=memor 記憶 + ize 使;modernize=現代化=modern 現代 + ize 使;criticize=批評=critic 評論者 + ize 使
+s|-ify/-fy|使⋯化|ify 也是「使⋯」|simplify=簡化=simpl 簡單 + ify 使;beautify=美化=beaut 美 + ify 使;classify=分類=class 類 + ify 使;identify=辨認=ident 相同 + ify 使;purify=淨化=pur 純 + ify 使;satisfy=使滿意=satis 足夠 + fy 使
+s|-en|使變得|形容詞加 en 變動詞：wide → widen|widen=加寬=wide 寬 + n 使;shorten=縮短=short 短 + en 使;darken=變暗=dark 暗 + en 使;sharpen=削尖=sharp 尖 + en 使;strengthen=加強=strength 力量 + en 使;soften=軟化=soft 軟 + en 使
+s|-en|⋯製的|名詞加 en，表示「用⋯做的」|wooden=木製的=wood 木 + en 製的;golden=金色的、金製的=gold 金 + en 製的;woolen=羊毛製的=wool 羊毛 + en 製的;earthen=陶土製的=earth 泥土 + en 製的
+s|-y|有⋯的、多⋯的|名詞加 y 變形容詞：rain → rainy|sunny=晴朗的=sun 太陽 + n + y 的;rainy=多雨的=rain 雨 + y 的;windy=多風的=wind 風 + y 的;cloudy=多雲的=cloud 雲 + y 的;salty=鹹的=salt 鹽 + y 的;healthy=健康的=health 健康 + y 的
+s|-ish|有點、像⋯的|ish 是「像⋯的、帶點⋯」|childish=孩子氣的=child 孩子 + ish 像;foolish=愚蠢的=fool 傻瓜 + ish 像;reddish=帶紅色的=red 紅 + d + ish 帶點;selfish=自私的=self 自己 + ish 像;greenish=帶綠色的=green 綠 + ish 帶點;stylish=時髦的=styl 風格 + ish 有
+s|-ship|關係、身分、技能|ship 放字尾表示「關係、身分」，不是船|friendship=友誼=friend 朋友 + ship 關係;relationship=關係=relation 關聯 + ship 關係;leadership=領導力=leader 領袖 + ship 能力;membership=會員身分=member 會員 + ship 身分;citizenship=公民身分=citizen 公民 + ship 身分;championship=冠軍賽=champion 冠軍 + ship 地位
+s|-hood|時期、狀態、群體|hood 是「⋯時期、⋯狀態」|childhood=童年=child 孩子 + hood 時期;neighborhood=鄰近地區=neighbor 鄰居 + hood 群體;boyhood=少年時期=boy 男孩 + hood 時期;adulthood=成年期=adult 成人 + hood 時期;motherhood=母親身分=mother 母親 + hood 狀態;brotherhood=手足情誼=brother 兄弟 + hood 狀態
+s|-dom|領域、狀態|dom 是「⋯的領域、狀態」|kingdom=王國=king 國王 + dom 領域;freedom=自由=free 自由 + dom 狀態;wisdom=智慧=wis 智慧的 + dom 狀態;boredom=無聊=bore 無聊 + dom 狀態;stardom=明星地位=star 明星 + dom 地位
+s|-ward|朝⋯方向|ward 是「朝向」|forward=向前=for 前 + ward 朝向;backward=向後=back 後 + ward 朝向;upward=向上=up 上 + ward 朝向;downward=向下=down 下 + ward 朝向;homeward=回家的=home 家 + ward 朝向;toward=朝向=to 向 + ward 朝
+s|-wise|方向、方式|wise 放字尾表示「⋯方式、⋯方向」|clockwise=順時針的=clock 時鐘 + wise 方向;otherwise=否則=other 其他 + wise 方式;likewise=同樣地=like 相同 + wise 方式;lengthwise=縱向地=length 長度 + wise 方向
+s|-some|有⋯傾向的|some 放字尾表示「帶來⋯的」|lonesome=寂寞的=lone 孤單 + some 帶有;awesome=令人驚嘆的=awe 敬畏 + some 帶來;tiresome=令人厭煩的=tire 疲倦 + some 帶來;troublesome=麻煩的=trouble 麻煩 + some 帶來;wholesome=有益健康的=whole 完整 + some 帶有
+s|-ism|主義、行為|ism 是「⋯主義、⋯行為」|tourism=觀光業=tour 旅遊 + ism 行業;heroism=英雄主義=hero 英雄 + ism 精神;optimism=樂觀=optim 最好 + ism 主義;criticism=批評=critic 評論 + ism 行為;capitalism=資本主義=capital 資本 + ism 主義
+s|-ology/-logy|學科、研究|logy 是「⋯學」，來自希臘文 logos（話語、道理）|biology=生物學=bio 生命 + logy 學;geology=地質學=geo 地 + logy 學;psychology=心理學=psycho 心 + logy 學;technology=科技=techno 技術 + logy 學;zoology=動物學=zoo 動物 + logy 學;ecology=生態學=eco 家、生態 + logy 學
+s|-ure|行為、結果|ure 把動詞變名詞：press → pressure|pressure=壓力=press 壓 + ure 名詞;failure=失敗=fail 失敗 + ure 名詞;mixture=混合物=mixt 混合 + ure 名詞;departure=離開=depart 離開 + ure 名詞;pleasure=樂趣=pleas 使高興 + ure 名詞;closure=關閉=clos 關 + ure 名詞
+s|-ance/-ence|性質、行為|ance、ence 把形容詞或動詞變名詞|importance=重要性=import 重要 + ance 名詞;difference=差異=differ 不同 + ence 名詞;distance=距離=di 分開 + st 站 + ance 名詞;silence=寂靜=sil 安靜 + ence 名詞;patience=耐心=pati 忍受 + ence 名詞;appearance=外表=appear 出現 + ance 名詞
+s|-ancy/-ency|狀態|ancy、ency 表示「⋯的狀態」|emergency=緊急情況=emerg 浮現 + ency 狀態;frequency=頻率=frequ 常常 + ency 狀態;vacancy=空缺=vac 空 + ancy 狀態;fluency=流利=flu 流 + ency 狀態;urgency=緊急=urg 催促 + ency 狀態;pregnancy=懷孕=pregn 懷孕 + ancy 狀態
+s|-age|集合、行為、費用|age 放字尾可以是「一堆東西、行為、費用」|baggage=行李=bag 袋 + g + age 集合;postage=郵資=post 郵寄 + age 費用;marriage=婚姻=marri 結婚 + age 行為;shortage=短缺=short 短 + age 狀態;package=包裹=pack 打包 + age 東西;storage=儲藏=stor 儲存 + age 行為
+s|-ery/-ry|場所、行業、集合|ery、ry 可指「場所、一類東西、性質」|bakery=麵包店=bake 烘烤 + ry 場所;bravery=勇敢=brave 勇敢 + ry 性質;machinery=機械=machine 機器 + ry 集合;scenery=風景=scene 景 + ry 集合;jewelry=珠寶=jewel 寶石 + ry 集合;nursery=托兒所=nurse 照顧 + ry 場所
+s|-ary|與⋯有關的|ary 常表示「與⋯有關的」|imaginary=想像的=imagin 想像 + ary 的;necessary=必要的=necess 必須 + ary 的;temporary=暫時的=tempor 時間 + ary 的;primary=主要的=prim 第一 + ary 的;secondary=次要的=second 第二 + ary 的;ordinary=普通的=ordin 秩序 + ary 的
+s|-ory|場所|ory 常表示「做⋯的場所」|factory=工廠=fact 做 + ory 場所;laboratory=實驗室=labor 工作 + atory 場所;dormitory=宿舍=dorm 睡 + itory 場所;territory=領土=terr 土地 + itory 地方;observatory=天文台=observ 觀察 + atory 場所;directory=名錄=direct 指引 + ory 東西
+s|-ling|小的、與⋯有關的|ling 有「小、⋯的人或物」的意思|duckling=小鴨=duck 鴨 + ling 小;seedling=幼苗=seed 種子 + ling 小;darling=親愛的=dar 珍愛 + ling 人;earthling=地球人=earth 地球 + ling 人;sibling=兄弟姊妹=sib 親屬 + ling 人
+s|-let|小|let 是「小」|piglet=小豬=pig 豬 + let 小;booklet=小冊子=book 書 + let 小;droplet=小水滴=drop 滴 + let 小;leaflet=傳單=leaf 葉 + let 小;starlet=小明星=star 明星 + let 小
+s|-ics|學科|ics 常是「⋯學」|physics=物理學=phys 自然 + ics 學;mathematics=數學=mathemat 學問 + ics 學;economics=經濟學=econom 經濟 + ics 學;politics=政治=polit 城邦 + ics 學;athletics=田徑運動=athlet 運動員 + ics 學;electronics=電子學=electron 電子 + ics 學
+s|-th|性質（名詞）|th 把形容詞或動詞變名詞：warm → warmth|growth=成長=grow 長 + th 名詞;warmth=溫暖=warm 暖 + th 名詞;strength=力量=streng 強 + th 名詞;length=長度=leng 長 + th 名詞;width=寬度=wid 寬 + th 名詞;truth=真相=tru 真 + th 名詞
+s|-ate|使成為（動詞）|ate 常把字根變成動詞|create=創造=cre 生長 + ate 使;activate=啟動=activ 活躍 + ate 使;celebrate=慶祝=celebr 隆重 + ate 使;decorate=裝飾=decor 美 + ate 使;educate=教育=educ 引導 + ate 使;locate=找出位置、位於=loc 地方 + ate 使
+s|-like|像⋯的|like 放字尾就是「像⋯一樣」|childlike=天真的=child 孩子 + like 像;lifelike=栩栩如生的=life 生命 + like 像;warlike=好戰的=war 戰爭 + like 像;ladylike=淑女的=lady 淑女 + like 像;businesslike=公事公辦的=business 生意 + like 像
+s|-ant/-ent|⋯的（形容詞）|ant、ent 也能當形容詞字尾|important=重要的=import 重要 + ant 的;different=不同的=differ 不同 + ent 的;pleasant=令人愉快的=pleas 使高興 + ant 的;excellent=優秀的=excel 擅長 + ent 的;confident=有自信的=confid 信任 + ent 的;silent=安靜的=sil 安靜 + ent 的
+s|-er|比較級（更⋯）|形容詞加 er 表示「更⋯」|taller=比較高的=tall 高 + er 更;faster=比較快的=fast 快 + er 更;bigger=比較大的=big 大 + g + er 更;happier=比較快樂的=happi 快樂 + er 更;younger=比較年輕的=young 年輕 + er 更
+s|-est|最高級（最⋯）|形容詞加 est 表示「最⋯」|tallest=最高的=tall 高 + est 最;fastest=最快的=fast 快 + est 最;biggest=最大的=big 大 + g + est 最;happiest=最快樂的=happi 快樂 + est 最;youngest=最年輕的=young 年輕 + est 最
+s|-ed|感到⋯的|ed 結尾的感受形容詞：人「感到」⋯|excited=感到興奮的=excit 刺激 + ed 感到;bored=感到無聊的=bor 無聊 + ed 感到;interested=感興趣的=interest 興趣 + ed 感到;surprised=感到驚訝的=surpris 驚訝 + ed 感到;tired=疲倦的=tir 疲倦 + ed 感到
+s|-ing|令人⋯的|ing 結尾的感受形容詞：事物「令人」⋯|exciting=令人興奮的=excit 刺激 + ing 令人;boring=無聊的=bor 無聊 + ing 令人;interesting=有趣的=interest 興趣 + ing 令人;surprising=令人驚訝的=surpris 驚訝 + ing 令人;tiring=令人疲倦的=tir 疲倦 + ing 令人
+s|-ing|動作、活動（名詞）|動詞加 ing 可以當名詞，表示活動|swimming=游泳=swim 游 + m + ing 活動;reading=閱讀=read 讀 + ing 活動;painting=畫作=paint 畫 + ing 作品;building=建築物=build 建 + ing 東西;meeting=會議=meet 見面 + ing 活動;shopping=購物=shop 逛店 + p + ing 活動
+s|-ar|⋯的|ar 也能表示「⋯的」|circular=圓形的=circul 圓 + ar 的;popular=受歡迎的=popul 人民 + ar 的;regular=規律的=regul 規則 + ar 的;similar=相似的=simil 相同 + ar 的;muscular=肌肉發達的=muscul 肌肉 + ar 的;spectacular=壯觀的=spectacul 景象 + ar 的
+s|-cracy/-crat|統治、統治者|cracy 是「統治」；crat 是「統治者」|democracy=民主=demo 人民 + cracy 統治;democrat=民主主義者=demo 人民 + crat 統治者;bureaucracy=官僚體系=bureau 辦公處 + cracy 統治;aristocrat=貴族=aristo 最好的 + crat 統治者;autocracy=獨裁=auto 自己 + cracy 統治
+s|-ette|小|ette 是「小、小型」|kitchenette=小廚房=kitchen 廚房 + ette 小;cigarette=香菸=cigar 雪茄 + ette 小;statuette=小雕像=statu 雕像 + ette 小

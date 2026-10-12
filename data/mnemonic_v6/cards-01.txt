@@ -1,0 +1,102 @@
+# word|method|hook|cue|scene|spell|example|exampleZh
+# method: k 諧音聯想 · l 外來語借音 · h 英文同音 · c 構詞拆字 · d 對比聯想 · i 情境圖像
+ambulance|k|俺不能死|俺不能死，快叫救護車|傷者大喊「俺不能死」，救護車鳴笛衝來把人送醫。|am-bu-lance 三拍，重音在 AM|Call an ambulance, please!|請叫救護車！
+family|k|發米粒|發米粒，全家一起吃飯|媽媽把一鍋飯的米粒分給每個人，一家人圍著同一張餐桌吃飯。|F-A-M-I-L-Y＝Father And Mother, I Love You；三音節，重音在 FA|My family eats dinner together.|我的家人一起吃晚餐。
+father|k|發達|發達，爸爸努力養家|爸爸每天認真工作，事業發達，把全家照顧得好好的。|fa + ther：th 念 /ð/，像 mother、brother 的結尾|My father reads the news every morning.|我爸爸每天早上看新聞。
+mother|d||mother 是媽媽，father 是爸爸|家庭照片中，孩子指向媽媽說 mother，再指向爸爸說 father，對照兩個家庭稱呼。|mother / father 對照；th 用舌尖靠近上齒發聲|My mother sings when she cooks.|我媽媽煮飯時會唱歌。
+parent|k|陪人等|陪人等，家長校門口等孩子|放學時，家長站在校門口陪人等，看到孩子就揮手。|parent 指父或母一人；parents 是雙親|Every parent loves their child.|每位家長都愛自己的孩子。
+brother|k|不惹|不惹哥哥，兄弟和好|弟弟說「不惹你了」，兄弟倆勾肩一起回家。|b + r + other；brother 可指哥哥或弟弟|My brother plays soccer.|我哥哥踢足球。
+sister|k|細絲帶|細絲帶，姊妹互綁頭髮|姊姊幫妹妹用細絲帶綁頭髮，兩人相視而笑。|sis + ter：兩個 s 夾一個 i|My sister is two years older than me.|我姊姊比我大兩歲。
+grandfather|c||爸爸或媽媽的爸爸，都是 grandfather|家族樹上，父母各自的爸爸位於上一代，孩子分別指向爺爺與外公。|grand + father；包含爺爺與外公|My grandfather tells funny stories.|我爺爺會說好笑的故事。
+grandmother|c||爸爸或媽媽的媽媽，都是 grandmother|家族樹上，父母各自的媽媽位於上一代，孩子分別指向奶奶與外婆。|grand + mother；包含奶奶與外婆|My grandmother grows vegetables.|我奶奶種菜。
+uncle|k|安可|安可！舅舅叔叔最會喊|演唱會上，舅舅站起來大喊「安可」，全家都笑了。|un + cle；uncle 包含伯伯、叔叔、舅舅、姑丈、姨丈|My uncle lives in Tainan.|我叔叔住在臺南。
+aunt|h||阿姨怕螞蟻，同音不同字|阿姨野餐時看到螞蟻爬上蛋糕，嚇得跳起來。|aunt ↔ ant（美式同音 /ænt/）；阿姨多一個 u|My aunt makes great cakes.|我阿姨做的蛋糕很好吃。
+cousin|d||不是親兄弟姊妹，是堂表兄弟姊妹|家族聚會的兩個孩子各自站在不同父母身旁；他們是堂表親，不是同一對父母的孩子。|cousin 堂表兄弟姊妹，不分性別；brother / sister 是兄弟姊妹|My cousin and I play games online.|我和表哥在線上玩遊戲。
+son|h||兒子曬太陽，同音不同字|兒子在院子裡曬太陽，影子拉得長長的。|son ↔ sun（同音 /sʌn/）；兒子用 o|Their son is ten years old.|他們的兒子十歲。
+daughter|k|多特|多特別！女兒是寶貝|爸爸抱著剛出生的女兒，說她「多特別」。|daugh + ter：gh 不發音，像 taught|Their daughter is a doctor.|他們的女兒是醫生。
+baby|l|貝比|貝比，小寶貝在睡覺|嬰兒床上的貝比抱著奶瓶熟睡。|ba + by：兩個 b；複數 babies|The baby is sleeping now.|嬰兒正在睡覺。
+child|i||一個孩子是 child，一群孩子是 children|一個孩子拿著單人照片，旁邊是多個孩子的合照，用一個與一群對照單複數。|child 單數；複數 children，不是 childs|The child is drawing a cat.|這個孩子在畫貓。
+children|k|去兒童|去兒童樂園，孩子們|週末一群孩子們排隊去兒童樂園玩。|child + ren：特殊複數，不加 s|The children are playing outside.|孩子們在外面玩。
+friend|k|分得|分得一半點心的好朋友|兩個好朋友把一塊餅乾分成兩半，一人分得一半。|fr + i + end：朋友到最後（end）都在|She is my best friend.|她是我最好的朋友。
+neighbor|k|內伯|內伯伯，住隔壁的鄰居|隔壁的伯伯從圍牆內探頭，跟我打招呼。|neigh + bor：gh 不發音；英式拼 neighbour|Our neighbor has a big dog.|我們的鄰居養了一隻大狗。
+person|k|怕生|怕生的那個人|一個怕生的人躲在門後，只探出半張臉。|per + son：人裡面藏著 son|She is a kind person.|她是個善良的人。
+people|k|批批|批批，一批批人們|捷運站裡，一批又一批的人們走出車廂。|peo + ple：eo 念 /i/；people 本身就是複數|Many people visit the park.|很多人去那座公園。
+school|k|思酷|思酷，動腦好酷的學校|校門寫著「思酷學校」，學生在裡面動腦思考。|sch + ool：ch 念 /k/|I go to school by bus.|我搭公車上學。
+classroom|c||上課的房間，就是教室|教室門牌寫著上課的房間，裡面擺滿課桌。|class（課）+ room（房間）|Our classroom is on the second floor.|我們的教室在二樓。
+teacher|k|提茶|提茶給老師|教師節，學生提茶給老師，老師笑著道謝。|teach（教）+ er（人）|Our teacher is very patient.|我們老師很有耐心。
+student|k|是讀的|是讀的，學生在讀書|教室裡的學生翻開課本：「我是來讀書的！」|stud + ent：study 的 stud + ent（人）|He is a student at our school.|他是我們學校的學生。
+classmate|c||同一班的夥伴，同學|全班同學合照，每個人都是同班的夥伴。|class（班）+ mate（夥伴）|My classmate lent me a pen.|我同學借我一支筆。
+blackboard|c||黑色的板，就是黑板|老師用粉筆在黑色板子上寫字。|black（黑）+ board（板）|Please look at the blackboard.|請看黑板。
+desk|k|爹思考|爹思考，坐在書桌前|爸爸坐在書桌前托腮思考，桌上堆滿文件。|desk 書桌；table 餐桌|My desk is next to the window.|我的書桌在窗戶旁邊。
+chair|k|茄兒|茄兒坐椅子|一根紫色茄子像人一樣坐在椅子上，翹著腳。|ch + air：椅子坐在空氣 air 上|Please sit on the chair.|請坐在椅子上。
+pencil|k|盆塞|盆塞滿鉛筆|書桌上的小盆裡塞滿削尖的鉛筆。|pen + cil：鉛筆以 pen 開頭|Can I borrow your pencil?|我可以借你的鉛筆嗎？
+pen|k|噴|噴墨的筆|原子筆筆尖噴出一點墨，在紙上寫出名字。|pen 是 pencil 的開頭|I write with a blue pen.|我用藍色原子筆寫字。
+eraser|k|一雷射|一雷射，錯字全擦光|橡皮擦像雷射槍，一照錯字就消失。|erase（擦掉）+ r → 擦掉的工具|I need an eraser.|我需要一個橡皮擦。
+ruler|c||守規則畫直線，就是尺|拿一把直尺，照著刻度畫出筆直的線。|rule（規則、畫線）+ r → 尺；也可指統治者|Draw a line with a ruler.|用尺畫一條線。
+notebook|c||記筆記的本子|筆記本一打開，每頁都是工整的筆記。|note（筆記）+ book（本子）|Write it in your notebook.|把它寫在你的筆記本裡。
+textbook|c||印課文的書，就是課本|翻開課本，每頁都是課文和插圖。|text（課文）+ book（書）|Open your textbook to page ten.|把課本翻到第十頁。
+backpack|c||背在背後的包，後背包|學生把後背包背在背上，雙手空空走路。|back（背）+ pack（包）|My backpack is heavy today.|我的背包今天很重。
+homework|c||帶回家的功課|放學回家，坐在書桌前寫功課。|home（家）+ work（工作）；不可數，不說 homeworks|I finish my homework after dinner.|我晚餐後寫完功課。
+lesson|k|來上|來上一堂課|鐘響了，老師說「來上課吧」，一堂課開始。|less + on：一堂課 lesson 不是 less（較少）|We have an English lesson today.|我們今天有一堂英文課。
+library|k|來不累哩|來不累哩，圖書館看書|在安靜的圖書館看書，看再久也說「來不累哩」。|li + brar + y：記住兩個 r；librarian 館員|I borrow books from the library.|我從圖書館借書。
+playground|c||玩耍的場地，就是操場|下課鐘一響，孩子衝到操場玩溜滑梯。|play（玩）+ ground（地面）|The children run on the playground.|孩子們在操場上跑。
+question|k|快思沉|快思沉，想通這個問題|學生盯著黑板上的大問號，快速思考又沉思。|quest（探尋）+ ion → 要去探尋的事|May I ask a question?|我可以問一個問題嗎？
+answer|k|按手|按手搶答，說出答案|搶答節目中，選手按手按鈕，大聲說出答案。|an + swer：w 不發音|Do you know the answer?|你知道答案嗎？
+listen|k|麗聲|麗聲入耳，仔細聽|閉上眼睛，把耳朵朝向鳥叫聲，專心聆聽美麗的聲音。|lis + ten：t 不發音；listen to 加對象|Please listen to the teacher.|請聽老師說。
+speak|i||站上講台，開口說英文|學生站上講台，鼓起勇氣對全班開口說英文。|拼字記法：s + peak（山頂），站上山頂大聲說；speak / spoke / spoken；speech 是名詞|Can you speak English?|你會說英文嗎？
+read|k|日讀|日讀一本書|每天睡前讀幾頁書，日日讀，越讀越多。|read 現在式念 /rid/；過去式同拼字念 /rɛd/|I read a story every night.|我每晚讀一個故事。
+write|h||右手寫字，同音不同字|用右手握筆寫字，right 與 write 念法相同。|write ↔ right（同音 /raɪt/）；w 不發音|Please write your name here.|請在這裡寫你的名字。
+wash|k|哇洗|哇洗，洗得好乾淨|孩子把滿是泥巴的手洗乾淨，大叫「哇」。|wash your hands；washing machine 洗衣機|Wash your hands before eating.|吃飯前要洗手。
+brush|k|把刷|一把刷子，刷刷刷|拿起一把刷子，來回刷牙刷鞋。|brush 名詞刷子、動詞刷；toothbrush 牙刷|I brush my teeth twice a day.|我一天刷牙兩次。
+cook|k|顧鍋|顧鍋，廚師顧鍋煮飯|戴高帽的廚師顧著鍋子，甩鍋炒菜，火焰竄起。|cook 煮飯，也指廚師；cooker 是爐具|My dad cooks on Sundays.|我爸爸星期天煮飯。
+clean|k|可淋|可淋水，沖乾淨|用水管淋水，把髒兮兮的腳踏車沖得乾乾淨淨。|clean 乾淨的／打掃；cleaner 清潔劑或清潔人員|Please clean your room.|請打掃你的房間。
+sleep|k|息裡鋪|息裡鋪，鑽進床鋪睡|累了就鑽進床鋪休息，一下子就睡著了。|sleep / slept；asleep 睡著的|I sleep eight hours a night.|我每晚睡八小時。
+wake|k|喂可|喂可，可以醒來了|媽媽在床邊說「喂，可以起來了」，孩子揉眼醒來。|wake up 醒來；woke / woken|I wake up at six.|我六點醒來。
+walk|k|我可|我可以走路去|孩子說「我可以自己走」，一步一步走到學校。|walk 的 l 不發音，像 talk|Let's walk to the park.|我們走路去公園吧。
+run|k|讓|讓一讓，我要跑|跑者大喊「讓一讓」，從人群旁邊衝過去。|run / ran / run；runner 跑者（雙 n）|I run every morning.|我每天早上跑步。
+jump|k|張蹦|張蹦，跳過水坑|孩子張開雙腳一蹦，跳過路上的水坑。|jump / jumped；jump rope 跳繩|The cat can jump very high.|那隻貓可以跳得很高。
+swim|k|水溫|水溫剛好，下水游泳|試一下水溫，剛好不冷，跳進泳池游起來。|swim / swam / swum；swimming 雙 m|Can you swim?|你會游泳嗎？
+help|k|嘿幫|嘿幫，幫我一把|搬重箱子的人喊「嘿，幫一把」，朋友立刻伸手。|help / helped；helpful 樂於助人的|Can you help me?|你可以幫我嗎？
+smile|k|是買了|是買了！嘴角微笑|終於買到想要的書，他嘴角上揚，露出微笑。|smile 微笑不出聲；laugh 笑出聲|She has a lovely smile.|她的微笑很可愛。
+laugh|k|樂福|樂福滿滿，哈哈大笑|一家人看喜劇，笑得前仰後合，滿屋樂福。|laugh：gh 念 /f/，像 enough|The joke made us laugh.|那個笑話讓我們大笑。
+cry|k|苦哀|苦哀哀，哭出來|小孩跌倒，苦哀哀地哭，眼淚掉下來。|cry / cried；也可指大聲喊|The baby started to cry.|寶寶開始哭了。
+breakfast|c||打破禁食，第一餐|早上醒來，打破一整夜沒吃東西，開始吃早餐。|break（打破）+ fast（禁食，不是快）|I eat eggs for breakfast.|我早餐吃蛋。
+lunch|k|連吃|午餐連吃兩碗飯|中午太餓，午餐連吃兩碗飯。|lunch 午餐；lunchbox 便當盒|We have lunch at noon.|我們中午吃午餐。
+dinner|k|訂了|晚餐訂了位|爸爸打電話給餐廳：「晚上七點，訂了位。」|din + ner：雙 n；diner 是用餐者|What's for dinner?|晚餐吃什麼？
+meal|k|米兒|一餐少不了米兒|飯桌上，每人碗裡都裝滿香噴噴的米飯。|meal 一餐；meat 肉，別拼錯|Breakfast is my favorite meal.|早餐是我最喜歡的一餐。
+water|k|我特渴|我特渴，快給我水|跑完步滿身大汗，大喊「我特渴」，一口氣喝光一杯水。|wa + ter：美式 t 常念得像輕快的 d|Can I have some water?|可以給我一些水嗎？
+milk|k|咪了口|咪了口，貓咪喝牛奶|小貓咪低頭喝了一口牛奶，鬍子沾滿白色奶滴。|milk 不可數：a glass of milk|I drink milk every morning.|我每天早上喝牛奶。
+tea|k|踢|踢到茶杯，茶灑了|一不小心踢到茶杯，熱茶灑在托盤上。|tea 與字母 T 同音|Would you like some tea?|你要喝點茶嗎？
+juice|k|汁濕|果汁濕了手|用力擠柳橙，汁濕了整隻手，杯裡裝滿果汁。|juice 不可數；juicy 多汁的|I like orange juice.|我喜歡柳橙汁。
+bread|k|撥熱的|撥熱的，剝開熱麵包|剛出爐的麵包被撥開，冒出熱氣。|ea 念 /ɛ/，像 head；不可數：a slice of bread|I have bread and milk for breakfast.|我早餐吃麵包配牛奶。
+rice|k|來四|米飯來四碗|餐廳老闆喊：「白米飯，來四碗！」|rice 不可數；fried rice 炒飯|We eat rice every day.|我們每天吃米飯。
+noodle|k|扭的|扭的，扭來扭去的麵條|筷子挑起一大把麵條，麵條扭來扭去。|常用複數 noodles；oo 像兩條麵|I like beef noodles.|我喜歡牛肉麵。
+apple|k|愛剖|愛剖蘋果，看果核|小朋友愛把蘋果剖成兩半，看裡面的果核。|ap + ple：雙 p；an apple 用 an|An apple a day is good for you.|每天一顆蘋果對你有益。
+banana|l|芭娜娜|芭娜娜，香蕉一大串|水果攤掛著「芭娜娜」招牌，一大串黃香蕉。|ba + na + na：一個 b 加兩個 na；重音在第二音節|Monkeys love bananas.|猴子喜歡香蕉。
+orange|k|噢冷汁|噢冷汁，冰冷柳橙汁|夏天喝一大口冰冷的柳橙汁，忍不住「噢」一聲。|o + range；orange 也是橙色；an orange|I peel an orange for my sister.|我幫妹妹剝柳橙。
+vegetable|i||菜籃裝滿各種蔬菜|菜籃裡有紅蘿蔔、葉菜和花椰菜，準備端上餐桌。|vege + table：把蔬菜擺上桌（拼字記法，不是字源）|Eat more vegetables.|多吃蔬菜。
+fruit|k|福祿|福祿水果，一籃拜拜|過年時擺一籃水果，祝福「福祿滿滿」。|fr + ui + t：ui 念 /u/；fruit 常不可數|I eat fruit after lunch.|我午餐後吃水果。
+dog|k|逗狗|逗狗玩，小狗搖尾巴|拿球逗狗，小狗搖著尾巴追過去。|dog 倒過來是 god|I walk my dog every day.|我每天遛狗。
+cat|k|卡|貓卡在紙箱|一隻貓鑽進太小的紙箱，卡住只露出尾巴。|cat / cats；kitten 小貓|The cat is sleeping on the sofa.|那隻貓在沙發上睡覺。
+bird|k|伯的|伯伯的鳥會唱歌|公園裡，伯伯的鳥籠掛在樹上，小鳥唱個不停。|ir 念 /ɝ/，像 girl、first|A bird is singing in the tree.|一隻鳥在樹上唱歌。
+rabbit|k|來比它|來比它，兔子要賽跑|兔子對烏龜說「來比賽跑」，一溜煙衝出去。|rab + bit：雙 b；bunny 是口語小兔|The rabbit has long ears.|兔子有長耳朵。
+elephant|k|餓了飯|餓了飯，大象飯量大|大象餓了，用長鼻子捲起一大把草送進嘴裡。|ele + phant：ph 念 /f/；an elephant|An elephant has a long trunk.|大象有長鼻子。
+monkey|k|忙騎|猴子忙騎單車|馬戲團的猴子忙著騎單車繞圈。|mon + key：裡面有 key（鑰匙）；ey 念 /i/|The monkey is eating a banana.|猴子在吃香蕉。
+tiger|k|太哥|森林太哥，就是老虎|老虎走過森林，動物們都叫牠「太哥」。|ti + ger：i 念 /aɪ/|The tiger has black stripes.|老虎有黑色條紋。
+lion|k|賴昂|賴昂，獅子賴地昂首吼|獅子賴在草地上，突然昂首大吼。|li + on：兩個音節；lioness 母獅|The lion is the king of the jungle.|獅子是叢林之王。
+fish|k|飛濕|飛濕，魚飛出水濺得濕|一條魚飛躍出水面，濺得釣客全身濕。|fish 單複數同形；fishing 釣魚|There are many fish in the lake.|湖裡有很多魚。
+bear|k|背兒|熊媽媽背兒子|熊媽媽把小熊背在背上，慢慢走進森林。|bear 熊；和 pear 梨只差一個字母|The bear is looking for honey.|熊在找蜂蜜。
+weather|k|外的|外的，看外頭的天氣|出門前看窗外：外頭的天氣是晴還是雨？|weather ↔ whether（同音）；ea 念 /ɛ/|The weather is nice today.|今天天氣很好。
+sunny|c||有太陽，就晴朗|太陽高掛，晴朗的天空一朵雲也沒有。|sun + n + y：重複 n 再加 y|It's sunny today.|今天是晴天。
+rainy|c||有雨的，就是雨天|窗外下著雨，地上滿是水窪。|rain（雨）+ y|I stay home on rainy days.|下雨天我待在家。
+cloudy|c||有雲的，多雲天|天空堆滿灰雲，看不見太陽。|cloud（雲）+ y|It's cloudy and cool.|天氣多雲又涼爽。
+windy|c||有風的，風很大|風很大，旗子和樹都被吹向同一邊。|wind（風）+ y|It's windy, so let's fly a kite.|風很大，我們去放風箏吧。
+snowy|c||有雪的，下雪天|下雪天，屋頂和地面都白成一片。|snow（雪）+ y|It was snowy in Japan.|日本當時在下雪。
+season|k|洗衫|換季節，洗衫換衣櫃|換季時把夏天的衣衫洗好收起，換上冬衣。|sea + son；動詞 season 是調味|Spring is my favorite season.|春天是我最喜歡的季節。
+spring|k|是不冷|春天是不冷|春天到了，花都開了，天氣是不冷也不熱。|spring 也指彈簧、泉水|Flowers bloom in spring.|花在春天綻放。
+summer|k|沙嗎|沙嗎，夏天去沙灘嗎|夏天好熱，朋友問：「去沙灘嗎？」|sum + mer：雙 m|We go swimming in summer.|我們夏天去游泳。
+autumn|k|藕湯|秋天喝藕湯|秋風吹落黃葉，一家人喝熱騰騰的藕湯。|au + tumn：n 不發音；美式常說 fall|Leaves turn red in autumn.|秋天樹葉變紅。
+winter|k|溫特|溫特，冬天溫度特低|冬天溫度特別低，大家圍著圍巾發抖。|win + ter|It snows in winter.|冬天會下雪。
+morning|k|摸鈴|早晨摸鈴按鬧鐘|早晨鬧鈴響，伸手摸鈴按掉，太陽已經升起。|morn + ing；Good morning 早安|I jog in the morning.|我早上慢跑。
+afternoon|c||正午之後，就是下午|時鐘過了十二點，正午之後就是下午。|after（之後）+ noon（正午）|See you this afternoon.|今天下午見。
+evening|k|已晚寧|已晚寧，傍晚好寧靜|太陽下山，天色已晚，街道變得寧靜。|even + ing；Good evening 晚上見面問候|We take a walk in the evening.|我們傍晚去散步。

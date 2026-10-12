@@ -1,0 +1,100 @@
+usually|k|又如舊哩|通常又如舊哩|每天早上通常又如舊：刷牙、吃早餐、上學。|usual（平常的）+ ly|I usually walk to school.|我通常走路上學。
+often|k|哦煩|哦煩，常常被唸好煩|媽媽常常提醒寫功課，「哦，好煩！」|of + ten：t 常不發音|I often read at night.|我常在晚上看書。
+sometimes|c||有些時候，有時|有些時候晴天、有些時候下雨，天氣不一定。|some（一些）+ times（次、時候）|Sometimes I walk to school.|有時我走路上學。
+seldom|k|雪冬|臺灣雪冬很少見|臺灣平地的冬天，很少見到下雪。|sel + dom|It seldom snows here.|這裡很少下雪。
+rarely|c||稀有地，幾乎不|稀有的流星雨，很少看得到。|rare（稀有的）+ ly|He rarely eats meat.|他很少吃肉。
+never|k|能否|能否說謊？從不！|有人問他能否作弊？他說：「從不！」|n + ever：not + ever，一次都沒有|I never tell lies.|我從不說謊。
+once|c||一次，從 one 變來|只試一次就成功了，一次就好。|one（一）→ once（一次）；念 /wʌns/|I have been to Japan once.|我去過日本一次。
+twice|c||兩次，從 two 變來|一天刷牙兩次，早晚各一次。|two（二）→ twice（兩次）|I brush my teeth twice a day.|我一天刷牙兩次。
+thrice|c||三次，從 three 變來|敲門三次，咚咚咚。|three（三）→ thrice（三次）；口語多說 three times|He knocked thrice.|他敲了三次門。
+fourth|c||第四，four 加 th|排隊排在第四個位置。|four（四）+ th（第幾）|He came fourth.|他得了第四名。
+fifth|c||第五，five 變 fif 加 th|比賽第五名，剛好一隻手的數目。|five（五）→ fif + th：v 變 f|It's my fifth birthday.|這是我的五歲生日。
+sixth|c||第六，six 加 th|六年級是小學第六年。|six（六）+ th|He is in sixth grade.|他讀六年級。
+seventh|c||第七，seven 加 th|一週的第七天，休息日。|seven（七）+ th|Sunday is the seventh day.|星期日是第七天。
+eighth|c||第八，eight 只加 h|eight 已經有 t，只要再加 h。|eight（八）+ h：不是 eightth|She came eighth.|她得了第八名。
+ninth|c||第九，nine 去 e 加 th|九號球員，排第九。|nine（九）→ nin + th：去掉 e|It's the ninth day.|這是第九天。
+tenth|c||第十，ten 加 th|第十次練習，終於成功。|ten（十）+ th|This is my tenth try.|這是我第十次嘗試。
+million|k|米粒|一百萬顆米粒|一個大米倉裡，堆了一百萬顆米粒。|mill + ion；millionaire 百萬富翁|A million people live here.|這裡住了一百萬人。
+billion|k|比粒|比粒，十億比米粒還多|十億，比一倉米粒還要多一千倍。|b + illion：million 的 m 換成 b|There are billions of stars.|有數十億顆星星。
+circle|k|收口了|畫圓一圈收口了|拿圓規轉一圈，線條回到起點收口了。|cir + cle；circus、circle 都有 circ（圓）|Draw a circle.|畫一個圓。
+triangle|c||三個角的形狀，三角形|三根筷子圍成一個三角形。|tri（三）+ angle（角）|A triangle has three sides.|三角形有三個邊。
+rectangle|c||四個直角的形狀，長方形|課本封面是四個直角的長方形。|rect（直、正）+ angle（角）|A door is a rectangle.|門是長方形。
+oval|c||像蛋的形狀，橢圓|一顆雞蛋側看，就是橢圓形。|ov（蛋，拉丁文 ovum）+ al：蛋形的|An egg is oval.|蛋是橢圓形的。
+diamond|k|戴滿的|手指戴滿的鑽石|貴婦手指戴滿鑽石，菱形切面閃閃發光。|di + a + mond；diamond 也指菱形|She has a diamond ring.|她有一枚鑽石戒指。
+heart|k|哈特|哈特，特別愛你|比出一個愛心手勢：「哈！特別愛你。」|h + ear + t：心裡藏著 ear（耳）和 art|She drew a heart on the card.|她在卡片上畫了一個愛心。
+line|k|賴|加賴，連成一條線|兩個人「加賴」後，手機之間像連起一條線。|l + ine；online 線上的|Draw a straight line.|畫一條直線。
+dot|k|逗|逗點上面是一個小點|逗點「，」上面是一個小圓點，下面再拖一條小尾巴。|d + ot；polka dots 圓點花紋|Draw a dot.|畫一個點。
+stripe|k|四條排|四條排成條紋|白襯衫上四條藍線排成一道道條紋。|str + ipe；striped 有條紋的|The zebra has black stripes.|斑馬有黑色條紋。
+pattern|k|盤騰|龍形盤騰的花紋|瓷盤上畫著一圈圈龍形盤騰的花紋圖案。|pat + tern：雙 t|I like the pattern on your shirt.|我喜歡你襯衫上的圖案。
+workbook|c||做練習的本子，習作本|翻開習作本，一題題寫練習。|work（練習、功課）+ book（本子）|Do page 5 in your workbook.|寫習作本第五頁。
+storybook|c||裝故事的書，故事書|睡前翻開故事書，聽一個童話。|story（故事）+ book（書）|Read me a storybook.|唸一本故事書給我聽。
+handbook|c||拿在手裡查的小書，手冊|新生拿到一本學生手冊，隨時查規定。|hand（手）+ book（書）|Read the student handbook.|讀學生手冊。
+cookbook|c||教做菜的書，食譜|翻開食譜書，照著步驟做蛋糕。|cook（烹飪）+ book（書）|Mom has many cookbooks.|媽媽有很多食譜書。
+guidebook|c||帶路指引的書，導覽書|出國旅遊帶一本導覽書，照著地圖走。|guide（指引）+ book（書）|The guidebook shows the best places.|導覽書列出最好的景點。
+bookmark|c||書裡做記號的東西，書籤|讀到一半，夾一張書籤做記號。|book（書）+ mark（記號）|I use a bookmark.|我用書籤。
+sunlight|c||太陽的光，陽光|早晨陽光灑進窗戶，暖洋洋。|sun（太陽）+ light（光）|Plants need sunlight.|植物需要陽光。
+moonlight|c||月亮的光，月光|月光照在湖面上，銀亮一片。|moon（月亮）+ light（光）|We walked in the moonlight.|我們在月光下散步。
+daylight|c||白天的光，日光|天亮了，日光照亮整條街。|day（白天）+ light（光）|We left before daylight.|我們在天亮前出發。
+headlight|c||車頭的燈，大燈|夜裡汽車打開車頭兩盞大燈。|head（頭、前面）+ light（燈）|Turn on the headlights.|打開大燈。
+candlelight|c||蠟燭的光，燭光|燭光晚餐，桌上點著兩根蠟燭。|candle（蠟燭）+ light（光）|We had dinner by candlelight.|我們吃了燭光晚餐。
+spotlight|c||照亮一個點的燈，聚光燈|舞台上一道聚光燈只照著主角。|spot（點、地點）+ light（燈）|The singer stood in the spotlight.|歌手站在聚光燈下。
+snowball|c||雪做的球，雪球|捏一顆雪球，丟向朋友。|snow（雪）+ ball（球）|They had a snowball fight.|他們打了一場雪仗。
+snowman|c||雪做的人，雪人|堆一個雪人，鼻子插紅蘿蔔。|snow（雪）+ man（人）|Let's build a snowman.|我們來堆雪人吧。
+snowstorm|c||下雪的暴風，暴風雪|暴風雪來了，大雪狂飛看不清路。|snow（雪）+ storm（暴風）|The snowstorm closed the roads.|暴風雪讓道路封閉。
+rainstorm|c||下雨的暴風，暴風雨|暴風雨中雷聲轟隆，雨像倒下來。|rain（雨）+ storm（暴風）|A rainstorm is coming.|暴風雨要來了。
+raindrop|c||落下的一滴雨，雨滴|窗玻璃上一顆顆雨滴往下滑。|rain（雨）+ drop（滴）|Raindrops fell on my face.|雨滴落在我臉上。
+seashore|c||海邊的岸，海濱|沿著海濱撿貝殼，浪花拍上岸。|sea（海）+ shore（岸）|We walked along the seashore.|我們沿著海岸散步。
+seafood|c||海裡來的食物，海鮮|一桌海鮮：蝦、蟹、魚、蛤蜊。|sea（海）+ food（食物）|I love seafood.|我愛吃海鮮。
+seagull|c||海上的鷗，海鷗|海鷗在海面上盤旋，嘎嘎叫。|sea（海）+ gull（鷗）|A seagull took my chips!|一隻海鷗搶走我的薯條！
+seashell|c||海裡的殼，貝殼|沙灘上撿到一個漂亮的貝殼。|sea（海）+ shell（殼）|She collects seashells.|她收集貝殼。
+fishbowl|c||養魚的圓碗，金魚缸|圓圓的金魚缸裡，一條金魚游來游去。|fish（魚）+ bowl（碗）|The goldfish lives in a fishbowl.|金魚住在魚缸裡。
+fisherman|c||捕魚的人，漁夫|漁夫天沒亮就出海撒網捕魚。|fish（捕魚）+ er + man（人）|The fisherman caught a big fish.|漁夫捕到一條大魚。
+fishery|c||捕魚的行業與場所，漁業|港口漁場裡，漁船一艘艘進出。|fish（魚）+ ery（行業、場所）|The town depends on its fisheries.|這個小鎮靠漁業維生。
+choose|k|抽|抽籤來選擇|拿不定主意，就抽籤來選擇。|ch + oo + se；choice 選擇（名詞）|Choose one color.|選一個顏色。
+freeze|i||水結成冰，凍得硬邦邦|把水倒進製冰盒、放進冷凍庫，幾小時後就結冰凍住了。|fr + ee + ze；freezer 冷凍庫；froze / frozen|Water freezes at 0°C.|水在攝氏零度結冰。
+rise|k|來自|太陽來自東方升起|太陽來自東方，慢慢升起。|r + ise；rise 自己升起；raise 舉起別的東西|The sun rises in the east.|太陽從東方升起。
+raise|k|瑞士|舉起瑞士國旗|運動員高高舉起紅底白十字的瑞士國旗。|r + aise；raise 是及物：raise your hand；也指撫養、籌募|Raise your hand.|舉起你的手。
+lead|k|領的|帶頭領的隊長|隊長走在最前面，帶領全隊往前走。|l + ea + d：帶領念 /lid/；鉛念 /lɛd/|Please lead the way.|請帶路。
+spread|k|撒布的|撒布的，消息撒布開來|一個消息像撒布種子，很快傳遍全村。|spr + ead：ea 念 /ɛ/；三態同形|The news spread quickly.|消息很快就傳開了。
+grow|k|果肉|種子長出果肉|種下一顆種子，長大結出甜甜果肉。|gr + ow；grow / grew / grown|Plants grow fast in spring.|植物在春天長得快。
+hide|k|害得|做錯事害得要躲|打破花瓶，害得他躲到床底下。|h + ide；hide-and-seek 捉迷藏|The cat hides under the bed.|貓躲在床底下。
+steal|k|是提了|小偷是提了就跑|小偷順手提了錢包就跑。|st + ea + l；steal ↔ steel（鋼）同音|Don't steal.|不要偷東西。
+break|k|迸裂|杯子摔得迸裂|杯子掉在地上，迸裂成好幾片。|br + eak：ea 念 /eɪ/；break / broke / broken|Don't break the glass.|別打破杯子。
+bring|k|把拎|把拎，把東西拎來|去旅行時，記得把相機拎來。|br + ing；bring / brought / brought|Bring your book tomorrow.|明天帶你的書來。
+buy|k|拜|拜託，買給我|小孩拉著媽媽：「拜託，買給我！」|b + uy；buy ↔ by ↔ bye 同音|I want to buy a book.|我想買一本書。
+drive|k|載夫|開車載夫出門|太太開車載老公出門上班。|dr + ive；driver 駕駛；drive / drove / driven|My mom drives to work.|我媽媽開車上班。
+fall|k|飛落|秋天落葉飛落|秋天一到，樹葉一片片飛落。|f + all；美式 fall 也指秋天；fall / fell / fallen|Be careful not to fall.|小心不要跌倒。
+feel|k|肥了|覺得自己肥了|過年吃太多，摸摸肚子，覺得自己肥了。|f + ee + l；feeling 感覺；feel / felt|I feel happy.|我覺得很開心。
+find|k|翻的|翻的，翻箱倒櫃找到|翻了半天，終於在抽屜裡找到鑰匙。|f + ind；find / found / found|I can't find my key.|我找不到鑰匙。
+forget|k|放鴿|放鴿子，忘了約會|他忘了和同學的約，害大家被放鴿子。|for + get；forget / forgot / forgotten|Don't forget your homework.|別忘了你的作業。
+give|k|給|給你一個禮物|伸出雙手，給你一個禮物。|g + ive；give / gave / given|Give me a pen, please.|請給我一支筆。
+hear|k|嘻耳|嘻耳，笑聲傳進耳|隔壁傳來嘻嘻笑聲，傳進耳朵裡。|h + ear：聽見要用 ear（耳）；hear ↔ here 同音|Can you hear me?|你聽得到我說話嗎？
+keep|k|吉普|吉普車保持前進|一輛吉普車在山路上保持速度，一直往前開。|k + ee + p；keep / kept / kept|Keep quiet, please.|請保持安靜。
+know|k|諾|知道了，諾|老師說明規則，學生點頭：「諾，知道了。」|k + now：k 不發音；know ↔ no 同音|I know the answer.|我知道答案。
+leave|k|離位|離位，離開座位|下課鈴響，他離開座位走出教室。|l + ea + ve；leave / left / left|Don't leave me alone.|不要丟下我一個人。
+lose|k|漏子|出了漏子，輸了|防守出了漏子，比賽輸了。|l + ose；lose / lost / lost；loose（鬆的）多一個 o|Don't lose your ticket.|別弄丟你的票。
+meet|k|覓|覓得老朋友|在人群中覓得老朋友，高興地見面握手。|m + ee + t；meet ↔ meat（肉）同音|Nice to meet you.|很高興認識你。
+pay|k|賠|打破要賠錢付款|打破店裡的杯子，只好賠錢付款。|p + ay；pay / paid / paid|I'll pay for lunch.|我來付午餐錢。
+ride|k|來的|騎腳踏車來的|他是騎腳踏車來的，車停在門口。|r + ide；ride / rode / ridden|I ride my bike to school.|我騎腳踏車上學。
+see|h||眼睛看見，同音不同字|爬上山頂，看見（see）遠方的大海（sea）。|see ↔ sea（同音 /si/）；看見用 ee|I can see the moon.|我看得到月亮。
+send|k|送的|寄送的包裹|郵差把寄送的包裹送到門口。|s + end：送到終點（end）；send / sent / sent|Send me a message.|傳訊息給我。
+sit|k|席地|席地而坐|大家在草地上席地而坐，野餐聊天。|s + it；sit / sat / sat|Please sit down.|請坐。
+spend|k|四本|四本書花光零用錢|在書店待了一下午，買了四本書，零用錢都花光了。|sp + end：花到最後（end）；spend / spent / spent|I spend an hour reading.|我花一小時閱讀。
+stand|k|是站的|是站的，大家站著|公車上沒有座位，大家都是站的。|st + and；stand / stood / stood|Please stand up.|請站起來。
+take|k|帶個|帶個傘再出門|下雨了，媽媽說：「帶個傘再出門。」|t + ake；take / took / taken|Take an umbrella.|帶一把傘。
+teach|k|提起|提起筆教你寫|老師提起毛筆，一筆一畫教你寫字。|t + each：每一個（each）都教；teach / taught / taught|She teaches English.|她教英文。
+tell|k|透了|透了，透露告訴你|朋友悄悄透露了，告訴你一個秘密。|t + ell：雙 l；tell / told / told|Tell me the truth.|告訴我實話。
+think|k|深刻|深刻地想一想|閉上眼睛，深刻地想一想這題怎麼解。|th + ink：把想法用墨水（ink）寫下；think / thought|I think so.|我想是的。
+wear|k|圍上|圍上圍巾，穿戴整齊|出門前圍上圍巾、穿上外套。|w + ear：穿戴不是耳朵 ear；wear ↔ where 同音|Wear a coat.|穿上外套。
+win|k|穩|穩贏了|最後一球投進，穩贏了。|w + in；winner 贏家（雙 n）；win / won / won|I hope our team will win.|希望我們隊會贏。
+technology|k|太可能了|科技讓一切太可能了|手機能翻譯、導航、視訊，科技讓一切太可能了。|techno（技術）+ logy（學問）|Technology changes our lives.|科技改變我們的生活。
+internet|c||網子彼此之間相連，網際網路|全世界的電腦像一張大網彼此相連。|inter（之間）+ net（網）|I use the internet every day.|我每天用網路。
+smartphone|c||聰明的電話，智慧型手機|一支智慧型手機能拍照、上網、導航。|smart（聰明）+ phone（電話）|My smartphone is new.|我的智慧型手機是新的。
+software|d||軟體是程式，硬體是設備|電腦螢幕裡跑的程式是軟體，摸得到的機器是硬體。|soft（軟）+ ware（器物）；hardware 硬體|This software is free.|這個軟體是免費的。
+device|k|得外送|裝置壞了得外送修|平板電子設備壞了，得外送去維修。|de + vice：vice 念 /vaɪs/；devise（設計）是動詞|Turn off your device.|關掉你的裝置。
+application|c||應用到手機上的程式|手機桌面上一個個應用程式，點開就能用。|apply（應用、申請）→ application；口語簡稱 app|I downloaded a new application.|我下載了一個新的應用程式。
+connect|c||綁在一起，連接|兩條線綁在一起，電就連通了。|con（一起）+ nect（綁、連）|Connect the two wires.|把兩條電線連起來。
+information|c||把消息傳進來，資訊|新聞把消息傳進每個人腦中。|inform（通知、告知）+ ation；不可數|I need more information.|我需要更多資訊。
+online|c||在線上的，線上|戴上耳機，在線上和同學開會。|on（在上面）+ line（線）|We have online classes.|我們上線上課程。
+digital|c||用數字表示的，數位|手錶不用指針，只用數字顯示時間。|digit（數字、手指）+ al（⋯的）|I have a digital camera.|我有一臺數位相機。
+environment|k|因為人們|環境好壞，因為人們|垃圾撿乾淨，河流變清澈，環境好壞都因為人們。|en + viron（環繞）+ ment：環繞我們的一切|We must protect the environment.|我們必須保護環境。

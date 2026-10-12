@@ -1,5 +1,6 @@
-// A finite queue of original card MP3s, independent of search and pagination.
-export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=()=>{},baseUrl}){
+// A finite queue of MP3s, independent of search and pagination. Used by the 1,000 cards and the 500 word families.
+export const AUDIO_VERSION='keyword6';
+export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=()=>{},baseUrl,fileFor=item=>'audio-trio/'+encodeURIComponent(item.word)+'.mp3',version=AUDIO_VERSION}){
  let queue=[],index=-1,status='idle',epoch=0,error='';
  const state=()=>({status,index,total:queue.length,current:queue[index]||null,error});
  const emit=()=>onState(state());
@@ -7,9 +8,9 @@ export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=
  async function playIndex(next){
   if(next>=queue.length){finish();return;}
   const token=++epoch;index=next;status='loading';error='';emit();
-  audio.pause();stopOther();audio.src=new URL('audio-trio/'+encodeURIComponent(queue[index].word)+'.mp3?v=mandarin3',baseUrl).href;
+  audio.pause();stopOther();audio.src=new URL(fileFor(queue[index])+'?v='+version,baseUrl).href;
   try{await audio.play();if(token!==epoch)return;status='playing';emit();}
-  catch(e){if(token!==epoch)return;status='error';error='這張音檔暫時無法播放。可重試或跳到下一張。';emit();}
+  catch(e){if(token!==epoch)return;status='error';error='這個音檔暫時無法播放。可重試或跳到下一個。';emit();}
  }
  function start(){const available=getCards();if(!available.length)return;queue=available.slice();return playIndex(0);}
  function stop(){epoch++;status='idle';index=-1;queue=[];error='';audio.pause();emit();}
@@ -23,7 +24,7 @@ export function createMnemonicPlaylist({audio,getCards,onState=()=>{},stopOther=
  }
  function next(){if(!['playing','paused','error'].includes(status))return;return playIndex(index+1);}
  audio.addEventListener('ended',()=>{if(status==='playing'&&audio.ended)void playIndex(index+1);});
- audio.addEventListener('error',()=>{if(!queue[index]||!audio.error||!['loading','playing','paused'].includes(status))return;epoch++;status='error';error='這張音檔載入失敗。可重試或跳到下一張。';emit();});
+ audio.addEventListener('error',()=>{if(!queue[index]||!audio.error||!['loading','playing','paused'].includes(status))return;epoch++;status='error';error='這個音檔載入失敗。可重試或跳到下一個。';emit();});
  audio.addEventListener('pause',()=>{if(status==='playing'&&audio.paused&&!audio.ended){epoch++;status='paused';emit();}});
  return {start,stop,toggle,next,getState:state,refresh:emit};
 }

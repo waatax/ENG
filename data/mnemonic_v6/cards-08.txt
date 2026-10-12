@@ -1,0 +1,100 @@
+castle|k|看守|城堡有衛兵看守|高高的城堡門口，衛兵日夜看守。|cas + tle：t 不發音|The king lives in a castle.|國王住在城堡裡。
+palace|k|怕了誰|住宮殿的皇帝怕了誰|金碧輝煌的宮殿裡，皇帝心想：我怕了誰？|pal + ace：ace（王牌）在宮殿裡|The queen lives in a palace.|女王住在宮殿裡。
+tower|k|頭兒|高塔頭兒在雲裡|高塔的頭兒伸進雲裡，看不見塔尖。|tow + er；Eiffel Tower 艾菲爾鐵塔|The tower is very tall.|那座塔很高。
+monument|k|莫忘民|莫忘民，紀念碑提醒人|廣場上的紀念碑刻著名字，提醒大家莫忘先民。|monu（提醒）+ ment：提醒人記住的東西|We visited the monument.|我們參觀了紀念碑。
+fountain|k|翻騰|噴泉水花翻騰|廣場噴泉的水柱衝上天，水花翻騰落下。|foun + tain；fountain pen 鋼筆|Children play near the fountain.|孩子們在噴泉附近玩。
+square|k|四塊|四塊，廣場鋪四方磚|市民廣場上鋪滿一塊塊四方形石磚。|squ + are；square 也指正方形|People gather in the square.|人們聚集在廣場上。
+yawn|k|喲嗯|喲嗯，打個大哈欠|上課太睏，張大嘴巴「喲～嗯」打了一個大哈欠。|y + awn；和 lawn（草坪）同韻|He yawned in class.|他在課堂上打哈欠。
+stretch|k|舒展|舒展筋骨，伸個懶腰|一早起床，雙手往上舒展筋骨，伸個大懶腰。|str + etch；stretcher 擔架|Stretch your arms.|伸展你的手臂。
+shave|k|削微|刮鬍刀削微鬍渣|爸爸拿刮鬍刀，把下巴的鬍渣削得乾乾淨淨。|sh + ave；shaver 電動刮鬍刀|Dad shaves every morning.|爸爸每天早上刮鬍子。
+bake|k|被烤|麵包被烤得香|麵團放進烤箱被烤，膨成香噴噴麵包。|b + ake；bakery 麵包店|Let's bake cookies.|我們來烤餅乾吧。
+fry|k|翻來|油鍋翻來翻去煎|雞塊在油鍋裡翻來翻去，炸得金黃酥脆。|fr + y；French fries 薯條|Fry the eggs.|煎蛋。
+boil|k|爆了|水滾到泡泡爆了|鍋裡的水煮沸，大泡泡一顆顆爆了。|b + oil：油 oil 前加 b|Boil the water first.|先把水煮沸。
+steam|k|是蒸|清蒸魚是蒸的|蒸籠冒出白色蒸汽，一條魚是蒸熟的。|st + ea + m；steam 也指蒸汽|Steam the fish for ten minutes.|把魚蒸十分鐘。
+roast|k|肉燒|整隻肉燒烤|一整隻雞放進烤爐，肉燒得金黃。|r + oa + st；roast chicken 烤雞|We roast a chicken for dinner.|我們晚餐烤一隻雞。
+grill|k|格裡|格裡，烤架格子裡烤肉|中秋節烤肉，肉片放在烤架的格子裡滋滋響。|gr + ill：裡面有 ill；grill 也指烤架|Grill the corn.|烤玉米。
+slice|i||把吐司切成一片一片|刀子一下一下切，整條吐司變成一片一片。|sl + ice：裡面有 ice（冰）|Cut the bread into slices.|把麵包切成片。
+peel|k|皮了|削皮了，果皮掉|用削皮刀削皮了，果皮一圈圈掉下來。|p + ee + l；peel ↔ peal（鐘聲）同音|Peel the apple.|削蘋果皮。
+pour|k|潑|倒水別潑出來|拿水壺往杯子倒水，小心別潑出來。|p + our；pour ↔ pore（毛孔）同音|Pour the milk into the cup.|把牛奶倒進杯子。
+stir|k|四繞|湯匙四繞，攪拌|湯匙在杯子裡四處繞圈，把糖攪拌開。|st + ir；stir-fry 快炒|Stir the soup slowly.|慢慢攪拌湯。
+mix|l|米克斯|米克斯就是混種狗|臺灣常把混種狗叫「米克斯」，就是 mix（混合）。|m + ix；mixer 攪拌機|Mix the flour and eggs.|把麵粉和蛋混合。
+taste|k|特試|嚐味道，特試一口|廚師拿湯匙特地試一口，嚐嚐味道。|t + aste；tasty 好吃的|Taste the soup.|嚐嚐這湯。
+smell|k|濕霉了|聞到濕霉了的味道|打開衣櫃，聞到衣服濕霉了的味道。|sm + ell：雙 l|I can smell flowers.|我聞到花香。
+chew|k|出|慢慢嚼出滋味|牛肉乾要慢慢嚼，才嚼得出滋味。|ch + ew；chewing gum 口香糖|Chew your food well.|食物要好好咀嚼。
+swallow|k|水落|藥丸隨水落肚|把藥丸和水一起吞下，咕嚕水落進肚子。|swal + low；swallow 也指燕子|Swallow the pill.|把藥丸吞下去。
+bite|k|白特|白特大門牙咬一口|露出白特大的門牙，咬一大口蘋果。|b + ite；bite ↔ byte（位元組）同音|Don't bite your nails.|不要咬指甲。
+lick|i||小狗伸舌頭舔冰淇淋|小狗伸出舌頭，舔了一口主人手上的冰淇淋。|l + ick|The dog licked my hand.|狗舔了我的手。
+sip|k|細品|細品一小口熱茶|熱茶太燙，只能一小口一小口細品。|s + ip；sip 小口喝、gulp 大口喝|Take a sip of tea.|喝一小口茶。
+sweep|k|刷一遍|掃把刷一遍地|拿掃把在地上刷一遍，把灰塵掃乾淨。|sw + ee + p；sweep / swept|Sweep the floor.|掃地。
+wipe|k|外皮|擦拭蘋果外皮|用布把蘋果外皮擦得亮晶晶。|w + ipe；wipe out 消滅|Wipe the table.|擦桌子。
+dust|k|打掃|打掃時撣掉灰塵|拿雞毛撢子打掃，把書架上的灰塵撣光光。|d + ust；dust 名詞是灰塵、動詞是撣灰|Dust the shelves.|撣書架上的灰塵。
+scrub|k|絲瓜布|絲瓜布用力刷洗|拿絲瓜布用力刷洗，把鍋底的焦黑刷得發亮。|scr + ub|Scrub the pot.|用力刷鍋子。
+fold|k|服了|服了！衣服對摺好整齊|媽媽把衣服對摺得整整齊齊，大家都說：「服了！」|f + old；folder 資料夾|Fold your clothes.|把衣服摺好。
+hang|k|晃|掛著晃來晃去|衣服掛在曬衣架上，被風吹得晃來晃去。|h + ang；hang / hung；hanger 衣架|Hang your coat here.|把外套掛在這裡。
+organize|k|噢乾淨哉|整理好，噢乾淨哉|把書桌整理好，忍不住說：「噢，乾淨哉！」|organ（器官、組織）+ ize（使成）|Organize your desk.|整理你的書桌。
+pack|k|拍|行李拍緊打包|把行李塞進箱子，拍一拍壓緊再拉上。|p + ack；backpack 背包|Pack your bag.|把你的包包打包好。
+unpack|c||打包的相反，拆開行李|旅行回家，把行李箱打開，一件件拿出來。|un（相反）+ pack（打包）|Unpack your suitcase.|把行李箱的東西拿出來。
+lock|k|落扣|鎖頭落扣，鎖上|門鎖一落扣，喀一聲鎖上了。|l + ock；locker 置物櫃|Lock the door.|把門鎖上。
+unlock|c||鎖上的相反，開鎖|插入鑰匙一轉，門鎖打開。|un（相反）+ lock（鎖）|Unlock the door, please.|請開鎖。
+push|k|撲|撲上去用力推|車子拋錨，大家撲上去用力推。|p + ush；push ↔ pull 推拉相反|Push the door.|推門。
+pull|k|拔了|拔河用力拉，拔了|拔河比賽，大家往後拉，「拔了！」|p + ull：雙 l；pull ↔ push|Pull the rope.|拉繩子。
+lift|k|立扶|立扶起箱子|蹲下來，立刻扶住箱子舉起來。|l + ift；英式 lift 也指電梯|Lift the box.|把箱子抬起來。
+drop|k|掉啪|手機掉啪一聲|手一滑，手機掉在地上「啪」一聲。|dr + op；drop / dropped（雙 p）|Don't drop the glass.|別把杯子摔了。
+carry|k|扛力|扛力搬重物|工人扛著大箱子，用力往前走。|car + ry：雙 r；carry / carried|Carry this bag for me.|幫我拿這個包。
+hold|k|好的|好的，握住我的手|過馬路時媽媽說「握住我的手」，孩子說「好的」。|h + old；hold on 等一下|Hold my hand.|握住我的手。
+catch|k|可接|球飛來，可接住|一顆球飛過來，伸手可接住。|c + atch；catch / caught|Catch the ball!|接住球！
+throw|k|甩囉|用力甩囉，丟出去|投手用力一甩，把球丟出去。|thr + ow；throw / threw / thrown|Throw the ball to me.|把球丟給我。
+kick|k|起腳|起腳一踢，球進門|前鋒起腳一踢，球直接射進球門。|k + ick；kick off 開球|Kick the ball.|踢球。
+hit|k|揮它|球棒揮它，打中|打擊手揮動球棒，鏘一聲打中球。|h + it；hit / hit / hit 三態同形|Don't hit your brother.|不要打你弟弟。
+clap|k|可拍|大家可拍手鼓掌|表演結束，大家可以拍手鼓掌。|cl + ap；clap / clapped|Clap your hands.|拍拍手。
+wave|k|喂喂|揮手喊喂喂|看到朋友在對街，揮手大喊「喂～喂～」。|w + ave；wave 也指波浪|Wave goodbye.|揮手道別。
+point|k|碰它|手指碰它指向|老師用手指碰它，指向地圖上的臺灣。|p + oint；point 也指重點、分數|Point to the picture.|指向那張圖。
+nod|k|腦袋|腦袋點一點，就是點頭|老師問懂了嗎？同學腦袋點一點，表示懂了。|n + od；nod 點頭、shake 搖頭|He nodded and smiled.|他點頭微笑。
+shake|k|篩殼|搖晃篩殼|把花生放進篩子，搖一搖篩掉殼。|sh + ake；milkshake 奶昔|Shake the bottle.|搖一搖瓶子。
+bow|k|抱|抱，抱拳鞠躬|演出結束，演員抱拳彎腰，向觀眾鞠躬。|b + ow：鞠躬念 /baʊ/；弓、蝴蝶結念 /boʊ/|We bow to our teacher.|我們向老師鞠躬。
+hug|k|哈個|哈個，抱一個|好久不見，張開雙臂說：「哈！抱一個。」|h + ug；hug / hugged|Give me a hug.|給我一個擁抱。
+kiss|k|喜事|喜事上新人親吻|婚禮喜事上，新郎新娘甜蜜親吻。|k + iss；複數 kisses|She kissed the baby.|她親了寶寶。
+shout|k|哨的|像吹哨的高聲喊|裁判吹哨的同時，大聲呼喊「停！」|sh + out：裡面有 out（出去）——喊出去|Don't shout in the library.|在圖書館不要大叫。
+whisper|k|微私|微微私語，輕聲說|靠近耳邊，微微私語說秘密。|whis + per：h 不發音|She whispered a secret.|她小聲說了一個秘密。
+sing|k|星|歌星唱歌|舞台上的歌星拿著麥克風唱歌。|s + ing；singer 歌手；sing / sang / sung|Let's sing a song.|我們來唱首歌吧。
+dance|k|單身|單身派對跳舞|單身派對上，大家隨著音樂跳舞。|d + ance；dancer 舞者|Can you dance?|你會跳舞嗎？
+play|k|陪|陪你玩|姊姊陪弟弟在客廳玩積木。|pl + ay；player 玩家、球員|Let's play outside.|我們去外面玩吧。
+draw|k|抓|抓起筆畫線條|抓起一支筆，在紙上畫出線條。|draw / drew / drawn；drawer 是「一拉就出來」的抽屜|Draw a cat.|畫一隻貓。
+paint|k|噴它|拿漆噴它，塗上顏色|拿油漆噴它，把牆塗成藍色。|p + aint；painter 畫家、油漆工|Paint the wall blue.|把牆漆成藍色。
+build|k|筆立|大樓筆立蓋起來|工人一層層建造，大樓筆直立了起來。|b + uild：u 不發音；building 建築物|Let's build a sandcastle.|我們來堆沙堡吧。
+climb|k|快來嘛|快來嘛，一起爬上樹|爬到樹上的孩子往下喊：「快來嘛，一起爬上來！」|cl + imb：b 不發音|The cat climbed the tree.|貓爬上樹。
+crawl|k|跪啦|跪啦，在地上爬|小嬰兒跪在地上，用手腳慢慢爬。|cr + awl；crawl 爬行、climb 攀爬|The baby can crawl.|寶寶會爬了。
+slide|k|溜來的|溜滑梯溜來的|小朋友從溜滑梯咻一聲溜下來。|sl + ide；slide 也指溜滑梯、投影片|The kids slide down the slide.|孩子們從溜滑梯滑下來。
+swing|k|甩贏|盪鞦韆甩贏高|盪鞦韆一甩一甩，比賽誰盪得高誰贏。|sw + ing；swing 也指鞦韆、揮棒|Let's go on the swings.|我們去盪鞦韆吧。
+skip|k|四格撲|四格撲，蹦跳跳過四格|小朋友輕快蹦跳，一撲跳過四格。|sk + ip；skip / skipped；skip rope 跳繩|Don't skip breakfast.|不要不吃早餐。
+hop|k|好怕|單腳跳好怕跌|一隻腳跳啊跳，好怕跌倒。|h + op；hop / hopped；hip-hop 嘻哈|Hop on one foot.|單腳跳。
+jog|k|家狗|帶家狗去慢跑|清晨帶著家狗沿著河堤慢跑。|j + og；jogging 慢跑（雙 g）|I jog in the park.|我在公園慢跑。
+sprint|k|是拚的|衝刺是拚的|最後一百公尺，選手全力衝刺，是拚了命的。|sp + rint；print（印）前加 s|Sprint to the finish line.|衝刺到終點線。
+skate|k|是快的|溜冰是快的|溜冰鞋一蹬，咻地滑出去，是快的。|sk + ate；skateboard 滑板|I can skate on ice.|我會溜冰。
+ski|k|試起|穿上雪板試起來|穿上滑雪板，在雪坡上試著滑起來。|sk + i；skier 滑雪者|We ski in Japan.|我們在日本滑雪。
+surf|k|速浮|衝浪速浮浪上|衝浪手站上浪板，速度快得浮在浪頭上。|s + urf；surf the internet 上網|He surfs in summer.|他夏天衝浪。
+sail|k|賽了|帆船賽了一場|一艘艘帆船揚起帆，在海上賽了一場。|s + ail；sail ↔ sale（拍賣）同音|We sail on the lake.|我們在湖上航行。
+row|k|肉|划船划到手臂肉痠|兩人一起划船，划到手臂肉都痠了。|r + ow：划船念 /roʊ/；吵架念 /raʊ/|We row a boat on the lake.|我們在湖上划船。
+cheerful|c||充滿歡呼的，愉快的|笑容滿面的女孩，整天都很愉快。|cheer（歡呼、高興）+ ful（充滿）|She is always cheerful.|她總是很愉快。
+gentle|k|真疼|溫柔地真疼你|奶奶溫柔地摸著你的頭，真疼你。|gen + tle；gentleman 紳士|Be gentle with the baby.|對寶寶要溫柔。
+polite|k|婆來的|婆婆來的時候要有禮貌|婆婆來的時候，孫子有禮貌地鞠躬問好。|po + lite；impolite 沒禮貌|Be polite to others.|對別人要有禮貌。
+rude|k|辱的|辱的，粗魯話辱人|粗魯的人說話辱罵別人，很沒禮貌。|r + ude；rudely 粗魯地|Don't be rude.|不要沒禮貌。
+honest|k|俺老實|俺老實，不說謊|小男孩舉手說：「俺老實，花瓶是我打破的。」|h 不發音：hon + est；honesty 誠實|He is an honest boy.|他是個誠實的男孩。
+brave|k|不畏|勇敢不畏懼|消防員勇敢不畏，衝進火場救人。|br + ave；bravery 勇氣|The firefighter is brave.|消防員很勇敢。
+shy|k|曬|害羞臉紅像曬過|害羞的女孩低下頭，臉紅得像曬過太陽。|sh + y；shyly 害羞地|She is shy with strangers.|她對陌生人很害羞。
+proud|k|抱得|抱得冠軍好驕傲|抱得冠軍獎盃的選手，驕傲地抬起頭。|pr + oud；be proud of 以⋯為榮|I am proud of you.|我以你為榮。
+calm|k|看|冷靜看清楚|遇到事情先深呼吸，冷靜看清楚。|ca + lm：l 不發音，像 palm|Stay calm.|保持冷靜。
+nervous|k|腦霧|腦霧一片，太緊張|上台前太緊張，腦袋像起了霧，台詞全忘了。|nerv（神經）+ ous：神經緊繃的|I feel nervous before tests.|我考試前會緊張。
+lonely|k|樓裡|一個人在樓裡好寂寞|空蕩蕩的大樓裡，只有一個人，好寂寞。|lone（獨自）+ ly|He feels lonely.|他覺得寂寞。
+curious|k|瞧裡有啥|瞧裡有啥？好奇打開盒子|好奇的孩子捧著禮物盒，想瞧瞧裡面有啥。|cur + i + ous；curiosity 好奇心|Cats are curious.|貓很好奇。
+careful|c||充滿注意的，小心的|過馬路要小心，左看右看再走。|care（注意、關心）+ ful（充滿）|Be careful!|小心！
+careless|c||沒有注意的，粗心大意|粗心大意的人，考卷名字都忘了寫。|care（注意）+ less（沒有）|Don't be careless.|不要粗心。
+lazy|k|累死|懶惰鬼喊累死了|叫懶惰鬼掃地，他躺著喊：「累死了！」|la + zy；lazily 懶洋洋地|Don't be lazy.|不要懶惰。
+hardworking|c||努力工作的，勤奮|勤奮的人每天早起，認真工作。|hard（努力地）+ working（工作的）|She is a hardworking student.|她是勤奮的學生。
+smart|k|思敏的|思敏的，思考敏捷好聰明|思敏的學生，一下子就想出答案。|sm + art；smartphone 智慧型手機|She is very smart.|她很聰明。
+clever|k|可靈活|腦筋可靈活|機靈的孩子腦筋可靈活，什麼難題都想得到辦法。|cl + ever：裡面有 ever|What a clever idea!|多聰明的點子！
+foolish|c||像傻瓜一樣，愚蠢|做了愚蠢的事，像個傻瓜。|fool（傻瓜）+ ish（像⋯的）|It was a foolish mistake.|那是個愚蠢的錯誤。
+silly|k|傻裡|傻裡傻氣|小丑戴著紅鼻子，做出傻裡傻氣的動作。|sil + ly：雙 l|Don't be silly.|別傻了。
+kind|k|開恩的|仁慈開恩的人|仁慈的國王開恩，放了犯錯的小偷。|k + ind；kind 也指種類|She is kind to animals.|她對動物很仁慈。
+cruel|k|酷了|太殘酷了|欺負小動物，太殘酷了。|cru + el；cruelty 殘忍|Don't be cruel to animals.|不要對動物殘忍。
+friendly|c||像朋友一樣，友善|新鄰居很友善，笑著打招呼。|friend（朋友）+ ly（像⋯的）|The dog is friendly.|那隻狗很友善。

@@ -22,5 +22,29 @@
     "start": 0.7905409999999999,
     "duration": 0.699458,
     "bytes": 4845
+  },
+  {
+    "word": "bow",
+    "context": "We bow politely.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.290541,
+    "duration": 0.449458,
+    "bytes": 3261
+  },
+  {
+    "word": "row",
+    "context": "We row a boat.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.318333,
+    "duration": 0.38,
+    "bytes": 2829
+  },
+  {
+    "word": "minute",
+    "context": "I waited one minute.",
+    "voice": "en-US-AriaNeural",
+    "start": 0.887791,
+    "duration": 0.657791,
+    "bytes": 4557
   }
 ]

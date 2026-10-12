@@ -1,6 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+// Unpublished working folders that must not be mirrored (the watercolor draft is incomplete and not tracked).
+const SKIP = new Set([path.join('dist', 'mnemonics', 'illustrations')]);
+
 function syncDirectory(srcDir, destDir) {
   if (!fs.existsSync(destDir)) {
     fs.mkdirSync(destDir, { recursive: true });
@@ -10,6 +13,7 @@ function syncDirectory(srcDir, destDir) {
   for (const entry of entries) {
     if (entry.name.endsWith('.tmp.mp3')) continue;
     const srcPath = path.join(srcDir, entry.name);
+    if (SKIP.has(srcPath)) continue;
     const destPath = path.join(destDir, entry.name);
 
     if (entry.isDirectory()) {

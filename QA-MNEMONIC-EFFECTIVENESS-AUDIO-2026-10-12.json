@@ -1,0 +1,54 @@
+{
+  "format": "english-cue-meaning-english",
+  "cards": 1000,
+  "parts": 4000,
+  "english": 1000,
+  "chineseCues": 1000,
+  "chineseMeanings": 1000,
+  "allPartsNonSilent": true,
+  "textAndOrderMatchCards": true,
+  "hashesMatch": true,
+  "totalBytes": 33737074,
+  "shortestSeconds": 5.01,
+  "longestSeconds": 10.17,
+  "example": {
+    "id": "fc-el-0552",
+    "word": "ambulance",
+    "file": "audio-trio/ambulance.mp3",
+    "parts": [
+      {
+        "role": "english",
+        "text": "ambulance",
+        "language": "en-US",
+        "start": 0.15,
+        "end": 1.15
+      },
+      {
+        "role": "cue",
+        "text": "俺不能死，快叫救護車",
+        "language": "zh-TW",
+        "start": 1.6,
+        "end": 4.13
+      },
+      {
+        "role": "meaning",
+        "text": "救護車",
+        "language": "zh-TW",
+        "start": 4.58,
+        "end": 5.51
+      },
+      {
+        "role": "english-repeat",
+        "text": "ambulance",
+        "language": "en-US",
+        "start": 6.11,
+        "end": 7.11
+      }
+    ],
+    "duration": 7.41,
+    "bytes": 37709,
+    "signature": "8f57bf1e127047b071cd99aa98fe8a748b18cf36e66c06a53143e0fcd5c69f94",
+    "sha256": "4d66cb18b7cd10a53abbbdcbbe1b8e9c2c633a16eb35ba15631cdbd3b88ecc9a"
+  },
+  "notes": "Decoded audio and synthesis boundary alignment verified; not a claim of human listening review of every word."
+}

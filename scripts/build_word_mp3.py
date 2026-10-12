@@ -3,6 +3,7 @@ Requires edge-tts 7.2+, FFmpeg/ffprobe. Cache permits interrupted runs to resume
 """
 import argparse,asyncio,hashlib,json,os,pathlib,re,shutil,subprocess,time,html
 import edge_tts
+import tts_endpoint  # noqa: F401  (switches edge-tts to the working host)
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CACHE=ROOT/'data/word_audio/cache'
 OUT=ROOT/'dist/audio/words'
@@ -23,7 +24,7 @@ async def synth(text,language):
  key=hashlib.sha256((VOICES[language]+RATE+text).encode()).hexdigest()
  audio=CACHE/(key+'.mp3');meta=CACHE/(key+'.json')
  if audio.exists() and meta.exists():return audio,json.loads(meta.read_text(encoding='utf8'))
- for attempt in range(5):
+ for attempt in range(9):
   try:
    chunks=[];events=[]
    async for c in edge_tts.Communicate(text,VOICES[language],rate=RATE,boundary='SentenceBoundary',connect_timeout=20,receive_timeout=180).stream():
@@ -33,8 +34,8 @@ async def synth(text,language):
    audio.write_bytes(b''.join(chunks));meta.write_text(json.dumps(events,ensure_ascii=False),encoding='utf8')
    return audio,events
   except Exception:
-   if attempt==4:raise
-   await asyncio.sleep(2**attempt)
+   if attempt==8:raise
+   await asyncio.sleep(min(60,3*2**attempt))  # the current host answers bursts with 429
 async def segments(words,language):
  texts=[speech_text(w,language) for w in words]
  audio,events=await synth(('。\n' if language=='zh' else '.\n').join(texts)+('。' if language=='zh' else '.'),language)

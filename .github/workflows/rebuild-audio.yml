@@ -1,0 +1,76 @@
+name: Rebuild stale mnemonic audio
+
+# Fallback when local speech synthesis is unavailable: re-synthesizes only the card and word-family MP3s
+# whose spoken text no longer matches the data, and commits them back to the same branch.
+on:
+  push:
+    branches: [audio-rebuild]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audio-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install FFmpeg and edge-tts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install edge-tts==7.2.8
+
+      - name: Probe speech service
+        working-directory: scripts
+        continue-on-error: true
+        run: |
+          python - <<'PY' 2>&1 | tee ../ci-tts-probe.log
+          import asyncio, edge_tts
+          async def main():
+              n = 0
+              async for c in edge_tts.Communicate('好', 'zh-TW-HsiaoChenNeural').stream():
+                  if c['type'] == 'audio':
+                      n += len(c['data'])
+              print('probe bytes', n)
+          asyncio.run(main())
+          PY
+
+      - name: Rebuild stale audio
+        id: rebuild
+        working-directory: scripts
+        run: |
+          set -o pipefail
+          python rebuild_stale_audio.py 2>&1 | tee ../ci-rebuild.log
+
+      - name: Verify every card and family MP3
+        working-directory: scripts
+        run: |
+          set -o pipefail
+          python validate_mnemonic_trio_audio.py 2>&1 | tee -a ../ci-rebuild.log
+          python validate_word_family_audio.py 2>&1 | tee -a ../ci-rebuild.log
+
+      - name: Commit rebuilt audio or diagnostics
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p ci-logs && mv ci-*.log ci-logs/ 2>/dev/null || true
+          git add ci-logs
+          if [ "${{ job.status }}" = "success" ]; then
+            git add dist/mnemonics/audio-trio dist/mnemonics/audio-manifest.json dist/roots/audio dist/roots/audio-manifest.json QA-MNEMONIC-EFFECTIVENESS-AUDIO-2026-10-12.json QA-WORD-FAMILY-AUDIO-2026-10-12.json
+          fi
+          git diff --cached --quiet || git commit -m "CI audio rebuild (${{ job.status }})"
+          git push

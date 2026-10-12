@@ -8,3 +8,4 @@ data/word_audio/cache/
 data/word_audio/test-*.mp3
 data/word_audio/*.log
 data/word_audio/test-results.txt
+data/illustration_records/

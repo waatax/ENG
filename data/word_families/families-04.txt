@@ -1,0 +1,61 @@
+p|un-|不、非|un 放在形容詞前表示「不」，把意思反過來|unhappy=不快樂的=un 不 + happy 快樂;unkind=不仁慈的=un 不 + kind 仁慈;unfair=不公平的=un 不 + fair 公平;unknown=未知的=un 不 + known 知道的;unusual=不尋常的=un 不 + usual 平常;unable=不能的=un 不 + able 能
+p|un-|解開、反向動作|un 放在動詞前表示「把動作倒回去」|unlock=開鎖=un 反向 + lock 鎖;untie=解開=un 反向 + tie 綁;unpack=拆開行李=un 反向 + pack 打包;undo=復原=un 反向 + do 做;unfold=攤開=un 反向 + fold 摺;unzip=拉開拉鍊=un 反向 + zip 拉鍊
+p|re-|再、重新|re 是「再一次」：redo 就是再做一次|redo=重做=re 再 + do 做;rewrite=重寫=re 再 + write 寫;reuse=再利用=re 再 + use 用;rebuild=重建=re 再 + build 建;replay=重播=re 再 + play 播放;recycle=回收再利用=re 再 + cycle 循環
+p|re-|回、返|re 也有「往回」的意思|return=返回=re 回 + turn 轉;react=反應=re 回 + act 動作;recall=回想=re 回 + call 叫;refund=退款=re 回 + fund 錢;repay=償還=re 回 + pay 付;rebound=反彈=re 回 + bound 跳
+p|dis-|不、相反、去除|dis 表示「不、相反、拿掉」|dislike=不喜歡=dis 不 + like 喜歡;disagree=不同意=dis 不 + agree 同意;dishonest=不誠實的=dis 不 + honest 誠實;disappear=消失=dis 相反 + appear 出現;disconnect=斷開=dis 相反 + connect 連接;discover=發現=dis 拿掉 + cover 蓋子
+p|in-|不|in 放在形容詞前表示「不」|incorrect=不正確的=in 不 + correct 正確;incomplete=不完整的=in 不 + complete 完整;invisible=看不見的=in 不 + visible 看得見;independent=獨立的=in 不 + dependent 依賴;inactive=不活躍的=in 不 + active 活躍;informal=非正式的=in 不 + formal 正式
+p|im-|不（接 b、m、p 開頭）|in 遇到 b、m、p 就變成 im，比較好念|impossible=不可能的=im 不 + possible 可能;impolite=沒禮貌的=im 不 + polite 有禮;impatient=不耐煩的=im 不 + patient 有耐心;imperfect=不完美的=im 不 + perfect 完美;immature=不成熟的=im 不 + mature 成熟;imbalance=不平衡=im 不 + balance 平衡
+p|il-|不（接 l 開頭）|in 遇到 l 就變成 il|illegal=違法的=il 不 + legal 合法;illogical=不合邏輯的=il 不 + logical 合邏輯;illiterate=不識字的=il 不 + literate 識字;illegible=難以辨認的=il 不 + legible 可辨認
+p|ir-|不（接 r 開頭）|in 遇到 r 就變成 ir|irregular=不規則的=ir 不 + regular 規則;irresponsible=不負責任的=ir 不 + responsible 負責;irrelevant=不相關的=ir 不 + relevant 相關;irrational=不理性的=ir 不 + rational 理性
+p|in-/im-|進入、在內|in 也有「進入、在裡面」的意思|include=包含=in 內 + clude 關;income=收入=in 進 + come 來;input=輸入=in 進 + put 放;inside=裡面=in 內 + side 邊;import=進口=im 進 + port 搬運;insert=插入=in 進 + sert 放
+p|mis-|錯誤|mis 是「錯、誤」|mistake=錯誤=mis 錯 + take 拿;misunderstand=誤會=mis 錯 + understand 理解;misspell=拼錯=mis 錯 + spell 拼;misplace=放錯地方=mis 錯 + place 放;misbehave=行為不端=mis 錯 + behave 表現;mislead=誤導=mis 錯 + lead 引導
+p|pre-|之前、預先|pre 是「先、在前」|preview=預習=pre 先 + view 看;prepare=準備=pre 先 + pare 安排;predict=預測=pre 先 + dict 說;prepay=預付=pre 先 + pay 付;prehistoric=史前的=pre 前 + historic 歷史的;preschool=幼兒園=pre 前 + school 學校
+p|post-|之後|post 是「在後」|postpone=延後=post 後 + pone 放;postwar=戰後的=post 後 + war 戰爭;postscript=附筆=post 後 + script 寫;postgraduate=研究所的=post 後 + graduate 畢業
+p|non-|非、無|non 是「非、沒有」|nonstop=不停的=non 不 + stop 停;nonsense=胡說=non 無 + sense 意義;nonfiction=非小說類=non 非 + fiction 小說;nonprofit=非營利的=non 非 + profit 利潤;nonsmoker=不吸菸者=non 不 + smoker 吸菸者
+p|over-|過度、在上方|over 是「超過、在上面」|overeat=吃太多=over 過度 + eat 吃;overweight=超重的=over 過度 + weight 重量;overwork=過勞=over 過度 + work 工作;overflow=溢出=over 超過 + flow 流;overcoat=大衣=over 在外 + coat 外套;overlook=俯瞰、忽略=over 在上 + look 看
+p|under-|在下、不足|under 是「在下面、不夠」|underline=畫底線=under 在下 + line 線;underwater=水中的=under 在下 + water 水;underweight=體重過輕的=under 不足 + weight 重量;underpaid=薪水過低的=under 不足 + paid 付的;underground=地下的=under 在下 + ground 地;underestimate=低估=under 不足 + estimate 估計
+p|sub-|在下、次一級|sub 是「在下面」：subway 就是地面下的路|subway=地下鐵=sub 下 + way 路;submarine=潛水艇=sub 下 + marine 海;subtitle=字幕=sub 下 + title 標題;subtract=減去=sub 下 + tract 拉;subzero=零下的=sub 下 + zero 零;suburb=郊區=sub 次 + urb 城市
+p|super-|超級、在上|super 是「超級、在上方」|supermarket=超市=super 超級 + market 市場;superman=超人=super 超 + man 人;superstar=巨星=super 超級 + star 明星;superhero=超級英雄=super 超級 + hero 英雄;supervise=監督=super 在上 + vise 看;superior=較優的=super 上 + ior 比較
+p|inter-|之間、互相|inter 是「在⋯之間」|international=國際的=inter 之間 + national 國家的;internet=網際網路=inter 之間 + net 網;interview=面試=inter 互相 + view 看;interact=互動=inter 互相 + act 行動;interrupt=打斷=inter 之間 + rupt 破;intersection=十字路口=inter 互相 + section 切
+p|trans-|穿越、轉換|trans 是「越過、轉到另一邊」|transport=運輸=trans 越過 + port 搬;translate=翻譯=trans 轉 + late 帶;transfer=轉移=trans 轉 + fer 帶;transform=轉變=trans 轉 + form 形;transparent=透明的=trans 穿透 + parent 出現;transit=運輸、過境=trans 越過 + it 走
+p|anti-|反對、對抗|anti 是「反、抗」|antibiotic=抗生素=anti 抗 + biotic 生物;antivirus=防毒的=anti 抗 + virus 病毒;antisocial=反社會的=anti 反 + social 社會;antibody=抗體=anti 抗 + body 體;antiwar=反戰的=anti 反 + war 戰爭
+p|co-|共同|co 是「一起」|cooperate=合作=co 共同 + operate 操作;coworker=同事=co 共同 + worker 工作者;coexist=共存=co 共同 + exist 存在;coauthor=共同作者=co 共同 + author 作者;copilot=副駕駛=co 共同 + pilot 駕駛
+p|com-/con-/col-/cor-|一起、完全|com 是「一起」；遇到不同字母會變成 con、col、cor|combine=結合=com 一起 + bine 二;compare=比較=com 一起 + pare 相等;connect=連接=con 一起 + nect 綁;contact=接觸=con 一起 + tact 碰;collect=收集=col 一起 + lect 選;correspond=通信、相符=cor 一起 + respond 回應
+p|de-|向下、去除|de 是「往下、拿掉」|decrease=減少=de 下 + crease 增長;descend=下降=de 下 + scend 爬;defrost=除霜=de 去除 + frost 霜;deflate=洩氣=de 去 + flate 吹;decode=解碼=de 解 + code 碼;dehydrate=脫水=de 去除 + hydrate 水
+p|ex-|向外|ex 是「向外、出去」：exit 就是出口|exit=出口=ex 出 + it 走;export=出口貨物=ex 出 + port 搬;exhale=呼氣=ex 出 + hale 呼吸;expand=擴張=ex 外 + pand 展開;exclude=排除=ex 外 + clude 關;express=表達=ex 出 + press 壓
+p|en-/em-|使成為、使進入|en 是「使⋯」；遇到 b、p 變成 em|enjoy=享受=en 使 + joy 快樂;enlarge=放大=en 使 + large 大;encourage=鼓勵=en 使 + courage 勇氣;endanger=危及=en 使 + danger 危險;empower=授權=em 使 + power 力量;embrace=擁抱=em 進 + brace 手臂
+p|fore-|前面、預先|fore 是「前面、事先」|forecast=預報=fore 先 + cast 拋;forehead=額頭=fore 前 + head 頭;foresee=預見=fore 先 + see 看;forefinger=食指=fore 前 + finger 手指;foreground=前景=fore 前 + ground 地面;forewarn=預先警告=fore 先 + warn 警告
+p|mid-|中間|mid 是「中間」|midnight=午夜=mid 中 + night 夜;midday=正午=mid 中 + day 日;midterm=期中考=mid 中 + term 學期;midway=途中=mid 中 + way 路;midsummer=仲夏=mid 中 + summer 夏
+p|semi-|一半|semi 是「半」|semicircle=半圓=semi 半 + circle 圓;semifinal=準決賽=semi 半 + final 決賽;semiconductor=半導體=semi 半 + conductor 導體;semicolon=分號=semi 半 + colon 冒號;semiannual=半年一次的=semi 半 + annual 年度的
+p|bi-|二|bi 是「二」：bicycle 有兩個輪子|bicycle=腳踏車=bi 二 + cycle 輪;bilingual=雙語的=bi 二 + lingual 語言的;binoculars=雙筒望遠鏡=bi 二 + oculars 眼;biweekly=雙週的=bi 二 + weekly 每週;biplane=雙翼飛機=bi 二 + plane 翼面
+p|tri-|三|tri 是「三」：triangle 有三個角|triangle=三角形=tri 三 + angle 角;tricycle=三輪車=tri 三 + cycle 輪;triple=三倍的=tri 三 + ple 倍;trio=三人組=tri 三 + o;tripod=三腳架=tri 三 + pod 腳;triathlon=三項全能=tri 三 + athlon 競賽
+p|uni-|一|uni 是「一」：unicorn 只有一隻角|uniform=制服=uni 一 + form 形式;unicorn=獨角獸=uni 一 + corn 角;unicycle=單輪車=uni 一 + cycle 輪;unique=獨特的=uni 一 + que;unite=聯合=uni 一 + te 使成;universe=宇宙=uni 一 + verse 轉成
+p|mono-|單一|mono 是「單一」|monorail=單軌電車=mono 單 + rail 軌;monotone=單調的=mono 單 + tone 音調;monologue=獨白=mono 單 + logue 說;monopoly=壟斷=mono 單 + poly 賣;monolingual=單語的=mono 單 + lingual 語言的
+p|multi-|多|multi 是「很多」|multiply=乘、增加=multi 多 + ply 摺;multimedia=多媒體=multi 多 + media 媒體;multinational=跨國的=multi 多 + national 國家的;multiple=多重的=multi 多 + ple 摺;multitask=多工處理=multi 多 + task 工作
+p|poly-|多|poly 也是「多」，來自希臘文|polygon=多邊形=poly 多 + gon 角;polyester=聚酯纖維=poly 多 + ester 酯;polytechnic=理工學院=poly 多 + technic 技術;polymer=聚合物=poly 多 + mer 部分
+p|auto-|自己|auto 是「自己」：automatic 是自己會動|automobile=汽車=auto 自己 + mobile 移動;autograph=親筆簽名=auto 自己 + graph 寫;automatic=自動的=auto 自己 + matic 動;autobiography=自傳=auto 自己 + bio 生命 + graphy 寫;autopilot=自動駕駛=auto 自己 + pilot 駕駛
+p|tele-|遠|tele 是「遠」：telephone 是遠方的聲音|telephone=電話=tele 遠 + phone 聲音;television=電視=tele 遠 + vision 看;telescope=望遠鏡=tele 遠 + scope 看的器具;telegram=電報=tele 遠 + gram 寫;teleport=瞬間移動=tele 遠 + port 搬
+p|micro-|微小|micro 是「非常小」|microscope=顯微鏡=micro 微 + scope 看的器具;microwave=微波=micro 微 + wave 波;microphone=麥克風=micro 小 + phone 聲音;microchip=微晶片=micro 微 + chip 晶片;microbe=微生物=micro 小 + be 生命
+p|out-|超過、勝過|out 放動詞前表示「勝過、超出」|outdo=勝過=out 超過 + do 做;outrun=跑贏=out 勝過 + run 跑;outgrow=長大到穿不下=out 超過 + grow 長;outnumber=數量超過=out 超過 + number 數量;outlive=活得比⋯久=out 超過 + live 活
+p|a-|在⋯狀態|a 放字首常表示「在⋯中、在⋯上」|asleep=睡著的=a 在 + sleep 睡;alive=活著的=a 在 + live 活;awake=醒著的=a 在 + wake 醒;aboard=在船上=a 在 + board 甲板;ashore=上岸=a 在 + shore 岸;ahead=在前方=a 在 + head 前頭
+p|be-|在、使|be 常表示「在⋯」或「使⋯」|become=變成=be 使 + come 來;behind=在後面=be 在 + hind 後;below=在下面=be 在 + low 低;beside=在旁邊=be 在 + side 邊;between=在兩者之間=be 在 + tween 二;befriend=與⋯交朋友=be 使 + friend 朋友
+p|with-|向後、對抗|with 在字首表示「往後、對抗」|withdraw=撤回=with 向後 + draw 拉;withhold=扣留=with 向後 + hold 抓住;withstand=抵擋=with 對抗 + stand 站
+p|for-|離開、禁止|for 在字首常表示「離開、反對」|forget=忘記=for 離開 + get 拿到;forgive=原諒=for 完全 + give 給;forbid=禁止=for 反對 + bid 命令;forsake=拋棄=for 離開 + sake 爭
+p|circum-|環繞|circum 是「周圍、繞一圈」，和 circle 有關|circumstance=情況=circum 周圍 + stance 站;circumference=圓周=circum 繞 + ference 帶;circumnavigate=環航=circum 繞 + navigate 航行;circumvent=規避=circum 繞 + vent 來
+p|contra-/counter-|相反、對抗|contra、counter 都是「相對、相反」|contrast=對比=contra 相對 + st 站;contradict=反駁=contra 相反 + dict 說;contrary=相反的=contra 相反 + ry;counterclockwise=逆時針的=counter 相反 + clockwise 順時針;counterattack=反擊=counter 對抗 + attack 攻擊;counterpart=對應的人=counter 相對 + part 部分
+p|extra-|額外、超出|extra 是「超出範圍、額外」|extraordinary=非凡的=extra 超出 + ordinary 普通;extracurricular=課外的=extra 超出 + curricular 課程的;extraterrestrial=外星的=extra 超出 + terrestrial 地球的;extravagant=奢侈的=extra 超出 + vagant 遊蕩
+p|ab-|離開、偏離|ab 是「離開」|absent=缺席的=ab 離開 + sent 在;abnormal=不正常的=ab 偏離 + normal 正常;abduct=綁架=ab 離 + duct 帶;absorb=吸收=ab 離 + sorb 吸;abuse=濫用=ab 偏離 + use 用
+p|ad-|朝向、加|ad 是「朝向、加上」|adapt=適應=ad 朝 + apt 合適;adjust=調整=ad 朝 + just 正確;admit=承認=ad 朝 + mit 送;adopt=採用、收養=ad 朝 + opt 選擇;adventure=冒險=ad 朝 + vent 來 + ure;advertise=登廣告、宣傳=ad 朝 + vert 轉 + ise 動詞
+p|per-|完全、穿過|per 是「完全、從頭到尾」|perfect=完美的=per 完全 + fect 做;persist=堅持=per 一直 + sist 站;persuade=說服=per 完全 + suade 勸說;permit=允許=per 穿過 + mit 送;perspire=流汗=per 穿過 + spire 呼吸
+p|pro-|向前、為了|pro 是「向前、在前面」|progress=進步=pro 向前 + gress 走;promote=促進=pro 向前 + mote 移動;produce=生產=pro 向前 + duce 引出;project=計畫=pro 向前 + ject 丟;protect=保護=pro 前面 + tect 遮蓋;propose=提議=pro 向前 + pose 放
+p|se-|分開|se 是「分開、離開」|separation=分開、分離=se 分 + par 準備 + ation 名詞;select=挑選=se 分出 + lect 選;secure=安全的=se 免於 + cure 擔心;secret=秘密=se 分開 + cret 篩
+p|sur-|在上、超過|sur 是「在上面、超過」|surface=表面=sur 上 + face 面;surpass=超越=sur 超過 + pass 通過;surrender=投降、交出=sur 上 + render 交出;surname=姓=sur 加上 + name 名;surplus=剩餘=sur 超過 + plus 更多;survive=倖存=sur 超過 + vive 活
+p|syn-/sym-|一起、相同|syn 是「一起、相同」；遇到 b、m、p 變成 sym|sympathy=同情=sym 同 + pathy 感受;symphony=交響樂=sym 一起 + phony 聲音;synonym=同義字=syn 同 + onym 名;synchronize=同步=syn 同 + chron 時間 + ize 使;symmetry=對稱=sym 同 + metry 測量
+p|mal-|壞|mal 是「壞、不良」|malfunction=故障=mal 壞 + function 功能;malnutrition=營養不良=mal 不良 + nutrition 營養;malpractice=醫療疏失=mal 壞 + practice 執業;malware=惡意軟體=mal 壞 + ware 軟體;malice=惡意=mal 壞 + ice
+p|bene-|好|bene 是「好」，和 mal 相反|benefit=好處=bene 好 + fit 做;benefactor=捐助者=bene 好 + factor 做的人;beneficial=有益的=bene 好 + ficial 做的;benevolent=仁慈的=bene 好 + volent 意願
+p|hyper-|超過、過度|hyper 是「超過、過度」|hyperactive=過動的=hyper 過度 + active 活躍;hypertension=高血壓=hyper 過度 + tension 張力;hyperlink=超連結=hyper 超 + link 連結;hypersonic=高超音速的=hyper 超過 + sonic 聲音的
+p|hypo-|在下、不足|hypo 是「在下面、不足」，和 hyper 相反|hypothesis=假設=hypo 在下 + thesis 放置;hypothermia=體溫過低=hypo 不足 + thermia 熱;hypodermic=皮下的=hypo 下 + dermic 皮膚的
+p|ultra-|超越、極度|ultra 是「超越、極」|ultraviolet=紫外線的=ultra 超越 + violet 紫;ultrasound=超音波=ultra 超越 + sound 聲音;ultramodern=超現代的=ultra 極 + modern 現代;ultralight=超輕型的=ultra 極 + light 輕
+p|dia-|穿過、之間|dia 是「穿過、橫越」|diameter=直徑=dia 穿過 + meter 測量;diagonal=對角線=dia 穿過 + gonal 角;dialogue=對話=dia 之間 + logue 說;diagram=圖表=dia 穿過 + gram 畫
+p|para-|旁邊、防護|para 是「在旁邊」，也有「防護」|parachute=降落傘=para 防 + chute 落下;paragraph=段落=para 旁 + graph 寫;parallel=平行的=para 旁 + allel 彼此;paramedic=救護技術員=para 輔助 + medic 醫
+p|peri-|周圍|peri 是「周圍、四周」|perimeter=周長=peri 周圍 + meter 測量;periscope=潛望鏡=peri 周圍 + scope 看的器具;period=期間=peri 周 + od 路;peripheral=周邊的=peri 周圍 + pheral 帶

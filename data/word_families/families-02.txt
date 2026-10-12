@@ -1,0 +1,48 @@
+c|bed|床|bed 是「床」|bedroom=臥室=bed 床 + room 房;bedtime=就寢時間=bed 床 + time 時間;bedside=床邊=bed 床 + side 邊;flowerbed=花圃=flower 花 + bed 床;sunbed=日光躺椅=sun 太陽 + bed 床
+c|table|桌子、表|table 是「桌子、表格」|timetable=時刻表=time 時間 + table 表;tablecloth=桌布=table 桌 + cloth 布;tablespoon=大湯匙=table 餐桌 + spoon 匙;tablet=藥片、平板=table 平板 + t 小;vegetable=蔬菜=vege + table，拼字記「菜上桌」
+c|cup|杯子|cup 是「杯」|cupboard=碗櫥=cup 杯 + board 板架，p 不發音;cupcake=杯子蛋糕=cup 杯 + cake 蛋糕;teacup=茶杯=tea 茶 + cup 杯;buttercup=毛茛花=butter 奶油色 + cup 杯形;hiccup=打嗝=hic 嗝聲 + cup，拼字記法
+c|tea|茶|tea 是「茶」|teapot=茶壺=tea 茶 + pot 壺;teacup=茶杯=tea 茶 + cup 杯;teaspoon=茶匙=tea 茶 + spoon 匙;teatime=下午茶時間=tea 茶 + time 時間;teahouse=茶館=tea 茶 + house 房
+c|pot|壺、鍋|pot 是「壺、鍋、盆」|teapot=茶壺=tea 茶 + pot 壺;flowerpot=花盆=flower 花 + pot 盆;jackpot=頭獎=jack 傑克 + pot 彩金;potluck=百樂餐=pot 鍋 + luck 運氣;hotpot=火鍋=hot 熱 + pot 鍋
+c|spoon|湯匙|spoon 是「匙」|teaspoon=茶匙=tea 茶 + spoon 匙;tablespoon=大湯匙=table 餐桌 + spoon 匙;spoonful=一匙的量=spoon 匙 + ful 滿;soupspoon=湯匙=soup 湯 + spoon 匙
+c|dish|盤子|dish 是「盤子、菜餚」|dishwasher=洗碗機=dish 盤 + washer 清洗器;dishcloth=洗碗布=dish 盤 + cloth 布;dishware=餐具=dish 盤 + ware 器物;dishpan=洗碗盆=dish 盤 + pan 盆
+c|wash|洗|wash 是「洗」|washroom=洗手間=wash 洗 + room 房;dishwasher=洗碗機=dish 盤 + washer 清洗器;mouthwash=漱口水=mouth 嘴 + wash 洗;whitewash=粉刷、掩飾=white 白 + wash 刷;washcloth=小方巾=wash 洗 + cloth 布
+c|cloth|布|cloth 是「布」|tablecloth=桌布=table 桌 + cloth 布;dishcloth=洗碗布=dish 盤 + cloth 布;washcloth=小方巾=wash 洗 + cloth 布;clothes=衣服=cloth 布 + es，布做的東西;clothing=衣物=cloth 布 + ing 名詞
+c|egg|蛋|egg 是「蛋」|eggplant=茄子=egg 蛋 + plant 植物;eggshell=蛋殼=egg 蛋 + shell 殼;eggnog=蛋酒=egg 蛋 + nog 濃啤酒;eggcup=蛋杯=egg 蛋 + cup 杯
+c|milk|牛奶|milk 是「奶」|milkshake=奶昔=milk 奶 + shake 搖;milkman=送奶員=milk 奶 + man 人;buttermilk=白脫牛奶=butter 奶油 + milk 奶;milky=乳白色的=milk 奶 + y 的
+c|butter|奶油|butter 是「奶油」|butterfly=蝴蝶=butter 奶油 + fly 飛蟲;buttermilk=白脫牛奶=butter 奶油 + milk 奶;buttery=奶油味的=butter 奶油 + y 的;butterscotch=奶油糖=butter 奶油 + scotch，字源不明，僅記憶用
+c|cake|蛋糕、餅|cake 是「蛋糕、餅」|pancake=鬆餅=pan 平底鍋 + cake 餅;cupcake=杯子蛋糕=cup 杯 + cake 糕;cheesecake=起司蛋糕=cheese 起司 + cake 糕;mooncake=月餅=moon 月 + cake 餅;shortcake=酥餅=short 酥脆 + cake 糕
+c|corn|玉米|corn 是「玉米」|popcorn=爆米花=pop 啵爆開 + corn 玉米;cornfield=玉米田=corn 玉米 + field 田;cornflakes=玉米片=corn 玉米 + flakes 薄片;cornstarch=玉米粉=corn 玉米 + starch 澱粉
+c|nut|堅果|nut 是「堅果」|peanut=花生=pea 豆 + nut 堅果;walnut=核桃=wal 外來的 + nut 堅果;coconut=椰子=coco + nut 堅果;chestnut=栗子=chest 栗 + nut 堅果;hazelnut=榛果=hazel 榛樹 + nut 堅果;doughnut=甜甜圈=dough 麵團 + nut 堅果形
+c|berry|莓果|berry 是「莓果」：顏色、外形決定名字|strawberry=草莓=straw 稻草 + berry 莓;blueberry=藍莓=blue 藍 + berry 莓;blackberry=黑莓=black 黑 + berry 莓;raspberry=覆盆莓=rasp + berry 莓，p 不發音;cranberry=蔓越莓=cran 鶴 + berry 莓;gooseberry=醋栗=goose 鵝 + berry 莓
+c|paper|紙|paper 是「紙」|newspaper=報紙=news 新聞 + paper 紙;wallpaper=壁紙=wall 牆 + paper 紙;paperwork=文書工作=paper 紙 + work 工作;sandpaper=砂紙=sand 沙 + paper 紙;paperback=平裝書=paper 紙 + back 封底
+c|post|郵件、柱|post 是「郵件、郵寄」|postman=郵差=post 郵件 + man 人;postcard=明信片=post 郵寄 + card 卡;postbox=郵筒=post 郵件 + box 箱;postage=郵資=post 郵件 + age 費用;postmark=郵戳=post 郵件 + mark 記號
+c|card|卡片|card 是「卡」|postcard=明信片=post 郵寄 + card 卡;cardboard=硬紙板=card 卡紙 + board 板;scorecard=記分卡=score 分數 + card 卡;cardholder=持卡人=card 卡 + holder 持有者;flashcard=字卡=flash 閃示 + card 卡
+c|mail|郵件|mail 是「郵件」|mailbox=信箱=mail 郵件 + box 箱;mailman=郵差=mail 郵件 + man 人;email=電子郵件=e 電子 + mail 郵件;airmail=航空郵件=air 空 + mail 郵件;voicemail=語音留言=voice 聲音 + mail 郵件
+c|phone|電話、聲音|phone 是「電話、聲音」|smartphone=智慧型手機=smart 聰明 + phone 電話;headphone=頭戴式耳機=head 頭 + phone 聲音;earphone=耳機=ear 耳 + phone 聲音;cellphone=手機=cell 蜂巢基地台 + phone 電話;telephone=電話=tele 遠 + phone 聲音
+c|work|工作|work 是「工作、作品」|homework=家庭作業=home 家 + work 功課;housework=家事=house 家 + work 工作;teamwork=團隊合作=team 團隊 + work 工作;workshop=工作坊=work 工作 + shop 場所;network=網路=net 網 + work 結構;artwork=藝術品=art 藝術 + work 作品
+c|shop|商店|shop 是「店」|workshop=工作坊=work 工作 + shop 場所;bookshop=書店=book 書 + shop 店;shopkeeper=店主=shop 店 + keeper 管理者;shoplifter=商店竊賊=shop 店 + lifter 偷拿的人;shopping=購物=shop 逛店 + p + ing 活動
+c|keep|保持、看守|keep 是「看守、保管」|shopkeeper=店主=shop 店 + keeper 看守者;goalkeeper=守門員=goal 球門 + keeper 看守者;beekeeper=養蜂人=bee 蜂 + keeper 照顧者;housekeeper=管家=house 家 + keeper 管理者;bookkeeper=記帳員=book 帳簿 + keeper 管理者
+c|ground|地面|ground 是「地面、場地」|playground=遊樂場=play 玩 + ground 場地;background=背景=back 後 + ground 地面;underground=地下的=under 在下 + ground 地面;campground=露營地=camp 露營 + ground 場地;groundwork=基礎工作=ground 地基 + work 工作
+c|yard|院子、場|yard 是「院子、場地」|backyard=後院=back 後 + yard 院;schoolyard=校園=school 學校 + yard 院;shipyard=造船廠=ship 船 + yard 場;graveyard=墓地=grave 墳墓 + yard 地;farmyard=農家庭院=farm 農場 + yard 院
+c|line|線|line 是「線、行」|headline=標題=head 頭 + line 行;deadline=截止期限=dead 死 + line 線;online=線上的=on 在 + line 線;outline=大綱=out 外 + line 線;airline=航空公司=air 空 + line 航線;skyline=天際線=sky 天 + line 線
+c|mark|記號|mark 是「記號、標記」|bookmark=書籤=book 書 + mark 記號;landmark=地標=land 地 + mark 標記;trademark=商標=trade 貿易 + mark 標記;birthmark=胎記=birth 出生 + mark 記號;postmark=郵戳=post 郵件 + mark 記號
+c|word|字|word 是「字、詞」|password=密碼=pass 通過 + word 字;crossword=填字遊戲=cross 交叉 + word 字;keyword=關鍵字=key 關鍵 + word 字;wordplay=文字遊戲=word 字 + play 玩;foreword=序言=fore 前 + word 話
+c|key|鑰匙、關鍵|key 是「鑰匙、按鍵、關鍵」|keyboard=鍵盤=key 鍵 + board 板;keyhole=鑰匙孔=key 鑰匙 + hole 洞;keyword=關鍵字=key 關鍵 + word 字;keychain=鑰匙圈=key 鑰匙 + chain 鍊;keypad=按鍵板=key 鍵 + pad 板
+c|lock|鎖|lock 是「鎖」|padlock=掛鎖=pad + lock 鎖;locker=置物櫃=lock 鎖 + er 東西;unlock=開鎖=un 反 + lock 鎖;deadlock=僵局=dead 死 + lock 鎖;locksmith=鎖匠=lock 鎖 + smith 工匠
+c|step|步、台階|step 是「步、台階」|footstep=腳步=foot 腳 + step 步;doorstep=門階=door 門 + step 台階;stepmother=繼母=step 繼 + mother 母;stepfather=繼父=step 繼 + father 父;stepladder=梯凳=step 台階 + ladder 梯
+c|grand|大、隔一代|grand 是「大、偉大」；放在親屬稱呼前表示「隔一代」：祖父母、孫子女|grandfather=祖父=grand 隔一代 + father 父;grandmother=祖母=grand 隔一代 + mother 母;grandson=孫子=grand 隔一代 + son 兒子;granddaughter=孫女=grand 隔一代 + daughter 女兒;grandparent=祖父母=grand 隔一代 + parent 父母;grandstand=大看台=grand 大 + stand 台
+c|friend|朋友|friend 是「朋友」|boyfriend=男朋友=boy 男孩 + friend 朋友;girlfriend=女朋友=girl 女孩 + friend 朋友;friendship=友誼=friend 朋友 + ship 關係;friendly=友善的=friend 朋友 + ly 的;unfriendly=不友善的=un 不 + friendly 友善的
+c|mate|夥伴|mate 是「夥伴」：一起做什麼，就是什麼伴|classmate=同班同學=class 班 + mate 夥伴;roommate=室友=room 房 + mate 夥伴;teammate=隊友=team 隊 + mate 夥伴;playmate=玩伴=play 玩 + mate 夥伴;schoolmate=同校同學=school 學校 + mate 夥伴;shipmate=船友=ship 船 + mate 夥伴
+c|boy|男孩|boy 是「男孩」|boyfriend=男朋友=boy 男孩 + friend 朋友;cowboy=牛仔=cow 牛 + boy 男孩;schoolboy=男學生=school 學校 + boy 男孩;paperboy=送報童=paper 報紙 + boy 男孩;boyhood=少年時期=boy 男孩 + hood 時期
+c|self/selv|自己|self 是「自己」；複數 selves|myself=我自己=my 我的 + self 自己;yourself=你自己=your 你的 + self 自己;himself=他自己=him 他 + self 自己;herself=她自己=her 她 + self 自己;itself=它自己=it 它 + self 自己;ourselves=我們自己=our 我們的 + selves 自己們
+c|every|每一|every 是「每一個」：後面接人、事、地|everyone=每個人=every 每 + one 人;everything=每件事=every 每 + thing 事;everywhere=到處=every 每 + where 地方;everybody=每個人=every 每 + body 人;everyday=日常的=every 每 + day 天
+c|some|某些|some 是「某、一些」|someone=某人=some 某 + one 人;something=某事=some 某 + thing 事;somewhere=某處=some 某 + where 地方;sometimes=有時=some 一些 + times 次;somebody=某人=some 某 + body 人;somehow=不知怎麼地=some 某 + how 方式
+c|any|任何|any 是「任何」|anyone=任何人=any 任何 + one 人;anything=任何事=any 任何 + thing 事;anywhere=任何地方=any 任何 + where 地方;anyway=無論如何=any 任何 + way 方式;anybody=任何人=any 任何 + body 人;anytime=任何時候=any 任何 + time 時候
+c|no|沒有|no 是「沒有、無」|nobody=沒有人=no 無 + body 人;nothing=沒有東西=no 無 + thing 事物;nowhere=無處=no 無 + where 地方;nonsense=胡說=non 無 + sense 意義;none=沒有一個=no 無 + one 一個
+c|out|外、出|out 是「外、出」|outside=外面=out 外 + side 邊;outdoor=戶外的=out 外 + door 門;outline=大綱=out 外 + line 線;output=產出=out 出 + put 放;outcome=結果=out 出 + come 來;outlet=出口、插座=out 出 + let 讓
+c|up|上|up 是「往上」|upstairs=樓上=up 上 + stairs 樓梯;update=更新=up 上 + date 日期;upload=上傳=up 上 + load 載;upset=心煩的、打翻=up 上 + set 放，上下顛倒放;uphill=上坡的=up 上 + hill 山坡;upside=上面=up 上 + side 邊
+c|down|下|down 是「往下」|downstairs=樓下=down 下 + stairs 樓梯;download=下載=down 下 + load 載;downtown=市中心=down 下 + town 城鎮;downhill=下坡的=down 下 + hill 山坡;downpour=傾盆大雨=down 下 + pour 倒
+c|stairs/stair|樓梯|stairs 是「樓梯」|upstairs=樓上=up 上 + stairs 樓梯;downstairs=樓下=down 下 + stairs 樓梯;staircase=樓梯=stair 階 + case 框架;stairway=樓梯通道=stair 階 + way 路
+c|town|城鎮|town 是「城鎮」|downtown=市中心=down 下方 + town 城鎮;hometown=家鄉=home 家 + town 城鎮;township=鄉鎮=town 鎮 + ship 區域;townhouse=連棟住宅=town 城鎮 + house 房;townspeople=鎮民=towns 城鎮 + people 人們
+c|hill|山坡|hill 是「小山、坡」|hillside=山坡=hill 山 + side 邊;uphill=上坡的=up 上 + hill 坡;downhill=下坡的=down 下 + hill 坡;anthill=蟻丘=ant 螞蟻 + hill 丘;hilltop=山頂=hill 山 + top 頂
+c|farm|農場|farm 是「農場」|farmer=農夫=farm 農場 + er 人;farmhouse=農舍=farm 農場 + house 房;farmland=農田=farm 農場 + land 地;farmyard=農家庭院=farm 農場 + yard 院;farming=農業=farm 農場 + ing 活動

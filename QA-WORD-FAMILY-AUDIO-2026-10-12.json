@@ -1,0 +1,13 @@
+{
+  "groups": 500,
+  "mp3Files": 500,
+  "spokenParts": 6162,
+  "members": 2581,
+  "textOrderTimingHashesMatch": true,
+  "allPartsNonSilent": true,
+  "totalBytes": 36906078,
+  "totalMinutes": 152.5,
+  "shortestSeconds": 11.52,
+  "longestSeconds": 23.47,
+  "notes": "Decoded PCM, text order and synthesis boundaries verified; not a human listening review of every word."
+}

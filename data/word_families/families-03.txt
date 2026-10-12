@@ -1,0 +1,52 @@
+c|after|之後|after 是「之後」|afternoon=下午=after 之後 + noon 正午;afterward=之後=after 之後 + ward 方向;aftershock=餘震=after 之後 + shock 震;aftertaste=餘味=after 之後 + taste 味道;aftercare=後續照顧=after 之後 + care 照顧
+c|news|新聞、消息|news 是「消息、新聞」；不可數|newspaper=報紙=news 新聞 + paper 紙;newsletter=通訊刊物=news 消息 + letter 信;newsroom=新聞編輯室=news 新聞 + room 房;newscast=新聞廣播=news 新聞 + cast 播送;newsstand=書報攤=news 報 + stand 攤
+c|print|印|print 是「印、印記」|footprint=腳印=foot 腳 + print 印;fingerprint=指紋=finger 手指 + print 印;blueprint=藍圖=blue 藍 + print 印;printer=印表機=print 印 + er 機器;misprint=印錯=mis 錯 + print 印;reprint=重印=re 再 + print 印
+c|finger|手指|finger 是「手指」|fingerprint=指紋=finger 手指 + print 印;fingernail=手指甲=finger 手指 + nail 甲;fingertip=指尖=finger 手指 + tip 尖;forefinger=食指=fore 前 + finger 指
+c|walk|走|walk 是「走、走道」|sidewalk=人行道=side 邊 + walk 走;crosswalk=斑馬線=cross 橫越 + walk 走;catwalk=伸展台=cat 貓 + walk 走;boardwalk=木棧道=board 木板 + walk 走;walkway=走道=walk 走 + way 路;sleepwalk=夢遊=sleep 睡 + walk 走
+c|cross|交叉、橫越|cross 是「十字、交叉、橫越」|crosswalk=斑馬線=cross 橫越 + walk 走;crossroads=十字路口=cross 交叉 + roads 路;crossword=填字遊戲=cross 交叉 + word 字;crossbow=十字弓=cross 十字 + bow 弓;across=橫越=a 在 + cross 橫過;crossover=跨界=cross 交叉 + over 越過
+c|craft|技藝、飛行器|craft 是「手藝」，也指「船、飛行器」|aircraft=飛行器=air 空 + craft 飛行器;spacecraft=太空船=space 太空 + craft 飛行器;handicraft=手工藝=handi 手 + craft 工藝;craftsman=工匠=crafts 技藝 + man 人;witchcraft=巫術=witch 巫 + craft 技藝
+c|space|空間、太空|space 是「空間、太空」|spaceship=太空船=space 太空 + ship 船;spacecraft=太空飛行器=space 太空 + craft 飛行器;spacesuit=太空衣=space 太空 + suit 套裝;aerospace=航太=aero 空氣 + space 太空;workspace=工作空間=work 工作 + space 空間
+c|life|生命、生活|life 是「生命、生活」|lifeboat=救生艇=life 生命 + boat 船;lifeguard=救生員=life 生命 + guard 守護;lifetime=一生=life 一生 + time 時間;lifestyle=生活方式=life 生活 + style 樣式;wildlife=野生動物=wild 野 + life 生命;lifelong=終身的=life 一生 + long 長
+c|guard|守衛|guard 是「守護、警衛」|lifeguard=救生員=life 生命 + guard 守護;bodyguard=保鑣=body 身體 + guard 守護;safeguard=保護措施=safe 安全 + guard 守護;guardian=監護人=guard 守護 + ian 人;coastguard=海巡隊=coast 海岸 + guard 守衛
+c|green|綠色|green 是「綠色、青菜」|greenhouse=溫室=green 綠 + house 房;evergreen=常綠的=ever 永遠 + green 綠;greenery=綠色植物=green 綠 + ery 集合;greenish=帶綠色的=green 綠 + ish 略帶;greengrocer=蔬果商=green 青菜 + grocer 雜貨商
+c|black|黑色|black 是「黑」|blackboard=黑板=black 黑 + board 板;blackberry=黑莓=black 黑 + berry 莓;blackbird=黑鳥=black 黑 + bird 鳥;blackout=停電=black 黑 + out 出;blacksmith=鐵匠=black 黑鐵 + smith 工匠;blacklist=黑名單=black 黑 + list 名單
+c|blue|藍色|blue 是「藍」|blueberry=藍莓=blue 藍 + berry 莓;blueprint=藍圖=blue 藍 + print 印;bluebird=藍鶇=blue 藍 + bird 鳥;bluebell=藍鈴花=blue 藍 + bell 鈴
+c|gold|金|gold 是「金」|goldfish=金魚=gold 金 + fish 魚;goldsmith=金匠=gold 金 + smith 工匠;golden=金色的=gold 金 + en 的;goldmine=金礦=gold 金 + mine 礦;marigold=金盞花=mari 瑪麗 + gold 金
+c|bath|洗澡|bath 是「洗澡、浴盆」|bathroom=浴室=bath 洗澡 + room 房;bathtub=浴缸=bath 洗澡 + tub 盆;bathrobe=浴袍=bath 洗澡 + robe 袍;birdbath=鳥浴盆=bird 鳥 + bath 浴盆;bathhouse=澡堂=bath 洗澡 + house 房
+c|ache|痛|ache 是「持續的痛」，念 /eɪk/|headache=頭痛=head 頭 + ache 痛;toothache=牙痛=tooth 牙 + ache 痛;stomachache=胃痛=stomach 胃 + ache 痛;backache=背痛=back 背 + ache 痛;earache=耳朵痛=ear 耳 + ache 痛;heartache=心痛=heart 心 + ache 痛
+c|store|店、儲存|store 是「店」，也作「儲存」|bookstore=書店=book 書 + store 店;drugstore=藥妝店=drug 藥 + store 店;storeroom=儲藏室=store 儲存 + room 房;storekeeper=店主=store 店 + keeper 管理者;superstore=大型商場=super 超級 + store 店
+c|case|箱、套|case 是「箱子、外殼、套」|bookcase=書櫃=book 書 + case 櫃;suitcase=行李箱=suit 一套衣服 + case 箱;staircase=樓梯=stair 階 + case 框架;briefcase=公事包=brief 文件 + case 箱;showcase=展示櫃=show 展示 + case 櫃;pillowcase=枕頭套=pillow 枕頭 + case 套
+c|bag|袋子|bag 是「袋、包」|handbag=手提包=hand 手 + bag 包;schoolbag=書包=school 學校 + bag 包;sandbag=沙包=sand 沙 + bag 袋;airbag=安全氣囊=air 空氣 + bag 袋;beanbag=懶骨頭、豆袋=bean 豆 + bag 袋
+c|coat|外套|coat 是「外套、塗層」|raincoat=雨衣=rain 雨 + coat 外套;overcoat=大衣=over 外面 + coat 外套;waistcoat=背心=waist 腰 + coat 外套;topcoat=面漆、大衣=top 最外層 + coat 塗層
+c|shoe|鞋子|shoe 是「鞋」|horseshoe=馬蹄鐵=horse 馬 + shoe 鞋;shoelace=鞋帶=shoe 鞋 + lace 帶;shoemaker=鞋匠=shoe 鞋 + maker 做的人;snowshoe=雪鞋=snow 雪 + shoe 鞋;shoebox=鞋盒=shoe 鞋 + box 盒
+c|lace/lac|細帶、蕾絲|lace 是「細帶、蕾絲」|shoelace=鞋帶=shoe 鞋 + lace 帶;necklace=項鍊=neck 脖子 + lace 帶;bootlace=靴帶=boot 靴 + lace 帶;lacy=蕾絲的=lac 蕾絲 + y 的
+c|glass|玻璃、鏡片|glass 是「玻璃」；glasses 是眼鏡|sunglasses=太陽眼鏡=sun 太陽 + glasses 眼鏡;eyeglasses=眼鏡=eye 眼 + glasses 鏡片;hourglass=沙漏=hour 小時 + glass 玻璃;fiberglass=玻璃纖維=fiber 纖維 + glass 玻璃;glassware=玻璃器皿=glass 玻璃 + ware 器物
+c|car|車|car 是「車、車廂」|carport=車棚=car 車 + port 停靠處;carsick=暈車的=car 車 + sick 不舒服;sidecar=邊車=side 旁 + car 車;streetcar=路面電車=street 街 + car 車;racecar=賽車=race 比賽 + car 車
+c|box|盒子|box 是「盒、箱」|mailbox=信箱=mail 郵件 + box 箱;toolbox=工具箱=tool 工具 + box 箱;lunchbox=便當盒=lunch 午餐 + box 盒;sandbox=沙坑=sand 沙 + box 箱;matchbox=火柴盒=match 火柴 + box 盒;inbox=收件匣=in 進來 + box 匣
+c|chair|椅子|chair 是「椅子」，也指主席|wheelchair=輪椅=wheel 輪 + chair 椅;armchair=扶手椅=arm 扶手 + chair 椅;highchair=兒童高腳椅=high 高 + chair 椅;chairman=主席=chair 主席座 + man 人;deckchair=躺椅=deck 甲板 + chair 椅
+c|heart|心|heart 是「心」|sweetheart=心上人=sweet 甜 + heart 心;heartbeat=心跳=heart 心 + beat 跳;heartbreak=心碎=heart 心 + break 碎;heartache=心痛=heart 心 + ache 痛;heartless=無情的=heart 心 + less 無;wholehearted=全心全意的=whole 全 + hearted 心的
+c|cut|切、剪|cut 是「切、剪」|haircut=理髮=hair 頭髮 + cut 剪;shortcut=捷徑=short 短 + cut 切出的路;woodcut=木刻版畫=wood 木 + cut 刻;cutback=削減=cut 削 + back 回;cutout=剪下的圖=cut 剪 + out 出;uppercut=上鉤拳=upper 往上 + cut 擊
+c|brush|刷子|brush 是「刷子」|toothbrush=牙刷=tooth 牙 + brush 刷;hairbrush=梳子=hair 頭髮 + brush 刷;paintbrush=畫筆=paint 顏料 + brush 刷;underbrush=矮樹叢=under 下層 + brush 灌木
+c|screen|螢幕、遮擋|screen 是「螢幕、屏障」|sunscreen=防曬乳=sun 太陽 + screen 遮擋;touchscreen=觸控螢幕=touch 觸 + screen 螢幕;screenshot=螢幕截圖=screen 螢幕 + shot 拍攝;screenplay=劇本=screen 銀幕 + play 劇;smokescreen=煙幕=smoke 煙 + screen 遮擋
+c|web|網|web 是「網」|website=網站=web 網 + site 地點;webcam=網路攝影機=web 網 + cam 攝影機;cobweb=蜘蛛網=cob 蜘蛛 + web 網;webpage=網頁=web 網 + page 頁;webmaster=網站管理員=web 網 + master 主人
+c|net|網|net 是「網」|internet=網際網路=inter 之間 + net 網;network=網路=net 網 + work 結構;hairnet=髮網=hair 頭髮 + net 網;fishnet=漁網=fish 魚 + net 網;netball=無板籃球=net 網 + ball 球
+c|ware|器物、貨品|ware 是「器物、貨品」|software=軟體=soft 軟 + ware 器物;hardware=硬體=hard 硬 + ware 器物;silverware=銀器餐具=silver 銀 + ware 器物;kitchenware=廚具=kitchen 廚房 + ware 器物;warehouse=倉庫=ware 貨品 + house 房
+c|wear|穿著、衣物|wear 是「穿戴、衣物」|underwear=內衣褲=under 在下 + wear 衣物;sportswear=運動服=sports 運動 + wear 服裝;swimwear=泳裝=swim 游泳 + wear 服裝;footwear=鞋類=foot 腳 + wear 穿戴物;outerwear=外衣=outer 外層 + wear 衣物
+c|suit|套裝|suit 是「一套衣服」，也指訴訟|swimsuit=泳衣=swim 游泳 + suit 套裝;spacesuit=太空衣=space 太空 + suit 套裝;lawsuit=訴訟=law 法律 + suit 訴訟;tracksuit=運動套裝=track 跑道 + suit 套裝;suitcase=行李箱=suit 一套衣服 + case 箱
+c|storm|暴風雨|storm 是「暴風雨」|snowstorm=暴風雪=snow 雪 + storm 暴風;rainstorm=暴風雨=rain 雨 + storm 暴風;thunderstorm=雷雨=thunder 雷 + storm 暴風雨;brainstorm=腦力激盪=brain 腦 + storm 風暴;sandstorm=沙塵暴=sand 沙 + storm 暴風
+c|fall|落下|fall 是「落下」|waterfall=瀑布=water 水 + fall 落下;rainfall=降雨量=rain 雨 + fall 落;snowfall=降雪量=snow 雪 + fall 落;nightfall=黃昏=night 夜 + fall 降臨;downfall=垮台=down 下 + fall 落
+c|drop|滴、落|drop 是「一滴、掉落」|raindrop=雨滴=rain 雨 + drop 滴;dewdrop=露珠=dew 露 + drop 滴;teardrop=淚珠=tear 淚 + drop 滴;dropout=輟學生=drop 掉 + out 出;eyedrops=眼藥水=eye 眼 + drops 滴
+c|shell|殼|shell 是「殼」|seashell=貝殼=sea 海 + shell 殼;eggshell=蛋殼=egg 蛋 + shell 殼;nutshell=堅果殼=nut 堅果 + shell 殼;shellfish=有殼海鮮=shell 殼 + fish 水產;bombshell=炸彈、驚人消息=bomb 炸彈 + shell 殼
+c|fly|飛、飛蟲|fly 是「飛」，也是「蒼蠅、飛蟲」|butterfly=蝴蝶=butter 奶油 + fly 飛蟲;firefly=螢火蟲=fire 火 + fly 飛蟲;dragonfly=蜻蜓=dragon 龍 + fly 飛蟲;housefly=家蠅=house 家 + fly 蠅;flyover=高架橋=fly 飛 + over 越過
+c|worm|蟲|worm 是「蠕蟲」|earthworm=蚯蚓=earth 土 + worm 蟲;silkworm=蠶=silk 絲 + worm 蟲;bookworm=書蟲=book 書 + worm 蟲;inchworm=尺蠖=inch 英寸 + worm 蟲
+c|arm|手臂|arm 是「手臂」|armchair=扶手椅=arm 扶手 + chair 椅;armpit=腋下=arm 手臂 + pit 窩;armband=臂章=arm 手臂 + band 帶;forearm=前臂=fore 前 + arm 臂;armful=一抱=arm 手臂 + ful 滿
+c|neck|脖子|neck 是「脖子、頸」|necklace=項鍊=neck 脖子 + lace 帶;necktie=領帶=neck 脖子 + tie 綁;bottleneck=瓶頸=bottle 瓶 + neck 頸;turtleneck=高領=turtle 烏龜 + neck 頸;neckline=領口=neck 頸 + line 線
+c|mouth|嘴|mouth 是「嘴」|mouthwash=漱口水=mouth 嘴 + wash 洗;mouthful=一口=mouth 嘴 + ful 滿;mouthpiece=吹口、代言人=mouth 嘴 + piece 部件;loudmouth=大嘴巴=loud 大聲 + mouth 嘴
+c|sky|天空|sky 是「天空」|skyline=天際線=sky 天 + line 線;skyscraper=摩天大樓=sky 天 + scraper 刮的東西;skylight=天窗=sky 天 + light 光;skydiving=跳傘=sky 天 + diving 跳;skyrocket=飆升=sky 天 + rocket 火箭
+c|make|做、製造|make 是「做」；maker 是「做的人」|makeup=化妝=make 做 + up 上;shoemaker=鞋匠=shoe 鞋 + maker 做的人;troublemaker=麻煩製造者=trouble 麻煩 + maker 製造者;peacemaker=和事佬=peace 和平 + maker 締造者;homemaker=持家者=home 家 + maker 經營者;remake=翻拍=re 再 + make 做
+c|bee|蜜蜂|bee 是「蜂」|honeybee=蜜蜂=honey 蜜 + bee 蜂;beehive=蜂巢=bee 蜂 + hive 巢;beekeeper=養蜂人=bee 蜂 + keeper 照顧者;bumblebee=熊蜂=bumble 嗡嗡 + bee 蜂;beeswax=蜂蠟=bees 蜂 + wax 蠟
+c|honey|蜂蜜|honey 是「蜂蜜」，也是暱稱「親愛的」|honeymoon=蜜月=honey 蜜 + moon 月;honeybee=蜜蜂=honey 蜜 + bee 蜂;honeycomb=蜂巢=honey 蜜 + comb 梳狀;honeydew=蜜瓜=honey 蜜 + dew 露;honeysuckle=忍冬=honey 蜜 + suckle 吸吮
+c|week|星期|week 是「週」|weekend=週末=week 週 + end 尾;weekday=平日=week 週 + day 日;weekly=每週的=week 週 + ly 的;midweek=週中=mid 中 + week 週;weeknight=平日晚上=week 週 + night 夜
+c|sick|生病、不舒服|sick 是「病、不舒服」|homesick=想家的=home 家 + sick 難受;seasick=暈船的=sea 海 + sick 不舒服;carsick=暈車的=car 車 + sick 不舒服;airsick=暈機的=air 空 + sick 不舒服;sickness=疾病=sick 病 + ness 名詞;lovesick=相思的=love 愛 + sick 難受
+c|proof|防|proof 放字尾表示「防⋯的」|waterproof=防水的=water 水 + proof 防;fireproof=防火的=fire 火 + proof 防;soundproof=隔音的=sound 聲音 + proof 防;bulletproof=防彈的=bullet 子彈 + proof 防;childproof=防兒童開啟的=child 小孩 + proof 防
+c|check|檢查、核對|check 是「檢查、核對」|checkup=健康檢查=check 檢查 + up 完全;checkout=結帳=check 核對 + out 出;checklist=清單=check 核對 + list 單;checkbook=支票簿=check 支票 + book 本;checkpoint=檢查站=check 檢查 + point 點

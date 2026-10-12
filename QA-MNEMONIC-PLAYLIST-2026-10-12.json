@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-12",
+  "checks": [
+    {
+      "width": 320,
+      "all1000DespiteSearch": true,
+      "stop": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "all1000DespiteSearch": true,
+      "stop": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "all1000DespiteSearch": true,
+      "stop": true,
+      "overflow": false
+    },
+    {
+      "nativeAutoAdvance": "ambulance to family",
+      "pauseResumes": true,
+      "searchAndPageDoNotInterrupt": true
+    },
+    {
+      "next": true,
+      "singleAndAllMutuallyExclusive": true,
+      "restartFromFirst": true
+    },
+    {
+      "missingFileStops": true,
+      "retryKeepsCurrentWord": true
+    }
+  ],
+  "errors": []
+}

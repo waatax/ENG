@@ -1,0 +1,100 @@
+sheet|k|洗它|床單髒了，洗它|床單髒了，拆下來丟進洗衣機洗它。|sh + ee + t；a sheet of paper 一張紙|I changed the bed sheets.|我換了床單。
+quilt|k|蓋了|棉被蓋了好暖|寒夜把厚棉被蓋了，暖得不想起床。|qu + ilt；quilt 常指拼布棉被|Grandma made a quilt.|奶奶做了一條拼布被。
+mattress|k|美睡死|床墊舒服美睡死|躺上新床墊，軟硬剛好，美美地睡熟了。|mat（墊子）+ tress|This mattress is soft.|這張床墊很軟。
+wardrobe|c||看守袍子的衣櫃|打開衣櫃，一件件袍子和外套掛得整齊。|ward（看守）+ robe（袍子）：收好衣服的櫃子|My clothes are in the wardrobe.|我的衣服在衣櫃裡。
+closet|c||關起來的小空間，壁櫥|打開牆裡的壁櫥，掛滿衣服。|close（關）+ et（小）：可以關起來的小房間|Hang your coat in the closet.|把外套掛進壁櫥。
+drawer|c||一拉就出來的抽屜|抓住把手一拉，抽屜滑了出來。|draw（拉）+ er：一拉就出來的東西|The pen is in the drawer.|筆在抽屜裡。
+cupboard|c||放杯子的板架，碗櫥|碗櫥的木板層架上排著杯子和盤子。|cup（杯）+ board（板）：p 不發音，念 /ˈkʌbɚd/|The cups are in the cupboard.|杯子在碗櫥裡。
+cabinet|k|開不能|櫃子上鎖開不能|藥品櫃子上了鎖，小孩打不開。|cabin（小屋）+ et（小）|The cabinet is full of dishes.|櫃子裡裝滿盤子。
+shelf|k|寫福|架上擺寫福的紅紙|過年時，書架上擺著寫了福字的紅紙。|sh + elf：裡面有 elf（小精靈）；複數 shelves|Put the book on the shelf.|把書放在架子上。
+bookcase|c||裝書的櫃子，書櫃|整面牆的書櫃，塞滿一排排書。|book（書）+ case（箱、櫃）|The bookcase is full.|書櫃滿了。
+curtain|k|隔天|拉上窗簾睡到隔天|晚上拉上厚窗簾，一覺睡到隔天中午。|cur + tain|Please close the curtains.|請拉上窗簾。
+blind|k|不來|不來了，百葉窗擋光|拉下百葉窗，刺眼的陽光就不來了。|bl + ind；blind 也指盲的|Pull down the blinds.|把百葉窗拉下來。
+carpet|k|咖潑它|咖潑它，咖啡潑上地毯|一杯咖啡打翻，潑在白色地毯上。|car + pet：拼字記「汽車 + 寵物」|The carpet is soft.|地毯很軟。
+rug|k|拉個|拉個小地毯鋪門口|拉個小地毯鋪在門口，進門擦擦腳。|r + ug；rug 小塊地毯、carpet 大地毯|The cat sleeps on the rug.|貓在小地毯上睡覺。
+refrigerator|c||讓東西再變冷的機器，冰箱|打開冰箱，冷氣撲面，食物冰得涼涼的。|re（再）+ friger（冷）+ ator（機器）|Put the milk in the refrigerator.|把牛奶放進冰箱。
+fridge|k|肥雞|肥雞冰進冰箱|過年買了一隻肥雞，先冰進冰箱裡保鮮。|fridge 是 refrigerator 的口語縮寫|There's juice in the fridge.|冰箱裡有果汁。
+freezer|c||讓東西結凍的冷凍庫|冰淇淋放進冷凍庫，凍得硬邦邦。|freeze（結凍）+ r：結凍的櫃子|The ice cream is in the freezer.|冰淇淋在冷凍庫。
+oven|k|俺溫|俺溫，烤箱先溫熱|烤蛋糕前，俺先把烤箱溫熱到一百八十度。|o + ven：o 念 /ʌ/|Bake the cake in the oven.|把蛋糕放進烤箱烤。
+microwave|c||用微小電波加熱，微波爐|便當放進微波爐，叮一聲就熱了。|micro（微小）+ wave（波）|Heat the soup in the microwave.|用微波爐加熱湯。
+stove|k|燒透|燒透木炭的爐子|爐子裡的木炭燒透了，紅通通的好溫暖。|st + ove；和 drove 同韻|Don't touch the hot stove.|不要碰熱爐子。
+toaster|c||烤吐司的機器|吐司放進烤麵包機，叮一聲彈出來。|toast（吐司、烤）+ er（機器）|The toaster is hot.|烤麵包機很燙。
+blender|c||把東西混合打碎的機器|水果丟進果汁機，嗡嗡嗡打成果汁。|blend（混合）+ er（機器）|Mix the fruit in the blender.|用果汁機把水果打勻。
+kettle|k|開透|水壺水開透了|熱水壺嗚嗚響，水開透了冒蒸氣。|ket + tle：雙 t|Boil water in the kettle.|用熱水壺燒水。
+pot|k|怕燙|鍋子怕燙要握把|剛煮好的鍋子很燙，要握著鍋把端。|p + ot；teapot 茶壺|Put the pot on the stove.|把鍋子放到爐子上。
+pan|k|盤|平底鍋像大盤|平底鍋又平又圓，像一個大盤子。|p + an；pancake 鬆餅|Fry the egg in a pan.|用平底鍋煎蛋。
+teapot|c||泡茶的壺，茶壺|茶壺倒出熱茶，冒著香氣。|tea（茶）+ pot（壺）|The teapot is hot.|茶壺很燙。
+sink|k|辛苦|水槽洗碗好辛苦|水槽堆滿碗盤，洗起來好辛苦。|s + ink：裡面有 ink（墨水）；sink 也作動詞「下沉」|Put the dishes in the sink.|把碗盤放進水槽。
+faucet|k|放水的|水龍頭是放水的|轉開水龍頭，嘩啦嘩啦放水。|fau + cet；英式常說 tap|Turn off the faucet.|關掉水龍頭。
+bathtub|c||洗澡的大盆，浴缸|浴缸放滿熱水，泡得全身放鬆。|bath（洗澡）+ tub（盆）|The baby is in the bathtub.|寶寶在浴缸裡。
+shower|k|唰|蓮蓬頭唰沖下|打開蓮蓬頭，熱水唰兒一聲沖下來。|show + er；shower 也指陣雨|I take a shower every night.|我每晚淋浴。
+toilet|k|偷懶的|坐在馬桶上偷懶的|有人坐在馬桶上滑手機偷懶，不肯出來。|toi + let|Flush the toilet.|沖馬桶。
+towel|k|套了|洗完頭，毛巾套了頭|洗完頭，用一條毛巾套住頭髮擦乾。|tow + el|Dry your hands with a towel.|用毛巾擦乾手。
+soap|k|送泡|送泡，肥皂送泡泡|搓搓肥皂，送出一大堆白泡泡。|s + oa + p；soup 是湯，別混淆|Wash your hands with soap.|用肥皂洗手。
+shampoo|l|香波|香波就是洗髮精|擠一坨香波（洗髮精）在頭上，搓出泡泡。|sham + poo：重音在 poo|I need some shampoo.|我需要一些洗髮精。
+toothbrush|c||刷牙齒的刷子，牙刷|牙刷沾上牙膏，上下刷牙齒。|tooth（牙）+ brush（刷）|I need a new toothbrush.|我需要一支新牙刷。
+toothpaste|c||牙齒用的膏，牙膏|擠一段牙膏在牙刷上。|tooth（牙）+ paste（膏、糊）|Squeeze the toothpaste.|擠牙膏。
+comb|k|狗毛|拿扁梳梳狗毛|用一把扁梳，把狗毛梳得整整齊齊。|com + b：b 不發音，像 lamb|She keeps a comb in her bag.|她包包裡放著一把扁梳。
+iron|k|愛燙|熨斗愛燙衣服|媽媽拿熨斗燙衣服，皺褶一下就平了。|iron 也指鐵；念 /ˈaɪɚn/，r 在 o 前面|Be careful, the iron is hot.|小心，熨斗很燙。
+dryer|c||讓衣服變乾的機器|濕衣服丟進烘乾機，轉一轉就乾了。|dry（乾）+ er（機器）|Put the clothes in the dryer.|把衣服放進烘乾機。
+vacuum|c||抽走空氣吸灰塵的吸塵器|吸塵器嗡嗡響，靠抽走空氣的吸力，把地上灰塵一口氣吸進去。|vac（空）+ uum：兩個 u；和 vacant（空的）同源；vacuum 也指真空|The vacuum is very loud.|吸塵器很吵。
+broom|k|不容|掃帚不容灰塵|一把掃帚來回掃，不容一點灰塵留下。|br + oo + m；女巫騎 broom|Sweep the floor with a broom.|用掃帚掃地。
+mop|k|抹|拖把抹地板|拖把沾水，在地板上來回抹乾淨。|m + op；mop 也作動詞「拖地」|The mop is behind the door.|拖把在門後面。
+bucket|k|把可提|水桶有把可提|水桶上有個提把，裝滿水也可提起來。|buck + et|Fill the bucket with water.|把水桶裝滿水。
+sponge|k|是胖擠|是胖擠，海綿一擠就出水|海綿吸飽水變胖，一擠水就嘩啦流出。|sp + onge：o 念 /ʌ/|Wash the dishes with a sponge.|用海綿洗碗。
+flashlight|c||一閃就亮的燈，手電筒|停電時打開手電筒，一道光照亮前方。|flash（閃光）+ light（燈）|I need a flashlight.|我需要一支手電筒。
+candle|k|看燈|停電點蠟燭看燈|停電了，點一根蠟燭，大家圍著看燈火。|can + dle|Blow out the candles.|吹熄蠟燭。
+match|k|賣擦|賣擦，賣火柴的女孩擦一根|賣火柴的小女孩在雪夜裡擦亮一根火柴。|m + atch；match 也指比賽、相配|Light a match.|點一根火柴。
+lighter|c||點火的工具，打火機|按一下打火機，冒出小火苗。|light（點燃）+ er（工具）|Keep the lighter away from kids.|讓打火機遠離小孩。
+vehicle|i||載人載貨的都叫車輛|汽車、公車、卡車、機車，凡是載人載貨的都叫車輛。|ve + hi + cle：h 常輕或不發音|No vehicles in the park.|公園內禁止車輛。
+motorcycle|c||裝馬達的車，重型機車|騎士戴安全帽，騎著重型機車噗噗前進。|motor（馬達）+ cycle（輪、車）|He rides a motorcycle.|他騎重型機車。
+scooter|l|速克達|速克達機車|臺灣街頭滿是速克達機車，騎起來輕巧。|scoot（迅速走）+ er；也指滑板車|My mom rides a scooter.|我媽媽騎速克達。
+van|k|飯|廂型車送便當飯|一輛白色廂型車停下，送來一箱箱便當飯。|v + an|We moved in a van.|我們用廂型車搬家。
+truck|k|出口|出口貨物靠卡車|港口邊，一輛輛大卡車載著要出口的貨櫃。|tr + uck；fire truck 消防車|A big truck is coming.|一輛大卡車開過來了。
+taxi|l|的士|的士就是計程車|路邊舉手一招，一輛的士（計程車）停下來。|tax + i；taxi 也作動詞「飛機滑行」|Let's take a taxi.|我們搭計程車吧。
+cab|k|開吧|坐上計程車：開吧|一坐上黃色計程車，對司機說：「開吧！」|cab 是 taxicab 的簡稱，與 taxi 同義|We took a cab to the airport.|我們搭計程車去機場。
+subway|c||地面下的通道，地下鐵|走下樓梯，搭上地面下的地下鐵。|sub（在下）+ way（路）|I take the subway to work.|我搭地鐵上班。
+metro|k|沒錯囉|搭捷運，沒錯囉|問路人怎麼去最快？「搭捷運，沒錯囉！」|met + ro；來自 metropolitan（大都市的）|I take the metro to school.|我搭捷運上學。
+tram|k|串|有軌電車串起老街|一節節有軌電車沿著鐵軌，串起整條老街。|tr + am|We rode a tram in Hong Kong.|我們在香港搭了電車。
+monorail|c||只有一條軌道的單軌電車|單軌電車騎在一條高架軌道上滑行。|mono（單一）+ rail（軌道）|The monorail goes to the zoo.|單軌電車開往動物園。
+ferry|k|費力|坐渡輪不費力過河|不用費力游泳，坐上渡輪就到對岸。|fer + ry：雙 r|We took a ferry to the island.|我們搭渡輪去島上。
+yacht|k|要它|富豪說遊艇我要它|富豪指著海上最豪華的遊艇：「我要它！」|y + acht：ch 不發音，念 /jɑt/|They sailed on a yacht.|他們搭遊艇出航。
+canoe|k|肯努|划獨木舟肯努力|兩個人坐在獨木舟上，肯努力划才前進。|ca + noe：重音在 noe|We paddled a canoe.|我們划了獨木舟。
+kayak|k|開呀|划皮划艇，開呀|坐進皮划艇，雙頭槳一划：「開呀！」|kay + ak：前後對稱，倒過來還是 kayak|I want to try a kayak.|我想試試皮划艇。
+raft|k|拉伐|拉伐木綁成木筏|把伐下的木頭拉來綁一綁，做成木筏漂流。|r + aft|They built a raft.|他們做了一個木筏。
+submarine|c||在海面下的船，潛水艇|潛水艇潛到海面下，伸出潛望鏡。|sub（在下）+ marine（海的）|The submarine went deep.|潛水艇潛得很深。
+helicopter|c||螺旋翅膀的飛機，直升機|直升機頭上的螺旋槳轉啊轉，直直升空。|helico（螺旋）+ pter（翅膀）：希臘文「螺旋翼」|A helicopter is landing.|一架直升機正在降落。
+rocket|k|熱氣|熱氣狂噴，火箭升空|火箭尾部噴出滾滾熱氣，轟一聲衝上太空。|rock + et：拼字裡有 rock（岩石）|The rocket flew into space.|火箭飛向太空。
+spaceship|c||在太空航行的船|太空船載著太空人，飛向月球。|space（太空）+ ship（船）|The spaceship landed on the moon.|太空船降落在月球上。
+harbor|k|海泊|船在港口海泊|一艘艘船在港口海邊停泊。|har + bor；英式拼 harbour|Boats are in the harbor.|船停在港口。
+port|k|報到|船隻進港報到|貨輪一艘艘進港報到，卸下貨櫃。|port 港口；airport、passport 都有 port|The ship arrived at the port.|船抵達港口。
+pier|k|陪兒|碼頭上陪兒釣魚|爸爸在伸入海中的碼頭上，陪兒子釣魚。|p + ier；pier ↔ peer（同儕）同音|We fished from the pier.|我們在碼頭上釣魚。
+dock|k|搭靠|船隻搭靠船塢|船慢慢搭靠到船塢邊，綁好纜繩。|d + ock|The boat is at the dock.|船停在碼頭。
+runway|c||飛機跑的路，跑道|飛機在長長的跑道上加速起飛。|run（跑）+ way（路）|The plane is on the runway.|飛機在跑道上。
+terminal|k|特忙呢|機場航廈特忙呢|機場航廈裡旅客來來往往，特忙呢。|term（期限、終點）+ inal：終點站|We waited at Terminal 2.|我們在第二航廈等候。
+platform|c||平平的台子，月台|旅客站在平平的月台上等火車。|plat（平）+ form（形狀）|The train is at Platform 3.|火車在第三月台。
+avenue|k|阿文路|阿文路，阿文走上大道|阿文沿著寬寬的大道，一路往市中心走。|a + ve + nue；縮寫 Ave.|Fifth Avenue is famous.|第五大道很有名。
+boulevard|k|不累哇|不累哇，林蔭大道慢慢走|林蔭大道兩旁大樹遮陽，走再久也不累哇。|bou + le + vard；縮寫 Blvd.|We walked along the boulevard.|我們沿著林蔭大道散步。
+lane|k|連|小巷一條連一條|老城區的小巷，一條連著一條。|l + ane；lane 也指車道|Stay in your lane.|保持在你的車道內。
+alley|k|挨里|挨里，挨家挨戶的巷弄|窄窄的巷弄裡，房子一家挨著一家。|al + ley：雙 l；blind alley 死巷|The cat ran into the alley.|貓跑進巷子裡。
+highway|c||高高的大路，公路|一條寬大的公路，連接兩座城鎮。|high（主要的、高）+ way（路）|We drove on the highway.|我們在公路上開車。
+freeway|c||不用停的快速道路|高速公路沒有紅綠燈，車子一路不停開。|free（自由、不受阻）+ way（路）|The freeway has no traffic lights.|高速公路沒有紅綠燈。
+bridge|k|必擠|假日橋上必擠|假日的大橋上，車子必定擠成一長串。|br + idge；和 fridge 同韻|We walked across the bridge.|我們走過那座橋。
+tunnel|k|通了|隧道打通了|工人挖穿大山，隧道終於通了。|tun + nel：雙 n|The train went into the tunnel.|火車開進隧道。
+sidewalk|c||路旁走路的道，人行道|行人走在馬路旁邊的人行道上。|side（旁邊）+ walk（走）|Walk on the sidewalk.|走在人行道上。
+crosswalk|c||橫越馬路的走道，斑馬線|綠燈亮了，大家走過黑白相間的斑馬線。|cross（穿越）+ walk（走）|Use the crosswalk.|走斑馬線。
+intersection|c||道路互相切過的路口|兩條路互相交叉，形成十字路口。|inter（互相）+ sect（切）+ ion|Turn left at the intersection.|在十字路口左轉。
+corner|k|可能|可能在街角等你|朋友傳訊息說：「我可能在街角的便利商店等你。」|cor + ner；in the corner 在角落|The shop is on the corner.|那家店在街角。
+sign|k|閃|閃，閃爍的標誌牌|夜裡路口的標誌牌閃爍發光，提醒車輛減速。|si + gn：g 不發音；signal 的 g 要念|Read the sign.|看看那個標誌。
+bakery|c||烘烤麵包的店|走進麵包店，剛烤好的麵包香氣撲鼻。|bake（烘烤）+ ry（場所）|I buy bread at the bakery.|我在麵包店買麵包。
+butcher|k|剝切|剝切，肉舖剝皮切肉|肉舖老闆拿大刀剝皮切肉。|butch + er；butcher 也指肉販|I buy meat at the butcher shop.|我在肉舖買肉。
+bookstore|c||賣書的店，書店|書店裡一排排書架，擺滿新書。|book（書）+ store（店）|Let's meet at the bookstore.|我們在書店碰面吧。
+laundromat|c||自動洗衣的店|自助洗衣店裡一排洗衣機轉個不停。|laundr（洗衣）+ omat（自動）：來自 laundry + automat|We wash clothes at the laundromat.|我們在自助洗衣店洗衣服。
+cinema|k|心麻麻|恐怖片看到心麻麻|在電影院看恐怖片，看得心裡麻麻的。|cin + e + ma；美式多說 movie theater|Let's go to the cinema.|我們去電影院吧。
+theater|k|戲院的|戲院的舞台，就是劇院|戲院的舞台上，演員正在演一齣戲，觀眾熱烈鼓掌。|the + a + ter；英式拼 theatre|We saw a play at the theater.|我們在劇院看了一齣戲。
+circus|k|誰敢試|馬戲團特技誰敢試|馬戲團裡高空飛人翻跟斗，誰敢試？|cir + cus：前一個 c 念 /s/、後一個念 /k/|The circus has clowns.|馬戲團有小丑。
+aquarium|c||養水中生物的場所|走進水族館，頭頂上游過一條鯊魚。|aqua（水）+ rium（場所）|We saw sharks at the aquarium.|我們在水族館看到鯊魚。
+planetarium|c||看行星的場所，天文館|天文館圓頂上映出滿天行星和星星。|planet（行星）+ arium（場所）|The planetarium shows the stars.|天文館展示星空。
+factory|c||製造東西的地方，工廠|工廠裡機器轟隆隆，生產一箱箱產品。|fact（做）+ ory（場所）|My uncle works in a factory.|我叔叔在工廠工作。
+temple|k|添保|添保，寺廟添福保平安|過年到寺廟拜拜，添香油錢求保平安。|tem + ple；temple 也指太陽穴|We visited a temple.|我們參觀了一座寺廟。
+church|k|出去|週日出去上教堂|星期天早上全家出去，到教堂做禮拜。|ch + ur + ch：頭尾都是 ch|They go to church on Sunday.|他們星期天去教堂。

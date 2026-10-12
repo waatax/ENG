@@ -1,0 +1,57 @@
+r|sol/soli|單獨|sol 是「單獨」：solo 就是一個人表演|solo=獨唱、單獨的=sol 單獨 + o;solitary=孤獨的=solit 單獨 + ary;desolate=荒涼的=de 完全 + sol 單獨 + ate;solitude=孤獨=solit 單獨 + ude
+r|sol|太陽|sol 也是「太陽」：solar 是太陽的|solar=太陽的=sol 太陽 + ar;solstice=至日=sol 太陽 + stice 停止;parasol=陽傘=para 擋 + sol 太陽;solarium=日光室=solar 太陽 + ium 場所
+r|solv/solu|鬆開、解決|solv 是「解開」：solve 就是把結解開|solve=解決=solv 解開 + e;solution=解答、溶液=solu 解 + tion;dissolve=溶解=dis 分 + solve 鬆開;resolve=下決心、解決=re 再 + solve 解;absolute=絕對的=ab 離 + solute 鬆開
+r|son|聲音|son 是「聲音」|sonic=聲音的=son 聲 + ic;resonate=共鳴=re 回 + son 聲 + ate;consonant=子音=con 一起 + son 聲 + ant;unison=齊聲=uni 一 + son 聲;supersonic=超音速的=super 超 + sonic 聲音的
+r|spec/spect/spic/pect|看|spect 是「看」：spectator 是看比賽的人|inspect=檢查=in 往內 + spect 看;respect=尊敬=re 再 + spect 看;spectator=觀眾=spect 看 + ator 人;expect=期待=ex 外 + spect 看;special=特別的=spec 外觀 + ial;suspicious=可疑的=su 下 + spic 看 + ious
+r|spir/pire|呼吸|spir 是「呼吸」：spirit 是一口氣、精神|inspire=激勵=in 進 + spire 呼吸;expire=到期=ex 出 + (s)pire 呼吸;spirit=精神=spir 呼吸 + it;respiration=呼吸作用=re 再 + spir 呼吸 + ation;perspire=流汗=per 穿過 + spire 呼吸
+r|sta/stat/sist/stit|站立|sta 是「站」：stand、station 都是站|station=車站=stat 站 + ion;statue=雕像=stat 站 + ue;stable=穩定的=sta 站 + ble;insist=堅持=in 在 + sist 站;resist=抵抗=re 回 + sist 站;constitution=憲法=con 一起 + stitut 站立 + ion
+r|struct/stroy|建造|struct 是「建造」：structure 是結構|structure=結構=struct 建 + ure;construct=建造=con 一起 + struct 建;instruct=指導=in 在 + struct 建;obstruct=阻塞=ob 擋 + struct 建;destroy=破壞=de 反 + stroy 建;destruction=破壞=de 反 + struct 建 + ion
+r|tact/tang|碰觸|tact 是「碰觸」：contact 是互相碰觸|contact=接觸、聯絡=con 一起 + tact 碰;tactile=觸覺的=tact 碰 + ile;intact=完整的=in 不 + tact 碰;tangible=有形的=tang 碰 + ible 可;tangent=切線=tang 碰 + ent
+r|tain/ten/tin|握住、保持|tain 是「握住」：contain 是把東西握在裡面|contain=包含=con 一起 + tain 握;obtain=獲得=ob 朝 + tain 握;maintain=維持=main 手 + tain 握;retain=保留=re 回 + tain 握;continue=繼續=con 一起 + tin 握;tenant=房客=ten 握有 + ant 人
+r|tempor/temp|時間|tempor 是「時間」|temporary=暫時的=tempor 時間 + ary;contemporary=當代的=con 一起 + tempor 時間 + ary;tempo=速度、節拍=temp 時間 + o;temporal=時間的=tempor 時間 + al
+r|tend/tens/tent|伸展|tend 是「伸、拉」：extend 是往外伸|extend=延伸=ex 外 + tend 伸;intend=打算=in 向 + tend 伸;attend=參加=at 朝 + tend 伸;tension=緊張=tens 拉緊 + ion;tent=帳篷=tent 撐開;pretend=假裝=pre 前 + tend 伸
+r|terr/terra|土地|terr 是「土地」：territory 是領土|territory=領土=terr 土地 + itory;terrace=露臺、梯田=terr 土地 + ace;terrain=地形=terr 土地 + ain;terrestrial=地球的、陸地的=terr 土地 + estrial;subterranean=地下的=sub 下 + terr 土 + anean
+r|test|見證|test 是「見證」：testify 就是出庭作證（測驗的 test 其實來自拉丁文 testum 陶罐，另有來源）|attest=證明=at 朝 + test 見證;contest=比賽=con 一起 + test 見證;protest=抗議=pro 公開 + test 見證;testify=作證=test 見證 + ify;testimony=證詞=testi 見證 + mony
+r|text|編織|text 是「編織」：文字像布一樣編織起來|text=文字、課文=text 編織;textile=紡織品=text 織 + ile;texture=質地=text 織 + ure;context=上下文=con 一起 + text 織;textbook=課本=text 課文 + book 書
+r|therm/thermo|熱|therm 是「熱」：thermometer 量熱度|thermometer=溫度計=thermo 熱 + meter 量;thermos=保溫瓶=therm 熱 + os;thermal=熱的=therm 熱 + al;thermostat=恆溫器=thermo 熱 + stat 停住
+r|tort|扭曲|tort 是「扭」：distort 就是扭到變形|distort=扭曲=dis 分 + tort 扭;torture=折磨=tort 扭 + ure;retort=反駁=re 回 + tort 扭;extort=勒索=ex 出 + tort 扭;contort=扭曲身體=con 完全 + tort 扭
+r|tract|拉|tract 是「拉」：tractor 是拉東西的車|tractor=曳引機=tract 拉 + or;attract=吸引=at 朝 + tract 拉;subtract=減去=sub 下 + tract 拉;extract=提取=ex 出 + tract 拉;distract=使分心=dis 分 + tract 拉;contract=合約=con 一起 + tract 拉
+r|trib|給予、分配|trib 是「給、分配」|contribute=貢獻=con 一起 + tribute 給;distribute=分配=dis 分 + tribute 給;contribution=貢獻=con 一起 + tribut 給 + ion;tribute=致敬=trib 給 + ute;tributary=支流=tribut 給 + ary，把水給主流
+r|urb|城市|urb 是「城市」|urban=城市的=urb 城 + an;suburb=郊區=sub 次 + urb 城;suburban=郊區的=suburb 郊區 + an;urbanization=都市化=urban 城市的 + ization
+r|vac/void/van|空|vac 是「空」：vacation 是空出來的時間|vacation=假期=vac 空 + ation;vacant=空的=vac 空 + ant;vacuum=真空、吸塵器=vac 空 + uum;evacuate=疏散=e 出 + vacu 空 + ate;avoid=避免=a 出 + void 空;vanish=消失=van 空 + ish
+r|val/vail|價值、強|val 是「價值、強」|value=價值=val 價值 + ue;valuable=有價值的=valu 價值 + able;evaluate=評估=e 出 + valu 價值 + ate;valid=有效的=val 強 + id;available=可用的=a 朝 + vail 價值 + able;equivalent=相等的=equi 相等 + val 價值 + ent
+r|ven/vent/venue|來|vent 是「來」：event 是發生出來的事|event=事件=e 出 + vent 來;invent=發明=in 進 + vent 來;prevent=預防=pre 前 + vent 來;adventure=冒險=ad 朝 + vent 來 + ure;convenient=方便的=con 一起 + ven 來 + ient;avenue=大道=a 朝 + venue 來
+r|ver|真|ver 是「真」|verify=查證=ver 真 + ify;very=非常=ver 真 + y，真的;verdict=判決=ver 真 + dict 說
+r|vers/vert|轉|vert 是「轉」：reverse 是轉回來|reverse=相反=re 回 + verse 轉;convert=轉換=con 完全 + vert 轉;universe=宇宙=uni 一 + verse 轉;vertical=垂直的=vert 轉 + ical;versus=對抗=vers 轉向 + us;advertise=廣告=ad 朝 + vert 轉 + ise
+r|via/vey/voy/vi|路|via 是「路、經由」|via=經由=via 路;voyage=航行=voy 路 + age;convey=運送=con 一起 + vey 路;trivial=瑣碎的=tri 三 + via 路 + l，三岔路口的閒談;obvious=明顯的=ob 對著 + vi 路 + ous;previous=先前的=pre 前 + vi 路 + ous
+r|vict/vinc|征服|vict 是「征服、勝利」：victory 是勝利|victory=勝利=vict 征服 + ory;victor=勝利者=vict 征服 + or 人;convince=說服=con 完全 + vince 征服;province=省=pro 前 + vince 征服，一說指征服來的領土;invincible=無敵的=in 不 + vinc 征服 + ible
+r|vid/vis|看|vis 是「看」：vision 是視力|video=影片=vid 看 + eo;visible=看得見的=vis 看 + ible 可;vision=視力=vis 看 + ion;visit=拜訪=vis 看 + it，一再去看;evidence=證據=e 出 + vid 看 + ence;supervise=監督=super 上 + vise 看
+r|viv/vit|生命、活|viv、vit 是「活」|vivid=生動的=viv 活 + id;survive=倖存=sur 超過 + vive 活;revive=復活=re 再 + vive 活;vital=重要的、生命的=vit 生命 + al;vitamin=維他命=vita 生命 + amin 胺
+r|voc/vok/voice|聲音、喊|voc 是「聲音、喊」：voice 也同一家族|voice=聲音=voice 聲;vocal=聲音的=voc 聲 + al;vocabulary=字彙=vocabul 字 + ary;evoke=喚起=e 出 + voke 喚;provoke=挑釁=pro 向前 + voke 喊;vocation=職業=voc 召喚 + ation，天命召喚
+r|vol|意願|vol 是「意願」：volunteer 是自願的人|volunteer=志工=vol 意願 + unteer;voluntary=自願的=vol 意願 + untary;benevolent=仁慈的=bene 好 + vol 意願 + ent;malevolent=惡意的=male 壞 + vol 意願 + ent
+r|volv/volu|捲、轉|volv 是「捲、轉」|revolve=旋轉=re 回 + volve 轉;involve=牽涉=in 進 + volve 捲;evolve=演化=e 出 + volve 展開;revolution=革命=re 回 + volu 轉 + tion;volume=冊、音量=volu 捲 + me，古書是捲軸
+r|vor/vour|吃|vor 是「吞吃」|carnivore=肉食動物=carni 肉 + vore 吃;herbivore=草食動物=herbi 草 + vore 吃;omnivore=雜食動物=omni 全 + vore 吃;devour=吞食=de 完全 + vour 吃
+r|zo/zoo|動物|zoo 是「動物」|zoo=動物園=zoo 動物;zoology=動物學=zoo 動物 + logy 學;zookeeper=動物園管理員=zoo 動物園 + keeper 照顧者;zodiac=黃道帶=zod 動物 + iac，動物圈
+r|aqua/aqu|水|aqua 是「水」：aquarium 是養水中生物的地方|aquarium=水族館=aqua 水 + rium 場所;aquatic=水生的=aqua 水 + tic;aqueduct=輸水道=aque 水 + duct 引;aquamarine=海藍寶石=aqua 水 + marine 海
+r|astro/aster|星星|astro 是「星」：astronaut 是航向星星的人|astronaut=太空人=astro 星 + naut 航行者;astronomy=天文學=astro 星 + nomy 規律;astrology=占星術=astro 星 + logy 學;asteroid=小行星=aster 星 + oid 像;disaster=災難=dis 壞 + aster 星，壞星象
+r|cad/cas/cid|落下、發生|cad、cas、cid 是「落下」|accident=意外=ac 朝 + cid 落 + ent;incident=事件=in 上 + cid 落 + ent;cascade=小瀑布=casc 落 + ade;casual=隨意的=cas 偶然落下 + ual;occasion=場合=oc 朝 + cas 落 + ion
+r|cent|百|cent 是「百」：100 cents = 1 dollar|cent=一分錢=cent 百分之一;century=世紀=cent 百 + ury;percent=百分比=per 每 + cent 百;centimeter=公分=centi 百分之一 + meter 公尺;centipede=蜈蚣=centi 百 + pede 腳;centennial=百年紀念=cent 百 + ennial 年
+r|cert|確定|cert 是「確定」：certain 就是確定的|certain=確定的=cert 確定 + ain;certificate=證書=certi 確定 + ficate 做;certify=證明=cert 確定 + ify;ascertain=查明=as 朝 + certain 確定;uncertain=不確定的=un 不 + certain 確定
+r|cit|喚起、叫|cit 是「喚起」|excite=使興奮=ex 出 + cite 喚;recite=背誦=re 再 + cite 叫;cite=引用=cit 叫出 + e;incite=煽動=in 進 + cite 喚
+r|civ|公民、城市|civ 是「公民」|civil=公民的=civ 公民 + il;civilian=平民=civil 公民 + ian 人;civilization=文明=civil 公民 + ization;civic=市民的=civ 公民 + ic
+r|clin|傾斜|clin 是「傾斜、靠」|decline=下降、拒絕=de 下 + cline 傾;incline=傾向=in 向 + cline 傾;recline=斜靠=re 後 + cline 傾;clinic=診所=clin 傾，古時病人斜躺的床
+r|cosm|宇宙、秩序|cosm 是「宇宙、秩序」|cosmos=宇宙=cosm 宇宙 + os;cosmic=宇宙的=cosm 宇宙 + ic;cosmetic=化妝品=cosm 秩序美觀 + etic;cosmopolitan=國際性的=cosmo 世界 + politan 市民;microcosm=縮影=micro 小 + cosm 宇宙
+r|cre/creat/crease|生長、創造|cre 是「生長」：create 是讓東西長出來|create=創造=cre 生 + ate;creature=生物=creat 創造 + ure;creative=有創意的=creat 創造 + ive;increase=增加=in 進 + crease 長;decrease=減少=de 下 + crease 長;concrete=混凝土、具體的=con 一起 + crete 長
+r|crit|判斷|crit 是「判斷」|critic=評論家=crit 判斷 + ic;critical=關鍵的、批判的=critic 判斷 + al;criticize=批評=critic 判斷 + ize;criterion=標準=crit 判斷 + erion;hypocrite=偽君子=hypo 下 + crite 判斷
+r|cult|耕種、培養|cult 是「耕種」：culture 是把人「耕」出教養|culture=文化=cult 耕 + ure;agriculture=農業=agri 田 + culture 耕;cultivate=耕種、培養=cultiv 耕 + ate;horticulture=園藝=horti 花園 + culture 耕
+r|don/dona|給|don 是「給」|donate=捐贈=don 給 + ate;donor=捐贈者=don 給 + or 人;donation=捐款=donate 捐 + ion;pardon=原諒=par 完全 + don 給
+r|dur|持久|dur 是「持續」：during 是在持續的期間|durable=耐用的=dur 持久 + able;during=在⋯期間=dur 持續 + ing;duration=持續時間=dur 持續 + ation;endure=忍受=en 使 + dure 持久;endurance=耐力=endur 忍耐 + ance
+r|fess|說出、承認|fess 是「說出」|confess=坦白=con 完全 + fess 說;profess=聲稱=pro 公開 + fess 說;professor=教授=profess 公開宣講 + or 人;profession=職業=profess 公開聲明 + ion;confession=坦白、認罪=confess 坦白 + ion
+r|fend/fens|擋開|fend 是「擋、打」|defend=防守=de 離 + fend 擋;offend=冒犯=of 對著 + fend 打;defense=防禦=de 離 + fense 擋;offense=冒犯=of 對著 + fense 打;fender=擋泥板=fend 擋 + er
+r|firm|堅定|firm 是「堅固、堅定」|firm=堅固的、公司=firm 堅定;confirm=確認=con 完全 + firm 堅定;affirm=肯定=af 朝 + firm 堅定;affirmative=肯定的=affirm 肯定 + ative
+r|fix|固定|fix 是「固定」|fix=修理、固定=fix 固定;prefix=字首=pre 前 + fix 固定;suffix=字尾=suf 下 + fix 固定;fixture=固定裝置=fix 固定 + ture;affix=詞綴=af 朝 + fix 固定
+r|fus/fuse|倒、流|fus 是「倒出、流」|confuse=使困惑=con 一起 + fuse 倒，全混在一起;refusal=拒絕=re 回 + fus 倒 + al;fuse=保險絲、熔合=fus 熔流 + e;transfusion=輸血=trans 轉 + fus 倒 + ion;infuse=注入=in 進 + fuse 倒;diffusion=擴散=dif 分散 + fus 倒 + ion
+r|gest|帶、運送|gest 是「帶」|digest=消化=di 分 + gest 運;suggest=建議=sug 下 + gest 帶;congestion=壅塞=con 一起 + gest 運 + ion;gesture=手勢=gest 帶出 + ure
+r|glob|球|glob 是「球」：globe 是地球儀|globe=地球儀=glob 球 + e;global=全球的=glob 球 + al;globalization=全球化=global 全球的 + ization;hemoglobin=血紅素=hemo 血 + glob 球 + in
+r|grav|重|grav 是「重」：gravity 是重力|gravity=重力=grav 重 + ity;grave=嚴重的=grav 重 + e（「墳墓」grave 是另一個字）;gravitation=萬有引力=gravit 重 + ation;aggravate=加重=ag 朝 + grav 重 + ate
+r|hum|土地、人|hum 是「土地」，引申為「人」|human=人類=hum 地上的 + an;humble=謙虛的=hum 地面 + ble，低到地面;humility=謙遜=humil 低 + ity;humanity=人性=human 人 + ity;humus=腐植土=hum 土 + us

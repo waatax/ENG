@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify 1000 mnemonic cards, 500 word families and their MP3s
+        run: node scripts/validate_mnemonic_release.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

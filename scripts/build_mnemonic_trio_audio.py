@@ -1,36 +1,39 @@
-"""Export English -> original Chinese sound cue -> Chinese meaning for every card."""
+"""Export English -> Mandarin keyword cue -> Chinese meaning -> English again, for every card (format 4)."""
 import argparse,asyncio,hashlib,json,pathlib,re,os
 from build_word_mp3 import segments,decode,run,silence,SAMPLE_RATE,FFMPEG,FFPROBE,duration,CACHE
+from audio_trim import trim
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 BASE=ROOT/'dist/mnemonics';OUT=BASE/'audio-trio'
 RECORDS=CACHE/'mnemonic-trio-records'
 def spoken_meaning(text):
     text=re.sub(r'\([^)]*\)|（[^）]*）','',text)
     return re.sub(r'[、；;]','，',text).strip(' ，')
+ROLES=['english','cue','meaning','english-repeat']
 def texts(card):
-    return [card['word'],card['cue'],spoken_meaning(card['zh'])]
+    en=card.get('displayWord',card['word'])
+    return [en,card['cue'],spoken_meaning(card['zh']),en]
 def signature(card):
     en=BASE/'audio'/(card['word']+'.mp3')
-    return hashlib.sha256(json.dumps({'text':texts(card),'englishSHA256':hashlib.sha256(en.read_bytes()).hexdigest(),'voice':'zh-TW-HsiaoChenNeural','rate':'-10%','format':1},ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+    return hashlib.sha256(json.dumps({'text':texts(card),'englishSHA256':hashlib.sha256(en.read_bytes()).hexdigest(),'voice':'zh-TW-HsiaoChenNeural','rate':'-10%','format':5},ensure_ascii=False,sort_keys=True).encode()).hexdigest()
 def cached(card):
     p=RECORDS/(card['word']+'.json');audio=OUT/(card['word']+'.mp3')
     if p.exists() and audio.exists():
         old=json.loads(p.read_text(encoding='utf8'))
         if old['signature']==signature(card) and old['sha256']==hashlib.sha256(audio.read_bytes()).hexdigest():return old
 def encode(card,zh_cue,zh_meaning):
-    english=decode(BASE/'audio'/(card['word']+'.mp3'))
+    english=trim(decode(BASE/'audio'/(card['word']+'.mp3')));zh_cue=trim(zh_cue);zh_meaning=trim(zh_meaning)
     payload=[];frames=0;parts=[]
     def append(pcm):
         nonlocal frames
         payload.append(pcm);frames+=len(pcm)//2
     append(silence(.15))
-    for role,text,pcm,gap in zip(['english','cue','meaning'],texts(card),[english,zh_cue,zh_meaning],[.45,.45,.25]):
+    for role,text,pcm,gap in zip(ROLES,texts(card),[english,zh_cue,zh_meaning,english],[.45,.45,.6,.3]):
         if len(pcm)<SAMPLE_RATE//5:raise ValueError('Empty '+role+' for '+card['word'])
         start=frames/SAMPLE_RATE;append(pcm);end=frames/SAMPLE_RATE
-        parts.append({'role':role,'text':text,'language':'en-US' if role=='english' else 'zh-TW','start':round(start,4),'end':round(end,4)})
+        parts.append({'role':role,'text':text,'language':'en-US' if role.startswith('english') else 'zh-TW','start':round(start,4),'end':round(end,4)})
         append(silence(gap))
     target=OUT/(card['word']+'.mp3');temp=OUT/(card['word']+'.tmp.mp3')
-    run([FFMPEG,'-v','error','-y','-f','s16le','-ar',str(SAMPLE_RATE),'-ac','1','-i','pipe:0','-codec:a','libmp3lame','-b:a','48k','-id3v2_version','3','-metadata','title='+card['word']+' | '+card['cue']+' | '+spoken_meaning(card['zh']),'-metadata','comment=English -> Chinese mnemonic -> Chinese meaning',str(temp)],b''.join(payload))
+    run([FFMPEG,'-v','error','-y','-f','s16le','-ar',str(SAMPLE_RATE),'-ac','1','-i','pipe:0','-codec:a','libmp3lame','-b:a','40k','-id3v2_version','3','-metadata','title='+card['word']+' | '+card['cue']+' | '+spoken_meaning(card['zh']),'-metadata','comment=English -> Mandarin keyword cue -> Chinese meaning -> English',str(temp)],b''.join(payload))
     os.replace(temp,target);actual=duration(target)
     if abs(actual-frames/SAMPLE_RATE)>.3:raise ValueError('Duration mismatch: '+card['word'])
     result={'id':card['id'],'word':card['word'],'file':'audio-trio/'+card['word']+'.mp3','parts':parts,'duration':round(actual,4),'bytes':target.stat().st_size,'signature':signature(card),'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
@@ -49,7 +52,7 @@ async def main():
             fresh={}
             if missing:
                 # Boundary text is checked by segments(); mismatch falls back to per-text synthesis.
-                lines=[{'zh':t} for c in missing for t in texts(c)[1:]]
+                lines=[{'zh':t} for c in missing for t in texts(c)[1:3]]
                 chinese,fallback=await segments(lines,'zh')
                 assert len(chinese)==2*len(missing)
                 for i,c in enumerate(missing):
@@ -60,7 +63,7 @@ async def main():
     batches=[cards[i:i+25] for i in range(0,len(cards),25)]
     nested=await asyncio.gather(*(group(b) for b in batches));records=[r for batch in nested for r in batch]
     assert len(records)==len(cards) and len({r['word'] for r in records})==len(cards)
-    manifest={'version':3,'format':'english-cue-meaning','order':['english','cue','meaning'],'voices':{'english':'en-US-AriaNeural','chinese':'zh-TW-HsiaoChenNeural'},'rate':'-10%','cards':len(records),'totalBytes':sum(r['bytes'] for r in records),'records':records}
+    manifest={'version':4,'format':'english-cue-meaning-english','order':ROLES,'voices':{'english':'en-US-AriaNeural','chinese':'zh-TW-HsiaoChenNeural'},'rate':'-10%','cards':len(records),'totalBytes':sum(r['bytes'] for r in records),'records':records}
     filename='audio-manifest.json' if len(cards)==1000 else 'audio-manifest-preview.json'
     (BASE/filename).write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
     preview=BASE/'audio-manifest-preview.json'

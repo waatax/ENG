@@ -1,0 +1,46 @@
+r|act/ag|做、行動|act 是「做」：actor 是做表演的人|act=行動、表演=act 做;action=行動=act 做 + ion 名詞;active=活躍的=act 做 + ive 的;actor=演員=act 做 + or 人;react=反應=re 回 + act 做;agent=代理人=ag 做 + ent 人
+r|aud|聽|aud 是「聽」：audio 是聽的聲音|audio=音訊=aud 聽 + io;audience=觀眾=aud 聽 + ience 名詞，來聽的人;audition=試鏡=aud 聽 + ition 名詞;auditorium=禮堂=audit 聽 + orium 場所;audible=聽得見的=aud 聽 + ible 可
+r|bio|生命|bio 是「生命」：biology 是研究生命的學問|biology=生物學=bio 生命 + logy 學;biography=傳記=bio 生命 + graphy 寫;antibiotic=抗生素=anti 抗 + bio 生命 + tic;autobiography=自傳=auto 自己 + bio 生命 + graphy 寫;biosphere=生物圈=bio 生命 + sphere 球
+r|cap/capt/capit|頭、首|cap 是「頭」：cap 帽子就戴在頭上|cap=帽子=cap 頭;capital=首都=capit 頭 + al;captain=船長=capt 頭 + ain 人;capitalism=資本主義=capital 資本 + ism 主義
+r|cap/capt/cept/ceive/ceipt|拿、抓住|cap 也有「拿、抓住」：capture 是抓住|capture=捕獲=capt 抓 + ure;accept=接受=ac 朝 + cept 拿;except=除了=ex 外 + cept 拿;receive=收到=re 回 + ceive 拿;receipt=收據=re 回 + ceipt 拿;capable=有能力的=cap 拿 + able 能
+r|ced/cess/ceed|走、前進|ced、cess、ceed 都是「走」|process=過程=pro 向前 + cess 走;success=成功=suc 往下 + cess 走到底;access=通道=ac 朝 + cess 走;exceed=超過=ex 外 + ceed 走;proceed=繼續進行=pro 向前 + ceed 走;recess=下課休息=re 回 + cess 走
+r|chron|時間|chron 是「時間」|chronic=慢性的=chron 時間 + ic，拖很久;chronology=年表=chrono 時間 + logy 學;synchronize=同步=syn 同 + chron 時間 + ize;chronicle=編年史=chron 時間 + icle
+r|cide/cise|切、殺|cide、cise 是「切、殺」|decide=決定=de 去 + cide 切斷;precise=精確的=pre 先 + cise 切好;concise=簡潔的=con 完全 + cise 切;insecticide=殺蟲劑=insect 昆蟲 + cide 殺;pesticide=農藥=pest 害蟲 + cide 殺
+r|claim/clam|喊叫|claim 是「喊」：exclaim 是喊出來|claim=聲稱=claim 喊;exclaim=驚叫=ex 出 + claim 喊;proclaim=宣布=pro 向前 + claim 喊;exclamation=驚嘆=ex 出 + clam 喊 + ation;acclaim=稱讚=ac 朝 + claim 喊
+r|clud/clus/clos|關閉|clud 是「關」：close 也是同一家族|include=包含=in 內 + clude 關;exclude=排除=ex 外 + clude 關;conclude=下結論=con 完全 + clude 關;closed=關閉的=clos 關 + ed;closet=壁櫥=clos 關 + et 小;enclose=圍住、附上=en 使 + close 關
+r|cogn|知道|cogn 是「知道」：recognize 是再次知道|recognize=認出=re 再 + cogn 知 + ize;recognition=承認、認出=re 再 + cogn 知 + ition;cognitive=認知的=cogn 知 + itive;incognito=隱姓埋名的=in 不 + cognito 被知道
+r|commun/common|共同、分享|commun 是「共同、分享」：common 就是共同的|common=共同的=common 共同;communicate=溝通=commun 共同 + icate 使;communication=溝通、通訊=communicate 溝通 + ion;community=社區=commun 共同 + ity;communion=交流、共融=commun 共同 + ion;communism=共產主義=commun 共同 + ism
+r|cord/cour/core|心|cord 是「心」：courage 是心的力量|courage=勇氣=cour 心 + age;record=紀錄、唱片=re 再 + cord 心，記在心上;accord=一致=ac 朝 + cord 心;core=核心=core 心，一說源自拉丁文 cor 心;cordial=熱誠的=cord 心 + ial;discord=不和=dis 分開 + cord 心
+r|cred|相信|cred 是「相信」：credit card 就是信用卡|credit=信用=cred 信 + it;incredible=難以置信的=in 不 + cred 信 + ible 可;credible=可信的=cred 信 + ible 可;credential=資格證書=cred 信 + ential;credibility=可信度=cred 信 + ibility
+r|cur/curr/curs/cour|跑、流|cur 是「跑」：current 是流動的水|current=水流、目前的=curr 跑 + ent;currency=貨幣=curr 流通 + ency;occur=發生=oc 朝 + cur 跑;excursion=遠足=ex 外 + curs 跑 + ion;course=路線、課程=cour 跑 + se;recur=重現=re 再 + cur 跑
+r|cycl/cycle|圓、輪|cycl 是「圓、輪子」|bicycle=腳踏車=bi 二 + cycle 輪;cycle=循環=cycle 圓;recycle=回收=re 再 + cycle 循環;motorcycle=機車=motor 馬達 + cycle 輪;cyclone=氣旋=cycl 圓 + one;encyclopedia=百科全書=en 在 + cyclo 圓 + pedia 教育
+r|dem/demo|人民|demo 是「人民」|democracy=民主=demo 人民 + cracy 統治;democrat=民主主義者=demo 人民 + crat 統治者;epidemic=流行病=epi 在上 + dem 人民 + ic;demographic=人口統計的=demo 人民 + graphic 描寫的;pandemic=全球流行病=pan 全 + dem 人民 + ic
+r|dent|牙齒|dent 是「牙」：dentist 是牙醫|dentist=牙醫=dent 牙 + ist 人;dental=牙齒的=dent 牙 + al;denture=假牙=dent 牙 + ure;trident=三叉戟=tri 三 + dent 齒
+r|dict|說|dict 是「說」：dictionary 是說明字義的書|dictionary=字典=dict 說 + ionary;predict=預測=pre 先 + dict 說;contradict=反駁=contra 相反 + dict 說;dictate=口述、命令=dict 說 + ate;verdict=判決=ver 真 + dict 說;dictator=獨裁者=dict 說 + ator 人，說了算
+r|doc/doct|教|doc 是「教」：doctor 原意是「教的人」|doctor=醫生、博士=doct 教 + or 人;document=文件=docu 教 + ment;documentary=紀錄片=document 文件 + ary;doctrine=教義=doctr 教 + ine;docile=溫順的=doc 教 + ile 易於
+r|dom/domin|家、主宰|dom 是「家」，引申為家裡作主|domestic=家庭的、國內的=dom 家 + estic;dominate=支配=domin 主宰 + ate;dominant=主導的=domin 主宰 + ant;domain=領域=dom 主宰 + ain;dome=圓頂=dom 房屋，源自義大利文 duomo 大教堂
+r|duc/duct|引導|duc 是「引導、帶」：educate 是把能力引出來|educate=教育=e 出 + duc 引 + ate;produce=生產=pro 向前 + duce 引;product=產品=pro 向前 + duct 引;introduce=介紹=intro 向內 + duce 引;conductor=指揮家、導體=con 一起 + duct 引 + or;reduce=減少=re 回 + duce 引
+r|equ|相等|equ 是「相等」：equal 就是相等|equal=相等的=equ 相等 + al;equation=方程式=equ 相等 + ation;equator=赤道=equat 平分 + or;equality=平等=equal 相等 + ity;adequate=足夠的=ad 朝 + equ 相等 + ate
+r|fac/fact/fect/fic|做|fac、fact 是「做」：factory 是做東西的地方|factory=工廠=fact 做 + ory 場所;fact=事實=fact 做出來的事;manufacture=製造=manu 手 + fact 做 + ure;effect=效果=ef 出 + fect 做;perfect=完美的=per 完全 + fect 做;efficient=有效率的=ef 出 + fic 做 + ient
+r|fer|帶、拿|fer 是「帶、承受」：transfer 是把東西帶到另一邊|transfer=轉移=trans 轉 + fer 帶;prefer=偏好=pre 前 + fer 帶;offer=提供=of 朝 + fer 帶;refer=參考=re 回 + fer 帶;suffer=受苦=suf 下 + fer 承受，在下面扛著;conference=會議=con 一起 + fer 帶 + ence
+r|fin|結束、界限|fin 是「結束」：finish 就是完成|finish=完成=fin 結束 + ish;final=最後的=fin 結束 + al;finally=最後=final 最後 + ly;infinite=無限的=in 不 + fin 界限 + ite;define=定義=de 完全 + fine 界限;confine=限制=con 一起 + fine 界限
+r|flect/flex|彎曲|flex 是「彎」：flexible 是可以彎的|flexible=有彈性的=flex 彎 + ible 可;reflect=反射=re 回 + flect 彎;reflection=倒影=reflect 反射 + ion;deflect=使偏斜=de 偏 + flect 彎;reflex=反射動作=re 回 + flex 彎
+r|flu|流|flu 是「流」：fluent 是說話像流水|fluid=流體=flu 流 + id;fluent=流利的=flu 流 + ent;influence=影響=in 進 + flu 流 + ence;affluent=富裕的=af 朝 + flu 流 + ent，財富流過來;flu=流感=flu 流行;fluctuate=波動=fluct 流動 + uate
+r|form|形狀|form 是「形狀、形式」|form=形式、表格=form 形;uniform=制服=uni 一 + form 形;transform=轉變=trans 轉 + form 形;formal=正式的=form 形式 + al;inform=告知=in 進 + form 形;reform=改革=re 再 + form 形
+r|fort/forc|強|fort 是「強壯」：fort 是堅固的堡壘|fort=堡壘=fort 強;effort=努力=ef 出 + fort 力;comfort=安慰、舒適=com 完全 + fort 強;force=力量=forc 強;enforce=執行=en 使 + force 力;fortress=要塞=fort 強 + ress
+r|frag/fract|破碎|frag、fract 是「破」|fragile=易碎的=frag 破 + ile 易;fragment=碎片=frag 破 + ment;fraction=分數=fract 破 + ion;fracture=骨折=fract 破 + ure
+r|gen/gener|出生、產生|gen 是「生、產生」|generate=產生=gener 生 + ate;gene=基因=gen 生;generation=世代=generate 產生 + ion;genius=天才=gen 生 + ius，天生的;generous=慷慨的=gener 高貴出身 + ous;oxygen=氧=oxy 酸 + gen 生
+r|geo|地、土地|geo 是「地」：geography 是描寫大地|geography=地理=geo 地 + graphy 描寫;geology=地質學=geo 地 + logy 學;geometry=幾何=geo 地 + metry 測量;geothermal=地熱的=geo 地 + thermal 熱的
+r|grad/gress|步、走|grad、gress 是「步、走」|grade=年級、等級=grad 步;gradual=逐漸的=grad 步 + ual;graduation=畢業=grad 階段 + uation;progress=進步=pro 向前 + gress 走;aggressive=有侵略性的=ag 朝 + gress 走 + ive;congress=國會=con 一起 + gress 走
+r|graph/gram|寫、畫|graph 是「寫、畫」|photograph=照片=photo 光 + graph 畫;paragraph=段落=para 旁 + graph 寫;autograph=親筆簽名=auto 自己 + graph 寫;graphic=圖像的=graph 畫 + ic;telegram=電報=tele 遠 + gram 寫;grammar=文法=gramm 寫 + ar
+r|grat/grac|感謝、高興|grat 是「感謝、使人高興」|grateful=感激的=grate 感謝 + ful;congratulate=恭喜=con 一起 + grat 高興 + ulate;gratitude=感激=grat 感謝 + itude;grace=優雅=grac 恩惠;gracious=親切的=grac 恩惠 + ious
+r|hab/hib|住、擁有|hab 是「住、擁有」：habit 是身上擁有的習慣|habit=習慣=hab 擁有 + it;habitat=棲息地=habit 住 + at;inhabit=居住=in 在 + habit 住;inhabitant=居民=inhabit 居住 + ant 人;exhibit=展示=ex 出 + hibit 拿;prohibit=禁止=pro 前 + hibit 拿住
+r|hydr|水|hydr 是「水」|hydrogen=氫=hydro 水 + gen 生，燃燒生成水;dehydrate=脫水=de 去 + hydr 水 + ate;hydrant=消防栓=hydr 水 + ant;hydroelectric=水力發電的=hydro 水 + electric 電的;hydraulic=液壓的=hydr 水 + aulic
+r|ject|丟、投|ject 是「丟」：project 是往前丟出的計畫|project=計畫=pro 向前 + ject 丟;reject=拒絕=re 回 + ject 丟;inject=注射=in 進 + ject 丟;object=物體=ob 對著 + ject 丟;subject=科目、主題=sub 下 + ject 丟;eject=彈出=e 出 + ject 丟
+r|jud/jur/jus|判斷、法律|jud 是「判斷」，jus 是「公正」|judge=法官、判斷=jud 判 + ge;judgment=判斷=judge 判 + ment;justice=正義=jus 公正 + tice;just=公正的=jus 公正;injure=傷害=in 不 + jure 法;jury=陪審團=jur 宣誓
+r|junct/join|連接|junct 是「連接」：join 也同一家族|join=加入=join 連接;joint=關節、接合處=join 連接 + t;junction=交會點=junct 連 + ion;conjunction=連接詞=con 一起 + junct 連 + ion;adjoin=毗連=ad 朝 + join 連
+r|labor/lab|工作、勞動|labor 是「勞動」|labor=勞動=labor 工作;laboratory=實驗室=labor 工作 + atory 場所;elaborate=精心的、詳盡的=e 出 + labor 工作 + ate;collaborate=合作=col 一起 + labor 工作 + ate;laborious=費力的=labor 勞動 + ious
+r|lect/leg/lig|選、收集|lect 是「選、收集」|collect=收集=col 一起 + lect 選;select=挑選=se 分出 + lect 選;elect=選舉=e 出 + lect 選;lecture=演講=lect 讀 + ure;elegant=優雅的=e 出 + leg 選 + ant，精挑細選;neglect=忽略=neg 不 + lect 選
+r|liber|自由|liber 是「自由」：liberty 就是自由|liberty=自由=liber 自由 + ty;liberal=開明的=liber 自由 + al;liberate=解放=liber 自由 + ate;liberation=解放=liberate 解放 + ion
+r|loc|地方|loc 是「地方、位置」|local=當地的=loc 地方 + al;location=位置=locate 定位 + ion;locate=找出位置=loc 地方 + ate;allocate=分配=al 朝 + loc 地方 + ate;locomotive=火車頭=loco 地方 + motive 移動
+r|log/logue/logy|說、道理|log 是「話語、道理」|dialogue=對話=dia 之間 + logue 說;monologue=獨白=mono 單 + logue 說;apology=道歉=apo 離 + logy 說;logic=邏輯=log 道理 + ic;catalog=目錄=cata 完全 + log 說;prologue=序言=pro 前 + logue 說

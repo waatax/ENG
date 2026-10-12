@@ -1,0 +1,100 @@
+bone|k|崩|骨頭崩一聲斷|狗狗用力一咬，骨頭崩一聲斷成兩截。|b + one：裡面有 one|The dog is chewing a bone.|狗在啃骨頭。
+muscle|k|猛縮|肌肉猛縮出力|舉起啞鈴，手臂肌肉猛縮鼓起來。|mus + cle：c 不發音；和 mussel（淡菜）同音|He has strong muscles.|他有強壯的肌肉。
+blood|k|爆了的|傷口爆了的血|膝蓋擦傷，傷口冒出紅紅的血。|bl + oo + d：oo 念 /ʌ/，像 flood|Blood is red.|血是紅色的。
+brain|k|不累|大腦不累，一直想|大腦不累，整天轉動思考。|br + ain：rain（雨）前加 b|Use your brain.|動動你的腦。
+lung|k|冷|吸冷空氣進肺|冬天深吸一口冷空氣，涼涼地灌進肺裡。|l + ung；兩個肺 lungs|Smoking hurts your lungs.|抽菸傷肺。
+liver|k|力乏|肝累了，全身力乏|熬夜傷肝，第二天全身力乏；肝臟在右上腹。|live（活）+ r：肝讓人活下去|The liver cleans the blood.|肝臟會清潔血液。
+kidney|i||腰後兩顆像腰豆的腎臟|腰後左右各有一顆腎臟，形狀就像紅紅的腰豆（kidney bean）。|kid + ney：拼字裡有 kid（小孩）；kidney bean 腰豆|We have two kidneys.|我們有兩顆腎臟。
+forehead|c||頭的前面，額頭|摸摸頭的最前面，就是額頭。|fore（前面）+ head（頭）|He has a big forehead.|他的額頭很寬。
+eyebrow|c||眼睛上的眉|眼睛上方兩道彎彎的眉毛。|eye（眼）+ brow（眉）|She raised her eyebrows.|她揚起眉毛。
+eyelash|c||眼睛的小鞭子，睫毛|眨眼時，長長睫毛像小鞭子一甩。|eye（眼）+ lash（鞭子）|She has long eyelashes.|她有長長的睫毛。
+eyelid|c||眼睛的蓋子，眼皮|閉上眼，眼皮像蓋子蓋住眼睛。|eye（眼）+ lid（蓋子）|My eyelids feel heavy.|我的眼皮好重。
+cheek|k|掐可|掐可，掐臉頰好可愛|阿嬤掐著孫子的臉頰說「好可愛」。|ch + ee + k|She kissed his cheek.|她親了他的臉頰。
+chin|k|親|親一下下巴|小嬰兒仰起頭，媽媽親了一下他的下巴。|ch + in；chin 下巴、jaw 顎骨|He has a beard on his chin.|他的下巴有鬍子。
+jaw|k|嚼|嚼東西靠下顎|大口嚼牛肉乾，下顎上下用力動。|j + aw；jaws 嘴巴兩顎|My jaw hurts.|我的下顎很痛。
+lip|k|裂皮|嘴唇乾到裂皮|冬天太乾，嘴唇乾到裂皮，要擦護唇膏。|l + ip；lipstick 口紅|My lips are dry.|我的嘴唇很乾。
+tongue|k|湯|舌頭嚐熱湯|用舌頭嚐一口湯，好燙！|tongue：ue 不發音，念 /tʌŋ/|Don't stick out your tongue.|不要伸舌頭。
+headache|c||頭在痛，頭痛|抱著頭皺眉，頭好痛。|head（頭）+ ache（痛）|I have a headache.|我頭痛。
+fever|k|沸了|發燒體溫沸了|額頭燙得像水沸了，量體溫三十九度。|fe + ver；have a fever 發燒|She has a fever.|她發燒了。
+cough|k|咳夫|咳夫咳夫咳不停|感冒的人咳夫咳夫，咳個不停。|c + ough：ough 念 /ɔf/|He has a bad cough.|他咳得很厲害。
+sneeze|k|濕你滋|濕你滋，噴嚏濕一臉|一個大噴嚏，口水濕你滋滋一臉。|sn + ee + ze|Cover your mouth when you sneeze.|打噴嚏時要遮住嘴巴。
+bandage|k|綁的擠|綁的擠，繃帶綁緊緊|護士用繃帶在手臂上綁得緊緊的。|band（帶子）+ age|Put a bandage on the cut.|在傷口貼上繃帶。
+pill|k|片|吞一片藥|醫生說每天吃一片兒藥，配溫開水吞下。|p + ill：裡面有 ill（生病）——生病吃 pill|Take this pill after meals.|飯後吃這顆藥。
+capsule|i||兩半小殼套起來的膠囊|一顆膠囊由兩半小殼套在一起，裡面裝著藥粉。|cap（帽、蓋）+ sule：兩半像帽子套起來|Swallow the capsule with water.|用水吞下膠囊。
+tablet|k|太補了|藥片一吃，太補了|一小片維他命錠，吃了覺得太補了。|tab + let：小小的平板；也指平板電腦|Take one tablet a day.|一天吃一片藥。
+ointment|i||擠一點擦在患處的藥膏|蚊子咬的地方擠一點藥膏擦一擦，涼涼的就不癢了。|oint + ment：point 去掉 p 再加 ment；和 anoint（塗油）同源|Put some ointment on the bite.|在咬傷處擦一些藥膏。
+thermometer|c||量熱度的器具，體溫計|把體溫計放在舌下量熱度。|thermo（熱）+ meter（量器）|Use a thermometer to check your fever.|用體溫計量是否發燒。
+stethoscope|c||聽胸口的器具，聽診器|醫生把聽診器放在胸口，聽心跳聲。|stetho（胸）+ scope（觀察器具）|The doctor uses a stethoscope.|醫生使用聽診器。
+syringe|k|射進|針筒把藥射進去|護士推動針筒，把藥水慢慢推進手臂。|sy + ringe：y 念 /ə/|The nurse used a syringe.|護士用了針筒。
+wheelchair|c||有輪子的椅子，輪椅|坐在輪椅上，兩手推動大輪子前進。|wheel（輪子）+ chair（椅子）|He uses a wheelchair.|他使用輪椅。
+crutch|k|跨去|撐著拐杖跨去|腳受傷的人撐著拐杖，一步一步跨去教室。|cr + utch；常成對 crutches|He walks with crutches.|他拄著拐杖走路。
+stretcher|c||撐開躺平的擔架|救護人員把擔架撐開，讓傷者平躺抬走。|stretch（伸展、撐開）+ er：撐開的用具|They carried him on a stretcher.|他們用擔架抬他。
+dentist|c||看牙的人，牙醫|牙醫拿小鏡子檢查你的牙齒。|dent（牙）+ ist（人）|I see the dentist twice a year.|我一年看兩次牙醫。
+surgeon|k|手針|手針，外科醫生縫傷口|外科醫生戴手套，手持針線把傷口縫好。|sur + geon：g 念 /dʒ/；surgery 手術|The surgeon did the operation.|外科醫生做了手術。
+patient|i||病人要很有耐心地等|病人在候診室耐心地等，聽到叫號才走進診間。|pa + tient；patient 也作形容詞「有耐心的」|The patient is resting.|病人正在休息。
+clinic|k|看你咳|診所醫生看你咳|小診所裡，醫生聽你咳了幾聲，開了藥。|clin + ic；clinic 診所、hospital 醫院|I went to the clinic.|我去了診所。
+pharmacy|k|發麻些|發麻些，去藥局買藥|手腳發麻，到藥局買些藥。|pharm + a + cy：ph 念 /f/；pharmacist 藥師|The pharmacy is next to the clinic.|藥局在診所旁邊。
+sweater|c||穿了會流汗的毛衣|穿上厚毛衣跑一圈，熱得流汗。|sweat（流汗）+ er：穿了會流汗的衣服|This sweater is warm.|這件毛衣很暖。
+cardigan|k|開的釦|前面開的釦，開襟毛衣|開襟羊毛衫前面一排開的釦子，好穿好脫。|car + di + gan；名稱來自英國卡迪根伯爵|She wears a gray cardigan.|她穿一件灰色開襟毛衣。
+vest|k|微濕的|運動背心微濕的|跑完步，運動背心微微濕了。|v + est；美式也指西裝背心|He wears a vest.|他穿著背心。
+suit|k|肅|穿西裝，表情嚴肅|穿上筆挺西裝，站得直直的，表情嚴肅。|s + uit；suit 也作動詞「適合」|My dad wears a suit to work.|我爸爸穿西裝上班。
+tuxedo|k|抬膝跳|抬膝跳，穿晚禮服跳舞|派對上，穿黑色晚禮服的紳士抬膝跳起舞來。|tux + e + do；口語 tux|He wore a tuxedo to the party.|他穿晚禮服去派對。
+blouse|k|布料絲|布料絲，絲質女襯衫|媽媽穿一件絲質布料的女用襯衫，輕輕飄動。|bl + ouse：mouse 的 m 換成 bl|She wears a white blouse.|她穿一件白色女用襯衫。
+jeans|k|金子|牛仔褲口袋藏金子|翻開牛仔褲口袋，竟然藏著一枚金幣。|jean + s：恆為複數 a pair of jeans|I like blue jeans.|我喜歡藍色牛仔褲。
+shorts|c||短短的褲子，短褲|夏天穿短褲，露出膝蓋涼快。|short（短）+ s：恆為複數|I wear shorts in summer.|我夏天穿短褲。
+trousers|k|穿熱死|穿熱死，夏天穿長褲|大熱天穿長褲，腿被悶得熱死。|trou + sers：恆為複數；英式常用，美式多說 pants|These trousers are too long.|這條長褲太長了。
+overalls|c||從上蓋住全部的吊帶褲|農夫穿著吊帶褲，從胸口一路蓋到腳。|over（覆蓋）+ all（全部）+ s|The farmer wears overalls.|農夫穿吊帶褲。
+pajamas|k|趴家嘛|穿睡衣趴家嘛|週末穿睡衣在家趴著嘛，最舒服。|pa + ja + mas：恆為複數；英式拼 pyjamas|I put on my pajamas.|我換上睡衣。
+robe|k|柔布|浴袍是柔軟柔布|洗完澡穿上柔軟的浴袍，像被柔布包住。|r + obe；bathrobe 浴袍|She wears a robe after a bath.|她洗澡後穿浴袍。
+raincoat|c||下雨穿的外套，雨衣|下雨天穿上雨衣，雨珠滑下來。|rain（雨）+ coat（外套）|Wear your raincoat.|穿上你的雨衣。
+swimsuit|c||游泳穿的一套衣|穿上泳衣，跳進游泳池。|swim（游泳）+ suit（套裝）|I need a new swimsuit.|我需要一件新泳衣。
+bikini|l|比基尼|比基尼兩件式泳裝|海灘上，兩件式的比基尼泳裝色彩鮮豔。|bi + ki + ni；名稱來自比基尼環礁|She wore a bikini at the beach.|她在海灘穿比基尼。
+trunks|k|穿褲|下水前穿褲，男生泳褲|男生游泳前穿上短短的泳褲。|trunk + s；trunk 也指樹幹、象鼻、後車廂|He put on his swim trunks.|他穿上泳褲。
+underwear|c||穿在最下面的內衣褲|內衣褲穿在衣服的最裡面、最下層。|under（在下）+ wear（穿著）；不可數|Pack some clean underwear.|帶一些乾淨的內衣褲。
+boots|k|步|穿靴子步步踩雪|穿上長靴，在雪地上一步一步踩。|boot + s；英式 boot 也指後車廂|I wear boots in winter.|我冬天穿靴子。
+sneakers|c||偷偷走沒聲音的球鞋|穿上膠底運動鞋，走路安靜，可以偷偷溜過去。|sneak（偷偷走）+ er：膠底走路沒聲音|My sneakers are white.|我的運動鞋是白色的。
+sandals|k|三帶|三帶，涼鞋三條帶|一雙涼鞋只有三條細帶子，腳趾露在外面。|san + dal + s|I wear sandals in summer.|我夏天穿涼鞋。
+slippers|c||輕鬆滑進去的拖鞋|腳一滑就穿進軟軟的室內拖鞋。|slip（滑、輕鬆穿上）+ per + s|Put on your slippers.|穿上你的拖鞋。
+gloves|k|鍋了扶|鍋了扶，戴手套扶熱鍋|端熱鍋前先戴上手套，扶著鍋把。|g + love + s：手套裡有 love|Wear gloves in the cold.|天冷要戴手套。
+mittens|k|沒疼|沒疼，連指手套護手|雪地裡戴上四指相連的手套，手一點都沒凍疼。|mit + ten + s：雙 t；大拇指分開、四指在一起|The baby wears mittens.|寶寶戴著連指手套。
+scarf|k|絲卡服|絲卡服，圍巾卡在衣服上|一條毛線圍巾繞過脖子，尾端卡在外套上。|sc + arf；複數 scarves|Wear a scarf, it's cold.|戴上圍巾，天氣很冷。
+belt|k|被勒|被勒，皮帶勒緊肚子|吃太飽，肚子被皮帶勒得緊緊的。|b + elt；seat belt 安全帶|He wears a black belt.|他繫著黑色皮帶。
+tie|k|太|領帶綁太緊|爸爸把領帶綁太緊，臉都漲紅了。|t + ie；tie 也作動詞「綁」|He wears a tie to work.|他打領帶上班。
+ring|k|玲|玲瓏戒指亮晶晶|手指上戴著一枚玲瓏的戒指，亮晶晶。|r + ing；ring 也指鈴聲、圓圈|She has a gold ring.|她有一枚金戒指。
+necklace|c||掛在脖子的細鍊，項鍊|脖子上掛一條細細的項鍊，墜子閃亮。|neck（脖子）+ lace（細帶）|She wears a pearl necklace.|她戴著珍珠項鍊。
+bracelet|c||戴在手臂的小環，手鍊|手腕上戴著一條小小的串珠手鍊。|brace（手臂、環抱）+ let（小）|She wears a silver bracelet.|她戴著銀手鍊。
+earring|c||耳朵上的環，耳環|耳垂上掛著一對亮亮的耳環。|ear（耳）+ ring（環）|She lost an earring.|她掉了一隻耳環。
+purse|k|破四|錢包破四個洞|舊錢包破了四個洞，零錢都掉出來。|p + urse：nurse（護士）的 n 換成 p|She keeps money in her purse.|她把錢放在錢包裡。
+wallet|k|我樂的|皮夾裝滿錢，我樂的|打開皮夾，裡面裝滿鈔票，我樂得笑開懷。|wal + let：雙 l|I lost my wallet.|我弄丟了皮夾。
+umbrella|k|俺不淋啦|撐傘，俺不淋啦|下大雨時撐開雨傘，雨滴落在傘外：「俺不淋啦！」|um + brel + la：雙 l；三音節，重音在 BREL|Take an umbrella with you.|帶一把傘。
+sunglasses|c||擋太陽的眼鏡|大太陽下戴上太陽眼鏡，不再瞇眼。|sun（太陽）+ glasses（眼鏡）|I wear sunglasses at the beach.|我在海灘戴太陽眼鏡。
+glasses|c||兩片玻璃，眼鏡|鼻樑上架著兩片玻璃鏡片。|glass（玻璃）+ es：恆為複數 a pair of glasses|He wears glasses.|他戴眼鏡。
+pocket|k|爆開|口袋塞太滿要爆開|口袋塞滿糖果，鼓得快要爆開了。|pock + et；pocket money 零用錢|Put the key in your pocket.|把鑰匙放進口袋。
+button|k|不停|不停扣，一排鈕扣扣到頂|大衣前面一整排鈕扣，早上趕時間扣個不停。|but + ton：雙 t；button 也指按鈕|A button fell off my shirt.|我襯衫掉了一顆鈕扣。
+zipper|k|滋噗|拉鍊滋噗一拉|外套拉鍊滋噗一聲拉到頂。|zip + per：雙 p|My zipper is stuck.|我的拉鍊卡住了。
+shoelace|c||鞋子的帶子，鞋帶|蹲下把鞋帶綁成蝴蝶結。|shoe（鞋）+ lace（細帶）|Tie your shoelaces.|綁好你的鞋帶。
+collar|k|卡了|卡了，衣領好緊|襯衫扣到最上面，衣領卡了脖子好緊。|col + lar：雙 l|His shirt collar is dirty.|他的襯衫衣領髒了。
+sleeve|k|撕裂|袖子勾到撕裂|爬樹時袖子勾到樹枝，嘶一聲撕裂了。|sl + ee + ve；short sleeves 短袖|Roll up your sleeves.|把袖子捲起來。
+kitchen|k|去煎|去煎，去廚房煎蛋|肚子餓，走去廚房煎一顆荷包蛋。|kit + chen；chicken 和 kitchen 別混淆|Mom is cooking in the kitchen.|媽媽在廚房煮飯。
+bedroom|c||放床的房間，臥室|臥室裡一張大床，枕頭棉被整齊。|bed（床）+ room（房間）|My bedroom is upstairs.|我的臥室在樓上。
+bathroom|c||洗澡的房間，浴室|浴室裡有浴缸、蓮蓬頭和馬桶。|bath（洗澡）+ room（房間）|Where is the bathroom?|洗手間在哪裡？
+balcony|k|白鴿呢|陽臺上停著白鴿呢|從屋內往外伸出的陽臺上，停著兩隻白鴿。|bal + co + ny；陽臺多從樓上外伸|We sit on the balcony.|我們坐在陽臺上。
+porch|k|泡茶|門廊下泡茶|阿公坐在屋前門廊下泡茶，看著路人經過。|p + orch：和 torch（火把）同韻|The dog sleeps on the porch.|狗在門廊睡覺。
+hallway|c||通往各房間的走道|穿過長長的走廊，兩邊是一間間教室。|hall（大廳）+ way（通道）|Don't run in the hallway.|不要在走廊奔跑。
+attic|k|矮的|矮的閣樓在屋頂下|屋頂下矮矮的閣樓，要彎著腰才能走進去，裡面堆著舊玩具。|at + tic：雙 t|Old toys are in the attic.|舊玩具在閣樓裡。
+basement|c||房子最底下，地下室|走下樓梯到房子最底層的地下室。|base（底部）+ ment|We keep tools in the basement.|我們把工具放在地下室。
+garage|k|擱入|擱入車庫，車子停好|爸爸把車子倒車擱入車庫，再拉下鐵捲門。|ga + rage：裡面有 rage（怒氣）|Dad parks the car in the garage.|爸爸把車停在車庫。
+yard|k|鴨的|院子是鴨的家|後院子裡養著鴨，那裡是鴨的家。|y + ard；yard 也是長度單位「碼」|The kids play in the yard.|孩子們在院子裡玩。
+patio|k|派對喔|露臺開派對喔|屋外鋪石的露臺上，大家烤肉開派對。|pa + ti + o；多指屋旁鋪面露臺|We eat dinner on the patio.|我們在露臺吃晚餐。
+roof|k|魯夫|魯夫站在屋頂上|草帽魯夫爬上屋頂，站在最高處大喊。|r + oo + f；複數 roofs|A cat is on the roof.|屋頂上有一隻貓。
+chimney|k|氣悶你|煙囪冒煙氣悶你|屋頂煙囪冒出濃煙，讓人氣悶。|chim + ney；聖誕老人從 chimney 進屋|Smoke comes out of the chimney.|煙從煙囪冒出來。
+ceiling|k|吸頂|天花板裝吸頂燈|抬頭看天花板，一盞吸頂燈亮著。|ceil + ing：ei 念 /i/|The ceiling is very high.|天花板很高。
+floor|k|扶樓|扶樓梯上樓層地板|扶著樓梯往上走，到二樓踏上光亮的地板。|fl + oo + r：oo 念 /ɔ/；floor 也指樓層|Don't sit on the floor.|不要坐在地板上。
+wall|k|圍|圍牆圍住房子|一道磚牆圍住整棟房子，牆上掛著一幅畫。|w + all：雙 l；Great Wall 長城|There is a picture on the wall.|牆上有一幅畫。
+fence|k|粉絲|粉絲擠在柵欄外|演唱會外，粉絲擠在柵欄外尖叫。|f + ence|The dog jumped over the fence.|狗跳過柵欄。
+gate|k|給它|給它開大門|主人回家，按下遙控器：「給它開大門！」|g + ate；ate 是吃的過去式|Please close the gate.|請關上大門。
+doorbell|c||門上的鈴，門鈴|按下門旁的門鈴，叮咚叮咚。|door（門）+ bell（鈴）|Someone rang the doorbell.|有人按了門鈴。
+mailbox|c||裝信的箱子，信箱|郵差把信投進門口的信箱。|mail（郵件）+ box（箱子）|Check the mailbox.|去看看信箱。
+pillow|k|疲勞|疲勞了就靠枕頭|疲勞了一整天，頭一碰枕頭就睡著。|pil + low：雙 l|I need a soft pillow.|我需要一個軟枕頭。
+cushion|k|靠身|靠墊給你靠身|沙發上放個靠墊，給你舒服靠身；枕頭則是托頭。|cush + ion|Sit on this cushion.|坐在這個坐墊上。
+blanket|k|不冷蓋|不冷蓋，毛毯一蓋不冷|冬夜把毛毯一蓋，全身暖和不冷。|blank + et：裡面有 blank（空白）|I need a warm blanket.|我需要一條暖毛毯。
