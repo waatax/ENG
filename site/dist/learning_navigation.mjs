@@ -1,10 +1,12 @@
 // Shared DOM navigation: content stays owned by each existing lesson renderer.
 import { journey, journeyCatalog, escapeJourney as e, relatedLessons, journeyDomain } from './learning_journey.mjs';
 import { skillFramework } from './learning_framework.mjs';
+import { mountStudyWorkspace } from './study_workspace.mjs';
 let dispose = () => {};
 let lastRoute = '';
 export function enhanceLearningPage(root) {
   dispose();
+  document.body.classList.remove('study-wide','study-focus');
   const main = root.querySelector('#main-content');
   if (!main) return;
   const title = main.querySelector('h1');
@@ -83,5 +85,6 @@ export function enhanceLearningPage(root) {
   };
   const onScroll=()=>{if(!scheduled)scheduled=requestAnimationFrame(update);};
   window.addEventListener('scroll',onScroll,{passive:true});update();
-  dispose=()=>{window.removeEventListener('scroll',onScroll);cancelAnimationFrame(scheduled);};
+  const workspaceDispose=entry ? mountStudyWorkspace(main,entry,container,panel) : ()=>{};
+  dispose=()=>{workspaceDispose();window.removeEventListener('scroll',onScroll);cancelAnimationFrame(scheduled);};
 }
