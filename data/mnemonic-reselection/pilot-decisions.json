@@ -1,0 +1,76 @@
+{
+  "ambulance": {
+    "candidateSound": "俺不能死",
+    "candidateImage": "傷者喊俺不能死，救護車立刻送醫",
+    "soundLimit": "近似節奏提示；不逐漢字念，三音節、首音節重音",
+    "reason": "使用者指定；危急情境直接導向救護車"
+  },
+  "family": {
+    "candidateImage": "一家人坐在同一張餐桌前，逐一介紹家人",
+    "reason": "發米粒只勉強接聲音，保留家庭共同活動作詞義畫面；重新找音鉤"
+  },
+  "father": {
+    "candidateImage": "孩子指著父親，再指向母親，對照 father / mother",
+    "reason": "法則與 /ˈfɑðɚ/ 後段不近，不能整詞諧音"
+  },
+  "cousin": {
+    "candidateStructure": "brother / sister 同父母；cousin 是堂表親",
+    "candidateImage": "家族樹中兩個孩子分屬不同父母",
+    "reason": "移除咖讚；關係圖比任意咖啡故事更直接"
+  },
+  "child": {
+    "candidateStructure": "one child / two children",
+    "candidateImage": "一張照片只有一個孩子，另一張有多個孩子",
+    "reason": "移除拆兒；用單複數對比同時學意義及詞形"
+  },
+  "knee": {
+    "candidateSound": "泥",
+    "candidateImage": "跌跪在泥地，膝蓋沾泥",
+    "soundLimit": "泥只近似 /ni/；英文 /niː/ 有長母音，k 不發音",
+    "reason": "自然名詞關鍵字；動作使泥與膝蓋直接相連"
+  },
+  "goose": {
+    "candidateImage": "一隻鵝伸長脖子與張翅，旁邊小鴨作大小對照",
+    "soundLimit": "若選姑只能提示 /gu/，/s/ 不可漏",
+    "reason": "姑姑只是任意人物，需要比較聲音提示與無人物畫面"
+  },
+  "one": {
+    "candidateSound": "碗",
+    "candidateImage": "桌上只有一個碗",
+    "soundLimit": "碗與 /wʌn/ 母音不同；僅聲音提示",
+    "reason": "單一物件可明確承載數量一；不能把碗當正確英文發音"
+  },
+  "two": {
+    "candidateSound": "兔",
+    "candidateImage": "恰好兩隻兔子並排",
+    "soundLimit": "兔近似 /tu/；英文 /tuː/ 長母音",
+    "reason": "中文自然，畫面必須真的只有兩隻"
+  },
+  "son": {
+    "candidateSound": "sun",
+    "candidateImage": "兒子站在太陽下",
+    "soundLimit": "son / sun 同音 /sʌn/，分清 o 與 u",
+    "reason": "真英文同音，不需捏造中文近音"
+  },
+  "wheelchair": {
+    "candidateStructure": "wheel + chair = 輪子 + 椅子",
+    "candidateImage": "椅子裝上輪子，成為輪椅",
+    "reason": "英文零件與意思直接对应，優於牽強諧音"
+  },
+  "vegetable": {
+    "candidateImage": "菜籃裡有胡蘿蔔、葉菜和花椰菜",
+    "reason": "餵雞它不不是自然中文；vegetable 不能只指給雞吃的食物"
+  },
+  "umbrella": {
+    "candidateImage": "下雨時張開雨傘，雨滴留在傘外",
+    "reason": "俺不熱啦可回想遮陽卻未提示最常見雨傘情境；需比較候選"
+  },
+  "student": {
+    "candidateImage": "學生坐在教室，舉手問問題",
+    "reason": "死讀等不自然且把學習描繪成消極等待；改選熟悉且可視化提示"
+  },
+  "people": {
+    "candidateImage": "不同的人在公園活動，people 表示人們",
+    "reason": "皮包只是任意物件，與人們的詞義關係弱"
+  }
+}
