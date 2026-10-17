@@ -710,7 +710,7 @@ function shell(body) {
     <div class="shell">
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
-        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="mnemonics/index.html">💡 1,000 字聯想記憶卡</a><a href="roots/index.html">🧩 500 組字根字族</a><a href="EN/">English Academy ↗</a></div>
+        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="#flashcards">⚡ 單字片語閃卡</a><a href="mnemonics/index.html">💡 1,000 字聯想記憶卡</a><a href="roots/index.html">🧩 500 組字根字族</a><a href="EN/">English Academy ↗</a></div>
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
@@ -746,7 +746,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
-        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options"><summary>單字複習 · 選擇字卡與自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
+        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options" open><summary>📱 單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
         ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening','wordaudio'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
@@ -2451,7 +2451,12 @@ root.addEventListener('click', e => {
   if (d.speakSentence || d.speakWord || d.playDialogue || d.stopAudio) pauseLessonAudio();
   if (d.fcQuickPlay) {
     navigate('flashcards');
-    startFlashcardQuickPlay(d.fcQuickPlay, render);
+    startFlashcardQuickPlay(d.fcQuickPlay, render, false);
+    return;
+  }
+  if (d.fcPhrasePlay) {
+    navigate('flashcards');
+    startFlashcardQuickPlay(d.fcPhrasePlay, render, true);
     return;
   }
   if (handleFullWordClick(b, render)) return;

@@ -142541,11 +142541,12 @@ let autoPlayToken = 0;
 let autoPlayStepTimer = null;
 let isAutoPlaying = false;
 let audioFailure = '';
-let autoPlayVoiceMode = 'word_zh_sentence'; // 'word_zh_sentence' (英文單字 > 中文 > 例句) | 'word_zh' (英文 > 中文) | 'word_sentence' (英文 > 例句)
+let autoPlayVoiceMode = 'word_zh_sentence'; // 'word_zh_sentence' | 'word_zh' | 'word_sentence' | 'word_en_thinking'
 let practiceBatchSize = 20; // 10 | 20 | 30 | 50 | 100 | 0 (0 為全部)
 let currentBatchIndex = 0;
 let batchCompleted = false;
 let cardFilterStatus = 'all'; // 'all' | 'need_review' | 'mastered'
+let cardSetType = 'all'; // 'all' | 'phrases'
 let cardSearchKeyword = '';
 
 // 本機學習進度 (cardId -> 'mastered' | 'need_review')
@@ -142564,13 +142565,36 @@ function saveMastery() {
   } catch (e) {}
 }
 
+function isPhraseOrCollocationCard(c) {
+  return c.word.includes(' ') || c.word.includes('-') || /片語|搭配|慣用/.test(c.category || '') || (c.collocation && c.collocation.trim().split(/\s+/).length >= 2);
+}
+
+function buildEnglishThinkingClue(card) {
+  if (!card) return '';
+  const word = String(card.word || '').trim();
+  const example = String(card.example || '').trim();
+  if (example && word) {
+    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const masked = example.replace(new RegExp(escaped, 'gi'), '[ _____ ]');
+    if (masked !== example) return masked;
+  }
+  const coll = String(card.collocation || '').replace(/\s*\([^)]*\)/g, '').trim();
+  if (coll) return `Collocation frame: "${coll}"`;
+  return `Think in English: How would you use "${word}" (${card.pos || 'word'}) in a real sentence?`;
+}
+
 // 取得當前篩選後的卡片清單
 function getFilteredCards() {
   let list = FLASHCARD_DATABASE.filter(c => c.tier === currentTier);
 
+  if (cardSetType === 'phrases') {
+    const phraseList = list.filter(isPhraseOrCollocationCard);
+    if (phraseList.length > 0) list = phraseList;
+  }
+
   if (cardSearchKeyword) {
     const kw = cardSearchKeyword.toLowerCase();
-    list = list.filter(c => c.word.toLowerCase().includes(kw) || c.zh.includes(kw) || c.category.toLowerCase().includes(kw));
+    list = list.filter(c => c.word.toLowerCase().includes(kw) || c.zh.includes(kw) || c.category.toLowerCase().includes(kw) || (c.collocation || '').toLowerCase().includes(kw));
   }
 
   if (cardFilterStatus === 'mastered') {
@@ -142605,21 +142629,36 @@ function getBatchCards() {
 
 // 閃卡館主頁渲染函數
 const quickTierLabels = { elem_1000: '國小', jhs_2000: '國中', shs_3000: '高中', toeic: 'TOEIC 多益', toefl: 'TOEFL 托福', sat: 'SAT', gre: 'GRE', gmat: 'GMAT' };
+const quickMp3GroupIds = { elem_1000: 'elementary-001', jhs_2000: 'junior-001', shs_3000: 'senior-001', toeic: 'toeic-001', toefl: 'toefl-001', sat: 'sat-001', gre: 'gre-001', gmat: 'gmat-001' };
 export function renderFlashcardQuickPlay() {
   return `<section class="card flashcard-quick-play" aria-labelledby="flashcard-quick-title">
-    <div class="pill">單字複習 · 自動播放</div>
-    <h2 id="flashcard-quick-title">9,500 張閃卡，點選就開始聽讀</h2>
-    <p>選擇想複習的類別，自動朗讀英文、中文與例句。每組 20 張，進入後可調整字數、語音模式或暫停。</p>
+    <div class="pill">📱 手機直式單手快選 · 單字集 / 片語集一鍵即播</div>
+    <h2 id="flashcard-quick-title">9,500 張閃卡與片語集，點選就開始聽讀</h2>
+    <p>針對手機直式單手操作優化：點選下方任一<strong>分級單字集</strong>或<strong>高頻片語搭配集</strong>，立即啟動語音連播（每組 20 張，支援思考式純英與雙語模式）。</p>
     <div class="flashcard-quick-grid">${FLASHCARD_TIERS.map(t => `<button class="btn" data-fc-quick-play="${t.id}" aria-label="自動播放${quickTierLabels[t.id]}閃卡"><strong>▶ ${quickTierLabels[t.id]}</strong><span>${FLASHCARD_DATABASE.filter(c => c.tier === t.id).length.toLocaleString('en-US')} 張</span></button>`).join('')}</div>
-    <button class="btn quiet" data-nav="flashcards">搜尋字卡與自訂複習</button>
+    <div class="quick-phrase-sets" role="group" aria-label="高頻片語與英英思考語音集快選">
+      <span class="quick-phrase-label">🔗 片語與搭配詞集即點即播：</span>
+      <button class="btn quiet small" data-fc-phrase-play="shs_3000">▶ 高中核心動詞片語集</button>
+      <button class="btn quiet small" data-fc-phrase-play="toeic">▶ TOEIC 商務片語搭配集</button>
+      <button class="btn quiet small" data-fc-phrase-play="toefl">▶ TOEFL 學術轉折片語集</button>
+      <button class="btn quiet small" data-fc-phrase-play="sat">▶ SAT 語境邏輯搭配集</button>
+      <button class="btn quiet small" data-fc-phrase-play="gre">▶ GRE 雙選等價片語集</button>
+      <button class="btn quiet small" data-fc-phrase-play="gmat">▶ GMAT 商業論證搭配集</button>
+    </div>
+    <div class="learning-actions" style="margin-top:12px;margin-bottom:0">
+      <button class="btn quiet" data-nav="flashcards">搜尋字卡與自訂複習</button>
+      <a class="btn quiet" href="#wordaudio/elementary-001">🎵 190 組 MP3 離線音檔</a>
+      <a class="btn primary" href="EN/">🇬🇧 EN 純英檢定教學與英英語音 (TOEFL/TOEIC/SAT/GMAT/GRE) ↗</a>
+    </div>
   </section>`;
 }
-export function startFlashcardQuickPlay(tier, renderCallback) {
+export function startFlashcardQuickPlay(tier, renderCallback, phraseOnly = false) {
   if (!FLASHCARD_TIERS.some(t => t.id === tier)) return false;
   stopFlashcardAutoPlay();
   currentTier = tier;
   cardSearchKeyword = '';
   cardFilterStatus = 'all';
+  cardSetType = phraseOnly ? 'phrases' : 'all';
   currentBatchIndex = 0;
   currentCardIndex = 0;
   practiceBatchSize = 20;
@@ -142647,30 +142686,38 @@ export function renderFlashcardsStudioView() {
 
   const totalTierMastered = allTierCards.filter(c => masteryState[c.id] === 'mastered').length;
   const masteryPercentage = allTierCards.length ? Math.round((totalTierMastered / allTierCards.length) * 100) : 0;
+  const thinkingClue = buildEnglishThinkingClue(currentCard);
 
   return `
-    <div class="flashcard-studio"><section class="card"><h2>聽發音、想意思，再翻卡確認</h2><p>完整 9,500 張字卡，依程度練習。</p><a href="#affixes">探索字首・字尾與構詞範例 →</a><p>國小 1,000 · 國中 2,000 · 高中 3,000 · TOEIC 700 · TOEFL 700 · SAT 700 · GRE 700 · GMAT 700。每張皆提供字義、拼字與複習練習。</p><button class="btn primary" data-nav="wordpractice">開始 9,500 張字卡學習</button><button class="btn quiet" data-nav="schoolwords">國小・國中課本字彙複習</button></section>
+    <div class="flashcard-studio"><section class="card"><h2>聽發音、想意思，再翻卡確認</h2><p>完整 9,500 張字卡與片語搭配，依程度練習。</p><a href="#affixes">探索字首・字尾與構詞範例 →</a><p>國小 1,000 · 國中 2,000 · 高中 3,000 · TOEIC 700 · TOEFL 700 · SAT 700 · GRE 700 · GMAT 700。每張皆提供字義、拼字與複習練習。</p><div class="learning-actions"><button class="btn primary" data-nav="wordpractice">開始 9,500 張字卡學習</button><button class="btn quiet" data-nav="schoolwords">國小・國中課本字彙複習</button><a class="btn quiet" href="#wordaudio/${quickMp3GroupIds[currentTier] || 'elementary-001'}">🎵 切換本級別 MP3 連播</a><a class="btn quiet" href="EN/#vocab">🇬🇧 EN 純英單字釋義語音 ↗</a></div></section>
     <div class="header-block">
-      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🗂️ 全階記憶閃卡館 · 雙重編碼與檢索練習</div>
-      <h1 style="margin:8px 0;font-size:28px">單字記憶工作室</h1>
+      <div class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">🗂️ 全階記憶閃卡館 · 手機直式快選 × 思考式英文檢索</div>
+      <h1 style="margin:8px 0;font-size:28px">單字與片語記憶工作室</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px;line-height:1.6">
-        依據第二語言習得 (SLA) 之「雙重編碼理論 (Dual-Coding Theory)」與「檢索練習 (Retrieval Practice)」深層設計：
-        <strong>正面純英文</strong>（音節拆解、KK音標、詞性與發音），激發大腦主動提取；<strong>背面繁中與主題圖示</strong>（圖示錨點、核心釋義、高頻搭配、情境例句與記憶秘訣）。
+        依據第二語言習得 (SLA) 之「雙重編碼理論 (Dual-Coding Theory)」與「思考式檢索 (Thinking-First Retrieval)」設計：
+        <strong>正面純英文與語境挖空線索</strong>（音節拆解、KK音標、詞性與英文語境思考提示），先用英文線索推理；<strong>背面繁中與主題圖示</strong>（核心釋義、高頻搭配、雙語例句與深層記憶要點）。
       </p>
     </div>
 
-    <!-- 程度級別切換標籤條 (Tiers Tabs) -->
-    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:18px;scrollbar-width:thin">
+    <!-- 程度級別切換網格 (Mobile Portrait 2-Column Grid / Desktop Multi-Column) -->
+    <div class="fc-tier-grid" role="group" aria-label="選擇單字與片語集分級">
       ${FLASHCARD_TIERS.map(t => {
         const isCur = t.id === currentTier;
         const countNum = FLASHCARD_DATABASE.filter(c => c.tier === t.id).length;
         return `
           <button class="btn ${isCur ? 'primary' : 'quiet'}" data-fc-tier="${t.id}"
-            style="white-space:nowrap;padding:10px 16px;border-radius:10px;font-size:14px;font-weight:${isCur ? '700' : '500'};border:${isCur ? '2px solid #047857' : '1px solid #cbd5e1'}">
+            style="padding:10px 12px;border-radius:10px;font-size:14px;font-weight:${isCur ? '700' : '500'};border:${isCur ? '2px solid #047857' : '1px solid #cbd5e1'}">
             ${t.name} (${countNum})
           </button>
         `;
       }).join('')}
+    </div>
+
+    <!-- 單字集 vs 片語搭配集 快速切換列 -->
+    <div class="fc-set-type-bar" role="group" aria-label="單字與片語集模式切換">
+      <button class="btn ${cardSetType === 'all' ? 'primary' : 'quiet'}" data-fc-set-type="all">📚 全部單字與片語 (${allTierCards.length})</button>
+      <button class="btn ${cardSetType === 'phrases' ? 'primary' : 'quiet'}" data-fc-set-type="phrases">🔗 精選片語與高頻搭配集 (${allTierCards.filter(isPhraseOrCollocationCard).length})</button>
+      <button class="btn quiet" data-fc-quick-play="${currentTier}">▶ 一鍵連播本集 (20張)</button>
     </div>
 
     <!-- 程度進度狀態欄 -->
@@ -142742,6 +142789,11 @@ export function renderFlashcardsStudioView() {
             title="純英語境沉浸：英文單字（語音） ➔ 翻面 ➔ 完整英文例句（語音）">
             🎧 純英沉浸：英文 ➔ 完整例句
           </button>
+          <button class="btn ${autoPlayVoiceMode === 'word_en_thinking' ? 'primary' : 'quiet'}" data-fc-voice-mode="word_en_thinking"
+            style="font-size:13px;padding:7px 16px;border-radius:8px;font-weight:${autoPlayVoiceMode === 'word_en_thinking' ? '700' : '500'};border:${autoPlayVoiceMode === 'word_en_thinking' ? '2px solid #047857' : '1px solid #cbd5e1'}"
+            title="思考式純英：先聽英文單字 ➔ 停頓思考語境 ➔ 英文搭配與完整例句">
+            🧠 思考式純英：單字 ➔ 思考 ➔ 搭配與例句
+          </button>
         </div>
       </div>
 
@@ -142771,7 +142823,7 @@ export function renderFlashcardsStudioView() {
         <div style="font-size:32px;margin-bottom:6px">🎉</div>
         <strong style="font-size:17px;color:#065f46">本組 ${batchCards.length} 個單字已完成自動輪播聽讀練習！</strong>
         <p style="font-size:13px;color:#047857;margin:6px 0 14px">
-          語音模式：${autoPlayVoiceMode === 'word_zh_sentence' ? '🌟 完整聽讀（英文 ➔ 中文 ➔ 完整例句）' : (autoPlayVoiceMode === 'word_zh' ? '⚡ 簡易複習（英文 ➔ 中文語音）' : '🎧 純英沉浸（英文 ➔ 完整例句）')} · 雙重編碼記憶已深化
+          語音模式：${autoPlayVoiceMode === 'word_zh_sentence' ? '🌟 完整聽讀（英文 ➔ 中文 ➔ 完整例句）' : (autoPlayVoiceMode === 'word_zh' ? '⚡ 簡易複習（英文 ➔ 中文語音）' : (autoPlayVoiceMode === 'word_en_thinking' ? '🧠 思考式純英（單字 ➔ 思考 ➔ 搭配與例句）' : '🎧 純英沉浸（英文 ➔ 完整例句）'))} · 雙重編碼記憶已深化
         </p>
         <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
           <button class="btn primary" data-fc-replay-batch="true" style="font-size:13px;padding:8px 16px">
@@ -142804,9 +142856,9 @@ export function renderFlashcardsStudioView() {
         </button>
       </div>
 
-      <div style="display:flex;gap:8px;align-items:center">
-        <input type="text" id="fc-search-input" aria-label="搜尋英文、中文或主題" placeholder="🔍 搜尋單字或中文..." value="${esc(cardSearchKeyword)}"
-          style="padding:8px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:13px;width:180px" />
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <input type="text" id="fc-search-input" aria-label="搜尋英文、中文或主題" placeholder="🔍 搜尋單字、片語或中文..." value="${esc(cardSearchKeyword)}"
+          style="padding:8px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:13px;width:180px;max-width:100%" />
         <button class="btn quiet" data-fc-shuffle="true" style="font-size:13px;padding:8px 12px" title="隨機洗牌重排順序">
           🔀 洗牌
         </button>
@@ -142821,15 +142873,15 @@ export function renderFlashcardsStudioView() {
     ${currentCard ? `
       <div style="perspective:1000px;max-width:720px;margin:0 auto 24px">
         <div class="fc-card-stage"
-          style="min-height:380px;position:relative;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer;border-radius:18px;box-shadow:0 12px 30px -5px rgba(0,0,0,0.12);transform:${isFlipped ? 'rotateY(180deg)' : 'none'}">
+          style="min-height:400px;position:relative;transform-style:preserve-3d;transition:transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer;border-radius:18px;box-shadow:0 12px 30px -5px rgba(0,0,0,0.12);transform:${isFlipped ? 'rotateY(180deg)' : 'none'}">
 
-          <!-- 卡片正面 (FRONT) - 嚴格純英文環境，促進檢索提取 (Retrieval Practice) -->
+          <!-- 卡片正面 (FRONT) - 嚴格純英文環境 + 語境思考推理提示 (Thinking-First Retrieval Practice) -->
           <div class="fc-card-face fc-front" ${isFlipped ? 'inert aria-hidden="true"' : ''}
-            style="position:absolute;inset:0;background:#ffffff;border:2px solid ${isMastered ? '#10b981' : (isNeedReview ? '#f59e0b' : '#e2e8f0')};border-radius:18px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;backface-visibility:hidden;-webkit-backface-visibility:hidden">
+            style="position:absolute;inset:0;background:#ffffff;border:2px solid ${isMastered ? '#10b981' : (isNeedReview ? '#f59e0b' : '#e2e8f0')};border-radius:18px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;backface-visibility:hidden;-webkit-backface-visibility:hidden">
             <div>
               <!-- 頂部級別與分類標籤 -->
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-                <div style="display:flex;align-items:center;gap:6px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px">
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
                   <span class="pill" style="background:${tierInfo.color}15;color:${tierInfo.color};font-size:12px;font-weight:700;border:1px solid ${tierInfo.color}35">
                     ${tierInfo.name.split(' ')[0]} ${tierInfo.cefr}
                   </span>
@@ -142838,23 +142890,28 @@ export function renderFlashcardsStudioView() {
                 <span style="font-size:13px;color:#64748b;font-weight:500">卡片 ${currentCardIndex + 1} / ${batchCards.length}${practiceBatchSize > 0 ? ` (第 ${currentBatchIndex + 1}/${totalBatches} 組)` : ''}</span>
               </div>
 
-              <!-- 單字與音節拆解 (正面絕無中文釋義，以利檢索回想) -->
-              <div style="text-align:center;padding:24px 0 16px">
-                <div style="font-size:42px;font-weight:800;color:#0f172a;letter-spacing:-0.5px;margin-bottom:8px;line-height:1.2">
+              <!-- 單字與音節拆解 (正面絕無中文釋義，並提供純英語境線索以利思考回想) -->
+              <div style="text-align:center;padding:14px 0 10px">
+                <div style="font-size:clamp(28px,6vw,42px);font-weight:800;color:#0f172a;letter-spacing:-0.5px;margin-bottom:6px;line-height:1.2;overflow-wrap:anywhere">
                   ${currentCard.word}
                 </div>
-                <div style="font-size:20px;font-weight:700;color:#2563eb;letter-spacing:1.5px;margin-bottom:10px">
+                <div style="font-size:18px;font-weight:700;color:#2563eb;letter-spacing:1.2px;margin-bottom:8px">
                   ${currentCard.chunk}
                 </div>
-                <div style="display:inline-flex;align-items:center;gap:8px;background:#f8fafc;padding:6px 14px;border-radius:20px;border:1px solid #e2e8f0">
+                <div style="display:inline-flex;align-items:center;gap:8px;background:#f8fafc;padding:5px 14px;border-radius:20px;border:1px solid #e2e8f0">
                   <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700;font-size:12px;padding:2px 8px">${currentCard.pos}</span>
                   <span style="font-size:15px;color:#334155;font-family:'Segoe UI',monospace;font-weight:500">${currentCard.ipa}</span>
                 </div>
+                ${thinkingClue ? `
+                  <div class="fc-thinking-clue" lang="en" style="margin-top:12px;padding:8px 12px;background:#f0fdf4;border:1px dashed #86efac;border-radius:10px;font-size:13px;color:#14532d;line-height:1.45;text-align:left">
+                    <strong>🧠 Context Thinking Clue:</strong> ${esc(thinkingClue)}
+                  </div>
+                ` : ''}
               </div>
             </div>
 
             <!-- 正面底部：雙速發音控制與翻面提示 -->
-            <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f1f5f9;padding-top:14px;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f1f5f9;padding-top:12px;flex-wrap:wrap;gap:8px">
               <div style="display:flex;gap:8px;flex-wrap:wrap">
                 <button class="btn primary" data-fc-speak-word="${esc(currentCard.word)}" style="padding:8px 16px;font-size:13px;font-weight:700;border-radius:8px">
                   🔊 單字發音 1.0x
@@ -142963,7 +143020,7 @@ export function renderFlashcardsStudioView() {
         </button>
 
         <!-- 掌握狀態標記按鈕組 -->
-        <div style="display:flex;gap:10px">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
           <button class="btn ${isNeedReview ? 'secondary' : 'quiet'}" data-fc-mark="need_review"
             style="padding:10px 18px;font-size:14px;border:1px solid #f59e0b;color:${isNeedReview ? '#b45309' : '#d97706'};font-weight:700;background:${isNeedReview ? '#fef3c7' : '#fff'}">
             ${isNeedReview ? '🌱 標記為需加強 (已標記)' : '🌱 仍需複習'}
@@ -143017,6 +143074,20 @@ export function handleFlashcardEvents(target, renderCallback) {
     return true;
   }
 
+  // 切換單字集 / 片語與搭配集
+  if (d.fcSetType) {
+    if (['all', 'phrases'].includes(d.fcSetType)) {
+      cardSetType = d.fcSetType;
+      currentBatchIndex = 0;
+      currentCardIndex = 0;
+      batchCompleted = false;
+      isFlipped = false;
+      stopFlashcardAutoPlay();
+      renderCallback();
+    }
+    return true;
+  }
+
   // 變更每批次練習字數 (10, 20, 30, 50, 100, 0: 全部)
   if (d.fcBatchSize !== undefined) {
     if(!['10','20','30','50','100','0'].includes(String(d.fcBatchSize))) return true;
@@ -143030,9 +143101,9 @@ export function handleFlashcardEvents(target, renderCallback) {
     return true;
   }
 
-  // 變更輪播語音模式 (word_zh: 英文+中文 | word_zh_sentence: 英文+中文+例句)
+  // 變更輪播語音模式
   if (d.fcVoiceMode) {
-    if(!['word_zh_sentence','word_zh','word_sentence'].includes(d.fcVoiceMode)) return true;
+    if(!['word_zh_sentence','word_zh','word_sentence','word_en_thinking'].includes(d.fcVoiceMode)) return true;
     stopFlashcardAutoPlay();
     audioFailure = '';
     autoPlayVoiceMode = d.fcVoiceMode;
@@ -143259,17 +143330,29 @@ export function startFlashcardAutoPlay(renderCallback) {
       onEnd: () => {
         if (!isAutoPlaying || autoPlayToken !== currentToken) return;
 
-        // 英文單字結束後停頓 600ms（提供大腦回想檢索的黃金時間）
+        // 英文單字結束後停頓（思考式純英模式給予 1100ms 語境推理時間，一般模式 600ms）
+        const thinkDelay = autoPlayVoiceMode === 'word_en_thinking' ? 1100 : 600;
         autoPlayStepTimer = setTimeout(() => {
           if (!isAutoPlaying || autoPlayToken !== currentToken) return;
 
-          // 階段 2：翻至背面顯示繁中核心釋義與主題圖示
+          // 階段 2：翻至背面顯示核心釋義與主題圖示
           isFlipped = true;
           renderCallback();
 
-          if (autoPlayVoiceMode === 'word_sentence') {
-            // 純英例句模式：不朗讀中文，直接朗讀完整英文例句
-            playSentenceStep();
+          if (autoPlayVoiceMode === 'word_sentence' || autoPlayVoiceMode === 'word_en_thinking') {
+            // 純英例句 / 思考式純英模式：不朗讀中文，直接朗讀英文搭配與完整英文例句
+            const enCollocation = String(card.collocation || '').replace(/\s*\([^)]*\)/g, '').trim();
+            if (autoPlayVoiceMode === 'word_en_thinking' && enCollocation && enCollocation.toLowerCase() !== card.word.toLowerCase()) {
+              playSentence(enCollocation, false, {
+                onEnd: () => {
+                  if (!isAutoPlaying || autoPlayToken !== currentToken) return;
+                  playSentenceStep();
+                },
+                onError: failAudio
+              });
+            } else {
+              playSentenceStep();
+            }
           } else if (autoPlayVoiceMode === 'word_zh') {
             // 簡易快速複習模式：僅朗讀英文單字 + 繁中釋義（無例句，快速高效複習）
             playChinese(card.zh, {
@@ -143308,7 +143391,7 @@ export function startFlashcardAutoPlay(renderCallback) {
               proceedToNextCard(800);
             }
           }
-        }, 600);
+        }, thinkDelay);
       },
       onError: failAudio
     });

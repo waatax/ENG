@@ -3,6 +3,8 @@
     {
       "width": 320,
       "englishRoutes": "pass",
+      "vocabStudio": "pass",
+      "examDrills": "pass",
       "overflow": false,
       "speech": "English word + definition + example",
       "quizAndReview": "pass"
@@ -10,6 +12,8 @@
     {
       "width": 390,
       "englishRoutes": "pass",
+      "vocabStudio": "pass",
+      "examDrills": "pass",
       "overflow": false,
       "speech": "English word + definition + example",
       "quizAndReview": "pass"
@@ -17,6 +21,8 @@
     {
       "width": 768,
       "englishRoutes": "pass",
+      "vocabStudio": "pass",
+      "examDrills": "pass",
       "overflow": false,
       "speech": "English word + definition + example",
       "quizAndReview": "pass"
@@ -24,6 +30,8 @@
     {
       "width": 1280,
       "englishRoutes": "pass",
+      "vocabStudio": "pass",
+      "examDrills": "pass",
       "overflow": false,
       "speech": "English word + definition + example",
       "quizAndReview": "pass"
@@ -31,12 +39,16 @@
     {
       "width": 320,
       "bilingualSets": "pass",
-      "adjacentAndPicker": "pass"
+      "quickGroupPills": "pass",
+      "thinkingRecall": "pass",
+      "phraseSetFilter": "pass"
     },
     {
       "width": 390,
       "bilingualSets": "pass",
-      "adjacentAndPicker": "pass"
+      "quickGroupPills": "pass",
+      "thinkingRecall": "pass",
+      "phraseSetFilter": "pass"
     },
     {
       "allLessons": 20,

@@ -3,11 +3,76 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
 const http=require('node:http'),path=require('node:path');
 const server=http.createServer((req,res)=>{const relative=decodeURIComponent(new URL(req.url,'http://localhost').pathname);let p=path.resolve('dist','.'+relative);if(!p.startsWith(path.resolve('dist')+path.sep)&&p!==path.resolve('dist')){res.writeHead(403);return res.end();}if(fs.existsSync(p)&&fs.statSync(p).isDirectory())p=path.join(p,'index.html');fs.readFile(p,(err,data)=>{if(err){res.writeHead(404);return res.end();}res.setHeader('Content-Type',({'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json'})[path.extname(p)]||'application/octet-stream');res.end(data);});});server.listen(8091,'127.0.0.1');server.unref();
 (async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage();page.setDefaultTimeout(10000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
-await page.addInitScript(()=>{window.SpeechSynthesisUtterance=class {constructor(text){this.text=text;}};window.__spoken=[];window.__cancel=0;Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[{lang:'en-US',name:'QA English'}],cancel(){window.__cancel++;},speak(u){window.__spoken.push({text:u.text,lang:u.lang});}}});});
+await page.addInitScript(()=>{window.SpeechSynthesisUtterance=class {constructor(text){this.text=text;}};window.__spoken=[];window.__cancel=0;Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[{lang:'en-US',name:'QA English'},{lang:'zh-TW',name:'QA Chinese'}],cancel(){window.__cancel++;},speak(u){window.__spoken.push({text:u.text,lang:u.lang});if(typeof u.onstart==='function')u.onstart();setTimeout(()=>{if(typeof u.onend==='function')u.onend();},5);}}});});
 const report=[];
-for(const width of [320,390,768,1280]){await page.setViewportSize({width,height:844});await page.goto('http://localhost:8091/EN/index.html');await page.getByRole('heading',{name:'Choose your course'}).waitFor();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`home overflow at ${width}`);await page.goto('http://localhost:8091/EN/index.html#lesson/toefl/0/words');await page.getByRole('button',{name:'Play this set'}).click();assert.ok(await page.evaluate(()=>window.__spoken.at(-1).text.includes('a result of an action or event')));assert.equal(await page.evaluate(()=>window.__spoken.at(-1).lang),'en-US');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`words overflow ${width}`);await page.getByRole('link',{name:'Flashcards',exact:true}).click();await page.getByRole('button',{name:'Reveal meaning'}).click();await page.getByText('a result of an action or event',{exact:true}).waitFor();await page.getByRole('link',{name:'Practice',exact:true}).click();await page.getByRole('button',{name:'is identical to',exact:true}).click();await page.getByText('Review the reasoning.',{exact:true}).waitFor();await page.getByRole('button',{name:'Next question'}).click();await page.getByRole('button',{name:'Warmer water can affect fish survival.',exact:true}).click();await page.getByRole('button',{name:'Finish practice'}).click();await page.getByRole('heading',{name:'Practice complete'}).waitFor();await page.getByRole('link',{name:'Review mistakes',exact:true}).click();await page.getByRole('heading',{name:'Which phrase introduces a possible cause?'}).waitFor();report.push({width,englishRoutes:'pass',overflow:false,speech:'English word + definition + example',quizAndReview:'pass'});}
+for(const width of [320,390,768,1280]){
+  await page.setViewportSize({width,height:844});
+  await page.goto('http://localhost:8091/EN/index.html');
+  await page.getByRole('heading',{name:'Choose your course'}).waitFor();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`home overflow at ${width}`);
+
+  // Verify new Word & Phrase Audio Studio (#vocab)
+  await page.goto('http://localhost:8091/EN/index.html#vocab/toefl-phrases');
+  await page.getByRole('heading',{name:'Word & Phrase Audio Studio'}).waitFor();
+  await page.getByRole('button',{name:'Play this set'}).click();
+  assert.ok(await page.evaluate(()=>window.__spoken.some(s=>s.text.includes('attribute to')&&s.text.includes('to explain an outcome'))),'Studio must speak phrase + English definition');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`vocab studio overflow at ${width}`);
+
+  // Verify new Interactive Exam Drills (#drills) including GRE 6-Choose-2 Sentence Equivalence
+  await page.goto('http://localhost:8091/EN/index.html#drills/gre');
+  await page.getByRole('heading',{name:'Exam Strategy Drills & Verification'}).waitFor();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`drills overflow at ${width}`);
+
+  // Verify Track full teaching framework (#track/toefl)
+  await page.goto('http://localhost:8091/EN/index.html#track/toefl');
+  await page.getByRole('heading',{name:'Construct Essence & Exam Mindset'}).waitFor();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`track framework overflow at ${width}`);
+
+  await page.goto('http://localhost:8091/EN/index.html#lesson/toefl/0/words');
+  await page.getByRole('button',{name:'Play this set'}).click();
+  assert.ok(await page.evaluate(()=>window.__spoken.some(s=>s.text.includes('a result of an action or event'))));
+  assert.equal(await page.evaluate(()=>window.__spoken.at(-1).lang),'en-US');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`words overflow ${width}`);
+  await page.getByRole('link',{name:'Flashcards',exact:true}).click();
+  await page.getByRole('button',{name:'Reveal meaning'}).click();
+  await page.getByText('a result of an action or event',{exact:true}).waitFor();
+  await page.getByRole('link',{name:'Practice',exact:true}).click();
+  await page.getByRole('button',{name:'is identical to',exact:true}).click();
+  await page.getByText('Review the reasoning.',{exact:true}).waitFor();
+  await page.getByRole('button',{name:'Next question'}).click();
+  await page.getByRole('button',{name:'Warmer water can affect fish survival.',exact:true}).click();
+  await page.getByRole('button',{name:'Finish practice'}).click();
+  await page.getByRole('heading',{name:'Practice complete'}).waitFor();
+  await page.getByRole('link',{name:'Review mistakes',exact:true}).click();
+  await page.getByRole('heading',{name:'Which phrase introduces a possible cause?'}).waitFor();
+  report.push({width,englishRoutes:'pass',vocabStudio:'pass',examDrills:'pass',overflow:false,speech:'English word + definition + example',quizAndReview:'pass'});
+}
 await page.goto('http://localhost:8091/EN/index.html#lesson/toeic/0/learn');await page.locator('#reflection').fill('Send the revised proposal by Thursday.');await page.reload();await page.locator('#reflection').waitFor();assert.equal(await page.locator('#reflection').inputValue(),'Send the revised proposal by Thursday.');
-for(const width of [320,390]){await page.setViewportSize({width,height:844});await page.goto('http://localhost:8091/#wordaudio/toefl-001');await page.locator('#mp3-group').waitFor();await page.locator('[data-mp3-tier="gre"]').click();await page.waitForFunction(()=>document.querySelector('#mp3-group')?.value==='gre-001');await page.getByRole('button',{name:'下一組 →',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#mp3-group')?.value==='gre-002');await page.locator('[data-mp3-picker]').click();assert.ok(page.url().includes('#wordaudio/gre-002'));assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`bilingual overflow ${width}`);report.push({width,bilingualSets:'pass',adjacentAndPicker:'pass'});}
+
+for(const width of [320,390]){
+  await page.setViewportSize({width,height:844});
+  await page.goto('http://localhost:8091/#wordaudio/toefl-001');
+  await page.locator('#mp3-group').waitFor();
+  await page.locator('[data-mp3-tier="gre"]').click();
+  await page.waitForFunction(()=>document.querySelector('#mp3-group')?.value==='gre-001');
+  await page.getByRole('button',{name:'下一組 →',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('#mp3-group')?.value==='gre-002');
+  // Test new quick-group pill and thinking mode on mobile portrait
+  await page.locator('.mp3-group-pill[data-mp3-group="gre-003"]').click();
+  await page.waitForFunction(()=>document.querySelector('#mp3-group')?.value==='gre-003');
+  await page.locator('[data-mp3-thinking="recall"]').first().click();
+  await page.locator('[data-mp3-picker]').click();
+  assert.ok(page.url().includes('#wordaudio/gre-003'));
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`bilingual wordaudio overflow ${width}`);
+
+  // Test mobile portrait flashcards & phrase set selector
+  await page.goto('http://localhost:8091/#flashcards');
+  await page.locator('[data-fc-set-type="phrases"]').waitFor();
+  await page.locator('[data-fc-set-type="phrases"]').click();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`flashcards portrait overflow ${width}`);
+  report.push({width,bilingualSets:'pass',quickGroupPills:'pass',thinkingRecall:'pass',phraseSetFilter:'pass'});
+}
+
 const {tracks}=await import('../dist/EN/content.mjs');let lessonChecks=0;
 await page.setViewportSize({width:320,height:844});
 for(const track of tracks)for(const [n,lesson] of track.lessons.entries()){
