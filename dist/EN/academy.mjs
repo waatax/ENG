@@ -1,5 +1,5 @@
 import {tracks} from './content.mjs';
-import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills} from './exam_curriculum.mjs';
+import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills, examCommuteDialogues} from './exam_curriculum.mjs';
 
 const main=document.querySelector('main'),status=document.querySelector('#audio-status'),toggle=document.querySelector('#listen-toggle');
 const KEY='english-quest-academy-v1';
@@ -19,6 +19,9 @@ let saved={
   drillAnswered:{},
   drillWrong:[],
   audioMode:'word_def_ex',
+  dialogueMode:'teaching',
+  dialogueAutoNext:true,
+  dialogueLoop:false,
   recallMask:false,
   theme:'light',
   scale:1,
@@ -38,6 +41,7 @@ try{
   if(!saved.drillAnswered||typeof saved.drillAnswered!=='object'||Array.isArray(saved.drillAnswered))saved.drillAnswered={};
   if(!Array.isArray(saved.drillWrong))saved.drillWrong=[];
   if(!['word_def_ex','word_def','word_def_3x','think_pause'].includes(saved.audioMode))saved.audioMode='word_def_ex';
+  if(!['teaching','natural','shadowing','recall'].includes(saved.dialogueMode))saved.dialogueMode='teaching';
   saved.completed=saved.completed.filter(x=>typeof x==='string');
   saved.wrong=saved.wrong.filter(x=>typeof x==='string');
   saved.known=saved.known.filter(x=>typeof x==='string');
@@ -50,6 +54,7 @@ let activeVocabTrack='all',activeVocabKind='all',activeVocabSetId=examWordAndPhr
 let revealedMaskItems=new Set();
 let activeDrillTrack='all',activeDrillSubtopic='all',activeDrillIndex=0,drillHintShown={},drillMultiSelection={};
 let activeDialoguePlaying=-1;
+let activeCommuteTrack='all',activeCommuteId=examCommuteDialogues[0].id,activeCommuteLine=-1,commuteRecallShown={};
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const id=(t,i)=>`${t.id}/${i}`;
@@ -69,13 +74,14 @@ function stop(clear=true){
   clearTimeout(timer);
   playing=false;
   activeDialoguePlaying=-1;
+  activeCommuteLine=-1;
   window.speechSynthesis?.cancel();
   if(toggle)toggle.textContent='Listen';
   document.querySelectorAll('.word.active,.dialogue-line.active').forEach(el=>el.classList.remove('active'));
   if(clear)status.textContent='';
 }
 
-function speak(text,done,version){
+function speak(text,done,version,rateOverride=null){
   const engine=window.speechSynthesis;
   if(!engine){
     stop(false);
@@ -84,7 +90,8 @@ function speak(text,done,version){
   }
   const u=new SpeechSynthesisUtterance(text);
   u.lang='en-US';
-  u.rate=[.75,1,1.25].includes(Number(saved.rate))?Number(saved.rate):1;
+  const baseRate=[.75,1,1.25].includes(Number(saved.rate))?Number(saved.rate):1;
+  u.rate=rateOverride||baseRate;
   const voices=engine.getVoices();
   const voice=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
   if(!voice){
@@ -111,7 +118,11 @@ function listen(at=index,single=false){
       listenStudioSet(activeVocabIndex,single);
       return;
     }
-    status.textContent='Choose a lesson or audio set, then tap Listen.';
+    if(parts[0]==='dialogues'){
+      listenCommuteDialogue(activeCommuteId,-1);
+      return;
+    }
+    status.textContent='Choose a lesson, commute dialogue, or audio set, then tap Listen.';
     return;
   }
   stop();
@@ -263,6 +274,215 @@ function listenDialogue(trackId,lineIdx=-1){
     },version);
   }
   nextLine();
+}
+
+function getFilteredCommuteDialogues(){
+  return examCommuteDialogues.filter(d=>activeCommuteTrack==='all'||d.track===activeCommuteTrack);
+}
+
+function getCurrentCommuteDialogue(){
+  const list=getFilteredCommuteDialogues();
+  return list.find(d=>d.id===activeCommuteId)||examCommuteDialogues.find(d=>d.id===activeCommuteId)||list[0]||examCommuteDialogues[0];
+}
+
+function listenCommuteDialogue(dialogueId=activeCommuteId,singleLineIdx=-1){
+  const dlg=examCommuteDialogues.find(d=>d.id===dialogueId)||getCurrentCommuteDialogue();
+  if(!dlg||!dlg.lines.length)return;
+  activeCommuteId=dlg.id;
+  stop(false);
+  playing=true;
+  toggle.textContent='Stop audio';
+  const version=token;
+  const baseRate=[.75,1,1.25].includes(Number(saved.rate))?Number(saved.rate):1;
+
+  if(singleLineIdx>=0&&dlg.lines[singleLineIdx]){
+    const ln=dlg.lines[singleLineIdx];
+    activeCommuteLine=singleLineIdx;
+    document.querySelectorAll('[data-commute-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.commuteLine)===singleLineIdx));
+    status.textContent=`${ln.speaker}: ${ln.text}`;
+    const textToSpeak=saved.dialogueMode==='teaching'?`${ln.speaker} says: ${ln.text}. Coaching note: ${ln.focusNote}`:`${ln.speaker} says: ${ln.text}`;
+    speak(textToSpeak,()=>stop(false),version,baseRate);
+    return;
+  }
+
+  let idx=0;
+  function playLine(){
+    if(version!==token)return;
+    const ln=dlg.lines[idx];
+    if(!ln){
+      if(saved.dialogueLoop){
+        idx=0;
+        timer=setTimeout(playLine,800);
+        return;
+      }
+      if(saved.dialogueAutoNext){
+        const list=getFilteredCommuteDialogues();
+        const curPos=list.findIndex(d=>d.id===dlg.id);
+        const nextDlg=list[(curPos+1)%list.length];
+        if(nextDlg){
+          activeCommuteId=nextDlg.id;
+          render();
+          timer=setTimeout(()=>listenCommuteDialogue(nextDlg.id,-1),900);
+          return;
+        }
+      }
+      stop(false);
+      status.textContent='Commute dialogue complete. Try the Active Recall prompt below.';
+      return;
+    }
+    activeCommuteLine=idx;
+    document.querySelectorAll('[data-commute-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.commuteLine)===idx));
+    status.textContent=`${dlg.track.toUpperCase()} Dialogue (${idx+1}/${dlg.lines.length}) · ${ln.speaker}`;
+
+    if(saved.dialogueMode==='shadowing'){
+      speak(`${ln.speaker}: ${ln.text}`,()=>{
+        if(version!==token)return;
+        status.textContent=`Shadowing Pause: Repeat "${ln.text}" out loud now...`;
+        timer=setTimeout(()=>{
+          if(version!==token)return;
+          speak(ln.text,()=>{
+            idx++;
+            timer=setTimeout(playLine,650);
+          },version,baseRate);
+        },2200);
+      },version,Math.max(0.75,baseRate*0.85));
+    }else if(saved.dialogueMode==='teaching'){
+      speak(`${ln.speaker} says: ${ln.text}`,()=>{
+        if(version!==token)return;
+        timer=setTimeout(()=>{
+          if(version!==token)return;
+          speak(`Coaching note: ${ln.focusNote}`,()=>{
+            idx++;
+            timer=setTimeout(playLine,750);
+          },version,baseRate);
+        },350);
+      },version,baseRate);
+    }else if(saved.dialogueMode==='recall'){
+      speak(`${ln.speaker} says: ${ln.text}`,()=>{
+        idx++;
+        const pauseMs=idx<dlg.lines.length?1800:700;
+        if(idx<dlg.lines.length)status.textContent='Active Recall Pause: Predict the next speaker’s response...';
+        timer=setTimeout(playLine,pauseMs);
+      },version,baseRate);
+    }else{
+      speak(`${ln.speaker}: ${ln.text}`,()=>{
+        idx++;
+        timer=setTimeout(playLine,650);
+      },version,baseRate);
+    }
+  }
+
+  if(saved.dialogueMode==='teaching'){
+    status.textContent=`Setting: ${dlg.setting}`;
+    speak(`${dlg.title}. Context: ${dlg.setting}`,()=>{
+      if(version!==token)return;
+      timer=setTimeout(playLine,500);
+    },version,baseRate);
+  }else{
+    playLine();
+  }
+}
+
+function renderCommuteDialoguesStudio(){
+  const filtered=getFilteredCommuteDialogues();
+  const activeDlg=getCurrentCommuteDialogue();
+  activeCommuteId=activeDlg.id;
+  const curIdx=filtered.findIndex(d=>d.id===activeDlg.id);
+  const recallVisible=Boolean(commuteRecallShown[activeDlg.id]);
+  const modes=[
+    ['teaching','Teaching + Coaching Note (Context → Line → Pragmatic Note)'],
+    ['natural','Natural Commute Flow (Line-by-Line Spoken Cadence)'],
+    ['shadowing','Shadowing Coach (Slow Model → 2.2s Repeat Pause → Natural)'],
+    ['recall','Response Recall Pause (Predict Next Turn Before It Plays)']
+  ];
+
+  return `
+    <p class="eyebrow">Hands-Free Commute Dialogue Studio · Pure-English Coaching</p>
+    <h1>One-Tap Commute Teaching Dialogues</h1>
+    <p class="lead">Designed for fast transit and walking commutes: tap once to stream high-stakes academic, executive, and campus conversations with built-in pragmatic coaching notes, shadowing pauses, and continuous radio auto-advance.</p>
+
+    <section class="card quick-audio-hub">
+      <div class="actions" style="justify-content:space-between;align-items:center">
+        <h2 style="margin:0">1. Filter by Exam Track &amp; Select Dialogue</h2>
+        <div class="actions">
+          <button type="button" class="primary" data-action="play-commute-dialogue">${playing?'⏸ Stop / Pause Dialogue':'▶ Play Commute Dialogue Now'}</button>
+          <button type="button" data-action="prev-commute-dialogue">⏮ Prev</button>
+          <button type="button" data-action="next-commute-dialogue">⏭ Next</button>
+        </div>
+      </div>
+
+      <div class="actions" style="margin:12px 0" role="group" aria-label="Filter commute dialogues by exam">
+        ${[['all','All 15 Dialogues'],['toefl','TOEFL Campus & Seminar'],['toeic','TOEIC Executive & Travel'],['sat','SAT Evidence & Rhetoric'],['gmat','GMAT Strategy & Logic'],['gre','GRE Graduate Critique']].map(([tid,label])=>`
+          <button type="button" class="${activeCommuteTrack===tid?'primary':''}" data-commute-track="${tid}">${label}</button>
+        `).join('')}
+      </div>
+
+      <div class="settings" style="margin-bottom:12px">
+        <label>Commute playback mode
+          <select id="commute-mode-select" aria-label="Commute dialogue playback mode">
+            ${modes.map(([val,label])=>`<option value="${val}" ${saved.dialogueMode===val?'selected':''}>${label}</option>`).join('')}
+          </select>
+        </label>
+        <label>Speed
+          <select id="speed">${[.75,1,1.25].map(r=>`<option value="${r}" ${Number(saved.rate)===r?'selected':''}>${r}×</option>`).join('')}</select>
+        </label>
+        <button type="button" class="${saved.dialogueAutoNext?'primary':''}" data-action="toggle-dialogue-autonext">${saved.dialogueAutoNext?'📻 Radio Auto-Next: ON':'📻 Radio Auto-Next: OFF'}</button>
+        <button type="button" class="${saved.dialogueLoop?'primary':''}" data-action="toggle-dialogue-loop">${saved.dialogueLoop?'🔂 Loop Dialogue: ON':'🔂 Loop Dialogue: OFF'}</button>
+      </div>
+
+      <div class="pill-grid" role="group" aria-label="Select commute dialogue">
+        ${filtered.map((d,i)=>`
+          <button type="button" class="pill-btn ${d.id===activeDlg.id?'active':''}" data-select-commute-dialogue="${esc(d.id)}">
+            <span>🎧 ${i+1}. [${esc(d.track.toUpperCase())}] ${esc(d.title)}</span>
+            <small>${esc(d.category)} · ${d.lines.length} turns · Tap to play</small>
+          </button>
+        `).join('')}
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="actions" style="justify-content:space-between">
+        <p class="eyebrow" style="margin:0">${esc(activeDlg.track.toUpperCase())} · ${esc(activeDlg.category)} · Dialogue ${curIdx+1} of ${filtered.length}</p>
+        <button type="button" class="primary" data-action="play-commute-dialogue">▶ Play Full Dialogue (${esc(saved.dialogueMode)})</button>
+      </div>
+      <h2>${esc(activeDlg.title)}</h2>
+      <p><strong>Scenario Context:</strong> ${esc(activeDlg.setting)}</p>
+      <div class="actions" style="margin:10px 0">
+        <span class="eyebrow" style="margin:0">Key Target Collocations (Tap to hear):</span>
+        ${activeDlg.keyPatterns.map(pat=>`<button type="button" data-speak-text="${esc(pat)}">🔊 "${esc(pat)}"</button>`).join('')}
+      </div>
+
+      <div class="dialogue-box">
+        ${activeDlg.lines.map((ln,idx)=>`
+          <div class="dialogue-line ${activeCommuteLine===idx?'active':''}" data-commute-line="${idx}">
+            <div class="actions" style="justify-content:space-between">
+              <strong>Turn ${idx+1} · ${esc(ln.speaker)}:</strong>
+              <div class="actions">
+                <button type="button" data-play-commute-line="${esc(activeDlg.id)}:${idx}">▶ Hear turn</button>
+                <button type="button" data-speak-text="${esc(ln.text)}">🗣️ Repeat line</button>
+              </div>
+            </div>
+            <p>${esc(ln.text)}</p>
+            <p class="muted">💡 <strong>Pragmatic &amp; Exam Note:</strong> ${esc(ln.focusNote)}</p>
+          </div>
+        `).join('')}
+      </div>
+
+      <article class="card" style="background:var(--subtle);margin-top:16px">
+        <div class="actions" style="justify-content:space-between">
+          <p class="eyebrow" style="margin:0">End-of-Commute Active Speaking Check</p>
+          <button type="button" data-commute-recall="${esc(activeDlg.id)}">${recallVisible?'Hide Model Response':'Show & Hear Model Response'}</button>
+        </div>
+        <p><strong>Prompt:</strong> ${esc(activeDlg.recallPrompt)}</p>
+        ${recallVisible?`
+          <div class="formula-box">
+            <p style="margin:0 0 8px"><strong>Model Spoken Response:</strong> "${esc(activeDlg.recallModel)}"</p>
+            <button type="button" data-speak-text="${esc(activeDlg.recallModel)}">🔊 Listen to model response</button>
+          </div>
+        `:''}
+      </article>
+    </section>
+  `;
 }
 
 const links=(t,i)=>`<div class="steps" aria-label="Lesson modes">${['learn','words','cards','quiz'].map(m=>`<a href="#lesson/${id(t,i)}/${m}" ${m===mode?'aria-current="page"':''}>${{learn:'Learn',words:'Words & audio',cards:'Flashcards',quiz:'Practice'}[m]}</a>`).join('')}</div>`;
@@ -583,6 +803,18 @@ function render(){
     else a.removeAttribute('aria-current');
   });
 
+  if(parts[0]==='dialogues'){
+    if(parts[1]){
+      const foundDlg=examCommuteDialogues.find(d=>d.id===parts[1]||d.track===parts[1]);
+      if(foundDlg){
+        activeCommuteId=foundDlg.id;
+        activeCommuteTrack=parts[1]===foundDlg.track?foundDlg.track:'all';
+      }
+    }
+    main.innerHTML=renderCommuteDialoguesStudio();
+    return;
+  }
+
   if(parts[0]==='vocab'){
     if(parts[1]){
       const found=getAllStudioSets().find(s=>s.id===parts[1]);
@@ -645,20 +877,35 @@ function render(){
     const count=saved.completed.filter(k=>tracks.some(t=>t.lessons.some((_,i)=>id(t,i)===k))).length;
     const drillCount=Object.keys(saved.drillAnswered).length;
     const spacedEntries=Object.entries(saved.spaced);
-    main.innerHTML=`<p class="eyebrow">Your learning record</p><h1>${count} of ${lessonTotal} lessons practiced</h1><div class="meter" role="progressbar" aria-label="Lessons practiced" aria-valuemin="0" aria-valuemax="${lessonTotal}" aria-valuenow="${count}"><span style="width:${count/lessonTotal*100}%"></span></div><p>${saved.known.length} vocabulary entries marked as recalled · ${drillCount} of ${examSubtopicDrills.length} exam strategy drills completed · ${saved.bookmarks.length} bookmarked items.</p><p>This records completed practice checks. It is not an official score or a proficiency estimate.</p><div class="actions"><a class="button primary" href="#review">Review mistakes (${saved.wrong.length+saved.drillWrong.length})</a><a class="button" href="#vocab">Open Word &amp; Phrase Audio Studio</a><a class="button" href="#drills">Open Exam Drills</a></div>${spacedEntries.length?`<section class="card"><h2>Spaced Repetition Schedule (1 / 3 / 7 / 14 Days)</h2><ul>${spacedEntries.map(([k,info])=>`<li><strong>${esc(k)}</strong> — Stage ${Number(info.stage)||1} (Next review: ${esc(info.nextDate||'Scheduled')})</li>`).join('')}</ul></section>`:''}<div class="card"><p>Progress, bookmarks, spaced schedule, and notes are saved in this browser.</p><div class="actions"><button type="button" data-action="export-notes">Export my reflection notes (.txt)</button><button data-action="reset">Reset my English academy progress</button></div><p id="reset-confirm"></p></div>`;
+    main.innerHTML=`<p class="eyebrow">Your learning record</p><h1>${count} of ${lessonTotal} lessons practiced</h1><div class="meter" role="progressbar" aria-label="Lessons practiced" aria-valuemin="0" aria-valuemax="${lessonTotal}" aria-valuenow="${count}"><span style="width:${count/lessonTotal*100}%"></span></div><p>${saved.known.length} vocabulary entries marked as recalled · ${drillCount} of ${examSubtopicDrills.length} exam strategy drills completed · ${saved.bookmarks.length} bookmarked items.</p><p>This records completed practice checks. It is not an official score or a proficiency estimate.</p><div class="actions"><a class="button primary" href="#review">Review mistakes (${saved.wrong.length+saved.drillWrong.length})</a><a class="button" href="#dialogues">Open Commute Dialogues</a><a class="button" href="#vocab">Open Word &amp; Phrase Audio Studio</a><a class="button" href="#drills">Open Exam Drills</a></div>${spacedEntries.length?`<section class="card"><h2>Spaced Repetition Schedule (1 / 3 / 7 / 14 Days)</h2><ul>${spacedEntries.map(([k,info])=>`<li><strong>${esc(k)}</strong> — Stage ${Number(info.stage)||1} (Next review: ${esc(info.nextDate||'Scheduled')})</li>`).join('')}</ul></section>`:''}<div class="card"><p>Progress, bookmarks, spaced schedule, and notes are saved in this browser.</p><div class="actions"><button type="button" data-action="export-notes">Export my reflection notes (.txt)</button><button data-action="reset">Reset my English academy progress</button></div><p id="reset-confirm"></p></div>`;
     return;
   }
 
   main.innerHTML=`
     <p class="eyebrow">English-only academy · TOEFL · TOEIC · SAT · GMAT · GRE</p>
     <h1>Understand it.<br>Say it. Use it.</h1>
-    <p class="lead">Build English for TOEFL, TOEIC, SAT, GMAT and GRE. Choose a course, study a complete teaching blueprint, or tap any vocabulary and phrase set below to hear English words and their English definitions immediately.</p>
+    <p class="lead">Build English for TOEFL, TOEIC, SAT, GMAT and GRE. Choose a course, stream hands-free Commute Teaching Dialogues, or tap any vocabulary and phrase set below to hear English words and their English definitions immediately.</p>
     <div class="actions">
-      <a class="button primary" href="#track/toefl">Explore TOEFL</a>
+      <a class="button primary" href="#dialogues">🎧 Commute Dialogues</a>
+      <a class="button" href="#track/toefl">Explore TOEFL</a>
       <a class="button" href="#vocab">Word &amp; Phrase Audio</a>
       <a class="button" href="#drills">Exam Drills</a>
       <a class="button" href="#review">Review mistakes</a>
     </div>
+
+    <section class="card quick-audio-hub" aria-labelledby="quick-commute-heading">
+      <p class="eyebrow">One-Tap Commute Dialogue Radio · Context → Spoken Turn → Pragmatic Note</p>
+      <h2 id="quick-commute-heading">Stream High-Utility English Teaching Dialogues on Your Commute</h2>
+      <p>Tap any scenario below to launch hands-free dialogue coaching with Shadowing Pause, Active Recall, and Radio Auto-Next.</p>
+      <div class="pill-grid">
+        ${examCommuteDialogues.slice(0,6).map(d=>`
+          <a class="button pill-btn" href="#dialogues/${esc(d.id)}">
+            <span>🎧 ${esc(d.track.toUpperCase())} · ${esc(d.category)}</span>
+            <small>${esc(d.title)}</small>
+          </a>
+        `).join('')}
+      </div>
+    </section>
 
     <section class="card quick-audio-hub" aria-labelledby="quick-audio-heading">
       <p class="eyebrow">One-Tap Portrait Audio Selector · Word / Phrase → English Definition</p>
@@ -683,7 +930,7 @@ function render(){
           <p>${t.intro}</p>
           <div class="actions">
             <a class="button primary" href="#track/${t.id}">View lessons</a>
-            <a class="button" href="#lesson/${t.id}/0/words">Listen to a set</a>
+            <a class="button" href="#dialogues/${t.id}">Commute dialogues</a>
             <a class="button" href="#vocab/${t.id}-phrases">Phrases audio</a>
             <a class="button" href="#drills/${t.id}">Exam drills</a>
           </div>
@@ -694,7 +941,7 @@ function render(){
     <div class="card">
       <h2>A complete learning cycle</h2>
       <p>Learn the idea &amp; Step-0 mindset → analyze worked examples &amp; traps → listen and repeat (Word → English definition → Example) → recall with flashcards → verify with practice &amp; exam drills → review mistakes on a 1/3/7/14-day spaced schedule.</p>
-      <p class="muted">Collection: ${lessonTotal} core lessons, 15 deep teaching chapters, ${wordTotal+studioWordTotal} word and phrase entries with English definitions, and ${questionTotal+examSubtopicDrills.length} original practice and drill questions. Listening uses your device’s English speech voice and requires an available English voice. These lessons are independent learning materials, not official exam questions or a complete exam syllabus.</p>
+      <p class="muted">Collection: ${lessonTotal} core lessons, 15 deep teaching chapters, ${examCommuteDialogues.length} commute teaching dialogues, ${wordTotal+studioWordTotal} word and phrase entries with English definitions, and ${questionTotal+examSubtopicDrills.length} original practice and drill questions. Listening uses your device’s English speech voice and requires an available English voice. These lessons are independent learning materials, not official exam questions or a complete exam syllabus.</p>
       <a href="../index.html">Open the full bilingual learning library ↗</a>
     </div>
   `;
@@ -851,6 +1098,39 @@ main.addEventListener('click',e=>{
     listenDialogue(tid,Number(idx));
     return;
   }
+  if(d.commuteTrack){
+    stop();
+    activeCommuteTrack=d.commuteTrack;
+    const list=getFilteredCommuteDialogues();
+    if(list.length)activeCommuteId=list[0].id;
+    render();
+    return;
+  }
+  if(d.selectCommuteDialogue){
+    stop();
+    activeCommuteId=d.selectCommuteDialogue;
+    render();
+    listenCommuteDialogue(activeCommuteId,-1);
+    return;
+  }
+  if(d.playCommuteLine){
+    const [cid,idx]=d.playCommuteLine.split(':');
+    listenCommuteDialogue(cid,Number(idx));
+    return;
+  }
+  if(d.commuteRecall){
+    commuteRecallShown[d.commuteRecall]=!commuteRecallShown[d.commuteRecall];
+    render();
+    if(commuteRecallShown[d.commuteRecall]){
+      const dlg=examCommuteDialogues.find(x=>x.id===d.commuteRecall);
+      if(dlg){
+        stop(false);
+        playing=true;
+        speak(dlg.recallModel,()=>stop(false),token);
+      }
+    }
+    return;
+  }
   if(d.vocabTrack){
     stop();
     activeVocabTrack=d.vocabTrack;
@@ -968,8 +1248,36 @@ main.addEventListener('click',e=>{
   }
 
   const a=d.action;
-  if(a==='stop-audio'){stop();return;}
+  if(a==='stop-audio'){stop();render();return;}
   if(a==='play-studio-set'){listenStudioSet(0,false);return;}
+  if(a==='play-commute-dialogue'){
+    if(playing){stop();render();}
+    else{listenCommuteDialogue(activeCommuteId,-1);render();}
+    return;
+  }
+  if(a==='prev-commute-dialogue'||a==='next-commute-dialogue'){
+    const list=getFilteredCommuteDialogues();
+    const idx=list.findIndex(x=>x.id===activeCommuteId);
+    const nextIdx=a==='next-commute-dialogue'?(idx+1)%list.length:(idx-1+list.length)%list.length;
+    if(list[nextIdx]){
+      activeCommuteId=list[nextIdx].id;
+      render();
+      listenCommuteDialogue(activeCommuteId,-1);
+    }
+    return;
+  }
+  if(a==='toggle-dialogue-autonext'){
+    saved.dialogueAutoNext=!saved.dialogueAutoNext;
+    persist();
+    render();
+    return;
+  }
+  if(a==='toggle-dialogue-loop'){
+    saved.dialogueLoop=!saved.dialogueLoop;
+    persist();
+    render();
+    return;
+  }
   if(a==='toggle-recall-mask'){
     saved.recallMask=!saved.recallMask;
     revealedMaskItems.clear();
@@ -994,7 +1302,7 @@ main.addEventListener('click',e=>{
     return;
   }
   if(a==='confirm-reset'){
-    saved={completed:[],wrong:[],notes:{},position:{},known:[],bookmarks:[],spaced:{},drillAnswered:{},drillWrong:[],audioMode:'word_def_ex',recallMask:false,theme:saved.theme||'light',scale:saved.scale||1,rate:1};
+    saved={completed:[],wrong:[],notes:{},position:{},known:[],bookmarks:[],spaced:{},drillAnswered:{},drillWrong:[],audioMode:'word_def_ex',dialogueMode:'teaching',dialogueAutoNext:true,dialogueLoop:false,recallMask:false,theme:saved.theme||'light',scale:saved.scale||1,rate:1};
     persist();
     render();
     return;
@@ -1056,7 +1364,9 @@ main.addEventListener('change',e=>{
     saved.rate=Number(e.target.value);
     persist();
     if(playing){
+      const parts=location.hash.slice(1).split('/');
       if(current)listen(index);
+      else if(parts[0]==='dialogues')listenCommuteDialogue(activeCommuteId,-1);
       else listenStudioSet(activeVocabIndex);
     }
   }
@@ -1067,6 +1377,12 @@ main.addEventListener('change',e=>{
       if(current)listen(index);
       else listenStudioSet(activeVocabIndex);
     }
+  }
+  if(e.target.id==='commute-mode-select'){
+    saved.dialogueMode=e.target.value;
+    persist();
+    render();
+    if(playing)listenCommuteDialogue(activeCommuteId,-1);
   }
 });
 

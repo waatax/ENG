@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {tracks} from '../dist/EN/content.mjs';
-import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills} from '../dist/EN/exam_curriculum.mjs';
+import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills, examCommuteDialogues} from '../dist/EN/exam_curriculum.mjs';
 import {readFileSync} from 'node:fs';
 
 test('Five English courses have complete original lesson cycles and precise answer keys',()=>{
@@ -28,11 +28,21 @@ test('Pure-English examFrameworks cover TOEFL, TOEIC, SAT, GMAT and GRE with ful
  assert.ok(!/[\u3400-\u9fff]/u.test(JSON.stringify(examFrameworks)),'examFrameworks must contain zero CJK characters');
 });
 
-test('Pure-English Word & Phrase Audio sets and Interactive Exam Drills are complete and 100% English',()=>{
+test('Pure-English Word & Phrase Audio sets, Commute Dialogues and Interactive Exam Drills are complete and 100% English',()=>{
  assert.equal(examWordAndPhraseSets.length,10,'Must include both phrase sets and core vocab sets for all 5 exams');
+ assert.equal(examCommuteDialogues.length,15,'Must include 15 pure-English commute dialogues across all 5 exams');
  for(const tid of ['toefl','toeic','sat','gmat','gre']){
    assert.ok(examWordAndPhraseSets.some(s=>s.track===tid&&s.kind==='phrase'),`Missing phrase set for ${tid}`);
    assert.ok(examWordAndPhraseSets.some(s=>s.track===tid&&s.kind==='vocab'),`Missing vocab set for ${tid}`);
+   assert.equal(examCommuteDialogues.filter(d=>d.track===tid).length,3,`Must have 3 commute dialogues for ${tid}`);
+ }
+ for(const dlg of examCommuteDialogues){
+   assert.ok(dlg.title.length>10);
+   assert.ok(dlg.setting.length>15);
+   assert.ok(dlg.keyPatterns.length>=3);
+   assert.ok(dlg.lines.length>=4);
+   assert.ok(dlg.recallPrompt.length>15);
+   assert.ok(dlg.recallModel.length>15);
  }
  for(const set of examWordAndPhraseSets){
    assert.ok(set.items.length>=6);
@@ -54,6 +64,7 @@ test('Pure-English Word & Phrase Audio sets and Interactive Exam Drills are comp
  }
  assert.ok(!/[\u3400-\u9fff]/u.test(JSON.stringify(examWordAndPhraseSets)));
  assert.ok(!/[\u3400-\u9fff]/u.test(JSON.stringify(examSubtopicDrills)));
+ assert.ok(!/[\u3400-\u9fff]/u.test(JSON.stringify(examCommuteDialogues)));
 });
 
 test('English edition assets contain zero CJK characters and match deployment mirror byte-for-byte',()=>{

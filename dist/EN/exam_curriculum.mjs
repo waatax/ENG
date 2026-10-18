@@ -1054,3 +1054,246 @@ export const examSubtopicDrills = [
     explanation: 'By noting that 70% of trips replaced walking or transit rather than car trips, the author challenges the claim of "unqualified" triumph without claiming the program had zero value.'
   }
 ];
+
+export const examCommuteDialogues = [
+  {
+    id: 'en-commute-toefl-1',
+    track: 'toefl',
+    category: 'Campus & Office Hours',
+    title: 'Negotiating a Research Paper Scope in Office Hours',
+    setting: 'A student visits a professor during office hours to narrow an overly broad term paper topic before Friday.',
+    keyPatterns: ['narrow the scope to', 'within the page limit', 'primary archival sources'],
+    recallPrompt: 'How do you politely ask a professor whether narrowing your research question to a single decade is acceptable?',
+    recallModel: 'Would it be feasible to narrow the scope to a single decade so I can analyze the primary sources in depth?',
+    lines: [
+      { speaker: 'Student', text: 'Professor Lin, I started outlining my paper on urban transit history, but I already have forty sources.', focusNote: 'State the concrete problem first instead of asking a vague question.' },
+      { speaker: 'Professor', text: 'Forty sources is far too broad for a ten-page seminar paper. Which decade shows the sharpest policy shift?', focusNote: 'Notice how the professor redirects from breadth to a specific analytical pivot.' },
+      { speaker: 'Student', text: 'The 1970s energy crisis triggered the biggest shift toward electric rail investment.', focusNote: '"Triggered the biggest shift toward..." is a high-scoring cause-and-effect collocation.' },
+      { speaker: 'Professor', text: 'Focus exclusively on that decade and compare two municipal case studies within the page limit.', focusNote: '"Focus exclusively on..." signals the actionable recommendation tested in TOEFL listening.' }
+    ]
+  },
+  {
+    id: 'en-commute-toefl-2',
+    track: 'toefl',
+    category: 'Campus & Lab Access',
+    title: 'Resolving a Laboratory Equipment Scheduling Conflict',
+    setting: 'Two graduate researchers coordinate spectrometer time after a calibration delay.',
+    keyPatterns: ['push back the slot', 'run a calibration check', 'back-to-back samples'],
+    recallPrompt: 'How do you propose swapping lab time slots without delaying your partner’s deadline?',
+    recallModel: 'If I take the evening slot after calibration finishes, could you run your baseline samples tomorrow morning?',
+    lines: [
+      { speaker: 'Researcher A', text: 'The technician just let me know the spectrometer needs a two-hour calibration check this afternoon.', focusNote: '"Let me know (that)..." is natural spoken academic English for reporting updates.' },
+      { speaker: 'Researcher B', text: 'That overlaps with my two o’clock reservation, and my samples degrade if they sit overnight.', focusNote: 'Pay attention to the constraint ("degrade if they sit overnight")—it drives the final decision.' },
+      { speaker: 'Researcher A', text: 'Mine are stable at room temperature, so you can take the four o’clock slot right after calibration.', focusNote: 'Offering a practical trade-off demonstrates collaborative problem solving.' },
+      { speaker: 'Researcher B', text: 'Thank you—I will run my batch at four and leave the chamber clean for your evening run.', focusNote: 'Confirming the exact time and next step closes the agreement clearly.' }
+    ]
+  },
+  {
+    id: 'en-commute-toefl-3',
+    track: 'toefl',
+    category: 'Academic Seminar Discussion',
+    title: 'Qualifying an Ecological Hypothesis in Seminar',
+    setting: 'Two students discuss why a coral restoration trial succeeded in one bay but failed in another.',
+    keyPatterns: ['account for the discrepancy', 'confounding variable', 'contingent on water flow'],
+    recallPrompt: 'How do you point out that an experiment’s success depends on local water conditions?',
+    recallModel: 'Those results appear to be contingent on strong tidal circulation rather than temperature alone.',
+    lines: [
+      { speaker: 'Student A', text: 'The reading claims heat-tolerant coral fragments survived at an eighty percent rate in the northern bay.', focusNote: 'Introduces the baseline empirical finding.' },
+      { speaker: 'Student B', text: 'True, yet the southern bay used the exact same genetic strain and lost half its colonies.', focusNote: '"True, yet..." concedes the premise while introducing a counter-example.' },
+      { speaker: 'Student A', text: 'What accounts for the discrepancy if water temperatures were identical in both bays?', focusNote: '"What accounts for the discrepancy" is a classic academic inquiry phrase.' },
+      { speaker: 'Student B', text: 'Tidal flushing was much weaker in the south, so survival was contingent on water flow as well as heat tolerance.', focusNote: '"Contingent on" expresses a necessary condition accurately.' }
+    ]
+  },
+  {
+    id: 'en-commute-toeic-1',
+    track: 'toeic',
+    category: 'Supply Chain & Logistics',
+    title: 'Expediting a Delayed Component Shipment',
+    setting: 'A procurement manager calls a supplier after customs clearance delays a critical valve shipment.',
+    keyPatterns: ['held up in customs', 'air-freight a partial batch', 'keep the assembly line running'],
+    recallPrompt: 'How do you ask a vendor to air-freight a partial batch today so production does not stop?',
+    recallModel: 'Could you air-freight a partial batch of five hundred units today so we can keep the assembly line running?',
+    lines: [
+      { speaker: 'Buyer', text: 'Hi Kenji, our tracking portal shows the sea-freight container is still held up in customs.', focusNote: '"Held up in..." is a high-frequency TOEIC phrasal verb for delays.' },
+      { speaker: 'Supplier', text: 'Yes, the port inspector requested an updated certificate of origin, which we submitted an hour ago.', focusNote: 'Explains the root cause and the corrective action already taken.' },
+      { speaker: 'Buyer', text: 'Our assembly line will run out of intake valves by Thursday morning unless we get a bridge shipment.', focusNote: '"Unless we get..." sets a clear operational deadline.' },
+      { speaker: 'Supplier', text: 'We can air-freight five hundred valves from our regional hub this afternoon at no extra shipping charge.', focusNote: 'Listen for the concrete remedy ("air-freight five hundred valves... this afternoon").' }
+    ]
+  },
+  {
+    id: 'en-commute-toeic-2',
+    track: 'toeic',
+    category: 'Client Negotiation & Contracts',
+    title: 'Negotiating Volume Pricing and Service-Level Terms',
+    setting: 'An account director and a corporate client finalize software licensing tiers during a commuter call.',
+    keyPatterns: ['waive the onboarding fee', 'commit to a two-year term', 'guaranteed response window'],
+    recallPrompt: 'How do you offer to waive the setup fee if the client signs a two-year contract?',
+    recallModel: 'We can waive the onboarding fee entirely if your team commits to a two-year agreement by Friday.',
+    lines: [
+      { speaker: 'Client', text: 'Your enterprise tier meets our security requirements, but the onboarding fee pushes us over our Q3 budget.', focusNote: 'Signals buying interest paired with a specific budget objection.' },
+      { speaker: 'Account Director', text: 'If your company commits to a twenty-four-month term, we can waive the onboarding fee entirely.', focusNote: 'Conditional concession ("If X, we can waive Y") is core negotiation syntax.' },
+      { speaker: 'Client', text: 'Does that agreement still include the four-hour guaranteed response window for critical outages?', focusNote: 'Verifies that service-level quality is preserved despite the discount.' },
+      { speaker: 'Account Director', text: 'Absolutely—I will put that service-level guarantee in Clause 4 and send the revised contract within the hour.', focusNote: 'Provides immediate written confirmation and a specific delivery time.' }
+    ]
+  },
+  {
+    id: 'en-commute-toeic-3',
+    track: 'toeic',
+    category: 'Business Travel & Transit',
+    title: 'Rebooking a Canceled Connecting Flight at the Gate',
+    setting: 'A business traveler speaks with an airline agent to reach a keynote presentation on time.',
+    keyPatterns: ['reroute through', 'make the morning keynote', 'confirm a seat assignment'],
+    recallPrompt: 'How do you ask an airline agent to reroute you through another hub so you arrive before 9:00 a.m.?',
+    recallModel: 'Is there any way to reroute me through Frankfurt tonight so I can make my nine o’clock keynote?',
+    lines: [
+      { speaker: 'Traveler', text: 'Excuse me, Flight 408 to Zurich was just canceled, and I am scheduled to deliver a keynote at nine tomorrow morning.', focusNote: 'States both the disruption and the time-critical business constraint.' },
+      { speaker: 'Gate Agent', text: 'Let me check partner carriers—there is a flight to Munich boarding at Gate B12 in twenty-five minutes.', focusNote: 'Offers an alternative routing with an urgent boarding window.' },
+      { speaker: 'Traveler', text: 'Does that connection get me into Zurich before eight-thirty, and will my carry-on fit in the overhead bin?', focusNote: 'Checks arrival time and baggage logistics in a single turn.' },
+      { speaker: 'Gate Agent', text: 'You will land in Zurich at seven-forty-five a.m.; here is your new boarding pass with priority boarding.', focusNote: 'Confirms arrival margin and resolves the carry-on concern.' }
+    ]
+  },
+  {
+    id: 'en-commute-sat-1',
+    track: 'sat',
+    category: 'Evidence & Precision',
+    title: 'Distinguishing Narrow Inference from Overgeneralization',
+    setting: 'Two students review a Digital SAT reading question about urban tree-canopy cooling.',
+    keyPatterns: ['warranted by the data', 'goes beyond the scope', 'hedged with conditional language'],
+    recallPrompt: 'How do you explain why an answer choice with the word "always" is incorrect based on a single city study?',
+    recallModel: 'That choice goes beyond the scope of the evidence because the study only measured one arid city during July.',
+    lines: [
+      { speaker: 'Tutor', text: 'Why did you eliminate Choice B even though it mentions tree-canopy cooling from the passage?', focusNote: 'Prompts the learner to articulate flaw-detection logic.' },
+      { speaker: 'Student', text: 'Choice B claims trees lower street temperatures by five degrees in every climate zone worldwide.', focusNote: 'Identifies the extreme universal quantifier ("every... worldwide").' },
+      { speaker: 'Tutor', text: 'Spot on—and how does Choice A stay within what is warranted by the data?', focusNote: '"Warranted by the data" means strictly supported by the stated evidence.' },
+      { speaker: 'Student', text: 'Choice A is hedged with "can reduce peak afternoon heat in arid neighborhoods," which matches the Phoenix sample.', focusNote: 'Shows how modal hedging ("can reduce") aligns with bounded empirical scope.' }
+    ]
+  },
+  {
+    id: 'en-commute-sat-2',
+    track: 'sat',
+    category: 'Rhetorical Synthesis & Transitions',
+    title: 'Selecting Logical Transitions Between Clause Boundaries',
+    setting: 'A writing coach and student analyze why "nevertheless" beats "consequently" in a synthesis prompt.',
+    keyPatterns: ['semantic polarity shift', 'independent clause boundary', 'conjunctive adverb'],
+    recallPrompt: 'When two independent clauses are joined by "however", what punctuation is required?',
+    recallModel: 'Place a semicolon before "however" and a comma after it when joining two independent clauses.',
+    lines: [
+      { speaker: 'Student', text: 'The first sentence says early solar cells converted less than two percent of sunlight into electricity.', focusNote: 'Establishes a negative/limited baseline premise.' },
+      { speaker: 'Coach', text: 'And the second sentence says satellite engineers adopted them immediately for orbital missions. What is the logical link?', focusNote: 'Highlights the surprising positive outcome despite low efficiency.' },
+      { speaker: 'Student', text: 'It is a concession contrast, so we need "nevertheless" rather than a cause-and-effect word like "consequently."', focusNote: 'Names the exact semantic relationship before looking at punctuation.' },
+      { speaker: 'Coach', text: 'Exactly—and because both halves have a subject and finite verb, use a semicolon before "nevertheless" and a comma after.', focusNote: 'Combines transition logic with SAT Standard English boundary rules.' }
+    ]
+  },
+  {
+    id: 'en-commute-sat-3',
+    track: 'sat',
+    category: 'Words in Context',
+    title: 'Decoding High-Utility Academic Vocabulary from Structural Clues',
+    setting: 'Two classmates practice predicting word meanings from appositives and contrast markers.',
+    keyPatterns: ['structural restatement', 'far from being arbitrary', 'corroborate the claim'],
+    recallPrompt: 'How do you use a colon or dash in a sentence to predict a vocabulary blank?',
+    recallModel: 'Treat the clause after a colon or dash as a direct structural restatement of the word in the blank.',
+    lines: [
+      { speaker: 'Partner A', text: 'Look at this stem: "The archivist’s catalog was _______: every manuscript was cross-indexed by date, scribe, and ink pigment."', focusNote: 'The colon signals that the second clause defines the blank.' },
+      { speaker: 'Partner B', text: 'Cross-indexing every manuscript by three criteria means the catalog was thorough and systematic.', focusNote: 'Predicts a plain-English meaning ("thorough and systematic") before reading options.' },
+      { speaker: 'Partner A', text: 'Among "meticulous," "tentative," "ephemeral," and "redundant," which one matches our prediction?', focusNote: 'Tests options against the pre-formed prediction.' },
+      { speaker: 'Partner B', text: '"Meticulous" means showing extreme care about minute details, which directly mirrors the clause after the colon.', focusNote: 'Confirms exact semantic equivalence.' }
+    ]
+  },
+  {
+    id: 'en-commute-gmat-1',
+    track: 'gmat',
+    category: 'Critical Reasoning & Executive Strategy',
+    title: 'Stress-Testing a Profit Forecast with the Negation Test',
+    setting: 'Two strategy analysts evaluate whether cutting packaging weight will increase net operating margin.',
+    keyPatterns: ['necessary assumption', 'apply the negation test', 'offset by breakage costs'],
+    recallPrompt: 'How do you challenge a plan that assumes lower shipping weight automatically increases total profit?',
+    recallModel: 'That conclusion assumes lighter packaging will not increase product breakage or return costs by more than the freight savings.',
+    lines: [
+      { speaker: 'Analyst A', text: 'Switching to thinner glass bottles cuts freight expenses by twelve percent, so our beverage unit’s net profit will rise.', focusNote: 'Notice the leap from one cost component (freight) to net profit.' },
+      { speaker: 'Analyst B', text: 'That conclusion holds only if thinner bottles do not lead to higher breakage rates during transit.', focusNote: 'Identifies the unstated necessary assumption.' },
+      { speaker: 'Analyst A', text: 'Let us apply the negation test: what if breakage claims increase by more than twelve percent?', focusNote: 'Negating the assumption tests whether the argument collapses.' },
+      { speaker: 'Analyst B', text: 'Then net profit would actually fall—so we must pilot-test breakage rates before approving the fleet-wide switch.', focusNote: 'Translates GMAT Critical Reasoning into real executive decision-making.' }
+    ]
+  },
+  {
+    id: 'en-commute-gmat-2',
+    track: 'gmat',
+    category: 'Data Insights & Quantitative Logic',
+    title: 'Separating Percentage Rates from Absolute Totals in a Board Briefing',
+    setting: 'A CFO and a regional director examine why a lower defect rate still produced more total returns.',
+    keyPatterns: ['percentage versus absolute volume', 'denominator expanded', 'base-rate fallacy'],
+    recallPrompt: 'How can a factory have a lower defect percentage this quarter but a higher total number of defective units?',
+    recallModel: 'If total production volume more than doubled, a smaller defect percentage can still yield a larger absolute number of defects.',
+    lines: [
+      { speaker: 'Director', text: 'Our plant reduced its defect rate from three percent in Q1 to two percent in Q2, yet total warranty returns increased.', focusNote: 'Presents a classic GMAT rate-versus-total paradox.' },
+      { speaker: 'CFO', text: 'Did total production volume change between Q1 and Q2?', focusNote: 'Immediately checks the denominator (total units produced).' },
+      { speaker: 'Director', text: 'Yes, we more than doubled output from ten thousand units to twenty-five thousand units for the summer launch.', focusNote: 'Reveals that the denominator expanded by 2.5x.' },
+      { speaker: 'CFO', text: 'Two percent of twenty-five thousand is five hundred units, versus three hundred in Q1—so the rate improved while volume drove total returns.', focusNote: 'Resolves the paradox with exact arithmetic.' }
+    ]
+  },
+  {
+    id: 'en-commute-gmat-3',
+    track: 'gmat',
+    category: 'Causal Inference & Confounders',
+    title: 'Eliminating Self-Selection Bias in a Remote-Work Productivity Study',
+    setting: 'An HR analytics lead explains why a voluntary four-day workweek pilot needs a randomized baseline.',
+    keyPatterns: ['self-selection bias', 'baseline performance parity', 'isolate the causal variable'],
+    recallPrompt: 'How do you rule out self-selection bias when comparing volunteers against non-volunteers?',
+    recallModel: 'We need to verify that both groups had comparable baseline productivity before the pilot began.',
+    lines: [
+      { speaker: 'VP of Operations', text: 'The twenty engineers who opted into the four-day schedule closed fifteen percent more tickets than the rest of the department.', focusNote: '"Opted into" signals voluntary self-selection.' },
+      { speaker: 'Analytics Lead', text: 'Before we credit the schedule, we need to check whether those twenty engineers were already top performers.', focusNote: 'Identifies pre-existing skill/motivation as a confounding variable.' },
+      { speaker: 'VP of Operations', text: 'Good point—what did their prior six-month ticket velocity look like?', focusNote: 'Asks for pre-intervention baseline data.' },
+      { speaker: 'Analytics Lead', text: 'Their baseline velocity matched the department median, which strengthens the claim that the schedule itself boosted focus.', focusNote: 'Baseline parity rules out the confounder and strengthens causality.' }
+    ]
+  },
+  {
+    id: 'en-commute-gre-1',
+    track: 'gre',
+    category: 'Graduate Seminar & Polarity',
+    title: 'Tracking Double Negation and Concession in Historiography',
+    setting: 'Two graduate students dissect a dense historiographical critique before a seminar presentation.',
+    keyPatterns: ['far from being monolithic', 'ostensibly neutral', 'belied by archival letters'],
+    recallPrompt: 'What does it mean if a scholar’s ostensibly neutral summary is belied by private archival letters?',
+    recallModel: 'It means the summary appears unbiased on the surface, but the private letters contradict that appearance.',
+    lines: [
+      { speaker: 'Grad Student A', text: 'The reviewer writes that the committee’s report was "ostensibly impartial, yet belied by the chair’s private correspondence."', focusNote: '"Ostensibly" marks surface appearance; "belied by" marks contradiction by evidence.' },
+      { speaker: 'Grad Student B', text: 'So on the surface the report looked objective, but the private letters exposed a hidden bias.', focusNote: 'Paraphrases high-register GRE lexis into clear functional English.' },
+      { speaker: 'Grad Student A', text: 'And what about the next clause: "far from being a perfunctory dissent, the minority memo reshaped the treaty"?', focusNote: '"Far from being X" negates "perfunctory" (routine/superficial).' },
+      { speaker: 'Grad Student B', text: 'Instead of being a routine formality, the minority memo was substantive and decisive.', focusNote: 'Pairs the negated flaw with its positive semantic twin.' }
+    ]
+  },
+  {
+    id: 'en-commute-gre-2',
+    track: 'gre',
+    category: 'Sentence Equivalence & Precision',
+    title: 'Distinguishing True Semantic Twins from Thematic Distractors',
+    setting: 'A verbal coach walks a test-taker through a 6-Choose-2 Sentence Equivalence trap.',
+    keyPatterns: ['converge on identical meaning', 'thematic distractor', 'unsupported motive'],
+    recallPrompt: 'Why are "laconic" and "concise" semantic twins whereas "evasive" is a distractor?',
+    recallModel: '"Laconic" and "concise" both mean brief and to the point, whereas "evasive" adds an unsupported motive of hiding the truth.',
+    lines: [
+      { speaker: 'Test-Taker', text: 'In this Sentence Equivalence item, the speaker gave brief, factual replies, so I picked "concise" and "evasive."', focusNote: 'Reveals a common mistake: pairing a correct word with a tone-mismatched distractor.' },
+      { speaker: 'Coach', text: 'Check the tone: if the replies were factual and direct, was the speaker trying to dodge the question?', focusNote: 'Uses context to test hidden connotation.' },
+      { speaker: 'Test-Taker', text: 'No—the sentence explicitly says she stated the facts without elaboration.', focusNote: 'Returns to the textual anchor ("stated the facts without elaboration").' },
+      { speaker: 'Coach', text: 'Then drop "evasive" and pair "concise" with "laconic"—both mean using very few words without implying dishonesty.', focusNote: 'Demonstrates how GRE twin synonyms must produce equivalent sentences.' }
+    ]
+  },
+  {
+    id: 'en-commute-gre-3',
+    track: 'gre',
+    category: 'Critique & Qualification',
+    title: 'Evaluating Nuanced Authorial Stance in Science Policy',
+    setting: 'Two researchers discuss why an editorial neither wholly endorses nor completely dismisses carbon offsets.',
+    keyPatterns: ['qualified endorsement', 'salutary interim measure', 'panacea for emissions'],
+    recallPrompt: 'How do you describe a policy that is helpful in the short term but not a complete cure-all?',
+    recallModel: 'The policy serves as a salutary interim measure rather than a panacea for long-term emissions.',
+    lines: [
+      { speaker: 'Researcher 1', text: 'Does the editorial dismiss forestry offsets entirely, or does it offer a qualified endorsement?', focusNote: '"Qualified endorsement" is a classic GRE Reading Comprehension answer pattern.' },
+      { speaker: 'Researcher 2', text: 'It calls them a "salutary interim measure" while warning that they are no "panacea" for industrial decarbonization.', focusNote: 'Contrasts "salutary interim measure" (helpful temporary step) with "panacea" (cure-all).' },
+      { speaker: 'Researcher 1', text: 'So the author recognizes their short-term benefit but rejects relying on them as a permanent solution.', focusNote: 'Captures both sides of the author’s balanced boundary.' },
+      { speaker: 'Researcher 2', text: 'Exactly—any option claiming the author considers offsets "utterly futile" or "wholly sufficient" distorts that balance.', focusNote: 'Shows how to eliminate extreme polarity traps on test day.' }
+    ]
+  }
+];

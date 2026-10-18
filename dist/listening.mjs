@@ -5,6 +5,7 @@ import { UNIFIED_GRADES } from './curriculum_unified.mjs';
 import { points } from './knowledge_content.mjs';
 import { foundations } from './knowledge_foundations.mjs';
 import { registerAudioLesson, renderLessonAudio, escapeAudio as e, pauseLessonAudio } from './lesson_audio.mjs';
+import { renderCommuteDialogueStudio, handleCommuteDialogueClick, handleCommuteDialogueChange, handleCommuteDialogueInput, stopCommuteDialogue } from './commute_dialogues.mjs';
 export const listeningLessons=[];
 const add=(id,title,stage,href,sections)=>{registerAudioLesson(id,title,sections);listeningLessons.push({id,title,stage,href});};
 const section=(title,...text)=>({title,text:text.filter(Boolean).join('。')});
@@ -78,11 +79,27 @@ export function renderListeningDecodingTable() {
     </div>
   `;
 }
+const allStages=['國小','國中','高中','高工','國際考試'];
 let stage='國小', selected=listeningLessons.find(l=>l.stage===stage)?.id;
 export function listeningPage(){
   const list=listeningLessons.filter(l=>l.stage===stage),lesson=list.find(l=>l.id===selected)||list[0];
   if(lesson)selected=lesson.id;
-  return `<header class="header-block"><div class="pill">🎧 通勤英語教室</div><h1>把通勤時間，變成聽懂一個單元的時間</h1><p>先選學段和主題；播放會依序帶過重點、例句和回想練習。建議到站後再完成頁面上的自我檢核。</p><a href="#grammar">🧩 前往圖解文法專區</a></header><section class="card"><h2>1. 選擇學段</h2><div class="audio-controls">${['國小','國中','高中','高工'].map(s=>`<button class="btn ${stage===s?'primary':'quiet'}" data-listen-stage="${s}" aria-pressed="${stage===s}">${s}</button>`).join('')}</div><h2>2. 選擇今天想聽的單元</h2><label for="listening-unit">教學單元（${list.length}）</label><select id="listening-unit">${list.map(l=>`<option value="${e(l.id)}" ${l.id===selected?'selected':''}>${e(l.title)}</option>`).join('')}</select></section>${renderListeningConnectedSpeechDiagram()}${renderListeningDecodingTable()}${lesson?`${renderLessonAudio(lesson.id)}<p><a class="btn" href="${lesson.href}">開啟本單元完整教學與練習 →</a></p>`:''}`;
+  return `<header class="header-block"><div class="pill">🎧 通勤英語會話＆聽課電台</div><h1>把通勤時間，變成聽懂一段會話與觀念的時間</h1><p>上方可<strong>一鍵快播 112 組雙語教學會話</strong>（支援教學精講、雙語快播、開口跟讀與純英盲聽）；下方可依學段聆聽完整單元觀念解說。</p><div class="learning-actions" style="margin:12px 0 0"><a class="btn primary" href="#commute-dialogue-studio">📻 跳至教學會話快播</a><a class="btn quiet" href="#unit-listening-section">📚 跳至單元觀念聽課</a><a class="btn quiet" href="#grammar">🧩 圖解文法專區</a></div></header>${renderCommuteDialogueStudio()}<section class="card" id="unit-listening-section"><h2>📚 單元觀念聽課：1. 選擇學段</h2><div class="audio-controls">${allStages.map(s=>`<button class="btn ${stage===s?'primary':'quiet'}" data-listen-stage="${s}" aria-pressed="${stage===s}">${s}</button>`).join('')}</div><h2>2. 選擇今天想聽的單元</h2><label for="listening-unit">教學單元（${list.length}）</label><select id="listening-unit">${list.map(l=>`<option value="${e(l.id)}" ${l.id===selected?'selected':''}>${e(l.title)}</option>`).join('')}</select></section>${lesson?`${renderLessonAudio(lesson.id)}<p><a class="btn" href="${lesson.href}">開啟本單元完整教學與練習 →</a></p>`:''}${renderListeningConnectedSpeechDiagram()}${renderListeningDecodingTable()}`;
 }
-export function handleListeningClick(button,render){if(!button.dataset.listenStage)return false;if(['國小','國中','高中','高工'].includes(button.dataset.listenStage)){pauseLessonAudio();stage=button.dataset.listenStage;selected=null;render();}return true;}
-export function handleListeningChange(target,render){if(target.id!=='listening-unit')return false;if(listeningLessons.some(l=>l.id===target.value&&l.stage===stage)){pauseLessonAudio();selected=target.value;render();}return true;}
+export function handleListeningClick(button,render){
+  if(handleCommuteDialogueClick(button,render))return true;
+  if(!button.dataset.listenStage)return false;
+  if(allStages.includes(button.dataset.listenStage)){stopCommuteDialogue(false);pauseLessonAudio();stage=button.dataset.listenStage;selected=null;render();}
+  return true;
+}
+export function handleListeningChange(target,render){
+  if(handleCommuteDialogueChange(target,render))return true;
+  if(target.id!=='listening-unit')return false;
+  if(listeningLessons.some(l=>l.id===target.value&&l.stage===stage)){stopCommuteDialogue(false);pauseLessonAudio();selected=target.value;render();}
+  return true;
+}
+export function handleListeningInput(target,render){
+  return handleCommuteDialogueInput(target,render);
+}
+export { stopCommuteDialogue };
+

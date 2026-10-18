@@ -60,7 +60,21 @@ test('Recall pauses after the question and sleep timer stops the next utterance'
  const originalNow=Date.now;let now=1000;Date.now=()=>now;
  try{player.handleLessonAudioChange({dataset:{laSetting:'sleep'},value:'10',closest:()=>({dataset:{lessonAudioPanel:panelId}})});now+=600001;click('play');assert.equal(player.getLessonAudioState().playing,false);}finally{Date.now=originalNow;}
 });
-test('Source and Pages mirror remain byte-identical',()=>{for(const f of ['lesson_audio.mjs','listening.mjs','grammar.mjs','grammar_content.mjs','app.js','knowledge.mjs','lesson_pages.mjs','styles.css'])assert.deepEqual(readFileSync('dist/'+f),readFileSync('site/dist/'+f),f);});
+test('Source and Pages mirror remain byte-identical',()=>{for(const f of ['commute_dialogues.mjs','lesson_audio.mjs','listening.mjs','grammar.mjs','grammar_content.mjs','app.js','knowledge.mjs','lesson_pages.mjs','styles.css','learning_experience.css'])assert.deepEqual(readFileSync('dist/'+f),readFileSync('site/dist/'+f),f);});
+test('Commute Dialogue Studio provides 112 bilingual teaching dialogues and 4 SLA commute modes',async()=>{
+ const commute=await import('../dist/commute_dialogues.mjs');
+ assert.equal(commute.COMMUTE_FEATURED_DIALOGUES.length,24);
+ assert.equal(commute.ALL_COMMUTE_DIALOGUES.length,112);
+ for(const d of commute.ALL_COMMUTE_DIALOGUES){
+  assert.ok(d.title&&d.scenario&&d.recallPrompt&&d.recallAnswer,d.id);
+  assert.ok(Array.isArray(d.keyPatterns)&&d.keyPatterns.length>=2,d.id);
+  assert.ok(Array.isArray(d.lines)&&d.lines.length>=2,d.id);
+  for(const ln of d.lines)assert.ok(ln.speaker&&ln.en&&ln.zh&&ln.note,`${d.id} line`);
+ }
+ const studioHtml=commute.renderCommuteDialogueStudio();
+ assert.ok(studioHtml.includes('commute-dialogue-studio')&&studioHtml.includes('🌟 教學精講')&&studioHtml.includes('⚡ 雙語快播')&&studioHtml.includes('🗣️ 開口跟讀')&&studioHtml.includes('🎧 純英盲聽'));
+ assert.ok(catalog.listeningPage().includes('commute-dialogue-studio'));
+});
 
 test('A mixed-language sentence stays on one track until every language segment completes',()=>{
  panelId='mixed';player.registerAudioLesson('mixed','Mixed',[{title:'規則',text:'使用 be 動詞。'}]);

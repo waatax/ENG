@@ -3,7 +3,8 @@ import { enhanceLearningPage } from './learning_navigation.mjs';
 import { renderAffixGuide } from './affix_guide.mjs';
 import { handleAffixInput, handleAffixClick } from './affix_library.mjs';
 import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syncLessonAudio, pauseLessonAudio } from './lesson_audio.mjs';
-import { listeningPage, handleListeningClick, handleListeningChange } from './listening.mjs';
+import { listeningPage, handleListeningClick, handleListeningChange, handleListeningInput } from './listening.mjs';
+import { renderCommuteDialogueStudio, startCommuteDialogue, stopCommuteDialogue } from './commute_dialogues.mjs';
 import { grammarPage, grammarRoute, setGrammarTopic, handleGrammarClick } from './grammar.mjs';
 import {renderFullWordPractice,handleFullWordClick,handleFullWordChange,handleFullWordSubmit} from './full_word_practice.mjs';
 import { renderTeachingAid } from './teaching_aids.mjs';
@@ -124,6 +125,7 @@ function navigate(p) {
   stopFlashcardAutoPlay();
   stopWordAudio(root);
   pauseLessonAudio();
+  stopCommuteDialogue(false);
   activePlayingDialogueIndex = -1;
   page = p;
   const route = p === 'wordaudio' ? wordAudioRoute() : p === 'grammar' ? grammarRoute() : p === 'listening' ? '#listening' : p === 'junyi' ? '#unit/' + activeUnitId : ['wordpractice','flashcards','affixes'].includes(p) ? '#'+p : p === 'schoolwords' ? '#schoolwords' : p === 'diagnostic' ? '#diagnostic' : p === 'knowledgePoint' ? '#knowledge/' + knowledgeId : p === 'chapter' ? '#chapter/' + openChapterId.replace(':', '/') : p === 'knowledge' ? '#knowledge' : '#'+p;
@@ -710,7 +712,7 @@ function shell(body) {
     <div class="shell">
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
-        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="#flashcards">⚡ 單字片語閃卡</a><a href="mnemonics/index.html">💡 1,000 字聯想記憶卡</a><a href="roots/index.html">🧩 500 組字根字族</a><a href="EN/">English Academy ↗</a></div>
+        <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#listening">🎧 通勤會話快播</a><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="#flashcards">⚡ 單字片語閃卡</a><a href="mnemonics/index.html">💡 1,000 字聯想記憶卡</a><a href="roots/index.html">🧩 500 組字根字族</a><a href="EN/">English Academy ↗</a></div>
         
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
@@ -746,7 +748,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
-        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options" open><summary>📱 單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
+        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options" open><summary>📱 通勤會話・單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
         ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening','wordaudio'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
@@ -1885,18 +1887,19 @@ function chapterPage() {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function studioPage() {
   const allVocab = UNIFIED_GRADES.flatMap(g => g.semesters.flatMap(s => s.units.flatMap(u => u.phonicsVocab || [])));
-  const allDialogues = UNIFIED_GRADES.flatMap(g => g.semesters.flatMap(s => s.units.flatMap(u => u.dialogue || [])));
 
   return `
     <div class="header-block">
-      <div class="pill">🎙️ 單字會話語音館</div>
-      <h1 style="margin:8px 0">全情境音標單字點讀與會話語音互動館</h1>
+      <div class="pill">🎙️ 通勤教學會話＆單字語音點讀館</div>
+      <h1 style="margin:8px 0">全情境雙語教學會話連播與音標單字點讀館</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        收錄全 7 年級 150+ 核心單字標準 IPA 音標與對話語料，支援點讀發音、慢速播放與循序對話朗讀。
+        完整收錄 <strong>112 組通勤英語教學會話</strong>（支援教學精講、雙語快播、開口跟讀、純英盲聽與角色扮演）與全學年核心單字 IPA 點讀發音。
       </p>
     </div>
 
-    <div class="card" style="margin-bottom:20px">
+    ${renderCommuteDialogueStudio()}
+
+    <div class="card" style="margin-top:20px">
       <h3 style="margin:0 0 12px">🔤 核心單字點讀卡庫 (${allVocab.length} 個字詞)</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:10px">
         ${allVocab.slice(0, 48).map(v => `
@@ -1907,21 +1910,6 @@ function studioPage() {
               <div style="font-size:12px;color:#64748b">${v.pos} ${v.zh}</div>
             </div>
             <button class="btn small quiet" data-speak-word="${esc(v.word)}">🔊</button>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 style="margin:0 0 12px">💬 情境雙語對話語料庫</h3>
-      <div style="display:grid;gap:8px">
-        ${allDialogues.slice(0, 20).map(d => `
-          <div style="padding:10px 14px;border-radius:8px;background:#f1f5f9;display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <strong style="color:#3730a3">${d.speaker}:</strong> <span lang="en">${d.en}</span>
-              <div style="font-size:12px;color:#64748b;margin-top:2px">${d.zh}</div>
-            </div>
-            <button class="btn small quiet" data-speak-sentence="${esc(d.en)}">🔊 朗讀</button>
           </div>
         `).join('')}
       </div>
@@ -2449,6 +2437,11 @@ root.addEventListener('click', e => {
   if (handleListeningClick(b, render)) return;
   if (handleGrammarClick(b, render)) return;
   if (d.speakSentence || d.speakWord || d.playDialogue || d.stopAudio) pauseLessonAudio();
+  if (d.commuteQuickDialogue) {
+    navigate('listening');
+    startCommuteDialogue(d.commuteQuickDialogue, 0, false, render);
+    return;
+  }
   if (d.fcQuickPlay) {
     navigate('flashcards');
     startFlashcardQuickPlay(d.fcQuickPlay, render, false);
@@ -2940,12 +2933,27 @@ root.addEventListener('change', e => handleFullWordChange(e.target, render));
 root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.preventDefault();handleFullWordSubmit(e.target,render);} });
 
 root.addEventListener('change', e => { if (handleLessonAudioChange(e.target)) return; handleListeningChange(e.target, render); });
-window.addEventListener('pagehide', pauseLessonAudio);
+root.addEventListener('input', e => handleListeningInput(e.target, render));
+window.addEventListener('pagehide', () => { pauseLessonAudio(); stopCommuteDialogue(false); });
 
 if (typeof window !== 'undefined' && window.addEventListener) {
   window.addEventListener('keydown', e => {
     if (e.target && e.target.matches && e.target.matches('input, textarea, select')) return;
     const key = (e.key || '').toLowerCase();
+
+    // 🎧 通勤會話實驗室快捷鍵 (Space 播放/暫停, 左右鍵切換會話)
+    if (page === 'listening' || page === 'studio') {
+      if (e.code === 'Space') {
+        const playBtn = document.querySelector('[data-cd-action="toggle-play"]');
+        if (playBtn) { e.preventDefault(); playBtn.click(); return; }
+      } else if (e.code === 'ArrowRight') {
+        const nextBtn = document.querySelector('[data-cd-action="next-dialogue"]');
+        if (nextBtn && !nextBtn.disabled) { e.preventDefault(); nextBtn.click(); return; }
+      } else if (e.code === 'ArrowLeft') {
+        const prevBtn = document.querySelector('[data-cd-action="prev-dialogue"]');
+        if (prevBtn && !prevBtn.disabled) { e.preventDefault(); prevBtn.click(); return; }
+      }
+    }
 
     // 🎴 閃卡工作室快捷鍵
     if (page === 'flashcards') {

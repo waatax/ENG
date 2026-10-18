@@ -5,6 +5,7 @@ import {renderWordStructure} from './word_structure.mjs';
 
 import { teachingCard, qualityCounts } from './flashcard_quality.mjs';
 import { playWord, playSentence, playChinese, stopAudio } from './audio.mjs';
+import { renderCommuteQuickPlayStrip } from './commute_dialogues.mjs';
 
 function esc(str) {
   return String(str ?? '').replace(/[&<>"']/g, c => ({
@@ -142645,8 +142646,10 @@ export function renderFlashcardQuickPlay() {
       <button class="btn quiet small" data-fc-phrase-play="gre">▶ GRE 雙選等價片語集</button>
       <button class="btn quiet small" data-fc-phrase-play="gmat">▶ GMAT 商業論證搭配集</button>
     </div>
+    ${renderCommuteQuickPlayStrip()}
     <div class="learning-actions" style="margin-top:12px;margin-bottom:0">
       <button class="btn quiet" data-nav="flashcards">搜尋字卡與自訂複習</button>
+      <a class="btn quiet" href="#listening">🎧 112 組通勤教學會話電台</a>
       <a class="btn quiet" href="#wordaudio/elementary-001">🎵 190 組 MP3 離線音檔</a>
       <a class="btn primary" href="EN/">🇬🇧 EN 純英檢定教學與英英語音 (TOEFL/TOEIC/SAT/GMAT/GRE) ↗</a>
     </div>
