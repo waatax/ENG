@@ -10,10 +10,10 @@ globalThis.localStorage={getItem(){return null;},setItem(){}};
 const {points,knowledgePage}=await import('../dist/knowledge.mjs');
 const {teachingChapter,microLesson}=await import('../dist/lesson_pages.mjs');
 const {meaningChoices,normalizeSpelling,renderSchoolWords}=await import('../dist/school_words.mjs');
-test('All 97 primary teaching pages contain readable diagrams and comparison tables',()=>{
+test('All 134 primary teaching pages contain readable diagrams and comparison tables',()=>{
  let n=0;for(const t of curriculum)for(const c of t.chapters){const h=teachingChapter(`${t.id}:${c.id}`);assert.ok(h.includes('aid-flow'));assert.ok(h.includes('<caption>'));n++;}
  for(const g of UNIFIED_GRADES)for(const s of g.semesters)for(const u of s.units){const h=microLesson(u.id);assert.ok(h.includes('aid-flow'),u.id);assert.ok(h.includes('<caption>'));n++;}
- for(const p of points){const h=knowledgePage(p.id);assert.ok(h.includes('aid-flow'),p.id);assert.ok(h.includes('<caption>'));n++;}assert.equal(n,97);
+ for(const p of points){const h=knowledgePage(p.id);assert.ok(h.includes('aid-flow'),p.id);assert.ok(h.includes('<caption>'));n++;}assert.equal(n,134);
 });
 test('Visual selection never treats incidental English substrings as prepositions',()=>{
  assert.match(aidProfile('Reading strategies')[1],/線索/);assert.match(aidProfile('被動語態')[1],/主角/);assert.equal(aidProfile('unknown topic'),undefined);

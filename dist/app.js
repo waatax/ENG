@@ -10,6 +10,7 @@ import {renderFullWordPractice,handleFullWordClick,handleFullWordChange,handleFu
 import { renderTeachingAid } from './teaching_aids.mjs';
 import { renderSchoolWords, handleSchoolWordClick, handleSchoolWordChange, handleSchoolWordSubmit } from './school_words.mjs';
 import { knowledgeHome, knowledgePage, searchKnowledge, answerKnowledge } from './knowledge.mjs';
+import { standardsMapPage } from './standards_map.mjs';
 // app.js - 全方位 108 課綱英語教育旗艦平台 (專家團隊 7 次深度大改造版)
 // 7 位跨領域專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主微課架構、大考測驗心理計量、語音聲學、技高ESP與全齡UX
 // 深度整合：國小 (Sixth 專案 6上/6下)、國中 (JH 專案 7-9年級 16單元)、高中/技高 (Arch 專案 10-12年級大考先修與學期複習)
@@ -564,7 +565,7 @@ function renderExamTracksComparisonTable() {
 }
 
 function renderStageQuickNav() {
-  const isElem = (activeGradeId === 'g6' || page === 'sixth') && page === 'curriculum108';
+  const isElem = (/^g[3-6]$/.test(activeGradeId) || page === 'sixth') && page === 'curriculum108';
   const isJh = (['g7', 'g8', 'g9'].includes(activeGradeId) || page === 'jh') && page === 'curriculum108';
   const isSh = (['g10', 'g11', 'g12'].includes(activeGradeId) || page === 'arch') && page === 'curriculum108';
 
@@ -577,10 +578,10 @@ function renderStageQuickNav() {
         </div>
         <div class="stage-tags-group">
           <!-- 🎒 國小英文 Tag -->
-          <button class="stage-tag-btn stage-tag-elem ${isElem ? 'is-active' : ''}" data-quick-stage="elementary" title="點擊直達國小六年級 6A / 6B 課程">
+          <button class="stage-tag-btn stage-tag-elem ${isElem ? 'is-active' : ''}" data-quick-stage="elementary" title="點擊直達國小三至六年級課程">
             <span class="stage-emoji">🎒</span>
             <span class="stage-name">國小英文</span>
-            <span class="stage-badge">G6 · Pre-A1~A1 (8單元)</span>
+            <span class="stage-badge">G3-G6 · Pre-A1~A1 (${UNIFIED_GRADES.filter(g => /^g[3-6]$/.test(g.gradeId)).reduce((n, g) => n + g.semesters.reduce((m, s) => m + s.units.length, 0), 0)}單元)</span>
           </button>
 
           <!-- 🏫 國中英文 Tag -->
@@ -665,6 +666,7 @@ function shell(body) {
     ['curriculum108', '03', '學年課程地圖'],
     ['phonics', '04', '自然拼讀與發音'],
     ['matrix', '05', '課綱對照'],
+    ['standards', '05a', '📜 108 課綱學習重點地圖'],
     ['junyi', '06', '單元微課'],
     ['sixth', '07', '國小銜接教材'],
     ['jh', '08', '國中閱讀與會考'],
@@ -694,7 +696,8 @@ function shell(body) {
     curriculum108: '108 課綱英語全學年課程地圖',
     phonics: '自然拼讀 (Phonics) 與發音規則全景大師課 (見字能讀·聽音能寫)',
     flashcards: '多階層英語單字與核心片語記憶閃卡館 (3D翻轉·合成語音)',
-    matrix: '108 課綱與 CEFR 評量指引總體檢核矩陣 (88項對標)',
+    matrix: '108 課綱與 CEFR 評量指引總體檢核矩陣（全學年單元與章節）',
+    standards: '108 課綱學習重點地圖',
     junyi: '自主微課與鷹架館 (42 致命陷阱避雷雷達)',
     sixth: '國小六年級小升初 (8 單元名師講義)',
     jh: '國中會考衝刺館 (16 主題全案精通)',
@@ -2333,6 +2336,7 @@ function render() {
     phonics: renderPhonicsMasteryView,
     flashcards: renderFlashcardsStudioView,
     matrix: renderCurriculumMatrixView,
+    standards: standardsMapPage,
     junyi: junyiPage,
     sixth: sixthPage,
     jh: jhPage,
@@ -2501,9 +2505,9 @@ root.addEventListener('click', e => {
   // 快速學段切換 (國小 / 國中 / 高中)
   if (d.quickStage) {
     if (d.quickStage === 'elementary') {
-      activeGradeId = 'g6';
-      activeSemId = 'g6-s1';
-      activeUnitId = 'g6-s1-u1';
+      if (!/^g[3-6]$/.test(activeGradeId)) activeGradeId = 'g3';
+      activeSemId = activeGradeId + '-s1';
+      activeUnitId = activeGradeId + '-s1-u1';
     } else if (d.quickStage === 'junior') {
       if (!['g7', 'g8', 'g9'].includes(activeGradeId)) activeGradeId = 'g7';
       activeSemId = activeGradeId + '-s1';
@@ -2918,6 +2922,7 @@ function readKnowledgeRoute() {
   else if (['wordpractice','flashcards'].includes(parts[0])) { navigate(parts[0]); }
   else if (parts[0] === 'schoolwords') { navigate('schoolwords'); }
   else if (parts[0] === 'matrix') { navigate('matrix'); }
+  else if (parts[0] === 'standards') { navigate('standards'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }

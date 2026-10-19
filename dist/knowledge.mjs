@@ -8,7 +8,10 @@ import { escapeText as e } from './lesson_pages.mjs';
 import { points as originalPoints } from './knowledge_content.mjs';
 import { foundations } from './knowledge_foundations.mjs';
 import { createKnowledgeProgress } from './knowledge_progress.mjs';
-export const points = [...foundations.slice(0,2), ...originalPoints, foundations[2]];
+import { renderStandardsCard } from './standards_view.mjs';
+import { renderKeyPoints, keyPointsForKnowledge } from './key_points.mjs';
+import { standardsPoints } from './knowledge_standards.mjs';
+export const points = [...foundations.slice(0,2), ...originalPoints, foundations[2], ...standardsPoints];
 const progress = createKnowledgeProgress(points);
 let query = '', stage = '全部', domain = '全部';
 const catalog = learningCatalog(points);
@@ -29,7 +32,7 @@ export function knowledgeHome() {
  const review=points.filter(p=>progress.summary(p.id).needsReview);
  const attempted=points.filter(p=>progress.summary(p.id).answered).length;
  return `<section class="knowledge-home">
- <header class="learning-hero"><p class="pill">English Quest · 每次弄懂一個觀念</p><h1>把英文學懂，<br>從今天的一小步開始。</h1><p>選一個目標，看懂例句，再用自己的話練一次。按自己的步調，讓每次學習都有下一步。</p><div class="learning-actions"><a class="btn primary" href="${recent?.link || (last?'#knowledge/'+last.id:'#knowledge/be-sentences')}">${recent||last?'接續上次學習':'從第一句英文開始'} →</a><a class="btn" href="#listening">🎧 通勤會話快播</a><a class="btn" href="#wordaudio">🎵 單字 MP3 跟讀</a><a class="btn" href="#flashcards">⚡ 單字片語閃卡</a><a class="btn" href="EN/">🇬🇧 EN 純英檢定學院</a><a class="btn quiet" href="#diagnostic">用練習找補強方向</a></div><p class="small">不確定程度也沒關係，先從熟悉的情境開始。</p></header>
+ <header class="learning-hero"><p class="pill">English Quest · 每次弄懂一個觀念</p><h1>把英文學懂，<br>從今天的一小步開始。</h1><p>選一個目標，看懂例句，再用自己的話練一次。按自己的步調，讓每次學習都有下一步。</p><div class="learning-actions"><a class="btn primary" href="${recent?.link || (last?'#knowledge/'+last.id:'#knowledge/be-sentences')}">${recent||last?'接續上次學習':'從第一句英文開始'} →</a><a class="btn" href="#listening">🎧 通勤會話快播</a><a class="btn" href="#wordaudio">🎵 單字 MP3 跟讀</a><a class="btn" href="#flashcards">⚡ 單字片語閃卡</a><a class="btn" href="#standards">📜 108 課綱學習地圖</a><a class="btn" href="EN/">🇬🇧 EN 純英檢定學院</a><a class="btn quiet" href="#diagnostic">用練習找補強方向</a></div><p class="small">不確定程度也沒關係，先從熟悉的情境開始。</p></header>
  ${journeyHome()}${learningPaths()}
  <div class="learning-dashboard"><section class="card"><h2>今天的學習任務</h2><p>看一個觀念 → 比較例句 → 不看答案做檢核。</p><a href="${review.length?'#knowledge/'+review[0].id:last?'#knowledge/'+last.id:'#knowledge/be-sentences'}">${review.length?'先訂正：'+e(review[0].title):last?'繼續：'+e(last.title):'起步：人稱與 be 動詞'} →</a></section><section class="card"><h2>你的學習足跡</h2><p>${attempted} / ${points.length} 個核心知識點已開始作答 · ${review.length} 個待訂正</p><p class="small">紀錄只保存在這個瀏覽器。閱讀與作答不等同精熟認證。</p>${review.length?`<details><summary>查看待訂正清單</summary><ul>${review.map(p=>`<li><a href="#knowledge/${p.id}">${e(p.title)}</a></li>`).join('')}</ul></details>`:''}</section></div>
  <section aria-labelledby="catalog-title"><h2 id="catalog-title">依能力找知識，也能依學段篩選</h2><p>核心知識點、圖解文法、綜合章節與學年微課，一起搜尋。</p><div class="knowledge-filters"><div><label for="knowledge-search">搜尋主題或英文關鍵字</label><input type="search" id="knowledge-search" value="${e(query)}" placeholder="例如：被動、閱讀、完成式"></div><div><label for="knowledge-stage">選擇學習階段</label><select id="knowledge-stage">${stages.map(s=>`<option ${stage===s?'selected':''}>${s}</option>`).join('')}</select></div><div><label for="knowledge-domain">選擇學習能力</label><select id="knowledge-domain">${domains.map(([id,label])=>`<option value="${id}" ${domain===id?'selected':''}>${label}</option>`).join('')}</select></div></div><div class="domain-guide">${domains.slice(1).map(([id,label,description])=>`<button type="button" data-catalog-domain="${id}"><strong>${label}</strong><small>${description}</small></button>`).join('')}</div><button type="button" class="btn quiet" data-catalog-reset>清除搜尋與篩選</button><div id="knowledge-results">${knowledgeResults()}</div></section>
@@ -78,6 +81,7 @@ export function knowledgePage(id) {
   const related = points.filter(x=>x.id!==p.id && catalog.find(c=>c.id===x.id).domain===currentDomain);
   const next = related.find(x=>!progress.summary(x.id).answered) || related[0];
   return `<article class="lesson-page knowledge-detail"><a href="#knowledge">← 回知識點教室</a><header><p class="pill">${e(p.stage)} · 原創教學</p><h1>${e(p.title)}</h1><p>${e(p.goal)}</p><p class="small">先備知識：${e(p.prior)}</p></header>
+    ${renderStandardsCard('knowledge:'+p.id)}${renderKeyPoints(keyPointsForKnowledge(p))}
     <details class="lesson-audio-disclosure"><summary>聆聽本課 · 語音與跟讀設定</summary>${renderLessonAudio('knowledge:'+p.id)}</details>
     <nav class="lesson-links" aria-label="本頁段落">${[['concept','觀念'],['examples','例句'],['steps','判斷與自查'],['practice','練習'],['output','應用']].map(([id,label])=>`<button class="btn quiet" data-scroll-to="#kp-${id}">${label}</button>`).join('')}</nav>
     <section class="card" id="kp-concept"><h2>1. 理解核心觀念</h2><p>${e(p.rule)}</p></section>

@@ -32,7 +32,7 @@ test('1. All 27 Curriculum Exam Chapters have dedicated visual diagrams and comp
   assert.equal(count, 27);
 });
 
-test('2. All 61 Unified Grade Units have dedicated visual diagrams and comparison tables', () => {
+test('2. All 79 Unified Grade Units have dedicated visual diagrams and comparison tables', () => {
   let count = 0;
   for (const g of UNIFIED_GRADES) {
     for (const s of g.semesters) {
@@ -49,10 +49,10 @@ test('2. All 61 Unified Grade Units have dedicated visual diagrams and compariso
       }
     }
   }
-  assert.equal(count, 61);
+  assert.equal(count, 79);
 });
 
-test('3. All 9 Core Knowledge Points have dedicated visual diagrams and comparison tables', () => {
+test('3. All 28 Core Knowledge Points have dedicated visual diagrams and comparison tables', () => {
   let count = 0;
   for (const p of points) {
     count++;
@@ -65,7 +65,7 @@ test('3. All 9 Core Knowledge Points have dedicated visual diagrams and comparis
     const vc = renderTopicVisualChart(p.title);
     assert.ok(vc && vc.length > 50, `Point missing visual chart: ${p.title}`);
   }
-  assert.equal(count, 9);
+  assert.equal(count, 28);
 });
 
 test('4. All 20 Grammar Topics have dedicated visual diagrams, flows and tables', () => {

@@ -22,7 +22,7 @@ export function learningCatalog(points=[]) {
  const entries=[...points.map(p=>({id:p.id,title:p.title,stage:p.stage,description:p.goal,search:p.rule,link:'#knowledge/'+p.id,kind:'核心知識點'})),
  ...curriculum.flatMap(t=>t.chapters.map(c=>({id:t.id+':'+c.id,title:c.title,stage:stageFor[t.id]||t.title,description:c.concepts.map(x=>x.heading).join(' · '),search:c.concepts.map(x=>x.body).join(' '),link:'#chapter/'+t.id+'/'+c.id,kind:'綜合教學章節'}))),
  ...grammarTopics.map(t=>({id:'grammar:'+t.id,title:t.title,stage:t.stage,description:t.rule,search:t.trap,link:'#grammar/'+t.id,kind:'圖解文法'})),
- ...UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units.map(u=>({id:u.id,title:u.title,stage:/g[1-6]$/.test(g.id)?'國小':/g[7-9]$/.test(g.id)?'國中':'高中',description:[g.title,s.title,u.goal].filter(Boolean).join(' · '),search:u.sourceRef,link:'#unit/'+u.id,kind:'學年微課'}))))];
+ ...UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units.map(u=>({id:u.id,title:u.title,stage:/^g[1-6]$/.test(g.gradeId)?'國小':/^g[7-9]$/.test(g.gradeId)?'國中':'高中',description:[g.title,s.title,u.goal].filter(Boolean).join(' · '),search:u.sourceRef,link:'#unit/'+u.id,kind:'學年微課'}))))];
  return entries.map(c=>{
    const domain=c.kind==='圖解文法'?'sentences':domainOf(c.title);
    const secondary=domains.slice(1).filter(([id])=>id!==domain && domainOf(c.description)===id).map(([id])=>id);

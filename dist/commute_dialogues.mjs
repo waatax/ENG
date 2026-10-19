@@ -1140,7 +1140,7 @@ function buildAllCommuteDialogues() {
 
   // 整合 61 組 108 課綱學年單元會話 (`curriculum_unified.mjs`)
   for (const g of UNIFIED_GRADES) {
-    const stg = g.gradeId === 'g6' ? '國小' : ['g7', 'g8', 'g9'].includes(g.gradeId) ? '國中' : '高中';
+    const stg = /^g[1-6]$/.test(g.gradeId) ? '國小' : ['g7', 'g8', 'g9'].includes(g.gradeId) ? '國中' : '高中';
     for (const sem of g.semesters) {
       for (const u of sem.units) {
         if (!u.dialogue || !u.dialogue.length) continue;

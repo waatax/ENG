@@ -4,7 +4,7 @@ import {createJourney,journeyCatalog,relatedLessons,learningPaths} from '../dist
 import {filterCatalog} from '../dist/learning_catalog.mjs';
 import {skillFramework} from '../dist/learning_framework.mjs';
 test('All catalog pages have valid distinct recommendations and path targets',()=>{
-  assert.equal(journeyCatalog.length,117);
+  assert.equal(journeyCatalog.length,154);
   for(const c of journeyCatalog){assert.ok(c.skills.includes(c.domain));assert.ok(relatedLessons(c).every(r=>r.link!==c.link && r.domain===c.domain));const f=skillFramework[c.domain];assert.ok(f.prior&&f.goal&&f.recall&&f.transfer);assert.ok(journeyCatalog.some(r=>r.link===f.repair)||f.repair==='#phonics');}
   for(const [,route] of learningPaths().matchAll(/href="(#[^"]+)"/g)) assert.ok(journeyCatalog.some(c=>c.link===route)||['#wordaudio','#affixes','#schoolwords','#phonics'].includes(route),route);
   assert.ok(filterCatalog(journeyCatalog,'passive').some(c=>c.link==='#grammar/passive'));

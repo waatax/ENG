@@ -1,0 +1,1029 @@
+{
+ "source": {
+  "title": "十二年國民基本教育課程綱要 技術型高級中等學校 語文領域－英語文",
+  "url": "https://stv.naer.edu.tw/data/course_outline/pta_18519_8013652_59836.pdf",
+  "issued": "民國107年4月",
+  "retrieved": "2026-10-19",
+  "note": "條文由官方 PDF 以 pdftotext 擷取，表格跨頁斷行處已逐條比對原文校正。"
+ },
+ "performances": [
+  {
+   "code": "1-V-1",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "能聽懂課堂中所學的字詞。"
+  },
+  {
+   "code": "1-V-2",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂日常生活用語。"
+  },
+  {
+   "code": "1-V-3",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂常用句型的句子。"
+  },
+  {
+   "code": "1-V-4",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂英語日常對話。"
+  },
+  {
+   "code": "1-V-5",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂簡易英語歌曲的主要內容。"
+  },
+  {
+   "code": "1-V-6",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂短篇英語故事主要內容。"
+  },
+  {
+   "code": "1-V-7",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "能聽懂公共場所簡易廣播的內容，如捷運、車站、機場廣播。"
+  },
+  {
+   "code": "1-V-8",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂簡易英語影片的主要內容。"
+  },
+  {
+   "code": "1-V-9",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂簡短英語說明或敘述的主要內容。"
+  },
+  {
+   "code": "1-V-10",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂英語教學廣播節目的內容。"
+  },
+  {
+   "code": "1-V-11",
+   "cat": 1,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂職場常用詞語、句子與對話。"
+  },
+  {
+   "code": "2-V-1",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "能說出課堂中所學的字詞。"
+  },
+  {
+   "code": "2-V-2",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依主題或情境以英語簡短介紹或描述自己、家人、朋友與職場。"
+  },
+  {
+   "code": "2-V-3",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依主題或情境以英語簡短描述生活與職場中的事件或回答問題。"
+  },
+  {
+   "code": "2-V-4",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依主題或情境作簡單的提問。"
+  },
+  {
+   "code": "2-V-5",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能以清晰英語說出常用句型的句子。"
+  },
+  {
+   "code": "2-V-6",
+   "cat": 2,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能以簡易英語看圖說故事。"
+  },
+  {
+   "code": "3-V-1",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "能辨識課堂中所學字詞。"
+  },
+  {
+   "code": "3-V-2",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂常見的英文標示。"
+  },
+  {
+   "code": "3-V-3",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂常見的圖表。"
+  },
+  {
+   "code": "3-V-4",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂常見的生活用語。"
+  },
+  {
+   "code": "3-V-5",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂常見的句型。"
+  },
+  {
+   "code": "3-V-6",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能了解簡短文章與書信的內容。"
+  },
+  {
+   "code": "3-V-7",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能了解短篇故事的內容與情節。"
+  },
+  {
+   "code": "3-V-8",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能辨識故事的要素，如背景、人物、事件和結局。"
+  },
+  {
+   "code": "3-V-9",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能利用字詞結構、上下文意、句型結構及篇章組織推測字詞意義或句子內容。"
+  },
+  {
+   "code": "3-V-10",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能從圖畫或圖示猜測字義或推論文意。"
+  },
+  {
+   "code": "3-V-11",
+   "cat": 3,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂職場上常用之圖表與使用手冊。"
+  },
+  {
+   "code": "4-V-1",
+   "cat": 4,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能拼寫技術型高級中等學校階段基本常用字詞。"
+  },
+  {
+   "code": "4-V-2",
+   "cat": 4,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依主題或情境寫出正確達意的句子。"
+  },
+  {
+   "code": "4-V-3",
+   "cat": 4,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能將中文句子譯成正確的英文。"
+  },
+  {
+   "code": "4-V-4",
+   "cat": 4,
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "能使用正確的體例格式書寫便條、書信、電子郵件等。"
+  },
+  {
+   "code": "5-V-1",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂、讀懂技術型高級中等學校階段基本字詞。"
+  },
+  {
+   "code": "5-V-2",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能掌握技術型高級中等學校階段所學字詞及句型，適當地應用於實用情境之溝通。"
+  },
+  {
+   "code": "5-V-3",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能以適當的發音、斷句、節奏、語調、語氣及速度，朗讀簡易文章或故事。"
+  },
+  {
+   "code": "5-V-4",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能針對各類選文，以簡易口語或書面回答相關問題。"
+  },
+  {
+   "code": "5-V-5",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能轉述簡短談話或故事。"
+  },
+  {
+   "code": "5-V-6",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂並填寫常用的英文表格。"
+  },
+  {
+   "code": "5-V-7",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂日常簡易對話，並能記下要點。"
+  },
+  {
+   "code": "5-V-8",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂短篇故事，並能記下要點。"
+  },
+  {
+   "code": "5-V-9",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂簡易廣播，並能記下要點。"
+  },
+  {
+   "code": "5-V-10",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能讀懂簡易短文或故事，並以簡短的句子述說或寫出主旨或大意。"
+  },
+  {
+   "code": "5-V-11",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂日常書信、簡訊、電子郵件、留言、卡片等，並能簡短回應。"
+  },
+  {
+   "code": "5-V-12",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂職場常用圖表。"
+  },
+  {
+   "code": "5-V-13",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能看懂並填寫職場常用的英文表格。"
+  },
+  {
+   "code": "5-V-14",
+   "cat": 5,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能聽懂職場簡易對話，並記下要點。"
+  },
+  {
+   "code": "6-V-1",
+   "cat": 6,
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "樂於參與課堂中各類練習活動，不畏犯錯。"
+  },
+  {
+   "code": "6-V-2",
+   "cat": 6,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "樂於主動預習與複習學習內容。"
+  },
+  {
+   "code": "6-V-3",
+   "cat": 6,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "樂於參與英語文課外活動，如英語營、歌唱、短劇、讀者劇場等。"
+  },
+  {
+   "code": "6-V-4",
+   "cat": 6,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "樂於以英語文與人面對面或透過網路、書信等方式溝通，不畏犯錯。"
+  },
+  {
+   "code": "6-V-5",
+   "cat": 6,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "樂於接觸課外的英語文多元素材，如報章雜誌、廣播、網路資訊等。"
+  },
+  {
+   "code": "6-V-6",
+   "cat": 6,
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "樂於以英語文為工具，接觸與所修習技術領域相關的新知並關注國際議題。"
+  },
+  {
+   "code": "7-V-1",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能把握並主動尋找溝通或表達意見的機會。"
+  },
+  {
+   "code": "7-V-2",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能利用工具書與網路資源，主動了解文本內容。"
+  },
+  {
+   "code": "7-V-3",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能根據課文內容找尋相關資料，強化學習成效。"
+  },
+  {
+   "code": "7-V-4",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能探尋並有效運用學習英語文的方法與技巧。"
+  },
+  {
+   "code": "7-V-5",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能利用文本的結構特色（如轉折語、陳述次序等），增進文意理解。"
+  },
+  {
+   "code": "7-V-6",
+   "cat": 7,
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "能針對課文主題進行延伸閱讀，以強化學習的深度與廣度。"
+  },
+  {
+   "code": "7-V-7",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能利用語言及非語言溝通策略（如請求重述、手勢、表情等）提升溝通效能。"
+  },
+  {
+   "code": "7-V-8",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能檢視自我學習過程，並隨時改進。"
+  },
+  {
+   "code": "7-V-9",
+   "cat": 7,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能訂定英語文學習計畫，養成自主學習的習慣。"
+  },
+  {
+   "code": "8-V-1",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能以簡易英語文介紹國內外主要的節慶習俗及風土民情。"
+  },
+  {
+   "code": "8-V-2",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能了解國內外文化的異同。"
+  },
+  {
+   "code": "8-V-3",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能了解並尊重不同的文化與風土民情。"
+  },
+  {
+   "code": "8-V-4",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能了解並應用國際交流之基本禮儀。"
+  },
+  {
+   "code": "8-V-5",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能關心時事，了解國際情勢，以培養國際視野。"
+  },
+  {
+   "code": "8-V-6",
+   "cat": 8,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能培養地球村的觀念，尊重生命與促進全球永續發展。"
+  },
+  {
+   "code": "8-V-7",
+   "cat": 8,
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "能融合文化知識與語言能力，解決生活與職場中的問題。"
+  },
+  {
+   "code": "9-V-1",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能把多項訊息加以比較、歸類、排序。"
+  },
+  {
+   "code": "9-V-2",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依據上下文語境釐清不同訊息間的關係。"
+  },
+  {
+   "code": "9-V-3",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能依據上下文分辨客觀事實與主觀意見。"
+  },
+  {
+   "code": "9-V-4",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能分析、歸納多項訊息的共通點或相異之處。"
+  },
+  {
+   "code": "9-V-5",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能將習得的原則類推到新情境中，解決問題。"
+  },
+  {
+   "code": "9-V-6",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能綜合現有訊息，預測可能的發展。"
+  },
+  {
+   "code": "9-V-7",
+   "cat": 9,
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "能整合資訊，合理規劃並發揮創意完成任務。"
+  }
+ ],
+ "contents": [
+  {
+   "code": "Ab-V-1",
+   "theme": "Ab",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "技術型高級中等學校階段課程所學之句子的正確發音及適切語調。"
+  },
+  {
+   "code": "Ac-V-1",
+   "theme": "Ac",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "常見的英文標示。"
+  },
+  {
+   "code": "Ac-V-2",
+   "theme": "Ac",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "生活用語。"
+  },
+  {
+   "code": "Ac-V-3",
+   "theme": "Ac",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "技術型高級中等學校階段課程所學之字詞。"
+  },
+  {
+   "code": "Ac-V-4",
+   "theme": "Ac",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "職場常用詞語。"
+  },
+  {
+   "code": "Ad-V-1",
+   "theme": "Ad",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "技術型高級中等學校階段所學的句型結構。"
+  },
+  {
+   "code": "Ae-V-1",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "歌曲、短文、故事。"
+  },
+  {
+   "code": "Ae-V-2",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "常見的圖表。"
+  },
+  {
+   "code": "Ae-V-3",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "公共場所簡易廣播（如捷運、車站、機場廣播）。"
+  },
+  {
+   "code": "Ae-V-4",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "卡片、便條、書信、電子郵件。"
+  },
+  {
+   "code": "Ae-V-5",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "教學廣播節目的內容。"
+  },
+  {
+   "code": "Ae-V-6",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "學習雜誌、漫畫。"
+  },
+  {
+   "code": "Ae-V-7",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "職場常用之圖表與使用手冊。"
+  },
+  {
+   "code": "Ae-V-8",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "工具書與網路資源。"
+  },
+  {
+   "code": "Ae-V-9",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "短篇故事的內容與情節。"
+  },
+  {
+   "code": "Ae-V-10",
+   "theme": "Ae",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "故事的背景、人物、事件和結局。"
+  },
+  {
+   "code": "B-V-1",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "主題式或情境式的簡短介紹及自己、家人、朋友與職場的描述。"
+  },
+  {
+   "code": "B-V-2",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "生活與職場中的主題式或情境式的簡短描述或問題簡答。"
+  },
+  {
+   "code": "B-V-3",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "技術型高級中等學校階段所學字詞及句型的生活溝通。"
+  },
+  {
+   "code": "B-V-4",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "技術型高級中等學校階段所學字詞及句型的職場溝通。"
+  },
+  {
+   "code": "B-V-5",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "圖片描述。"
+  },
+  {
+   "code": "B-V-6",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "引導式討論。"
+  },
+  {
+   "code": "B-V-7",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "短文、書信的內容。"
+  },
+  {
+   "code": "B-V-8",
+   "theme": "B",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "簡短談話或故事的轉述。"
+  },
+  {
+   "code": "B-V-9",
+   "theme": "B",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "日常簡易對話、短篇故事、簡易廣播的要點。"
+  },
+  {
+   "code": "B-V-10",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "職場簡易對話的要點。"
+  },
+  {
+   "code": "B-V-11",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "簡易短文或故事的主旨或大意。"
+  },
+  {
+   "code": "B-V-12",
+   "theme": "B",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "語言與非語言的溝通策略（如請求重述、手勢、表情等）。"
+  },
+  {
+   "code": "B-V-13",
+   "theme": "B",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "符合情境或場景的自我表達與人際溝通。"
+  },
+  {
+   "code": "C-V-1",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "多元文化觀點、不同文化及習俗的尊重。"
+  },
+  {
+   "code": "C-V-2",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "國際社會的基本生活禮儀。"
+  },
+  {
+   "code": "C-V-3",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "國際情勢、國際視野。"
+  },
+  {
+   "code": "C-V-4",
+   "theme": "C",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "國際議題（如全球暖化、人工智慧、氣候變遷等）。"
+  },
+  {
+   "code": "C-V-5",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "地球村觀點、生命及全球永續發展的關注。"
+  },
+  {
+   "code": "C-V-6",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "文化知識與語言能力、生活與職場中的問題解決之道。"
+  },
+  {
+   "code": "C-V-7",
+   "theme": "C",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "多元文化、文化差異。"
+  },
+  {
+   "code": "C-V-8",
+   "theme": "C",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "文化涵養與國際觀。"
+  },
+  {
+   "code": "C-V-9",
+   "theme": "C",
+   "stage": "V",
+   "advanced": true,
+   "spiral": false,
+   "text": "文化素養及社會上的多元文化觀點。"
+  },
+  {
+   "code": "D-V-1",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "多項訊息的比較、歸類、排序。"
+  },
+  {
+   "code": "D-V-2",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "不同訊息關係的釐清。"
+  },
+  {
+   "code": "D-V-3",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": true,
+   "text": "藉文字線索，對客觀事實及主觀意見的分辨。"
+  },
+  {
+   "code": "D-V-4",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "多項訊息共通點或相異處的分析及歸納。"
+  },
+  {
+   "code": "D-V-5",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "原則的類推、問題解決之道。"
+  },
+  {
+   "code": "D-V-6",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "依訊息的整合，對情勢發展的預測。"
+  },
+  {
+   "code": "D-V-7",
+   "theme": "D",
+   "stage": "V",
+   "advanced": false,
+   "spiral": false,
+   "text": "資訊的評估，及任務的規劃與完成。"
+  }
+ ],
+ "competencies": [
+  {
+   "code": "英V-U-A1",
+   "level": "V-U",
+   "dim": "A1",
+   "text": "具備積極探究的態度，並能運用各種學習與溝通策略，主動探索與修習領域相關之課外資訊，擴展學習場域，養成自主學習習慣，為終身學習奠定基礎。"
+  },
+  {
+   "code": "英V-U-A2",
+   "level": "V-U",
+   "dim": "A2",
+   "text": "具備系統性思考能力，善用各種策略，提升英語文學習效率與品質，應用所學解決問題。"
+  },
+  {
+   "code": "英V-U-A3",
+   "level": "V-U",
+   "dim": "A3",
+   "text": "具備探索學習策略的能力，並能規劃與執行有效的英語文學習計畫，增進未來職場與生活的適應力。"
+  },
+  {
+   "code": "英V-U-B1",
+   "level": "V-U",
+   "dim": "B1",
+   "text": "具備聽、說、讀、寫的英語文素養，能連結自身經驗，運用詞彙、句型與肢體語言，在生活與職場常見情境中適切溝通表達。"
+  },
+  {
+   "code": "英V-U-B2",
+   "level": "V-U",
+   "dim": "B2",
+   "text": "具備用英語文加入社群、搜尋、運用所修習領域相關網路資訊的能力，以增進有效溝通能力。"
+  },
+  {
+   "code": "英V-U-B3",
+   "level": "V-U",
+   "dim": "B3",
+   "text": "具備欣賞英語文語音、篇章美感的基礎能力，並能探索生活與實用技術的美感。"
+  },
+  {
+   "code": "英V-U-C1",
+   "level": "V-U",
+   "dim": "C1",
+   "text": "具備運用英語文的積極態度，關心國際議題與自然生態；具人文關懷，主動參與社會活動。"
+  },
+  {
+   "code": "英V-U-C2",
+   "level": "V-U",
+   "dim": "C2",
+   "text": "積極參與課堂內小組學習及課外英語文相關之團體活動，發展個人在生活與職場上溝通協調之能力，提升團隊合作素養。"
+  },
+  {
+   "code": "英V-U-C3",
+   "level": "V-U",
+   "dim": "C3",
+   "text": "具備國際視野及地球村觀念，能從多元文化觀點了解、欣賞不同文化習俗，尊重生命與全球之永續發展。"
+  }
+ ]
+}

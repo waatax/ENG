@@ -4590,11 +4590,11 @@ for (const [id, a] of Object.entries(sixthAudioData)) {
   }
 }
 
-for (const g of UNIFIED_GRADES.filter(g => ['g6', 'g7', 'g8', 'g9'].includes(g.gradeId))) {
+for (const g of UNIFIED_GRADES.filter(g => ['g3', 'g4', 'g5', 'g6', 'g7', 'g8', 'g9'].includes(g.gradeId))) {
   for (const s of g.semesters) {
     for (const u of s.units) {
       for (const w of u.phonicsVocab || []) {
-        add(g.gradeId === 'g6' ? 'elementary' : 'junior', w.word, w.zh, w.sentence, w.ipa, u.title, u.id, u.id);
+        add(/^g[3-6]$/.test(g.gradeId) ? 'elementary' : 'junior', w.word, w.zh, w.sentence, w.ipa, u.title, u.id, u.id);
       }
     }
   }

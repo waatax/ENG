@@ -12,12 +12,12 @@ export const curriculum = [
         num: '01',
         title: '句子骨架與基本時態',
         subtitle: '五大基本句型・四大時態・科學真理現在式例外',
-        curriculumCode: '1-Ⅳ-4 / 2-Ⅳ-2 / 3-Ⅳ-2 / 4-Ⅳ-1 / Ac-Ⅳ-1',
+        curriculumCode: '1-Ⅳ-3 / 2-Ⅳ-6 / 3-Ⅳ-6 / 4-Ⅳ-5 / Ad-Ⅳ-1 / B-Ⅳ-5',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2 (初級精熟 · 國中會考滿分基礎)',
         competency: 'A2 系統思考與解決問題、B1 符號運用與溝通表達',
         learningPerformance: '掌握英文五大基本句型（S+V, S+V+SC, S+V+O, S+V+IO+DO, S+V+O+OC）與四大基礎時態；依時間副詞標記判定動詞變化。',
-        learningContent: 'Ac-Ⅳ-1 簡易句型與主謂結構；Ac-Ⅳ-3 現在、過去、未來與現在進行式；科學客觀真理現在式例外。',
+        learningContent: 'Ad-Ⅳ-1 國中階段所學的文法句型。；B-Ⅳ-5 人、事、時、地、物的描述及問答。',
         guideline: '心測中心國中教育會考雙向細目表文法單題命題規準；科學客觀真理（Water boils at 100°C）名詞子句時態一致性例外必考點。',
         concepts: [
           {
@@ -58,12 +58,12 @@ export const curriculum = [
         num: '02',
         title: '代名詞、限定詞與數量詞',
         subtitle: '主格・受格・所有格・反身代名詞與可數不可數量詞',
-        curriculumCode: '3-Ⅳ-2 / 4-Ⅳ-1 / Ac-Ⅳ-2',
+        curriculumCode: '2-Ⅳ-4 / 3-Ⅳ-6 / 4-Ⅳ-5 / Ad-Ⅳ-1 / B-Ⅳ-1',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2 (初級精熟)',
         competency: 'A1 身心素質與自我精進、B1 符號運用與溝通表達',
         learningPerformance: '辨析人稱代名詞四性格位（主格、受格、所有格、所有格代名詞）與反身代名詞功能；熟練可數與不可數名詞之數量詞修飾規則。',
-        learningContent: 'Ac-Ⅳ-2 名詞與代名詞之性、數、格；數量詞 many/much, a few/a little 之肯定與否定語氣；常見不可數抽象物質名詞。',
+        learningContent: 'Ad-Ⅳ-1 國中階段所學的文法句型。；B-Ⅳ-1 自己、家人及朋友的簡易描述。',
         guideline: '國中教育會考數量詞與不可數名詞（information, news, advice, bread）辨析；反身代名詞作受詞（主受同人）與強調語氣命題規準。',
         concepts: [
           {
@@ -104,12 +104,12 @@ export const curriculum = [
         num: '03',
         title: '疑問句、情態助動詞與生活溝通',
         subtitle: '5W1H・附加問句・情態助動詞與禮貌社交應答',
-        curriculumCode: '1-Ⅳ-2 / 2-Ⅳ-1 / 2-Ⅳ-4 / Ac-Ⅳ-3',
+        curriculumCode: '1-Ⅳ-4 / 2-Ⅳ-5 / 2-Ⅳ-7 / 5-Ⅳ-3 / Ad-Ⅳ-1 / Ac-Ⅳ-3 / B-Ⅳ-4 / B-Ⅳ-5',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2 (初級精熟 · 生活交際)',
         competency: 'B1 符號運用與溝通表達、C2 人際關係與團隊合作',
         learningPerformance: '靈活運用 5W1H 疑問詞與附加問句獲取資訊；使用情態助動詞表達禮貌請求、允許、能力與義務。',
-        learningContent: 'Ac-Ⅳ-3 疑問句結構、附加問句（前肯後否/前否後肯）；情態助動詞 can, could, may, must, should, would 語氣階梯。',
+        learningContent: 'Ad-Ⅳ-1 國中階段所學的文法句型。；Ac-Ⅳ-3 常見的生活用語。；B-Ⅳ-4 個人的需求、意願和感受的表達。；B-Ⅳ-5 人、事、時、地、物的描述及問答。',
         guideline: '心測中心生活會話與聽力基本問答題型；附加問句特例（Let\'s go, shall we? / I am, aren\'t I?）與情態動詞後接原形動詞標準。',
         concepts: [
           {
@@ -150,12 +150,12 @@ export const curriculum = [
         num: '04',
         title: '連接詞與複句',
         subtitle: '對等連接詞・因果轉折・時間與條件副詞子句',
-        curriculumCode: '3-Ⅳ-2 / 3-Ⅳ-6 / 4-Ⅳ-1 / Ac-Ⅳ-5',
+        curriculumCode: '3-Ⅳ-6 / 4-Ⅳ-5 / 4-Ⅳ-8 / 9-Ⅳ-3 / Ad-Ⅳ-1 / D-Ⅳ-3',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2+ (初級精熟進階)',
         competency: 'A2 系統思考與解決問題、B1 符號運用與溝通表達',
         learningPerformance: '區分對等連接詞（and, but, or, so）與從屬連接詞（because, although, if, when, while）；建立邏輯嚴密之複合句。',
-        learningContent: 'Ac-Ⅳ-5 複句結構；時間與條件副詞子句；因果與轉折子句；禁用雙重連接詞語法規則。',
+        learningContent: 'Ad-Ⅳ-1 國中階段所學的文法句型。；D-Ⅳ-3 訊息因果關係的釐清。',
         guideline: '會考文法克漏字必考考點：條件句與時間子句「現在式代未來式」；禁用「Although... but...」與「Because... so...」命題偵錯。',
         concepts: [
           {
@@ -196,12 +196,12 @@ export const curriculum = [
         num: '05',
         title: '短文閱讀與生活應用文本',
         subtitle: '公告・表格・菜單資訊檢索與推論技巧',
-        curriculumCode: '3-Ⅳ-4 / 3-Ⅳ-6 / Ad-Ⅳ-1 / Ad-Ⅳ-2',
+        curriculumCode: '3-Ⅳ-3 / 3-Ⅳ-4 / 3-Ⅳ-8 / 3-Ⅳ-11 / 3-Ⅳ-12 / 5-Ⅳ-11 / Ac-Ⅳ-1 / Ae-Ⅳ-2 / Ae-Ⅳ-4 / Ae-Ⅳ-8 / D-Ⅳ-1',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2 ~ Pre-B1 (跨文本素養閱讀)',
         competency: 'B2 科技資訊與媒體素養、C3 多元文化與國際理解',
         learningPerformance: '閱讀真實生活文本（如時刻表、海報、菜單、通訊記錄、地圖）；綜合擷取關鍵事實並進行合理推論文意。',
-        learningContent: 'Ad-Ⅳ-1 生活實用文本；Ad-Ⅳ-2 圖表、圖示與數據轉譯；篇章主旨與細節事實交叉驗證。',
+        learningContent: 'Ac-Ⅳ-1 簡易的英文標示。；Ae-Ⅳ-2 常見的圖表。；Ae-Ⅳ-4 簡易賀卡、書信、電子郵件。；Ae-Ⅳ-8 簡易故事及短文的大意。；D-Ⅳ-1 依綜合資訊作合理猜測。',
         guideline: '心測中心 109–115 會考多模態題組命題規範：星號附註條件、雙文本資訊比對、排比圖表題之排除干擾選項原則。',
         concepts: [
           {
@@ -242,12 +242,12 @@ export const curriculum = [
         num: '06',
         title: '聽力辨識與語音線索',
         subtitle: '連音・弱化・語音轉折與關鍵數字聽辨',
-        curriculumCode: '1-Ⅳ-1 / 1-Ⅳ-2 / 1-Ⅳ-3 / Ab-Ⅳ-1',
+        curriculumCode: '1-Ⅳ-4 / 1-Ⅳ-7 / 1-Ⅳ-9 / 1-Ⅳ-11 / 2-Ⅳ-8 / Ab-Ⅳ-1 / Ae-Ⅳ-3',
         stage: '第四學習階段 (國中 7–9 年級)',
         cefr: 'A2 (聽力評量精熟)',
         competency: 'B1 符號運用與溝通表達、A1 身心素質與自我精進',
         learningPerformance: '聽辨英語母語者弱化音、連音（Connected Speech）、同化與省音；辨識對話語氣、重音位置與時間數字資訊。',
-        learningContent: 'Ab-Ⅳ-1 常用音標發音規則；語音弱化（schwa /ə/）；言談重音與語調所傳達之情感與隱含態度。',
+        learningContent: 'Ab-Ⅳ-1 句子的發音、重音及語調。；Ae-Ⅳ-3 公共場所廣播（如捷運、車站、機場廣播）。',
         guideline: '國中教育會考英語聽力測驗三大題型（辨識句意、基本問答、言談理解）命題準則；常見數字陷阱（-teen vs -ty）與轉折詞聽辨規準。',
         concepts: [
           {
@@ -288,12 +288,12 @@ export const curriculum = [
         num: '07',
         title: '會考英語整合與訂正策略',
         subtitle: '題型總複習・錯題歸因分析・跨日提取策略',
-        curriculumCode: '3-Ⅳ-2 / 5-Ⅳ-1 / 5-Ⅳ-2 / Ac-Ⅳ-1',
+        curriculumCode: '3-Ⅳ-12 / 5-Ⅳ-2 / 6-Ⅳ-2 / 7-Ⅳ-5 / 9-Ⅳ-1 / Ac-Ⅳ-4 / Ad-Ⅳ-1 / D-Ⅳ-1',
         stage: '第四學習階段 (國中 7–9 年級會考總複習)',
         cefr: 'A2+ (國中會考 A++ 標竿)',
         competency: 'A2 系統思考與解決問題、A3 規劃執行與創新應變',
         learningPerformance: '建立全方位錯題歸因 X 光機診斷機制；掌握考場 42 項避雷法則與篇章克漏字雙向定錨策略。',
-        learningContent: '國中 1200 核心詞彙與高頻片語總盤點；全考科時態句型陷阱雷達；間隔重複與大考考前衝刺檢核清單。',
+        learningContent: 'Ac-Ⅳ-4 國中階段所學字詞（能聽、讀、說、寫最基本的 1,200 字詞）。；Ad-Ⅳ-1 國中階段所學的文法句型。；D-Ⅳ-1 依綜合資訊作合理猜測。',
         guideline: '教育部會考英語科答對題數與精熟門檻（A++、A+、A）換算標準；考前 10 分鐘必備避雷指南與時間分配配速標準。',
         concepts: [
           {
@@ -342,12 +342,12 @@ export const curriculum = [
         num: '01',
         title: '高中句法與長難句拆解',
         subtitle: '分詞構句・關係子句・倒裝與假設語氣',
-        curriculumCode: '3-Ⅴ-2 / 4-Ⅴ-1 / Ac-Ⅴ-1',
+        curriculumCode: '3-Ⅴ-5 / 3-Ⅴ-12 / 4-Ⅴ-4 / Ad-Ⅴ-1',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B1+ (高中學測前標)',
         competency: 'A2 系統思考與解決問題、B1 符號運用與溝通表達',
         learningPerformance: '解構長難句之核心骨架；熟練分詞構句、關係代名詞子句、讓步倒裝句與分裂強調句之語意轉換與書寫。',
-        learningContent: 'Ac-Ⅴ-1 進階句法結構；分詞構句（主動V-ing/被動p.p.）；與現在/過去事實相反之假設語氣；省略if之倒裝句型。',
+        learningContent: 'Ad-Ⅴ-1 高中階段所學的結構。',
         guideline: '大考中心學測英文科長句分析能力規準；中譯英非選大題主從句結構對稱性與動詞時態一致性評分規準。',
         concepts: [
           {
@@ -388,12 +388,12 @@ export const curriculum = [
         num: '02',
         title: '篇章結構與四空五選策略',
         subtitle: '語意鉤子・代名詞指涉・115 新制干擾選項排除',
-        curriculumCode: '3-Ⅴ-1 / 3-Ⅴ-2 / Ab-Ⅴ-2',
+        curriculumCode: '3-Ⅴ-7 / 3-Ⅴ-12 / 7-Ⅴ-5 / 9-Ⅴ-2 / Ae-Ⅴ-9 / B-Ⅴ-8 / D-Ⅴ-2',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B2 (高中學測頂標)',
         competency: 'A2 系統思考與解決問題、B1 符號運用與溝通表達',
         learningPerformance: '分析論說文篇章銜接機制（Cohesive Devices）；掌握代名詞前指/後指、時空順序、反差轉折與因果鏈條。',
-        learningContent: 'Ab-Ⅴ-2 篇章組織標記；段落主題句（Topic Sentence）與支持句邏輯扣連；干擾選項之同義代換破綻。',
+        learningContent: 'Ae-Ⅴ-9 不同體裁、不同主題之文章。；B-Ⅴ-8 短文、書信的內容及文本結構。；D-Ⅴ-2 兩個訊息關係的釐清。',
         guideline: '111–115 新型學測「篇章結構（四空五選 / 五空五選）」雙向細目表；段落前後上下文句法語意雙向定錨解題規範。',
         concepts: [
           {
@@ -434,12 +434,12 @@ export const curriculum = [
         num: '03',
         title: '學術長篇閱讀與雙文比較',
         subtitle: '科普社科篇章・作者語氣推論・跨文本觀點整合',
-        curriculumCode: '3-Ⅴ-3 / 3-Ⅴ-4 / Ae-Ⅴ-1',
+        curriculumCode: '3-Ⅴ-11 / 3-Ⅴ-13 / 3-Ⅴ-15 / 7-Ⅴ-6 / 9-Ⅴ-4 / Ae-Ⅴ-9 / C-Ⅴ-4 / D-Ⅴ-4',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B2 (學術跨域閱讀)',
         competency: 'B2 科技資訊與媒體素養、C3 多元文化與國際理解',
         learningPerformance: '深度閱讀科技、人文、生態科普學術長篇文本；比對雙文本之共同論述焦點與互斥觀點，推論作者潛在語氣立場。',
-        learningContent: 'Ae-Ⅴ-1 當代全球議題；人工智慧演算法、循環經濟ESG、生物多樣性；雙文本觀點比較與表格轉譯。',
+        learningContent: 'Ae-Ⅴ-9 不同體裁、不同主題之文章。；C-Ⅴ-4 國際議題（如全球暖化、人工智慧、氣候變遷等）。；D-Ⅴ-4 多項訊息共通點或結論的分析及歸納。',
         guideline: '大考中心學測混合題型（選擇+非選擇）命題指引：手寫摘錄關鍵詞、字數嚴格限制、圖表轉譯評分標準。',
         concepts: [
           {
@@ -480,12 +480,12 @@ export const curriculum = [
         num: '04',
         title: '高中核心詞彙與精確搭配詞',
         subtitle: '7000 詞字根構詞・語域辨義・核心搭配語塊',
-        curriculumCode: '3-Ⅴ-1 / 4-Ⅴ-1 / Ab-Ⅴ-1',
+        curriculumCode: '3-Ⅴ-1 / 3-Ⅴ-12 / 4-Ⅴ-1 / 7-Ⅴ-2 / Ac-Ⅴ-3 / Ae-Ⅴ-8',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B1 ~ B2 (7000詞彙精熟)',
         competency: 'A1 身心素質與自我精進、B1 符號運用與溝通表達',
         learningPerformance: '活用高中 7000 核心詞彙之字首、字根、字尾構詞衍生規律；精準掌握正式語域（Formal Register）與道地固定搭配詞（Collocations）。',
-        learningContent: 'Ab-Ⅴ-1 高階學術詞彙；動詞+名詞搭配（e.g. conduct research, reach consensus）；介系詞慣用搭配；文意選填四色詞性定位。',
+        learningContent: 'Ac-Ⅴ-3 高中階段所學字詞（字頻最高的 4,500 字詞）。；Ae-Ⅴ-8 工具書（如百科全書）或其他線上資源。',
         guideline: '學測第一大題詞彙題（1–10 題）語境搭配命題規準；文意選填十大詞性標記（動詞時態、名詞單複數、形容詞/副詞）排除法。',
         concepts: [
           {
@@ -526,12 +526,12 @@ export const curriculum = [
         num: '05',
         title: '中譯英與句子產出邏輯',
         subtitle: '無主句轉化・形合意合・大考高分翻譯句型',
-        curriculumCode: '4-Ⅴ-1 / 4-Ⅴ-2 / Ac-Ⅴ-1',
+        curriculumCode: '4-Ⅴ-4 / 4-Ⅴ-5 / 4-Ⅴ-7 / Ad-Ⅴ-1 / Ac-Ⅴ-3',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B1+ (精準中譯英)',
         competency: 'B1 符號運用與溝通表達、A2 系統思考與解決問題',
         learningPerformance: '擺脫中式英文（Chinglish）思維干擾；掌握無主句英譯轉化、及物不及物動詞用法與主被動句構轉換。',
-        learningContent: 'Ac-Ⅴ-1 漢英語法結構對比；「虛主詞 It / There be」轉化；因果副詞子句與倒裝加強語氣句構。',
+        learningContent: 'Ad-Ⅴ-1 高中階段所學的結構。；Ac-Ⅴ-3 高中階段所學字詞（字頻最高的 4,500 字詞）。',
         guideline: '大考中心學測非選擇題中譯英 8 分官方評分規準：兩小題各 4 分，結構 2 分、拼寫字彙搭配 2 分；扣分細則嚴格對標。',
         concepts: [
           {
@@ -572,12 +572,12 @@ export const curriculum = [
         num: '06',
         title: '英文寫作與思維論證',
         subtitle: '圖表說明文・看圖敘事・論說文主張—理由—例證架構',
-        curriculumCode: '4-Ⅴ-1 / 4-Ⅴ-3 / 5-Ⅴ-1',
+        curriculumCode: '4-Ⅴ-6 / 4-Ⅴ-8 / 9-Ⅴ-3 / 9-Ⅴ-7 / B-Ⅴ-9 / D-Ⅴ-3 / D-Ⅴ-7',
         stage: '第五學習階段 (高中 10–12 年級)',
         cefr: 'B2 (論述與寫作頂標)',
         competency: 'A3 規劃執行與創新應變、B1 符號運用與溝通表達',
         learningPerformance: '撰寫 120–150 字結構完整之論說文或看圖敘事文；清晰鋪陳主張（Claim）、理由（Reason）與例證（Evidence）。',
-        learningContent: '篇章寫作四要素：內容（Content）、組織（Organization）、文法句構（Grammar）、字彙拼字（Vocabulary/Mechanics）。',
+        learningContent: 'B-Ⅴ-9 有情節發展及細節描述的故事或個人經驗。；D-Ⅴ-3 藉文字線索，對客觀事實及主觀意見的分辨。；D-Ⅴ-7 不同資訊的評估，及合理判斷或建議的提供。',
         guideline: '大考中心學測英文作文 20 分四項度評分規準（每項 5 分）；高分模板破題句與結論句呼應原則。',
         concepts: [
           {
@@ -618,12 +618,12 @@ export const curriculum = [
         num: '07',
         title: '學測與統測整卷衝刺',
         subtitle: '100 分鐘全真作答節奏・混合題手寫・歷屆陷阱掃描',
-        curriculumCode: '3-Ⅴ-2 / 4-Ⅴ-1 / 5-Ⅴ-2',
+        curriculumCode: '3-Ⅴ-13 / 5-Ⅴ-4 / 7-Ⅴ-8 / 7-Ⅴ-9 / Ac-Ⅴ-3 / Ad-Ⅴ-1 / Ae-Ⅴ-2 / Ae-Ⅴ-9',
         stage: '第五學習階段 (高中學測統測大考衝刺)',
         cefr: 'B2 (學測 15 級分滿級分)',
         competency: 'A3 規劃執行與創新應變、A2 系統思考與解決問題',
         learningPerformance: '精確落實學測 100 分鐘全真作答時間配速；整合選擇題、混合題手寫與非選作文之雙向檢查策略。',
-        learningContent: '109–115 歷屆學測命題趨勢分析；易錯誘答肢排除法則；考場應試心態與答題卡劃記管理。',
+        learningContent: 'Ac-Ⅴ-3 高中階段所學字詞（字頻最高的 4,500 字詞）。；Ad-Ⅴ-1 高中階段所學的結構。；Ae-Ⅴ-2 常見的圖表。；Ae-Ⅴ-9 不同體裁、不同主題之文章。',
         guideline: '學測各級分累計百分比與非選閱卷規準；大考中心手寫卷卷面書寫規範與防倒扣答題策略。',
         concepts: [
           {
@@ -672,12 +672,12 @@ export const curriculum = [
         num: '01',
         title: '工場安全與指令',
         subtitle: 'PPE 個人防護裝備・安全等級標示・緊急疏散指引',
-        curriculumCode: '1-Ⅴ-2 / 2-Ⅴ-2 / Ac-Ⅴ-2 (技高外語群)',
+        curriculumCode: '1-V-11 / 2-V-5 / 3-V-2 / 3-V-11 / Ac-V-1 / Ac-V-4 / B-V-4',
         stage: '第五學習階段 (技術型高中 10–12 年級)',
         cefr: 'B1 (技高職場安全)',
         competency: 'A3 規劃執行與創新應變、B1 符號運用與溝通表達',
         learningPerformance: '掌握工廠與施工現場個人防護裝備（PPE）、安全警語（Caution/Danger/Warning）與緊急疏散指令之精準英語。',
-        learningContent: '技高專業英語 ESP；OSHA 與 ISO 45001 安全標誌；安全操作 SOP 祈使句與禁止用語。',
+        learningContent: 'Ac-V-1 常見的英文標示。；Ac-V-4 職場常用詞語。；B-V-4 技術型高級中等學校階段所學字詞及句型的職場溝通。',
         guideline: '技專校院入學測驗中心（TVE）四技二專統測外語群專業科目職場實務英語命題規準。',
         concepts: [
           {
@@ -718,12 +718,12 @@ export const curriculum = [
         num: '02',
         title: '工具、材料與尺寸規格',
         subtitle: '精密量具・金屬特性・公差標註與工程單位換算',
-        curriculumCode: '3-Ⅴ-2 / 4-Ⅴ-2 / Ab-Ⅴ-2',
+        curriculumCode: '1-V-11 / 3-V-11 / 5-V-12 / Ac-V-4 / Ae-V-7',
         stage: '第五學習階段 (技術型高中 10–12 年級)',
         cefr: 'B1 (工程工具與材料)',
         competency: 'B1 符號運用與溝通表達、A2 系統思考與解決問題',
         learningPerformance: '辨識工程精密量具（Caliper, Micrometer）、材料物性（Tensile strength, Corrosion resistance）與公差尺寸規格。',
-        learningContent: '英制與公制工程單位換算；材料物理特性詞彙；技術規格說明書參數表格讀取。',
+        learningContent: 'Ac-V-4 職場常用詞語。；Ae-V-7 職場常用之圖表與使用手冊。',
         guideline: '統測專業英文（二）工具材料題型；技術圖例與量測尺寸對照命題標準。',
         concepts: [
           {
@@ -764,12 +764,12 @@ export const curriculum = [
         num: '03',
         title: '流程與故障排除',
         subtitle: 'SOP 祈使句・順序副詞・故障診斷流程圖',
-        curriculumCode: '3-Ⅴ-2 / 4-Ⅴ-2 / Ac-Ⅴ-2',
+        curriculumCode: '2-V-3 / 3-V-11 / 5-V-14 / 9-V-5 / Ae-V-7 / B-V-2 / D-V-5',
         stage: '第五學習階段 (技術型高中 10–12 年級)',
         cefr: 'B1+ (流程與故障排除)',
         competency: 'A2 系統思考與解決問題、B2 科技資訊與媒體素養',
         learningPerformance: '依據流程圖（Flowchart）閱讀步驟說明；使用順序副詞與條件句撰寫設備故障排除指引（Troubleshooting Guide）。',
-        learningContent: '順序連接詞（First, Next, Subsequently, Finally）；故障診斷條件句（If error code persists, then...）；被動語態操作說明。',
+        learningContent: 'Ae-V-7 職場常用之圖表與使用手冊。；B-V-2 生活與職場中的主題式或情境式的簡短描述或問題簡答。；D-V-5 原則的類推、問題解決之道。',
         guideline: '四技二專統測外語群專業英文流程圖與操作步驟轉譯試題規準。',
         concepts: [
           {
@@ -810,12 +810,12 @@ export const curriculum = [
         num: '04',
         title: '技術圖表與說明書',
         subtitle: '工程圖解・配線圖・爆炸圖・參數規格表精讀',
-        curriculumCode: '3-Ⅴ-4 / 4-Ⅴ-2 / Ad-Ⅴ-1',
+        curriculumCode: '3-V-3 / 3-V-10 / 3-V-11 / 5-V-12 / Ae-V-2 / Ae-V-7',
         stage: '第五學習階段 (技術型高中 10–12 年級)',
         cefr: 'B1+ (技術圖表判讀)',
         competency: 'B2 科技資訊與媒體素養、A2 系統思考與解決問題',
         learningPerformance: '精讀配線圖（Wiring diagram）、爆炸圖（Exploded view）、機械藍圖與工程參數數據表。',
-        learningContent: '空間方位詞；零件編號標註法；技術說明書中縮寫（OEM, CAD, CNC, PCB）與圖文互譯。',
+        learningContent: 'Ae-V-2 常見的圖表。；Ae-V-7 職場常用之圖表與使用手冊。',
         guideline: '統測專業科目（二）閱讀測驗工程圖表題型；多模態技術文本訊息比對規範。',
         concepts: [
           {
@@ -856,12 +856,12 @@ export const curriculum = [
         num: '05',
         title: '職場溝通與技術電子郵件',
         subtitle: '商務書信結構・RFQ 詢價採購・客訴處理與交期催告',
-        curriculumCode: '4-Ⅴ-2 / 2-Ⅴ-2 / Ac-Ⅴ-2',
+        curriculumCode: '2-V-2 / 4-V-4 / 5-V-11 / 7-V-7 / Ae-V-4 / B-V-4 / B-V-12',
         stage: '第五學習階段 (技術型高中 10–12 年級)',
         cefr: 'B2 (國際職場商務電郵)',
         competency: 'B1 符號運用與溝通表達、C2 人際關係與團隊合作',
         learningPerformance: '撰寫標準國際商務與技術電子郵件；熟練詢價（RFQ）、交期催告、技術支援與客戶爭議協商之正式書信。',
-        learningContent: '電郵標準七結構；委婉禮貌語氣（I would appreciate if...）；專業商業術語與交貨條款（Incoterms）。',
+        learningContent: 'Ae-V-4 卡片、便條、書信、電子郵件。；B-V-4 技術型高級中等學校階段所學字詞及句型的職場溝通。；B-V-12 語言與非語言的溝通策略（如請求重述、手勢、表情等）。',
         guideline: '統測英文寫作大題：商務書信與技術便條寫作評分規準。',
         concepts: [
           {
@@ -902,12 +902,12 @@ export const curriculum = [
         num: '06',
         title: '統測英語類專業科目 (二) 讀寫',
         subtitle: '外語群專業英文・科技商業閱讀・摘要與寫作解題攻略',
-        curriculumCode: '3-Ⅴ-2 / 4-Ⅴ-3 / 5-Ⅴ-2',
+        curriculumCode: '3-V-6 / 3-V-9 / 4-V-2 / 4-V-3 / 5-V-10 / Ad-V-1 / Ae-V-9 / B-V-11',
         stage: '第五學習階段 (技術型高中 10–12 年級統測衝刺)',
         cefr: 'B2 (統測專二頂標)',
         competency: 'A3 規劃執行與創新應變、A2 系統思考與解決問題',
         learningPerformance: '全面掌握統測英語類專業科目（二）閱讀與寫作兩大題型；熟練 50 字精準摘要技巧與專業長篇閱讀解題。',
-        learningContent: '科技與商業跨領域閱讀；篇章主旨概括法；論說段落寫作與統測歷屆試題關鍵字定位法。',
+        learningContent: 'Ad-V-1 技術型高級中等學校階段所學的句型結構。；Ae-V-9 短篇故事的內容與情節。；B-V-11 簡易短文或故事的主旨或大意。',
         guideline: '技測中心統測外語群專業科目（二）非選題官方評分規準（摘要內容度、文法句型、詞彙精確度）。',
         concepts: [
           {
@@ -948,12 +948,12 @@ export const curriculum = [
         num: '07',
         title: '跨國技術現場實務整合',
         subtitle: 'ISO 國際認證標準・跨國視訊會議・專案驗收與保固協議',
-        curriculumCode: '2-Ⅴ-2 / 4-Ⅴ-2 / C3 (全球技職素養)',
+        curriculumCode: '2-V-3 / 5-V-14 / 8-V-4 / 8-V-7 / B-V-13 / C-V-2 / C-V-6',
         stage: '第五學習階段 (技術型高中與全球就業銜接)',
         cefr: 'B2 (跨國工程現場實務)',
         competency: 'C3 多元文化與國際理解、C2 人際關係與團隊合作',
         learningPerformance: '參與跨國技術會議與遠距視訊溝通；掌握 ISO 驗收文件、工程合約條款與保固協議之關鍵法律與技術英語。',
-        learningContent: '國際標準化用語；跨國視訊會議議事規則與發言用語；專案里程碑驗收與維護合約。',
+        learningContent: 'B-V-13 符合情境或場景的自我表達與人際溝通。；C-V-2 國際社會的基本生活禮儀。；C-V-6 文化知識與語言能力、生活與職場中的問題解決之道。',
         guideline: '國際工程師與技術人才全球溝通指引；跨國專案驗收報告書寫標準。',
         concepts: [
           {
@@ -1002,12 +1002,12 @@ export const curriculum = [
         num: '01',
         title: '全民英檢 GEPT 全級別實戰',
         subtitle: '初級至優級對標・四技能評量規準・短文翻譯與申論答辯',
-        curriculumCode: 'CEFR 全階對照認證 (A2–C2)',
+        curriculumCode: '1-Ⅴ-4 / 2-Ⅴ-3 / 3-Ⅴ-11 / 4-Ⅴ-8 / 7-Ⅴ-9 / Ae-Ⅴ-9 / B-Ⅴ-7',
         stage: '終生學習與國際認證',
         cefr: 'A2 ~ C2 (初級、中級、中高級、高級、優級全階)',
         competency: 'B1 符號運用、A1 自我精進、C3 國際理解',
         learningPerformance: '完整掌握全民英檢五大級別之聽、說、讀、寫評量規準；初級至中高級各階段寫作與口說評分量表解構。',
-        learningContent: 'LTTC 全民英檢各級詞彙量（初級2260字、中級5000字、中高級8000字）；短文翻譯、段落寫作與口試回答技巧。',
+        learningContent: 'Ae-Ⅴ-9 不同體裁、不同主題之文章。；B-Ⅴ-7 符合情境或場景的自我表達與人際溝通。',
         guideline: '財團法人語言訓練測驗中心（LTTC）全民英檢各級能力指標與通過門檻規準。',
         concepts: [
           {
@@ -1048,12 +1048,12 @@ export const curriculum = [
         num: '02',
         title: 'TOEIC 多益國際商務測驗',
         subtitle: 'L&R 聽讀 990 滿分配速・Part 1–7 各大題秒殺破綻・商務情境',
-        curriculumCode: 'CEFR B1–C1 (商務英語指標)',
+        curriculumCode: '1-Ⅴ-8 / 3-Ⅴ-3 / 3-Ⅴ-7 / 5-Ⅴ-11 / Ae-Ⅴ-2 / Ae-Ⅴ-3 / Ae-Ⅴ-4',
         stage: '國際職場與商務溝通',
         cefr: 'B1 ~ C1 (TOEIC 550–990 金色證書)',
         competency: 'B1 符號運用、C2 團隊合作、A3 規劃執行',
         learningPerformance: '掌握 TOEIC 聽力與閱讀 200 題 120 分鐘極限配速；迅速辨識 Part 5 詞性填空、Part 6 篇章結構與 Part 7 跨篇閱讀破題點。',
-        learningContent: 'ETS 國際商務十三大情境；商業採購、物流運輸、人事招聘、財務報表與商務差旅高頻語料。',
+        learningContent: 'Ae-Ⅴ-2 常見的圖表。；Ae-Ⅴ-3 公共場所廣播（如捷運、車站、機場廣播）。；Ae-Ⅴ-4 賀卡、便條、書信、電子郵件、邀請卡。',
         guideline: 'ETS TOEIC Listening & Reading 官方分數對照表與 scaled score 轉換標準。',
         concepts: [
           {
@@ -1109,12 +1109,12 @@ export const curriculum = [
         num: '03',
         title: 'Digital SAT Reading and Writing',
         subtitle: '雙模組適性 (MST) 演算法・Craft & Structure・長難句修辭',
-        curriculumCode: 'CEFR B2–C1 (美加名校入學學術測驗)',
+        curriculumCode: '3-Ⅴ-12 / 3-Ⅴ-15 / 4-Ⅴ-4 / 9-Ⅴ-2 / Ad-Ⅴ-1 / Ae-Ⅴ-9 / D-Ⅴ-2',
         stage: '海外留學與高等學術英語',
         cefr: 'B2 ~ C1 (Digital SAT 1200–1600)',
         competency: 'A2 系統思考、B1 符號運用、B2 資訊素養',
         learningPerformance: '駕馭 Digital SAT 雙模組多階段適性測驗（MST）演算法；精通 Craft & Structure, Information & Ideas, Standard English, Rhetorical Synthesis 四大領域。',
-        learningContent: '學術跨領域極短篇精讀；高難度句子修辭與修飾語錯置（Dangling Modifiers）；圖表數據因果反差推理。',
+        learningContent: 'Ad-Ⅴ-1 高中階段所學的結構。；Ae-Ⅴ-9 不同體裁、不同主題之文章。；D-Ⅴ-2 兩個訊息關係的釐清。',
         guideline: 'College Board Digital SAT 官方評量標準與難度適性跳轉門檻規範。',
         concepts: [
           {
@@ -1170,12 +1170,12 @@ export const curriculum = [
         num: '04',
         title: 'GRE General Exam 語意與論證',
         subtitle: 'Verbal 130–170 雙空三空邏輯反差・Sentence Equivalence・Issue 立論',
-        curriculumCode: 'CEFR C1–C2 (研究所入學學術批判)',
+        curriculumCode: '3-Ⅴ-12 / 3-Ⅴ-15 / 6-Ⅴ-9 / 9-Ⅴ-7 / Ac-Ⅴ-3 / D-Ⅴ-7',
         stage: '研究所入學與學術深造',
         cefr: 'C1 ~ C2 (GRE Verbal 155–170)',
         competency: 'A2 系統思考、5-Ⅴ-1 邏輯批判思維',
         learningPerformance: '掌握 Text Completion 單/雙/三空與 Sentence Equivalence 雙生同義詞邏輯轉折；解構學術長篇密集論證與反直覺觀點。',
-        learningContent: 'GRE 高階難詞與同義語族；語意反差標記（Contrast clues）；Issue 立論分析與反駁架構。',
+        learningContent: 'Ac-Ⅴ-3 高中階段所學字詞（字頻最高的 4,500 字詞）。；D-Ⅴ-7 不同資訊的評估，及合理判斷或建議的提供。',
         guideline: 'ETS GRE General Test Verbal Reasoning 官方評量標準與雙向細目。',
         concepts: [
           {
@@ -1226,12 +1226,12 @@ export const curriculum = [
         num: '05',
         title: 'GMAT 批判推理與商業長文',
         subtitle: 'Critical Reasoning 五大模型・Data Insights 語言理解・商學院決策',
-        curriculumCode: 'CEFR C1–C2 (全球頂尖商學院入學)',
+        curriculumCode: '3-Ⅴ-3 / 9-Ⅴ-4 / 9-Ⅴ-6 / 9-Ⅴ-7 / Ae-Ⅴ-2 / D-Ⅴ-4 / D-Ⅴ-6 / D-Ⅴ-7',
         stage: '全球商學院 MBA/MS 入學',
         cefr: 'C1 ~ C2 (GMAT Focus Edition)',
         competency: 'A2 系統思考、B1 符號運用、商業決策',
         learningPerformance: '精準操作批判推理（Critical Reasoning）五大核心題型：Weaken, Strengthen, Assumption（否定測試法）, Evaluate, Boldface 角色判定。',
-        learningContent: '形式邏輯因果論證；充分必要條件；商業經濟長篇密集閱讀與 Data Insights 語文綜合判讀。',
+        learningContent: 'Ae-Ⅴ-2 常見的圖表。；D-Ⅴ-4 多項訊息共通點或結論的分析及歸納。；D-Ⅴ-6 依於訊息的整合，對情勢發展的預測。；D-Ⅴ-7 不同資訊的評估，及合理判斷或建議的提供。',
         guideline: 'GMAC GMAT Focus Edition Verbal 官方評分規準與非邏輯干擾選項排除法。',
         concepts: [
           {
@@ -1287,12 +1287,12 @@ export const curriculum = [
         num: '06',
         title: 'TOEFL iBT 2026 新制四技能',
         subtitle: '2026 新制 1–6 量尺・學術在線討論寫作・聽後複誦與訪談',
-        curriculumCode: 'CEFR B2–C1+ (海外學術英語能力)',
+        curriculumCode: '1-Ⅴ-10 / 2-Ⅴ-10 / 4-Ⅴ-8 / 5-Ⅴ-12 / Ae-Ⅴ-9 / B-Ⅴ-13',
         stage: '海外大學與研究所學術溝通',
         cefr: 'B2 ~ C1+ (TOEFL iBT 2026 新制 90–120分)',
         competency: 'B1 符號溝通、B2 科技資訊、C3 多元文化',
         learningPerformance: '掌握 2026 TOEFL iBT 新制四技能：學術討論在線寫作（Writing for an Academic Discussion）、聽講速記與即席口說答辯。',
-        learningContent: '北美大學學術講座聽力；校園日常生活情境對話；學術閱讀長句簡化與觀點整合。',
+        learningContent: 'Ae-Ⅴ-9 不同體裁、不同主題之文章。；B-Ⅴ-13 談話或短文的摘要。',
         guideline: 'ETS TOEFL iBT 官方四技能評分量表（Rubrics）與 CEFR B2/C1 等級對照規準。',
         concepts: [
           {

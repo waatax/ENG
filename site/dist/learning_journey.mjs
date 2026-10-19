@@ -2,7 +2,8 @@
 import { learningCatalog, domains } from './learning_catalog.mjs';
 import { points as core } from './knowledge_content.mjs';
 import { foundations } from './knowledge_foundations.mjs';
-export const journeyCatalog = learningCatalog([...foundations.slice(0,2), ...core, foundations[2]]);
+import { standardsPoints } from './knowledge_standards.mjs';
+export const journeyCatalog = learningCatalog([...foundations.slice(0,2), ...core, foundations[2], ...standardsPoints]);
 const KEY = 'english-quest-journey-v1';
 const DAY = 86400000;
 export function createJourney(storage, now = () => Date.now()) {

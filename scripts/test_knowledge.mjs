@@ -4,8 +4,8 @@ import {readFileSync} from 'node:fs';
 globalThis.localStorage={getItem(){return null;},setItem(){}};
 const {learningCatalog,filterCatalog}=await import('../dist/learning_catalog.mjs');
 const {points,knowledgePage,knowledgeResults,answerKnowledge}=await import('../dist/knowledge.mjs');
-test('Nine lessons render complete content and eighteen valid questions',()=>{
- assert.equal(points.length,9);assert.equal(new Set(points.map(p=>p.id )).size,9);
+test('Twenty-eight lessons render complete content and fifty-six valid questions',()=>{
+ assert.equal(points.length,28);assert.equal(new Set(points.map(p=>p.id )).size,28);
  for(const p of points){const html=knowledgePage(p.id);assert.ok(html.includes(p.title));assert.ok(html.includes(p.rule));assert.ok(html.includes(p.model));assert.equal(p.questions.length,2);for(const q of p.questions){assert.ok(Number.isInteger(q[2])&&q[2]>=0&&q[2]<q[1].length);assert.ok(q[3].trim().length>0);}}
  assert.match(knowledgePage('missing'),/找不到/);
 });

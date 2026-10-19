@@ -1,3 +1,5 @@
+import { renderElementaryVisual } from './elementary_visuals.mjs';
+import { renderStandardsVisual } from './standards_visuals.mjs';
 // lesson_visuals.mjs - 英語知識點教學視覺化圖表與自然拼讀/閃卡鷹架模組
 // 依據教育部 108 課綱與國際 ESL 教學標準，提供豐富的 SVG 語法時態時間軸、主被動結構圖、五大句型柱、條件句決策樹、高工工程規格圖與邏輯論證地圖
 
@@ -1670,6 +1672,8 @@ export function renderPronounsMatrixDiagram() {
 // 智能匹配主題最佳視覺圖表
 export function renderTopicVisualChart(title = '') {
   const t = String(title ?? '');
+  const elementary = renderElementaryVisual(t) || renderStandardsVisual(t);
+  if (elementary) return elementary;
   if (/toeic\b|多益|商務測驗/i.test(t)) return renderTOEICQuestionTypeStrategyMap();
   if (/sat\b|digital sat|學術英語/i.test(t)) return renderSATConstructBlueprint();
   if (/gre\b|gre general|語意與論證/i.test(t)) return renderGRESemanticPolarityChart();

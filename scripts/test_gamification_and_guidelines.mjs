@@ -55,6 +55,7 @@ const {
 } = await import('../dist/duolingo_game.mjs');
 const { getAllCurriculumMaterials, renderCurriculumMatrixView } = await import('../dist/curriculum_matrix.mjs');
 const { teachingChapter, microLesson } = await import('../dist/lesson_pages.mjs');
+const { ALIGNMENT } = await import('../dist/curriculum_alignment.mjs');
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 測試群組 1：Duolingo 遊戲學習嚴格限定第一章 (Scope Guard)
@@ -80,7 +81,8 @@ test('Chapter J1 teaching page renders Duolingo Game banner & alignment box, whi
   assert.ok(htmlJ1.includes('DUOLINGO 互動遊戲學習旗艦體驗'), 'J1 must include Duolingo banner');
   assert.ok(htmlJ1.includes('多鄰國闖關模式'), 'J1 must include Duolingo quest mode');
   assert.ok(htmlJ1.includes('lesson-alignment-box'), 'J1 must include alignment box');
-  assert.ok(htmlJ1.includes('1-Ⅳ-4 / 2-Ⅳ-2 / 3-Ⅳ-2 / 4-Ⅳ-1 / Ac-Ⅳ-1'), 'J1 must show 108 curriculum code');
+  for (const code of [...ALIGNMENT['chapter:jhs:j1'].perf, ...ALIGNMENT['chapter:jhs:j1'].content]) assert.ok(htmlJ1.includes(code), `J1 must show official code ${code}`);
+  assert.ok(htmlJ1.includes('108 課綱對應') && htmlJ1.includes('能聽懂基本或重要句型的句子。'), 'J1 must quote official curriculum wording');
   assert.ok(htmlJ1.includes('A2 (初級精熟 · 國中會考滿分基礎)'), 'J1 must show CEFR level');
 
   // 測試 J2 至其他章節，確認絕無 Duolingo 遊戲橫幅干擾
@@ -88,11 +90,11 @@ test('Chapter J1 teaching page renders Duolingo Game banner & alignment box, whi
   assert.ok(!htmlJ2.includes('DUOLINGO 互動遊戲學習旗艦體驗'), 'J2 must NOT include Duolingo');
   assert.ok(!htmlJ2.includes('多鄰國闖關模式'), 'J2 must NOT include Duolingo');
   assert.ok(htmlJ2.includes('lesson-alignment-box'), 'J2 must still include official alignment box');
-  assert.ok(htmlJ2.includes('3-Ⅳ-2 / 4-Ⅳ-1 / Ac-Ⅳ-2'), 'J2 must show 108 curriculum code');
+  for (const code of ALIGNMENT['chapter:jhs:j2'].content) assert.ok(htmlJ2.includes(code), `J2 must show official code ${code}`);
 
   const htmlS1 = teachingChapter('sh:s1');
   assert.ok(!htmlS1.includes('DUOLINGO 互動遊戲學習旗艦體驗'), 'S1 must NOT include Duolingo');
-  assert.ok(htmlS1.includes('3-Ⅴ-2 / 4-Ⅴ-1 / Ac-Ⅴ-1'), 'S1 must show 108 curriculum code');
+  for (const code of ALIGNMENT['chapter:sh:s1'].perf) assert.ok(htmlS1.includes(code), `S1 must show official code ${code}`);
   assert.ok(htmlS1.includes('B1+ (高中學測前標)'), 'S1 must show CEFR level');
 });
 
@@ -178,9 +180,9 @@ test('Duolingo Game State & Mechanics: Audio, Hearts, Word Bank, Match, Listen, 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 測試群組 3：教材課綱指標與 CEFR 指引完整性 (Curriculum Guidelines)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-test('All 61 units across G6 to G12 have valid 108 indicators, stage, CEFR and guidelines', () => {
+test('All 79 units across G3 to G12 have valid 108 indicators, stage, CEFR and guidelines', () => {
   const allUnits = UNIFIED_GRADES.flatMap(g => g.semesters.flatMap(s => s.units));
-  assert.equal(allUnits.length, 61);
+  assert.equal(allUnits.length, 79);
 
   for (const u of allUnits) {
     assert.ok(u.id, `Unit missing id: ${JSON.stringify(u)}`);
@@ -193,8 +195,11 @@ test('All 61 units across G6 to G12 have valid 108 indicators, stage, CEFR and g
 
     // microLesson 渲染檢查
     const html = microLesson(u.id);
-    assert.ok(html.includes(`課綱: ${u.indicator}`), `microLesson ${u.id} must display indicator`);
-    assert.ok(html.includes(`CEFR: ${u.cefr}`), `microLesson ${u.id} must display CEFR`);
+    for (const code of [...ALIGNMENT['unit:' + u.id].perf, ...ALIGNMENT['unit:' + u.id].content]) {
+      assert.ok(u.indicator.includes(code), `Unit ${u.id} indicator must list ${code}`);
+      assert.ok(html.includes(code), `microLesson ${u.id} must display ${code}`);
+    }
+    assert.ok(html.includes(`CEFR 參考：${u.cefr}`), `microLesson ${u.id} must display CEFR`);
   }
 });
 
@@ -215,13 +220,13 @@ test('All 27 exam chapters have valid 108 curriculum codes, stage, CEFR and guid
   }
 });
 
-test('Curriculum Matrix aggregates exactly 88 materials with 100% coverage', () => {
+test('Curriculum Matrix aggregates exactly 106 materials with 100% coverage', () => {
   const materials = getAllCurriculumMaterials();
-  assert.equal(materials.length, 88); // 61 units + 27 chapters
+  assert.equal(materials.length, 106); // 79 units + 27 chapters
 
   const unitsCount = materials.filter(m => m.type === 'academic_unit').length;
   const chaptersCount = materials.filter(m => m.type === 'exam_chapter').length;
-  assert.equal(unitsCount, 61);
+  assert.equal(unitsCount, 79);
   assert.equal(chaptersCount, 27);
 
   // 驗證沒有任何未定義欄位
@@ -236,9 +241,9 @@ test('Curriculum Matrix aggregates exactly 88 materials with 100% coverage', () 
   // 驗證 HTML 矩陣視圖渲染
   const matrixHtml = renderCurriculumMatrixView();
   assert.ok(matrixHtml.includes('108 課綱與 CEFR 評量指引總體檢核矩陣'));
-  assert.ok(matrixHtml.includes('100% 貫通'));
+  assert.ok(matrixHtml.includes('教材模組皆標示官方條文代碼') && matrixHtml.includes('#standards'));
   assert.ok(matrixHtml.includes('A1 至 C2 全覆蓋'));
-  assert.ok(matrixHtml.includes('共符合 88 項教材模組'));
+  assert.ok(matrixHtml.includes('共符合 106 項教材模組'));
 });
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

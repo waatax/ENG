@@ -1,3 +1,4 @@
+import { UNIFIED_GRADES } from './curriculum_unified.mjs';
 // junyi_engine.mjs - 智慧自主精熟引導引擎 (Mastery Self-Paced Learning Engine)
 // 專家委員會指導：課綱總體諮詢、第二語言習得 (SLA)、自主學習架構、大考會考測驗、語音聲學、技高ESP與全齡UX
 // 包含技能精熟追蹤、鷹架提示 (Scaffolding Hints)、步驟 0 破題思維、42項致命陷阱 X 光機與 12 枚核心素養徽章系統
@@ -514,7 +515,7 @@ export class JunyiEngine {
   }
 
   getProgressStats() {
-    const totalUnitsCount = 61; // 全7年段 61 個完整核心單元
+    const totalUnitsCount = UNIFIED_GRADES.reduce((n, g) => n + g.semesters.reduce((m, s) => m + s.units.length, 0), 0); // 國小三年級至高三全部單元
     const masteredCount = Object.values(this.data.mastery).filter(m => m === 'mastered').length;
     const familiarCount = Object.values(this.data.mastery).filter(m => m === 'familiar').length;
     const practicingCount = Object.values(this.data.mastery).filter(m => m === 'practicing').length;

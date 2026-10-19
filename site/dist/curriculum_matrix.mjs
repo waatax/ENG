@@ -15,7 +15,7 @@ export const matrixState = {
 export function getAllCurriculumMaterials() {
   const list = [];
 
-  // 1. 納入 61 個全學年學期單元 (UNIFIED_GRADES)
+  // 1. 納入全學年學期單元 (UNIFIED_GRADES，含國小三至五年級)
   UNIFIED_GRADES.forEach(g => {
     g.semesters.forEach(s => {
       s.units.forEach(u => {
@@ -180,7 +180,7 @@ export function renderCurriculumMatrixView() {
         <h1 style="margin:8px 0">108 課綱與 CEFR 評量指引總體檢核矩陣 (Curriculum Matrix)</h1>
         <p style="color:var(--text-muted);margin:0;font-size:15px">
           依據教育部 108 課綱英語文綱要、大考中心 (CEEC) 學測非選規準、心測中心 (CAP) 會考雙向細目表與歐洲共同語言架構 (CEFR) 嚴謹組織。
-          已實現<strong>全平台 61 個學年單元與 27 個大考章節 100% 完整對標</strong>，每項教材皆具備明確指標、核心素養與命題指引！
+          全平台 <strong>${getAllCurriculumMaterials().filter(m => m.type === 'academic_unit').length} 個學年單元與 ${getAllCurriculumMaterials().filter(m => m.type === 'exam_chapter').length} 個章節</strong>皆列出官方學習表現與學習內容代碼；逐條覆蓋情形見 <a href="#standards">108 課綱學習重點地圖</a>。
         </p>
       </div>
 
@@ -188,8 +188,8 @@ export function renderCurriculumMatrixView() {
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;margin-bottom:24px">
         <div class="card" style="padding:16px;border-left:4px solid #10b981;background:#ffffff">
           <div style="font-size:12px;color:#64748b;font-weight:600">108 課綱指標覆蓋率</div>
-          <div style="font-size:22px;font-weight:800;color:#059669;margin:4px 0">100% 貫通</div>
-          <div style="font-size:12px;color:#94a3b8">88 門教材模組全部具備學習表現與內容細目</div>
+          <div style="font-size:22px;font-weight:800;color:#059669;margin:4px 0">${getAllCurriculumMaterials().length} 門</div>
+          <div style="font-size:12px;color:#94a3b8">教材模組皆標示官方條文代碼（對應由本站編排）</div>
         </div>
 
         <div class="card" style="padding:16px;border-left:4px solid #2563eb;background:#ffffff">

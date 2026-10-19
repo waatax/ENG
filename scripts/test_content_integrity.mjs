@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import {UNIFIED_GRADES} from '../dist/curriculum_unified.mjs';
 import {QuestionBankDB} from '../dist/question_db.mjs';
 
-test('All 107 school concepts have unambiguous examples', () => {
+test('All 143 school concepts have unambiguous examples', () => {
   const concepts=UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units.flatMap(u=>u.concepts)));
-  assert.equal(concepts.length,107);
+  assert.equal(concepts.length,143);
   for(const c of concepts){
     const q=c.examExample;
     assert.ok(q,`${c.title}: missing example`);

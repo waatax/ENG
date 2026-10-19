@@ -1,0 +1,19 @@
+{
+ "date": "2026-10-19",
+ "pages": 154,
+ "runs": [
+  {
+   "width": 390,
+   "theme": "dark",
+   "pagesPassed": 154,
+   "mapHeatCells": 80
+  },
+  {
+   "width": 1280,
+   "theme": "light",
+   "pagesPassed": 154,
+   "mapHeatCells": 80
+  }
+ ],
+ "failures": []
+}

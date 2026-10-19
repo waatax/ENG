@@ -1,7 +1,8 @@
 // curriculum_unified.mjs - 英語文分年級課程資料
 // 課程標籤供自學導航；不代表官方課綱或考試機構認證。
-// 涵蓋：國小 (Sixth 6上/6下)、國中 (JH 7-9年級 16單元)、高中/技高 (Arch 10-11年級先修與學期複習)、大考全考制
+// 涵蓋：國小 (3–5 年級見 curriculum_elementary.mjs；Sixth 6上/6下)、國中 (JH 7-9年級 16單元)、高中/技高 (Arch 10-11年級先修與學期複習)、大考全考制
 
+import { ELEMENTARY_GRADES } from './curriculum_elementary.mjs';
 import { sixthLessons, sixthNotes, sixthQuestions, sixthAudioData } from './sixth_assets.mjs';
 import { jhUnits, jhCases, jhHandouts, jhCapAnalysis } from './jh_assets.mjs';
 import { 
@@ -14,6 +15,7 @@ import {
 import { archSemesters, englishS1Review, englishS2Review, englishS3Review, englishS4Review } from './arch_semesters.mjs';
 
 export const UNIFIED_GRADES = [
+  ...ELEMENTARY_GRADES,
   {
     "gradeId": "g6",
     "title": "國小六年級 (Grade 6)",
@@ -30,7 +32,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s1-u1",
             "unitNo": "Unit 1",
             "title": "日常生活作息與時間表達 (Daily Routines & Telling Time)",
-            "indicator": "1-III-2 / 2-III-1 / Ac-III-1",
+            "indicator": "1-Ⅲ-9 / 2-Ⅲ-7 / 2-Ⅲ-8 / 3-Ⅲ-5 / 5-Ⅲ-4 / Ac-Ⅲ-3 / Ad-Ⅲ-2 / B-Ⅲ-2",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "A2 系統思考與解決問題、B1 符號運用與溝通表達",
@@ -202,7 +204,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s1-u2",
             "unitNo": "Unit 2",
             "title": "過去式故事與冒險歷險記 (Past Tense Stories & Irregular Verbs)",
-            "indicator": "2-III-3 / 3-III-1 / Ac-III-2",
+            "indicator": "1-Ⅲ-12 / 3-Ⅲ-7 / 5-Ⅲ-8 / 9-Ⅲ-2 / Ad-Ⅲ-2 / Ae-Ⅲ-2 / D-Ⅲ-2",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "B1 符號運用與溝通表達、C2 人際關係與團隊合作",
@@ -368,7 +370,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s1-u3",
             "unitNo": "Unit 3",
             "title": "城市探索與問路指路指南 (Places & Asking for Directions)",
-            "indicator": "1-III-4 / 2-III-2 / Ac-III-3",
+            "indicator": "1-Ⅲ-10 / 2-Ⅲ-7 / 2-Ⅲ-8 / 3-Ⅲ-2 / Ac-Ⅲ-1 / B-Ⅲ-2",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "B1 符號運用、C1 道德實踐與公民意識",
@@ -382,15 +384,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "複合名詞重音多在第一部分 (BUS stop, FIRE station, POST office)。",
                 "example": "The library is across from the post office on Zhongshan Road.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [公共設施與市容場所核心詞庫], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "The library is across from the post office on Zhongshan Road.",
-                    "The library are across from the post office on Zhongshan Road.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「公共設施與市容場所核心詞庫」之核心公式：bakery, post office, convenience store, pharmacy, museum, fire station。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Ben wants to mail a birthday card to his grandma in Tainan. Where should he go?",
+                 "options": [
+                  "a bakery",
+                  "a post office",
+                  "a pharmacy",
+                  "a fire station"
+                 ],
+                 "answer": 1,
+                 "analysis": "寄卡片（mail a card）要去郵局 post office。bakery 是麵包店、pharmacy 是藥局、fire station 是消防局。複合名詞重音多在第一個字：POST office。"
                 }
               },
               {
@@ -534,7 +536,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s1-u4",
             "unitNo": "Unit 4",
             "title": "健康飲食、身體部位與醫療照護 (Food, Health & Care)",
-            "indicator": "2-III-4 / 3-III-2 / Ac-III-4",
+            "indicator": "1-Ⅲ-8 / 2-Ⅲ-6 / 4-Ⅲ-4 / 9-Ⅲ-1 / Ac-Ⅲ-3 / B-Ⅲ-2 / D-Ⅲ-1",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "A1 身心素質與健全發展、B1 溝通表達",
@@ -710,7 +712,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s2-u5",
             "unitNo": "Unit 5",
             "title": "世界節慶巡禮與多元文化 (Festivals & World Cultures)",
-            "indicator": "3-III-3 / 5-III-1 / Ac-III-5",
+            "indicator": "8-Ⅲ-1 / 8-Ⅲ-2 / 8-Ⅲ-3 / 8-Ⅲ-4 / C-Ⅲ-1 / C-Ⅲ-2",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "C3 多元文化與國際理解、B1 符號溝通",
@@ -833,7 +835,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s2-u6",
             "unitNo": "Unit 6",
             "title": "閱讀理解力、字首字尾與語篇導航 (Reading & Phonics Mastery)",
-            "indicator": "3-III-4 / 4-III-1 / Ac-III-6",
+            "indicator": "3-Ⅲ-6 / 3-Ⅲ-9 / 5-Ⅲ-9 / 5-Ⅲ-10 / 7-Ⅲ-1 / Ab-Ⅲ-2 / Ab-Ⅲ-5 / D-Ⅲ-3",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "B1 符號運用、A2 系統思考",
@@ -939,7 +941,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s2-u7",
             "unitNo": "Unit 7",
             "title": "未來計畫與夢想志向 (Future Plans & Dream Careers)",
-            "indicator": "3-III-3 / Ac-III-7",
+            "indicator": "2-Ⅲ-3 / 2-Ⅲ-7 / 4-Ⅲ-6 / Ad-Ⅲ-2 / B-Ⅲ-1",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "A1 身心發展、A2 系統思考",
@@ -1045,7 +1047,7 @@ export const UNIFIED_GRADES = [
             "id": "g6-s2-u8",
             "unitNo": "Unit 8",
             "title": "事物比較與世界之最 (Comparisons & World Wonders)",
-            "indicator": "2-III-6 / Ac-III-8",
+            "indicator": "2-Ⅲ-7 / 3-Ⅲ-6 / 8-Ⅲ-4 / 9-Ⅲ-3 / Ad-Ⅲ-2 / D-Ⅲ-3",
             "stage": "第三學習階段 (國小高年級 108 課綱)",
             "cefr": "A1 ~ Pre-A2 (基礎起步 · 雙語銜接)",
             "competency": "B1 符號溝通、C3 國際理解",
@@ -1168,7 +1170,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s1-u1",
             "unitNo": "JH-Unit 1",
             "title": "句子骨架、be 動詞與現在簡單式 (Sentence Patterns & Present Simple)",
-            "indicator": "1-IV-1 / 2-IV-2 / Ac-IV-1",
+            "indicator": "1-Ⅳ-3 / 2-Ⅳ-4 / 3-Ⅳ-6 / 4-Ⅳ-5 / Ad-Ⅳ-1 / B-Ⅳ-1",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -1198,15 +1200,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "主詞是 He, She, It 或單數名詞時，肯定句動詞必須做三單現變化。此規則在會考改錯與選擇題命中率極高！",
                 "example": "He watches TV every night. / She studies hard.",
                 "examExample": {
-                  "stem": "Yesterday afternoon, Sarah ___ through the old family photo album and ___ her grandmother's graduation diploma.",
-                  "options": [
-                    "flipped; discovered",
-                    "flips; discovers",
-                    "was flipped; had discovered",
-                    "flipped; was discovered"
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】時間副詞 Yesterday afternoon 明確指示過去時間，前後對等連接詞 and 連接兩個過去簡單式主動動詞：flip -> flipped (重複字尾加 ed)，discover -> discovered。"
+                 "stem": "My sister ___ her teeth after every meal, and she ___ to bed at ten.",
+                 "options": [
+                  "brush; go",
+                  "brushs; goes",
+                  "brushes; goes",
+                  "brushes; gos"
+                 ],
+                 "answer": 2,
+                 "analysis": "主詞 My sister 是第三人稱單數，描述習慣用現在簡單式。brush 字尾是 sh，加 -es → brushes；go 加 -es → goes。brushs、gos 都拼錯。"
                 }
               },
               {
@@ -1215,15 +1217,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "絕對不可將 be 動詞與一般動詞原形黏在一起（如 He is like dogs ❌ ➔ He likes dogs ✔️）。",
                 "example": "Does your sister play badminton? No, she doesn't.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [be 動詞與助動詞 do/does 的絕對分界], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Does your sister play badminton? No, she doesn't.",
-                    "Does your sareter play badminton? No, she doesn't.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「be 動詞與助動詞 do/does 的絕對分界」之核心公式：be 動詞句型 (Am/Is/Are) 表身分、狀態；一般動詞疑問否定叫 do/does 出來幫忙。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "___ your brother like basketball? — Yes, he ___.",
+                 "options": [
+                  "Is; is",
+                  "Does; does",
+                  "Do; likes",
+                  "Does; is"
+                 ],
+                 "answer": 1,
+                 "analysis": "like 是一般動詞，問句要借助動詞；主詞 your brother 是第三人稱單數，用 Does，簡答也用 does。Is your brother like… 把 be 與一般動詞黏在一起，是常見錯誤。"
                 }
               }
             ],
@@ -1332,7 +1334,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s1-u2",
             "unitNo": "JH-Unit 2",
             "title": "名詞單複數、指示代名詞與祈使句 (Nouns, Demonstratives & Imperatives)",
-            "indicator": "1-IV-2 / 2-IV-1 / Ac-IV-2",
+            "indicator": "1-Ⅳ-2 / 2-Ⅳ-3 / 3-Ⅳ-3 / 4-Ⅳ-1 / Ac-Ⅳ-1 / Ac-Ⅳ-2 / Ad-Ⅳ-1",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "B1 符號運用、C1 公民道德",
@@ -1455,7 +1457,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s1-u3",
             "unitNo": "Arch-Phonetics",
             "title": "國際音標 (IPA/KK) 與字典查閱全指南 (Phonetics & Dictionary Guide)",
-            "indicator": "Arch: phonetics-dictionary",
+            "indicator": "2-Ⅳ-8 / 5-Ⅳ-4 / 5-Ⅳ-5 / 7-Ⅳ-1 / Ab-Ⅳ-1 / Ab-Ⅳ-3",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "B1 符號運用、A1 自主行動",
@@ -1568,7 +1570,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s2-u4",
             "unitNo": "JH-Unit 3",
             "title": "現在進行式與動態時間表達 (Present Continuous & Dynamic Time)",
-            "indicator": "JH: english-2 / Ac-IV-3",
+            "indicator": "1-Ⅳ-3 / 2-Ⅳ-6 / 2-Ⅳ-10 / 4-Ⅳ-2 / Ad-Ⅳ-1 / B-Ⅳ-6",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -1668,7 +1670,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s2-u5",
             "unitNo": "JH-Unit 4",
             "title": "頻率副詞、情態助動詞 can 與存在句 (Adverbs of Frequency & There is/are)",
-            "indicator": "JH: english-8 / Ac-IV-4",
+            "indicator": "2-Ⅳ-6 / 2-Ⅳ-10 / 3-Ⅳ-6 / 4-Ⅳ-5 / Ad-Ⅳ-1 / B-Ⅳ-5 / B-Ⅳ-6",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "B1 符號溝通",
@@ -1767,7 +1769,7 @@ export const UNIFIED_GRADES = [
             "id": "g7-s2-u6",
             "unitNo": "JH-Unit 5",
             "title": "時空方位介系詞與地圖導航指南 (Prepositions of Space & Directions)",
-            "indicator": "JH: english-13 / Ac-IV-5",
+            "indicator": "1-Ⅳ-4 / 2-Ⅳ-7 / 3-Ⅳ-3 / 3-Ⅳ-4 / Ac-Ⅳ-1 / Ae-Ⅳ-2 / B-Ⅳ-5",
             "stage": "第四學習階段 (國中 7 年級 108 課綱)",
             "cefr": "A2 (初級起步 · 會考文法核心)",
             "competency": "B1 符號溝通、C1 公民行動",
@@ -1883,7 +1885,7 @@ export const UNIFIED_GRADES = [
             "id": "g8-s1-u1",
             "unitNo": "JH-Unit 6",
             "title": "過去式、未來與敘事時間軸 (Past Simple, Future Tense & Narrative)",
-            "indicator": "JH: english-3 / Ac-IV-6",
+            "indicator": "1-Ⅳ-6 / 3-Ⅳ-9 / 3-Ⅳ-10 / 4-Ⅳ-8 / Ad-Ⅳ-1 / Ae-Ⅳ-6",
             "stage": "第四學習階段 (國中 8 年級 108 課綱)",
             "cefr": "A2+ (初級精熟 · 句構拓展)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -1982,7 +1984,7 @@ export const UNIFIED_GRADES = [
             "id": "g8-s1-u2",
             "unitNo": "JH-Unit 7",
             "title": "過去進行式、時間連接詞 when/while 與數量詞 (Past Continuous & Quantifiers)",
-            "indicator": "JH: english-9 / Ac-IV-7",
+            "indicator": "3-Ⅳ-6 / 4-Ⅳ-5 / 9-Ⅳ-2 / Ad-Ⅳ-1 / D-Ⅳ-2",
             "stage": "第四學習階段 (國中 8 年級 108 課綱)",
             "cefr": "A2+ (初級精熟 · 句構拓展)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -1996,15 +1998,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "while 後面接進行中的長動作；when 後面常接突然發生的瞬間短動作。",
                 "example": "While I was studying in my room, the power suddenly went out.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [長動作背景 vs 短動作突發 (When vs While)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "While I was studying in my room, the power suddenly went out.",
-                    "While I were studying in my room, the power suddenly went out.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「長動作背景 vs 短動作突發 (When vs While)」之核心公式：While + 長動作 (was/were + V-ing), 短動作 (過去式) / When + 短動作 (過去式), 長動作 (was/were + V-ing)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "___ Amy was cooking dinner, the doorbell suddenly ___.",
+                 "options": [
+                  "When; was ringing",
+                  "While; rang",
+                  "While; was rung",
+                  "Because; rings"
+                 ],
+                 "answer": 1,
+                 "analysis": "做飯是持續中的長動作（was cooking），用 while 帶出背景；門鈴響是突然插入的短動作，用過去簡單式 rang。was rung 是被動，語意不通；rings 時態不一致。"
                 }
               }
             ],
@@ -2082,7 +2084,7 @@ export const UNIFIED_GRADES = [
             "id": "g8-s1-u3",
             "unitNo": "JH-Unit 8",
             "title": "條件副詞子句與情態假設語氣 If / Unless (Conditional Clauses)",
-            "indicator": "JH: english-14 / Ac-IV-8",
+            "indicator": "2-Ⅳ-5 / 3-Ⅳ-6 / 4-Ⅳ-5 / 9-Ⅳ-3 / Ad-Ⅳ-1 / D-Ⅳ-3",
             "stage": "第四學習階段 (國中 8 年級 108 課綱)",
             "cefr": "A2+ (初級精熟 · 句構拓展)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -2096,15 +2098,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "一般未來條件子句通常用現在式；will 表意願或堅持時可能出現。if 表「是否」的名詞子句不適用這個口訣。",
                 "example": "If the weather is fine tomorrow, we will go on a hike.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [條件副詞子句「從現代未」鐵律], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "If the weather is fine tomorrow, we will go on a hike.",
-                    "If the weather are fine tomorrow, we will go on a hike.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「條件副詞子句「從現代未」鐵律」之核心公式：If / unless + S + 現在簡單式, S + will + 原形動詞。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "If it ___ tomorrow, the school sports day ___ postponed.",
+                 "options": [
+                  "rains; will be",
+                  "will rain; will be",
+                  "rains; is being",
+                  "rained; would"
+                 ],
+                 "answer": 0,
+                 "analysis": "表示未來條件的 if 子句用現在簡單式 rains；主要子句用 will 表未來結果。運動會是「被」延期，所以是 will be postponed。"
                 }
               }
             ],
@@ -2189,7 +2191,7 @@ export const UNIFIED_GRADES = [
             "id": "g8-s2-u4",
             "unitNo": "JH-Unit 9",
             "title": "比較級、不定詞 to V 與動名詞 V-ing (Comparatives, Infinitives & Gerunds)",
-            "indicator": "JH: english-4 / Ac-IV-9",
+            "indicator": "2-Ⅳ-5 / 3-Ⅳ-6 / 4-Ⅳ-6 / 9-Ⅳ-2 / Ad-Ⅳ-1 / D-Ⅳ-2",
             "stage": "第四學習階段 (國中 8 年級 108 課綱)",
             "cefr": "A2+ (初級精熟 · 句構拓展)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -2203,15 +2205,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "口訣：享受 (enjoy) 練習 (practice) 才能完成 (finish)！這三個動詞若直接接另一個動作作受詞，通常用 V-ing；也可接名詞，如 finish the work，不能說後面只有 V-ing 一種形式。",
                 "example": "She finished writing the report and enjoyed listening to music.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [三大必接動名詞巨頭 (Gerund Verbs)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "She finished writing the report and enjoyed listening to music.",
-                    "She finarehed writing the report and enjoyed laretening to music.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「三大必接動名詞巨頭 (Gerund Verbs)」之核心公式：enjoy / practice / finish + V-ing。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Kevin finally finished ___ his science report and then enjoyed ___ a movie with his family.",
+                 "options": [
+                  "to write; to watch",
+                  "writing; watching",
+                  "write; watch",
+                  "writing; to watch"
+                 ],
+                 "answer": 1,
+                 "analysis": "finish 和 enjoy 後面接另一個動作時用動名詞：finished writing、enjoyed watching。"
                 }
               }
             ],
@@ -2289,7 +2291,7 @@ export const UNIFIED_GRADES = [
             "id": "g8-s2-u5",
             "unitNo": "JH-Unit 10",
             "title": "連綴動詞、感官動詞與最高級比較 (Linking & Sensory Verbs, Superlatives)",
-            "indicator": "JH: english-10 / Ac-IV-10",
+            "indicator": "2-Ⅳ-5 / 2-Ⅳ-10 / 3-Ⅳ-6 / Ad-Ⅳ-1 / B-Ⅳ-4 / B-Ⅳ-6",
             "stage": "第四學習階段 (國中 8 年級 108 課綱)",
             "cefr": "A2+ (初級精熟 · 句構拓展)",
             "competency": "B1 符號溝通",
@@ -2404,7 +2406,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s1-u1",
             "unitNo": "JH-Unit 11",
             "title": "完成式、被動與關係子句 (Present Perfect, Passive Voice, Rel Clauses)",
-            "indicator": "JH: english-5 / Ac-IV-11",
+            "indicator": "3-Ⅳ-6 / 3-Ⅳ-8 / 4-Ⅳ-5 / 4-Ⅳ-6 / Ad-Ⅳ-1",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -2504,7 +2506,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s1-u2",
             "unitNo": "JH-Unit 12",
             "title": "授予動詞、使役動詞與完成式進階 (Dative & Causative Verbs)",
-            "indicator": "JH: english-11 / Ac-IV-12",
+            "indicator": "2-Ⅳ-5 / 3-Ⅳ-6 / 4-Ⅳ-6 / Ad-Ⅳ-1 / B-Ⅳ-4",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "B1 符號溝通",
@@ -2604,7 +2606,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s1-u3",
             "unitNo": "JH-Unit 13",
             "title": "關係代名詞受格省略與介系詞搭配 (Rel Pronoun Omission & Prepositions)",
-            "indicator": "JH: english-15 / Ac-IV-13",
+            "indicator": "3-Ⅳ-6 / 3-Ⅳ-12 / 4-Ⅳ-6 / Ac-Ⅳ-4 / Ad-Ⅳ-1",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -2711,7 +2713,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s2-u4",
             "unitNo": "JH-Unit 14",
             "title": "附加問句、名詞子句與間接問句 (Tag Questions & Indirect Questions)",
-            "indicator": "JH: english-12 / Ac-IV-14",
+            "indicator": "1-Ⅳ-9 / 2-Ⅳ-7 / 5-Ⅳ-3 / 5-Ⅳ-6 / Ab-Ⅳ-1 / Ad-Ⅳ-1 / B-Ⅳ-5",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -2810,7 +2812,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s2-u5",
             "unitNo": "JH-Unit 15",
             "title": "閱讀策略、情境溝通與指代推論 (Reading Strategies & Contextual Inference)",
-            "indicator": "JH: english-6 / Ac-IV-15",
+            "indicator": "3-Ⅳ-12 / 3-Ⅳ-15 / 7-Ⅳ-2 / 9-Ⅳ-1 / 9-Ⅳ-4 / Ae-Ⅳ-7 / Ae-Ⅳ-8 / D-Ⅳ-1 / D-Ⅳ-4",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "B1 符號溝通、A2 系統思考",
@@ -2824,15 +2826,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "遇到 What does 'it' refer to? 先看前一句話的主詞或受詞，確認性別與單複數。",
                 "example": "The solar panel was broken. Replacing IT took three technicians a full day.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [代名詞指代與推論三大鐵證], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "The solar panel was broken. Replacing IT took three technicians a full day.",
-                    "The solar panel were broken. Replacing IT took three technicians a full day.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「代名詞指代與推論三大鐵證」之核心公式：上下文指涉相容 + 文本證據支持 + 排除過度推論；最近的名詞不一定是指涉對象。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Lisa lent Tom her umbrella on a rainy afternoon. The next morning, he returned it with a thank-you card. What does \"it\" refer to?",
+                 "options": [
+                  "the afternoon",
+                  "the umbrella",
+                  "the thank-you card",
+                  "the rain"
+                 ],
+                 "answer": 1,
+                 "analysis": "return 的受詞必須是能被歸還的東西；前句 Tom 借走的是 umbrella。代回原句：he returned the umbrella，語意通順。卡片是他附上的，不是被歸還的物品。"
                 }
               }
             ],
@@ -2910,7 +2912,7 @@ export const UNIFIED_GRADES = [
             "id": "g9-s2-u6",
             "unitNo": "JH-Unit 16",
             "title": "跨文本圖表閱讀與素養克漏字 (Multimodal Texts & Cloze Mastery)",
-            "indicator": "JH: english-16 / Ac-IV-16",
+            "indicator": "3-Ⅳ-4 / 3-Ⅳ-16 / 5-Ⅳ-11 / 5-Ⅳ-12 / 9-Ⅳ-2 / Ae-Ⅳ-2 / Ae-Ⅳ-4 / Ae-Ⅳ-5 / D-Ⅳ-2",
             "stage": "第四學習階段 (國中 9 年級會考衝刺)",
             "cefr": "A2++ / Pre-B1 (會考 A++ 標竿)",
             "competency": "A2 系統思考、B1 符號溝通、C3 國際理解",
@@ -3025,7 +3027,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u1",
             "unitNo": "SH-Unit 1",
             "title": "五大基本句型與動詞分類 (Five Basic Sentence Patterns & Verb Classification)",
-            "indicator": "SH: Ac-V-1 基本句構與擴展句型",
+            "indicator": "3-Ⅴ-5 / 3-Ⅴ-12 / 4-Ⅴ-4 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考與解決問題、B1 符號運用與溝通表達",
@@ -3154,7 +3156,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u2",
             "unitNo": "SH-Unit 2",
             "title": "動名詞與不定詞深度語義對決 (Gerunds vs. Infinitives: Semantic Nuances)",
-            "indicator": "SH: Ac-V-2 非限定動詞之形式與功能",
+            "indicator": "3-Ⅴ-5 / 4-Ⅴ-4 / 4-Ⅴ-5 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A1 身心素質與自我精進、B1 符號運用與溝通表達",
@@ -3168,15 +3170,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "remember / forget / regret + to V = 記得/忘記/遺憾去執行 (尚未發生)；remember / forget / regret + V-ing = 記得/忘記/後悔做過某事 (已發生)。",
                 "example": "Remember to lock the laboratory door tonight. vs. I distinctly remember locking it before leaving.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [雙向動詞的時間箭頭 (Temporal Distinction of Dual Verbs)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Remember to lock the laboratory door tonight. vs. I distinctly remember locking it before leaving.",
-                    "Remember to lock the laboratory door tonight. vs. I daretinctly remember locking it before leaving.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「雙向動詞的時間箭頭 (Temporal Distinction of Dual Verbs)」之核心公式：V + to V (指向未來未做) vs. V + V-ing (指向過去已做/正在做)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "I clearly remember ___ the lab door, so the key must be somewhere else. Please remember ___ it again tonight.",
+                 "options": [
+                  "locking; to lock",
+                  "to lock; locking",
+                  "locking; locking",
+                  "to lock; to lock"
+                 ],
+                 "answer": 0,
+                 "analysis": "remember V-ing＝記得做過（已發生）；remember to V＝記得要去做（尚未發生）。第一句回想已經鎖過門，第二句提醒今晚要鎖。"
                 }
               },
               {
@@ -3285,7 +3287,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u3",
             "unitNo": "SH-Unit 3",
             "title": "被動語態進階矩陣與無靈主詞 (Advanced Passives & Impersonal 'It')",
-            "indicator": "SH: Ac-V-3 語態之時態變化與客觀論述",
+            "indicator": "1-Ⅴ-12 / 3-Ⅴ-5 / 4-Ⅴ-5 / 9-Ⅴ-3 / Ad-Ⅴ-1 / Ae-Ⅴ-7 / D-Ⅴ-3",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通、C2 人際關係與團隊合作",
@@ -3299,15 +3301,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "當報導動作與原動作同時代，後接 to V；若原動作先於報導時間，後接 to have p.p. (完成不定詞)。",
                 "example": "It is believed that the pyramids were built over two decades. <=> The pyramids are believed to have been built over two decades.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [客觀報導句型雙重轉換 (Double Conversion of Impersonal Passives)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "It is believed that the pyramids were built over two decades. <=> The pyramids are believed to have been built over two decades.",
-                    "It are believed that the pyramids were built over two decades. <=> The pyramids are believed to have been built over two decades.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「客觀報導句型雙重轉換 (Double Conversion of Impersonal Passives)」之核心公式：It is said/believed/reported that S + V  <=>  S + is said/believed/reported + to V / to have p.p.。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "It is believed that the old bridge was built in the 12th century. → The old bridge is believed ___ in the 12th century.",
+                 "options": [
+                  "to build",
+                  "to be built",
+                  "to have been built",
+                  "having built"
+                 ],
+                 "answer": 2,
+                 "analysis": "建造（過去）早於「被相信」（現在），而且橋是被建造的，所以用完成式被動不定詞 to have been built。"
                 }
               },
               {
@@ -3415,7 +3417,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u4",
             "unitNo": "SH-Unit 4",
             "title": "名詞子句與間接問句 (Noun Clauses & Indirect Questions)",
-            "indicator": "SH: Ac-V-4 名詞子句與祈使假定法",
+            "indicator": "2-Ⅴ-4 / 3-Ⅴ-5 / 4-Ⅴ-4 / 5-Ⅴ-5 / Ad-Ⅴ-1 / B-Ⅴ-10",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -3445,15 +3447,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "表要求或建議時，that 子句可用原形（美式常見）或 should + 原形；suggest 表「顯示」、insist 表「堅稱事實」時，須依語意選一般時態。",
                 "example": "The physician insisted that the patient (should) quit smoking immediately.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [堅決建意命要動詞後 that 子句 (Subjunctive with Verbs of Demand/Suggestion)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "The physician insisted that the patient (should) quit smoking immediately.",
-                    "The physician insareted that the patient (should) quit smoking immediately.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「堅決建意命要動詞後 that 子句 (Subjunctive with Verbs of Demand/Suggestion)」之核心公式：S + demand/insist/suggest/order/require + that + S + (should) + V-原形。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "The doctor insisted that the patient ___ smoking immediately.",
+                 "options": [
+                  "quits",
+                  "quit",
+                  "quitted",
+                  "will quit"
+                 ],
+                 "answer": 1,
+                 "analysis": "insist 表「堅持要求」時，that 子句用 (should) + 原形：(should) quit。若 insist 是「堅稱某事屬實」，才依事實使用一般時態。"
                 }
               }
             ],
@@ -3545,7 +3547,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u5",
             "unitNo": "SH-Unit 5",
             "title": "形容詞子句與關係代名詞基礎 (Adjective Clauses & Relative Pronouns)",
-            "indicator": "SH: Ac-V-5 關係子句之修飾與省略",
+            "indicator": "3-Ⅴ-5 / 3-Ⅴ-12 / 4-Ⅴ-5 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -3676,7 +3678,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s1-u6",
             "unitNo": "SH-Unit 6",
             "title": "副詞子句與邏輯因果轉折 (Adverb Clauses: Cause, Condition, Concession)",
-            "indicator": "SH: Ac-V-6 副詞子句與篇章銜接詞",
+            "indicator": "3-Ⅴ-12 / 4-Ⅴ-8 / 7-Ⅴ-5 / 9-Ⅴ-2 / Ad-Ⅴ-1 / D-Ⅴ-2",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通、C3 多元文化與國際理解",
@@ -3813,7 +3815,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u7",
             "unitNo": "SH-Unit 7",
             "title": "限定與非限定關係子句對比 (Restrictive vs. Non-Restrictive Relatives)",
-            "indicator": "SH: Ac-V-5 關係子句之修飾與非限定用法",
+            "indicator": "3-Ⅴ-5 / 3-Ⅴ-12 / 4-Ⅴ-2 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -3827,15 +3829,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "逗號後的 which 不僅可指代前面的名詞，更常指代前面整個句子所陳述的事實，which 指整件事時用單數；若指複數名詞，則須配合該名詞用複數。",
                 "example": "The factory reduced greenhouse emissions by 40%, which surprised regulatory authorities.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [非限定子句修飾整句或先行詞 (Comma + which / who)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "The factory reduced greenhouse emissions by 40%, which surprised regulatory authorities.",
-                    "The factory reduced greenhouse emaresions by 40%, which surprareed regulatory authorities.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「非限定子句修飾整句或先行詞 (Comma + which / who)」之核心公式：S + V + O, which + V (which 代替前面整個句子或先行詞)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "The factory cut its emissions by 40 percent, ___ surprised many experts.",
+                 "options": [
+                  "that",
+                  "which",
+                  "what",
+                  "it"
+                 ],
+                 "answer": 1,
+                 "analysis": "逗號後補充說明前面整件事，用非限定的 which。that 不能用在逗號後的非限定子句；what 本身不接先行詞；用 it 會讓兩個子句沒有連接詞。"
                 }
               },
               {
@@ -3844,15 +3846,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "無逗號為限定修飾 (眾多中的一部分)；有逗號為補充說明 (等於全部)。",
                 "example": "Paris, which is the capital of France, attracts millions of tourists annually.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [限定 vs. 非限定的語意對比 (Semantic Distinction)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Paris, which is the capital of France, attracts millions of tourists annually.",
-                    "Parare, which are the capital of France, attracts millions of tourarets annually.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「限定 vs. 非限定的語意對比 (Semantic Distinction)」之核心公式：He has two sons who are doctors (可能有其他兒子) vs. He has two sons, who are doctors (總共只有兩個兒子)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Which sentence suggests that Mr. Lin has ONLY two daughters?",
+                 "options": [
+                  "Mr. Lin has two daughters who work in Taipei.",
+                  "Mr. Lin has two daughters, who work in Taipei.",
+                  "Mr. Lin has two daughters that work in Taipei.",
+                  "Mr. Lin has two daughters working in Taipei."
+                 ],
+                 "answer": 1,
+                 "analysis": "有逗號的非限定子句只是補充說明，表示他的女兒就是這兩位。沒有逗號的 who、that 或分詞修飾是限定用法，暗示可能還有其他女兒，這兩位是在台北工作的。"
                 }
               }
             ],
@@ -3944,7 +3946,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u8",
             "unitNo": "SH-Unit 8",
             "title": "複合關係代名詞與準關係代名詞 (Compound & Quasi-Relatives)",
-            "indicator": "SH: Ac-V-5 進階關係詞與複合語法",
+            "indicator": "3-Ⅴ-5 / 4-Ⅴ-4 / 4-Ⅴ-5 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -4075,7 +4077,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u9",
             "unitNo": "SH-Unit 9",
             "title": "現代論說文核心篇章標記 (Discourse Markers in Expository Essays)",
-            "indicator": "SH: Ac-V-7 篇章連貫與邏輯標記",
+            "indicator": "3-Ⅴ-7 / 4-Ⅴ-8 / 7-Ⅴ-5 / 9-Ⅴ-2 / Ae-Ⅴ-9 / B-Ⅴ-8 / D-Ⅴ-2",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "B1 符號運用、B2 科技資訊與媒體素養、C1 道德實踐與公民意識",
@@ -4105,15 +4107,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "1. 轉折: nevertheless, however, conversely 2. 遞進: furthermore, moreover, additionally 3. 因果: thus, hence, accordingly 4. 舉例: specifically, notably.",
                 "example": "Renewable energy produces minimal emissions. Furthermore, operational costs decline over time.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [四大核心邏輯語義家族 (Four Major Logical Families)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Renewable energy produces minimal emissions. Furthermore, operational costs decline over time.",
-                    "Renewable energy produces minimal emaresions. Furthermore, operational costs decline over time.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「四大核心邏輯語義家族 (Four Major Logical Families)」之核心公式：Contrast (轉折) | Additive (遞進) | Causal (因果) | Exemplification (舉例)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Solar panels produce almost no emissions. ___, their operating costs fall over time.",
+                 "options": [
+                  "However",
+                  "Furthermore",
+                  "For example",
+                  "Otherwise"
+                 ],
+                 "answer": 1,
+                 "analysis": "第二句再加上一項優點，屬於遞進關係，用 Furthermore。However 表轉折、For example 表舉例、Otherwise 表「否則」。"
                 }
               }
             ],
@@ -4205,7 +4207,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u10",
             "unitNo": "SH-Unit 10",
             "title": "學測圖表與多文本綜合剖析 (GSAT Multimodal Data & Chart Interpretation)",
-            "indicator": "SH: Ac-V-8 多模態文本解讀與圖表分析",
+            "indicator": "3-Ⅴ-3 / 5-Ⅴ-4 / 9-Ⅴ-1 / 9-Ⅴ-4 / Ae-Ⅴ-2 / D-Ⅴ-1 / D-Ⅴ-4",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "B2 科技資訊與媒體素養、A2 系統思考與解決問題",
@@ -4334,7 +4336,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u11",
             "unitNo": "SH-Unit 11",
             "title": "情態助動詞的推測與批判思考 (Modal Auxiliaries of Deduction)",
-            "indicator": "SH: Ac-V-9 情態助動詞與推論語氣",
+            "indicator": "3-Ⅴ-14 / 9-Ⅴ-3 / 9-Ⅴ-6 / Ad-Ⅴ-1 / D-Ⅴ-3 / D-Ⅴ-6",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A2 系統思考與解決問題、B1 符號溝通",
@@ -4463,7 +4465,7 @@ export const UNIFIED_GRADES = [
             "id": "g10-s2-u12",
             "unitNo": "SH-Unit 12",
             "title": "高一全冊素養總結與混合題實戰 (G10 Culminating Exam & Cross-Textual Synthesis)",
-            "indicator": "SH: 總綱素養評量指標綜合應用",
+            "indicator": "3-Ⅴ-11 / 5-Ⅴ-10 / 7-Ⅴ-8 / 9-Ⅴ-4 / Ae-Ⅴ-9 / B-Ⅴ-12 / D-Ⅴ-4",
             "stage": "第五學習階段 (高中一年級 108 課綱)",
             "cefr": "B1 (學測核心基底)",
             "competency": "A1 身心素質、A2 系統思考、B1 符號溝通、C2 團隊合作",
@@ -4592,7 +4594,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u1",
             "unitNo": "SH-Unit 13",
             "title": "分詞構句與分詞形容詞全解 (Participle Constructions & Participial Adjectives)",
-            "indicator": "SH: Ac-V-10 分詞構句之簡化與修飾",
+            "indicator": "3-Ⅴ-5 / 3-Ⅴ-12 / 4-Ⅴ-4 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通、B3 藝術涵養與美感素養",
@@ -4722,7 +4724,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u2",
             "unitNo": "SH-Unit 14",
             "title": "獨立分詞構句與慣用懸置分詞 (Absolute Constructions & Idiomatic Participles)",
-            "indicator": "SH: Ac-V-10 獨立分詞與慣用懸置用法",
+            "indicator": "3-Ⅴ-5 / 4-Ⅴ-5 / 6-Ⅴ-9 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -4770,15 +4772,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "這些慣用片語已演變為獨立副詞功能，不受主句主詞一致性規則的限制。",
                 "example": "Judging from his accent, he must be a native of Scotland.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [慣用懸置分詞 (Idiomatic Dangling Participles)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Judging from his accent, he must be a native of Scotland.",
-                    "Judging from hare accent, he must be a native of Scotland.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「慣用懸置分詞 (Idiomatic Dangling Participles)」之核心公式：Generally speaking (一般而言) | Judging from (從...來判斷) | Frankly speaking (坦白說)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "___ from his accent, the speaker probably grew up in Scotland.",
+                 "options": [
+                  "Judged",
+                  "Judging",
+                  "To judge being",
+                  "Having judged by"
+                 ],
+                 "answer": 1,
+                 "analysis": "Judging from…（從…判斷）是慣用的獨立分詞片語，不需要和主句主詞一致。Judged 是被動形式，語意不通。"
                 }
               }
             ],
@@ -4870,7 +4872,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u3",
             "unitNo": "SH-Unit 15",
             "title": "假設語氣與條件句全景 (Subjunctive Mood: Unreal Present, Past & Future)",
-            "indicator": "SH: Ac-V-11 假設語氣與非真實條件句",
+            "indicator": "2-Ⅴ-3 / 3-Ⅴ-5 / 4-Ⅴ-4 / 9-Ⅴ-6 / Ad-Ⅴ-1 / D-Ⅴ-6",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -4900,15 +4902,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "與過去事實相反，子句動詞用過去完成式 had p.p.；主要子句用 would/could/should/might + have + p.p.。",
                 "example": "If we had left ten minutes earlier, we would not have missed the high-speed rail.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [與過去相反之假設 (Subjunctive Unreal Past)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "If we had left ten minutes earlier, we would not have missed the high-speed rail.",
-                    "If we had left ten minutes earlier, we would not have maresed the high-speed rail.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「與過去相反之假設 (Subjunctive Unreal Past)」之核心公式：If + S + had + p.p., S + would/could/should/might + have + p.p.。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "If we ___ ten minutes earlier, we ___ the high-speed train.",
+                 "options": [
+                  "left; would not miss",
+                  "had left; would not have missed",
+                  "have left; will not miss",
+                  "had left; will not miss"
+                 ],
+                 "answer": 1,
+                 "analysis": "事實是出發太晚、錯過了車，屬於與過去事實相反的假設：if 子句用 had + p.p.，主要子句用 would have + p.p.。"
                 }
               },
               {
@@ -4917,15 +4919,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "were to 可提出較假設性的未來情境，不代表絕不可能；should 可表較正式、較不確定的條件，也不指定機率。",
                 "example": "If the sun were to rise in the west, I would still honor my promise.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [與未來相反之純假想 (Subjunctive Unreal Future)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "If the sun were to rise in the west, I would still honor my promise.",
-                    "If the sun were to raree in the west, I would still honor my promaree.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「與未來相反之純假想 (Subjunctive Unreal Future)」之核心公式：If + S + were to / should + V-原形, S + would/could + V-原形。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "If a typhoon ___ hit Taipei tomorrow, all flights would be cancelled.",
+                 "options": [
+                  "were to",
+                  "will",
+                  "has",
+                  "is going"
+                 ],
+                 "answer": 0,
+                 "analysis": "對未來提出假設性的情境，可用 If + S + were to + V，主要子句用 would + V。條件子句不用 will；has 與 is going 結構都不完整。"
                 }
               }
             ],
@@ -5017,7 +5019,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u4",
             "unitNo": "SH-Unit 16",
             "title": "混合假設語氣與省略 if 倒裝 (Mixed Conditionals & Inverted Conditionals)",
-            "indicator": "SH: Ac-V-11 混合假設與省略 if 倒裝結構",
+            "indicator": "3-Ⅴ-5 / 4-Ⅴ-5 / 9-Ⅴ-5 / Ad-Ⅴ-1 / D-Ⅴ-5",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -5148,7 +5150,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u5",
             "unitNo": "SH-Unit 17",
             "title": "否定副詞倒裝與地方副詞倒裝 (Inversion: Negative Adverbials & Locatives)",
-            "indicator": "SH: Ac-V-12 強調語氣與副詞倒裝全系列",
+            "indicator": "3-Ⅴ-5 / 4-Ⅴ-4 / 6-Ⅴ-9 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -5279,7 +5281,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s1-u6",
             "unitNo": "SH-Unit 18",
             "title": "So / Such / Nor / Neither 倒裝與平衡句型 (Balance & Parallel Inversion)",
-            "indicator": "SH: Ac-V-12 對稱平衡與關聯倒裝句型",
+            "indicator": "2-Ⅴ-5 / 3-Ⅴ-5 / 4-Ⅴ-4 / Ad-Ⅴ-1 / B-Ⅴ-7",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -5417,7 +5419,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u7",
             "unitNo": "SH-Unit 19",
             "title": "分裂句與焦點強調結構 (Cleft Sentences: It is ... that ...)",
-            "indicator": "SH: Ac-V-13 分裂句與強調句型",
+            "indicator": "1-Ⅴ-13 / 2-Ⅴ-5 / 3-Ⅴ-5 / 4-Ⅴ-4 / Ab-Ⅴ-1 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -5431,15 +5433,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "檢驗方法：若把 'It is/was' 和 'that' 同時拿掉，剩下的單字能重新還原拼成一句完整的正常句子，就是分裂強調句！",
                 "example": "Columbus reached the Americas in 1492. => It was in 1492 that Columbus reached the Americas.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [分裂句標準公式與還原檢驗法 (Cleft Sentence Formula & Test)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Columbus reached the Americas in 1492. => It was in 1492 that Columbus reached the Americas.",
-                    "Columbus reached the Americas in 1492. => It were in 1492 that Columbus reached the Americas.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「分裂句標準公式與還原檢驗法 (Cleft Sentence Formula & Test)」之核心公式：It is / was + [強調焦點 (S / O / Adv Phrase)] + that / who + [剩餘句子成分]。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Original: Columbus reached the Americas in 1492. Which sentence emphasizes the YEAR?",
+                 "options": [
+                  "It was Columbus that reached the Americas in 1492.",
+                  "It was in 1492 that Columbus reached the Americas.",
+                  "It was the Americas that Columbus reached in 1492.",
+                  "It is 1492 when Columbus reached the Americas."
+                 ],
+                 "answer": 1,
+                 "analysis": "分裂句：It was + 焦點 + that + 其餘部分。強調年份就把 in 1492 放進焦點；拿掉 It was…that 後可還原原句。最後一句時態與結構都不正確。"
                 }
               },
               {
@@ -5448,15 +5450,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "以 what 子句作為主詞，將整個句子的核心焦點推移至 be 動詞之後。",
                 "example": "What the biosphere urgently requires is substantive decarbonization, not hollow pledges.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [Wh- 分裂句 (Pseudo-cleft Sentences)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "What the biosphere urgently requires is substantive decarbonization, not hollow pledges.",
-                    "What the biosphere urgently requires are substantive decarbonization, not hollow pledges.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「Wh- 分裂句 (Pseudo-cleft Sentences)」之核心公式：What + S + V + is / was + [強調焦點]。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Which pseudo-cleft sentence correctly puts the focus on \"a quiet place to study\"?",
+                 "options": [
+                  "What I need is a quiet place to study.",
+                  "What I need are a quiet place to study.",
+                  "That I need is a quiet place to study.",
+                  "What do I need is a quiet place to study."
+                 ],
+                 "answer": 0,
+                 "analysis": "What 子句當主詞時視為單數，後接 is；焦點放在 be 動詞之後。What 子句內用直述語序 I need，不能寫成 do I need。"
                 }
               }
             ],
@@ -5548,7 +5550,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u8",
             "unitNo": "SH-Unit 20",
             "title": "讓步子句倒裝與高級連接詞 (Concession Inversion & Complex Conjunctions)",
-            "indicator": "SH: Ac-V-14 高級讓步倒裝與文言轉折",
+            "indicator": "3-Ⅴ-12 / 4-Ⅴ-8 / 7-Ⅴ-5 / Ad-Ⅴ-1 / D-Ⅴ-2",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通、C3 多元文化",
@@ -5579,15 +5581,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "源自古英語虛擬式原形倒裝，廣泛保留於現代新聞評論、法學與大考長文中。",
                 "example": "Every participant must register, be they students or renowned scholars.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [高級讓步與假設片語 (Advanced Idiomatic Concessions)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Every participant must register, be they students or renowned scholars.",
-                    "Every participant must regareter, be they students or renowned scholars.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「高級讓步與假設片語 (Advanced Idiomatic Concessions)」之核心公式：Be it A or B (無論是A還是B) | Come what may (無論發生什麼) | Be that as it may (儘管如此)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Every visitor must sign in at the front desk, ___ a student or a professor.",
+                 "options": [
+                  "be it",
+                  "is it",
+                  "being it",
+                  "it be"
+                 ],
+                 "answer": 0,
+                 "analysis": "be it A or B（無論是 A 還是 B）是保留虛擬原形的倒裝讓步句型；is it 是疑問語序，不能表示讓步。"
                 }
               }
             ],
@@ -5679,7 +5681,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u9",
             "unitNo": "SH-Unit 21",
             "title": "ESP 科技英語與 AI 論文閱讀 (ESP: Artificial Intelligence & Academic Research)",
-            "indicator": "SH: 技術型高中專業英文 (ESP) 與普通高中跨學科素養",
+            "indicator": "3-Ⅴ-11 / 5-Ⅴ-12 / 6-Ⅴ-7 / 7-Ⅴ-2 / Ae-Ⅴ-8 / B-Ⅴ-13 / C-Ⅴ-4",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "B2 科技資訊與媒體素養、A2 系統思考與問題解決",
@@ -5693,15 +5695,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "科技論文摘要依循嚴密脈絡。善用定位詞快速抓取核心貢獻。",
                 "example": "This paper proposes a novel Transformer architecture capable of mitigating hallucinations in LLMs.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [學術科技英文摘要四大結構 (Four Pillars of Academic Abstracts)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "This paper proposes a novel Transformer architecture capable of mitigating hallucinations in LLMs.",
-                    "Thare paper proposes a novel Transformer architecture capable of mitigating hallucinations in LLMs.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「學術科技英文摘要四大結構 (Four Pillars of Academic Abstracts)」之核心公式：Objective (研究目的) -> Methodology (研究方法) -> Findings (實驗結果) -> Implications (實務意涵)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "In a research abstract, which sentence most likely reports the FINDINGS?",
+                 "options": [
+                  "This study aims to examine how AI tutors affect writing accuracy.",
+                  "We surveyed 300 students across five high schools.",
+                  "Results show that weekly AI feedback reduced grammar errors by 18%.",
+                  "These results suggest that schools should combine AI and teacher feedback."
+                 ],
+                 "answer": 2,
+                 "analysis": "摘要常依序寫：目的（aims to）→ 方法（surveyed…）→ 結果（Results show…，常帶數據）→ 意涵（suggest that…should）。"
                 }
               },
               {
@@ -5809,7 +5811,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u10",
             "unitNo": "SH-Unit 22",
             "title": "ESP 全球永續與綠色能源跨域論證 (ESP: Global Sustainability & ESG Discourses)",
-            "indicator": "SH: 永續發展目標 (SDGs) 與全球公民素養融入英文教學",
+            "indicator": "2-Ⅴ-8 / 3-Ⅴ-11 / 8-Ⅴ-6 / 8-Ⅴ-7 / 9-Ⅴ-7 / C-Ⅴ-4 / C-Ⅴ-5 / D-Ⅴ-7",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "C1 道德實踐與公民意識、C3 多元文化與國際理解、B2 科技資訊與媒體素養",
@@ -5938,7 +5940,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u11",
             "unitNo": "SH-Unit 23",
             "title": "篇章結構與段落填空破題密碼 (Discourse Cohesion & Textual Flow Mastery)",
-            "indicator": "SH: 學測篇章結構題型與語篇連貫分析",
+            "indicator": "3-Ⅴ-12 / 7-Ⅴ-5 / 9-Ⅴ-2 / Ae-Ⅴ-9 / D-Ⅴ-2",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -5952,15 +5954,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "檢查空格前後的指涉與邏輯，必要時回看整段；線索數量不固定，也不一定出現代名詞。",
                 "example": "Sentence A mentions 'Dr. Evans launched a project.' Option C begins with 'This ambitious endeavor...'",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [篇章連貫四大定錨法則 (Four Anchoring Principles of Discourse Cohesion)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Sentence A mentions 'Dr. Evans launched a project.' Option C begins with 'This ambitious endeavor...'",
-                    "Sentence A mentions 'Dr. Evans launched a project.' Option C begins with 'Thare ambitious endeavor...'",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「篇章連貫四大定錨法則 (Four Anchoring Principles of Discourse Cohesion)」之核心公式：1. 代名詞定錨 (they, this, such) -> 2. 定冠詞特定指稱 (the + N) -> 3. 轉折語流 (However, Thus) -> 4. 語意回響 (Lexical Reiteration)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Dr. Evans launched a project to clean up the river. Which sentence best follows?",
+                 "options": [
+                  "This ambitious effort attracted over 200 volunteers.",
+                  "However, rivers are important for farming.",
+                  "They are also popular among tourists.",
+                  "For example, the weather was sunny."
+                 ],
+                 "answer": 0,
+                 "analysis": "This ambitious effort 用「this + 概括名詞」回指前句的 project，指涉鏈完整。However 沒有可對比的內容；They 找不到複數先行詞；天氣的例子和前句無關。"
                 }
               }
             ],
@@ -6052,7 +6054,7 @@ export const UNIFIED_GRADES = [
             "id": "g11-s2-u12",
             "unitNo": "SH-Unit 24",
             "title": "高二全冊融會貫通與頂標衝刺模擬 (G11 Culminating Synthesis & Diagnostic Trial)",
-            "indicator": "SH: 108 課綱高中第二階段加深加廣全維度總結",
+            "indicator": "3-Ⅴ-13 / 7-Ⅴ-8 / 9-Ⅴ-4 / Ac-Ⅴ-3 / Ad-Ⅴ-1 / D-Ⅴ-4",
             "stage": "第五學習階段 (高中二年級 108 課綱)",
             "cefr": "B1+ ~ B2 (學測前標與統測外語)",
             "competency": "A1 自我精進、A2 系統思考、B1 符號溝通、B2 科技素養、C2 團隊領導",
@@ -6066,15 +6068,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "面對大考長達 1200 字的多篇閱讀題組，切莫一字一字死讀。首段抓議題、各段首句抓論點、末段抓結論，再帶題檢索精確定位。",
                 "example": "Skim paragraph 1 for the main thesis; scan for capitalized proper nouns mentioned in Question 38.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [高難度長篇閱讀三階速讀心法 (Three-Stage Velocity Reading for GSAT)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Skim paragraph 1 for the main thesis; scan for capitalized proper nouns mentioned in Question 38.",
-                    "Skim paragraph 1 for the main thesare; scan for capitalized proper nouns mentioned in Question 38.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「高難度長篇閱讀三階速讀心法 (Three-Stage Velocity Reading for GSAT)」之核心公式：Stage 1: Topic Sentence Skim (每段首尾句 45 秒抓大意) -> Stage 2: Question Keyword Scan (題幹定位 30 秒) -> Stage 3: Deep Syntactic Parsing (長難句精準拆解)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "A 900-word passage comes with a question asking in which year a law was passed. What is the most efficient first step?",
+                 "options": [
+                  "Read every word carefully from the beginning.",
+                  "Scan the passage for dates near the word \"law.\"",
+                  "Look up every unfamiliar word first.",
+                  "Read only the last paragraph."
+                 ],
+                 "answer": 1,
+                 "analysis": "細節題先用題幹關鍵字（law、year）掃讀定位日期，再精讀該句確認。逐字讀或先查所有生字太慢；只讀末段可能漏掉答案。"
                 }
               }
             ],
@@ -6182,7 +6184,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u1",
             "unitNo": "EX-Unit 1",
             "title": "學測英文詞彙與綜合測驗極速破題 (GSAT Cloze & Lexical Precision)",
-            "indicator": "SH/Exam: 大考中心學測英文第一、二大題高頻命題常模",
+            "indicator": "3-Ⅴ-1 / 3-Ⅴ-12 / 4-Ⅴ-1 / Ac-Ⅴ-3 / Ad-Ⅴ-1",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A1 自我精進、A2 系統思考、B1 符號溝通",
@@ -6196,15 +6198,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "詞彙題應以實際語境辨義，而是考驗考生是否能依據前後文的形容詞修飾或受詞搭配，選出唯一道地的動詞或名詞。",
                 "example": "The scientist's pioneering research made a significant contribution to marine preservation.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [詞彙題語境三步定位法 (Three-Step Lexical Context Method)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "The scientist's pioneering research made a significant contribution to marine preservation.",
-                    "The scientaret's pioneering research made a significant contribution to marine preservation.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「詞彙題語境三步定位法 (Three-Step Lexical Context Method)」之核心公式：1. 詞性判定 (判斷空格需要 N, V, Adj, Adv) -> 2. 正負向情感色彩 (+ / -) -> 3. 搭配詞精準鎖定 (Collocation)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "The scientist's research made a significant ___ to marine conservation.",
+                 "options": [
+                  "contribution",
+                  "distribution",
+                  "attribution",
+                  "constitution"
+                 ],
+                 "answer": 0,
+                 "analysis": "空格前是 made a significant，後接 to：make a contribution to（對…做出貢獻）是固定搭配，語意也正向。distribution 分配、attribution 歸因、constitution 憲法皆不合。"
                 }
               },
               {
@@ -6313,7 +6315,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u2",
             "unitNo": "EX-Unit 2",
             "title": "學測文意選填與篇章結構無懈可擊 (GSAT Blanks Filling & Discourse Logic)",
-            "indicator": "SH/Exam: 大考中心學測英文第三大題 (文意選填) 與第四大題 (篇章結構)",
+            "indicator": "3-Ⅴ-12 / 7-Ⅴ-5 / 9-Ⅴ-2 / Ae-Ⅴ-9 / D-Ⅴ-2",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A2 系統思考、B1 符號溝通",
@@ -6442,7 +6444,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u3",
             "unitNo": "EX-Unit 3",
             "title": "學測閱讀測驗長篇與混合題滿分策略 (GSAT Extended Reading & Hybrid Response)",
-            "indicator": "SH/Exam: 大考中心學測英文第五大題 (長篇閱讀) 與第六大題 (混合題)",
+            "indicator": "3-Ⅴ-13 / 3-Ⅴ-15 / 5-Ⅴ-4 / 5-Ⅴ-10 / Ae-Ⅴ-9 / Ae-Ⅴ-12 / B-Ⅴ-12",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A2 系統思考、B1 符號溝通、B2 科技素養",
@@ -6456,15 +6458,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "主旨題不可選過於狹隘的單一段落細節；細節題以原文精確字詞為準；推論題從原文事實進行最小邏輯步長推導。",
                 "example": "Question asks for 'primary purpose'; look at opening and concluding paragraphs for thesis statement.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [長篇閱讀四大多層次題型破解法 (Four Types of GSAT Reading Questions)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Question asks for 'primary purpose'; look at opening and concluding paragraphs for thesis statement.",
-                    "Question asks for 'primary purpose'; look at opening and concluding paragraphs for thesare statement.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「長篇閱讀四大多層次題型破解法 (Four Types of GSAT Reading Questions)」之核心公式：1. 主旨題 (首段末段+各段首句) | 2. 細節題 (專有名詞關鍵字定位) | 3. 推論題 (嚴禁超譯過度推測) | 4. 詞義題 (上下文代入驗證)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "A question asks for the passage's \"primary purpose.\" Which strategy fits best?",
+                 "options": [
+                  "Find the paragraph with the most numbers.",
+                  "Check the opening and closing paragraphs and the first sentence of each paragraph.",
+                  "Choose the option with the hardest vocabulary.",
+                  "Pick a detail mentioned only in the last sentence."
+                 ],
+                 "answer": 1,
+                 "analysis": "主旨題要看全文架構：首段、末段的論點加上各段首句。只取單一段落或單一句的細節，範圍太狹隘。"
                 }
               },
               {
@@ -6572,7 +6574,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u4",
             "unitNo": "EX-Unit 4",
             "title": "學測英文作文：看圖寫作與雙面論證 (GSAT Essay Writing: Image Prompt & Argumentation)",
-            "indicator": "SH/Exam: 大考中心學測非選擇題英文作文 (滿分 20 分評分規準)",
+            "indicator": "2-Ⅴ-6 / 4-Ⅴ-6 / 4-Ⅴ-8 / 9-Ⅴ-7 / B-Ⅴ-4 / B-Ⅴ-9 / D-Ⅴ-7",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A1 自我精進、B1 符號溝通、C1 道德公民、C3 國際理解",
@@ -6702,7 +6704,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u5",
             "unitNo": "EX-Unit 5",
             "title": "統測共同科目與專業科目(一)(二)全真突破 (TVE Vocational Joint Exam & ESP Domain English)",
-            "indicator": "TVE: 技專校院入學測驗中心統一入學測驗 (統測英文與外語群群帶)",
+            "indicator": "1-V-11 / 3-V-11 / 4-V-2 / 5-V-12 / Ac-V-4 / Ae-V-7 / B-V-4",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A2 系統思考、B1 符號溝通、B2 科技素養",
@@ -6831,7 +6833,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s1-u6",
             "unitNo": "EX-Unit 6",
             "title": "國中教育會考 A++ 決勝題型徹底破解 (CAP A++ Fatal Challenge & Reading Velocity)",
-            "indicator": "JH/CAP: 國中教育會考英語科精熟級 (A++) 頂標滿分題型全解",
+            "indicator": "3-Ⅳ-12 / 3-Ⅳ-14 / 7-Ⅳ-5 / 9-Ⅳ-1 / Ac-Ⅳ-4 / Ad-Ⅳ-1 / D-Ⅳ-1",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A2 系統思考、B1 符號溝通、B2 科技資訊",
@@ -6968,7 +6970,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u7",
             "unitNo": "EX-Unit 7",
             "title": "GEPT 全民英檢中級/中高級高分全策 (GEPT Intermediate/High-Intermediate Blueprint)",
-            "indicator": "International/GEPT: LTTC 全民英檢中級與中高級聽說讀寫四大面向評量",
+            "indicator": "1-Ⅴ-4 / 2-Ⅴ-3 / 4-Ⅴ-8 / 7-Ⅴ-9 / B-Ⅴ-7",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "B1 符號溝通、A1 身心自我精進、C3 國際理解",
@@ -7098,7 +7100,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u8",
             "unitNo": "EX-Unit 8",
             "title": "TOEIC 多益 900+ 金色證書核心考點 (TOEIC Listening & Reading Gold Level Tactics)",
-            "indicator": "International/TOEIC: ETS 多益聽力與閱讀測驗金色證書 (860-990分) 實戰技法",
+            "indicator": "1-Ⅴ-8 / 3-Ⅴ-3 / 5-Ⅴ-11 / Ae-Ⅴ-2 / Ae-Ⅴ-3 / Ae-Ⅴ-4",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "B1 符號溝通、A2 系統思考、B2 科技素養",
@@ -7128,15 +7130,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "跨文本題需整合相關文件，但不能依題號判定；每題先確認要求的是單篇細節或跨篇資訊。",
                 "example": "Text 1 lists Model X400 at $200; Text 2 is an invoice for Model X400; Text 3 offers 10% discount on order.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [Part 7 三文本交叉檢索題 (Triple Passage Cross-Referencing in Part 7)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Text 1 lists Model X400 at $200; Text 2 is an invoice for Model X400; Text 3 offers 10% discount on order.",
-                    "Text 1 larets Model X400 at $200; Text 2 are an invoice for Model X400; Text 3 offers 10% darecount on order.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「Part 7 三文本交叉檢索題 (Triple Passage Cross-Referencing in Part 7)」之核心公式：Text 1 (網頁公告/產品型錄) + Text 2 (客戶訂購單/客訴電郵) + Text 3 (客服主管回覆) -> 尋找時間、型號與差價交叉點。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Text 1: Model X400 costs $200. Text 2: Ms. Ho orders two X400 units. Text 3: The manager offers her 10% off the whole order. How much will Ms. Ho pay?",
+                 "options": [
+                  "$180",
+                  "$360",
+                  "$400",
+                  "$380"
+                 ],
+                 "answer": 1,
+                 "analysis": "整合三篇：2 × $200 = $400，再打九折：$400 × 0.9 = $360。$180 是單台折扣價，$400 沒有打折。"
                 }
               }
             ],
@@ -7228,7 +7230,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u9",
             "unitNo": "EX-Unit 9",
             "title": "大學 EMI 全英語授課銜接與口頭簡報 (EMI Academic Listening & Oral Presentation)",
-            "indicator": "Bilingual 2030: 大學全英語授課 (English as a Medium of Instruction) 與學術口頭報告",
+            "indicator": "1-Ⅴ-10 / 2-Ⅴ-10 / 5-Ⅴ-7 / 7-Ⅴ-7 / B-Ⅴ-3 / B-Ⅴ-11",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "B1 符號溝通、C2 團隊領導與合作、C3 國際理解與跨文化溝通",
@@ -7242,15 +7244,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "面對外籍教授每分鐘 160 字的高速全英授課，切忌逐字聽抄。善用符號與縮寫 (w/o = without, b/c = because, -> leads to, = equals) 記錄概念鏈。",
                 "example": "Prof explains photosynthesis: Light -> Thylakoid -> ATP + NADPH -> Calvin Cycle (Stroma) -> Glucose.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [大學講堂康乃爾筆記速記心法 (Cornell Academic Note-Taking System)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Prof explains photosynthesis: Light -> Thylakoid -> ATP + NADPH -> Calvin Cycle (Stroma) -> Glucose.",
-                    "Prof explains photosynthesare: Light -> Thylakoid -> ATP + NADPH -> Calvin Cycle (Stroma) -> Glucose.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「大學講堂康乃爾筆記速記心法 (Cornell Academic Note-Taking System)」之核心公式：Right Column (課堂筆記：主論點、縮寫、箭頭) -> Left Column (課後提煉關鍵字與可能考題) -> Bottom (50字核心摘要)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "In the Cornell note-taking system, what goes in the LEFT column after class?",
+                 "options": [
+                  "A word-for-word transcript of the lecture",
+                  "Key words and questions that cue the main notes",
+                  "A 50-word summary of the whole lecture",
+                  "Drawings unrelated to the topic"
+                 ],
+                 "answer": 1,
+                 "analysis": "右欄是課堂速記，左欄在課後寫關鍵字與提問（cue），底部寫摘要。逐字抄寫跟不上講課，也不利整理。"
                 }
               },
               {
@@ -7358,7 +7360,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u10",
             "unitNo": "EX-Unit 10",
             "title": "批判性思維與學術思辨寫作 (Critical Thinking, Fallacies & Academic Essay Architecture)",
-            "indicator": "SH/Higher Ed: 批判性思考、邏輯謬誤辨析與學術思辨寫作",
+            "indicator": "3-Ⅴ-15 / 4-Ⅴ-8 / 9-Ⅴ-3 / 9-Ⅴ-7 / Ae-Ⅴ-12 / D-Ⅴ-3 / D-Ⅴ-7",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "A2 系統思考與問題解決、B1 符號運用、C1 道德公民實踐",
@@ -7372,15 +7374,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "批判性思維的核心就是檢驗論證的前提是否扎實、推導鏈是否有效，避免被情緒煽動或虛假相關性所誤導。",
                 "example": "Claiming 'If we allow this minor amendment, total tyranny will inevitably result tomorrow' is a classic slippery slope.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [三大常見學術邏輯謬誤辨識 (Three Core Logical Fallacies in Academic Writing)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Claiming 'If we allow this minor amendment, total tyranny will inevitably result tomorrow' is a classic slippery slope.",
-                    "Claiming 'If we allow thare minor amendment, total tyranny will inevitably result tomorrow' are a classic slippery slope.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「三大常見學術邏輯謬誤辨識 (Three Core Logical Fallacies in Academic Writing)」之核心公式：Straw Man (稻草人謬誤：曲解對方論點) | Slippery Slope (滑坡謬誤：極端連鎖假想) | Ad Hominem (人身攻擊：針對個人非論點)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "\"If we let students use phones at lunch, soon they will use them in every class, and education will collapse.\" Which fallacy is this?",
+                 "options": [
+                  "Straw man",
+                  "Slippery slope",
+                  "Ad hominem",
+                  "No fallacy"
+                 ],
+                 "answer": 1,
+                 "analysis": "從一個小步驟推到一連串未經證明的極端後果，是滑坡謬誤。稻草人是曲解對方論點；人身攻擊是針對人而不是論點。"
                 }
               },
               {
@@ -7488,7 +7490,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u11",
             "unitNo": "EX-Unit 11",
             "title": "全真跨域綜合大考終極模擬 (Comprehensive Cross-Discipline Diagnostic Exam)",
-            "indicator": "SH/Unified: 108 課綱各考科跨領域核心素養終極整合檢定",
+            "indicator": "3-Ⅴ-11 / 5-Ⅴ-4 / 7-Ⅴ-8 / 9-Ⅴ-4 / Ae-Ⅴ-9 / C-Ⅴ-4 / D-Ⅴ-4",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "全人核心素養九大面向全景融合應用",
@@ -7601,7 +7603,7 @@ export const UNIFIED_GRADES = [
             "id": "g12-s2-u12",
             "unitNo": "EX-Unit 12",
             "title": "終生自主學習與英語力全景指南 (Lifelong Autonomous English Mastery Roadmap)",
-            "indicator": "Lifelong: 108 課綱終身學習者自主精進全景藍圖",
+            "indicator": "6-Ⅴ-3 / 6-Ⅴ-6 / 7-Ⅴ-2 / 7-Ⅴ-4 / 7-Ⅴ-9 / Ae-Ⅴ-5 / Ae-Ⅴ-8",
             "stage": "第五學習階段 (高三與大考巔峰戰力)",
             "cefr": "B2 ~ C1 (學測滿級分 · 國際認證)",
             "competency": "自主行動、溝通互動、社會參與三大面向終身實踐",
@@ -7615,15 +7617,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "將英語從「考試學科」轉化為「日常生活思維語言」。每天沉浸 30 分鐘優質英語內容，十年間累積的複利效應將徹底重塑人生軌跡。",
                 "example": "Listen to BBC Radio 4 or NPR daily; engage in international seminars and academic exchange.",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [終身自主英語學習飛輪效應 (The Lifelong Autonomous Flywheel)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Listen to BBC Radio 4 or NPR daily; engage in international seminars and academic exchange.",
-                    "Lareten to BBC Radio 4 or NPR daily; engage in international seminars and academic exchange.",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「終身自主英語學習飛輪效應 (The Lifelong Autonomous Flywheel)」之核心公式：High-Quality Input (優質英文原版輸入) -> Cognitive Synthesis (筆記與知識內化) -> Authentic Output (部落格/演講/交流輸出) -> Continuous Feedback (反思精進)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Which plan best follows the \"input → synthesis → output → feedback\" cycle?",
+                 "options": [
+                  "Listen to a podcast, write a summary, post it to a class forum, and revise it after comments.",
+                  "Memorize 100 words a day without using them.",
+                  "Watch English movies with Chinese subtitles only.",
+                  "Take one practice test a year."
+                 ],
+                 "answer": 0,
+                 "analysis": "第一個選項依序完成輸入（聽 podcast）、內化（寫摘要）、輸出（發表）與回饋修正（依留言修改）；其他選項缺少輸出或回饋。"
                 }
               },
               {
@@ -7632,15 +7634,15 @@ export const UNIFIED_GRADES = [
                 "explanation": "善用生成式 AI 扮演蘇格拉底式導師，主動要求 AI 指出自己文法盲點與用詞不自然處，達成 24 小時個人化刻意練習。",
                 "example": "Prompt: 'Act as an academic editor. Critique my essay for discourse flow and suggest three natural collocations.'",
                 "examExample": {
-                  "stem": "According to the core linguistic principle of [AI 時代人機協作英文精進術 (Human-AI Synergistic Language Mastery)], which sentence demonstrates the most accurate grammatical and syntactic structure?",
-                  "options": [
-                    "Prompt: 'Act as an academic editor. Critique my essay for discourse flow and suggest three natural collocations.'",
-                    "Prompt: 'Act as an academic editor. Critique my essay for darecourse flow and suggest three natural collocations.'",
-                    "The findings was concluded without sufficient empirical verification.",
-                    "Regardless of the evidence, the hypothesis were abruptly abandoned."
-                  ],
-                  "answer": 0,
-                  "analysis": "【考點解構】本題精確考核「AI 時代人機協作英文精進術 (Human-AI Synergistic Language Mastery)」之核心公式：Prompt Engineering for Language Acquisition (設計情境對話、寫作評分規準檢驗、口音糾正)。正確選項完美符合該句法原則；其餘選項皆存在主謂不一致或時態語態誤用。"
+                 "stem": "Which prompt uses AI as a learning coach rather than a ghostwriter?",
+                 "options": [
+                  "Write my essay about climate change.",
+                  "Point out three grammar problems in my paragraph and explain why, but do not rewrite it.",
+                  "Translate my Chinese essay into perfect English.",
+                  "Give me the answers to tomorrow's quiz."
+                 ],
+                 "answer": 1,
+                 "analysis": "請 AI 指出問題並說明原因、再由自己修改，才是刻意練習。代寫、整篇翻譯或索取答案都跳過學習歷程，也可能違反學術誠信。"
                 }
               }
             ],

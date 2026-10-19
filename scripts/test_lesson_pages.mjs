@@ -17,8 +17,8 @@ test('Every chapter displays its own knowledge, vocabulary, dialogue and usable 
   assert.ok(html.includes('data-lesson-draft'));assert.ok(!html.includes('undefined'));
  }assert.equal(prompts.size,27);
 });
-test('All 61 academic units resolve their own material, no shared football question',()=>{
- const units=UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units));assert.equal(units.length,61);
+test('All 79 academic units resolve their own material, no shared football question',()=>{
+ const units=UNIFIED_GRADES.flatMap(g=>g.semesters.flatMap(s=>s.units));assert.equal(units.length,79);
  for(const u of units){const html=pages.microLesson(u.id);assert.ok(html.includes(pages.escapeText(u.title)));assert.ok(!html.includes('Look! The children ________ soccer'));assert.ok(!html.includes('undefined'));if(!u.id.includes('exam-suite'))assert.ok(!html.includes('這是考試資料入口'),u.id);}
  const sixth=pages.microLesson('g6-s1-u1');assert.ok(sixth.includes('quarter'));assert.ok(sixth.includes('<table>'));assert.ok(sixth.includes('micro-en1-1'));
  assert.ok(pages.microLesson('g8-s1-u3').includes('unless'));
