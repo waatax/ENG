@@ -1192,7 +1192,8 @@ let state = {
   rate: 0.95,
   shadowGap: 3,
   completedIds: [],
-  favoriteIds: []
+  favoriteIds: [],
+  resumeLine: 0
 };
 
 try {
@@ -1210,6 +1211,7 @@ try {
 function persistState() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      resumeLine: state.resumeLine,
       category: state.category,
       selectedId: state.selectedId,
       playMode: state.playMode,
@@ -1453,6 +1455,7 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
 
   stopCommuteDialogue(false);
   state.selectedId = target.id;
+  state.resumeLine = Math.max(0, Math.min(target.lines.length - 1, Number(startLine) || 0));
   persistState();
 
   isPlaying = true;
@@ -1515,6 +1518,8 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
   function runNextStep() {
     if (!isPlaying || myToken !== playToken) return;
     if (stepIdx >= steps.length) {
+      state.resumeLine = 0;
+      persistState();
       if (!state.completedIds.includes(target.id)) {
         state.completedIds.push(target.id);
         persistState();
@@ -1552,6 +1557,7 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
 
     const step = steps[stepIdx];
     activeLineIndex = step.lineIdx;
+    if (Number.isInteger(step.lineIdx) && step.lineIdx >= 0 && step.lineIdx < target.lines.length) { state.resumeLine = step.lineIdx; persistState(); }
     activePhaseLabel = step.phase;
     if (stepIdx === 0 && externalRerender) externalRerender();
     else refreshCommuteDom();
@@ -2143,4 +2149,16 @@ export function getCommuteDialogueState() {
     activePhaseLabel,
     totalDialogues: ALL_COMMUTE_DIALOGUES.length
   };
+}
+
+// Home playback stays in the selected lesson, sharing completion and position with the studio.
+export function playHomeConversation(id, mode, resume, rerender) {
+  const target = ALL_COMMUTE_DIALOGUES.find(d => d.id === id);
+  if (!target) return;
+  const line = resume && state.selectedId === id ? Math.max(0, Math.min(target.lines.length - 1, Number(state.resumeLine) || 0)) : 0;
+  state.category = target.stage;
+  state.playMode = ['blind_en','bilingual','shadowing'].includes(mode) ? mode : 'blind_en';
+  state.autoAdvance = false;
+  state.loopSingle = false;
+  startCommuteDialogue(id, line, false, rerender);
 }

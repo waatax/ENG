@@ -19,26 +19,20 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window && typeof windo
   window.speechSynthesis.onvoiceschanged = loadVoices;
 }
 
-// 優先挑選自然的美式或英式英語發音
+// Select locale before voice name: never silently prefer a British voice.
+export function selectAmericanVoice(available) {
+  const american = available.filter(v => /^en[-_]US$/i.test(v.lang));
+  const score = v => /Jenny|Aria|Guy|Andrew|Ava|Emma|Brian/i.test(v.name) && /Natural|Online/i.test(v.name) ? 100 :
+    /Natural|Neural|Premium|Enhanced/i.test(v.name) ? 90 : /Google US English/i.test(v.name) ? 80 : /Samantha|Alex/i.test(v.name) ? 60 : 10;
+  return american.sort((a,b) => score(b)-score(a))[0] || null;
+}
 export function getBestEnglishVoice() {
-  if (!voices.length) loadVoices();
-  const preferred = [
-    'Google US English',
-    'Microsoft Jenny Online (Natural) - English (United States)',
-    'Microsoft Guy Online (Natural) - English (United States)',
-    'Microsoft Zira - English (United States)',
-    'Microsoft David - English (United States)',
-    'Samantha',
-    'Alex',
-    'Victoria',
-    'Daniel'
-  ];
-  for (const name of preferred) {
-    const v = voices.find(x => x.name.includes(name));
-    if (v) return v;
-  }
-  return voices.find(v => v.lang.startsWith('en-US')) ||
-         voices.find(v => v.lang.startsWith('en')) || null;
+  loadVoices();
+  return selectAmericanVoice(voices);
+}
+export function englishVoiceDescription() {
+  const voice = getBestEnglishVoice();
+  return voice ? `${voice.name} · ${voice.lang}` : '裝置預設英文；尚未找到 en-US 聲音，可在系統安裝美式英文語音後重試。';
 }
 
 // 優先挑選自然繁體中文或流暢普通話發音

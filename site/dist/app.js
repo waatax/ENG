@@ -1,3 +1,4 @@
+import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
 import { enhanceLearningPage } from './learning_navigation.mjs?v=lessons20261020';
 import { renderAffixGuide } from './affix_guide.mjs';
@@ -2427,6 +2428,7 @@ root.addEventListener('click', e => {
   if (!b) return;
   if (b.classList.contains('reading-drawer-overlay') && e.target !== b) return;
   const d = b.dataset;
+  if (handleHomeConversationClick(b, render)) return;
   if (handleWordAudioClick(b, render)) return;
   if (handleAffixClick(b, render)) return;
   if (d.listenUnit) {
@@ -3049,3 +3051,6 @@ root.addEventListener('change', e => handleWordAudioChange(e.target,render));
 window.addEventListener('pagehide',()=>stopWordAudio(root));
 
 root.addEventListener('click', event => { const target=event.target.closest('[data-catalog-domain],[data-catalog-reset]'); if(target)searchKnowledge(target); });
+
+root.addEventListener('input', e => handleHomeConversationInput(e.target));
+root.addEventListener('change', e => handleHomeConversationInput(e.target));
