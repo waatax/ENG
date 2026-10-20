@@ -1,0 +1,33 @@
+✔ Every card sends the target word as part of its complete example text (23.4811ms)
+✔ Long sentences preserve every word and emit completion only after the final spoken chunk (0.5855ms)
+✔ Stopping or replacing speech invalidates late callbacks from the previous utterance (0.1605ms)
+✔ Full and simple modes finish exactly ten cards in the required language/text order (12.1706ms)
+✔ Speech errors stop the batch without skipping, and mode changes cancel pending callbacks (2.1487ms)
+✔ All requested batch sizes exist and navigation stops the autoplay owner (62.412ms)
+✔ Natural US voice outranks named British voices and legacy US voices (1.0893ms)
+✔ Every conversation is reachable in a populated difficulty group (1.8489ms)
+✔ Difficulty, English keyword and completion filters combine with empty results (0.6089ms)
+✔ Home stop retains sentence, resume starts there, late speech cannot advance (1.3592ms)
+✔ Five English courses have complete original lesson cycles and precise answer keys (1.7398ms)
+✔ Pure-English examFrameworks cover TOEFL, TOEIC, SAT, GMAT and GRE with full teaching blueprints, Step-0 protocols, traps, worked demos and dialogues (0.423ms)
+✔ Pure-English Word & Phrase Audio sets, Commute Dialogues and Interactive Exam Drills are complete and 100% English (1.852ms)
+✔ English edition assets contain zero CJK characters and match deployment mirror byte-for-byte (9.9372ms)
+✔ All catalog pages have valid distinct recommendations and path targets (4.6032ms)
+✔ Saved lessons, visits and spaced recall survive reload without premature promotion (0.6184ms)
+✔ Corrupt or blocked storage preserves usable interactions and explicit warning (0.423ms)
+✔ All school units, chapters and knowledge points offer their own playable lesson (54.9762ms)
+✔ Grammar routes contain accessible diagrams, tables, listening and correctable questions (6.5585ms)
+✔ Bilingual speech preserves English examples and chooses language separately (0.2097ms)
+✔ Playback advances only on completion, pauses safely, resumes and rejects late callbacks (1.4453ms)
+✔ Recall pauses after the question and sleep timer stops the next utterance (0.4728ms)
+✔ Source and Pages mirror remain byte-identical (13.2358ms)
+✔ Commute Dialogue Studio provides 154 bilingual teaching dialogues and 4 SLA commute modes (3.0402ms)
+✔ A mixed-language sentence stays on one track until every language segment completes (0.4153ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 370.2753

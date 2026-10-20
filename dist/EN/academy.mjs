@@ -1,3 +1,4 @@
+import { speak as speakAmerican, stopAudio as stopAmericanAudio } from '../audio.mjs';
 import {tracks} from './content.mjs';
 import {renderReasoningMap} from './reasoning_map.mjs?v=lessons20261020';
 import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills, examCommuteDialogues} from './exam_curriculum.mjs';
@@ -76,34 +77,21 @@ function stop(clear=true){
   playing=false;
   activeDialoguePlaying=-1;
   activeCommuteLine=-1;
-  window.speechSynthesis?.cancel();
+  stopAmericanAudio();
   if(toggle)toggle.textContent='Listen';
   document.querySelectorAll('.word.active,.dialogue-line.active').forEach(el=>el.classList.remove('active'));
   if(clear)status.textContent='';
 }
 
+let speechRole=0;
+const roleFor=(lines,speaker)=>Math.max(0,[...new Set(lines.map(l=>l.speaker))].indexOf(speaker))%2;
 function speak(text,done,version,rateOverride=null){
-  const engine=window.speechSynthesis;
-  if(!engine){
-    stop(false);
-    status.textContent='Speech is unavailable. Read the definition and example on each card.';
-    return;
-  }
-  const u=new SpeechSynthesisUtterance(text);
-  u.lang='en-US';
   const baseRate=[.75,1,1.25].includes(Number(saved.rate))?Number(saved.rate):1;
-  u.rate=rateOverride||baseRate;
-  const voices=engine.getVoices();
-  const voice=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
-  if(!voice){
-    stop(false);
-    status.textContent='No English voice is available. Enable an English voice on your device, then try again.';
-    return;
-  }
-  u.voice=voice;
-  u.onend=()=>{if(version===token)done();};
-  u.onerror=()=>{if(version===token){stop(false);status.textContent='Speech stopped. Tap Listen to try again.';}};
-  engine.speak(u);
+  speakAmerican(text,{
+    lang:'en-US',rate:rateOverride||baseRate,voiceRole:speechRole,requireAmerican:true,chunkLimit:240,
+    onEnd:()=>{if(version===token)done();},
+    onError:()=>{if(version===token){stop(false);status.textContent='US English speech is unavailable or was interrupted. Enable an English (United States) voice, then try again.';}}
+  });
 }
 
 function buildAudioSpeechText(term,def,example){
@@ -251,10 +239,11 @@ function listenDialogue(trackId,lineIdx=-1){
   const version=token;
   if(lineIdx>=0&&fw.dialogue.lines[lineIdx]){
     const line=fw.dialogue.lines[lineIdx];
+    speechRole=roleFor(fw.dialogue.lines,line.speaker);
     activeDialoguePlaying=lineIdx;
     document.querySelectorAll('[data-dialogue-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.dialogueLine)===lineIdx));
     status.textContent=`${line.speaker}: ${line.text}`;
-    speak(`${line.speaker} says: ${line.text}`,()=>stop(false),version);
+    speak(line.text,()=>stop(false),version);
     return;
   }
   let idx=0;
@@ -266,10 +255,11 @@ function listenDialogue(trackId,lineIdx=-1){
       status.textContent='Dialogue complete.';
       return;
     }
+    speechRole=roleFor(fw.dialogue.lines,line.speaker);
     activeDialoguePlaying=idx;
     document.querySelectorAll('[data-dialogue-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.dialogueLine)===idx));
     status.textContent=`Dialogue ${idx+1}/${fw.dialogue.lines.length} · ${line.speaker}`;
-    speak(`${line.speaker} says: ${line.text}`,()=>{
+    speak(line.text,()=>{
       idx++;
       timer=setTimeout(nextLine,700);
     },version);
@@ -298,10 +288,11 @@ function listenCommuteDialogue(dialogueId=activeCommuteId,singleLineIdx=-1){
 
   if(singleLineIdx>=0&&dlg.lines[singleLineIdx]){
     const ln=dlg.lines[singleLineIdx];
+    speechRole=roleFor(dlg.lines,ln.speaker);
     activeCommuteLine=singleLineIdx;
     document.querySelectorAll('[data-commute-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.commuteLine)===singleLineIdx));
-    status.textContent=`${ln.speaker}: ${ln.text}`;
-    const textToSpeak=saved.dialogueMode==='teaching'?`${ln.speaker} says: ${ln.text}. Coaching note: ${ln.focusNote}`:`${ln.speaker} says: ${ln.text}`;
+    status.textContent=ln.text;
+    const textToSpeak=saved.dialogueMode==='teaching'?`${ln.text} Coaching note: ${ln.focusNote}`:ln.text;
     speak(textToSpeak,()=>stop(false),version,baseRate);
     return;
   }
@@ -331,12 +322,13 @@ function listenCommuteDialogue(dialogueId=activeCommuteId,singleLineIdx=-1){
       status.textContent='Commute dialogue complete. Try the Active Recall prompt below.';
       return;
     }
+    speechRole=roleFor(dlg.lines,ln.speaker);
     activeCommuteLine=idx;
     document.querySelectorAll('[data-commute-line]').forEach(el=>el.classList.toggle('active',Number(el.dataset.commuteLine)===idx));
     status.textContent=`${dlg.track.toUpperCase()} Dialogue (${idx+1}/${dlg.lines.length}) · ${ln.speaker}`;
 
     if(saved.dialogueMode==='shadowing'){
-      speak(`${ln.speaker}: ${ln.text}`,()=>{
+      speak(ln.text,()=>{
         if(version!==token)return;
         status.textContent=`Shadowing Pause: Repeat "${ln.text}" out loud now...`;
         timer=setTimeout(()=>{
@@ -348,7 +340,7 @@ function listenCommuteDialogue(dialogueId=activeCommuteId,singleLineIdx=-1){
         },2200);
       },version,Math.max(0.75,baseRate*0.85));
     }else if(saved.dialogueMode==='teaching'){
-      speak(`${ln.speaker} says: ${ln.text}`,()=>{
+      speak(ln.text,()=>{
         if(version!==token)return;
         timer=setTimeout(()=>{
           if(version!==token)return;
@@ -359,14 +351,14 @@ function listenCommuteDialogue(dialogueId=activeCommuteId,singleLineIdx=-1){
         },350);
       },version,baseRate);
     }else if(saved.dialogueMode==='recall'){
-      speak(`${ln.speaker} says: ${ln.text}`,()=>{
+      speak(ln.text,()=>{
         idx++;
         const pauseMs=idx<dlg.lines.length?1800:700;
         if(idx<dlg.lines.length)status.textContent='Active Recall Pause: Predict the next speaker’s response...';
         timer=setTimeout(playLine,pauseMs);
       },version,baseRate);
     }else{
-      speak(`${ln.speaker}: ${ln.text}`,()=>{
+      speak(ln.text,()=>{
         idx++;
         timer=setTimeout(playLine,650);
       },version,baseRate);
@@ -399,7 +391,7 @@ function renderCommuteDialoguesStudio(){
 
   return `
     <p class="eyebrow">Hands-Free Commute Dialogue Studio · Pure-English Coaching</p>
-    <h1>One-Tap Commute Teaching Dialogues</h1>
+    <h1>One-Tap Commute Teaching Dialogues</h1><p>US English voices are selected for both speakers, with natural voices preferred when available. Audio pauses if a US voice is unavailable. Voice quality depends on your device.</p>
     <p class="lead">Designed for fast transit and walking commutes: tap once to stream high-stakes academic, executive, and campus conversations with built-in pragmatic coaching notes, shadowing pauses, and continuous radio auto-advance.</p>
 
     <section class="card quick-audio-hub">

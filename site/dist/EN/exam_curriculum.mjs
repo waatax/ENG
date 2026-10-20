@@ -1297,3 +1297,34 @@ export const examCommuteDialogues = [
     ]
   }
 ];
+
+// Editorial corrections shared by all English Academy dialogue routes.
+const updateLine=(id,index,text,focusNote)=>{const d=examCommuteDialogues.find(d=>d.id===id);if(d)d.lines[index]={...d.lines[index],text,focusNote};};
+updateLine('en-commute-toefl-1',1,"Forty sources may be too many to cover well in ten pages. Which decade would let you focus the question?",'Narrow the research question; the number of sources alone does not determine scope.');
+updateLine('en-commute-toefl-1',2,"For this practice project, I'd focus on transit policy during the nineteen seventies and compare two cities.",'State a proposed research scope without presenting an unsupported historical causal claim as fact.');
+updateLine('en-commute-toefl-3',3,"Water flow was weaker in the south. That could help explain the difference, but we would need more evidence to separate its effect from other factors.",'A possible confounder suggests an explanation; it does not establish causation.');
+updateLine('en-commute-toeic-3',3,"The itinerary shows an arrival at seven forty-five in the morning. Let me also check the carry-on allowance for that aircraft before I confirm the booking.",'Confirm the itinerary and baggage details separately; priority boarding does not guarantee bin space.');
+updateLine('en-commute-sat-3',0,"The catalog description has a blank, followed by a colon. It says every manuscript was indexed by date, author, and ink type. What word would fit?",'Read the missing word as blank; use the following description as a contextual clue.');
+updateLine('en-commute-gmat-1',1,"Only if any added breakage and return costs stay below the freight savings, assuming other costs and revenue stay the same.",'A small increase in breakage may still allow net savings; compare amounts, not unrelated percentages.');
+updateLine('en-commute-gmat-1',2,"What if the added breakage costs exceed the amount we save on freight?",'Negate the relevant cost condition by comparing money saved with money lost.');
+updateLine('en-commute-gmat-1',3,"Then this change would reduce profit, with other factors held constant. We should test it before switching all our packaging.",'Compare net amounts and preserve the stated assumptions.');
+updateLine('en-commute-gmat-2',0,"Our defect rate fell from three percent in the first quarter to two percent in the second, but the number of defective units rose.",'Keep defective units separate from warranty returns, which may have other causes and time lags.');
+updateLine('en-commute-gmat-2',3,"Two percent of twenty-five thousand is five hundred, compared with three hundred before. The rate fell, but the total number of defective units rose.",'Compare the same measure across periods: defect rate multiplied by production volume.');
+updateLine('en-commute-gmat-3',3,"Their earlier performance was similar, which addresses one concern. But volunteers may differ in other ways, so we still cannot attribute the increase to the schedule alone.",'Baseline similarity does not eliminate self-selection or prove a causal effect.');
+const causalDialogue=examCommuteDialogues.find(d=>d.id==='en-commute-gmat-3');
+causalDialogue.title='Checking Self-Selection Bias in a Work-Schedule Study';
+causalDialogue.setting='An HR team examines a voluntary four-day workweek pilot and discusses the limits of its causal evidence.';
+causalDialogue.recallPrompt='Why is similar baseline performance insufficient to rule out self-selection bias?';
+causalDialogue.recallModel='Volunteers may still differ in motivation or other unmeasured ways. Baseline similarity addresses one concern but does not prove causation.';
+const dataDialogue=examCommuteDialogues.find(d=>d.id==='en-commute-gmat-2');
+dataDialogue.setting='A finance team compares defect rates and total defective units across two production periods.';
+dataDialogue.keyPatterns=['defect rate','total defective units','production volume'];
+const satContext=examCommuteDialogues.find(d=>d.id==='en-commute-sat-3');
+satContext.recallModel='Look at the surrounding clauses to see whether they explain, illustrate, or contrast with the missing word. A colon or dash is a clue, not a guarantee of a definition.';
+for(const d of examCommuteDialogues)for(const l of d.lines){l.focusNote=l.focusNote.replace('high-scoring cause-and-effect collocation','useful cause-and-effect phrase');}
+examFrameworks.toefl.dialogue.lines[1].text="That claim is too strong without more evidence. What does the study actually show, and how could you limit the wording?";
+examFrameworks.toefl.dialogue.lines[1].focusNote='Do not endorse a mechanism or statistical significance before checking the evidence.';
+examFrameworks.toefl.dialogue.lines[2].text="I could say the restored wetlands reduced nitrogen runoff under the conditions measured in this study.";
+examFrameworks.toefl.dialogue.lines[2].focusNote='Match the conclusion to the measured conditions; do not invent statistical significance.';
+examFrameworks.gmat.dialogue.lines[0].text="If more staff work remotely, fewer people will use the office each day. Could that lower our annual facility costs?";
+examFrameworks.gmat.dialogue.lines[0].focusNote='Distinguish an expected occupancy change from a demonstrated reduction in fixed costs.';

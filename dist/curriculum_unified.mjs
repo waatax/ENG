@@ -1,3 +1,4 @@
+import { applyUnitDialogueRevisions } from './dialogue_editorial.mjs';
 // curriculum_unified.mjs - 英語文分年級課程資料
 // 課程標籤供自學導航；不代表官方課綱或考試機構認證。
 // 涵蓋：國小 (3–5 年級見 curriculum_elementary.mjs；Sixth 6上/6下)、國中 (JH 7-9年級 16單元)、高中/技高 (Arch 10-11年級先修與學期複習)、大考全考制
@@ -7735,3 +7736,5 @@ export const UNIFIED_GRADES = [
     ]
   }
 ];
+
+applyUnitDialogueRevisions(UNIFIED_GRADES);

@@ -1897,7 +1897,7 @@ function studioPage() {
       <div class="pill">🎙️ 通勤教學會話＆單字語音點讀館</div>
       <h1 style="margin:8px 0">全情境雙語教學會話連播與音標單字點讀館</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        完整收錄 <strong>112 組通勤英語教學會話</strong>（支援教學精講、雙語快播、開口跟讀、純英盲聽與角色扮演）與全學年核心單字 IPA 點讀發音。
+        完整收錄 <strong>各程度通勤英語教學會話</strong>（支援教學精講、雙語快播、開口跟讀、純英盲聽與角色扮演）與全學年核心單字 IPA 點讀發音。
       </p>
     </div>
 
@@ -2855,7 +2855,8 @@ root.addEventListener('click', e => {
     }
 
     if (targetUnit && targetUnit.dialogue && targetUnit.dialogue.length > 0) {
-      const items = targetUnit.dialogue.map(d => ({ text: d.en, slow: false }));
+      const speakers=[...new Set(targetUnit.dialogue.map(d=>d.speaker))];
+      const items = targetUnit.dialogue.map(d => ({ text: d.en, slow: false, rate:1, requireAmerican:true, voiceRole:Math.max(0,speakers.indexOf(d.speaker))%2, chunkLimit:240 }));
       playSequence(items, (idx) => {
         activePlayingDialogueIndex = idx;
         render();

@@ -1,10 +1,12 @@
+import { reviseFeaturedDialogues, UNIT_DIALOGUE_REVISIONS, CHAPTER_DIALOGUE_REVISIONS, FEATURED_LINE_REVISIONS } from './dialogue_editorial.mjs';
+import { NEW_CONVERSATION_SCENARIOS } from './conversation_scenarios.mjs';
 // commute_dialogues.mjs - 通勤英語教學會話快播與深度學習引擎 (Commute English Teaching Dialogue Studio)
 // 專為「快速通勤、單手即點即播、邊聽邊學」設計：
 // 1. 四大教學播放模式：🌟 教學精講 (導讀+英+中+句型解析+回想)、⚡ 雙語快播 (英+中極速刷聽)、🗣️ 開口跟讀 (慢速示範+留白跟讀+原速確認)、🎧 純英盲聽 (純英+語境思考)
 // 2. 支援「📻 通勤電台自動連播下一篇」、「🔂 單篇循環熟練」、「🎭 A/B 角色扮演開口接話」、「🙈 盲聽字幕遮罩」
 // 3. 整合：24 組高頻通勤實戰精選會話 + 27 組核心章節與國際考制會話 (含完整中譯與考點解析) + 61 組 108 課綱學年單元會話 = 共 112 組完整教學會話
 
-import { speak, stopAudio } from './audio.mjs';
+import { speak, stopAudio, renderAmericanVoiceSettings, setAmericanVoice } from './audio.mjs';
 import { curriculum } from './curriculum.mjs';
 import { UNIFIED_GRADES } from './curriculum_unified.mjs';
 
@@ -19,24 +21,24 @@ function esc(str) {
 }
 
 export const COMMUTE_CATEGORIES = [
-  { id: 'featured', label: '🔥 通勤實戰精選', sub: '24 組高頻生活・旅遊・商務・學術必備會話', badge: '60秒即學即用' },
+  { id: 'featured', label: '🔥 通勤實戰精選', sub: '生活・旅遊・商務・學術與新增實用情境', badge: '60秒即學即用' },
   { id: '國小', label: '🎒 國小基礎會話', sub: '日常作息・問路・點餐・節慶生活應對', badge: 'Pre-A1~A1' },
   { id: '國中', label: '🏫 國中日常＆會考', sub: '校園溝通・購物・天氣・會考聽力核心情境', badge: 'A1~B1' },
   { id: '高中', label: '🎓 高中學測＆思辨', sub: '長難句拆解・雙文觀點・搭配詞・學術討論', badge: 'B1~B2' },
   { id: '高工', label: '🛠️ 高工職場＆專業', sub: '現場安全・精密量測・故障排除・跨國驗收', badge: 'ESP 專業英文' },
   { id: '國際考試', label: '🌐 多益・托福・留學', sub: 'TOEIC 商務・TOEFL 研討・SAT・GRE・GMAT', badge: 'B2~C2' },
-  { id: 'all', label: '📚 全部教學會話', sub: '完整 112 組跨學段與情境教學會話總庫', badge: '全收錄' }
+  { id: 'all', label: '📚 全部教學會話', sub: '跨學段與情境教學會話總庫', badge: '全收錄' }
 ];
 
 export const COMMUTE_PLAY_MODES = [
-  { id: 'teaching', label: '🌟 教學精講', short: '教學精講', desc: '情境導讀 ➔ 英文原音 ➔ 中文翻譯 ➔ 句型與連音解析 ➔ 到站回想提問' },
+  { id: 'teaching', label: '🌟 教學精講', short: '教學精講', desc: '情境導讀 ➔ 美式英文示範 ➔ 中文翻譯 ➔ 句型與連音解析 ➔ 到站回想提問' },
   { id: 'bilingual', label: '⚡ 雙語快播', short: '雙語快播', desc: '英文會話 ➔ 中文意思，緊湊連播無干擾，1 分鐘快速刷完一組' },
   { id: 'shadowing', label: '🗣️ 開口跟讀', short: '開口跟讀', desc: '英文慢速清晰示範 ➔ 留白跟讀時間 (輪你開口) ➔ 英文原速確認 ➔ 中文' },
   { id: 'blind_en', label: '🎧 純英盲聽', short: '純英盲聽', desc: '純英文連播＋語境思考停頓，訓練不靠中文直接抓出對話關鍵訊息' }
 ];
 
 // 24 組專為通勤族打造的 60~90 秒高頻實戰教學會話
-export const COMMUTE_FEATURED_DIALOGUES = [
+const ORIGINAL_FEATURED_DIALOGUES = [
   {
     id: 'commute-daily-01',
     stage: 'featured',
@@ -1106,8 +1108,10 @@ function inferLineTeachingNote(en, zh, unitTitle) {
   return `對應「${String(unitTitle || '').split('(')[0].trim()}」核心情境句：建議先盲聽抓關鍵實詞（名詞與動詞），再開口跟讀模仿語調。`;
 }
 
+export const COMMUTE_FEATURED_DIALOGUES = reviseFeaturedDialogues(ORIGINAL_FEATURED_DIALOGUES);
+
 function buildAllCommuteDialogues() {
-  const list = [...COMMUTE_FEATURED_DIALOGUES];
+  const list = [...COMMUTE_FEATURED_DIALOGUES, ...NEW_CONVERSATION_SCENARIOS];
 
   // 整合 27 組核心教學章節會話 (`curriculum.mjs`)
   const stageMap = { jhs: '國中', sh: '高中', voc: '高工', intl: '國際考試' };
@@ -1119,7 +1123,7 @@ function buildAllCommuteDialogues() {
       const lines = c.dialogue.map((d, idx) => ({
         speaker: d.speaker,
         en: d.text || d.en || '',
-        zh: d.zh || (enrich.zhLines && enrich.zhLines[idx]) || '（請聽英文原音，體會上下文語境與句構關係）',
+        zh: d.zh || (enrich.zhLines && enrich.zhLines[idx]) || '（請聽美式英文示範，體會上下文語境與句構關係）',
         note: d.note || (enrich.notes && enrich.notes[idx]) || inferLineTeachingNote(d.text || d.en, d.zh, c.title)
       }));
       list.push({
@@ -1173,6 +1177,15 @@ function buildAllCommuteDialogues() {
     }
   }
 
+  for(const d of list) {
+    const revised = d.id.startsWith('unit:') ? UNIT_DIALOGUE_REVISIONS[d.id.slice(5)] : d.id.startsWith('chapter:') ? CHAPTER_DIALOGUE_REVISIONS[d.id.slice(8)] : FEATURED_LINE_REVISIONS[d.id];
+    if(revised) {
+      d.keyPatterns = d.lines.slice(0,2).map(l=>`${l.en}（${l.zh}）`);
+      d.recallPrompt = '先不看字幕，用自己的資訊改寫本段的一問一答，再跟讀核對。';
+      d.recallAnswer = d.lines.slice(0,2).map(l=>l.en).join(' ');
+      if(d.id.startsWith('unit:')) d.scenario = '把本課主題用在一問一答中：'+d.title.replace(/（[^）]*）/g,'')+'。先聽懂雙方目的，再換成自己的資訊練習。';
+    }
+  }
   return list;
 }
 
@@ -1189,7 +1202,7 @@ let state = {
   autoAdvance: true,
   loopSingle: false,
   blindMask: false,
-  rate: 0.95,
+  rate: 1,
   shadowGap: 3,
   completedIds: [],
   favoriteIds: [],
@@ -1295,6 +1308,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
   const steps = [];
   const mode = state.playMode;
   const enRate = state.rate;
+  const speakers = [...new Set(dlg.lines.map(l=>l.speaker))];
   const slowRate = Math.max(0.68, +(state.rate * 0.84).toFixed(2));
   const zhRate = Math.min(1.15, +(state.rate * 1.02).toFixed(2));
 
@@ -1337,7 +1351,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
     if (mode === 'bilingual') {
       steps.push({
         lineIdx: i,
-        phase: `🗣️ 第 ${i + 1}/${dlg.lines.length} 句（${line.speaker}）英文原音`,
+        phase: `🗣️ 第 ${i + 1}/${dlg.lines.length} 句（${line.speaker}）美式英文示範`,
         text: line.en,
         lang: 'en-US',
         rate: enRate,
@@ -1393,7 +1407,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
       // 'teaching' 教學精講模式
       steps.push({
         lineIdx: i,
-        phase: `🗣️ 第 ${i + 1}/${dlg.lines.length} 句英文原音（${line.speaker}）`,
+        phase: `🗣️ 第 ${i + 1}/${dlg.lines.length} 句美式英文示範（${line.speaker}）`,
         text: line.en,
         lang: 'en-US',
         rate: enRate,
@@ -1445,6 +1459,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
     }
   }
 
+  for(const step of steps) { if(step.lang==='en-US') {step.voiceRole=Math.max(0,speakers.indexOf(dlg.lines[step.lineIdx]?.speaker))%2; if(step.pauseMs===1100)step.pauseMs=480;} }
   return steps;
 }
 
@@ -1470,6 +1485,9 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
 
     speak(line.en, {
       lang: 'en-US',
+      requireAmerican: true,
+      voiceRole: Math.max(0,[...new Set(target.lines.map(l=>l.speaker))].indexOf(line.speaker))%2,
+      chunkLimit: 240,
       rate: state.rate,
       onEnd: () => {
         if (myToken !== playToken) return;
@@ -1500,11 +1518,11 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
           else refreshCommuteDom();
         }
       },
-      onError: () => {
+      onError: error => {
         if (myToken !== playToken) return;
         isPlaying = false;
         activeLineIndex = -1;
-        activePhaseLabel = '語音未完整播放，請確認裝置支援英文語音後重試。';
+        activePhaseLabel = error?.message || '語音未完整播放，請重試或更換聲音。';
         if (externalRerender) externalRerender();
         else refreshCommuteDom();
       }
@@ -1564,16 +1582,19 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
 
     speak(step.text, {
       lang: step.lang,
+      requireAmerican: step.lang==='en-US',
+      voiceRole: step.voiceRole || 0,
+      chunkLimit: 240,
       rate: step.rate,
       onEnd: () => {
         if (!isPlaying || myToken !== playToken) return;
         stepIdx++;
         playTimer = setTimeout(runNextStep, step.pauseMs || 450);
       },
-      onError: () => {
+      onError: error => {
         if (myToken !== playToken) return;
         isPlaying = false;
-        activePhaseLabel = '語音中斷或裝置不支援，已保留目前進度。請按播放重試。';
+        activePhaseLabel = error?.message || '語音中斷或裝置不支援，已保留目前進度。請按播放重試。';
         if (externalRerender) externalRerender();
         else refreshCommuteDom();
       }
@@ -1598,7 +1619,7 @@ export function renderCommuteQuickPlayStrip() {
     <div class="commute-quick-strip" role="region" aria-label="通勤英語教學會話一鍵即播">
       <div class="commute-quick-strip-head">
         <div>
-          <span class="pill" style="background:#dcfce7;color:#166534;font-weight:700">🎧 通勤會話快播 · 112 組情境教學</span>
+          <span class="pill" style="background:#dcfce7;color:#166534;font-weight:700">🎧 通勤會話快播 · ${ALL_COMMUTE_DIALOGUES.length} 組情境教學</span>
           <strong>走進捷運或公車，點一下就開始「聽會話＋學句型」</strong>
         </div>
         <a class="btn primary small" href="#listening">開啟通勤會話電台 →</a>
@@ -1632,7 +1653,7 @@ export function renderCommuteDialogueStudio() {
             <span class="pill" style="background:#e0e7ff;color:#3730a3;font-weight:700">共 ${ALL_COMMUTE_DIALOGUES.length} 組情境會話</span>
             <span class="pill" style="background:#fef3c7;color:#92400e;font-weight:700">已聽完 ${state.completedIds.length} 組</span>
           </div>
-          <h2 id="commute-studio-heading" style="margin:4px 0 6px;font-size:clamp(1.25rem,3vw,1.6rem)">一鍵連播雙語教學會話：聽原音 ➔ 懂句型 ➔ 開口跟讀回想</h2>
+          <h2 id="commute-studio-heading" style="margin:4px 0 6px;font-size:clamp(1.25rem,3vw,1.6rem)">一鍵連播雙語教學會話：聽英文 ➔ 懂句型 ➔ 開口跟讀回想</h2>
           <p style="margin:0;color:var(--text-muted);font-size:14px">
             專為通勤單手操作設計：選擇下方任一分類或情境會話，立即依所選模式連播。支援<strong>自動接續下一篇</strong>、<strong>慢速留白跟讀</strong>與<strong>盲聽字幕遮罩</strong>。
           </p>
@@ -1729,6 +1750,7 @@ export function renderCommuteDialogueStudio() {
           <button type="button" class="btn quiet" data-cd-action="stop">⏹ 停止</button>
         </div>
 
+        ${renderAmericanVoiceSettings()}
         <!-- 通勤微調設定列：自動連播、循環、角色扮演、盲聽遮罩、語速 -->
         <div class="commute-sub-controls">
           <button type="button" class="btn small ${state.autoAdvance ? 'primary' : 'quiet'}" data-cd-action="toggle-autoadvance" aria-pressed="${state.autoAdvance}">
@@ -1746,7 +1768,7 @@ export function renderCommuteDialogueStudio() {
           <label class="commute-inline-select">
             語速
             <select data-cd-setting="rate" aria-label="會話播放語速">
-              ${[0.75, 0.85, 0.95, 1.05, 1.2].map(r => `<option value="${r}" ${state.rate === r ? 'selected' : ''}>${r}x</option>`).join('')}
+              ${[0.75, 0.85, 0.95, 1, 1.05, 1.2].map(r => `<option value="${r}" ${state.rate === r ? 'selected' : ''}>${r}x</option>`).join('')}
             </select>
           </label>
           <label class="commute-inline-select">
@@ -1954,7 +1976,7 @@ export function handleCommuteDialogueClick(button, rerender) {
       state.playMode = d.cdMode;
       persistState();
       if (isPlaying) {
-        startCommuteDialogue(state.selectedId, Math.max(0, activeLineIndex), false, rerender);
+        startCommuteDialogue(state.selectedId, Math.max(0, activeLineIndex >= 0 ? activeLineIndex : Number(state.resumeLine)||0), false, rerender);
       } else {
         activePhaseLabel = `已切換為「${COMMUTE_PLAY_MODES.find(m => m.id === d.cdMode).label}」，按播放即可開始。`;
         rerender?.();
@@ -2001,7 +2023,7 @@ export function handleCommuteDialogueClick(button, rerender) {
         stopCommuteDialogue(true);
         rerender?.();
       } else {
-        startCommuteDialogue(dlg.id, Math.max(0, activeLineIndex), false, rerender);
+        startCommuteDialogue(dlg.id, Math.max(0, activeLineIndex >= 0 ? activeLineIndex : Number(state.resumeLine)||0), false, rerender);
       }
       return true;
     }
@@ -2071,7 +2093,7 @@ export function handleCommuteDialogueClick(button, rerender) {
       const idx = COMMUTE_PLAY_MODES.findIndex(m => m.id === state.playMode);
       state.playMode = COMMUTE_PLAY_MODES[(idx + 1) % COMMUTE_PLAY_MODES.length].id;
       persistState();
-      if (isPlaying) startCommuteDialogue(dlg.id, Math.max(0, activeLineIndex), false, rerender);
+      if (isPlaying) startCommuteDialogue(dlg.id, Math.max(0, activeLineIndex >= 0 ? activeLineIndex : Number(state.resumeLine)||0), false, rerender);
       else rerender?.();
       return true;
     }
@@ -2096,6 +2118,12 @@ export function handleCommuteDialogueClick(button, rerender) {
 }
 
 export function handleCommuteDialogueChange(target, rerender) {
+  if(target?.dataset?.americanVoice !== undefined) {
+    stopCommuteDialogue(false);
+    setAmericanVoice(Number(target.dataset.americanVoice),target.value);
+    activePhaseLabel='已更新美式角色聲音，按播放可從保存的位置重試。';
+    rerender?.(); return true;
+  }
   if (!target) return false;
   if (rerender) externalRerender = rerender;
 
@@ -2114,7 +2142,7 @@ export function handleCommuteDialogueChange(target, rerender) {
     if (setting === 'rate' && val >= 0.5 && val <= 1.5) state.rate = val;
     if (setting === 'shadowGap' && val >= 1 && val <= 10) state.shadowGap = val;
     persistState();
-    if (isPlaying) startCommuteDialogue(state.selectedId, Math.max(0, activeLineIndex), false, rerender);
+    if (isPlaying) startCommuteDialogue(state.selectedId, Math.max(0, activeLineIndex >= 0 ? activeLineIndex : Number(state.resumeLine)||0), false, rerender);
     else rerender?.();
     return true;
   }

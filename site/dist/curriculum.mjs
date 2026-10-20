@@ -1,3 +1,4 @@
+import { applyChapterDialogueRevisions } from './dialogue_editorial.mjs';
 // curriculum.mjs - 國中會考(J1-J7)、高中學測(S1-S7)、高工職場(V1-V7) 與 國際考制(GEPT, TOEIC, SAT, GRE, GMAT, TOEFL) 深度教學庫
 
 export const curriculum = [
@@ -1437,3 +1438,5 @@ export const examStudy = {
     source: 'https://www.ets.org/toefl/test-takers/ibt/about/content.html'
   }
 };
+
+applyChapterDialogueRevisions(curriculum);

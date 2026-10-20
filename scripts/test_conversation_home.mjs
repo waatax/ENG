@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 const saved=new Map(),spoken=[],timers=new Map();let timer=0;
 globalThis.localStorage={getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)};
 globalThis.SpeechSynthesisUtterance=class{constructor(text){this.text=text;}};
-globalThis.window={speechSynthesis:{getVoices:()=>[],speak:u=>spoken.push(u),cancel(){}}};
+globalThis.window={speechSynthesis:{getVoices:()=>[{name:'Test US Natural A',lang:'en-US'},{name:'Test US Natural B',lang:'en-US'}],speak:u=>spoken.push(u),cancel(){}}};
 globalThis.setTimeout=fn=>{timers.set(++timer,fn);return timer;};globalThis.clearTimeout=id=>timers.delete(id);
 const audio=await import('../dist/audio.mjs');
 const home=await import('../dist/conversation_home.mjs');
@@ -16,7 +16,7 @@ test('Every conversation is reachable in a populated difficulty group',()=>{
  const counts={};for(const d of commute.ALL_COMMUTE_DIALOGUES){const g=home.conversationGroup(d);counts[g]=(counts[g]||0)+1;assert.ok(d.lines.length);}
  assert.equal(Object.keys(counts).length,5);
  const html=home.homeConversations();assert.equal((html.match(/data-home-play=/g)||[]).length,commute.ALL_COMMUTE_DIALOGUES.length);
- assert.match(html,/裝置預設英文/);
+ assert.match(html,/Test US Natural A/);
 });
 test('Difficulty, English keyword and completion filters combine with empty results',()=>{
  home.handleHomeConversationClick({dataset:{homeLevel:'入門'}},()=>{});
@@ -34,4 +34,13 @@ test('Home stop retains sentence, resume starts there, late speech cannot advanc
  commute.playHomeConversation(d.id,'blind_en',true,()=>{});assert.equal(spoken.at(-1).text,d.lines[1].en);
  assert.equal(commute.getCommuteDialogueState().autoAdvance,false);
  const record=JSON.parse(saved.get('eq-commute-dialogue-studio-v1'));assert.equal(record.resumeLine,1);commute.stopCommuteDialogue();
+});
+
+test('New-scenario filter exposes all 24 additions without mixing in older scripts',()=>{
+ home.handleHomeConversationClick({dataset:{homeLevel:'全部'}},()=>{});
+ home.handleHomeConversationInput({id:'home-conversation-progress',value:'全部'});
+ home.handleHomeConversationClick({dataset:{homeNewFilter:''}},()=>{});
+ assert.match(home.homeConversationResults(),/找到 24 篇/);
+ assert.doesNotMatch(home.homeConversationResults(),/data-home-play="commute-/);
+ home.handleHomeConversationClick({dataset:{homeNewFilter:''}},()=>{});
 });
