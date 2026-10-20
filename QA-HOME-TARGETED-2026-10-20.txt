@@ -1,0 +1,29 @@
+✔ Every card sends the target word as part of its complete example text (25.6073ms)
+✔ Long sentences preserve every word and emit completion only after the final spoken chunk (0.8011ms)
+✔ Stopping or replacing speech invalidates late callbacks from the previous utterance (0.2014ms)
+✔ Full and simple modes finish exactly ten cards in the required language/text order (13.0902ms)
+✔ Speech errors stop the batch without skipping, and mode changes cancel pending callbacks (2.6206ms)
+✔ All requested batch sizes exist and navigation stops the autoplay owner (146.6134ms)
+✔ Natural US voice outranks named British voices and legacy US voices (1.122ms)
+✔ Every conversation is reachable in a populated difficulty group (2.3525ms)
+✔ Difficulty, English keyword and completion filters combine with empty results (0.7887ms)
+✔ Home stop retains sentence, resume starts there, late speech cannot advance (1.4665ms)
+✔ All catalog pages have valid distinct recommendations and path targets (4.9122ms)
+✔ Saved lessons, visits and spaced recall survive reload without premature promotion (1.0674ms)
+✔ Corrupt or blocked storage preserves usable interactions and explicit warning (0.5597ms)
+✔ All school units, chapters and knowledge points offer their own playable lesson (61.3161ms)
+✔ Grammar routes contain accessible diagrams, tables, listening and correctable questions (6.5619ms)
+✔ Bilingual speech preserves English examples and chooses language separately (0.2269ms)
+✔ Playback advances only on completion, pauses safely, resumes and rejects late callbacks (1.3827ms)
+✔ Recall pauses after the question and sleep timer stops the next utterance (0.4174ms)
+✔ Source and Pages mirror remain byte-identical (49.3445ms)
+✔ Commute Dialogue Studio provides 130 bilingual teaching dialogues and 4 SLA commute modes (2.7924ms)
+✔ A mixed-language sentence stays on one track until every language segment completes (0.4861ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 469.7461

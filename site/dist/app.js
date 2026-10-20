@@ -752,7 +752,7 @@ function shell(body) {
 
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
-        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options" open><summary>📱 通勤會話・單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
+        ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options"><summary>📱 通勤會話・單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
         ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)}
         ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening','wordaudio'].includes(page) ? '' : renderStageQuickNav()}
         <main class="main" id="main-content">
