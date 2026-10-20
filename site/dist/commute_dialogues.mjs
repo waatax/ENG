@@ -31,6 +31,7 @@ export const COMMUTE_CATEGORIES = [
 ];
 
 export const COMMUTE_PLAY_MODES = [
+  { id: 'retrieval', label: '🧠 中文提示說英文', short: '開口回想', desc: '先聽中文提示 ➔ 留白自己說英文 ➔ 英文示範核對 ➔ 換情境回想；可用不同但合適的說法' },
   { id: 'teaching', label: '🌟 教學精講', short: '教學精講', desc: '情境導讀 ➔ 美式英文示範 ➔ 中文翻譯 ➔ 句型與連音解析 ➔ 到站回想提問' },
   { id: 'bilingual', label: '⚡ 雙語快播', short: '雙語快播', desc: '英文會話 ➔ 中文意思，緊湊連播無干擾，1 分鐘快速刷完一組' },
   { id: 'shadowing', label: '🗣️ 開口跟讀', short: '開口跟讀', desc: '英文慢速清晰示範 ➔ 留白跟讀時間 (輪你開口) ➔ 英文原速確認 ➔ 中文' },
@@ -1304,6 +1305,11 @@ function refreshCommuteDom() {
   });
 }
 
+export function speakingGapMs(text, minimum = 3, rate = 1) {
+  const words = String(text).trim().split(/\s+/).filter(Boolean).length;
+  return Math.min(30000, Math.max(3000, (Number(minimum) || 3) * 1000, Math.ceil(words / (2 * Math.max(.5, Number(rate) || 1)) * 1000) + 1500));
+}
+
 function buildStepsForDialogue(dlg, startFromLine = 0) {
   const steps = [];
   const mode = state.playMode;
@@ -1326,7 +1332,8 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
 
   for (let i = Math.max(0, startFromLine); i < dlg.lines.length; i++) {
     const line = dlg.lines[i];
-    const isMutedRole = (state.rolePlay === 'speakerB' && i % 2 === 1) || (state.rolePlay === 'speakerA' && i % 2 === 0);
+    const roleIndex = speakers.indexOf(line.speaker) % 2;
+    const isMutedRole = (state.rolePlay === 'speakerB' && roleIndex === 1) || (state.rolePlay === 'speakerA' && roleIndex === 0);
 
     if (isMutedRole) {
       steps.push({
@@ -1335,7 +1342,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
         text: `輪你扮演 ${line.speaker}。提示：${line.zh}`,
         lang: 'zh-TW',
         rate: zhRate,
-        pauseMs: state.shadowGap * 1000
+        pauseMs: speakingGapMs(line.en, state.shadowGap, enRate)
       });
       steps.push({
         lineIdx: i,
@@ -1348,7 +1355,10 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
       continue;
     }
 
-    if (mode === 'bilingual') {
+    if (mode === 'retrieval') {
+      steps.push({lineIdx:i, phase:`🧠 第 ${i + 1}/${dlg.lines.length} 句：聽中文後自己說英文`, text:`請用英文表達：${line.zh}`, lang:'zh-TW', rate:zhRate, pauseMs:speakingGapMs(line.en,state.shadowGap,enRate)});
+      steps.push({lineIdx:i, phase:`🔎 第 ${i + 1}/${dlg.lines.length} 句：核對意思與用法，不必逐字相同`, text:line.en, lang:'en-US', rate:enRate, pauseMs:650});
+    } else if (mode === 'bilingual') {
       steps.push({
         lineIdx: i,
         phase: `🗣️ 第 ${i + 1}/${dlg.lines.length} 句（${line.speaker}）美式英文示範`,
@@ -1374,7 +1384,7 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
         text: line.en,
         lang: 'en-US',
         rate: slowRate,
-        pauseMs: state.shadowGap * 1000
+        pauseMs: speakingGapMs(line.en, state.shadowGap, enRate)
       });
       steps.push({
         lineIdx: i,
@@ -1437,14 +1447,14 @@ function buildStepsForDialogue(dlg, startFromLine = 0) {
   }
 
   // 結尾加入主動回想提問與示範解答
-  if (dlg.recallPrompt && (mode === 'teaching' || mode === 'shadowing')) {
+  if (dlg.recallPrompt && ['teaching','shadowing','retrieval'].includes(mode)) {
     steps.push({
       lineIdx: dlg.lines.length,
-      phase: `🧠 通勤口頭回想挑戰（想 3 秒鐘）`,
+      phase: `🧠 換情境回想：先開口，再聽參考回答`,
       text: dlg.recallPrompt,
       lang: 'zh-TW',
       rate: zhRate,
-      pauseMs: 2600
+      pauseMs: speakingGapMs(dlg.recallAnswer || '', Math.max(8,state.shadowGap), enRate)
     });
     if (dlg.recallAnswer) {
       const enPart = dlg.recallAnswer.split('（')[0].trim();
@@ -1588,6 +1598,10 @@ export function startCommuteDialogue(dialogueId = state.selectedId, startLine = 
       rate: step.rate,
       onEnd: () => {
         if (!isPlaying || myToken !== playToken) return;
+        if (step.pauseMs >= 3000) {
+          activePhaseLabel = `🎤 輪你開口 · 約 ${Math.round(step.pauseMs / 1000)} 秒；說不完可停止後接續本句。`;
+          refreshCommuteDom();
+        }
         stepIdx++;
         playTimer = setTimeout(runNextStep, step.pauseMs || 450);
       },
@@ -1772,9 +1786,9 @@ export function renderCommuteDialogueStudio() {
             </select>
           </label>
           <label class="commute-inline-select">
-            跟讀留白
-            <select data-cd-setting="shadowGap" aria-label="開口跟讀停頓秒數">
-              ${[2, 3, 5].map(s => `<option value="${s}" ${state.shadowGap === s ? 'selected' : ''}>${s} 秒</option>`).join('')}
+            最少留白（長句自動延長，最多 30 秒）
+            <select data-cd-setting="shadowGap" aria-label="開口跟讀最少停頓秒數">
+              ${[3, 5, 8, 10].map(s => `<option value="${s}" ${Math.max(3,state.shadowGap) === s ? 'selected' : ''}>${s} 秒</option>`).join('')}
             </select>
           </label>
         </div>
@@ -1805,7 +1819,7 @@ export function renderCommuteDialogueStudio() {
             const lineKey = `${dlg.id}:${idx}`;
             const isMasked = state.blindMask && !revealedLines.has(lineKey);
             const isActive = isPlaying && activeLineIndex === idx;
-            const isSpeakerB = idx % 2 === 1;
+            const isSpeakerB = [...new Set(dlg.lines.map(l=>l.speaker))].indexOf(line.speaker) % 2 === 1;
             return `
               <article class="commute-line-card ${isActive ? 'is-active-line' : ''} ${isSpeakerB ? 'speaker-b' : 'speaker-a'}" data-commute-line-idx="${idx}" role="listitem">
                 <div class="commute-line-head">
@@ -2185,7 +2199,8 @@ export function playHomeConversation(id, mode, resume, rerender) {
   if (!target) return;
   const line = resume && state.selectedId === id ? Math.max(0, Math.min(target.lines.length - 1, Number(state.resumeLine) || 0)) : 0;
   state.category = target.stage;
-  state.playMode = ['blind_en','bilingual','shadowing'].includes(mode) ? mode : 'blind_en';
+  state.playMode = COMMUTE_PLAY_MODES.some(m=>m.id===mode) ? mode : 'blind_en';
+  state.rolePlay = 'off';
   state.autoAdvance = false;
   state.loopSingle = false;
   startCommuteDialogue(id, line, false, rerender);

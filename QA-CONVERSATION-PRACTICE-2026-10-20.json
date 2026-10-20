@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "play": true,
+      "stop": true,
+      "keyboard": true,
+      "reload": true,
+      "dueFilter": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1280,
+      "play": true,
+      "stop": true,
+      "keyboard": true,
+      "reload": true,
+      "dueFilter": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "speech": "Mock speech validates events and text, not device sound quality"
+}

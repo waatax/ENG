@@ -39,10 +39,10 @@ test('Delayed voice loading starts exactly once; cancellation prevents late voic
  available=[usA,usB];for(const fn of [...events.get('voiceschanged')])fn();assert.equal(spoken.length,1);assert.equal(timers.size,0);
  audio.stopAudio();spoken.length=0;available=[];audio.speak('Canceled.',{requireAmerican:true});audio.stopAudio();available=[usA,usB];for(const fn of [...events.get('voiceschanged')])fn();assert.equal(spoken.length,0);assert.equal(timers.size,0);
 });
-test('All 154 conversations complete in all four modes with US voices, stable roles and intact text',()=>{
+test('All 154 conversations complete in all five modes with US voices, stable roles and intact text',()=>{
  available=[uk,usA,usB,{name:'Chinese',lang:'zh-TW'}];
  commute.playHomeConversation(commute.ALL_COMMUTE_DIALOGUES[0].id,'blind_en',false,()=>{});reset();
- for(const mode of ['blind_en','bilingual','shadowing','teaching']){
+ for(const mode of ['blind_en','bilingual','shadowing','teaching','retrieval']){
   commute.handleCommuteDialogueClick({dataset:{cdMode:mode}},()=>{});
   for(const d of commute.ALL_COMMUTE_DIALOGUES){
    reset();commute.startCommuteDialogue(d.id,0,false,()=>{});drain();
