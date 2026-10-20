@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-20",
+  "cycles": [
+    {
+      "round": 1,
+      "check": "盤點154主站教材及20英文課，發音與圖表教材分類錯置",
+      "correctiveAction": "修正拼讀、重音、比較與跨文本圖表的能力分類",
+      "validation": "分類回歸測試通過，保留所有路徑與ID",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": [
+        "#grammar/be-do",
+        "#grammar/pronouns"
+      ]
+    },
+    {
+      "round": 2,
+      "check": "圖解缺兩個主題且頻率副詞被固定百分比化，語調和拼讀規則過度絕對化",
+      "correctiveAction": "補be/do與代名詞專屬對照；修正頻率、語調、拼讀例外與節慶範圍",
+      "validation": "全站視覺教材回歸通過，154頁均有對應教學圖解設定",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    },
+    {
+      "round": 3,
+      "check": "原有圖解缺少可操作的例句判斷與理由比對",
+      "correctiveAction": "154頁加入主題流程圖、可切換例句、選項和對比理由，圖示均附文字",
+      "validation": "154個模型與圖解可生成，全部有多個判斷示例及可讀圖說",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    },
+    {
+      "round": 4,
+      "check": "重試容易掩蓋首次錯誤，缺乏可保存的錯因與修正計畫",
+      "correctiveAction": "加入首次及最近作答、提示紀錄、逐課訂正與下載，儲存失敗時保留操作",
+      "validation": "首次答案、重載、跨課隔離、儲存失敗的測試通過",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    },
+    {
+      "round": 5,
+      "check": "標籤配對之外還需要能診斷文法、證據與情境誤解的練習",
+      "correctiveAction": "加入29組主題迷思題與6種能力補充題，答案依路徑換序，解釋適用條件",
+      "validation": "154頁均有有效選項及解析，關鍵被動、時間、證據與成長率答案測試通過",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    },
+    {
+      "round": 6,
+      "check": "英文區20課缺少與中文教材相當的可讀概念圖和例句對照",
+      "correctiveAction": "英文區每課加入目標到應用的流程圖、詞義用法表、理由核對和依考科設計的遷移任務",
+      "validation": "20課圖文、詞語、題目連結有效，英文區內容維持全英文，既有功能測試通過",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    },
+    {
+      "round": 7,
+      "check": "最後檢查逐頁操作、提示換題紀錄、放大重排與兩個部署根",
+      "correctiveAction": "修正未作答前看提示的紀錄，加入全站操作與放大明暗配色驗證，更新資源版本",
+      "validation": "47項回歸通過，154主站加20英文課共348組頁面尺寸檢查通過，6組放大明暗重排通過",
+      "mainPages": 154,
+      "academyLessons": 20,
+      "unmatchedAids": []
+    }
+  ]
+}

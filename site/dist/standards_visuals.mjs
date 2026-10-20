@@ -7,7 +7,7 @@ const flow = steps => `<ol class="ev-flow">${steps.map(s => `<li>${s}</li>`).joi
 
 function stressIntonation() {
   const bar = (words) => `<div class="ev-syl ev-sentence">${words.map(([w, hi]) => `<i class="${hi ? 'hi' : ''}">${w}</i>`).join('')}</div>`;
-  return fig('句子重音長條與語調箭頭', '句子重音長條圖與兩種語調', bar([['I', 0], ['LIKE', 1], ['ice', 0], ['CREAM', 1]]) + bar([['CAN', 1], ['you', 0], ['SWIM', 1], ['↗', 0]]) + bar([['WHAT’S', 1], ['your', 0], ['NAME', 1], ['↘', 0]]), '高長條＝重音（帶意思的字）；↗ 是非問句上揚、↘ Wh- 問句與敘述句下降。');
+  return fig('句子重音長條與語調箭頭', '句子重音長條圖與兩種語調', bar([['I', 0], ['LIKE', 1], ['ice', 0], ['CREAM', 1]]) + bar([['CAN', 1], ['you', 0], ['SWIM', 1], ['↗', 0]]) + bar([['WHAT’S', 1], ['your', 0], ['NAME', 1], ['↘', 0]]), '高長條＝重音（帶意思的字）；中性詢問常見：↗ 是非問句上揚、↘ Wh- 問句下降；語調會依情境與說話目的改變。');
 }
 function classroomPhrases() {
   return fig('情境 → 用語對照卡', '四種生活情境與對應英文用語', tiles([['🙋', 'May I…?', '請求許可'], ['🙏', 'Thank you. → You’re welcome.', '道謝與回應'], ['😥', 'Sorry. → That’s OK.', '道歉與回應'], ['🤝', 'Can you help me, please?', '請求幫忙'], ['👂', 'Excuse me.', '引起注意、借過'], ['🔁', 'Pardon? / Say it again, please.', '沒聽清楚']]));

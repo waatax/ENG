@@ -2,6 +2,7 @@
 import { journey, journeyCatalog, escapeJourney as e, relatedLessons, journeyDomain } from './learning_journey.mjs';
 import { skillFramework } from './learning_framework.mjs';
 import { mountStudyWorkspace } from './study_workspace.mjs';
+import { mountLessonLab } from './lesson_lab.mjs';
 let dispose = () => {};
 let lastRoute = '';
 export function enhanceLearningPage(root) {
@@ -42,6 +43,7 @@ export function enhanceLearningPage(root) {
       recall.querySelector('[data-recall-status]').textContent=journey.warning || `已安排 ${new Date(journey.records[entry.link].due).toLocaleDateString('zh-TW')} 再回想。回首頁可查看複習安排。`;
     }));
     container.append(recall);
+    mountLessonLab(container,entry);
   }
   const headings = [...main.querySelectorAll('h2')].filter(h=>!h.closest('nav, .knowledge-card, .knowledge-home'));
   if (!headings.length || main.querySelector('.knowledge-home, .word-mp3')) return;

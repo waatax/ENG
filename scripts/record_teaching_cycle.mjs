@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {journeyCatalog} from '../dist/learning_journey.mjs';
+import {tracks} from '../dist/EN/content.mjs';
+import {aidProfile} from '../dist/teaching_aids.mjs';
+const [number,check,action,validation]=process.argv.slice(2);
+const path='TEACHING-PDCA-2026-10-20.json';
+const log=fs.existsSync(path)?JSON.parse(fs.readFileSync(path,'utf8')):{date:'2026-10-20',cycles:[]};
+assert.equal(Number(number),log.cycles.length+1,'Cycles must be recorded in execution order');
+log.cycles.push({round:Number(number),check,correctiveAction:action,validation,mainPages:journeyCatalog.length,academyLessons:tracks.reduce((n,t)=>n+t.lessons.length,0),unmatchedAids:journeyCatalog.filter(c=>!aidProfile(c.title)).map(c=>c.link)});
+fs.writeFileSync(path,JSON.stringify(log,null,2)+'\n');console.log(JSON.stringify(log.cycles.at(-1)));

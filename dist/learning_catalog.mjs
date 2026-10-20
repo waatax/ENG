@@ -7,6 +7,10 @@ export const domains = [
  ['reading','閱讀與推理','找證據，連結段落意思'],['application','情境與表達','把英文用在生活與工作'],['integrated','綜合與考試','整合能力，練習訂正']
 ];
 export function domainOf(title) {
+ if (/字母.*聲音|字母 A|短母音|長母音|Magic e|CVC|重音|押韻/i.test(title)) return 'sounds';
+ if (/字母 N|字母名稱/i.test(title)) return 'sounds';
+ if (/事物比較|未來計畫/.test(title)) return 'sentences';
+ if (/圖表|多文本|跨文本/.test(title)) return 'reading';
  if (/論證假設|段落連貫|批判性思維|Reading and Writing/i.test(title)) return 'reading';
  if (/寫作|作文|中譯英/.test(title)) return 'application';
  if (/可數|不可數|量詞|簡單式|分裂句|句型/.test(title)) return 'sentences';

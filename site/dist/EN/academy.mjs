@@ -1,4 +1,5 @@
 import {tracks} from './content.mjs';
+import {renderReasoningMap} from './reasoning_map.mjs?v=lessons20261020';
 import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills, examCommuteDialogues} from './exam_curriculum.mjs';
 
 const main=document.querySelector('main'),status=document.querySelector('#audio-status'),toggle=document.querySelector('#listen-toggle');
@@ -1008,6 +1009,7 @@ function renderMode(){
       <p>${esc(l.example)}</p>
       <button data-action="example">Listen to the example</button>
     </section>
+    ${renderReasoningMap(l,current.track,current.key)}
     ${relatedChapter?`
       <section class="card">
         <p class="eyebrow">Step-0 Strategy &amp; Structural Formula</p>

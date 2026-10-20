@@ -1,0 +1,16 @@
+{
+  "mainPages": 154,
+  "englishLessons": 20,
+  "widths": [
+    320,
+    1280
+  ],
+  "mainChecks": 308,
+  "enChecks": 40,
+  "feedback": true,
+  "exampleSwitch": true,
+  "diagnostics": true,
+  "correctionReload": true,
+  "overflow": false,
+  "errors": []
+}

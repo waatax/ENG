@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "route": "/#grammar/be-do",
+      "theme": "light",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    },
+    {
+      "route": "/#knowledge/reading-evidence",
+      "theme": "light",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    },
+    {
+      "route": "/EN/#lesson/toefl/0/learn",
+      "theme": "light",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    },
+    {
+      "route": "/#grammar/be-do",
+      "theme": "dark",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    },
+    {
+      "route": "/#knowledge/reading-evidence",
+      "theme": "dark",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    },
+    {
+      "route": "/EN/#lesson/toefl/0/learn",
+      "theme": "dark",
+      "width": 320,
+      "rootFontPixels": 32,
+      "overflow": false
+    }
+  ],
+  "hintAcrossSwitch": true,
+  "notes": "Reflow and basic theme checks only; not a complete WCAG audit."
+}

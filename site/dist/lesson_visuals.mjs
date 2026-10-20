@@ -1307,18 +1307,18 @@ export function renderFrequencySpectrumExistenceDiagram() {
   return `
     <div class="lesson-visual-diagram card" style="background:#fff;border:1px solid #cbd5e1;padding:18px;margin:16px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">📊 頻率副詞百分比刻度尺與 There is / are 存在句結構</strong>
+        <strong style="color:#0f172a;font-size:15px">📊 頻率副詞相對頻率順序與 There is / are 存在句結構</strong>
         <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">七年級核心語法</span>
       </div>
       <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:12px;border-radius:8px;margin-bottom:12px">
-        <div style="font-size:12px;font-weight:700;color:#0f172a;margin-bottom:8px">頻率副詞發生機率刻度尺：</div>
+        <div style="font-size:12px;font-weight:700;color:#0f172a;margin-bottom:8px">頻率由高到低的常見排列（不等於固定百分比）：</div>
         <div style="display:grid;grid-template-columns:repeat(6, 1fr);gap:4px;text-align:center;font-size:11px">
-          <div style="background:#15803d;color:#fff;padding:6px 2px;border-radius:4px"><strong>always</strong><br>100%</div>
-          <div style="background:#16a34a;color:#fff;padding:6px 2px;border-radius:4px"><strong>usually</strong><br>80%</div>
-          <div style="background:#65a30d;color:#fff;padding:6px 2px;border-radius:4px"><strong>often</strong><br>60%</div>
-          <div style="background:#eab308;color:#fff;padding:6px 2px;border-radius:4px"><strong>sometimes</strong><br>40%</div>
-          <div style="background:#f97316;color:#fff;padding:6px 2px;border-radius:4px"><strong>seldom</strong><br>20%</div>
-          <div style="background:#dc2626;color:#fff;padding:6px 2px;border-radius:4px"><strong>never</strong><br>0%</div>
+          <div style="background:#15803d;color:#fff;padding:6px 2px;border-radius:4px"><strong>always</strong><br>總是</div>
+          <div style="background:#16a34a;color:#fff;padding:6px 2px;border-radius:4px"><strong>usually</strong><br>通常</div>
+          <div style="background:#65a30d;color:#fff;padding:6px 2px;border-radius:4px"><strong>often</strong><br>經常</div>
+          <div style="background:#eab308;color:#fff;padding:6px 2px;border-radius:4px"><strong>sometimes</strong><br>有時</div>
+          <div style="background:#f97316;color:#fff;padding:6px 2px;border-radius:4px"><strong>seldom</strong><br>很少</div>
+          <div style="background:#dc2626;color:#fff;padding:6px 2px;border-radius:4px"><strong>never</strong><br>從不</div>
         </div>
         <div style="font-size:11px;color:#64748b;margin-top:8px">
           💡 <strong>位置口訣：</strong>「be 動詞後、一般動詞前」➔ <em>She <strong>is always</strong> happy.</em> ｜ <em>He <strong>often plays</strong> tennis.</em>

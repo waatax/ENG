@@ -1,5 +1,5 @@
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
-import { enhanceLearningPage } from './learning_navigation.mjs';
+import { enhanceLearningPage } from './learning_navigation.mjs?v=lessons20261020';
 import { renderAffixGuide } from './affix_guide.mjs';
 import { handleAffixInput, handleAffixClick } from './affix_library.mjs';
 import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syncLessonAudio, pauseLessonAudio } from './lesson_audio.mjs';

@@ -1,0 +1,41 @@
+// Original low-stakes concept checks. These are not official exam questions.
+const q=(id,match,prompt,correct,wrong,reason)=>({id,match,prompt,options:[correct,wrong],answer:0,reason});
+export const diagnosticTopics=[
+q('letter',/字母|短母音|長母音|Magic e|拼讀|音標|phonics/i,'字母 S 的名稱與 sun 的第一個聲音，有什麼差別？','名稱 /es/；sun 起首是 /s/','名稱和聲音永遠相同','字母名稱與字母代表的音不同；拼讀時連接聲音，不是把字母名稱串起來。'),
+q('rhythm',/重音|語調|押韻|歌謠/,'同一句話的重音改變時，哪個判斷較合理？','焦點或對比可能改變，要配合情境理解','只要文法相同，表達焦點一定完全相同','重音可凸顯新資訊或對比；語調不是僅由問號決定。'),
+q('passive',/被動|passive/i,'The machine must ___ before cleaning. 選擇完整的被動形式。','be stopped','stopped','must 是情態助動詞；後面用 be + 過去分詞，不能省去 be。'),
+q('perfect',/完成式|完成時|perfect/i,'明確說昨天完成：I ___ the report yesterday.','finished','have finished','yesterday 把事件放在已結束的過去時間；此例使用過去簡單式。'),
+q('relative',/關係|relative/i,'The book that I bought is useful. 哪一個成分是子句中缺少的受詞？','the book，是 bought 的受詞','I，是 bought 的受詞','I 是主詞；bought 後的受詞缺口對應先行詞 the book。'),
+q('condition',/條件|假設|unless|conditional|subjunctive/i,'談可能發生的未來：If it rains, we ___ home.','will stay','would have stayed','這是開放的未來條件：if 子句用現在式，主句可用 will。'),
+q('comparison',/比較|最高級|comparative|superlative/i,'This bag is ___ than that one.','cheaper','more cheaper','此例 cheaper 已有比較級形式，不能再疊加 more。'),
+q('quantity',/可數|不可數|量詞|數量|名詞|冠詞/i,'請給我兩則建議：two ___.','pieces of advice','advices','advice 常作不可數名詞；用 pieces 作可數的單位。'),
+q('pronouns',/代名詞|所有格/i,'This is her book. This book is ___.','hers','her','her 在此作所有格形容詞，後接 book；hers 可獨立代替 her book。'),
+q('indirect',/間接問句|名詞子句|noun clause/i,'Do you know ___?','where she lives','where does she live','間接問句的子句用直述語序：疑問詞 + 主詞 + 動詞。'),
+q('inversion',/倒裝|強調|分裂句/i,'Never ___ such a view before.','have I seen','I have seen','否定副詞 never 放在句首時，這種結構把助動詞移到主詞前。'),
+q('gerund',/不定詞|動名詞/i,'I enjoy ___.','reading','to read','enjoy 常接動名詞 V-ing；不能將所有動詞都套成同一補語形式。'),
+q('participle',/分詞/i,'___ by the noise, Amy closed the window.','Disturbed','Disturbing','Amy 是受到干擾的人，因此用過去分詞 Disturbed 表被動關係。'),
+q('modal',/助動詞|情態|推測/i,'You must not enter. 這個要求是什麼？','禁止進入','沒有必要進入，但可以進入','must not 表禁止；沒有必要通常用 do not have to，兩者不同。'),
+q('frequency',/頻率|存在句|there is/i,'通常與經常的頻率差異應如何理解？','相對頻率，不能當固定的精確百分比','usually 在任何情境都剛好是 80%','副詞表達概略頻率；實際次數與情境會變，固定百分比只是教學近似。'),
+q('progressive',/進行式|正在/i,'Look! They ___ in the park now.','are running','run','Look 和 now 在此指眼前正在發生；be + V-ing，複數 they 用 are。'),
+q('present',/現在簡單|be 動詞|第三人稱|句子骨架|基本句型|五大句型/i,'Does Amy ___ here?','work','works','助動詞 does 已表達第三人稱現在式，後面主要動詞用原形 work。'),
+q('past',/過去式|過去簡單|敘事時間/i,'Yesterday, Amy ___ to school.','went','goes','yesterday 指已結束的過去；go 的過去式是 went。'),
+q('future',/未來|future/i,'已安排明天與醫師見面：I ___ the doctor tomorrow.','am seeing','saw','現在進行式可表已安排的未來事件；saw 則是過去式。'),
+q('preposition',/介系詞|方位|問路|位置/i,'圖書館在銀行與公園之間：between the bank ___ the park.','and','to','此例用 between A and B 連接兩個參考地點。'),
+q('charts',/圖表|圖面|規格|尺寸|多文本|跨文本/i,'示範資料 A: 20→30，B: 40→45。哪一個成長率較大？','A：50%，B：12.5%','B：45 比 30 大，所以成長率較大','成長率 = 增加量 ÷ 原值；最終數量大不等於成長率較高。這是示範資料。'),
+q('safety',/安全|工場|操作步驟/i,'Disconnect power before cleaning. 哪個先做？','Disconnect power','Cleaning','before cleaning 指清潔前先斷電；這裡練英語順序，實際操作依設備手冊。'),
+q('cause',/流程|故障/i,'The device stopped after the update. 這句話證明了什麼？','描述先更新後停止的時間順序','已排除其他原因，證明更新一定造成故障','after 說明先後；要確認原因，仍需其他證據。'),
+q('culture',/文化|節慶|國際禮儀/i,'介紹文化差異，哪句較能保留範圍？','Some families celebrate in this way.','Everyone from that country always does this.','some families 限定群體；不能只看單一例子就概括所有人。'),
+q('clarify',/聽不懂|重述|溝通策略/i,'對方說得太快，哪句可幫助繼續溝通？','Could you speak more slowly, please?','I understood everything.','直接提出需要的幫助，比假裝全懂更能確認意思。'),
+q('writing',/寫作|作文|中譯英|書信|電子郵件|便條|填表|書寫格式/i,'請對方改期，哪個訊息組合較完整？','說明原時間、建議新時間，請對方確認','只寫 Please change it，省略時間與對象','可採取行動的訊息需要清楚指涉、時間和請求；正確文法之外也要顧讀者。'),
+q('argument',/論證|假設|批判|GMAT|GRE/i,'調查發現讀書時間長的人分數較高，哪個結論較謹慎？','有相關，尚不能排除先備能力等因素','只要增加讀書時間，每個人一定提高相同分數','相關不足以單獨證明因果，也不支持每個人效果相同。'),
+q('project',/專題|分工|自主學習|終生|學習計畫/i,'哪個計畫較容易核對是否完成？','週五前讀一篇文章，寫三個重點','以後要更努力','可核對的行動有時間、材料與產出；完成任務仍不等於已精熟。'),
+q('story',/故事|詩歌|短劇|篇章標記|段落連貫|篇章結構/i,'Amy missed the bus. Therefore, she was late. Therefore 表示什麼？','後句是前面情況帶來的結果','後句必然與前句形成相反立場','therefore 引出結果；but 或 however 常表對比，不能任意互換。'),
+];
+const fallback={
+ sounds:q('listen',null,'The meeting is at ten—sorry, eleven. 應記哪個時間？','十一點','十點','sorry 引出更正；核對更正後資訊，不能只記第一個數字。'),
+ words:q('collocation',null,'表達做決定，常見搭配是哪個？','make a decision','do a decision','學單字要連常見搭配一起學；此處用 make a decision。'),
+ sentences:q('sentence',null,'She ___ happy today.','is','does','happy 在此描述狀態；用 be 動詞 is，而不是 do。'),
+ reading:q('evidence',null,'The shop closes at six today. 哪個判斷有文字支持？','今天六點關門','每天都六點關門','today 限定今天；不能擴大成每天。'),
+ application:q('purpose',null,'想請同學幫忙，哪句更清楚？','Could you help me carry this box?','You know the thing.','清楚說明動作與物件，對方才知道如何回應。'),
+ integrated:q('review',null,'訂正後如何檢查是否學會？','隔一段時間換題獨立作答，說明理由','剛看完解析立刻把同題答案按一次','獨立提取與換情境較能發現盲點；看過答案後的正確不等於獨立完成。')};
+export function diagnosticFor(entry){const base=diagnosticTopics.find(q=>q.match.test(entry.title))||fallback[entry.domain];const reverse=[...entry.link].reduce((n,c)=>n+c.charCodeAt(0),0)%2;return {...base,options:reverse?[...base.options].reverse():base.options,answer:reverse?1:0};}
