@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-23",
+  "scope": "Full structural inventory of imported teaching collections; selected semantic reading only. No learning efficacy or formal level validation.",
+  "catalog": {
+    "total": 154,
+    "byKind": {
+      "核心知識點": 28,
+      "綜合教學章節": 27,
+      "圖解文法": 20,
+      "學年微課": 79
+    },
+    "byStage": {
+      "國小": 36,
+      "國中": 39,
+      "高中": 50,
+      "高工": 13,
+      "國際考試": 8,
+      "高中／高工": 8
+    },
+    "byDomain": {
+      "sentences": 67,
+      "reading": 23,
+      "sounds": 12,
+      "application": 37,
+      "integrated": 13,
+      "words": 2
+    }
+  },
+  "grades": [
+    {
+      "id": "g3",
+      "title": "國小三年級 (Grade 3)",
+      "units": 6
+    },
+    {
+      "id": "g4",
+      "title": "國小四年級 (Grade 4)",
+      "units": 6
+    },
+    {
+      "id": "g5",
+      "title": "國小五年級 (Grade 5)",
+      "units": 6
+    },
+    {
+      "id": "g6",
+      "title": "國小六年級 (Grade 6)",
+      "units": 8
+    },
+    {
+      "id": "g7",
+      "title": "國中七年級 (Grade 7)",
+      "units": 6
+    },
+    {
+      "id": "g8",
+      "title": "國中八年級 (Grade 8)",
+      "units": 5
+    },
+    {
+      "id": "g9",
+      "title": "國中九年級 (Grade 9 / 會考衝刺)",
+      "units": 6
+    },
+    {
+      "id": "g10",
+      "title": "高中一年級 (Grade 10)",
+      "units": 12
+    },
+    {
+      "id": "g11",
+      "title": "高中二年級 (Grade 11)",
+      "units": 12
+    },
+    {
+      "id": "g12",
+      "title": "高三與大考巔峰戰力 (Grade 12 & Examination Mastery)",
+      "units": 12
+    }
+  ],
+  "flashcards": {
+    "total": 9500,
+    "flagged": 13,
+    "repaired": 13,
+    "byTier": {
+      "elem_1000": 1000,
+      "jhs_2000": 2000,
+      "shs_3000": 3000,
+      "toeic": 700,
+      "toefl": 700,
+      "sat": 700,
+      "gre": 700,
+      "gmat": 700
+    },
+    "note": "Known-template detector only; unflagged does not mean editorially approved."
+  },
+  "conversations": {
+    "total": 154,
+    "sample": [
+      {
+        "id": "commute-daily-01",
+        "title": "上班途中買咖啡：客製點餐與手機感應付款",
+        "fields": [
+          "id",
+          "stage",
+          "topicTag",
+          "level",
+          "title",
+          "scenario",
+          "keyPatterns",
+          "lines",
+          "recallPrompt",
+          "recallAnswer"
+        ]
+      },
+      {
+        "id": "commute-daily-02",
+        "title": "捷運月台問路：確認方向、轉乘與班距",
+        "fields": [
+          "id",
+          "stage",
+          "topicTag",
+          "level",
+          "title",
+          "scenario",
+          "keyPatterns",
+          "lines",
+          "recallPrompt",
+          "recallAnswer"
+        ]
+      },
+      {
+        "id": "commute-daily-03",
+        "title": "超商取包裹：核對姓名、電話末三碼與證件",
+        "fields": [
+          "id",
+          "stage",
+          "topicTag",
+          "level",
+          "title",
+          "scenario",
+          "keyPatterns",
+          "lines",
+          "recallPrompt",
+          "recallAnswer"
+        ]
+      }
+    ]
+  },
+  "academy": {
+    "tracks": 5,
+    "lessons": 20
+  },
+  "mnemonics": {
+    "count": 1000,
+    "shape": "array"
+  },
+  "families": {
+    "count": 500,
+    "members": 2581,
+    "shape": [
+      "version",
+      "groups",
+      "counts",
+      "members",
+      "uniqueWords"
+    ]
+  },
+  "banks": [
+    {
+      "file": "diagnostic_bank.json",
+      "records": 2000,
+      "distinctSurfaces": 2000,
+      "duplicateRecords": 0,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "1": 250,
+        "2": 250,
+        "3": 250,
+        "4": 250,
+        "5": 250,
+        "6": 250,
+        "7": 250,
+        "8": 250
+      }
+    },
+    {
+      "file": "gaokao.json",
+      "records": 6000,
+      "distinctSurfaces": 60,
+      "duplicateRecords": 5940,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 6000
+      }
+    },
+    {
+      "file": "gmat.json",
+      "records": 3000,
+      "distinctSurfaces": 20,
+      "duplicateRecords": 2980,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 3000
+      }
+    },
+    {
+      "file": "gre.json",
+      "records": 3000,
+      "distinctSurfaces": 47,
+      "duplicateRecords": 2953,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 3000
+      }
+    },
+    {
+      "file": "jhs.json",
+      "records": 1000,
+      "distinctSurfaces": 183,
+      "duplicateRecords": 817,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 1000
+      }
+    },
+    {
+      "file": "sat.json",
+      "records": 3000,
+      "distinctSurfaces": 16,
+      "duplicateRecords": 2984,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 3000
+      }
+    },
+    {
+      "file": "shs.json",
+      "records": 1000,
+      "distinctSurfaces": 8,
+      "duplicateRecords": 992,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 1000
+      }
+    },
+    {
+      "file": "toeic.json",
+      "records": 3000,
+      "distinctSurfaces": 148,
+      "duplicateRecords": 2852,
+      "missingPrompt": 0,
+      "invalidAnswers": 0,
+      "tiers": {
+        "unknown": 3000
+      }
+    }
+  ],
+  "fingerprintMethod": "NFKC and whitespace-normalized passage + prompt + ordered options. Not semantic deduplication; different option orders remain distinct.",
+  "limitations": [
+    "Not every item has been read or fact-checked by a teacher.",
+    "No audio quality listening audit in this cycle.",
+    "Existing labels are not calibrated learner levels.",
+    "No learner testing or production deployment in this cycle."
+  ]
+}

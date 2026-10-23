@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-23",
+  "checks": [
+    "onboarding to section 1",
+    "path at 320/390/768/1280 without horizontal scroll",
+    "reload keeps the session and resumes",
+    "wrong answer repaired at the end; 5/6 first-try shown",
+    "listening transcript fallback and build/input items",
+    "unit challenge: 3 hearts fail, retry, crown",
+    "word lesson with matching pairs",
+    "unit guide",
+    "interactive story",
+    "mistake bank practice",
+    "vocabulary set with recorded MP3",
+    "personalised practice",
+    "jump test unlocks section 3",
+    "placement recommends a section",
+    "practice/stories/library/profile at 320 and 1280",
+    "backup download",
+    "blocked storage shows a warning and stays usable"
+  ],
+  "errors": []
+}

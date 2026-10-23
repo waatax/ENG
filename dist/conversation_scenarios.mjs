@@ -222,7 +222,7 @@ export const NEW_CONVERSATION_SCENARIOS = [
     "isNew": true,
     "lines": [
       {
-        "speaker": "Maya",
+        "speaker": "Rachel",
         "en": "Hi, I'm Rachel. Nice to meet you.",
         "zh": "嗨，我是 Rachel，很高興認識你。",
         "note": "Could you speak a little more slowly? 可用於請對方稍微放慢。"
@@ -234,7 +234,7 @@ export const NEW_CONVERSATION_SCENARIOS = [
         "note": "Could you speak a little more slowly? 可用於請對方稍微放慢。"
       },
       {
-        "speaker": "Maya",
+        "speaker": "Rachel",
         "en": "Rachel. It's spelled R, A, C, H, E, L.",
         "zh": "Rachel，拼法是 R、A、C、H、E、L。",
         "note": "Could you speak a little more slowly? 可用於請對方稍微放慢。"
@@ -246,7 +246,7 @@ export const NEW_CONVERSATION_SCENARIOS = [
         "note": "Could you speak a little more slowly? 可用於請對方稍微放慢。"
       },
       {
-        "speaker": "Maya",
+        "speaker": "Rachel",
         "en": "No problem. Would you like me to speak more slowly?",
         "zh": "沒問題，要我說慢一點嗎？",
         "note": "Could you speak a little more slowly? 可用於請對方稍微放慢。"

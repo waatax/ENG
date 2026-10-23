@@ -1,0 +1,325 @@
+{
+  "sections": [
+    {
+      "id": "s1",
+      "units": 7,
+      "nodes": 31,
+      "items": 428,
+      "stories": 0
+    },
+    {
+      "id": "s2",
+      "units": 8,
+      "nodes": 37,
+      "items": 532,
+      "stories": 3
+    },
+    {
+      "id": "s3",
+      "units": 6,
+      "nodes": 27,
+      "items": 323,
+      "stories": 3
+    },
+    {
+      "id": "s4",
+      "units": 8,
+      "nodes": 37,
+      "items": 468,
+      "stories": 6
+    },
+    {
+      "id": "s5",
+      "units": 11,
+      "nodes": 48,
+      "items": 481,
+      "stories": 5
+    },
+    {
+      "id": "s6",
+      "units": 6,
+      "nodes": 27,
+      "items": 339,
+      "stories": 9
+    },
+    {
+      "id": "s7",
+      "units": 12,
+      "nodes": 54,
+      "items": 397,
+      "stories": 9
+    },
+    {
+      "id": "s8",
+      "units": 12,
+      "nodes": 54,
+      "items": 444,
+      "stories": 10
+    },
+    {
+      "id": "s9",
+      "units": 12,
+      "nodes": 47,
+      "items": 359,
+      "stories": 3
+    }
+  ],
+  "branches": [
+    {
+      "id": "b-cap",
+      "units": 7,
+      "items": 285
+    },
+    {
+      "id": "b-gsat",
+      "units": 7,
+      "items": 287
+    },
+    {
+      "id": "b-voc",
+      "units": 7,
+      "items": 302
+    },
+    {
+      "id": "b-cert",
+      "units": 2,
+      "items": 82
+    },
+    {
+      "id": "b-toeic",
+      "units": 6,
+      "items": 295
+    },
+    {
+      "id": "b-sat",
+      "units": 6,
+      "items": 293
+    },
+    {
+      "id": "b-gre",
+      "units": 6,
+      "items": 292
+    },
+    {
+      "id": "b-gmat",
+      "units": 6,
+      "items": 295
+    }
+  ],
+  "stories": 48,
+  "items": 5902,
+  "byType": {
+    "grammar/choice": 437,
+    "talk/build": 288,
+    "grammar/input": 28,
+    "talk/listen": 442,
+    "word/choice": 944,
+    "word/listen": 472,
+    "word/input": 601,
+    "word/match": 65,
+    "talk/choice": 256,
+    "grammar/info": 236,
+    "drill/choice": 2062,
+    "talk/input": 71,
+    "story/line": 245,
+    "story/choice": 243,
+    "story/build": 30
+  },
+  "excluded": [
+    {
+      "id": "g3-s1-u1.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g3-s1-u2.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g3-s1-u2.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g4-s1-u1.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g4-s1-u1.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g4-s1-u2.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g4-s2-u5.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g5-s1-u1.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g5-s1-u1.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g5-s2-u5.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g5-s2-u5.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g5-s2-u6.trap2",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g6-s2-u6.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g7-s1-u3.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g9-s2-u5.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g9-s2-u6.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g10-s2-u9.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g10-s2-u10.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g10-s2-u12.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s1-u1.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s1-u2.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s1-u5.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s2-u7.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s2-u9.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s2-u10.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s2-u11.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g11-s2-u12.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u1.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u2.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u3.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u4.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u5.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s1-u6.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u7.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u8.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u9.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u10.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u11.trap1",
+      "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g12-s2-u12.trap1",
+      "reason": "trap is not a pair of English sentences"
+    }
+  ],
+  "storySections": {
+    "s2": 3,
+    "s3": 3,
+    "s4": 6,
+    "s5": 5,
+    "s6": 9,
+    "s7": 9,
+    "s8": 10,
+    "s9": 3
+  },
+  "vocabSets": 137,
+  "vocabWords": 1072,
+  "excludedCount": 39,
+  "excludedByReason": {
+    "trap is not a pair of English sentences": 39
+  },
+  "version": "2026-10-23.v2",
+  "files": {
+    "b-cap.json": 151824,
+    "b-cert.json": 50041,
+    "b-gmat.json": 475136,
+    "b-gre.json": 214377,
+    "b-gsat.json": 171580,
+    "b-sat.json": 277037,
+    "b-toeic.json": 188550,
+    "b-voc.json": 188319,
+    "index.json": 101091,
+    "s1.json": 171899,
+    "s2.json": 220213,
+    "s3.json": 150250,
+    "s4.json": 238216,
+    "s5.json": 282621,
+    "s6.json": 212475,
+    "s7.json": 255885,
+    "s8.json": 294510,
+    "s9.json": 249941,
+    "stories.json": 254578,
+    "vocab.json": 136359
+  }
+}

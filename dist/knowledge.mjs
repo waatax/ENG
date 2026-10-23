@@ -33,6 +33,7 @@ export function knowledgeHome() {
  const review=points.filter(p=>progress.summary(p.id).needsReview);
  const attempted=points.filter(p=>progress.summary(p.id).answered).length;
  return `<section class="knowledge-home">
+ <a class="quest-banner" href="quest/"><span class="quest-banner-ic" aria-hidden="true">🌱</span><span class="quest-banner-text"><b>English Quest 闖關模式</b><small>像玩遊戲一樣學英文：9 段程度、82 個單元、48 篇互動故事。每天一小關，累積 XP、連續天數與金冠。</small></span><span class="quest-banner-go">開始闖關 →</span></a>
  <header class="learning-hero"><p class="pill">English Quest · 每次弄懂一個觀念</p><h1>找到你的程度，<br>從一段會話繼續學。</h1><p>選一個目標，看懂例句，再用自己的話練一次。按自己的步調，讓每次學習都有下一步。</p><div class="learning-actions"><a class="btn primary" href="${recent?.link || (last?'#knowledge/'+last.id:'#knowledge/be-sentences')}">${recent||last?'接續上次學習':'從第一句英文開始'} →</a><a class="btn" href="#listening">🎧 通勤會話快播</a><a class="btn" href="#wordaudio">🎵 單字 MP3 跟讀</a><a class="btn" href="#flashcards">⚡ 單字片語閃卡</a><a class="btn" href="#standards">📜 108 課綱學習地圖</a><a class="btn" href="EN/">EN 純英檢定學院</a><a class="btn quiet" href="#diagnostic">用練習找補強方向</a></div><p class="small">不確定程度也沒關係，先從熟悉的情境開始。</p></header>
  ${homeConversations()}
  <nav class="learning-actions" aria-label="首頁快速導覽"><button class="btn" data-home-jump="catalog-title">找教材主題 ↓</button><button class="btn" data-home-jump="journey-title">我的進度 ↓</button><button class="btn" data-home-jump="paths-title">建議學習路徑 ↓</button></nav>

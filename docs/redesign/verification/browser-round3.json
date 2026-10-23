@@ -1,0 +1,14 @@
+{
+  "round": 3,
+  "checks": [
+    "map 320",
+    "map 390",
+    "map 768",
+    "map 1280",
+    "lesson 320",
+    "lesson 390",
+    "lesson 768",
+    "lesson 1280"
+  ],
+  "errors": []
+}
