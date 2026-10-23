@@ -4,63 +4,63 @@
       "id": "s1",
       "units": 7,
       "nodes": 31,
-      "items": 428,
+      "items": 429,
       "stories": 3
     },
     {
       "id": "s2",
       "units": 8,
-      "nodes": 37,
-      "items": 532,
+      "nodes": 39,
+      "items": 572,
       "stories": 3
     },
     {
       "id": "s3",
       "units": 6,
       "nodes": 27,
-      "items": 323,
+      "items": 324,
       "stories": 3
     },
     {
       "id": "s4",
       "units": 8,
       "nodes": 37,
-      "items": 468,
+      "items": 480,
       "stories": 6
     },
     {
       "id": "s5",
       "units": 11,
       "nodes": 48,
-      "items": 481,
+      "items": 489,
       "stories": 5
     },
     {
       "id": "s6",
       "units": 6,
       "nodes": 27,
-      "items": 339,
+      "items": 349,
       "stories": 9
     },
     {
       "id": "s7",
       "units": 12,
       "nodes": 54,
-      "items": 397,
+      "items": 413,
       "stories": 9
     },
     {
       "id": "s8",
       "units": 12,
       "nodes": 54,
-      "items": 444,
+      "items": 460,
       "stories": 10
     },
     {
       "id": "s9",
       "units": 12,
       "nodes": 47,
-      "items": 359,
+      "items": 384,
       "stories": 3
     }
   ],
@@ -68,58 +68,58 @@
     {
       "id": "b-cap",
       "units": 7,
-      "items": 285
+      "items": 294
     },
     {
       "id": "b-gsat",
       "units": 7,
-      "items": 287
+      "items": 301
     },
     {
       "id": "b-voc",
       "units": 7,
-      "items": 302
+      "items": 319
     },
     {
       "id": "b-cert",
       "units": 2,
-      "items": 82
+      "items": 88
     },
     {
       "id": "b-toeic",
       "units": 6,
-      "items": 295
+      "items": 296
     },
     {
       "id": "b-sat",
       "units": 6,
-      "items": 293
+      "items": 295
     },
     {
       "id": "b-gre",
       "units": 6,
-      "items": 292
+      "items": 294
     },
     {
       "id": "b-gmat",
       "units": 6,
-      "items": 295
+      "items": 298
     }
   ],
   "stories": 51,
-  "items": 5902,
+  "items": 6085,
   "byType": {
     "grammar/choice": 437,
-    "talk/build": 288,
+    "talk/build": 433,
     "grammar/input": 28,
     "talk/listen": 442,
     "word/choice": 944,
     "word/listen": 472,
-    "word/input": 601,
+    "word/input": 599,
     "word/match": 65,
     "talk/choice": 256,
     "grammar/info": 236,
-    "drill/choice": 2062,
+    "drill/choice": 2102,
     "talk/input": 71,
     "story/line": 257,
     "story/choice": 256,
@@ -173,6 +173,14 @@
     {
       "id": "g5-s2-u6.trap2",
       "reason": "trap is not a pair of English sentences"
+    },
+    {
+      "id": "g6-s1-u1.w3c",
+      "reason": "editorial: punctual 屬 B2 程度、不在國中小基本字表，要求小六學生在填空中拼出此字過難（辨識題可保留）。"
+    },
+    {
+      "id": "g6-s1-u1.w3s",
+      "reason": "editorial: punctual 屬 B2 程度、不在國中小基本字表，聽寫拼出此字對 A2 學生過難（辨識題可保留）。"
     },
     {
       "id": "g6-s2-u6.trap1",
@@ -296,31 +304,60 @@
   },
   "vocabSets": 137,
   "vocabWords": 1072,
-  "excludedCount": 39,
-  "excludedByReason": {
-    "trap is not a pair of English sentences": 39
+  "excludedCount": 41,
+  "review": {
+    "reviewed": {
+      "s1": {
+        "date": "2026-10-24",
+        "scope": "all scorable items",
+        "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+      },
+      "s2": {
+        "date": "2026-10-24",
+        "scope": "all scorable items",
+        "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+      },
+      "s3": {
+        "date": "2026-10-24",
+        "scope": "all scorable items",
+        "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+      },
+      "s4": {
+        "date": "2026-10-24",
+        "scope": "all scorable items",
+        "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+      }
+    },
+    "excluded": 2,
+    "patched": 206,
+    "unused": []
   },
-  "version": "2026-10-23.v3",
+  "excludedByReason": {
+    "trap is not a pair of English sentences": 39,
+    "editorial: punctual 屬 B2 程度、不在國中小基本字表，要求小六學生在填空中拼出此字過難（辨識題可保留）。": 1,
+    "editorial: punctual 屬 B2 程度、不在國中小基本字表，聽寫拼出此字對 A2 學生過難（辨識題可保留）。": 1
+  },
+  "version": "2026-10-24.v5",
   "files": {
-    "b-cap.json": 151824,
-    "b-cert.json": 50041,
-    "b-gmat.json": 475136,
-    "b-gre.json": 214377,
-    "b-gsat.json": 171580,
-    "b-sat.json": 277037,
-    "b-toeic.json": 188550,
-    "b-voc.json": 188319,
-    "index.json": 101638,
-    "s1.json": 171899,
-    "s2.json": 220213,
-    "s3.json": 150250,
-    "s4.json": 238216,
-    "s5.json": 282621,
-    "s6.json": 212475,
-    "s7.json": 255885,
-    "s8.json": 294510,
-    "s9.json": 249941,
-    "stories.json": 263955,
+    "b-cap.json": 157563,
+    "b-cert.json": 54191,
+    "b-gmat.json": 476212,
+    "b-gre.json": 214695,
+    "b-gsat.json": 180577,
+    "b-sat.json": 277437,
+    "b-toeic.json": 188278,
+    "b-voc.json": 199789,
+    "index.json": 102429,
+    "s1.json": 172140,
+    "s2.json": 240969,
+    "s3.json": 150722,
+    "s4.json": 243484,
+    "s5.json": 285795,
+    "s6.json": 217746,
+    "s7.json": 265728,
+    "s8.json": 303802,
+    "s9.json": 264715,
+    "stories.json": 263849,
     "vocab.json": 136359
   }
 }

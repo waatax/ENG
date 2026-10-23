@@ -1,0 +1,27 @@
+✔ round 1: hints and repair cannot build independent combos or clear mistakes; hearing requires playback (19.6346ms)
+✔ course: 9 leveled sections, 8 goal branches, every unit has playable nodes (11.9868ms)
+✔ course: every exercise is answerable and keeps a traceable source (11.0757ms)
+✔ course: editorial decisions are applied and explanations carry no option letters or production notes (11.5135ms)
+✔ course: stories, placement and vocabulary sets are complete (6.5093ms)
+✔ engine: new learner starts at the first node; later sections are locked, branches are open (8.6348ms)
+✔ engine: a lesson awards XP once, marks the day and opens the next node; replays earn less (10.3385ms)
+✔ engine: submit is idempotent and a reload resumes the same step with its feedback (18.8242ms)
+✔ engine: a miss is retried once at the end, enters the mistake bank, and leaves after two later successes (8.6353ms)
+✔ engine: two misses in a row insert a hint card and an easier item (12.4536ms)
+✔ engine: unit challenge has 3 hearts, ends at zero, and does not block the next unit (8.6956ms)
+✔ engine: finishing a unit schedules review; only a due review moves the interval forward (8.143ms)
+✔ engine: jump test unlocks a section and marks earlier lessons as tested, not completed (13.0184ms)
+✔ engine: placement recommends a start without XP; accepting it tests out earlier sections (6.5574ms)
+✔ engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends (13.6608ms)
+✔ engine: daily quests are fixed per date, reset next day and pay the bonus chest once (7.4026ms)
+✔ engine: blocked or corrupt storage stays usable; bad backups change nothing; backups round-trip (7.4638ms)
+✔ engine: pilot v1 progress migrates without touching the v1 record (14.0306ms)
+✔ engine: answers accept contractions, case and punctuation but not different grammar (0.1342ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.8256

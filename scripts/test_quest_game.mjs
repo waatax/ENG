@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createCourse, createGame, accepts, normalize, localDay, streakOf, vocabExercises, isScored, KEY, V1_KEY, DAY, XP, HEARTS, FREEZE_COST, GOALS } from '../dist/quest/engine.mjs';
 import { journeyCatalog } from '../dist/learning_journey.mjs';
+import {nextAdventure,sessionTrail} from '../dist/quest/adventure.mjs';
 
 const dir = 'dist/quest/course/';
 const read = f => JSON.parse(fs.readFileSync(dir + f, 'utf8'));
@@ -23,6 +24,42 @@ function play(g, answer = right, guard = 200) {
   return g.result;
 }
 const lessonPath = (c, track) => c.path(track).filter(id => c.nodes.get(id).kind !== 'boss');
+
+test('round 5: corrupt session results are rejected while completed progress survives', () => {
+ const storage=memory(),c=loadCourse();let g=createGame({storage,course:c});g.start('lesson','u1:q1');play(g);g.start('lesson','u1:q2');
+ const raw=JSON.parse(g.export());raw.session.results=[{id:'forged',ok:true}];storage.setItem(KEY,JSON.stringify(raw));g=createGame({storage,course:c});assert.equal(g.validSession(),false);assert.equal(g.state.nodes['u1:q1'].n,1);assert.equal(g.state.session,null);
+});
+
+test('round 4: missions prefer due review and takeaway cards prioritise actual mistakes', () => {
+ const c=loadCourse(),g=createGame({storage:memory(),course:c});assert.equal(nextAdventure(g,c,'s1').id,'u1:q1');
+ g.start('lesson','u1:q1');const first=g.currentItem().id;g.submit(wrong(g.currentItem()));assert.equal(sessionTrail(g.state.session).independent,0);g.next();const r=play(g);
+ assert.equal(r.takeaways[0].id,first);assert.equal(r.takeaways[0].repair,true);assert.equal(r.takeaways.length,3);
+ g.state.review.u1={due:0,step:0};assert.equal(nextAdventure(g,c,'s1').mode,'review');
+});
+
+test('round 3: unfinished sessions cannot settle and a short challenge needs 80 percent independent accuracy', () => {
+ const c=loadCourse(),g=createGame({storage:memory(),course:c});g.start('lesson','u1:q1');assert.equal(g.finish(),null);assert.equal(g.state.xp.total,0);play(g);
+ for(const id of ['u1:q2','u1:q3']){g.start('lesson',id);play(g);}
+ const boss=c.nodes.get('u1:q4');boss.pool=boss.pool.filter(id=>isScored(c.item(id))).slice(0,6);
+ g.start('boss','u1:q4');let n=0;const r=play(g,it=>n++<2?wrong(it):right(it));
+ assert.ok(r.hearts>0);assert.ok(r.accuracy<.8);assert.equal(r.passed,false);assert.equal(g.state.crowns.u1,undefined);
+});
+
+test('round 2: repeated activity rewards cap at three daily completions, persist and reset tomorrow', () => {
+ let t=new Date(2026,9,24,12).getTime();const storage=memory(),c=loadCourse();let g=createGame({storage,course:c,now:()=>t});
+ for(let i=0;i<3;i++){g.start('lesson','u1:q1');assert.ok(play(g).xp>0);}
+ g=createGame({storage,course:c,now:()=>t});g.start('lesson','u1:q1');assert.equal(play(g).xp,0);
+ t+=DAY;g.start('lesson','u1:q1');assert.ok(play(g).xp>0);
+});
+
+test('round 1: hints and repair cannot build independent combos or clear mistakes; hearing requires playback', () => {
+ const c=loadCourse(),g=createGame({storage:memory(),course:c});
+ g.start('lesson','u1:q1'); const id=g.currentItem().id;g.submit(wrong(g.currentItem()));g.next();play(g);
+ g.start('mistakes');g.hint();g.submit(right(g.currentItem()));g.next();
+ assert.equal(g.state.items[id].fix,0);assert.equal(g.state.items[id].m,true);
+ if(g.state.session)play(g);g.start('lesson','u1:q2');g.transcript();g.heard();assert.equal(g.state.session.audio,false);
+ g.hint();g.submit(right(g.currentItem()));assert.equal(g.state.session.combo,0);assert.equal(g.state.session.maxCombo,0);
+});
 
 test('course: 9 leveled sections, 8 goal branches, every unit has playable nodes', () => {
   assert.equal(index.sections.length, 9);
@@ -57,11 +94,28 @@ test('course: every exercise is answerable and keeps a traceable source', () => 
       for (const t of tokens) assert.ok(bank.includes(t), `${it.id} missing token ${t}`);
       assert.ok(accepts(it, it.answer), it.id);
       assert.ok(!/[㐀-鿿]/.test(it.words.join(' ')), it.id);
+      if (it.given) { assert.equal(normalize(`${it.given} ${it.answer}`), normalize(it.audioAfter), `${it.id} given + answer rebuild the line`); assert.ok(tokens.length >= 3 && tokens.length <= 10, it.id); }
     } else if (it.type === 'input') assert.ok(String(it.answer).trim() && String(it.prompt).trim(), it.id);
     else if (it.type === 'match') { assert.equal(it.pairs.length, 4, it.id); assert.equal(new Set(it.pairs.map(p => p[1])).size, 4, it.id); }
     else assert.equal(it.type, 'info', it.id);
   }
   assert.ok(n > 5000, `only ${n} items`);
+});
+
+test('course: editorial decisions are applied and explanations carry no option letters or production notes', () => {
+  const items = Object.assign({}, ...trackFiles.map(f => f.items));
+  for (const f of fs.readdirSync('data/quest-review').filter(f => f.endsWith('.json'))) {
+    const r = JSON.parse(fs.readFileSync('data/quest-review/' + f, 'utf8'));
+    for (const id of Object.keys(r.exclude || {})) assert.equal(items[id], undefined, `${id} should be excluded`);
+    for (const [id, p] of Object.entries(r.patch || {})) for (const [k, v] of Object.entries(p.set)) if (k !== 'why' && k !== 'hint') assert.deepEqual(items[id]?.[k], v, `${id}.${k} patched`);
+  }
+  for (const s of ['s1', 's2', 's3', 's4']) assert.ok(index.reviewed?.[s], `${s} marked as reviewed`);
+  const stories = Object.values(storiesFile.stories).flatMap(s => s.steps);
+  for (const it of [...Object.values(items), ...stories]) {
+    const text = `${it.why || ''} ${it.hint || ''} ${it.note || ''}`;
+    assert.ok(!/[（(][A-D][)）]|故選\s*[A-D]/.test(text), `${it.id} names an option by letter`);
+    assert.ok(!/合成語音|斜線音標|字典音標|一般文字朗讀|孤立音素/.test(text), `${it.id} shows a production note`);
+  }
 });
 
 test('course: stories, placement and vocabulary sets are complete', () => {

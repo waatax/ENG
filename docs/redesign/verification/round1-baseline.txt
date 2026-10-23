@@ -1,0 +1,26 @@
+✔ course: 9 leveled sections, 8 goal branches, every unit has playable nodes (17.3395ms)
+✔ course: every exercise is answerable and keeps a traceable source (11.882ms)
+✔ course: editorial decisions are applied and explanations carry no option letters or production notes (9.0546ms)
+✔ course: stories, placement and vocabulary sets are complete (8.7299ms)
+✔ engine: new learner starts at the first node; later sections are locked, branches are open (9.8415ms)
+✔ engine: a lesson awards XP once, marks the day and opens the next node; replays earn less (9.6333ms)
+✔ engine: submit is idempotent and a reload resumes the same step with its feedback (20.6995ms)
+✔ engine: a miss is retried once at the end, enters the mistake bank, and leaves after two later successes (7.4559ms)
+✔ engine: two misses in a row insert a hint card and an easier item (9.9981ms)
+✔ engine: unit challenge has 3 hearts, ends at zero, and does not block the next unit (12.6689ms)
+✔ engine: finishing a unit schedules review; only a due review moves the interval forward (8.843ms)
+✔ engine: jump test unlocks a section and marks earlier lessons as tested, not completed (16.9857ms)
+✔ engine: placement recommends a start without XP; accepting it tests out earlier sections (7.4334ms)
+✔ engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends (13.0548ms)
+✔ engine: daily quests are fixed per date, reset next day and pay the bonus chest once (8.2254ms)
+✔ engine: blocked or corrupt storage stays usable; bad backups change nothing; backups round-trip (8.3563ms)
+✔ engine: pilot v1 progress migrates without touching the v1 record (8.2531ms)
+✔ engine: answers accept contractions, case and punctuation but not different grammar (0.1879ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 333.398

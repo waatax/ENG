@@ -1,4 +1,5 @@
-// English Quest v2 game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
+// English Quest game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
+import {takeaways} from './adventure.mjs';
 export const KEY = 'english-quest-game-v2';
 export const V1_KEY = 'english-quest-game-v1';
 export const DAY = 86400000;
@@ -92,6 +93,7 @@ function sanitize(raw, now) {
   for (const [k, v] of Object.entries(raw.items || {})) if (isObj(v)) s.items[k] = { s: num(v.s), c: num(v.c), w: num(v.w), last: v.last === 1 ? 1 : 0, at: num(v.at), m: v.m === true, fix: num(v.fix), ws: num(v.ws), f: String(v.f || '') };
   s.xp.total = num(raw.xp?.total); for (const [d, v] of Object.entries(raw.xp?.days || {})) if (DAY_RE.test(d)) s.xp.days[d] = num(v);
   for (const [k, v] of Object.entries(raw.awards || {})) if (Number.isFinite(v)) s.awards[k] = v;
+  s.rewardRuns = {}; for (const [k,v] of Object.entries(raw.rewardRuns || {})) if (Number.isInteger(v) && v >= 0 && v <= 3) s.rewardRuns[k] = v;
   s.days = [...new Set((raw.days || []).filter(d => DAY_RE.test(d)))].sort();
   s.frozen = [...new Set((raw.frozen || []).filter(d => DAY_RE.test(d)))].sort();
   s.freezes = Math.min(MAX_FREEZES, num(raw.freezes)); s.gems = num(raw.gems); s.serial = num(raw.serial);
@@ -280,7 +282,10 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   // a saved session is only resumed if all of its items still exist in the loaded course data
   function validSession() {
     const s = state.session; if (!s) return false;
-    const ok = s.queue.every(id => course.item(id)) && s.index >= 0 && s.index < s.queue.length && Array.isArray(s.results);
+    const modes=['lesson','boss','story','review','mistakes','practice','listen','vocab','jump','placement'];
+    const basic=Array.isArray(s.queue)&&s.queue.length>0&&s.queue.length<=512&&s.queue.every(id=>typeof id==='string'&&course.item(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<s.queue.length&&Array.isArray(s.results)&&modes.includes(s.mode)&&Number.isSafeInteger(s.id)&&s.id>0&&Number.isInteger(s.base)&&s.base>0&&s.base<=s.queue.length&&Number.isFinite(s.started)&&(s.hearts===null||Number.isInteger(s.hearts)&&s.hearts>=0&&s.hearts<=HEARTS)&&(!s.feedback||typeof s.feedback.ok==='boolean');
+    const processed=basic?s.queue.slice(0,s.index+(s.feedback?1:0)).filter(id=>isScored(course.item(id))):[];
+    const ok=basic&&processed.length===s.results.length&&s.results.every((r,i)=>r&&r.id===processed[i]&&typeof r.ok==='boolean'&&typeof r.hint==='boolean'&&typeof r.repair==='boolean');
     if (!ok) { state.session = null; save(); }
     return ok;
   }
@@ -301,10 +306,10 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     record.s++; record.at = t; record.last = ok ? 1 : 0; record.f = it.f || record.f;
     const counts = s.mode !== 'placement';
     if (ok) {
-      record.c++; s.combo++; s.maxCombo = Math.max(s.maxCombo, s.combo); s.wrongRun = 0;
-      if (record.m && record.ws !== s.id && counts) { record.fix++; bumpQuest('fix'); if (record.fix >= 2) { record.m = false; state.stats.fixed++; } }
-      if (counts && (it.type === 'listen' || it.listen) && !s.transcript) bumpQuest('listen');
-      if (counts) bumpQuest('combo', s.combo, true);
+      record.c++; s.combo = s.hint || repair ? 0 : s.combo + 1; s.maxCombo = Math.max(s.maxCombo, s.combo); s.wrongRun = 0;
+      if (record.m && record.ws !== s.id && counts && !s.hint && !repair && record.fixedSession !== s.id) { record.fixedSession = s.id; record.fix++; bumpQuest('fix'); if (record.fix >= 2) { record.m = false; state.stats.fixed++; } }
+      if (counts && (it.type === 'listen' || it.listen) && s.audio && !s.transcript && !s.hint && !repair) bumpQuest('listen');
+      if (counts && !s.hint && !repair) bumpQuest('combo', s.combo, true);
     } else {
       record.w++; s.combo = 0; s.wrongRun++;
       if (counts) { record.m = true; record.fix = 0; record.ws = s.id; }
@@ -324,6 +329,11 @@ export function createGame({ storage, now = () => Date.now(), course }) {
 
   function addXp(key, xp) {
     if (Object.hasOwn(state.awards, key) || xp <= 0) return 0;
+    const s = state.session, scope = `${today()}:${s.mode}:${s.ref || 'mixed'}`;
+    state.rewardRuns ||= {};
+    if ((state.rewardRuns[scope] || 0) >= 3) return 0;
+    state.rewardRuns[scope] = (state.rewardRuns[scope] || 0) + 1;
+    for (const old of Object.keys(state.rewardRuns)) if (old.slice(0, 10) < dayStr(dayNum(today()) - 30)) delete state.rewardRuns[old];
     state.awards[key] = xp; state.xp.total += xp; const d = today(); state.xp.days[d] = (state.xp.days[d] || 0) + xp;
     const keys = Object.keys(state.awards); if (keys.length > 400) for (const k of keys.slice(0, keys.length - 400)) delete state.awards[k];
     bumpQuest('xp', state.xp.days[d], true); return xp;
@@ -332,6 +342,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
 
   function finish() {
     const s = state.session; if (!s) return null;
+    if (!(s.hearts !== null && s.hearts <= 0) && (s.index < s.queue.length - 1 || (isScored(currentItem()) && !s.feedback))) return null;
     pending = [];
     const scored = s.results.filter(r => !r.repair), firstTry = scored.filter(r => r.ok && !r.hint).length;
     const accuracy = scored.length ? firstTry / scored.length : 1, perfect = scored.length > 0 && scored.every(r => r.ok && !r.hint);
@@ -353,30 +364,31 @@ export function createGame({ storage, now = () => Date.now(), course }) {
         if (first && unit.nodes.filter(n => n.kind !== 'boss').every(n => nodeDone(n.id)) && !state.review[unit.id]) state.review[unit.id] = { due: t + DAY, step: 0 };
         state.stats.lessons++;
       } else if (s.mode === 'boss') {
-        passed = s.hearts > 0; const unitId = course.unitOfNode(s.ref);
+        passed = s.hearts > 0 && accuracy >= 0.8; const unitId = course.unitOfNode(s.ref);
         const node = state.nodes[s.ref] ||= { n: 0, at: 0, best: 0, tested: false }; node.n++; node.at = t; node.best = Math.max(node.best, accuracy);
         if (passed && !state.crowns[unitId]) { state.crowns[unitId] = t; state.gems += CROWN_GEMS; state.stats.crowns++; extra.chest = CROWN_GEMS; }
         xp = addXp(key, passed ? XP.boss + (perfect ? XP.perfect : 0) : XP.bossTry); state.stats.lessons++;
       } else if (s.mode === 'story') {
         const first = !state.stories[s.ref]; state.stories[s.ref] = t; if (first) state.stats.stories++;
-        xp = addXp(key, first ? XP.story : XP.storyReplay); bumpQuest('story');
+        xp = addXp(key, first ? XP.story : XP.storyReplay); if (xp) bumpQuest('story');
       } else if (s.mode === 'review') {
         const r = state.review[s.ref], due = r && t >= r.due;
         if (due) { const step = accuracy >= 0.8 ? Math.min(r.step + 1, REVIEW_DAYS.length - 1) : 0; state.review[s.ref] = { due: t + REVIEW_DAYS[step] * DAY, step }; extra.nextReview = state.review[s.ref].due; }
         xp = addXp(key, (due ? XP.review : XP.practice) + (perfect ? XP.perfect : 0)); state.stats.lessons++;
       } else if (s.mode === 'jump') {
-        passed = s.hearts > 0;
+        passed = s.hearts > 0 && accuracy >= 0.8;
         if (passed) { const i = course.index.sections.findIndex(x => x.id === s.ref); for (const sec of course.index.sections.slice(0, i)) for (const u of sec.units) for (const n of u.nodes) if (n.kind !== 'boss' && !state.nodes[n.id]?.n) state.nodes[n.id] = { n: 0, at: t, best: 0, tested: true }; state.jumped[s.ref] = t; }
         xp = addXp(key, passed ? XP.jump : 0);
       } else {
         xp = addXp(key, XP.practice + (perfect ? XP.perfect : 0)); state.stats.lessons++;
       }
-      if (perfect && s.mode !== 'jump') { state.stats.perfect++; bumpQuest('perfect'); }
-      if (s.mode !== 'jump' || passed) { newDay = markActive(); bumpQuest('lessons'); }
+      if (perfect && s.mode !== 'jump' && xp) { state.stats.perfect++; bumpQuest('perfect'); }
+      if (s.mode !== 'jump' || passed) { newDay = markActive(); if (xp) bumpQuest('lessons'); }
       state.stats.combo = Math.max(state.stats.combo, s.maxCombo);
     }
     checkBadges();
     result = { mode: s.mode, ref: s.ref, xp, accuracy, perfect, firstTry, total: scored.length, repairs: s.results.filter(r => r.repair).length, passed, hearts: s.hearts, maxCombo: s.maxCombo, seconds: Math.max(1, Math.round((t - s.started) / 1000)), newDay, streak: streak(), streakBefore, events: pending, ...extra };
+    result.takeaways = takeaways(s, course);
     pending = []; state.session = null; save(); return result;
   }
 
@@ -389,7 +401,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     flag(id) { if (!course.item(id)) return false; if (state.flags[id]) delete state.flags[id]; else state.flags[id] = now(); save(); return !!state.flags[id]; },
     acceptPlacement(sectionId) { const order = course.index.sections.map(s => s.id), i = order.indexOf(sectionId); if (i < 0) return false; const t = now(); if (i > 0) state.jumped[sectionId] = t; for (const sec of course.index.sections.slice(0, i)) for (const u of sec.units) for (const n of u.nodes) if (n.kind !== 'boss' && !state.nodes[n.id]?.n) state.nodes[n.id] = { n: 0, at: t, best: 0, tested: true }; if (state.profile) state.profile.start = sectionId; save(); return true; },
     hint() { const s = state.session; if (s && !s.feedback && !['boss', 'jump', 'placement'].includes(s.mode)) { s.hint = true; save(); return true; } return false; },
-    heard() { const s = state.session; if (s && !s.feedback) { s.audio = true; save(); } },
+    heard() { const s = state.session; if (s && !s.feedback && !s.transcript) { s.audio = true; save(); } },
     transcript() { const s = state.session; if (s && !s.feedback) { s.transcript = true; s.audio = false; save(); } },
     abandon() { state.session = null; result = null; save(); },
     clearResult() { result = null; },

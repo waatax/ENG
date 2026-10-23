@@ -1,0 +1,31 @@
+✔ round 5: corrupt session results are rejected while completed progress survives (20.3461ms)
+✔ round 4: missions prefer due review and takeaway cards prioritise actual mistakes (10.7072ms)
+✔ round 3: unfinished sessions cannot settle and a short challenge needs 80 percent independent accuracy (8.8812ms)
+✔ round 2: repeated activity rewards cap at three daily completions, persist and reset tomorrow (10.2019ms)
+✔ round 1: hints and repair cannot build independent combos or clear mistakes; hearing requires playback (13.7418ms)
+✔ course: 9 leveled sections, 8 goal branches, every unit has playable nodes (9.4049ms)
+✔ course: every exercise is answerable and keeps a traceable source (10.1155ms)
+✔ course: editorial decisions are applied and explanations carry no option letters or production notes (9.6924ms)
+✔ course: stories, placement and vocabulary sets are complete (8.1331ms)
+✔ engine: new learner starts at the first node; later sections are locked, branches are open (9.7148ms)
+✔ engine: a lesson awards XP once, marks the day and opens the next node; replays earn less (9.2414ms)
+✔ engine: submit is idempotent and a reload resumes the same step with its feedback (17.6937ms)
+✔ engine: a miss is retried once at the end, enters the mistake bank, and leaves after two later successes (5.9568ms)
+✔ engine: two misses in a row insert a hint card and an easier item (12.3779ms)
+✔ engine: unit challenge has 3 hearts, ends at zero, and does not block the next unit (6.9466ms)
+✔ engine: finishing a unit schedules review; only a due review moves the interval forward (6.874ms)
+✔ engine: jump test unlocks a section and marks earlier lessons as tested, not completed (9.3559ms)
+✔ engine: placement recommends a start without XP; accepting it tests out earlier sections (7.8001ms)
+✔ engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends (22.1307ms)
+✔ engine: daily quests are fixed per date, reset next day and pay the bonus chest once (6.6657ms)
+✔ engine: blocked or corrupt storage stays usable; bad backups change nothing; backups round-trip (7.381ms)
+✔ engine: pilot v1 progress migrates without touching the v1 record (8.2532ms)
+✔ engine: answers accept contractions, case and punctuation but not different grammar (0.1586ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 393.6496

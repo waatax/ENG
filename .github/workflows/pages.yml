@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify quest content, progress and reward rules
+        run: node --test scripts/test_quest_game.mjs
+
       - name: Verify 1000 mnemonic cards, 500 word families and their MP3s
         run: node scripts/validate_mnemonic_release.mjs
 

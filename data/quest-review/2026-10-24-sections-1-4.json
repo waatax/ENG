@@ -1,0 +1,1792 @@
+{
+ "note": "Editorial review of sections 1–4 (Pre-A1 to A2), 2026-10-24: six parallel Claude review agents read all 1,690 scorable items; every error and a sample of warnings were checked by the main session before applying. Applied at build time by scripts/build_quest_course.mjs.",
+ "reviewed": {
+  "s1": {
+   "date": "2026-10-24",
+   "scope": "all scorable items",
+   "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+  },
+  "s2": {
+   "date": "2026-10-24",
+   "scope": "all scorable items",
+   "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+  },
+  "s3": {
+   "date": "2026-10-24",
+   "scope": "all scorable items",
+   "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+  },
+  "s4": {
+   "date": "2026-10-24",
+   "scope": "all scorable items",
+   "method": "AI editorial review (6 agents) + main-session verification; not a teacher review"
+  }
+ },
+ "exclude": {
+  "g6-s1-u1.w3c": "punctual 屬 B2 程度、不在國中小基本字表，要求小六學生在填空中拼出此字過難（辨識題可保留）。",
+  "g6-s1-u1.w3s": "punctual 屬 B2 程度、不在國中小基本字表，聽寫拼出此字對 A2 學生過難（辨識題可保留）。"
+ },
+ "patch": {
+  "g3-s1-u3.t3b": {
+   "severity": "error",
+   "problem": "中文提示是「Leo，你有幾本書？」，照中文語序排出 Leo how many books do you have 也是正確英文（Leo, how many books do you have?），卻會被判錯。",
+   "set": {
+    "alternatives": [
+     "Leo how many books do you have"
+    ]
+   }
+  },
+  "g3-s1-u3.t1b": {
+   "severity": "error",
+   "problem": "「請坐下」直譯為 Please sit down，排成 good morning class please sit down 同樣正確自然，卻會被判錯。",
+   "set": {
+    "alternatives": [
+     "good morning class please sit down"
+    ]
+   }
+  },
+  "g3-s1-u3.trap1": {
+   "severity": "error",
+   "problem": "干擾句 You stand up. 文法上並沒有錯（可作直述句或加強語氣的命令），把它當成「不正確的句子」有爭議；應換成明顯錯誤的句子。",
+   "set": {
+    "options": [
+     "Stand up, please.",
+     "Stands up, please."
+    ],
+    "why": "下指令（祈使句）用動詞原形開頭，不加 s；加 please 更有禮貌。"
+   }
+  },
+  "g3-s2-u5.w1m": {
+   "severity": "error",
+   "problem": "干擾項「雙親之一、父母親」也可以描述 father（爸爸就是雙親之一），選項有爭議。",
+   "set": {
+    "options": [
+     "爸爸",
+     "家庭、家人",
+     "哥哥；弟弟"
+    ]
+   }
+  },
+  "g3-s2-u5.w6m": {
+   "severity": "warn",
+   "problem": "干擾項「媽媽」「爸爸」本身都是 parent 的一種，容易讓學生覺得也算對；建議換成不重疊的家人詞。",
+   "set": {
+    "options": [
+     "雙親之一、父母親",
+     "哥哥；弟弟",
+     "姊姊；妹妹"
+    ]
+   }
+  },
+  "g3-s1-u2.x2": {
+   "severity": "warn",
+   "problem": "題目直接寫出 \"pig\"，學生看題目就知道缺的是 p，失去辨別 b/d/p/q 的練習效果。",
+   "set": {
+    "prompt": "Look: _ig (豬). Which letter is missing?"
+   }
+  },
+  "g3-s1-u3.x1": {
+   "severity": "warn",
+   "problem": "英文題幹 wants you to look at the board 與正確選項 Look at the board. 字面完全相同，等於直接給答案。",
+   "set": {
+    "prompt": "老師要你看黑板，她會怎麼說？"
+   }
+  },
+  "g3-s1-u1.q1": {
+   "severity": "warn",
+   "problem": "提示直接寫出「F 後面是 G」，等於公布答案。",
+   "set": {
+    "hint": "唸一次字母歌：E, F, ___"
+   }
+  },
+  "g3-s1-u2.q2": {
+   "severity": "warn",
+   "problem": "提示直接寫出「T 在 S 後面」，等於公布答案。",
+   "set": {
+    "hint": "唸：N, O, P, Q, R, S。"
+   }
+  },
+  "g3-s1-u2.x1": {
+   "severity": "warn",
+   "problem": "提示括號裡的（sun）就是正確答案。",
+   "set": {
+    "hint": "字母名稱：S = /es/ ｜ 字母聲音：s = /s/"
+   }
+  },
+  "g3-s1-u3.q1": {
+   "severity": "warn",
+   "problem": "提示「八 eight」直接給出答案。",
+   "set": {
+    "hint": "e-i-g-h-t。從 one 開始數：one、two、three……數到 eight 是幾？"
+   }
+  },
+  "g3-s1-u3.q2": {
+   "severity": "warn",
+   "problem": "提示「close＝關上、闔上」直接對應正確選項「闔上書」，等於公布答案。",
+   "set": {
+    "hint": "close 和 open 意思相反。"
+   }
+  },
+  "g3-s2-u4.x1": {
+   "severity": "warn",
+   "problem": "提示例句 This is an eraser. 與題目完全相同，等於公布答案。",
+   "set": {
+    "hint": "This is a pen. / This is an apple.（母音開頭的字用 an）"
+   }
+  },
+  "g3-s2-u4.q1": {
+   "severity": "warn",
+   "problem": "題幹 Which group are ALL colors? 主詞動詞不一致、不自然；提示列出「綠、粉紅、黑」正好是正確選項，等於公布答案。",
+   "set": {
+    "prompt": "Which group has ONLY colors?",
+    "hint": "把每個字的意思想一想，哪一組的三個字都是顏色？"
+   }
+  },
+  "g3-s1-u1.r2": {
+   "severity": "warn",
+   "problem": "短文沒有說 Ms. Lin 是老師（只有 Good morning, Ms. Lin!），答案要靠推測，與「文章依據」的解析不符。",
+   "set": {
+    "prompt": "Who does Amy say good morning to?"
+   }
+  },
+  "g3-s1-u2.t1b": {
+   "severity": "warn",
+   "problem": "解析混入開發備註（「不讓合成語音朗讀斜線音標」），對學生沒有意義也與本句無關。",
+   "set": {
+    "why": "What letter is this?（這是什麼字母？）"
+   }
+  },
+  "g3-s1-u2.t3b": {
+   "severity": "warn",
+   "problem": "解析混入開發備註（「不讓合成語音朗讀斜線音標」），對學生沒有意義也與本句無關。",
+   "set": {
+    "why": "Sun! What about this letter?（Sun！那這個字母呢？）"
+   }
+  },
+  "g3-s1-u2.t4b": {
+   "severity": "warn",
+   "problem": "解析混入開發備註（「不讓合成語音朗讀斜線音標」），對學生沒有意義也與本句無關。",
+   "set": {
+    "why": "It's Z, like the Z in zebra.（是 Z，就像 zebra 裡的 Z。）"
+   }
+  },
+  "g3-s1-u1.t3b": {
+   "severity": "warn",
+   "problem": "Ben nice to meet you（Ben, nice to meet you.）同樣正確自然，應一併接受。",
+   "set": {
+    "alternatives": [
+     "Ben nice to meet you"
+    ]
+   }
+  },
+  "g3-s1-u3.t2b": {
+   "severity": "warn",
+   "problem": "Mr Chen thank you（Mr. Chen, thank you.）同樣正確，應一併接受。",
+   "set": {
+    "alternatives": [
+     "Mr Chen thank you"
+    ]
+   }
+  },
+  "g3-s1-u1.w1c": {
+   "severity": "warn",
+   "problem": "提示「哈囉；你好」下，Hi, I'm Amy. 同樣正確，應接受 hi。",
+   "set": {
+    "alternatives": [
+     "hello",
+     "hi"
+    ]
+   }
+  },
+  "g3-s1-u1.w4c": {
+   "severity": "warn",
+   "problem": "提示「再見」下，Bye, Ms. Lin! 與拼法 Good-bye 也正確，應一併接受。",
+   "set": {
+    "alternatives": [
+     "goodbye",
+     "bye",
+     "good-bye"
+    ]
+   }
+  },
+  "g3-s2-u5.w1c": {
+   "severity": "warn",
+   "problem": "提示「爸爸」最直接對應 dad，This is my dad. 完全正確，應接受 dad/daddy。",
+   "set": {
+    "alternatives": [
+     "father",
+     "dad",
+     "daddy"
+    ]
+   }
+  },
+  "g3-s2-u5.w2c": {
+   "severity": "warn",
+   "problem": "提示「媽媽」最直接對應 mom，My mom is kind. 完全正確，應接受 mom/mum/mommy。",
+   "set": {
+    "alternatives": [
+     "mother",
+     "mom",
+     "mum",
+     "mommy"
+    ]
+   }
+  },
+  "k.classroom-life-english.2": {
+   "severity": "warn",
+   "problem": "題幹 What is the most polite? 文法不自然，應為 Which is the most polite?",
+   "set": {
+    "prompt": "You want to borrow a pencil. Which is the most polite?"
+   }
+  },
+  "d.diag-0061": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (A)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "否定祈使句以 Don't + 原形動詞 開頭，表示禁止命令。正確答案為「Don't」。否定祈使句開頭必須用 Don't，不可單用 Not 或 No。"
+   }
+  },
+  "d.diag-0062": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (B)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "肯定祈使句以 Please + 動詞原形 開頭表示禮貌要求。正確答案為「wash」。祈使句動詞一律用原形 wash。"
+   }
+  },
+  "d.diag-0063": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (C)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "祈使句中若接形容詞 quiet，動詞必須使用 be 動詞原形 Be。正確答案為「Be」。祈使句使用原形動詞：Be quiet!"
+   }
+  },
+  "d.diag-0064": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (D)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "Don't 後方必須接動詞原形 feed。正確答案為「feed」。"
+   }
+  },
+  "d.diag-0065": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (A)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "Please 後接動詞原形 close。正確答案為「close」。祈使句使用原形動詞 close。"
+   }
+  },
+  "d.diag-0066": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (B)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "否定祈使句警示語以 Don't 開頭。正確答案為「Don't」。警告不要做某事用 Don't touch。"
+   }
+  },
+  "d.diag-0067": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (C)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "Always 用於祈使句句首表示叮嚀，後方動詞仍需使用原形 listen。正確答案為「listen」。"
+   }
+  },
+  "d.diag-0068": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (D)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "祈使句句首以原形動詞 Keep 開頭。正確答案為「Keep」。"
+   }
+  },
+  "d.diag-0069": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (A)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "Don't 後接形容詞 late，必須使用原形 be 動詞 be，形成 Don't be late!。正確答案為「be」。"
+   }
+  },
+  "d.diag-0070": {
+   "severity": "warn",
+   "problem": "解析寫「正確答案為 (B)」，但選項在畫面上會被打亂且沒有 A–D 標號，字母可能對不上。",
+   "set": {
+    "why": "Please 後接片語動詞原形 take off。正確答案為「take off」。祈使句片語動詞維持原形 take off。"
+   }
+  },
+  "g3-s2-u5.w7c": {
+   "severity": "warn",
+   "problem": "提示「祖父、爺爺、外公」下，grandpa 也正確（國小課本常用），應接受。",
+   "set": {
+    "alternatives": [
+     "grandfather",
+     "grandpa"
+    ]
+   }
+  },
+  "g3-s2-u5.w8c": {
+   "severity": "warn",
+   "problem": "提示「祖母、奶奶、外婆」下，grandma 也正確（國小課本常用），應接受。",
+   "set": {
+    "alternatives": [
+     "grandmother",
+     "grandma"
+    ]
+   }
+  },
+  "g3-s2-u5.t4b": {
+   "severity": "warn",
+   "problem": "所給字卡也能排成 He is my dad. He's a cook.，同樣正確，應接受。",
+   "set": {
+    "alternatives": [
+     "he is my dad he's a cook"
+    ]
+   }
+  },
+  "g3-s2-u5.q1": {
+   "severity": "warn",
+   "problem": "aunt 是成年女性，不是 girl，題幹用字不精確；提示直接寫出 aunt＝阿姨、姑姑，等於洩題。",
+   "set": {
+    "prompt": "Which family member is a woman?",
+    "hint": "想想每個家人是男生還是女生。"
+   }
+  },
+  "g3-s2-u5.q2": {
+   "severity": "warn",
+   "problem": "提示「女生用 she」幾乎直接給出答案。",
+   "set": {
+    "hint": "mom 是男生還是女生？想想男生、女生各用哪個代名詞。"
+   }
+  },
+  "g3-s2-u5.q3": {
+   "severity": "warn",
+   "problem": "提示直接寫出句型 This is my…，等於洩題。",
+   "set": {
+    "hint": "介紹家人時，句子裡要有 be 動詞，字的順序也要注意。"
+   }
+  },
+  "g3-s2-u5.r1": {
+   "severity": "warn",
+   "problem": "短文完全沒有出現 Tom，答案 Tom’s mom. 在文中找不到依據。",
+   "set": {
+    "answer": "The writer’s mom.",
+    "options": [
+     "The writer’s mom.",
+     "She is five.",
+     "It is blue."
+    ],
+    "why": "文章依據：This is my mom. She is a teacher."
+   }
+  },
+  "g3-s2-u6.w1c": {
+   "severity": "warn",
+   "problem": "提示「兔子」下，兒童常用的 bunny 也正確，應接受。",
+   "set": {
+    "alternatives": [
+     "rabbit",
+     "bunny"
+    ]
+   }
+  },
+  "g3-s2-u6.w5c": {
+   "severity": "warn",
+   "problem": "提示含「小狗」，puppy 也符合句意與提示，應接受。",
+   "set": {
+    "alternatives": [
+     "dog",
+     "puppy"
+    ]
+   }
+  },
+  "g3-s2-u6.w6c": {
+   "severity": "warn",
+   "problem": "提示含「小貓」，kitten 也符合句意與提示，應接受。",
+   "set": {
+    "alternatives": [
+     "cat",
+     "kitten"
+    ]
+   }
+  },
+  "g3-s2-u6.t2b": {
+   "severity": "warn",
+   "problem": "所給字卡排成 They are smart and big. 也正確，應接受。",
+   "set": {
+    "alternatives": [
+     "yes I do they are smart and big"
+    ]
+   }
+  },
+  "g3-s2-u6.q1": {
+   "severity": "warn",
+   "problem": "提示直接點名 cat、dog、hamster 是寵物，用刪去法即得答案。",
+   "set": {
+    "hint": "想想哪些動物住在動物園，哪些通常是家裡養的寵物？"
+   }
+  },
+  "g3-s2-u6.q2": {
+   "severity": "warn",
+   "problem": "提示「do not = don’t」幾乎直接給出唯一含 don’t 的選項。",
+   "set": {
+    "hint": "用 Do 問，簡答也用 do；No 後面要用否定。"
+   }
+  },
+  "u2-q1-4": {
+   "severity": "error",
+   "problem": "沒有提示，I feel / I was happy today. 也完全正確卻會被判錯。",
+   "set": {
+    "prompt": "I ___ happy today.（am / is / are）"
+   }
+  },
+  "u2-q1-6": {
+   "severity": "warn",
+   "problem": "沒有提示，You were in my class. 也正確卻會被判錯。",
+   "set": {
+    "prompt": "You ___ in my class.（am / is / are）"
+   }
+  },
+  "u2-q2-3": {
+   "severity": "warn",
+   "problem": "沒有提示，She was / looks ready. 也正確卻會被判錯。",
+   "set": {
+    "prompt": "She ___ ready.（am / is / are）"
+   }
+  },
+  "u2-q2-6": {
+   "severity": "error",
+   "problem": "沒有提示，My brother works / stays / was at home. 都正確卻會被判錯。",
+   "set": {
+    "prompt": "My brother ___ at home.（am / is / are）"
+   }
+  },
+  "u2-q3-6": {
+   "severity": "warn",
+   "problem": "沒有提示，Were they your friends? 也正確卻會被判錯。",
+   "set": {
+    "prompt": "___ they your friends?（am / is / are）"
+   }
+  },
+  "u2-q4-2": {
+   "severity": "error",
+   "problem": "沒有提示，My teammates were / feel / look ready for the game. 都正確卻會被判錯。",
+   "set": {
+    "prompt": "My teammates ___ ready for the game.（am / is / are）"
+   }
+  },
+  "u2-r1": {
+   "severity": "error",
+   "problem": "沒有提示，The children read / study / play / were in the library. 都正確卻會被判錯。",
+   "set": {
+    "prompt": "The children ___ in the library.（am / is / are）"
+   }
+  },
+  "u2-r4": {
+   "severity": "warn",
+   "problem": "沒有提示，I was not hungry. 也正確卻會被判錯。",
+   "set": {
+    "prompt": "I ___ not hungry.（am / is / are）"
+   }
+  },
+  "k.be-sentences.1": {
+   "severity": "warn",
+   "problem": "提示在句中被截斷（結尾「I 搭…」），顯示不完整。",
+   "set": {
+    "hint": "be 動詞的現在式有 am / is / are，要看主詞來選。"
+   }
+  },
+  "k.be-sentences.2": {
+   "severity": "warn",
+   "problem": "提示在句中被截斷（結尾「I 搭…」），顯示不完整。",
+   "set": {
+    "hint": "含 be 動詞的句子改成問句時，be 動詞要放在哪裡？需要加 do 嗎？"
+   }
+  },
+  "g4-s1-u1.t1b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「拼讀練習先聽完整單字…文字朗讀不是孤立音素示範」像是內部語音備註，與本句無關，會讓學生困惑。",
+   "set": {
+    "why": "Can you read this word: hat?"
+   }
+  },
+  "g4-s1-u1.t2b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「拼讀練習先聽完整單字…文字朗讀不是孤立音素示範」像是內部語音備註，與本句無關，會讓學生困惑。",
+   "set": {
+    "why": "Hat! Is that your hat?"
+   }
+  },
+  "g4-s1-u1.t3b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「拼讀練習先聽完整單字…文字朗讀不是孤立音素示範」像是內部語音備註，與本句無關，會讓學生困惑。",
+   "set": {
+    "why": "Yes, it is. Now spell dog."
+   }
+  },
+  "g4-s1-u1.t4b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「拼讀練習先聽完整單字…文字朗讀不是孤立音素示範」像是內部語音備註，與本句無關，會讓學生困惑。 另外字卡 d 為小寫而 O、G 為大寫，字母名稱大小寫不一致。",
+   "set": {
+    "why": "D, O, G. I can read dog, too!",
+    "words": [
+     "D",
+     "O",
+     "G",
+     "I",
+     "can",
+     "read",
+     "dog",
+     "too",
+     "morning",
+     "sandwich",
+     "I'd"
+    ],
+    "answer": "D O G I can read dog too"
+   }
+  },
+  "g4-s1-u1.q1": {
+   "severity": "warn",
+   "problem": "提示直接寫出「bed 的母音是 e」，等於洩題。",
+   "set": {
+    "hint": "短母音 i 唸 /ɪ/。把每個字唸唸看，找出母音不同的那一個。"
+   }
+  },
+  "g4-s1-u1.q3": {
+   "severity": "warn",
+   "problem": "提示「-at 和 -at」直接指向唯一的 cat / hat，等於洩題。",
+   "set": {
+    "hint": "押韻是字尾的聲音相同，例如 sun 和 fun。"
+   }
+  },
+  "g4-s1-u2.w5c": {
+   "severity": "warn",
+   "problem": "提示「一、一個」下，I have a brother. 也正確，a 應接受。",
+   "set": {
+    "alternatives": [
+     "one",
+     "a"
+    ]
+   }
+  },
+  "g4-s1-u2.t1b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「釐清數字時用數位重述 one five；thirteen、thirty 的重音…」與本句無關或用詞不當（「數位」是 digital 之意），會讓學生困惑。",
+   "set": {
+    "why": "This toy car is fifteen dollars."
+   }
+  },
+  "g4-s1-u2.t2b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「釐清數字時用數位重述 one five；thirteen、thirty 的重音…」與本句無關或用詞不當（「數位」是 digital 之意），會讓學生困惑。 另外 Did you say fifty or fifteen? 也正確，應接受。",
+   "set": {
+    "why": "Did you say fifteen or fifty?｜數字聽不清楚時，可以這樣跟對方確認。",
+    "alternatives": [
+     "did you say fifty or fifteen"
+    ]
+   }
+  },
+  "g4-s1-u2.t3b": {
+   "severity": "warn",
+   "problem": "說明用語「用數位重述」不當（數位＝digital），後半句重音說明與本句無關。",
+   "set": {
+    "why": "Fifteen. That's one five.｜確認數字時，可以一個一個數字念出來：fifteen → one five。"
+   }
+  },
+  "g4-s1-u2.t4b": {
+   "severity": "warn",
+   "problem": "說明末尾附加的「釐清數字時用數位重述 one five；thirteen、thirty 的重音…」與本句無關或用詞不當（「數位」是 digital 之意），會讓學生困惑。",
+   "set": {
+    "why": "OK. Here's twenty dollars."
+   }
+  },
+  "g4-s1-u2.q1": {
+   "severity": "warn",
+   "problem": "提示直接寫出「40 = forty」，等於洩題。",
+   "set": {
+    "hint": "十位是 40，個位是 8，兩個部分中間用連字號連起來。"
+   }
+  },
+  "g4-s1-u2.q3": {
+   "severity": "warn",
+   "problem": "提示「哪一個是 -teen？」而選項中只有 sixteen 是 -teen，等於洩題。",
+   "set": {
+    "hint": "比較 -teen 和 -ty 結尾的數字：哪一種的重音在後面？"
+   }
+  },
+  "g4-s1-u2.trap1": {
+   "severity": "warn",
+   "problem": "選項含括號 (years old) 不像一個完整句子，與說明「或只說 I’m ten.」也不一致。",
+   "set": {
+    "options": [
+     "I’m ten years old.",
+     "I’m ten years."
+    ],
+    "answer": "I’m ten years old."
+   }
+  },
+  "d.diag-0035": {
+   "severity": "warn",
+   "problem": "題意不合邏輯：問「你的還是 Peter 的」，答 It's his 卻又說 Peter's is green，his 指的不是 Peter，學生會困惑；說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "prompt": "Is this pencil case yours or Peter's? It's ___; mine is green.",
+    "hint": "題意：這個鉛筆盒是你的還是 Peter 的？是他的；我的是綠色的。",
+    "why": "his 同時可作所有格代名詞，在此指代 his pencil case。 正確答案為「his」。指代男性的所有物，所有格代名詞為 his。"
+   }
+  },
+  "d.diag-0237": {
+   "severity": "warn",
+   "problem": "sturdy wings 搭配不自然、gracefully 超出程度；中譯「堅韌的翅膀」亦不自然；說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "prompt": "Birds use their strong ___ to fly through the sky.",
+    "hint": "題意：鳥類用牠們強壯的翅膀在天空中飛翔。",
+    "why": "飛行器官為翅膀 wings。 正確答案為「wings」。飛翔器官選 wings。"
+   }
+  },
+  "d.diag-0117": {
+   "severity": "warn",
+   "problem": "goose 是鵝／雁，不是天鵝（swan）；提示中譯「天鵝/大雁」有誤；說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "hint": "題意：今天早上有一群大雁（野鵝）飛越湖面往南飛。",
+    "why": "goose 的複數為不規則變化 geese。 正確答案為「geese」。goose 複數為 geese。"
+   }
+  },
+  "d.diag-0118": {
+   "severity": "warn",
+   "problem": "fishes 在指多種魚時也是正確複數，作為錯誤選項有爭議；說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "options": [
+     "a fish",
+     "fish",
+     "fishs",
+     "fishing"
+    ],
+    "why": "fish 作為同一種魚的數量複數時，單複數同形。 正確答案為「fish」。fish 單複數同形。"
+   }
+  },
+  "d.diag-0031": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "句末獨立指代「我的雨傘 (my umbrella)」，必須使用所有格代名詞 mine。 正確答案為「mine」。my 後面一定要有名詞，單獨在句尾必須用 mine。"
+   }
+  },
+  "d.diag-0032": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "名詞 new bicycle 前方需要所有格形容詞 my 進行修飾。 正確答案為「my」。修飾後方名詞 bicycle 必須使用所有格 my。"
+   }
+  },
+  "d.diag-0033": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "hers 代表 her water bottle，獨立充當主詞補語。 正確答案為「hers」。後方無名詞，獨立代表她的水瓶用 hers。"
+   }
+  },
+  "d.diag-0034": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "修飾名詞 English workbooks 需用第二人稱複數所有格 your。 正確答案為「your」。後面有名詞 workbooks，故選所有格形容詞 your。"
+   }
+  },
+  "d.diag-0036": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "修飾動物的名詞 paws（爪子）需用所有格 its（無撇號）。 正確答案為「its」。注意 its (所有格) 與 it's (it is 縮寫) 之區別，選 its。"
+   }
+  },
+  "d.diag-0037": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "theirs 獨立擔任對等子句之主詞，指代 their classroom。 正確答案為「theirs」。當子句主詞且後無名詞，需用所有格代名詞 theirs。"
+   }
+  },
+  "d.diag-0038": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "修飾名詞 keys 必須使用所有格形容詞 her。 正確答案為「her」。修飾名詞 keys 選所有格 her。"
+   }
+  },
+  "d.diag-0039": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "ours 獨立充當主詞補語，指代 our drawing markers。 正確答案為「ours」。句尾無名詞，代表我們擁有的物品用 ours。"
+   }
+  },
+  "d.diag-0040": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "修飾名詞 childhood（童年）需用所有格形容詞 his。 正確答案為「his」。修飾名詞 childhood 需用所有格 his。"
+   }
+  },
+  "d.diag-0231": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "萬獸之王 (king of the jungle) 指 lion。 正確答案為「lion」。萬獸之王為 lion。"
+   }
+  },
+  "d.diag-0232": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "生活在海洋且會躍水表演的是 dolphin。 正確答案為「dolphin」。海中精靈選 dolphin。"
+   }
+  },
+  "d.diag-0233": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "長脖子吃高樹葉的動物為 giraffe。 正確答案為「giraffe」。長頸鹿選 giraffe。"
+   }
+  },
+  "d.diag-0234": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "袋鼠與無尾熊原產地為 Australia。 正確答案為「Australia」。特產國為 Australia。"
+   }
+  },
+  "d.diag-0235": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "貓熊的主食是竹子 bamboo。 正確答案為「bamboo」。貓熊主食選 bamboo。"
+   }
+  },
+  "d.diag-0236": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "黑白條紋動物為 zebra。 正確答案為「zebra」。黑白條紋選 zebra。"
+   }
+  },
+  "d.diag-0238": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "炎熱乾旱且駱駝適應的環境為 desert。 正確答案為「desert」。沙漠環境選 desert。"
+   }
+  },
+  "d.diag-0239": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "from tree to tree 固定片語（在樹木之間）。 正確答案為「tree」。樹木間擺盪選 tree。"
+   }
+  },
+  "d.diag-0240": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "兩棲動物生活於陸地與水中 (water)。 正確答案為「water」。兩棲生活選 water。"
+   }
+  },
+  "d.diag-0111": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "child 的複數為不規則形 children，不可加 s。 正確答案為「children」。child 複數為 children。"
+   }
+  },
+  "d.diag-0112": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "tooth 的複數為不規則變化 teeth。 正確答案為「teeth」。tooth 複數為 teeth。"
+   }
+  },
+  "d.diag-0113": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "foot 的複數為不規則變化 feet。 正確答案為「feet」。foot 複數為 feet。"
+   }
+  },
+  "d.diag-0114": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "mouse 的複數為不規則變化 mice。 正確答案為「mice」。mouse 複數為 mice。"
+   }
+  },
+  "d.diag-0115": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "woman 的複數為不規則變化 women。 正確答案為「women」。woman 複數為 women。"
+   }
+  },
+  "d.diag-0116": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "man 的複數為不規則變化 men。 正確答案為「men」。man 複數為 men。"
+   }
+  },
+  "d.diag-0119": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "sheep 為單複數同形名詞，不可加 s。 正確答案為「sheep」。sheep 單複數同形。"
+   }
+  },
+  "d.diag-0120": {
+   "severity": "warn",
+   "problem": "說明寫「正確答案為 (X)」，但選項在畫面上會隨機排列，字母代號與學生看到的位置不符。",
+   "set": {
+    "why": "duckling 複數直接加 -s 變 ducklings。 正確答案為「ducklings」。duckling 加 s 變複數。"
+   }
+  },
+  "g4-s2-u5.w8m": {
+   "severity": "error",
+   "problem": "干擾項「傍晚、晚上」中的「晚上」也是 night 最常見的中文（Good night 晚安、at night 在晚上），學生選它也合理，答案不唯一。",
+   "set": {
+    "options": [
+     "夜晚",
+     "節日",
+     "下午"
+    ]
+   }
+  },
+  "d.diag-0125": {
+   "severity": "error",
+   "problem": "a slice of bread / a piece of bread 文法上都成立，只能靠 buy 推測要「整條」，slice 與 piece 都有爭議。",
+   "set": {
+    "options": [
+     "loaf",
+     "glass",
+     "bowl",
+     "bar"
+    ]
+   }
+  },
+  "u3-q4-2": {
+   "severity": "error",
+   "problem": "開放填空沒有提示，Can / Will / Did 等填入也合文法，但只接受 Do，正確作答會被判錯。",
+   "set": {
+    "prompt": "___ your friends visit the park on Saturdays?（Do / Does）"
+   }
+  },
+  "g4-s1-u3.t2b": {
+   "severity": "warn",
+   "problem": "用同一組字排成 I'd like some milk and a sandwich please 一樣正確自然，應一併接受。",
+   "set": {
+    "alternatives": [
+     "I'd like some milk and a sandwich please"
+    ]
+   }
+  },
+  "g4-s2-u4.t2b": {
+   "severity": "warn",
+   "problem": "It's windy and cloudy 與答案同樣正確，應一併接受。",
+   "set": {
+    "alternatives": [
+     "it's windy and cloudy"
+    ]
+   }
+  },
+  "g4-s2-u4.t3b": {
+   "severity": "warn",
+   "problem": "Take an umbrella. It may rain. 用同一組字、意思相同且自然，應一併接受。",
+   "set": {
+    "alternatives": [
+     "take an umbrella it may rain"
+    ]
+   }
+  },
+  "g4-s2-u5.t4b": {
+   "severity": "warn",
+   "problem": "We eat mooncakes and look at the moon. 與答案同樣正確，應一併接受。",
+   "set": {
+    "alternatives": [
+     "we eat mooncakes and look at the moon"
+    ]
+   }
+  },
+  "g4-s2-u5.w1c": {
+   "severity": "warn",
+   "problem": "描述每週習慣時 I go to school on Mondays. 更自然，複數 Mondays 應接受。",
+   "set": {
+    "alternatives": [
+     "Monday",
+     "Mondays"
+    ]
+   }
+  },
+  "g4-s2-u5.w2c": {
+   "severity": "warn",
+   "problem": "We play in the park on Saturdays. 同樣正確（表習慣更自然），複數 Saturdays 應接受。",
+   "set": {
+    "alternatives": [
+     "Saturday",
+     "Saturdays"
+    ]
+   }
+  },
+  "g4-s2-u5.w4s": {
+   "severity": "warn",
+   "problem": "mooncake 也常拼成 moon cake（字典兩種皆收），聽寫應接受。",
+   "set": {
+    "alternatives": [
+     "moon cake"
+    ]
+   }
+  },
+  "g4-s1-u3.q2": {
+   "severity": "warn",
+   "problem": "提示直接寫「母音開頭用 an」，等於公布答案。",
+   "set": {
+    "hint": "egg 的第一個聲音是什麼？想想 a 和 an 的差別。"
+   }
+  },
+  "g4-s2-u4.q2": {
+   "severity": "warn",
+   "problem": "提示「wind＋y」直接拼出答案 windy。",
+   "set": {
+    "hint": "這個圖示代表風。風很大的天氣怎麼說？"
+   }
+  },
+  "g4-s2-u4.x2": {
+   "severity": "warn",
+   "problem": "提示中直接出現「It’s cold. Wear a coat.」，與正確選項完全相同，等於公布答案；季節列表也與題目無關。",
+   "set": {
+    "hint": "又冷又有風的時候，該提醒弟弟做什麼才不會著涼？"
+   }
+  },
+  "g4-s2-u5.q3": {
+   "severity": "warn",
+   "problem": "提示「on + 星期」直接公布答案。",
+   "set": {
+    "hint": "星期幾前面要用哪個介系詞？in / on / at 要分清楚。"
+   }
+  },
+  "g4-s2-u5.q2": {
+   "severity": "warn",
+   "problem": "提示直接說出「聖誕節的祝福語」，幾乎等於公布答案。",
+   "set": {
+    "hint": "12 月 25 日是什麼節日？那天大家會互相說什麼？"
+   }
+  },
+  "k.present-questions.1": {
+   "severity": "warn",
+   "problem": "提示文字被截斷（結尾「多數加 -…」），顯示不完整。",
+   "set": {
+    "hint": "現在簡單式表示習慣或常做的事。主詞是第三人稱單數（he / she / it 或單數名詞）時，肯定句的動詞要跟著變化。"
+   }
+  },
+  "k.present-questions.2": {
+   "severity": "warn",
+   "problem": "提示被截斷，且內容只講肯定句，與本題的疑問句無關。",
+   "set": {
+    "hint": "現在簡單式疑問句：助動詞 Do / Does 放句首，後面的主要動詞用原形。想想 your sister 要配哪一個。"
+   }
+  },
+  "g4-s2-u5.x2": {
+   "severity": "warn",
+   "problem": "提示被截斷（結尾「萬…」），萬聖節的英文沒有顯示出來。",
+   "set": {
+    "hint": "春節 Chinese New Year · 端午節 Dragon Boat Festival · 中秋節 Moon Festival · 聖誕節 Christmas · 萬聖節 Halloween"
+   }
+  },
+  "d.diag-0122": {
+   "severity": "warn",
+   "problem": "「a glass of hot water」不自然（熱水通常用 cup 或 mug），chilly 對 A1–A2 也偏難。",
+   "set": {
+    "prompt": "May I have a ___ of water, please? I'm thirsty.",
+    "hint": "題意：請給我一杯水好嗎？我口渴了。"
+   }
+  },
+  "d.diag-0128": {
+   "severity": "warn",
+   "problem": "recipe / requires / enhance the flavor 對國小 A1–A2 程度明顯過難（pinch 本身也偏難），題幹宜簡化。",
+   "set": {
+    "prompt": "Just add a ___ of salt to the soup.",
+    "hint": "題意：只要在湯裡加一小撮鹽就好。"
+   }
+  },
+  "g4-s1-u3.w8e": {
+   "severity": "warn",
+   "problem": "干擾項 dinner 本身也是「一餐」，與題目中文重疊；另「飯局」多指應酬聚餐，不是 meal 的貼切譯法（建議在詞彙來源改為「一餐、餐點」，連帶 w8m/w8l/w8c/w8s/match2 同步）。",
+   "set": {
+    "options": [
+     "meal",
+     "sandwich",
+     "juice"
+    ]
+   }
+  },
+  "g4-s2-u4.r1": {
+   "severity": "warn",
+   "problem": "提示說「看圖示」，但短文只有文字、沒有任何圖示。",
+   "set": {
+    "hint": "找出每個城市的天氣。"
+   }
+  },
+  "g4-s2-u4.r2": {
+   "severity": "warn",
+   "problem": "提示說「看圖示」，但短文只有文字、沒有任何圖示。",
+   "set": {
+    "hint": "找出每個城市的天氣。"
+   }
+  },
+  "d.diag-0199": {
+   "severity": "warn",
+   "problem": "解說寫「禮服」，與題意的「洋裝」不一致；dress 在此是洋裝。",
+   "set": {
+    "why": "穿一件漂亮的白色洋裝用 dress。 正確答案為 (C)「dress」。洋裝選 dress。"
+   }
+  },
+  "d.diag-0046": {
+   "severity": "error",
+   "problem": "句中沒有表示「現在正在」的時間線索，The soccer players practiced hard ... to prepare for tomorrow's match（過去式）和 practice（現在簡單式）都合文法，因此不只一個正確選項。",
+   "set": {
+    "prompt": "Look! The soccer players ___ hard on the field to prepare for tomorrow's match.",
+    "hint": "題意：看！足球選手們正在球場上努力練習，為明天的比賽做準備。",
+    "why": "Look! 表示眼前正在發生的動作，複數主詞 The soccer players 要用 are + V-ing。 正確答案為 (B)「are practicing」。"
+   }
+  },
+  "d.diag-0050": {
+   "severity": "error",
+   "problem": "句中沒有時間線索，The children danced happily around the Christmas tree（過去式）和 dance（現在簡單式）都是正確句子，因此不只一個正確選項。",
+   "set": {
+    "prompt": "Look! The children ___ happily around the Christmas tree in the hall.",
+    "hint": "題意：看！孩子們正在大廳的聖誕樹周圍開心地跳舞。",
+    "why": "Look! 表示眼前正在發生的動作，複數主詞 The children 要用 are + dancing。 正確答案為 (B)「are dancing」。"
+   }
+  },
+  "g5-s1-u2.t1b": {
+   "severity": "error",
+   "problem": "干擾字 hello 也可以翻譯「嗨」，學生排出 hello I'm Mia I'm new here 會被判錯。",
+   "set": {
+    "words": [
+     "hi",
+     "I'm",
+     "Mia",
+     "I'm",
+     "new",
+     "here",
+     "else",
+     "what",
+     "my"
+    ]
+   }
+  },
+  "d.diag-0201": {
+   "severity": "warn",
+   "problem": "「傳統西方日曆以哪天為首日」有爭議（歐洲與 ISO 週曆以 Monday 開始），Monday 可以被視為正確；句子對 Pre-A1–A2 也太難。",
+   "set": {
+    "prompt": "On US calendars, the week usually starts on ___.",
+    "hint": "題意：在美國的日曆上，一週通常從星期日開始。",
+    "why": "美國日曆的一週通常從 Sunday 開始。 正確答案為 (A)「Sunday」。"
+   }
+  },
+  "d.diag-0205": {
+   "severity": "warn",
+   "problem": "提示有錯字「每年的的」。",
+   "set": {
+    "hint": "題意：元旦新年在每年的一月一日。"
+   }
+  },
+  "d.diag-0207": {
+   "severity": "warn",
+   "problem": "題幹後半寫了 October 31st，答案 October 已直接出現在題目中。",
+   "set": {
+    "prompt": "Halloween is celebrated on the last day of ___.",
+    "hint": "題意：萬聖夜在十月的最後一天慶祝。"
+   }
+  },
+  "d.diag-0052": {
+   "severity": "warn",
+   "problem": "提示的中文不通順（「你可以請幫忙我解答」）。",
+   "set": {
+    "hint": "題意：可以請你幫我解這道很難的數學題嗎？"
+   }
+  },
+  "d.diag-0053": {
+   "severity": "warn",
+   "problem": "she can already ride bicycles 用複數泛指不自然，描述小妹妹會騎車一般說 ride a bike / a bicycle。",
+   "set": {
+    "prompt": "My little sister is only four, but she can already ___ a bike."
+   }
+  },
+  "g4-s2-u6.w10c": {
+   "severity": "warn",
+   "problem": "提示「手」不分單複數，Raise your hands. 也是正確自然的句子，應該接受 hands。",
+   "set": {
+    "alternatives": [
+     "hand",
+     "hands"
+    ]
+   }
+  },
+  "g4-s2-u6.x1": {
+   "severity": "warn",
+   "problem": "提示寫了 Stamp your feet.，直接透露答案 feet。",
+   "set": {
+    "hint": "Touch your head / nose / ears. · Clap your hands. · 注意：foot 的複數是不規則變化。"
+   }
+  },
+  "g4-s2-u6.q2": {
+   "severity": "warn",
+   "problem": "提示最後寫了 Yes, I can.，等於直接給出答案。",
+   "set": {
+    "hint": "用 Can 問，簡答時要用哪個字回答？"
+   }
+  },
+  "g5-s1-u1.t1b": {
+   "severity": "warn",
+   "problem": "解說後半「不把字典音標交給一般文字朗讀」是製作用的內部註記，學生看不懂。",
+   "set": {
+    "why": "How do you say this word: cape?｜字尾不發音的 e 是常見的拼字規律，但不是每個字都適用；可以用 cape、cap 對照來記。"
+   }
+  },
+  "g5-s1-u1.t2b": {
+   "severity": "warn",
+   "problem": "解說含有製作用的內部註記；另外 Cape. In this word, the e is silent. 也是同樣正確的語序，應該接受。",
+   "set": {
+    "why": "Cape. The e is silent in this word.｜字尾不發音的 e 是常見的拼字規律，但不是每個字都適用；可以用 cape、cap 對照來記。",
+    "alternatives": [
+     "cape in this word the e is silent"
+    ]
+   }
+  },
+  "g5-s1-u1.t3b": {
+   "severity": "warn",
+   "problem": "解說含有製作用的內部註記；另外 And it's cap without the e, right? 也是同樣正確的語序，應該接受。",
+   "set": {
+    "why": "And without the e, it's cap, right?｜字尾不發音的 e 是常見的拼字規律，但不是每個字都適用；可以用 cape、cap 對照來記。",
+    "alternatives": [
+     "and it's cap without the e right"
+    ]
+   }
+  },
+  "g5-s1-u2.x2": {
+   "severity": "warn",
+   "problem": "提示句 He likes soccer. 直接示範了答案 likes。",
+   "set": {
+    "hint": "This is my friend Ken. He is tall. He plays soccer. He has a dog."
+   }
+  },
+  "g5-s1-u3.x1": {
+   "severity": "warn",
+   "problem": "提示句 They are playing. 直接給出答案 are playing。",
+   "set": {
+    "hint": "I am reading. / He is running. / They are singing."
+   }
+  },
+  "g5-s1-u3.x2": {
+   "severity": "warn",
+   "problem": "提示寫了 make → making，與題目用字相同，直接給出答案。",
+   "set": {
+    "hint": "一般加 ing：read → reading · 字尾 e 去 e：ride → riding · 短母音 + 一個子音：重複字尾 run → running, swim → swimming"
+   }
+  },
+  "g5-s1-u3.q3": {
+   "severity": "warn",
+   "problem": "提示寫了「I am not 縮寫成 I'm not」，直接給出答案。",
+   "set": {
+    "hint": "Are you…? 要用 be 動詞簡答；注意 am not 沒有 amn't 這種縮寫。"
+   }
+  },
+  "g5-s2-u4.w2c": {
+   "severity": "warn",
+   "problem": "提示「廁所；洗手間」與 Where is the ___? 也可以填 bathroom、toilet、washroom，都是正確常用說法，應該接受。",
+   "set": {
+    "alternatives": [
+     "restroom",
+     "rest room",
+     "bathroom",
+     "toilet",
+     "washroom"
+    ]
+   }
+  },
+  "g5-s2-u4.w8c": {
+   "severity": "warn",
+   "problem": "提示「商店、店家」與 I bought milk at the ___. 也可以填 shop，應該接受。",
+   "set": {
+    "alternatives": [
+     "store",
+     "shop"
+    ]
+   }
+  },
+  "g5-s2-u4.t2b": {
+   "severity": "warn",
+   "problem": "It's next to the library, on the third floor. 也是同樣正確的語序，應該接受。",
+   "set": {
+    "alternatives": [
+     "it's next to the library on the third floor"
+    ]
+   }
+  },
+  "d.diag-0145": {
+   "severity": "error",
+   "problem": "答句是 It's just the cat（貓不是人），問「什麼東西在發出怪聲」用 What 反而更自然，What 與 Who 都可成立，答案有歧義。",
+   "set": {
+    "prompt": "___ is making that strange noise in the kitchen? It's just my brother.",
+    "options": [
+     "Who",
+     "How",
+     "Where",
+     "When"
+    ],
+    "hint": "題意：是誰在廚房裡製造那奇怪的聲音？只是我弟弟啦。",
+    "why": "詢問動作的發出者是誰，使用 Who。 正確答案為 (A)「Who」。答句是人（my brother），問人用 Who。"
+   }
+  },
+  "d.diag-0148": {
+   "severity": "error",
+   "problem": "What season do you like best, spring or winter? 母語者也常這樣說，干擾項 What 可算正確，答案不唯一。",
+   "set": {
+    "options": [
+     "How",
+     "Where",
+     "Who",
+     "Which"
+    ]
+   }
+  },
+  "d.diag-0149": {
+   "severity": "warn",
+   "problem": "What's your birthday? 在美式口語中很常見，干擾項 What 可被視為正確。",
+   "set": {
+    "options": [
+     "When",
+     "Where",
+     "Who",
+     "Why"
+    ]
+   }
+  },
+  "d.diag-0169": {
+   "severity": "error",
+   "problem": "句中沒有任何過去時間線索，The students raise their hands to answer the teacher's question.（現在式）同樣正確，答案不唯一。",
+   "set": {
+    "prompt": "The students ___ their hands to answer the teacher's question in class yesterday.",
+    "hint": "題意：昨天上課時，學生們舉手回答老師的問題。",
+    "why": "yesterday 提示過去式；字尾為 e 的規則動詞 raise，直接加 -d 變 raised。 正確答案為 (A)「raised」。raise 過去式為 raised。"
+   }
+  },
+  "d.diag-0173": {
+   "severity": "error",
+   "problem": "句中沒有過去時間線索，I see a colorful rainbow in the sky after the heavy rain.（現在式）也說得通，答案不唯一。",
+   "set": {
+    "prompt": "I ___ a colorful rainbow in the sky after the heavy rain yesterday.",
+    "hint": "題意：昨天大雨過後，我看見天空中有一道色彩繽紛的彩虹。",
+    "why": "yesterday 提示過去式；see 的不規則過去式為 saw。 正確答案為 (A)「saw」。see 過去式為 saw。"
+   }
+  },
+  "g5-s2-u6.t4b": {
+   "severity": "error",
+   "problem": "干擾字 you 可組成 Run, run, as fast as you can!（薑餅人名句，文法正確），中文提示也沒有指明「我」，學生選 you 會被誤判。",
+   "set": {
+    "words": [
+     "oh",
+     "no",
+     "run",
+     "run",
+     "as",
+     "fast",
+     "as",
+     "I",
+     "can",
+     "next",
+     "look",
+     "cheese"
+    ]
+   }
+  },
+  "g6-s1-u2.x2": {
+   "severity": "warn",
+   "problem": "與 x1 題目、選項、答案、解析完全重複，只換了提示；提示（A-A-A/A-B-B/A-B-C 不規則動詞）與題目內容無關。",
+   "set": {
+    "prompt": "Last Sunday, we ___ to the zoo and ___ many animals.",
+    "options": [
+     "went; saw",
+     "goed; seed",
+     "went; seen",
+     "go; see"
+    ],
+    "answer": "went; saw",
+    "why": "【考點解構】Last Sunday 是過去時間。go 和 see 都是不規則動詞：go → went，see → saw；seen 是過去分詞，不能單獨當過去式；goed、seed 都是錯誤拼法。"
+   }
+  },
+  "g6-s1-u2.x3": {
+   "severity": "warn",
+   "problem": "與 x1 題目、選項、答案、解析完全重複，只換了提示；提示（Did + 主詞 + 原形動詞）與題目內容無關。",
+   "set": {
+    "prompt": "___ you ___ your homework last night?",
+    "options": [
+     "Did; finish",
+     "Did; finished",
+     "Do; finished",
+     "Were; finish"
+    ],
+    "answer": "Did; finish",
+    "why": "【考點解構】last night 是過去時間，問句用 Did + 主詞 + 原形動詞，所以是 Did you finish...? Did 已經表示過去，後面的動詞不再加 -ed。"
+   }
+  },
+  "g6-s1-u1.x2": {
+   "severity": "warn",
+   "problem": "international seminar、officially commence 遠超 A2 程度；9:00 a.m. 與 morning 語意重複。",
+   "set": {
+    "prompt": "Our school science fair will start ___ 9:00 ___ Monday morning ___ early October.",
+    "why": "【考點解構】套用倒金字塔法則：特定時間點 9:00 用 at；特定某天的早晨 (Monday morning) 用 on；月份 (early October) 用 in，因此唯一正確搭配為 at; on; in。"
+   }
+  },
+  "g6-s1-u1.x3": {
+   "severity": "warn",
+   "problem": "adheres、standard word order、Dr. Watson、morning rounds、punctual 等字詞遠超 A2，小六學生難以讀懂題目本身。",
+   "set": {
+    "prompt": "Which sentence puts the frequency words in the right place?",
+    "options": [
+     "Tom is always on time, and he seldom gets to school late.",
+     "Tom always is on time, and he gets seldom to school late.",
+     "Tom is on time always, and he doesn't never get to school late.",
+     "Tom never is late, and he always is getting to school on time."
+    ],
+    "answer": "Tom is always on time, and he seldom gets to school late.",
+    "why": "【考點解構】頻率副詞口訣為「Be動詞之後、一般動詞之前」。is always 符合 be 後；seldom gets 符合動前。選項 (C) doesn't never 犯了雙重否定禁忌。"
+   }
+  },
+  "g6-s1-u1.trap1": {
+   "severity": "warn",
+   "problem": "第一句沒有時間情境，單獨看永遠「正確」；第二句 It is a quarter to eight at 8:15. 是不自然的英文，題目設計不清楚。",
+   "set": {
+    "prompt": "現在是 8:15，哪一句是正確的？",
+    "options": [
+     "It is a quarter past eight.",
+     "It is a quarter to eight."
+    ]
+   }
+  },
+  "d.diag-0217": {
+   "severity": "warn",
+   "problem": "doing exercises 最常見的理解是「做運動」，但提示翻成「寫練習題」，中英不一致。",
+   "set": {
+    "prompt": "Peter likes to ___ music on his headphones while he exercises.",
+    "hint": "題意：Peter 喜歡在運動時戴耳機聽音樂。"
+   }
+  },
+  "d.diag-0176": {
+   "severity": "warn",
+   "problem": "came at our bus stop 搭配不自然，應為 came to our bus stop（或 arrived at）。",
+   "set": {
+    "prompt": "The school bus ___ to our bus stop early this morning."
+   }
+  },
+  "g5-s2-u5.q2": {
+   "severity": "warn",
+   "problem": "What a big cake.（句號）在英文寫作中也可接受，干擾項有爭議；提示「句首大寫＋驚嘆號」直接洩漏答案。",
+   "set": {
+    "options": [
+     "what a big cake!",
+     "What a big cake!",
+     "What A Big Cake!",
+     "what a big cake?"
+    ],
+    "hint": "這是驚呼的句子，想想句首和句尾要怎麼寫。"
+   }
+  },
+  "g5-s2-u4.q1": {
+   "severity": "warn",
+   "problem": "提示「exit＝出口」直接給出答案。",
+   "set": {
+    "hint": "「出去」的地方，門上會寫哪個字？"
+   }
+  },
+  "g5-s2-u4.q2": {
+   "severity": "warn",
+   "problem": "提示「under＝在…下面」直接給出答案。",
+   "set": {
+    "hint": "「在…下面」的英文是哪一個字？"
+   }
+  },
+  "g5-s2-u4.q3": {
+   "severity": "warn",
+   "problem": "提示「Excuse me…」只對應唯一選項，等於直接給答案；題幹 find the toilet politely 用語不自然。",
+   "set": {
+    "prompt": "You need to find the restroom. How do you ask politely? ___",
+    "hint": "有禮貌地問路，開頭要先說什麼？"
+   }
+  },
+  "g5-s2-u5.q3": {
+   "severity": "warn",
+   "problem": "提示直接寫出答案「逗號」。",
+   "set": {
+    "hint": "列舉三樣東西時，中間要用什麼符號隔開？"
+   }
+  },
+  "g5-s2-u6.q1": {
+   "severity": "warn",
+   "problem": "提示「起床 → 吃早餐 → 上學」直接寫出正確順序。",
+   "set": {
+    "hint": "一天的開始先做什麼？依照早上真正發生的順序排排看。"
+   }
+  },
+  "g5-s2-u6.q2": {
+   "severity": "warn",
+   "problem": "提示「a girl named Rose」直接給出答案；且本題依賴 The Lost Puppy 故事，題目本身沒有附文章。",
+   "set": {
+    "hint": "回到故事 The Lost Puppy，找找是誰給了小狗毛巾。"
+   }
+  },
+  "g5-s2-u6.q3": {
+   "severity": "warn",
+   "problem": "提示「書名與圖畫」直接給出答案。",
+   "set": {
+    "hint": "想想看：還沒翻開書時，封面上有哪些線索？"
+   }
+  },
+  "g6-s1-u1.q1": {
+   "severity": "warn",
+   "problem": "提示把算式和答案（a quarter、指向 8:00）都寫出來，等於直接給答案。",
+   "set": {
+    "hint": "7:45 已經過了 30 分鐘，想想看：離下一個整點還差幾分鐘？"
+   }
+  },
+  "g5-s2-u6.t1b": {
+   "severity": "warn",
+   "problem": "A little mouse was hungry one day. 同樣是正確語序，應一併接受。",
+   "set": {
+    "alternatives": [
+     "a little mouse was hungry one day"
+    ]
+   }
+  },
+  "g6-s1-u2.t3b": {
+   "severity": "warn",
+   "problem": "While snorkeling, did you see any sea turtles? 同樣是正確語序，應一併接受。",
+   "set": {
+    "alternatives": [
+     "while snorkeling did you see any sea turtles"
+    ]
+   }
+  },
+  "g5-s2-u5.w2c": {
+   "severity": "warn",
+   "problem": "句號的英式說法 full stop 也符合提示與空格，應接受。",
+   "set": {
+    "alternatives": [
+     "period",
+     "full stop"
+    ]
+   }
+  },
+  "g5-s2-u6.w3c": {
+   "severity": "warn",
+   "problem": "Firstly, wash your hands. 也正確且符合提示「首先」，應接受。",
+   "set": {
+    "alternatives": [
+     "first",
+     "firstly"
+    ]
+   }
+  },
+  "g5-s2-u6.w4c": {
+   "severity": "warn",
+   "problem": "Lastly / Eventually, they went home. 也符合提示「最後」，應接受。",
+   "set": {
+    "alternatives": [
+     "finally",
+     "lastly",
+     "eventually"
+    ]
+   }
+  },
+  "g6-s1-u3.w1c": {
+   "severity": "warn",
+   "problem": "crossroads 也是「十字路口」，Turn left at the next crossroads. 正確，應接受。",
+   "set": {
+    "alternatives": [
+     "intersection",
+     "crossroads"
+    ]
+   }
+  },
+  "g6-s1-u3.w6c": {
+   "severity": "warn",
+   "problem": "提示「重型機車」時 motorbike 同樣正確，應列入可接受答案。",
+   "set": {
+    "alternatives": [
+     "motorcycle",
+     "motorbike"
+    ]
+   }
+  },
+  "g6-s1-u3.w8c": {
+   "severity": "warn",
+   "problem": "We moved in a van. 容易被讀成 move in（搬進去住在廂型車裡），語意不清；改成明確的搬家情境。",
+   "set": {
+    "text": "We moved our things in a _____.",
+    "why": "完整句子：We moved our things in a van."
+   }
+  },
+  "g6-s1-u3.w10c": {
+   "severity": "warn",
+   "problem": "Let's take a cab. 也是常用說法（計程車），應接受 cab。",
+   "set": {
+    "alternatives": [
+     "taxi",
+     "cab"
+    ]
+   }
+  },
+  "g6-s1-u3.x2": {
+   "severity": "warn",
+   "problem": "題幹用 international science seminar / officially commence，遠超 A2 程度；提示講的是地點介系詞（next to / across from），和時間介系詞考點無關。",
+   "set": {
+    "prompt": "Our school trip will start ___ 9:00 a.m. ___ Monday morning ___ early October.",
+    "hint": "想一想：時刻（幾點）、某一天、月份前面分別用哪個介系詞？"
+   }
+  },
+  "g6-s1-u3.q1": {
+   "severity": "error",
+   "problem": "提示直接寫出答案 between。另外 across from the hospital and the fire department（在兩棟建築對面）和 next to 兩者在英文中也說得通，干擾選項不夠明確錯。",
+   "set": {
+    "options": [
+     "among",
+     "in",
+     "between",
+     "under"
+    ],
+    "hint": "數一數空格後面連接了幾個地點。"
+   }
+  },
+  "g6-s1-u3.trap2": {
+   "severity": "warn",
+   "problem": "解析說「不可加介系詞 to」不精確：turn to the right 是正確說法，錯的是少了 the 的 turn to right。",
+   "set": {
+    "why": "turn right 是固定說法，right 直接放在 turn 後面。也可以說 turn to the right，但不能說 turn to right（少了 the）。"
+   }
+  },
+  "k.clarify-politely.1": {
+   "severity": "warn",
+   "problem": "提示列出「Could you speak more slowl…」，等於直接給出答案；提示文字也被截斷。",
+   "set": {
+    "hint": "聽不懂時，用完整又禮貌的句子請對方幫忙，不要只說一兩個字。"
+   }
+  },
+  "k.clarify-politely.2": {
+   "severity": "warn",
+   "problem": "提示講的是聽不懂時的溝通策略，和本題（什麼問題算有禮貌）無關，而且被截斷。",
+   "set": {
+    "hint": "想一想：哪個問題不會讓剛認識的朋友覺得不舒服？"
+   }
+  },
+  "g6-s1-u4.w1c": {
+   "severity": "warn",
+   "problem": "stomach ache（分寫）是常見的正確拼法，tummy ache / bellyache 也符合「肚子痛」，應接受。",
+   "set": {
+    "alternatives": [
+     "stomachache",
+     "stomach ache",
+     "tummy ache",
+     "bellyache"
+    ]
+   }
+  },
+  "g6-s1-u4.w1s": {
+   "severity": "warn",
+   "problem": "聽寫時寫成分開的 stomach ache 也是正確拼法，應接受。",
+   "set": {
+    "alternatives": [
+     "stomach ache"
+    ]
+   }
+  },
+  "g6-s1-u4.w2c": {
+   "severity": "warn",
+   "problem": "Take this medication three times a day after meals. 也自然且符合提示「藥物」，應接受 medication。",
+   "set": {
+    "alternatives": [
+     "medicine",
+     "medication"
+    ]
+   }
+  },
+  "g6-s1-u4.t4b": {
+   "severity": "warn",
+   "problem": "干擾字 then 可以代替 next（接下來）組成 …what to do then，或加在句首組成 Then let's ask…，學生可能因此被誤判錯；應換成無關字。",
+   "set": {
+    "words": [
+     "of",
+     "course",
+     "let's",
+     "ask",
+     "the",
+     "nurse",
+     "what",
+     "to",
+     "do",
+     "next",
+     "quick",
+     "cake",
+     "time"
+    ]
+   }
+  },
+  "g6-s1-u4.x1": {
+   "severity": "warn",
+   "problem": "提示是 head + ache 等複合字，和本題的過去式主動考點完全無關；題目內容（翻相簿、graduation diploma）和健康單元無關，用字也偏難。",
+   "set": {
+    "hint": "看時間副詞 Yesterday afternoon 決定時態；Sarah 是自己做這些動作（主動語態）。"
+   }
+  },
+  "g6-s1-u4.q1": {
+   "severity": "warn",
+   "problem": "提示寫出「使用 shouldn't + 原形動詞」，等於直接給答案。",
+   "set": {
+    "hint": "依據常理想一想：發高燒時適合在寒冷的雨中外出嗎？"
+   }
+  },
+  "g6-s1-u4.r1": {
+   "severity": "warn",
+   "problem": "contain rich vitamins 是中式英文（含有豐富維他命），自然說法是 are rich in vitamins；文章本身（passage 無法用 patch 修改）也應一併改成 because they are rich in vitamins。文章用字（nutritionists, immune system, repair damaged cells）也偏 B1 以上。",
+   "set": {
+    "answer": "Because they are rich in vitamins.",
+    "options": [
+     "Because they are rich in vitamins.",
+     "At least eight hours of sleep.",
+     "For one hour (from 4:00 to 5:00 p.m.)."
+    ],
+    "why": "文章說蔬果 contain rich vitamins（富含維生素），自然的英文說法是 They are rich in vitamins."
+   }
+  },
+  "g6-s1-u4.r2": {
+   "severity": "warn",
+   "problem": "文章只說營養師建議吃蔬果，沒說「營養師建議」睡眠時數，題目把話安在營養師身上；提示（找 because/so）和本題無關。",
+   "set": {
+    "prompt": "How many hours of sleep does the passage suggest?",
+    "hint": "找出文章中提到 sleep 的句子。"
+   }
+  },
+  "g6-s2-u5.x1": {
+   "severity": "warn",
+   "problem": "提示寫「Moon Festival (mooncakes)」，直接給出答案；提示文字也被截斷。",
+   "set": {
+    "hint": "Moon Festival 就是 Mid-Autumn Festival（中秋節）。"
+   }
+  },
+  "g6-s2-u5.x2": {
+   "severity": "warn",
+   "problem": "題幹用 international science seminar / officially commence，遠超 A2 程度，和節慶單元也無關。",
+   "set": {
+    "prompt": "Our school trip will start ___ 9:00 a.m. ___ Monday morning ___ early October."
+   }
+  },
+  "g6-s2-u5.q1": {
+   "severity": "warn",
+   "problem": "提示寫出「時間介系詞固定用 on」，等於直接給答案。",
+   "set": {
+    "hint": "Lunar New Year's Day 是特定的某一天。想一想：某一天前面要用哪個介系詞？"
+   }
+  },
+  "d.diag-0498": {
+   "severity": "error",
+   "problem": "the end of the Lunar New Year season 是很自然的正確說法，season 也可以是答案；vacation 也有人會選（雖然實際假期通常更早結束）。另外句首少了 The。",
+   "set": {
+    "prompt": "The Lantern Festival marks the official end of the Lunar New Year ___.",
+    "options": [
+     "school",
+     "celebrations",
+     "dinner",
+     "homework"
+    ]
+   }
+  },
+  "d.diag-0499": {
+   "severity": "warn",
+   "problem": "during ___ Festival 少了冠詞，填入後成為 during Dragon Boat Festival，應為 during the Dragon Boat Festival。",
+   "set": {
+    "prompt": "People in Taiwan eat delicious rice dumplings called zongzi during the ___ Festival."
+   }
+  },
+  "g6-s2-u6.w2c": {
+   "severity": "warn",
+   "problem": "提示含「方法」，a useful reading method 也自然正確，應接受 method。",
+   "set": {
+    "alternatives": [
+     "strategy",
+     "method"
+    ]
+   }
+  },
+  "g6-s2-u6.q1": {
+   "severity": "warn",
+   "problem": "提示寫出「careful + ly = carefully」，直接給答案。",
+   "set": {
+    "hint": "想一想：quick → quickly、slow → slowly，形容詞變副詞通常怎麼做？"
+   }
+  },
+  "g6-s2-u6.r1": {
+   "severity": "warn",
+   "problem": "正確選項中的 avoid predators 文章沒有提到，解析卻寫「文章依據」；seamlessly、adaptation 等字也遠超 A2。",
+   "set": {
+    "answer": "To blend into their surroundings.",
+    "options": [
+     "To blend into their surroundings.",
+     "For one hour (from 4:00 to 5:00 p.m.).",
+     "Maple Avenue."
+    ],
+    "why": "文章依據：Camouflage allows animals to blend seamlessly into their surroundings.（偽裝讓動物融入周遭環境。）"
+   }
+  },
+  "g6-s2-u7.q1": {
+   "severity": "warn",
+   "problem": "提示寫出「優先使用 is going to + 原形動詞」，直接給答案。",
+   "set": {
+    "hint": "天上已經看得到烏雲，這是根據眼前跡象做出的預測。"
+   }
+  },
+  "g6-s2-u8.w3c": {
+   "severity": "warn",
+   "problem": "提示「大的、巨大的」：a large elephant、a huge elephant 也正確，應接受。",
+   "set": {
+    "alternatives": [
+     "big",
+     "large",
+     "huge"
+    ]
+   }
+  },
+  "g6-s2-u8.w4c": {
+   "severity": "warn",
+   "problem": "提示「小的、微小的」：The mouse is very little / tiny 也說得通，應接受。",
+   "set": {
+    "alternatives": [
+     "small",
+     "little",
+     "tiny"
+    ]
+   }
+  },
+  "g6-s2-u8.w8c": {
+   "severity": "warn",
+   "problem": "提示含「迅速地」，He runs quickly. 也正確，應接受 quickly。",
+   "set": {
+    "alternatives": [
+     "fast",
+     "quickly"
+    ]
+   }
+  },
+  "g6-s2-u8.x1": {
+   "severity": "warn",
+   "problem": "提示是比較級加 -er 的規則，和本題的過去式主動考點無關；題目內容和比較級單元也無關，用字偏難。",
+   "set": {
+    "hint": "看時間副詞 Yesterday afternoon 決定時態；Sarah 是自己做這些動作（主動語態）。"
+   }
+  },
+  "g6-s2-u8.q1": {
+   "severity": "warn",
+   "problem": "提示寫出「比較級加 more」，直接給答案。",
+   "set": {
+    "hint": "句中有 than，要用比較級。想一想：difficult 是長字還是短字？"
+   }
+  }
+ }
+}

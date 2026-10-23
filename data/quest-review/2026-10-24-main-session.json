@@ -1,0 +1,10 @@
+{
+ "note": "Fixes made by the main session while applying the 2026-10-24 review (wording left awkward by the automatic removal of option letters).",
+ "patch": {
+  "g6-s1-u1.x1": {
+   "severity": "warn",
+   "problem": "移除選項字母後，解析出現「選項 誤將…」不通順的句子。",
+   "set": { "why": "8:45 已經過了 30 分，英文常說「差幾分到下一個整點」：差 15 分到 9 點，所以是 a quarter to nine。a quarter past eight 是 8:15，half past eight 是 8:30，a quarter to eight 是 7:45。" }
+  }
+ }
+}

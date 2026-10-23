@@ -13,7 +13,7 @@ import { ALL_COMMUTE_DIALOGUES } from '../dist/commute_dialogues.mjs';
 import { journeyCatalog } from '../dist/learning_journey.mjs';
 import { units as pilotUnits, quests as pilotQuests, reviews as pilotReviews } from '../dist/quest/catalog.mjs';
 
-export const COURSE_VERSION = '2026-10-23.v3';
+export const COURSE_VERSION = '2026-10-24.v5';
 const OUT = 'dist/quest/course';
 const read = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const diagBank = read('data/questions/diagnostic_bank.json');
@@ -173,6 +173,19 @@ function vocabItems(uid, list, ctx) {
   return items.filter(Boolean);
 }
 
+// where to cut a long line for a partly given build: prefer a sentence end, then a comma,
+// nearest to leaving about half (and at most 10 words) for the learner
+function splitPoint(en, count) {
+  const raw = String(en).normalize('NFKC').split(/\s+/).filter(r => /[A-Za-z0-9]/.test(r));
+  const ok = k => k >= 2 && count - k >= 3 && count - k <= 10;
+  const target = count - Math.min(10, Math.ceil(count / 2));
+  const near = ks => ks.filter(ok).sort((a, b) => Math.abs(a - target) - Math.abs(b - target))[0];
+  const after = re => raw.map((r, i) => (re.test(r) ? i + 1 : -1)).filter(k => k > 0 && k < count);
+  // without punctuation, cut before a joining word so a phrase like "two blocks" stays whole
+  const before = re => raw.map((r, i) => (i > 0 && re.test(r) ? i : -1)).filter(k => k > 0);
+  return near(after(/[.!?]["')]?$/)) ?? near(after(/[,;:]["')]?$/)) ?? near(before(/^(and|but|or|so|because|when|if|then|to|at|in|on|for|with|after|before)$/i))
+    ?? Math.max(2, count - Math.min(9, Math.ceil(count / 2) + 1));
+}
 function dialogueItems(uid, lines, ctx) {
   const items = [];
   const usable = lines.filter(l => l.en && l.zh && !CJK.test(l.en) && englishSentence(l.en));
@@ -186,6 +199,13 @@ function dialogueItems(uid, lines, ctx) {
       const answerSet = new Set(tk.map(t => t.toLowerCase()));
       const extra = distractors('', [ctx.sectionTokens], 3, base + 'b', (a, b) => answerSet.has(String(b).toLowerCase())).filter(isWordToken);
       if (extra.length >= 2) items.push({ id: base + 'b', kind: 'talk', type: 'build', prompt: `用英文說：「${l.zh}」`, answer: tk.join(' '), words: [...tk, ...extra], audioAfter: l.en, why: `${l.en}${l.note ? '｜' + short(l.note, 80) : ''}`, level: 3 });
+    } else if (tk.length > 10 && tk.length <= 20 && tk.every(isWordToken)) {
+      // long line: the first part is given, the learner arranges the rest (3–10 words)
+      const k = splitPoint(l.en, tk.length);
+      const rest = tk.slice(k), restSet = new Set(rest.map(t => t.toLowerCase()));
+      const extra = distractors('', [ctx.sectionTokens], 3, base + 'B', (a, b) => restSet.has(String(b).toLowerCase())).filter(isWordToken);
+      // the given part is shown, not chosen, so it keeps its original capitals and punctuation
+      if (k >= 2 && rest.length >= 3 && rest.length <= 10 && extra.length >= 2) items.push({ id: base + 'B', kind: 'talk', type: 'build', prompt: `用英文說：「${l.zh}」`, given: String(l.en).normalize('NFKC').replace(/[’‘]/g, "'").split(/\s+/).filter(r => /[A-Za-z0-9]/.test(r)).slice(0, k).join(' '), answer: rest.join(' '), words: [...rest, ...extra], audioAfter: l.en, why: `${l.en}${l.note ? '｜' + short(l.note, 80) : ''}`, level: 3 });
     }
     // only a reply to a question has one clearly natural next line; distractors are statements of similar length
     if (j > 0 && isQuestion(usable[j - 1].en) && !isQuestion(l.en)) {
@@ -258,12 +278,47 @@ function diagItem(q) {
   const opts = q.options;
   const why = [q.coreConcept, String(q.trapExplanation || '').replace(/^【[^】]*】/, '')].filter(Boolean).join(' ');
   const zh = String(q.translation || '').split('\n')[0].replace(/^【[^】]*】/, '').trim();
-  return validChoice({ id: `d.${q.id}`, kind: 'drill', type: 'choice', passage: q.passage || '', prompt: q.prompt, options: opts, answer: opts[q.answer], hint: q.tier <= 4 && zh ? `題意：${zh}` : `這題考：${q.subtopic}`, why: short(why, 420), level: Math.min(5, Math.max(1, q.difficulty || 2)), topic: q.subtopic });
+  return validChoice({ id: `d.${q.id}`, kind: 'drill', type: 'choice', passage: q.passage || '', prompt: q.prompt, options: opts, answer: opts[q.answer], hint: q.tier <= 4 && zh && q.dimension !== '單字語意' ? `題意：${zh}` : `這題考：${q.subtopic.replace(/\s*[（(][^)）]*[)）]/g, '')}`, why: short(why, 420), level: Math.min(5, Math.max(1, q.difficulty || 2)), topic: q.subtopic });
 }
 
 // ---------- assemble units ----------
 const items = {}; const report = { sections: [], branches: [], stories: 0, items: 0, byType: {}, excluded };
-function addItems(list, src) { for (const it of list) { if (!it) continue; it.src ||= src; if (items[it.id]) throw new Error('duplicate item id ' + it.id); items[it.id] = it; } return list.filter(Boolean).map(i => i.id); }
+// editorial decisions (data/quest-review/*.json) are applied here, so a rebuild never loses them:
+// excluded items are dropped, patched fields are merged and the item must still pass the checks
+const review = { exclude: {}, patch: {}, reviewed: {} };
+for (const f of fs.existsSync('data/quest-review') ? fs.readdirSync('data/quest-review').filter(f => f.endsWith('.json')).sort() : []) {
+  const r = read('data/quest-review/' + f);
+  Object.assign(review.exclude, r.exclude || {}); Object.assign(review.patch, r.patch || {}); Object.assign(review.reviewed, r.reviewed || {});
+}
+const reviewUsed = new Set();
+function applyReview(it) {
+  if (review.exclude[it.id]) { reviewUsed.add(it.id); excluded.push({ id: it.id, reason: 'editorial: ' + review.exclude[it.id] }); return null; }
+  const p = review.patch[it.id]; if (!p) return it;
+  reviewUsed.add(it.id);
+  const out = cleanItem({ ...it, ...p.set });
+  if ((out.type === 'choice' || out.type === 'listen') && !validChoice(out)) throw new Error('editorial patch breaks ' + it.id);
+  if (out.type === 'build') { const bank = out.words.map(w => normalize(w)); for (const t of normalize(out.answer).split(' ')) if (!bank.includes(t)) throw new Error(`editorial patch: build ${it.id} lacks token ${t}`); }
+  return out;
+}
+// explanations: options are shuffled and shown without letters, so "正確答案為 (B)" / "故選 B" would point at the wrong
+// option; some source notes are production notes about speech synthesis that learners should not see
+const PRODUCTION_NOTE = /合成語音|斜線音標|字典音標|一般文字朗讀|孤立音素|用數位重述/;
+export function cleanText(s) {
+  if (!s) return s;
+  return String(s).split('｜').map(part => part.split(/(?<=[。；])/).filter(seg => !PRODUCTION_NOTE.test(seg)).join('')).filter(p => p.trim()).join('｜')
+    .replace(/正確答案為\s*[（(][A-D][)）]\s*/g, '正確答案為')
+    .replace(/\s*[，,]?\s*故選\s*[（(]?[A-D][)）]?\s*[。.]?/g, '。')
+    .replace(/選\s*[（(][A-D][)）]/g, '選')
+    .replace(/選項\s*[（(][A-D][)）]\s*/g, '選項 ')
+    .replace(/\s*[（(][A-D][)）](?=\s*[。.，,]|$)/g, '')
+    .replace(/[。.]\s*。/g, '。').trim();
+}
+const cleanItem = it => ({ ...it, ...(it.why ? { why: cleanText(it.why) } : {}), ...(it.hint ? { hint: cleanText(it.hint) } : {}) });
+function addItems(list, src) {
+  const ids = [];
+  for (const raw of list) { if (!raw) continue; const it = applyReview(cleanItem(raw)); if (!it) continue; it.src ||= src; if (items[it.id]) throw new Error('duplicate item id ' + it.id); items[it.id] = it; ids.push(it.id); }
+  return ids;
+}
 
 function sectionContext(unitIds) {
   const ctx = { sectionZh: [], sectionEn: [], sectionLineZh: [], sectionLines: [], sectionTokens: [], sectionPhrases: [], sectionReadAnswers: [] };
@@ -280,11 +335,13 @@ function sectionContext(unitIds) {
     .map(t => /^i'/.test(t) ? 'I' + t.slice(1) : NAMES.has(cap(t)) ? cap(t) : t);
   return ctx;
 }
+// game-only gloss corrections for the mnemonic card data (the cards themselves are edited in their own workflow)
+const GLOSS_FIX = { meal: '一餐；餐點' };
 function mnemonicVocab(uid, existing) {
   const cats = MNEMONIC_CATEGORIES[uid]; if (!cats) return [];
   const have = new Set(existing.map(v => v.word.toLowerCase()));
   return mnemonicCards.filter(c => cats.includes(c.category) && c.tier === 'elem_1000' && /^[A-Za-z]+$/.test(c.word) && !have.has(c.word.toLowerCase()) && fileExists(`dist/mnemonics/audio/${c.word}.mp3`))
-    .slice(0, 6).map(c => ({ word: c.word, zh: c.zh, sentence: c.example, mp3: `../mnemonics/audio/${encodeURIComponent(c.word)}.mp3`, icon: c.icon }));
+    .slice(0, 6).map(c => ({ word: c.word, zh: GLOSS_FIX[c.word] || c.zh, sentence: c.example, mp3: `../mnemonics/audio/${encodeURIComponent(c.word)}.mp3`, icon: c.icon }));
 }
 
 function buildNodes(uid, pools, minSize = 4) {
@@ -328,6 +385,12 @@ function pilotUnit(pu) {
   });
   const reviewIds = addItems(pilotReviews[pu.id].map(conv), pu.source);
   nodes.at(-1).pool.push(...reviewIds);
+  // the hand-written units also get their mapped question-bank drills, as a mastery node before the challenge
+  if (drillByUnit[pu.id]?.length) {
+    const ids = addItems(drillByUnit[pu.id], pu.source);
+    nodes.splice(nodes.length - 1, 0, { id: `${pu.id}:drill`, kind: 'drill', title: '精熟練習', icon: '🎯', goal: '用分層題庫再練一次本單元的句型。', pool: ids });
+    nodes.at(-1).pool.push(...ids);
+  }
   const guide = { goal: pu.goal, motivation: '', tips: [{ title: '本單元重點', formula: pu.example, body: pu.tip, example: pu.transfer }], traps: [], words: [], dialogue: [], checklist: [], level: pu.stage, extra: [] };
   return { id: pu.id, title: pu.title, en: '', icon: { u1: '👋', u2: '🙋', u3: '📅' }[pu.id], src: pu.source, nodesOverride: nodes, guide };
 }
@@ -421,7 +484,7 @@ for (const d of [...featured].sort((a, b) => LEVEL_RANK[storyLevel(a)] - LEVEL_R
   const lv = storyLevel(d); const secs = STORY_SECTIONS[lv];
   const sec = secs.reduce((best, s) => ((storyBySection[s]?.length || 0) < (storyBySection[best]?.length || 0) ? s : best), secs[0]);
   (storyBySection[sec] ||= []).push(d.id);
-  const lines = d.lines.filter(l => l.en && l.zh && !CJK.test(l.en));
+  const lines = d.lines.filter(l => l.en && l.zh && !CJK.test(l.en)).map(l => ({ ...l, note: cleanText(l.note) }));
   const steps = []; const zhPool = lines.map(l => l.zh);
   lines.forEach((l, j) => {
     const base = `st.${d.id}.${j + 1}`;
@@ -440,7 +503,10 @@ for (const d of [...featured].sort((a, b) => LEVEL_RANK[storyLevel(a)] - LEVEL_R
   const pattern = lines.map(l => l.en).find(en => { const t = bankTokens(en); return t.length >= 4 && t.length <= 10 && t.every(isWordToken); });
   if (pattern) {
     const tk = bankTokens(pattern); const set = new Set(tk.map(t => t.toLowerCase()));
-    const extra = distractors('', [[...new Set(allStoryLines.flatMap(tokens).filter(isWordToken).map(t => t.toLowerCase()))]], 3, d.id + 'b', (a, b) => set.has(b) || b.length < 3);
+    // distractor words come from stories of the same level first, then neighbouring levels, so beginners do not meet words like "salaries"
+    const wordsAt = keep => [...new Set(featured.filter(x => x.id !== d.id && keep(LEVEL_RANK[storyLevel(x)])).flatMap(x => x.lines.flatMap(y => tokens(y.en))).filter(isWordToken).map(t => t.toLowerCase()))];
+    const rank = LEVEL_RANK[lv];
+    const extra = distractors('', [wordsAt(r => r === rank), wordsAt(r => Math.abs(r - rank) === 1)], 3, d.id + 'b', (a, b) => set.has(b) || b.length < 3);
     steps.push({ id: `st.${d.id}.build`, kind: 'story', type: 'build', prompt: `重組故事中的關鍵句：「${lines.find(l => l.en === pattern).zh}」`, answer: tk.join(' '), words: [...tk, ...extra], audioAfter: pattern, why: pattern, level: 3 });
   }
   stories[d.id] = { id: d.id, title: d.title.replace(/：.*$/, ''), full: d.title, scenario: d.scenario, level: d.level, cefr: lv, topic: d.topicTag, section: sec, steps: steps.filter(Boolean), patterns: d.keyPatterns || [] };
@@ -507,7 +573,7 @@ for (const [cat, cards] of Object.entries(byCat)) {
     let group = cards.slice(k, k + 8); if (group.length < 4) group = cards.slice(-Math.min(8, cards.length));
     const sid = `v.${hash(cat).toString(36)}.${k / 8 + 1}`;
     // the practice hub builds exercises from these words at runtime, which keeps this file small
-    vocabSets.push({ id: sid, title: `${cat} ${k / 8 + 1}`, category: cat, icon: group[0].icon || '🔤', words: group.map(c => ({ w: c.word, zh: c.zh, ex: c.example, exZh: c.exampleZh, ic: c.icon })) });
+    vocabSets.push({ id: sid, title: `${cat} ${k / 8 + 1}`, category: cat, icon: group[0].icon || '🔤', words: group.map(c => ({ w: c.word, zh: GLOSS_FIX[c.word] || c.zh, ex: c.example, exZh: c.exampleZh, ic: c.icon })) });
   }
 }
 
@@ -518,16 +584,26 @@ const placement = ['s1', 's2', 's4', 's5', 's7', 's9'].map(sid => {
   return { section: sid, items: pick(ids, 3, 'placement-' + sid) };
 });
 index.placement = placement;
+index.reviewed = review.reviewed;
 index.vocabSets = vocabSets.map(s => ({ id: s.id, title: s.title, category: s.category, icon: s.icon, size: s.words.length }));
 
 // ---------- write ----------
-fs.rmSync(OUT, { recursive: true, force: true });
+// overwrite in place and remove only stale files: deleting the whole folder fails while OneDrive is syncing it
 fs.mkdirSync(OUT, { recursive: true });
-const write = (name, data) => fs.writeFileSync(path.join(OUT, name), JSON.stringify(data));
+const written = new Set();
+const pause = ms => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+function write(name, data) { // OneDrive briefly locks files it is uploading; retry for a few seconds
+  for (let attempt = 0; ; attempt++) {
+    try { fs.writeFileSync(path.join(OUT, name), JSON.stringify(data)); written.add(name); return; }
+    catch (e) { if (!['EBUSY', 'EPERM'].includes(e.code) || attempt >= 20) throw e; pause(500); }
+  }
+}
 for (const [id, f] of Object.entries(sectionFiles)) write(`${id}.json`, f);
 write('stories.json', { version: COURSE_VERSION, stories });
 write('vocab.json', { version: COURSE_VERSION, sets: vocabSets });
 write('index.json', index);
+// only after every file is written: drop course files that this build no longer produces
+for (const f of fs.readdirSync(OUT)) if (f.endsWith('.json') && !written.has(f)) fs.unlinkSync(path.join(OUT, f));
 report.stories = Object.keys(stories).length;
 report.storySections = Object.fromEntries(Object.entries(storyBySection).map(([k, v]) => [k, v.length]));
 report.vocabSets = vocabSets.length;
@@ -535,6 +611,8 @@ report.vocabWords = vocabSets.reduce((n, s) => n + s.words.length, 0);
 report.items = Object.keys(items).length;
 for (const it of [...Object.values(items), ...Object.values(stories).flatMap(s => s.steps)]) report.byType[`${it.kind}/${it.type}`] = (report.byType[`${it.kind}/${it.type}`] || 0) + 1;
 report.excludedCount = excluded.length;
+report.review = { reviewed: review.reviewed, excluded: Object.keys(review.exclude).length, patched: Object.keys(review.patch).length, unused: [...Object.keys(review.exclude), ...Object.keys(review.patch)].filter(id => !reviewUsed.has(id)) };
+if (report.review.unused.length) console.warn('editorial entries that match no item:', report.review.unused.join(', '));
 report.excludedByReason = excluded.reduce((m, e) => (m[e.reason] = (m[e.reason] || 0) + 1, m), {});
 report.version = COURSE_VERSION;
 report.files = Object.fromEntries(fs.readdirSync(OUT).map(f => [f, fs.statSync(path.join(OUT, f)).size]));

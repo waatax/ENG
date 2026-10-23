@@ -1,7 +1,7 @@
 // Browser verification for English Quest v2 (dist/quest). Usage: node scripts/qa_quest_game.cjs [--smoke]
 const { chromium } = require('C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs = require('node:fs'), http = require('node:http'), path = require('node:path'), assert = require('node:assert/strict'), { pathToFileURL } = require('node:url');
-const root = path.resolve('dist'), out = 'docs/redesign/verification'; fs.mkdirSync(out, { recursive: true });
+const root = path.resolve('dist'), out = 'docs/redesign/verification/v5/round6'; fs.mkdirSync(out, { recursive: true });
 const types = { '.html': 'text/html;charset=utf-8', '.mjs': 'text/javascript', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.mp3': 'audio/mpeg' };
 const server = http.createServer((req, res) => {
   let p = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
@@ -56,7 +56,7 @@ const KEY = 'english-quest-game-v2';
     await page.locator('[data-act="ob-why"][data-id="school"]').click(); await page.locator('[data-act="ob-next"]').click();
     await page.locator('[data-act="ob-goal"][data-id="casual"]').click(); await page.locator('[data-act="ob-next"]').click();
     await page.locator('[data-act="ob-start"][data-id="s1"]').click();
-    await page.locator('.path').waitFor(); checks.push('onboarding to section 1');
+    await page.locator('.path').waitFor();await page.locator('.adventure').waitFor();checks.push('onboarding and actionable next adventure');
     for (const width of [320, 390, 768, 1280]) { await page.setViewportSize({ width, height: 900 }); await noOverflow('path ' + width); await page.screenshot({ path: `${out}/v2-path-${width}.png` }); }
     checks.push('path at 320/390/768/1280 without horizontal scroll');
     await page.setViewportSize({ width: 390, height: 844 });
@@ -68,8 +68,10 @@ const KEY = 'english-quest-game-v2';
     const seen = await play(); assert.ok(seen.length >= 5);
     assert.match(await page.locator('.result h1').innerText(), /連續 1 天/); await page.screenshot({ path: `${out}/v2-streak-390.png` });
     await page.locator('[data-act="streak-ok"]').click(); assert.match(await page.locator('.tiles').innerText(), /83%/); await page.screenshot({ path: `${out}/v2-result-390.png` });
-    await leaveResult(); checks.push('wrong answer repaired at the end; 5/6 first-try shown');
-    for (const id of ['u1:q2', 'u1:q3']) { await openNode(id); if (id === 'u1:q2') { await page.locator('[data-act="transcript"]').click(); assert.ok(await page.locator('.transcript').count()); } await play(); await leaveResult(); }
+    await page.locator('.recall-pack details').first().locator('summary').click();assert.ok(await page.locator('.recall-pack details[open]').count());await leaveResult(); checks.push('wrong answer repaired; first-try score and retrieval souvenir verified');
+    for (const id of ['u1:q2', 'u1:q3']) { await openNode(id); if (id === 'u1:q2') { await page.locator('[data-act="transcript"]').click(); await page.reload();await page.locator('[data-act="resume"]').click();assert.ok(await page.locator('.transcript').count()); }
+      if(id==='u1:q3'){let guard=30;while(items[(await session()).queue[(await session()).index]].type!=='input'&&guard-->0)await step();assert.ok(guard>0);await page.locator('#answer').dispatchEvent('compositionstart');await page.locator('#answer').fill('am');await page.locator('.type-form').dispatchEvent('submit');assert.equal((await session()).feedback,null);await page.locator('#answer').dispatchEvent('compositionend');checks.push('IME composition does not submit prematurely');}
+      await play(); await leaveResult(); }
     checks.push('listening transcript fallback and build/input items');
     let st = await page.evaluate(k => JSON.parse(localStorage.getItem(k)), KEY);
     assert.ok(st.review.u1, 'review scheduled after unit lessons');
@@ -103,7 +105,7 @@ const KEY = 'english-quest-game-v2';
     await denied.goto(base); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-start"][data-id="s1"]').click();
     assert.match(await denied.locator('.warn').innerText(), /無法儲存/); await denied.close(); checks.push('blocked storage shows a warning and stays usable');
     assert.deepEqual(errors, []);
-    const report = { date: new Date().toISOString().slice(0, 10), checks, errors };
+    const report = { date: '2026-10-24', version: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }

@@ -1,0 +1,28 @@
+✔ round 2: repeated activity rewards cap at three daily completions, persist and reset tomorrow (21.9543ms)
+✔ round 1: hints and repair cannot build independent combos or clear mistakes; hearing requires playback (10.5502ms)
+✔ course: 9 leveled sections, 8 goal branches, every unit has playable nodes (10.2713ms)
+✔ course: every exercise is answerable and keeps a traceable source (12.6214ms)
+✔ course: editorial decisions are applied and explanations carry no option letters or production notes (9.3774ms)
+✔ course: stories, placement and vocabulary sets are complete (12.0391ms)
+✔ engine: new learner starts at the first node; later sections are locked, branches are open (7.1823ms)
+✔ engine: a lesson awards XP once, marks the day and opens the next node; replays earn less (8.5753ms)
+✔ engine: submit is idempotent and a reload resumes the same step with its feedback (19.6915ms)
+✔ engine: a miss is retried once at the end, enters the mistake bank, and leaves after two later successes (8.4192ms)
+✔ engine: two misses in a row insert a hint card and an easier item (14.3638ms)
+✔ engine: unit challenge has 3 hearts, ends at zero, and does not block the next unit (7.1377ms)
+✔ engine: finishing a unit schedules review; only a due review moves the interval forward (7.7028ms)
+✔ engine: jump test unlocks a section and marks earlier lessons as tested, not completed (9.6678ms)
+✔ engine: placement recommends a start without XP; accepting it tests out earlier sections (7.5912ms)
+✔ engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends (21.0652ms)
+✔ engine: daily quests are fixed per date, reset next day and pay the bonus chest once (6.1161ms)
+✔ engine: blocked or corrupt storage stays usable; bad backups change nothing; backups round-trip (6.6813ms)
+✔ engine: pilot v1 progress migrates without touching the v1 record (7.2511ms)
+✔ engine: answers accept contractions, case and punctuation but not different grammar (0.1836ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 356.3577

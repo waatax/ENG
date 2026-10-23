@@ -1,0 +1,50 @@
+✖ round 3: unfinished sessions cannot settle and a short challenge needs 80 percent independent accuracy (23.6867ms)
+✔ round 2: repeated activity rewards cap at three daily completions, persist and reset tomorrow (11.6232ms)
+✔ round 1: hints and repair cannot build independent combos or clear mistakes; hearing requires playback (7.4656ms)
+✔ course: 9 leveled sections, 8 goal branches, every unit has playable nodes (10.7608ms)
+✔ course: every exercise is answerable and keeps a traceable source (16.8088ms)
+✔ course: editorial decisions are applied and explanations carry no option letters or production notes (9.5325ms)
+✔ course: stories, placement and vocabulary sets are complete (8.1111ms)
+✔ engine: new learner starts at the first node; later sections are locked, branches are open (8.7448ms)
+✔ engine: a lesson awards XP once, marks the day and opens the next node; replays earn less (9.4632ms)
+✔ engine: submit is idempotent and a reload resumes the same step with its feedback (18.9494ms)
+✔ engine: a miss is retried once at the end, enters the mistake bank, and leaves after two later successes (12.6895ms)
+✔ engine: two misses in a row insert a hint card and an easier item (8.4577ms)
+✔ engine: unit challenge has 3 hearts, ends at zero, and does not block the next unit (8.3656ms)
+✔ engine: finishing a unit schedules review; only a due review moves the interval forward (13.027ms)
+✔ engine: jump test unlocks a section and marks earlier lessons as tested, not completed (8.4645ms)
+✔ engine: placement recommends a start without XP; accepting it tests out earlier sections (7.1906ms)
+✔ engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends (14.4153ms)
+✔ engine: daily quests are fixed per date, reset next day and pay the bonus chest once (7.1551ms)
+✔ engine: blocked or corrupt storage stays usable; bad backups change nothing; backups round-trip (17.6515ms)
+✔ engine: pilot v1 progress migrates without touching the v1 record (7.6365ms)
+✔ engine: answers accept contractions, case and punctuation but not different grammar (0.1538ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 385.5921
+
+✖ failing tests:
+
+test at scripts\test_quest_game.mjs:27:1
+✖ round 3: unfinished sessions cannot settle and a short challenge needs 80 percent independent accuracy (23.6867ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.accuracy<.8)
+  
+      at TestContext.<anonymous> (file:///C:/Users/User/OneDrive/%E6%96%87%E4%BB%B6/Antigravity/ENG/scripts/test_quest_game.mjs:31:31)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

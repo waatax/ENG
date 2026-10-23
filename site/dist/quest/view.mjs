@@ -1,7 +1,8 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261023v3';
-import * as sound from './sound.mjs?v=20261023v3';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v5';
+import * as sound from './sound.mjs?v=20261024v5';
 
-const V = '20261023v3';
+const V = '20261024v5';
+import {nextAdventure,sessionTrail} from './adventure.mjs';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -78,7 +79,9 @@ function learnPage() {
   const units = t.units.map((u, ui2) => unitBlock(t, u, ui2, currentId)).join('');
   const nextSec = t.kind === 'section' ? course.index.sections[t.no] : null;
   const tail = nextSec ? `<section class="next-sec card"><p class="eyebrow">下一段</p><h2>第 ${nextSec.no} 段 · ${esc(nextSec.title)}</h2><p class="muted">${esc(nextSec.level)} · ${nextSec.units.length} 個單元</p><button class="btn" data-act="track" data-id="${nextSec.id}">看看第 ${nextSec.no} 段 →</button></section>` : '';
-  return `${resume}${todayMobile()}${header}${suggestBranches()}<div class="path">${units}</div>${tail}`;
+  const mission=nextAdventure(game,course,t.id);
+  const launch=unlocked&&!s?`<section class="adventure"><span aria-hidden="true">🧭</span><div><h2>${mission.title}</h2><p>${esc(mission.text)}</p></div><button class="btn primary" data-act="start" data-mode="${mission.mode}" data-id="${mission.id}">${mission.label} →</button></section>`:'';
+  return `${resume}${todayMobile()}${header}${launch}${suggestBranches()}<div class="path">${units}</div>${tail}`;
 }
 // narrow screens have no side rail, so today's goal and quests fold into the top of the path
 function todayMobile() {
@@ -106,7 +109,7 @@ function popover(n, status, u) {
   const firstXp = n.kind === 'boss' ? XP.boss : XP.lesson, replay = n.kind === 'boss' ? XP.boss : XP.replay;
   let body;
   if (status === 'locked') body = n.kind === 'boss' ? `<p>先完成本單元的課程，就能挑戰金冠。</p>` : game.trackUnlocked(n.track) ? `<p>先完成前面的關卡，這一關就會打開。</p>` : `<p>這一段還沒開啟。完成上一段，或通過跳級測驗。</p><button class="btn gold" data-act="jump" data-id="${n.track}">⏩ 跳級測驗</button>`;
-  else if (n.kind === 'boss') body = `<p>從整個單元混合出題，共 ${n.size} 題，有 ${HEARTS} 顆 ❤️，錯 ${HEARTS} 題就結束，可以馬上再挑戰。通過可以得到金冠 👑 和寶箱 💎。</p><button class="btn gold" data-act="start" data-mode="boss" data-id="${n.id}">${status === 'crowned' ? '再挑戰一次' : '開始挑戰'} +${firstXp} XP</button>`;
+  else if (n.kind === 'boss') body = `<p>從整個單元混合出題，共 ${n.size} 題，有 ${HEARTS} 顆 ❤️，錯 ${HEARTS} 題就結束；通過還需至少 80% 獨立答對，可以馬上再挑戰。通過可以得到金冠 👑 和寶箱 💎。</p><button class="btn gold" data-act="start" data-mode="boss" data-id="${n.id}">${status === 'crowned' ? '再挑戰一次' : '開始挑戰'} +${firstXp} XP</button>`;
   else body = `<p>${KIND_TEXT[n.kind] || '課程'} · 約 ${n.size} 題${status === 'tested' ? ' · 已測過，也可以練習' : ''}</p><button class="btn primary" data-act="start" data-mode="lesson" data-id="${n.id}">${status === 'done' ? `重練 +${replay}` : `開始 +${firstXp}`} XP</button>`;
   return `<div class="pop c-${u.color}" role="dialog" aria-label="${esc(n.title)}"><p class="eyebrow">${esc(u.title)} · 第 ${nodeIndex} 關</p><h3>${n.icon} ${esc(n.title)}</h3>${body}</div>`;
 }
@@ -150,11 +153,12 @@ function sessionTitle(s) {
 }
 function lessonView() {
   const s = game.state.session, it = game.currentItem(), fb = s.feedback;
+  const trail=sessionTrail(s);
   const pct = Math.round(100 * (s.index + (fb || !isScored(it) ? 1 : 0)) / s.queue.length);
   const hearts = s.hearts !== null ? `<span class="hearts" aria-label="剩下 ${s.hearts} 顆心">${'❤️'.repeat(s.hearts)}${'🤍'.repeat(HEARTS - s.hearts)}</span>` : '';
   const combo = s.combo >= 3 ? `<span class="combo ${s.combo % 5 === 0 ? 'pop' : ''}">🔥 ${s.combo} 連對</span>` : '';
   return `<div class="lesson-screen ${fb ? (fb.ok ? 'is-ok' : 'is-bad') : ''}"><header class="lesson-top"><button class="x" data-act="exit" aria-label="暫停並離開">✕</button><div class="progress" role="progressbar" aria-label="進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><span style="width:${pct}%"></span></div>${combo}${hearts}</header>
-  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p>${itemView(it, s)}</main>
+  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${trail.label}</span><small>本次獨立答對 ${trail.independent} / ${trail.attempts}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${itemView(it, s)}</main>
   ${lessonFooter(it, s)}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 function sayBtn(text, mp3 = '', big = false, label = '播放英文') { return `<button class="say ${big ? 'big' : ''}" data-act="say" data-text="${esc(text)}" data-mp3="${esc(mp3 || '')}" aria-label="${label}">🔊</button>`; }
@@ -173,7 +177,8 @@ function itemView(it, s) {
     body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button>`; }).join('')}</div>`;
   } else if (it.type === 'build') {
     const bank = shuffle(it.words.map((w, i) => ({ w, i })), it.id + s.id);
-    body = `<div class="answer-line" aria-label="你的句子">${a.tokens.length ? a.tokens.map(i => `<button class="tok" data-act="untok" data-i="${i}" ${locked ? 'disabled' : ''} lang="en">${esc(it.words[i])}</button>`).join('') : '<span class="muted">點下面的字，排出句子</span>'}</div><div class="bank" lang="en">${bank.map(({ w, i }, k) => `<button class="tok ${a.tokens.includes(i) ? 'used' : ''}" data-act="tok" data-i="${i}" ${a.tokens.includes(i) || locked ? 'disabled' : ''} aria-label="${esc(w)}（${k + 1}）">${esc(w)}</button>`).join('')}</div>`;
+    const given = it.given ? it.given.split(' ').map(w => `<span class="tok given" lang="en">${esc(w)}</span>`).join('') : '';
+    body = `<div class="answer-line" aria-label="你的句子">${given}${a.tokens.length ? a.tokens.map(i => `<button class="tok" data-act="untok" data-i="${i}" ${locked ? 'disabled' : ''} lang="en">${esc(it.words[i])}</button>`).join('') : '<span class="muted">點下面的字，排出句子</span>'}</div><div class="bank" lang="en">${bank.map(({ w, i }, k) => `<button class="tok ${a.tokens.includes(i) ? 'used' : ''}" data-act="tok" data-i="${i}" ${a.tokens.includes(i) || locked ? 'disabled' : ''} aria-label="${esc(w)}（${k + 1}）">${esc(w)}</button>`).join('')}</div>`;
   } else if (it.type === 'input') {
     body = `<form class="type-form" data-form="answer"><label class="offscreen" for="answer">輸入英文答案</label><input id="answer" class="type-in" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" lang="en" value="${esc(locked ? fb(s) : a.text)}" ${locked ? 'disabled' : ''} placeholder="輸入英文"></form>`;
   } else if (it.type === 'match') {
@@ -187,7 +192,7 @@ const fb = s => s.feedback?.value;
 function hintText(it) {
   if (it.hint) return it.hint;
   const g = course.guides.get(course.nodes.get(game.state.session?.ref)?.unit);
-  if (it.type === 'build') return `第一個字是「${it.answer.split(' ')[0]}」。`;
+  if (it.type === 'build') return `${it.given ? '前半句已經排好，接下來' : ''}第一個字是「${it.answer.split(' ')[0]}」。`;
   if (it.type === 'input') return `開頭是「${it.answer[0]}」，共 ${it.answer.length} 個字母。`;
   return g?.tips?.[0]?.formula || '先找出題目的關鍵字，再刪去明顯不合的選項。';
 }
@@ -196,7 +201,7 @@ function lessonFooter(it, s) {
   if (!isScored(it)) return `<footer class="check"><div class="check-in"><span></span><button class="btn primary big" data-act="next" id="go">${it.type === 'info' ? '了解了' : '繼續'}</button></div></footer>`;
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
-    const answer = it.type === 'match' ? it.why : it.answer;
+    const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
     return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why">${esc(it.why)}</p>` : ''}<button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
@@ -218,13 +223,14 @@ function resultView() {
   }
   const failed = !r.passed;
   const title = failed ? (r.mode === 'jump' ? '這次還沒過關' : '差一點點！') : r.mode === 'boss' ? '挑戰成功！獲得金冠 👑' : r.mode === 'jump' ? '跳級成功！' : r.mode === 'story' ? '故事讀完了！' : r.perfect ? '全對！太厲害了' : '課程完成！';
-  const sub = failed ? (r.mode === 'jump' ? '沒關係，這表示前面的段落值得好好學。從頭學也會很快。' : '錯題已經加進錯題本。看一下指南，再試一次就會更熟。') : r.perfect ? '一題都沒錯，記憶正在變牢。' : '答錯的題目已加入錯題本，之後會再出現。';
+  const sub = failed ? (r.mode === 'jump' ? '沒關係，這表示前面的段落值得好好學。從頭學也會很快。' : '錯題已經加進錯題本。看一下指南，再試一次就會更熟。') : r.perfect ? '本次獨立答對，隔日再回想，確認是否留得住。' : '答錯的題目已加入錯題本，之後會再出現。';
   const ev = (r.events || []).map(e => e.type === 'quest' ? `<li>✅ 每日任務完成 +10 💎</li>` : e.type === 'chest' ? `<li>🎁 三項任務全完成，寶箱 +20 💎</li>` : e.type === 'badge' ? (() => { const b = BADGES.find(x => x.id === e.id); return `<li>${b.icon} 新成就：${esc(b.title)} +20 💎</li>`; })() : '').join('');
   const goalHit = game.todayXp() >= game.goalXp() && game.todayXp() - r.xp < game.goalXp();
   return `<div class="result ${failed ? 'failed' : 'passed'}">${!failed && profile().motion !== false ? confetti() : ''}${mascot(failed ? 'sad' : 'cheer', 120)}<h1>${title}</h1><p class="lead">${sub}</p>
-  <div class="tiles"><div class="tile xp"><small>獲得 XP</small><b>⚡ ${r.xp}</b></div><div class="tile acc"><small>首次答對</small><b>🎯 ${Math.round(r.accuracy * 100)}%</b></div><div class="tile time"><small>用時</small><b>⏱ ${fmtTime(r.seconds)}</b></div>${r.maxCombo >= 3 ? `<div class="tile combo"><small>最高連對</small><b>🔥 ${r.maxCombo}</b></div>` : ''}</div>
+  <div class="tiles"><div class="tile xp"><small>獲得 XP</small><b>⚡ ${r.xp}</b></div><div class="tile acc"><small>本次首次答對</small><b>🎯 ${Math.round(r.accuracy * 100)}%</b></div><div class="tile time"><small>用時</small><b>⏱ ${fmtTime(r.seconds)}</b></div>${r.maxCombo >= 3 ? `<div class="tile combo"><small>最高連對</small><b>🔥 ${r.maxCombo}</b></div>` : ''}</div>
   ${r.chest ? `<p class="chest">🎁 單元寶箱：+${r.chest} 💎</p>` : ''}${goalHit ? '<p class="chest">🎉 今天的每日目標達成！</p>' : ''}${ev ? `<ul class="events">${ev}</ul>` : ''}
-  ${r.nextReview ? `<p class="muted">下次複習：${new Date(r.nextReview).toLocaleDateString('zh-TW')}</p>` : ''}${r.xp === 0 && r.mode !== 'jump' ? '' : ''}
+  ${r.nextReview ? `<p class="muted">下次複習：${new Date(r.nextReview).toLocaleDateString('zh-TW')}</p>` : ''}${r.xp === 0 && r.mode !== 'jump' ? '<p class="muted">這個活動今天已領取三次獎勵。仍可自由練習，也可以探索新內容。</p>' : ''}
+  <section class="recall-pack"><h2>🎒 這次帶走的線索</h2><p>先遮住答案，在心裡想一次，再展開核對。這是自我回想，不另計分。</p>${(r.takeaways||[]).map(q=>`<details><summary>${q.repair?'↻ 訂正回想：':'✦ 回想：'}${esc(q.prompt)}</summary><p lang="en"><b>${esc(q.answer)}</b></p><p>${esc(q.why)}</p></details>`).join('')}</section>
   <div class="row center">${failed && r.mode === 'boss' ? `<button class="btn ghost" data-act="guide" data-id="${course.nodes.get(r.ref).unit}">看指南</button><button class="btn gold big" data-act="start" data-mode="boss" data-id="${r.ref}">再挑戰</button>` : ''}<button class="btn primary big" data-act="done">繼續</button></div></div>`;
 }
 const fmtTime = s => s >= 60 ? `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` : `${s} 秒`;
@@ -242,7 +248,7 @@ function practicePage() {
    <section class="card practice green"><h2>💪 個人化練習</h2><p>從學過的題目中，優先挑出錯題與答對率接近 70% 的題目。</p><button class="btn primary" data-act="practice" data-mode="practice" ${learned ? '' : 'disabled'}>開始練習</button></section>
    <section class="card practice violet"><h2>🎧 聽力特訓</h2><p>只練聽音選字、聽句選意思與聽寫。</p><button class="btn primary" data-act="practice" data-mode="listen" ${learned ? '' : 'disabled'}>開始聽力</button></section>
   </div>
-  <section class="card"><h2>🔤 單字特訓</h2><p class="muted">1,000 張校對過的國小與國中聯想字卡，聽真人錄製的單字音檔作答。</p><div class="chips">${Object.keys(cats).map(c => `<button class="chip ${c === cat ? 'on' : ''}" data-act="vcat" data-id="${esc(c)}">${esc(c)} <small>${cats[c].reduce((n, s) => n + s.size, 0)}</small></button>`).join('')}</div><div class="sets">${(cats[cat] || []).map(s => `<button class="set" data-act="practice" data-mode="vocab" data-id="${s.id}"><span>${s.icon}</span><b>${esc(s.title)}</b><small>${s.size} 字</small></button>`).join('')}</div></section>
+  <section class="card"><h2>🔤 單字特訓</h2><p class="muted">1,000 張校對過的國小與國中聯想字卡，搭配既有的單字音檔作答；無音檔時使用裝置語音。</p><div class="chips">${Object.keys(cats).map(c => `<button class="chip ${c === cat ? 'on' : ''}" data-act="vcat" data-id="${esc(c)}">${esc(c)} <small>${cats[c].reduce((n, s) => n + s.size, 0)}</small></button>`).join('')}</div><div class="sets">${(cats[cat] || []).map(s => `<button class="set" data-act="practice" data-mode="vocab" data-id="${s.id}"><span>${s.icon}</span><b>${esc(s.title)}</b><small>${s.size} 字</small></button>`).join('')}</div></section>
   ${learned ? '' : '<p class="muted">先在「學習」完成一個課程，個人化練習和聽力特訓就會打開。</p>'}`;
 }
 function storiesPage() {
@@ -300,7 +306,7 @@ function render(focus = false) {
   let html, newItem = false;
   if (s && !ui.paused) {
     const key = `${s.id}:${s.index}`;
-    if (ui.shownFor !== key) { ui.shownFor = key; ui.a = freshAnswer(); newItem = true; }
+    if (ui.shownFor !== key) { ui.shownFor = key; ui.a = {...freshAnswer(),transcript:!!s.transcript,hint:!!s.hint}; newItem = true; }
     html = lessonView();
   }
   else if (game.result) html = `<div class="result-wrap">${resultView()}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
@@ -322,9 +328,11 @@ function afterNewItem() {
 }
 function playItem(text, mp3, slow = false, isAuto = false) {
   if (!text) return;
+  const session=game.state.session,token=session?`${session.id}:${session.index}`:null;
   sound.play({ text, mp3: mp3 || '', slow }).then(r => {
-    if (r === 'ok') { if (game.state.session && !game.state.session.feedback && !ui.a.transcript) game.heard(); }
-    else if (r === 'unavailable' && !isAuto) toast('這個裝置沒有英文語音，可以改看文字作答。');
+    const s=game.state.session;if(token && (!s||token!==`${s.id}:${s.index}`))return;
+    if (r === 'ok') { if (s && !s.feedback && !ui.a.transcript && text===game.currentItem()?.audio) game.heard(); }
+    else if (['unavailable','error'].includes(r) && !isAuto) toast('英文播放未完成，可以重試或改看文字作答。');
   });
 }
 function lessonSubmit(value) {
@@ -408,7 +416,10 @@ root.addEventListener('click', async e => {
 root.addEventListener('input', e => {
   if (e.target.id === 'answer') { ui.a.text = e.target.value; const go = document.querySelector('#go'); if (go) go.disabled = !ui.a.text.trim(); }
 });
-root.addEventListener('submit', e => { e.preventDefault(); if (e.target.dataset.form === 'answer' && ui.a.text.trim()) lessonSubmit(ui.a.text); });
+let composing=false;
+root.addEventListener('compositionstart',()=>{composing=true;});
+root.addEventListener('compositionend',()=>{composing=false;});
+root.addEventListener('submit', e => { e.preventDefault(); if (!composing && e.target.dataset.form === 'answer' && ui.a.text.trim()) lessonSubmit(ui.a.text); });
 root.addEventListener('change', async e => {
   const set = e.target.dataset.set;
   if (set) { const v = e.target.type === 'checkbox' ? e.target.checked : set === 'rate' ? Number(e.target.value) : e.target.value; game.update({ [set]: v }); toast('設定已儲存'); render(); return; }
@@ -419,6 +430,7 @@ root.addEventListener('change', async e => {
   }
 });
 document.addEventListener('keydown', e => {
+  if(e.isComposing||composing||e.keyCode===229)return;
   if (!game) return;
   if (e.key === 'Escape' && ui.modal) { ui.modal = null; render(); return; }
   const s = game.state.session; if (!s || ui.paused || ui.modal) return;
