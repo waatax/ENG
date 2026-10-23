@@ -13,7 +13,7 @@ import { ALL_COMMUTE_DIALOGUES } from '../dist/commute_dialogues.mjs';
 import { journeyCatalog } from '../dist/learning_journey.mjs';
 import { units as pilotUnits, quests as pilotQuests, reviews as pilotReviews } from '../dist/quest/catalog.mjs';
 
-export const COURSE_VERSION = '2026-10-23.v2';
+export const COURSE_VERSION = '2026-10-23.v3';
 const OUT = 'dist/quest/course';
 const read = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const diagBank = read('data/questions/diagnostic_bank.json');
@@ -353,10 +353,68 @@ for (const tier of [1, 2, 3, 4]) {
 }
 
 // ---------- stories ----------
-const LEVEL_RANK = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 5 };
-const featured = ALL_COMMUTE_DIALOGUES.filter(d => d.stage === 'featured');
-const storyLevel = d => (d.level.match(/A1|A2|B1|B2|C1|C2/) || ['B1'])[0];
-const STORY_SECTIONS = { A1: ['s2', 's3'], A2: ['s4', 's5'], B1: ['s6', 's7'], B2: ['s8'], C1: ['s9'], C2: ['s9'] };
+const PRE_A1_STORIES = [
+  {
+    id: 'story-prea1-01',
+    stage: 'featured',
+    topicTag: '👋 認識新朋友',
+    level: 'Pre-A1 (起步)',
+    title: '學校走廊遇見新朋友：打招呼與說名字',
+    scenario: '在學校走廊遇見新同學，彼此親切打招呼、說出自己的名字並表達高興認識對方。',
+    keyPatterns: [
+      'What is your name?（你叫什麼名字？）',
+      'Nice to meet you, too.（我也很高興認識你。）'
+    ],
+    lines: [
+      { speaker: 'Amy', en: 'Hello! I am Amy. What is your name?', zh: '哈囉！我是 Amy。你叫什麼名字？', note: '打招呼用 Hello 或 Hi；問名字用 What is your name?' },
+      { speaker: 'Ben', en: 'Hi, Amy! My name is Ben.', zh: '嗨，Amy！我的名字是 Ben。', note: '回答名字可用 My name is... 或 I am...' },
+      { speaker: 'Amy', en: 'Nice to meet you, Ben.', zh: '很高興認識你，Ben。', note: '初次見面說 Nice to meet you。' },
+      { speaker: 'Ben', en: 'Nice to meet you, too!', zh: '我也很高興認識你！', note: '回應加上 too 表示「也」。' }
+    ]
+  },
+  {
+    id: 'story-prea1-02',
+    stage: 'featured',
+    topicTag: '🏫 教室早晨',
+    level: 'Pre-A1 (起步)',
+    title: '早晨的第一堂英文課：聽懂指令與數一數',
+    scenario: '英文課開始了，老師引導大家坐好，並請同學數一數書桌上有幾本書。',
+    keyPatterns: [
+      'Good morning, class! Sit down, please.（同學早安！請坐下。）',
+      'How many books do you have?（你有幾本書？）'
+    ],
+    lines: [
+      { speaker: 'Teacher', en: 'Good morning, class. Sit down, please.', zh: '同學早安。請坐下。', note: 'Sit down, please 是有禮貌的請坐下。' },
+      { speaker: 'Class', en: 'Good morning, Mr. Chen. Thank you!', zh: '陳老師早安。謝謝您！', note: '見面道早安用 Good morning。' },
+      { speaker: 'Teacher', en: 'How many books do you have, Leo?', zh: 'Leo，你有幾本書？', note: '問數量用 How many + 複數名詞。' },
+      { speaker: 'Leo', en: 'I have two books on my desk.', zh: '我的桌上有兩本書。', note: '數量大於一，book 要加 s。' }
+    ]
+  },
+  {
+    id: 'story-prea1-03',
+    stage: 'featured',
+    topicTag: '🎨 彩色鉛筆盒',
+    level: 'Pre-A1 (起步)',
+    title: '鉛筆盒裡的驚喜：問顏色與分享文具',
+    scenario: '畫畫課上，兩位同學互相借看漂亮的文具，用英文問出顏色並稱讚彼此。',
+    keyPatterns: [
+      'What color is it?（它是什麼顏色？）',
+      'It is orange. I also have a blue pen.（它是橘色的。我還有一支藍色筆。）'
+    ],
+    lines: [
+      { speaker: 'Ken', en: 'What is this in your hand?', zh: '你手裡的這個是什麼？', note: 'What is this 問這是什麼。' },
+      { speaker: 'Lily', en: 'It is a new crayon.', zh: '是一支新蠟筆。', note: 'It is a/an 介紹物品。' },
+      { speaker: 'Ken', en: 'What color is it?', zh: '它是什麼顏色？', note: '問顏色用 What color is it?' },
+      { speaker: 'Lily', en: 'It is orange. I also have a blue pen!', zh: '它是橘色的。我還有一支藍色的筆！', note: '顏色放名詞前：a blue pen。' }
+    ]
+  }
+];
+for (const d of PRE_A1_STORIES) for (const l of d.lines) learnNames(l.en || '');
+
+const LEVEL_RANK = { 'Pre-A1': 0, A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 5 };
+const featured = [...PRE_A1_STORIES, ...ALL_COMMUTE_DIALOGUES.filter(d => d.stage === 'featured')];
+const storyLevel = d => (d.level.match(/Pre-A1|A1|A2|B1|B2|C1|C2/) || ['B1'])[0];
+const STORY_SECTIONS = { 'Pre-A1': ['s1'], A1: ['s2', 's3'], A2: ['s4', 's5'], B1: ['s6', 's7'], B2: ['s8'], C1: ['s9'], C2: ['s9'] };
 const stories = {}; const storyBySection = {};
 const allStoryLines = featured.flatMap(d => d.lines.map(l => l.en));
 for (const d of [...featured].sort((a, b) => LEVEL_RANK[storyLevel(a)] - LEVEL_RANK[storyLevel(b)] || a.id.localeCompare(b.id))) {
@@ -369,7 +427,8 @@ for (const d of [...featured].sort((a, b) => LEVEL_RANK[storyLevel(a)] - LEVEL_R
     const base = `st.${d.id}.${j + 1}`;
     if (j >= 1 && isQuestion(lines[j - 1].en) && !isQuestion(l.en)) { // predict the reply before it is revealed
       const sameLevel = featured.filter(x => x.id !== d.id && storyLevel(x) === lv).flatMap(x => x.lines.map(y => y.en)), len = tokens(l.en).length;
-      const others = distractors(l.en, [sameLevel], 2, base + 'n', (a, b) => tokens(b).length < 4 || isQuestion(b) || Math.abs(tokens(b).length - len) > Math.max(4, len) || GENERIC_REPLY.test(b));
+      const minTokens = lv === 'Pre-A1' ? 2 : 4;
+      const others = distractors(l.en, [sameLevel, allStoryLines], 2, base + 'n', (a, b) => tokens(b).length < minTokens || isQuestion(b) || Math.abs(tokens(b).length - len) > Math.max(minTokens, len) || GENERIC_REPLY.test(b));
       if (others.length === 2) steps.push(validChoice({ id: base + 'n', kind: 'story', type: 'choice', prompt: `${l.speaker} 接下來最可能說什麼？`, answer: l.en, options: [l.en, ...others], why: `${l.en}（${l.zh}）`, level: 3 }));
     }
     steps.push({ id: base, kind: 'story', type: 'line', speaker: l.speaker, en: l.en, zh: l.zh, note: short(l.note, 120) });

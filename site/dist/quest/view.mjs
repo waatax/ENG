@@ -1,7 +1,7 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261023v2';
-import * as sound from './sound.mjs?v=20261023v2';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261023v3';
+import * as sound from './sound.mjs?v=20261023v3';
 
-const V = '20261023v2';
+const V = '20261023v3';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -284,7 +284,7 @@ function onboarding() {
   const step = ui.step;
   const dots = `<div class="dots">${[0, 1, 2, 3].map(i => `<span class="${i <= step ? 'on' : ''}"></span>`).join('')}</div>`;
   let body;
-  if (step === 0) body = `<div class="center">${mascot('cheer', 140)}<h1>嗨！我是阿芽 🌱</h1><p class="lead">每天幾分鐘，一關一關把英文變成你的習慣。</p><p class="muted">9 段程度、82 個單元、48 篇互動故事，從第一句招呼到大考與國際檢定。</p><button class="btn primary big" data-act="ob-next">開始</button><p><label class="link" for="import">已經有備份？匯入</label><input class="offscreen" id="import" type="file" accept="application/json,.json"></p></div>`;
+  if (step === 0) body = `<div class="center">${mascot('cheer', 140)}<h1>嗨！我是阿芽 🌱</h1><p class="lead">每天幾分鐘，一關一關把英文變成你的習慣。</p><p class="muted">9 段程度、82 個單元、51 篇互動故事，從第一句招呼到大考與國際檢定。</p><button class="btn primary big" data-act="ob-next">開始</button><p><label class="link" for="import">已經有備份？匯入</label><input class="offscreen" id="import" type="file" accept="application/json,.json"></p></div>`;
   else if (step === 1) body = `<h1>你學英文主要是為了？</h1><div class="pick">${Object.entries(WHY_INFO).map(([k, v]) => `<button class="pick-card ${ui.why === k ? 'on' : ''}" data-act="ob-why" data-id="${k}" aria-pressed="${ui.why === k}"><span class="big-ic">${v[0]}</span><b>${v[1]}</b><small>${v[2]}</small></button>`).join('')}</div><button class="btn primary big" data-act="ob-next">下一步</button>`;
   else if (step === 2) body = `<h1>每天想練多少？</h1><div class="pick list">${Object.entries(GOALS).map(([k, v]) => `<button class="pick-card row-card ${ui.goal === k ? 'on' : ''}" data-act="ob-goal" data-id="${k}" aria-pressed="${ui.goal === k}"><b>${GOAL_INFO[k][0]}</b><span>${v} XP / 天</span><small>${GOAL_INFO[k][1]}</small></button>`).join('')}</div><p class="muted">之後可以在「我的」隨時調整。</p><button class="btn primary big" data-act="ob-next">下一步</button>`;
   else body = `<h1>從哪裡開始？</h1><div class="pick">${`<button class="pick-card" data-act="ob-start" data-id="s1"><span class="big-ic">🌱</span><b>從零開始</b><small>第 1 段：打招呼、字母、數字</small></button><button class="pick-card" data-act="placement"><span class="big-ic">🧭</span><b>先測程度</b><small>約 18 題、5 分鐘，找出適合的段落</small></button>`}</div><p class="muted">程度測驗只用來建議起點，不是正式分級。各段落都能用「跳到這裡」測驗快速前進。</p>`;

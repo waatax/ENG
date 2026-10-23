@@ -5,7 +5,7 @@
       "units": 7,
       "nodes": 31,
       "items": 428,
-      "stories": 0
+      "stories": 3
     },
     {
       "id": "s2",
@@ -106,7 +106,7 @@
       "items": 295
     }
   ],
-  "stories": 48,
+  "stories": 51,
   "items": 5902,
   "byType": {
     "grammar/choice": 437,
@@ -121,9 +121,9 @@
     "grammar/info": 236,
     "drill/choice": 2062,
     "talk/input": 71,
-    "story/line": 245,
-    "story/choice": 243,
-    "story/build": 30
+    "story/line": 257,
+    "story/choice": 256,
+    "story/build": 33
   },
   "excluded": [
     {
@@ -284,6 +284,7 @@
     }
   ],
   "storySections": {
+    "s1": 3,
     "s2": 3,
     "s3": 3,
     "s4": 6,
@@ -299,7 +300,7 @@
   "excludedByReason": {
     "trap is not a pair of English sentences": 39
   },
-  "version": "2026-10-23.v2",
+  "version": "2026-10-23.v3",
   "files": {
     "b-cap.json": 151824,
     "b-cert.json": 50041,
@@ -309,7 +310,7 @@
     "b-sat.json": 277037,
     "b-toeic.json": 188550,
     "b-voc.json": 188319,
-    "index.json": 101091,
+    "index.json": 101638,
     "s1.json": 171899,
     "s2.json": 220213,
     "s3.json": 150250,
@@ -319,7 +320,7 @@
     "s7.json": 255885,
     "s8.json": 294510,
     "s9.json": 249941,
-    "stories.json": 254578,
+    "stories.json": 263955,
     "vocab.json": 136359
   }
 }

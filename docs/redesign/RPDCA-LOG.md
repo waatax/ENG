@@ -138,3 +138,32 @@ R0 之後另做了 3 單元、12 關、99 題的手寫試點（`dist/quest/` 第
 2. 邀請 5–8 位學習者試用，觀察 D1／D7 回訪與首次正確率。
 3. 補第 1 段的故事，並為長句會話加入分段排句。
 4. 決定是否把闖關版設為首頁預設。
+
+
+## v3｜全段落互動故事補齊與深層優化（2026-10-23）
+
+### R（研究）
+- 盤點現況：v2 建立了 9 段能力主線與 8 大目標分支，共 48 篇互動故事，但故事皆分布於 S2–S9，新手起步的第 1 段（Pre-A1）沒有故事節點，缺乏 Duolingo 式「每過一到二個單元就有一篇生動小故事」的獎勵成就感。
+- 資料來源挖掘：讀取國小微課（`dist/curriculum_elementary.mjs`），G3 具有高頻優質日常會話（打招呼自我介紹、教室用語數字、文具顏色），完全適合轉化為 Pre-A1 起步短篇故事。
+
+### P（規劃）
+- 為第 1 段（Pre-A1）增設 3 篇專屬情境故事：
+  1. `story-prea1-01`：學校走廊遇見新朋友（Amy & Ben）
+  2. `story-prea1-02`：早晨的第一堂英文課（Mr. Chen & Leo）
+  3. `story-prea1-03`：鉛筆盒裡的驚喜（Ken & Lily）
+- 故事檢查點自動掛載在第 1 段的單元 2、單元 4、單元 6 上，全站故事數量自 48 篇擴展至 51 篇，達成 S1–S9 全段落覆蓋。
+- 升級版本標記至 `2026-10-23.v3`。
+
+### D（執行）
+- `scripts/build_quest_course.mjs` 增補 Pre-A1 故事生成邏輯與人名學習，產出 `dist/quest/course/` 全部檔案。
+- 更新 `dist/quest/view.mjs`、`dist/quest/index.html`、`dist/knowledge.mjs` 與 `README.md`。
+- 100% 同步鏡像至 `site/dist/`。
+
+### C（檢查）
+- 執行 `scripts/test_quest_game.mjs`：17 項全數通過（含 51 篇故事完整性檢驗）。
+- 執行 `scripts/validate_mnemonic_release.mjs`：卡片、字族、MP3 與全站容量檢核全數通過。
+- 執行全站測試 `node --test scripts/test*.mjs`：全部通過。
+
+### A（調整）
+- 維持 `data/mnemonic_revision.txt` 與未完成水彩檔案不被誤納入發布。
+- 鏡像同步 `dist/` 至 `site/dist/`，確保 GitHub Pages 發布零落差。

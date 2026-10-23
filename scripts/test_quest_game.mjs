@@ -65,7 +65,7 @@ test('course: every exercise is answerable and keeps a traceable source', () => 
 });
 
 test('course: stories, placement and vocabulary sets are complete', () => {
-  assert.equal(Object.keys(storiesFile.stories).length, 48);
+  assert.equal(Object.keys(storiesFile.stories).length, 51);
   for (const s of Object.values(storiesFile.stories)) {
     assert.ok(s.steps.some(x => x.type === 'line') && s.steps.some(x => isScored(x)), s.id);
     assert.ok(index.sections.some(sec => sec.id === s.section));
