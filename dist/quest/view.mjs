@@ -1,7 +1,7 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v5';
-import * as sound from './sound.mjs?v=20261024v5';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v6';
+import * as sound from './sound.mjs?v=20261024v6';
 
-const V = '20261024v5';
+const V = '20261024v6';
 import {nextAdventure,sessionTrail} from './adventure.mjs';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}

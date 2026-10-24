@@ -8,7 +8,7 @@
 
 1. [v2 全站大改版計畫](GAME-REDESIGN-V2.md)：研究摘要、9 段主線與 8 條目標分支、節點與題型、遊戲機制、工程架構與品質閘門。
 2. [RPDCA 執行紀錄](RPDCA-LOG.md)：R0 研究、試點補記，以及 v2 的 R1–R5。每一輪都寫明實際做了什麼、檢查了什麼、發現與修正的問題，以及尚未驗證的事。
-3. 逐題校審：`data/quest-review/` 中記錄每題的排除與修改及其原因，目前完成第 1–4 段（2026-10-24，AI 校審加主工作階段核對，不是教師審定）。
+3. 逐題校審：`data/quest-review/` 中記錄每題的排除與修改及其原因，全部 9 段與 8 條分支都已完成（第 1–4 段：v4；第 5–9 段與分支：v6；AI 校審加主工作階段核對，不是教師審定）。
 4. [課程建置報告](COURSE-BUILD-REPORT.json)：各段題數、題型分布、被排除的題目與原因、檔案大小。
 5. [瀏覽器驗證](verification/browser-v2.json) 與 `verification/v2-*.png` 截圖。
 6. 歷史文件：[R0 整體規劃](GAME-REDESIGN-RPDCA.md)、[第一批 12 關規格](PILOT-QUESTS.md)、[內容盤點](CONTENT-BASELINE-2026-10-23.json)。

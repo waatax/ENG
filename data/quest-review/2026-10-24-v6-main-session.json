@@ -1,0 +1,15 @@
+{
+ "note": "v6 main-session fixes: source passages with factual or wording errors found in the v4 review (passage edits apply to every question on the same passage).",
+ "patch": {
+  "g4-s2-u6.r1": {
+   "severity": "error",
+   "problem": "文章說「A bird can fly, but it can’t swim well.」並不正確，鴨子、企鵝都很會游泳；改成不含錯誤概括的句子，兩題閱讀題的答案不受影響。",
+   "set": { "passage": "A bird can fly. A fish can swim, but it can’t walk. A kangaroo can jump very high. What can you do?" }
+  },
+  "g6-s1-u4.r1": {
+   "severity": "warn",
+   "problem": "文章的「contain rich vitamins」是中式英文；改為自然的 are rich in vitamins，與 v4 已修正的答案一致。",
+   "set": { "passage": "Staying healthy requires consistent daily habits rather than occasional efforts. Nutritionists recommend eating five portions of colorful vegetables and fruits every day because they are rich in vitamins. Regular physical exercise strengthens your immune system and heart. Moreover, getting at least eight hours of sleep allows your body to repair damaged cells. When you feel unwell, listen to your body and rest early instead of staying up late." }
+  }
+ }
+}

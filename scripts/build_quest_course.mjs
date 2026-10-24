@@ -13,7 +13,7 @@ import { ALL_COMMUTE_DIALOGUES } from '../dist/commute_dialogues.mjs';
 import { journeyCatalog } from '../dist/learning_journey.mjs';
 import { units as pilotUnits, quests as pilotQuests, reviews as pilotReviews } from '../dist/quest/catalog.mjs';
 
-export const COURSE_VERSION = '2026-10-24.v5';
+export const COURSE_VERSION = '2026-10-24.v6';
 const OUT = 'dist/quest/course';
 const read = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const diagBank = read('data/questions/diagnostic_bank.json');
@@ -56,6 +56,8 @@ const tokens = en => String(en).normalize('NFKC').replace(/[’‘]/g, "'").spli
 const isWordToken = t => /^[A-Za-z][A-Za-z']*$/.test(t);
 const englishSentence = s => !CJK.test(s) && (s.match(/[A-Za-z]+/g) || []).length >= 2;
 const splitTitle = t => { const m = String(t).match(/^(.*?)\s*\(([^()]*)\)\s*$/); return m ? { zh: m[1].trim(), en: m[2].trim() } : { zh: String(t).trim(), en: '' }; };
+// hints keep whole sentences instead of stopping mid-word
+const firstSentences = (s, n) => { const parts = String(s ?? '').split(/(?<=[。；！？])/); let out = ''; for (const x of parts) { if ((out + x).length > n && out) break; out += x; } return out.length > n ? short(out, n) : out.trim(); };
 const short = (s, n = 160) => { s = String(s ?? '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1) + '…' : s; };
 const wordInSentence = (word, sentence) => { const w = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const m = new RegExp(`(^|[^A-Za-z'])(${w})(?=[^A-Za-z']|$)`, 'i').exec(sentence); return m ? { index: m.index + m[1].length, text: m[2] } : null; };
 const fileExists = p => { try { return fs.statSync(p).isFile(); } catch { return false; } };
@@ -238,8 +240,11 @@ function grammarItems(uid, u) {
     const x = c.examExample;
     if (x?.options && Number.isInteger(x.answer)) items.push(validChoice({ id: `${uid}.x${i + 1}`, kind: 'grammar', type: 'choice', prompt: x.stem, answer: x.options[x.answer], options: x.options, hint: c.formula ? short(c.formula, 120) : '', why: x.analysis, level: 2 }));
   });
+  // a quiz question that asks about "the passage" needs the unit's reading text beside it
+  const refersToText = s => /according to the (passage|article|text|reading)|in the (passage|article)|the (passage|article) (says|suggests|implies|states|mentions)/i.test(s || '');
+  const withPassage = s => refersToText(s) && u.reading?.text ? { passage: u.reading.text, passageTitle: u.reading.title } : {};
   (u.formativeQuiz || []).forEach((q, i) => {
-    if (q?.options && Number.isInteger(q.ans)) items.push(validChoice({ id: `${uid}.q${i + 1}`, kind: 'grammar', type: 'choice', prompt: q.q, answer: q.options[q.ans], options: q.options, hint: [q.hint1, q.hint2].filter(Boolean).join(' '), why: q.solution, level: 3 }));
+    if (q?.options && Number.isInteger(q.ans)) items.push(validChoice({ id: `${uid}.q${i + 1}`, kind: 'grammar', type: 'choice', prompt: q.q, ...withPassage(q.q), answer: q.options[q.ans], options: q.options, hint: [q.hint1, q.hint2].filter(Boolean).join(' '), why: q.solution, level: 3 }));
   });
   (u.traps || []).forEach((t, i) => {
     const right = clean(t.correct), wrong = clean(t.wrong), id = `${uid}.trap${i + 1}`;
@@ -252,12 +257,12 @@ function grammarItems(uid, u) {
 function knowledgeItems(id) {
   const p = knowledge.get(id); if (!p) return [];
   const items = [{ id: `k.${id}.tip`, kind: 'grammar', type: 'info', title: p.title, formula: p.goal, body: short(p.rule, 260), example: (p.pairs || []).slice(0, 2).map(x => x[0]).join(' / '), src: `#knowledge/${id}` }];
-  (p.questions || []).forEach(([stem, options, ans, why], i) => items.push(validChoice({ id: `k.${id}.${i + 1}`, kind: 'grammar', type: 'choice', prompt: stem, options, answer: options[ans], why, hint: short(p.rule, 100), level: 3, src: `#knowledge/${id}` })));
+  (p.questions || []).forEach(([stem, options, ans, why], i) => items.push(validChoice({ id: `k.${id}.${i + 1}`, kind: 'grammar', type: 'choice', prompt: stem, options, answer: options[ans], why, hint: firstSentences(p.rule, 110), level: 3, src: `#knowledge/${id}` })));
   return items.filter(Boolean);
 }
 function grammarTopicItems(id) {
   const t = grammar.get(id); if (!t) return [];
-  return [validChoice({ id: `gr.${id}`, kind: 'grammar', type: 'choice', prompt: t.question, options: t.options, answer: t.options[t.answer], why: t.explanation, hint: short(t.rule, 100), level: 3, src: `#grammar/${id}` })].filter(Boolean);
+  return [validChoice({ id: `gr.${id}`, kind: 'grammar', type: 'choice', prompt: t.question, options: t.options, answer: t.options[t.answer], why: t.explanation, hint: firstSentences(t.rule, 110), level: 3, src: `#grammar/${id}` })].filter(Boolean);
 }
 function readingItems(uid, reading, ctx) {
   if (!reading?.text || !englishSentence(reading.text)) return [];
@@ -274,11 +279,29 @@ for (const c of chapters.values()) for (const l of c.dialogue || []) learnNames(
 for (const d of ALL_COMMUTE_DIALOGUES) for (const l of d.lines) learnNames(l.en || '');
 const diagSubtopics = {};
 for (const q of diagBank) ((diagSubtopics[q.tier] ||= {})[q.subtopic] ||= []).push(q);
+// exam-style tiers: naming the English concept ("Base Rate Fallacy") usually names the right option, so give a method instead
+const EXAM_HINT = {
+  6: '先判斷這題考的是用字、轉折、標點還是文意，再回到句子裡找證據。',
+  7: '先找句中表示轉折或因果的線索字，判斷空格需要正面還是負面的意思。',
+  8: '先分清楚結論與證據，再判斷題目要你加強、削弱、找假設還是做推論。'
+};
 function diagItem(q) {
   const opts = q.options;
-  const why = [q.coreConcept, String(q.trapExplanation || '').replace(/^【[^】]*】/, '')].filter(Boolean).join(' ');
+  // the option analysis repeats the core concept, restates the answer (already shown in the feedback bar)
+  // and, in the reasoning tiers, ends with one stock sentence that does not describe these distractors
+  const core = String(q.coreConcept || '').trim();
+  let trap = String(q.trapExplanation || '').replace(/^【[^】]*】/, '')
+    .replace(/正確答案為\s*[（(][A-D][)）]\s*「[\s\S]*?」\s*[。.]?/, '')
+    .replace(/此項精準鎖定[^。]*。/g, '');
+  if (core) trap = trap.split(core).join('');
+  const why = [core, trap.trim()].filter(Boolean).join(' ');
   const zh = String(q.translation || '').split('\n')[0].replace(/^【[^】]*】/, '').trim();
-  return validChoice({ id: `d.${q.id}`, kind: 'drill', type: 'choice', passage: q.passage || '', prompt: q.prompt, options: opts, answer: opts[q.answer], hint: q.tier <= 4 && zh && q.dimension !== '單字語意' ? `題意：${zh}` : `這題考：${q.subtopic.replace(/\s*[（(][^)）]*[)）]/g, '')}`, why: short(why, 420), level: Math.min(5, Math.max(1, q.difficulty || 2)), topic: q.subtopic });
+  // a full translation gives the answer away when the options are different content words (Wednesday / Friday),
+  // but helps when they are forms of one word or function words (bring / bringing, is / are)
+  const FUNCTION = /^(am|is|are|was|were|be|been|being|do|does|did|have|has|had|can|could|will|would|shall|should|may|might|must|a|an|the|in|on|at|of|to|for|with|by|from|and|but|or|so|because|although|if|when|while|who|whom|whose|which|that|what|where|why|how|this|these|those|it|its|my|your|his|her|our|their|mine|yours|ours|theirs)$/i;
+  const contentWords = opts.every(o => /^[A-Za-z]+$/.test(o) && !FUNCTION.test(o)) && opts.filter(o => o.slice(0, 3).toLowerCase() === opts[q.answer].slice(0, 3).toLowerCase()).length === 1;
+  const hint = q.tier <= 4 && zh && q.dimension !== '單字語意' && !contentWords ? `題意：${zh}` : EXAM_HINT[q.tier] || `這題考：${q.subtopic.replace(/\s*[（(][^)）]*[)）]/g, '')}`;
+  return validChoice({ id: `d.${q.id}`, kind: 'drill', type: 'choice', passage: q.passage || '', prompt: q.prompt, options: opts, answer: opts[q.answer], hint, why: short(why, 420), level: Math.min(5, Math.max(1, q.difficulty || 2)), topic: q.subtopic });
 }
 
 // ---------- assemble units ----------
@@ -288,14 +311,18 @@ const items = {}; const report = { sections: [], branches: [], stories: 0, items
 const review = { exclude: {}, patch: {}, reviewed: {} };
 for (const f of fs.existsSync('data/quest-review') ? fs.readdirSync('data/quest-review').filter(f => f.endsWith('.json')).sort() : []) {
   const r = read('data/quest-review/' + f);
-  Object.assign(review.exclude, r.exclude || {}); Object.assign(review.patch, r.patch || {}); Object.assign(review.reviewed, r.reviewed || {});
+  Object.assign(review.exclude, r.exclude || {}); Object.assign(review.reviewed, r.reviewed || {});
+  // a later review round refines an earlier patch of the same item field by field
+  for (const [id, p] of Object.entries(r.patch || {})) review.patch[id] = { ...review.patch[id], ...p, set: { ...review.patch[id]?.set, ...p.set } };
 }
 const reviewUsed = new Set();
+const passageFix = new Map(); // a corrected passage is shared by every question on that passage
 function applyReview(it) {
   if (review.exclude[it.id]) { reviewUsed.add(it.id); excluded.push({ id: it.id, reason: 'editorial: ' + review.exclude[it.id] }); return null; }
   const p = review.patch[it.id]; if (!p) return it;
   reviewUsed.add(it.id);
   const out = cleanItem({ ...it, ...p.set });
+  if (p.set.passage && it.passage && it.passage !== p.set.passage) passageFix.set(it.passage, p.set.passage);
   if ((out.type === 'choice' || out.type === 'listen') && !validChoice(out)) throw new Error('editorial patch breaks ' + it.id);
   if (out.type === 'build') { const bank = out.words.map(w => normalize(w)); for (const t of normalize(out.answer).split(' ')) if (!bank.includes(t)) throw new Error(`editorial patch: build ${it.id} lacks token ${t}`); }
   return out;
@@ -313,7 +340,10 @@ export function cleanText(s) {
     .replace(/\s*[（(][A-D][)）](?=\s*[。.，,]|$)/g, '')
     .replace(/[。.]\s*。/g, '。').trim();
 }
-const cleanItem = it => ({ ...it, ...(it.why ? { why: cleanText(it.why) } : {}), ...(it.hint ? { hint: cleanText(it.hint) } : {}) });
+// a few source strings carry simplified characters; the site is Traditional Chinese (Taiwan)
+const toTrad = s => typeof s === 'string' ? s.replaceAll('等于', '等於') : s;
+const cleanItem = it => ({ ...it, ...(it.why ? { why: toTrad(cleanText(it.why)) } : {}), ...(it.hint ? { hint: toTrad(cleanText(it.hint)) } : {}),
+  ...(it.prompt ? { prompt: toTrad(it.prompt) } : {}), ...(it.options ? { options: it.options.map(toTrad), answer: toTrad(it.answer) } : {}), ...(it.pairs ? { pairs: it.pairs.map(p => p.map(toTrad)) } : {}) });
 function addItems(list, src) {
   const ids = [];
   for (const raw of list) { if (!raw) continue; const it = applyReview(cleanItem(raw)); if (!it) continue; it.src ||= src; if (items[it.id]) throw new Error('duplicate item id ' + it.id); items[it.id] = it; ids.push(it.id); }
@@ -588,6 +618,7 @@ index.reviewed = review.reviewed;
 index.vocabSets = vocabSets.map(s => ({ id: s.id, title: s.title, category: s.category, icon: s.icon, size: s.words.length }));
 
 // ---------- write ----------
+for (const it of Object.values(items)) if (it.passage && passageFix.has(it.passage)) it.passage = passageFix.get(it.passage);
 // overwrite in place and remove only stale files: deleting the whole folder fails while OneDrive is syncing it
 fs.mkdirSync(OUT, { recursive: true });
 const written = new Set();
