@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "empty mistakes never falls back to playing all words",
+    "wrong queue excludes mastered cards, crosses MP3 groups and completes after two cards",
+    "fullscreen fills portrait/landscape viewport, flips, pauses and restores background on Escape",
+    "random current-group queue automatically advances at word boundary without repeating and stop cancels playback",
+    "Real MP3 memory mode plays English three times, freezes five-second recall while paused, reveals Chinese, advances and stops",
+    "mnemonic fullscreen closes cleanly and empty mistakes are explicit"
+  ],
+  "errors": []
+}

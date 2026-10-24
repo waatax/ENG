@@ -1,5 +1,5 @@
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v6';
-import * as sound from './sound.mjs?v=20261024v6';
+import * as sound from './sound.mjs?v=memory1';
 
 const V = '20261024v6';
 import {nextAdventure,sessionTrail} from './adventure.mjs';
@@ -166,9 +166,9 @@ function itemView(it, s) {
   const a = ui.a, locked = !!s.feedback;
   if (it.type === 'info') return `<section class="info-card"><p class="tag">📐 新觀念</p><h1>${esc(it.title)}</h1>${it.formula ? `<p class="formula">${esc(it.formula)}</p>` : ''}${it.body ? `<p>${esc(it.body)}</p>` : ''}${it.example ? `<p class="example">${sayBtn(it.example)} <span lang="en">${esc(it.example)}</span></p>` : ''}</section>`;
   if (it.type === 'line') return `<section class="story-line">${mascot('happy', 56)}<div class="bubble"><b>${esc(it.speaker || '')}</b><p lang="en">${sayBtn(it.en)} ${esc(it.en)}</p>${a.zh ? `<p class="zh">${esc(it.zh)}</p>` : `<button class="link" data-act="zh">顯示中文</button>`}${a.zh && it.note ? `<p class="muted small">${esc(it.note)}</p>` : ''}</div></section>`;
-  const head = `<h1 class="prompt">${esc(it.prompt)}</h1>`;
+  const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="prompt-say" data-text="${esc(it.prompt)}" aria-label="朗讀題目">🔊</button></h1>`;
   const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><p lang="en">${esc(it.passage)}</p></details>` : '';
-  const stim = it.text ? `<div class="stimulus">${it.audio && it.type !== 'listen' ? sayBtn(it.audio, it.mp3) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && (locked || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
+  const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && (locked || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
   const listenBox = (it.type === 'listen' || (it.type === 'input' && it.audio && !it.text)) ? `<div class="listen-box">${a.transcript ? `<p class="transcript" lang="en">${esc(it.audio)}</p><small class="muted">已改用文字，這題不算聽力。</small>` : `${sayBtn(it.audio, it.mp3, true, '播放聲音')}<button class="say slow" data-act="say" data-slow="1" data-text="${esc(it.audio)}" aria-label="慢速播放">🐢</button><button class="link" data-act="transcript" ${locked ? 'disabled' : ''}>不方便聽？改看文字</button>`}</div>` : '';
   const hint = (a.hint || s.hint) && !locked ? `<div class="hint">💡 ${esc(hintText(it))}</div>` : '';
   let body = '';
@@ -387,6 +387,7 @@ root.addEventListener('click', async e => {
     case 'reset': ui.modal = 'reset'; render(); break;
     case 'reset-yes': game.reset(); ui.modal = null; ui.step = 0; ui.track = 's1'; render(true); break;
     case 'export': { const blob = new Blob([game.export()], { type: 'application/json' }), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = `english-quest-${game.today()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); break; }
+    case 'prompt-say': sound.speak(el.dataset.text,{lang:/[\u3400-\u9fff]/.test(el.dataset.text)?'zh':'en'}).then(r=>{if(['error','unavailable'].includes(r))toast('此裝置無法朗讀題目，請閱讀畫面文字。');}); break;
     case 'say': playItem(el.dataset.text, el.dataset.mp3, el.dataset.slow === '1'); break;
     case 'resume': if (await ensure(game.filesFor(s.mode, s.ref)) && game.validSession()) { ui.paused = false; ui.shownFor = ''; render(); } else { toast('這個練習的內容已更新，已重新開始。'); render(); } break;
     case 'discard': game.abandon(); ui.paused = false; render(); break;

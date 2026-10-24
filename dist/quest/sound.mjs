@@ -2,19 +2,20 @@
 let rate = 0.85, effects = true, generation = 0, current = null, ctx = null;
 export function configure(opts = {}) { if (opts.rate) rate = opts.rate; if (typeof opts.sound === 'boolean') effects = opts.sound; }
 const synth = () => globalThis.speechSynthesis;
-export function voice() {
+export function voice(lang='en') {
   const vs = synth()?.getVoices?.() || [];
+  if(lang==='zh')return vs.find(v=>/^zh[-_]TW/i.test(v.lang))||vs.find(v=>/^zh/i.test(v.lang))||null;
   return vs.find(v => /^en[-_]US/i.test(v.lang) && /natural|neural|google|aria|jenny|guy|samantha|ava|allison/i.test(v.name))
     || vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
 }
 export function canSpeak() { return !!(synth() && globalThis.SpeechSynthesisUtterance); }
 export function stop() { generation++; try { synth()?.cancel(); } catch {} if (current) { current.pause(); current = null; } }
 // resolves to 'ok' | 'error' | 'unavailable' | 'stopped'
-export function speak(text, { slow = false } = {}) {
+export function speak(text, { slow = false, lang = 'en' } = {}) {
   stop(); const g = generation;
   return new Promise(resolve => {
     if (!text || !canSpeak()) return resolve('unavailable');
-    const v = voice(); if (!v) return resolve('unavailable');
+    const v = voice(lang); if (!v) return resolve('unavailable');
     const u = new SpeechSynthesisUtterance(text); u.voice = v; u.lang = v.lang; u.rate = slow ? Math.max(0.5, rate - 0.3) : rate;
     u.onend = () => resolve(g === generation ? 'ok' : 'stopped');
     u.onerror = () => resolve(g === generation ? 'error' : 'stopped');
