@@ -1,3 +1,4 @@
+import {showVocabularyCard,hideVocabularyCard} from '../vocabulary_card.mjs';
 import {createMnemonicPlaylist,AUDIO_VERSION} from '../mnemonics/mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-word-families-v1',SIZE=12,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const TYPES=['複合詞字族','字首','字尾','字根'];
@@ -8,8 +9,8 @@ const fileFor=g=>'audio/'+g.id+'.mp3';const url=g=>new URL(fileFor(g)+'?v='+AUDI
 // Single-group and single-word player: one Audio element; a word clip stops at its Chinese part's end.
 const player=new Audio();player.preload='none';let active=null,clipEnd=null;
 function clearMarks(){document.querySelectorAll('.member.speaking').forEach(el=>el.classList.remove('speaking'));}
-function stop(){player.pause();active=null;clipEnd=null;clearMarks();document.querySelectorAll('[data-play]').forEach(b=>{b.textContent='▶ 整組 MP3';b.setAttribute('aria-pressed','false');});}
-function mark(id,time){const parts=timing.get(id);if(!parts)return;const part=parts.find(p=>time>=p.start-.05&&time<=p.end+.5);document.querySelectorAll(`[data-group="${id}"].member`).forEach(el=>el.classList.toggle('speaking',!!part&&Number(el.dataset.member)===part.member));}
+function stop(){player.pause();active=null;queueMicrotask(()=>{if(!playlist.getState().current)hideVocabularyCard();});clipEnd=null;clearMarks();document.querySelectorAll('[data-play]').forEach(b=>{b.textContent='▶ 整組 MP3';b.setAttribute('aria-pressed','false');});}
+function mark(id,time){const parts=timing.get(id);if(!parts)return;const part=parts.filter(p=>time>=p.start).at(-1)||parts[0];const group=groups.find(g=>g.id===id);if(group&&part){const member=group.members[part.member];const audio=active?player:allAudio;showVocabularyCard(member?{id:group.id+'-'+part.member,word:member.word,zh:member.zh,tip:member.parts}:{id:group.id,word:group.display,zh:group.meaning,tip:group.tip},{back:part.role==='chinese',paused:audio.paused,label:group.typeLabel+' · '+group.display,toggle:()=>{if(active){if(player.paused)player.play().catch(()=>{});else player.pause();}else void playlist.toggle();},stop:()=>{stop();playlist.stop();hideVocabularyCard();}});}document.querySelectorAll(`[data-group="${id}"].member`).forEach(el=>el.classList.toggle('speaking',!!part&&Number(el.dataset.member)===part.member));}
 player.addEventListener('timeupdate',()=>{if(!active)return;if(clipEnd!==null&&player.currentTime>=clipEnd){stop();return;}mark(active,player.currentTime);});
 player.addEventListener('ended',stop);player.addEventListener('error',()=>{if(!active)return;stop();$('#notice').textContent='MP3 無法載入，請重試或下載音檔。';});
 const allAudio=new Audio();allAudio.preload='none';
@@ -21,8 +22,9 @@ function updateAll(state){
  const c=state.current,prefix=state.status==='loading'?'載入中':state.status==='paused'?'已暫停':state.status==='error'?'播放中斷':'正在播放';
  $('#all-status').textContent=state.status==='complete'?`本次連播已結束（共 ${state.total} 組）。`:c?`${prefix} · 第 ${state.index+1} / ${state.total} 組 · ${c.typeLabel} ${c.display}：${c.meaning}${state.error?'。'+state.error:''}`:`目前清單 ${list().length} 組，按「依序播放字族」開始。`;
  $('#all-progress').max=state.total||list().length||500;$('#all-progress').value=state.status==='complete'?state.total:busy?state.index+1:0;
- document.querySelectorAll('.family').forEach(el=>el.classList.toggle('is-playing',busy&&el.dataset.id===c?.id));if(!busy)clearMarks();
+ document.querySelectorAll('.family').forEach(el=>el.classList.toggle('is-playing',busy&&el.dataset.id===c?.id));if(!busy){clearMarks();if(!active)hideVocabularyCard();}else if(c)mark(c.id,allAudio.currentTime);
 }
+for(const a of [player,allAudio])for(const event of ['playing','pause','seeked'])a.addEventListener(event,()=>{const id=active||playlist.getState().current?.id;if(id)mark(id,a.currentTime);});
 const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>list(),stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor});
 $('#play-all').addEventListener('click',()=>{void playlist.start();});$('#all-pause').addEventListener('click',()=>{void playlist.toggle();});
 $('#all-next').addEventListener('click',()=>{void playlist.next();});$('#all-stop').addEventListener('click',()=>playlist.stop());

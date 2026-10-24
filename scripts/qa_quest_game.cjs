@@ -1,7 +1,7 @@
 // Browser verification for English Quest v2 (dist/quest). Usage: node scripts/qa_quest_game.cjs [--smoke]
 const { chromium } = require('C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs = require('node:fs'), http = require('node:http'), path = require('node:path'), assert = require('node:assert/strict'), { pathToFileURL } = require('node:url');
-const root = path.resolve('dist'), out = 'docs/redesign/verification/v5/round6'; fs.mkdirSync(out, { recursive: true });
+const root = path.resolve('dist'), out = process.env.EQ_QA_OUT || 'docs/redesign/verification/v5/round6'; fs.mkdirSync(out, { recursive: true });
 const types = { '.html': 'text/html;charset=utf-8', '.mjs': 'text/javascript', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.mp3': 'audio/mpeg' };
 const server = http.createServer((req, res) => {
   let p = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));

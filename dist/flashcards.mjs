@@ -142894,6 +142894,7 @@ export function renderFlashcardsStudioView() {
               </div>
 
               <!-- 單字與音節拆解 (正面絕無中文釋義，並提供純英語境線索以利思考回想) -->
+<div class="fc-front-picture" aria-hidden="true" style="text-align:center;font-size:45px;line-height:1.1">${currentCard.icon || '📖'}</div>
               <div style="text-align:center;padding:14px 0 10px">
                 <div style="font-size:clamp(28px,6vw,42px);font-weight:800;color:#0f172a;letter-spacing:-0.5px;margin-bottom:6px;line-height:1.2;overflow-wrap:anywhere">
                   ${currentCard.word}

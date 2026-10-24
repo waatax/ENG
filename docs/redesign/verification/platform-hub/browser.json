@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "home, search, direct game link, no overflow 320px",
+    "home, search, direct game link, no overflow 390px",
+    "home, search, direct game link, no overflow 1280px",
+    "9500-word MP3 deep link, pause, all repetition boundaries and manual override",
+    "all 8 levels open the matching playable word card",
+    "family header, member word, translation and filtering retain playback card",
+    "mnemonic player clears the shared mobile navigation",
+    "game entry loads without answer-revealing vocabulary overlay",
+    "English-only card follows speech completion, closes safely and ignores stale callbacks",
+    "lesson/school word pronunciation opens a card and navigation dismisses it",
+    "catalog failure offers retry, game remains reachable, empty search is recoverable"
+  ],
+  "errors": []
+}

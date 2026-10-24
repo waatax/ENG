@@ -1,3 +1,5 @@
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=hub1';
+import {hideVocabularyCard} from './vocabulary_card.mjs';
 import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
 import { enhanceLearningPage } from './learning_navigation.mjs?v=lessons20261020';
@@ -59,7 +61,7 @@ try {
 }
 
 // 導覽頁面狀態
-let page = 'knowledge';
+let page = 'home';
 let knowledgeId = ''; // 預設首頁為 108 課綱學年地圖
 let selected = null;
 let resultId = null;
@@ -125,6 +127,7 @@ function due() {
 
 function navigate(p) {
   stopFlashcardAutoPlay();
+  hideVocabularyCard();
   stopWordAudio(root);
   pauseLessonAudio();
   stopCommuteDialogue(false);
@@ -717,7 +720,7 @@ function shell(body) {
       <aside class="side">
         <div class="brand">English<span> Quest.</span></div>
         <div class="edition">英語自學 · 理解與應用</div><div class="mobile-learning-entry"><a href="#listening">🎧 通勤會話快播</a><a href="#wordaudio">▶ 選單字集・聽讀</a><a href="#flashcards">⚡ 單字片語閃卡</a><a href="mnemonics/index.html">💡 1,000 字聯想記憶卡</a><a href="roots/index.html">🧩 500 組字根字族</a><a href="EN/">English Academy ↗</a></div>
-        
+
         <div class="user-xp-pill" style="background:rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.12)">
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:4px">
             <span>✨ 精熟經驗值 (XP)</span>
@@ -730,18 +733,7 @@ function shell(body) {
         </div>
 
         <details class="site-menu" ${typeof window !== 'undefined' && window.innerWidth <= 768 ? '' : 'open'}><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
-          ${nav.map(([id, num, label], idx) => {
-            let header = '';
-            if (idx === 0) header = '<div class="nav-group-header">🌟 程度檢定與引導</div>';
-            else if (idx === 1) header = '<div class="nav-group-header">🧩 觀念圖解與知識點</div>';
-            else if (idx === 5) header = '<div class="nav-group-header">🎒 課綱學年與發音微課</div>';
-            else if (idx === 10) header = '<div class="nav-group-header">🏫 升學會考與先修講義</div>';
-            else if (idx === 15) header = '<div class="nav-group-header">🗂️ 核心單字與構詞閃卡</div>';
-            else if (idx === 18) header = '<div class="nav-group-header">🎯 題庫實戰與學習紀錄</div>';
-            return `${header}<button data-nav="${id}" class="${page === id ? 'active' : ''}"><small>${num}</small>${label}</button>`;
-          }).join('')}
-          <a href="mnemonics/index.html" class="btn">💡 1,000 字聯想記憶卡 · MP3</a>
-          <a href="roots/index.html" class="btn">🧩 500 組字根字族 · MP3</a>
+<a href="#home">⌂ 首頁</a><a href="#words">Aa 學單字</a><a href="quest/">✦ 玩遊戲</a><a href="#wordaudio">♫ MP3 聽讀</a><a href="mnemonics/">💡 聯想記憶</a><a href="roots/">🌱 字根字族</a><a href="#knowledge">▤ 教材總覽</a><details><summary>課程、練習與工具</summary><button data-toggle-reading-drawer="true">閱讀設定</button>${nav.map(([id,num,label])=>`<a href="#${id}">${label}</a>`).join('')}</details>
         </nav></details>
         <div class="side-foot">
           <strong>108課綱・自學教材持續更新</strong><br>
@@ -753,8 +745,8 @@ function shell(body) {
       <div class="main-wrapper">
         <details class="reading-settings"><summary>閱讀設定 · 字體與顯示</summary>${renderDisplayToolbar(currentTitle)}</details>
         ${['knowledge', 'curriculum108'].includes(page) ? '<details class="quick-review-options"><summary>📱 通勤會話・單字・片語集快選 · 一鍵自動播放</summary>' + renderFlashcardQuickPlay() + '</details>' : ''}
-        ${page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)}
-        ${['knowledge','knowledgePoint','chapter','junyi','schoolwords','wordpractice','flashcards','affixes','grammar','listening','wordaudio'].includes(page) ? '' : renderStageQuickNav()}
+
+
         <main class="main" id="main-content">
           ${body}
         </main>
@@ -2325,6 +2317,8 @@ function progress() {
 function render() {
   prepareWordAudio(root);
   const pages = {
+    home:renderLearningHub,
+    words:()=>`<article class="learning-hub"><h1>學單字</h1><p class="hub-lead">選程度或搜尋，直接從你要的單字開始聽讀。</p>${renderWordPicker()}</article>`,
     affixes: renderAffixGuide,
     wordpractice: renderFullWordPractice,
     schoolwords: renderSchoolWords,
@@ -2352,9 +2346,11 @@ function render() {
   root.innerHTML = shell((pages[page] || knowledgeHome)());
   if (window.matchMedia('(max-width: 768px)').matches) root.querySelector('.site-menu')?.removeAttribute('open');
   bindEvents();
+  bindLearningHub(root);
   enhanceLearningPage(root);
   syncLessonAudio();
   bindWordAudio(root,render);
+  document.dispatchEvent(new Event('eq-route-change'));
 }
 
 function bindEvents() {
@@ -2911,13 +2907,14 @@ root.addEventListener('input', e => searchKnowledge(e.target));
 root.addEventListener('change', e => { if(['knowledge-stage','knowledge-domain'].includes(e.target.id)) searchKnowledge(e.target); });
 function readKnowledgeRoute() {
   const parts = location.hash.slice(1).split('/');
-  if (!parts[0]) { knowledgeId=''; page='knowledge'; render(); return; }
+  if (!parts[0]) { knowledgeId=''; page='home'; render(); return; }
+  if (['home','words'].includes(parts[0])) { navigate(parts[0]); return; }
   if (['affix-prefixes','affix-suffixes','affix-library'].includes(parts[0])) {
     if (page !== 'affixes') { page='affixes'; render(); }
     document.getElementById(parts[0])?.scrollIntoView();
     return;
   }
-  if (parts[0] === 'wordaudio') { setWordAudioGroup(parts[1]); navigate('wordaudio'); }
+  if (parts[0] === 'wordaudio') { setWordAudioGroup(parts[1],parts[2]); navigate('wordaudio'); }
   else if (parts[0] === 'grammar') { setGrammarTopic(parts[1] || ''); navigate('grammar'); }
   else if (parts[0] === 'listening') { navigate('listening'); }
   else if (parts[0] === 'unit' && UNIFIED_GRADES.some(g=>g.semesters.some(s=>s.units.some(u=>u.id===parts[1])))) { activeUnitId=parts[1]; navigate('junyi'); }

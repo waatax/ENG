@@ -1,0 +1,23 @@
+[
+  "app.js",
+  "audio.mjs",
+  "flashcards.mjs",
+  "index.html",
+  "start.mjs",
+  "word_mp3.mjs",
+  "learning_navigation.mjs",
+  "learning_hub.mjs",
+  "vocabulary_card.mjs",
+  "vocabulary-catalog.json",
+  "platform_nav.mjs",
+  "platform.css",
+  "roots/app.mjs",
+  "roots/index.html",
+  "mnemonics/index.html",
+  "EN/academy.mjs",
+  "EN/index.html",
+  "quest/view.mjs",
+  "quest/index.html",
+  "mnemonics/card_player.mjs",
+  "mnemonics/app.mjs"
+]

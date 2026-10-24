@@ -16,6 +16,7 @@ export function enhanceLearningPage(root) {
     title.tabIndex=-1;title.focus({preventScroll:true});
   }
   lastRoute=location.hash;
+  if(main.querySelector('.learning-hub'))return;
   const entry = journeyCatalog.find(c=>c.link === location.hash);
   if (entry && title?.textContent.trim()===entry.title) {
     const framework=skillFramework[entry.domain];

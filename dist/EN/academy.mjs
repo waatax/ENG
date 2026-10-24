@@ -1,3 +1,4 @@
+import {showVocabularyCard,hideVocabularyCard} from '../vocabulary_card.mjs';
 import { speak as speakAmerican, stopAudio as stopAmericanAudio } from '../audio.mjs';
 import {tracks} from './content.mjs';
 import {renderReasoningMap} from './reasoning_map.mjs?v=lessons20261020';
@@ -72,6 +73,7 @@ function applyDisplayPreferences(){
 }
 
 function stop(clear=true){
+  hideVocabularyCard();
   token++;
   clearTimeout(timer);
   playing=false;
@@ -98,6 +100,16 @@ function buildAudioSpeechText(term,def,example){
   if(saved.audioMode==='word_def')return `${term}. Meaning: ${def}.`;
   if(saved.audioMode==='word_def_3x')return `${term}. ${def}. ${term}. ${def}. ${term}. ${def}. ${example}`;
   return `${term}. ${def}. ${example}`;
+}
+
+function speakVocabularyEntry(term,definition,example,version,done){
+ const repeats=saved.audioMode==='word_def_3x'?3:1,parts=[];
+ for(let i=0;i<repeats;i++){parts.push({text:term,back:false});parts.push({text:definition,back:true});}
+ if(saved.audioMode!=='word_def'&&example)parts.push({text:example,back:true});
+ let step=0;function nextPart(){if(version!==token)return;const part=parts[step++];if(!part){done();return;}
+ showVocabularyCard({id:'en-'+term,word:term,zh:definition,definition,tip:'Picture a situation. Use the word in your own sentence.',example},{lang:'en',back:part.back,label:'English · '+step+' / '+parts.length,stop:()=>stop()});
+ speak(part.text,()=>{if(version!==token)return;const delay=saved.audioMode==='think_pause'&&!part.back?1400:250;timer=setTimeout(nextPart,delay);},version);
+ }nextPart();
 }
 
 function listen(at=index,single=false){
@@ -131,29 +143,7 @@ function listen(at=index,single=false){
     persist();
     status.textContent=`${index+1} / ${current.lesson.words.length} · ${w[0]}`;
     document.querySelectorAll('[data-word]').forEach(el=>el.classList.toggle('active',Number(el.dataset.word)===index));
-    const speechText=buildAudioSpeechText(w[0],w[1],w[2]);
-    if(saved.audioMode==='think_pause'&&!single){
-      speak(`${w[0]}.`,()=>{
-        if(version!==token)return;
-        timer=setTimeout(()=>{
-          if(version!==token)return;
-          speak(`${w[1]}. ${w[2]}`,()=>{
-            index++;
-            timer=setTimeout(next,900);
-          },version);
-        },1400);
-      },version);
-    }else{
-      speak(speechText,()=>{
-        if(single){
-          stop(false);
-          status.textContent='Finished. Tap Listen to continue the set.';
-        }else{
-          index++;
-          timer=setTimeout(next,900);
-        }
-      },version);
-    }
+    speakVocabularyEntry(w[0],w[1],w[2],version,()=>{if(single){stop(false);status.textContent='Finished. Tap Listen to continue the set.';}else{index++;timer=setTimeout(next,900);}});
   }
   next();
 }
@@ -203,29 +193,7 @@ function listenStudioSet(at=0,single=false){
     const [term,,pos,def,,example]=item;
     status.textContent=`${activeVocabIndex+1} / ${set.items.length} · ${term} (${pos||'term'})`;
     document.querySelectorAll('[data-studio-word]').forEach(el=>el.classList.toggle('active',Number(el.dataset.studioWord)===activeVocabIndex));
-    const speechText=buildAudioSpeechText(term,def,example);
-    if(saved.audioMode==='think_pause'&&!single){
-      speak(`${term}.`,()=>{
-        if(version!==token)return;
-        timer=setTimeout(()=>{
-          if(version!==token)return;
-          speak(`Definition: ${def}. Example: ${example}`,()=>{
-            activeVocabIndex++;
-            timer=setTimeout(nextItem,900);
-          },version);
-        },1400);
-      },version);
-    }else{
-      speak(speechText,()=>{
-        if(single){
-          stop(false);
-          status.textContent='Finished entry. Tap Play this set to continue.';
-        }else{
-          activeVocabIndex++;
-          timer=setTimeout(nextItem,900);
-        }
-      },version);
-    }
+    speakVocabularyEntry(term,def,example,version,()=>{if(single){stop(false);status.textContent='Finished entry. Tap Play this set to continue.';}else{activeVocabIndex++;timer=setTimeout(nextItem,900);}});
   }
   nextItem();
 }

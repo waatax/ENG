@@ -33,6 +33,9 @@ jobs:
       - name: Verify mnemonic flip timing and recall compatibility
         run: node --test scripts/test_mnemonic_flip.mjs scripts/test_mnemonic_playlist.mjs scripts/test_mnemonic_recall.mjs
 
+      - name: Verify all vocabulary cards and MP3 boundaries
+        run: node --test scripts/test_vocabulary_platform.mjs scripts/test_word_mp3.mjs scripts/test_audio_completion.mjs scripts/test_english_academy.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

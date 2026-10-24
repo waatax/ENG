@@ -1,3 +1,4 @@
+import {showVocabularyCard,hideVocabularyCard} from './vocabulary_card.mjs';
 // audio.mjs - 雙擎語音播放引擎（Web Speech Synthesis + Web Audio API Fallback）
 
 let voices = [];
@@ -142,6 +143,7 @@ export function speak(text, {rate=1, pitch=1, lang='en-US', voiceRole=0, require
 
 // 快速播放單字（支援慢速 0.75x）
 export function playWord(word, slow = false, callbacks = {}) {
+  if(typeof document!=='undefined'&&!document.querySelector('.fc-card-stage'))showVocabularyCard({word},{label:'單字發音',stop:()=>stopAudio()});
   speak(word, { rate: slow ? 0.72 : 0.95, lang: 'en-US', ...callbacks });
 }
 

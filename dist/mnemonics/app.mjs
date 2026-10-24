@@ -1,4 +1,4 @@
-import {installCardPlayer} from './card_player.mjs?v=flip1';
+import {installCardPlayer} from './card_player.mjs?v=hub1';
 import {directionRecord,recordRecall,cleanRecord} from './mnemonic_recall.mjs?v=keyword6r2';
 import {createMnemonicPlaylist,AUDIO_VERSION} from './mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-mnemonics-v1',esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

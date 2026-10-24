@@ -56,7 +56,7 @@ function questList() {
 }
 function layout(body, { wide = false } = {}) {
   return `<div class="shell">
-  <nav class="side" aria-label="主要導覽"><a class="brand" href="#learn">${mascot('happy', 40)}<span>English Quest<small>每天一小關</small></span></a>${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i>${t}</a>`).join('')}<a class="side-out" href="../">← 回到完整教材網</a></nav>
+  <nav class="side" aria-label="主要導覽"><a class="brand" href="#learn">${mascot('happy', 40)}<span>English Quest<small>每天一小關</small></span></a>${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i>${t}</a>`).join('')}<a class="side-out" href="../#words">Aa 學單字與聽讀</a><a class="side-out" href="../#home">← 學習首頁</a></nav>
   <header class="top">${trackChip()}${stats()}</header>
   <main id="main" class="main ${wide ? 'wide' : ''}">${game.warning ? `<div class="warn" role="status">${esc(game.warning)}</div>` : ''}${ui.busy ? `<div class="busy" role="status">${esc(ui.busy)}</div>` : ''}${body}</main>
   ${wide ? '' : rail()}
