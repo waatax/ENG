@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "front/back and no overflow 320px",
+    "front/back and no overflow 390px",
+    "front/back and no overflow 1280px",
+    "real MP3 seek follows all four recorded phases",
+    "manual face stays until auto is restored",
+    "playlist survives search, pauses/resumes and advances with visible card",
+    "close stops both players; reverse recall still saves",
+    "uninterrupted real audio flips front/back/front and advances naturally",
+    "missing MP3 can retry the same card"
+  ],
+  "errors": []
+}

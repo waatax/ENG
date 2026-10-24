@@ -1,3 +1,4 @@
+import {installCardPlayer} from './card_player.mjs?v=flip1';
 import {directionRecord,recordRecall,cleanRecord} from './mnemonic_recall.mjs?v=keyword6r2';
 import {createMnemonicPlaylist,AUDIO_VERSION} from './mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-mnemonics-v1',esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -9,20 +10,23 @@ const recallMeaning=c=>c.zh.replace(/（[^）]*[a-zA-Z][^）]*）|\([^)]*[a-zA-Z
 const direction=()=>$('#direction').value;
 const recallRecord=c=>directionRecord(progress[c.id],direction());
 const trioUrl=c=>'audio-trio/'+encodeURIComponent(c.word)+'.mp3';
-function stop(){player.pause();active=null;document.querySelectorAll('[data-play]').forEach(b=>{b.textContent='▶ 四段聯想 MP3';b.setAttribute('aria-pressed','false');});}
+function stop(){player.pause();active=null;queueMicrotask(()=>followCard.sync());document.querySelectorAll('[data-play]').forEach(b=>{b.textContent='▶ 四段聯想 MP3';b.setAttribute('aria-pressed','false');});}
+for(const event of ['playing','pause'])player.addEventListener(event,()=>{const b=document.querySelector('[data-play="'+active+'"]');if(b){b.textContent=player.paused?'▶ 繼續播放':'Ⅱ 暫停';b.setAttribute('aria-pressed',String(!player.paused));}});
 player.addEventListener('ended',stop);player.addEventListener('error',()=>{if(!active)return;stop();$('#notice').textContent='MP3 無法載入，請重試或下載音檔。';});
 const allAudio=new Audio();allAudio.preload='none';
 function updateAll(state){
+ queueMicrotask(()=>followCard.sync());
  const busy=['loading','playing','paused','error'].includes(state.status);
  $('#play-all').disabled=!cards.length||busy;
  $('#all-stop').disabled=!busy;$('#all-next').disabled=!['playing','paused','error'].includes(state.status);
  const pause=$('#all-pause');pause.disabled=!['playing','paused','error'].includes(state.status);pause.textContent=state.status==='paused'?'▶ 繼續播放':state.status==='error'?'▶ 重試這張':'Ⅱ 暫停';pause.setAttribute('aria-pressed',String(state.status==='paused'));
  const current=state.current;const prefix=state.status==='loading'?'載入中':state.status==='paused'?'已暫停':state.status==='error'?'播放中斷':'正在播放';
- $('#all-status').textContent=state.status==='complete'?`本次連播已結束（共 ${state.total.toLocaleString()} 張）。`:current?`${prefix} · 第 ${state.index+1} / ${state.total.toLocaleString()} 張 · ${current.displayWord||current.word} → ${current.cue} → ${current.zh}${state.error?'。'+state.error:''}`:`共 ${cards.length.toLocaleString()} 張，按「一次全部播放（聯想）」開始。`;
+ $('#all-status').textContent=state.status==='complete'?`本次連播已結束（共 ${state.total.toLocaleString()} 張）。`:current?`${prefix} · 第 ${state.index+1} / ${state.total.toLocaleString()} 張 · ${current.displayWord||current.word}${state.error?'。'+state.error:''}`:`共 ${cards.length.toLocaleString()} 張，按「一次全部播放（聯想）」開始。`;
  $('#all-progress').max=state.total||cards.length||1000;$('#all-progress').value=state.status==='complete'?state.total:busy?state.index+1:0;
  document.querySelectorAll('.word-card').forEach(el=>el.classList.toggle('is-playing',busy&&el.dataset.id===current?.id));
 }
 const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>cards,stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor:trioUrl});
+const followCard=installCardPlayer({single:player,all:allAudio,getCard:id=>cards.find(c=>c.id===id),getSingle:()=>active,getPlaylist:()=>playlist.getState(),escape:esc,onStop:()=>{stop();playlist.stop();},onToggle:()=>{if(active){if(player.paused)player.play().catch(()=>stop());else player.pause();}else void playlist.toggle();}});
 $('#play-all').addEventListener('click',()=>{void playlist.start();});
 $('#all-pause').addEventListener('click',()=>{void playlist.toggle();});
 $('#all-next').addEventListener('click',()=>{void playlist.next();});
@@ -35,11 +39,12 @@ function stressText(p){return p?`${p.syllables} 音節 · ${p.syllables===1?'單
 function familyLinks(c){return c.families?.length?`<p class="families">字族：${c.families.map(f=>`<a href="../roots/index.html#${esc(f.id)}">${esc(f.type)} ${esc(f.key)}（${esc(f.meaning)}）</a>`).join('')}</p>`:'';}
 function cardHtml(c){const open=revealed.has(c.id),saved=recallRecord(c),reverse=direction()==='reverse',word=c.displayWord||c.word;
 return `<article class="word-card" data-id="${esc(c.id)}"><div class="topline"><span>${esc(c.category)}</span><span class="method method-${METHODS.indexOf(c.method)}">${esc(c.method)}</span></div>
-<p class="recall-prompt">${reverse?"看中文，先說英文並拼字":"看英文，先說中文意思"}</p><h2 lang="${reverse?"zh-Hant":"en"}">${esc(reverse?recallMeaning(c):word)}</h2>${reverse?"":`<p class="phonetic" lang="en">音素：${esc(c.sounds)}</p><p class="pronunciation">${esc(stressText(c.pronunciation))}</p>`}
+<div class="card-front" ${open?'hidden':''}><p class="recall-prompt">${reverse?"看中文，先說英文並拼字":"看英文，先說中文意思"}</p><h2 lang="${reverse?"zh-Hant":"en"}">${esc(reverse?recallMeaning(c):word)}</h2>${reverse?"":`<p class="phonetic" lang="en">音素：${esc(c.sounds)}</p><p class="pronunciation">${esc(stressText(c.pronunciation))}</p>`}
+<div class="card-picture" aria-hidden="true">${esc(c.icon)}</div></div>
 <div class="actions"><button class="play" data-play="${esc(c.id)}" aria-label="${reverse?"聽答案提示":"播放 "+esc(word)} 的四段聯想 MP3" aria-pressed="false">▶ 四段聯想 MP3</button><a class="download" href="${trioUrl(c)}?v=${AUDIO_VERSION}" download="${esc(c.word)}-聯想.mp3" aria-label="${reverse?"下載答案音訊":"下載 "+esc(word)+" MP3"}">↓ MP3</a></div>
 <p class="audio-order">英文 → ${c.method==='諧音聯想'?'近音口訣':'聯想提示'} → 中文意思 → 英文</p>
-<button data-reveal="${esc(c.id)}" aria-expanded="${open}" aria-controls="answer-${esc(c.id)}">${open?'遮住答案，再回想':'翻卡：看意思與聯想'}</button>
-<div class="answer" id="answer-${esc(c.id)}" ${open?'':'hidden'}>${reverse?`<h3 lang="en">${esc(word)}</h3><p class="pronunciation">${esc(stressText(c.pronunciation))}</p>`:""}<div class="icon" aria-hidden="true">${esc(c.icon)}</div><p class="meaning">${esc(c.zh)}</p>${c.hook&&!custom[c.id]?`<p class="hook-badge"><span>${c.method==='外來語借音'?'借音':'諧音'}</span>「${esc(c.hook)}」</p>`:''}<p class="cue">${cueHtml(c)}</p>${custom[c.id]?`<p class="status">MP3 朗讀本站原始口訣「${esc(c.cue)}」；自訂口訣只儲存在此瀏覽器。</p>`:''}<p class="scene">${esc(custom[c.id]?'用自己的口訣連結這個字的意思，再跟著 MP3 念一次。':c.scene)}</p>
+<button data-reveal="${esc(c.id)}" aria-expanded="${open}" aria-controls="answer-${esc(c.id)}">${open?'翻回正面，再回想':'翻卡：看意思與聯想'}</button>
+<div class="answer" id="answer-${esc(c.id)}" ${open?'':'hidden'}>${reverse?`<h3 lang="en">${esc(word)}</h3><p class="pronunciation">${esc(stressText(c.pronunciation))}</p>`:""}<p class="meaning">${esc(c.zh)}</p>${c.hook&&!custom[c.id]?`<p class="hook-badge"><span>${c.method==='外來語借音'?'借音':'諧音'}</span>「${esc(c.hook)}」</p>`:''}<p class="cue">${cueHtml(c)}</p>${custom[c.id]?`<p class="status">MP3 朗讀本站原始口訣「${esc(c.cue)}」；自訂口訣只儲存在此瀏覽器。</p>`:''}<p class="scene">${esc(custom[c.id]?'用自己的口訣連結這個字的意思，再跟著 MP3 念一次。':c.scene)}</p>
 <p class="spell"><strong>拼字鉤子</strong>${esc(c.spell)}</p><div class="example"><p lang="en">${esc(c.example)}</p><p>${esc(c.exampleZh)}</p></div>
 ${c.soundBridge?`<div class="sound-bridge"><strong>${esc(c.soundBridge.scope)}</strong><p>${esc(c.soundBridge.note)}</p></div>`:''}${c.soundNote?`<p class="sound-note">辨音：${esc(c.soundNote)}</p>`:''}${familyLinks(c)}
 <p class="dictionary"><a href="${esc(c.dictionaryUrl)}" target="_blank" rel="noopener noreferrer">查詞典：發音與用法 ↗</a></p><div class="grade"><button data-grade="${esc(c.id)}" data-correct="false">還沒記住</button><button data-grade="${esc(c.id)}" data-correct="true">回想答對了</button></div>
@@ -51,7 +56,7 @@ playlist.refresh();$('#prev').disabled=page===0;$('#next').disabled=(page+1)*SIZ
 }
 $('#cards').addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset,id=d.play||d.reveal||d.grade||d.save||d.reset,c=cards.find(c=>c.id===id);if(!c)return;
 if(d.play){playlist.stop();if(active===id&&!player.paused){player.pause();b.textContent='▶ 繼續播放';b.setAttribute('aria-pressed','false');return;}if(active!==id){stop();active=id;player.src=new URL(trioUrl(c)+'?v='+AUDIO_VERSION,import.meta.url).href;}try{await player.play();if(active===id){b.textContent='Ⅱ 暫停';b.setAttribute('aria-pressed','true');}}catch{if(active!==id)return;stop();$('#notice').textContent='無法開始播放，請重試或使用 MP3 下載。';}return;}
-if(d.reveal){revealed.has(id)?revealed.delete(id):revealed.add(id);const answer=$('#answer-'+id);answer.hidden=!revealed.has(id);b.setAttribute('aria-expanded',String(!answer.hidden));b.textContent=answer.hidden?'翻卡：看意思與聯想':'遮住答案，再回想';return;}
+if(d.reveal){revealed.has(id)?revealed.delete(id):revealed.add(id);const answer=$('#answer-'+id);answer.hidden=!revealed.has(id);b.closest('.word-card').querySelector('.card-front').hidden=!answer.hidden;b.setAttribute('aria-expanded',String(!answer.hidden));b.textContent=answer.hidden?'翻卡：看意思與聯想':'遮住答案，再回想';return;}
 if(d.grade){const ok=d.correct==='true',old=progress[id];progress[id]=recordRecall(old,ok,direction());save();revealed.delete(id);render();$('#notice').textContent=`${c.displayWord||c.word} 已記錄；${ok?'依此方向的回想進度安排下次複習。':'十分鐘後再試一次。'}`;}
 if(d.save){const value=$('#custom-'+id).value.trim();if(value)custom[id]=value.slice(0,200);else delete custom[id];save();render();$('#notice').textContent='口訣已儲存。';}
 if(d.reset){delete custom[id];save();render();$('#notice').textContent='已恢復原口訣。';}

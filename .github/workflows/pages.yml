@@ -30,6 +30,9 @@ jobs:
       - name: Verify 1000 mnemonic cards, 500 word families and their MP3s
         run: node scripts/validate_mnemonic_release.mjs
 
+      - name: Verify mnemonic flip timing and recall compatibility
+        run: node --test scripts/test_mnemonic_flip.mjs scripts/test_mnemonic_playlist.mjs scripts/test_mnemonic_recall.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
