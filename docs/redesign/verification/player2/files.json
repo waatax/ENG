@@ -1,0 +1,15 @@
+[
+  "card_fullscreen.mjs",
+  "word_queue.mjs",
+  "vocabulary_card.mjs",
+  "word_mp3.mjs",
+  "platform.css",
+  "index.html",
+  "mnemonics/app.mjs",
+  "mnemonics/card_player.mjs",
+  "mnemonics/index.html",
+  "roots/app.mjs",
+  "roots/index.html",
+  "EN/index.html",
+  "quest/index.html"
+]

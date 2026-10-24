@@ -1,3 +1,4 @@
+import {shuffledWords} from '../word_queue.mjs';
 import {installCardPlayer} from './card_player.mjs?v=hub1';
 import {directionRecord,recordRecall,cleanRecord} from './mnemonic_recall.mjs?v=keyword6r2';
 import {createMnemonicPlaylist,AUDIO_VERSION} from './mnemonic_playlist.mjs?v=keyword6r2';
@@ -25,9 +26,10 @@ function updateAll(state){
  $('#all-progress').max=state.total||cards.length||1000;$('#all-progress').value=state.status==='complete'?state.total:busy?state.index+1:0;
  document.querySelectorAll('.word-card').forEach(el=>el.classList.toggle('is-playing',busy&&el.dataset.id===current?.id));
 }
-const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>cards,stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor:trioUrl});
+let playbackSelection=null;
+const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>playbackSelection||cards,stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor:trioUrl});
 const followCard=installCardPlayer({single:player,all:allAudio,getCard:id=>cards.find(c=>c.id===id),getSingle:()=>active,getPlaylist:()=>playlist.getState(),escape:esc,onStop:()=>{stop();playlist.stop();},onToggle:()=>{if(active){if(player.paused)player.play().catch(()=>stop());else player.pause();}else void playlist.toggle();}});
-$('#play-all').addEventListener('click',()=>{void playlist.start();});
+$('#play-all').addEventListener('click',()=>{playbackSelection=null;void playlist.start();});
 $('#all-pause').addEventListener('click',()=>{void playlist.toggle();});
 $('#all-next').addEventListener('click',()=>{void playlist.next();});
 $('#all-stop').addEventListener('click',()=>playlist.stop());
@@ -75,3 +77,5 @@ try{const r=await fetch(new URL('cards.json?v='+AUDIO_VERSION,import.meta.url));
  $('#editorial').textContent='本版 1,000 張逐詞重寫：'+used.map(m=>m+' '+count(m)+' 張').join('、')+`；${cards.filter(c=>c.families?.length).length} 張可直接連到字根字族。全部 MP3 的英文、口訣、意思與重複英文都依本版文字校驗。`;
  const q=new URLSearchParams(location.search).get('q');if(q){$('#search').value=q.slice(0,60);}
  render();}catch{$('#count').textContent='字卡載入失敗，請重新整理再試。';}
+
+for(const mode of ['random','wrong'])$('#play-'+mode).addEventListener('click',()=>{const selected=mode==='random'?shuffledWords(list()):list().filter(c=>['forward','reverse'].some(d=>{const r=directionRecord(progress[c.id],d);return r?.reviews>0&&r.step===0;}));if(!selected.length){$('#notice').textContent='目前篩選範圍沒有需要播放的錯題。';return;}playbackSelection=selected;void playlist.start();});

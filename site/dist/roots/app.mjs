@@ -1,3 +1,4 @@
+import {shuffledWords} from '../word_queue.mjs';
 import {showVocabularyCard,hideVocabularyCard} from '../vocabulary_card.mjs';
 import {createMnemonicPlaylist,AUDIO_VERSION} from '../mnemonics/mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-word-families-v1',SIZE=12,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -25,8 +26,9 @@ function updateAll(state){
  document.querySelectorAll('.family').forEach(el=>el.classList.toggle('is-playing',busy&&el.dataset.id===c?.id));if(!busy){clearMarks();if(!active)hideVocabularyCard();}else if(c)mark(c.id,allAudio.currentTime);
 }
 for(const a of [player,allAudio])for(const event of ['playing','pause','seeked'])a.addEventListener(event,()=>{const id=active||playlist.getState().current?.id;if(id)mark(id,a.currentTime);});
-const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>list(),stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor});
-$('#play-all').addEventListener('click',()=>{void playlist.start();});$('#all-pause').addEventListener('click',()=>{void playlist.toggle();});
+let playbackSelection=null;
+const playlist=createMnemonicPlaylist({audio:allAudio,getCards:()=>playbackSelection||list(),stopOther:stop,onState:updateAll,baseUrl:import.meta.url,fileFor});
+$('#play-all').addEventListener('click',()=>{playbackSelection=null;void playlist.start();});$('#all-pause').addEventListener('click',()=>{void playlist.toggle();});
 $('#all-next').addEventListener('click',()=>{void playlist.next();});$('#all-stop').addEventListener('click',()=>playlist.stop());
 const haystack=g=>[g.key,g.display,g.meaning,g.tip,g.typeLabel,...g.members.flatMap(m=>[m.word,m.zh,m.parts])].join(' ').toLowerCase();
 function list(){const q=$('#search').value.trim().toLowerCase(),type=$('#type').value,mode=$('#review').value,now=Date.now();
@@ -65,3 +67,5 @@ try{const [g,a,c]=await Promise.all(['groups.json','audio-manifest.json','../mne
  $('#type').innerHTML='<option value="">全部類型</option>'+TYPES.map(t=>`<option value="${t}">${t}（${groups.filter(x=>x.typeLabel===t).length}）</option>`).join('');
  $('#hero-stats').textContent=`500 組字族 · ${TYPES.map(t=>`${t} ${groups.filter(x=>x.typeLabel===t).length} 組`).join(' · ')} · ${g.members.toLocaleString()} 個成員字`;
  render();openHash();}catch{$('#count').textContent='字族載入失敗，請重新整理再試。';}
+
+for(const mode of ['random','wrong'])$('#play-'+mode).addEventListener('click',()=>{const selected=mode==='random'?shuffledWords(list()):list().filter(g=>progress[g.id]?.reviews>0&&progress[g.id]?.step===0);if(!selected.length){$('#notice').textContent='目前篩選範圍沒有需要播放的錯題。';return;}playbackSelection=selected;void playlist.start();});

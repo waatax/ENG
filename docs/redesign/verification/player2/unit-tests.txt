@@ -1,0 +1,25 @@
+✔ Every card follows its actual MP3 boundaries, including pauses and seeking backwards (19.5636ms)
+✔ All 1000 revised cards play once in order and stop after the last (15170.7533ms)
+✔ Pause/resume preserves the current position; next moves exactly one card (0.559ms)
+✔ Stop cancels queued playback and a fresh start begins at the first card (0.6235ms)
+✔ Missing files stop progression until retry or explicit next (13.6767ms)
+✔ An obsolete rejected play promise cannot restart or corrupt a stopped queue (0.2764ms)
+✔ Word-family playlists use their own file names with the shared version tag (15.0651ms)
+✔ Reverse-only practice does not claim forward practice; repeated early success cannot skip spacing (1.2611ms)
+✔ Legacy progress migrates to forward; export/import preserves both valid directions (1.2794ms)
+✔ All 9500 stable card IDs resolve to the exact MP3 group, word, translation and starting position (495.1845ms)
+✔ All 28500 MP3 repetitions flip at their recorded English and Chinese boundaries (153.5471ms)
+✔ All 9500 existing flashcards appear exactly once in 190 50-word groups (4.1868ms)
+✔ Every final MP3 has all bilingual words and three ordered English-Chinese rounds (1145.908ms)
+✔ MP3 route, duration labels and unsafe route handling are predictable (8.1384ms)
+✔ Shuffle preserves IDs exactly once and does not mutate its source (5.1829ms)
+✔ Only unresolved mistakes from the four documented sources are collected and deduplicated (1.0421ms)
+✔ Corrupt storage is reported rather than mistaken for a clean wrong-answer record (0.1563ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15286.8317
