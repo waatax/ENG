@@ -34,7 +34,7 @@ const KEY = 'english-quest-game-v2';
       if (s.feedback) { await page.locator('#go').click(); return 'next'; }
       const it = items[s.queue[s.index]];
       if (it.type === 'info' || it.type === 'line') { await page.locator('#go').click(); return it.type; }
-      assert.equal(await page.locator('[data-act="prompt-say"]').getAttribute('data-text'),it.prompt);
+      assert.equal(await page.locator('.prompt [data-act="prompt-say"]').getAttribute('data-text'),it.prompt);
       if (it.type === 'choice' || it.type === 'listen') {
         const opts = page.locator('.opt'); const n = await opts.count();
         for (let i = 0; i < n; i++) { const v = await opts.nth(i).getAttribute('data-v'); if ((v === it.answer) !== wrong) { await opts.nth(i).click(); break; } }
