@@ -47,3 +47,20 @@ export function sfx(kind) {
     }
   } catch {}
 }
+
+// A shared generation cancels the entire bilingual sequence on next/stop/another playback.
+export async function narrate(text, { slow = false } = {}) {
+  stop();
+  if (!text) return 'unavailable';
+  const chunks = String(text).match(/[a-zA-Z][a-zA-Z0-9\s.,!?'’:_-]*|[^a-zA-Z]+/g) || [];
+  let expected = generation;
+  for (const chunk of chunks) {
+    if (generation !== expected) return 'stopped';
+    if (!/[a-zA-Z\u3400-\u9fff]/.test(chunk)) continue;
+    const pending = speak(chunk, { slow, lang: /[\u3400-\u9fff]/.test(chunk) ? 'zh' : 'en' });
+    expected = generation;
+    const result = await pending;
+    if (result !== 'ok') return result;
+  }
+  return 'ok';
+}

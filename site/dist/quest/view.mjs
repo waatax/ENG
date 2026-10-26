@@ -1,5 +1,6 @@
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v6';
-import * as sound from './sound.mjs?v=memory1';
+import * as sound from './sound.mjs?v=coach20261026';
+import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
 const V = '20261024v6';
 import {nextAdventure,sessionTrail} from './adventure.mjs';
@@ -57,7 +58,7 @@ function questList() {
 function layout(body, { wide = false } = {}) {
   return `<div class="shell">
   <nav class="side" aria-label="主要導覽"><a class="brand" href="#learn">${mascot('happy', 40)}<span>English Quest<small>每天一小關</small></span></a>${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i>${t}</a>`).join('')}<a class="side-out" href="../#words">Aa 學單字與聽讀</a><a class="side-out" href="../#home">← 學習首頁</a></nav>
-  <header class="top">${trackChip()}${stats()}</header>
+  <header class="top"><div class="top-actions"><button class="btn placement-entry" data-act="placement">🧭 檢測程度</button>${trackChip()}</div>${stats()}</header>
   <main id="main" class="main ${wide ? 'wide' : ''}">${game.warning ? `<div class="warn" role="status">${esc(game.warning)}</div>` : ''}${ui.busy ? `<div class="busy" role="status">${esc(ui.busy)}</div>` : ''}${body}</main>
   ${wide ? '' : rail()}
   <nav class="bottom" aria-label="主要導覽">${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i><span>${t}</span></a>`).join('')}</nav>
@@ -81,7 +82,8 @@ function learnPage() {
   const tail = nextSec ? `<section class="next-sec card"><p class="eyebrow">下一段</p><h2>第 ${nextSec.no} 段 · ${esc(nextSec.title)}</h2><p class="muted">${esc(nextSec.level)} · ${nextSec.units.length} 個單元</p><button class="btn" data-act="track" data-id="${nextSec.id}">看看第 ${nextSec.no} 段 →</button></section>` : '';
   const mission=nextAdventure(game,course,t.id);
   const launch=unlocked&&!s?`<section class="adventure"><span aria-hidden="true">🧭</span><div><h2>${mission.title}</h2><p>${esc(mission.text)}</p></div><button class="btn primary" data-act="start" data-mode="${mission.mode}" data-id="${mission.id}">${mission.label} →</button></section>`:'';
-  return `${resume}${todayMobile()}${header}${launch}${suggestBranches()}<div class="path">${units}</div>${tail}`;
+  // the path comes first; branch suggestions wait below it so the first lesson is visible without scrolling
+  return `${resume}${todayMobile()}${header}${launch}<div class="path">${units}</div>${suggestBranches()}${tail}`;
 }
 // narrow screens have no side rail, so today's goal and quests fold into the top of the path
 function todayMobile() {
@@ -202,7 +204,7 @@ function lessonFooter(it, s) {
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why">${esc(it.why)}</p>` : ''}<button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p><div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement'].includes(s.mode);
@@ -275,7 +277,7 @@ function profilePage() {
    <label>學習目的<select data-set="why">${Object.entries(WHY_INFO).map(([k, v]) => `<option value="${k}" ${p.why === k ? 'selected' : ''}>${v[0]} ${v[1]}</option>`).join('')}</select></label>
    <label>英文語速<select data-set="rate">${[[0.7, '慢'], [0.85, '一般'], [1, '自然']].map(([v, t]) => `<option value="${v}" ${p.rate === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
    <label class="toggle"><input type="checkbox" data-set="sound" ${p.sound !== false ? 'checked' : ''}> 答題音效</label>
-   <label class="toggle"><input type="checkbox" data-set="autoplay" ${p.autoplay !== false ? 'checked' : ''}> 自動播放英文</label>
+   <label class="toggle"><input type="checkbox" data-set="autoplay" ${p.autoplay !== false ? 'checked' : ''}> 自動播放英文與作答後正解</label>
    <label class="toggle"><input type="checkbox" data-set="motion" ${p.motion !== false ? 'checked' : ''}> 動畫與彩帶</label>
    <p class="muted small">英文語音：${sound.voice() ? esc(sound.voice().name) : '這個裝置沒有英文語音，聽力題可改看文字'}<button class="link" data-act="say" data-text="Welcome to English Quest. Let's learn a little every day.">試聽</button></p>
    <button class="btn" data-act="placement">重新做程度測驗</button>
@@ -294,7 +296,7 @@ function onboarding() {
   else if (step === 1) body = `<h1>你學英文主要是為了？</h1><div class="pick">${Object.entries(WHY_INFO).map(([k, v]) => `<button class="pick-card ${ui.why === k ? 'on' : ''}" data-act="ob-why" data-id="${k}" aria-pressed="${ui.why === k}"><span class="big-ic">${v[0]}</span><b>${v[1]}</b><small>${v[2]}</small></button>`).join('')}</div><button class="btn primary big" data-act="ob-next">下一步</button>`;
   else if (step === 2) body = `<h1>每天想練多少？</h1><div class="pick list">${Object.entries(GOALS).map(([k, v]) => `<button class="pick-card row-card ${ui.goal === k ? 'on' : ''}" data-act="ob-goal" data-id="${k}" aria-pressed="${ui.goal === k}"><b>${GOAL_INFO[k][0]}</b><span>${v} XP / 天</span><small>${GOAL_INFO[k][1]}</small></button>`).join('')}</div><p class="muted">之後可以在「我的」隨時調整。</p><button class="btn primary big" data-act="ob-next">下一步</button>`;
   else body = `<h1>從哪裡開始？</h1><div class="pick">${`<button class="pick-card" data-act="ob-start" data-id="s1"><span class="big-ic">🌱</span><b>從零開始</b><small>第 1 段：打招呼、字母、數字</small></button><button class="pick-card" data-act="placement"><span class="big-ic">🧭</span><b>先測程度</b><small>約 18 題、5 分鐘，找出適合的段落</small></button>`}</div><p class="muted">程度測驗只用來建議起點，不是正式分級。各段落都能用「跳到這裡」測驗快速前進。</p>`;
-  return `<div class="onboard">${dots}${step > 0 ? '<button class="link back" data-act="ob-back">← 上一步</button>' : ''}${body}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
+  return `<div class="onboard"><div class="onboard-placement"><button class="btn placement-entry" data-act="placement">🧭 檢測程度・找出學習起點</button></div>${dots}${step > 0 ? '<button class="link back" data-act="ob-back">← 上一步</button>' : ''}${body}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 
 // ---------- render ----------
@@ -335,13 +337,19 @@ function playItem(text, mp3, slow = false, isAuto = false) {
     else if (['unavailable','error'].includes(r) && !isAuto) toast('英文播放未完成，可以重試或改看文字作答。');
   });
 }
+function narrate(text, slow = false, isAuto = false) {
+  return sound.narrate(text, { slow }).then(r => {
+    if (['error', 'unavailable'].includes(r) && !isAuto) toast('此裝置無法完成朗讀，請確認已安裝中英文語音，或閱讀畫面文字。');
+  });
+}
 function lessonSubmit(value) {
   const s = game.state.session; if (!s || s.feedback) return;
   if (!game.submit(value)) return;
   const f = game.state.session.feedback, it = game.currentItem();
   sound.sfx(f.ok ? (game.state.session.combo > 0 && game.state.session.combo % 5 === 0 ? 'combo' : 'correct') : 'wrong');
   root.innerHTML = lessonView();
-  if (f.ok && it.audioAfter && profile().autoplay !== false) playItem(it.audioAfter, it.mp3 && it.audioAfter === it.audio ? it.mp3 : '', false, true);
+  sound.stop();
+  if (profile().autoplay !== false) narrate(answerText(it), false, true);
   document.querySelector('#go')?.focus({ preventScroll: true });
 }
 function lessonNext() {
@@ -387,7 +395,10 @@ root.addEventListener('click', async e => {
     case 'reset': ui.modal = 'reset'; render(); break;
     case 'reset-yes': game.reset(); ui.modal = null; ui.step = 0; ui.track = 's1'; render(true); break;
     case 'export': { const blob = new Blob([game.export()], { type: 'application/json' }), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = `english-quest-${game.today()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); break; }
-    case 'prompt-say': sound.speak(el.dataset.text,{lang:/[\u3400-\u9fff]/.test(el.dataset.text)?'zh':'en'}).then(r=>{if(['error','unavailable'].includes(r))toast('此裝置無法朗讀題目，請閱讀畫面文字。');}); break;
+    case 'prompt-say': narrate(el.dataset.text); break;
+    case 'answer-say': if (s?.feedback) narrate(answerText(it), el.dataset.slow === '1'); break;
+    case 'explain-say': if (s?.feedback) narrate(it.why); break;
+    case 'stop-say': sound.stop(); break;
     case 'say': playItem(el.dataset.text, el.dataset.mp3, el.dataset.slow === '1'); break;
     case 'resume': if (await ensure(game.filesFor(s.mode, s.ref)) && game.validSession()) { ui.paused = false; ui.shownFor = ''; render(); } else { toast('這個練習的內容已更新，已重新開始。'); render(); } break;
     case 'discard': game.abandon(); ui.paused = false; render(); break;
@@ -467,5 +478,9 @@ async function boot() {
   const s = game.state.session;
   if (s) { ui.paused = true; await ensure(game.filesFor(s.mode, s.ref)); game.validSession(); }
   render();
+  if (location.hash === '#placement' && !s) {
+    if (!game.state.profile) game.setup({ goal: ui.goal, why: ui.why, start: 's1' });
+    await begin('placement');
+  }
 }
 boot();

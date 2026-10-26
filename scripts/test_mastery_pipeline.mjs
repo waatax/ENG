@@ -42,15 +42,16 @@ test('3. grammarPage renders 3-second exam clue and solving scaffolding hint', a
   grammar.setGrammarTopic();
 });
 
-test('4. Navigation sidebar organizes 22 items into intuitive categorized groups', () => {
+test('4. Navigation exposes primary destinations and keeps course tools in a disclosure', () => {
   const appJs = readFileSync('dist/app.js', 'utf8');
-  assert.ok(appJs.includes('nav-group-header'), 'app.js should render nav-group-header elements');
-  assert.ok(appJs.includes('🌟 程度檢定與引導'), 'Must include 🌟 程度檢定與引導');
-  assert.ok(appJs.includes('🧩 觀念圖解與知識點'), 'Must include 🧩 觀念圖解與知識點');
-  assert.ok(appJs.includes('🎒 課綱學年與發音微課'), 'Must include 🎒 課綱學年與發音微課');
-  assert.ok(appJs.includes('🏫 升學會考與先修講義'), 'Must include 🏫 升學會考與先修講義');
-  assert.ok(appJs.includes('🗂️ 核心單字與構詞閃卡'), 'Must include 🗂️ 核心單字與構詞閃卡');
-  assert.ok(appJs.includes('🎯 題庫實戰與學習紀錄'), 'Must include 🎯 題庫實戰與學習紀錄');
+  assert.ok(appJs.includes('<details class="site-menu"'));
+  assert.ok(appJs.includes('<summary>課程、練習與工具</summary>'));
+  for (const href of ['#home', '#words', 'quest/', '#wordaudio', 'mnemonics/', 'roots/', '#knowledge']) {
+    assert.ok(appJs.includes(`href="${href}"`), `Missing primary destination ${href}`);
+  }
+  for (const id of ['diagnostic', 'grammar', 'curriculum108', 'exams', 'progress']) {
+    assert.ok(appJs.includes(`['${id}',`), `Missing secondary tool ${id}`);
+  }
 });
 
 test('5. Diagnostic report questions integrate clue radar and 3-step solving breakdown', async () => {

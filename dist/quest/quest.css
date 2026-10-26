@@ -165,3 +165,31 @@ body.reduce *,body.reduce *:before,body.reduce *:after{animation:none!important;
 .tok.given{background:var(--soft);border-style:dashed;color:var(--muted);display:inline-flex;align-items:center}
 /* v5: action-oriented missions and retrieval souvenirs */
 .adventure{display:flex;align-items:center;gap:18px;padding:22px;margin:20px 0;background:#edf7e9;border:2px solid #c3dfb5;border-radius:20px}.adventure>span{font-size:32px}.adventure>div{flex:1;min-width:0}.adventure h2{font-size:19px;margin:0}.adventure p{font-size:14px;margin:6px 0;color:#385745}.mission-strip{padding:10px 14px;border-radius:12px;background:#eef5e9;color:#31553b;font-size:13px;margin:12px 0 20px}.mission-strip small{display:block;margin-top:4px}.recall-pack{max-width:620px;margin:24px auto;text-align:left;padding:20px;border:1px solid #d6e4cf;border-radius:18px;background:#f7faf3}.recall-pack h2{font-size:19px}.recall-pack>p{font-size:14px}.recall-pack details{border-top:1px solid #d6e4cf;padding:8px 0;overflow-wrap:anywhere}.recall-pack summary{cursor:pointer;min-height:44px;padding:8px 0;font-weight:650}.recall-pack details p{font-size:15px}.recall-pack details summary:focus-visible{outline:3px solid #287548;outline-offset:3px}@media(max-width:600px){.adventure{flex-wrap:wrap;padding:16px;gap:12px}.adventure .btn{width:100%}.adventure>span{font-size:24px}.recall-pack{padding:16px}}
+/* v7 UI/UX: path first on phones, pinned unit banner, compact lesson footer, dark-mode fixes for v5 cards */
+:root{--top-h:71px}
+.unit-banner{position:sticky;top:var(--top-h);z-index:15}
+.suggest{margin:26px 0 0}
+@media (prefers-color-scheme:dark){
+ .adventure{background:#1d3328;border-color:#2f5a42}.adventure p{color:#b9d7c3}
+ .mission-strip{background:#1d3328;color:#b9d7c3}
+ .recall-pack{background:#1b2a22;border-color:#2f5a42}.recall-pack details{border-color:#2f5a42}
+}
+@media (max-width:767px){
+ :root{--top-h:67px}
+ .track-head{padding:12px 16px;margin-bottom:8px;border-bottom-width:4px}.track-head h1{font-size:1.3rem}.track-head>div>p:not(.eyebrow){display:none}.track-head .jump{max-width:none;width:100%}
+ .adventure{flex-wrap:nowrap;padding:12px 14px;gap:10px;margin:10px 0}.adventure>span{font-size:22px}.adventure h2{font-size:16px}.adventure p{font-size:13px;margin:2px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.adventure .btn{min-height:42px;padding:6px 12px;font-size:.9rem;flex:none}
+ .today-mobile{margin-bottom:10px}
+ .unit{margin-top:14px}.unit-banner{padding:10px 14px}.unit-banner h2{font-size:1.05rem}.unit-banner .en{display:none}.guide-btn{padding:6px 10px}
+}
+@media (max-width:600px){
+ .check:not(.ok):not(.bad) .check-in{flex-direction:row;align-items:center}
+ .check:not(.ok):not(.bad) .check-in .btn.ghost{flex:none;min-width:0;padding:10px 14px}
+ .check:not(.ok):not(.bad) .check-in .btn.big{flex:1;width:auto;min-width:0}
+ .result .tiles{display:grid;grid-template-columns:1fr 1fr;width:100%}.result .tile{min-width:0}
+}
+/* phones: icon and text on one row, a compact full-width button below */
+@media (max-width:767px){.adventure{flex-wrap:wrap}.adventure>div{flex:1 1 180px}.adventure .btn{width:100%;flex:1 1 100%}}
+
+/* Visible placement, comfortable feedback and speak-along controls. */
+.top-actions{display:flex;align-items:center;gap:10px;min-width:0}.placement-entry{background:var(--green-l);border-color:var(--green-d);color:var(--ink);white-space:nowrap;font-size:.88rem;padding:7px 12px;flex-shrink:0}.top-actions .track-chip{max-width:30vw}.onboard-placement{display:flex;justify-content:center;margin-bottom:22px}.coach-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.coach-controls .btn{font-size:.82rem;min-height:44px;padding:6px 10px}.correction-tip{margin-top:10px;font-size:.88rem;line-height:1.65}.check.ok,.check.bad{max-height:48dvh;overflow-y:auto;overscroll-behavior:contain}.lesson-screen:is(.is-ok,.is-bad) .lesson-body{padding-bottom:52dvh}.verdict{min-width:0;overflow-wrap:anywhere}
+@media(max-width:767px){:root{--top-h:112px}.top{flex-wrap:wrap;gap:6px}.top-actions{width:100%;justify-content:space-between}.top-actions .track-chip{max-width:47vw}.top .stats{margin-left:auto}.check.ok .check-in,.check.bad .check-in{gap:10px}.coach-controls{gap:6px}.placement-entry{min-height:44px}.check.ok,.check.bad{padding-top:12px}.check .why{font-size:.88rem}}

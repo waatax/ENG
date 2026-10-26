@@ -3,3 +3,9 @@ const base=new URL('./',import.meta.url);
 const links=[['#home','⌂','首頁'],['#words','Aa','學單字'],['quest/','✦','玩遊戲'],['#wordaudio','♫','聽讀'],['#knowledge','▤','教材']];
 function update(){const nav=document.querySelector('.platform-nav');if(!nav)return;const path=location.pathname,hash=location.hash;nav.querySelectorAll('a').forEach((a,i)=>{const active=i===2?path.includes('/quest/'):i===1?(/\/mnemonics\/|\/roots\//.test(path)||hash==='#words'||hash.startsWith('#flashcards')||hash==='#wordpractice'):i===3?hash.startsWith('#wordaudio')||hash.startsWith('#listening'):i===0?(!hash||hash==='#home')&&!/\/EN\/|\/quest\/|\/mnemonics\/|\/roots\//.test(path):hash==='#knowledge';if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
 if(!location.pathname.includes('/quest/')&&!location.pathname.includes('/EN/')){const nav=document.createElement('nav');nav.className='platform-nav';nav.setAttribute('aria-label','主要學習入口');nav.innerHTML=links.map(([url,icon,label])=>`<a href="${new URL(url,base).href}"><span aria-hidden="true">${icon}</span>${label}</a>`).join('');document.body.append(nav);document.body.classList.add('has-platform-nav');window.addEventListener('hashchange',update);document.addEventListener('eq-route-change',update);update();}
+
+if (document.querySelector('#app')) {
+ const entry=document.createElement('a');entry.className='level-top-entry';entry.href=new URL('quest/#placement',base).href;
+ entry.textContent='🧭 檢測程度';entry.setAttribute('aria-label','檢測英文程度，找出適合的闖關起點');document.body.prepend(entry);
+ document.body.classList.add('has-level-entry');
+}

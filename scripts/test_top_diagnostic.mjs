@@ -42,11 +42,16 @@ test('2. Navigation sidebar puts practice check at index 0 (topmost)', () => {
   assert.ok(navIdx !== -1 && knowledgeIdx !== -1 && navIdx < knowledgeIdx, 'diagnostic must precede knowledge in nav');
 });
 
-test('3. Top banner renders across pages and routes to #diagnostic', () => {
-  const appJs = readFileSync('dist/app.js', 'utf8');
-  assert.ok(appJs.includes('renderEnglishLevelTestTopBanner'), 'app.js should define renderEnglishLevelTestTopBanner');
-  assert.ok(appJs.includes("page === 'knowledge' || page === 'knowledgePoint' || page === 'chapter' || page === 'wordaudio' ? '' : renderEnglishLevelTestTopBanner(page)"), 'main-wrapper should render the banner');
-  assert.ok(appJs.includes("else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }"), 'hash route should support diagnostic');
+test('3. Shared top entry routes main-site pages to placement and quest keeps it in the header', () => {
+  const nav = readFileSync('dist/platform_nav.mjs', 'utf8');
+  assert.ok(nav.includes("document.querySelector('#app')"));
+  assert.ok(nav.includes("new URL('quest/#placement',base)"));
+  assert.ok(nav.includes('document.body.prepend(entry)'));
+  const view = readFileSync('dist/quest/view.mjs', 'utf8');
+  assert.match(view, /<header class="top">.*data-act="placement"/);
+  assert.ok(view.includes("location.hash === '#placement' && !s"), 'Must preserve unfinished sessions');
+  const css = readFileSync('dist/platform.css', 'utf8');
+  assert.match(css, /\.level-top-entry\{position:sticky;top:0/);
 });
 
 test('4. Diagnostic page intro identifies practice rather than certification', async () => {

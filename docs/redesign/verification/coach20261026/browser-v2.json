@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-26",
+  "version": "coach20261026",
+  "courseVersion": "2026-10-24.v6",
+  "checks": [
+    "onboarding and actionable next adventure",
+    "path at 320/390/768/1280 without horizontal scroll",
+    "wrong answer has explanation, correction, normal/slow answer and stop controls",
+    "reload keeps the session and resumes",
+    "wrong answer repaired; first-try score and retrieval souvenir verified",
+    "IME composition does not submit prematurely",
+    "listening transcript fallback and build/input items",
+    "unit challenge: 3 hearts fail, retry, crown",
+    "word lesson with matching pairs",
+    "unit guide",
+    "interactive story",
+    "mistake bank practice",
+    "vocabulary set with recorded MP3",
+    "personalised practice",
+    "jump test unlocks section 3",
+    "placement recommends a section",
+    "practice/stories/library/profile at 320 and 1280",
+    "backup download",
+    "blocked storage shows a warning and stays usable",
+    "fresh learner enters placement directly; prompt narration works without revealing answer",
+    "main site top placement link preserves an unfinished test"
+  ],
+  "errors": []
+}

@@ -64,7 +64,7 @@ const KEY = 'english-quest-game-v2';
 
     await openNode('u1:q1');
     await page.screenshot({ path: `${out}/v2-lesson-390.png` });
-    await step(true); await page.screenshot({ path: `${out}/v2-feedback-wrong-390.png` }); await step(); // wrong answer, then continue
+    await step(true); await page.locator('.correction-tip').waitFor(); assert.equal(await page.locator('.coach-controls button').count(),4); await page.locator('[data-act="answer-say"]').first().click(); await page.locator('[data-act="stop-say"]').click(); assert.ok((await session()).feedback); checks.push('wrong answer has explanation, correction, normal/slow answer and stop controls'); await page.screenshot({ path: `${out}/v2-feedback-wrong-390.png` }); await step(); // wrong answer, then continue
     await step(); await page.reload(); await page.locator('[data-act="resume"]').click(); await page.locator('.lesson-screen').waitFor(); checks.push('reload keeps the session and resumes');
     const seen = await play(); assert.ok(seen.length >= 5);
     assert.match(await page.locator('.result h1').innerText(), /連續 1 天/); await page.screenshot({ path: `${out}/v2-streak-390.png` });
@@ -94,7 +94,7 @@ const KEY = 'english-quest-game-v2';
     await page.locator('.track-head [data-act="jump"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
     assert.match(await page.locator('.result h1').innerText(), /跳級成功/); await leaveResult();
     assert.ok(await page.locator('.node.current').count()); checks.push('jump test unlocks section 3');
-    await page.goto(base + '#profile'); await page.locator('[data-act="placement"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
+    await page.goto(base + '#profile'); await page.locator('.top [data-act="placement"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
     assert.match(await page.locator('.result h1').innerText(), /建議從第/); await page.locator('[data-act="accept"]').first().click(); checks.push('placement recommends a section');
     for (const tab of ['practice', 'stories', 'library', 'profile']) for (const width of [320, 1280]) { await page.setViewportSize({ width, height: 900 }); await page.goto(base + '#' + tab); await page.locator('.page-head').waitFor(); await noOverflow(tab + ' ' + width); if (width === 1280) await page.screenshot({ path: `${out}/v2-${tab}-1280.png`, fullPage: false }); }
     checks.push('practice/stories/library/profile at 320 and 1280');
@@ -105,8 +105,28 @@ const KEY = 'english-quest-game-v2';
     const denied = await browser.newPage(); await denied.addInitScript(() => { Storage.prototype.setItem = function () { throw Error('blocked'); }; });
     await denied.goto(base); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-next"]').click(); await denied.locator('[data-act="ob-start"][data-id="s1"]').click();
     assert.match(await denied.locator('.warn').innerText(), /無法儲存/); await denied.close(); checks.push('blocked storage shows a warning and stays usable');
+    const direct = await browser.newPage({viewport:{width:320,height:740}});
+    await direct.addInitScript(() => {
+      window.coachSpeech=[];
+      window.SpeechSynthesisUtterance=class {constructor(text){this.text=text;}};
+      Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{
+        getVoices:()=>[{lang:'en-US',name:'English'},{lang:'zh-TW',name:'Chinese'}],cancel(){},addEventListener(){},
+        speak(u){window.coachSpeech.push({text:u.text,lang:u.lang,rate:u.rate});queueMicrotask(()=>u.onend?.());}
+      }});
+    });
+    await direct.goto(base+'#placement');await direct.locator('.lesson-screen').waitFor();
+    assert.equal(await direct.locator('.coach-controls').count(),0);
+    await direct.locator('[data-act="prompt-say"]').first().click();
+    await direct.waitForFunction(()=>window.coachSpeech.length>0);
+    assert.equal(await direct.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+    checks.push('fresh learner enters placement directly; prompt narration works without revealing answer');
+    await direct.goto(base.replace(/quest\/$/,''));await direct.locator('.level-top-entry').waitFor();
+    assert.match(await direct.locator('.level-top-entry').getAttribute('href'),/quest\/#placement$/);
+    assert.equal(await direct.locator('.level-top-entry').evaluate(e=>e.getBoundingClientRect().top),0);
+    await direct.locator('.level-top-entry').click();await direct.locator('[data-act="resume"]').waitFor();
+    checks.push('main site top placement link preserves an unfinished test');await direct.close();
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-24', version: index.version, checks, errors };
+    const report = { date: '2026-10-26', version: 'coach20261026', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }
