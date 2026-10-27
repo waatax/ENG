@@ -1,8 +1,9 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=20261024v6';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=path20261027';
 import * as sound from './sound.mjs?v=coach20261026';
 import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
 const V = '20261024v6';
+import { courseAtlas, LEVEL_GOALS } from './atlas.mjs';
 import {nextAdventure,sessionTrail} from './adventure.mjs';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
@@ -75,7 +76,7 @@ function learnPage() {
   const s = game.state.session;
   const resume = s && ui.paused ? `<div class="resume card"><div>${mascot('wow', 48)}</div><div><b>還有一個未完成的${s.mode === 'story' ? '故事' : '練習'}</b><p class="muted">剛剛的作答都保存了，從原來的地方繼續。</p></div><div class="row"><button class="btn primary" data-act="resume">接續</button><button class="btn ghost" data-act="discard">放棄</button></div></div>` : '';
   const header = t.kind === 'section'
-    ? `<section class="track-head ${t.color}"><div><p class="eyebrow">第 ${t.no} 段 · ${esc(t.level)}</p><h1>${esc(t.title)}</h1><p>${t.units.length} 個單元 · ${t.units.reduce((n, u) => n + u.nodes.length, 0)} 個關卡</p></div>${unlocked ? '' : `<div class="jump"><p>已經會了？通過跳級測驗就能直接從這裡開始。</p><button class="btn gold" data-act="jump" data-id="${t.id}">⏩ 跳到這裡</button></div>`}</section>`
+    ? `<section class="track-head ${t.color}"><div><p class="eyebrow">第 ${t.no} 段 · ${esc(t.level)}</p><h1>${esc(t.title)}</h1><p>${t.units.length} 個單元 · ${t.units.reduce((n, u) => n + u.nodes.length, 0)} 個關卡</p></div>${unlocked ? (t.no<9 ? `<div class="jump"><p>第 1–8 段自由選關；已經熟悉？也能測驗跳級。</p><button class="btn gold" data-act="jump" data-id="${course.index.sections[t.no].id}">⏩ 挑戰下一段</button></div>` : '') : `<div class="jump"><p>已經會了？通過跳級測驗就能直接從這裡開始。</p><button class="btn gold" data-act="jump" data-id="${t.id}">⏩ 跳到這裡</button></div>`}</section>`
     : `<section class="track-head ${t.color}"><div><p class="eyebrow">目標分支 · ${esc(t.level)}</p><h1>${t.icon} ${esc(t.title)}</h1><p>${t.units.length} 個單元 · 隨時可以開始，不是必經的升級順序</p></div></section>`;
   const units = t.units.map((u, ui2) => unitBlock(t, u, ui2, currentId)).join('');
   const nextSec = t.kind === 'section' ? course.index.sections[t.no] : null;
@@ -83,7 +84,7 @@ function learnPage() {
   const mission=nextAdventure(game,course,t.id);
   const launch=unlocked&&!s?`<section class="adventure"><span aria-hidden="true">🧭</span><div><h2>${mission.title}</h2><p>${esc(mission.text)}</p></div><button class="btn primary" data-act="start" data-mode="${mission.mode}" data-id="${mission.id}">${mission.label} →</button></section>`:'';
   // the path comes first; branch suggestions wait below it so the first lesson is visible without scrolling
-  return `${resume}${todayMobile()}${header}${launch}<div class="path">${units}</div>${suggestBranches()}${tail}`;
+  return `${resume}${todayMobile()}${header}${launch}${courseAtlas(course,game)}<p class="path-goals">🎯 ${esc((LEVEL_GOALS[t.id] || [t.title]).join(' · '))}</p><div class="path">${units}</div>${suggestBranches()}${tail}`;
 }
 // narrow screens have no side rail, so today's goal and quests fold into the top of the path
 function todayMobile() {
@@ -100,7 +101,7 @@ function unitBlock(t, u, index, currentId) {
     const status = game.nodeStatus(n.id), isCur = n.id === currentId;
     const off = OFFSETS[(index * 3 + i) % OFFSETS.length];
     const icon = status === 'locked' ? (n.kind === 'boss' ? '🏆' : '🔒') : status === 'crowned' ? '👑' : status === 'done' && n.kind !== 'boss' ? '✓' : n.icon;
-    return `<div class="node-row" style="--x:${off}">${isCur ? `<div class="start-bubble" aria-hidden="true">開始</div>` : ''}<button class="node ${n.kind} ${status} ${isCur ? 'current' : ''} c-${u.color}" data-act="pop" data-id="${n.id}" aria-label="${esc(n.title)}（${KIND_TEXT[n.kind] || ''}）：${nodeLabel(status)}" aria-expanded="${ui.pop === n.id}"><span>${icon}</span></button>${isCur ? `<div class="mascot-side" aria-hidden="true">${mascot('happy', 64)}</div>` : ''}</div>${ui.pop === n.id ? popover(n, status, u) : ''}`;
+    return `<div class="node-row" style="--x:${off}">${isCur ? `<div class="start-bubble" aria-hidden="true">開始</div>` : ''}<button class="node ${n.kind} ${status} ${isCur ? 'current' : ''} c-${u.color}" data-act="pop" data-id="${n.id}" aria-label="${esc(n.title)}（${KIND_TEXT[n.kind] || ''}）：${nodeLabel(status)}" aria-expanded="${ui.pop === n.id}"><span>${icon}</span></button><span class="node-label">${esc(n.title)}</span>${isCur ? `<div class="mascot-side" aria-hidden="true">${mascot('happy', 64)}</div>` : ''}</div>${ui.pop === n.id ? popover(n, status, u) : ''}`;
   }).join('');
   const story = u.story ? (() => { const st = game.unitStoryStatus(u.id), meta = course.stories.get(u.story); return `<div class="node-row" style="--x:0"><button class="node story ${st}" data-act="story" data-id="${u.story}" aria-label="故事：${esc(meta?.title)}（${st === 'done' ? '已讀' : st === 'available' ? '可以閱讀' : '完成本單元後開啟'}）"><span>${st === 'done' ? '✓' : '📖'}</span></button><div class="story-label">${esc(meta?.title || '')}</div></div>`; })() : '';
   const done = u.nodes.filter(n => ['done', 'tested', 'crowned'].includes(game.nodeStatus(n.id))).length;
@@ -136,7 +137,8 @@ function guideView(unitId) {
 function modalView() {
   if (!ui.modal) return '';
   let inner = '';
-  if (ui.modal === 'guide') inner = guideView(ui.guide);
+  if (ui.modal === 'placement') inner = `<h2>先選擇檢測題數</h2><p class="muted">先取樣各級，再補測程度交界。不限時，可以暫停接續；完成後統一看正解，避免影響後面的判斷。</p><div class="placement-options">${[[10,'快速定位','約 3–5 分鐘 · 先找大方向'],[20,'標準檢測','約 6–10 分鐘 · 各級增加取樣'],[30,'深入確認','約 10–15 分鐘 · 較完整的各級證據']].map(([n,title,desc])=>`<button class="placement-size" data-act="placement-start" data-size="${n}"><b>${n}<small> 題</small></b><span>${title}${n===20?' · 建議':''}<small>${desc}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div><p class="muted small">只評估本次字詞、句型、閱讀與聽辨取樣，未測口說與寫作。結果用來推薦課程起點，不能換算正式 CEFR 或考試成績。</p>`;
+  else if (ui.modal === 'guide') inner = guideView(ui.guide);
   else if (ui.modal === 'tracks') inner = `<h2>選擇段落</h2><div class="track-list">${course.index.sections.map(s => `<button class="track-opt ${s.color} ${ui.track === s.id ? 'on' : ''}" data-act="track" data-id="${s.id}"><b>${game.trackUnlocked(s.id) ? '' : '🔒 '}第 ${s.no} 段 · ${esc(s.title)}</b><small>${esc(s.level)} · ${s.units.length} 單元${game.sectionDone(s.id) ? ' · ✓ 完成' : ''}</small></button>`).join('')}</div><h3>目標分支</h3><div class="track-list">${course.index.branches.map(b => `<button class="track-opt ${b.color} ${ui.track === b.id ? 'on' : ''}" data-act="track" data-id="${b.id}"><b>${b.icon} ${esc(b.title)}</b><small>${esc(b.level)} · ${b.units.length} 單元</small></button>`).join('')}</div>`;
   else if (ui.modal === 'exit') inner = `<div class="center">${mascot('sad', 88)}<h2>要先休息一下嗎？</h2><p>剛剛的作答已經保存，回來可以接著做。</p><div class="row center"><button class="btn primary" data-act="close">繼續學習</button><button class="btn ghost" data-act="pause">先離開</button></div></div>`;
   else if (ui.modal === 'shop') { const st = game.state; inner = `<h2>🧊 凍結卡</h2><p>漏掉一天時會自動使用一張，連續天數不會中斷（那天不加一）。最多持有 ${MAX_FREEZES} 張。</p><p>你有 💎 ${st.gems}，凍結卡 ${st.freezes}/${MAX_FREEZES}。</p><button class="btn primary" data-act="buy" ${st.gems < FREEZE_COST || st.freezes >= MAX_FREEZES ? 'disabled' : ''}>用 💎 ${FREEZE_COST} 兌換</button><p class="muted small">寶石來自每日任務、單元寶箱與成就，不能購買。</p>`; }
@@ -155,12 +157,13 @@ function sessionTitle(s) {
 }
 function lessonView() {
   const s = game.state.session, it = game.currentItem(), fb = s.feedback;
+  const assessment = s.mode === 'placement';
   const trail=sessionTrail(s);
   const pct = Math.round(100 * (s.index + (fb || !isScored(it) ? 1 : 0)) / s.queue.length);
   const hearts = s.hearts !== null ? `<span class="hearts" aria-label="剩下 ${s.hearts} 顆心">${'❤️'.repeat(s.hearts)}${'🤍'.repeat(HEARTS - s.hearts)}</span>` : '';
   const combo = s.combo >= 3 ? `<span class="combo ${s.combo % 5 === 0 ? 'pop' : ''}">🔥 ${s.combo} 連對</span>` : '';
-  return `<div class="lesson-screen ${fb ? (fb.ok ? 'is-ok' : 'is-bad') : ''}"><header class="lesson-top"><button class="x" data-act="exit" aria-label="暫停並離開">✕</button><div class="progress" role="progressbar" aria-label="進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><span style="width:${pct}%"></span></div>${combo}${hearts}</header>
-  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${trail.label}</span><small>本次獨立答對 ${trail.independent} / ${trail.attempts}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${itemView(it, s)}</main>
+  return `<div class="lesson-screen ${fb && !assessment ? (fb.ok ? 'is-ok' : 'is-bad') : ''}"><header class="lesson-top"><button class="x" data-act="exit" aria-label="暫停並離開">✕</button><div class="progress" role="progressbar" aria-label="進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><span style="width:${pct}%"></span></div>${combo}${hearts}</header>
+  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${assessment ? '程度檢測：獨立作答，完成後看解析' : trail.label}</span><small>${assessment ? `已作答 ${s.results.length} / ${s.queue.length} 題 · 不計速度` : `本次獨立答對 ${trail.independent} / ${trail.attempts}`}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${itemView(it, s)}</main>
   ${lessonFooter(it, s)}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 function sayBtn(text, mp3 = '', big = false, label = '播放英文') { return `<button class="say ${big ? 'big' : ''}" data-act="say" data-text="${esc(text)}" data-mp3="${esc(mp3 || '')}" aria-label="${label}">🔊</button>`; }
@@ -170,13 +173,13 @@ function itemView(it, s) {
   if (it.type === 'line') return `<section class="story-line">${mascot('happy', 56)}<div class="bubble"><b>${esc(it.speaker || '')}</b><p lang="en">${sayBtn(it.en)} ${esc(it.en)}</p>${a.zh ? `<p class="zh">${esc(it.zh)}</p>` : `<button class="link" data-act="zh">顯示中文</button>`}${a.zh && it.note ? `<p class="muted small">${esc(it.note)}</p>` : ''}</div></section>`;
   const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="prompt-say" data-text="${esc(it.prompt)}" aria-label="朗讀題目">🔊</button></h1>`;
   const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><p lang="en">${esc(it.passage)}</p></details>` : '';
-  const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && (locked || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
+  const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && ((locked && s.mode !== 'placement') || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
   const listenBox = (it.type === 'listen' || (it.type === 'input' && it.audio && !it.text)) ? `<div class="listen-box">${a.transcript ? `<p class="transcript" lang="en">${esc(it.audio)}</p><small class="muted">已改用文字，這題不算聽力。</small>` : `${sayBtn(it.audio, it.mp3, true, '播放聲音')}<button class="say slow" data-act="say" data-slow="1" data-text="${esc(it.audio)}" aria-label="慢速播放">🐢</button><button class="link" data-act="transcript" ${locked ? 'disabled' : ''}>不方便聽？改看文字</button>`}</div>` : '';
   const hint = (a.hint || s.hint) && !locked ? `<div class="hint">💡 ${esc(hintText(it))}</div>` : '';
   let body = '';
   if (it.type === 'choice' || it.type === 'listen') {
     const opts = shuffle(it.options, it.id + s.id);
-    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button>`; }).join('')}</div>`;
+    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (s.mode === 'placement' ? (o === fb(s) ? 'sel' : '') : o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button>`; }).join('')}</div>`;
   } else if (it.type === 'build') {
     const bank = shuffle(it.words.map((w, i) => ({ w, i })), it.id + s.id);
     const given = it.given ? it.given.split(' ').map(w => `<span class="tok given" lang="en">${esc(w)}</span>`).join('') : '';
@@ -201,6 +204,7 @@ function hintText(it) {
 function lessonFooter(it, s) {
   const f = s.feedback;
   if (!isScored(it)) return `<footer class="check"><div class="check-in"><span></span><button class="btn primary big" data-act="next" id="go">${it.type === 'info' ? '了解了' : '繼續'}</button></div></footer>`;
+  if (f && s.mode === 'placement') return `<footer class="check assessment-recorded" role="status"><div class="check-in"><p>✓ 已記錄答案，完成後一起看分析。</p><button class="btn primary big" data-act="next" id="go">${s.index+1===s.queue.length?'查看檢測結果':'下一題'}</button></div></footer>`;
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
@@ -217,7 +221,10 @@ function resultView() {
   const r = game.result;
   if (r.mode === 'placement') {
     const sec = course.track(r.recommended);
-    return `<div class="result">${mascot('cheer', 120)}<p class="eyebrow">程度測驗完成</p><h1>建議從第 ${sec.no} 段開始</h1><p class="lead">「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">共 ${r.total} 題，首次答對 ${r.firstTry} 題。這只是幫你找起點，不是正式的程度認證。之後隨時可以回到前面的段落。</p><div class="row center"><button class="btn primary big" data-act="accept" data-id="${sec.id}">從第 ${sec.no} 段開始</button><button class="btn ghost" data-act="accept" data-id="s1">從頭開始</button></div></div>`;
+    return `<div class="result placement-result">${mascot('cheer', 92)}<p class="eyebrow">${esc(r.evidence || '程度測驗完成')} · ${r.total} 題</p><h1>建議從第 ${sec.no} 段開始</h1><p class="lead">「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">首次答對 ${r.firstTry}/${r.total} 題。${r.range ? (r.range[0]===r.range[1] ? `本次證據較支持第 ${course.track(r.range[0]).no} 段，仍可用單元挑戰確認。` : `待確認起點：第 ${course.track(r.range[0]).no}–${course.track(r.range[1]).no} 段。`) : ''}這是課程起點建議，未評估口說與寫作。</p><p class="placement-note">${r.total===10?'10 題只作初步定位，建議用 20 或 30 題再確認。':'依各級答題模式推估，答題速度不影響分級。'}${r.listeningLimited ? ' 聽力證據不足，建議完成聽辨後再確認。' : ''}${r.seen ? ` 本次有 ${r.seen} 題曾作答，熟悉度可能影響結果。` : ''}</p>
+    ${r.rows ? `<div class="level-evidence"><h2>各級取樣表現</h2>${r.rows.map((x,i)=>`<div><span>第 ${i+1} 段 · ${esc(x.title)}</span><b>${x.correct}/${x.n}</b><small>${!x.n?'未取樣':x.n<2?'樣本少，待確認':x.correct/x.n>=.75?'本次表現順利':'建議補強'}</small></div>`).join('')}</div><div class="skill-evidence">${r.skills.map(x=>`<section><b>${esc(x.label)}</b><p>${x.id==='listening' ? (x.heard ? `${x.correct}/${x.heard} 題有效聽辨` : '未取得有效聽力證據') : x.n?`${x.correct}/${x.n} 題`:'本次未取樣'}</p>${x.id==='listening'?`<small>${x.heard}/${x.n} 題完整聽完；改文字不當作聽力證據</small>`:''}</section>`).join('')}</div>` : ''}
+    <div class="row center"><button class="btn primary big" data-act="accept" data-id="${sec.id}">從第 ${sec.no} 段開始</button><button class="btn ghost" data-act="accept" data-id="s1">從頭開始</button><button class="btn" data-act="placement">換題數重新確認</button></div>
+    ${r.review ? `<details class="placement-review"><summary>展開 ${r.review.length} 題答案與解說</summary>${r.review.map(x=>`<details><summary>${x.ok?'✓':'↻'} ${esc(x.prompt)}</summary>${x.passage ? `<p class="review-stimulus" lang="en">${esc(x.passage)}</p>` : ''}${x.text ? `<p class="review-stimulus">${esc(x.text)}</p>` : ''}${!x.ok && x.value ? `<p class="muted">你的答案：${esc(x.value)}</p>` : ''}<p><b>正解：${esc(x.answer)}</b></p><p>${esc(x.why)}</p><button class="btn small" data-act="prompt-say" data-text="${esc(x.answer)}">🔊 聽正解</button><button class="btn small" data-act="prompt-say" data-text="${esc(x.why)}">💬 聽解說</button></details>`).join('')}</details>`:''}</div>`;
   }
   if (r.newDay && !ui.streakShown) {
     const week = game.weekXp();
@@ -233,7 +240,7 @@ function resultView() {
   ${r.chest ? `<p class="chest">🎁 單元寶箱：+${r.chest} 💎</p>` : ''}${goalHit ? '<p class="chest">🎉 今天的每日目標達成！</p>' : ''}${ev ? `<ul class="events">${ev}</ul>` : ''}
   ${r.nextReview ? `<p class="muted">下次複習：${new Date(r.nextReview).toLocaleDateString('zh-TW')}</p>` : ''}${r.xp === 0 && r.mode !== 'jump' ? '<p class="muted">這個活動今天已領取三次獎勵。仍可自由練習，也可以探索新內容。</p>' : ''}
   <section class="recall-pack"><h2>🎒 這次帶走的線索</h2><p>先遮住答案，在心裡想一次，再展開核對。這是自我回想，不另計分。</p>${(r.takeaways||[]).map(q=>`<details><summary>${q.repair?'↻ 訂正回想：':'✦ 回想：'}${esc(q.prompt)}</summary><p lang="en"><b>${esc(q.answer)}</b></p><p>${esc(q.why)}</p></details>`).join('')}</section>
-  <div class="row center">${failed && r.mode === 'boss' ? `<button class="btn ghost" data-act="guide" data-id="${course.nodes.get(r.ref).unit}">看指南</button><button class="btn gold big" data-act="start" data-mode="boss" data-id="${r.ref}">再挑戰</button>` : ''}<button class="btn primary big" data-act="done">繼續</button></div></div>`;
+  <div class="row center">${r.suggestedJump ? `<section class="jump-offer card"><h2>⚡ 連續快速答對，試試更高一段？</h2><p>你已有至少 5 題新的題目連續獨立快速答對。可挑戰第 ${course.track(r.suggestedJump).no} 段跳級測驗；通過需 80% 正確率，仍可自由回頭補強。</p><button class="btn gold" data-act="result-jump" data-id="${r.suggestedJump}">開始跳級測驗 →</button></section>` : ''}${failed && r.mode === 'boss' ? `<button class="btn ghost" data-act="guide" data-id="${course.nodes.get(r.ref).unit}">看指南</button><button class="btn gold big" data-act="start" data-mode="boss" data-id="${r.ref}">再挑戰</button>` : ''}<button class="btn primary big" data-act="done">繼續</button></div></div>`;
 }
 const fmtTime = s => s >= 60 ? `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` : `${s} 秒`;
 function confetti() { return `<div class="confetti" aria-hidden="true">${Array.from({ length: 28 }, (_, i) => `<i style="--i:${i};--h:${(i * 47) % 360}"></i>`).join('')}</div>`; }
@@ -295,7 +302,7 @@ function onboarding() {
   if (step === 0) body = `<div class="center">${mascot('cheer', 140)}<h1>嗨！我是阿芽 🌱</h1><p class="lead">每天幾分鐘，一關一關把英文變成你的習慣。</p><p class="muted">9 段程度、82 個單元、51 篇互動故事，從第一句招呼到大考與國際檢定。</p><button class="btn primary big" data-act="ob-next">開始</button><p><label class="link" for="import">已經有備份？匯入</label><input class="offscreen" id="import" type="file" accept="application/json,.json"></p></div>`;
   else if (step === 1) body = `<h1>你學英文主要是為了？</h1><div class="pick">${Object.entries(WHY_INFO).map(([k, v]) => `<button class="pick-card ${ui.why === k ? 'on' : ''}" data-act="ob-why" data-id="${k}" aria-pressed="${ui.why === k}"><span class="big-ic">${v[0]}</span><b>${v[1]}</b><small>${v[2]}</small></button>`).join('')}</div><button class="btn primary big" data-act="ob-next">下一步</button>`;
   else if (step === 2) body = `<h1>每天想練多少？</h1><div class="pick list">${Object.entries(GOALS).map(([k, v]) => `<button class="pick-card row-card ${ui.goal === k ? 'on' : ''}" data-act="ob-goal" data-id="${k}" aria-pressed="${ui.goal === k}"><b>${GOAL_INFO[k][0]}</b><span>${v} XP / 天</span><small>${GOAL_INFO[k][1]}</small></button>`).join('')}</div><p class="muted">之後可以在「我的」隨時調整。</p><button class="btn primary big" data-act="ob-next">下一步</button>`;
-  else body = `<h1>從哪裡開始？</h1><div class="pick">${`<button class="pick-card" data-act="ob-start" data-id="s1"><span class="big-ic">🌱</span><b>從零開始</b><small>第 1 段：打招呼、字母、數字</small></button><button class="pick-card" data-act="placement"><span class="big-ic">🧭</span><b>先測程度</b><small>約 18 題、5 分鐘，找出適合的段落</small></button>`}</div><p class="muted">程度測驗只用來建議起點，不是正式分級。各段落都能用「跳到這裡」測驗快速前進。</p>`;
+  else body = `<h1>從哪裡開始？</h1><div class="pick">${`<button class="pick-card" data-act="ob-start" data-id="s1"><span class="big-ic">🌱</span><b>從零開始</b><small>第 1 段：打招呼、字母、數字</small></button><button class="pick-card" data-act="placement"><span class="big-ic">🧭</span><b>先測程度</b><small>10／20／30 題，選擇檢測深度</small></button>`}</div><p class="muted">程度測驗只用來建議起點，不是正式分級。各段落都能用「跳到這裡」測驗快速前進。</p>`;
   return `<div class="onboard"><div class="onboard-placement"><button class="btn placement-entry" data-act="placement">🧭 檢測程度・找出學習起點</button></div>${dots}${step > 0 ? '<button class="link back" data-act="ob-back">← 上一步</button>' : ''}${body}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 
@@ -323,7 +330,7 @@ function render(focus = false) {
 // a new step: autoplay its English (when enabled) and move focus to where the learner acts next
 function afterNewItem() {
   const it = game.currentItem();
-  if (profile().autoplay !== false && (it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word'))) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
+  if (game.state.session.mode !== 'placement' && profile().autoplay !== false && (it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word'))) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
   const input = document.querySelector('#answer');
   if (input) input.focus();
   else { const h = document.querySelector('.lesson-body h1') || document.querySelector('#go'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } }
@@ -346,10 +353,10 @@ function lessonSubmit(value) {
   const s = game.state.session; if (!s || s.feedback) return;
   if (!game.submit(value)) return;
   const f = game.state.session.feedback, it = game.currentItem();
-  sound.sfx(f.ok ? (game.state.session.combo > 0 && game.state.session.combo % 5 === 0 ? 'combo' : 'correct') : 'wrong');
+  sound.sfx(s.mode==='placement' ? 'tap' : f.ok ? (game.state.session.combo > 0 && game.state.session.combo % 5 === 0 ? 'combo' : 'correct') : 'wrong');
   root.innerHTML = lessonView();
   sound.stop();
-  if (profile().autoplay !== false) narrate(answerText(it), false, true);
+  if (s.mode !== 'placement' && profile().autoplay !== false) narrate(answerText(it), false, true);
   document.querySelector('#go')?.focus({ preventScroll: true });
 }
 function lessonNext() {
@@ -378,10 +385,13 @@ root.addEventListener('click', async e => {
     case 'ob-why': ui.why = id; render(); break;
     case 'ob-goal': ui.goal = id; render(); break;
     case 'ob-start': game.setup({ goal: ui.goal, why: ui.why, start: id }); ui.track = id; await ensure([id]); render(true); break;
-    case 'placement': if (!game.state.profile) game.setup({ goal: ui.goal, why: ui.why, start: 's1' }); ui.modal = null; await begin('placement'); break;
+    case 'placement': if (s) { toast('目前的練習已保留，請先接續完成，或回學習頁放棄後再開始檢測。'); break; } ui.modal = 'placement'; render(); break;
+    case 'placement-start': if (!game.state.profile) game.setup({goal:ui.goal,why:ui.why,start:'s1'}); await begin('placement',Number(el.dataset.size)); break;
+    case 'result-jump': game.clearResult(); await begin('jump',id); break;
     case 'accept': game.acceptPlacement(id); ui.track = id; game.clearResult(); ui.tab = 'learn'; location.hash = '#learn'; await ensure([id]); render(true); break;
     case 'tracks': ui.modal = 'tracks'; render(); break;
-    case 'track': ui.track = id; ui.modal = null; ui.pop = null; ui.tab = 'learn'; if (location.hash !== '#learn') location.hash = '#learn'; render(true); window.scrollTo(0, 0); break;
+    case 'unit-select':
+    case 'track': ui.track = id; game.update({start:id}); ui.modal = null; ui.pop = null; ui.tab = 'learn'; if (location.hash !== '#learn') location.hash = '#learn'; render(true); if (el.dataset.unit) document.getElementById('u-'+el.dataset.unit)?.scrollIntoView({block:'start',behavior:profile().motion===false?'instant':'smooth'}); else window.scrollTo(0, 0); break;
     case 'pop': ui.pop = ui.pop === id ? null : id; sound.sfx('tap'); render(); document.querySelector('.pop .btn')?.focus({ preventScroll: true }); break;
     case 'start': game.clearResult(); await begin(el.dataset.mode, id); break;
     case 'story': { const st = game.unitStoryStatus([...course.units.values()].find(u => u.story === id)?.id); if (st === 'locked' && ui.tab === 'learn') { toast('先完成這個單元的課程，故事就會打開。'); break; } await begin('story', id); break; }
@@ -422,7 +432,7 @@ root.addEventListener('click', async e => {
     case 'next': lessonNext(); break;
     case 'flag': { const on = game.flag(el.dataset.id); toast(on ? '🚩 已記下，下載備份時會附上。謝謝！' : '已取消回報'); root.innerHTML = lessonView(); break; }
     case 'streak-ok': ui.streakShown = true; render(true); break;
-    case 'done': { const r = game.result; game.clearResult(); ui.streakShown = false; if (r?.mode === 'jump' && r.passed) ui.track = r.ref; render(true); break; }
+    case 'done': { const r = game.result; game.clearResult(); ui.streakShown = false; if (r?.mode === 'jump' && r.passed) { ui.track = r.ref; game.update({start:r.ref}); } render(true); break; }
   }
 });
 root.addEventListener('input', e => {
@@ -458,6 +468,7 @@ document.addEventListener('keydown', e => {
 });
 window.addEventListener('hashchange', () => {
   const tab = location.hash.slice(1).split('/')[0];
+  if (tab === 'placement' && game) { if (game.state.session) { ui.paused=true; ui.tab='learn'; } else ui.modal='placement'; render(true); return; }
   if (TABS.some(([id]) => id === tab)) { ui.tab = tab; ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
 });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && game) { game.refreshDay(); if (!game.state.session || ui.paused) render(); } });
@@ -473,14 +484,11 @@ async function boot() {
   ui.track = game.state.profile?.start || 's1';
   const firstOpen = course.index.sections.find(sec => game.trackUnlocked(sec.id) && game.current(sec.id));
   if (game.state.profile && firstOpen && !game.trackUnlocked(ui.track)) ui.track = firstOpen.id;
-  // continue where the learner actually is: the furthest unlocked section with an open lesson
-  if (game.state.profile) { const furthest = [...course.index.sections].reverse().find(sec => game.trackUnlocked(sec.id) && game.current(sec.id)); if (furthest) ui.track = furthest.id; }
   const s = game.state.session;
   if (s) { ui.paused = true; await ensure(game.filesFor(s.mode, s.ref)); game.validSession(); }
   render();
   if (location.hash === '#placement' && !s) {
-    if (!game.state.profile) game.setup({ goal: ui.goal, why: ui.why, start: 's1' });
-    await begin('placement');
+    ui.modal = 'placement'; render();
   }
 }
 boot();

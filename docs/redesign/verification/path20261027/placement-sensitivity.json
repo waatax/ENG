@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-27",
+  "purpose": "Algorithm sensitivity checks only. Synthetic independent responses use assumed probabilities, not real learners, calibrated items, formal CEFR accuracy or educational effectiveness.",
+  "rows": [
+    {
+      "masteryChance": 0.85,
+      "size": 10,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.593,
+      "withinOneStage": 0.867
+    },
+    {
+      "masteryChance": 0.85,
+      "size": 20,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.3,
+      "withinOneStage": 0.953
+    },
+    {
+      "masteryChance": 0.85,
+      "size": 30,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.207,
+      "withinOneStage": 0.96
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 10,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.967,
+      "withinOneStage": 0.78
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 20,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.693,
+      "withinOneStage": 0.853
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 30,
+      "syntheticProfiles": 150,
+      "meanStageDistance": 0.387,
+      "withinOneStage": 0.9
+    }
+  ]
+}

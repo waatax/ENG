@@ -132,13 +132,17 @@ test('course: stories, placement and vocabulary sets are complete', () => {
   assert.ok(ex.length >= 10 && ex.every(it => !it.options || it.options.includes(it.answer)));
 });
 
-test('engine: new learner starts at the first node; later sections are locked, branches are open', () => {
+test('engine: school sections and their lessons, challenges and stories are freely selectable', () => {
   const c = loadCourse(), g = createGame({ storage: memory(), course: c });
   assert.equal(g.nodeStatus('u1:q1'), 'available');
-  assert.equal(g.nodeStatus('u1:q2'), 'locked');
-  assert.equal(g.trackUnlocked('s2'), false);
+  assert.equal(g.nodeStatus('u1:q2'), 'available');
+  assert.equal(g.trackUnlocked('s2'), true);
+  assert.equal(g.trackUnlocked('s8'), true);
+  assert.equal(g.trackUnlocked('s9'), false);
   assert.equal(g.trackUnlocked('b-toeic'), true);
-  assert.equal(g.start('lesson', 'u1:q2'), false);
+  assert.equal(g.start('lesson', 'u1:q2'), true);
+  assert.equal(g.nodeStatus('u1:q4'), 'available');
+  assert.equal(g.state.nodes['u1:q1'], undefined);
   assert.equal(g.current('s1'), 'u1:q1');
 });
 
@@ -251,7 +255,7 @@ test('engine: finishing a unit schedules review; only a due review moves the int
 
 test('engine: jump test unlocks a section and marks earlier lessons as tested, not completed', () => {
   const c = loadCourse(), g = createGame({ storage: memory(), course: c });
-  assert.equal(g.trackUnlocked('s3'), false);
+  assert.equal(g.trackUnlocked('s3'), true);
   assert.ok(g.start('jump', 's3'));
   assert.equal(g.state.session.hearts, HEARTS);
   const r = play(g);
@@ -265,21 +269,23 @@ test('engine: jump test unlocks a section and marks earlier lessons as tested, n
   const g2 = createGame({ storage: memory(), course: c });
   g2.start('jump', 's3'); const failed = play(g2, wrong);
   assert.equal(failed.passed, false);
-  assert.equal(g2.trackUnlocked('s3'), false);
+  assert.equal(g2.trackUnlocked('s3'), true, 'school access stays open even after a failed jump');
+  assert.equal(g2.state.nodes['u1:q1'],undefined);
 });
 
-test('engine: placement recommends a start without XP; accepting it tests out earlier sections', () => {
+test('engine: placement recommends a start without XP; accepting it leaves earlier lessons uncompleted', () => {
   const c = loadCourse(), g = createGame({ storage: memory(), course: c });
   g.start('placement'); const all = play(g);
   assert.equal(all.recommended, 's9');
   assert.equal(all.xp, 0);
   assert.equal(g.state.days.length, 0);
-  g.start('placement'); let k = 0;
-  const r = play(g, it => (k++ < 6 ? right(it) : wrong(it)));
-  assert.equal(r.recommended, 's3', 'passed s1 and s2 blocks, failed s4');
+  g.start('placement',20);
+  const r = play(g, it => g.state.session.placement.slots.find(x=>x.id===it.id).section < 's3' ? right(it) : wrong(it));
+  assert.equal(r.recommended, 's3', 'full level evidence recommends the first unmastered section');
   g.acceptPlacement('s3');
   assert.equal(g.trackUnlocked('s3'), true);
-  assert.equal(g.nodeStatus('g4-s2-u6:word'), 'tested');
+  assert.equal(g.nodeStatus('g4-s2-u6:word'), 'available');
+  assert.equal(g.state.nodes['g4-s2-u6:word'],undefined);
 });
 
 test('engine: streak crosses local midnight, a freeze covers one missed day, without it the streak ends', () => {

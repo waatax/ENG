@@ -1,5 +1,7 @@
 // English Quest game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
 import {takeaways} from './adventure.mjs';
+import { makePlacement, placementReport, refinePlacement } from './placement.mjs';
+import { fastAnswerEligible, jumpSuggestion } from './acceleration.mjs';
 export const KEY = 'english-quest-game-v2';
 export const V1_KEY = 'english-quest-game-v1';
 export const DAY = 86400000;
@@ -193,22 +195,23 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function trackUnlocked(trackId) {
     const t = course.track(trackId); if (!t) return false; if (t.kind === 'branch') return true;
     const i = course.index.sections.findIndex(s => s.id === trackId);
-    if (i <= 0 || state.jumped[trackId]) return true;
+    if (i <= 7 || state.jumped[trackId]) return true;
     return sectionDone(course.index.sections[i - 1].id);
   }
   // a node opens when the previous lesson node in its track is done; challenges and stories never block the path
   function nodeStatus(nodeId) {
     const n = course.nodes.get(nodeId); if (!n) return 'locked';
     const done = state.nodes[nodeId];
-    if (n.kind === 'boss') { if (state.crowns[n.unit]) return 'crowned'; const unit = course.units.get(n.unit); return unit.nodes.filter(x => x.kind !== 'boss').every(x => nodeDone(x.id)) ? 'available' : (done?.n ? 'done' : 'locked'); }
+    if (n.kind === 'boss') { if (state.crowns[n.unit]) return 'crowned'; if (course.track(n.track)?.kind === 'section' && course.track(n.track).no <= 8) return 'available'; const unit = course.units.get(n.unit); return unit.nodes.filter(x => x.kind !== 'boss').every(x => nodeDone(x.id)) ? 'available' : (done?.n ? 'done' : 'locked'); }
     if (done?.n) return 'done'; if (done?.tested) return 'tested';
     if (!trackUnlocked(n.track)) return 'locked';
+    if (course.track(n.track)?.kind === 'section' && course.track(n.track).no <= 8) return 'available';
     const lessons = course.path(n.track).filter(id => course.nodes.get(id).kind !== 'boss');
     const i = lessons.indexOf(nodeId);
     return i <= 0 || nodeDone(lessons[i - 1]) ? 'available' : 'locked';
   }
   function current(trackId) { return course.path(trackId).find(id => course.nodes.get(id).kind !== 'boss' && nodeStatus(id) === 'available') || null; }
-  function unitStoryStatus(unitId) { const u = course.units.get(unitId); if (!u?.story) return null; if (state.stories[u.story]) return 'done'; return u.nodes.filter(n => n.kind !== 'boss').every(n => nodeDone(n.id)) ? 'available' : 'locked'; }
+  function unitStoryStatus(unitId) { const u = course.units.get(unitId); if (!u?.story) return null; if (state.stories[u.story]) return 'done'; if (course.track(u.track)?.kind === 'section' && course.track(u.track).no <= 8) return 'available'; return u.nodes.filter(n => n.kind !== 'boss').every(n => nodeDone(n.id)) ? 'available' : 'locked'; }
 
   // ----- composing sessions -----
   const rec = id => state.items[id];
@@ -249,10 +252,10 @@ export function createGame({ storage, now = () => Date.now(), course }) {
         const i = course.index.sections.findIndex(s => s.id === id); if (i <= 0) return null;
         const prior = course.index.sections.slice(0, i), recent = prior.at(-1);
         const take = (sec, k, salt) => shuffle(sec.units.flatMap(u => u.nodes.filter(n => n.kind !== 'boss').flatMap(n => scorable(course.nodes.get(n.id).pool || []))).filter(x => ['grammar', 'drill', 'talk'].includes(course.item(x).kind) && course.item(x).type !== 'match'), salt).slice(0, k);
-        const queue = [...take(recent, 8, id + serial), ...prior.slice(0, -1).flatMap((s, k) => take(s, 1, s.id + serial + k))].slice(0, BOSS_SIZE);
+        const queue = [...new Set([...take(recent, 8, id + serial), ...prior.slice(0, -1).flatMap((s, k) => take(s, 1, s.id + serial + k))])].slice(0, BOSS_SIZE);
         return queue.length >= 6 ? { queue: shuffle(queue, 'j' + serial), hearts: HEARTS } : null;
       }
-      case 'placement': { const queue = (course.index.placement || []).flatMap(b => b.items).filter(x => course.item(x)); return queue.length ? { queue, hearts: null } : null; }
+      case 'placement': { const placement = makePlacement(course, id ?? 20, serial, state.items); return placement ? { queue: placement.slots.map(x=>x.id), hearts:null, placement } : null; }
     }
     return null;
   }
@@ -263,7 +266,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     if (mode === 'lesson' || mode === 'boss') return [course.nodes.get(id)?.track].filter(Boolean);
     if (mode === 'review') return [course.units.get(id)?.track].filter(Boolean);
     if (mode === 'jump') { const i = course.index.sections.findIndex(s => s.id === id); return course.index.sections.slice(0, Math.max(0, i)).map(s => s.id); }
-    if (mode === 'placement') return [...new Set((course.index.placement || []).map(b => b.section))];
+    if (mode === 'placement') return course.index.sections.map(s=>s.id);
     if (mode === 'mistakes') return [...new Set(Object.values(state.items).filter(r => r.m).map(r => r.f).filter(Boolean))];
     if (mode === 'practice' || mode === 'listen') return [...new Set(Object.keys(state.nodes).filter(k => state.nodes[k].n).map(k => course.nodes.get(k)?.track).filter(Boolean))];
     return [];
@@ -275,7 +278,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     if (mode === 'boss' && !['available', 'crowned', 'done'].includes(nodeStatus(id))) return false;
     const serial = state.serial + 1, c = compose(mode, id, serial); if (!c?.queue.length) return false;
     state.serial = serial; result = null;
-    state.session = { id: serial, mode, ref: id, queue: c.queue, index: 0, results: [], feedback: null, hint: false, audio: false, combo: 0, maxCombo: 0, hearts: c.hearts, repairs: 0, support: 0, wrongRun: 0, started: now(), base: c.queue.length };
+    state.session = { id: serial, mode, ref: id, queue: c.queue, index: 0, results: [], feedback: null, hint: false, audio: false, combo: 0, maxCombo: 0, hearts: c.hearts, repairs: 0, support: 0, wrongRun: 0, started: now(), itemStarted: now(), fastRun:0, fastBest:0, placement:c.placement || null, base: c.queue.length };
     save(); return true;
   }
   const currentItem = () => state.session ? course.item(state.session.queue[state.session.index]) : null;
@@ -285,7 +288,8 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const modes=['lesson','boss','story','review','mistakes','practice','listen','vocab','jump','placement'];
     const basic=Array.isArray(s.queue)&&s.queue.length>0&&s.queue.length<=512&&s.queue.every(id=>typeof id==='string'&&course.item(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<s.queue.length&&Array.isArray(s.results)&&modes.includes(s.mode)&&Number.isSafeInteger(s.id)&&s.id>0&&Number.isInteger(s.base)&&s.base>0&&s.base<=s.queue.length&&Number.isFinite(s.started)&&(s.hearts===null||Number.isInteger(s.hearts)&&s.hearts>=0&&s.hearts<=HEARTS)&&(!s.feedback||typeof s.feedback.ok==='boolean');
     const processed=basic?s.queue.slice(0,s.index+(s.feedback?1:0)).filter(id=>isScored(course.item(id))):[];
-    const ok=basic&&processed.length===s.results.length&&s.results.every((r,i)=>r&&r.id===processed[i]&&typeof r.ok==='boolean'&&typeof r.hint==='boolean'&&typeof r.repair==='boolean');
+    const planOk = !s.placement || (isObj(s.placement) && s.placement.version === 1 && s.placement.anchors === Math.floor(s.placement.size/9)*9 && s.mode === 'placement' && [10,20,30].includes(s.placement.size) && s.queue.length === s.placement.size && Array.isArray(s.placement.slots) && s.placement.slots.length === s.queue.length && s.placement.slots.every((x,i)=>x && x.id===s.queue[i] && course.index.sections.some(sec=>sec.id===x.section)));
+    const ok=basic&&planOk&&processed.length===s.results.length&&s.results.every((r,i)=>r&&r.id===processed[i]&&typeof r.ok==='boolean'&&typeof r.hint==='boolean'&&typeof r.repair==='boolean');
     if (!ok) { state.session = null; save(); }
     return ok;
   }
@@ -294,13 +298,16 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const it = currentItem();
     if (isScored(it) && !s.feedback) return false;
     if (s.index + 1 >= s.queue.length || (s.hearts !== null && s.hearts <= 0)) return finish();
-    s.index++; s.feedback = null; s.hint = false; s.audio = false; s.transcript = false; save(); return true;
+    if (s.mode === 'placement' && s.placement) { refinePlacement(s.placement,s.results,course,s.id,state.items); s.queue = s.placement.slots.map(x=>x.id); }
+    s.index++; s.itemStarted = now(); s.feedback = null; s.hint = false; s.audio = false; s.transcript = false; save(); return true;
   }
   function submit(value) {
     const s = state.session, it = currentItem();
     if (!s || !isScored(it) || s.feedback || value === undefined || value === null || String(value).trim() === '') return false;
     const ok = accepts(it, value), repair = s.index >= s.base, t = now();
-    const r = { id: it.id, ok, hint: s.hint, repair, audio: s.audio };
+    const r = { id: it.id, value:String(value), ok, hint: s.hint, repair, audio: s.audio, transcript: !!s.transcript, elapsed: Number.isFinite(s.itemStarted) ? Math.max(0,t-s.itemStarted) : null };
+    const seen = (state.items[it.id]?.s || 0)>0;
+    s.fastRun = fastAnswerEligible(it,r,seen) ? (s.fastRun || 0)+1 : 0; s.fastBest = Math.max(s.fastBest || 0,s.fastRun);
     s.results.push(r); s.feedback = { ok, value: String(value) };
     const record = state.items[it.id] ||= { s: 0, c: 0, w: 0, last: 0, at: 0, m: false, fix: 0, ws: 0, f: it.f || '' };
     record.s++; record.at = t; record.last = ok ? 1 : 0; record.f = it.f || record.f;
@@ -349,12 +356,17 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const t = now(), key = 'session:' + s.id; let xp = 0, passed = true, newDay = false, extra = {};
     const streakBefore = streak();
     if (s.mode === 'placement') {
+      if (s.placement) {
+        extra = placementReport(s.placement,s.results,course);
+        extra.review = s.results.map(r=>({id:r.id,ok:r.ok,value:r.value || '',prompt:course.item(r.id).prompt,text:course.item(r.id).text || course.item(r.id).audio || '',passage:course.item(r.id).passage || '',answer:course.item(r.id).given ? `${course.item(r.id).given} ${course.item(r.id).answer}` : course.item(r.id).answer,why:course.item(r.id).why}));
+      } else {
       const blocks = course.index.placement || []; let reached = 0, i = 0;
       for (const [bi, b] of blocks.entries()) { const rs = s.results.slice(i, i + b.items.length); i += b.items.length; if (rs.length && rs.filter(r => !r.ok).length <= 1) reached = bi + 1; else break; }
       const order = course.index.sections.map(x => x.id);
       const lastPassed = reached ? order.indexOf(blocks[reached - 1].section) : -1;
       const recommended = order[Math.min(order.length - 1, lastPassed + 1)];
       extra = { recommended, reached, blocks: blocks.length };
+      }
     } else {
       if (s.mode === 'lesson') {
         const node = state.nodes[s.ref] ||= { n: 0, at: 0, best: 0, tested: false }; const first = !node.n;
@@ -389,6 +401,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     checkBadges();
     result = { mode: s.mode, ref: s.ref, xp, accuracy, perfect, firstTry, total: scored.length, repairs: s.results.filter(r => r.repair).length, passed, hearts: s.hearts, maxCombo: s.maxCombo, seconds: Math.max(1, Math.round((t - s.started) / 1000)), newDay, streak: streak(), streakBefore, events: pending, ...extra };
     result.takeaways = takeaways(s, course);
+    result.suggestedJump = jumpSuggestion(s,course);
     pending = []; state.session = null; save(); return result;
   }
 
@@ -399,7 +412,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     setup(profile) { state.profile = makeProfile(profile); retargetXpQuest(); save(); },
     update(patch) { if (!state.profile) return; state.profile = makeProfile({ ...state.profile, ...patch }); retargetXpQuest(); save(); },
     flag(id) { if (!course.item(id)) return false; if (state.flags[id]) delete state.flags[id]; else state.flags[id] = now(); save(); return !!state.flags[id]; },
-    acceptPlacement(sectionId) { const order = course.index.sections.map(s => s.id), i = order.indexOf(sectionId); if (i < 0) return false; const t = now(); if (i > 0) state.jumped[sectionId] = t; for (const sec of course.index.sections.slice(0, i)) for (const u of sec.units) for (const n of u.nodes) if (n.kind !== 'boss' && !state.nodes[n.id]?.n) state.nodes[n.id] = { n: 0, at: t, best: 0, tested: true }; if (state.profile) state.profile.start = sectionId; save(); return true; },
+    acceptPlacement(sectionId) { const order = course.index.sections.map(s=>s.id), i=order.indexOf(sectionId); if (i<0) return false; if (i>0) state.jumped[sectionId]=now(); if(state.profile) state.profile.start=sectionId; save(); return true; },
     hint() { const s = state.session; if (s && !s.feedback && !['boss', 'jump', 'placement'].includes(s.mode)) { s.hint = true; save(); return true; } return false; },
     heard() { const s = state.session; if (s && !s.feedback && !s.transcript) { s.audio = true; save(); } },
     transcript() { const s = state.session; if (s && !s.feedback) { s.transcript = true; s.audio = false; save(); } },

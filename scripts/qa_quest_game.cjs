@@ -44,7 +44,7 @@ const KEY = 'english-quest-game-v2';
         await page.locator('#go').click();
       } else if (it.type === 'input') { await page.locator('#answer').fill(wrong ? 'zzz' : it.answer); await page.locator('#answer').press('Enter'); }
       else if (it.type === 'match') for (let i = 0; i < it.pairs.length; i++) { await page.locator(`[data-act="mL"][data-i="${i}"]`).click(); await page.locator(`[data-act="mR"][data-i="${i}"]`).click(); }
-      await page.locator('.check.ok, .check.bad').waitFor();
+      await page.locator(s.mode==='placement'?'.assessment-recorded':'.check.ok, .check.bad').waitFor();
       return it.type;
     }
     async function play(wrong = () => false, guard = 80) { const seen = []; let k = 0; while (guard-- > 0) { const r = await step(wrong(k)); if (r === null) break; if (r !== 'next') { seen.push(r); k++; } } await page.locator('.result').waitFor(); return seen; }
@@ -94,7 +94,7 @@ const KEY = 'english-quest-game-v2';
     await page.locator('.track-head [data-act="jump"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
     assert.match(await page.locator('.result h1').innerText(), /跳級成功/); await leaveResult();
     assert.ok(await page.locator('.node.current').count()); checks.push('jump test unlocks section 3');
-    await page.goto(base + '#profile'); await page.locator('.top [data-act="placement"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
+    await page.goto(base + '#profile'); await page.locator('.top [data-act="placement"]').click(); await page.locator('[data-size="20"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
     assert.match(await page.locator('.result h1').innerText(), /建議從第/); await page.locator('[data-act="accept"]').first().click(); checks.push('placement recommends a section');
     for (const tab of ['practice', 'stories', 'library', 'profile']) for (const width of [320, 1280]) { await page.setViewportSize({ width, height: 900 }); await page.goto(base + '#' + tab); await page.locator('.page-head').waitFor(); await noOverflow(tab + ' ' + width); if (width === 1280) await page.screenshot({ path: `${out}/v2-${tab}-1280.png`, fullPage: false }); }
     checks.push('practice/stories/library/profile at 320 and 1280');
@@ -114,19 +114,19 @@ const KEY = 'english-quest-game-v2';
         speak(u){window.coachSpeech.push({text:u.text,lang:u.lang,rate:u.rate});queueMicrotask(()=>u.onend?.());}
       }});
     });
-    await direct.goto(base+'#placement');await direct.locator('.lesson-screen').waitFor();
+    await direct.goto(base+'#placement'); await direct.locator('.placement-options').waitFor(); assert.equal(await direct.locator('.placement-size').count(),3); await direct.locator('[data-size="10"]').click();await direct.locator('.lesson-screen').waitFor();
     assert.equal(await direct.locator('.coach-controls').count(),0);
     await direct.locator('[data-act="prompt-say"]').first().click();
     await direct.waitForFunction(()=>window.coachSpeech.length>0);
     assert.equal(await direct.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-    checks.push('fresh learner enters placement directly; prompt narration works without revealing answer');
+    checks.push('fresh learner chooses 10/20/30 before placement; prompt narration works without revealing answer');
     await direct.goto(base.replace(/quest\/$/,''));await direct.locator('.level-top-entry').waitFor();
     assert.match(await direct.locator('.level-top-entry').getAttribute('href'),/quest\/#placement$/);
     assert.equal(await direct.locator('.level-top-entry').evaluate(e=>e.getBoundingClientRect().top),0);
     await direct.locator('.level-top-entry').click();await direct.locator('[data-act="resume"]').waitFor();
     checks.push('main site top placement link preserves an unfinished test');await direct.close();
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-26', version: 'coach20261026', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-27', version: 'path20261027', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }
