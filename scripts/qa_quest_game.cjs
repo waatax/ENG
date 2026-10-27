@@ -127,7 +127,7 @@ const KEY = 'english-quest-game-v2';
     await direct.locator('.level-top-entry').click();await direct.locator('[data-act="resume"]').waitFor();
     checks.push('main site top placement link preserves an unfinished test');await direct.close();
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-27', version: 'advanced20261027', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-27', version: 'school20261027', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }

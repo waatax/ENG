@@ -1,15 +1,17 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=advanced20261027';
+import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
+import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=school20261027';
 import * as sound from './sound.mjs?v=coach20261026';
 import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
 const V = '20261024v6';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
-import {nextAdventure,sessionTrail} from './adventure.mjs';
+import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const TABS = [['learn', '🏠', '學習'], ['practice', '💪', '練習'], ['stories', '📖', '故事'], ['library', '📚', '教材'], ['profile', '🙂', '我的']];
+const TABS = [['learn', '🏠', '學習'], ['school','🎒','學期'], ['practice', '💪', '練習'], ['stories', '📖', '故事'], ['library', '📚', '教材'], ['profile', '🙂', '我的']];
 const GOAL_INFO = { casual: ['輕鬆', '約 5 分鐘'], regular: ['一般', '約 10 分鐘'], serious: ['認真', '約 15 分鐘'], intense: ['衝刺', '約 20 分鐘'] };
 const WHY_INFO = { life: ['🧳', '生活與旅遊', '點餐、問路、交朋友'], school: ['🏫', '學校與大考', '會考、學測、統測'], work: ['💼', '工作與職場', '技高、職場溝通、多益'], exam: ['📜', '檢定與留學', '英檢、托福、SAT、GRE、GMAT'] };
 const WHY_BRANCH = { life: [], school: ['b-cap', 'b-gsat'], work: ['b-voc', 'b-toeic'], exam: ['b-cert', 'b-toeic', 'b-sat'] };
@@ -17,7 +19,7 @@ const PRAISE = ['太棒了！', '答對了！', '很好！', '完全正確！', 
 const KIND_TEXT = { word: '字詞', talk: '會話', grammar: '觀念', drill: '精熟', boss: '單元挑戰', lesson: '課程' };
 
 let course, game;
-const ui = { tab: 'learn', track: null, pop: null, guide: null, modal: null, paused: false, toast: [], step: 0, why: 'life', goal: 'regular', a: null, shownFor: '', played: '', streakShown: false, vocabCat: '', busy: '' };
+const ui = { tab: 'learn', track: null, pop: null, guide: null, modal: null, paused: false, toast: [], step: 0, why: 'life', goal: 'regular', a: null, shownFor: '', played: '', streakShown: false, vocabCat: '', busy: '', schoolGroup:'junior' };
 const freshAnswer = () => ({ value: '', tokens: [], text: '', left: null, done: [], wrong: 0, flash: null, transcript: false, hint: false, zh: false });
 ui.a = freshAnswer();
 
@@ -66,7 +68,7 @@ function layout(body, { wide = false } = {}) {
   <nav class="bottom" aria-label="主要導覽">${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i><span>${t}</span></a>`).join('')}</nav>
   </div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
-function trackChip() { const t = course.track(ui.track); return `<button class="track-chip ${t?.color || ''}" data-act="tracks" aria-label="切換段落">${t?.kind === 'branch' ? t.icon : `第 ${t?.no} 段`} <b>${esc(t?.title || '')}</b> ▾</button>`; }
+function trackChip() { const t = course.track(ui.track); return `<button class="track-chip ${t?.color || ''}" data-act="tracks" aria-label="切換段落">${t?.kind !== 'section' ? t.icon : `第 ${t?.no} 段`} <b>${esc(t?.title || '')}</b> ▾</button>`; }
 
 // ---------- learn: the path ----------
 const OFFSETS = [0, 1, 1.6, 1, 0, -1, -1.6, -1];
@@ -76,7 +78,7 @@ function learnPage() {
   const unlocked = game.trackUnlocked(t.id), currentId = game.current(t.id);
   const s = game.state.session;
   const resume = s && ui.paused ? `<div class="resume card"><div>${mascot('wow', 48)}</div><div><b>還有一個未完成的${s.mode === 'story' ? '故事' : '練習'}</b><p class="muted">剛剛的作答都保存了，從原來的地方繼續。</p></div><div class="row"><button class="btn primary" data-act="resume">接續</button><button class="btn ghost" data-act="discard">放棄</button></div></div>` : '';
-  const header = t.kind === 'section'
+  const header = t.kind === 'semester' ? semesterIntro(semesterOf(t.id),course,game) : t.kind === 'section'
     ? `<section class="track-head ${t.color}"><div><p class="eyebrow">第 ${t.no} 段 · ${esc(t.level)}</p><h1>${esc(t.title)}</h1><p>${t.units.length} 個單元 · ${t.units.reduce((n, u) => n + u.nodes.length, 0)} 個關卡</p></div>${unlocked ? (t.no<9 ? `<div class="jump"><p>第 1–8 段自由選關；已經熟悉？也能測驗跳級。</p><button class="btn gold" data-act="jump" data-id="${course.index.sections[t.no].id}">⏩ 挑戰下一段</button></div>` : '') : `<div class="jump"><p>已經會了？通過跳級測驗就能直接從這裡開始。</p><button class="btn gold" data-act="jump" data-id="${t.id}">⏩ 跳到這裡</button></div>`}</section>`
     : `<section class="track-head ${t.color}"><div><p class="eyebrow">目標分支 · ${esc(t.level)}</p><h1>${t.icon} ${esc(t.title)}</h1><p>${t.units.length} 個單元 · 隨時可以開始，不是必經的升級順序</p></div></section>`;
   const units = t.units.map((u, ui2) => unitBlock(t, u, ui2, currentId)).join('');
@@ -85,7 +87,7 @@ function learnPage() {
   const mission=nextAdventure(game,course,t.id);
   const launch=unlocked&&!s?`<section class="adventure"><span aria-hidden="true">🧭</span><div><h2>${mission.title}</h2><p>${esc(mission.text)}</p></div><button class="btn primary" data-act="start" data-mode="${mission.mode}" data-id="${mission.id}">${mission.label} →</button></section>`:'';
   // the path comes first; branch suggestions wait below it so the first lesson is visible without scrolling
-  return `${resume}${todayMobile()}${header}${launch}${courseAtlas(course,game)}<p class="path-goals">🎯 ${esc((LEVEL_GOALS[t.id] || [t.title]).join(' · '))}</p><div class="path">${units}</div>${suggestBranches()}${tail}`;
+  return `${resume}${todayMobile()}${header}${launch}${t.kind==='semester'?'':`<a class="school-entry card" href="#school"><b>🎒 國中／高中六學期課程</b><small>依 108 課綱展開 12 個學期單元、闖關與作品 →</small></a>`}${t.kind==='semester'?'':courseAtlas(course,game)}<p class="path-goals">🎯 ${esc((LEVEL_GOALS[t.id] || [t.title]).join(' · '))}</p><div class="path">${units}</div>${t.kind==='semester'?semesterProject(semesterOf(t.id),game):''}${suggestBranches()}${tail}`;
 }
 // narrow screens have no side rail, so today's goal and quests fold into the top of the path
 function todayMobile() {
@@ -94,7 +96,7 @@ function todayMobile() {
 }
 function suggestBranches() {
   const ids = WHY_BRANCH[profile().why] || []; const t = course.track(ui.track);
-  if (!ids.length || t.kind === 'branch' || t.no > 2) return '';
+  if (!ids.length || t.kind !== 'section' || t.no > 2) return '';
   return `<div class="suggest">推薦你的目標分支：${ids.map(id => { const b = course.track(id); return `<button class="chip" data-act="track" data-id="${id}">${b.icon} ${esc(b.title)}</button>`; }).join('')}</div>`;
 }
 function unitBlock(t, u, index, currentId) {
@@ -121,6 +123,7 @@ function popover(n, status, u) {
 // ---------- guide ----------
 function guideView(unitId) {
   const u = course.units.get(unitId), g = course.guides.get(unitId);
+  if(u?.semester)return schoolGuide(semesterOf(u.semester),course);
   if (!g) return `<p>指南載入中…</p>`;
   const say = (text, label = '播放') => `<button class="say" data-act="say" data-text="${esc(text)}" aria-label="${label}：${esc(text)}">🔊</button>`;
   return `<p class="eyebrow">單元指南</p><h2>${u.icon} ${esc(u.title)}</h2>${g.goal ? `<p class="goal">🎯 ${esc(g.goal)}</p>` : ''}${g.motivation ? `<p class="muted">${esc(g.motivation)}</p>` : ''}
@@ -210,7 +213,7 @@ function lessonFooter(it, s) {
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p><div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement'].includes(s.mode);
@@ -235,7 +238,7 @@ function resultView() {
   }
   const failed = !r.passed;
   const title = failed ? (r.mode === 'jump' ? '這次還沒過關' : '差一點點！') : r.mode === 'boss' ? '挑戰成功！獲得金冠 👑' : r.mode === 'jump' ? '跳級成功！' : r.mode === 'story' ? '故事讀完了！' : r.perfect ? '全對！太厲害了' : '課程完成！';
-  const sub = failed ? (r.mode === 'jump' ? '沒關係，這表示前面的段落值得好好學。從頭學也會很快。' : '錯題已經加進錯題本。看一下指南，再試一次就會更熟。') : r.perfect ? '本次獨立答對，隔日再回想，確認是否留得住。' : '答錯的題目已加入錯題本，之後會再出現。';
+  const sub = r.audioPending ? '聽辨題尚未完整播放，這次不授予學期金冠。可以重聽挑戰，或先以文字練習。' : failed ? (r.mode === 'jump' ? '沒關係，這表示前面的段落值得好好學。從頭學也會很快。' : '錯題已經加進錯題本。看一下指南，再試一次就會更熟。') : r.perfect ? '本次獨立答對，隔日再回想，確認是否留得住。' : '答錯的題目已加入錯題本，之後會再出現。';
   const ev = (r.events || []).map(e => e.type === 'quest' ? `<li>✅ 每日任務完成 +10 💎</li>` : e.type === 'chest' ? `<li>🎁 三項任務全完成，寶箱 +20 💎</li>` : e.type === 'badge' ? (() => { const b = BADGES.find(x => x.id === e.id); return `<li>${b.icon} 新成就：${esc(b.title)} +20 💎</li>`; })() : '').join('');
   const goalHit = game.todayXp() >= game.goalXp() && game.todayXp() - r.xp < game.goalXp();
   return `<div class="result ${failed ? 'failed' : 'passed'}">${!failed && profile().motion !== false ? confetti() : ''}${mascot(failed ? 'sad' : 'cheer', 120)}<h1>${title}</h1><p class="lead">${sub}</p>
@@ -323,7 +326,7 @@ function render(focus = false) {
   }
   else if (game.result) html = `<div class="result-wrap">${resultView()}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
   else if (!game.state.profile) html = onboarding();
-  else html = layout({ learn: learnPage, practice: practicePage, stories: storiesPage, library: libraryPage, profile: profilePage }[ui.tab]?.() || learnPage(), { wide: ui.tab === 'profile' });
+  else html = layout({ learn: learnPage, school:()=>schoolHome(course,game,ui.schoolGroup), practice: practicePage, stories: storiesPage, library: libraryPage, profile: profilePage }[ui.tab]?.() || learnPage(), { wide: ui.tab === 'profile' });
   document.body.classList.toggle('in-lesson', !!(s && !ui.paused) || !!game.result || !game.state.profile);
   root.innerHTML = html; paintToasts();
   if (newItem) afterNewItem();
@@ -392,17 +395,18 @@ root.addEventListener('click', async e => {
     case 'placement-start': if (!game.state.profile) game.setup({goal:ui.goal,why:ui.why,start:'s1'}); await begin('placement',Number(el.dataset.size)); break;
     case 'result-jump': game.clearResult(); await begin('jump',id); break;
     case 'accept': game.acceptPlacement(id); ui.track = id; game.clearResult(); ui.tab = 'learn'; location.hash = '#learn'; await ensure([id]); render(true); break;
+    case 'school-group': ui.schoolGroup=id; render(true); break;
     case 'tracks': ui.modal = 'tracks'; render(); break;
     case 'advanced-track': game.clearResult();
     case 'unit-select':
-    case 'track': ui.track = id; game.update({start:id}); ui.modal = null; ui.pop = null; ui.tab = 'learn'; if (location.hash !== '#learn') location.hash = '#learn'; render(true); if (el.dataset.unit) document.getElementById('u-'+el.dataset.unit)?.scrollIntoView({block:'start',behavior:profile().motion===false?'instant':'smooth'}); else window.scrollTo(0, 0); break;
+    case 'track': ui.track = id; if(semesterOf(id))ui.schoolGroup=semesterOf(id).group; game.update({start:id}); ui.modal = null; ui.pop = null; ui.tab = 'learn'; if (location.hash !== '#learn') location.hash = '#learn'; render(true); if (el.dataset.unit) document.getElementById('u-'+el.dataset.unit)?.scrollIntoView({block:'start',behavior:profile().motion===false?'instant':'smooth'}); else window.scrollTo(0, 0); break;
     case 'pop': ui.pop = ui.pop === id ? null : id; sound.sfx('tap'); render(); document.querySelector('.pop .btn')?.focus({ preventScroll: true }); break;
     case 'start': game.clearResult(); await begin(el.dataset.mode, id); break;
     case 'story': { const st = game.unitStoryStatus([...course.units.values()].find(u => u.story === id)?.id); if (st === 'locked' && ui.tab === 'learn') { toast('先完成這個單元的課程，故事就會打開。'); break; } await begin('story', id); break; }
     case 'jump': ui.modal = null; await begin('jump', id); break;
     case 'practice': await begin(el.dataset.mode, id); break;
     case 'vcat': ui.vocabCat = id; render(); break;
-    case 'guide': ui.guide = id; ui.modal = 'guide'; if (await ensure([course.units.get(id)?.track])) render(); break;
+    case 'guide': ui.guide = id; ui.modal = 'guide'; if (await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))) render(); break;
     case 'close': ui.modal = null; render(); break;
     case 'shop': ui.modal = 'shop'; render(); break;
     case 'buy': if (game.buyFreeze()) { toast('🧊 已兌換一張凍結卡'); } render(); break;
@@ -440,6 +444,7 @@ root.addEventListener('click', async e => {
   }
 });
 root.addEventListener('input', e => {
+  if (e.target.id === 'school-draft') saveSchoolDraft();
   if (e.target.id === 'answer') { ui.a.text = e.target.value; const go = document.querySelector('#go'); if (go) go.disabled = !ui.a.text.trim(); }
 });
 let composing=false;
@@ -473,7 +478,7 @@ document.addEventListener('keydown', e => {
 window.addEventListener('hashchange', () => {
   const tab = location.hash.slice(1).split('/')[0];
   if (tab === 'placement' && game) { if (game.state.session) { ui.paused=true; ui.tab='learn'; } else ui.modal='placement'; render(true); return; }
-  if (TABS.some(([id]) => id === tab)) { ui.tab = tab; ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
+  if (TABS.some(([id]) => id === tab)) { if(tab==='school'&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'}); ui.tab = tab; ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
 });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && game) { game.refreshDay(); if (!game.state.session || ui.paused) render(); } });
 window.addEventListener('pagehide', () => sound.stop());
@@ -485,7 +490,9 @@ async function boot() {
   catch { root.innerHTML = `<div class="boot">${mascot('sad', 96)}<p>課程資料載入失敗。請確認網路後重新整理，或先使用<a href="../">完整教材網</a>。</p></div>`; return; }
   game = createGame({ storage, course });
   const tab = location.hash.slice(1).split('/')[0]; if (TABS.some(([id]) => id === tab)) ui.tab = tab;
+  if(tab==='school'&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'});
   ui.track = game.state.profile?.start || 's1';
+  if(semesterOf(ui.track))ui.schoolGroup=semesterOf(ui.track).group;
   const firstOpen = course.index.sections.find(sec => game.trackUnlocked(sec.id) && game.current(sec.id));
   if (game.state.profile && firstOpen && !game.trackUnlocked(ui.track)) ui.track = firstOpen.id;
   const s = game.state.session;
@@ -496,3 +503,10 @@ async function boot() {
   }
 }
 boot();
+
+function saveSchoolDraft(){
+ const panel=document.querySelector('.semester-project');if(!panel)return;
+ const text=panel.querySelector('#school-draft')?.value || '', checks=[...panel.querySelectorAll('.school-check')].map(el=>el.checked);
+ if(game.saveSchoolWork(panel.dataset.semester,text,checks)){const status=panel.querySelector('#school-save-status');if(status)status.textContent=game.warning || '已儲存於此瀏覽器';}
+}
+root.addEventListener('change',e=>{if(e.target.matches('.school-check'))saveSchoolDraft();});

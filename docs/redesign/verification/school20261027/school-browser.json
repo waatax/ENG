@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-27",
+  "checks": [
+    "fresh visitor opens semester catalog directly without onboarding",
+    "six junior and six senior semester cards at 320/390/768/1280",
+    "國一上 guide, source dependencies and word/structure lesson",
+    "國一下 guide, source dependencies and word/structure lesson",
+    "國二上 guide, source dependencies and word/structure lesson",
+    "國二下 guide, source dependencies and word/structure lesson",
+    "國三上 guide, source dependencies and word/structure lesson",
+    "國三下 guide, source dependencies and word/structure lesson",
+    "高一上 guide, source dependencies and word/structure lesson",
+    "高一下 guide, source dependencies and word/structure lesson",
+    "高二上 guide, source dependencies and word/structure lesson",
+    "高二下 guide, source dependencies and word/structure lesson",
+    "高三上 guide, source dependencies and word/structure lesson",
+    "高三下 guide, source dependencies and word/structure lesson",
+    "school portfolio auto-save, script escaping, checkbox persistence and no self-assessment XP",
+    "high-school listening, reading, expression lessons and scheduled semester review",
+    "unheard correct guesses cannot earn a semester crown",
+    "semester challenge failure, retry, 80-percent pass and earned crown",
+    "downloaded backup contains both semester portfolios"
+  ],
+  "errors": []
+}

@@ -7,10 +7,10 @@ export function nextAdventure(game,course,trackId){
  return {mode:'practice',id:'',title:'換個情境再挑戰',text:'這一段已經走過。回到學過的內容，找找還能更熟悉的地方。',label:'個人化練習'};
 }
 export function sessionTrail(session){
- const attempts=session.results.filter(r=>!r.repair),independent=attempts.filter(r=>r.ok&&!r.hint).length;
+ const attempts=session.results.filter(r=>!r.repair),independent=attempts.filter(r=>r.ok&&!r.hint&&!r.unheard).length;
  return {independent,attempts:attempts.length,phase:session.index>=session.base?'repair':attempts.length?'practice':'start',label:session.index>=session.base?'修復站：把剛剛的線索想起來':session.mode==='story'?'故事任務：跟著角色找線索':'本關任務：先想答案，再看解析'};
 }
 export function takeaways(session,course){
- const ordered=[...session.results.filter(r=>!r.ok),...session.results.filter(r=>r.ok&&!r.hint)];
+ const ordered=[...session.results.filter(r=>!r.ok),...session.results.filter(r=>r.ok&&!r.hint&&!r.unheard)];
  return [...new Set(ordered.map(r=>r.id))].slice(0,3).map(id=>{const q=course.item(id);return {id,prompt:q.prompt,answer:q.type==='match'?q.why:q.given?`${q.given} ${q.answer}`:q.answer,why:q.why,repair:session.results.some(r=>r.id===id&&!r.ok)};});
 }

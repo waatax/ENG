@@ -1,0 +1,887 @@
+{
+  "date": "2026-10-27",
+  "sequence": "School-authored 6+6 semester route aligned to stage outcomes; not a nationwide mandated semester order or complete curriculum certification.",
+  "junior": 6,
+  "senior": 6,
+  "coreModules": 48,
+  "newNodes": 60,
+  "newScoredItems": 72,
+  "mentorCards": 12,
+  "semesters": [
+    {
+      "id": "j1a",
+      "label": "國一上",
+      "title": "我的校園與日常",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽懂教室指示並回應",
+        "用完整句介紹自己與同學",
+        "讀懂課表與社團通知",
+        "寫出有標點的簡短介紹"
+      ],
+      "prerequisite": "先能辨識字母與常用生活字詞",
+      "coreModules": [
+        "g7-s1-u1",
+        "g7-s1-u2",
+        "g7-s1-u3"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s5"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-2",
+        "2-Ⅳ-4",
+        "3-Ⅳ-6",
+        "4-Ⅳ-3",
+        "5-Ⅳ-3",
+        "7-Ⅳ-1",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ac-Ⅳ-2",
+        "Ad-Ⅳ-1",
+        "B-Ⅳ-1"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j1a:word",
+          "skill": "word",
+          "scoredPool": 53
+        },
+        {
+          "id": "sem-j1a:listen",
+          "skill": "listen",
+          "scoredPool": 21
+        },
+        {
+          "id": "sem-j1a:read",
+          "skill": "read",
+          "scoredPool": 40
+        },
+        {
+          "id": "sem-j1a:use",
+          "skill": "use",
+          "scoredPool": 19
+        },
+        {
+          "id": "sem-j1a:boss",
+          "skill": "boss",
+          "scoredPool": 117
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "資訊包含人物、地點與時間",
+        "每句有主詞及合適動詞",
+        "句首大寫、標點清楚",
+        "能不看稿傳達至少兩項重點"
+      ]
+    },
+    {
+      "id": "j1b",
+      "label": "國一下",
+      "title": "社區生活與合作",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽懂簡單路線與時間變動",
+        "描述正在發生及日常活動",
+        "比較公告中的地點與條件",
+        "寫出清楚的邀請與回覆"
+      ],
+      "prerequisite": "先會現在簡單式、be 與基本問句",
+      "coreModules": [
+        "g7-s2-u4",
+        "g7-s2-u5",
+        "g7-s2-u6"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s5"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-4",
+        "2-Ⅳ-7",
+        "3-Ⅳ-3",
+        "4-Ⅳ-7",
+        "5-Ⅳ-12",
+        "9-Ⅳ-2",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ac-Ⅳ-3",
+        "Ae-Ⅳ-4",
+        "B-Ⅳ-5"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j1b:word",
+          "skill": "word",
+          "scoredPool": 20
+        },
+        {
+          "id": "sem-j1b:listen",
+          "skill": "listen",
+          "scoredPool": 15
+        },
+        {
+          "id": "sem-j1b:read",
+          "skill": "read",
+          "scoredPool": 50
+        },
+        {
+          "id": "sem-j1b:use",
+          "skill": "use",
+          "scoredPool": 15
+        },
+        {
+          "id": "sem-j1b:boss",
+          "skill": "boss",
+          "scoredPool": 96
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "邀請內容包含時間、地點與準備事項",
+        "區分日常習慣與正在進行",
+        "方位指示有可依循的順序",
+        "能回覆朋友提出的問題"
+      ]
+    },
+    {
+      "id": "j2a",
+      "label": "國二上",
+      "title": "經驗敘事與安排",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽出事件先後與改約原因",
+        "用不同時態交代背景與事件",
+        "辨別短文中的原因及結果",
+        "寫出有時間順序的個人經驗"
+      ],
+      "prerequisite": "先能表達現在活動、頻率與地點",
+      "coreModules": [
+        "g8-s1-u1",
+        "g8-s1-u2",
+        "g8-s1-u3"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s5"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-6",
+        "2-Ⅳ-6",
+        "3-Ⅳ-9",
+        "4-Ⅳ-8",
+        "5-Ⅳ-8",
+        "9-Ⅳ-3",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ad-Ⅳ-1",
+        "Ae-Ⅳ-6",
+        "D-Ⅳ-3"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j2a:word",
+          "skill": "word",
+          "scoredPool": 23
+        },
+        {
+          "id": "sem-j2a:listen",
+          "skill": "listen",
+          "scoredPool": 16
+        },
+        {
+          "id": "sem-j2a:read",
+          "skill": "read",
+          "scoredPool": 100
+        },
+        {
+          "id": "sem-j2a:use",
+          "skill": "use",
+          "scoredPool": 16
+        },
+        {
+          "id": "sem-j2a:boss",
+          "skill": "boss",
+          "scoredPool": 149
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "交代背景與發生的事件",
+        "過去式與過去進行式搭配合理",
+        "時間及因果連接詞清楚",
+        "能區分原計畫與實際結果"
+      ]
+    },
+    {
+      "id": "j2b",
+      "label": "國二下",
+      "title": "選擇比較與感受",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽懂比較與選擇理由",
+        "以條件比較方案並提出建議",
+        "辨別價格、時間與限制資訊",
+        "表達興趣、感受與未來意願"
+      ],
+      "prerequisite": "先掌握基本時態與條件表達",
+      "coreModules": [
+        "g8-s2-u4",
+        "g8-s2-u5"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s5"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-4",
+        "2-Ⅳ-5",
+        "3-Ⅳ-4",
+        "4-Ⅳ-5",
+        "5-Ⅳ-2",
+        "9-Ⅳ-2",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ae-Ⅳ-2",
+        "B-Ⅳ-4",
+        "D-Ⅳ-2"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j2b:word",
+          "skill": "word",
+          "scoredPool": 17
+        },
+        {
+          "id": "sem-j2b:listen",
+          "skill": "listen",
+          "scoredPool": 11
+        },
+        {
+          "id": "sem-j2b:read",
+          "skill": "read",
+          "scoredPool": 96
+        },
+        {
+          "id": "sem-j2b:use",
+          "skill": "use",
+          "scoredPool": 11
+        },
+        {
+          "id": "sem-j2b:boss",
+          "skill": "boss",
+          "scoredPool": 131
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "至少使用兩個明確比較條件",
+        "比較級與動詞後形式正確",
+        "建議符合題目給定限制",
+        "能說明另一方案的優點"
+      ]
+    },
+    {
+      "id": "j3a",
+      "label": "國三上",
+      "title": "經驗、人物與公共參與",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽懂經驗敘述並記錄要點",
+        "描述人物、物品與服務過程",
+        "追蹤代名詞與關係子句指涉",
+        "用例子支持個人經驗敘述"
+      ],
+      "prerequisite": "先能用過去式敘事並比較方案",
+      "coreModules": [
+        "g9-s1-u1",
+        "g9-s1-u2",
+        "g9-s1-u3"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s6"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-7",
+        "2-Ⅳ-13",
+        "3-Ⅳ-8",
+        "4-Ⅳ-8",
+        "5-Ⅳ-7",
+        "8-Ⅳ-4",
+        "9-Ⅳ-1",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ad-Ⅳ-1",
+        "Ae-Ⅳ-5",
+        "C-Ⅳ-3"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j3a:word",
+          "skill": "word",
+          "scoredPool": 26
+        },
+        {
+          "id": "sem-j3a:listen",
+          "skill": "listen",
+          "scoredPool": 16
+        },
+        {
+          "id": "sem-j3a:read",
+          "skill": "read",
+          "scoredPool": 121
+        },
+        {
+          "id": "sem-j3a:use",
+          "skill": "use",
+          "scoredPool": 16
+        },
+        {
+          "id": "sem-j3a:boss",
+          "skill": "boss",
+          "scoredPool": 173
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "完成式的時間表達合理",
+        "關係子句有清楚指涉",
+        "被動語態能交代受事者",
+        "反思避免替不同群體貼標籤"
+      ]
+    },
+    {
+      "id": "j3b",
+      "label": "國三下",
+      "title": "多文本閱讀與溝通整合",
+      "stage": "Ⅳ",
+      "goals": [
+        "聽懂公告更動並擷取重點",
+        "用禮貌問句確認不確定資訊",
+        "整合兩種文本與表格作決定",
+        "寫出有證據的簡短回應"
+      ],
+      "prerequisite": "先能追蹤時態、被動與句子指涉",
+      "coreModules": [
+        "g9-s2-u4",
+        "g9-s2-u5",
+        "g9-s2-u6"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s6"
+      ],
+      "performanceCodes": [
+        "1-Ⅳ-11",
+        "2-Ⅳ-7",
+        "3-Ⅳ-12",
+        "4-Ⅳ-7",
+        "5-Ⅳ-9",
+        "9-Ⅳ-4",
+        "6-Ⅳ-2"
+      ],
+      "contentCodes": [
+        "Ae-Ⅳ-2",
+        "Ae-Ⅳ-3",
+        "D-Ⅳ-4"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-j3b:word",
+          "skill": "word",
+          "scoredPool": 25
+        },
+        {
+          "id": "sem-j3b:listen",
+          "skill": "listen",
+          "scoredPool": 16
+        },
+        {
+          "id": "sem-j3b:read",
+          "skill": "read",
+          "scoredPool": 131
+        },
+        {
+          "id": "sem-j3b:use",
+          "skill": "use",
+          "scoredPool": 15
+        },
+        {
+          "id": "sem-j3b:boss",
+          "skill": "boss",
+          "scoredPool": 179
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "結論同時符合兩份資料",
+        "區分公告事實與自己的意見",
+        "間接問句使用敘述句字序",
+        "指出至少一項待確認資訊"
+      ]
+    },
+    {
+      "id": "h1a",
+      "label": "高一上",
+      "title": "句構、身份與觀點",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽出說明的重點與限制",
+        "用理由支持身份或生活選擇",
+        "分析句構與文本指涉",
+        "寫有主題句與支持細節的段落"
+      ],
+      "prerequisite": "先能讀懂國中短文及複句",
+      "coreModules": [
+        "g10-s1-u1",
+        "g10-s1-u2",
+        "g10-s1-u3",
+        "g10-s1-u4",
+        "g10-s1-u5",
+        "g10-s1-u6"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s7"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-10",
+        "2-Ⅴ-3",
+        "3-Ⅴ-7",
+        "4-Ⅴ-4",
+        "5-Ⅴ-4",
+        "7-Ⅴ-5",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "Ad-Ⅴ-1",
+        "Ae-Ⅴ-4",
+        "B-Ⅴ-8"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h1a:word",
+          "skill": "word",
+          "scoredPool": 101
+        },
+        {
+          "id": "sem-h1a:listen",
+          "skill": "listen",
+          "scoredPool": 43
+        },
+        {
+          "id": "sem-h1a:read",
+          "skill": "read",
+          "scoredPool": 57
+        },
+        {
+          "id": "sem-h1a:use",
+          "skill": "use",
+          "scoredPool": 38
+        },
+        {
+          "id": "sem-h1a:boss",
+          "skill": "boss",
+          "scoredPool": 207
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "主題句與支持細節相連",
+        "子句指涉明確且句構完整",
+        "因果與讓步不互相矛盾",
+        "簡報能回應一個追問"
+      ]
+    },
+    {
+      "id": "h1b",
+      "label": "高一下",
+      "title": "文本、數據與媒體判讀",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽出確定資訊與推測",
+        "根據多文本提出有界線的說明",
+        "比較數量、比例與調查對象",
+        "寫出資料支持的比較段落"
+      ],
+      "prerequisite": "先會主要子句、因果及讓步表達",
+      "coreModules": [
+        "g10-s2-u7",
+        "g10-s2-u8",
+        "g10-s2-u9",
+        "g10-s2-u10",
+        "g10-s2-u11",
+        "g10-s2-u12"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s7"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-10",
+        "2-Ⅴ-8",
+        "3-Ⅴ-3",
+        "4-Ⅴ-8",
+        "5-Ⅴ-10",
+        "9-Ⅴ-3",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "Ae-Ⅴ-2",
+        "Ae-Ⅴ-12",
+        "D-Ⅴ-3"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h1b:word",
+          "skill": "word",
+          "scoredPool": 97
+        },
+        {
+          "id": "sem-h1b:listen",
+          "skill": "listen",
+          "scoredPool": 43
+        },
+        {
+          "id": "sem-h1b:read",
+          "skill": "read",
+          "scoredPool": 47
+        },
+        {
+          "id": "sem-h1b:use",
+          "skill": "use",
+          "scoredPool": 40
+        },
+        {
+          "id": "sem-h1b:boss",
+          "skill": "boss",
+          "scoredPool": 192
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "同時交代數量及分母",
+        "推論強度不超出資料",
+        "轉折與比較關係清楚",
+        "能口頭指出資料的限制"
+      ]
+    },
+    {
+      "id": "h2a",
+      "label": "高二上",
+      "title": "敘事視角與假設推演",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽出反事實條件與實際結果",
+        "比較敘事者視角與證據",
+        "把精簡句構還原成因果關係",
+        "寫有反思與細節的敘事段落"
+      ],
+      "prerequisite": "先熟悉關係、副詞子句與情態用法",
+      "coreModules": [
+        "g11-s1-u1",
+        "g11-s1-u2",
+        "g11-s1-u3",
+        "g11-s1-u4",
+        "g11-s1-u5",
+        "g11-s1-u6"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s8"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-6",
+        "2-Ⅴ-9",
+        "3-Ⅴ-10",
+        "4-Ⅴ-6",
+        "5-Ⅴ-5",
+        "9-Ⅴ-2",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "Ae-Ⅴ-11",
+        "B-Ⅴ-9",
+        "D-Ⅴ-2"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h2a:word",
+          "skill": "word",
+          "scoredPool": 99
+        },
+        {
+          "id": "sem-h2a:listen",
+          "skill": "listen",
+          "scoredPool": 43
+        },
+        {
+          "id": "sem-h2a:read",
+          "skill": "read",
+          "scoredPool": 125
+        },
+        {
+          "id": "sem-h2a:use",
+          "skill": "use",
+          "scoredPool": 38
+        },
+        {
+          "id": "sem-h2a:boss",
+          "skill": "boss",
+          "scoredPool": 270
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "實際事件與假設沒有混淆",
+        "分詞或子句的主詞一致",
+        "兩個視角有具體差異",
+        "反思有例子而非空泛結論"
+      ]
+    },
+    {
+      "id": "h2b",
+      "label": "高二下",
+      "title": "永續議題與論證限制",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽出研究主張的保留條件",
+        "比較文本證據與替代解釋",
+        "評估永續方案的效益及限制",
+        "寫有證據與限制的說明段落"
+      ],
+      "prerequisite": "先能分辨假設、實際結果與敘事立場",
+      "coreModules": [
+        "g11-s2-u7",
+        "g11-s2-u8",
+        "g11-s2-u9",
+        "g11-s2-u10",
+        "g11-s2-u11",
+        "g11-s2-u12"
+      ],
+      "optionalExtensions": [],
+      "dependencies": [
+        "s8"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-10",
+        "2-Ⅴ-8",
+        "3-Ⅴ-15",
+        "4-Ⅴ-8",
+        "5-Ⅴ-12",
+        "8-Ⅴ-7",
+        "9-Ⅴ-7",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "Ae-Ⅴ-9",
+        "C-Ⅴ-5",
+        "D-Ⅴ-7"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h2b:word",
+          "skill": "word",
+          "scoredPool": 92
+        },
+        {
+          "id": "sem-h2b:listen",
+          "skill": "listen",
+          "scoredPool": 43
+        },
+        {
+          "id": "sem-h2b:read",
+          "skill": "read",
+          "scoredPool": 38
+        },
+        {
+          "id": "sem-h2b:use",
+          "skill": "use",
+          "scoredPool": 41
+        },
+        {
+          "id": "sem-h2b:boss",
+          "skill": "boss",
+          "scoredPool": 177
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "主張有可追溯證據",
+        "保留條件未被摘要刪去",
+        "討論至少一個替代解釋",
+        "提出可執行的後續查核"
+      ]
+    },
+    {
+      "id": "h3a",
+      "label": "高三上",
+      "title": "多文本綜合與論說表達",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽取多項觀點並整理重點",
+        "整合不同來源且不扭曲立場",
+        "辨別事實、推論及價值判斷",
+        "寫有反方回應的論說段落"
+      ],
+      "prerequisite": "先能評估文本立場、研究限制與因果",
+      "coreModules": [
+        "g12-s1-u1",
+        "g12-s1-u2",
+        "g12-s1-u3",
+        "g12-s1-u4"
+      ],
+      "optionalExtensions": [
+        "g12-s1-u5",
+        "g12-s1-u6"
+      ],
+      "dependencies": [
+        "s9"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-10",
+        "2-Ⅴ-10",
+        "3-Ⅴ-11",
+        "4-Ⅴ-8",
+        "5-Ⅴ-12",
+        "9-Ⅴ-4",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "B-Ⅴ-13",
+        "Ae-Ⅴ-12",
+        "D-Ⅴ-4"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h3a:word",
+          "skill": "word",
+          "scoredPool": 62
+        },
+        {
+          "id": "sem-h3a:listen",
+          "skill": "listen",
+          "scoredPool": 29
+        },
+        {
+          "id": "sem-h3a:read",
+          "skill": "read",
+          "scoredPool": 63
+        },
+        {
+          "id": "sem-h3a:use",
+          "skill": "use",
+          "scoredPool": 27
+        },
+        {
+          "id": "sem-h3a:boss",
+          "skill": "boss",
+          "scoredPool": 158
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "不同來源的主張不混寫",
+        "改寫保留原意並註明來源",
+        "回應反方而非只重複立場",
+        "結論與證據強度一致"
+      ]
+    },
+    {
+      "id": "h3b",
+      "label": "高三下",
+      "title": "跨文化專題與自主學習",
+      "stage": "Ⅴ",
+      "goals": [
+        "聽懂不同表達並主動澄清",
+        "尊重文化差異而不過度概括",
+        "評估來源與規劃小型專題",
+        "以回饋修訂作品與學習計畫"
+      ],
+      "prerequisite": "先能整合來源、引用證據與回應反方",
+      "coreModules": [
+        "g12-s2-u9",
+        "g12-s2-u10",
+        "g12-s2-u12"
+      ],
+      "optionalExtensions": [
+        "g12-s2-u7",
+        "g12-s2-u8",
+        "g12-s2-u11"
+      ],
+      "dependencies": [
+        "s9"
+      ],
+      "performanceCodes": [
+        "1-Ⅴ-10",
+        "2-Ⅴ-10",
+        "3-Ⅴ-15",
+        "4-Ⅴ-8",
+        "5-Ⅴ-12",
+        "7-Ⅴ-9",
+        "8-Ⅴ-8",
+        "9-Ⅴ-8",
+        "6-Ⅴ-2"
+      ],
+      "contentCodes": [
+        "C-Ⅴ-6",
+        "C-Ⅴ-7",
+        "D-Ⅴ-8"
+      ],
+      "allCodesExist": true,
+      "nodes": [
+        {
+          "id": "sem-h3b:word",
+          "skill": "word",
+          "scoredPool": 49
+        },
+        {
+          "id": "sem-h3b:listen",
+          "skill": "listen",
+          "scoredPool": 22
+        },
+        {
+          "id": "sem-h3b:read",
+          "skill": "read",
+          "scoredPool": 11
+        },
+        {
+          "id": "sem-h3b:use",
+          "skill": "use",
+          "scoredPool": 20
+        },
+        {
+          "id": "sem-h3b:boss",
+          "skill": "boss",
+          "scoredPool": 85
+        }
+      ],
+      "newScoredItems": 6,
+      "portfolioRubric": [
+        "比較以資料為基礎且避免刻板印象",
+        "說明來源品質與資訊缺口",
+        "根據回饋做出具體修訂",
+        "學習計畫有可追蹤目標及檢核時間"
+      ]
+    }
+  ]
+}

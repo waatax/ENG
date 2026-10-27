@@ -1,5 +1,6 @@
+import { SCHOOL_ITEMS, SEMESTERS, schoolTracks, schoolFiles, refreshSchoolPools } from './school.mjs?v=school20261027';
 // English Quest game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
-import {takeaways} from './adventure.mjs';
+import {takeaways} from './adventure.mjs?v=school20261027';
 import { makePlacement, placementReport, refinePlacement, validPlacementPlan } from './placement.mjs?v=advanced20261027';
 import { ADVANCED_ITEMS } from './advanced_placement.mjs?v=advanced20261027';
 import { fastAnswerEligible, jumpSuggestion } from './acceleration.mjs';
@@ -37,13 +38,15 @@ export function shuffle(list, seed) { const arr = [...list]; let x = hash(seed) 
 // ---------- course registry ----------
 export function createCourse(index) {
   const units = new Map(), nodes = new Map(), items = new Map(), files = new Set(), guides = new Map(), stories = new Map(), vocab = new Map();
-  const tracks = [...index.sections.map(s => ({ ...s, kind: 'section' })), ...index.branches.map(b => ({ ...b, kind: 'branch' }))];
+  const tracks = [...index.sections.map(s => ({ ...s, kind: 'section' })), ...index.branches.map(b => ({ ...b, kind: 'branch' })), ...schoolTracks(index)];
   for (const t of tracks) t.units.forEach((u, ui) => {
     units.set(u.id, { ...u, track: t.id, trackKind: t.kind, order: ui });
     u.nodes.forEach((n, ni) => nodes.set(n.id, { ...n, unit: u.id, track: t.id, order: ni, pool: null }));
   });
   for (const s of index.stories || []) stories.set(s.id, { ...s, steps: null });
   for (const it of ADVANCED_ITEMS) items.set(it.id,{...it,f:'placement-advanced'});
+  for (const it of SCHOOL_ITEMS) items.set(it.id,{...it,f:'semester-items'});
+  files.add('semester-items');
   const course = {
     index, tracks, units, nodes, items, guides, stories, vocab,
     track: id => tracks.find(t => t.id === id),
@@ -54,12 +57,13 @@ export function createCourse(index) {
       if (file.sets) { for (const set of file.sets) { vocab.set(set.id, set); for (const it of vocabExercises(set)) items.set(it.id, { ...it, f: 'vocab', set: set.id }); } files.add('vocab'); return; }
       for (const [id, it] of Object.entries(file.items)) items.set(id, { ...it, f: file.id });
       for (const [uid, u] of Object.entries(file.units)) { guides.set(uid, u.guide); for (const [nid, pool] of Object.entries(u.nodes)) if (nodes.has(nid)) nodes.get(nid).pool = pool; }
-      files.add(file.id);
+      files.add(file.id); refreshSchoolPools(course);
     },
     // path order inside a track: every node of every unit, with the optional story after its unit
     path(trackId) { return course.track(trackId).units.flatMap(u => u.nodes.map(n => n.id)); },
     unitOfNode: id => nodes.get(id)?.unit
   };
+  refreshSchoolPools(course);
   return course;
 }
 
@@ -82,8 +86,8 @@ export function vocabExercises(set) {
 
 // ---------- state ----------
 const WHY = ['life', 'school', 'work', 'exam'];
-const makeProfile = p => ({ goal: GOALS[p.goal] ? p.goal : 'regular', start: /^s[1-9]$/.test(p.start) ? p.start : 's1', why: WHY.includes(p.why) ? p.why : 'life', sound: p.sound !== false, autoplay: p.autoplay !== false, motion: p.motion !== false, rate: [0.7, 0.85, 1].includes(p.rate) ? p.rate : 0.85 });
-const fresh = now => ({ schema: 2, created: now, profile: null, nodes: {}, crowns: {}, review: {}, jumped: {}, items: {}, xp: { total: 0, days: {} }, awards: {}, days: [], frozen: [], freezes: 0, gems: 0, quests: null, achievements: {}, stories: {}, flags: {}, stats: { lessons: 0, perfect: 0, combo: 0, listen: 0, fixed: 0, stories: 0, crowns: 0 }, session: null, serial: 0, legacy: null });
+const makeProfile = p => ({ goal: GOALS[p.goal] ? p.goal : 'regular', start: /^(s[1-9]|sem-[jh][123][ab])$/.test(p.start) ? p.start : 's1', why: WHY.includes(p.why) ? p.why : 'life', sound: p.sound !== false, autoplay: p.autoplay !== false, motion: p.motion !== false, rate: [0.7, 0.85, 1].includes(p.rate) ? p.rate : 0.85 });
+const fresh = now => ({ schema: 2, created: now, profile: null, nodes: {}, crowns: {}, review: {}, jumped: {}, items: {}, xp: { total: 0, days: {} }, awards: {}, days: [], frozen: [], freezes: 0, gems: 0, quests: null, achievements: {}, stories: {}, flags: {}, stats: { lessons: 0, perfect: 0, combo: 0, listen: 0, fixed: 0, stories: 0, crowns: 0 }, session: null, serial: 0, legacy: null, schoolWork:{} });
 const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
 const num = (v, d = 0) => Number.isFinite(v) && v >= 0 ? v : d;
 const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -104,6 +108,7 @@ function sanitize(raw, now) {
   if (isObj(raw.quests) && DAY_RE.test(raw.quests.day) && Array.isArray(raw.quests.list)) s.quests = { day: raw.quests.day, bonus: raw.quests.bonus === true, list: raw.quests.list.filter(isObj).map(q => ({ id: String(q.id), target: num(q.target, 1), n: num(q.n), done: q.done === true })) };
   for (const k of Object.keys(s.stats)) s.stats[k] = num(raw.stats?.[k]);
   if (isObj(raw.session) && Array.isArray(raw.session.queue) && Number.isInteger(raw.session.index)) s.session = raw.session; // validated against the course on resume
+  for (const [id,v] of Object.entries(raw.schoolWork || {})) if (SEMESTERS.some(s=>s.id===id) && isObj(v)) s.schoolWork[id]={text:String(v.text || '').slice(0,6000),checks:Array.from({length:4},(_,i)=>v.checks?.[i]===true),at:num(v.at)};
   if (isObj(raw.legacy)) s.legacy = raw.legacy;
   return s;
 }
@@ -195,7 +200,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
 
   // ----- unlocking -----
   function trackUnlocked(trackId) {
-    const t = course.track(trackId); if (!t) return false; if (t.kind === 'branch') return true;
+    const t = course.track(trackId); if (!t) return false; if (t.kind === 'branch' || t.kind === 'semester') return true;
     const i = course.index.sections.findIndex(s => s.id === trackId);
     if (i <= 7 || state.jumped[trackId]) return true;
     return sectionDone(course.index.sections[i - 1].id);
@@ -204,9 +209,10 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function nodeStatus(nodeId) {
     const n = course.nodes.get(nodeId); if (!n) return 'locked';
     const done = state.nodes[nodeId];
-    if (n.kind === 'boss') { if (state.crowns[n.unit]) return 'crowned'; if (course.track(n.track)?.kind === 'section' && course.track(n.track).no <= 8) return 'available'; const unit = course.units.get(n.unit); return unit.nodes.filter(x => x.kind !== 'boss').every(x => nodeDone(x.id)) ? 'available' : (done?.n ? 'done' : 'locked'); }
+    if (n.kind === 'boss') { if (state.crowns[n.unit]) return 'crowned'; if(n.semester)return 'available'; if (course.track(n.track)?.kind === 'section' && course.track(n.track).no <= 8) return 'available'; const unit = course.units.get(n.unit); return unit.nodes.filter(x => x.kind !== 'boss').every(x => nodeDone(x.id)) ? 'available' : (done?.n ? 'done' : 'locked'); }
     if (done?.n) return 'done'; if (done?.tested) return 'tested';
     if (!trackUnlocked(n.track)) return 'locked';
+    if(n.semester)return 'available';
     if (course.track(n.track)?.kind === 'section' && course.track(n.track).no <= 8) return 'available';
     const lessons = course.path(n.track).filter(id => course.nodes.get(id).kind !== 'boss');
     const i = lessons.indexOf(nodeId);
@@ -226,7 +232,15 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function interleaveKinds(ids) { const groups = {}; for (const id of ids) (groups[course.item(id).kind] ||= []).push(id); const out = []; const g = Object.values(groups); while (g.some(x => x.length)) for (const x of g) if (x.length) out.push(x.shift()); return out; }
   function composeNode(nodeId, serial) {
     const n = course.nodes.get(nodeId); if (!n?.pool) return null;
+    if(n.semester && schoolFiles(n.semester,course.index).some(file=>!course.loaded(file)))return null;
     const pool = scorable(n.pool); if (!pool.length) return null;
+    if(n.semester) {
+      const anchors=pool.filter(id=>course.item(id).school===n.semester);
+      const count=n.kind==='boss'?BOSS_SIZE:LESSON_SIZE;
+      const chosen=[...anchors,...choose(pool.filter(id=>!anchors.includes(id)),Math.max(0,count-anchors.length),nodeId+serial,id=>rec(id)?.m?2:rec(id)?.s?0:1)];
+      const info=n.kind==='boss'?[]:n.pool.filter(id=>course.item(id)?.type==='info'&&!state.nodes[nodeId]?.n);
+      return {queue:[...info,...chosen.slice(0,count)],hearts:n.kind==='boss'?HEARTS:null};
+    }
     if (n.kind === 'boss') return { queue: interleaveKinds(choose(pool, BOSS_SIZE, nodeId + serial, id => (rec(id)?.m ? 2 : 0) + (rec(id)?.s ? 0 : 1))), hearts: HEARTS };
     const first = !state.nodes[nodeId]?.n;
     const picked = byLevel(choose(pool, Math.min(LESSON_SIZE, pool.length), nodeId + serial, id => (rec(id)?.m ? 2 : 0) + (rec(id)?.s ? 0 : 1)));
@@ -265,12 +279,12 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function filesFor(mode, id) {
     if (mode === 'story') return ['stories'];
     if (mode === 'vocab') return ['vocab'];
-    if (mode === 'lesson' || mode === 'boss') return [course.nodes.get(id)?.track].filter(Boolean);
-    if (mode === 'review') return [course.units.get(id)?.track].filter(Boolean);
+    if (mode === 'lesson' || mode === 'boss') {const n=course.nodes.get(id);return n?.semester?schoolFiles(n.semester,course.index):[n?.track].filter(Boolean);}
+    if (mode === 'review') {const u=course.units.get(id);return u?.semester?schoolFiles(u.semester,course.index):[u?.track].filter(Boolean);}
     if (mode === 'jump') { const i = course.index.sections.findIndex(s => s.id === id); return course.index.sections.slice(0, Math.max(0, i)).map(s => s.id); }
     if (mode === 'placement') return course.index.sections.map(s=>s.id);
     if (mode === 'mistakes') return [...new Set(Object.values(state.items).filter(r => r.m).map(r => r.f).filter(Boolean))];
-    if (mode === 'practice' || mode === 'listen') return [...new Set(Object.keys(state.nodes).filter(k => state.nodes[k].n).map(k => course.nodes.get(k)?.track).filter(Boolean))];
+    if (mode === 'practice' || mode === 'listen') return [...new Set(Object.keys(state.nodes).filter(k=>state.nodes[k].n).flatMap(k=>{const n=course.nodes.get(k);return n?.semester?schoolFiles(n.semester,course.index):[n?.track];}).filter(Boolean))];
     return [];
   }
 
@@ -307,7 +321,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const s = state.session, it = currentItem();
     if (!s || !isScored(it) || s.feedback || value === undefined || value === null || String(value).trim() === '') return false;
     const ok = accepts(it, value), repair = s.index >= s.base, t = now();
-    const r = { id: it.id, value:String(value), ok, hint: s.hint, repair, audio: s.audio, transcript: !!s.transcript, elapsed: Number.isFinite(s.itemStarted) ? Math.max(0,t-s.itemStarted) : null };
+    const r = { id: it.id, value:String(value), ok, hint: s.hint, repair, audio: s.audio, transcript: !!s.transcript, unheard: !!course.nodes.get(s.ref)?.semester && (it.type==='listen'||it.type==='input'&&it.audio&&!it.text) && (!s.audio||!!s.transcript), elapsed: Number.isFinite(s.itemStarted) ? Math.max(0,t-s.itemStarted) : null };
     const seen = (state.items[it.id]?.s || 0)>0;
     s.fastRun = fastAnswerEligible(it,r,seen) ? (s.fastRun || 0)+1 : 0; s.fastBest = Math.max(s.fastBest || 0,s.fastRun);
     s.results.push(r); s.feedback = { ok, value: String(value) };
@@ -315,10 +329,10 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     record.s++; record.at = t; record.last = ok ? 1 : 0; record.f = it.f || record.f;
     const counts = s.mode !== 'placement';
     if (ok) {
-      record.c++; s.combo = s.hint || repair ? 0 : s.combo + 1; s.maxCombo = Math.max(s.maxCombo, s.combo); s.wrongRun = 0;
-      if (record.m && record.ws !== s.id && counts && !s.hint && !repair && record.fixedSession !== s.id) { record.fixedSession = s.id; record.fix++; bumpQuest('fix'); if (record.fix >= 2) { record.m = false; state.stats.fixed++; } }
+      record.c++; s.combo = s.hint || repair || r.unheard ? 0 : s.combo + 1; s.maxCombo = Math.max(s.maxCombo, s.combo); s.wrongRun = 0;
+      if (record.m && record.ws !== s.id && counts && !s.hint && !repair && !r.unheard && record.fixedSession !== s.id) { record.fixedSession = s.id; record.fix++; bumpQuest('fix'); if (record.fix >= 2) { record.m = false; state.stats.fixed++; } }
       if (counts && (it.type === 'listen' || it.listen) && s.audio && !s.transcript && !s.hint && !repair) bumpQuest('listen');
-      if (counts && !s.hint && !repair) bumpQuest('combo', s.combo, true);
+      if (counts && !s.hint && !repair && !r.unheard) bumpQuest('combo', s.combo, true);
     } else {
       record.w++; s.combo = 0; s.wrongRun++;
       if (counts) { record.m = true; record.fix = 0; record.ws = s.id; }
@@ -353,8 +367,8 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const s = state.session; if (!s) return null;
     if (!(s.hearts !== null && s.hearts <= 0) && (s.index < s.queue.length - 1 || (isScored(currentItem()) && !s.feedback))) return null;
     pending = [];
-    const scored = s.results.filter(r => !r.repair), firstTry = scored.filter(r => r.ok && !r.hint).length;
-    const accuracy = scored.length ? firstTry / scored.length : 1, perfect = scored.length > 0 && scored.every(r => r.ok && !r.hint);
+    const scored = s.results.filter(r => !r.repair), firstTry = scored.filter(r => r.ok && !r.hint && !r.unheard).length;
+    const accuracy = scored.length ? firstTry / scored.length : 1, perfect = scored.length > 0 && scored.every(r => r.ok && !r.hint && !r.unheard);
     const t = now(), key = 'session:' + s.id; let xp = 0, passed = true, newDay = false, extra = {};
     const streakBefore = streak();
     if (s.mode === 'placement') {
@@ -378,7 +392,9 @@ export function createGame({ storage, now = () => Date.now(), course }) {
         if (first && unit.nodes.filter(n => n.kind !== 'boss').every(n => nodeDone(n.id)) && !state.review[unit.id]) state.review[unit.id] = { due: t + DAY, step: 0 };
         state.stats.lessons++;
       } else if (s.mode === 'boss') {
-        passed = s.hearts > 0 && accuracy >= 0.8; const unitId = course.unitOfNode(s.ref);
+        passed = s.hearts > 0 && accuracy >= 0.8;
+        if(course.nodes.get(s.ref)?.semester && scored.some(r=>r.unheard)){passed=false;extra.audioPending=true;}
+        const unitId = course.unitOfNode(s.ref);
         const node = state.nodes[s.ref] ||= { n: 0, at: 0, best: 0, tested: false }; node.n++; node.at = t; node.best = Math.max(node.best, accuracy);
         if (passed && !state.crowns[unitId]) { state.crowns[unitId] = t; state.gems += CROWN_GEMS; state.stats.crowns++; extra.chest = CROWN_GEMS; }
         xp = addXp(key, passed ? XP.boss + (perfect ? XP.perfect : 0) : XP.bossTry); state.stats.lessons++;
@@ -413,6 +429,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     currentItem, next: advance,
     setup(profile) { state.profile = makeProfile(profile); retargetXpQuest(); save(); },
     update(patch) { if (!state.profile) return; state.profile = makeProfile({ ...state.profile, ...patch }); retargetXpQuest(); save(); },
+    saveSchoolWork(id,text,checks=[]) {if(!SEMESTERS.some(s=>s.id===id))return false;state.schoolWork[id]={text:String(text || '').slice(0,6000),checks:Array.from({length:4},(_,i)=>checks[i]===true),at:now()};save();return true;},
     flag(id) { if (!course.item(id)) return false; if (state.flags[id]) delete state.flags[id]; else state.flags[id] = now(); save(); return !!state.flags[id]; },
     acceptPlacement(sectionId) { const order = course.index.sections.map(s=>s.id), i=order.indexOf(sectionId); if (i<0) return false; if (i>0) state.jumped[sectionId]=now(); if(state.profile) state.profile.start=sectionId; save(); return true; },
     hint() { const s = state.session; if (s && !s.feedback && !['boss', 'jump', 'placement'].includes(s.mode)) { s.hint = true; save(); return true; } return false; },
