@@ -1,0 +1,36 @@
+✔ all twelve exam campaigns have balanced practice and two isolated unseen forms (17.7717ms)
+✔ every low/mid/high route earns a milestone only after skill evidence and a different next-day unseen form (100.1603ms)
+✔ unheard TOEIC answers, hints, wrong answers and timeout do not produce independent readiness (6.6881ms)
+✔ two-choice grading requires two different correct options, independent of click order (0.3071ms)
+✔ abandoned or reloaded exposure cannot be repackaged as an unseen form (3.3805ms)
+✔ exam evidence round-trips, counts distinct dates and never invents a score conversion (1.2727ms)
+✔ official score evidence rejects invalid increments, impossible dates and repeated forms as new evidence (0.68ms)
+✔ corrupt exam resume cannot shorten the full form or expand its time allowance (4.5161ms)
+✔ seven fixed forms match all section totals and contain no repeated question IDs (1.1783ms)
+✔ official section lengths are represented independently (0.6247ms)
+✔ reload preserves absolute deadlines and selected answers (2.2821ms)
+✔ a late answer cannot enter the next section (0.3305ms)
+✔ time expired across both modules while closed finishes at the original deadline (0.9375ms)
+✔ automatic next-section timer carries its original start, including background delays (0.2299ms)
+✔ manual section submission starts the next section now and locks earlier answers (0.2397ms)
+✔ SAT and GRE allow skipping and returning inside the active section (0.3732ms)
+✔ listening permits questions in the current group but forbids seeking a different audio group (0.7303ms)
+✔ GMAT requires a submitted answer and prohibits returning until all questions are answered (0.4821ms)
+✔ GMAT permits exactly three answer changes during review, including repeated changes to one item (0.27ms)
+✔ multi-select requires the complete set; multi-blank preserves blank order (0.1131ms)
+✔ GSAT shared word bank and sentence bank use consistent order with correct mappings (0.1422ms)
+✔ TOEIC Parts 3 and 4 use 13 and 10 audio groups of three questions each (0.2735ms)
+✔ TOEIC text completion has four choices and Part 7 includes ten double- and fifteen triple-document items (0.1678ms)
+✔ GRE and GMAT follow supported choice counts; TOEIC response options remain audio-only (0.1965ms)
+✔ writing stays unscored and unfinished questions count toward omissions (0.4653ms)
+✔ finished submissions cannot be changed or advanced again (0.138ms)
+✔ early termination saves partial answers and explicitly marks the attempt incomplete (0.3477ms)
+✔ deployed and mirrored simulation assets match byte-for-byte (9.1507ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 232.1215

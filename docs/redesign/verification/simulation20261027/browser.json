@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "seven exam choices fit 320/390/768/1280 px",
+    "review filters show incomplete and manual items, and option focus survives selection",
+    "SAT saves answers and original timer on reload, locks prior module, hides review until full submission and exports report",
+    "GMAT requires each answer before advancing, enables review only after all 23 answers, caps answer changes at three",
+    "GSAT supports ten-word bank, five-sentence bank, select-two, saved free writing and separate manual marking",
+    "GRE supports two- and three-blank selections, six-option equivalence, 12/15-question sections and four responsive sizes",
+    "GEPT writing stores both translation and composition without inventing an automatic writing score",
+    "toeic listening is single-play with group navigation; timeout starts and locks the reading section",
+    "gept listening is single-play with group navigation; timeout starts and locks the reading section",
+    "offline expiry across multiple modules finishes rather than granting new time",
+    "early termination preserves a clearly labelled incomplete report without waiting through listening",
+    "corrupt storage keeps the lobby usable and offers the untouched raw backup",
+    "clearing a record in another tab returns safely to the lobby",
+    "audio completion preserves an open confirmation and cancelled callbacks cannot alter saved playback state",
+    "existing exam campaigns expose the simulation entry"
+  ],
+  "errors": []
+}

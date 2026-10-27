@@ -1,5 +1,5 @@
 import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
-import {examsHome,examResult} from './exam_view.mjs?v=exams20261027';
+import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=exams20261027';
@@ -63,7 +63,7 @@ function questList() {
 }
 function layout(body, { wide = false } = {}) {
   return `<div class="shell">
-  <nav class="side" aria-label="主要導覽"><a class="brand" href="#learn">${mascot('happy', 40)}<span>English Quest<small>每天一小關</small></span></a>${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i>${t}</a>`).join('')}<a class="side-out" href="../#words">Aa 學單字與聽讀</a><a class="side-out" href="../#home">← 學習首頁</a></nav>
+  <nav class="side" aria-label="主要導覽"><a class="brand" href="#learn">${mascot('happy', 40)}<span>English Quest<small>每天一小關</small></span></a>${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i>${t}</a>`).join('')}<a class="side-out" href="simulation.html">⏱ 擬真模考</a><a class="side-out" href="../#words">Aa 學單字與聽讀</a><a class="side-out" href="../#home">← 學習首頁</a></nav>
   <header class="top"><div class="top-actions"><button class="btn placement-entry" data-act="placement">🧭 檢測程度</button>${trackChip()}</div>${stats()}</header>
   <main id="main" class="main ${wide ? 'wide' : ''}">${game.warning ? `<div class="warn" role="status">${esc(game.warning)}</div>` : ''}${ui.busy ? `<div class="busy" role="status">${esc(ui.busy)}</div>` : ''}${body}</main>
   ${wide ? '' : rail()}
