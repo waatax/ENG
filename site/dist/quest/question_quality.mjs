@@ -11,7 +11,7 @@ export function questionKey(q){
  if(!q)return '';
  if(q.type==='match')return 'match:'+q.pairs.map(p=>p.map(canonical).join('=')).sort().join('|');
  const audio=q.type==='listen'||q.listen?q.audio:'';
- const generic=!q.text&&!q.passage&&!audio&&!q.given&&/正確|correct sentence|grammatical|complete sentence/i.test(q.prompt||'');
+ const generic=!q.text&&!q.passage&&!audio&&!q.given&&/正確|correct|grammatical|complete sentence|^Choose\b|Which sentence|Which version/i.test(q.prompt||'');
  return 'q:'+digest(JSON.stringify([canonical(q.prompt),canonical(q.text),canonical(q.passage),canonical(audio),canonical(q.given),generic?(q.options||[]).map(canonical).sort():[]]));
 }
 export function learningKeys(q){

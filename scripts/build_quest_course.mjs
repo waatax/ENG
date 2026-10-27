@@ -653,3 +653,5 @@ console.log(JSON.stringify({ ...report, excluded: undefined }, null, 2));
 // Keep semantic capacity and lexical diversity guarantees on every future rebuild.
 const { enrichCourseFiles } = await import('./enrich_quest_bank.mjs');
 enrichCourseFiles();
+// The base cleanup above removes derived JSON files; restore the exam campaign bank too.
+await import('./build_exam_campaigns.mjs');

@@ -147,7 +147,7 @@ const KEY = 'english-quest-game-v2';
     await page.screenshot({path:`${out}/section-nine-cycle-390.png`});await play();await leaveResult();
     checks.push('section nine first unit: 32 distinct words across four sessions, reload preserves queue, next round explicitly labelled');
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-27', version: 'quality20261027', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-27', version: 'exams20261027', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }

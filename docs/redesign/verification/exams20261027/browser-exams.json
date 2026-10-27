@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "fresh visitor enters exam campaigns directly with honest score scope",
+    "toeic has low/mid/high routes and no overflow at four widths",
+    "sat has low/mid/high routes and no overflow at four widths",
+    "gre has low/mid/high routes and no overflow at four widths",
+    "gmat has low/mid/high routes and no overflow at four widths",
+    "GRE six options require exactly two selections; reload and full practice work",
+    "unseen check hides correctness and answer narration until completion; next fresh form waits 24 hours",
+    "self-reported official section evidence survives reload without awarding a predicted score",
+    "TOEIC transcript fallback cannot count as independent listening evidence",
+    "existing learning path and exam routes can be entered repeatedly"
+  ],
+  "errors": []
+}

@@ -1,4 +1,4 @@
-import { questionKey, learningKeys } from './question_quality.mjs?v=quality20261027';
+import { questionKey, learningKeys } from './question_quality.mjs?v=exams20261027';
 import { ADVANCED_TRACKS, ADVANCED_ITEMS } from './advanced_placement.mjs?v=advanced20261027';
 // Curriculum placement heuristic, not a calibrated CEFR/IRT test.
 export const PLACEMENT_SIZES = [10, 20, 30];

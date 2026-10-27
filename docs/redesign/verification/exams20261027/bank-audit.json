@@ -1,0 +1,365 @@
+{
+  "version": "exams20261027",
+  "original": 468,
+  "integrated": 106,
+  "total": 574,
+  "campaigns": [
+    {
+      "key": "toeic:low",
+      "target": 550,
+      "skills": [
+        {
+          "id": "conversation",
+          "title": "對話聽辨",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "talk",
+          "title": "短篇獨白",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商務閱讀",
+          "practice": 7,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "language",
+          "title": "句型與篇章",
+          "practice": 8,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 55
+    },
+    {
+      "key": "toeic:mid",
+      "target": 750,
+      "skills": [
+        {
+          "id": "conversation",
+          "title": "對話聽辨",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "talk",
+          "title": "短篇獨白",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商務閱讀",
+          "practice": 27,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "language",
+          "title": "句型與篇章",
+          "practice": 17,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 84
+    },
+    {
+      "key": "toeic:high",
+      "target": 900,
+      "skills": [
+        {
+          "id": "conversation",
+          "title": "對話聽辨",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "talk",
+          "title": "短篇獨白",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商務閱讀",
+          "practice": 5,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "language",
+          "title": "句型與篇章",
+          "practice": 27,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 72
+    },
+    {
+      "key": "sat:low",
+      "target": 550,
+      "skills": [
+        {
+          "id": "information",
+          "title": "資訊與證據",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "craft",
+          "title": "文意與結構",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "conventions",
+          "title": "標準英語規範",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "expression",
+          "title": "表達與修辭",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 48
+    },
+    {
+      "key": "sat:mid",
+      "target": 650,
+      "skills": [
+        {
+          "id": "information",
+          "title": "資訊與證據",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "craft",
+          "title": "文意與結構",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "conventions",
+          "title": "標準英語規範",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "expression",
+          "title": "表達與修辭",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 48
+    },
+    {
+      "key": "sat:high",
+      "target": 750,
+      "skills": [
+        {
+          "id": "information",
+          "title": "資訊與證據",
+          "practice": 8,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "craft",
+          "title": "文意與結構",
+          "practice": 9,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "conventions",
+          "title": "標準英語規範",
+          "practice": 8,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "expression",
+          "title": "表達與修辭",
+          "practice": 7,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 64
+    },
+    {
+      "key": "gre:low",
+      "target": 145,
+      "skills": [
+        {
+          "id": "completion",
+          "title": "語意填空",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "equivalence",
+          "title": "句子等義（選二）",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "學術閱讀",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 36
+    },
+    {
+      "key": "gre:mid",
+      "target": 155,
+      "skills": [
+        {
+          "id": "completion",
+          "title": "語意填空",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "equivalence",
+          "title": "句子等義（選二）",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "學術閱讀",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 36
+    },
+    {
+      "key": "gre:high",
+      "target": 165,
+      "skills": [
+        {
+          "id": "completion",
+          "title": "語意填空",
+          "practice": 10,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "equivalence",
+          "title": "句子等義（選二）",
+          "practice": 9,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "學術閱讀",
+          "practice": 6,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 49
+    },
+    {
+      "key": "gmat:low",
+      "target": 75,
+      "skills": [
+        {
+          "id": "critical",
+          "title": "批判推理",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商業與學術閱讀",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 24
+    },
+    {
+      "key": "gmat:mid",
+      "target": 80,
+      "skills": [
+        {
+          "id": "critical",
+          "title": "批判推理",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商業與學術閱讀",
+          "practice": 4,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 24
+    },
+    {
+      "key": "gmat:high",
+      "target": 85,
+      "skills": [
+        {
+          "id": "critical",
+          "title": "批判推理",
+          "practice": 12,
+          "A": 4,
+          "B": 4
+        },
+        {
+          "id": "reading",
+          "title": "商業與學術閱讀",
+          "practice": 6,
+          "A": 4,
+          "B": 4
+        }
+      ],
+      "total": 34
+    }
+  ]
+}

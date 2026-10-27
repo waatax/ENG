@@ -1,17 +1,19 @@
+import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
+import {examsHome,examResult} from './exam_view.mjs?v=exams20261027';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=quality20261027';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=exams20261027';
 import * as sound from './sound.mjs?v=coach20261026';
 import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
-const V = 'quality20261027';
+const V = 'exams20261027';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const TABS = [['learn', '🏠', '學習'], ['school','🎒','學期'], ['practice', '💪', '練習'], ['stories', '📖', '故事'], ['library', '📚', '教材'], ['profile', '🙂', '我的']];
+const TABS = [['learn', '🏠', '學習'], ['school','🎒','學期'], ['exams','🎯','考試'], ['practice', '💪', '練習'], ['stories', '📖', '故事'], ['library', '📚', '教材'], ['profile', '🙂', '我的']];
 const GOAL_INFO = { casual: ['輕鬆', '約 5 分鐘'], regular: ['一般', '約 10 分鐘'], serious: ['認真', '約 15 分鐘'], intense: ['衝刺', '約 20 分鐘'] };
 const WHY_INFO = { life: ['🧳', '生活與旅遊', '點餐、問路、交朋友'], school: ['🏫', '學校與大考', '會考、學測、統測'], work: ['💼', '工作與職場', '技高、職場溝通、多益'], exam: ['📜', '檢定與留學', '英檢、托福、SAT、GRE、GMAT'] };
 const WHY_BRANCH = { life: [], school: ['b-cap', 'b-gsat'], work: ['b-voc', 'b-toeic'], exam: ['b-cert', 'b-toeic', 'b-sat'] };
@@ -19,7 +21,7 @@ const PRAISE = ['太棒了！', '答對了！', '很好！', '完全正確！', 
 const KIND_TEXT = { word: '字詞', talk: '會話', grammar: '觀念', drill: '精熟', boss: '單元挑戰', lesson: '課程' };
 
 let course, game;
-const ui = { tab: 'learn', track: null, pop: null, guide: null, modal: null, paused: false, toast: [], step: 0, why: 'life', goal: 'regular', a: null, shownFor: '', played: '', streakShown: false, vocabCat: '', busy: '', schoolGroup:'junior' };
+const ui = { tab: 'learn', track: null, pop: null, guide: null, modal: null, paused: false, toast: [], step: 0, why: 'life', goal: 'regular', a: null, shownFor: '', played: '', streakShown: false, vocabCat: '', busy: '', schoolGroup:'junior', exam:'toeic' };
 const freshAnswer = () => ({ value: '', tokens: [], text: '', left: null, done: [], wrong: 0, flash: null, transcript: false, hint: false, zh: false });
 ui.a = freshAnswer();
 
@@ -68,7 +70,7 @@ function layout(body, { wide = false } = {}) {
   <nav class="bottom" aria-label="主要導覽">${TABS.map(([id, ic, t]) => `<a href="#${id}" class="${ui.tab === id ? 'on' : ''}" ${ui.tab === id ? 'aria-current="page"' : ''}><i aria-hidden="true">${ic}</i><span>${t}</span></a>`).join('')}</nav>
   </div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
-function trackChip() { const t = course.track(ui.track); return `<button class="track-chip ${t?.color || ''}" data-act="tracks" aria-label="切換段落">${t?.kind !== 'section' ? t.icon : `第 ${t?.no} 段`} <b>${esc(t?.title || '')}</b> ▾</button>`; }
+function trackChip() { const t = course.track(ui.track); return `<button class="track-chip ${t?.color || ''}" data-act="tracks" aria-label="切換段落">${t?.kind !== 'section' ? (t?.icon||'🧭') : `第 ${t?.no} 段`} <b>${esc(t?.title || '')}</b> ▾</button>`; }
 
 // ---------- learn: the path ----------
 const OFFSETS = [0, 1, 1.6, 1, 0, -1, -1.6, -1];
@@ -87,7 +89,7 @@ function learnPage() {
   const mission=nextAdventure(game,course,t.id);
   const launch=unlocked&&!s?`<section class="adventure"><span aria-hidden="true">🧭</span><div><h2>${mission.title}</h2><p>${esc(mission.text)}</p></div><button class="btn primary" data-act="start" data-mode="${mission.mode}" data-id="${mission.id}">${mission.label} →</button></section>`:'';
   // the path comes first; branch suggestions wait below it so the first lesson is visible without scrolling
-  return `${resume}${todayMobile()}${header}${launch}${t.kind==='semester'?'':`<a class="school-entry card" href="#school"><b>🎒 國中／高中六學期課程</b><small>依 108 課綱展開 12 個學期單元、闖關與作品 →</small></a>`}${t.kind==='semester'?'':courseAtlas(course,game)}<p class="path-goals">🎯 ${esc((LEVEL_GOALS[t.id] || [t.title]).join(' · '))}</p><div class="path">${units}</div>${t.kind==='semester'?semesterProject(semesterOf(t.id),game):''}${suggestBranches()}${tail}`;
+  return `${resume}${todayMobile()}${header}${EXAMS.some(e=>e.branch===t.id)?`<a class="school-entry card" href="#exams/${EXAMS.find(e=>e.branch===t.id).id}"><b>🎯 展開低標／中標／高標考試遠征</b><small>技能關、未見卷與官方成績核對 →</small></a>`:''}${launch}${t.kind==='semester'?'':`<a class="school-entry card" href="#school"><b>🎒 國中／高中六學期課程</b><small>依 108 課綱展開 12 個學期單元、闖關與作品 →</small></a>`}${t.kind==='semester'?'':courseAtlas(course,game)}<p class="path-goals">🎯 ${esc((LEVEL_GOALS[t.id] || [t.title]).join(' · '))}</p><div class="path">${units}</div>${t.kind==='semester'?semesterProject(semesterOf(t.id),game):''}${suggestBranches()}${tail}`;
 }
 // narrow screens have no side rail, so today's goal and quests fold into the top of the path
 function todayMobile() {
@@ -152,23 +154,24 @@ function modalView() {
 
 // ---------- lesson ----------
 function sessionTitle(s) {
+  if(s.mode.startsWith('exam-')){const c=campaign(s.ref);return `${c.exam.title} · ${c.level.title} · ${s.mode==='exam-check'?'未見題挑戰':c.exam.skills.find(x=>x[0]===c.skill)?.[1]}`;}
   if (s.mode === 'lesson' || s.mode === 'boss') { const n = course.nodes.get(s.ref), u = course.units.get(n.unit); return s.mode === 'boss' ? `🏆 ${u.title}・單元挑戰` : `${n.icon} ${u.title}・${n.title}`; }
   if (s.mode === 'story') return `📖 ${course.stories.get(s.ref)?.title || '故事'}`;
   if (s.mode === 'review') return `↻ 複習・${course.units.get(s.ref)?.title || ''}`;
   if (s.mode === 'vocab') return `🔤 ${course.vocab.get(s.ref)?.title || '單字特訓'}`;
-  if (s.mode === 'placement' && s.placement?.version===2) { const slot=s.placement.slots[s.index],track=ADVANCED_TRACKS.find(x=>x.id===slot.section); return track ? `程度檢測 · ${track.title}（進階）` : '程度檢測 · 一般英語'; }
+  if (s.mode==='placement' && s.placement?.version===2) { const slot=s.placement.slots[s.index],track=ADVANCED_TRACKS.find(x=>x.id===slot.section); return track ? `程度檢測 · ${track.title}（進階）` : '程度檢測 · 一般英語'; }
   if (s.mode === 'jump') return `⏩ 跳級測驗・第 ${course.track(s.ref)?.no} 段`;
   return { mistakes: '📕 錯題本', practice: '💪 個人化練習', listen: '🎧 聽力特訓', placement: '🧭 程度測驗' }[s.mode] || '練習';
 }
 function lessonView() {
   const s = game.state.session, it = game.currentItem(), fb = s.feedback;
-  const assessment = s.mode === 'placement';
+  const assessment = isAssessment(s.mode);
   const trail=sessionTrail(s);
   const pct = Math.round(100 * (s.index + (fb || !isScored(it) ? 1 : 0)) / s.queue.length);
   const hearts = s.hearts !== null ? `<span class="hearts" aria-label="剩下 ${s.hearts} 顆心">${'❤️'.repeat(s.hearts)}${'🤍'.repeat(HEARTS - s.hearts)}</span>` : '';
-  const combo = s.combo >= 3 ? `<span class="combo ${s.combo % 5 === 0 ? 'pop' : ''}">🔥 ${s.combo} 連對</span>` : '';
+  const combo = !assessment && s.combo >= 3 ? `<span class="combo ${s.combo % 5 === 0 ? 'pop' : ''}">🔥 ${s.combo} 連對</span>` : '';
   return `<div class="lesson-screen ${fb && !assessment ? (fb.ok ? 'is-ok' : 'is-bad') : ''}"><header class="lesson-top"><button class="x" data-act="exit" aria-label="暫停並離開">✕</button><div class="progress" role="progressbar" aria-label="進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><span style="width:${pct}%"></span></div>${combo}${hearts}</header>
-  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${assessment ? '程度檢測：獨立作答，完成後看解析' : trail.label}</span><small>${assessment ? `已作答 ${s.results.length} / ${s.queue.length} 題 · 不計速度` : `本次獨立答對 ${trail.independent} / ${trail.attempts}`}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${s.index>=s.base?'<p class="question-rotation repair-notice">↻ 訂正回想：這是本次答錯後刻意重出的題目，不算新題。</p>':s.rotation?`<p class="question-rotation">${s.rotation.cycled?'↻ 本題池本輪已出完，現在進入輪替複習。':'✦ 本次 '+s.rotation.questions+' 題，單關不重複同一單字、句子或題面。'}第 ${s.rotation.round} 輪 · 題數以實際不同內容計算。</p>`:''}${itemView(it, s)}</main>
+  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${assessment ? '程度檢測：獨立作答，完成後看解析' : trail.label}</span><small>${assessment ? `已作答 ${s.results.length} / ${s.queue.length} 題 · 不計速度` : `本次獨立答對 ${trail.independent} / ${trail.attempts}`}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${s.index>=s.base?'<p class="question-rotation repair-notice">↻ 訂正回想：這是本次答錯後刻意重出的題目，不算新題。</p>':s.rotation?`<p class="question-rotation">${s.rotation.cycled?'↻ 本題池本輪已出完，現在進入輪替複習。':'✦ 本次 '+s.rotation.questions+' 題，單關不重複同一單字、句子或題面。'}第 ${s.rotation.round} 輪 · 題數以實際不同內容計算。</p>`:''}${s.examPlan?.assessment?`<p class="exam-clock" id="exam-clock" role="timer" aria-live="off"></p><p class="small muted">暫停仍計時；完成後統一看解析。${s.examPlan.novel?'本次未見篇章':'已見卷 · 只作複習'}</p>`:''}${itemView(it, s)}</main>
   ${lessonFooter(it, s)}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 function sayBtn(text, mp3 = '', big = false, label = '播放英文') { return `<button class="say ${big ? 'big' : ''}" data-act="say" data-text="${esc(text)}" data-mp3="${esc(mp3 || '')}" aria-label="${label}">🔊</button>`; }
@@ -178,13 +181,13 @@ function itemView(it, s) {
   if (it.type === 'line') return `<section class="story-line">${mascot('happy', 56)}<div class="bubble"><b>${esc(it.speaker || '')}</b><p lang="en">${sayBtn(it.en)} ${esc(it.en)}</p>${a.zh ? `<p class="zh">${esc(it.zh)}</p>` : `<button class="link" data-act="zh">顯示中文</button>`}${a.zh && it.note ? `<p class="muted small">${esc(it.note)}</p>` : ''}</div></section>`;
   const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="prompt-say" data-text="${esc(it.prompt)}" aria-label="朗讀題目">🔊</button></h1>`;
   const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><p lang="en">${esc(it.passage)}</p></details>` : '';
-  const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && ((locked && s.mode !== 'placement') || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
+  const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && ((locked && !isAssessment(s.mode)) || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
   const listenBox = (it.type === 'listen' || (it.type === 'input' && it.audio && !it.text)) ? `<div class="listen-box">${a.transcript ? `<p class="transcript" lang="en">${esc(it.audio)}</p><small class="muted">已改用文字，這題不算聽力。</small>` : `${sayBtn(it.audio, it.mp3, true, '播放聲音')}<button class="say slow" data-act="say" data-slow="1" data-text="${esc(it.audio)}" aria-label="慢速播放">🐢</button><button class="link" data-act="transcript" ${locked ? 'disabled' : ''}>不方便聽？改看文字</button>`}</div>` : '';
   const hint = (a.hint || s.hint) && !locked ? `<div class="hint">💡 ${esc(hintText(it))}</div>` : '';
   let body = '';
-  if (it.type === 'choice' || it.type === 'listen') {
+  if(it.type==='multi'){const picked=locked?String(fb(s)).split(' || '):a.tokens;const opts=shuffle(it.options,it.id+s.id);body=`<p class="multi-instruction">選擇 ${it.selectCount} 個答案 · 已選 ${picked.length}/${it.selectCount}</p><div class="options" role="group" aria-label="多選選項">${opts.map((o,i)=>`<button class="opt ${picked.includes(o)?'sel':''} ${locked&&!isAssessment(s.mode)&&it.correctAnswers.includes(o)?'right':''}" data-act="multi" data-v="${esc(o)}" aria-pressed="${picked.includes(o)}" ${locked?'disabled':''}><kbd>${i+1}</kbd><span lang="en">${esc(o)}</span></button>`).join('')}</div>`;} else if (it.type === 'choice' || it.type === 'listen') {
     const opts = shuffle(it.options, it.id + s.id);
-    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (s.mode === 'placement' ? (o === fb(s) ? 'sel' : '') : o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button>`; }).join('')}</div>`;
+    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (isAssessment(s.mode) ? (o === fb(s) ? 'sel' : '') : o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button>`; }).join('')}</div>`;
   } else if (it.type === 'build') {
     const bank = shuffle(it.words.map((w, i) => ({ w, i })), it.id + s.id);
     const given = it.given ? it.given.split(' ').map(w => `<span class="tok given" lang="en">${esc(w)}</span>`).join('') : '';
@@ -209,21 +212,22 @@ function hintText(it) {
 function lessonFooter(it, s) {
   const f = s.feedback;
   if (!isScored(it)) return `<footer class="check"><div class="check-in"><span></span><button class="btn primary big" data-act="next" id="go">${it.type === 'info' ? '了解了' : '繼續'}</button></div></footer>`;
-  if (f && s.mode === 'placement') return `<footer class="check assessment-recorded" role="status"><div class="check-in"><p>✓ 已記錄答案，完成後一起看分析。</p><button class="btn primary big" data-act="next" id="go">${s.index+1===s.queue.length?'查看檢測結果':'下一題'}</button></div></footer>`;
+  if (f && isAssessment(s.mode)) return `<footer class="check assessment-recorded" role="status"><div class="check-in"><p>✓ 已記錄答案，完成後一起看分析。</p><button class="btn primary big" data-act="next" id="go">${s.index+1===s.queue.length?'查看檢測結果':'下一題'}</button></div></footer>`;
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
     return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
-  const ready = it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
-  const canHint = !['boss', 'jump', 'placement'].includes(s.mode);
-  return `<footer class="check"><div class="check-in">${canHint ? `<button class="btn ghost" data-act="hint" ${ui.a.hint ? 'disabled' : ''}>💡 提示</button>` : `<span class="muted small">${s.mode === 'placement' ? '程度測驗不提供提示' : '挑戰模式不提供提示'}</span>`}${it.type === 'match' ? '<span class="muted small">全部配對完成就會自動檢查</span>' : `<button class="btn primary big" data-act="check" id="go" ${ready ? '' : 'disabled'}>檢查</button>`}</div></footer>`;
+  const ready = it.type==='multi'?ui.a.tokens.length===it.selectCount:it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
+  const canHint = !['boss', 'jump', 'placement','exam-check'].includes(s.mode);
+  return `<footer class="check"><div class="check-in">${canHint ? `<button class="btn ghost" data-act="hint" ${ui.a.hint ? 'disabled' : ''}>💡 提示</button>` : `<span class="muted small">${isAssessment(s.mode) ? '程度測驗不提供提示' : '挑戰模式不提供提示'}</span>`}${it.type === 'match' ? '<span class="muted small">全部配對完成就會自動檢查</span>' : `<button class="btn primary big" data-act="check" id="go" ${ready ? '' : 'disabled'}>檢查</button>`}</div></footer>`;
 }
 const normalize2 = s => String(s ?? '').toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim();
 
 // ---------- results ----------
 function resultView() {
   const r = game.result;
+  if(r.mode.startsWith('exam-'))return examResult(r);
   if (r.mode === 'placement') {
     const sec = course.track(r.recommended);
     return `<div class="result placement-result">${mascot('cheer', 92)}<p class="eyebrow">${esc(r.evidence || '程度測驗完成')} · ${r.total} 題</p><h1>${r.advancedReady ? '建議展開進階學術挑戰' : `建議從第 ${sec.no} 段開始`}</h1><p class="lead">一般英語起點：「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">首次答對 ${r.firstTry}/${r.total} 題。${r.range ? (r.range[0]===r.range[1] ? `本次證據較支持第 ${course.track(r.range[0]).no} 段，仍可用單元挑戰確認。` : `待確認起點：第 ${course.track(r.range[0]).no}–${course.track(r.range[1]).no} 段。`) : ''}這是課程起點建議，未評估口說與寫作。</p><p class="placement-note">${r.total===10?'10 題只作初步定位，建議用 20 或 30 題再確認。':'依各級答題模式推估，答題速度不影響分級。'}${r.listeningLimited ? ' 聽力證據不足，建議完成聽辨後再確認。' : ''}${r.seen ? ` 本次有 ${r.seen} 題曾作答，熟悉度可能影響結果。` : ''}</p>
@@ -326,7 +330,7 @@ function render(focus = false) {
   }
   else if (game.result) html = `<div class="result-wrap">${resultView()}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
   else if (!game.state.profile) html = onboarding();
-  else html = layout({ learn: learnPage, school:()=>schoolHome(course,game,ui.schoolGroup), practice: practicePage, stories: storiesPage, library: libraryPage, profile: profilePage }[ui.tab]?.() || learnPage(), { wide: ui.tab === 'profile' });
+  else html = layout({ learn: learnPage, school:()=>schoolHome(course,game,ui.schoolGroup), exams:()=>examsHome(course,game,ui.exam), practice: practicePage, stories: storiesPage, library: libraryPage, profile: profilePage }[ui.tab]?.() || learnPage(), { wide: ui.tab === 'profile' });
   document.body.classList.toggle('in-lesson', !!(s && !ui.paused) || !!game.result || !game.state.profile);
   root.innerHTML = html; paintToasts();
   if (newItem) afterNewItem();
@@ -336,7 +340,7 @@ function render(focus = false) {
 // a new step: autoplay its English (when enabled) and move focus to where the learner acts next
 function afterNewItem() {
   const it = game.currentItem();
-  if (game.state.session.mode !== 'placement' && profile().autoplay !== false && (it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word'))) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
+  if (!isAssessment(game.state.session.mode) && profile().autoplay !== false && (it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word'))) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
   const input = document.querySelector('#answer');
   if (input) input.focus();
   else { const h = document.querySelector('.lesson-body h1') || document.querySelector('#go'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } }
@@ -359,10 +363,10 @@ function lessonSubmit(value) {
   const s = game.state.session; if (!s || s.feedback) return;
   if (!game.submit(value)) return;
   const f = game.state.session.feedback, it = game.currentItem();
-  sound.sfx(s.mode==='placement' ? 'tap' : f.ok ? (game.state.session.combo > 0 && game.state.session.combo % 5 === 0 ? 'combo' : 'correct') : 'wrong');
+  sound.sfx(isAssessment(s.mode) ? 'tap' : f.ok ? (game.state.session.combo > 0 && game.state.session.combo % 5 === 0 ? 'combo' : 'correct') : 'wrong');
   root.innerHTML = lessonView();
   sound.stop();
-  if (s.mode !== 'placement' && profile().autoplay !== false) narrate(answerText(it), false, true);
+  if (!isAssessment(s.mode) && profile().autoplay !== false) narrate(answerText(it), false, true);
   document.querySelector('#go')?.focus({ preventScroll: true });
 }
 function lessonNext() {
@@ -374,7 +378,7 @@ function lessonNext() {
 async function begin(mode, id) {
   if (game.state.session) { if (ui.paused) { toast('先完成或放棄目前未完成的練習。'); ui.pop = null; render(); } return; }
   if (!await ensure(game.filesFor(mode, id))) return;
-  if (!game.start(mode, id)) { toast(mode === 'practice' || mode === 'listen' ? '先完成一些課程，才有題目可以練習。' : '這一關目前無法開始。'); render(); return; }
+  if (!game.start(mode, id)) { toast(mode==='exam-check'?'未見卷複測須與已通過卷相隔 24 小時；請回考試頁查看狀態。':mode === 'practice' || mode === 'listen' ? '先完成一些課程，才有題目可以練習。' : '這一關目前無法開始。'); render(); return; }
   ui.paused = false; ui.pop = null; ui.modal = null; ui.shownFor = ''; render();
 }
 
@@ -395,6 +399,9 @@ root.addEventListener('click', async e => {
     case 'placement-start': if (!game.state.profile) game.setup({goal:ui.goal,why:ui.why,start:'s1'}); await begin('placement',Number(el.dataset.size)); break;
     case 'result-jump': game.clearResult(); await begin('jump',id); break;
     case 'accept': game.acceptPlacement(id); ui.track = id; game.clearResult(); ui.tab = 'learn'; location.hash = '#learn'; await ensure([id]); render(true); break;
+    case 'exam-load': await ensure(['exams']);render();break;
+    case 'exam-select': ui.exam=id;location.hash='#exams/'+id;render(true);break;
+    case 'exam-home': game.clearResult();ui.exam=id;ui.tab='exams';location.hash='#exams/'+id;await ensure(['exams']);render(true);break;
     case 'school-group': ui.schoolGroup=id; render(true); break;
     case 'tracks': ui.modal = 'tracks'; render(); break;
     case 'advanced-track': game.clearResult();
@@ -423,6 +430,7 @@ root.addEventListener('click', async e => {
     case 'exit': ui.modal = 'exit'; render(); break;
     case 'pause': sound.stop(); ui.modal = null; ui.paused = true; ui.tab = 'learn'; render(true); break;
     // lesson
+    case 'multi': if(!s.feedback){const v=el.dataset.v;ui.a.tokens=ui.a.tokens.includes(v)?ui.a.tokens.filter(x=>x!==v):ui.a.tokens.length<it.selectCount?[...ui.a.tokens,v]:ui.a.tokens;root.innerHTML=lessonView();}break;
     case 'choose': if (!s.feedback) { ui.a.value = el.dataset.v; sound.sfx('tap'); root.innerHTML = lessonView(); document.querySelector('.opt.sel')?.focus({ preventScroll: true }); } break;
     case 'tok': if (!s.feedback) { ui.a.tokens.push(Number(el.dataset.i)); root.innerHTML = lessonView(); (document.querySelector('.bank .tok:not(:disabled)') || document.querySelector('#go'))?.focus({ preventScroll: true }); } break;
     case 'untok': if (!s.feedback) { ui.a.tokens = ui.a.tokens.filter(i => i !== Number(el.dataset.i)); root.innerHTML = lessonView(); } break;
@@ -436,7 +444,7 @@ root.addEventListener('click', async e => {
     case 'hint': if (game.hint()) { ui.a.hint = true; root.innerHTML = lessonView(); } break;
     case 'transcript': game.transcript(); ui.a.transcript = true; sound.stop(); root.innerHTML = lessonView(); break;
     case 'zh': ui.a.zh = true; root.innerHTML = lessonView(); break;
-    case 'check': lessonSubmit(it.type === 'build' ? ui.a.tokens.map(i => it.words[i]).join(' ') : it.type === 'input' ? ui.a.text : ui.a.value); break;
+    case 'check': lessonSubmit(it.type==='multi'?ui.a.tokens.join(' || '):it.type === 'build' ? ui.a.tokens.map(i => it.words[i]).join(' ') : it.type === 'input' ? ui.a.text : ui.a.value); break;
     case 'next': lessonNext(); break;
     case 'flag': { const on = game.flag(el.dataset.id); toast(on ? '🚩 已記下，下載備份時會附上。謝謝！' : '已取消回報'); root.innerHTML = lessonView(); break; }
     case 'streak-ok': ui.streakShown = true; render(true); break;
@@ -470,15 +478,15 @@ document.addEventListener('keydown', e => {
   if (inField || s.feedback || e.ctrlKey || e.metaKey || e.altKey) return;
   const n = Number(e.key);
   if (n >= 1 && n <= 9) {
-    if (it.type === 'choice' || it.type === 'listen') document.querySelectorAll('.opt')[n - 1]?.click();
+    if (['choice','listen','multi'].includes(it.type)) document.querySelectorAll('.opt')[n - 1]?.click();
     else if (it.type === 'build') document.querySelectorAll('.bank .tok')[n - 1]?.click();
   } else if (e.key === 'Backspace' && it.type === 'build' && ui.a.tokens.length) { e.preventDefault(); ui.a.tokens.pop(); root.innerHTML = lessonView(); }
   else if (e.key === ' ' && (it.type === 'listen' || it.audio)) { e.preventDefault(); playItem(it.audio, it.mp3); }
 });
-window.addEventListener('hashchange', () => {
+window.addEventListener('hashchange', async () => {
   const tab = location.hash.slice(1).split('/')[0];
   if (tab === 'placement' && game) { if (game.state.session) { ui.paused=true; ui.tab='learn'; } else ui.modal='placement'; render(true); return; }
-  if (TABS.some(([id]) => id === tab)) { if(tab==='school'&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'}); ui.tab = tab; ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
+  if (TABS.some(([id]) => id === tab)) { if(['school','exams'].includes(tab)&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'}); ui.tab = tab;if(tab==='exams'){ui.exam=location.hash.split('/')[1]||ui.exam;await ensure(['exams']);} ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
 });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && game) { game.refreshDay(); if (!game.state.session || ui.paused) render(); } });
 window.addEventListener('pagehide', () => sound.stop());
@@ -489,9 +497,11 @@ async function boot() {
   try { course = createCourse(await getJson('course/index.json')); }
   catch { root.innerHTML = `<div class="boot">${mascot('sad', 96)}<p>課程資料載入失敗。請確認網路後重新整理，或先使用<a href="../">完整教材網</a>。</p></div>`; return; }
   game = createGame({ storage, course });
+  ui.paused=!!game.state.session;
   const tab = location.hash.slice(1).split('/')[0]; if (TABS.some(([id]) => id === tab)) ui.tab = tab;
-  if(tab==='school'&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'});
+  if(['school','exams'].includes(tab)&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'});
   ui.track = game.state.profile?.start || 's1';
+  if(tab==='exams'){ui.exam=location.hash.split('/')[1]||'toeic';await ensure(['exams']);}
   if(semesterOf(ui.track))ui.schoolGroup=semesterOf(ui.track).group;
   const firstOpen = course.index.sections.find(sec => game.trackUnlocked(sec.id) && game.current(sec.id));
   if (game.state.profile && firstOpen && !game.trackUnlocked(ui.track)) ui.track = firstOpen.id;
@@ -510,3 +520,6 @@ function saveSchoolDraft(){
  if(game.saveSchoolWork(panel.dataset.semester,text,checks)){const status=panel.querySelector('#school-save-status');if(status)status.textContent=game.warning || '已儲存於此瀏覽器';}
 }
 root.addEventListener('change',e=>{if(e.target.matches('.school-check'))saveSchoolDraft();});
+
+root.addEventListener('submit',e=>{if(e.target.dataset.form!=='exam-evidence')return;e.preventDefault();const data=new FormData(e.target),ok=game.saveExamEvidence(e.target.dataset.key,{score:data.get('score'),date:data.get('date'),kind:data.get('kind'),form:data.get('form')});if(ok){render();toast('已儲存自行登錄的官方成績');}else{const status=e.target.querySelector('.exam-save-status');if(status)status.textContent='請檢查分數範圍、日期或是否已記錄同一筆成績。';}});
+setInterval(()=>{const el=document.querySelector('#exam-clock'),s=game?.state.session;if(!el||!s?.examPlan?.assessment)return;const left=Math.ceil((s.examPlan.timeLimit-(Date.now()-s.started))/1000);el.textContent=left>0?'⏱ 目標時間剩餘 '+Math.floor(left/60)+':'+String(left%60).padStart(2,'0'):'⏱ 已超過目標時間 · 可繼續作答，這次不計限時達標';el.classList.toggle('over',left<=0);},1000);
