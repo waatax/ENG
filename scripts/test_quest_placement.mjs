@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createCourse, createGame, isScored, KEY } from '../dist/quest/engine.mjs';
-import { makePlacement, placementReport, refinePlacement } from '../dist/quest/placement.mjs';
+import { makePlacement, placementReport, refinePlacement, FOUNDATION_BANDS, makeLegacyPlacement, validPlacementPlan } from '../dist/quest/placement.mjs';
 import { fastAnswerEligible, jumpSuggestion } from '../dist/quest/acceleration.mjs';
 const index = JSON.parse(fs.readFileSync('dist/quest/course/index.json'));
 function course() {
@@ -20,13 +20,17 @@ function play(g, decide = () => true, tick = () => {}) {
   }
   return g.result;
 }
-test('10/20/30 plans have exact unique questions, all nine stages and multiple skills', () => {
+test('10/20/30 plans have exact unique questions, seven merged bands, fixed advanced tail and multiple skills', () => {
   const c = course();
   for (const size of [10,20,30]) for (const seed of [1,7,91]) {
     const p = makePlacement(c,size,seed);
     assert.equal(p.slots.length,size);
     assert.equal(new Set(p.slots.map(x=>x.id)).size,size);
-    assert.equal(new Set(p.slots.map(x=>x.section)).size,9);
+    assert.equal(p.version,2);
+    assert.equal(new Set(p.slots.filter(x=>!x.advanced).map(x=>x.band)).size,7);
+    assert.deepEqual(p.slots.slice(-3).map(x=>x.section),['b-sat','b-gre','b-gmat']);
+    assert.equal(p.slots.filter(x=>x.advanced).length,size*3/10);
+    assert.equal(validPlacementPlan(p,p.slots.map(x=>x.id),c),true);
     assert.ok(new Set(p.slots.map(x=>x.skill)).size>=3);
     assert.ok(p.slots.every(x=>c.item(x.id).why));
   }
@@ -34,12 +38,12 @@ test('10/20/30 plans have exact unique questions, all nine stages and multiple s
 });
 test('all ideal mastery frontiers stay monotonic across the three test lengths; early slip does not cap advanced learners', () => {
   const c=course();
-  for (const size of [10,20,30]) for(let mastered=0;mastered<=9;mastered++) {
+  for (const size of [10,20,30]) for(let mastered=0;mastered<=7;mastered++) {
     const p=makePlacement(c,size,2), rs=[];
-    for(let i=0;i<size;i++){const x=p.slots[i];rs.push({id:x.id,ok:Number(x.section.slice(1))<=mastered,hint:false,repair:false,audio:true});refinePlacement(p,rs,c,2);}
+    for(let i=0;i<size;i++){const x=p.slots[i];rs.push({id:x.id,ok:!x.advanced&&x.band<mastered,hint:false,repair:false,audio:true});refinePlacement(p,rs,c,2);}
     assert.equal(new Set(p.slots.map(x=>x.id)).size,size);
     const r=placementReport(p,rs,c);
-    assert.equal(r.recommended,'s'+Math.min(9,mastered+1),`size ${size}, frontier ${mastered}`);
+    assert.equal(r.recommended,FOUNDATION_BANDS[Math.min(6,mastered)].id,`size ${size}, frontier ${mastered}`);
     assert.equal(r.complete,true);
   }
   const p=makePlacement(c,30,5), rs=p.slots.map((x,i)=>({id:x.id,ok:i!==0,hint:false,repair:false}));
@@ -98,4 +102,31 @@ test('text fallback or unplayed audio is not scored as listening evidence and wi
  const r=placementReport(p,rs,c),listening=r.skills.find(x=>x.id==='listening');
  assert.equal(listening.correct,0);assert.equal(listening.heard,0);assert.equal(r.listeningLimited,true);
  assert.notEqual(r.range[0],r.range[1]);
+});
+
+
+test('advanced SAT/GRE/GMAT probes require passage reasoning; failures never replace the protected tail',()=>{
+ const c=course();
+ for(const size of [10,20,30]) for(const correct of [true,false]) {
+  const p=makePlacement(c,size,12),tail=structuredClone(p.slots.slice(p.generalCount)),rs=[];
+  for(let i=0;i<size;i++) {const x=p.slots[i];rs.push({id:x.id,ok:correct,hint:false,repair:false,audio:true});refinePlacement(p,rs,c,12);}
+  assert.deepEqual(p.slots.slice(p.generalCount),tail);
+  for(const slot of tail){const q=c.item(slot.id);assert.ok(q.passage.split(/\s+/).length>=75,q.id);assert.ok(q.options.length>=4);assert.equal(q.difficulty,'advanced');assert.ok(q.reasoningSkill);assert.ok(q.why.length>80);assert.equal(q.options.filter(x=>x===q.answer).length,1);}
+ }
+});
+
+test('general placement and advanced exam directions are independently reported, never ordered SAT < GRE < GMAT',()=>{
+ const c=course(),p=makePlacement(c,10,3);
+ const make=advanced=>p.slots.map(x=>({id:x.id,ok:x.advanced?advanced:true,hint:false,repair:false,audio:true}));
+ const weak=placementReport(p,make(false),c),strong=placementReport(p,make(true),c);
+ assert.equal(weak.recommended,strong.recommended);assert.equal(weak.advancedReady,false);assert.equal(strong.advancedReady,true);
+ assert.deepEqual(strong.advancedRows.map(x=>[x.id,x.correct,x.n]),[['b-sat',1,1],['b-gre',1,1],['b-gmat',1,1]]);
+ assert.equal(strong.rows.length,7);
+});
+
+test('saved v1 plans still resume; forged or misplaced advanced items are rejected',()=>{
+ const c=course(),storage=memory();let g=createGame({course:c,storage});g.start('placement',10);
+ const legacy=makeLegacyPlacement(c,10,7);Object.assign(g.state.session,{placement:legacy,queue:legacy.slots.map(x=>x.id)});g.save();
+ g=createGame({course:c,storage});assert.equal(g.validSession(),true);assert.ok(play(g).recommended);
+ const p=makePlacement(c,10,1);p.slots[9]={...p.slots[0]};assert.equal(validPlacementPlan(p,p.slots.map(x=>x.id),c),false);
 });

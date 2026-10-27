@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-27",
+  "purpose": "Seven merged general bands; advanced probe correctness is independently simulated at 0.4 and does not determine the general frontier. Algorithm sensitivity checks only. Synthetic independent responses use assumed probabilities, not real learners, calibrated items, formal CEFR accuracy or educational effectiveness.",
+  "rows": [
+    {
+      "masteryChance": 0.85,
+      "size": 10,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 0.642,
+      "withinOneGeneralBand": 0.833
+    },
+    {
+      "masteryChance": 0.85,
+      "size": 20,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 0.425,
+      "withinOneGeneralBand": 0.908
+    },
+    {
+      "masteryChance": 0.85,
+      "size": 30,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 0.183,
+      "withinOneGeneralBand": 0.967
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 10,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 1.042,
+      "withinOneGeneralBand": 0.717
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 20,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 0.617,
+      "withinOneGeneralBand": 0.85
+    },
+    {
+      "masteryChance": 0.75,
+      "size": 30,
+      "syntheticProfiles": 120,
+      "meanGeneralBandDistance": 0.408,
+      "withinOneGeneralBand": 0.917
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "checks": [
+    "10 exact questions, protected SAT/GRE/GMAT tail, separate general and advanced evidence, full explanations and no XP",
+    "20 exact questions, protected SAT/GRE/GMAT tail, separate general and advanced evidence, full explanations and no XP",
+    "30 exact questions, protected SAT/GRE/GMAT tail, separate general and advanced evidence, full explanations and no XP",
+    "advanced report opens GRE learning path",
+    "20-question interrupted test restores metadata and deferred feedback",
+    "all nine levels expandable; every high-school lesson/challenge selectable and chosen level survives reload",
+    "fast fresh independent answers offer a separate jump test; failed test never marks a level as tested"
+  ],
+  "errors": []
+}

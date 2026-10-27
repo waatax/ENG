@@ -1,9 +1,10 @@
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=path20261027';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=advanced20261027';
 import * as sound from './sound.mjs?v=coach20261026';
 import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
 const V = '20261024v6';
-import { courseAtlas, LEVEL_GOALS } from './atlas.mjs';
+import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
+import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs';
 const root = document.querySelector('#game');
 let storage; try { storage = globalThis.localStorage; } catch {}
@@ -137,7 +138,7 @@ function guideView(unitId) {
 function modalView() {
   if (!ui.modal) return '';
   let inner = '';
-  if (ui.modal === 'placement') inner = `<h2>先選擇檢測題數</h2><p class="muted">先取樣各級，再補測程度交界。不限時，可以暫停接續；完成後統一看正解，避免影響後面的判斷。</p><div class="placement-options">${[[10,'快速定位','約 3–5 分鐘 · 先找大方向'],[20,'標準檢測','約 6–10 分鐘 · 各級增加取樣'],[30,'深入確認','約 10–15 分鐘 · 較完整的各級證據']].map(([n,title,desc])=>`<button class="placement-size" data-act="placement-start" data-size="${n}"><b>${n}<small> 題</small></b><span>${title}${n===20?' · 建議':''}<small>${desc}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div><p class="muted small">只評估本次字詞、句型、閱讀與聽辨取樣，未測口說與寫作。結果用來推薦課程起點，不能換算正式 CEFR 或考試成績。</p>`;
+  if (ui.modal === 'placement') inner = `<h2>先選擇檢測題數</h2><p class="muted">減少基礎重複取樣，最後保留 SAT／GRE／GMAT 三方向進階推理題。不限時，可以暫停接續；完成後統一看正解，避免影響後面的判斷。</p><div class="placement-options">${[[10,'快速定位','7 題一般英語＋3 題進階挑戰'],[20,'標準檢測','14 題一般英語＋6 題進階挑戰'],[30,'深入確認','21 題一般英語＋9 題進階挑戰']].map(([n,title,desc])=>`<button class="placement-size" data-act="placement-start" data-size="${n}"><b>${n}<small> 題</small></b><span>${title}${n===20?' · 建議':''}<small>${desc}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div><p class="muted small">只評估本次字詞、句型、閱讀與聽辨取樣，未測口說與寫作。結果用來推薦課程起點，不能換算正式 CEFR 或考試成績。</p>`;
   else if (ui.modal === 'guide') inner = guideView(ui.guide);
   else if (ui.modal === 'tracks') inner = `<h2>選擇段落</h2><div class="track-list">${course.index.sections.map(s => `<button class="track-opt ${s.color} ${ui.track === s.id ? 'on' : ''}" data-act="track" data-id="${s.id}"><b>${game.trackUnlocked(s.id) ? '' : '🔒 '}第 ${s.no} 段 · ${esc(s.title)}</b><small>${esc(s.level)} · ${s.units.length} 單元${game.sectionDone(s.id) ? ' · ✓ 完成' : ''}</small></button>`).join('')}</div><h3>目標分支</h3><div class="track-list">${course.index.branches.map(b => `<button class="track-opt ${b.color} ${ui.track === b.id ? 'on' : ''}" data-act="track" data-id="${b.id}"><b>${b.icon} ${esc(b.title)}</b><small>${esc(b.level)} · ${b.units.length} 單元</small></button>`).join('')}</div>`;
   else if (ui.modal === 'exit') inner = `<div class="center">${mascot('sad', 88)}<h2>要先休息一下嗎？</h2><p>剛剛的作答已經保存，回來可以接著做。</p><div class="row center"><button class="btn primary" data-act="close">繼續學習</button><button class="btn ghost" data-act="pause">先離開</button></div></div>`;
@@ -152,6 +153,7 @@ function sessionTitle(s) {
   if (s.mode === 'story') return `📖 ${course.stories.get(s.ref)?.title || '故事'}`;
   if (s.mode === 'review') return `↻ 複習・${course.units.get(s.ref)?.title || ''}`;
   if (s.mode === 'vocab') return `🔤 ${course.vocab.get(s.ref)?.title || '單字特訓'}`;
+  if (s.mode === 'placement' && s.placement?.version===2) { const slot=s.placement.slots[s.index],track=ADVANCED_TRACKS.find(x=>x.id===slot.section); return track ? `程度檢測 · ${track.title}（進階）` : '程度檢測 · 一般英語'; }
   if (s.mode === 'jump') return `⏩ 跳級測驗・第 ${course.track(s.ref)?.no} 段`;
   return { mistakes: '📕 錯題本', practice: '💪 個人化練習', listen: '🎧 聽力特訓', placement: '🧭 程度測驗' }[s.mode] || '練習';
 }
@@ -221,8 +223,9 @@ function resultView() {
   const r = game.result;
   if (r.mode === 'placement') {
     const sec = course.track(r.recommended);
-    return `<div class="result placement-result">${mascot('cheer', 92)}<p class="eyebrow">${esc(r.evidence || '程度測驗完成')} · ${r.total} 題</p><h1>建議從第 ${sec.no} 段開始</h1><p class="lead">「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">首次答對 ${r.firstTry}/${r.total} 題。${r.range ? (r.range[0]===r.range[1] ? `本次證據較支持第 ${course.track(r.range[0]).no} 段，仍可用單元挑戰確認。` : `待確認起點：第 ${course.track(r.range[0]).no}–${course.track(r.range[1]).no} 段。`) : ''}這是課程起點建議，未評估口說與寫作。</p><p class="placement-note">${r.total===10?'10 題只作初步定位，建議用 20 或 30 題再確認。':'依各級答題模式推估，答題速度不影響分級。'}${r.listeningLimited ? ' 聽力證據不足，建議完成聽辨後再確認。' : ''}${r.seen ? ` 本次有 ${r.seen} 題曾作答，熟悉度可能影響結果。` : ''}</p>
-    ${r.rows ? `<div class="level-evidence"><h2>各級取樣表現</h2>${r.rows.map((x,i)=>`<div><span>第 ${i+1} 段 · ${esc(x.title)}</span><b>${x.correct}/${x.n}</b><small>${!x.n?'未取樣':x.n<2?'樣本少，待確認':x.correct/x.n>=.75?'本次表現順利':'建議補強'}</small></div>`).join('')}</div><div class="skill-evidence">${r.skills.map(x=>`<section><b>${esc(x.label)}</b><p>${x.id==='listening' ? (x.heard ? `${x.correct}/${x.heard} 題有效聽辨` : '未取得有效聽力證據') : x.n?`${x.correct}/${x.n} 題`:'本次未取樣'}</p>${x.id==='listening'?`<small>${x.heard}/${x.n} 題完整聽完；改文字不當作聽力證據</small>`:''}</section>`).join('')}</div>` : ''}
+    return `<div class="result placement-result">${mascot('cheer', 92)}<p class="eyebrow">${esc(r.evidence || '程度測驗完成')} · ${r.total} 題</p><h1>${r.advancedReady ? '建議展開進階學術挑戰' : `建議從第 ${sec.no} 段開始`}</h1><p class="lead">一般英語起點：「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">首次答對 ${r.firstTry}/${r.total} 題。${r.range ? (r.range[0]===r.range[1] ? `本次證據較支持第 ${course.track(r.range[0]).no} 段，仍可用單元挑戰確認。` : `待確認起點：第 ${course.track(r.range[0]).no}–${course.track(r.range[1]).no} 段。`) : ''}這是課程起點建議，未評估口說與寫作。</p><p class="placement-note">${r.total===10?'10 題只作初步定位，建議用 20 或 30 題再確認。':'依各級答題模式推估，答題速度不影響分級。'}${r.listeningLimited ? ' 聽力證據不足，建議完成聽辨後再確認。' : ''}${r.seen ? ` 本次有 ${r.seen} 題曾作答，熟悉度可能影響結果。` : ''}</p>
+    ${r.advancedRows ? `<section class="advanced-evidence"><h2>進階挑戰 · SAT／GRE／GMAT</h2><p class="muted small">三者代表不同學術與推理方向，不是同一條難度或分數階梯。</p><div class="advanced-grid">${r.advancedRows.map(x=>`<article><h3>${esc(x.title)}</h3><b class="advanced-score">${x.correct}/${x.n}</b><p class="small">${x.n<2 ? (x.correct?'單題命中，值得進一步挑戰':'單題未命中，可先補強') : x.correct/x.n>=2/3?'本次進階表現順利':'建議練習後再確認'}</p><p class="muted small">${esc(x.focus)}</p><button class="btn small" data-act="advanced-track" data-id="${x.id}">展開 ${x.id.slice(2).toUpperCase()} 課程 →</button></article>`).join('')}</div><p class="muted small">原創進階取樣，未換算正式考試成績；10 題版各方向一題，建議用 20／30 題增加證據。</p></section>` : ''}
+    ${r.rows ? `<div class="level-evidence"><h2>${r.blueprint===2?'一般英語 · 合併分層取樣':'各級取樣表現'}</h2>${r.rows.map((x,i)=>`<div><span>${esc(x.label || `第 ${i+1} 段 · ${x.title}`)}</span><b>${x.correct}/${x.n}</b><small>${!x.n?'未取樣':x.n<2?(x.correct?'已找到一項線索':'建議補強這項線索'):x.correct/x.n>=.75?'本次表現順利':'建議補強'}</small></div>`).join('')}</div><div class="skill-evidence">${r.skills.map(x=>`<section><b>${esc(x.label)}</b><p>${x.id==='listening' ? (x.heard ? `${x.correct}/${x.heard} 題有效聽辨` : '未取得有效聽力證據') : x.n?`${x.correct}/${x.n} 題`:'本次未取樣'}</p>${x.id==='listening'?`<small>${x.heard}/${x.n} 題完整聽完；改文字不當作聽力證據</small>`:''}</section>`).join('')}</div>` : ''}
     <div class="row center"><button class="btn primary big" data-act="accept" data-id="${sec.id}">從第 ${sec.no} 段開始</button><button class="btn ghost" data-act="accept" data-id="s1">從頭開始</button><button class="btn" data-act="placement">換題數重新確認</button></div>
     ${r.review ? `<details class="placement-review"><summary>展開 ${r.review.length} 題答案與解說</summary>${r.review.map(x=>`<details><summary>${x.ok?'✓':'↻'} ${esc(x.prompt)}</summary>${x.passage ? `<p class="review-stimulus" lang="en">${esc(x.passage)}</p>` : ''}${x.text ? `<p class="review-stimulus">${esc(x.text)}</p>` : ''}${!x.ok && x.value ? `<p class="muted">你的答案：${esc(x.value)}</p>` : ''}<p><b>正解：${esc(x.answer)}</b></p><p>${esc(x.why)}</p><button class="btn small" data-act="prompt-say" data-text="${esc(x.answer)}">🔊 聽正解</button><button class="btn small" data-act="prompt-say" data-text="${esc(x.why)}">💬 聽解說</button></details>`).join('')}</details>`:''}</div>`;
   }
@@ -390,6 +393,7 @@ root.addEventListener('click', async e => {
     case 'result-jump': game.clearResult(); await begin('jump',id); break;
     case 'accept': game.acceptPlacement(id); ui.track = id; game.clearResult(); ui.tab = 'learn'; location.hash = '#learn'; await ensure([id]); render(true); break;
     case 'tracks': ui.modal = 'tracks'; render(); break;
+    case 'advanced-track': game.clearResult();
     case 'unit-select':
     case 'track': ui.track = id; game.update({start:id}); ui.modal = null; ui.pop = null; ui.tab = 'learn'; if (location.hash !== '#learn') location.hash = '#learn'; render(true); if (el.dataset.unit) document.getElementById('u-'+el.dataset.unit)?.scrollIntoView({block:'start',behavior:profile().motion===false?'instant':'smooth'}); else window.scrollTo(0, 0); break;
     case 'pop': ui.pop = ui.pop === id ? null : id; sound.sfx('tap'); render(); document.querySelector('.pop .btn')?.focus({ preventScroll: true }); break;

@@ -15,6 +15,7 @@ const KEY = 'english-quest-game-v2';
   const dir = 'dist/quest/course/', index = JSON.parse(fs.readFileSync(dir + 'index.json', 'utf8'));
   const items = {};
   for (const t of [...index.sections, ...index.branches]) Object.assign(items, JSON.parse(fs.readFileSync(dir + t.id + '.json', 'utf8')).items);
+  const {ADVANCED_ITEMS}=await import(pathToFileURL(path.resolve('dist/quest/advanced_placement.mjs')).href);for(const q of ADVANCED_ITEMS)items[q.id]=q;
   for (const s of Object.values(JSON.parse(fs.readFileSync(dir + 'stories.json', 'utf8')).stories)) for (const x of s.steps) items[x.id] = x;
   for (const set of JSON.parse(fs.readFileSync(dir + 'vocab.json', 'utf8')).sets) for (const x of vocabExercises(set)) items[x.id] = x;
   await new Promise(r => server.listen(0, '127.0.0.1', r));
@@ -95,7 +96,7 @@ const KEY = 'english-quest-game-v2';
     assert.match(await page.locator('.result h1').innerText(), /跳級成功/); await leaveResult();
     assert.ok(await page.locator('.node.current').count()); checks.push('jump test unlocks section 3');
     await page.goto(base + '#profile'); await page.locator('.top [data-act="placement"]').click(); await page.locator('[data-size="20"]').click(); await page.locator('.lesson-screen').waitFor(); await play();
-    assert.match(await page.locator('.result h1').innerText(), /建議從第/); await page.locator('[data-act="accept"]').first().click(); checks.push('placement recommends a section');
+    assert.match(await page.locator('.result h1').innerText(), /建議從第|進階學術挑戰/); await page.locator('[data-act="accept"]').first().click(); checks.push('placement recommends a section');
     for (const tab of ['practice', 'stories', 'library', 'profile']) for (const width of [320, 1280]) { await page.setViewportSize({ width, height: 900 }); await page.goto(base + '#' + tab); await page.locator('.page-head').waitFor(); await noOverflow(tab + ' ' + width); if (width === 1280) await page.screenshot({ path: `${out}/v2-${tab}-1280.png`, fullPage: false }); }
     checks.push('practice/stories/library/profile at 320 and 1280');
     await page.setViewportSize({ width: 1280, height: 900 }); await page.goto(base + '#learn'); await page.screenshot({ path: `${out}/v2-learn-1280.png` });
@@ -126,7 +127,7 @@ const KEY = 'english-quest-game-v2';
     await direct.locator('.level-top-entry').click();await direct.locator('[data-act="resume"]').waitFor();
     checks.push('main site top placement link preserves an unfinished test');await direct.close();
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-27', version: 'path20261027', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-27', version: 'advanced20261027', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }

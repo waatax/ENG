@@ -1,6 +1,7 @@
 // English Quest game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
 import {takeaways} from './adventure.mjs';
-import { makePlacement, placementReport, refinePlacement } from './placement.mjs';
+import { makePlacement, placementReport, refinePlacement, validPlacementPlan } from './placement.mjs?v=advanced20261027';
+import { ADVANCED_ITEMS } from './advanced_placement.mjs?v=advanced20261027';
 import { fastAnswerEligible, jumpSuggestion } from './acceleration.mjs';
 export const KEY = 'english-quest-game-v2';
 export const V1_KEY = 'english-quest-game-v1';
@@ -42,6 +43,7 @@ export function createCourse(index) {
     u.nodes.forEach((n, ni) => nodes.set(n.id, { ...n, unit: u.id, track: t.id, order: ni, pool: null }));
   });
   for (const s of index.stories || []) stories.set(s.id, { ...s, steps: null });
+  for (const it of ADVANCED_ITEMS) items.set(it.id,{...it,f:'placement-advanced'});
   const course = {
     index, tracks, units, nodes, items, guides, stories, vocab,
     track: id => tracks.find(t => t.id === id),
@@ -288,7 +290,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const modes=['lesson','boss','story','review','mistakes','practice','listen','vocab','jump','placement'];
     const basic=Array.isArray(s.queue)&&s.queue.length>0&&s.queue.length<=512&&s.queue.every(id=>typeof id==='string'&&course.item(id))&&Number.isInteger(s.index)&&s.index>=0&&s.index<s.queue.length&&Array.isArray(s.results)&&modes.includes(s.mode)&&Number.isSafeInteger(s.id)&&s.id>0&&Number.isInteger(s.base)&&s.base>0&&s.base<=s.queue.length&&Number.isFinite(s.started)&&(s.hearts===null||Number.isInteger(s.hearts)&&s.hearts>=0&&s.hearts<=HEARTS)&&(!s.feedback||typeof s.feedback.ok==='boolean');
     const processed=basic?s.queue.slice(0,s.index+(s.feedback?1:0)).filter(id=>isScored(course.item(id))):[];
-    const planOk = !s.placement || (isObj(s.placement) && s.placement.version === 1 && s.placement.anchors === Math.floor(s.placement.size/9)*9 && s.mode === 'placement' && [10,20,30].includes(s.placement.size) && s.queue.length === s.placement.size && Array.isArray(s.placement.slots) && s.placement.slots.length === s.queue.length && s.placement.slots.every((x,i)=>x && x.id===s.queue[i] && course.index.sections.some(sec=>sec.id===x.section)));
+    const planOk = !s.placement || (s.mode==='placement' && validPlacementPlan(s.placement,s.queue,course));
     const ok=basic&&planOk&&processed.length===s.results.length&&s.results.every((r,i)=>r&&r.id===processed[i]&&typeof r.ok==='boolean'&&typeof r.hint==='boolean'&&typeof r.repair==='boolean');
     if (!ok) { state.session = null; save(); }
     return ok;
