@@ -1,0 +1,5740 @@
+{
+  "version": "2026-10-27.quality1",
+  "units": 141,
+  "nodes": 626,
+  "thinNodes": 0,
+  "sampledFreshLessons": 6260,
+  "minimumNodeTargets": 10,
+  "minimumUnitTargets": 44,
+  "sectionNineFirst": {
+    "id": "g12-s1-u1:word",
+    "kind": "word",
+    "track": "s9",
+    "unit": "g12-s1-u1",
+    "targets": 32,
+    "words": 32
+  },
+  "tracks": [
+    {
+      "id": "s1",
+      "nodes": 31,
+      "minTargets": 19
+    },
+    {
+      "id": "s2",
+      "nodes": 39,
+      "minTargets": 12
+    },
+    {
+      "id": "s3",
+      "nodes": 27,
+      "minTargets": 10
+    },
+    {
+      "id": "s4",
+      "nodes": 37,
+      "minTargets": 11
+    },
+    {
+      "id": "s5",
+      "nodes": 47,
+      "minTargets": 14
+    },
+    {
+      "id": "s6",
+      "nodes": 27,
+      "minTargets": 20
+    },
+    {
+      "id": "s7",
+      "nodes": 54,
+      "minTargets": 15
+    },
+    {
+      "id": "s8",
+      "nodes": 54,
+      "minTargets": 14
+    },
+    {
+      "id": "s9",
+      "nodes": 47,
+      "minTargets": 16
+    },
+    {
+      "id": "b-cap",
+      "nodes": 21,
+      "minTargets": 20
+    },
+    {
+      "id": "b-gsat",
+      "nodes": 21,
+      "minTargets": 20
+    },
+    {
+      "id": "b-voc",
+      "nodes": 23,
+      "minTargets": 20
+    },
+    {
+      "id": "b-cert",
+      "nodes": 6,
+      "minTargets": 20
+    },
+    {
+      "id": "b-toeic",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-sat",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-gre",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-gmat",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "sem-j1a",
+      "nodes": 5,
+      "minTargets": 19
+    },
+    {
+      "id": "sem-j1b",
+      "nodes": 5,
+      "minTargets": 15
+    },
+    {
+      "id": "sem-j2a",
+      "nodes": 5,
+      "minTargets": 16
+    },
+    {
+      "id": "sem-j2b",
+      "nodes": 5,
+      "minTargets": 11
+    },
+    {
+      "id": "sem-j3a",
+      "nodes": 5,
+      "minTargets": 16
+    },
+    {
+      "id": "sem-j3b",
+      "nodes": 5,
+      "minTargets": 15
+    },
+    {
+      "id": "sem-h1a",
+      "nodes": 5,
+      "minTargets": 38
+    },
+    {
+      "id": "sem-h1b",
+      "nodes": 5,
+      "minTargets": 40
+    },
+    {
+      "id": "sem-h2a",
+      "nodes": 5,
+      "minTargets": 38
+    },
+    {
+      "id": "sem-h2b",
+      "nodes": 5,
+      "minTargets": 41
+    },
+    {
+      "id": "sem-h3a",
+      "nodes": 5,
+      "minTargets": 27
+    },
+    {
+      "id": "sem-h3b",
+      "nodes": 5,
+      "minTargets": 20
+    }
+  ],
+  "nodeCapacities": [
+    {
+      "id": "u1:q1",
+      "kind": "lesson",
+      "track": "s1",
+      "unit": "u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u1:q2",
+      "kind": "lesson",
+      "track": "s1",
+      "unit": "u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u1:q3",
+      "kind": "lesson",
+      "track": "s1",
+      "unit": "u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u1:q4",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "u1",
+      "targets": 55,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u1:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s1-u1:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u1:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s1-u1",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g3-s1-u2:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s1-u2:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u2:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s1-u2",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g3-s1-u3:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s1-u3:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u3:drill",
+      "kind": "drill",
+      "track": "s1",
+      "unit": "g3-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s1-u3:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s1-u3",
+      "targets": 81,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u4:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u4:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u4:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s2-u4",
+      "targets": 19,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u4:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s2-u4",
+      "targets": 71,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u5:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u5:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u5:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u5:drill",
+      "kind": "drill",
+      "track": "s1",
+      "unit": "g3-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u5:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s2-u5",
+      "targets": 84,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u6:word",
+      "kind": "word",
+      "track": "s1",
+      "unit": "g3-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g3-s2-u6:talk",
+      "kind": "talk",
+      "track": "s1",
+      "unit": "g3-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u6:grammar",
+      "kind": "grammar",
+      "track": "s1",
+      "unit": "g3-s2-u6",
+      "targets": 19,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u6:drill",
+      "kind": "drill",
+      "track": "s1",
+      "unit": "g3-s2-u6",
+      "targets": 19,
+      "words": 0
+    },
+    {
+      "id": "g3-s2-u6:boss",
+      "kind": "boss",
+      "track": "s1",
+      "unit": "g3-s2-u6",
+      "targets": 71,
+      "words": 32
+    },
+    {
+      "id": "u2:q1",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u2:q2",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u2:q3",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u2:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "u2",
+      "targets": 23,
+      "words": 0
+    },
+    {
+      "id": "u2:q4",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "u2",
+      "targets": 67,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u1:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s1-u1:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u1:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s1-u1",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g4-s1-u2:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s1-u2:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u2:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "g4-s1-u2",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u2:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s1-u2",
+      "targets": 94,
+      "words": 32
+    },
+    {
+      "id": "g4-s1-u3:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s1-u3:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s1-u3",
+      "targets": 17,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u3:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "g4-s1-u3",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "g4-s1-u3:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s1-u3",
+      "targets": 91,
+      "words": 32
+    },
+    {
+      "id": "u3:q1",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u3:q2",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u3:q3",
+      "kind": "lesson",
+      "track": "s2",
+      "unit": "u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "u3:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "u3",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "u3:q4",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "u3",
+      "targets": 76,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u4:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s2-u4:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u4:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s2-u4",
+      "targets": 17,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u4:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "g4-s2-u4",
+      "targets": 12,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u4:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s2-u4",
+      "targets": 81,
+      "words": 32
+    },
+    {
+      "id": "g4-s2-u5:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s2-u5:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u5:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u5:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "g4-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u5:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s2-u5",
+      "targets": 84,
+      "words": 32
+    },
+    {
+      "id": "g4-s2-u6:word",
+      "kind": "word",
+      "track": "s2",
+      "unit": "g4-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g4-s2-u6:talk",
+      "kind": "talk",
+      "track": "s2",
+      "unit": "g4-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u6:grammar",
+      "kind": "grammar",
+      "track": "s2",
+      "unit": "g4-s2-u6",
+      "targets": 17,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u6:drill",
+      "kind": "drill",
+      "track": "s2",
+      "unit": "g4-s2-u6",
+      "targets": 12,
+      "words": 0
+    },
+    {
+      "id": "g4-s2-u6:boss",
+      "kind": "boss",
+      "track": "s2",
+      "unit": "g4-s2-u6",
+      "targets": 81,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u1:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u1:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u1:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s1-u1",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u2:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u2:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u2:drill",
+      "kind": "drill",
+      "track": "s3",
+      "unit": "g5-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u2:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s1-u2",
+      "targets": 84,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u3:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s1-u3:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u3:drill",
+      "kind": "drill",
+      "track": "s3",
+      "unit": "g5-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s1-u3:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s1-u3",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u4:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u4:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u4:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s2-u4",
+      "targets": 19,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u4:drill",
+      "kind": "drill",
+      "track": "s3",
+      "unit": "g5-s2-u4",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u4:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s2-u4",
+      "targets": 93,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u5:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u5:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u5:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s2-u5",
+      "targets": 17,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u5:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s2-u5",
+      "targets": 69,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u6:word",
+      "kind": "word",
+      "track": "s3",
+      "unit": "g5-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g5-s2-u6:talk",
+      "kind": "talk",
+      "track": "s3",
+      "unit": "g5-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u6:grammar",
+      "kind": "grammar",
+      "track": "s3",
+      "unit": "g5-s2-u6",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "g5-s2-u6:boss",
+      "kind": "boss",
+      "track": "s3",
+      "unit": "g5-s2-u6",
+      "targets": 62,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u1:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u1:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u1:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s1-u1",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u1:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s1-u1",
+      "targets": 84,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u2:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u2:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u2:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s1-u2",
+      "targets": 22,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u2:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s1-u2",
+      "targets": 81,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u3:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u3:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s1-u3",
+      "targets": 18,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u3:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s1-u3",
+      "targets": 12,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u3:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s1-u3",
+      "targets": 82,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u4:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s1-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s1-u4:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u4:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s1-u4",
+      "targets": 16,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u4:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s1-u4",
+      "targets": 12,
+      "words": 0
+    },
+    {
+      "id": "g6-s1-u4:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s1-u4",
+      "targets": 80,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u5:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u5:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u5:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s2-u5",
+      "targets": 16,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u5:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s2-u5",
+      "targets": 11,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u5:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s2-u5",
+      "targets": 79,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u6:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u6:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u6:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s2-u6",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u7:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s2-u7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u7:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u7:grammar",
+      "kind": "grammar",
+      "track": "s4",
+      "unit": "g6-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u7:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u7:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s2-u7",
+      "targets": 83,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u8:word",
+      "kind": "word",
+      "track": "s4",
+      "unit": "g6-s2-u8",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g6-s2-u8:talk",
+      "kind": "talk",
+      "track": "s4",
+      "unit": "g6-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u8:drill",
+      "kind": "drill",
+      "track": "s4",
+      "unit": "g6-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g6-s2-u8:boss",
+      "kind": "boss",
+      "track": "s4",
+      "unit": "g6-s2-u8",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u1:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g7-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u1:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s5",
+      "unit": "g7-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u1:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g7-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u1:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s1-u1",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u2:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g7-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u2:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s5",
+      "unit": "g7-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u2:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g7-s1-u2",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u2:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s1-u2",
+      "targets": 80,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u3:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g7-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g7-s1-u3:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s5",
+      "unit": "g7-s1-u3",
+      "targets": 15,
+      "words": 0
+    },
+    {
+      "id": "g7-s1-u3:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s1-u3",
+      "targets": 67,
+      "words": 32
+    },
+    {
+      "id": "g7-s2-u4:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g7-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g7-s2-u4:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u4:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g7-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u4:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s2-u4",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g7-s2-u5:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u5:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g7-s2-u5",
+      "targets": 24,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u5:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s2-u5",
+      "targets": 44,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u6:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g7-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g7-s2-u6:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g7-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u6:grammar",
+      "kind": "grammar",
+      "track": "s5",
+      "unit": "g7-s2-u6",
+      "targets": 14,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u6:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g7-s2-u6",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g7-s2-u6:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g7-s2-u6",
+      "targets": 87,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u1:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g8-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u1:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g8-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u1:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g8-s1-u1",
+      "targets": 24,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u1:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g8-s1-u1",
+      "targets": 76,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u2:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g8-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u2:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g8-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u2:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g8-s1-u2",
+      "targets": 34,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u2:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g8-s1-u2",
+      "targets": 86,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u3:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g8-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g8-s1-u3:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g8-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u3:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g8-s1-u3",
+      "targets": 44,
+      "words": 0
+    },
+    {
+      "id": "g8-s1-u3:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g8-s1-u3",
+      "targets": 96,
+      "words": 32
+    },
+    {
+      "id": "g8-s2-u4:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g8-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g8-s2-u4:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g8-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s2-u4:grammar",
+      "kind": "grammar",
+      "track": "s5",
+      "unit": "g8-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s2-u4:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g8-s2-u4",
+      "targets": 41,
+      "words": 0
+    },
+    {
+      "id": "g8-s2-u4:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g8-s2-u4",
+      "targets": 103,
+      "words": 32
+    },
+    {
+      "id": "g8-s2-u5:word",
+      "kind": "word",
+      "track": "s5",
+      "unit": "g8-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g8-s2-u5:talk",
+      "kind": "talk",
+      "track": "s5",
+      "unit": "g8-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g8-s2-u5:drill",
+      "kind": "drill",
+      "track": "s5",
+      "unit": "g8-s2-u5",
+      "targets": 54,
+      "words": 0
+    },
+    {
+      "id": "g8-s2-u5:boss",
+      "kind": "boss",
+      "track": "s5",
+      "unit": "g8-s2-u5",
+      "targets": 106,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u1:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u1:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s6",
+      "unit": "g9-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u1:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s1-u1",
+      "targets": 41,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u1:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s1-u1",
+      "targets": 99,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u2:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u2:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u2:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s1-u2",
+      "targets": 44,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u2:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s1-u2",
+      "targets": 96,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u3:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s1-u3:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u3:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s1-u3",
+      "targets": 34,
+      "words": 0
+    },
+    {
+      "id": "g9-s1-u3:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s1-u3",
+      "targets": 86,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u4:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s2-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u4:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u4:grammar",
+      "kind": "grammar",
+      "track": "s6",
+      "unit": "g9-s2-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u4:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s2-u4",
+      "targets": 41,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u4:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s2-u4",
+      "targets": 113,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u5:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s2-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u5:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u5:grammar",
+      "kind": "grammar",
+      "track": "s6",
+      "unit": "g9-s2-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u5:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s2-u5",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u5:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s2-u5",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u6:word",
+      "kind": "word",
+      "track": "s6",
+      "unit": "g9-s2-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g9-s2-u6:talk",
+      "kind": "talk",
+      "track": "s6",
+      "unit": "g9-s2-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u6:drill",
+      "kind": "drill",
+      "track": "s6",
+      "unit": "g9-s2-u6",
+      "targets": 63,
+      "words": 0
+    },
+    {
+      "id": "g9-s2-u6:boss",
+      "kind": "boss",
+      "track": "s6",
+      "unit": "g9-s2-u6",
+      "targets": 115,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u1:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u1:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u1",
+      "targets": 15,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u1:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u1",
+      "targets": 67,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u2:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u2:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u2:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u2",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u3:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u3:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u3:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s1-u3",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u3:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u3",
+      "targets": 78,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u4:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u4:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u4:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u4:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u4:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u4",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u5:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u5:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u5:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u5:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u5:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u5",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u6:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s1-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s1-u6:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u6:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s1-u6:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s1-u6",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u7:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u7:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u7:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u7:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u7:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u7",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u8:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u8",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u8:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u8:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u8:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u8:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u8",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u9:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u9",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u9:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u9:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u9:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u9:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u9",
+      "targets": 74,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u10:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u10",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u10:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u10:drill",
+      "kind": "drill",
+      "track": "s7",
+      "unit": "g10-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u10:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u10",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u11:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u11",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u11:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u11:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u11:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u11",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u12:word",
+      "kind": "word",
+      "track": "s7",
+      "unit": "g10-s2-u12",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g10-s2-u12:talk",
+      "kind": "talk",
+      "track": "s7",
+      "unit": "g10-s2-u12",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u12:grammar",
+      "kind": "grammar",
+      "track": "s7",
+      "unit": "g10-s2-u12",
+      "targets": 15,
+      "words": 0
+    },
+    {
+      "id": "g10-s2-u12:boss",
+      "kind": "boss",
+      "track": "s7",
+      "unit": "g10-s2-u12",
+      "targets": 67,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u1:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u1:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u1:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u1:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u1:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u1",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u2:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u2:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u2:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u2:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u2:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u2",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u3:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u3:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u3:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u3:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u3",
+      "targets": 31,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u3:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u3",
+      "targets": 89,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u4:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u4:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u4:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u4:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u4",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u4:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u4",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u5:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u5:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u5:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u5:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u5",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u5:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u5",
+      "targets": 87,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u6:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s1-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s1-u6:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u6:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u6:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s1-u6",
+      "targets": 21,
+      "words": 0
+    },
+    {
+      "id": "g11-s1-u6:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s1-u6",
+      "targets": 77,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u7:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u7:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u7:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s2-u7",
+      "targets": 14,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u7:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u7",
+      "targets": 66,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u8:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u8",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u8:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u8:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u8:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u8",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u9:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u9",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u9:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u9:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u9:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u9",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u10:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u10",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u10:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u10:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u10:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u10",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u11:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u11",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u11:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u11:grammar",
+      "kind": "grammar",
+      "track": "s8",
+      "unit": "g11-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u11:drill",
+      "kind": "drill",
+      "track": "s8",
+      "unit": "g11-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u11:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u11",
+      "targets": 83,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u12:word",
+      "kind": "word",
+      "track": "s8",
+      "unit": "g11-s2-u12",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g11-s2-u12:talk",
+      "kind": "talk",
+      "track": "s8",
+      "unit": "g11-s2-u12",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g11-s2-u12:boss",
+      "kind": "boss",
+      "track": "s8",
+      "unit": "g11-s2-u12",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u1:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u1:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u1:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s1-u1",
+      "targets": 44,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u1:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u1",
+      "targets": 96,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u2:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u2:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u2:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s1-u2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u2:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u2",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u3:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u3:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u3:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s1-u3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u3:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u3",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u4:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u4:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u4:grammar",
+      "kind": "grammar",
+      "track": "s9",
+      "unit": "g12-s1-u4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u4:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u4",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u5:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u5:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u5:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s1-u5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u5:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u5",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u6:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s1-u6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s1-u6:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u6:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s1-u6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s1-u6:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s1-u6",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u7:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u7:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u7:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s2-u7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u7:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u7",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u8:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u8",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u8:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u8:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s2-u8",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u8:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u8",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u9:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u9",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u9:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u9",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u9:grammar",
+      "kind": "grammar",
+      "track": "s9",
+      "unit": "g12-s2-u9",
+      "targets": 16,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u9:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u9",
+      "targets": 68,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u10:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u10",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u10:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u10:drill",
+      "kind": "drill",
+      "track": "s9",
+      "unit": "g12-s2-u10",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u10:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u10",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u11:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u11",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u11:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u11",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u11:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u11",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u12:word",
+      "kind": "word",
+      "track": "s9",
+      "unit": "g12-s2-u12",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "g12-s2-u12:talk",
+      "kind": "talk",
+      "track": "s9",
+      "unit": "g12-s2-u12",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u12:grammar",
+      "kind": "grammar",
+      "track": "s9",
+      "unit": "g12-s2-u12",
+      "targets": 16,
+      "words": 0
+    },
+    {
+      "id": "g12-s2-u12:boss",
+      "kind": "boss",
+      "track": "s9",
+      "unit": "g12-s2-u12",
+      "targets": 68,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j1:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j1:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j1:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j1",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j2:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j2:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j2:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j2",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j3:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j3:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j3:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j3",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j4:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j4:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j4:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j4",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j5:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j5:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j5:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j5",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j6:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j6:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j6:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j6",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j7:word",
+      "kind": "word",
+      "track": "b-cap",
+      "unit": "c-jhs-j7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-jhs-j7:talk",
+      "kind": "talk",
+      "track": "b-cap",
+      "unit": "c-jhs-j7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-jhs-j7:boss",
+      "kind": "boss",
+      "track": "b-cap",
+      "unit": "c-jhs-j7",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s1:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s1:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s1:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s1",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s2:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s2:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s2:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s2",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s3:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s3:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s3:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s3",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s4:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s4:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s4:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s4",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s5:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s5:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s5:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s5",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s6:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s6:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s6:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s6",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s7:word",
+      "kind": "word",
+      "track": "b-gsat",
+      "unit": "c-sh-s7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-sh-s7:talk",
+      "kind": "talk",
+      "track": "b-gsat",
+      "unit": "c-sh-s7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-sh-s7:boss",
+      "kind": "boss",
+      "track": "b-gsat",
+      "unit": "c-sh-s7",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v1:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v1",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v1:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v1",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v1:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v1",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v2:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v2",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v2:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v2",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v2:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v2",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v3:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v3",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v3:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v3",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v3:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v3",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v4:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v4",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v4:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v4",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v4:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v4",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v5:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v5",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v5:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v5:grammar",
+      "kind": "grammar",
+      "track": "b-voc",
+      "unit": "c-voc-v5",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v5:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v5",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v6:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v6",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v6:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v6",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v6:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v6",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v7:word",
+      "kind": "word",
+      "track": "b-voc",
+      "unit": "c-voc-v7",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-voc-v7:talk",
+      "kind": "talk",
+      "track": "b-voc",
+      "unit": "c-voc-v7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v7:grammar",
+      "kind": "grammar",
+      "track": "b-voc",
+      "unit": "c-voc-v7",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-voc-v7:boss",
+      "kind": "boss",
+      "track": "b-voc",
+      "unit": "c-voc-v7",
+      "targets": 72,
+      "words": 32
+    },
+    {
+      "id": "c-intl-gept:word",
+      "kind": "word",
+      "track": "b-cert",
+      "unit": "c-intl-gept",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-gept:talk",
+      "kind": "talk",
+      "track": "b-cert",
+      "unit": "c-intl-gept",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-gept:boss",
+      "kind": "boss",
+      "track": "b-cert",
+      "unit": "c-intl-gept",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-intl-toefl:word",
+      "kind": "word",
+      "track": "b-cert",
+      "unit": "c-intl-toefl",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-toefl:talk",
+      "kind": "talk",
+      "track": "b-cert",
+      "unit": "c-intl-toefl",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-toefl:boss",
+      "kind": "boss",
+      "track": "b-cert",
+      "unit": "c-intl-toefl",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "c-intl-toeic:word",
+      "kind": "word",
+      "track": "b-toeic",
+      "unit": "c-intl-toeic",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-toeic:talk",
+      "kind": "talk",
+      "track": "b-toeic",
+      "unit": "c-intl-toeic",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-toeic:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "c-intl-toeic",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "b-toeic-u1:d1",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u1:d2",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u1:d3",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u1:d4",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u1:d5",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u1:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "b-toeic-u1",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:d1",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:d2",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:d3",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:d4",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:d5",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u2:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "b-toeic-u2",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:d1",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:d2",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:d3",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:d4",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:d5",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u3:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "b-toeic-u3",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:d1",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:d2",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:d3",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:d4",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:d5",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u4:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "b-toeic-u4",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:d1",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:d2",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:d3",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:d4",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:d5",
+      "kind": "drill",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-toeic-u5:boss",
+      "kind": "boss",
+      "track": "b-toeic",
+      "unit": "b-toeic-u5",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "c-intl-sat:word",
+      "kind": "word",
+      "track": "b-sat",
+      "unit": "c-intl-sat",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-sat:talk",
+      "kind": "talk",
+      "track": "b-sat",
+      "unit": "c-intl-sat",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-sat:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "c-intl-sat",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "b-sat-u1:d1",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u1:d2",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u1:d3",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u1:d4",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u1:d5",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u1:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "b-sat-u1",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:d1",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:d2",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:d3",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:d4",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:d5",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u2:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "b-sat-u2",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:d1",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:d2",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:d3",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:d4",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:d5",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u3:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "b-sat-u3",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:d1",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:d2",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:d3",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:d4",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:d5",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u4:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "b-sat-u4",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:d1",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:d2",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:d3",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:d4",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:d5",
+      "kind": "drill",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-sat-u5:boss",
+      "kind": "boss",
+      "track": "b-sat",
+      "unit": "b-sat-u5",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "c-intl-gre:word",
+      "kind": "word",
+      "track": "b-gre",
+      "unit": "c-intl-gre",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-gre:talk",
+      "kind": "talk",
+      "track": "b-gre",
+      "unit": "c-intl-gre",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-gre:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "c-intl-gre",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "b-gre-u1:d1",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u1:d2",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u1:d3",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u1:d4",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u1:d5",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u1:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "b-gre-u1",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:d1",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:d2",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:d3",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:d4",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:d5",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u2:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "b-gre-u2",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:d1",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:d2",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:d3",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:d4",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:d5",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u3:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "b-gre-u3",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:d1",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:d2",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:d3",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:d4",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:d5",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u4:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "b-gre-u4",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:d1",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:d2",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:d3",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:d4",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:d5",
+      "kind": "drill",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gre-u5:boss",
+      "kind": "boss",
+      "track": "b-gre",
+      "unit": "b-gre-u5",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "c-intl-gmat:word",
+      "kind": "word",
+      "track": "b-gmat",
+      "unit": "c-intl-gmat",
+      "targets": 32,
+      "words": 32
+    },
+    {
+      "id": "c-intl-gmat:talk",
+      "kind": "talk",
+      "track": "b-gmat",
+      "unit": "c-intl-gmat",
+      "targets": 20,
+      "words": 0
+    },
+    {
+      "id": "c-intl-gmat:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "c-intl-gmat",
+      "targets": 52,
+      "words": 32
+    },
+    {
+      "id": "b-gmat-u1:d1",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u1:d2",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u1:d3",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u1:d4",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u1:d5",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u1:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "b-gmat-u1",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:d1",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:d2",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:d3",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:d4",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:d5",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u2:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "b-gmat-u2",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:d1",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:d2",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:d3",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:d4",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:d5",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u3:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "b-gmat-u3",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:d1",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:d2",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:d3",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:d4",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:d5",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u4:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "b-gmat-u4",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:d1",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:d2",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:d3",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:d4",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:d5",
+      "kind": "drill",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 10,
+      "words": 0
+    },
+    {
+      "id": "b-gmat-u5:boss",
+      "kind": "boss",
+      "track": "b-gmat",
+      "unit": "b-gmat-u5",
+      "targets": 50,
+      "words": 0
+    },
+    {
+      "id": "sem-j1a:word",
+      "kind": "lesson",
+      "track": "sem-j1a",
+      "unit": "sem-j1a-unit",
+      "targets": 66,
+      "words": 36
+    },
+    {
+      "id": "sem-j1a:listen",
+      "kind": "lesson",
+      "track": "sem-j1a",
+      "unit": "sem-j1a-unit",
+      "targets": 49,
+      "words": 15
+    },
+    {
+      "id": "sem-j1a:read",
+      "kind": "lesson",
+      "track": "sem-j1a",
+      "unit": "sem-j1a-unit",
+      "targets": 41,
+      "words": 0
+    },
+    {
+      "id": "sem-j1a:use",
+      "kind": "lesson",
+      "track": "sem-j1a",
+      "unit": "sem-j1a-unit",
+      "targets": 19,
+      "words": 8
+    },
+    {
+      "id": "sem-j1a:boss",
+      "kind": "boss",
+      "track": "sem-j1a",
+      "unit": "sem-j1a-unit",
+      "targets": 138,
+      "words": 36
+    },
+    {
+      "id": "sem-j1b:word",
+      "kind": "lesson",
+      "track": "sem-j1b",
+      "unit": "sem-j1b-unit",
+      "targets": 86,
+      "words": 64
+    },
+    {
+      "id": "sem-j1b:listen",
+      "kind": "lesson",
+      "track": "sem-j1b",
+      "unit": "sem-j1b-unit",
+      "targets": 57,
+      "words": 11
+    },
+    {
+      "id": "sem-j1b:read",
+      "kind": "lesson",
+      "track": "sem-j1b",
+      "unit": "sem-j1b-unit",
+      "targets": 66,
+      "words": 0
+    },
+    {
+      "id": "sem-j1b:use",
+      "kind": "lesson",
+      "track": "sem-j1b",
+      "unit": "sem-j1b-unit",
+      "targets": 15,
+      "words": 2
+    },
+    {
+      "id": "sem-j1b:boss",
+      "kind": "boss",
+      "track": "sem-j1b",
+      "unit": "sem-j1b-unit",
+      "targets": 194,
+      "words": 64
+    },
+    {
+      "id": "sem-j2a:word",
+      "kind": "lesson",
+      "track": "sem-j2a",
+      "unit": "sem-j2a-unit",
+      "targets": 76,
+      "words": 65
+    },
+    {
+      "id": "sem-j2a:listen",
+      "kind": "lesson",
+      "track": "sem-j2a",
+      "unit": "sem-j2a-unit",
+      "targets": 49,
+      "words": 12
+    },
+    {
+      "id": "sem-j2a:read",
+      "kind": "lesson",
+      "track": "sem-j2a",
+      "unit": "sem-j2a-unit",
+      "targets": 100,
+      "words": 0
+    },
+    {
+      "id": "sem-j2a:use",
+      "kind": "lesson",
+      "track": "sem-j2a",
+      "unit": "sem-j2a-unit",
+      "targets": 16,
+      "words": 3
+    },
+    {
+      "id": "sem-j2a:boss",
+      "kind": "boss",
+      "track": "sem-j2a",
+      "unit": "sem-j2a-unit",
+      "targets": 209,
+      "words": 65
+    },
+    {
+      "id": "sem-j2b:word",
+      "kind": "lesson",
+      "track": "sem-j2b",
+      "unit": "sem-j2b-unit",
+      "targets": 42,
+      "words": 33
+    },
+    {
+      "id": "sem-j2b:listen",
+      "kind": "lesson",
+      "track": "sem-j2b",
+      "unit": "sem-j2b-unit",
+      "targets": 30,
+      "words": 9
+    },
+    {
+      "id": "sem-j2b:read",
+      "kind": "lesson",
+      "track": "sem-j2b",
+      "unit": "sem-j2b-unit",
+      "targets": 96,
+      "words": 0
+    },
+    {
+      "id": "sem-j2b:use",
+      "kind": "lesson",
+      "track": "sem-j2b",
+      "unit": "sem-j2b-unit",
+      "targets": 11,
+      "words": 2
+    },
+    {
+      "id": "sem-j2b:boss",
+      "kind": "boss",
+      "track": "sem-j2b",
+      "unit": "sem-j2b-unit",
+      "targets": 158,
+      "words": 33
+    },
+    {
+      "id": "sem-j3a:word",
+      "kind": "lesson",
+      "track": "sem-j3a",
+      "unit": "sem-j3a-unit",
+      "targets": 48,
+      "words": 34
+    },
+    {
+      "id": "sem-j3a:listen",
+      "kind": "lesson",
+      "track": "sem-j3a",
+      "unit": "sem-j3a-unit",
+      "targets": 55,
+      "words": 10
+    },
+    {
+      "id": "sem-j3a:read",
+      "kind": "lesson",
+      "track": "sem-j3a",
+      "unit": "sem-j3a-unit",
+      "targets": 121,
+      "words": 0
+    },
+    {
+      "id": "sem-j3a:use",
+      "kind": "lesson",
+      "track": "sem-j3a",
+      "unit": "sem-j3a-unit",
+      "targets": 16,
+      "words": 3
+    },
+    {
+      "id": "sem-j3a:boss",
+      "kind": "boss",
+      "track": "sem-j3a",
+      "unit": "sem-j3a-unit",
+      "targets": 209,
+      "words": 34
+    },
+    {
+      "id": "sem-j3b:word",
+      "kind": "lesson",
+      "track": "sem-j3b",
+      "unit": "sem-j3b-unit",
+      "targets": 77,
+      "words": 64
+    },
+    {
+      "id": "sem-j3b:listen",
+      "kind": "lesson",
+      "track": "sem-j3b",
+      "unit": "sem-j3b-unit",
+      "targets": 64,
+      "words": 14
+    },
+    {
+      "id": "sem-j3b:read",
+      "kind": "lesson",
+      "track": "sem-j3b",
+      "unit": "sem-j3b-unit",
+      "targets": 146,
+      "words": 0
+    },
+    {
+      "id": "sem-j3b:use",
+      "kind": "lesson",
+      "track": "sem-j3b",
+      "unit": "sem-j3b-unit",
+      "targets": 15,
+      "words": 3
+    },
+    {
+      "id": "sem-j3b:boss",
+      "kind": "boss",
+      "track": "sem-j3b",
+      "unit": "sem-j3b-unit",
+      "targets": 268,
+      "words": 64
+    },
+    {
+      "id": "sem-h1a:word",
+      "kind": "lesson",
+      "track": "sem-h1a",
+      "unit": "sem-h1a-unit",
+      "targets": 87,
+      "words": 47
+    },
+    {
+      "id": "sem-h1a:listen",
+      "kind": "lesson",
+      "track": "sem-h1a",
+      "unit": "sem-h1a-unit",
+      "targets": 83,
+      "words": 25
+    },
+    {
+      "id": "sem-h1a:read",
+      "kind": "lesson",
+      "track": "sem-h1a",
+      "unit": "sem-h1a-unit",
+      "targets": 73,
+      "words": 0
+    },
+    {
+      "id": "sem-h1a:use",
+      "kind": "lesson",
+      "track": "sem-h1a",
+      "unit": "sem-h1a-unit",
+      "targets": 38,
+      "words": 14
+    },
+    {
+      "id": "sem-h1a:boss",
+      "kind": "boss",
+      "track": "sem-h1a",
+      "unit": "sem-h1a-unit",
+      "targets": 210,
+      "words": 47
+    },
+    {
+      "id": "sem-h1b:word",
+      "kind": "lesson",
+      "track": "sem-h1b",
+      "unit": "sem-h1b-unit",
+      "targets": 146,
+      "words": 101
+    },
+    {
+      "id": "sem-h1b:listen",
+      "kind": "lesson",
+      "track": "sem-h1b",
+      "unit": "sem-h1b-unit",
+      "targets": 110,
+      "words": 32
+    },
+    {
+      "id": "sem-h1b:read",
+      "kind": "lesson",
+      "track": "sem-h1b",
+      "unit": "sem-h1b-unit",
+      "targets": 87,
+      "words": 0
+    },
+    {
+      "id": "sem-h1b:use",
+      "kind": "lesson",
+      "track": "sem-h1b",
+      "unit": "sem-h1b-unit",
+      "targets": 40,
+      "words": 16
+    },
+    {
+      "id": "sem-h1b:boss",
+      "kind": "boss",
+      "track": "sem-h1b",
+      "unit": "sem-h1b-unit",
+      "targets": 301,
+      "words": 101
+    },
+    {
+      "id": "sem-h2a:word",
+      "kind": "lesson",
+      "track": "sem-h2a",
+      "unit": "sem-h2a-unit",
+      "targets": 74,
+      "words": 47
+    },
+    {
+      "id": "sem-h2a:listen",
+      "kind": "lesson",
+      "track": "sem-h2a",
+      "unit": "sem-h2a-unit",
+      "targets": 91,
+      "words": 25
+    },
+    {
+      "id": "sem-h2a:read",
+      "kind": "lesson",
+      "track": "sem-h2a",
+      "unit": "sem-h2a-unit",
+      "targets": 125,
+      "words": 0
+    },
+    {
+      "id": "sem-h2a:use",
+      "kind": "lesson",
+      "track": "sem-h2a",
+      "unit": "sem-h2a-unit",
+      "targets": 38,
+      "words": 17
+    },
+    {
+      "id": "sem-h2a:boss",
+      "kind": "boss",
+      "track": "sem-h2a",
+      "unit": "sem-h2a-unit",
+      "targets": 259,
+      "words": 47
+    },
+    {
+      "id": "sem-h2b:word",
+      "kind": "lesson",
+      "track": "sem-h2b",
+      "unit": "sem-h2b-unit",
+      "targets": 152,
+      "words": 127
+    },
+    {
+      "id": "sem-h2b:listen",
+      "kind": "lesson",
+      "track": "sem-h2b",
+      "unit": "sem-h2b-unit",
+      "targets": 100,
+      "words": 36
+    },
+    {
+      "id": "sem-h2b:read",
+      "kind": "lesson",
+      "track": "sem-h2b",
+      "unit": "sem-h2b-unit",
+      "targets": 73,
+      "words": 0
+    },
+    {
+      "id": "sem-h2b:use",
+      "kind": "lesson",
+      "track": "sem-h2b",
+      "unit": "sem-h2b-unit",
+      "targets": 41,
+      "words": 17
+    },
+    {
+      "id": "sem-h2b:boss",
+      "kind": "boss",
+      "track": "sem-h2b",
+      "unit": "sem-h2b-unit",
+      "targets": 278,
+      "words": 127
+    },
+    {
+      "id": "sem-h3a:word",
+      "kind": "lesson",
+      "track": "sem-h3a",
+      "unit": "sem-h3a-unit",
+      "targets": 85,
+      "words": 66
+    },
+    {
+      "id": "sem-h3a:listen",
+      "kind": "lesson",
+      "track": "sem-h3a",
+      "unit": "sem-h3a-unit",
+      "targets": 66,
+      "words": 22
+    },
+    {
+      "id": "sem-h3a:read",
+      "kind": "lesson",
+      "track": "sem-h3a",
+      "unit": "sem-h3a-unit",
+      "targets": 84,
+      "words": 0
+    },
+    {
+      "id": "sem-h3a:use",
+      "kind": "lesson",
+      "track": "sem-h3a",
+      "unit": "sem-h3a-unit",
+      "targets": 27,
+      "words": 10
+    },
+    {
+      "id": "sem-h3a:boss",
+      "kind": "boss",
+      "track": "sem-h3a",
+      "unit": "sem-h3a-unit",
+      "targets": 207,
+      "words": 66
+    },
+    {
+      "id": "sem-h3b:word",
+      "kind": "lesson",
+      "track": "sem-h3b",
+      "unit": "sem-h3b-unit",
+      "targets": 126,
+      "words": 87
+    },
+    {
+      "id": "sem-h3b:listen",
+      "kind": "lesson",
+      "track": "sem-h3b",
+      "unit": "sem-h3b-unit",
+      "targets": 59,
+      "words": 22
+    },
+    {
+      "id": "sem-h3b:read",
+      "kind": "lesson",
+      "track": "sem-h3b",
+      "unit": "sem-h3b-unit",
+      "targets": 23,
+      "words": 0
+    },
+    {
+      "id": "sem-h3b:use",
+      "kind": "lesson",
+      "track": "sem-h3b",
+      "unit": "sem-h3b-unit",
+      "targets": 20,
+      "words": 7
+    },
+    {
+      "id": "sem-h3b:boss",
+      "kind": "boss",
+      "track": "sem-h3b",
+      "unit": "sem-h3b-unit",
+      "targets": 181,
+      "words": 87
+    }
+  ],
+  "unitCapacities": [
+    {
+      "id": "u1",
+      "targets": 55
+    },
+    {
+      "id": "g3-s1-u1",
+      "targets": 72
+    },
+    {
+      "id": "g3-s1-u2",
+      "targets": 72
+    },
+    {
+      "id": "g3-s1-u3",
+      "targets": 81
+    },
+    {
+      "id": "g3-s2-u4",
+      "targets": 71
+    },
+    {
+      "id": "g3-s2-u5",
+      "targets": 84
+    },
+    {
+      "id": "g3-s2-u6",
+      "targets": 71
+    },
+    {
+      "id": "u2",
+      "targets": 67
+    },
+    {
+      "id": "g4-s1-u1",
+      "targets": 72
+    },
+    {
+      "id": "g4-s1-u2",
+      "targets": 94
+    },
+    {
+      "id": "g4-s1-u3",
+      "targets": 91
+    },
+    {
+      "id": "u3",
+      "targets": 76
+    },
+    {
+      "id": "g4-s2-u4",
+      "targets": 81
+    },
+    {
+      "id": "g4-s2-u5",
+      "targets": 84
+    },
+    {
+      "id": "g4-s2-u6",
+      "targets": 81
+    },
+    {
+      "id": "g5-s1-u1",
+      "targets": 72
+    },
+    {
+      "id": "g5-s1-u2",
+      "targets": 84
+    },
+    {
+      "id": "g5-s1-u3",
+      "targets": 72
+    },
+    {
+      "id": "g5-s2-u4",
+      "targets": 93
+    },
+    {
+      "id": "g5-s2-u5",
+      "targets": 69
+    },
+    {
+      "id": "g5-s2-u6",
+      "targets": 62
+    },
+    {
+      "id": "g6-s1-u1",
+      "targets": 84
+    },
+    {
+      "id": "g6-s1-u2",
+      "targets": 81
+    },
+    {
+      "id": "g6-s1-u3",
+      "targets": 82
+    },
+    {
+      "id": "g6-s1-u4",
+      "targets": 80
+    },
+    {
+      "id": "g6-s2-u5",
+      "targets": 79
+    },
+    {
+      "id": "g6-s2-u6",
+      "targets": 52
+    },
+    {
+      "id": "g6-s2-u7",
+      "targets": 83
+    },
+    {
+      "id": "g6-s2-u8",
+      "targets": 72
+    },
+    {
+      "id": "g7-s1-u1",
+      "targets": 72
+    },
+    {
+      "id": "g7-s1-u2",
+      "targets": 80
+    },
+    {
+      "id": "g7-s1-u3",
+      "targets": 67
+    },
+    {
+      "id": "g7-s2-u4",
+      "targets": 72
+    },
+    {
+      "id": "g7-s2-u5",
+      "targets": 44
+    },
+    {
+      "id": "g7-s2-u6",
+      "targets": 87
+    },
+    {
+      "id": "g8-s1-u1",
+      "targets": 76
+    },
+    {
+      "id": "g8-s1-u2",
+      "targets": 86
+    },
+    {
+      "id": "g8-s1-u3",
+      "targets": 96
+    },
+    {
+      "id": "g8-s2-u4",
+      "targets": 103
+    },
+    {
+      "id": "g8-s2-u5",
+      "targets": 106
+    },
+    {
+      "id": "g9-s1-u1",
+      "targets": 99
+    },
+    {
+      "id": "g9-s1-u2",
+      "targets": 96
+    },
+    {
+      "id": "g9-s1-u3",
+      "targets": 86
+    },
+    {
+      "id": "g9-s2-u4",
+      "targets": 113
+    },
+    {
+      "id": "g9-s2-u5",
+      "targets": 77
+    },
+    {
+      "id": "g9-s2-u6",
+      "targets": 115
+    },
+    {
+      "id": "g10-s1-u1",
+      "targets": 67
+    },
+    {
+      "id": "g10-s1-u2",
+      "targets": 72
+    },
+    {
+      "id": "g10-s1-u3",
+      "targets": 78
+    },
+    {
+      "id": "g10-s1-u4",
+      "targets": 72
+    },
+    {
+      "id": "g10-s1-u5",
+      "targets": 72
+    },
+    {
+      "id": "g10-s1-u6",
+      "targets": 72
+    },
+    {
+      "id": "g10-s2-u7",
+      "targets": 77
+    },
+    {
+      "id": "g10-s2-u8",
+      "targets": 77
+    },
+    {
+      "id": "g10-s2-u9",
+      "targets": 74
+    },
+    {
+      "id": "g10-s2-u10",
+      "targets": 72
+    },
+    {
+      "id": "g10-s2-u11",
+      "targets": 72
+    },
+    {
+      "id": "g10-s2-u12",
+      "targets": 67
+    },
+    {
+      "id": "g11-s1-u1",
+      "targets": 72
+    },
+    {
+      "id": "g11-s1-u2",
+      "targets": 77
+    },
+    {
+      "id": "g11-s1-u3",
+      "targets": 89
+    },
+    {
+      "id": "g11-s1-u4",
+      "targets": 77
+    },
+    {
+      "id": "g11-s1-u5",
+      "targets": 87
+    },
+    {
+      "id": "g11-s1-u6",
+      "targets": 77
+    },
+    {
+      "id": "g11-s2-u7",
+      "targets": 66
+    },
+    {
+      "id": "g11-s2-u8",
+      "targets": 72
+    },
+    {
+      "id": "g11-s2-u9",
+      "targets": 72
+    },
+    {
+      "id": "g11-s2-u10",
+      "targets": 72
+    },
+    {
+      "id": "g11-s2-u11",
+      "targets": 83
+    },
+    {
+      "id": "g11-s2-u12",
+      "targets": 52
+    },
+    {
+      "id": "g12-s1-u1",
+      "targets": 96
+    },
+    {
+      "id": "g12-s1-u2",
+      "targets": 72
+    },
+    {
+      "id": "g12-s1-u3",
+      "targets": 72
+    },
+    {
+      "id": "g12-s1-u4",
+      "targets": 72
+    },
+    {
+      "id": "g12-s1-u5",
+      "targets": 72
+    },
+    {
+      "id": "g12-s1-u6",
+      "targets": 72
+    },
+    {
+      "id": "g12-s2-u7",
+      "targets": 72
+    },
+    {
+      "id": "g12-s2-u8",
+      "targets": 72
+    },
+    {
+      "id": "g12-s2-u9",
+      "targets": 68
+    },
+    {
+      "id": "g12-s2-u10",
+      "targets": 72
+    },
+    {
+      "id": "g12-s2-u11",
+      "targets": 52
+    },
+    {
+      "id": "g12-s2-u12",
+      "targets": 68
+    },
+    {
+      "id": "c-jhs-j1",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j2",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j3",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j4",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j5",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j6",
+      "targets": 52
+    },
+    {
+      "id": "c-jhs-j7",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s1",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s2",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s3",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s4",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s5",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s6",
+      "targets": 52
+    },
+    {
+      "id": "c-sh-s7",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v1",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v2",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v3",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v4",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v5",
+      "targets": 72
+    },
+    {
+      "id": "c-voc-v6",
+      "targets": 52
+    },
+    {
+      "id": "c-voc-v7",
+      "targets": 72
+    },
+    {
+      "id": "c-intl-gept",
+      "targets": 52
+    },
+    {
+      "id": "c-intl-toefl",
+      "targets": 52
+    },
+    {
+      "id": "c-intl-toeic",
+      "targets": 52
+    },
+    {
+      "id": "b-toeic-u1",
+      "targets": 50
+    },
+    {
+      "id": "b-toeic-u2",
+      "targets": 50
+    },
+    {
+      "id": "b-toeic-u3",
+      "targets": 50
+    },
+    {
+      "id": "b-toeic-u4",
+      "targets": 50
+    },
+    {
+      "id": "b-toeic-u5",
+      "targets": 50
+    },
+    {
+      "id": "c-intl-sat",
+      "targets": 52
+    },
+    {
+      "id": "b-sat-u1",
+      "targets": 50
+    },
+    {
+      "id": "b-sat-u2",
+      "targets": 50
+    },
+    {
+      "id": "b-sat-u3",
+      "targets": 50
+    },
+    {
+      "id": "b-sat-u4",
+      "targets": 50
+    },
+    {
+      "id": "b-sat-u5",
+      "targets": 50
+    },
+    {
+      "id": "c-intl-gre",
+      "targets": 52
+    },
+    {
+      "id": "b-gre-u1",
+      "targets": 50
+    },
+    {
+      "id": "b-gre-u2",
+      "targets": 50
+    },
+    {
+      "id": "b-gre-u3",
+      "targets": 50
+    },
+    {
+      "id": "b-gre-u4",
+      "targets": 50
+    },
+    {
+      "id": "b-gre-u5",
+      "targets": 50
+    },
+    {
+      "id": "c-intl-gmat",
+      "targets": 52
+    },
+    {
+      "id": "b-gmat-u1",
+      "targets": 50
+    },
+    {
+      "id": "b-gmat-u2",
+      "targets": 50
+    },
+    {
+      "id": "b-gmat-u3",
+      "targets": 50
+    },
+    {
+      "id": "b-gmat-u4",
+      "targets": 50
+    },
+    {
+      "id": "b-gmat-u5",
+      "targets": 50
+    },
+    {
+      "id": "sem-j1a-unit",
+      "targets": 138
+    },
+    {
+      "id": "sem-j1b-unit",
+      "targets": 194
+    },
+    {
+      "id": "sem-j2a-unit",
+      "targets": 209
+    },
+    {
+      "id": "sem-j2b-unit",
+      "targets": 158
+    },
+    {
+      "id": "sem-j3a-unit",
+      "targets": 209
+    },
+    {
+      "id": "sem-j3b-unit",
+      "targets": 268
+    },
+    {
+      "id": "sem-h1a-unit",
+      "targets": 210
+    },
+    {
+      "id": "sem-h1b-unit",
+      "targets": 301
+    },
+    {
+      "id": "sem-h2a-unit",
+      "targets": 259
+    },
+    {
+      "id": "sem-h2b-unit",
+      "targets": 278
+    },
+    {
+      "id": "sem-h3a-unit",
+      "targets": 207
+    },
+    {
+      "id": "sem-h3b-unit",
+      "targets": 181
+    }
+  ]
+}

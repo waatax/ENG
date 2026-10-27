@@ -649,3 +649,7 @@ report.version = COURSE_VERSION;
 report.files = Object.fromEntries(fs.readdirSync(OUT).map(f => [f, fs.statSync(path.join(OUT, f)).size]));
 fs.writeFileSync('docs/redesign/COURSE-BUILD-REPORT.json', JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify({ ...report, excluded: undefined }, null, 2));
+
+// Keep semantic capacity and lexical diversity guarantees on every future rebuild.
+const { enrichCourseFiles } = await import('./enrich_quest_bank.mjs');
+enrichCourseFiles();

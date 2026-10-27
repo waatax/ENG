@@ -1,6 +1,6 @@
 const {chromium}=require('C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),{pathToFileURL}=require('node:url');
-const root=path.resolve('dist'),out='docs/redesign/verification/school20261027';fs.mkdirSync(out,{recursive:true});
+const root=path.resolve('dist'),out=process.env.EQ_QA_OUT||'docs/redesign/verification/school20261027';fs.mkdirSync(out,{recursive:true});
 const server=http.createServer((req,res)=>{let p=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(p!==root&&!p.startsWith(root+path.sep)){res.writeHead(403);return res.end();}if(fs.existsSync(p)&&fs.statSync(p).isDirectory())p=path.join(p,'index.html');fs.readFile(p,(e,b)=>{if(e){res.writeHead(404);return res.end();}res.setHeader('Content-Type',({'.html':'text/html;charset=utf-8','.mjs':'text/javascript','.js':'text/javascript','.css':'text/css','.json':'application/json','.mp3':'audio/mpeg'})[path.extname(p)]||'application/octet-stream');res.end(b);});});
 const KEY='english-quest-game-v2';
 (async()=>{

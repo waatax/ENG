@@ -1,10 +1,10 @@
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=school20261027';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=quality20261027';
 import * as sound from './sound.mjs?v=coach20261026';
 import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
 
-const V = '20261024v6';
+const V = 'quality20261027';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
@@ -116,7 +116,7 @@ function popover(n, status, u) {
   let body;
   if (status === 'locked') body = n.kind === 'boss' ? `<p>先完成本單元的課程，就能挑戰金冠。</p>` : game.trackUnlocked(n.track) ? `<p>先完成前面的關卡，這一關就會打開。</p>` : `<p>這一段還沒開啟。完成上一段，或通過跳級測驗。</p><button class="btn gold" data-act="jump" data-id="${n.track}">⏩ 跳級測驗</button>`;
   else if (n.kind === 'boss') body = `<p>從整個單元混合出題，共 ${n.size} 題，有 ${HEARTS} 顆 ❤️，錯 ${HEARTS} 題就結束；通過還需至少 80% 獨立答對，可以馬上再挑戰。通過可以得到金冠 👑 和寶箱 💎。</p><button class="btn gold" data-act="start" data-mode="boss" data-id="${n.id}">${status === 'crowned' ? '再挑戰一次' : '開始挑戰'} +${firstXp} XP</button>`;
-  else body = `<p>${KIND_TEXT[n.kind] || '課程'} · 約 ${n.size} 題${status === 'tested' ? ' · 已測過，也可以練習' : ''}</p><button class="btn primary" data-act="start" data-mode="lesson" data-id="${n.id}">${status === 'done' ? `重練 +${replay}` : `開始 +${firstXp}`} XP</button>`;
+  else body = `<p>${n.capacity ? (n.capacity.words?`題池 ${n.capacity.words} 個不同單字；`:`題池 ${n.capacity.targets} 個不同內容；`) : ''}${KIND_TEXT[n.kind] || '課程'} · 約 ${n.size} 題${status === 'tested' ? ' · 已測過，也可以練習' : ''}</p><button class="btn primary" data-act="start" data-mode="lesson" data-id="${n.id}">${status === 'done' ? `重練 +${replay}` : `開始 +${firstXp}`} XP</button>`;
   return `<div class="pop c-${u.color}" role="dialog" aria-label="${esc(n.title)}"><p class="eyebrow">${esc(u.title)} · 第 ${nodeIndex} 關</p><h3>${n.icon} ${esc(n.title)}</h3>${body}</div>`;
 }
 
@@ -168,7 +168,7 @@ function lessonView() {
   const hearts = s.hearts !== null ? `<span class="hearts" aria-label="剩下 ${s.hearts} 顆心">${'❤️'.repeat(s.hearts)}${'🤍'.repeat(HEARTS - s.hearts)}</span>` : '';
   const combo = s.combo >= 3 ? `<span class="combo ${s.combo % 5 === 0 ? 'pop' : ''}">🔥 ${s.combo} 連對</span>` : '';
   return `<div class="lesson-screen ${fb && !assessment ? (fb.ok ? 'is-ok' : 'is-bad') : ''}"><header class="lesson-top"><button class="x" data-act="exit" aria-label="暫停並離開">✕</button><div class="progress" role="progressbar" aria-label="進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><span style="width:${pct}%"></span></div>${combo}${hearts}</header>
-  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${assessment ? '程度檢測：獨立作答，完成後看解析' : trail.label}</span><small>${assessment ? `已作答 ${s.results.length} / ${s.queue.length} 題 · 不計速度` : `本次獨立答對 ${trail.independent} / ${trail.attempts}`}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${itemView(it, s)}</main>
+  <main id="main" class="lesson-body"><p class="eyebrow">${esc(sessionTitle(s))}${s.index >= s.base ? ' · 再試一次' : ''}</p><div class="mission-strip"><span>${assessment ? '程度檢測：獨立作答，完成後看解析' : trail.label}</span><small>${assessment ? `已作答 ${s.results.length} / ${s.queue.length} 題 · 不計速度` : `本次獨立答對 ${trail.independent} / ${trail.attempts}`}${s.hearts!==null?' · 挑戰需至少 80% 且保有愛心':''}</small></div>${s.index>=s.base?'<p class="question-rotation repair-notice">↻ 訂正回想：這是本次答錯後刻意重出的題目，不算新題。</p>':s.rotation?`<p class="question-rotation">${s.rotation.cycled?'↻ 本題池本輪已出完，現在進入輪替複習。':'✦ 本次 '+s.rotation.questions+' 題，單關不重複同一單字、句子或題面。'}第 ${s.rotation.round} 輪 · 題數以實際不同內容計算。</p>`:''}${itemView(it, s)}</main>
   ${lessonFooter(it, s)}</div>${modalView()}<div id="toasts" class="toasts" aria-live="polite"></div>`;
 }
 function sayBtn(text, mp3 = '', big = false, label = '播放英文') { return `<button class="say ${big ? 'big' : ''}" data-act="say" data-text="${esc(text)}" data-mp3="${esc(mp3 || '')}" aria-label="${label}">🔊</button>`; }

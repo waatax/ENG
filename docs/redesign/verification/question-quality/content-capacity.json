@@ -1,0 +1,5004 @@
+{
+  "version": "2026-10-27.quality1",
+  "units": 129,
+  "distinctIntegratedLexemes": 595,
+  "distinctIntegratedDialogueLines": 271,
+  "originalQuestions": 150,
+  "thin": [],
+  "report": [
+    {
+      "unit": "u1",
+      "title": "認識新朋友",
+      "track": "s1",
+      "topic": "family",
+      "capacities": [
+        {
+          "node": "u1:q1",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u1:q2",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u1:q3",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u1:q4",
+          "kind": "boss",
+          "questions": 72,
+          "targets": 55,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "g3-s1-u1",
+      "title": "字母 A–M 與打招呼",
+      "track": "s1",
+      "topic": "school",
+      "capacities": [
+        {
+          "node": "g3-s1-u1:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s1-u1:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u1:boss",
+          "kind": "boss",
+          "questions": 94,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g3-s1-u2",
+      "title": "字母 N–Z 與字母的聲音",
+      "track": "s1",
+      "topic": "school",
+      "capacities": [
+        {
+          "node": "g3-s1-u2:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u2:boss",
+          "kind": "boss",
+          "questions": 94,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g3-s1-u3",
+      "title": "教室用語與數字 1–10",
+      "track": "s1",
+      "topic": "school",
+      "capacities": [
+        {
+          "node": "g3-s1-u3:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s1-u3:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u3:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s1-u3:boss",
+          "kind": "boss",
+          "questions": 128,
+          "targets": 81,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g3-s2-u4",
+      "title": "顏色與文具",
+      "track": "s1",
+      "topic": "school",
+      "capacities": [
+        {
+          "node": "g3-s2-u4:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s2-u4:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u4:grammar",
+          "kind": "grammar",
+          "questions": 19,
+          "targets": 19,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u4:boss",
+          "kind": "boss",
+          "questions": 117,
+          "targets": 71,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g3-s2-u5",
+      "title": "我的家人",
+      "track": "s1",
+      "topic": "family",
+      "capacities": [
+        {
+          "node": "g3-s2-u5:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s2-u5:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u5:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u5:boss",
+          "kind": "boss",
+          "questions": 132,
+          "targets": 84,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g3-s2-u6",
+      "title": "動物與喜好",
+      "track": "s1",
+      "topic": "nature",
+      "capacities": [
+        {
+          "node": "g3-s2-u6:word",
+          "kind": "word",
+          "questions": 72,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g3-s2-u6:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u6:grammar",
+          "kind": "grammar",
+          "questions": 19,
+          "targets": 19,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u6:drill",
+          "kind": "drill",
+          "questions": 19,
+          "targets": 19,
+          "wordTargets": 0
+        },
+        {
+          "node": "g3-s2-u6:boss",
+          "kind": "boss",
+          "questions": 117,
+          "targets": 71,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "u2",
+      "title": "介紹我和朋友",
+      "track": "s2",
+      "topic": "family",
+      "capacities": [
+        {
+          "node": "u2:q1",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u2:q2",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u2:q3",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u2:drill",
+          "kind": "drill",
+          "questions": 23,
+          "targets": 23,
+          "wordTargets": 0
+        },
+        {
+          "node": "u2:q4",
+          "kind": "boss",
+          "questions": 81,
+          "targets": 67,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "g4-s1-u1",
+      "title": "短母音拼讀 CVC",
+      "track": "s2",
+      "topic": "cvc",
+      "capacities": [
+        {
+          "node": "g4-s1-u1:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s1-u1:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u1:boss",
+          "kind": "boss",
+          "questions": 94,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g4-s1-u2",
+      "title": "數字 11–100：年齡與數量",
+      "track": "s2",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "g4-s1-u2:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u2:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u2:boss",
+          "kind": "boss",
+          "questions": 141,
+          "targets": 94,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g4-s1-u3",
+      "title": "食物與飲料",
+      "track": "s2",
+      "topic": "food",
+      "capacities": [
+        {
+          "node": "g4-s1-u3:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 17,
+          "targets": 17,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u3:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s1-u3:boss",
+          "kind": "boss",
+          "questions": 139,
+          "targets": 91,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "u3",
+      "title": "我的日常",
+      "track": "s2",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "u3:q1",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u3:q2",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u3:q3",
+          "kind": "lesson",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "u3:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "u3:q4",
+          "kind": "boss",
+          "questions": 90,
+          "targets": 76,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "g4-s2-u4",
+      "title": "天氣與季節",
+      "track": "s2",
+      "topic": "nature",
+      "capacities": [
+        {
+          "node": "g4-s2-u4:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s2-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u4:grammar",
+          "kind": "grammar",
+          "questions": 17,
+          "targets": 17,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u4:drill",
+          "kind": "drill",
+          "questions": 12,
+          "targets": 12,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u4:boss",
+          "kind": "boss",
+          "questions": 128,
+          "targets": 81,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g4-s2-u5",
+      "title": "星期與國內外節慶",
+      "track": "s2",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "g4-s2-u5:word",
+          "kind": "word",
+          "questions": 73,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s2-u5:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u5:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u5:boss",
+          "kind": "boss",
+          "questions": 131,
+          "targets": 84,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g4-s2-u6",
+      "title": "身體與能力",
+      "track": "s2",
+      "topic": "health",
+      "capacities": [
+        {
+          "node": "g4-s2-u6:word",
+          "kind": "word",
+          "questions": 70,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g4-s2-u6:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u6:grammar",
+          "kind": "grammar",
+          "questions": 17,
+          "targets": 17,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u6:drill",
+          "kind": "drill",
+          "questions": 12,
+          "targets": 12,
+          "wordTargets": 0
+        },
+        {
+          "node": "g4-s2-u6:boss",
+          "kind": "boss",
+          "questions": 125,
+          "targets": 81,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s1-u1",
+      "title": "長母音與 Magic e",
+      "track": "s3",
+      "topic": "magic",
+      "capacities": [
+        {
+          "node": "g5-s1-u1:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s1-u1:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u1:boss",
+          "kind": "boss",
+          "questions": 95,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s1-u2",
+      "title": "介紹自己、家人與朋友",
+      "track": "s3",
+      "topic": "family",
+      "capacities": [
+        {
+          "node": "g5-s1-u2:word",
+          "kind": "word",
+          "questions": 48,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u2:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u2:boss",
+          "kind": "boss",
+          "questions": 105,
+          "targets": 84,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s1-u3",
+      "title": "現在進行式：你在做什麼？",
+      "track": "s3",
+      "topic": "action",
+      "capacities": [
+        {
+          "node": "g5-s1-u3:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u3:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s1-u3:boss",
+          "kind": "boss",
+          "questions": 95,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s2-u4",
+      "title": "校園標示與位置",
+      "track": "s3",
+      "topic": "school",
+      "capacities": [
+        {
+          "node": "g5-s2-u4:word",
+          "kind": "word",
+          "questions": 74,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s2-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u4:grammar",
+          "kind": "grammar",
+          "questions": 19,
+          "targets": 19,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u4:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u4:boss",
+          "kind": "boss",
+          "questions": 140,
+          "targets": 93,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s2-u5",
+      "title": "大寫與標點：寫出正確句子",
+      "track": "s3",
+      "topic": "action",
+      "capacities": [
+        {
+          "node": "g5-s2-u5:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s2-u5:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u5:grammar",
+          "kind": "grammar",
+          "questions": 17,
+          "targets": 17,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u5:boss",
+          "kind": "boss",
+          "questions": 91,
+          "targets": 69,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g5-s2-u6",
+      "title": "繪本故事與事件排序",
+      "track": "s3",
+      "topic": "literature",
+      "capacities": [
+        {
+          "node": "g5-s2-u6:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g5-s2-u6:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u6:grammar",
+          "kind": "grammar",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "g5-s2-u6:boss",
+          "kind": "boss",
+          "questions": 84,
+          "targets": 62,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s1-u1",
+      "title": "日常生活作息與時間表達",
+      "track": "s4",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "g6-s1-u1:word",
+          "kind": "word",
+          "questions": 72,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s1-u1:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u1:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u1:boss",
+          "kind": "boss",
+          "questions": 129,
+          "targets": 84,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s1-u2",
+      "title": "過去式故事與冒險歷險記",
+      "track": "s4",
+      "topic": "travel",
+      "capacities": [
+        {
+          "node": "g6-s1-u2:word",
+          "kind": "word",
+          "questions": 47,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s1-u2:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u2:drill",
+          "kind": "drill",
+          "questions": 22,
+          "targets": 22,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u2:boss",
+          "kind": "boss",
+          "questions": 102,
+          "targets": 81,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s1-u3",
+      "title": "城市探索與問路指路指南",
+      "track": "s4",
+      "topic": "travel",
+      "capacities": [
+        {
+          "node": "g6-s1-u3:word",
+          "kind": "word",
+          "questions": 73,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 18,
+          "targets": 18,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u3:drill",
+          "kind": "drill",
+          "questions": 12,
+          "targets": 12,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u3:boss",
+          "kind": "boss",
+          "questions": 129,
+          "targets": 82,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s1-u4",
+      "title": "健康飲食、身體部位與醫療照護",
+      "track": "s4",
+      "topic": "food",
+      "capacities": [
+        {
+          "node": "g6-s1-u4:word",
+          "kind": "word",
+          "questions": 71,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s1-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u4:grammar",
+          "kind": "grammar",
+          "questions": 16,
+          "targets": 16,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u4:drill",
+          "kind": "drill",
+          "questions": 12,
+          "targets": 12,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s1-u4:boss",
+          "kind": "boss",
+          "questions": 124,
+          "targets": 80,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s2-u5",
+      "title": "世界節慶巡禮與多元文化",
+      "track": "s4",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "g6-s2-u5:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s2-u5:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u5:grammar",
+          "kind": "grammar",
+          "questions": 16,
+          "targets": 16,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u5:drill",
+          "kind": "drill",
+          "questions": 11,
+          "targets": 11,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u5:boss",
+          "kind": "boss",
+          "questions": 91,
+          "targets": 79,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s2-u6",
+      "title": "閱讀理解力、字首字尾與語篇導航",
+      "track": "s4",
+      "topic": "travel",
+      "capacities": [
+        {
+          "node": "g6-s2-u6:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s2-u6:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u6:boss",
+          "kind": "boss",
+          "questions": 66,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s2-u7",
+      "title": "未來計畫與夢想志向",
+      "track": "s4",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g6-s2-u7:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s2-u7:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u7:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u7:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u7:boss",
+          "kind": "boss",
+          "questions": 97,
+          "targets": 83,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g6-s2-u8",
+      "title": "事物比較與世界之最",
+      "track": "s4",
+      "topic": "culture",
+      "capacities": [
+        {
+          "node": "g6-s2-u8:word",
+          "kind": "word",
+          "questions": 65,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g6-s2-u8:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u8:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g6-s2-u8:boss",
+          "kind": "boss",
+          "questions": 111,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g7-s1-u1",
+      "title": "句子骨架、be 動詞與現在簡單式",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g7-s1-u1:word",
+          "kind": "word",
+          "questions": 45,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g7-s1-u1:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u1:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u1:boss",
+          "kind": "boss",
+          "questions": 89,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g7-s1-u2",
+      "title": "名詞單複數、指示代名詞與祈使句",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g7-s1-u2:word",
+          "kind": "word",
+          "questions": 38,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g7-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u2:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u2:boss",
+          "kind": "boss",
+          "questions": 91,
+          "targets": 80,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g7-s1-u3",
+      "title": "國際音標 (IPA/KK) 與字典查閱全指南",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g7-s1-u3:word",
+          "kind": "word",
+          "questions": 38,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g7-s1-u3:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 15,
+          "targets": 15,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s1-u3:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 67,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g7-s2-u4",
+      "title": "現在進行式與動態時間表達",
+      "track": "s5",
+      "topic": "time",
+      "capacities": [
+        {
+          "node": "g7-s2-u4:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g7-s2-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u4:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u4:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g7-s2-u5",
+      "title": "頻率副詞、情態助動詞 can 與存在句",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g7-s2-u5:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u5:drill",
+          "kind": "drill",
+          "questions": 24,
+          "targets": 24,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u5:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 44,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "g7-s2-u6",
+      "title": "時空方位介系詞與地圖導航指南",
+      "track": "s5",
+      "topic": "travel",
+      "capacities": [
+        {
+          "node": "g7-s2-u6:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g7-s2-u6:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u6:grammar",
+          "kind": "grammar",
+          "questions": 14,
+          "targets": 14,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u6:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g7-s2-u6:boss",
+          "kind": "boss",
+          "questions": 96,
+          "targets": 87,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g8-s1-u1",
+      "title": "過去式、未來與敘事時間軸",
+      "track": "s5",
+      "topic": "literature",
+      "capacities": [
+        {
+          "node": "g8-s1-u1:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g8-s1-u1:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u1:drill",
+          "kind": "drill",
+          "questions": 24,
+          "targets": 24,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u1:boss",
+          "kind": "boss",
+          "questions": 84,
+          "targets": 76,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g8-s1-u2",
+      "title": "過去進行式、時間連接詞 when/while 與數量詞",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g8-s1-u2:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g8-s1-u2:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u2:drill",
+          "kind": "drill",
+          "questions": 34,
+          "targets": 34,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u2:boss",
+          "kind": "boss",
+          "questions": 95,
+          "targets": 86,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g8-s1-u3",
+      "title": "條件副詞子句與情態假設語氣 If / Unless",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g8-s1-u3:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g8-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u3:drill",
+          "kind": "drill",
+          "questions": 44,
+          "targets": 44,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s1-u3:boss",
+          "kind": "boss",
+          "questions": 105,
+          "targets": 96,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g8-s2-u4",
+      "title": "比較級、不定詞 to V 與動名詞 V-ing",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g8-s2-u4:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g8-s2-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s2-u4:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s2-u4:drill",
+          "kind": "drill",
+          "questions": 41,
+          "targets": 41,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s2-u4:boss",
+          "kind": "boss",
+          "questions": 111,
+          "targets": 103,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g8-s2-u5",
+      "title": "連綴動詞、感官動詞與最高級比較",
+      "track": "s5",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g8-s2-u5:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g8-s2-u5:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s2-u5:drill",
+          "kind": "drill",
+          "questions": 54,
+          "targets": 54,
+          "wordTargets": 0
+        },
+        {
+          "node": "g8-s2-u5:boss",
+          "kind": "boss",
+          "questions": 114,
+          "targets": 106,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s1-u1",
+      "title": "完成式、被動與關係子句",
+      "track": "s6",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g9-s1-u1:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s1-u1:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u1:drill",
+          "kind": "drill",
+          "questions": 41,
+          "targets": 41,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u1:boss",
+          "kind": "boss",
+          "questions": 108,
+          "targets": 99,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s1-u2",
+      "title": "授予動詞、使役動詞與完成式進階",
+      "track": "s6",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g9-s1-u2:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s1-u2:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u2:drill",
+          "kind": "drill",
+          "questions": 44,
+          "targets": 44,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u2:boss",
+          "kind": "boss",
+          "questions": 105,
+          "targets": 96,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s1-u3",
+      "title": "關係代名詞受格省略與介系詞搭配",
+      "track": "s6",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g9-s1-u3:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u3:drill",
+          "kind": "drill",
+          "questions": 34,
+          "targets": 34,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s1-u3:boss",
+          "kind": "boss",
+          "questions": 95,
+          "targets": 86,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s2-u4",
+      "title": "附加問句、名詞子句與間接問句",
+      "track": "s6",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g9-s2-u4:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s2-u4:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u4:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u4:drill",
+          "kind": "drill",
+          "questions": 41,
+          "targets": 41,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u4:boss",
+          "kind": "boss",
+          "questions": 122,
+          "targets": 113,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s2-u5",
+      "title": "閱讀策略、情境溝通與指代推論",
+      "track": "s6",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "g9-s2-u5:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s2-u5:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u5:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u5:boss",
+          "kind": "boss",
+          "questions": 85,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g9-s2-u6",
+      "title": "跨文本圖表閱讀與素養克漏字",
+      "track": "s6",
+      "topic": "data",
+      "capacities": [
+        {
+          "node": "g9-s2-u6:word",
+          "kind": "word",
+          "questions": 35,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g9-s2-u6:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u6:drill",
+          "kind": "drill",
+          "questions": 63,
+          "targets": 63,
+          "wordTargets": 0
+        },
+        {
+          "node": "g9-s2-u6:boss",
+          "kind": "boss",
+          "questions": 122,
+          "targets": 115,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u1",
+      "title": "五大基本句型與動詞分類",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u1:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u1:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 15,
+          "targets": 15,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u1:boss",
+          "kind": "boss",
+          "questions": 82,
+          "targets": 67,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u2",
+      "title": "動名詞與不定詞深度語義對決",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u2:word",
+          "kind": "word",
+          "questions": 39,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u2:boss",
+          "kind": "boss",
+          "questions": 84,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u3",
+      "title": "被動語態進階矩陣與無靈主詞",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u3:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u3:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u3:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u3:boss",
+          "kind": "boss",
+          "questions": 91,
+          "targets": 78,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u4",
+      "title": "名詞子句與間接問句",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u4:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u4:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u4:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u4:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u4:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u5",
+      "title": "形容詞子句與關係代名詞基礎",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u5:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u5:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u5:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u5:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s1-u6",
+      "title": "副詞子句與邏輯因果轉折",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s1-u6:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s1-u6:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u6:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s1-u6:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u7",
+      "title": "限定與非限定關係子句對比",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s2-u7:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u7:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u7:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u7:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u7:boss",
+          "kind": "boss",
+          "questions": 91,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u8",
+      "title": "複合關係代名詞與準關係代名詞",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s2-u8:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u8:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u8:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u8:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u8:boss",
+          "kind": "boss",
+          "questions": 92,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u9",
+      "title": "現代論說文核心篇章標記",
+      "track": "s7",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "g10-s2-u9:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u9:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u9:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u9:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u9:boss",
+          "kind": "boss",
+          "questions": 89,
+          "targets": 74,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u10",
+      "title": "學測圖表與多文本綜合剖析",
+      "track": "s7",
+      "topic": "data",
+      "capacities": [
+        {
+          "node": "g10-s2-u10:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u10:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u10:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u10:boss",
+          "kind": "boss",
+          "questions": 85,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u11",
+      "title": "情態助動詞的推測與批判思考",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s2-u11:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u11:talk",
+          "kind": "talk",
+          "questions": 23,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u11:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u11:boss",
+          "kind": "boss",
+          "questions": 83,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g10-s2-u12",
+      "title": "高一全冊素養總結與混合題實戰",
+      "track": "s7",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g10-s2-u12:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g10-s2-u12:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u12:grammar",
+          "kind": "grammar",
+          "questions": 15,
+          "targets": 15,
+          "wordTargets": 0
+        },
+        {
+          "node": "g10-s2-u12:boss",
+          "kind": "boss",
+          "questions": 82,
+          "targets": 67,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u1",
+      "title": "分詞構句與分詞形容詞全解",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u1:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u1:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u1:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u1:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u1:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u2",
+      "title": "獨立分詞構句與慣用懸置分詞",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u2:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u2:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u2:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u2:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u2:boss",
+          "kind": "boss",
+          "questions": 90,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u3",
+      "title": "假設語氣與條件句全景",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u3:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u3:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u3:drill",
+          "kind": "drill",
+          "questions": 31,
+          "targets": 31,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u3:boss",
+          "kind": "boss",
+          "questions": 104,
+          "targets": 89,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u4",
+      "title": "混合假設語氣與省略 if 倒裝",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u4:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u4:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u4:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u4:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u4:boss",
+          "kind": "boss",
+          "questions": 90,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u5",
+      "title": "否定副詞倒裝與地方副詞倒裝",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u5:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u5:talk",
+          "kind": "talk",
+          "questions": 23,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u5:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u5:boss",
+          "kind": "boss",
+          "questions": 99,
+          "targets": 87,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s1-u6",
+      "title": "So / Such / Nor / Neither 倒裝與平衡句型",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s1-u6:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s1-u6:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u6:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u6:drill",
+          "kind": "drill",
+          "questions": 21,
+          "targets": 21,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s1-u6:boss",
+          "kind": "boss",
+          "questions": 90,
+          "targets": 77,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u7",
+      "title": "分裂句與焦點強調結構",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s2-u7:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u7:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u7:drill",
+          "kind": "drill",
+          "questions": 14,
+          "targets": 14,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u7:boss",
+          "kind": "boss",
+          "questions": 81,
+          "targets": 66,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u8",
+      "title": "讓步子句倒裝與高級連接詞",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s2-u8:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u8:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u8:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u8:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u9",
+      "title": "ESP 科技英語與 AI 論文閱讀",
+      "track": "s8",
+      "topic": "technology",
+      "capacities": [
+        {
+          "node": "g11-s2-u9:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u9:talk",
+          "kind": "talk",
+          "questions": 24,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u9:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u9:boss",
+          "kind": "boss",
+          "questions": 84,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u10",
+      "title": "ESP 全球永續與綠色能源跨域論證",
+      "track": "s8",
+      "topic": "environment",
+      "capacities": [
+        {
+          "node": "g11-s2-u10:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u10:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u10:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u10:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u11",
+      "title": "篇章結構與段落填空破題密碼",
+      "track": "s8",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "g11-s2-u11:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u11:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u11:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u11:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u11:boss",
+          "kind": "boss",
+          "questions": 98,
+          "targets": 83,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g11-s2-u12",
+      "title": "高二全冊融會貫通與頂標衝刺模擬",
+      "track": "s8",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g11-s2-u12:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g11-s2-u12:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g11-s2-u12:boss",
+          "kind": "boss",
+          "questions": 66,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u1",
+      "title": "學測英文詞彙與綜合測驗極速破題",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s1-u1:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u1:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u1:drill",
+          "kind": "drill",
+          "questions": 44,
+          "targets": 44,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u1:boss",
+          "kind": "boss",
+          "questions": 110,
+          "targets": 96,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u2",
+      "title": "學測文意選填與篇章結構無懈可擊",
+      "track": "s9",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "g12-s1-u2:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u2:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u2:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u2:boss",
+          "kind": "boss",
+          "questions": 85,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u3",
+      "title": "學測閱讀測驗長篇與混合題滿分策略",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s1-u3:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u3:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u3:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u3:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u4",
+      "title": "學測英文作文：看圖寫作與雙面論證",
+      "track": "s9",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "g12-s1-u4:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u4:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u4:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u4:boss",
+          "kind": "boss",
+          "questions": 87,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u5",
+      "title": "統測共同科目與專業科目(一)(二)全真突破",
+      "track": "s9",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "g12-s1-u5:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u5:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u5:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u5:boss",
+          "kind": "boss",
+          "questions": 86,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s1-u6",
+      "title": "國中教育會考 A++ 決勝題型徹底破解",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s1-u6:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s1-u6:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u6:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s1-u6:boss",
+          "kind": "boss",
+          "questions": 87,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u7",
+      "title": "GEPT 全民英檢中級/中高級高分全策",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s2-u7:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u7:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u7:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u7:boss",
+          "kind": "boss",
+          "questions": 87,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u8",
+      "title": "TOEIC 多益 900+ 金色證書核心考點",
+      "track": "s9",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "g12-s2-u8:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u8:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u8:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u8:boss",
+          "kind": "boss",
+          "questions": 87,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u9",
+      "title": "大學 EMI 全英語授課銜接與口頭簡報",
+      "track": "s9",
+      "topic": "research",
+      "capacities": [
+        {
+          "node": "g12-s2-u9:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u9:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u9:grammar",
+          "kind": "grammar",
+          "questions": 16,
+          "targets": 16,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u9:boss",
+          "kind": "boss",
+          "questions": 82,
+          "targets": 68,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u10",
+      "title": "批判性思維與學術思辨寫作",
+      "track": "s9",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "g12-s2-u10:word",
+          "kind": "word",
+          "questions": 40,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u10:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u10:drill",
+          "kind": "drill",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u10:boss",
+          "kind": "boss",
+          "questions": 85,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u11",
+      "title": "全真跨域綜合大考終極模擬",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s2-u11:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u11:talk",
+          "kind": "talk",
+          "questions": 25,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u11:boss",
+          "kind": "boss",
+          "questions": 66,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "g12-s2-u12",
+      "title": "終生自主學習與英語力全景指南",
+      "track": "s9",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "g12-s2-u12:word",
+          "kind": "word",
+          "questions": 41,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "g12-s2-u12:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u12:grammar",
+          "kind": "grammar",
+          "questions": 16,
+          "targets": 16,
+          "wordTargets": 0
+        },
+        {
+          "node": "g12-s2-u12:boss",
+          "kind": "boss",
+          "questions": 83,
+          "targets": 68,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j1",
+      "title": "句子骨架與基本時態",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j1:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j1:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j1:boss",
+          "kind": "boss",
+          "questions": 77,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j2",
+      "title": "代名詞、限定詞與數量詞",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j2:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j2:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j2:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j3",
+      "title": "疑問句、情態助動詞與生活溝通",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j3:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j3:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j3:boss",
+          "kind": "boss",
+          "questions": 77,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j4",
+      "title": "連接詞與複句",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j4:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j4:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j4:boss",
+          "kind": "boss",
+          "questions": 77,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j5",
+      "title": "短文閱讀與生活應用文本",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j5:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j5:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j5:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j6",
+      "title": "聽力辨識與語音線索",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j6:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j6:talk",
+          "kind": "talk",
+          "questions": 30,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j6:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-jhs-j7",
+      "title": "會考英語整合與訂正策略",
+      "track": "b-cap",
+      "topic": "grammar",
+      "capacities": [
+        {
+          "node": "c-jhs-j7:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-jhs-j7:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-jhs-j7:boss",
+          "kind": "boss",
+          "questions": 79,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s1",
+      "title": "高中句法與長難句拆解",
+      "track": "b-gsat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "c-sh-s1:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s1:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s1:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s2",
+      "title": "篇章結構與四空五選策略",
+      "track": "b-gsat",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "c-sh-s2:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s2:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s2:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s3",
+      "title": "學術長篇閱讀與雙文比較",
+      "track": "b-gsat",
+      "topic": "research",
+      "capacities": [
+        {
+          "node": "c-sh-s3:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s3:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s3:boss",
+          "kind": "boss",
+          "questions": 76,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s4",
+      "title": "高中核心詞彙與精確搭配詞",
+      "track": "b-gsat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "c-sh-s4:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s4:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s4:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s5",
+      "title": "中譯英與句子產出邏輯",
+      "track": "b-gsat",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "c-sh-s5:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s5:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s5:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s6",
+      "title": "英文寫作與思維論證",
+      "track": "b-gsat",
+      "topic": "writing",
+      "capacities": [
+        {
+          "node": "c-sh-s6:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s6:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s6:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-sh-s7",
+      "title": "學測與統測整卷衝刺",
+      "track": "b-gsat",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "c-sh-s7:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-sh-s7:talk",
+          "kind": "talk",
+          "questions": 30,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-sh-s7:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v1",
+      "title": "工場安全與指令",
+      "track": "b-voc",
+      "topic": "vocational",
+      "capacities": [
+        {
+          "node": "c-voc-v1:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v1:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v1:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v2",
+      "title": "工具、材料與尺寸規格",
+      "track": "b-voc",
+      "topic": "vocational",
+      "capacities": [
+        {
+          "node": "c-voc-v2:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v2:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v2:boss",
+          "kind": "boss",
+          "questions": 76,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v3",
+      "title": "流程與故障排除",
+      "track": "b-voc",
+      "topic": "vocational",
+      "capacities": [
+        {
+          "node": "c-voc-v3:word",
+          "kind": "word",
+          "questions": 48,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v3:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v3:boss",
+          "kind": "boss",
+          "questions": 76,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v4",
+      "title": "技術圖表與說明書",
+      "track": "b-voc",
+      "topic": "data",
+      "capacities": [
+        {
+          "node": "c-voc-v4:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v4:talk",
+          "kind": "talk",
+          "questions": 30,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v4:boss",
+          "kind": "boss",
+          "questions": 79,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v5",
+      "title": "職場溝通與技術電子郵件",
+      "track": "b-voc",
+      "topic": "vocational",
+      "capacities": [
+        {
+          "node": "c-voc-v5:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v5:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v5:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v5:boss",
+          "kind": "boss",
+          "questions": 98,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v6",
+      "title": "統測英語類專業科目 (二) 讀寫",
+      "track": "b-voc",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "c-voc-v6:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v6:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v6:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-voc-v7",
+      "title": "跨國技術現場實務整合",
+      "track": "b-voc",
+      "topic": "vocational",
+      "capacities": [
+        {
+          "node": "c-voc-v7:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-voc-v7:talk",
+          "kind": "talk",
+          "questions": 30,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v7:grammar",
+          "kind": "grammar",
+          "questions": 20,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-voc-v7:boss",
+          "kind": "boss",
+          "questions": 101,
+          "targets": 72,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-gept",
+      "title": "全民英檢 GEPT 全級別實戰",
+      "track": "b-cert",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "c-intl-gept:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-gept:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-gept:boss",
+          "kind": "boss",
+          "questions": 80,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-toefl",
+      "title": "TOEFL iBT 2026 新制四技能",
+      "track": "b-cert",
+      "topic": "research",
+      "capacities": [
+        {
+          "node": "c-intl-toefl:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-toefl:talk",
+          "kind": "talk",
+          "questions": 29,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-toefl:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-toeic",
+      "title": "TOEIC 多益國際商務測驗",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "c-intl-toeic:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-toeic:talk",
+          "kind": "talk",
+          "questions": 28,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-toeic:boss",
+          "kind": "boss",
+          "questions": 79,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "b-toeic-u1",
+      "title": "TOEIC 多益 題型 1",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "b-toeic-u1:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u1:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u1:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u1:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u1:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u1:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-toeic-u2",
+      "title": "TOEIC 多益 題型 2",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "b-toeic-u2:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u2:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u2:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u2:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u2:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u2:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-toeic-u3",
+      "title": "TOEIC 多益 題型 3",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "b-toeic-u3:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u3:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u3:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u3:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u3:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u3:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-toeic-u4",
+      "title": "TOEIC 多益 題型 4",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "b-toeic-u4:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u4:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u4:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u4:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u4:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u4:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-toeic-u5",
+      "title": "TOEIC 多益 題型 5",
+      "track": "b-toeic",
+      "topic": "business",
+      "capacities": [
+        {
+          "node": "b-toeic-u5:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u5:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u5:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u5:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u5:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-toeic-u5:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-sat",
+      "title": "Digital SAT Reading and Writing",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "c-intl-sat:word",
+          "kind": "word",
+          "questions": 49,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-sat:talk",
+          "kind": "talk",
+          "questions": 26,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-sat:boss",
+          "kind": "boss",
+          "questions": 75,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "b-sat-u1",
+      "title": "Digital SAT 題型 1",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "b-sat-u1:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u1:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u1:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u1:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u1:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u1:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-sat-u2",
+      "title": "Digital SAT 題型 2",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "b-sat-u2:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u2:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u2:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u2:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u2:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u2:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-sat-u3",
+      "title": "Digital SAT 題型 3",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "b-sat-u3:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u3:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u3:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u3:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u3:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u3:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-sat-u4",
+      "title": "Digital SAT 題型 4",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "b-sat-u4:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u4:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u4:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u4:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u4:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u4:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-sat-u5",
+      "title": "Digital SAT 題型 5",
+      "track": "b-sat",
+      "topic": "academic",
+      "capacities": [
+        {
+          "node": "b-sat-u5:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u5:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u5:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u5:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u5:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-sat-u5:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-gre",
+      "title": "GRE General Exam 語意與論證",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "c-intl-gre:word",
+          "kind": "word",
+          "questions": 50,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-gre:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-gre:boss",
+          "kind": "boss",
+          "questions": 77,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "b-gre-u1",
+      "title": "GRE Verbal 題型 1",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "b-gre-u1:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u1:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u1:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u1:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u1:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u1:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gre-u2",
+      "title": "GRE Verbal 題型 2",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "b-gre-u2:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u2:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u2:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u2:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u2:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u2:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gre-u3",
+      "title": "GRE Verbal 題型 3",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "b-gre-u3:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u3:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u3:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u3:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u3:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u3:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gre-u4",
+      "title": "GRE Verbal 題型 4",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "b-gre-u4:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u4:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u4:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u4:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u4:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u4:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gre-u5",
+      "title": "GRE Verbal 題型 5",
+      "track": "b-gre",
+      "topic": "gre",
+      "capacities": [
+        {
+          "node": "b-gre-u5:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u5:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u5:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u5:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u5:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gre-u5:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "c-intl-gmat",
+      "title": "GMAT 批判推理與商業長文",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "c-intl-gmat:word",
+          "kind": "word",
+          "questions": 51,
+          "targets": 32,
+          "wordTargets": 32
+        },
+        {
+          "node": "c-intl-gmat:talk",
+          "kind": "talk",
+          "questions": 27,
+          "targets": 20,
+          "wordTargets": 0
+        },
+        {
+          "node": "c-intl-gmat:boss",
+          "kind": "boss",
+          "questions": 78,
+          "targets": 52,
+          "wordTargets": 32
+        }
+      ]
+    },
+    {
+      "unit": "b-gmat-u1",
+      "title": "GMAT 批判推理 題型 1",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "b-gmat-u1:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u1:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u1:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u1:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u1:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u1:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gmat-u2",
+      "title": "GMAT 批判推理 題型 2",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "b-gmat-u2:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u2:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u2:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u2:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u2:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u2:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gmat-u3",
+      "title": "GMAT 批判推理 題型 3",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "b-gmat-u3:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u3:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u3:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u3:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u3:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u3:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gmat-u4",
+      "title": "GMAT 批判推理 題型 4",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "b-gmat-u4:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u4:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u4:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u4:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u4:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u4:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    },
+    {
+      "unit": "b-gmat-u5",
+      "title": "GMAT 批判推理 題型 5",
+      "track": "b-gmat",
+      "topic": "argument",
+      "capacities": [
+        {
+          "node": "b-gmat-u5:d1",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u5:d2",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u5:d3",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u5:d4",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u5:d5",
+          "kind": "drill",
+          "questions": 10,
+          "targets": 10,
+          "wordTargets": 0
+        },
+        {
+          "node": "b-gmat-u5:boss",
+          "kind": "boss",
+          "questions": 50,
+          "targets": 50,
+          "wordTargets": 0
+        }
+      ]
+    }
+  ]
+}

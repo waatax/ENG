@@ -1,7 +1,8 @@
+import { questionKey, learningKeys, uniqueQuestions, selectDistinct } from './question_quality.mjs?v=quality20261027';
 import { SCHOOL_ITEMS, SEMESTERS, schoolTracks, schoolFiles, refreshSchoolPools } from './school.mjs?v=school20261027';
 // English Quest game engine. Pure logic: no DOM. Time and storage are injected so every rule is testable.
 import {takeaways} from './adventure.mjs?v=school20261027';
-import { makePlacement, placementReport, refinePlacement, validPlacementPlan } from './placement.mjs?v=advanced20261027';
+import { makePlacement, placementReport, refinePlacement, validPlacementPlan } from './placement.mjs?v=quality20261027';
 import { ADVANCED_ITEMS } from './advanced_placement.mjs?v=advanced20261027';
 import { fastAnswerEligible, jumpSuggestion } from './acceleration.mjs';
 export const KEY = 'english-quest-game-v2';
@@ -87,7 +88,7 @@ export function vocabExercises(set) {
 // ---------- state ----------
 const WHY = ['life', 'school', 'work', 'exam'];
 const makeProfile = p => ({ goal: GOALS[p.goal] ? p.goal : 'regular', start: /^(s[1-9]|sem-[jh][123][ab])$/.test(p.start) ? p.start : 's1', why: WHY.includes(p.why) ? p.why : 'life', sound: p.sound !== false, autoplay: p.autoplay !== false, motion: p.motion !== false, rate: [0.7, 0.85, 1].includes(p.rate) ? p.rate : 0.85 });
-const fresh = now => ({ schema: 2, created: now, profile: null, nodes: {}, crowns: {}, review: {}, jumped: {}, items: {}, xp: { total: 0, days: {} }, awards: {}, days: [], frozen: [], freezes: 0, gems: 0, quests: null, achievements: {}, stories: {}, flags: {}, stats: { lessons: 0, perfect: 0, combo: 0, listen: 0, fixed: 0, stories: 0, crowns: 0 }, session: null, serial: 0, legacy: null, schoolWork:{} });
+const fresh = now => ({ schema: 2, created: now, profile: null, nodes: {}, crowns: {}, review: {}, jumped: {}, items: {}, xp: { total: 0, days: {} }, awards: {}, days: [], frozen: [], freezes: 0, gems: 0, quests: null, achievements: {}, stories: {}, flags: {}, stats: { lessons: 0, perfect: 0, combo: 0, listen: 0, fixed: 0, stories: 0, crowns: 0 }, session: null, serial: 0, legacy: null, schoolWork:{}, exposures:{}, rotations:{} });
 const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
 const num = (v, d = 0) => Number.isFinite(v) && v >= 0 ? v : d;
 const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -109,6 +110,8 @@ function sanitize(raw, now) {
   for (const k of Object.keys(s.stats)) s.stats[k] = num(raw.stats?.[k]);
   if (isObj(raw.session) && Array.isArray(raw.session.queue) && Number.isInteger(raw.session.index)) s.session = raw.session; // validated against the course on resume
   for (const [id,v] of Object.entries(raw.schoolWork || {})) if (SEMESTERS.some(s=>s.id===id) && isObj(v)) s.schoolWork[id]={text:String(v.text || '').slice(0,6000),checks:Array.from({length:4},(_,i)=>v.checks?.[i]===true),at:num(v.at)};
+  for(const [k,v]of Object.entries(raw.exposures||{}).slice(-12000))if(isObj(v)&&Number.isFinite(v.n)&&Number.isFinite(v.last))s.exposures[k]={n:num(v.n),last:num(v.last)};
+  for(const [k,v]of Object.entries(raw.rotations||{}))if(isObj(v)&&Array.isArray(v.seen))s.rotations[k]={round:Math.max(1,Math.floor(num(v.round,1))),seen:[...new Set(v.seen.filter(x=>typeof x==='string'))].slice(-1500)};
   if (isObj(raw.legacy)) s.legacy = raw.legacy;
   return s;
 }
@@ -224,29 +227,30 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   // ----- composing sessions -----
   const rec = id => state.items[id];
   const scorable = ids => ids.filter(id => isScored(course.item(id)));
+  function syncExposures(){for(const [id,r]of Object.entries(state.items)){const q=course.item(id);if(!q||!r.s)continue;for(const k of [questionKey(q),...learningKeys(q)])if(!state.exposures[k])state.exposures[k]={n:r.s,last:0};}}
   function choose(ids, n, seed, prefer) {
-    const ranked = shuffle(ids, seed).map((id, i) => ({ id, w: prefer(id) * 1000 - i })).sort((a, b) => b.w - a.w);
-    return ranked.slice(0, n).map(x => x.id);
+    syncExposures();
+    return selectDistinct(ids,course.item,n,{exposures:state.exposures,seed,prefer});
   }
+
   const byLevel = ids => ids.map((id, i) => ({ id, l: course.item(id).level || 2, i })).sort((a, b) => a.l - b.l || a.i - b.i).map(x => x.id);
   function interleaveKinds(ids) { const groups = {}; for (const id of ids) (groups[course.item(id).kind] ||= []).push(id); const out = []; const g = Object.values(groups); while (g.some(x => x.length)) for (const x of g) if (x.length) out.push(x.shift()); return out; }
   function composeNode(nodeId, serial) {
     const n = course.nodes.get(nodeId); if (!n?.pool) return null;
     if(n.semester && schoolFiles(n.semester,course.index).some(file=>!course.loaded(file)))return null;
-    const pool = scorable(n.pool); if (!pool.length) return null;
-    if(n.semester) {
-      const anchors=pool.filter(id=>course.item(id).school===n.semester);
-      const count=n.kind==='boss'?BOSS_SIZE:LESSON_SIZE;
-      const chosen=[...anchors,...choose(pool.filter(id=>!anchors.includes(id)),Math.max(0,count-anchors.length),nodeId+serial,id=>rec(id)?.m?2:rec(id)?.s?0:1)];
-      const info=n.kind==='boss'?[]:n.pool.filter(id=>course.item(id)?.type==='info'&&!state.nodes[nodeId]?.n);
-      return {queue:[...info,...chosen.slice(0,count)],hearts:n.kind==='boss'?HEARTS:null};
-    }
-    if (n.kind === 'boss') return { queue: interleaveKinds(choose(pool, BOSS_SIZE, nodeId + serial, id => (rec(id)?.m ? 2 : 0) + (rec(id)?.s ? 0 : 1))), hearts: HEARTS };
-    const first = !state.nodes[nodeId]?.n;
-    const picked = byLevel(choose(pool, Math.min(LESSON_SIZE, pool.length), nodeId + serial, id => (rec(id)?.m ? 2 : 0) + (rec(id)?.s ? 0 : 1)));
-    const tips = n.pool.filter(id => course.item(id)?.type === 'info').slice(0, first ? 2 : 0);
-    return { queue: [...tips, ...picked], hearts: null };
+    syncExposures();
+    const pool = uniqueQuestions(scorable(n.pool),course.item); if(!pool.length)return null;
+    const count=n.kind==='boss'?BOSS_SIZE:LESSON_SIZE,scope='node:'+nodeId;
+    const previous=state.rotations[scope]||{round:1,seen:[]};
+    const prefer=id=>(n.kind==='word'&&course.item(id).type==='match'?1:0)+(n.semester&&course.item(id).school===n.semester&&n.kind!=='boss'?10:0)+(rec(id)?.m?2:0);
+    let round=previous.round,seen=previous.seen;
+    let picked=selectDistinct(pool,course.item,count,{seen,exposures:state.exposures,seed:nodeId+serial,prefer});
+    let cycled=false;
+    if(!picked.length){seen=[];round++;cycled=true;picked=selectDistinct(pool,course.item,count,{exposures:state.exposures,seed:nodeId+serial,prefer});}
+    const tips=n.kind==='boss'?[]:n.pool.filter(id=>course.item(id)?.type==='info').slice(0,!state.nodes[nodeId]?.n?2:0);
+    return {queue:[...tips,...(n.kind==='boss'?interleaveKinds(picked):byLevel(picked))],hearts:n.kind==='boss'?HEARTS:null,rotation:{scope,round,cycled,seen,questions:picked.length,poolQuestions:pool.length}};
   }
+
   function weakFirst(ids, n, seed) { // p(correct) ≈ 0.7 is the sweet spot; mistakes and never-tried items come first
     return choose(ids, n, seed, id => { const r = rec(id); if (r?.m) return 3; if (!r?.s) return 1; const p = (r.c + 1) / (r.s + 2); return 2 - Math.abs(p - 0.7) * 2; });
   }
@@ -258,18 +262,19 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function compose(mode, id, serial) {
     switch (mode) {
       case 'lesson': case 'boss': return composeNode(id, serial);
-      case 'story': { const s = course.stories.get(id); return s?.steps ? { queue: [...s.steps], hearts: null } : null; }
+      case 'story': { const s = course.stories.get(id); const seen=new Set();const queue=s?.steps?.filter(id=>{const q=course.item(id);if(!isScored(q))return true;const key=questionKey(q);if(seen.has(key))return false;seen.add(key);return true;});return queue ? { queue, hearts: null } : null; }
       case 'review': { const u = course.units.get(id); if (!u) return null; const ids = scorable(u.nodes.filter(x => x.kind !== 'boss').flatMap(x => course.nodes.get(x.id).pool || [])); return ids.length ? { queue: interleaveKinds(weakFirst(ids, LESSON_SIZE, id + serial)), hearts: null } : null; }
-      case 'mistakes': { const ids = Object.entries(state.items).filter(([k, r]) => r.m && isScored(course.item(k))).map(([k]) => k); return ids.length ? { queue: shuffle(ids, 'm' + serial).slice(0, LESSON_SIZE), hearts: null } : null; }
+      case 'mistakes': { const ids = Object.entries(state.items).filter(([k, r]) => r.m && isScored(course.item(k))).map(([k]) => k); return ids.length ? { queue: choose(ids,LESSON_SIZE,'m'+serial,()=>0), hearts: null } : null; }
       case 'practice': { const ids = learnedItems(); return ids.length ? { queue: interleaveKinds(weakFirst(ids, LESSON_SIZE, 'p' + serial)), hearts: null } : null; }
       case 'listen': { const ids = learnedItems(it => it.type === 'listen' || it.listen); return ids.length ? { queue: weakFirst(ids, LESSON_SIZE, 'l' + serial), hearts: null } : null; }
-      case 'vocab': { const set = course.vocab.get(id); if (!set) return null; const ids = [...course.items.values()].filter(it => it.set === id).map(it => it.id); return { queue: byLevel(shuffle(ids, id + serial).slice(0, 12)), hearts: null }; }
+      case 'vocab': { const set = course.vocab.get(id); if (!set) return null; const ids = [...course.items.values()].filter(it => it.set === id && it.type!=='match').map(it => it.id); return { queue: byLevel(choose(ids,12,id+serial,()=>0)), hearts: null }; }
       case 'jump': { // test out of every section before this one
         const i = course.index.sections.findIndex(s => s.id === id); if (i <= 0) return null;
         const prior = course.index.sections.slice(0, i), recent = prior.at(-1);
         const take = (sec, k, salt) => shuffle(sec.units.flatMap(u => u.nodes.filter(n => n.kind !== 'boss').flatMap(n => scorable(course.nodes.get(n.id).pool || []))).filter(x => ['grammar', 'drill', 'talk'].includes(course.item(x).kind) && course.item(x).type !== 'match'), salt).slice(0, k);
         const queue = [...new Set([...take(recent, 8, id + serial), ...prior.slice(0, -1).flatMap((s, k) => take(s, 1, s.id + serial + k))])].slice(0, BOSS_SIZE);
-        return queue.length >= 6 ? { queue: shuffle(queue, 'j' + serial), hearts: HEARTS } : null;
+        const distinct=choose(queue,BOSS_SIZE,'j'+serial,()=>0);
+        return distinct.length >= 6 ? { queue: distinct, hearts: HEARTS } : null;
       }
       case 'placement': { const placement = makePlacement(course, id ?? 20, serial, state.items); return placement ? { queue: placement.slots.map(x=>x.id), hearts:null, placement } : null; }
     }
@@ -294,10 +299,18 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     if (mode === 'boss' && !['available', 'crowned', 'done'].includes(nodeStatus(id))) return false;
     const serial = state.serial + 1, c = compose(mode, id, serial); if (!c?.queue.length) return false;
     state.serial = serial; result = null;
-    state.session = { id: serial, mode, ref: id, queue: c.queue, index: 0, results: [], feedback: null, hint: false, audio: false, combo: 0, maxCombo: 0, hearts: c.hearts, repairs: 0, support: 0, wrongRun: 0, started: now(), itemStarted: now(), fastRun:0, fastBest:0, placement:c.placement || null, base: c.queue.length };
-    save(); return true;
+    state.session = { id: serial, mode, ref: id, queue: c.queue, index: 0, results: [], feedback: null, hint: false, audio: false, combo: 0, maxCombo: 0, hearts: c.hearts, repairs: 0, support: 0, wrongRun: 0, started: now(), itemStarted: now(), fastRun:0, fastBest:0, placement:c.placement || null, qualityVersion:2, rotation:c.rotation||null, exposedThrough:-1, base: c.queue.length };
+    if(c.rotation)state.rotations[c.rotation.scope]={round:c.rotation.round,seen:[...c.rotation.seen]};
+    noteExposure();save(); return true;
   }
   const currentItem = () => state.session ? course.item(state.session.queue[state.session.index]) : null;
+  function noteExposure(){
+    const s=state.session,it=currentItem();if(!s||!isScored(it)||s.index>=s.base||s.exposedThrough===s.index)return;
+    s.exposedThrough=s.index;const keys=[...new Set([questionKey(it),...learningKeys(it)])];
+    for(const key of keys){const r=state.exposures[key]||{n:0,last:0};state.exposures[key]={n:r.n+1,last:s.id};}
+    if(Object.keys(state.exposures).length>12000){const drop=Object.keys(state.exposures).sort((a,b)=>state.exposures[a].last-state.exposures[b].last).slice(0,1000);for(const key of drop)delete state.exposures[key];}
+    if(s.rotation){const r=state.rotations[s.rotation.scope]||{round:s.rotation.round,seen:[]};r.seen=[...new Set([...r.seen,...learningKeys(it)])];state.rotations[s.rotation.scope]=r;}
+  }
   // a saved session is only resumed if all of its items still exist in the loaded course data
   function validSession() {
     const s = state.session; if (!s) return false;
@@ -307,6 +320,11 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const planOk = !s.placement || (s.mode==='placement' && validPlacementPlan(s.placement,s.queue,course));
     const ok=basic&&planOk&&processed.length===s.results.length&&s.results.every((r,i)=>r&&r.id===processed[i]&&typeof r.ok==='boolean'&&typeof r.hint==='boolean'&&typeof r.repair==='boolean');
     if (!ok) { state.session = null; save(); }
+    else if(s.qualityVersion!==2&&!['placement','story'].includes(s.mode)){
+      const end=s.index+(s.feedback?1:0),prefix=s.queue.slice(0,end),used=new Set(prefix.filter(id=>isScored(course.item(id))).flatMap(id=>learningKeys(course.item(id))));
+      const tail=s.queue.slice(end,s.base).filter(id=>{const q=course.item(id);if(!isScored(q))return true;const keys=learningKeys(q);if(keys.some(k=>used.has(k)))return false;keys.forEach(k=>used.add(k));return true;});
+      const repairs=s.queue.slice(s.base);s.queue=[...prefix,...tail,...repairs];s.base=prefix.length+tail.length;if(s.index>=s.queue.length){s.index=Math.max(0,prefix.length-1);const r=s.results.at(-1);s.feedback=isScored(course.item(s.queue[s.index]))&&r?{ok:r.ok,value:r.value||''}:null;}s.qualityVersion=2;save();
+    }
     return ok;
   }
   function advance() {
@@ -315,7 +333,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     if (isScored(it) && !s.feedback) return false;
     if (s.index + 1 >= s.queue.length || (s.hearts !== null && s.hearts <= 0)) return finish();
     if (s.mode === 'placement' && s.placement) { refinePlacement(s.placement,s.results,course,s.id,state.items); s.queue = s.placement.slots.map(x=>x.id); }
-    s.index++; s.itemStarted = now(); s.feedback = null; s.hint = false; s.audio = false; s.transcript = false; save(); return true;
+    s.index++; s.itemStarted = now(); s.feedback = null; s.hint = false; s.audio = false; s.transcript = false; noteExposure();save(); return true;
   }
   function submit(value) {
     const s = state.session, it = currentItem();
@@ -341,7 +359,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
       // two misses in a row: add one easier item from the same unit (at most twice per session)
       if (s.wrongRun >= 2 && s.support < 2 && s.mode === 'lesson') {
         const n = course.nodes.get(s.ref), unit = course.units.get(n.unit);
-        const easy = unit.nodes.flatMap(x => course.nodes.get(x.id).pool || []).find(id => { const x = course.item(id); return isScored(x) && x.level === 1 && !s.queue.includes(id); });
+        const easy = unit.nodes.flatMap(x => course.nodes.get(x.id).pool || []).find(id => { const x = course.item(id); return isScored(x) && x.level === 1 && !s.queue.some(qid=>learningKeys(course.item(qid)).some(k=>learningKeys(x).includes(k))); });
         const tip = n.pool.find(id => course.item(id)?.type === 'info' && !s.queue.includes(id));
         const extra = [tip, easy].filter(Boolean);
         if (extra.length) { s.queue.splice(s.index + 1, 0, ...extra); s.base += extra.length; s.support++; s.wrongRun = 0; }

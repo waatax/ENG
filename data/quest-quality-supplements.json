@@ -1,0 +1,1427 @@
+{
+  "g3-s2-u4": {
+    "node": "g3-s2-u4:grammar",
+    "questions": [
+      [
+        "This ___ my blue pencil.",
+        "is",
+        [
+          "are",
+          "am"
+        ],
+        "this 指一件物品，搭配 is。"
+      ],
+      [
+        "These ___ are yellow.",
+        "rulers",
+        [
+          "ruler",
+          "a ruler"
+        ],
+        "these 後接複數名詞。"
+      ],
+      [
+        "I have ___ orange eraser.",
+        "an",
+        [
+          "a",
+          "two"
+        ],
+        "orange 的開頭是母音音素，單數前用 an。"
+      ],
+      [
+        "Please ___ the red pen on the desk.",
+        "put",
+        [
+          "puts",
+          "putting"
+        ],
+        "祈使句用原形動詞 put。"
+      ],
+      [
+        "___ color is your schoolbag?",
+        "What",
+        [
+          "Who",
+          "How many"
+        ],
+        "問顏色使用 What color。"
+      ],
+      [
+        "Are these your markers? Yes, ___.",
+        "they are",
+        [
+          "it is",
+          "these is"
+        ],
+        "回答 these 的複數問句用 they are。"
+      ],
+      [
+        "The two notebooks ___ green.",
+        "are",
+        [
+          "is",
+          "am"
+        ],
+        "two notebooks 是複數。"
+      ],
+      [
+        "This is my pencil. That is ___ pencil.",
+        "your",
+        [
+          "you",
+          "yours a"
+        ],
+        "名詞 pencil 前要用所有格 your。"
+      ],
+      [
+        "Do not ___ on the desk.",
+        "draw",
+        [
+          "draws",
+          "drawing"
+        ],
+        "Do not 後接原形動詞。"
+      ],
+      [
+        "One pen and one pen make ___ pens.",
+        "two",
+        [
+          "one",
+          "a"
+        ],
+        "兩支筆使用 two pens。"
+      ]
+    ]
+  },
+  "g4-s1-u3": {
+    "node": "g4-s1-u3:grammar",
+    "questions": [
+      [
+        "My sister ___ milk with breakfast.",
+        "drinks",
+        [
+          "drink",
+          "are drink"
+        ],
+        "第三人稱單數現在式用 drinks。"
+      ],
+      [
+        "Would you like ___ water?",
+        "some",
+        [
+          "many",
+          "a"
+        ],
+        "禮貌提供飲水可用 some water；water 在此不可數。"
+      ],
+      [
+        "How ___ apples do we need?",
+        "many",
+        [
+          "much",
+          "a"
+        ],
+        "apples 是可數複數，數量用 how many。"
+      ],
+      [
+        "There is ___ rice in the bowl.",
+        "some",
+        [
+          "a",
+          "many"
+        ],
+        "rice 為不可數名詞，不能說 a rice。"
+      ],
+      [
+        "I would like a sandwich, ___.",
+        "please",
+        [
+          "yesterday",
+          "who"
+        ],
+        "please 使點餐更有禮貌。"
+      ],
+      [
+        "___ you like carrots?",
+        "Do",
+        [
+          "Are",
+          "Does"
+        ],
+        "you 搭配 do 問一般動詞 like。"
+      ],
+      [
+        "The soup ___ hot.",
+        "is",
+        [
+          "are",
+          "do"
+        ],
+        "描述湯的狀態用單數 be 動詞 is。"
+      ],
+      [
+        "We eat lunch ___ noon.",
+        "at",
+        [
+          "on",
+          "to"
+        ],
+        "固定時間搭配 at noon。"
+      ],
+      [
+        "There are three ___ on the table.",
+        "cups",
+        [
+          "cup",
+          "a cup"
+        ],
+        "three 後接複數 cups。"
+      ],
+      [
+        "I am thirsty. May I have ___?",
+        "a drink",
+        [
+          "a ruler",
+          "a notebook"
+        ],
+        "thirsty 表示口渴，需要飲品。"
+      ]
+    ]
+  },
+  "g4-s2-u4": {
+    "node": "g4-s2-u4:grammar",
+    "questions": [
+      [
+        "It ___ rainy today.",
+        "is",
+        [
+          "are",
+          "do"
+        ],
+        "rainy 是形容詞，天氣主詞 it 搭配 is。"
+      ],
+      [
+        "___ is the weather like?",
+        "What",
+        [
+          "Who",
+          "How many"
+        ],
+        "What is the weather like 是詢問天氣的句型。"
+      ],
+      [
+        "Take an umbrella. It is ___.",
+        "raining",
+        [
+          "rain",
+          "rains now"
+        ],
+        "現在正在下雨用 is raining。"
+      ],
+      [
+        "We wear warm coats ___ winter.",
+        "in",
+        [
+          "on",
+          "at"
+        ],
+        "季節用介系詞 in。"
+      ],
+      [
+        "The sky is clear, and the sun is bright. It is ___.",
+        "sunny",
+        [
+          "snowy",
+          "rainy"
+        ],
+        "晴朗天空與陽光明亮支持 sunny。"
+      ],
+      [
+        "The leaves often fall in ___.",
+        "autumn",
+        [
+          "Monday",
+          "noon"
+        ],
+        "autumn 是季節；另外兩個不是季節名稱。"
+      ],
+      [
+        "The wind ___ strong today.",
+        "is",
+        [
+          "are",
+          "am"
+        ],
+        "wind 在此為單數／不可數，搭配 is。"
+      ],
+      [
+        "Is it cold outside? Yes, ___.",
+        "it is",
+        [
+          "they are",
+          "I do"
+        ],
+        "天氣問句用 it 回答。"
+      ],
+      [
+        "We can make a snowman when it ___.",
+        "snows",
+        [
+          "snowing",
+          "are snow"
+        ],
+        "when 子句需要完整動詞，it 搭配 snows。"
+      ],
+      [
+        "There ___ clouds in the sky.",
+        "are",
+        [
+          "is",
+          "am"
+        ],
+        "clouds 是複數。"
+      ]
+    ]
+  },
+  "g4-s2-u6": {
+    "node": "g4-s2-u6:grammar",
+    "questions": [
+      [
+        "I can ___ with my legs.",
+        "run",
+        [
+          "runs",
+          "running"
+        ],
+        "can 後接原形動詞 run。"
+      ],
+      [
+        "My hands ___ clean.",
+        "are",
+        [
+          "is",
+          "am"
+        ],
+        "hands 是複數。"
+      ],
+      [
+        "Can she swim? Yes, she ___.",
+        "can",
+        [
+          "does",
+          "is"
+        ],
+        "用 can 提問就用 can 回答。"
+      ],
+      [
+        "Please ___ your eyes for this game.",
+        "close",
+        [
+          "closes",
+          "closing"
+        ],
+        "祈使句用原形動詞 close。"
+      ],
+      [
+        "He ___ two ears.",
+        "has",
+        [
+          "have",
+          "are"
+        ],
+        "he 搭配 has。"
+      ],
+      [
+        "These are my ___.",
+        "feet",
+        [
+          "foot",
+          "a foot"
+        ],
+        "these 是複數，foot 的複數為 feet。"
+      ],
+      [
+        "She cannot ___ the heavy box.",
+        "lift",
+        [
+          "lifts",
+          "lifting"
+        ],
+        "cannot 後用原形動詞。"
+      ],
+      [
+        "___ your right hand, please.",
+        "Raise",
+        [
+          "Raises",
+          "Raising"
+        ],
+        "祈使句以動詞原形開始。"
+      ],
+      [
+        "Do you have long hair? No, I ___.",
+        "do not",
+        [
+          "am not",
+          "can not"
+        ],
+        "have 一般動詞問句以 do 否定回答。"
+      ],
+      [
+        "My brother and I ___ ride bicycles.",
+        "can",
+        [
+          "cans",
+          "are can"
+        ],
+        "can 不因主詞複數而加 s，也不與 are 這樣連用。"
+      ]
+    ]
+  },
+  "g5-s2-u4": {
+    "node": "g5-s2-u4:grammar",
+    "questions": [
+      [
+        "The library is ___ the bank and the school.",
+        "between",
+        [
+          "under",
+          "through"
+        ],
+        "兩個地點之間用 between ... and ...。"
+      ],
+      [
+        "The sign says No running. You should ___.",
+        "walk",
+        [
+          "run faster",
+          "race your friend"
+        ],
+        "No running 表示禁止奔跑，應步行。"
+      ],
+      [
+        "Please turn left ___ the corner.",
+        "at",
+        [
+          "under",
+          "inside of"
+        ],
+        "路口位置使用 at the corner。"
+      ],
+      [
+        "The office is on the ___ floor, above the first floor.",
+        "second",
+        [
+          "two",
+          "twice"
+        ],
+        "樓層使用序數 second。"
+      ],
+      [
+        "The café is ___ from the station, on the other side of the street.",
+        "across",
+        [
+          "under",
+          "inside"
+        ],
+        "across from 表示在對面。"
+      ],
+      [
+        "There is a notice ___ the door.",
+        "on",
+        [
+          "through",
+          "between"
+        ],
+        "貼在門表面的公告用 on。"
+      ],
+      [
+        "The sign Exit points toward the ___.",
+        "way out",
+        [
+          "class schedule",
+          "lunch menu"
+        ],
+        "Exit 指出口。"
+      ],
+      [
+        "Do not ___ this gate. It is for staff only.",
+        "enter",
+        [
+          "enters",
+          "entering"
+        ],
+        "Do not 後接原形 enter；staff only 是僅限員工。"
+      ],
+      [
+        "The room is next ___ the stairs.",
+        "to",
+        [
+          "at",
+          "through"
+        ],
+        "固定片語 next to。"
+      ],
+      [
+        "Which sentence politely asks for a location?",
+        "Where is the school office, please?",
+        [
+          "Close the office now.",
+          "The office is closed."
+        ],
+        "Where is ... 詢問位置，please 增加禮貌。"
+      ]
+    ]
+  },
+  "g6-s1-u3": {
+    "node": "g6-s1-u3:grammar",
+    "questions": [
+      [
+        "Go straight ___ you reach the bridge.",
+        "until",
+        [
+          "between",
+          "during"
+        ],
+        "until 引出持續到達的終點條件。"
+      ],
+      [
+        "Walk ___ the bridge to reach the park on the other side.",
+        "across",
+        [
+          "between",
+          "inside"
+        ],
+        "從橋一端走到另一端用 across。"
+      ],
+      [
+        "The bakery is ___ your right.",
+        "on",
+        [
+          "in",
+          "under"
+        ],
+        "on your right 表示在右手邊。"
+      ],
+      [
+        "___ the second turning on the left.",
+        "Take",
+        [
+          "Taking",
+          "Takes"
+        ],
+        "指路祈使句使用 Take。"
+      ],
+      [
+        "The station is a ten-minute ___ from here.",
+        "walk",
+        [
+          "walks",
+          "walking to"
+        ],
+        "a ten-minute walk 是十分鐘的步行距離。"
+      ],
+      [
+        "Could you tell me ___ the library is?",
+        "where",
+        [
+          "which place of",
+          "how many"
+        ],
+        "where 引導地點的間接問句。"
+      ],
+      [
+        "You must cross ___ the traffic light turns green.",
+        "when",
+        [
+          "between",
+          "during"
+        ],
+        "when 連接完整子句；另外兩個不能這樣接子句。"
+      ],
+      [
+        "The museum is next to the bank, not ___ it.",
+        "inside",
+        [
+          "beside",
+          "near"
+        ],
+        "not inside 區分兩棟相鄰建築，不是博物館位於銀行內部。"
+      ],
+      [
+        "After you pass the post office, ___ right.",
+        "turn",
+        [
+          "turns",
+          "turning"
+        ],
+        "主要祈使句用原形 turn。"
+      ],
+      [
+        "Which reply is useful when you did not hear a direction?",
+        "Could you say that again, please?",
+        [
+          "I have already arrived yesterday.",
+          "The ticket is blue."
+        ],
+        "請求重述直接處理沒聽清楚的情況。"
+      ]
+    ]
+  },
+  "g6-s1-u4": {
+    "node": "g6-s1-u4:grammar",
+    "questions": [
+      [
+        "I do not feel well. I ___ tell an adult.",
+        "should",
+        [
+          "should to",
+          "am should"
+        ],
+        "should 後直接接原形動詞 tell；此處練習表達求助。"
+      ],
+      [
+        "My teeth ___ clean.",
+        "are",
+        [
+          "is",
+          "am"
+        ],
+        "teeth 是複數。"
+      ],
+      [
+        "How ___ water is in the bottle?",
+        "much",
+        [
+          "many",
+          "a"
+        ],
+        "water 為不可數，使用 how much。"
+      ],
+      [
+        "She washes her hands ___ eating.",
+        "before",
+        [
+          "under",
+          "between"
+        ],
+        "before eating 表示吃東西之前。"
+      ],
+      [
+        "He ___ tired after the long walk.",
+        "feels",
+        [
+          "feel",
+          "is feel"
+        ],
+        "he 搭配 feels；feel 在此描述狀態。"
+      ],
+      [
+        "Which sentence asks for help politely?",
+        "Could you help me find the nurse?",
+        [
+          "You must be a medicine.",
+          "I am a hospital."
+        ],
+        "Could you help me ... 是合適求助句型。"
+      ],
+      [
+        "There are two ___ in the waiting room.",
+        "doctors",
+        [
+          "doctor",
+          "a doctor"
+        ],
+        "two 後用複數。"
+      ],
+      [
+        "I have a question ___ the school nurse.",
+        "for",
+        [
+          "between",
+          "under"
+        ],
+        "a question for someone 表示要向某人問的問題。"
+      ],
+      [
+        "We need ___ rest after the activity.",
+        "some",
+        [
+          "many",
+          "a few"
+        ],
+        "rest 在此為不可數概念，用 some。"
+      ],
+      [
+        "The clinic opens ___ eight in the morning.",
+        "at",
+        [
+          "on",
+          "between"
+        ],
+        "明確鐘點前使用 at。"
+      ]
+    ]
+  },
+  "g6-s2-u5": {
+    "node": "g6-s2-u5:grammar",
+    "questions": [
+      [
+        "The celebration takes place ___ July 15.",
+        "on",
+        [
+          "in",
+          "at"
+        ],
+        "特定日期用 on。"
+      ],
+      [
+        "Some families celebrate together, but customs can ___.",
+        "differ",
+        [
+          "differs",
+          "to differ"
+        ],
+        "can 後用原形 differ，也提醒習俗並非人人相同。"
+      ],
+      [
+        "Please ask ___ taking someone’s photo.",
+        "before",
+        [
+          "under",
+          "between"
+        ],
+        "before taking ... 表示拍照前先詢問。"
+      ],
+      [
+        "The visitors ___ sharing stories about their holidays.",
+        "are",
+        [
+          "is",
+          "am"
+        ],
+        "複數 visitors 配 are。"
+      ],
+      [
+        "Which question avoids assuming everyone has the same custom?",
+        "How does your family celebrate?",
+        [
+          "Why does everyone in your country do this?",
+          "Your custom must be wrong, right?"
+        ],
+        "詢問個人或家庭做法，避免以國籍概括所有人。"
+      ],
+      [
+        "We learned ___ a festival in class.",
+        "about",
+        [
+          "under",
+          "through of"
+        ],
+        "learn about 表示了解一個主題。"
+      ],
+      [
+        "The event is held ___ the community hall.",
+        "in",
+        [
+          "between",
+          "through"
+        ],
+        "活動在會館內舉行，用 in。"
+      ],
+      [
+        "Each guest ___ a different story to share.",
+        "has",
+        [
+          "have",
+          "are"
+        ],
+        "each guest 為單數。"
+      ],
+      [
+        "It is important ___ different traditions.",
+        "to respect",
+        [
+          "respecting of",
+          "respects"
+        ],
+        "It is important to V 表達尊重的重要性。"
+      ],
+      [
+        "Our traditions are different ___ theirs.",
+        "from",
+        [
+          "between",
+          "under"
+        ],
+        "different from 是常見搭配。"
+      ]
+    ]
+  },
+  "g7-s1-u3": {
+    "node": "g7-s1-u3:grammar",
+    "questions": [
+      [
+        "A dictionary marks a word with n. What does that label indicate?",
+        "The word is used as a noun.",
+        [
+          "The word is always negative.",
+          "The word has no meaning."
+        ],
+        "n. 是 noun 的詞性縮寫，不是否定或無意義。"
+      ],
+      [
+        "A dictionary entry shows v. Which information does it give?",
+        "The word can function as a verb.",
+        [
+          "The word must begin with v.",
+          "The word has five syllables."
+        ],
+        "v. 標示動詞詞性，不代表字首或音節數。"
+      ],
+      [
+        "You do not understand a word in a paragraph. What should you check first?",
+        "The sentence context and the relevant dictionary sense.",
+        [
+          "Only the first translation, regardless of context.",
+          "The page number alone."
+        ],
+        "語境有助挑選適合的詞義，不能一律套用第一個譯義。"
+      ],
+      [
+        "Which list is in alphabetical order?",
+        "cat, catch, cater",
+        [
+          "catch, cat, cater",
+          "cater, cat, catch"
+        ],
+        "先比較共同字母，再比較結束位置與後續字母。"
+      ],
+      [
+        "The entry lists two pronunciations for the same spelling. You should ___.",
+        "check which meaning and part of speech fit the sentence",
+        [
+          "assume the spelling has no pronunciation",
+          "always choose the longer recording"
+        ],
+        "相同拼字可能依詞性或詞義有不同發音，應配合句子。"
+      ],
+      [
+        "Which action gives direct evidence of a word’s pronunciation?",
+        "Listening to a reliable dictionary recording.",
+        [
+          "Guessing solely from the Chinese meaning.",
+          "Counting the letters only."
+        ],
+        "錄音能提供實際發音；字母數與中文意思不能直接判定。"
+      ],
+      [
+        "An example sentence in a dictionary mainly helps you ___.",
+        "see how a word is used in context",
+        [
+          "prove that the word has only one meaning",
+          "avoid reading the entry"
+        ],
+        "例句展示用法，不表示單字只有一義。"
+      ],
+      [
+        "A word is marked adj. Which role is being identified?",
+        "Adjective.",
+        [
+          "Adverb only.",
+          "Article only."
+        ],
+        "adj. 是 adjective，與 adv. 不同。"
+      ],
+      [
+        "You hear a word but are unsure of its spelling. A useful next step is to ___.",
+        "compare candidate spellings with the sound and sentence meaning",
+        [
+          "choose a word only because it is the longest",
+          "ignore the sentence meaning"
+        ],
+        "用聲音與語意交叉核對，而非僅看長度。"
+      ],
+      [
+        "Why should you check the date or edition of a reference source?",
+        "Usage information may be updated.",
+        [
+          "Older sources contain no English words.",
+          "The newest source always has the longest definitions."
+        ],
+        "日期有助判斷資訊是否更新，但不表示舊資料一律無效。"
+      ]
+    ]
+  },
+  "g7-s2-u6": {
+    "node": "g7-s2-u6:grammar",
+    "questions": [
+      [
+        "The café is ___ the cinema and the bookstore.",
+        "between",
+        [
+          "through",
+          "along of"
+        ],
+        "between A and B 表示兩者之間。"
+      ],
+      [
+        "Go ___ the tunnel, then cross the square.",
+        "through",
+        [
+          "between",
+          "under of"
+        ],
+        "穿過隧道內部用 through。"
+      ],
+      [
+        "Walk ___ the river until you reach the bridge.",
+        "along",
+        [
+          "inside",
+          "between"
+        ],
+        "沿著河邊行走用 along。"
+      ],
+      [
+        "The entrance is ___ the corner of Pine Street and Lake Road.",
+        "at",
+        [
+          "under",
+          "through"
+        ],
+        "街口位置常用 at the corner of。"
+      ],
+      [
+        "Which sentence is an instruction rather than a question?",
+        "Turn left after the bank.",
+        [
+          "Where is the bank?",
+          "Could you repeat that?"
+        ],
+        "原形動詞開頭的 Turn left ... 是指示。"
+      ],
+      [
+        "The park is directly ___ the school, on the opposite side of the road.",
+        "across from",
+        [
+          "inside",
+          "next into"
+        ],
+        "across from 表示隔路相對。"
+      ],
+      [
+        "After ___ the bridge, turn right.",
+        "crossing",
+        [
+          "crosses",
+          "crossed by"
+        ],
+        "介系詞 after 後可接 crossing。"
+      ],
+      [
+        "Do you know ___ bus stops near the museum?",
+        "which",
+        [
+          "where of",
+          "how much"
+        ],
+        "which 修飾 bus，詢問哪一路公車。"
+      ],
+      [
+        "The stop is two blocks ___ here.",
+        "from",
+        [
+          "between",
+          "through"
+        ],
+        "距離的起點使用 from here。"
+      ],
+      [
+        "Which detail would make a route easier to follow?",
+        "A landmark at the point where you turn.",
+        [
+          "An unrelated restaurant price.",
+          "Only the traveler’s age."
+        ],
+        "轉彎處的地標能提供可操作的定位線索。"
+      ]
+    ]
+  },
+  "g10-s1-u1": {
+    "node": "g10-s1-u1:grammar",
+    "questions": [
+      [
+        "In “The committee approved the proposal,” what is the object?",
+        "the proposal",
+        [
+          "the committee",
+          "approved"
+        ],
+        "proposal 是 approved 的受詞；committee 是主詞。"
+      ],
+      [
+        "Which sentence contains a linking verb followed by a subject complement?",
+        "The explanation seems reasonable.",
+        [
+          "The speaker explained the rule.",
+          "The audience applauded."
+        ],
+        "seems 連結主詞與形容詞補語 reasonable。"
+      ],
+      [
+        "In “The news made the residents anxious,” anxious functions as ___.",
+        "an object complement",
+        [
+          "the main subject",
+          "an indirect object"
+        ],
+        "anxious 描述受詞 residents 的狀態。"
+      ],
+      [
+        "Which sentence has an indirect object and a direct object?",
+        "The organizer sent the participants a reminder.",
+        [
+          "The organizer waited outside.",
+          "The reminder seemed clear."
+        ],
+        "participants 是間接受詞，reminder 是直接受詞。"
+      ],
+      [
+        "In “Several problems remain,” remain is used ___.",
+        "without a direct object",
+        [
+          "with two direct objects",
+          "as a preposition"
+        ],
+        "此句 remain 沒有直接受詞。"
+      ],
+      [
+        "Which change preserves the basic meaning of “She gave me the report”?",
+        "She gave the report to me.",
+        [
+          "She gave me to the report.",
+          "She gave to the report me."
+        ],
+        "give 的直接受詞 report 可配 to me。"
+      ],
+      [
+        "Which sentence correctly follows consider + object + complement?",
+        "We consider the evidence insufficient.",
+        [
+          "We consider insufficient the evidence is.",
+          "We consider the evidence to insufficient."
+        ],
+        "evidence 後的形容詞 insufficient 是受詞補語。"
+      ],
+      [
+        "In “The results became clearer,” clearer describes ___.",
+        "the results",
+        [
+          "an unnamed object",
+          "the action of measuring"
+        ],
+        "became 是連綴動詞，clearer 是主詞補語。"
+      ],
+      [
+        "Which sentence requires an object to complete this use of the verb?",
+        "The team discussed the findings.",
+        [
+          "The audience laughed.",
+          "The visitors arrived."
+        ],
+        "discuss 此用法直接接討論內容 findings。"
+      ],
+      [
+        "Which sentence contains a complete independent clause?",
+        "Although costly, the method works.",
+        [
+          "Although the method is costly.",
+          "Because the results."
+        ],
+        "第一句有主詞 method 與主要動詞 works；其餘不完整。"
+      ]
+    ]
+  },
+  "g10-s2-u12": {
+    "node": "g10-s2-u12:grammar",
+    "questions": [
+      [
+        "A report finds that users of a new app studied longer, but they chose the app themselves. Which wording is most justified?",
+        "App use was associated with longer study time.",
+        [
+          "The app certainly caused every user to study longer.",
+          "The app removed all differences between learners."
+        ],
+        "自選使用者的比較只能直接描述關聯，不能確定所有人的因果。"
+      ],
+      [
+        "The survey covered one class. Which qualification should a summary retain?",
+        "The sample was limited to one class.",
+        [
+          "All schools were represented.",
+          "Every student had the same preference."
+        ],
+        "摘要須保留取樣範圍，避免擴張結論。"
+      ],
+      [
+        "Which transition fits: “The method is inexpensive. ___, it requires careful training”?",
+        "However",
+        [
+          "Therefore certainly",
+          "For instance of"
+        ],
+        "便宜與訓練需求形成轉折。"
+      ],
+      [
+        "“Students who returned the form received a reminder.” Who received one?",
+        "The students who returned the form.",
+        [
+          "Every student, whether they returned it or not.",
+          "Only teachers."
+        ],
+        "限定關係子句界定收到提醒的學生範圍。"
+      ],
+      [
+        "“The result may reflect a seasonal change.” What does may signal?",
+        "A possible explanation, not a certainty.",
+        [
+          "A proved cause.",
+          "A command."
+        ],
+        "may 保留可能性。"
+      ],
+      [
+        "Which sentence correctly introduces a counterpoint?",
+        "Although access improved, costs also rose.",
+        [
+          "Because access improved, costs must never rise.",
+          "Access improved although and costs."
+        ],
+        "讓步句承認一項改善，同時提出成本問題。"
+      ],
+      [
+        "Which question helps compare two reports on the same topic?",
+        "Do they use the same population and time period?",
+        [
+          "Do their page numbers have the same color?",
+          "Are their authors’ first names identical?"
+        ],
+        "對象與期間不同會限制比較。"
+      ],
+      [
+        "A chart shows more participants but provides no total enrollment. What is unknown?",
+        "The participation rate.",
+        [
+          "The participant count shown.",
+          "Whether the count is a number."
+        ],
+        "缺少母體總數，無法計算參與率。"
+      ],
+      [
+        "Which paraphrase preserves “some participants were dissatisfied”?",
+        "A portion of the participants expressed dissatisfaction.",
+        [
+          "All participants rejected the program.",
+          "No participant had a complaint."
+        ],
+        "some 不能改寫為 all 或 no。"
+      ],
+      [
+        "Which conclusion appropriately acknowledges incomplete evidence?",
+        "A wider trial is needed before generalizing.",
+        [
+          "No additional information could ever matter.",
+          "One example proves a universal rule."
+        ],
+        "證據有限時應擴大檢驗，避免普遍化。"
+      ]
+    ]
+  },
+  "g11-s2-u7": {
+    "node": "g11-s2-u7:drill",
+    "questions": [
+      [
+        "It was the missing comparison group ___ weakened the argument.",
+        "that",
+        [
+          "what",
+          "because of"
+        ],
+        "It was ... that ... 聚焦名詞片語。"
+      ],
+      [
+        "What the researchers need ___ a larger sample.",
+        "is",
+        [
+          "are being",
+          "does"
+        ],
+        "What 引導的名詞子句在此作整體主詞，補語為 a larger sample，使用 is。"
+      ],
+      [
+        "It was not until the data were checked ___ the error became clear.",
+        "that",
+        [
+          "than",
+          "what"
+        ],
+        "It was not until ... that ... 為強調時間的結構。"
+      ],
+      [
+        "“It was the budget, not the schedule, that changed.” What is emphasized?",
+        "The budget was the thing that changed.",
+        [
+          "The schedule was the only thing that changed.",
+          "Neither changed."
+        ],
+        "not the schedule 排除時間表，焦點是預算。"
+      ],
+      [
+        "“What matters is how the evidence was collected.” The focus is on ___.",
+        "the method of collecting evidence",
+        [
+          "the font used in the report",
+          "the researcher’s surname"
+        ],
+        "how 引出蒐集證據的方法。"
+      ],
+      [
+        "Which sentence forms a correct cleft?",
+        "It was in the final interview that the discrepancy emerged.",
+        [
+          "It was in the final interview what the discrepancy emerged.",
+          "It in the final interview that was emerged."
+        ],
+        "It was ... that ... 保持主句與焦點結構完整。"
+      ],
+      [
+        "“It is the assumptions that require scrutiny.” Which part requires scrutiny?",
+        "the assumptions",
+        [
+          "the pronoun it itself",
+          "an unspecified location"
+        ],
+        "焦點名詞 assumptions 為需要檢視的對象。"
+      ],
+      [
+        "Which sentence correctly focuses on the person?",
+        "It was Lin who identified the error.",
+        [
+          "It Lin was identified who the error.",
+          "It was who Lin the error identified."
+        ],
+        "人物可用 It was ... who ... 聚焦。"
+      ],
+      [
+        "“What the team proposed was a small pilot, not a permanent policy.” What was proposed?",
+        "a limited trial",
+        [
+          "an immediate permanent policy",
+          "no action of any kind"
+        ],
+        "small pilot 是有限度試辦，not 排除永久政策。"
+      ],
+      [
+        "Why might a writer choose a cleft sentence?",
+        "To highlight a specific contrast or piece of information.",
+        [
+          "To guarantee that a claim is true.",
+          "To eliminate the need for evidence."
+        ],
+        "強調結構調整資訊焦點，不會自動證明內容。"
+      ]
+    ]
+  },
+  "g12-s2-u9": {
+    "node": "g12-s2-u9:grammar",
+    "questions": [
+      [
+        "Which question asks for clarification without pretending to understand?",
+        "Could you explain what you mean by “baseline”?",
+        [
+          "I already understand everything, so do not explain.",
+          "Your term must be wrong because it is unfamiliar."
+        ],
+        "具體指出不熟悉的術語，便於講者澄清。"
+      ],
+      [
+        "A lecturer says a finding is preliminary. Which note is accurate?",
+        "The finding is tentative and needs further examination.",
+        [
+          "The finding is a final universal law.",
+          "The finding has no relation to the topic."
+        ],
+        "preliminary 表示初步，不能記成最終定論。"
+      ],
+      [
+        "Which expression clearly attributes an idea to a source?",
+        "According to the study discussed today, ...",
+        [
+          "Everyone must know, ...",
+          "It is true because I say so, ..."
+        ],
+        "來源標示讓聽者能追溯資訊。"
+      ],
+      [
+        "Which summary preserves “the effect was observed only under laboratory conditions”?",
+        "The observed effect was limited to laboratory conditions.",
+        [
+          "The effect occurs in every real-world setting.",
+          "The study ruled out all laboratory effects."
+        ],
+        "only 的範圍限制不可省略。"
+      ],
+      [
+        "When a speaker distinguishes correlation from causation, the key point is that ___.",
+        "an association does not by itself establish a cause",
+        [
+          "every association proves a cause",
+          "causal explanations never need evidence"
+        ],
+        "兩者概念不同，僅關聯不足以確立因果。"
+      ],
+      [
+        "Which presentation sentence separates evidence from interpretation?",
+        "The survey recorded fewer visits; one possible explanation is a timetable change.",
+        [
+          "The survey proves our preferred explanation beyond doubt.",
+          "The explanation is a measurement itself."
+        ],
+        "先報觀察，再清楚標示可能解釋。"
+      ],
+      [
+        "Which question is most useful after an unfamiliar technical example?",
+        "How does this example illustrate the main claim?",
+        [
+          "What color is the lecturer’s notebook?",
+          "Can we skip the meaning of every term?"
+        ],
+        "把例子連回主旨有助理解論證。"
+      ],
+      [
+        "A classmate asks you to slow down. Which response supports communication?",
+        "I can restate the point more slowly and check whether it is clear.",
+        [
+          "You must understand the first explanation.",
+          "No one is allowed to ask questions."
+        ],
+        "重述與確認理解是溝通策略。"
+      ],
+      [
+        "Which note is a reasonable paraphrase of “the sample excluded first-year students”?",
+        "First-year students were not included in the sample.",
+        [
+          "Only first-year students were included.",
+          "Every year group was equally represented."
+        ],
+        "excluded 表示未納入，不能反轉為 only included。"
+      ],
+      [
+        "Which ending invites a focused discussion?",
+        "Which assumption in this proposal should we test first?",
+        [
+          "All discussion is pointless.",
+          "The proposal cannot have assumptions."
+        ],
+        "聚焦可檢驗的假設，能推進討論。"
+      ]
+    ]
+  },
+  "g12-s2-u12": {
+    "node": "g12-s2-u12:grammar",
+    "questions": [
+      [
+        "Which goal can be checked after one week?",
+        "Summarize three short articles and compare the summaries with the originals.",
+        [
+          "Become perfect at English immediately.",
+          "Never make a mistake again."
+        ],
+        "具體任務與可比對成果比空泛願望可檢核。"
+      ],
+      [
+        "You recognize answers while rereading but cannot produce them later. What should change?",
+        "Add retrieval without looking at the answer.",
+        [
+          "Only reread the answer more quickly.",
+          "Treat recognition as proof of independent recall."
+        ],
+        "辨認不等於獨立提取，應增加遮住答案的回想。"
+      ],
+      [
+        "Which record is useful for reviewing a writing revision?",
+        "The original sentence, feedback, and the reason for the change.",
+        [
+          "Only the file’s color.",
+          "Only the number of times the document was opened."
+        ],
+        "保留前後與修訂理由，才能檢視改變是否解決問題。"
+      ],
+      [
+        "A difficult task was completed with several hints. How should it be recorded?",
+        "As assisted practice, with independent performance still to be checked.",
+        [
+          "As guaranteed independent mastery.",
+          "As evidence that no further practice is possible."
+        ],
+        "提示後完成與獨立掌握必須區分。"
+      ],
+      [
+        "Which plan supports spaced practice?",
+        "Return to the skill on several separated days.",
+        [
+          "Repeat only within one uninterrupted minute and never return.",
+          "Avoid reviewing errors at all."
+        ],
+        "分散在不同日的回想與練習，能檢查延後提取。"
+      ],
+      [
+        "Which source check is most relevant to a factual claim?",
+        "Whether the source provides traceable evidence for that claim.",
+        [
+          "Whether the title uses the largest font.",
+          "Whether the author agrees with every personal belief."
+        ],
+        "查核應關注證據可追溯性，而非外觀或迎合個人偏好。"
+      ],
+      [
+        "What is the purpose of keeping an error log?",
+        "To identify patterns and plan targeted follow-up practice.",
+        [
+          "To prove that improvement is impossible.",
+          "To replace all future attempts with copied answers."
+        ],
+        "錯誤紀錄應支援診斷與後續練習。"
+      ],
+      [
+        "Which action makes peer feedback more actionable?",
+        "Ask the reviewer to point to a specific unclear sentence and explain why.",
+        [
+          "Request only a vague compliment.",
+          "Remove every sentence the reviewer did not mention."
+        ],
+        "具體位置與原因有助修訂。"
+      ],
+      [
+        "A plan repeatedly exceeds the available study time. What is a sensible adjustment?",
+        "Reduce the task size while keeping a measurable goal and review date.",
+        [
+          "Make the same unrealistic promise again.",
+          "Delete every progress record."
+        ],
+        "可執行的小任務較能支持持續檢核。"
+      ],
+      [
+        "Which result best supports a claim of improvement?",
+        "Better independent performance on comparable new tasks after a delay.",
+        [
+          "Only a higher count of clicks.",
+          "Only remembering the location of an answer on the screen."
+        ],
+        "可比較的新任務與延後獨立表現，比點擊或版面記憶更有力。"
+      ]
+    ]
+  }
+}

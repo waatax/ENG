@@ -86,7 +86,9 @@ test('five independent fast unseen answers suggest a separate jump test; hints, 
   const g=createGame({course:c,storage,now:()=>time});
   g.start('lesson','u1:q1');const r=play(g,()=>true,()=>{time+=2000;});
   assert.equal(r.suggestedJump,'s2');assert.equal(g.state.jumped.s2,undefined);
-  g.start('lesson','u1:q1');assert.equal(play(g,()=>true,()=>{time+=2000;}).suggestedJump,null);
+  for(const id of c.nodes.get('u1:q1').pool)g.state.items[id]={s:1,c:1,w:0,last:1,at:time,m:false,fix:0,ws:0,f:c.item(id).f};
+  for(const id of c.nodes.get('u1:q1').pool)g.state.items[id]={s:1,c:1,w:0,last:1,at:time,m:false,fix:0,ws:0,f:c.item(id).f};
+ g.start('lesson','u1:q1');assert.equal(play(g,()=>true,()=>{time+=2000;}).suggestedJump,null);
   const it={type:'choice',prompt:'Hello'},r0={ok:true,hint:false,repair:false,transcript:false,elapsed:2000};
   for(const patch of [{hint:true},{repair:true},{transcript:true},{elapsed:100},{ok:false},{elapsed:100000}]) assert.equal(fastAnswerEligible(it,{...r0,...patch},false),false);
   assert.equal(fastAnswerEligible(it,r0,true),false);

@@ -1,3 +1,4 @@
+import { questionKey, learningKeys } from './question_quality.mjs?v=quality20261027';
 import { ADVANCED_TRACKS, ADVANCED_ITEMS } from './advanced_placement.mjs?v=advanced20261027';
 // Curriculum placement heuristic, not a calibrated CEFR/IRT test.
 export const PLACEMENT_SIZES = [10, 20, 30];
@@ -11,8 +12,9 @@ function candidates(course, section) {
 }
 function pick(course, section, slots, salt, records) {
   const used = new Set(slots.map(x => signature(course.item(x.id))));
+  const targets=new Set(slots.flatMap(x=>learningKeys(course.item(x.id))));
   const skills = Object.keys(skillLabel), target = skills[slots.length % skills.length];
-  const options = candidates(course, section).filter(it => !used.has(signature(it)));
+  const options = candidates(course, section).filter(it => !used.has(signature(it))&&!targets.has(questionKey(it))&&!learningKeys(it).some(k=>targets.has(k)));
   options.sort((a,b) => {
     const rank = it => (records[it.id]?.s ? 100 : 0) + (skillOf(it) === target ? 0 : 10);
     return rank(a) - rank(b) || hash(a.id + salt) - hash(b.id + salt);

@@ -69,7 +69,7 @@ const KEY = 'english-quest-game-v2';
     await step(); await page.reload(); await page.locator('[data-act="resume"]').click(); await page.locator('.lesson-screen').waitFor(); checks.push('reload keeps the session and resumes');
     const seen = await play(); assert.ok(seen.length >= 5);
     assert.match(await page.locator('.result h1').innerText(), /連續 1 天/); await page.screenshot({ path: `${out}/v2-streak-390.png` });
-    await page.locator('[data-act="streak-ok"]').click(); assert.match(await page.locator('.tiles').innerText(), /83%/); await page.screenshot({ path: `${out}/v2-result-390.png` });
+    await page.locator('[data-act="streak-ok"]').click(); assert.match(await page.locator('.tiles').innerText(), /90%/); await page.screenshot({ path: `${out}/v2-result-390.png` });
     await page.locator('.recall-pack details').first().locator('summary').click();assert.ok(await page.locator('.recall-pack details[open]').count());await leaveResult(); checks.push('wrong answer repaired; first-try score and retrieval souvenir verified');
     for (const id of ['u1:q2', 'u1:q3']) { await openNode(id); if (id === 'u1:q2') { await page.locator('[data-act="transcript"]').click(); await page.reload();await page.locator('[data-act="resume"]').click();assert.ok(await page.locator('.transcript').count()); }
       if(id==='u1:q3'){let guard=30;while(items[(await session()).queue[(await session()).index]].type!=='input'&&guard-->0)await step();assert.ok(guard>0);await page.locator('#answer').dispatchEvent('compositionstart');await page.locator('#answer').fill('am');await page.locator('.type-form').dispatchEvent('submit');assert.equal((await session()).feedback,null);await page.locator('#answer').dispatchEvent('compositionend');checks.push('IME composition does not submit prematurely');}
@@ -126,8 +126,28 @@ const KEY = 'english-quest-game-v2';
     assert.equal(await direct.locator('.level-top-entry').evaluate(e=>e.getBoundingClientRect().top),0);
     await direct.locator('.level-top-entry').click();await direct.locator('[data-act="resume"]').waitFor();
     checks.push('main site top placement link preserves an unfinished test');await direct.close();
+    // Reproduce the user's section-nine report using a fresh, isolated learner fixture.
+    await page.evaluate(async () => {
+      const {createCourse,createGame}=await import('./engine.mjs?v=quality20261027');
+      const ix=await fetch('./course/index.json?v=quality20261027').then(r=>r.json()),c=createCourse(ix);
+      c.register(await fetch('./course/s9.json?v=quality20261027').then(r=>r.json()));
+      const g=createGame({course:c,storage:localStorage});g.state.session=null;g.state.exposures={};g.state.rotations={};
+      g.setup({start:'s9',goal:'regular'});g.acceptPlacement('s9');g.save();
+    });
+    await page.goto(base+'#learn');await page.reload();await page.locator('.path').waitFor();
+    const {learningKeys}=await import(pathToFileURL(path.resolve('dist/quest/question_quality.mjs')).href),targets=new Set();
+    for(let round=0;round<4;round++){
+      await openNode('g12-s1-u1:word');const current=await session(),scored=current.queue.filter(id=>items[id]?.type!=='info');
+      assert.equal(scored.length,round===3?2:10);assert.equal(current.rotation.round,1);
+      for(const id of scored)for(const key of learningKeys(items[id])){assert.ok(!targets.has(key),'section nine repeated '+key);targets.add(key);}
+      if(round===0){await page.screenshot({path:`${out}/section-nine-distinct-390.png`});await step();await step();await page.reload();await page.locator('[data-act="resume"]').click();assert.deepEqual((await session()).queue,current.queue);}
+      await play();await leaveResult();
+    }
+    assert.equal(targets.size,32);await openNode('g12-s1-u1:word');assert.equal((await session()).rotation.cycled,true);assert.match(await page.locator('.question-rotation').innerText(),/輪替複習/);
+    await page.screenshot({path:`${out}/section-nine-cycle-390.png`});await play();await leaveResult();
+    checks.push('section nine first unit: 32 distinct words across four sessions, reload preserves queue, next round explicitly labelled');
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-27', version: 'school20261027', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-27', version: 'quality20261027', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }
