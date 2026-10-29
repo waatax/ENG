@@ -3,10 +3,11 @@ import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=exams20261027';
-import * as sound from './sound.mjs?v=coach20261026';
-import { answerText, correctionTip } from './coach.mjs?v=coach20261026';
+import * as sound from './sound.mjs?v=learn20261029';
+import { answerText, correctionTip, feedbackText } from './coach.mjs?v=learn20261029';
+import {labView} from './lab.mjs?v=learn20261029';
 
-const V = 'exams20261027';
+const V = 'learn20261029';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
@@ -110,7 +111,7 @@ function unitBlock(t, u, index, currentId) {
   }).join('');
   const story = u.story ? (() => { const st = game.unitStoryStatus(u.id), meta = course.stories.get(u.story); return `<div class="node-row" style="--x:0"><button class="node story ${st}" data-act="story" data-id="${u.story}" aria-label="故事：${esc(meta?.title)}（${st === 'done' ? '已讀' : st === 'available' ? '可以閱讀' : '完成本單元後開啟'}）"><span>${st === 'done' ? '✓' : '📖'}</span></button><div class="story-label">${esc(meta?.title || '')}</div></div>`; })() : '';
   const done = u.nodes.filter(n => ['done', 'tested', 'crowned'].includes(game.nodeStatus(n.id))).length;
-  return `<section class="unit" aria-labelledby="u-${u.id}"><header class="unit-banner c-${u.color}"><div><p class="eyebrow">${t.kind === 'section' ? `第 ${t.no} 段，第 ${index + 1} 單元` : `單元 ${index + 1}`} · ${done}/${u.nodes.length}${game.state.crowns[u.id] ? ' · 👑' : ''}</p><h2 id="u-${u.id}">${u.icon} ${esc(u.title)}</h2>${u.en ? `<p class="en">${esc(u.en)}</p>` : ''}</div><button class="guide-btn" data-act="guide" data-id="${u.id}" aria-label="${esc(u.title)} 的單元指南">📘<span>指南</span></button></header><div class="nodes">${nodes}${story}</div></section>`;
+  return `<section class="unit" aria-labelledby="u-${u.id}"><header class="unit-banner c-${u.color}"><div><p class="eyebrow">${t.kind === 'section' ? `第 ${t.no} 段，第 ${index + 1} 單元` : `單元 ${index + 1}`} · ${done}/${u.nodes.length}${game.state.crowns[u.id] ? ' · 👑' : ''}</p><h2 id="u-${u.id}">${u.icon} ${esc(u.title)}</h2>${u.en ? `<p class="en">${esc(u.en)}</p>` : ''}</div><button class="guide-btn" data-act="guide" data-id="${u.id}" aria-label="${esc(u.title)} 的單元指南">📘<span>指南</span></button><button class="guide-btn" data-act="lab" data-id="${u.id}" aria-label="${esc(u.title)} 的實用加練">🧭<span>加練</span></button></header><div class="nodes">${nodes}${story}</div></section>`;
 }
 function popover(n, status, u) {
   const nodeIndex = u.nodes.indexOf(u.nodes.find(x => x.id === n.id)) + 1;
@@ -125,7 +126,7 @@ function popover(n, status, u) {
 // ---------- guide ----------
 function guideView(unitId) {
   const u = course.units.get(unitId), g = course.guides.get(unitId);
-  if(u?.semester)return schoolGuide(semesterOf(u.semester),course);
+  if(u?.semester)return schoolGuide(semesterOf(u.semester),course)+labView(course,unitId);
   if (!g) return `<p>指南載入中…</p>`;
   const say = (text, label = '播放') => `<button class="say" data-act="say" data-text="${esc(text)}" aria-label="${label}：${esc(text)}">🔊</button>`;
   return `<p class="eyebrow">單元指南</p><h2>${u.icon} ${esc(u.title)}</h2>${g.goal ? `<p class="goal">🎯 ${esc(g.goal)}</p>` : ''}${g.motivation ? `<p class="muted">${esc(g.motivation)}</p>` : ''}
@@ -136,7 +137,7 @@ function guideView(unitId) {
   ${g.traps?.length ? `<section><h3>常見錯誤</h3>${g.traps.map(t => `<div class="trap"><p class="bad">✗ ${esc(t.wrong)}</p><p class="good">✓ ${esc(t.correct)}</p><small>${esc(t.reason)}</small></div>`).join('')}</section>` : ''}
   ${(g.extra || []).map(x => `<section class="tip"><h3>${esc(x.title)}</h3><p>${esc(x.rule)}</p>${x.table ? `<div class="table-wrap"><table><thead><tr>${x.table.headers.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${x.table.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}${(x.pairs || []).map(p => `<p class="example">${esc(p[0])}<br><small>${esc(p[1])}</small></p>`).join('')}${x.trap ? `<p class="muted">⚠️ ${esc(x.trap)}</p>` : ''}<a href="../${x.src}">看完整說明 ↗</a></section>`).join('')}
   ${g.checklist?.length ? `<section><h3>學完後我能……</h3><ul>${g.checklist.map(c => `<li>${esc(c)}</li>`).join('')}</ul></section>` : ''}
-  <p><a class="btn" href="../${u.src}">打開完整教材 ↗</a></p>`;
+  ${labView(course,unitId)}<p><a class="btn" href="../${u.src}">打開完整教材 ↗</a></p>`;
 }
 
 // ---------- modal ----------
@@ -180,7 +181,7 @@ function itemView(it, s) {
   if (it.type === 'info') return `<section class="info-card"><p class="tag">📐 新觀念</p><h1>${esc(it.title)}</h1>${it.formula ? `<p class="formula">${esc(it.formula)}</p>` : ''}${it.body ? `<p>${esc(it.body)}</p>` : ''}${it.example ? `<p class="example">${sayBtn(it.example)} <span lang="en">${esc(it.example)}</span></p>` : ''}</section>`;
   if (it.type === 'line') return `<section class="story-line">${mascot('happy', 56)}<div class="bubble"><b>${esc(it.speaker || '')}</b><p lang="en">${sayBtn(it.en)} ${esc(it.en)}</p>${a.zh ? `<p class="zh">${esc(it.zh)}</p>` : `<button class="link" data-act="zh">顯示中文</button>`}${a.zh && it.note ? `<p class="muted small">${esc(it.note)}</p>` : ''}</div></section>`;
   const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="prompt-say" data-text="${esc(it.prompt)}" aria-label="朗讀題目">🔊</button></h1>`;
-  const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><p lang="en">${esc(it.passage)}</p></details>` : '';
+  const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><button class="btn small" data-act="prompt-say" data-text="${esc(it.passage)}">🔊 聽閱讀短文</button><p lang="en">${esc(it.passage)}</p></details>` : '';
   const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && ((locked && !isAssessment(s.mode)) || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
   const listenBox = (it.type === 'listen' || (it.type === 'input' && it.audio && !it.text)) ? `<div class="listen-box">${a.transcript ? `<p class="transcript" lang="en">${esc(it.audio)}</p><small class="muted">已改用文字，這題不算聽力。</small>` : `${sayBtn(it.audio, it.mp3, true, '播放聲音')}<button class="say slow" data-act="say" data-slow="1" data-text="${esc(it.audio)}" aria-label="慢速播放">🐢</button><button class="link" data-act="transcript" ${locked ? 'disabled' : ''}>不方便聽？改看文字</button>`}</div>` : '';
   const hint = (a.hint || s.hint) && !locked ? `<div class="hint">💡 ${esc(hintText(it))}</div>` : '';
@@ -197,9 +198,10 @@ function itemView(it, s) {
   } else if (it.type === 'match') {
     const left = shuffle(it.pairs.map((p, i) => i), it.id + 'L' + s.id), right = shuffle(it.pairs.map((p, i) => i), it.id + 'R' + s.id);
     const cell = (side, i, text) => { const done = a.done.includes(i), sel = side === 'L' && a.left === i, flash = a.flash && a.flash[side] === i; return `<button class="mcell ${done ? 'done' : ''} ${sel ? 'sel' : ''} ${flash ? 'flash' : ''}" data-act="m${side}" data-i="${i}" ${done || locked ? 'disabled' : ''} ${side === 'L' ? 'lang="en"' : ''}>${esc(text)}</button>`; };
-    body = `<div class="match"><div>${left.map(i => cell('L', i, it.pairs[i][0])).join('')}</div><div>${right.map(i => cell('R', i, it.pairs[i][1])).join('')}</div></div><p class="muted small">先點英文，再點對應的中文。${a.wrong ? `配錯 ${a.wrong} 次` : ''}</p>`;
+    body = `<div class="match"><div>${left.map(i => cell('L', i, it.pairs[i][0])).join('')}</div><div>${right.map(i => cell('R', i, it.pairs[i][1])).join('')}</div></div><p class="muted small">先點英文，再點對應的中文。${a.wrong ? `配錯 ${a.wrong} 次` : ''}</p>${a.flash && !isAssessment(s.mode) ? `<div class="hint" role="status">${esc(it.pairs[a.flash.L][0])} 的意思是「${esc(it.pairs[a.flash.L][1])}」，你選的是「${esc(it.pairs[a.flash.R][1])}」。先說一次詞義，再配對。<button class="btn small" data-act="prompt-say" data-text="${esc(it.pairs[a.flash.L].join('，'))}">🔊 聽這一組</button></div>` : ''}`;
   }
-  return `${head}${passage}${stim}${listenBox}${body}${hint}`;
+  const optionAudio = it.options?.length ? `<details class="option-audio"><summary>🎧 聽選項（不會選取答案）</summary><div class="coach-controls">${shuffle(it.options,it.id+s.id).map((o,i)=>`<button class="btn small" data-act="prompt-say" data-text="${esc(o)}" aria-label="朗讀選項 ${i+1}">${i+1} · 🔊</button>`).join('')}<button class="link" data-act="stop-say">停止朗讀</button></div></details>` : '';
+  return `${head}${passage}${stim}${listenBox}${body}${optionAudio}${hint}`;
 }
 const fb = s => s.feedback?.value;
 function hintText(it) {
@@ -216,7 +218,7 @@ function lessonFooter(it, s) {
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>✘ 正確答案</h2><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索</h2><p class="small">答錯是練習的一部分，先理解，再試一次。</p><p><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>為什麼？</b> ${esc(it.why)}</p>` : ''}${!f.ok && it.type!=='match' ? `<p class="your-answer">你的答案：${esc(f.value)}</p>` : ''}${!f.ok ? `<p class="correction-tip">💡 ${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls"><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type==='multi'?ui.a.tokens.length===it.selectCount:it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement','exam-check'].includes(s.mode);
@@ -413,16 +415,17 @@ root.addEventListener('click', async e => {
     case 'jump': ui.modal = null; await begin('jump', id); break;
     case 'practice': await begin(el.dataset.mode, id); break;
     case 'vcat': ui.vocabCat = id; render(); break;
+    case 'lab': ui.guide=id;ui.modal='guide';if(await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))){render();document.querySelector('.learning-lab')?.scrollIntoView({block:'start'});}break;
     case 'guide': ui.guide = id; ui.modal = 'guide'; if (await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))) render(); break;
-    case 'close': ui.modal = null; render(); break;
+    case 'close': sound.stop(); ui.modal = null; render(); break;
     case 'shop': ui.modal = 'shop'; render(); break;
     case 'buy': if (game.buyFreeze()) { toast('🧊 已兌換一張凍結卡'); } render(); break;
     case 'reset': ui.modal = 'reset'; render(); break;
     case 'reset-yes': game.reset(); ui.modal = null; ui.step = 0; ui.track = 's1'; render(true); break;
     case 'export': { const blob = new Blob([game.export()], { type: 'application/json' }), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = `english-quest-${game.today()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); break; }
-    case 'prompt-say': narrate(el.dataset.text); break;
-    case 'answer-say': if (s?.feedback) narrate(answerText(it), el.dataset.slow === '1'); break;
-    case 'explain-say': if (s?.feedback) narrate(it.why); break;
+    case 'prompt-say': narrate(el.dataset.text,el.dataset.slow==='1'); break;
+    case 'answer-say': if (s?.feedback && !isAssessment(s.mode)) narrate(answerText(it), el.dataset.slow === '1'); break;
+    case 'explain-say': if (s?.feedback && !isAssessment(s.mode)) narrate(s.feedback.ok ? it.why : feedbackText(it,s.feedback.value)); break;
     case 'stop-say': sound.stop(); break;
     case 'say': playItem(el.dataset.text, el.dataset.mp3, el.dataset.slow === '1'); break;
     case 'resume': if (await ensure(game.filesFor(s.mode, s.ref)) && game.validSession()) { ui.paused = false; ui.shownFor = ''; render(); } else { toast('這個練習的內容已更新，已重新開始。'); render(); } break;

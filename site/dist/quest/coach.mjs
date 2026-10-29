@@ -1,12 +1,19 @@
 // Feedback text remains derived from the item; no answer is exposed before submission.
 export function answerText(it) {
+  if (it.type === 'multi') return (it.correctAnswers || []).join('；');
   if (it.type === 'match') return it.pairs.map(p => p.join('，')).join('。');
   if (it.audioAfter) return it.audioAfter;
   if (it.given) return `${it.given} ${it.answer}`;
   const answer = String(it.answer ?? '');
   const sentence = it.text || it.prompt;
   if (sentence && /_{2,}/.test(sentence) && /[a-z]/i.test(answer) && !/[\u3400-\u9fff]/.test(answer)) return sentence.replace(/_{2,}/g, answer);
+  if (it.audio && /[\u3400-\u9fff]/.test(answer) && !/[\u3400-\u9fff]/.test(it.audio)) return `${it.audio}。${answer}`;
   return answer;
+}
+export function feedbackText(it, value) {
+  const chosen=String(value??'').trim();
+  const contrast=chosen && it.type!=='match' ? `你剛才回答「${chosen}」。正確答案是「${it.answer}」。` : '';
+  return `${contrast}${it.why||''} ${correctionTip(it,value)}`.trim();
 }
 export function correctionTip(it, value) {
   if (it.type === 'match') return '先把每個英文和中文意思各念一次，再逐組配對。錯配的字會再練習。';

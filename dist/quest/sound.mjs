@@ -1,5 +1,5 @@
 // English speech (recorded MP3 when available, otherwise the device's en-US voice) and short UI sound effects.
-let rate = 0.85, effects = true, generation = 0, current = null, ctx = null;
+let rate = 0.85, effects = true, generation = 0, current = null, ctx = null, pending = null;
 export function configure(opts = {}) { if (opts.rate) rate = opts.rate; if (typeof opts.sound === 'boolean') effects = opts.sound; }
 const synth = () => globalThis.speechSynthesis;
 export function voice(lang='en') {
@@ -9,7 +9,7 @@ export function voice(lang='en') {
     || vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
 }
 export function canSpeak() { return !!(synth() && globalThis.SpeechSynthesisUtterance); }
-export function stop() { generation++; try { synth()?.cancel(); } catch {} if (current) { current.pause(); current = null; } }
+export function stop() { generation++; const finish=pending;pending=null;finish?.('stopped'); try { synth()?.cancel(); } catch {} if (current) { current.pause(); current = null; } }
 // resolves to 'ok' | 'error' | 'unavailable' | 'stopped'
 export function speak(text, { slow = false, lang = 'en' } = {}) {
   stop(); const g = generation;
@@ -17,9 +17,10 @@ export function speak(text, { slow = false, lang = 'en' } = {}) {
     if (!text || !canSpeak()) return resolve('unavailable');
     const v = voice(lang); if (!v) return resolve('unavailable');
     const u = new SpeechSynthesisUtterance(text); u.voice = v; u.lang = v.lang; u.rate = slow ? Math.max(0.5, rate - 0.3) : rate;
-    u.onend = () => resolve(g === generation ? 'ok' : 'stopped');
-    u.onerror = () => resolve(g === generation ? 'error' : 'stopped');
-    try { synth().speak(u); } catch { resolve('error'); }
+    const finish=result=>{if(pending===finish)pending=null;resolve(result);};pending=finish;
+    u.onend = () => finish(g === generation ? 'ok' : 'stopped');
+    u.onerror = () => finish(g === generation ? 'error' : 'stopped');
+    try { synth().speak(u); } catch { finish('error'); }
   });
 }
 export function play({ text, mp3, slow = false }) {
@@ -27,9 +28,12 @@ export function play({ text, mp3, slow = false }) {
   stop(); const g = generation;
   return new Promise(resolve => {
     const a = new Audio(mp3); current = a; a.playbackRate = 1;
-    a.onended = () => resolve(g === generation ? 'ok' : 'stopped');
-    a.onerror = () => { if (g === generation) speak(text).then(resolve); else resolve('stopped'); };
-    a.play().catch(() => { if (g === generation) speak(text).then(resolve); else resolve('stopped'); });
+    let fallbackStarted=false;
+    const finish=result=>{if(pending===finish)pending=null;resolve(result);};pending=finish;
+    a.onended = () => finish(g === generation ? 'ok' : 'stopped');
+    const fallback=()=>{if(fallbackStarted)return;fallbackStarted=true;if(g!==generation)return finish('stopped');if(pending===finish)pending=null;speak(text).then(finish);};
+    a.onerror = fallback;
+    a.play().catch(fallback);
   });
 }
 // tiny synthesized cues; no audio files, silent when effects are off or WebAudio is missing

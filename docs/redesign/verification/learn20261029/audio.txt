@@ -1,0 +1,1 @@
+{"cards":1000,"cardMp3s":1000,"cardParts":4000,"families":500,"familyMp3s":500,"familyParts":6162,"hashes":true,"matchingText":true,"totalBytes":974743355}
