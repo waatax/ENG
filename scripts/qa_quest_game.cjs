@@ -65,7 +65,7 @@ const KEY = 'english-quest-game-v2';
 
     await openNode('u1:q1');
     await page.screenshot({ path: `${out}/v2-lesson-390.png` });
-    await page.locator('.option-audio summary').click(); const beforeAudio=await session(); await page.locator('.option-audio [data-act="prompt-say"]').first().click(); assert.deepEqual(await session(),beforeAudio); checks.push('option narration does not select or submit an answer'); await step(true); await page.locator('.correction-tip').waitFor(); assert.equal(await page.locator('.check .coach-controls button').count(),4); await page.locator('[data-act="answer-say"]').first().click(); await page.locator('.check [data-act="stop-say"]').click(); assert.ok((await session()).feedback); checks.push('wrong answer has explanation, correction, normal/slow answer and stop controls'); await page.screenshot({ path: `${out}/v2-feedback-wrong-390.png` }); await step(); // wrong answer, then continue
+    await page.locator('.option-audio summary').click(); const beforeAudio=await session(); await page.locator('.option-audio [data-act="prompt-say"]').first().click(); assert.deepEqual(await session(),beforeAudio); checks.push('option narration does not select or submit an answer'); await step(true); await page.locator('.correction-tip, .diagnosis').first().waitFor(); assert.equal(await page.locator('.check .coach-controls button').count(),5); await page.locator('[data-act="answer-say"]').first().click(); await page.locator('.check [data-act="stop-say"]').click(); assert.ok((await session()).feedback); checks.push('wrong answer has explanation, correction, normal/slow answer and stop controls'); await page.screenshot({ path: `${out}/v2-feedback-wrong-390.png` }); await step(); // wrong answer, then continue
     await step(); await page.reload(); await page.locator('[data-act="resume"]').click(); await page.locator('.lesson-screen').waitFor(); checks.push('reload keeps the session and resumes');
     const seen = await play(); assert.ok(seen.length >= 5);
     assert.match(await page.locator('.result h1').innerText(), /連續 1 天/); await page.screenshot({ path: `${out}/v2-streak-390.png` });
@@ -159,7 +159,7 @@ const KEY = 'english-quest-game-v2';
     await page.screenshot({path:`${out}/section-nine-cycle-390.png`});await play();await leaveResult();
     checks.push('section nine first unit: 32 distinct words across four sessions, reload preserves queue, next round explicitly labelled');
     assert.deepEqual(errors, []);
-    const report = { date: '2026-10-29', version: 'learn20261029', courseVersion: index.version, checks, errors };
+    const report = { date: '2026-10-30', version: 'learn20261030', courseVersion: index.version, checks, errors };
     fs.writeFileSync(`${out}/browser-v2.json`, JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
   } catch (e) { console.error('Browser verification failed:', e, errors); process.exitCode = 1; }
   finally { server.closeAllConnections(); server.close(); await Promise.race([browser.close(), new Promise(r => setTimeout(r, 3000))]); launcher.process()?.kill(); }

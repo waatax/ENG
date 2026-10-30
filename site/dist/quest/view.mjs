@@ -2,12 +2,12 @@ import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
 import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=exams20261027';
-import * as sound from './sound.mjs?v=learn20261029';
-import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText } from './coach.mjs?v=learn20261029';
-import {labView} from './lab.mjs?v=learn20261029';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=learn20261030';
+import * as sound from './sound.mjs?v=learn20261030';
+import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=learn20261030';
+import {labView} from './lab.mjs?v=learn20261030';
 
-const V = 'learn20261029';
+const V = 'learn20261030';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
@@ -211,6 +211,10 @@ function hintText(it) {
   if (it.type === 'input') return `開頭是「${it.answer[0]}」，共 ${it.answer.length} 個字母。`;
   return g?.tips?.[0]?.formula || '先找出題目的關鍵字，再刪去明顯不合的選項。';
 }
+// English ⇄ Chinese glossary from the course files loaded so far; rebuilt only when more files arrive.
+let gloss = null, glossSize = -1;
+function glossary() { if (glossSize !== course.items.size) { gloss = makeGlossary(course.items.values()); glossSize = course.items.size; } return gloss; }
+function feedbackContext(it, f) { return { diagnosis: f && !f.ok ? diagnose(it, f.value, { gloss: glossary() }) : '', evidence: evidenceFor(it) }; }
 function lessonFooter(it, s) {
   const f = s.feedback;
   if (!isScored(it)) return `<footer class="check"><div class="check-in"><span></span><button class="btn primary big" data-act="next" id="go">${it.type === 'info' ? '了解了' : '繼續'}</button></div></footer>`;
@@ -218,7 +222,8 @@ function lessonFooter(it, s) {
   if (f) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索 · 錯題解說</h2><p class="small">答錯是進步的階梯！先理解為什麼，再重試一次。</p><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${!f.ok ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    const ctx = feedbackContext(it, f);
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索 · 錯題解說</h2><p class="small">答錯是進步的階梯！先理解為什麼，再重試一次。</p><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${ctx.diagnosis ? `<p class="diagnosis"><b>🔍 錯在哪裡：</b>${esc(ctx.diagnosis)}</p>` : ''}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${ctx.evidence ? `<p class="evidence"><b>📖 原文線索：</b><span lang="en">${esc(ctx.evidence)}</span> <button class="say" data-act="prompt-say" data-text="${esc(ctx.evidence)}" aria-label="朗讀原文線索">🔊</button></p>` : ''}${!f.ok && !ctx.diagnosis ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type==='multi'?ui.a.tokens.length===it.selectCount:it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement','exam-check'].includes(s.mode);
@@ -294,7 +299,8 @@ function resultView() {
   const ev = (r.events || []).map(e => e.type === 'quest' ? `<li>✅ 每日任務完成 +10 💎</li>` : e.type === 'chest' ? `<li>🎁 三項任務全完成，寶箱 +20 💎</li>` : e.type === 'badge' ? (() => { const b = BADGES.find(x => x.id === e.id); return `<li>${b.icon} 新成就：${esc(b.title)} +20 💎</li>`; })() : '').join('');
   const goalHit = game.todayXp() >= game.goalXp() && game.todayXp() - r.xp < game.goalXp();
   return `<div class="result ${failed ? 'failed' : 'passed'}">${!failed && profile().motion !== false ? confetti() : ''}${mascot(failed ? 'sad' : 'cheer', 120)}<h1>${title}</h1><p class="lead">${sub}</p>
-  <div class="tiles"><div class="tile xp"><small>獲得 XP</small><b>⚡ ${r.xp}</b></div><div class="tile acc"><small>本次首次答對</small><b>🎯 ${Math.round(r.accuracy * 100)}%</b></div><div class="tile time"><small>用時</small><b>⏱ ${fmtTime(r.seconds)}</b></div>${r.maxCombo >= 3 ? `<div class="tile combo"><small>最高連對</small><b>🔥 ${r.maxCombo}</b></div>` : ''}</div>
+  <div class="tiles"><div class="tile xp"><small>獲得 XP</small><b>⚡ ${r.xp}</b></div><div class="tile acc"><small>本次首次答對</small><b>🎯 ${Math.round(r.accuracy * 100)}%</b></div><div class="tile time"><small>用時</small><b>⏱ ${fmtTime(r.seconds)}</b></div>${r.maxCombo >= 3 ? `<div class="tile combo"><small>最高連對</small><b>🔥 ${r.maxCombo}</b></div>` : ''}${r.repairs ? `<div class="tile fixed"><small>訂正成功</small><b>🛠️ ${r.repairsFixed || 0}/${r.repairs}</b></div>` : ''}</div>
+  ${r.repairsFixed ? `<p class="repair-win">🌱 有 ${r.repairsFixed} 題是答錯後自己再答對的，這正是學習發生的時刻。</p>` : ''}
   ${r.chest ? `<p class="chest">🎁 單元寶箱：+${r.chest} 💎</p>` : ''}${goalHit ? '<p class="chest">🎉 今天的每日目標達成！</p>' : ''}${ev ? `<ul class="events">${ev}</ul>` : ''}
   ${r.nextReview ? `<p class="muted">下次複習：${new Date(r.nextReview).toLocaleDateString('zh-TW')}</p>` : ''}${r.xp === 0 && r.mode !== 'jump' ? '<p class="muted">這個活動今天已領取三次獎勵。仍可自由練習，也可以探索新內容。</p>' : ''}
   <section class="recall-pack"><h2>🎒 這次帶走的線索</h2><p>先遮住答案，在心裡想一次，再展開核對。這是自我回想，不另計分。</p>${(r.takeaways||[]).map(q=>`<details><summary>${q.repair?'↻ 訂正回想：':'✦ 回想：'}${esc(q.prompt)}</summary><p lang="en"><b>${esc(q.answer)}</b></p><p>${esc(q.why)}</p><div class="coach-controls"><button class="btn small" data-act="prompt-say" data-text="${esc(q.answer)}">🔊 聽答案</button><button class="btn small" data-act="prompt-say" data-text="${esc(q.why)}">💬 聽解說</button></div></details>`).join('')}</section>
@@ -343,6 +349,7 @@ function profilePage() {
    <label>英文語速<select data-set="rate">${[[0.7, '慢'], [0.85, '一般'], [1, '自然']].map(([v, t]) => `<option value="${v}" ${p.rate === v ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
    <label class="toggle"><input type="checkbox" data-set="sound" ${p.sound !== false ? 'checked' : ''}> 答題音效</label>
    <label class="toggle"><input type="checkbox" data-set="autoplay" ${p.autoplay !== false ? 'checked' : ''}> 自動播放英文與作答後正解</label>
+   <label class="toggle"><input type="checkbox" data-set="readq" ${p.readq === true ? 'checked' : ''}> 聽題模式：每題自動念出題目與選項（適合剛開始識字、想用耳朵學的學習者；程度測驗與考試不啟用）</label>
    <label class="toggle"><input type="checkbox" data-set="motion" ${p.motion !== false ? 'checked' : ''}> 動畫與彩帶</label>
    <p class="muted small">英文語音：${sound.voice() ? esc(sound.voice().name) : '這個裝置沒有英文語音，聽力題可改看文字'}<button class="link" data-act="say" data-text="Welcome to English Quest. Let's learn a little every day.">試聽</button></p>
    <button class="btn" data-act="placement">重新做程度測驗</button>
@@ -388,11 +395,15 @@ function render(focus = false) {
 // a new step: autoplay its English (when enabled) and move focus to where the learner acts next
 function afterNewItem() {
   const it = game.currentItem();
-  if (!isAssessment(game.state.session.mode) && profile().autoplay !== false && (it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word'))) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
+  const audioFirst = it.type === 'listen' || it.type === 'line' || (it.type === 'input' && it.audio && !it.text) || (it.type === 'choice' && it.audio && it.text && it.kind === 'word');
+  if (!isAssessment(game.state.session.mode) && profile().autoplay !== false && audioFirst) playItem(it.type === 'line' ? it.en : it.audio, it.mp3, false, true);
+  else if (readAloudOn() && !audioFirst) narrate(it.type === 'info' ? joinSpeech([it.title, it.formula, it.body, it.example]) : questionAndOptionsText(it), false, true);
   const input = document.querySelector('#answer');
   if (input) input.focus();
   else { const h = document.querySelector('.lesson-body h1') || document.querySelector('#go'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } }
 }
+// 聽題模式: read every prompt and its options aloud (off by default; never in placement or exams, where it would change the skill measured).
+function readAloudOn() { const s = game.state.session; return profile().readq === true && !!s && !isAssessment(s.mode); }
 function playItem(text, mp3, slow = false, isAuto = false) {
   if (!text) return;
   const session=game.state.session,token=session?`${session.id}:${session.index}`:null;
@@ -416,7 +427,7 @@ function lessonSubmit(value) {
   sound.stop();
   if (!isAssessment(s.mode) && profile().autoplay !== false) {
     if (f.ok) narrate(answerText(it), false, true);
-    else narrate(errorFeedbackSpeechText(it, f.value), false, true);
+    else narrate(errorFeedbackSpeechText(it, f.value, feedbackContext(it, f)), false, true);
   }
   document.querySelector('#go')?.focus({ preventScroll: true });
 }
@@ -474,7 +485,7 @@ root.addEventListener('click', async e => {
     case 'export': { const blob = new Blob([game.export()], { type: 'application/json' }), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = `english-quest-${game.today()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); break; }
     case 'prompt-say': narrate(el.dataset.text,el.dataset.slow==='1'); break;
     case 'answer-say': if (s?.feedback && !isAssessment(s.mode)) narrate(answerText(it), el.dataset.slow === '1'); break;
-    case 'explain-say': if (s?.feedback && !isAssessment(s.mode)) narrate(s.feedback.ok ? it.why : errorFeedbackSpeechText(it,s.feedback.value)); break;
+    case 'explain-say': if (s?.feedback && !isAssessment(s.mode)) { const ctx = feedbackContext(it, s.feedback); narrate(s.feedback.ok ? joinSpeech([it.why, ctx.evidence && `原文線索：${ctx.evidence}`]) : errorFeedbackSpeechText(it, s.feedback.value, ctx)); } break;
     case 'question-all-say': narrate(questionAndOptionsText(it)); break;
     case 'question-say': narrate(questionText(it)); break;
     case 'stop-say': sound.stop(); break;

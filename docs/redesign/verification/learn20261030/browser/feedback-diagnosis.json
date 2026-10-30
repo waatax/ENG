@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-30",
+  "version": "learn20261030",
+  "checks": [
+    "wrong answer shows 🔍 錯在哪裡 and the narration reads it (light/dark, 390px)",
+    "results show 訂正成功 n/m and a growth message after repaired mistakes",
+    "reading item shows 📖 原文線索 with the passage sentence",
+    "聽題模式 toggle saves and reads a text question with its options aloud",
+    "unit lab phrasebook: count matches 10%, play-all narration, no overflow at 320/390/1280"
+  ],
+  "samples": {
+    "darkDiagnosisColors": [
+      "rgb(232, 238, 244)",
+      "rgb(27, 37, 48)"
+    ],
+    "diagnosis": {
+      "prompt": "That shiny new bicycle ___ a special present from my uncle.",
+      "answer": "is",
+      "text": "🔍 錯在哪裡：「are」和「is」都是 be 動詞，要看主詞與時間：he／she／it 和單數名詞搭配 is。"
+    },
+    "repairTile": "訂正成功\n🛠️ 1/1",
+    "evidence": {
+      "prompt": "Who does Amy say good morning to?",
+      "text": "📖 原文線索：Good morning, Ms. Lin! 🔊",
+      "diagnosis": "🔍 錯在哪裡：題目用 Who 問的是「人」。「Ben.」在文章裡有出現，但不是這一題要的資訊；回到原文，找出直接回答題目的那一句。"
+    },
+    "readAloud": {
+      "prompt": "You and I ___ selected as the class leaders this semester.",
+      "said": "You and I blank selected as the class leaders this semester.  選項 1： are 。選項 2： is 。選項 3： am 。選項 4： be"
+    },
+    "phrasebook": {
+      "phrases": 10,
+      "first": "聽懂重點 · 哈囉！我是 Amy。你叫什麼名字？\nHello! I’m Amy. What’s your name?🔊🐢"
+    }
+  },
+  "errors": []
+}

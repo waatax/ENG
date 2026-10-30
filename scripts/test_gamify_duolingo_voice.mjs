@@ -40,15 +40,16 @@ test('question speech and question+options speech text formats accurately for vo
     text: 'He ___ to school every day.',
     options: ['go', 'goes', 'going', 'went']
   };
-  assert.equal(questionText(qChoice), '請選出正確的動詞。He ___ to school every day.');
-  assert.equal(questionAndOptionsText(qChoice), '請選出正確的動詞。He ___ to school every day.。選項 1：go。選項 2：goes。選項 3：going。選項 4：went');
+  assert.equal(questionText(qChoice), '請選出正確的動詞。 He ___ to school every day.');
+  // No doubled "。" after English punctuation (2026-10-30 fix).
+  assert.equal(questionAndOptionsText(qChoice), '請選出正確的動詞。 He ___ to school every day. 選項 1：go。選項 2：goes。選項 3：going。選項 4：went');
 
   const qListen = {
     type: 'listen',
     prompt: '聽句子並選出意思',
     audio: 'Where is the library?'
   };
-  assert.equal(questionText(qListen), '聽句子並選出意思。Where is the library?');
+  assert.equal(questionText(qListen), '聽句子並選出意思。 Where is the library?');
 });
 
 test('error feedback speech text provides clear contrast, correct answer and formative why explanation', () => {
