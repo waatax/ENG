@@ -215,3 +215,17 @@ body.reduce *,body.reduce *:before,body.reduce *:after{animation:none!important;
 .lab-route{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.lab-route span{padding:8px 12px;border-radius:99px;background:#e9f7ee;color:#195035;font-weight:700;font-size:.85rem}
 .lab-card{border-top:1px solid #b6cfbf;padding:14px 0;overflow-wrap:anywhere}.lab-card summary{cursor:pointer;font-weight:700;line-height:1.6}.lab-card p{line-height:1.7}.lab-model{padding:12px;margin:12px 0;background:#eff7f1;color:#193d32;border-radius:12px}.lab-model .btn{margin:4px}.lab-context{white-space:pre-line}.lab-return{border-left:3px solid #3a9b64;padding-left:12px}.option-audio{margin:16px 0}.option-audio summary{cursor:pointer;padding:10px;font-weight:700}.your-answer{border-left:3px solid currentColor;padding-left:10px}
 @media(max-width:440px){.learning-lab{padding:12px}.lab-route span{font-size:.75rem}.lab-card .btn{max-width:100%;white-space:normal}}
+
+/* Duolingo gamification & voice audio enhancements */
+.speech-question-options-btn{margin-left:8px;font-size:.82rem;padding:5px 10px;vertical-align:middle;background:var(--gold-l);border-color:var(--gold-d);color:var(--ink)}
+.opt-say{margin-left:auto;padding:4px 8px;border-radius:8px;font-size:1rem;color:var(--muted);display:inline-flex;align-items:center;cursor:pointer;opacity:.7;transition:opacity .15s,transform .1s}
+.opt-say:hover{opacity:1;transform:scale(1.15);color:var(--sky-d)}
+.pop-sub-actions{margin-top:10px;display:flex;justify-content:center}
+.correct-answer-banner{font-size:1.05rem;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.6);display:inline-block;margin:6px 0}
+.lab-recall-prompt{font-weight:700;color:var(--ink);margin:8px 0}
+.lab-tip{margin-top:10px;padding:8px 12px;border-radius:10px;background:var(--gold-l);color:#533d06;font-weight:600}
+.lab-model p{margin:6px 0}
+.lab-ans{font-size:1.05rem;color:var(--green-d)}
+.lab-why{font-size:.92rem;color:var(--ink)}
+.lab-transfer{font-size:.95rem;font-weight:600;margin:6px 0}
+

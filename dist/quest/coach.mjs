@@ -10,11 +10,36 @@ export function answerText(it) {
   if (it.audio && /[\u3400-\u9fff]/.test(answer) && !/[\u3400-\u9fff]/.test(it.audio)) return `${it.audio}。${answer}`;
   return answer;
 }
-export function feedbackText(it, value) {
-  const chosen=String(value??'').trim();
-  const contrast=chosen && it.type!=='match' ? `你剛才回答「${chosen}」。正確答案是「${it.answer}」。` : '';
-  return `${contrast}${it.why||''} ${correctionTip(it,value)}`.trim();
+
+export function questionText(it) {
+  if (!it) return '';
+  if (it.audio && it.type === 'listen') return `${it.prompt ? it.prompt + '。' : ''}${it.audio}`;
+  const parts = [it.prompt, it.text].filter(Boolean);
+  return parts.join('。');
 }
+
+export function questionAndOptionsText(it) {
+  const q = questionText(it);
+  if (!it?.options || !it.options.length) return q;
+  const optList = it.options.map((o, i) => `選項 ${i + 1}：${o}`).join('。');
+  return `${q}。${optList}`;
+}
+
+export function errorFeedbackSpeechText(it, value) {
+  const chosen = String(value ?? '').trim();
+  const ans = answerText(it);
+  const contrast = chosen && it.type !== 'match' ? `你剛才回答「${chosen}」。` : '';
+  const why = it.why ? `為什麼？${it.why}。` : '';
+  const tip = correctionTip(it, value);
+  return `${contrast}正確答案是「${ans}」。${why}${tip}`.trim();
+}
+
+export function feedbackText(it, value) {
+  const chosen = String(value ?? '').trim();
+  const contrast = chosen && it.type !== 'match' ? `你剛才回答「${chosen}」。正確答案是「${it.answer}」。` : '';
+  return `${contrast}${it.why || ''} ${correctionTip(it, value)}`.trim();
+}
+
 export function correctionTip(it, value) {
   if (it.type === 'match') return '先把每個英文和中文意思各念一次，再逐組配對。錯配的字會再練習。';
   if (it.type === 'build') return '對照正確句子的字序，留意主詞、動詞與後面的補充資訊，再跟讀完整句子。';
