@@ -229,3 +229,86 @@ body.reduce *,body.reduce *:before,body.reduce *:after{animation:none!important;
 .lab-why{font-size:.92rem;color:var(--ink)}
 .lab-transfer{font-size:.95rem;font-weight:600;margin:6px 0}
 
+
+/* Placement test wrong-question review & question options styling */
+.placement-wrong-section{margin:24px 0;padding:20px;background:var(--card);border:2px solid #ef5350;border-radius:20px;text-align:left;box-shadow:0 4px 12px rgba(239,83,80,.08)}
+.wrong-section-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;padding-bottom:14px;border-bottom:2px dashed var(--line);flex-wrap:wrap}
+.wrong-header-left{display:flex;align-items:center;gap:12px}
+.wrong-header-icon{font-size:2rem;line-height:1}
+.wrong-header-title{font-size:1.25rem;font-weight:850;color:#d32f2f;margin:0}
+.wrong-header-sub{font-size:.88rem;color:var(--muted);margin:4px 0 0}
+.wrong-count-pill{background:#ffebee;color:#c62828;font-weight:800;font-size:.82rem;padding:6px 12px;border-radius:99px;border:1.5px solid #ef5350;white-space:nowrap}
+@media (prefers-color-scheme:dark){
+  .placement-wrong-section{border-color:#e57373;background:#261a1b}
+  .wrong-header-title{color:#ff8a80}
+  .wrong-count-pill{background:#43201f;color:#ff8a80;border-color:#e57373}
+}
+
+.placement-perfect-section{margin:24px 0;padding:18px 22px;background:#e8f5e9;border:2px solid #66bb6a;border-radius:20px;text-align:left}
+.perfect-card{display:flex;align-items:center;gap:16px}
+.perfect-icon{font-size:2.2rem}
+.perfect-text h3{font-size:1.15rem;font-weight:850;color:#2e7d32;margin:0}
+.perfect-text p{font-size:.88rem;color:#1b5e20;margin:4px 0 0}
+@media (prefers-color-scheme:dark){
+  .placement-perfect-section{background:#173d2a;border-color:#81c784}
+  .perfect-text h3{color:#a5d6a7}
+  .perfect-text p{color:#c8e6c9}
+}
+
+.placement-question-card{margin:16px 0;padding:18px;border:2px solid var(--line);border-radius:16px;background:var(--card);text-align:left;position:relative}
+.placement-question-card.card-wrong{border-color:#f8bbd0;box-shadow:0 3px 0 rgba(239,83,80,.2)}
+.placement-question-card.card-right{border-color:#c8e6c9;box-shadow:0 3px 0 rgba(76,175,80,.2)}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card-header-left{display:flex;align-items:center;gap:8px}
+.card-num{font-weight:850;font-size:.95rem;color:var(--ink)}
+.card-status-badge{font-size:.78rem;font-weight:800;padding:3px 8px;border-radius:6px}
+.card-status-badge.bad{background:#ffebee;color:#c62828}
+.card-status-badge.good{background:#e8f5e9;color:#2e7d32}
+@media (prefers-color-scheme:dark){
+  .card-status-badge.bad{background:#43201f;color:#ff8a80}
+  .card-status-badge.good{background:#173d2a;color:#a5d6a7}
+}
+.card-level-tag{font-size:.75rem;font-weight:750;color:var(--muted);background:var(--soft);padding:3px 8px;border-radius:6px}
+
+.review-passage-box{margin:12px 0;padding:14px;background:var(--soft);border-radius:12px;border-left:3px solid var(--sky-d)}
+.review-passage-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;font-weight:750;font-size:.9rem}
+.review-passage-body{font-size:.92rem;line-height:1.7;margin:0;white-space:pre-line;color:var(--ink)}
+.review-stimulus-box{margin:10px 0;padding:10px 14px;background:var(--soft);border-radius:10px;font-size:.95rem;line-height:1.6}
+.review-stimulus-text{margin:0}
+
+.review-prompt-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0}
+.review-prompt-text{font-size:1.05rem;font-weight:800;margin:0;flex:1}
+
+.review-options-list{display:grid;gap:8px;margin:14px 0}
+.review-opt-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--soft);transition:all .15s}
+.review-opt-row .opt-code{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.82rem;background:var(--card);border:1.5px solid var(--line);flex-shrink:0;color:var(--ink)}
+.review-opt-row .opt-text{flex:1;font-size:.92rem;line-height:1.5;color:var(--ink)}
+.review-opt-tag{font-size:.78rem;font-weight:850;padding:3px 8px;border-radius:6px;flex-shrink:0}
+.review-opt-tag.wrong-tag{background:#d32f2f;color:#fff}
+.review-opt-tag.correct-tag{background:#2e7d32;color:#fff}
+.review-opt-row.is-wrong-picked{border-color:#e53935;background:#fff5f5}
+.review-opt-row.is-correct{border-color:#43a047;background:#f1f8e9}
+@media (prefers-color-scheme:dark){
+  .review-opt-row.is-wrong-picked{border-color:#ef5350;background:#3d1b1e}
+  .review-opt-row.is-correct{border-color:#66bb6a;background:#1a3324}
+}
+
+.review-build-box,.review-input-box{display:grid;gap:8px;margin:12px 0}
+.review-ans-line{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;font-size:.92rem}
+.review-ans-line.wrong-line{background:#ffebee;color:#c62828}
+.review-ans-line.right-line{background:#e8f5e9;color:#2e7d32}
+.review-ans-line.correct-line{background:#e8f5e9;color:#1b5e20}
+.review-words-bank{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;font-size:.85rem}
+@media (prefers-color-scheme:dark){
+  .review-ans-line.wrong-line{background:#43201f;color:#ff8a80}
+  .review-ans-line.right-line,.review-ans-line.correct-line{background:#173d2a;color:#a5d6a7}
+}
+
+.review-why-box{margin:14px 0 6px;padding:14px 16px;background:color-mix(in srgb,var(--sky) 10%,var(--card));border-left:4px solid var(--sky-d);border-radius:0 12px 12px 0}
+.review-why-header{font-weight:850;font-size:.92rem;color:var(--sky-d);margin-bottom:6px}
+.review-why-text{font-size:.9rem;line-height:1.7;margin:0 0 10px;color:var(--ink);white-space:pre-line}
+.review-why-controls{display:flex;gap:8px;flex-wrap:wrap}
+
+.placement-all-review{text-align:left;margin:24px 0;padding:18px;background:var(--card);border:2px solid var(--line);border-radius:20px}
+.placement-all-summary{cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-weight:800;font-size:1rem}
+.placement-all-list{margin-top:16px}

@@ -90,7 +90,7 @@ export function vocabExercises(set) {
 
 // ---------- state ----------
 const WHY = ['life', 'school', 'work', 'exam'];
-const makeProfile = p => ({ goal: GOALS[p.goal] ? p.goal : 'regular', start: /^(s[1-9]|sem-[jh][123][ab])$/.test(p.start) ? p.start : 's1', why: WHY.includes(p.why) ? p.why : 'life', sound: p.sound !== false, autoplay: p.autoplay !== false, motion: p.motion !== false, rate: [0.7, 0.85, 1].includes(p.rate) ? p.rate : 0.85 });
+const makeProfile = p => ({ goal: GOALS[p.goal] ? p.goal : 'regular', start: /^(s[1-9]|sem-[jh][123][ab])$/.test(p.start) ? p.start : 's1', why: WHY.includes(p.why) ? p.why : 'life', sound: p.sound !== false, autoplay: p.autoplay !== false, readq: p.readq === true, motion: p.motion !== false, rate: [0.7, 0.85, 1].includes(p.rate) ? p.rate : 0.85 });
 const fresh = now => ({ schema: 2, created: now, profile: null, nodes: {}, crowns: {}, review: {}, jumped: {}, items: {}, xp: { total: 0, days: {} }, awards: {}, days: [], frozen: [], freezes: 0, gems: 0, quests: null, achievements: {}, stories: {}, flags: {}, stats: { lessons: 0, perfect: 0, combo: 0, listen: 0, fixed: 0, stories: 0, crowns: 0 }, session: null, serial: 0, legacy: null, schoolWork:{}, examProgress:{}, exposures:{}, rotations:{} });
 const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
 const num = (v, d = 0) => Number.isFinite(v) && v >= 0 ? v : d;
@@ -403,7 +403,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     } else if (s.mode === 'placement') {
       if (s.placement) {
         extra = placementReport(s.placement,s.results,course);
-        extra.review = s.results.map(r=>({id:r.id,ok:r.ok,value:r.value || '',prompt:course.item(r.id).prompt,text:course.item(r.id).text || course.item(r.id).audio || '',passage:course.item(r.id).passage || '',answer:course.item(r.id).given ? `${course.item(r.id).given} ${course.item(r.id).answer}` : course.item(r.id).answer,why:course.item(r.id).why}));
+        extra.review = s.results.map((r,idx)=>{const it=course.item(r.id)||{};return{id:r.id,num:idx+1,ok:r.ok,value:r.value||'',type:it.type||'choice',prompt:it.prompt||'',text:it.text||it.audio||'',audio:it.audio||'',passage:it.passage||'',passageTitle:it.passageTitle||'',options:it.options?[...it.options]:(it.words?[...it.words]:[]),correctAnswers:it.correctAnswers?[...it.correctAnswers]:[],answer:it.given?`${it.given} ${it.answer}`:(it.answer||''),why:it.why||'',level:it.level||1,exam:it.exam||'',difficulty:it.difficulty||'',skill:it.skill||''};});
       } else {
       const blocks = course.index.placement || []; let reached = 0, i = 0;
       for (const [bi, b] of blocks.entries()) { const rs = s.results.slice(i, i + b.items.length); i += b.items.length; if (rs.length && rs.filter(r => !r.ok).length <= 1) reached = bi + 1; else break; }
@@ -446,7 +446,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
       state.stats.combo = Math.max(state.stats.combo, s.maxCombo);
     }
     checkBadges();
-    result = { mode: s.mode, ref: s.ref, xp, accuracy, perfect, firstTry, total: scored.length, repairs: s.results.filter(r => r.repair).length, passed, hearts: s.hearts, maxCombo: s.maxCombo, seconds: Math.max(1, Math.round((t - s.started) / 1000)), newDay, streak: streak(), streakBefore, events: pending, ...extra };
+    result = { mode: s.mode, ref: s.ref, xp, accuracy, perfect, firstTry, total: scored.length, repairs: s.results.filter(r => r.repair).length, repairsFixed: s.results.filter(r => r.repair && r.ok).length, passed, hearts: s.hearts, maxCombo: s.maxCombo, seconds: Math.max(1, Math.round((t - s.started) / 1000)), newDay, streak: streak(), streakBefore, events: pending, ...extra };
     result.takeaways = takeaways(s, course);
     result.suggestedJump = jumpSuggestion(s,course);
     pending = []; state.session = null; save(); return result;

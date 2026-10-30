@@ -403,7 +403,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     } else if (s.mode === 'placement') {
       if (s.placement) {
         extra = placementReport(s.placement,s.results,course);
-        extra.review = s.results.map(r=>({id:r.id,ok:r.ok,value:r.value || '',prompt:course.item(r.id).prompt,text:course.item(r.id).text || course.item(r.id).audio || '',passage:course.item(r.id).passage || '',answer:course.item(r.id).given ? `${course.item(r.id).given} ${course.item(r.id).answer}` : course.item(r.id).answer,why:course.item(r.id).why}));
+        extra.review = s.results.map((r,idx)=>{const it=course.item(r.id)||{};return{id:r.id,num:idx+1,ok:r.ok,value:r.value||'',type:it.type||'choice',prompt:it.prompt||'',text:it.text||it.audio||'',audio:it.audio||'',passage:it.passage||'',passageTitle:it.passageTitle||'',options:it.options?[...it.options]:(it.words?[...it.words]:[]),correctAnswers:it.correctAnswers?[...it.correctAnswers]:[],answer:it.given?`${it.given} ${it.answer}`:(it.answer||''),why:it.why||'',level:it.level||1,exam:it.exam||'',difficulty:it.difficulty||'',skill:it.skill||''};});
       } else {
       const blocks = course.index.placement || []; let reached = 0, i = 0;
       for (const [bi, b] of blocks.entries()) { const rs = s.results.slice(i, i + b.items.length); i += b.items.length; if (rs.length && rs.filter(r => !r.ok).length <= 1) reached = bi + 1; else break; }

@@ -338,3 +338,31 @@ R0 之後另做了 3 單元、12 關、99 題的手寫試點（`dist/quest/` 第
 ### A：限制與後續
 - 語音合成依賴瀏覽器 Web Speech API 之中英文自然語音支援。
 - 建議後續進一步收集真人學習者使用反饋。
+
+## 2026-10-30｜程度檢定結果優化：獨立錯題專區、完整題目選項對照、高對比作答標記與詳細解析
+### R：檢視問題與使用者回饋
+- 使用者回饋手動測試檢定程度後，最底部「展開 10 題答案與解說」資料殘缺，且缺少獨立的錯題專區與完整題目及選項解析。
+- 根因分析：
+  1. `dist/quest/engine.mjs` 第 406 行 `extra.review = s.results.map(...)` 僅複製題幹 prompt、text、why、answer，遺漏了 `options`、`correctAnswers`、`passageTitle`、`level`、`exam` 等關鍵資料。
+  2. `dist/quest/view.mjs` 第 239 行僅使用折疊 details 渲染簡陋字串，未列出完整題目選項，亦無對比標記學習者作答與正確答案。
+### P／D：規劃與實作
+1. `dist/quest/engine.mjs`：
+   - 擴充 `extra.review` 映射，完整保留題目序號 `num`、題型 `type`、閱讀篇章 `passage`/`passageTitle`、所有選項清單 `options`、複選正確答案 `correctAnswers`、CEFR 等級與測驗類型。
+2. `dist/quest/view.mjs`：
+   - 新增 `placementQuestionCard(x, idx, isWrongOnly)` 元件，支援完整閱讀短文（含短文語音朗讀）、完整題幹與題目語音、完整選項清單（A, B, C, D 代號）與選項發音按鈕。
+   - 選項採用高對比視覺標記：明確標示學習者選錯的「❌ 你的作答」紅底標籤、正確選項的「✔ 正確答案」綠底標籤。
+   - 重組題（build）與填空題（input）提供作答與正解雙重比對及詞庫標籤。
+   - 核心解析區塊（`💡 關鍵解析與解題線索`）配備「🔊 聽正解」與「💬 聽解析」語音導讀按鈕。
+   - 結果頁面頂端優先展示預設展開的「📕 錯題解析專區（共 N 題）」；全對時展示「🎉 太強了！本次測驗全數答對（0 錯題）」成就卡片。
+   - 下方提供「📋 展開全部 N 題完整題目、選項與詳細解析」，讓學習者可檢閱所有題目的完整題目與選項。
+3. `dist/quest/quest.css`：
+   - 新增 `.placement-wrong-section`、`.placement-perfect-section`、`.placement-question-card`、`.review-opt-row`、`.review-opt-row.is-wrong-picked`、`.review-opt-row.is-correct`、`.review-why-box` 等淺色與深色模式樣式。
+4. `scripts/test_gamify_duolingo_voice.mjs`：
+   - 新增單元測試驗證程度檢定結果包含完整 `options`、`num`、`why`，且 HTML 中渲染錯題專區與作答對比標記。
+5. `scripts/sync_dist_to_site.mjs`：
+   - 執行鏡像同步，確保 `dist/` 與 `site/dist/` 100% Byte Parity。
+### C：查核
+- 自動化測試：全數 96 項測試 100% 通過（含 `test_quest_placement.mjs` 10 項測試與 `test_gamify_duolingo_voice.mjs` 5 項測試）。
+- 鏡像同步確效：`dist/` 與 `site/dist/` 達成 100% Byte Parity。
+### A：行動
+- 提交變更並推送至 GitHub main 分支，觸發 GitHub Actions 自動部署更新 GitHub Pages。

@@ -226,17 +226,63 @@ function lessonFooter(it, s) {
 }
 const normalize2 = s => String(s ?? '').toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim();
 
+function placementQuestionCard(x, idx, isWrongOnly) {
+  const num = x.num || idx;
+  const isWrong = !x.ok;
+  const badgeCls = isWrong ? 'bad' : 'good';
+  const badgeText = isWrong ? '❌ 答錯' : '✔ 答對';
+  const levelTag = x.exam ? esc(x.exam.replace('b-', '').toUpperCase()) : (x.level ? `CEFR L${x.level}` : '');
+  const passageHtml = x.passage ? `<div class="review-passage-box"><div class="review-passage-header"><span class="review-passage-title">📖 ${esc(x.passageTitle || '閱讀短文')}</span><button class="btn small speech-btn" data-act="prompt-say" data-text="${esc(x.passage)}">🔊 朗讀短文</button></div><p class="review-passage-body" lang="en">${esc(x.passage)}</p></div>` : '';
+  const stimHtml = x.text ? `<div class="review-stimulus-box"><p class="review-stimulus-text" lang="en">${esc(x.text)}</p></div>` : '';
+
+  let answersHtml = '';
+  if (x.options && x.options.length > 0 && x.type !== 'build') {
+    const optRows = x.options.map((opt, oIdx) => {
+      const code = String.fromCharCode(65 + oIdx);
+      const isUserChoice = String(x.value ?? '').trim() === String(opt).trim();
+      const isCorrect = String(x.answer ?? '').trim() === String(opt).trim() || (Array.isArray(x.correctAnswers) && x.correctAnswers.some(a => String(a).trim() === String(opt).trim()));
+      let rowCls = 'review-opt-row';
+      let tagHtml = '';
+      if (isUserChoice && !x.ok) {
+        rowCls += ' is-wrong-picked';
+        tagHtml = `<span class="review-opt-tag wrong-tag">❌ 你的作答</span>`;
+      } else if (isCorrect) {
+        rowCls += ' is-correct';
+        tagHtml = `<span class="review-opt-tag correct-tag">✔ 正確答案</span>`;
+      } else if (isUserChoice && x.ok) {
+        rowCls += ' is-correct';
+        tagHtml = `<span class="review-opt-tag correct-tag">✔ 你的作答（正確）</span>`;
+      }
+      return `<div class="${rowCls}"><span class="opt-code">${code}</span><span class="opt-text"${/[a-z]/i.test(opt) && !/[\u3400-\u9fff]/.test(opt) ? ' lang="en"' : ''}>${esc(opt)}</span>${tagHtml}<button class="opt-say" data-act="prompt-say" data-text="${esc(opt)}" title="聽選項發音" aria-label="聽選項 ${code}">🔊</button></div>`;
+    }).join('');
+    answersHtml = `<div class="review-options-list" role="list">${optRows}</div>`;
+  } else if (x.type === 'build') {
+    answersHtml = `<div class="review-build-box">${!x.ok ? `<div class="review-ans-line wrong-line"><span class="ans-label">❌ 你的重組：</span><span class="ans-val" lang="en">${esc(x.value || '（未作答）')}</span></div>` : `<div class="review-ans-line right-line"><span class="ans-label">✔ 你的重組：</span><span class="ans-val" lang="en">${esc(x.value)}</span></div>`}<div class="review-ans-line correct-line"><span class="ans-label">✔ 正確語序：</span><span class="ans-val" lang="en"><b>${esc(x.answer)}</b></span><button class="say small" data-act="prompt-say" data-text="${esc(x.answer)}" title="聽完整句子">🔊</button></div>${x.options?.length ? `<div class="review-words-bank"><span class="bank-label">詞庫單字：</span>${x.options.map(w => `<span class="tok">${esc(w)}</span>`).join('')}</div>` : ''}</div>`;
+  } else {
+    answersHtml = `<div class="review-input-box">${!x.ok ? `<div class="review-ans-line wrong-line"><span class="ans-label">❌ 你的答案：</span><span class="ans-val" lang="en">${esc(x.value || '（未作答）')}</span></div>` : `<div class="review-ans-line right-line"><span class="ans-label">✔ 你的答案：</span><span class="ans-val" lang="en">${esc(x.value)}</span></div>`}<div class="review-ans-line correct-line"><span class="ans-label">✔ 正確解答：</span><span class="ans-val" lang="en"><b>${esc(x.answer)}</b></span><button class="say small" data-act="prompt-say" data-text="${esc(x.answer)}" title="聽正解">🔊</button></div></div>`;
+  }
+
+  const promptSay = questionText(x) || x.prompt;
+  const whyHtml = x.why ? `<div class="review-why-box"><div class="review-why-header">💡 關鍵解析與解題線索</div><p class="review-why-text">${esc(x.why)}</p><div class="review-why-controls"><button class="btn small" data-act="prompt-say" data-text="${esc(x.answer)}">🔊 聽正解</button><button class="btn small" data-act="prompt-say" data-text="${esc(x.why)}">💬 聽解析</button></div></div>` : '';
+
+  return `<article class="placement-question-card ${isWrong ? 'card-wrong' : 'card-right'}" data-qid="${esc(x.id)}"><header class="card-header"><div class="card-header-left"><span class="card-num">第 ${num} 題</span><span class="card-status-badge ${badgeCls}">${badgeText}</span></div>${levelTag ? `<span class="card-level-tag">${levelTag}</span>` : ''}</header>${passageHtml}${stimHtml}<div class="review-prompt-row"><h3 class="review-prompt-text">${esc(x.prompt)}</h3><button class="say small" data-act="prompt-say" data-text="${esc(promptSay)}" title="朗讀題目" aria-label="朗讀題目">🔊</button></div>${answersHtml}${whyHtml}</article>`;
+}
+
 // ---------- results ----------
 function resultView() {
   const r = game.result;
   if(r.mode.startsWith('exam-'))return examResult(r);
   if (r.mode === 'placement') {
     const sec = course.track(r.recommended);
+    const wrongItems = (r.review || []).filter(x => !x.ok);
+    const wrongSection = r.review ? (wrongItems.length > 0 ? `<section class="placement-wrong-section" aria-label="錯題解析專區"><header class="wrong-section-header"><div class="wrong-header-left"><span class="wrong-header-icon" aria-hidden="true">📕</span><div><h2 class="wrong-header-title">錯題解析專區（共 ${wrongItems.length} 題）</h2><p class="wrong-header-sub">深入理解答錯題目的完整題幹、選項盲點與解題關鍵，快速破除盲點！</p></div></div><span class="wrong-count-pill">${wrongItems.length} 題待複習</span></header><div class="wrong-cards-list">${wrongItems.map((x, i) => placementQuestionCard(x, x.num || (i + 1), true)).join('')}</div></section>` : `<section class="placement-perfect-section" aria-label="恭喜全對"><div class="perfect-card"><span class="perfect-icon" aria-hidden="true">🎉</span><div class="perfect-text"><h3>太強了！本次測驗全數答對（0 錯題）</h3><p>你對目前的文法、字彙與題意掌握十分扎實，建議直接展開更進階的學習挑戰！</p></div></div></section>`) : '';
+    const allReviewSection = r.review ? `<details class="placement-review placement-all-review" ${wrongItems.length === 0 ? 'open' : ''}><summary class="placement-all-summary"><span class="summary-title">📋 展開全部 ${r.review.length} 題完整題目、選項與詳細解析</span><span class="summary-sub muted">（答對 ${r.firstTry} 題 · 答錯 ${wrongItems.length} 題）</span></summary><div class="placement-all-list">${r.review.map((x, i) => placementQuestionCard(x, x.num || (i + 1), false)).join('')}</div></details>` : '';
     return `<div class="result placement-result">${mascot('cheer', 92)}<p class="eyebrow">${esc(r.evidence || '程度測驗完成')} · ${r.total} 題</p><h1>${r.advancedReady ? '建議展開進階學術挑戰' : `建議從第 ${sec.no} 段開始`}</h1><p class="lead">一般英語起點：「${esc(sec.title)}」· ${esc(sec.level)}</p><p class="muted">首次答對 ${r.firstTry}/${r.total} 題。${r.range ? (r.range[0]===r.range[1] ? `本次證據較支持第 ${course.track(r.range[0]).no} 段，仍可用單元挑戰確認。` : `待確認起點：第 ${course.track(r.range[0]).no}–${course.track(r.range[1]).no} 段。`) : ''}這是課程起點建議，未評估口說與寫作。</p><p class="placement-note">${r.total===10?'10 題只作初步定位，建議用 20 或 30 題再確認。':'依各級答題模式推估，答題速度不影響分級。'}${r.listeningLimited ? ' 聽力證據不足，建議完成聽辨後再確認。' : ''}${r.seen ? ` 本次有 ${r.seen} 題曾作答，熟悉度可能影響結果。` : ''}</p>
+    ${wrongSection}
     ${r.advancedRows ? `<section class="advanced-evidence"><h2>進階挑戰 · SAT／GRE／GMAT</h2><p class="muted small">三者代表不同學術與推理方向，不是同一條難度或分數階梯。</p><div class="advanced-grid">${r.advancedRows.map(x=>`<article><h3>${esc(x.title)}</h3><b class="advanced-score">${x.correct}/${x.n}</b><p class="small">${x.n<2 ? (x.correct?'單題命中，值得進一步挑戰':'單題未命中，可先補強') : x.correct/x.n>=2/3?'本次進階表現順利':'建議練習後再確認'}</p><p class="muted small">${esc(x.focus)}</p><button class="btn small" data-act="advanced-track" data-id="${x.id}">展開 ${x.id.slice(2).toUpperCase()} 課程 →</button></article>`).join('')}</div><p class="muted small">原創進階取樣，未換算正式考試成績；10 題版各方向一題，建議用 20／30 題增加證據。</p></section>` : ''}
     ${r.rows ? `<div class="level-evidence"><h2>${r.blueprint===2?'一般英語 · 合併分層取樣':'各級取樣表現'}</h2>${r.rows.map((x,i)=>`<div><span>${esc(x.label || `第 ${i+1} 段 · ${x.title}`)}</span><b>${x.correct}/${x.n}</b><small>${!x.n?'未取樣':x.n<2?(x.correct?'已找到一項線索':'建議補強這項線索'):x.correct/x.n>=.75?'本次表現順利':'建議補強'}</small></div>`).join('')}</div><div class="skill-evidence">${r.skills.map(x=>`<section><b>${esc(x.label)}</b><p>${x.id==='listening' ? (x.heard ? `${x.correct}/${x.heard} 題有效聽辨` : '未取得有效聽力證據') : x.n?`${x.correct}/${x.n} 題`:'本次未取樣'}</p>${x.id==='listening'?`<small>${x.heard}/${x.n} 題完整聽完；改文字不當作聽力證據</small>`:''}</section>`).join('')}</div>` : ''}
     <div class="row center"><button class="btn primary big" data-act="accept" data-id="${sec.id}">從第 ${sec.no} 段開始</button><button class="btn ghost" data-act="accept" data-id="s1">從頭開始</button><button class="btn" data-act="placement">換題數重新確認</button></div>
-    ${r.review ? `<details class="placement-review"><summary>展開 ${r.review.length} 題答案與解說</summary>${r.review.map(x=>`<details><summary>${x.ok?'✓':'↻'} ${esc(x.prompt)}</summary>${x.passage ? `<p class="review-stimulus" lang="en">${esc(x.passage)}</p>` : ''}${x.text ? `<p class="review-stimulus">${esc(x.text)}</p>` : ''}${!x.ok && x.value ? `<p class="muted">你的答案：${esc(x.value)}</p>` : ''}<p><b>正解：${esc(x.answer)}</b></p><p>${esc(x.why)}</p><button class="btn small" data-act="prompt-say" data-text="${esc(x.answer)}">🔊 聽正解</button><button class="btn small" data-act="prompt-say" data-text="${esc(x.why)}">💬 聽解說</button></details>`).join('')}</details>`:''}</div>`;
+    ${allReviewSection}</div>`;
   }
   if (r.newDay && !ui.streakShown) {
     const week = game.weekXp();

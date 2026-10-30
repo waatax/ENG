@@ -52,9 +52,14 @@ export function sfx(kind) {
   } catch {}
 }
 
+// What the voice should actually say: blanks become "blank", pictographs and doubled punctuation are dropped.
+export function speakable(text) {
+  return String(text ?? '').replace(/_{2,}/g, ' blank ').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]/gu, '').replace(/([.!?])\s*。/g, '$1').replace(/。{2,}/g, '。').replace(/[ \t]{2,}/g, ' ').trim();
+}
 // A shared generation cancels the entire bilingual sequence on next/stop/another playback.
 export async function narrate(text, { slow = false } = {}) {
   stop();
+  text = speakable(text);
   if (!text) return 'unavailable';
   const chunks = String(text).match(/[a-zA-Z][a-zA-Z0-9\s.,!?'’:_-]*|[^a-zA-Z]+/g) || [];
   let expected = generation;
