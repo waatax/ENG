@@ -9,3 +9,6 @@ if (document.querySelector('#app')) {
  entry.textContent='🧭 檢測程度';entry.setAttribute('aria-label','檢測英文程度，找出適合的闖關起點');document.body.prepend(entry);
  document.body.classList.add('has-level-entry');
 }
+if ('serviceWorker' in navigator && !navigator.webdriver && location.protocol === 'https:') {
+ window.addEventListener('load', () => { navigator.serviceWorker.register(new URL('sw.js', base).href).catch(() => {}); });
+}

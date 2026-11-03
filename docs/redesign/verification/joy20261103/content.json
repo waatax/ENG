@@ -1,0 +1,2759 @@
+{
+  "units": 141,
+  "newMissions": 1483,
+  "definition": "Additional grounded self-explanation and transfer activities; not new scored questions or original vocabulary.",
+  "report": [
+    {
+      "id": "u1",
+      "title": "認識新朋友",
+      "baseline": 72,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "u1-q1-2",
+        "d.diag-0005",
+        "d.diag-0014",
+        "quality.dialogue.1g42org",
+        "quality.dialogue.192amfi",
+        "quality.dialogue.18ab8i5.build",
+        "quality.dialogue.p2tnaa.build",
+        "u1-q4-5"
+      ]
+    },
+    {
+      "id": "g3-s1-u1",
+      "title": "字母 A–M 與打招呼",
+      "baseline": 94,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g3-s1-u1.w1e",
+        "g3-s1-u1.w3m",
+        "g3-s1-u1.w4s",
+        "quality.lex.g3-s1-u1.xehlok",
+        "quality.lex.g3-s1-u1.ub18vn",
+        "quality.lex.g3-s1-u1.1cs5qlh",
+        "g3-s1-u1.t4b",
+        "quality.dialogue.1lgeclt",
+        "g3-s1-u1.q1",
+        "d.diag-0004"
+      ]
+    },
+    {
+      "id": "g3-s1-u2",
+      "title": "字母 N–Z 與字母的聲音",
+      "baseline": 94,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g3-s1-u2.w1e",
+        "g3-s1-u2.w3m",
+        "g3-s1-u2.w4s",
+        "quality.lex.g3-s1-u2.xehlok",
+        "quality.lex.g3-s1-u2.ub18vn",
+        "quality.lex.g3-s1-u2.1cs5qlh",
+        "g3-s1-u2.t4n",
+        "quality.dialogue.e0vhns",
+        "g3-s1-u2.q1",
+        "g3-s1-u1.r2"
+      ]
+    },
+    {
+      "id": "g3-s1-u3",
+      "title": "教室用語與數字 1–10",
+      "baseline": 128,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g3-s1-u3.w1e",
+        "g3-s1-u3.w3m",
+        "g3-s1-u3.w5m",
+        "g3-s1-u3.w7m",
+        "g3-s1-u3.w9m",
+        "g3-s1-u3.match1",
+        "quality.lex.g3-s1-u3.109ec4l",
+        "quality.lex.g3-s1-u3.1grd3rw",
+        "g3-s1-u3.t3b",
+        "quality.dialogue.g0s5ud",
+        "g3-s1-u3.x1",
+        "d.diag-0062",
+        "g3-s1-u3.r1"
+      ]
+    },
+    {
+      "id": "g3-s2-u4",
+      "title": "顏色與文具",
+      "baseline": 117,
+      "previousActivities": 12,
+      "newMissions": 12,
+      "sources": [
+        "g3-s2-u4.w1e",
+        "g3-s2-u4.w3m",
+        "g3-s2-u4.w5m",
+        "g3-s2-u4.w7m",
+        "g3-s2-u4.w9m",
+        "g3-s2-u4.w10s",
+        "quality.lex.g3-s2-u4.lmcs2o",
+        "quality.lex.g3-s2-u4.1leehtx",
+        "g3-s2-u4.t3b",
+        "quality.dialogue.18ab8i5",
+        "g3-s2-u4.x1",
+        "quality.original.g3-s2-u4.2"
+      ]
+    },
+    {
+      "id": "g3-s2-u5",
+      "title": "我的家人",
+      "baseline": 132,
+      "previousActivities": 14,
+      "newMissions": 14,
+      "sources": [
+        "g3-s2-u5.w1e",
+        "g3-s2-u5.w3m",
+        "g3-s2-u5.w4s",
+        "g3-s2-u5.w6s",
+        "g3-s2-u5.w8c",
+        "g3-s2-u5.w10c",
+        "quality.lex.g3-s2-u5.17m258g",
+        "quality.lex.g3-s2-u5.fnsvzu",
+        "g3-s2-u5.t2l",
+        "quality.dialogue.912oc1",
+        "quality.dialogue.192amfi",
+        "g3-s2-u5.q3",
+        "d.diag-0008",
+        "d.diag-0032"
+      ]
+    },
+    {
+      "id": "g3-s2-u6",
+      "title": "動物與喜好",
+      "baseline": 117,
+      "previousActivities": 12,
+      "newMissions": 12,
+      "sources": [
+        "g3-s2-u6.w1e",
+        "g3-s2-u6.w3e",
+        "g3-s2-u6.w5l",
+        "g3-s2-u6.w7l",
+        "g3-s2-u6.w9l",
+        "g3-s2-u6.match2",
+        "quality.lex.g3-s2-u6.1efcwm7",
+        "quality.lex.g3-s2-u6.482wdf",
+        "g3-s2-u6.t4l",
+        "quality.dialogue.18ab8i5",
+        "g3-s2-u6.x1",
+        "d.diag-0234"
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "介紹我和朋友",
+      "baseline": 81,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "u2-q1-2",
+        "d.diag-0005",
+        "d.diag-0014",
+        "quality.dialogue.1g42org",
+        "quality.dialogue.192amfi",
+        "quality.dialogue.18ab8i5.build",
+        "quality.dialogue.p2tnaa.build",
+        "d.diag-0019",
+        "u2-q4-5"
+      ]
+    },
+    {
+      "id": "g4-s1-u1",
+      "title": "短母音拼讀 CVC",
+      "baseline": 94,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g4-s1-u1.w1e",
+        "g4-s1-u1.w3m",
+        "g4-s1-u1.w4s",
+        "quality.lex.g4-s1-u1.1r5sqgt",
+        "quality.lex.g4-s1-u1.1vlmdkd",
+        "quality.lex.g4-s1-u1.1cagrn1",
+        "g4-s1-u1.t4b",
+        "quality.dialogue.e0vhns",
+        "g4-s1-u1.q1",
+        "g3-s1-u1.r2"
+      ]
+    },
+    {
+      "id": "g4-s1-u2",
+      "title": "數字 11–100：年齡與數量",
+      "baseline": 141,
+      "previousActivities": 15,
+      "newMissions": 15,
+      "sources": [
+        "g4-s1-u2.w1e",
+        "g4-s1-u2.w3m",
+        "g4-s1-u2.w4s",
+        "g4-s1-u2.w6s",
+        "g4-s1-u2.w8c",
+        "g4-s1-u2.w10c",
+        "quality.lex.g4-s1-u2.1rciku5",
+        "quality.lex.g4-s1-u2.1bseo86",
+        "g4-s1-u2.t2l",
+        "quality.dialogue.18v11hl",
+        "quality.dialogue.1q7ywei",
+        "g4-s1-u2.trap1",
+        "d.diag-0069",
+        "d.diag-0113",
+        "d.diag-0152"
+      ]
+    },
+    {
+      "id": "g4-s1-u3",
+      "title": "食物與飲料",
+      "baseline": 139,
+      "previousActivities": 14,
+      "newMissions": 14,
+      "sources": [
+        "g4-s1-u3.w1e",
+        "g4-s1-u3.w3m",
+        "g4-s1-u3.w5m",
+        "g4-s1-u3.w7m",
+        "g4-s1-u3.w9m",
+        "g4-s1-u3.match1",
+        "quality.lex.g4-s1-u3.1cdlvff",
+        "quality.lex.g4-s1-u3.vntn2u",
+        "g4-s1-u3.t3b",
+        "quality.dialogue.18ab8i5",
+        "g4-s1-u3.x1",
+        "quality.original.g4-s1-u3.4",
+        "d.diag-0122",
+        "d.diag-0222"
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "我的日常",
+      "baseline": 90,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "u3-q1-2",
+        "d.diag-0066",
+        "u3-q2-2",
+        "quality.dialogue.oqv7w",
+        "u3-q3-2",
+        "quality.dialogue.oqv7w.build",
+        "d.diag-0076",
+        "d.diag-0086",
+        "u3-q4-4"
+      ]
+    },
+    {
+      "id": "g4-s2-u4",
+      "title": "天氣與季節",
+      "baseline": 128,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g4-s2-u4.w1e",
+        "g4-s2-u4.w3m",
+        "g4-s2-u4.w5m",
+        "g4-s2-u4.w7m",
+        "g4-s2-u4.w9m",
+        "g4-s2-u4.match1",
+        "quality.lex.g4-s2-u4.1fxul4o",
+        "quality.lex.g4-s2-u4.sku6t2",
+        "g4-s2-u4.t3l",
+        "quality.dialogue.18ab8i5",
+        "g4-s2-u4.x1",
+        "quality.original.g4-s2-u4.4",
+        "d.diag-0192"
+      ]
+    },
+    {
+      "id": "g4-s2-u5",
+      "title": "星期與國內外節慶",
+      "baseline": 131,
+      "previousActivities": 14,
+      "newMissions": 14,
+      "sources": [
+        "g4-s2-u5.w1e",
+        "g4-s2-u5.w3m",
+        "g4-s2-u5.w5m",
+        "g4-s2-u5.w7m",
+        "g4-s2-u5.w8s",
+        "g4-s2-u5.w10c",
+        "quality.lex.g4-s2-u5.fsdtnt",
+        "quality.lex.g4-s2-u5.ybnnns",
+        "g4-s2-u5.t2l",
+        "quality.dialogue.18v11hl",
+        "quality.dialogue.x7bpck",
+        "g4-s2-u5.q3",
+        "d.diag-0069",
+        "d.diag-0202"
+      ]
+    },
+    {
+      "id": "g4-s2-u6",
+      "title": "身體與能力",
+      "baseline": 125,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g4-s2-u6.w1e",
+        "g4-s2-u6.w3e",
+        "g4-s2-u6.w5l",
+        "g4-s2-u6.w7l",
+        "g4-s2-u6.w9c",
+        "quality.lex.g4-s2-u6.1n0q7y1",
+        "quality.lex.g4-s2-u6.pg02oy",
+        "quality.lex.g4-s2-u6.1wpfd7u",
+        "g4-s2-u6.t4l",
+        "quality.dialogue.912oc1",
+        "g4-s2-u6.x2",
+        "quality.original.g4-s2-u6.4",
+        "d.diag-0052"
+      ]
+    },
+    {
+      "id": "g5-s1-u1",
+      "title": "長母音與 Magic e",
+      "baseline": 95,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g5-s1-u1.w1e",
+        "g5-s1-u1.w3m",
+        "g5-s1-u1.match1",
+        "quality.lex.g5-s1-u1.1my39eh",
+        "quality.lex.g5-s1-u1.1jq3o58",
+        "quality.lex.g5-s1-u1.5nftcz",
+        "g5-s1-u1.t4n",
+        "quality.dialogue.twjh27",
+        "g5-s1-u1.q1",
+        "g3-s1-u1.r2"
+      ]
+    },
+    {
+      "id": "g5-s1-u2",
+      "title": "介紹自己、家人與朋友",
+      "baseline": 105,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g5-s1-u2.w1e",
+        "g5-s1-u2.w3m",
+        "quality.lex.g5-s1-u2.ms7go9",
+        "quality.lex.g5-s1-u2.qvrfhs",
+        "quality.lex.g5-s1-u2.15ob10u",
+        "g5-s1-u2.t1l",
+        "quality.dialogue.912oc1",
+        "quality.dialogue.1ct05t0",
+        "g5-s1-u2.q3",
+        "d.diag-0006",
+        "d.diag-0022"
+      ]
+    },
+    {
+      "id": "g5-s1-u3",
+      "title": "現在進行式：你在做什麼？",
+      "baseline": 95,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g5-s1-u3.w1e",
+        "g5-s1-u3.w3m",
+        "g5-s1-u3.match1",
+        "quality.lex.g5-s1-u3.mbe0xq",
+        "quality.lex.g5-s1-u3.2twdau",
+        "quality.lex.g5-s1-u3.b7nksl",
+        "g5-s1-u3.t4n",
+        "quality.dialogue.1g42org",
+        "g5-s1-u3.q1",
+        "d.diag-0044"
+      ]
+    },
+    {
+      "id": "g5-s2-u4",
+      "title": "校園標示與位置",
+      "baseline": 140,
+      "previousActivities": 14,
+      "newMissions": 14,
+      "sources": [
+        "g5-s2-u4.w1e",
+        "g5-s2-u4.w3e",
+        "g5-s2-u4.w5e",
+        "g5-s2-u4.w7e",
+        "g5-s2-u4.w9e",
+        "g5-s2-u4.match2",
+        "quality.lex.g5-s2-u4.uvp3ao",
+        "quality.lex.g5-s2-u4.1leehtx",
+        "g5-s2-u4.t4l",
+        "quality.dialogue.1g42org",
+        "g5-s2-u4.q1",
+        "quality.original.g5-s2-u4.4",
+        "d.diag-0102",
+        "d.diag-0142"
+      ]
+    },
+    {
+      "id": "g5-s2-u5",
+      "title": "大寫與標點：寫出正確句子",
+      "baseline": 91,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g5-s2-u5.w1e",
+        "g5-s2-u5.w3m",
+        "g5-s2-u5.w4s",
+        "quality.lex.g5-s2-u5.1udq9t5",
+        "quality.lex.g5-s2-u5.v3idyo",
+        "quality.lex.g5-s2-u5.5lixqn",
+        "g5-s2-u5.t4l",
+        "quality.dialogue.18ab8i5",
+        "quality.dialogue.2e5eya",
+        "g5-s2-u5.r2"
+      ]
+    },
+    {
+      "id": "g5-s2-u6",
+      "title": "繪本故事與事件排序",
+      "baseline": 84,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g5-s2-u6.w1e",
+        "g5-s2-u6.w3m",
+        "g5-s2-u6.w4s",
+        "quality.lex.g5-s2-u6.1avkdf6",
+        "quality.lex.g5-s2-u6.uhe822",
+        "quality.lex.g5-s2-u6.8eo5n9",
+        "g5-s2-u6.t4b",
+        "quality.dialogue.sf1qgt",
+        "g5-s2-u6.x2"
+      ]
+    },
+    {
+      "id": "g6-s1-u1",
+      "title": "日常生活作息與時間表達",
+      "baseline": 129,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g6-s1-u1.w1e",
+        "g6-s1-u1.w3m",
+        "g6-s1-u1.w5l",
+        "g6-s1-u1.w7l",
+        "g6-s1-u1.w9l",
+        "quality.lex.g6-s1-u1.pvbdgk",
+        "quality.lex.g6-s1-u1.fsdtnt",
+        "quality.lex.g6-s1-u1.7m08nd",
+        "g6-s1-u1.t4B",
+        "quality.dialogue.197u10p",
+        "g6-s1-u1.q1",
+        "d.diag-0097",
+        "d.diag-0212"
+      ]
+    },
+    {
+      "id": "g6-s1-u2",
+      "title": "過去式故事與冒險歷險記",
+      "baseline": 102,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g6-s1-u2.w1e",
+        "g6-s1-u2.w3m",
+        "quality.lex.g6-s1-u2.3tiqte",
+        "quality.lex.g6-s1-u2.15s7fzk",
+        "quality.lex.g6-s1-u2.ql981l",
+        "g6-s1-u2.t1l",
+        "g6-s1-u2.t4n",
+        "quality.dialogue.1ghzjtz",
+        "g6-s1-u2.x3",
+        "d.diag-0165",
+        "g6-s1-u2.r1"
+      ]
+    },
+    {
+      "id": "g6-s1-u3",
+      "title": "城市探索與問路指路指南",
+      "baseline": 129,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g6-s1-u3.w1e",
+        "g6-s1-u3.w3m",
+        "g6-s1-u3.w5m",
+        "g6-s1-u3.w7e",
+        "g6-s1-u3.w9e",
+        "g6-s1-u3.match2",
+        "quality.lex.g6-s1-u3.15s7fzk",
+        "quality.lex.g6-s1-u3.ql981l",
+        "g6-s1-u3.t4l",
+        "quality.dialogue.17nh0ov",
+        "g6-s1-u3.x2",
+        "quality.original.g6-s1-u3.4",
+        "d.diag-0132"
+      ]
+    },
+    {
+      "id": "g6-s1-u4",
+      "title": "健康飲食、身體部位與醫療照護",
+      "baseline": 124,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g6-s1-u4.w1e",
+        "g6-s1-u4.w3m",
+        "g6-s1-u4.w5e",
+        "g6-s1-u4.w7m",
+        "g6-s1-u4.w9l",
+        "g6-s1-u4.match2",
+        "quality.lex.g6-s1-u4.11z4ng2",
+        "quality.lex.g6-s1-u4.jc9giz",
+        "g6-s1-u4.t4l",
+        "quality.dialogue.vpgnea",
+        "g6-s1-u4.x1",
+        "quality.original.g6-s1-u4.4",
+        "d.diag-0442"
+      ]
+    },
+    {
+      "id": "g6-s2-u5",
+      "title": "世界節慶巡禮與多元文化",
+      "baseline": 91,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g6-s2-u5.w1e",
+        "quality.lex.g6-s2-u5.pvbdgk",
+        "quality.lex.g6-s2-u5.1ei2k27",
+        "quality.lex.g6-s2-u5.1rks22e",
+        "quality.lex.g6-s2-u5.lcwfnd",
+        "g6-s2-u5.t4l",
+        "quality.dialogue.17nh0ov",
+        "g6-s2-u5.x1",
+        "quality.original.g6-s2-u5.4",
+        "d.diag-0492"
+      ]
+    },
+    {
+      "id": "g6-s2-u6",
+      "title": "閱讀理解力、字首字尾與語篇導航",
+      "baseline": 66,
+      "previousActivities": 7,
+      "newMissions": 7,
+      "sources": [
+        "g6-s2-u6.w1e",
+        "quality.lex.g6-s2-u6.3tiqte",
+        "quality.lex.g6-s2-u6.15s7fzk",
+        "quality.lex.g6-s2-u6.ql981l",
+        "quality.lex.g6-s2-u6.nfkhj4",
+        "g6-s2-u6.t4b",
+        "quality.dialogue.1s1dgsv"
+      ]
+    },
+    {
+      "id": "g6-s2-u7",
+      "title": "未來計畫與夢想志向",
+      "baseline": 97,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g6-s2-u7.w1e",
+        "quality.lex.g6-s2-u7.oxqpo4",
+        "quality.lex.g6-s2-u7.rui4dt",
+        "quality.lex.g6-s2-u7.noel5i",
+        "quality.lex.g6-s2-u7.1ymw37e",
+        "g6-s2-u7.t4n",
+        "quality.dialogue.197u10p",
+        "g6-s2-u7.trap1",
+        "d.diag-0099",
+        "d.diag-0242"
+      ]
+    },
+    {
+      "id": "g6-s2-u8",
+      "title": "事物比較與世界之最",
+      "baseline": 111,
+      "previousActivities": 12,
+      "newMissions": 12,
+      "sources": [
+        "g6-s2-u8.w1e",
+        "g6-s2-u8.w3e",
+        "g6-s2-u8.w5m",
+        "g6-s2-u8.w6s",
+        "g6-s2-u8.w8s",
+        "quality.lex.g6-s2-u8.17snhwu",
+        "quality.lex.g6-s2-u8.1qqh4kb",
+        "g6-s2-u8.t1l",
+        "quality.dialogue.17pv17w",
+        "quality.dialogue.garujv",
+        "g6-s2-u8.trap1",
+        "d.diag-0188"
+      ]
+    },
+    {
+      "id": "g7-s1-u1",
+      "title": "句子骨架、be 動詞與現在簡單式",
+      "baseline": 89,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g7-s1-u1.w1e",
+        "g7-s1-u1.w3l",
+        "quality.lex.g7-s1-u1.121l3kf",
+        "quality.lex.g7-s1-u1.g0ap6c",
+        "quality.lex.g7-s1-u1.1oc52r3",
+        "g7-s1-u1.t4l",
+        "quality.dialogue.uj5ju5",
+        "g7-s1-u1.x2",
+        "d.diag-0475"
+      ]
+    },
+    {
+      "id": "g7-s1-u2",
+      "title": "名詞單複數、指示代名詞與祈使句",
+      "baseline": 91,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g7-s1-u2.w1e",
+        "quality.lex.g7-s1-u2.12h2cso",
+        "quality.lex.g7-s1-u2.f5hu4n",
+        "quality.lex.g7-s1-u2.noel5i",
+        "quality.lex.g7-s1-u2.1ymw37e",
+        "g7-s1-u2.t4b",
+        "quality.dialogue.19kmh6k",
+        "g7-s1-u2.x2",
+        "d.diag-0404",
+        "d.diag-0413"
+      ]
+    },
+    {
+      "id": "g7-s1-u3",
+      "title": "國際音標 (IPA/KK) 與字典查閱全指南",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "g7-s1-u3.w1e",
+        "quality.lex.g7-s1-u3.12h2cso",
+        "quality.lex.g7-s1-u3.6hrwpl",
+        "quality.lex.g7-s1-u3.i9nj8i",
+        "g7-s1-u3.t2l",
+        "quality.dialogue.kf8mxn",
+        "quality.dialogue.uj5ju5",
+        "quality.original.g7-s1-u3.2"
+      ]
+    },
+    {
+      "id": "g7-s2-u4",
+      "title": "現在進行式與動態時間表達",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "g7-s2-u4.w1e",
+        "quality.lex.g7-s2-u4.1nicidh",
+        "quality.lex.g7-s2-u4.bah8fr",
+        "quality.lex.g7-s2-u4.lcwfnd",
+        "g7-s2-u4.t3b",
+        "quality.dialogue.1v0vf3v",
+        "g7-s2-u4.q1",
+        "d.diag-0258"
+      ]
+    },
+    {
+      "id": "g7-s2-u5",
+      "title": "頻率副詞、情態助動詞 can 與存在句",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "g7-s2-u5.t1b",
+        "quality.dialogue.1m6u7ju",
+        "quality.dialogue.s57pso",
+        "d.diag-0272",
+        "d.diag-0312"
+      ]
+    },
+    {
+      "id": "g7-s2-u6",
+      "title": "時空方位介系詞與地圖導航指南",
+      "baseline": 96,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g7-s2-u6.w1e",
+        "quality.lex.g7-s2-u6.1t4jh8w",
+        "quality.lex.g7-s2-u6.1480gk0",
+        "quality.lex.g7-s2-u6.1rx7im1",
+        "g7-s2-u6.t2n",
+        "quality.dialogue.14uuaue",
+        "quality.dialogue.1bgd51i",
+        "quality.original.g7-s2-u6.4",
+        "d.diag-0432",
+        "d.diag-0462"
+      ]
+    },
+    {
+      "id": "g8-s1-u1",
+      "title": "過去式、未來與敘事時間軸",
+      "baseline": 84,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g8-s1-u1.w1e",
+        "quality.lex.g8-s1-u1.82z34f",
+        "quality.lex.g8-s1-u1.s9804r",
+        "quality.lex.g8-s1-u1.8eo5n9",
+        "g8-s1-u1.t2B",
+        "quality.dialogue.bpwnti",
+        "quality.dialogue.1m6u7ju",
+        "d.diag-0263",
+        "d.diag-0482"
+      ]
+    },
+    {
+      "id": "g8-s1-u2",
+      "title": "過去進行式、時間連接詞 when/while 與數量詞",
+      "baseline": 95,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g8-s1-u2.w1e",
+        "quality.lex.g8-s1-u2.1as7itl",
+        "quality.lex.g8-s1-u2.kxmguw",
+        "quality.lex.g8-s1-u2.1oc52r3",
+        "g8-s1-u2.t2n",
+        "quality.dialogue.9vcmi",
+        "quality.dialogue.1m6u7ju",
+        "d.diag-0253",
+        "d.diag-0383",
+        "d.diag-0452"
+      ]
+    },
+    {
+      "id": "g8-s1-u3",
+      "title": "條件副詞子句與情態假設語氣 If / Unless",
+      "baseline": 105,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g8-s1-u3.w1e",
+        "quality.lex.g8-s1-u3.1as7itl",
+        "quality.lex.g8-s1-u3.kxmguw",
+        "quality.lex.g8-s1-u3.1oc52r3",
+        "g8-s1-u3.t2n",
+        "quality.dialogue.f88cez",
+        "quality.dialogue.k0xlg9",
+        "d.diag-0353",
+        "d.diag-0363",
+        "d.diag-0372",
+        "d.diag-0712"
+      ]
+    },
+    {
+      "id": "g8-s2-u4",
+      "title": "比較級、不定詞 to V 與動名詞 V-ing",
+      "baseline": 111,
+      "previousActivities": 12,
+      "newMissions": 12,
+      "sources": [
+        "g8-s2-u4.w1e",
+        "quality.lex.g8-s2-u4.1as7itl",
+        "quality.lex.g8-s2-u4.g0ap6c",
+        "quality.lex.g8-s2-u4.1afqyji",
+        "g8-s2-u4.t2b",
+        "quality.dialogue.jmgfgu",
+        "quality.dialogue.1v0vf3v",
+        "d.diag-0282",
+        "d.diag-0292",
+        "d.diag-0324",
+        "d.diag-0333",
+        "d.diag-0342"
+      ]
+    },
+    {
+      "id": "g8-s2-u5",
+      "title": "連綴動詞、感官動詞與最高級比較",
+      "baseline": 114,
+      "previousActivities": 12,
+      "newMissions": 12,
+      "sources": [
+        "g8-s2-u5.w1e",
+        "quality.lex.g8-s2-u5.1as7itl",
+        "quality.lex.g8-s2-u5.kxmguw",
+        "quality.lex.g8-s2-u5.1oc52r3",
+        "g8-s2-u5.t2n",
+        "quality.dialogue.13dba13",
+        "quality.dialogue.b6lczf",
+        "d.diag-0294",
+        "d.diag-0304",
+        "d.diag-0393",
+        "d.diag-0583",
+        "d.diag-0692"
+      ]
+    },
+    {
+      "id": "g9-s1-u1",
+      "title": "完成式、被動與關係子句",
+      "baseline": 108,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g9-s1-u1.w1e",
+        "quality.lex.g9-s1-u1.1as7itl",
+        "quality.lex.g9-s1-u1.kxmguw",
+        "quality.lex.g9-s1-u1.1w9ohx",
+        "g9-s1-u1.t3l",
+        "quality.dialogue.pxh289",
+        "quality.dialogue.11ckdta",
+        "d.diag-0503",
+        "d.diag-0523",
+        "d.diag-0532",
+        "d.diag-0542"
+      ]
+    },
+    {
+      "id": "g9-s1-u2",
+      "title": "授予動詞、使役動詞與完成式進階",
+      "baseline": 105,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g9-s1-u2.w1e",
+        "quality.lex.g9-s1-u2.1as7itl",
+        "quality.lex.g9-s1-u2.kxmguw",
+        "quality.lex.g9-s1-u2.1oc52r3",
+        "g9-s1-u2.t2n",
+        "quality.dialogue.13ez1zo",
+        "quality.dialogue.197u10p",
+        "d.diag-0513",
+        "d.diag-0573",
+        "d.diag-0642",
+        "d.diag-0672"
+      ]
+    },
+    {
+      "id": "g9-s1-u3",
+      "title": "關係代名詞受格省略與介系詞搭配",
+      "baseline": 95,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g9-s1-u3.w1e",
+        "quality.lex.g9-s1-u3.1as7itl",
+        "quality.lex.g9-s1-u3.kxmguw",
+        "quality.lex.g9-s1-u3.1oc52r3",
+        "g9-s1-u3.t2n",
+        "quality.dialogue.1v0vf3v",
+        "quality.dialogue.htkmky",
+        "d.diag-0553",
+        "d.diag-0563",
+        "d.diag-0682"
+      ]
+    },
+    {
+      "id": "g9-s2-u4",
+      "title": "附加問句、名詞子句與間接問句",
+      "baseline": 122,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g9-s2-u4.w1e",
+        "quality.lex.g9-s2-u4.1as7itl",
+        "quality.lex.g9-s2-u4.g0ap6c",
+        "quality.lex.g9-s2-u4.1oc52r3",
+        "g9-s2-u4.t2B",
+        "quality.dialogue.11ckdta",
+        "quality.dialogue.1ghzjtz",
+        "d.diag-0161",
+        "d.diag-0171",
+        "d.diag-0424",
+        "d.diag-0593",
+        "d.diag-0603",
+        "d.diag-0612"
+      ]
+    },
+    {
+      "id": "g9-s2-u5",
+      "title": "閱讀策略、情境溝通與指代推論",
+      "baseline": 85,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g9-s2-u5.w1e",
+        "quality.lex.g9-s2-u5.1as7itl",
+        "quality.lex.g9-s2-u5.g0ap6c",
+        "quality.lex.g9-s2-u5.1oc52r3",
+        "g9-s2-u5.t2n",
+        "quality.dialogue.105m9l4",
+        "quality.dialogue.1y77g7",
+        "d.diag-0704",
+        "d.diag-0743"
+      ]
+    },
+    {
+      "id": "g9-s2-u6",
+      "title": "跨文本圖表閱讀與素養克漏字",
+      "baseline": 122,
+      "previousActivities": 13,
+      "newMissions": 13,
+      "sources": [
+        "g9-s2-u6.w1e",
+        "quality.lex.g9-s2-u6.1csrk2f",
+        "quality.lex.g9-s2-u6.1nin5mp",
+        "quality.lex.g9-s2-u6.elcu97",
+        "g9-s2-u6.t2B",
+        "quality.dialogue.1s1dgsv",
+        "quality.dialogue.vpgnea",
+        "d.diag-0625",
+        "d.diag-0635",
+        "d.diag-0654",
+        "d.diag-0663",
+        "d.diag-0723",
+        "d.diag-0732"
+      ]
+    },
+    {
+      "id": "g10-s1-u1",
+      "title": "五大基本句型與動詞分類",
+      "baseline": 82,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s1-u1.w1e",
+        "g10-s1-u1.w3l",
+        "quality.lex.g10-s1-u1.1g7bo6b",
+        "quality.lex.g10-s1-u1.kw3w1e",
+        "quality.lex.g10-s1-u1.oy5dk3",
+        "g10-s1-u1.t3l",
+        "quality.dialogue.1b1stq",
+        "quality.dialogue.xq3js9",
+        "quality.original.g10-s1-u1.2"
+      ]
+    },
+    {
+      "id": "g10-s1-u2",
+      "title": "動名詞與不定詞深度語義對決",
+      "baseline": 84,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s1-u2.w1e",
+        "quality.lex.g10-s1-u2.12zovi4",
+        "quality.lex.g10-s1-u2.29d0lq",
+        "quality.lex.g10-s1-u2.bix4rw",
+        "quality.lex.g10-s1-u2.diewiu",
+        "g10-s1-u2.t4b",
+        "quality.dialogue.1b1stq",
+        "g10-s1-u2.q1",
+        "d.diag-0776"
+      ]
+    },
+    {
+      "id": "g10-s1-u3",
+      "title": "被動語態進階矩陣與無靈主詞",
+      "baseline": 91,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g10-s1-u3.w1e",
+        "g10-s1-u3.w3l",
+        "quality.lex.g10-s1-u3.u8brz3",
+        "quality.lex.g10-s1-u3.j8y43f",
+        "quality.lex.g10-s1-u3.lcqihj",
+        "g10-s1-u3.t4l",
+        "quality.dialogue.1v291ko",
+        "quality.dialogue.dhhix2",
+        "d.diag-0934",
+        "d.diag-0953"
+      ]
+    },
+    {
+      "id": "g10-s1-u4",
+      "title": "名詞子句與間接問句",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s1-u4.w1e",
+        "g10-s1-u4.w3c",
+        "quality.lex.g10-s1-u4.29d0lq",
+        "quality.lex.g10-s1-u4.9he0e9",
+        "quality.lex.g10-s1-u4.diewiu",
+        "g10-s1-u4.t4B",
+        "quality.dialogue.1geq2l1",
+        "g10-s1-u4.x2",
+        "d.diag-0948"
+      ]
+    },
+    {
+      "id": "g10-s1-u5",
+      "title": "形容詞子句與關係代名詞基礎",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s1-u5.w1e",
+        "g10-s1-u5.w3l",
+        "quality.lex.g10-s1-u5.u8brz3",
+        "quality.lex.g10-s1-u5.j8y43f",
+        "quality.lex.g10-s1-u5.c3neew",
+        "g10-s1-u5.t4l",
+        "quality.dialogue.11y5njn",
+        "g10-s1-u5.x2",
+        "d.diag-0845"
+      ]
+    },
+    {
+      "id": "g10-s1-u6",
+      "title": "副詞子句與邏輯因果轉折",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s1-u6.w1e",
+        "g10-s1-u6.w3l",
+        "quality.lex.g10-s1-u6.u8brz3",
+        "quality.lex.g10-s1-u6.j8y43f",
+        "quality.lex.g10-s1-u6.c3neew",
+        "g10-s1-u6.t4l",
+        "quality.dialogue.1paovcb",
+        "g10-s1-u6.x2",
+        "d.diag-0776"
+      ]
+    },
+    {
+      "id": "g10-s2-u7",
+      "title": "限定與非限定關係子句對比",
+      "baseline": 91,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g10-s2-u7.w1e",
+        "g10-s2-u7.w3l",
+        "quality.lex.g10-s2-u7.1g7bo6b",
+        "quality.lex.g10-s2-u7.kw3w1e",
+        "quality.lex.g10-s2-u7.oy5dk3",
+        "g10-s2-u7.t3l",
+        "quality.dialogue.4lf36a",
+        "quality.dialogue.wb6a84",
+        "d.diag-0844",
+        "d.diag-0853"
+      ]
+    },
+    {
+      "id": "g10-s2-u8",
+      "title": "複合關係代名詞與準關係代名詞",
+      "baseline": 92,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g10-s2-u8.w1e",
+        "g10-s2-u8.w3l",
+        "quality.lex.g10-s2-u8.1g7bo6b",
+        "quality.lex.g10-s2-u8.kw3w1e",
+        "quality.lex.g10-s2-u8.oy5dk3",
+        "g10-s2-u8.t3b",
+        "quality.dialogue.104qs3j",
+        "quality.dialogue.1v291ko",
+        "d.diag-0844",
+        "d.diag-0863"
+      ]
+    },
+    {
+      "id": "g10-s2-u9",
+      "title": "現代論說文核心篇章標記",
+      "baseline": 89,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s2-u9.w1e",
+        "g10-s2-u9.w3l",
+        "quality.lex.g10-s2-u9.1hv0y78",
+        "quality.lex.g10-s2-u9.bsqaur",
+        "quality.lex.g10-s2-u9.1em9zvu",
+        "g10-s2-u9.t4n",
+        "quality.dialogue.3mojoh",
+        "k.paragraph-cohesion.1",
+        "d.diag-0919"
+      ]
+    },
+    {
+      "id": "g10-s2-u10",
+      "title": "學測圖表與多文本綜合剖析",
+      "baseline": 85,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s2-u10.w1e",
+        "g10-s2-u10.w3c",
+        "quality.lex.g10-s2-u10.1hkj344",
+        "quality.lex.g10-s2-u10.1gbzt06",
+        "quality.lex.g10-s2-u10.1skg6pz",
+        "g10-s2-u10.t4b",
+        "quality.dialogue.1uwnr5w",
+        "g10-s2-u10.q1",
+        "d.diag-0888"
+      ]
+    },
+    {
+      "id": "g10-s2-u11",
+      "title": "情態助動詞的推測與批判思考",
+      "baseline": 83,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s2-u11.w1e",
+        "g10-s2-u11.w3c",
+        "quality.lex.g10-s2-u11.u8brz3",
+        "quality.lex.g10-s2-u11.j8y43f",
+        "quality.lex.g10-s2-u11.lcqihj",
+        "quality.dialogue.4kuhxb",
+        "quality.dialogue.1b1stq",
+        "g10-s2-u11.q1",
+        "d.diag-0776"
+      ]
+    },
+    {
+      "id": "g10-s2-u12",
+      "title": "高一全冊素養總結與混合題實戰",
+      "baseline": 82,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g10-s2-u12.w1e",
+        "g10-s2-u12.w3l",
+        "quality.lex.g10-s2-u12.1g7bo6b",
+        "quality.lex.g10-s2-u12.kw3w1e",
+        "quality.lex.g10-s2-u12.oy5dk3",
+        "g10-s2-u12.t3l",
+        "quality.dialogue.1b1stq",
+        "quality.dialogue.xq3js9",
+        "quality.original.g10-s2-u12.2"
+      ]
+    },
+    {
+      "id": "g11-s1-u1",
+      "title": "分詞構句與分詞形容詞全解",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s1-u1.w1e",
+        "g11-s1-u1.w3l",
+        "quality.lex.g11-s1-u1.u8brz3",
+        "quality.lex.g11-s1-u1.j8y43f",
+        "quality.lex.g11-s1-u1.c3neew",
+        "g11-s1-u1.t4l",
+        "quality.dialogue.1geq2l1",
+        "g11-s1-u1.x2",
+        "d.diag-0758"
+      ]
+    },
+    {
+      "id": "g11-s1-u2",
+      "title": "獨立分詞構句與慣用懸置分詞",
+      "baseline": 90,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s1-u2.w1e",
+        "g11-s1-u2.w3c",
+        "quality.lex.g11-s1-u2.29d0lq",
+        "quality.lex.g11-s1-u2.bix4rw",
+        "g11-s1-u2.t1l",
+        "quality.dialogue.1cyn5rv",
+        "quality.dialogue.zz1f6q",
+        "d.diag-0753",
+        "d.diag-0763"
+      ]
+    },
+    {
+      "id": "g11-s1-u3",
+      "title": "假設語氣與條件句全景",
+      "baseline": 104,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g11-s1-u3.w1e",
+        "g11-s1-u3.w3l",
+        "quality.lex.g11-s1-u3.1g7bo6b",
+        "quality.lex.g11-s1-u3.j8y43f",
+        "quality.lex.g11-s1-u3.lcqihj",
+        "g11-s1-u3.t4l",
+        "quality.dialogue.1710iz2",
+        "g11-s1-u3.x1",
+        "d.diag-0774",
+        "d.diag-0784",
+        "d.diag-0822"
+      ]
+    },
+    {
+      "id": "g11-s1-u4",
+      "title": "混合假設語氣與省略 if 倒裝",
+      "baseline": 90,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s1-u4.w1e",
+        "quality.lex.g11-s1-u4.12zovi4",
+        "quality.lex.g11-s1-u4.1suceuu",
+        "quality.lex.g11-s1-u4.t3v1op",
+        "g11-s1-u4.t1B",
+        "quality.dialogue.61430j",
+        "quality.dialogue.19ilq83",
+        "d.diag-0793",
+        "d.diag-0833"
+      ]
+    },
+    {
+      "id": "g11-s1-u5",
+      "title": "否定副詞倒裝與地方副詞倒裝",
+      "baseline": 99,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g11-s1-u5.w1e",
+        "g11-s1-u5.w3l",
+        "quality.lex.g11-s1-u5.u8brz3",
+        "quality.lex.g11-s1-u5.9he0e9",
+        "quality.lex.g11-s1-u5.diewiu",
+        "quality.dialogue.17i3166",
+        "quality.dialogue.1uwnr5w",
+        "d.diag-0793",
+        "d.diag-0803",
+        "d.diag-0812"
+      ]
+    },
+    {
+      "id": "g11-s1-u6",
+      "title": "So / Such / Nor / Neither 倒裝與平衡句型",
+      "baseline": 90,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s1-u6.w1e",
+        "g11-s1-u6.w3c",
+        "quality.lex.g11-s1-u6.29d0lq",
+        "quality.lex.g11-s1-u6.bix4rw",
+        "g11-s1-u6.t1l",
+        "quality.dialogue.1wj4ajy",
+        "quality.dialogue.1geq2l1",
+        "d.diag-0893",
+        "d.diag-0903"
+      ]
+    },
+    {
+      "id": "g11-s2-u7",
+      "title": "分裂句與焦點強調結構",
+      "baseline": 81,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s2-u7.w1e",
+        "g11-s2-u7.w3l",
+        "quality.lex.g11-s2-u7.1g7bo6b",
+        "quality.lex.g11-s2-u7.kw3w1e",
+        "quality.lex.g11-s2-u7.oy5dk3",
+        "g11-s2-u7.t3l",
+        "quality.dialogue.1b1stq",
+        "quality.dialogue.xq3js9",
+        "quality.original.g11-s2-u7.3"
+      ]
+    },
+    {
+      "id": "g11-s2-u8",
+      "title": "讓步子句倒裝與高級連接詞",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s2-u8.w1e",
+        "g11-s2-u8.w3l",
+        "quality.lex.g11-s2-u8.u8brz3",
+        "quality.lex.g11-s2-u8.j8y43f",
+        "quality.lex.g11-s2-u8.c3neew",
+        "g11-s2-u8.t4b",
+        "quality.dialogue.11y5njn",
+        "g11-s2-u8.x2",
+        "d.diag-0797"
+      ]
+    },
+    {
+      "id": "g11-s2-u9",
+      "title": "ESP 科技英語與 AI 論文閱讀",
+      "baseline": 84,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s2-u9.w1e",
+        "g11-s2-u9.w3c",
+        "quality.lex.g11-s2-u9.kack2k",
+        "quality.lex.g11-s2-u9.3wfahd",
+        "quality.lex.g11-s2-u9.1jtharf",
+        "g11-s2-u9.t4B",
+        "quality.dialogue.ucknb4",
+        "g11-s2-u9.q1",
+        "d.diag-0888"
+      ]
+    },
+    {
+      "id": "g11-s2-u10",
+      "title": "ESP 全球永續與綠色能源跨域論證",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g11-s2-u10.w1e",
+        "g11-s2-u10.w3l",
+        "quality.lex.g11-s2-u10.blicgl",
+        "quality.lex.g11-s2-u10.1b00jwh",
+        "quality.lex.g11-s2-u10.1i2tuxn",
+        "g11-s2-u10.t4l",
+        "quality.dialogue.1b1stq",
+        "g11-s2-u10.x2",
+        "d.diag-0888"
+      ]
+    },
+    {
+      "id": "g11-s2-u11",
+      "title": "篇章結構與段落填空破題密碼",
+      "baseline": 98,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "g11-s2-u11.w1e",
+        "g11-s2-u11.w3l",
+        "quality.lex.g11-s2-u11.1hv0y78",
+        "quality.lex.g11-s2-u11.1iqju1x",
+        "quality.lex.g11-s2-u11.lhuook",
+        "g11-s2-u11.t4n",
+        "quality.dialogue.zz1f6q",
+        "k.stories-poems-drama.1",
+        "d.diag-0889",
+        "d.diag-0992"
+      ]
+    },
+    {
+      "id": "g11-s2-u12",
+      "title": "高二全冊融會貫通與頂標衝刺模擬",
+      "baseline": 66,
+      "previousActivities": 7,
+      "newMissions": 7,
+      "sources": [
+        "g11-s2-u12.w1e",
+        "g11-s2-u12.w3l",
+        "quality.lex.g11-s2-u12.1g7bo6b",
+        "quality.lex.g11-s2-u12.j8y43f",
+        "quality.lex.g11-s2-u12.lcqihj",
+        "g11-s2-u12.t4l",
+        "quality.dialogue.1b1stq"
+      ]
+    },
+    {
+      "id": "g12-s1-u1",
+      "title": "學測英文詞彙與綜合測驗極速破題",
+      "baseline": 110,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "g12-s1-u1.w1e",
+        "quality.lex.g12-s1-u1.12zovi4",
+        "quality.lex.g12-s1-u1.1suceuu",
+        "quality.lex.g12-s1-u1.t3v1op",
+        "g12-s1-u1.t1b",
+        "quality.dialogue.k8bdq3",
+        "quality.dialogue.5g9cpf",
+        "d.diag-0872",
+        "d.diag-0922",
+        "d.diag-0962",
+        "d.diag-0972"
+      ]
+    },
+    {
+      "id": "g12-s1-u2",
+      "title": "學測文意選填與篇章結構無懈可擊",
+      "baseline": 85,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s1-u2.w1e",
+        "g12-s1-u2.w3c",
+        "quality.lex.g12-s1-u2.1hv0y78",
+        "quality.lex.g12-s1-u2.bsqaur",
+        "quality.lex.g12-s1-u2.qmfoxj",
+        "g12-s1-u2.t4b",
+        "quality.dialogue.zz1f6q",
+        "g12-s1-u2.q1",
+        "d.diag-0988"
+      ]
+    },
+    {
+      "id": "g12-s1-u3",
+      "title": "學測閱讀測驗長篇與混合題滿分策略",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s1-u3.w1e",
+        "g12-s1-u3.w3l",
+        "quality.lex.g12-s1-u3.u8brz3",
+        "quality.lex.g12-s1-u3.j8y43f",
+        "quality.lex.g12-s1-u3.c3neew",
+        "g12-s1-u3.t4B",
+        "quality.dialogue.zz1f6q",
+        "g12-s1-u3.x2",
+        "d.diag-0888"
+      ]
+    },
+    {
+      "id": "g12-s1-u4",
+      "title": "學測英文作文：看圖寫作與雙面論證",
+      "baseline": 87,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s1-u4.w1e",
+        "g12-s1-u4.w3l",
+        "quality.lex.g12-s1-u4.1hv0y78",
+        "quality.lex.g12-s1-u4.bsqaur",
+        "quality.lex.g12-s1-u4.qmfoxj",
+        "g12-s1-u4.t4B",
+        "quality.dialogue.bi42l1",
+        "g12-s1-u4.x2",
+        "d.diag-0916"
+      ]
+    },
+    {
+      "id": "g12-s1-u5",
+      "title": "統測共同科目與專業科目(一)(二)全真突破",
+      "baseline": 86,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s1-u5.w1e",
+        "g12-s1-u5.w3l",
+        "quality.lex.g12-s1-u5.1d6uhhx",
+        "quality.lex.g12-s1-u5.1sgzb5k",
+        "quality.lex.g12-s1-u5.bct6ia",
+        "g12-s1-u5.t4b",
+        "quality.dialogue.esaw16",
+        "g12-s1-u5.x2",
+        "d.diag-0918"
+      ]
+    },
+    {
+      "id": "g12-s1-u6",
+      "title": "國中教育會考 A++ 決勝題型徹底破解",
+      "baseline": 87,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s1-u6.w1e",
+        "g12-s1-u6.w3l",
+        "quality.lex.g12-s1-u6.u8brz3",
+        "quality.lex.g12-s1-u6.9he0e9",
+        "quality.lex.g12-s1-u6.c3neew",
+        "g12-s1-u6.t4B",
+        "quality.dialogue.1uwnr5w",
+        "g12-s1-u6.x2",
+        "d.diag-0888"
+      ]
+    },
+    {
+      "id": "g12-s2-u7",
+      "title": "GEPT 全民英檢中級/中高級高分全策",
+      "baseline": 87,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s2-u7.w1e",
+        "g12-s2-u7.w3l",
+        "quality.lex.g12-s2-u7.u8brz3",
+        "quality.lex.g12-s2-u7.9he0e9",
+        "quality.lex.g12-s2-u7.c3neew",
+        "g12-s2-u7.t4B",
+        "quality.dialogue.x787sg",
+        "g12-s2-u7.x2",
+        "d.diag-0918"
+      ]
+    },
+    {
+      "id": "g12-s2-u8",
+      "title": "TOEIC 多益 900+ 金色證書核心考點",
+      "baseline": 87,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s2-u8.w1e",
+        "g12-s2-u8.w3l",
+        "quality.lex.g12-s2-u8.1d6uhhx",
+        "quality.lex.g12-s2-u8.1eeg0g7",
+        "quality.lex.g12-s2-u8.bct6ia",
+        "g12-s2-u8.t4B",
+        "quality.dialogue.zz1f6q",
+        "g12-s2-u8.x2",
+        "d.diag-0886"
+      ]
+    },
+    {
+      "id": "g12-s2-u9",
+      "title": "大學 EMI 全英語授課銜接與口頭簡報",
+      "baseline": 82,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s2-u9.w1e",
+        "g12-s2-u9.w3c",
+        "quality.lex.g12-s2-u9.ok287c",
+        "quality.lex.g12-s2-u9.16un03b",
+        "quality.lex.g12-s2-u9.1fonhz8",
+        "g12-s2-u9.t3B",
+        "quality.dialogue.shy6rb",
+        "quality.dialogue.hxoll",
+        "quality.original.g12-s2-u9.2"
+      ]
+    },
+    {
+      "id": "g12-s2-u10",
+      "title": "批判性思維與學術思辨寫作",
+      "baseline": 85,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s2-u10.w1e",
+        "g12-s2-u10.w3c",
+        "quality.lex.g12-s2-u10.1hv0y78",
+        "quality.lex.g12-s2-u10.bsqaur",
+        "quality.lex.g12-s2-u10.qmfoxj",
+        "g12-s2-u10.t4B",
+        "quality.dialogue.15dvthx",
+        "g12-s2-u10.q1",
+        "d.diag-0918"
+      ]
+    },
+    {
+      "id": "g12-s2-u11",
+      "title": "全真跨域綜合大考終極模擬",
+      "baseline": 66,
+      "previousActivities": 7,
+      "newMissions": 7,
+      "sources": [
+        "g12-s2-u11.w1e",
+        "g12-s2-u11.w3l",
+        "quality.lex.g12-s2-u11.1g7bo6b",
+        "quality.lex.g12-s2-u11.j8y43f",
+        "quality.lex.g12-s2-u11.lcqihj",
+        "g12-s2-u11.t4b",
+        "quality.dialogue.1x1q4wc"
+      ]
+    },
+    {
+      "id": "g12-s2-u12",
+      "title": "終生自主學習與英語力全景指南",
+      "baseline": 83,
+      "previousActivities": 9,
+      "newMissions": 9,
+      "sources": [
+        "g12-s2-u12.w1e",
+        "g12-s2-u12.w3l",
+        "quality.lex.g12-s2-u12.1g7bo6b",
+        "quality.lex.g12-s2-u12.kw3w1e",
+        "quality.lex.g12-s2-u12.oy5dk3",
+        "g12-s2-u12.t3b",
+        "quality.dialogue.shy6rb",
+        "quality.dialogue.hxoll",
+        "quality.original.g12-s2-u12.2"
+      ]
+    },
+    {
+      "id": "c-jhs-j1",
+      "title": "句子骨架與基本時態",
+      "baseline": 77,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j1.w1e",
+        "c-jhs-j1.w3c",
+        "c-jhs-j1.w6e",
+        "quality.lex.c-jhs-j1.1as7itl",
+        "quality.lex.c-jhs-j1.kxmguw",
+        "quality.lex.c-jhs-j1.1xsoqom",
+        "c-jhs-j1.t2l",
+        "quality.dialogue.uj5ju5"
+      ]
+    },
+    {
+      "id": "c-jhs-j2",
+      "title": "代名詞、限定詞與數量詞",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j2.w1e",
+        "c-jhs-j2.w3l",
+        "c-jhs-j2.w6m",
+        "quality.lex.c-jhs-j2.1f9nhdm",
+        "quality.lex.c-jhs-j2.g0ap6c",
+        "quality.lex.c-jhs-j2.1oc52r3",
+        "c-jhs-j2.t2b",
+        "quality.dialogue.1v0vf3v"
+      ]
+    },
+    {
+      "id": "c-jhs-j3",
+      "title": "疑問句、情態助動詞與生活溝通",
+      "baseline": 77,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j3.w1e",
+        "c-jhs-j3.w3c",
+        "c-jhs-j3.w6e",
+        "quality.lex.c-jhs-j3.1f9nhdm",
+        "quality.lex.c-jhs-j3.g0ap6c",
+        "quality.lex.c-jhs-j3.1oc52r3",
+        "c-jhs-j3.t2l",
+        "quality.dialogue.egzw1g"
+      ]
+    },
+    {
+      "id": "c-jhs-j4",
+      "title": "連接詞與複句",
+      "baseline": 77,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j4.w1e",
+        "c-jhs-j4.w3l",
+        "c-jhs-j4.w6e",
+        "quality.lex.c-jhs-j4.1f9nhdm",
+        "quality.lex.c-jhs-j4.g0ap6c",
+        "quality.lex.c-jhs-j4.1oc52r3",
+        "c-jhs-j4.t2l",
+        "quality.dialogue.bpwnti"
+      ]
+    },
+    {
+      "id": "c-jhs-j5",
+      "title": "短文閱讀與生活應用文本",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j5.w1e",
+        "c-jhs-j5.w3l",
+        "c-jhs-j5.w6m",
+        "quality.lex.c-jhs-j5.1f9nhdm",
+        "quality.lex.c-jhs-j5.g0ap6c",
+        "quality.lex.c-jhs-j5.1afqyji",
+        "c-jhs-j5.t2b",
+        "quality.dialogue.cf9v58"
+      ]
+    },
+    {
+      "id": "c-jhs-j6",
+      "title": "聽力辨識與語音線索",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j6.w1e",
+        "c-jhs-j6.w3c",
+        "c-jhs-j6.w6e",
+        "quality.lex.c-jhs-j6.1v6l4l4",
+        "quality.lex.c-jhs-j6.1hoe4n4",
+        "c-jhs-j6.p1c",
+        "c-jhs-j6.t2b",
+        "quality.dialogue.1v0vf3v"
+      ]
+    },
+    {
+      "id": "c-jhs-j7",
+      "title": "會考英語整合與訂正策略",
+      "baseline": 79,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-jhs-j7.w1e",
+        "c-jhs-j7.w3l",
+        "c-jhs-j7.w6m",
+        "quality.lex.c-jhs-j7.1f9nhdm",
+        "quality.lex.c-jhs-j7.g0ap6c",
+        "quality.lex.c-jhs-j7.1oc52r3",
+        "c-jhs-j7.t2l",
+        "quality.dialogue.s57pso"
+      ]
+    },
+    {
+      "id": "c-sh-s1",
+      "title": "高中句法與長難句拆解",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s1.w1e",
+        "c-sh-s1.w3l",
+        "c-sh-s1.w6m",
+        "quality.lex.c-sh-s1.1ym94b9",
+        "quality.lex.c-sh-s1.auyojk",
+        "quality.lex.c-sh-s1.iq49dd",
+        "c-sh-s1.t2n",
+        "quality.dialogue.17i3166"
+      ]
+    },
+    {
+      "id": "c-sh-s2",
+      "title": "篇章結構與四空五選策略",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s2.w1e",
+        "c-sh-s2.w3l",
+        "c-sh-s2.w6l",
+        "quality.lex.c-sh-s2.1suceuu",
+        "quality.lex.c-sh-s2.1iqju1x",
+        "c-sh-s2.p1e",
+        "c-sh-s2.t2b",
+        "quality.dialogue.1vog9sj"
+      ]
+    },
+    {
+      "id": "c-sh-s3",
+      "title": "學術長篇閱讀與雙文比較",
+      "baseline": 76,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s3.w1e",
+        "c-sh-s3.w3l",
+        "c-sh-s3.w6e",
+        "quality.lex.c-sh-s3.106mmzx",
+        "quality.lex.c-sh-s3.12ytvwz",
+        "quality.lex.c-sh-s3.oy5dk3",
+        "c-sh-s3.t2B",
+        "quality.dialogue.18hd9ud"
+      ]
+    },
+    {
+      "id": "c-sh-s4",
+      "title": "高中核心詞彙與精確搭配詞",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s4.w1e",
+        "c-sh-s4.w3c",
+        "c-sh-s4.w6e",
+        "quality.lex.c-sh-s4.p3aa9c",
+        "quality.lex.c-sh-s4.kw3w1e",
+        "c-sh-s4.p1e",
+        "c-sh-s4.t2b",
+        "quality.dialogue.1vog9sj"
+      ]
+    },
+    {
+      "id": "c-sh-s5",
+      "title": "中譯英與句子產出邏輯",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s5.w1e",
+        "c-sh-s5.w3c",
+        "c-sh-s5.w6e",
+        "quality.lex.c-sh-s5.pi0p75",
+        "quality.lex.c-sh-s5.vytlwd",
+        "quality.lex.c-sh-s5.clkfr4",
+        "c-sh-s5.t2n",
+        "quality.dialogue.5g9cpf"
+      ]
+    },
+    {
+      "id": "c-sh-s6",
+      "title": "英文寫作與思維論證",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s6.w1e",
+        "c-sh-s6.w3l",
+        "c-sh-s6.w6e",
+        "quality.lex.c-sh-s6.pi0p75",
+        "quality.lex.c-sh-s6.4tegm9",
+        "quality.lex.c-sh-s6.qmfoxj",
+        "c-sh-s6.t2l",
+        "quality.dialogue.1wazpr2"
+      ]
+    },
+    {
+      "id": "c-sh-s7",
+      "title": "學測與統測整卷衝刺",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-sh-s7.w1e",
+        "c-sh-s7.w4m",
+        "c-sh-s7.w6l",
+        "quality.lex.c-sh-s7.3raptm",
+        "quality.lex.c-sh-s7.1sgzb5k",
+        "c-sh-s7.p1c",
+        "c-sh-s7.t2b",
+        "quality.dialogue.1mw60a4"
+      ]
+    },
+    {
+      "id": "c-voc-v1",
+      "title": "工場安全與指令",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-voc-v1.w1e",
+        "c-voc-v1.w3l",
+        "c-voc-v1.w6e",
+        "quality.lex.c-voc-v1.ovtg6b",
+        "quality.lex.c-voc-v1.bgqlkk",
+        "quality.lex.c-voc-v1.1obisii",
+        "c-voc-v1.t2B",
+        "quality.dialogue.72u9ox"
+      ]
+    },
+    {
+      "id": "c-voc-v2",
+      "title": "工具、材料與尺寸規格",
+      "baseline": 76,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-voc-v2.w1e",
+        "c-voc-v2.w3l",
+        "c-voc-v2.w6e",
+        "quality.lex.c-voc-v2.mlnjd3",
+        "quality.lex.c-voc-v2.40dljt",
+        "quality.lex.c-voc-v2.clrms4",
+        "c-voc-v2.t1b",
+        "quality.dialogue.rz9ukq"
+      ]
+    },
+    {
+      "id": "c-voc-v3",
+      "title": "流程與故障排除",
+      "baseline": 76,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-voc-v3.w1e",
+        "c-voc-v3.w4m",
+        "c-voc-v3.w6c",
+        "quality.lex.c-voc-v3.ovtg6b",
+        "quality.lex.c-voc-v3.13lxnr2",
+        "c-voc-v3.p1e",
+        "c-voc-v3.t3l",
+        "quality.dialogue.v2rf6w"
+      ]
+    },
+    {
+      "id": "c-voc-v4",
+      "title": "技術圖表與說明書",
+      "baseline": 79,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-voc-v4.w1e",
+        "c-voc-v4.w3l",
+        "c-voc-v4.w6l",
+        "quality.lex.c-voc-v4.1cf67vr",
+        "quality.lex.c-voc-v4.1wwprhc",
+        "c-voc-v4.p1c",
+        "c-voc-v4.t2n",
+        "quality.dialogue.134wmob"
+      ]
+    },
+    {
+      "id": "c-voc-v5",
+      "title": "職場溝通與技術電子郵件",
+      "baseline": 98,
+      "previousActivities": 10,
+      "newMissions": 10,
+      "sources": [
+        "c-voc-v5.w1e",
+        "c-voc-v5.w3l",
+        "c-voc-v5.w6e",
+        "quality.lex.c-voc-v5.ovtg6b",
+        "quality.lex.c-voc-v5.18qe0n7",
+        "c-voc-v5.p1c",
+        "c-voc-v5.t2l",
+        "quality.dialogue.rz9ukq",
+        "k.voc-workplace-listening.2",
+        "d.diag-1008"
+      ]
+    },
+    {
+      "id": "c-voc-v6",
+      "title": "統測英語類專業科目 (二) 讀寫",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-voc-v6.w1e",
+        "c-voc-v6.w3c",
+        "c-voc-v6.w6e",
+        "quality.lex.c-voc-v6.p9t0ec",
+        "quality.lex.c-voc-v6.1lj9cpn",
+        "c-voc-v6.p1e",
+        "c-voc-v6.t2n",
+        "quality.dialogue.5g9cpf"
+      ]
+    },
+    {
+      "id": "c-voc-v7",
+      "title": "跨國技術現場實務整合",
+      "baseline": 101,
+      "previousActivities": 11,
+      "newMissions": 11,
+      "sources": [
+        "c-voc-v7.w1e",
+        "c-voc-v7.w3l",
+        "c-voc-v7.w5c",
+        "quality.lex.c-voc-v7.1sk62y",
+        "quality.lex.c-voc-v7.1tqnssg",
+        "quality.lex.c-voc-v7.9baacj",
+        "c-voc-v7.p3c",
+        "c-voc-v7.t3B",
+        "quality.dialogue.ep2mss",
+        "k.voc-songs-stories-media.1",
+        "d.diag-1008"
+      ]
+    },
+    {
+      "id": "c-intl-gept",
+      "title": "全民英檢 GEPT 全級別實戰",
+      "baseline": 80,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-gept.w1e",
+        "c-intl-gept.w3c",
+        "c-intl-gept.w6e",
+        "quality.lex.c-intl-gept.p3aa9c",
+        "quality.lex.c-intl-gept.kw3w1e",
+        "c-intl-gept.p1e",
+        "c-intl-gept.t2B",
+        "quality.dialogue.5g9cpf"
+      ]
+    },
+    {
+      "id": "c-intl-toefl",
+      "title": "TOEFL iBT 2026 新制四技能",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-toefl.w1e",
+        "c-intl-toefl.w3c",
+        "c-intl-toefl.w6l",
+        "quality.lex.c-intl-toefl.wa0kub",
+        "quality.lex.c-intl-toefl.16un03b",
+        "c-intl-toefl.p1e",
+        "c-intl-toefl.t2B",
+        "quality.dialogue.5g9cpf"
+      ]
+    },
+    {
+      "id": "c-intl-toeic",
+      "title": "TOEIC 多益國際商務測驗",
+      "baseline": 79,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-toeic.w1e",
+        "c-intl-toeic.w3l",
+        "c-intl-toeic.w6m",
+        "quality.lex.c-intl-toeic.ge93gs",
+        "quality.lex.c-intl-toeic.1nxbkrr",
+        "quality.lex.c-intl-toeic.1uzhvt3",
+        "c-intl-toeic.t1b",
+        "quality.dialogue.14fkvk7"
+      ]
+    },
+    {
+      "id": "b-toeic-u1",
+      "title": "TOEIC 多益 題型 1",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1002",
+        "d.diag-1012",
+        "d.diag-1022",
+        "d.diag-1032",
+        "d.diag-1042"
+      ]
+    },
+    {
+      "id": "b-toeic-u2",
+      "title": "TOEIC 多益 題型 2",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1052",
+        "d.diag-1062",
+        "d.diag-1072",
+        "d.diag-1082",
+        "d.diag-1092"
+      ]
+    },
+    {
+      "id": "b-toeic-u3",
+      "title": "TOEIC 多益 題型 3",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1102",
+        "d.diag-1112",
+        "d.diag-1122",
+        "d.diag-1132",
+        "d.diag-1142"
+      ]
+    },
+    {
+      "id": "b-toeic-u4",
+      "title": "TOEIC 多益 題型 4",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1152",
+        "d.diag-1162",
+        "d.diag-1172",
+        "d.diag-1182",
+        "d.diag-1192"
+      ]
+    },
+    {
+      "id": "b-toeic-u5",
+      "title": "TOEIC 多益 題型 5",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1202",
+        "d.diag-1212",
+        "d.diag-1222",
+        "d.diag-1232",
+        "d.diag-1242"
+      ]
+    },
+    {
+      "id": "c-intl-sat",
+      "title": "Digital SAT Reading and Writing",
+      "baseline": 75,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-sat.w1e",
+        "c-intl-sat.w4m",
+        "c-intl-sat.w6e",
+        "quality.lex.c-intl-sat.p3aa9c",
+        "quality.lex.c-intl-sat.auyojk",
+        "quality.lex.c-intl-sat.iq49dd",
+        "c-intl-sat.t2l",
+        "quality.dialogue.10gxop1"
+      ]
+    },
+    {
+      "id": "b-sat-u1",
+      "title": "Digital SAT 題型 1",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1252",
+        "d.diag-1262",
+        "d.diag-1272",
+        "d.diag-1282",
+        "d.diag-1292"
+      ]
+    },
+    {
+      "id": "b-sat-u2",
+      "title": "Digital SAT 題型 2",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1302",
+        "d.diag-1312",
+        "d.diag-1322",
+        "d.diag-1332",
+        "d.diag-1342"
+      ]
+    },
+    {
+      "id": "b-sat-u3",
+      "title": "Digital SAT 題型 3",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1352",
+        "d.diag-1362",
+        "d.diag-1372",
+        "d.diag-1382",
+        "d.diag-1392"
+      ]
+    },
+    {
+      "id": "b-sat-u4",
+      "title": "Digital SAT 題型 4",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1402",
+        "d.diag-1412",
+        "d.diag-1422",
+        "d.diag-1432",
+        "d.diag-1442"
+      ]
+    },
+    {
+      "id": "b-sat-u5",
+      "title": "Digital SAT 題型 5",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1452",
+        "d.diag-1462",
+        "d.diag-1472",
+        "d.diag-1482",
+        "d.diag-1492"
+      ]
+    },
+    {
+      "id": "c-intl-gre",
+      "title": "GRE General Exam 語意與論證",
+      "baseline": 77,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-gre.w1e",
+        "c-intl-gre.w3l",
+        "c-intl-gre.w6m",
+        "quality.lex.c-intl-gre.13r7zq7",
+        "quality.lex.c-intl-gre.1od8qq2",
+        "quality.lex.c-intl-gre.141j7zk",
+        "c-intl-gre.t1B",
+        "quality.dialogue.5g9cpf"
+      ]
+    },
+    {
+      "id": "b-gre-u1",
+      "title": "GRE Verbal 題型 1",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1502",
+        "d.diag-1512",
+        "d.diag-1522",
+        "d.diag-1532",
+        "d.diag-1542"
+      ]
+    },
+    {
+      "id": "b-gre-u2",
+      "title": "GRE Verbal 題型 2",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1552",
+        "d.diag-1562",
+        "d.diag-1572",
+        "d.diag-1582",
+        "d.diag-1592"
+      ]
+    },
+    {
+      "id": "b-gre-u3",
+      "title": "GRE Verbal 題型 3",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1602",
+        "d.diag-1612",
+        "d.diag-1622",
+        "d.diag-1632",
+        "d.diag-1642"
+      ]
+    },
+    {
+      "id": "b-gre-u4",
+      "title": "GRE Verbal 題型 4",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1652",
+        "d.diag-1662",
+        "d.diag-1672",
+        "d.diag-1682",
+        "d.diag-1692"
+      ]
+    },
+    {
+      "id": "b-gre-u5",
+      "title": "GRE Verbal 題型 5",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1702",
+        "d.diag-1712",
+        "d.diag-1722",
+        "d.diag-1732",
+        "d.diag-1742"
+      ]
+    },
+    {
+      "id": "c-intl-gmat",
+      "title": "GMAT 批判推理與商業長文",
+      "baseline": 78,
+      "previousActivities": 8,
+      "newMissions": 8,
+      "sources": [
+        "c-intl-gmat.w1e",
+        "c-intl-gmat.w3l",
+        "c-intl-gmat.w6m",
+        "quality.lex.c-intl-gmat.wa0kub",
+        "quality.lex.c-intl-gmat.nrp3c2",
+        "quality.lex.c-intl-gmat.3wdeac",
+        "c-intl-gmat.t1B",
+        "quality.dialogue.11d6ejj"
+      ]
+    },
+    {
+      "id": "b-gmat-u1",
+      "title": "GMAT 批判推理 題型 1",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1752",
+        "d.diag-1762",
+        "d.diag-1772",
+        "d.diag-1782",
+        "d.diag-1792"
+      ]
+    },
+    {
+      "id": "b-gmat-u2",
+      "title": "GMAT 批判推理 題型 2",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1802",
+        "d.diag-1812",
+        "d.diag-1822",
+        "d.diag-1832",
+        "d.diag-1842"
+      ]
+    },
+    {
+      "id": "b-gmat-u3",
+      "title": "GMAT 批判推理 題型 3",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1852",
+        "d.diag-1862",
+        "d.diag-1872",
+        "d.diag-1882",
+        "d.diag-1892"
+      ]
+    },
+    {
+      "id": "b-gmat-u4",
+      "title": "GMAT 批判推理 題型 4",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1902",
+        "d.diag-1912",
+        "d.diag-1922",
+        "d.diag-1932",
+        "d.diag-1942"
+      ]
+    },
+    {
+      "id": "b-gmat-u5",
+      "title": "GMAT 批判推理 題型 5",
+      "baseline": 50,
+      "previousActivities": 5,
+      "newMissions": 5,
+      "sources": [
+        "d.diag-1952",
+        "d.diag-1962",
+        "d.diag-1972",
+        "d.diag-1982",
+        "d.diag-1992"
+      ]
+    },
+    {
+      "id": "sem-j1a-unit",
+      "title": "我的校園與日常",
+      "baseline": 187,
+      "previousActivities": 19,
+      "newMissions": 19,
+      "sources": [
+        "school.j1a.word2",
+        "g7-s1-u1.w3m",
+        "quality.lex.g7-s1-u1.ixs14",
+        "quality.lex.g7-s1-u1.f5hu4n",
+        "quality.lex.g7-s1-u1.wa74xa",
+        "g7-s1-u1.q1",
+        "g7-s1-u2.w2l",
+        "k.countability.2",
+        "g7-s1-u3.x1",
+        "quality.original.g7-s1-u3.7",
+        "quality.dialogue.vpgnea",
+        "quality.dialogue.f88cez",
+        "quality.dialogue.1y77g7",
+        "g7-s1-u3.t3l",
+        "g7-s1-u1.t4n",
+        "d.diag-0480",
+        "d.diag-0406",
+        "d.diag-0415",
+        "g7-s1-u1.t4B"
+      ]
+    },
+    {
+      "id": "sem-j1b-unit",
+      "title": "社區生活與合作",
+      "baseline": 217,
+      "previousActivities": 22,
+      "newMissions": 22,
+      "sources": [
+        "school.j1b.word2",
+        "quality.lex.g7-s2-u4.1s23bkx",
+        "quality.lex.g7-s2-u4.1bseo86",
+        "quality.lex.g7-s2-u4.16u4po7",
+        "g7-s2-u5.x1",
+        "quality.lex.g7-s2-u6.19xsssx",
+        "quality.lex.g7-s2-u6.1jgspim",
+        "quality.lex.g7-s2-u6.s1sa91",
+        "g7-s2-u6.q1",
+        "quality.original.g7-s2-u6.8",
+        "quality.dialogue.m8puhf",
+        "quality.dialogue.mp99t0",
+        "quality.dialogue.11ckdta",
+        "quality.dialogue.14uuaue",
+        "school.j1b.read2",
+        "d.diag-0257",
+        "g7-s2-u5.t2n",
+        "d.diag-0278",
+        "d.diag-0318",
+        "d.diag-0435",
+        "d.diag-0465",
+        "g7-s2-u4.t4b"
+      ]
+    },
+    {
+      "id": "sem-j2a-unit",
+      "title": "經驗敘事與安排",
+      "baseline": 239,
+      "previousActivities": 24,
+      "newMissions": 24,
+      "sources": [
+        "school.j2a.word2",
+        "quality.lex.g8-s1-u1.1hrjfz6",
+        "quality.lex.g8-s1-u1.1ym94b9",
+        "quality.lex.g8-s1-u1.qekjks",
+        "g8-s1-u2.w1m",
+        "quality.lex.g8-s1-u2.1as7itl",
+        "quality.lex.g8-s1-u2.kxmguw",
+        "quality.lex.g8-s1-u2.1w9ohx",
+        "g8-s1-u3.w1l",
+        "quality.dialogue.zw9wmt",
+        "quality.dialogue.17nh0ov",
+        "quality.dialogue.rh6pdm",
+        "quality.dialogue.f5m9mb",
+        "d.diag-0261",
+        "d.diag-0481",
+        "g8-s1-u2.t2n",
+        "d.diag-0258",
+        "d.diag-0388",
+        "d.diag-0458",
+        "d.diag-0355",
+        "d.diag-0365",
+        "d.diag-0375",
+        "d.diag-0715",
+        "g8-s1-u1.t4B"
+      ]
+    },
+    {
+      "id": "sem-j2b-unit",
+      "title": "選擇比較與感受",
+      "baseline": 182,
+      "previousActivities": 19,
+      "newMissions": 19,
+      "sources": [
+        "school.j2b.word2",
+        "quality.lex.g8-s2-u4.1mbpbc0",
+        "quality.lex.g8-s2-u4.bczyz3",
+        "quality.lex.g8-s2-u4.wa74xa",
+        "g8-s2-u4.trap1",
+        "school.j2b.listen",
+        "quality.dialogue.garujv",
+        "quality.dialogue.jxujpk",
+        "school.j2b.read1",
+        "d.diag-0288",
+        "g8-s2-u4.r1",
+        "d.diag-0330",
+        "d.diag-0339",
+        "d.diag-0349",
+        "d.diag-0303",
+        "d.diag-0392",
+        "d.diag-0582",
+        "d.diag-0691",
+        "school.j2b.use"
+      ]
+    },
+    {
+      "id": "sem-j3a-unit",
+      "title": "經驗、人物與公共參與",
+      "baseline": 244,
+      "previousActivities": 25,
+      "newMissions": 25,
+      "sources": [
+        "school.j3a.word2",
+        "quality.lex.g9-s1-u1.1mbpbc0",
+        "quality.lex.g9-s1-u1.bczyz3",
+        "quality.lex.g9-s1-u1.1afqyji",
+        "k.past-perfect.1",
+        "g9-s1-u2.trap1",
+        "g9-s1-u1.t2l",
+        "quality.dialogue.1qimvpd",
+        "g9-s1-u2.t2l",
+        "quality.dialogue.eeylxl",
+        "quality.dialogue.105m9l4",
+        "quality.dialogue.1jstkla",
+        "d.diag-0505",
+        "d.diag-0524",
+        "d.diag-0533",
+        "d.diag-0543",
+        "g9-s1-u2.r1",
+        "d.diag-0519",
+        "d.diag-0579",
+        "d.diag-0649",
+        "d.diag-0679",
+        "d.diag-0555",
+        "d.diag-0565",
+        "d.diag-0685",
+        "g9-s1-u1.t4B"
+      ]
+    },
+    {
+      "id": "sem-j3b-unit",
+      "title": "多文本閱讀與溝通整合",
+      "baseline": 296,
+      "previousActivities": 30,
+      "newMissions": 30,
+      "sources": [
+        "school.j3b.word2",
+        "quality.lex.g9-s2-u4.1mbpbc0",
+        "quality.lex.g9-s2-u4.bczyz3",
+        "quality.lex.g9-s2-u4.1afqyji",
+        "k.guided-discussion.1",
+        "g9-s2-u6.w1m",
+        "quality.lex.g9-s2-u6.1csrk2f",
+        "quality.lex.g9-s2-u6.1rl44io",
+        "quality.lex.g9-s2-u6.15v6o4n",
+        "g9-s2-u4.t3l",
+        "quality.dialogue.zw9wmt",
+        "g9-s2-u5.t3l",
+        "quality.dialogue.8o3udu",
+        "g9-s2-u6.t3l",
+        "quality.dialogue.14uuaue",
+        "d.diag-0166",
+        "d.diag-0175",
+        "d.diag-0429",
+        "d.diag-0599",
+        "d.diag-0609",
+        "d.diag-0619",
+        "d.diag-0707",
+        "g9-s2-u5.r1",
+        "d.diag-0624",
+        "d.diag-0634",
+        "d.diag-0654",
+        "d.diag-0664",
+        "d.diag-0724",
+        "d.diag-0734",
+        "g9-s2-u4.t3b"
+      ]
+    },
+    {
+      "id": "sem-h1a-unit",
+      "title": "句構、身份與觀點",
+      "baseline": 304,
+      "previousActivities": 31,
+      "newMissions": 31,
+      "sources": [
+        "school.h1a.word2",
+        "g10-s1-u1.w3m",
+        "quality.lex.g10-s1-u1.p3aa9c",
+        "quality.lex.g10-s1-u1.kw3w1e",
+        "quality.lex.g10-s1-u1.lcqihj",
+        "quality.original.g10-s1-u1.4",
+        "g10-s1-u2.w1l",
+        "g10-s1-u2.q1",
+        "g10-s1-u3.w2c",
+        "g10-s1-u4.w1e",
+        "g10-s1-u4.x1",
+        "g10-s1-u5.w1l",
+        "g10-s1-u5.x1",
+        "g10-s1-u6.w2m",
+        "g10-s1-u1.t1l",
+        "quality.dialogue.1v291ko",
+        "quality.dialogue.dhhix2",
+        "g10-s1-u3.t1l",
+        "quality.dialogue.61430j",
+        "quality.dialogue.1t2x8k8",
+        "quality.dialogue.wb6a84",
+        "g10-s1-u6.t4l",
+        "d.diag-0773",
+        "d.diag-0783",
+        "d.diag-0937",
+        "d.diag-0956",
+        "d.diag-0943",
+        "g10-s1-u5.t2n",
+        "d.diag-0850",
+        "g10-s1-u2.t1b",
+        "g10-s1-u4.t4B"
+      ]
+    },
+    {
+      "id": "sem-h1b-unit",
+      "title": "文本、數據與媒體判讀",
+      "baseline": 392,
+      "previousActivities": 40,
+      "newMissions": 40,
+      "sources": [
+        "school.h1b.word2",
+        "g10-s2-u7.w3m",
+        "quality.lex.g10-s2-u7.p3aa9c",
+        "quality.lex.g10-s2-u7.kw3w1e",
+        "quality.lex.g10-s2-u7.lcqihj",
+        "g10-s2-u8.w1c",
+        "g10-s2-u8.x1",
+        "g10-s2-u9.w2l",
+        "quality.lex.g10-s2-u9.a4csp5",
+        "quality.lex.g10-s2-u9.4tegm9",
+        "quality.lex.g10-s2-u9.1em9zvu",
+        "g12-s2-u10.q1",
+        "g10-s2-u10.w3l",
+        "quality.lex.g10-s2-u10.1hkj344",
+        "quality.lex.g10-s2-u10.1gbzt06",
+        "quality.lex.g10-s2-u10.16un03b",
+        "g10-s2-u11.w1e",
+        "g10-s2-u11.x1",
+        "g10-s2-u12.w2e",
+        "k.culture-etiquette-hs.2",
+        "quality.original.g10-s2-u12.10",
+        "quality.dialogue.7dovdr",
+        "quality.dialogue.ydepfa",
+        "quality.dialogue.wdrlm",
+        "g10-s2-u9.t2l",
+        "quality.dialogue.t0k7rn",
+        "g10-s2-u10.t1l",
+        "quality.dialogue.1i1w23o",
+        "quality.dialogue.yek0g5",
+        "school.h1b.read2",
+        "d.diag-0849",
+        "d.diag-0857",
+        "d.diag-0865",
+        "d.diag-0912",
+        "g12-s1-u4.r1",
+        "d.diag-0887",
+        "d.diag-0773",
+        "d.diag-0783",
+        "g10-s2-u8.t1b",
+        "g10-s2-u10.t3b"
+      ]
+    },
+    {
+      "id": "sem-h2a-unit",
+      "title": "敘事視角與假設推演",
+      "baseline": 359,
+      "previousActivities": 36,
+      "newMissions": 36,
+      "sources": [
+        "school.h2a.word2",
+        "g11-s1-u1.w3m",
+        "quality.lex.g11-s1-u1.p3aa9c",
+        "quality.lex.g11-s1-u1.kw3w1e",
+        "quality.lex.g11-s1-u1.lcqihj",
+        "g11-s1-u2.w1c",
+        "g11-s1-u2.x3",
+        "g11-s1-u3.w3m",
+        "g11-s1-u4.w1m",
+        "g11-s1-u4.w3l",
+        "g11-s1-u5.w2e",
+        "gr.agreement",
+        "g11-s1-u6.w3e",
+        "g11-s1-u1.t3l",
+        "quality.dialogue.1geq2l1",
+        "g11-s1-u2.t3l",
+        "quality.dialogue.1b1stq",
+        "g11-s1-u3.t3l",
+        "quality.dialogue.1paovcb",
+        "quality.dialogue.1bhrxh5",
+        "quality.dialogue.15viupd",
+        "g11-s1-u6.t2l",
+        "d.diag-0755",
+        "d.diag-0764",
+        "g11-s1-u3.t2n",
+        "d.diag-0779",
+        "d.diag-0788",
+        "d.diag-0828",
+        "d.diag-0797",
+        "g11-s1-u4.r1",
+        "d.diag-0805",
+        "d.diag-0814",
+        "d.diag-0894",
+        "d.diag-0904",
+        "g11-s1-u1.t2b",
+        "g11-s1-u4.t2b"
+      ]
+    },
+    {
+      "id": "sem-h2b-unit",
+      "title": "永續議題與論證限制",
+      "baseline": 363,
+      "previousActivities": 37,
+      "newMissions": 37,
+      "sources": [
+        "school.h2b.word2",
+        "g11-s2-u7.w3m",
+        "quality.lex.g11-s2-u7.p3aa9c",
+        "quality.lex.g11-s2-u7.kw3w1e",
+        "quality.lex.g11-s2-u7.lcqihj",
+        "g11-s2-u8.w2m",
+        "g11-s2-u8.x2",
+        "g11-s2-u9.w3m",
+        "quality.lex.g11-s2-u9.1ozgveh",
+        "quality.lex.g11-s2-u9.1d9ek6z",
+        "quality.lex.g11-s2-u9.1jtharf",
+        "g11-s2-u10.w2m",
+        "quality.lex.g11-s2-u10.1w8ohcb",
+        "quality.lex.g11-s2-u10.1pkeh9q",
+        "quality.lex.g11-s2-u10.16cbenf",
+        "g10-s2-u10.x1",
+        "g11-s2-u11.w2l",
+        "quality.lex.g11-s2-u11.a4csp5",
+        "quality.lex.g11-s2-u11.bsqaur",
+        "quality.lex.g11-s2-u11.lhuook",
+        "g11-s2-u12.w2e",
+        "g11-s2-u7.t1l",
+        "quality.dialogue.shy6rb",
+        "quality.dialogue.dhhix2",
+        "quality.dialogue.1710iz2",
+        "quality.dialogue.7dovdr",
+        "g11-s2-u10.t3l",
+        "g11-s2-u11.t4l",
+        "quality.original.g11-s2-u7.1",
+        "g11-s2-u8.t4n",
+        "d.diag-0799",
+        "d.diag-0882",
+        "d.diag-0911",
+        "g11-s2-u11.t2n",
+        "d.diag-0998",
+        "g11-s2-u8.t1b",
+        "g11-s2-u10.t4B"
+      ]
+    },
+    {
+      "id": "sem-h3a-unit",
+      "title": "多文本綜合與論說表達",
+      "baseline": 263,
+      "previousActivities": 27,
+      "newMissions": 27,
+      "sources": [
+        "school.h3a.word2",
+        "g12-s1-u1.w3e",
+        "quality.lex.g12-s1-u1.1g7bo6b",
+        "quality.lex.g12-s1-u1.j8y43f",
+        "quality.lex.g12-s1-u1.lcqihj",
+        "g12-s1-u2.w2m",
+        "quality.lex.g12-s1-u2.1eckznw",
+        "quality.lex.g12-s1-u2.vytlwd",
+        "quality.lex.g12-s1-u2.10m5vkn",
+        "g12-s1-u3.w2m",
+        "g12-s1-u3.q1",
+        "g12-s1-u4.w3e",
+        "g10-s2-u9.x1",
+        "quality.dialogue.14fkvk7",
+        "quality.dialogue.xq3js9",
+        "g12-s1-u3.t1l",
+        "quality.dialogue.10gxop1",
+        "g12-s1-u1.t4n",
+        "d.diag-0879",
+        "d.diag-0929",
+        "d.diag-0968",
+        "d.diag-0978",
+        "d.diag-0986",
+        "d.diag-0886",
+        "d.diag-0913",
+        "d.diag-0920",
+        "g12-s1-u2.t4b"
+      ]
+    },
+    {
+      "id": "sem-h3b-unit",
+      "title": "跨文化專題與自主學習",
+      "baseline": 223,
+      "previousActivities": 23,
+      "newMissions": 23,
+      "sources": [
+        "school.h3b.word2",
+        "g12-s2-u9.w3e",
+        "quality.lex.g12-s2-u9.wa0kub",
+        "quality.lex.g12-s2-u9.16un03b",
+        "quality.lex.g12-s2-u9.1fonhz8",
+        "quality.original.g12-s2-u9.3",
+        "g12-s2-u10.w1l",
+        "quality.lex.g12-s2-u10.1ei54nx",
+        "quality.lex.g12-s2-u10.1o9d1uc",
+        "quality.lex.g12-s2-u10.1ghamb3",
+        "g12-s2-u10.x2",
+        "g12-s2-u12.w2m",
+        "quality.lex.g12-s2-u12.s9804r",
+        "quality.lex.g12-s2-u12.kw3w1e",
+        "g12-s2-u12.x1",
+        "quality.original.g12-s2-u12.6",
+        "quality.dialogue.1uwnr5w",
+        "quality.dialogue.ucknb4",
+        "g12-s2-u10.t4l",
+        "g12-s2-u12.t2l",
+        "g12-s2-u10.r1",
+        "d.diag-0920",
+        "g12-s2-u9.t4B"
+      ]
+    }
+  ]
+}

@@ -2934,6 +2934,7 @@ readKnowledgeRoute();
 root.addEventListener('change', e => handleSchoolWordChange(e.target, render));
 root.addEventListener('submit', e => { if (e.target.matches('.word-search,.word-spelling')) { e.preventDefault(); handleSchoolWordSubmit(e.target, render); } });
 
+root.addEventListener('keydown', e => { if(e.target.id==='fc-recall-answer' && e.key==='Enter' && !e.isComposing && e.keyCode!==229){e.preventDefault();handleFlashcardEvents({dataset:{fcRecall:'check'}},render);} });
 root.addEventListener('change', e => handleFullWordChange(e.target, render));
 root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.preventDefault();handleFullWordSubmit(e.target,render);} });
 

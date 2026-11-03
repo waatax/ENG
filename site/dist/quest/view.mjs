@@ -2,12 +2,15 @@ import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
 import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=learn20261030';
-import * as sound from './sound.mjs?v=learn20261030';
-import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=learn20261030';
-import {labView} from './lab.mjs?v=learn20261030';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=joy20261103';
+import * as sound from './sound.mjs?v=joy20261103';
+import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=joy20261103';
+import {labView} from './lab.mjs?v=joy20261103';
+import {recordRecall} from '../recall.mjs?v=joy20261103';
+import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=joy20261103';
+import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=joy20261103';
 
-const V = 'learn20261030';
+const V = 'joy20261103';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
@@ -146,6 +149,7 @@ function modalView() {
   let inner = '';
   if (ui.modal === 'placement') inner = `<h2>先選擇檢測題數</h2><p class="muted">減少基礎重複取樣，最後保留 SAT／GRE／GMAT 三方向進階推理題。不限時，可以暫停接續；完成後統一看正解，避免影響後面的判斷。</p><div class="placement-options">${[[10,'快速定位','7 題一般英語＋3 題進階挑戰'],[20,'標準檢測','14 題一般英語＋6 題進階挑戰'],[30,'深入確認','21 題一般英語＋9 題進階挑戰']].map(([n,title,desc])=>`<button class="placement-size" data-act="placement-start" data-size="${n}"><b>${n}<small> 題</small></b><span>${title}${n===20?' · 建議':''}<small>${desc}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div><p class="muted small">只評估本次字詞、句型、閱讀與聽辨取樣，未測口說與寫作。結果用來推薦課程起點，不能換算正式 CEFR 或考試成績。</p>`;
   else if (ui.modal === 'guide') inner = guideView(ui.guide);
+  else if (ui.modal === 'reader') inner = renderGradedReaderModal(course, ui.readerStory, ui, glossary());
   else if (ui.modal === 'tracks') inner = `<h2>選擇段落</h2><div class="track-list">${course.index.sections.map(s => `<button class="track-opt ${s.color} ${ui.track === s.id ? 'on' : ''}" data-act="track" data-id="${s.id}"><b>${game.trackUnlocked(s.id) ? '' : '🔒 '}第 ${s.no} 段 · ${esc(s.title)}</b><small>${esc(s.level)} · ${s.units.length} 單元${game.sectionDone(s.id) ? ' · ✓ 完成' : ''}</small></button>`).join('')}</div><h3>目標分支</h3><div class="track-list">${course.index.branches.map(b => `<button class="track-opt ${b.color} ${ui.track === b.id ? 'on' : ''}" data-act="track" data-id="${b.id}"><b>${b.icon} ${esc(b.title)}</b><small>${esc(b.level)} · ${b.units.length} 單元</small></button>`).join('')}</div>`;
   else if (ui.modal === 'exit') inner = `<div class="center">${mascot('sad', 88)}<h2>要先休息一下嗎？</h2><p>剛剛的作答已經保存，回來可以接著做。</p><div class="row center"><button class="btn primary" data-act="close">繼續學習</button><button class="btn ghost" data-act="pause">先離開</button></div></div>`;
   else if (ui.modal === 'shop') { const st = game.state; inner = `<h2>🧊 凍結卡</h2><p>漏掉一天時會自動使用一張，連續天數不會中斷（那天不加一）。最多持有 ${MAX_FREEZES} 張。</p><p>你有 💎 ${st.gems}，凍結卡 ${st.freezes}/${MAX_FREEZES}。</p><button class="btn primary" data-act="buy" ${st.gems < FREEZE_COST || st.freezes >= MAX_FREEZES ? 'disabled' : ''}>用 💎 ${FREEZE_COST} 兌換</button><p class="muted small">寶石來自每日任務、單元寶箱與成就，不能購買。</p>`; }
@@ -180,15 +184,15 @@ function itemView(it, s) {
   const a = ui.a, locked = !!s.feedback;
   if (it.type === 'info') return `<section class="info-card"><p class="tag">📐 新觀念</p><h1>${esc(it.title)}</h1>${it.formula ? `<p class="formula">${esc(it.formula)}</p>` : ''}${it.body ? `<p>${esc(it.body)}</p>` : ''}${it.example ? `<p class="example">${sayBtn(it.example)} <span lang="en">${esc(it.example)}</span></p>` : ''}</section>`;
   if (it.type === 'line') return `<section class="story-line">${mascot('happy', 56)}<div class="bubble"><b>${esc(it.speaker || '')}</b><p lang="en">${sayBtn(it.en)} ${esc(it.en)}</p>${a.zh ? `<p class="zh">${esc(it.zh)}</p>` : `<button class="link" data-act="zh">顯示中文</button>`}${a.zh && it.note ? `<p class="muted small">${esc(it.note)}</p>` : ''}</div></section>`;
-  const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="prompt-say" data-text="${esc(it.prompt)}" aria-label="朗讀題目" title="朗讀題目">🔊</button>${it.options?.length ? ` <button class="btn small speech-question-options-btn" data-act="question-all-say" aria-label="朗讀題目與選項" title="朗讀題目與選項">🔊 朗讀題與選項</button>` : ''}</h1>`;
+  const head = `<h1 class="prompt">${esc(it.prompt)} <button class="say" data-act="question-say" aria-label="朗讀完整題目" title="朗讀題目">🔊</button>${it.options?.length ? ` <button class="btn small speech-question-options-btn" data-act="question-all-say" aria-label="朗讀題目與選項" title="朗讀題目與選項">🔊 朗讀題與選項</button>` : ''}</h1>`;
   const passage = it.passage ? `<details class="passage" open><summary>${esc(it.passageTitle || '閱讀短文')}</summary><button class="btn small" data-act="prompt-say" data-text="${esc(it.passage)}">🔊 聽閱讀短文</button><p lang="en">${esc(it.passage)}</p></details>` : '';
   const stim = it.text ? `<div class="stimulus">${it.type !== 'listen' ? (it.audio ? sayBtn(it.audio, it.mp3) : `<button class="say" data-act="prompt-say" data-text="${esc(it.text)}" aria-label="朗讀題幹">🔊</button>`) : ''}<p lang="en">${esc(it.text)}</p>${it.textZh && ((locked && !isAssessment(s.mode)) || a.hint) ? `<small>${esc(it.textZh)}</small>` : ''}</div>` : '';
   const listenBox = (it.type === 'listen' || (it.type === 'input' && it.audio && !it.text)) ? `<div class="listen-box">${a.transcript ? `<p class="transcript" lang="en">${esc(it.audio)}</p><small class="muted">已改用文字，這題不算聽力。</small>` : `${sayBtn(it.audio, it.mp3, true, '播放聲音')}<button class="say slow" data-act="say" data-slow="1" data-text="${esc(it.audio)}" aria-label="慢速播放">🐢</button><button class="link" data-act="transcript" ${locked ? 'disabled' : ''}>不方便聽？改看文字</button>`}</div>` : '';
   const hint = (a.hint || s.hint) && !locked ? `<div class="hint">💡 ${esc(hintText(it))}</div>` : '';
   let body = '';
-  if(it.type==='multi'){const picked=locked?String(fb(s)).split(' || '):a.tokens;const opts=shuffle(it.options,it.id+s.id);body=`<p class="multi-instruction">選擇 ${it.selectCount} 個答案 · 已選 ${picked.length}/${it.selectCount}</p><div class="options" role="group" aria-label="多選選項">${opts.map((o,i)=>`<button class="opt ${picked.includes(o)?'sel':''} ${locked&&!isAssessment(s.mode)&&it.correctAnswers.includes(o)?'right':''}" data-act="multi" data-v="${esc(o)}" aria-pressed="${picked.includes(o)}" ${locked?'disabled':''}><kbd>${i+1}</kbd><span lang="en">${esc(o)}</span><span class="opt-say" data-act="prompt-say" data-text="${esc(o)}" role="button" tabindex="0" aria-label="朗讀選項 ${i + 1}" title="朗讀此選項">🔊</span></button>`).join('')}</div>`;} else if (it.type === 'choice' || it.type === 'listen') {
+  if(it.type==='multi'){const picked=locked?String(fb(s)).split(' || '):a.tokens;const opts=shuffle(it.options,it.id+s.id);body=`<p class="multi-instruction">選擇 ${it.selectCount} 個答案 · 已選 ${picked.length}/${it.selectCount}</p><div class="options" role="group" aria-label="多選選項">${opts.map((o,i)=>`<div class="option-row"><button class="opt ${picked.includes(o)?'sel':''} ${locked&&!isAssessment(s.mode)&&it.correctAnswers.includes(o)?'right':''}" data-act="multi" data-v="${esc(o)}" aria-pressed="${picked.includes(o)}" ${locked?'disabled':''}><kbd>${i+1}</kbd><span lang="en">${esc(o)}</span></button><button class="opt-say" data-act="prompt-say" data-text="${esc(o)}" aria-label="朗讀選項 ${i + 1}" title="朗讀此選項">🔊</button></div>`).join('')}</div>`;} else if (it.type === 'choice' || it.type === 'listen') {
     const opts = shuffle(it.options, it.id + s.id);
-    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (isAssessment(s.mode) ? (o === fb(s) ? 'sel' : '') : o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span><span class="opt-say" data-act="prompt-say" data-text="${esc(o)}" role="button" tabindex="0" aria-label="朗讀選項 ${i + 1}" title="朗讀此選項">🔊</span></button>`; }).join('')}</div>`;
+    body = `<div class="options ${opts.some(o => o.length > 40) ? 'long' : ''}" role="group" aria-label="選項">${opts.map((o, i) => { const cls = locked ? (isAssessment(s.mode) ? (o === fb(s) ? 'sel' : '') : o === it.answer ? 'right' : o === fb(s) ? 'wrong' : '') : (a.value === o ? 'sel' : ''); return `<div class="option-row"><button class="opt ${cls}" data-act="choose" data-v="${esc(o)}" aria-pressed="${a.value === o}" ${locked ? 'disabled' : ''}><kbd>${i + 1}</kbd><span ${/[a-z]/i.test(o) && !/[㐀-鿿]/.test(o) ? 'lang="en"' : ''}>${esc(o)}</span></button><button class="opt-say" data-act="prompt-say" data-text="${esc(o)}" aria-label="朗讀選項 ${i + 1}" title="朗讀此選項">🔊</button></div>`; }).join('')}</div>`;
   } else if (it.type === 'build') {
     const bank = shuffle(it.words.map((w, i) => ({ w, i })), it.id + s.id);
     const given = it.given ? it.given.split(' ').map(w => `<span class="tok given" lang="en">${esc(w)}</span>`).join('') : '';
@@ -223,7 +227,7 @@ function lessonFooter(it, s) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
     const ctx = feedbackContext(it, f);
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索 · 錯題解說</h2><p class="small">答錯是進步的階梯！先理解為什麼，再重試一次。</p><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${ctx.diagnosis ? `<p class="diagnosis"><b>🔍 錯在哪裡：</b>${esc(ctx.diagnosis)}</p>` : ''}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${ctx.evidence ? `<p class="evidence"><b>📖 原文線索：</b><span lang="en">${esc(ctx.evidence)}</span> <button class="say" data-act="prompt-say" data-text="${esc(ctx.evidence)}" aria-label="朗讀原文線索">🔊</button></p>` : ''}${!f.ok && !ctx.diagnosis ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div><button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索 · 錯題解說</h2><p class="small">答錯是進步的階梯！先理解為什麼，再重試一次。</p><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${ctx.diagnosis ? `<p class="diagnosis"><b>🔍 錯在哪裡：</b>${esc(ctx.diagnosis)}</p>` : ''}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${ctx.evidence ? `<p class="evidence"><b>📖 原文線索：</b><span lang="en">${esc(ctx.evidence)}</span> <button class="say" data-act="prompt-say" data-text="${esc(ctx.evidence)}" aria-label="朗讀原文線索">🔊</button></p>` : ''}${!f.ok && !ctx.diagnosis ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div>${renderShadowingWidget(answerText(it), 'lesson-fb')}<button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type==='multi'?ui.a.tokens.length===it.selectCount:it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement','exam-check'].includes(s.mode);
@@ -322,12 +326,16 @@ function practicePage() {
    <section class="card practice violet"><h2>🎧 聽力特訓</h2><p>只練聽音選字、聽句選意思與聽寫。</p><button class="btn primary" data-act="practice" data-mode="listen" ${learned ? '' : 'disabled'}>開始聽力</button></section>
   </div>
   <section class="card"><h2>🔤 單字特訓</h2><p class="muted">1,000 張校對過的國小與國中聯想字卡，搭配既有的單字音檔作答；無音檔時使用裝置語音。</p><div class="chips">${Object.keys(cats).map(c => `<button class="chip ${c === cat ? 'on' : ''}" data-act="vcat" data-id="${esc(c)}">${esc(c)} <small>${cats[c].reduce((n, s) => n + s.size, 0)}</small></button>`).join('')}</div><div class="sets">${(cats[cat] || []).map(s => `<button class="set" data-act="practice" data-mode="vocab" data-id="${s.id}"><span>${s.icon}</span><b>${esc(s.title)}</b><small>${s.size} 字</small></button>`).join('')}</div></section>
+  ${renderSpeakingDictationStudio(ui, storage)}
+  ${renderWritingStudio(ui, storage)}
   ${learned ? '' : '<p class="muted">先在「學習」完成一個課程，個人化練習和聽力特訓就會打開。</p>'}`;
 }
 function storiesPage() {
-  const by = {}; for (const s of course.index.stories) (by[s.section] ||= []).push(s);
-  return `<section class="page-head">${mascot('happy', 72)}<div><p class="eyebrow">故事</p><h1>邊聽邊讀，跟著情境走</h1><p class="muted">一句一句播放，途中回答理解題。讀完 +${XP.story} XP，重讀 +${XP.storyReplay}。</p></div></section>
-  ${course.index.sections.filter(s => by[s.id]).map(sec => `<section class="story-sec"><h2>第 ${sec.no} 段 · ${esc(sec.title)} <small class="muted">${esc(sec.level)}</small></h2><div class="story-grid">${by[sec.id].map(st => { const done = game.state.stories[st.id]; return `<button class="story-card ${done ? 'done' : ''}" data-act="story" data-id="${st.id}"><span class="cover">${esc((st.topic || '📖').split(' ')[0])}</span><b>${esc(st.title)}</b><small>${esc(st.cefr)} · ${st.steps} 步${done ? ' · ✓ 已讀' : ''}</small></button>`; }).join('')}</div></section>`).join('')}`;
+  const storyCefr = ui.storyCefr || 'ALL';
+  const by = {}; for (const s of course.index.stories) if (storyCefr === 'ALL' || s.cefr === storyCefr) (by[s.section] ||= []).push(s);
+  return `<section class="page-head">${mascot('happy', 72)}<div><p class="eyebrow">故事 · 分級閱讀與點字即查共讀館</p><h1>邊聽邊讀，跟著情境走</h1><p class="muted">支援「🎮 互動闖關（回答理解題 +${XP.story} XP）」與「📖 全文共讀（點任何單字即查中文釋義、發音與開口跟讀）」雙模式。</p></div></section>
+  <div class="chips story-cefr-bar" role="group" aria-label="篩選故事 CEFR 等級">${['ALL', 'Pre-A1', 'A1', 'A2', 'B1', 'B2', 'C1'].map(lv => `<button type="button" class="chip ${storyCefr === lv ? 'on' : ''}" data-act="story-cefr" data-cefr="${lv}">${lv === 'ALL' ? '全部 51 篇故事' : lv}</button>`).join('')}</div>
+  ${course.index.sections.filter(s => by[s.id]).map(sec => `<section class="story-sec"><h2>第 ${sec.no} 段 · ${esc(sec.title)} <small class="muted">${esc(sec.level)}</small></h2><div class="story-grid">${by[sec.id].map(st => { const done = game.state.stories[st.id]; return `<div class="story-card-wrap"><button class="story-card ${done ? 'done' : ''}" data-act="story" data-id="${st.id}"><span class="cover">${esc((st.topic || '📖').split(' ')[0])}</span><b>${esc(st.title)}</b><small>${esc(st.cefr)} · ${st.steps} 步${done ? ' · ✓ 已讀' : ''}</small></button><button type="button" class="btn small ghost story-reader-btn" data-act="read-story" data-id="${st.id}">📖 全文共讀・點字即查</button></div>`; }).join('')}</div></section>`).join('')}`;
 }
 function libraryPage() {
   const t = course.track(ui.track);
@@ -483,6 +491,15 @@ root.addEventListener('click', async e => {
     case 'reset': ui.modal = 'reset'; render(); break;
     case 'reset-yes': game.reset(); ui.modal = null; ui.step = 0; ui.track = 's1'; render(true); break;
     case 'export': { const blob = new Blob([game.export()], { type: 'application/json' }), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = `english-quest-${game.today()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); break; }
+    case 'lab-rate': {
+      const group=el.closest('.mission-rating');
+      if(!group || el.disabled)break;
+      const saved=recordRecall(storage,el.dataset.id,el.dataset.rating);
+      const status=group.querySelector('.mission-status');
+      if(saved){group.querySelectorAll('button').forEach(b=>b.disabled=true);status.textContent=`✓ 已自評 · ${saved.days} 天後回想（${new Date(saved.due).toLocaleDateString('zh-TW')}）`;}
+      else status.textContent='無法儲存複習安排，請確認瀏覽器儲存空間。';
+      break;
+    }
     case 'prompt-say': narrate(el.dataset.text,el.dataset.slow==='1'); break;
     case 'answer-say': if (s?.feedback && !isAssessment(s.mode)) narrate(answerText(it), el.dataset.slow === '1'); break;
     case 'explain-say': if (s?.feedback && !isAssessment(s.mode)) { const ctx = feedbackContext(it, s.feedback); narrate(s.feedback.ok ? joinSpeech([it.why, ctx.evidence && `原文線索：${ctx.evidence}`]) : errorFeedbackSpeechText(it, s.feedback.value, ctx)); } break;
@@ -514,10 +531,142 @@ root.addEventListener('click', async e => {
     case 'flag': { const on = game.flag(el.dataset.id); toast(on ? '🚩 已記下，下載備份時會附上。謝謝！' : '已取消回報'); root.innerHTML = lessonView(); break; }
     case 'streak-ok': ui.streakShown = true; render(true); break;
     case 'done': { const r = game.result; game.clearResult(); ui.streakShown = false; if (r?.mode === 'jump' && r.passed) { ui.track = r.ref; game.update({start:r.ref}); } render(true); break; }
+    // minimal pairs, dictation, shadowing, graded reader & writing studio
+    case 'mp-select': ui.mpIdx = Number(el.dataset.idx) || 0; ui.pairIdx = 0; ui.mpFeedback = null; render(); break;
+    case 'mp-pair': ui.pairIdx = Number(el.dataset.idx) || 0; ui.mpFeedback = null; render(); break;
+    case 'mp-play-secret': {
+      ui.mpSecretSide = Math.random() < 0.5 ? 0 : 1;
+      const grp = MINIMAL_PAIRS[(ui.mpIdx || 0) % MINIMAL_PAIRS.length];
+      const pr = grp.pairs[(ui.pairIdx || 0) % grp.pairs.length];
+      const word = ui.mpSecretSide === 0 ? pr[0] : pr[2];
+      playItem(word, '', false);
+      break;
+    }
+    case 'mp-guess': {
+      const guess = Number(el.dataset.guess);
+      const secret = ui.mpSecretSide === 1 ? 1 : 0;
+      const grp = MINIMAL_PAIRS[(ui.mpIdx || 0) % MINIMAL_PAIRS.length];
+      const pr = grp.pairs[(ui.pairIdx || 0) % grp.pairs.length];
+      const ok = guess === secret;
+      const stStore = readStudioStore(storage);
+      if (ok) writeStudioStore({ minimalPairsDone: (Number(stStore.minimalPairsDone) || 0) + 1 }, storage);
+      ui.mpFeedback = { ok, msg: ok ? `✔ 聽辨正確！神秘音是「${secret === 0 ? pr[0] : pr[2]}」（${secret === 0 ? pr[1] : pr[3]}）。` : `↻ 再聽一次！剛才播放的是「${secret === 0 ? pr[0] : pr[2]}」，留意${grp.contrast}的嘴型差異。` };
+      sound.sfx(ok ? 'correct' : 'wrong');
+      render();
+      break;
+    }
+    case 'dic-cefr': ui.dicCefr = el.dataset.cefr; ui.dicId = null; ui.dicInput = ''; ui.dicResult = null; render(); break;
+    case 'dic-pick': ui.dicId = id; ui.dicInput = ''; ui.dicResult = null; render(); break;
+    case 'dic-hint-toggle': ui.dicHint = !ui.dicHint; render(); break;
+    case 'dic-check': {
+      const filtered = (!ui.dicCefr || ui.dicCefr === 'ALL') ? DICTATION_ITEMS : DICTATION_ITEMS.filter(d => d.cefr === ui.dicCefr);
+      const dicItem = filtered.find(d => d.id === ui.dicId) || filtered[0] || DICTATION_ITEMS[0];
+      const inp = document.querySelector('#dic-input-field')?.value ?? ui.dicInput ?? '';
+      ui.dicInput = inp;
+      ui.dicResult = scoreDictation(dicItem.text, inp);
+      if (ui.dicResult.accuracy >= 80) {
+        const stStore = readStudioStore(storage);
+        writeStudioStore({ dictationDone: (Number(stStore.dictationDone) || 0) + 1 }, storage);
+        sound.sfx('correct');
+      } else sound.sfx('tap');
+      render();
+      break;
+    }
+    case 'shadow-self': {
+      const boxKey = el.dataset.box || 'inline';
+      const stStore = readStudioStore(storage);
+      writeStudioStore({ spokenChecks: (Number(stStore.spokenChecks) || 0) + 1 }, storage);
+      const resEl = document.getElementById(`shadow-res-${boxKey}`);
+      if (resEl) resEl.innerHTML = `<span class="mp-feedback good">✔ 已記錄一次開口跟讀自評！建議對照原速示範確認連音與重音。</span>`;
+      sound.sfx('correct');
+      break;
+    }
+    case 'shadow-rec': {
+      const target = el.dataset.target || '';
+      const boxKey = el.dataset.box || 'inline';
+      const resEl = document.getElementById(`shadow-res-${boxKey}`);
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) {
+        if (resEl) resEl.innerHTML = `<span class="muted">此瀏覽器未提供即時語音辨識（SpeechRecognition）。請先點擊「🔊 原速示範」跟讀一遍，再按「✔ 我已開口自評」記錄。</span>`;
+        break;
+      }
+      try {
+        sound.stop();
+        const rec = new SR();
+        rec.lang = 'en-US';
+        rec.interimResults = false;
+        rec.maxAlternatives = 1;
+        if (resEl) resEl.innerHTML = `<span>🎙️ 正在聆聽中… 請朗讀英文句子</span>`;
+        rec.onresult = ev => {
+          const transcript = ev.results?.[0]?.[0]?.transcript || '';
+          const evRes = evaluateSpokenMatch(target, transcript);
+          const stStore = readStudioStore(storage);
+          writeStudioStore({ spokenChecks: (Number(stStore.spokenChecks) || 0) + 1 }, storage);
+          if (resEl) {
+            resEl.innerHTML = `<div class="shadow-diff"><p><b>辨識結果（吻合 ${evRes.matchedWords}/${evRes.totalWords} 字）：</b> <span lang="en">"${esc(transcript)}"</span></p><div class="dic-token-diff" lang="en">${evRes.words.map(w => `<button type="button" class="dic-tok ${w.ok ? 'ok' : 'miss'}" data-act="say" data-text="${esc(w.word)}" title="點擊聽 ${esc(w.word)} 發音">${esc(w.word)} 🔊</button>`).join(' ')}</div></div>`;
+          }
+        };
+        rec.onerror = () => {
+          if (resEl) resEl.innerHTML = `<span class="muted">未偵測到麥克風語音輸入。可再試一次，或直接按「✔ 我已開口自評」。</span>`;
+        };
+        rec.start();
+      } catch {
+        if (resEl) resEl.innerHTML = `<span class="muted">無法啟動麥克風，請直接使用「🔊 原速示範」＋「✔ 我已開口自評」。</span>`;
+      }
+      break;
+    }
+    case 'story-cefr': ui.storyCefr = el.dataset.cefr || 'ALL'; render(); break;
+    case 'read-story': {
+      if (!await ensure(['stories'])) break;
+      ui.readerStory = id;
+      ui.readerWord = '';
+      ui.modal = 'reader';
+      const stStore = readStudioStore(storage);
+      const readMap = { ...(stStore.readStories || {}), [id]: Date.now() };
+      writeStudioStore({ readStories: readMap }, storage);
+      render();
+      break;
+    }
+    case 'reader-toggle-zh': ui.readerShowZh = ui.readerShowZh === false; render(); break;
+    case 'reader-word': ui.readerWord = el.dataset.word || ''; playItem(ui.readerWord, '', false); render(); break;
+    case 'write-select': ui.writingId = id; delete ui.writingText; ui.writingSavedMsg = ''; render(); break;
+    case 'write-model-toggle': ui.writingShowModel = !ui.writingShowModel; render(); break;
+    case 'write-insert': {
+      const ta = document.querySelector('#writing-studio-textarea');
+      const w = el.dataset.word || '';
+      const cur = ta ? ta.value : (ui.writingText || '');
+      ui.writingText = (cur ? cur.trimEnd() + ' ' : '') + w + ' ';
+      render();
+      document.querySelector('#writing-studio-textarea')?.focus();
+      break;
+    }
+    case 'write-scaffold': {
+      const ta = document.querySelector('#writing-studio-textarea');
+      const sc = el.dataset.text || '';
+      const cur = ta ? ta.value : (ui.writingText || '');
+      ui.writingText = (cur ? cur.trimEnd() + ' ' : '') + sc;
+      render();
+      document.querySelector('#writing-studio-textarea')?.focus();
+      break;
+    }
+    case 'write-save': {
+      const ta = document.querySelector('#writing-studio-textarea');
+      const text = ta ? ta.value : (ui.writingText || '');
+      ui.writingText = text;
+      const stStore = readStudioStore(storage);
+      const drafts = { ...(stStore.writingDrafts || {}), [id]: { text, updatedAt: Date.now() } };
+      writeStudioStore({ writingDrafts: drafts }, storage);
+      ui.writingSavedMsg = '✔ 草稿已儲存於此瀏覽器，全站學習護照已同步更新寫作紀錄！';
+      sound.sfx('correct');
+      render();
+      break;
+    }
   }
 });
 root.addEventListener('input', e => {
   if (e.target.id === 'school-draft') saveSchoolDraft();
+  if (e.target.id === 'dic-input-field') ui.dicInput = e.target.value;
+  if (e.target.id === 'writing-studio-textarea') { ui.writingText = e.target.value; }
   if (e.target.id === 'answer') { ui.a.text = e.target.value; const go = document.querySelector('#go'); if (go) go.disabled = !ui.a.text.trim(); }
 });
 let composing=false;
@@ -539,7 +688,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && ui.modal) { ui.modal = null; render(); return; }
   const s = game.state.session; if (!s || ui.paused || ui.modal) return;
   const it = game.currentItem(), inField = e.target.matches?.('input, textarea, select');
-  if (e.key === 'Enter' && !inField) { const go = document.querySelector('#go'); if (go && !go.disabled && document.activeElement !== go) { e.preventDefault(); go.click(); } return; }
+  if (e.key === 'Enter' && !inField) { if(e.target.closest?.('button,a,summary,[role="button"]'))return; const go = document.querySelector('#go'); if (go && !go.disabled && document.activeElement !== go) { e.preventDefault(); go.click(); } return; }
   if (inField || s.feedback || e.ctrlKey || e.metaKey || e.altKey) return;
   const n = Number(e.key);
   if (n >= 1 && n <= 9) {

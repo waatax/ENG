@@ -1,0 +1,19 @@
+{
+  "name": "English Quest｜全程度英語學習與闖關平台 (Pre-A1 to C1)",
+  "short_name": "English Quest",
+  "description": "從 Pre-A1 零基礎自然拼讀、國小國中高中 108 課綱，到 TOEIC、TOEFL、SAT、GRE、GMAT 國際檢定的全方位英語學習網站。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f3",
+  "theme_color": "#176454",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23164f3d'/%3E%3Cellipse cx='50' cy='62' rx='30' ry='28' fill='%238ee07a'/%3E%3Ccircle cx='39' cy='55' r='4' fill='%231b4332'/%3E%3Ccircle cx='61' cy='55' r='4' fill='%231b4332'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
