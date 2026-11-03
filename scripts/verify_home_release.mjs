@@ -6,7 +6,7 @@ if(!api.ok)throw Error(`GitHub status ${api.status}`);
 const data=await api.json(),run=data.workflow_runs?.find(r=>r.name==='Deploy English Quest to GitHub Pages');
 const report={sha,run:run?{id:run.id,url:run.html_url,status:run.status,conclusion:run.conclusion}:null};
 if(run?.conclusion==='success'){
- const required=[['index.html','home_experience.css?v=launch20261103'],['start.mjs','learning_hub.mjs?v=launch20261103'],['home_experience.mjs','renderHomeHero'],['home_experience.css','.home-hero'],['masterclass.mjs','renderMasterclass'],['quest/index.html','view.mjs?v=launch20261103'],['quest/view.mjs','quickstart.mjs?v=launch20261103'],['quest/quickstart.mjs','startQuickLesson'],['sw.js','v20261103-launch1']];
+ const required=[['index.html','home_experience.css?v=launch20261103'],['start.mjs','learning_hub.mjs?v=launch20261103'],['home_experience.mjs','renderHomeHero'],['home_experience.css','.home-hero'],['masterclass.mjs','renderMasterclass'],['quest/index.html','start.mjs?v=launch20261103r2'],['quest/view.mjs','quickstart.mjs?v=launch20261103'],['quest/quickstart.mjs','startQuickLesson'],['sw.js','v20261103-launch2']];
  report.live=await Promise.all(required.map(async([path,marker])=>{const r=await fetch(`https://waatax.github.io/ENG/${path}?release=${sha}`),body=await r.text();return {path,status:r.status,marker:body.includes(marker)};}));
  report.verified=report.live.every(x=>x.status===200&&x.marker);
 }

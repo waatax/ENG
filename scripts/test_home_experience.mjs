@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {WARMUP_BANDS,WARMUP_ITEMS,HOME_REVIEW_KEY,readWarmups,saveWarmup,localDay,renderHomeHero,renderHomeDiscovery,renderConceptPanel} from '../dist/home_experience.mjs';
-import {STORAGE_KEYS,exportFullSiteBackup,restoreFullSiteBackup} from '../dist/mastery_passport.mjs';
+import {STORAGE_KEYS,exportFullSiteBackup,restoreFullSiteBackup,computeMasteryPassport} from '../dist/mastery_passport.mjs';
 import {createGame,createCourse,KEY,isScored} from '../dist/quest/engine.mjs';
 import {startQuickLesson} from '../dist/quest/quickstart.mjs';
 import {MASTERCLASS_KEY,MASTERCLASS_TASKS,saveMasterclass,readMasterclass,countEnglishWords,renderMasterclass} from '../dist/masterclass.mjs';
@@ -63,6 +63,7 @@ test('failed course loading does not create a phantom session or reward',async()
 test('four advanced production tasks preserve drafts, self-assessment and full-site backup without assigning a CEFR score',()=>{
  assert.equal(MASTERCLASS_TASKS.length,4);for(const task of MASTERCLASS_TASKS){assert.equal(task.criteria.length,4);assert.equal(task.sources.length,2);assert.ok(task.model&&task.focus&&task.target);}
  const store=memory();assert.ok(saveMasterclass('synthesis','My first draft.',[true,false,true],store));
+ assert.equal(computeMasteryPassport(store).writingCount,1);assert.equal(computeMasteryPassport(store).skills.find(s=>s.id==='write').href,'#masterclass');
  assert.deepEqual(readMasterclass(store).synthesis.checks,[true,false,true,false]);assert.equal(readMasterclass(store).synthesis.text,'My first draft.');assert.equal(countEnglishWords("It's a well-supported idea. 2026"),4);
  assert.equal(saveMasterclass('__proto__','bad',[],store),false);assert.equal(saveMasterclass('synthesis',null,[],store),false);
  assert.ok(STORAGE_KEYS.includes(MASTERCLASS_KEY));const restored=memory();assert.ok(restoreFullSiteBackup(exportFullSiteBackup(store),restored).ok);assert.deepEqual(readMasterclass(restored),readMasterclass(store));

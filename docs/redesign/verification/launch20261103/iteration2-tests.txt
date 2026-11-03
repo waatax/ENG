@@ -1,0 +1,22 @@
+✔ 1. Mastery Passport aggregates all 6 skills and round-trips full-site backup/restore (2.5162ms)
+✔ 2. Minimal Pairs (12 contrasts), 3-Speed Dictation, and Speaking Coach evaluate accurately (1.1193ms)
+✔ 3. CEFR Guided Writing Studio & Graded Reader gloss lookup verify grammar traps and rubric (1.2471ms)
+✔ 4. All 9,500 vocabulary catalog entries include non-empty examples and PWA files exist (24.4178ms)
+✔ all four warm-up bands have three uniquely keyed questions, balanced answers, explanations and transfer prompts (1.191ms)
+✔ skips earn no stars, repeat attempts replace the same day and never write game XP (1.4463ms)
+✔ invalid answers, unknown bands, corrupt stores and unavailable storage fail without fabricated success (0.2729ms)
+✔ warm-up history is bounded and included in the actual full-site backup (0.966ms)
+✔ homepage offers immediate placement and game, four accessible diagrams and a useful answer reveal (1.6584ms)
+✔ one-click entry starts a real scored lesson and awards no XP before completing it (11.4588ms)
+✔ one-click entry resumes exact pending answer and preserves profile, XP and settings (9.8593ms)
+✔ failed course loading does not create a phantom session or reward (2.6391ms)
+✔ four advanced production tasks preserve drafts, self-assessment and full-site backup without assigning a CEFR score (0.8198ms)
+✔ advanced draft HTML is escaped and the evaluation boundary is visible (1.8459ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 133.0532

@@ -92,6 +92,8 @@ export function computeMasteryPassport(storage = globalThis.localStorage) {
   const mp3 = safeRead(storage, 'english-quest-word-mp3-v1') || {};
   const fc = safeRead(storage, 'eq_flashcards_mastery_v1') || {};
   const studio = safeRead(storage, 'english-quest-studio-v1') || {};
+  const portfolio = safeRead(storage, 'eq_masterclass_v1') || {};
+  const portfolioCount = Object.values(portfolio).filter(d => typeof d?.text==='string' && d.text.trim()).length;
 
   const questNodes = Object.values(quest.nodes || {}).filter(n => n && n.n > 0).length;
   const crowns = Object.keys(quest.crowns || {}).length;
@@ -108,7 +110,7 @@ export function computeMasteryPassport(storage = globalThis.localStorage) {
 
   const listenCount = (Number(quest.stats?.listen) || 0) + (Number(studio.dictationDone) || 0) + (Number(studio.minimalPairsDone) || 0) + (mp3.group ? 1 : 0);
   const speakCount = Object.keys(conv || {}).length + (Number(studio.spokenChecks) || 0);
-  const writingCount = Object.keys(quest.schoolWork || {}).filter(k => quest.schoolWork[k]?.text?.trim()).length + Object.keys(studio.writingDrafts || {}).length;
+  const writingCount = Object.keys(quest.schoolWork || {}).filter(k => quest.schoolWork[k]?.text?.trim()).length + Object.keys(studio.writingDrafts || {}).length + portfolioCount;
   const examChecks = Object.values(quest.examProgress || {}).reduce((n, p) => n + ((p?.checks || []).length), 0) + (sim.status === 'finished' ? 1 : 0) + (Array.isArray(acad.completed) ? acad.completed.length : 0);
 
   const skills = [
@@ -116,7 +118,7 @@ export function computeMasteryPassport(storage = globalThis.localStorage) {
     { id: 'listen', icon: '🎧', name: '聽辨與拼讀', count: listenCount, unit: '次訓練', desc: `聽力闖關 ${Number(quest.stats?.listen) || 0} · 聽寫與辨音 ${(Number(studio.dictationDone) || 0) + (Number(studio.minimalPairsDone) || 0)}`, href: 'quest/#practice' },
     { id: 'speak', icon: '🎙️', name: '開口與跟讀', count: speakCount, unit: '句自評', desc: `會話自評 ${Object.keys(conv || {}).length} · 語音教練 ${Number(studio.spokenChecks) || 0}`, href: '#listening' },
     { id: 'read', icon: '📖', name: '分級閱讀', count: storiesRead, unit: '篇故事', desc: `Pre-A1 至 C1 故事與短文共讀`, href: 'quest/#stories' },
-    { id: 'write', icon: '✍️', name: '句型與寫作', count: questNodes + writingCount, unit: '項完成', desc: `闖關 ${questNodes} 關 · 寫作草稿 ${writingCount} 篇 · 訂正 ${fixed} 題`, href: 'quest/#school' },
+    { id: 'write', icon: '✍️', name: '句型與寫作', count: questNodes + writingCount, unit: '項完成', desc: `闖關 ${questNodes} 關 · 寫作草稿 ${writingCount} 篇（含進階作品 ${portfolioCount}）· 訂正 ${fixed} 題`, href: portfolioCount?'#masterclass':'quest/#school' },
     { id: 'exam', icon: '🎯', name: '檢定與模考', count: examChecks + crowns, unit: '項紀錄', desc: `金冠 ${crowns} · 模考與全英課 ${examChecks}`, href: 'quest/#exams' }
   ];
 
