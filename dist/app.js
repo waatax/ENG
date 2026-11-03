@@ -1,5 +1,5 @@
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=launch20261103r2';
-import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=launch20261103r2';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=launch20261103r3';
+import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=launch20261103r3';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
 import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';

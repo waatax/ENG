@@ -9,7 +9,7 @@ import {labView} from './lab.mjs?v=joy20261103';
 import {recordRecall} from '../recall.mjs?v=joy20261103';
 import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=joy20261103';
 import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=joy20261103';
-import {startQuickLesson} from './quickstart.mjs?v=launch20261103';
+import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=launch20261103r3';
 
 const V = 'joy20261103';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
@@ -709,6 +709,8 @@ document.addEventListener('keydown', e => {
 window.addEventListener('hashchange', async () => {
   const tab = location.hash.slice(1).split('/')[0];
   if (tab === 'quickstart' && game) { await quickStart(); return; }
+  const requested=game&&requestedLearningTrack(location.hash,course);
+  if(requested){if(!game.state.profile)game.setup({goal:'casual',why:'life',start:requested});if(game.trackUnlocked(requested))ui.track=requested;}
   if (tab === 'placement' && game) { if (game.state.session) { ui.paused=true; ui.tab='learn'; } else ui.modal='placement'; render(true); return; }
   if (TABS.some(([id]) => id === tab)) { if(['school','exams'].includes(tab)&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'}); ui.tab = tab;if(tab==='exams'){ui.exam=location.hash.split('/')[1]||ui.exam;await ensure(['exams']);} ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
 });
@@ -723,8 +725,11 @@ async function boot() {
   game = createGame({ storage, course });
   ui.paused=!!game.state.session;
   const tab = location.hash.slice(1).split('/')[0]; if (TABS.some(([id]) => id === tab)) ui.tab = tab;
+  const requested=requestedLearningTrack(location.hash,course);
+  if(requested&&!game.state.profile)game.setup({goal:'casual',why:'life',start:requested});
   if(['school','exams'].includes(tab)&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'});
   ui.track = game.state.profile?.start || 's1';
+  if(requested&&game.trackUnlocked(requested))ui.track=requested;
   if(tab==='exams'){ui.exam=location.hash.split('/')[1]||'toeic';await ensure(['exams']);}
   if(semesterOf(ui.track))ui.schoolGroup=semesterOf(ui.track).group;
   const firstOpen = course.index.sections.find(sec => game.trackUnlocked(sec.id) && game.current(sec.id));

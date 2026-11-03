@@ -2,8 +2,8 @@
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const HOME_REVIEW_KEY = 'eq_home_warmup_v1';
 export const WARMUP_BANDS = [
-  {id:'starter',label:'零基礎',level:'Pre-A1',title:'從第一句開始',href:'quest/#quickstart'},
-  {id:'foundation',label:'生活基礎',level:'A1–A2',title:'讓英文走進日常',href:'quest/#learn'},
+  {id:'starter',label:'零基礎',level:'Pre-A1',title:'從第一句開始',href:'quest/#learn/s1'},
+  {id:'foundation',label:'生活基礎',level:'A1–A2',title:'讓英文走進日常',href:'quest/#learn/s3'},
   {id:'intermediate',label:'進階應用',level:'B1–B2',title:'說清楚，也讀得懂',href:'quest/#exams/toeic'},
   {id:'advanced',label:'學術挑戰',level:'B2–C1',title:'讀懂觀點與證據',href:'quest/#exams/sat'}
 ];

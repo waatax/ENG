@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {WARMUP_BANDS,WARMUP_ITEMS,HOME_REVIEW_KEY,readWarmups,saveWarmup,localDay,renderHomeHero,renderHomeDiscovery,renderConceptPanel} from '../dist/home_experience.mjs';
 import {STORAGE_KEYS,exportFullSiteBackup,restoreFullSiteBackup,computeMasteryPassport} from '../dist/mastery_passport.mjs';
 import {createGame,createCourse,KEY,isScored} from '../dist/quest/engine.mjs';
-import {startQuickLesson} from '../dist/quest/quickstart.mjs';
+import {startQuickLesson,requestedLearningTrack} from '../dist/quest/quickstart.mjs';
 import {MASTERCLASS_KEY,MASTERCLASS_TASKS,saveMasterclass,readMasterclass,countEnglishWords,renderMasterclass} from '../dist/masterclass.mjs';
 const memory=()=>{const map=new Map();return {getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v),map};};
 function fixture(){
@@ -59,6 +59,13 @@ test('one-click entry resumes exact pending answer and preserves profile, XP and
 });
 test('failed course loading does not create a phantom session or reward',async()=>{
  const {course,game}=fixture();const result=await startQuickLesson(game,course,async()=>false);assert.equal(result.status,'unavailable');assert.equal(game.state.session,null);assert.equal(game.state.xp.total,0);
+});
+test('explicit beginner and foundation cards resolve to their selected track without rewriting existing profile',()=>{
+ const {course,game}=fixture();game.setup({start:'s7',goal:'serious',why:'work'});
+ assert.equal(WARMUP_BANDS.find(b=>b.id==='starter').href,'quest/#learn/s1');assert.equal(WARMUP_BANDS.find(b=>b.id==='foundation').href,'quest/#learn/s3');
+ assert.equal(requestedLearningTrack('#learn/s3',course),'s3');assert.equal(requestedLearningTrack('#learn/s1',course),'s1');
+ for(const hash of ['#learn/__proto__','#learn/unknown','#exams/s3','#quickstart'])assert.equal(requestedLearningTrack(hash,course),null);
+ assert.equal(game.state.profile.start,'s7');
 });
 test('four advanced production tasks preserve drafts, self-assessment and full-site backup without assigning a CEFR score',()=>{
  assert.equal(MASTERCLASS_TASKS.length,4);for(const task of MASTERCLASS_TASKS){assert.equal(task.criteria.length,4);assert.equal(task.sources.length,2);assert.ok(task.model&&task.focus&&task.target);}
