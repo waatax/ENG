@@ -9,6 +9,7 @@ import {labView} from './lab.mjs?v=joy20261103';
 import {recordRecall} from '../recall.mjs?v=joy20261103';
 import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=joy20261103';
 import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=joy20261103';
+import {startQuickLesson} from './quickstart.mjs?v=launch20261103';
 
 const V = 'joy20261103';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
@@ -451,6 +452,14 @@ async function begin(mode, id) {
   if (!game.start(mode, id)) { toast(mode==='exam-check'?'未見卷複測須與已通過卷相隔 24 小時；請回考試頁查看狀態。':mode === 'practice' || mode === 'listen' ? '先完成一些課程，才有題目可以練習。' : '這一關目前無法開始。'); render(); return; }
   ui.paused = false; ui.pop = null; ui.modal = null; ui.shownFor = ''; render();
 }
+async function quickStart() {
+  const result=await startQuickLesson(game,course,ensure);
+  ui.tab='learn';ui.track=result.track||ui.track||'s1';ui.modal=null;ui.pop=null;
+  ui.paused=!['started','resumed'].includes(result.status);ui.shownFor='';
+  if(result.status==='unavailable')toast('暫時無法開啟課程，請稍後再試。');
+  history.replaceState(null,'',location.pathname+location.search+'#learn');
+  render(true);
+}
 
 // ---------- events ----------
 root.addEventListener('click', async e => {
@@ -699,6 +708,7 @@ document.addEventListener('keydown', e => {
 });
 window.addEventListener('hashchange', async () => {
   const tab = location.hash.slice(1).split('/')[0];
+  if (tab === 'quickstart' && game) { await quickStart(); return; }
   if (tab === 'placement' && game) { if (game.state.session) { ui.paused=true; ui.tab='learn'; } else ui.modal='placement'; render(true); return; }
   if (TABS.some(([id]) => id === tab)) { if(['school','exams'].includes(tab)&&!game.state.profile)game.setup({goal:'regular',why:'school',start:'s1'}); ui.tab = tab;if(tab==='exams'){ui.exam=location.hash.split('/')[1]||ui.exam;await ensure(['exams']);} ui.pop = null; if (game?.state.session && !ui.paused) ui.paused = true; game?.clearResult(); render(true); window.scrollTo(0, 0); }
 });
@@ -721,6 +731,7 @@ async function boot() {
   if (game.state.profile && firstOpen && !game.trackUnlocked(ui.track)) ui.track = firstOpen.id;
   const s = game.state.session;
   if (s) { ui.paused = true; await ensure(game.filesFor(s.mode, s.ref)); game.validSession(); }
+  if (tab === 'quickstart') { await quickStart(); return; }
   render();
   if (location.hash === '#placement' && !s) {
     ui.modal = 'placement'; render();

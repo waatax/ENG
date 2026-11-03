@@ -27,6 +27,9 @@ jobs:
       - name: Verify quest content, progress and reward rules
         run: node --test scripts/test_quest_game.mjs scripts/test_quest_coach.mjs scripts/test_quest_placement.mjs scripts/test_quest_school.mjs scripts/test_quest_quality.mjs scripts/test_quest_exams.mjs scripts/test_simulation.mjs scripts/test_learning_lab.mjs scripts/test_gamify_duolingo_voice.mjs scripts/test_feedback_diagnosis.mjs scripts/test_joy_learning.mjs scripts/test_all_levels_mastery.mjs
 
+      - name: Verify homepage learning loop and one-click lesson entry
+        run: node --test scripts/test_home_experience.mjs
+
       - name: Verify every quest pool has enough distinct learning targets
         run: node scripts/audit_quest_quality.mjs
 

@@ -1,5 +1,14 @@
 # English Quest 英語學習平台
 
+## 2026-11-03 首頁立即暖身、測程度與一鍵闖關
+
+[開始學習](https://waatax.github.io/ENG/) ｜ [立即闖關](https://waatax.github.io/ENG/quest/#quickstart) ｜ [進階作品工坊](https://waatax.github.io/ENG/#masterclass)
+
+- 首頁重整為手機優先的學習入口，直接測程度、4 種難度三題暖身與一鍵開課，保留既有作答和 XP。
+- 4 組互動圖解含句構、時態、長句、論證，搭配對照表、易錯提醒及回想活動。單字目錄延後至展開時載入。
+- 4 個進階作品任務串接跨文摘要、論證反駁、語域與精準改寫，草稿及自評納入全站備份。C1→C2 為延伸學習目標，非完整 C2 課程或認證。
+- 研究、架構、實作與驗證：[迭代紀錄](docs/redesign/HOME-LEARNING-2026-11-03.md)。依使用者要求以 GitHub Pages 正式站進行畫面與操作確認。
+
 ## 2026-11-03 每日單字小遠征與單元運用任務
 
 [雙向閃卡回想](https://waatax.github.io/ENG/?v=joy20261103#flashcards) ｜ [英語闖關](https://waatax.github.io/ENG/quest/?v=joy20261103)

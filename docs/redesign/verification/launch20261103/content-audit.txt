@@ -1,0 +1,164 @@
+{
+  "version": "2026-10-27.quality1",
+  "units": 141,
+  "nodes": 626,
+  "thinNodes": 0,
+  "sampledFreshLessons": 6260,
+  "minimumNodeTargets": 10,
+  "minimumUnitTargets": 44,
+  "sectionNineFirst": {
+    "id": "g12-s1-u1:word",
+    "kind": "word",
+    "track": "s9",
+    "unit": "g12-s1-u1",
+    "targets": 32,
+    "words": 32
+  },
+  "tracks": [
+    {
+      "id": "s1",
+      "nodes": 31,
+      "minTargets": 19
+    },
+    {
+      "id": "s2",
+      "nodes": 39,
+      "minTargets": 12
+    },
+    {
+      "id": "s3",
+      "nodes": 27,
+      "minTargets": 10
+    },
+    {
+      "id": "s4",
+      "nodes": 37,
+      "minTargets": 11
+    },
+    {
+      "id": "s5",
+      "nodes": 47,
+      "minTargets": 14
+    },
+    {
+      "id": "s6",
+      "nodes": 27,
+      "minTargets": 20
+    },
+    {
+      "id": "s7",
+      "nodes": 54,
+      "minTargets": 15
+    },
+    {
+      "id": "s8",
+      "nodes": 54,
+      "minTargets": 14
+    },
+    {
+      "id": "s9",
+      "nodes": 47,
+      "minTargets": 16
+    },
+    {
+      "id": "b-cap",
+      "nodes": 21,
+      "minTargets": 20
+    },
+    {
+      "id": "b-gsat",
+      "nodes": 21,
+      "minTargets": 20
+    },
+    {
+      "id": "b-voc",
+      "nodes": 23,
+      "minTargets": 20
+    },
+    {
+      "id": "b-cert",
+      "nodes": 6,
+      "minTargets": 20
+    },
+    {
+      "id": "b-toeic",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-sat",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-gre",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "b-gmat",
+      "nodes": 33,
+      "minTargets": 10
+    },
+    {
+      "id": "sem-j1a",
+      "nodes": 5,
+      "minTargets": 19
+    },
+    {
+      "id": "sem-j1b",
+      "nodes": 5,
+      "minTargets": 15
+    },
+    {
+      "id": "sem-j2a",
+      "nodes": 5,
+      "minTargets": 16
+    },
+    {
+      "id": "sem-j2b",
+      "nodes": 5,
+      "minTargets": 11
+    },
+    {
+      "id": "sem-j3a",
+      "nodes": 5,
+      "minTargets": 16
+    },
+    {
+      "id": "sem-j3b",
+      "nodes": 5,
+      "minTargets": 15
+    },
+    {
+      "id": "sem-h1a",
+      "nodes": 5,
+      "minTargets": 38
+    },
+    {
+      "id": "sem-h1b",
+      "nodes": 5,
+      "minTargets": 40
+    },
+    {
+      "id": "sem-h2a",
+      "nodes": 5,
+      "minTargets": 38
+    },
+    {
+      "id": "sem-h2b",
+      "nodes": 5,
+      "minTargets": 41
+    },
+    {
+      "id": "sem-h3a",
+      "nodes": 5,
+      "minTargets": 27
+    },
+    {
+      "id": "sem-h3b",
+      "nodes": 5,
+      "minTargets": 20
+    }
+  ]
+}

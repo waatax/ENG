@@ -1,4 +1,5 @@
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=hub1';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=launch20261103';
+import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=launch20261103';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
 import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
@@ -2318,6 +2319,7 @@ function render() {
   prepareWordAudio(root);
   const pages = {
     home:renderLearningHub,
+    masterclass:renderMasterclass,
     words:()=>`<article class="learning-hub"><h1>學單字</h1><p class="hub-lead">選程度或搜尋，直接從你要的單字開始聽讀。</p>${renderWordPicker()}</article>`,
     affixes: renderAffixGuide,
     wordpractice: renderFullWordPractice,
@@ -2347,6 +2349,7 @@ function render() {
   if (window.matchMedia('(max-width: 768px)').matches) root.querySelector('.site-menu')?.removeAttribute('open');
   bindEvents();
   bindLearningHub(root);
+  bindMasterclass(root);
   enhanceLearningPage(root);
   syncLessonAudio();
   bindWordAudio(root,render);
@@ -2924,6 +2927,7 @@ function readKnowledgeRoute() {
   else if (parts[0] === 'matrix') { navigate('matrix'); }
   else if (parts[0] === 'standards') { navigate('standards'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
+  else if (parts[0] === 'masterclass') { navigate('masterclass'); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
   else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
