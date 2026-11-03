@@ -1,5 +1,6 @@
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=launch20261103r3';
-import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=launch20261103r3';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=advanced20261103';
+import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=advanced20261103';
+import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=advanced20261103';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
 import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
@@ -734,7 +735,7 @@ function shell(body) {
         </div>
 
         <details class="site-menu" ${typeof window !== 'undefined' && window.innerWidth <= 768 ? '' : 'open'}><summary>學習導覽</summary><nav class="nav" aria-label="主要導覽">
-<a href="#home">⌂ 首頁</a><a href="#words">Aa 學單字</a><a href="quest/">✦ 玩遊戲</a><a href="#wordaudio">♫ MP3 聽讀</a><a href="mnemonics/">💡 聯想記憶</a><a href="roots/">🌱 字根字族</a><a href="#knowledge">▤ 教材總覽</a><details><summary>課程、練習與工具</summary><button data-toggle-reading-drawer="true">閱讀設定</button>${nav.map(([id,num,label])=>`<a href="#${id}">${label}</a>`).join('')}</details>
+<a href="#home">⌂ 首頁</a><a href="#words">Aa 學單字</a><a href="#advanced">◇ C1→C2 精進課程</a><a href="quest/">✦ 玩遊戲</a><a href="#wordaudio">♫ MP3 聽讀</a><a href="mnemonics/">💡 聯想記憶</a><a href="roots/">🌱 字根字族</a><a href="#knowledge">▤ 教材總覽</a><details><summary>課程、練習與工具</summary><button data-toggle-reading-drawer="true">閱讀設定</button>${nav.map(([id,num,label])=>`<a href="#${id}">${label}</a>`).join('')}</details>
         </nav></details>
         <div class="side-foot">
           <strong>108課綱・自學教材持續更新</strong><br>
@@ -2320,6 +2321,7 @@ function render() {
   const pages = {
     home:renderLearningHub,
     masterclass:renderMasterclass,
+    advanced:()=>renderAdvancedCourse(),
     words:()=>`<article class="learning-hub"><h1>學單字</h1><p class="hub-lead">選程度或搜尋，直接從你要的單字開始聽讀。</p>${renderWordPicker()}</article>`,
     affixes: renderAffixGuide,
     wordpractice: renderFullWordPractice,
@@ -2350,6 +2352,7 @@ function render() {
   bindEvents();
   bindLearningHub(root);
   bindMasterclass(root);
+  bindAdvancedCourse(root,render);
   enhanceLearningPage(root);
   syncLessonAudio();
   bindWordAudio(root,render);
@@ -2928,6 +2931,7 @@ function readKnowledgeRoute() {
   else if (parts[0] === 'standards') { navigate('standards'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'masterclass') { navigate('masterclass'); }
+  else if (parts[0] === 'advanced') { page='advanced'; render(); window.scrollTo(0,0); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
   else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }

@@ -45,7 +45,7 @@ test('warm-up history is bounded and included in the actual full-site backup',()
 test('homepage offers immediate placement and game, four accessible diagrams and a useful answer reveal',()=>{
  const hero=renderHomeHero();assert.match(hero,/href="quest\/#placement"/);assert.match(hero,/href="quest\/#quickstart"/);assert.match(hero,/id="home-warmup-body"/);assert.match(hero,/暖身不判定程度/);
  const discovery=renderHomeDiscovery();for(const id of ['be','time','sentence','argument']){assert.ok(discovery.includes(`data-home-concept="${id}"`));const panel=renderConceptPanel(id);assert.match(panel,/<caption>/);assert.match(panel,/scope="col"/);assert.match(panel,/scope="row"/);assert.match(panel,/<figcaption>/);assert.match(panel,/<details/);assert.ok(!/undefined|\[object Object\]/.test(panel));}
- const html=fs.readFileSync('dist/index.html','utf8');assert.match(html,/home_experience.css\?v=launch20261103/);assert.match(html,/start.mjs\?v=launch20261103/);
+ const html=fs.readFileSync('dist/index.html','utf8');assert.match(html,/home_experience.css\?v=launch20261103/);assert.match(html,/start.mjs\?v=advanced20261103/);
 });
 test('one-click entry starts a real scored lesson and awards no XP before completing it',async()=>{
  const {course,game,ensure}=fixture();const result=await startQuickLesson(game,course,ensure);

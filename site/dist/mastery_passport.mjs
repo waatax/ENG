@@ -13,6 +13,7 @@ export const STORAGE_KEYS = [
   'eq_recall_v1',
   'eq_home_warmup_v1',
   'eq_masterclass_v1',
+  'eq_advanced_course_v1',
   'english-quest-school-words-v1',
   'english-quest-7700-practice-v1',
   'english-quest-studio-v1'
@@ -93,7 +94,10 @@ export function computeMasteryPassport(storage = globalThis.localStorage) {
   const fc = safeRead(storage, 'eq_flashcards_mastery_v1') || {};
   const studio = safeRead(storage, 'english-quest-studio-v1') || {};
   const portfolio = safeRead(storage, 'eq_masterclass_v1') || {};
-  const portfolioCount = Object.values(portfolio).filter(d => typeof d?.text==='string' && d.text.trim()).length;
+  const advanced = safeRead(storage, 'eq_advanced_course_v1') || {};
+  const portfolioIds = new Set(Object.entries(portfolio).filter(([,d])=>typeof d?.text==='string'&&d.text.trim()).map(([id])=>id));
+  for(const [id,d] of Object.entries(advanced.units||{}))if(typeof d?.initial?.text==='string'&&d.initial.text.trim())portfolioIds.add(id);
+  const portfolioCount = portfolioIds.size;
 
   const questNodes = Object.values(quest.nodes || {}).filter(n => n && n.n > 0).length;
   const crowns = Object.keys(quest.crowns || {}).length;
@@ -118,7 +122,7 @@ export function computeMasteryPassport(storage = globalThis.localStorage) {
     { id: 'listen', icon: '🎧', name: '聽辨與拼讀', count: listenCount, unit: '次訓練', desc: `聽力闖關 ${Number(quest.stats?.listen) || 0} · 聽寫與辨音 ${(Number(studio.dictationDone) || 0) + (Number(studio.minimalPairsDone) || 0)}`, href: 'quest/#practice' },
     { id: 'speak', icon: '🎙️', name: '開口與跟讀', count: speakCount, unit: '句自評', desc: `會話自評 ${Object.keys(conv || {}).length} · 語音教練 ${Number(studio.spokenChecks) || 0}`, href: '#listening' },
     { id: 'read', icon: '📖', name: '分級閱讀', count: storiesRead, unit: '篇故事', desc: `Pre-A1 至 C1 故事與短文共讀`, href: 'quest/#stories' },
-    { id: 'write', icon: '✍️', name: '句型與寫作', count: questNodes + writingCount, unit: '項完成', desc: `闖關 ${questNodes} 關 · 寫作草稿 ${writingCount} 篇（含進階作品 ${portfolioCount}）· 訂正 ${fixed} 題`, href: portfolioCount?'#masterclass':'quest/#school' },
+    { id: 'write', icon: '✍️', name: '句型與寫作', count: questNodes + writingCount, unit: '項完成', desc: `闖關 ${questNodes} 關 · 寫作草稿 ${writingCount} 篇（含進階作品 ${portfolioCount}）· 訂正 ${fixed} 題`, href: Object.values(advanced.units||{}).some(d=>typeof d?.initial?.text==='string'&&d.initial.text.trim())?'#advanced':portfolioCount?'#masterclass':'quest/#school' },
     { id: 'exam', icon: '🎯', name: '檢定與模考', count: examChecks + crowns, unit: '項紀錄', desc: `金冠 ${crowns} · 模考與全英課 ${examChecks}`, href: 'quest/#exams' }
   ];
 

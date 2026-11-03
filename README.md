@@ -1,5 +1,11 @@
 # English Quest 英語學習平台
 
+## 2026-11-03 接續：C1→C2 精進課程
+
+[進入 8 單元精進課程](https://waatax.github.io/ENG/?v=advanced20261103#advanced)
+
+圖解教學、48 題原創檢核、聽力筆記、轉述、答辯與綜合提案，串接草稿自動儲存、初稿／修訂、自評規準、間隔複習及全站備份。保留原四份作品與遊戲進度；不以徽章或自評取代 CEFR 認證。詳見 [研究、實作與確效](docs/redesign/ADVANCED-COURSE-2026-11-03.md)。
+
 ## 2026-11-03 首頁立即暖身、測程度與一鍵闖關
 
 [開始學習](https://waatax.github.io/ENG/) ｜ [立即闖關](https://waatax.github.io/ENG/quest/#quickstart) ｜ [進階作品工坊](https://waatax.github.io/ENG/#masterclass)
