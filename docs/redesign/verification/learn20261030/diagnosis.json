@@ -1,9 +1,9 @@
 {
   "wrongOptions": 26186,
-  "specificDiagnosis": 10693,
-  "coverage": 0.408,
+  "specificDiagnosis": 20161,
+  "coverage": 0.77,
   "passageItems": 143,
   "evidenceCited": 105,
-  "glossary": 1272,
+  "glossary": 1760,
   "note": "Rule-based; uncovered options fall back to the item explanation and a generic correction tip."
 }

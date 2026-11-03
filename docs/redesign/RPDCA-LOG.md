@@ -401,3 +401,43 @@ R0 之後另做了 3 單元、12 關、99 題的手寫試點（`dist/quest/` 第
 - 瀏覽器測試用假語音引擎驗證朗讀內容，不代表各裝置的實際音質。
 - 同一時間有另一個工作階段在這個資料夾提交 727977a（程度檢定錯題專區），並把本輪做到一半的 coach／engine／sound 一起帶進提交。該提交因舊測試斷言在 CI 失敗，沒有部署。本輪提交補上其餘部分並修正斷言。
 - 仍沒有真人試用與教師逐題審定。
+
+## 2026-11-03｜全程度英語學習平台 7 輪 RPDCA 深度升級（Pre-A1 至 C1 全技能閉環）
+
+### R：研究與全站盤點
+- 全面檢視 `dist/learning_hub.mjs`、`dist/flashcards.mjs`（9,500 張單字卡）、`dist/quest/view.mjs`、`dist/quest/coach.mjs`、`dist/quest/course/*.json`（51 篇故事与 26,186 個錯誤選項）及雙端同步與發布測試腳本。
+- 識別五大核心缺口：
+  1. 主站與闖關系統尚未整合統一的「下一步最佳任務（Next Best Step）」、跨程度四階段主幹道、六力學習護照（聽／說／讀／寫／單字／文法）與全站跨模組 JSON 備份還原。
+  2. `dist/flashcards.mjs` 中有大量國中、高中與檢定單字仍使用生硬的萬用模板例句，且 `dist/vocabulary-catalog.json` 缺少 `example` 與 `exampleZh` 欄位。
+  3. 缺乏系統化的「最小對立音聽辨（Minimal Pairs）」、「三速連音弱讀聽寫（1.0x／0.8x／0.65x）」與「開口跟讀即時語音辨識教練（SpeechRecognition + 無麥克風自評替代）」。
+  4. 51 篇故事僅有單步問答模式，缺乏連續文章排版與「點字即查（Tap-to-Gloss）」；且全站缺少 Pre-A1 至 C1 的引導式寫作與中式英文常見陷阱即時回饋。
+  5. `dist/quest/coach.mjs` 的具體錯因診斷涵蓋率為 `40.8%`（`10,693 / 26,186`），詞彙表僅收錄 1,150 字，且尚未支援 PWA Service Worker 離線快取。
+
+### P／D：7 輪規劃與實作
+1. **Loop 1（全程度主幹道、六力學習護照與全站備份）**：
+   - 新增 `dist/mastery_passport.mjs`：實作 `ALL_LEVEL_BANDS`（`Pre-A1`、`A1–A2`、`B1–B2`、`B2–C1`）、`computeMasteryPassport()`、`exportFullSiteBackup()`、`restoreFullSiteBackup()` 與 `renderMasteryPassportSection()`。
+   - 更新 `dist/learning_hub.mjs` 與 `dist/platform.css`：於主站首頁呈現「下一步最佳任務」橫幅、四階段程度主幹道切換、六力進度條、全站進度匯出／匯入與單字總表例句預覽。
+2. **Loop 2（9,500 張單字卡自然例句重鑄與目錄同步）**：
+   - 新增並執行 `scripts/upgrade_9500_examples.mjs`：整合 1,331 筆分級精修例句、709 筆聯想字卡情境句、1,067 筆雙語真實語料句與 146+ 種詞性／主題語境框架，全面升級 `dist/flashcards.mjs`；同時保留 `dist/flashcard_quality.mjs` 的 13 個哨兵攔截測試契約與 MP3 manifest 的 `zh` 欄位對齊。
+   - 更新 `scripts/build_vocabulary_catalog.mjs` 並重新產生 `dist/vocabulary-catalog.json`（9,500 筆皆含完整 `example` 與 `exampleZh`）。
+3. **Loop 3 & Loop 4（最小對立音、三速聽寫與開口跟讀教練）**：
+   - 新增 `dist/quest/speaking_dictation.mjs`：內建臺灣學習者最常混淆的 12 組最小對立音（`MINIMAL_PAIRS`）、涵蓋 Pre-A1 至 C1 的 12 句三速連音聽寫（`DICTATION_ITEMS`、`scoreDictation()`），以及整合 `SpeechRecognition` 與無麥克風自評的開口跟讀元件（`renderShadowingWidget()`、`evaluateSpokenMatch()`）。
+4. **Loop 5（51 篇故事全文點字即查與 CEFR 六階寫作工坊）**：
+   - 新增 `dist/quest/reading_writing.mjs`：為全部 51 篇故事提供 `renderGradedReaderModal()` 全文閱讀、雙語連播、逐句跟讀與 `lookupWordGloss()` 點字即查；並建立 6 個 CEFR 等級的引導式寫作任務（`WRITING_PROMPTS`）與五維度＋中式英文語病偵測（`evaluateWritingDraft()`）。
+   - 整合至 `dist/quest/view.mjs` 與 `dist/quest/quest.css`。
+5. **Loop 6（智慧錯因診斷 Coach v2）**：
+   - 升級 `dist/quest/coach.mjs`：擴充課程詞彙索引至 1,760 組，新增 80+ 組不規則動詞、衍生詞綴詞性辨析、聽力音近詞對比、對話疑問詞焦點與擴充文法對立群組。
+   - 全題庫 26,186 個錯誤選項的具體診斷涵蓋率由 **40.8%（10,693 / 26,186）提升至 77.0%（20,161 / 26,186）**。
+6. **Loop 7（PWA 支援、自動化測試與 GitHub Pages 部署）**：
+   - 新增 `dist/manifest.webmanifest` 與 `dist/sw.js`，於 `dist/platform_nav.mjs` 註冊（自動略過 `navigator.webdriver` 測試環境與 `.mp3` 大檔快取）。
+   - 新增 `scripts/test_all_levels_mastery.mjs` 驗證 Loop 1–7 所有核心模組。
+
+### C：查核與確效
+- 執行 `node scripts/sync_dist_to_site.mjs`：`dist/` 與 `site/dist/` 達成 100% Byte Parity。
+- 執行 `node scripts/validate_mnemonic_release.mjs` 與 `node scripts/audit_quest_quality.mjs`：1,000 張字卡 MP3、500 個字族 MP3、141 單元 626 關抽題全數通過（`totalBytes: 975,674,095` < 1 GB）。
+- 執行 58 項核心與發布單元測試（含 `test_all_levels_mastery.mjs`、`test_7700_flashcards.mjs`、`test_flashcard_quality.mjs`、`test_feedback_diagnosis.mjs`、`test_vocabulary_platform.mjs` 等）：58 / 58 全數通過。
+- 執行 Playwright 瀏覽器自動化檢查（`qa_platform_hub.cjs`、`qa_feedback_diagnosis.cjs`、`qa_quest_game.cjs`）：320px／390px／1280px 零水平溢位、零未捕捉錯誤。
+
+### A：部署
+- 提交變更並推送至 `origin/main`，更新 GitHub Pages。
+
