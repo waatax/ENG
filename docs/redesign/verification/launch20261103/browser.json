@@ -1,0 +1,33 @@
+{
+  "source": "GitHub Pages production, browser viewport emulation; no localhost visual acceptance",
+  "url": "https://waatax.github.io/ENG/?v=launch20261103r3",
+  "deploymentCommit": "c3551d64b867d10e0937982dee1c043dd2aa1d85",
+  "actionsRun": "https://github.com/waatax/ENG/actions/runs/41617232734",
+  "status": "passed",
+  "viewports": [
+    {"width":320,"height":740,"scrollWidth":305,"ctaHeights":[49,49],"routeColumns":2},
+    {"width":390,"height":844,"scrollWidth":375,"ctaHeights":[49,49],"routeColumns":2},
+    {"width":768,"height":1024,"scrollWidth":753,"ctaHeights":[49,49],"routeColumns":2},
+    {"width":844,"height":390,"scrollWidth":829,"ctaHeights":[50,50],"routeColumns":2},
+    {"width":1280,"height":900,"scrollWidth":1265,"sidebarWidth":210,"mainLeft":210,"menuOpen":true,"routeColumns":4}
+  ],
+  "observedChecks": [
+    "Production entry script has launch20261103r3 marker; level cards point to s1, s3, TOEIC and SAT.",
+    "Starter warm-up wrong/correct/skip sequence produces 1/3, complete explanations, transfer prompts and saved-result confirmation.",
+    "Advanced warm-up produces 3/3; quest passport still shows 0 XP and 0 completed nodes.",
+    "Long-sentence and argument concept selectors update the diagram and table; recall answer disclosure works.",
+    "Expanded vocabulary search finds ambulance and an example-sentence match without breaking the homepage.",
+    "An 18-word synthesis draft and one self-assessment checkbox save and persist after reload; the writing passport records one advanced draft.",
+    "Production 10-question placement opens actual first item; pause and quickstart preserve that unfinished placement.",
+    "After discarding only the placement session created in this QA run, quickstart opens a real first lesson; answering Good night gives 1/1 and explanatory feedback.",
+    "Final foundation card opens #learn/s3, displays 第 3 段 / 我的世界 and retains the prior unfinished lesson card.",
+    "Dark and light reading modes were both visually inspected after the contrast fix; the previous dark preference was restored.",
+    "No whole-document horizontal overflow was observed at the five tested sizes. Tables retain their own horizontal scrolling.",
+    "Final game page reported no captured error-level console messages. Browser viewport override was reset and the production homepage retained for handoff."
+  ],
+  "limits": [
+    "Viewport emulation is not a hardware-device test.",
+    "Speech voice quality, microphone permissions and pronunciation accuracy were not manually certified.",
+    "These are engineering and content checks, not a learner-outcome study or CEFR certification."
+  ]
+}
