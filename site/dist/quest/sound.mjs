@@ -41,7 +41,15 @@ export function sfx(kind) {
   if (!effects) return;
   try {
     ctx ||= new (globalThis.AudioContext || globalThis.webkitAudioContext)();
-    const notes = { correct: [[660, 0], [880, 0.09]], wrong: [[220, 0], [180, 0.12]], done: [[523, 0], [659, 0.1], [784, 0.2], [1046, 0.3]], tap: [[440, 0]], combo: [[784, 0], [988, 0.07], [1175, 0.14]] }[kind] || [];
+    const notes = {
+      correct: [[660, 0], [880, 0.09]],
+      wrong: [[220, 0], [180, 0.12]],
+      done: [[523, 0], [659, 0.1], [784, 0.2], [1046, 0.3]],
+      tap: [[440, 0]],
+      combo: [[784, 0], [988, 0.07], [1175, 0.14]],
+      flip: [[587, 0], [740, 0.05]],
+      streak: [[523, 0], [659, 0.08], [784, 0.16], [1046, 0.24], [1318, 0.34]]
+    }[kind] || [];
     const t0 = ctx.currentTime;
     for (const [f, at] of notes) {
       const o = ctx.createOscillator(), gain = ctx.createGain();

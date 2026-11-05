@@ -34,9 +34,13 @@ family('sub','字首','在…下方；次要', [['way','道路','subway'],['titl
 family('ion','字尾','動作或狀態（名詞）', [['act','行動','action'],['direct','指引','direction'],['protect','保護','protection'],['connect','連接','connection']]);
 family('ous','字尾','充滿…的（形容詞）', [['danger','危險'],['fame','名聲','famous'],['nerve','神經','nervous'],['courage','勇氣','courageous']]);
 family('ive','字尾','具…特性的（形容詞）', [['act','行動','active'],['create','創造','creative'],['attract','吸引','attractive'],['protect','保護','protective']]);
+family('bi','字首','二；雙重', [['cycle','輪子','bicycle'],['lingual','語言的','bilingual']]);
+family('tri','字首','三', [['angle','角','triangle']]);
+family('auto','字首','自己；自動', [['mobile','可移動的','automobile'],['graph','書寫','autograph']]);
 for (const [word, left, a, right, b] of [
  ['classroom','class','班級','room','房間'],['bedroom','bed','床','room','房間'],['bathroom','bath','洗澡','room','房間'],['homework','home','家','work','工作'],['notebook','note','筆記','book','本子'],['raincoat','rain','雨','coat','外套'],['sunlight','sun','太陽','light','光'],['toothbrush','tooth','牙齒','brush','刷子'],['football','foot','腳','ball','球'],['schoolbag','school','學校','bag','袋子'],['airport','air','空中','port','港口'],['bookshelf','book','書','shelf','架子'],
- ['sunflower','sun','太陽','flower','花'],['earthquake','earth','地球','quake','震動'],['waterfall','water','水','fall','落下'],['butterfly','butter','奶油','fly','蒼蠅/飛行'],['keyboard','key','鍵','board','板子'],['pancake','pan','平底鍋','cake','蛋糕'],['seafood','sea','海','food','食物']
+ ['sunflower','sun','太陽','flower','花'],['earthquake','earth','地球','quake','震動'],['waterfall','water','水','fall','落下'],['butterfly','butter','奶油','fly','蒼蠅/飛行'],['keyboard','key','鍵','board','板子'],['pancake','pan','平底鍋','cake','蛋糕'],['seafood','sea','海','food','食物'],
+ ['playground','play','玩耍','ground','場地'],['skyscraper','sky','天空','scraper','刮擦物/高樓'],['lighthouse','light','光線','house','房屋'],['firefighter','fire','火災','fighter','戰鬥員'],['background','back','後方','ground','背景/地面'],['masterpiece','master','大師','piece','作品'],['breakthrough','break','突破','through','穿透'],['landmark','land','陸地','mark','標誌']
 ]) entries.set(word,{parts:[part(left,'組合詞',a),part(right,'組合詞',b)],note:'這是複合字：兩個詞組合成新的意思。'});
 for (const [word, parts, note] of [
  ['transport',[['trans','字首','跨越'],['port','字根','搬運']],'跨越地方搬運 → 運輸。'],

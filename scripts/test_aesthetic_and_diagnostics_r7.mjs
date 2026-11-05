@@ -55,6 +55,26 @@ test('Loop 2: Flashcard vocabulary learning & intelligent spelling error diagnos
   assert.ok(!tomorrowErr.ok);
   assert.match(tomorrowErr.tip, /雙重子音/);
 
+  // Silent p (receipt)
+  const receiptErr = spellingFeedback('receit', 'receipt');
+  assert.ok(!receiptErr.ok);
+  assert.match(receiptErr.tip, /默音字母/);
+
+  // Silent t (listen)
+  const listenErr = spellingFeedback('lisen', 'listen');
+  assert.ok(!listenErr.ok);
+  assert.match(listenErr.tip, /默音字母/);
+
+  // -able vs -ible suffix
+  const possibleErr = spellingFeedback('possable', 'possible');
+  assert.ok(!possibleErr.ok);
+  assert.match(possibleErr.tip, /-able 與 -ible/);
+
+  // Homophone: their vs there
+  const homophoneErr = spellingFeedback('there', 'their');
+  assert.ok(!homophoneErr.ok);
+  assert.match(homophoneErr.tip, /同音辨析/);
+
   // Exact match
   const exact = spellingFeedback('beautiful', 'beautiful');
   assert.ok(exact.ok);
@@ -119,6 +139,21 @@ test('Loop 4: Deep error explanations & smart pedagogical diagnostics for errors
   const d4 = diagnose(q4, 'sensitive');
   assert.match(d4, /明智.*敏感/);
 
+  // Confusable pair: accept vs except
+  const q6 = { type: 'choice', answer: 'accept', options: ['accept', 'except'], why: '動詞接受。' };
+  const d6 = diagnose(q6, 'except');
+  assert.match(d6, /接受.*除/);
+
+  // Confusable pair: breath vs breathe
+  const q7 = { type: 'choice', answer: 'breathe', options: ['breath', 'breathe'], why: '動詞呼吸。' };
+  const d7 = diagnose(q7, 'breath');
+  assert.match(d7, /呼吸/);
+
+  // Confusable pair: desert vs dessert
+  const q8 = { type: 'choice', answer: 'dessert', options: ['desert', 'dessert'], why: '餐後甜點。' };
+  const d8 = diagnose(q8, 'desert');
+  assert.match(d8, /甜點/);
+
   // Indefinite pronouns agreement
   const q5 = { type: 'choice', answer: 'everyone', options: ['everyone', 'all'], why: '後接單數動詞 is。' };
   const d5 = diagnose(q5, 'all');
@@ -137,6 +172,9 @@ test('Loop 5: Any level progression & word morphology support', () => {
   assert.ok(wordStructure('sunflower') !== null);
   assert.ok(wordStructure('earthquake') !== null);
   assert.ok(wordStructure('waterfall') !== null);
+  assert.ok(wordStructure('playground') !== null);
+  assert.ok(wordStructure('skyscraper') !== null);
+  assert.ok(wordStructure('masterpiece') !== null);
 
   // Prefixes & Suffixes
   assert.ok(wordStructure('impossible') !== null);
@@ -144,6 +182,8 @@ test('Loop 5: Any level progression & word morphology support', () => {
   assert.ok(wordStructure('encourage') !== null);
   assert.ok(wordStructure('export') !== null);
   assert.ok(wordStructure('spectator') !== null);
+  assert.ok(wordStructure('bicycle') !== null);
+  assert.ok(wordStructure('triangle') !== null);
 
   // Word structure rendering
   const html = renderWordStructure({ word: 'sunflower' });
@@ -161,5 +201,6 @@ test('Loop 6: Gamification audio synthesis without crashes', () => {
     sfx('tap');
     sfx('combo');
     sfx('flip');
+    sfx('streak');
   });
 });

@@ -57,11 +57,34 @@ function diagnoseSpellingTrap(a, b) {
   if (/(?:mb|bt)$/.test(b) && !/(?:mb|bt)$/.test(a)) return '字尾的 b 為默音字母（如 climb, thumb, doubt, debt），不發 /b/ 音。';
   if (/gn/.test(b) && !/gn/.test(a)) return 'gn 中的 g 為默音字母（如 sign, foreign, design），常發 /n/。';
   if (/(?:talk|walk|half|calm|could|would|should)/.test(b) && !/l/.test(a)) return '單字中的 l 為默音字母，發長母音而不發 /l/ 音。';
+  if (/(?:listen|castle|whistle|often|soften)/.test(b) && !/t/.test(a)) return '單字中的 t 為默音字母（如 listen, castle, whistle, often），不發 /t/ 音。';
+  if (/(?:honest|hour|honor|ghost|echo|rhythm)/.test(b) && !/h/.test(a)) return '單字中的 h 為默音字母（如 honest, hour, honor, ghost, rhythm），不發 /h/ 音。';
+  if (/(?:receipt|psychology|pneumonia)/.test(b) && !/p/.test(a)) return '單字中的 p 為默音字母（如 receipt, psychology），不發 /p/ 音。';
+
   // Double consonants trap
-  const doubles = ['tomorrow', 'recommend', 'accommodate', 'embarrass', 'necessary', 'separate', 'committee', 'success', 'occurred', 'beginning', 'parallel'];
+  const doubles = ['tomorrow', 'recommend', 'accommodate', 'embarrass', 'necessary', 'separate', 'committee', 'success', 'occurred', 'beginning', 'parallel', 'disappoint', 'business', 'interrupt', 'address', 'possess'];
   for (const d of doubles) {
     if (b.includes(d)) return `注意雙重子音：「${d}」含有特別的雙字母拼寫規則，依音節分段記憶更不易出錯。`;
   }
+
+  // -able vs -ible suffix trap
+  if ((b.endsWith('able') && a.endsWith('ible')) || (b.endsWith('ible') && a.endsWith('able'))) {
+    return '字尾 -able 與 -ible 辨析：獨立單詞後常接 -able（如 comfort ➔ comfortable）；詞根不可獨立時常接 -ible（如 visible, flexible, possible）。';
+  }
+
+  // -ance vs -ence suffix trap
+  if ((b.endsWith('ance') && a.endsWith('ence')) || (b.endsWith('ence') && a.endsWith('ance')) || (b.endsWith('ant') && a.endsWith('ent')) || (b.endsWith('ent') && a.endsWith('ant'))) {
+    return '字尾 -ance/-ant 與 -ence/-ent 辨析：源自不同拉丁動詞變化（如 importance vs difference），依詞群固定拼法強化記憶。';
+  }
+
+  // Common homophones / confusable pairs
+  if ((a === 'there' && b === 'their') || (a === 'their' && b === 'there')) return '同音辨析：their（他們的，含 heir「繼承人」）；there（那裡，表地點）。';
+  if ((a === 'its' && b === "it's") || (a === "it's" && b === 'its')) return "文法辨析：its 是所有格「它的」；it's 是「it is」或「it has」的縮寫。";
+  if ((a === 'hear' && b === 'here') || (a === 'here' && b === 'hear')) return '同音辨析：hear（聽見，含 ear「耳朵」）；here（這裡，表地點）。';
+  if ((a === 'weather' && b === 'whether') || (a === 'whether' && b === 'weather')) return '同音辨析：weather 是「天氣」；whether 是連接詞「是否」。';
+  if ((a === 'loose' && b === 'lose') || (a === 'lose' && b === 'loose')) return '拼字辨析：lose（動詞：失去、輸掉）；loose（形容詞：寬鬆的）。';
+  if ((a === 'quiet' && b === 'quite') || (a === 'quite' && b === 'quiet')) return '拼字辨析：quiet（形容詞：安靜的，-et）；quite（程度副詞：相當，-te）。';
+
   // Common vowel schwa / weak syllables
   if (b.length >= 5 && a.length >= 4) {
     return '非重音節的弱讀母音（/ə/）常是拼寫易錯點，可拆分音節並大聲唸出標準拼音。';

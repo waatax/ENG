@@ -4,13 +4,15 @@
 
 [進入全程度英語學習平台](https://waatax.github.io/ENG/) ｜ [雙向閃卡回想](https://waatax.github.io/ENG/?v=joy20261103#flashcards) ｜ [開始闖關](https://waatax.github.io/ENG/quest/?v=joy20261103)
 
-- **Loop 1: 視覺質感與美感 UI/UX 頂級精進**：導入森林綠暖白質感設計系統（`--joy-paper`、`--joy-accent`、`--joy-shadow`），優化手機單手微互動、立體陰影層次、WCAG 高對比色彩與夜間深色沉浸模式。
-- **Loop 2: 閃卡學單字全方位 UI/UX 與雙向記憶工坊重鑄**：升級「每日單字小遠征」，正面純英語境思考線索與發音，背面繁中、音節拆解、KK音標、主題視覺圖示與構詞分析；內建智慧拼字診斷（字元級差異高亮、顛倒字、默音字母、ie/ei 口訣、雙子音陷阱解說）。
-- **Loop 3: 全單元至少 10% useful contents 實用內容擴充**：全站 141 個單元全面增設至少 10% 延伸運用任務（1,483 張）、10% 本單元實用表達（1,483 句）與 10% 檢索卡，附帶情境引導、自我檢驗規準與語音導讀（題＋答＋解）。
-- **Loop 4: 錯誤時深度科學解說升級 (Smart Coach v3)**：全方位擴充易混淆字（affect/effect、borrow/lend、rise/raise、lie/lay）、情緒分詞（-ed vs -ing）、不定代名詞主動一致性、介系詞搭配與連詞邏輯等精準錯因診斷；答錯時完整呈現「❌ 你的答案 vs ✔ 正確答案」、「🔍 錯在哪裡」、「💡 為什麼（底層文法解析）」、「📖 原文線索」與跟讀示範。
-- **Loop 5: 全程度科學學習路徑分級鷹架深化**：涵蓋 Pre-A1（自然發音、圖片錨點、慢速拼讀）至 C2（學術論證、語域轉換、國際檢定）四大主幹道分流，無縫銜接檢測起點與個人化任務。
-- **Loop 6: 遊戲化心流、聲音反饋與快樂學英語微互動**：優化 Web Audio 溫和反饋音效（答對清脆和弦、訂正溫潤木音、翻卡微聲、連續天數里程碑慶祝），結合愛心保護與間隔複習，營造零挫折無痛成長心流。
-- **Loop 7: 深度確效、全站 100% Byte Parity 同步與正式發布**：通過全站 50+ 項自動化整合測試與跨端校驗，`dist/` 與 `site/dist/` 100% Byte Parity 同步發布。
+全面貫徹 **「( 深度思考 ➔ 規劃 ➔ 優化規劃 ➔ 迭代規劃 ➔ 在開始執行 ➔ 確認效果 ➔ 優化 ) × 7」** 認知科學升級循環：
+- **Loop 1: 視覺質感與美感 UI/UX 頂級精進**：導入森林綠暖白質感設計系統（--joy-paper: #fffdf7、--joy-accent: #236748、--joy-shadow、--joy-gold），優化手機單手微互動（Thumb Zone >= 44px）、立體陰影層次、WCAG AAA/AA 高對比色彩與夜間深色沉浸護眼模式。
+- **Loop 2: 閃卡學單字全方位 UI/UX 與雙向記憶工坊重鑄**：升級「每日單字小遠征」，正面提供音節拆解、KK音標、詞性標籤、純英語境思考線索與雙速發音（1.0x 標準與 0.8x 慢速跟讀）；背面提供繁中核心釋義、高頻搭配、雙語例句與構詞分析（
+enderWordStructure 拆字網格）。
+- **Loop 3: 智慧拼字診斷與錯誤科學解說**：字元級差異視覺化高亮（.sp-match、.sp-mismatch、.sp-missing），全面涵蓋相鄰字母順序顛倒、8 組默音字母（kn-, wr-, -mb/-bt, -gn, silent l/t/h/p）、經典「i before e except after c」口訣、16 組常見雙子音陷阱、-able/-ible 及 -ance/-ence 辨析，以及常見同音異義詞（their/there, its/it's, hear/here, weather/whether, loose/lose, quiet/quite）。
+- **Loop 4: 答錯時多維科學解說升級 (Smart Coach v3)**：全方位擴充 20+ 組高頻易混淆字（affect/effect、borrow/lend、rise/raise、lie/lay、accept/except、breath/breathe、choose/chose、desert/dessert、principle/principal、economic/economical、historic/historical、classic/classical、advice/advise）、情緒分詞（-ed vs -ing）、不定代名詞主動一致性；答錯時完整呈現「❌ 你的答案 vs ✔ 正確答案」、「🔍 錯在哪裡」、「💡 為什麼（底層文法解析）」、「📖 原文線索」與語音導讀跟讀。
+- **Loop 5: 全單元至少 10% useful contents 實用內容擴充**：全站 141 個單元全面增設至少 10% 延伸運用任務（1,483 張）、10% 本單元實用表達（1,483 句）與 10% 檢索卡，附帶思維引導規準、自我檢驗規準與完整語音導讀（題＋答＋解）。
+- **Loop 6: 全程度科學學習心流與快樂趣味遊戲化**：涵蓋 Pre-A1 至 C2 分級鷹架，擴充生活複合詞與構詞庫；優化 Web Audio 純程序合成溫和反饋音效（答對清脆和弦、訂正溫潤木音、翻卡微聲 lip、連續天數里程碑慶祝 streak），結合愛心保護與間隔複習，營造零挫折無痛成長心流。
+- **Loop 7: 深度確效、全站 100% Byte Parity 同步與正式發布**：全數通過 40+ 項自動化整合測試與跨端校驗，dist/ 與 site/dist/ 100% Byte Parity 同步，提交推送至 GitHub Pages 正式發布。
 
 ## 2026-11-03 接續：C1→C2 精進課程
 
