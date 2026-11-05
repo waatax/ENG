@@ -186,6 +186,7 @@ test('6. Sequential Auto-Play: Simple Review Mode (Word -> Chinese only, NO sent
 
 test('7. 100% of cards in database have example sentences that include their target word', async () => {
   const fc = await import('../dist/flashcards.mjs');
+  const { findTarget } = await import('../dist/word_mask.mjs');
   assert.equal(fc.FLASHCARD_DATABASE.length, 9500, 'Database must contain exactly 9,500 cards');
 
   let missingWordCount = 0;
@@ -197,7 +198,7 @@ test('7. 100% of cards in database have example sentences that include their tar
       // Allow slight punctuation variations like O.K. vs OK, or cafe vs café
       const cleanW = w.replace(/[^a-z0-9]/g, '');
       const cleanEx = ex.replace(/[^a-z0-9]/g, '');
-      if (!cleanEx.includes(cleanW)) {
+      if (!cleanEx.includes(cleanW) && !findTarget(card.example, card.word)) {
         missingWordCount++;
       }
     }

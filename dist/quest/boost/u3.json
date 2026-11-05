@@ -1,0 +1,230 @@
+[
+ {
+  "id": "u3.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "He doesn't like milk.",
+   "He don't like milk.",
+   "He doesn't likes milk."
+  ],
+  "answer": "He doesn't like milk.",
+  "wrong": {
+   "He don't like milk.": "he 是第三人稱單數，否定要用 doesn't，不是 don't。",
+   "He doesn't likes milk.": "doesn't 後面已經有第三人稱的變化，動詞要回到原形 like。"
+  },
+  "why": "否定句：he + doesn't + 原形動詞。",
+  "tip": "doesn't 後面動詞用原形。",
+  "say": "He doesn't like milk."
+ },
+ {
+  "id": "u3.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I am go to bed at ten.",
+   "I go to bed at ten.",
+   "I going to bed at ten."
+  ],
+  "answer": "I go to bed at ten.",
+  "wrong": {
+   "I am go to bed at ten.": "go 是一般動詞，不需要再加 be 動詞 am。",
+   "I going to bed at ten.": "習慣用現在簡單式，不是 going，而且少了 be 動詞。"
+  },
+  "why": "日常習慣用現在簡單式，I 後面接原形動詞。",
+  "tip": "習慣用現在簡單式。",
+  "say": "I go to bed at ten."
+ },
+ {
+  "id": "u3.b3",
+  "type": "situation",
+  "prompt": "你想問朋友每天幾點起床。",
+  "text": "",
+  "options": [
+   "What time you get up?",
+   "What time are you get up?",
+   "What time do you get up?"
+  ],
+  "answer": "What time do you get up?",
+  "wrong": {
+   "What time you get up?": "問句缺少助動詞 do。",
+   "What time are you get up?": "get 是一般動詞，用 do，不能用 be 動詞 are。"
+  },
+  "why": "What time do you + 原形動詞 用來問習慣的時間。",
+  "tip": "問時間用 What time do you…?",
+  "say": "What time do you get up?"
+ },
+ {
+  "id": "u3.b4",
+  "type": "situation",
+  "prompt": "老師問你怎麼上學，你想說通常搭公車。",
+  "text": "",
+  "options": [
+   "I usually take the bus to school.",
+   "I usually take bus on school.",
+   "I am usually take the bus to school."
+  ],
+  "answer": "I usually take the bus to school.",
+  "wrong": {
+   "I usually take bus on school.": "the bus 前面通常要有 the，上學是 to school，不是 on school。",
+   "I am usually take the bus to school.": "take 是一般動詞，不需要再加 am。"
+  },
+  "why": "usually 放在一般動詞前，take the bus to school 是搭公車上學。",
+  "tip": "usually 放在一般動詞前。",
+  "say": "I usually take the bus to school."
+ },
+ {
+  "id": "u3.b5",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "My father ___ the dishes after dinner.",
+  "options": [
+   "wash",
+   "washes",
+   "washing"
+  ],
+  "answer": "washes",
+  "wrong": {
+   "wash": "my father 是第三人稱單數，wash 要變成 washes。",
+   "washing": "句中沒有 be 動詞，不能單獨用 washing 當動詞。"
+  },
+  "why": "my father 等於 he，動詞 wash 結尾是 sh，要加 es。",
+  "tip": "sh、ch 結尾的動詞加 es。",
+  "say": "My father washes the dishes after dinner."
+ },
+ {
+  "id": "u3.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "They ___ homework at six every day.",
+  "options": [
+   "does",
+   "doing",
+   "do"
+  ],
+  "answer": "do",
+  "wrong": {
+   "does": "they 是複數，不用 does。",
+   "doing": "every day 表示習慣，不用 -ing，而且少了 be 動詞。"
+  },
+  "why": "they 搭配 do，every day 用現在簡單式。",
+  "tip": "they 搭配 do。",
+  "say": "They do homework at six every day."
+ },
+ {
+  "id": "u3.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "She never ___ late for class.",
+  "options": [
+   "is",
+   "are",
+   "does"
+  ],
+  "answer": "is",
+  "wrong": {
+   "are": "she 搭配 is，不搭配 are。",
+   "does": "does 後面要接原形動詞，late 是形容詞，需要 be 動詞 is。"
+  },
+  "why": "never 放在 be 動詞後面，she 搭配 is。",
+  "tip": "never 放在 be 動詞之後。",
+  "say": "She never is late for class."
+ },
+ {
+  "id": "u3.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "___ your sister brush her teeth before bed?",
+  "options": [
+   "Do",
+   "Does",
+   "Is"
+  ],
+  "answer": "Does",
+  "wrong": {
+   "Do": "your sister 是第三人稱單數，要用 Does。",
+   "Is": "brush 是一般動詞，用 Does，不用 Is。"
+  },
+  "why": "your sister 等於 she，問句用 Does。",
+  "tip": "單數第三人稱問句用 Does。",
+  "say": "Does your sister brush her teeth before bed?"
+ },
+ {
+  "id": "u3.b9",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I usually have cereal for breakfast.",
+  "options": [
+   "我現在正在吃麥片。",
+   "我明天要吃麥片。",
+   "我通常早餐吃麥片。"
+  ],
+  "answer": "我通常早餐吃麥片。",
+  "wrong": {
+   "我現在正在吃麥片。": "usually 表示習慣，不是現在正在做。",
+   "我明天要吃麥片。": "句子沒有表示未來，usually 是通常的意思。"
+  },
+  "why": "usually 是通常，have cereal for breakfast 是早餐吃麥片。",
+  "tip": "usually 表示通常的習慣。",
+  "say": "I usually have cereal for breakfast."
+ },
+ {
+  "id": "u3.b10",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "How often do you exercise?",
+  "options": [
+   "你多久運動一次？",
+   "你為什麼運動？",
+   "你在哪裡運動？"
+  ],
+  "answer": "你多久運動一次？",
+  "wrong": {
+   "你為什麼運動？": "why 才是問原因，How often 是問頻率。",
+   "你在哪裡運動？": "where 才是問地點，How often 是問頻率。"
+  },
+  "why": "How often 問做某件事的頻率。",
+  "tip": "How often 問頻率。",
+  "say": "How often do you exercise?"
+ },
+ {
+  "id": "u3.b11",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Tom watch TV every night.",
+   "Tom watches TV every night.",
+   "Tom watchs TV every night."
+  ],
+  "answer": "Tom watches TV every night.",
+  "wrong": {
+   "Tom watch TV every night.": "Tom 是第三人稱單數，動詞要加 es。",
+   "Tom watchs TV every night.": "watch 結尾是 ch，加 es 變成 watches，不是 watchs。"
+  },
+  "why": "ch 結尾的動詞，第三人稱單數加 es。",
+  "tip": "ch 結尾加 es。",
+  "say": "Tom watches TV every night."
+ },
+ {
+  "id": "u3.b12",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Do she like music?",
+   "Does she likes music?",
+   "Does she like music?"
+  ],
+  "answer": "Does she like music?",
+  "wrong": {
+   "Do she like music?": "she 是第三人稱單數，問句要用 Does。",
+   "Does she likes music?": "Does 後面的動詞要用原形 like。"
+  },
+  "why": "Does 已經表示第三人稱單數，後面接原形動詞。",
+  "tip": "Does 後面用原形動詞。",
+  "say": "Does she like music?"
+ }
+]

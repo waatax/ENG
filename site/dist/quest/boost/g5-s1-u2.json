@@ -1,0 +1,268 @@
+[
+ {
+  "id": "g5-s1-u2.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "He is tall.",
+   "He is a tall.",
+   "He tall."
+  ],
+  "answer": "He is tall.",
+  "wrong": {
+   "He is a tall.": "tall 是形容詞，前面不能加 a。",
+   "He tall.": "少了 be 動詞 is。"
+  },
+  "why": "形容詞前面不加 a，要用 He is tall.",
+  "tip": "tall 前不加 a。",
+  "say": "He is tall."
+ },
+ {
+  "id": "g5-s1-u2.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "My father name is Tom.",
+   "My father's name is Tom.",
+   "My father is name Tom."
+  ],
+  "answer": "My father's name is Tom.",
+  "wrong": {
+   "My father name is Tom.": "表示「爸爸的名字」要用 father's，不能直接連在一起。",
+   "My father is name Tom.": "is 和 name 的位置錯了，不能說「爸爸是名字」。"
+  },
+  "why": "所有格用 's 表示屬於誰。",
+  "tip": "所有格加 's。",
+  "say": "My father's name is Tom."
+ },
+ {
+  "id": "g5-s1-u2.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "She have two brothers.",
+   "She haves two brothers.",
+   "She has two brothers."
+  ],
+  "answer": "She has two brothers.",
+  "wrong": {
+   "She have two brothers.": "she 是第三人稱單數，have 要變 has。",
+   "She haves two brothers.": "have 的第三人稱單數是 has，不是 haves。"
+  },
+  "why": "have 的第三人稱單數是 has。",
+  "tip": "she 搭配 has。",
+  "say": "She has two brothers."
+ },
+ {
+  "id": "g5-s1-u2.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I am twelve years old.",
+   "I am twelve years.",
+   "I have twelve years old."
+  ],
+  "answer": "I am twelve years old.",
+  "wrong": {
+   "I am twelve years.": "說年齡要加 old。",
+   "I have twelve years old.": "說年齡用 be 動詞 am，不用 have。"
+  },
+  "why": "說年齡：I am + 數字 + years old.",
+  "tip": "年齡用 am + years old。",
+  "say": "I am twelve years old."
+ },
+ {
+  "id": "g5-s1-u2.b5",
+  "type": "situation",
+  "prompt": "你想把好朋友 Amy 介紹給老師。",
+  "text": "",
+  "options": [
+   "Miss Lin, this are my friend Amy.",
+   "Miss Lin, this is my friend Amy.",
+   "Miss Lin, here is me friend Amy."
+  ],
+  "answer": "Miss Lin, this is my friend Amy.",
+  "wrong": {
+   "Miss Lin, this are my friend Amy.": "this 是單數，要搭配 is。",
+   "Miss Lin, here is me friend Amy.": "me 是受格，my 才是所有格。"
+  },
+  "why": "this is 用來介紹人，my 表示我的。",
+  "tip": "介紹用 This is…",
+  "say": "Miss Lin, this is my friend Amy."
+ },
+ {
+  "id": "g5-s1-u2.b6",
+  "type": "situation",
+  "prompt": "你想問新同學住在哪裡。",
+  "text": "",
+  "options": [
+   "Where you live?",
+   "Where are you live?",
+   "Where do you live?"
+  ],
+  "answer": "Where do you live?",
+  "wrong": {
+   "Where you live?": "問句缺少助動詞 do。",
+   "Where are you live?": "live 是一般動詞，不用 are。"
+  },
+  "why": "問居住地點：Where do you live?",
+  "tip": "問住哪裡用 Where do you live?",
+  "say": "Where do you live?"
+ },
+ {
+  "id": "g5-s1-u2.b7",
+  "type": "situation",
+  "prompt": "你想問朋友的興趣是什麼。",
+  "text": "",
+  "options": [
+   "What's your hobby?",
+   "What are your hobby?",
+   "What hobby is you?"
+  ],
+  "answer": "What's your hobby?",
+  "wrong": {
+   "What are your hobby?": "hobby 是單數，不能用 are。",
+   "What hobby is you?": "語序錯誤，要說 What's your hobby?"
+  },
+  "why": "What's your hobby? 用來問興趣。",
+  "tip": "問興趣就用 What's your hobby?",
+  "say": "What's your hobby?"
+ },
+ {
+  "id": "g5-s1-u2.b8",
+  "type": "situation",
+  "prompt": "第一次見面時，你應該說什麼？",
+  "text": "",
+  "options": [
+   "Nice to see you again.",
+   "Nice to meet you.",
+   "See you later."
+  ],
+  "answer": "Nice to meet you.",
+  "wrong": {
+   "Nice to see you again.": "again 是再次，用在見過面的人。",
+   "See you later.": "See you later 是告別，不是初次見面。"
+  },
+  "why": "第一次見面說 Nice to meet you.",
+  "tip": "初見面 Nice to meet you。",
+  "say": "Nice to meet you."
+ },
+ {
+  "id": "g5-s1-u2.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "This is my sister. ___ name is Lucy.",
+  "options": [
+   "His",
+   "She",
+   "Her"
+  ],
+  "answer": "Her",
+  "wrong": {
+   "His": "His 是他的，sister 是女生。",
+   "She": "She 是主詞，名字前面要用所有格 Her。"
+  },
+  "why": "sister 是女生，所有格是 her。",
+  "tip": "her 是她的。",
+  "say": "This is my sister. Her name is Lucy."
+ },
+ {
+  "id": "g5-s1-u2.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Tom and Ben are brothers. ___ are tall.",
+  "options": [
+   "They",
+   "He",
+   "We"
+  ],
+  "answer": "They",
+  "wrong": {
+   "He": "He 是單數，兩個人要用 They。",
+   "We": "We 包含說話者，不符合句意。"
+  },
+  "why": "Tom and Ben 是兩個人，用 They。",
+  "tip": "兩人以上用 they。",
+  "say": "Tom and Ben are brothers. They are tall."
+ },
+ {
+  "id": "g5-s1-u2.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I ___ a big family. There are six of us.",
+  "options": [
+   "has",
+   "have",
+   "am"
+  ],
+  "answer": "have",
+  "wrong": {
+   "has": "I 搭配 have，不是 has。",
+   "am": "a big family 是擁有的東西，用 have。"
+  },
+  "why": "I 搭配 have。",
+  "tip": "I 搭配 have。",
+  "say": "I have a big family. There are six of us."
+ },
+ {
+  "id": "g5-s1-u2.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "My mother's sister is my ___.",
+  "options": [
+   "uncle",
+   "grandma",
+   "aunt"
+  ],
+  "answer": "aunt",
+  "wrong": {
+   "uncle": "uncle 是男生。",
+   "grandma": "grandma 是祖母或外婆。"
+  },
+  "why": "mother's sister 是阿姨，英文是 aunt。",
+  "tip": "aunt 是阿姨。",
+  "say": "My mother's sister is my aunt."
+ },
+ {
+  "id": "g5-s1-u2.b13",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "We share a room.",
+  "options": [
+   "我們共用一間房間。",
+   "我們買了一間房間。",
+   "我們打掃房間。"
+  ],
+  "answer": "我們共用一間房間。",
+  "wrong": {
+   "我們買了一間房間。": "share 是分享或共用，不是買。",
+   "我們打掃房間。": "share 不是打掃。"
+  },
+  "why": "share 是分享，也可以表示共用。",
+  "tip": "share 是共用。",
+  "say": "We share a room."
+ },
+ {
+  "id": "g5-s1-u2.b14",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "He is my classmate.",
+  "options": [
+   "他是我的老師。",
+   "他是我的同學。",
+   "他是我的弟弟。"
+  ],
+  "answer": "他是我的同學。",
+  "wrong": {
+   "他是我的老師。": "teacher 才是老師。",
+   "他是我的弟弟。": "brother 才是兄弟。"
+  },
+  "why": "classmate 是同班同學。",
+  "tip": "classmate 是同學。",
+  "say": "He is my classmate."
+ }
+]

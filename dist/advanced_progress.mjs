@@ -1,5 +1,5 @@
 import {ADVANCED_UNITS,advancedUnit} from './advanced_content.mjs?v=advanced20261103';
-import {scheduleRecall} from './recall.mjs?v=joy20261103';
+import {scheduleRecall} from './recall.mjs?v=truth20261105';
 export const ADVANCED_KEY='eq_advanced_course_v1';
 const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const text=v=>typeof v==='string'?v.slice(0,12000):'';

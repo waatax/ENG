@@ -1,0 +1,694 @@
+{
+"k.relative-clauses.2": {
+"The movie that I watched it was moving.": "watched 的受詞已由關係代名詞 that 代替，再加 it 就重複了。",
+"The movie, that I watched, was moving.": "加逗號是非限定用法，非限定子句不能用 that。"
+},
+"g10-s1-u6.x1": {
+"will arrive": "表未來時間的 when 子句不能用 will，要用現在式 arrive。",
+"arrived": "過去式 arrived 指已發生的事，但句子說的是未來要打電話。"
+},
+"g10-s1-u6.x2": {
+"in; at; on": "9:00 a.m. 要用 at，不是 in；Monday morning 要用 on，October 才用 in。",
+"on; in; at": "9:00 a.m. 不用 on；Monday morning 不用 in；October 不用 at，三個全錯位。",
+"at; in; on": "Monday morning 要用 on，不是 in；October 要用 in，不是 on，後兩格對調了。"
+},
+"g10-s1-u6.q1": {
+"Although": "Although 是連接詞，後面要接子句，但空格後是名詞片語。",
+"Because": "Because 表原因，但亂流與平穩降落是轉折關係，語意不合。",
+"Even though": "Even though 是連接詞要接子句，空格後只有名詞片語，不能用。"
+},
+"g10-s1-u6.trap1": {
+"Although the budget was limited, but the team succeeded.": "Although 已表轉折，不能再與 but 連用，兩者重複。"
+},
+"g10-s1-u6.r1": {
+"Because 'to' in 'be accustomed to' is a preposition requiring a gerund.": "這是解釋 be accustomed to 的文法理由，不是文章提到的條件。",
+"The noun clause 'What distinguishes secure cryptographic protocols from traditional authentication'.": "這句是別篇關於加密協定的內容，文章沒提到紅樹林計畫的條件。"
+},
+"g10-s2-u7.x1": {
+"that": "逗號後的非限定子句不能用 that，要用 which。",
+"what": "what 本身含先行詞，不能用來補充說明前面整件事。",
+"it": "用 it 會變成兩個子句直接相連，缺少連接詞。"
+},
+"g10-s2-u7.x2": {
+"Mr. Lin has two daughters who work in Taipei.": "沒有逗號是限定用法，暗示他可能還有其他不在台北的女兒。",
+"Mr. Lin has two daughters that work in Taipei.": "that 引導限定子句，暗示還有別的女兒，不是只有兩位。",
+"Mr. Lin has two daughters working in Taipei.": "分詞片語也是限定修飾，同樣暗示可能還有其他女兒。"
+},
+"g10-s2-u7.q1": {
+"that": "that 不能接在逗號後引導非限定子句。",
+"what": "what 不能指代前面整件事，且本身含先行詞。",
+"it": "用 it 會讓 caused 前沒有連接詞，變成兩個子句硬接。"
+},
+"g10-s2-u7.trap1": {
+"He won the gold medal, that made his parents proud.": "逗號後的非限定子句代指整件事，不可用 that，要用 which。"
+},
+"g10-s2-u8.q1": {
+"That": "That 引導名詞子句時自己不當主詞，但空格後 is needed 缺主詞。",
+"Which": "Which 帶有選擇範圍，這裡需要「所需要的東西」，語意不合。",
+"It": "It 是代名詞，不能引導名詞子句當主詞。"
+},
+"g10-s2-u8.trap1": {
+"I cannot understand the reason what made her quit.": "what 已含先行詞，不能接在 the reason 後面，要用 that 或 which。"
+},
+"g10-s2-u8.r1": {
+"Because 'that' cannot follow a preposition directly in a relative clause.": "這是講 that 不能接介系詞的文法理由，沒有回答主要子句主詞是什麼。",
+"Because 'to' in 'be accustomed to' is a preposition requiring a gerund.": "這是 be accustomed to 的文法解釋，與第一句的主詞無關。"
+},
+"d.diag-0861": {
+"Whomever": "Whomever 是受格，但空格在子句中當 achieves 的主詞，要用主格。",
+"Whichever": "Whichever 指有限範圍中的某一個，這裡指凡是得高分的人。",
+"Whatever": "Whatever 指事物，而這裡指的是得獎的人。"
+},
+"d.diag-0862": {
+"whoever": "whoever 指人，但後面的 dessert 是甜點，不是人。",
+"however": "however 是「無論如何」的副詞，不能直接修飾名詞 dessert。",
+"wherever": "wherever 是「無論哪裡」，不能修飾 dessert。"
+},
+"d.diag-0863": {
+"Whoever": "Whoever 指人，但後面的 challenges 是挑戰，不是人。",
+"Whichever": "Whichever 表示在有限範圍中選擇，但旅途中的挑戰沒有固定範圍。",
+"Whenever": "Whenever 是「無論何時」，不能直接修飾名詞 challenges。"
+},
+"d.diag-0864": {
+"whomever": "子句缺的是 played 的主詞，要用主格 whoever，不是受格。",
+"whichever": "whichever 指有範圍的選擇，這裡指凡是最努力的人，且不接名詞。",
+"whatever": "whatever 指事物，但這裡是指打球的人。"
+},
+"d.diag-0865": {
+"whoever": "whoever 指人，但 seat 是座位。",
+"however": "however 是副詞「無論如何」，不能修飾名詞 seat。",
+"wherever": "wherever 是「無論哪裡」，不能直接放在 seat 前面當限定詞。"
+},
+"d.diag-0866": {
+"Whoever": "Whoever 指人，但 happens 的主詞是發生的事情。",
+"Whichever": "Whichever 需要有限的選擇範圍，這裡是不特定的任何事。",
+"However": "However 是「無論如何」的副詞，不能當 happens 的主詞。"
+},
+"d.diag-0867": {
+"whatever": "whatever 指事物，但 would benefit 的主詞是人。",
+"whomever": "空格是 would benefit 的主詞，要用主格 whoever，不是受格。",
+"whichever": "whichever 表有限範圍的選擇，這裡指任何覺得會受益的人。"
+},
+"d.diag-0868": {
+"whoever": "whoever 指人，但後面的 textbook 是課本。",
+"wherever": "wherever 是「無論哪裡」，不能修飾 textbook。",
+"however": "however 是副詞，不能直接修飾名詞 textbook。"
+},
+"d.diag-0869": {
+"Whomever": "Whomever 是受格，但空格是 breaks 的主詞，要用主格。",
+"Whatever": "Whatever 指事物，但打破文物的是人。",
+"Whichever": "Whichever 表有限範圍的選擇，這裡是指任何做這件事的人。"
+},
+"d.diag-0870": {
+"whoever": "whoever 後面不能再接名詞 candidate。",
+"wherever": "wherever 是「無論哪裡」，不能修飾 candidate。",
+"however": "however 是副詞，不能修飾名詞 candidate。"
+},
+"g10-s2-u9.x1": {
+"It rained, however we continued.": "however 是連接副詞，只用逗號會把兩個獨立句錯接在一起。",
+"It rained however we continued.": "兩個獨立子句之間沒有任何標點，however 前後也缺逗號。"
+},
+"g10-s2-u9.r1": {
+"Because 'to' in 'be accustomed to' is a preposition requiring a gerund.": "這是 be accustomed to 的文法理由，與 Consequently 的功能無關。",
+"Because 'recommend that' requires the subjunctive mood (should + base form).": "這是 recommend that 的虛擬語氣規則，沒有說明 Consequently 的作用。"
+},
+"d.diag-0915": {
+"Therefore": "Therefore 表因果，但前句預測失敗、後句卻暢銷，是相反關係。",
+"In addition": "In addition 表補充，但後句是推翻前句預測，不是補充。",
+"Similarly": "Similarly 表相似，但前後兩句的結果正好相反。"
+},
+"g10-s2-u10.x1": {
+"Sales fell by 20 units.": "銷量從 100 增到 120，是上升，不是下降。",
+"Sales doubled.": "doubled 是變成兩倍（200），但只增加了 20%。"
+},
+"g10-s2-u11.trap1": {
+"He didn't study, so he must fail the exam yesterday.": "yesterday 是過去，推測過去的事要用 must have failed，不能用 must fail。"
+},
+"g10-s2-u11.r1": {
+"S + V + O + OC (Pattern 5)": "這是句型名稱，不是原因，也沒回答歷史學家為何排除海盜。",
+"The metropolis is now believed to have supported more than one hundred thousand inhabitants.": "這句談的是古代城市的人口，與瑪麗·塞勒斯特號無關。"
+},
+"gr.modals": {
+"do not have to": "do not have to 只是「不必」，不能表示禁止。",
+"may": "may 是「可以」，與「禁止吸菸」意思相反。"
+},
+"g10-s2-u12.r1": {
+"Because 'recommend that' requires the subjunctive mood (should + base form).": "這是 recommend that 的文法規則，與量子電腦為何較快無關。",
+"S + V + O + OC (Pattern 5)": "這是句型名稱，不是量子電腦運算較快的原因。"
+},
+"k.culture-etiquette-hs.1": {
+"Italians are always late.": "用 always 把全體義大利人貼上標籤，正是以偏概全的刻板印象。",
+"Every Asian likes rice.": "Every 把所有亞洲人說成同一種喜好，是刻板印象。"
+},
+"k.culture-etiquette-hs.2": {
+"Calling the professor by first name without permission": "對方沒邀請就直呼名字，在正式的國際會議上不夠尊重。",
+"Asking about her salary": "詢問薪水是隱私問題，在正式場合並不得體。"
+},
+"quality.original.g10-s1-u1.4": {
+"The organizer waited outside.": "waited 是不及物動詞，後面沒有任何受詞。",
+"The reminder seemed clear.": "seemed 後面接形容詞當補語，沒有間接與直接受詞。"
+},
+"quality.original.g10-s1-u1.6": {
+"She gave me to the report.": "to 放錯位置，變成把「我」給報告，語意怪異。",
+"She gave to the report me.": "語序混亂，to 後面不能接 the report 再接 me。"
+},
+"quality.original.g10-s1-u1.7": {
+"We consider insufficient the evidence is.": "多了 is 變成兩個動詞，語序也不通順。",
+"We consider the evidence to insufficient.": "to 後面要接原形動詞，不能直接接形容詞 insufficient。"
+},
+"quality.original.g10-s1-u1.9": {
+"The audience laughed.": "laughed 是不及物動詞，不需要受詞就完整。",
+"The visitors arrived.": "arrived 是不及物動詞，不需要受詞。"
+},
+"d.diag-0771": {
+"was": "與現在事實相反的假設，正式文法 be 動詞用 were，不用 was。",
+"am": "am 是現在直述語氣，不是假設語氣。",
+"would be": "would 不能放在 if 子句中，if 子句用 were。"
+},
+"d.diag-0772": {
+"has": "has 是現在式，與現在相反的假設要用過去式 had。",
+"would have": "would 不放在 if 子句中，且 would have 是主要子句的形式。",
+"had had": "had had 是過去完成式，指與過去相反，但本句主要子句是 would launch。"
+},
+"d.diag-0773": {
+"does not suffer": "現在式不是假設語氣，與現在相反的 if 子句要用過去式。",
+"would not suffer": "would 不放在 if 子句中。",
+"had not suffered": "had not suffered 指與過去相反，但主要子句是 would travel（現在假設）。"
+},
+"d.diag-0774": {
+"have": "have 是現在式，與現在相反的假設要用過去式 had。",
+"would have": "would 不放在 if 子句中。",
+"had had": "had had 指與過去事實相反，但主要子句是 could soar，是現在假設。"
+},
+"d.diag-0775": {
+"will": "will 是真實未來，但 won 是過去式假設，主要子句要用 would。",
+"did": "did you do 不能搭配假設的 if 子句，語氣不合。",
+"do": "do 是現在式，與過去式假設 won 的語氣不一致。"
+},
+"d.diag-0776": {
+"is": "is 是現在直述語氣，不是與現狀相反的假設。",
+"was being": "was being 是過去進行式，不是假設語氣。",
+"would be": "would 不能放在 if 子句中，要用 were。"
+},
+"d.diag-0777": {
+"is": "is 是現在直述語氣，無法表達與現在相反的假設。",
+"was being": "was being 是過去進行式，不合假設語氣。",
+"has been": "has been 是現在完成式，與主要子句 could solve 的假設不合。"
+},
+"d.diag-0778": {
+"speaks": "speaks 是現在式，與現在相反的假設要用過去式 spoke。",
+"would speak": "would 不能放在 if 子句中。",
+"had spoken": "had spoken 指與過去相反，但主要子句是 would apply（現在假設）。"
+},
+"d.diag-0779": {
+"will not buy": "will 是真實未來，但 even if I had 是假設，要用 would。",
+"did not buy": "did not buy 是過去事實，不是假設結果。",
+"had not bought": "had not bought 是過去完成式，不能當假設的主要子句動詞。"
+},
+"d.diag-0781": {
+"noticed": "過去式 noticed 是與現在相反，但主要子句是 would not have fallen。",
+"would notice": "would 不放在 if 子句中。",
+"would have noticed": "would have noticed 是主要子句形式，不能放在 if 子句。"
+},
+"d.diag-0782": {
+"missed": "單純過去式 missed 不是假設結果，要用 would have missed。",
+"would miss": "would miss 是現在假設，但 had not taken 是過去相反，要用 would have。",
+"had missed": "had missed 是過去完成式，不是與過去相反的結果句形式。"
+},
+"d.diag-0783": {
+"did not function": "過去式指與現在相反，但主要子句是 would have been（過去相反）。",
+"would not function": "would 不放在 if 子句中。",
+"has not functioned": "現在完成式不是假設語氣，與 would have been 不搭配。"
+},
+"g12-s1-u4.q1": {
+"And also, I want to say that...": "And also 口語又重複，不是正式文章中引出深刻反駁的過渡語。",
+"Because of this, so I think...": "Because of 與 so 同時出現重複，且是表因果，不是反駁。",
+"First of all, I am very happy because...": "First of all 用來列第一點，不是反駁，語氣也太個人。"
+},
+"g12-s1-u4.r1": {
+"Direct neural control.": "這是別題的答案內容，文章中沒有倒裝條件句出現在這裡。",
+"The argument that users bear individual responsibility for curating diverse perspectives.": "這是另一篇文章中對手的論點，不是這篇的倒裝條件句。"
+},
+"g12-s1-u4.x1": {
+"Always write four paragraphs.": "題目明確要求兩段，固定寫四段不符合要求。",
+"Write one long sentence.": "題目要求兩段並分別發展，一句話無法完成。"
+},
+"g12-s1-u4.x2": {
+"Fascinating": "Fascinating 是主動、令人著迷的意思，但遊客是被極光吸引。",
+"To fascinate": "不定詞 To fascinate 表目的，不能表示被極光吸引的原因。",
+"Having fascinated": "Having fascinated 是主動完成式，變成遊客去吸引極光，意思錯誤。"
+},
+"g12-s2-u10.r1": {
+"Direct neural control.": "這與演算法推薦與確認偏誤的文章無關，作者承認的是使用者責任。",
+"By 65%.": "這是個數字，文章裡沒有任何百分比，也不是作者承認的反方論點。"
+},
+"d.diag-0883": {
+"confiscate": "confiscate 是沒收，政府為綠色建設撥款不是沒收。",
+"deplete": "deplete 是耗盡，與為建設編列預算的語意不合。",
+"extinguish": "extinguish 是熄滅或撲滅，不能搭配撥款。"
+},
+"d.diag-0884": {
+"purification": "purification 是淨化，與化石燃料造成二氧化碳增加相反。",
+"conservation": "conservation 是保育，不是燃燒化石燃料造成的結果。",
+"sequestration": "sequestration 是封存碳，會減少而不是增加二氧化碳。"
+},
+"d.diag-0886": {
+"hinder": "hinder 是妨礙，與預期人工智慧帶來進步的語意相反。",
+"obstruct": "obstruct 是阻擋，與句中期待提升效率相反。",
+"diminish": "diminish 是減少，與句意提升效率相反。"
+},
+"d.diag-0888": {
+"microscopic": "microscopic 是微小的，雲端基礎設施要存的是龐大資料。",
+"scarce": "scarce 是稀少的，與雲端儲存大量資料的句意相反。",
+"trivial": "trivial 是瑣碎的，不是形容資料量龐大。"
+},
+"g11-s2-u10.r1": {
+"Vincent van Gogh.": "這是人名，與循環經濟的核心理念無關。",
+"Past perfect subjunctive (unreal past).": "這是文法名稱，與文章談的循環經濟無關。"
+},
+"g11-s2-u10.x1": {
+"The method always saves energy everywhere.": "always 與 everywhere 把一次小型試驗的結果誇大到所有地方。",
+"All environmental problems are solved.": "小型試驗只看能源使用，不能推到所有環境問題都解決。"
+},
+"g12-s1-u6.q1": {
+"NT$600": "只算了爸爸一人的票價，漏掉 10 歲女兒的半價票 300。",
+"NT$1,200": "把女兒當全票（600+600），但 6 到 12 歲有五折，兒子 4 歲免費。",
+"NT$1,500": "把三人都當全票算，沒有計入女兒半價與兒子免費。"
+},
+"g12-s1-u6.r1": {
+"Direct neural control.": "這是別題的內容，與鐵道票價完全無關。",
+"'Had I not learned to unplug from virtual networks regularly, my intellectual autonomy would have been subsumed...'": "這是另一篇關於手機的文章句子，不是 8 歲兒童票價。"
+},
+"quality.original.g10-s2-u12.1": {
+"The app certainly caused every user to study longer.": "使用者是自選的，certainly 與 every 把關聯說成必然因果。",
+"The app removed all differences between learners.": "報告只比較讀書時間，沒說學習者之間的差異全部消失。"
+},
+"quality.original.g10-s2-u12.2": {
+"All schools were represented.": "調查只包含一個班級，不代表所有學校。",
+"Every student had the same preference.": "調查只涵蓋一班，且沒有說每個人偏好相同。"
+},
+"quality.original.g10-s2-u12.3": {
+"Therefore certainly": "Therefore 表因果，但便宜與需要訓練是轉折，且 certainly 多餘。",
+"For instance of": "For instance of 用法錯誤，也不是轉折語。"
+},
+"quality.original.g10-s2-u12.4": {
+"Every student, whether they returned it or not.": "限定子句只指交回表格的學生，不是每個學生。",
+"Only teachers.": "句中說的是學生收到提醒，與老師無關。"
+},
+"quality.original.g10-s2-u12.5": {
+"A proved cause.": "may 表示可能，並不是已證實的原因。",
+"A command.": "may 在這裡是推測的可能性，不是命令。"
+},
+"quality.original.g10-s2-u12.6": {
+"Because access improved, costs must never rise.": "Because 把改善當成成本不可上升的原因，邏輯不通，也不是對照。",
+"Access improved although and costs.": "although 與 and 亂接，缺少完整子句，文法錯誤。"
+},
+"quality.original.g10-s2-u12.7": {
+"Do their page numbers have the same color?": "頁碼顏色與兩份報告的內容比較無關。",
+"Are their authors’ first names identical?": "作者名字是否相同，不影響兩份報告的比較。"
+},
+"quality.original.g10-s2-u12.8": {
+"The participant count shown.": "圖表已經顯示了參加人數，所以這是已知的。",
+"Whether the count is a number.": "人數本來就是數字，不是缺少資料造成的未知。"
+},
+"quality.original.g10-s2-u12.9": {
+"All participants rejected the program.": "原句只說一部分人不滿意，All 把範圍擴大到全部。",
+"No participant had a complaint.": "No participant 與原句 some 不滿意的意思剛好相反。"
+},
+"quality.original.g10-s2-u12.10": {
+"No additional information could ever matter.": "證據不足時說新資料永遠不重要，並未承認證據有限。",
+"One example proves a universal rule.": "只靠一個例子就證明普遍規則，是過度推論。"
+},
+"g11-s1-u1.x1": {
+"protects": "protects 是主動語態，但資料是被保護，要用被動語態。",
+"was protecting": "was protecting 是過去進行式主動，資料不能主動保護。",
+"has protected": "has protected 是主動完成式，資料是被保護的對象。"
+},
+"g11-s1-u1.x2": {
+"bored / boring": "講座令人無聊要用 boring，人感到無聊用 bored，順序顛倒。",
+"bore / bored": "bore 是動詞原形，不能直接接在 was 後當形容詞。"
+},
+"g11-s1-u1.q1": {
+"Encouraging": "Encouraging 是主動，但女高音是被掌聲鼓舞。",
+"Having encouraged": "Having encouraged 是主動完成式，變成女高音去鼓舞觀眾。",
+"To encourage": "To encourage 是不定詞，無法表示被掌聲鼓舞。"
+},
+"gr.participles": {
+"confused / confusing": "指示令人困惑用 confusing，人感到困惑用 confused，兩者顛倒了。",
+"confuse / confused": "confuse 是動詞原形，不能直接接在 are 後當形容詞。"
+},
+"d.diag-0751": {
+"Destroying": "Destroying 是主動，但村莊是被地震摧毀。",
+"Having destroyed": "Having destroyed 是主動完成式，村莊不能主動摧毀自己。",
+"Destroy": "Destroy 是動詞原形，不能作分詞構句開頭。"
+},
+"d.diag-0752": {
+"Reached": "Reached 是被動，但登山者是主動登頂。",
+"Having been reached": "Having been reached 是被動完成式，登山者不是被抵達。",
+"To reach": "To reach 表目的，但句意是已登頂後歡呼。"
+},
+"d.diag-0753": {
+"Surrounding": "Surrounding 是主動，但修道院是被松樹環繞。",
+"Having surrounded": "Having surrounded 是主動完成式，修道院不會去環繞松樹。",
+"Surround": "Surround 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0754": {
+"Placed": "Placed 是被動，但 Emily 是主動放下背包。",
+"Having placed to": "placed to 搭配錯誤，place 不用 to 接受詞。",
+"To be placed": "To be placed 是被動不定詞，Emily 是主動放背包。"
+},
+"d.diag-0755": {
+"Warning": "Warning 是主動，但漁民是被颱風警報通知。",
+"Having warned": "Having warned 是主動完成式，漁民不是警告者。",
+"Warn": "Warn 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0756": {
+"Peered": "Peered 是過去分詞或被動，但天文學家是主動凝視。",
+"Having peered to": "peer 的搭配是 through，不是 to，且完成式不合。",
+"Peer": "Peer 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0757": {
+"Inscribing": "Inscribing 是主動，但古詩是被題寫的。",
+"Having inscribed": "Having inscribed 是主動完成式，詩不會自己題字。",
+"Inscribe": "Inscribe 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0758": {
+"Suffered": "Suffered 是被動，但 Leo 是主動承受失眠之苦。",
+"Having suffered to": "suffer 後接 from，不是 to。",
+"Suffer": "Suffer 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0759": {
+"Translating": "Translating 是主動，但名著是被翻譯。",
+"Having translated": "Having translated 是主動完成式，名著不會自己翻譯。",
+"Translate": "Translate 是動詞原形，不能當分詞構句開頭。"
+},
+"d.diag-0760": {
+"Forgotten": "Forgotten 是被動，但 Tony 是主動忘記鑰匙。",
+"Forgot": "Forgot 是過去式，在句首會變成兩個動詞，不是分詞。",
+"To forget": "To forget 是未來或目的，但忘記是步行前已發生的事。"
+},
+"g11-s1-u2.x1": {
+"Fascinating": "Fascinating 是令人著迷，但遊客是被極光吸引。",
+"To fascinate": "To fascinate 表目的，無法表示被極光吸引的狀態。",
+"Having fascinated": "Having fascinated 是主動完成式，變成遊客吸引極光。"
+},
+"g11-s1-u2.x2": {
+"protects": "protects 是主動，但資料是被保護的對象。",
+"was protecting": "was protecting 是過去進行式主動，語態與時態都不合。",
+"has protected": "has protected 是主動完成式，資料是被保護的一方。"
+},
+"g11-s1-u2.x3": {
+"Judged": "Judged 是被動，但慣用語是 Judging from，語意也不通。",
+"To judge being": "To judge being 不是慣用語，文法上也不通順。",
+"Having judged by": "Having judged by 不是固定用法，語序錯誤。"
+},
+"g11-s1-u2.q1": {
+"intertwining": "intertwining 是主動，但手指是被交叉扣在一起。",
+"to intertwine": "to intertwine 是不定詞，不能當 with 結構的補語。",
+"intertwines": "intertwines 是第三人稱動詞，不能放在 with 結構後。"
+},
+"g11-s1-u2.r1": {
+"Vincent van Gogh.": "這是畫家人名，與改寫句子無關。",
+"To conceive production loops where waste becomes input, decoupling economic growth from environmental harm.": "這是循環經濟的答案，與太空望遠鏡發射的句子改寫無關。"
+},
+"d.diag-0761": {
+"folding": "folding 是主動，但手臂是被交叉在胸前。",
+"fold": "fold 是原形動詞，不能當 with 結構的補語。",
+"to fold": "to fold 是不定詞，不表示手臂已交叉的狀態。"
+},
+"d.diag-0762": {
+"wagged": "wagged 是被動，但尾巴是主動搖擺。",
+"wag": "wag 是動詞原形，不能當 with 結構的補語。",
+"to wag": "to wag 是不定詞，不表示尾巴正在搖的狀態。"
+},
+"d.diag-0764": {
+"glowed": "glowed 是過去式，with 結構要用分詞表示正在發光。",
+"glow": "glow 是動詞原形，不能當 with 結構的補語。",
+"to glow": "to glow 是不定詞，不表示燈光正在發亮。"
+},
+"d.diag-0765": {
+"selling out": "selling out 是主動，但門票是被賣完。",
+"sell out": "sell out 是動詞原形，不能當 with 結構的補語。",
+"to sell out": "to sell out 是不定詞，不表示門票已賣完的狀態。"
+},
+"d.diag-0766": {
+"bowing": "bowing 是主動，但頭是被低下去，with his head bowed 表被動。",
+"bow": "bow 是動詞原形，不能當 with 結構的補語。",
+"to bow": "to bow 是不定詞，不表示頭已低垂的狀態。"
+},
+"d.diag-0767": {
+"approached": "approached 是被動或過去，但考試週是主動逼近。",
+"approach": "approach 是動詞原形，不能當 with 結構的補語。",
+"to approach": "to approach 是不定詞，不表示考試週正在逼近。"
+},
+"d.diag-0768": {
+"thrusting": "thrusting 是主動，但雙手是被插進口袋。",
+"thrusted": "thrust 的三態同形，沒有 thrusted 這個形式。",
+"to thrust": "to thrust 是不定詞，不表示雙手已插入的狀態。"
+},
+"d.diag-0769": {
+"permitted": "Weather permitted 變成過去式，而慣用語是 Weather permitting。",
+"permits": "permits 是第三人稱動詞，不能用在獨立分詞構句中。",
+"to permit": "to permit 是不定詞，不是慣用語 Weather permitting。"
+},
+"g11-s1-u3.x2": {
+"left; would not miss": "left 與過去事實相反要用 had left，且結果要用 would not have missed。",
+"have left; will not miss": "現在完成式與 will 是真實條件，但事實是已錯過，不是真實條件。",
+"had left; will not miss": "if 子句對，但主要子句 will not miss 不是假設語氣，要用 would not have missed。"
+},
+"g11-s1-u3.x3": {
+"will": "if 條件句中不能用 will，且這是假設語氣。",
+"has": "has 後缺過去分詞，結構不完整。",
+"is going": "is going 後缺 to，結構不完整，也不是假設語氣。"
+},
+"g11-s1-u3.q1": {
+"inspected": "inspected 是與現在相反，但主要子句是 could have been prevented（過去）。",
+"were inspecting": "were inspecting 是過去進行式，不是與過去相反的假設。",
+"would inspect": "would 不放在 if 子句中。"
+},
+"g11-s1-u3.trap1": {
+"If I would have known, I would have told you.": "if 子句不能用 would have，要用 had known；would have 只放在主要子句。"
+},
+"g11-s1-u3.r1": {
+"After all safety checks had been completed.": "這是另一篇太空發射文章的改寫答案，與亞歷山大圖書館的時態無關。",
+"Although his military campaigns along the frozen Danube were difficult.": "這是別題的句子，不是文章中假設用的時態。"
+},
+"gr.conditionals": {
+"will read": "will 是真實未來，但 If I were you 是假設，要用 would。",
+"had read": "had read 是過去完成式，不能當與現在相反的主要子句。"
+},
+"d.diag-0785": {
+"did not rush": "過去式指與現在相反，但主要子句是 would not have survived（過去相反）。",
+"would not rush": "would 不放在 if 子句中。",
+"has not rushed": "現在完成式不是假設語氣，不能配 would not have survived。"
+},
+"d.diag-0786": {
+"told": "單純過去式 told 不是假設結果，要用 would have told。",
+"would tell": "would tell 指現在，但 had asked 與過去相反，結果也在過去。",
+"had told": "had told 是過去完成式，不是與過去相反的結果句形式。"
+},
+"d.diag-0787": {
+"was not": "was not 是過去式，與過去相反要用 had not been。",
+"would not be": "would 不放在 if 子句中。",
+"is not": "is not 是現在式，不是與過去相反的假設。"
+},
+"d.diag-0788": {
+"followed": "過去式 followed 指與現在相反，但主要子句是 would have recovered。",
+"would follow": "would 不放在 if 子句中。",
+"has followed": "has followed 是現在完成式，不能配 would have recovered。"
+},
+"d.diag-0789": {
+"was not": "was not 是過去式，與過去相反要用 had not been。",
+"is not": "is not 是現在式，不是與過去相反的假設。",
+"would not be": "would 不放在 if 子句中。"
+},
+"d.diag-0790": {
+"did not locate": "過去式指與現在相反，但主要子句是 would have perished。",
+"would not locate": "would 不放在 if 子句中。",
+"has not located": "現在完成式不是假設語氣，不能配 would have perished。"
+},
+"g11-s1-u4.x1": {
+"did not discover": "did not discover 是與現在相反，但主要子句是 would have been。",
+"would not discover": "would 不放在 if 子句中。",
+"has not discovered": "現在完成式不是假設語氣，不能配 would have been。"
+},
+"g11-s1-u4.x2": {
+"Had": "Had 後要接過去分詞，但空格後 need 是原形。",
+"Were": "Were 後不能直接接原形動詞 need。",
+"Did": "Did 不能引導省略 if 的倒裝條件句。"
+},
+"g11-s1-u4.q1": {
+"If had": "If 和倒裝的 Had 不能同時出現，二選一。",
+"Should": "Should 後要接原形動詞，但後面是過去分詞 implemented。",
+"Were": "Were 後不能接過去分詞 implemented 表示與過去相反。"
+},
+"g11-s1-u4.trap1": {
+"Had not he arrived in time, we would have failed.": "倒裝時 not 要放在主詞 he 之後，不可放在 he 前面。"
+},
+"g11-s1-u4.r1": {
+"Vincent van Gogh.": "這是畫家人名，與還原 Had Captain Sullenberger hesitated 無關。",
+"Travelers seldom witness a spectacle as transcendent...": "這是 Seldom 倒裝句還原後的句子，不是這題的條件句還原。"
+},
+"d.diag-0792": {
+"would not have been": "would not have been 是過去結果，但 right now 指現在。",
+"were not": "were not 不是假設語氣的主要子句，缺 would。",
+"are not": "are not 是現在直述語氣，不是與過去相反的假設結果。"
+},
+"d.diag-0794": {
+"would have had": "would have had 指過去結果，但 today 指現在。",
+"had": "had 是過去式，不是假設結果句，需要 would。",
+"have": "have 是現在直述語氣，不是假設結果句。"
+},
+"d.diag-0796": {
+"would still have been": "would still have been 指過去結果，但 today 指現在。",
+"is still": "is still 是現在直述語氣，不是假設結果。",
+"was still": "was still 是過去式，不是假設結果句。"
+},
+"d.diag-0797": {
+"would have been": "would have been 指過去，但 now 指現在。",
+"am": "am 是現在直述語氣，不是假設結果。",
+"was": "was 是過去式，不是假設結果句。"
+},
+"d.diag-0798": {
+"would have been": "would have been 指過去，但 today 指現在。",
+"are": "are 是現在直述語氣，不是假設結果。",
+"were": "were 是過去式，不是假設結果句。"
+},
+"d.diag-0799": {
+"diversified": "過去式 diversified 是與現在相反，但後面 years ago 是過去相反的 if 子句。",
+"diversifies": "diversifies 是現在式，但 years ago 指過去。",
+"would diversify": "would 不放在 if 子句中。"
+},
+"d.diag-0800": {
+"would not have possessed": "would not have possessed 指過去結果，但 today 指現在。",
+"did not possess": "did not possess 是過去式，不是假設結果。",
+"does not possess": "does not possess 是現在直述語氣，不是假設結果。"
+},
+"g11-s1-u5.x1": {
+"Then only": "Then only 語序不對，倒裝要用 Only then。",
+"At that time": "At that time 不是 only 片語，後面的子句不會倒裝。",
+"Soon": "Soon 不是否定副詞，後面不會倒裝，且語意不合。"
+},
+"g11-s1-u5.x2": {
+"it stands": "多加代名詞 it，句子主詞已經是 an ancient temple。",
+"does stand": "地方片語置首、名詞主詞用完全倒裝，不需要助動詞 does。",
+"standing": "standing 是分詞，沒有定式動詞，句子不完整。"
+},
+"g11-s1-u5.q1": {
+"the scientists suspected": "Little 在句首要倒裝，主詞不能在助動詞前面。",
+"the scientists did suspect": "did 放在主詞後，沒有倒裝；Little 在句首要先 did。",
+"suspected the scientists": "suspected 前缺助動詞 did，倒裝時只倒助動詞，不倒實詞動詞。"
+},
+"g11-s1-u5.r1": {
+"After all safety checks had been completed.": "這是太空發射文章的改寫答案，與 Seldom 倒裝句無關。",
+"Our collective ethical wisdom.": "這是別題的片語，不是還原 Seldom do travelers 的結果。"
+},
+"d.diag-0801": {
+"I have witnessed": "Seldom 在句首要倒裝，主詞 I 不能在助動詞前面。",
+"I did witness": "Seldom 在句首時 did 要放在 I 前面。",
+"I witnessed": "Seldom 在句首沒有倒裝，且缺助動詞。"
+},
+"d.diag-0802": {
+"I imagined": "Never 在句首要倒裝，不能直接用主詞加動詞。",
+"imagined I": "只倒裝主詞與實詞動詞不行，要用助動詞 did 倒裝。",
+"I have imagined": "Never 在句首要倒裝，且 have 的時態與 would invent 不合。"
+},
+"d.diag-0803": {
+"he had fallen": "Hardly 在句首要倒裝為 had he fallen。",
+"did he fall": "Hardly...when 要搭配過去完成式 had fallen，不是過去式。",
+"has he fallen": "has he fallen 是現在完成式，與 when 後面的過去式不合。"
+},
+"d.diag-0804": {
+"I have been": "Rarely 在句首要倒裝，主詞不能放在 have 前面。",
+"I am": "Rarely 在句首要倒裝，且 am 的時態不合。",
+"I was": "Rarely 在句首要倒裝，主詞不能放在 was 前面。"
+},
+"d.diag-0805": {
+"we had reached": "Scarcely 在句首要倒裝為 had we reached。",
+"did we reach": "Scarcely...when 要搭配過去完成式 had reached。",
+"have we reached": "have we reached 是現在完成式，與 when 後的過去式不合。"
+},
+"d.diag-0806": {
+"rescuers located": "Not until 片語在句首，主要子句要倒裝，不能用主詞加動詞。",
+"had rescuers located": "had rescuers located 是過去完成式，但句意是光線出現後才找到，用 did。",
+"rescuers did locate": "did 放在主詞後沒有倒裝，Not until 在句首要用 did rescuers。"
+},
+"d.diag-0807": {
+"does": "does 無法搭配後面的 be disclosed，被動要用情態助動詞。",
+"is": "is 不能放在 be disclosed 之前，且助動詞重複。",
+"has": "has 後要接過去分詞，不能接 be disclosed。"
+},
+"d.diag-0808": {
+"we suspected": "Little 在句首要倒裝，不能用主詞加動詞。",
+"suspected we": "只倒裝實詞動詞不對，要用助動詞 did 倒裝。",
+"we have suspected": "Little 在句首要倒裝，且 have 的時態與 harbored 不合。"
+},
+"d.diag-0809": {
+"he exceeded": "Not only 在句首要倒裝為 did he exceed。",
+"he did exceed": "did 放在主詞後沒有倒裝，Not only 在句首要先 did。",
+"he had exceeded": "Not only 在句首要倒裝，且過去完成式與 but he also shattered 時態不合。"
+},
+"d.diag-0810": {
+"the speaker had ascended": "No sooner 在句首要倒裝為 had the speaker ascended。",
+"did the speaker ascend": "No sooner...than 要搭配過去完成式 had ascended，不是過去式。",
+"was the speaker ascending": "No sooner...than 要用過去完成式，不是過去進行式。"
+},
+"d.diag-0811": {
+"did come": "地方副詞置首、名詞主詞用完全倒裝，不需助動詞 did。",
+"comes it": "主詞 it 與名詞 school bus 不符，且時態與 filled 描述不合。",
+"was coming it": "不需要代名詞 it，主詞是 the yellow school bus。"
+},
+"d.diag-0812": {
+"does come": "Here 置首、名詞主詞用完全倒裝，不需助動詞 does。",
+"is coming it": "多餘的代名詞 it，主詞是 the express train。",
+"come it": "多餘的 it，且 come 與單數主詞 train 不一致。"
+},
+"d.diag-0813": {
+"goes he": "主詞是代名詞 he 時不倒裝，要寫成 there he goes。",
+"does he go": "代名詞主詞不倒裝，且 does he go 變成疑問句。",
+"is he going": "代名詞主詞不倒裝，且變成疑問句。"
+},
+"d.diag-0815": {
+"did pour": "Down 置首、名詞主詞用完全倒裝，不需助動詞 did。",
+"was pouring it": "多餘的代名詞 it，主詞是 raindrops。",
+"pours it": "多餘的 it，且 pours 與複數主詞 raindrops 不一致。"
+},
+"d.diag-0816": {
+"did": "did 後面缺原形動詞，且 chancellor 前不需要助動詞。",
+"were they": "主詞是單數 chancellor，不是 they，且 were 不一致。",
+"had been it": "多餘的 it，且 had been 與 our university chancellor 搭配錯誤。"
+},
+"d.diag-0817": {
+"did dash": "Away 置首、名詞主詞用完全倒裝，不需助動詞 did。",
+"dashes it": "多餘的 it，且主詞是 the deer。",
+"was dashing it": "多餘的 it，不需代名詞。"
+},
+"d.diag-0819": {
+"did sit": "地方片語置首、名詞主詞用完全倒裝，不需助動詞 did。",
+"sits it": "多餘的 it，且 sits 與複數 elders 不一致。",
+"was sitting it": "多餘的 it，且 was 與複數 elders 不一致。"
+},
+"d.diag-0820": {
+"did soar": "Up 置首、名詞主詞用完全倒裝，不需助動詞 did。",
+"soars it": "多餘的 it，主詞是 the flock。",
+"was soaring it": "多餘的 it，不需代名詞。"
+},
+"g11-s1-u6.x1": {
+"she was": "So + 形容詞在句首，主要子句要倒裝為 was she。",
+"did she": "exhausted 是形容詞，句子是 be 動詞，倒裝要用 was she，不用 did。",
+"she did": "So + 形容詞在句首要倒裝，且 be 動詞句不用 did。"
+},
+"g11-s1-u6.x2": {
+"neither were": "前句助動詞是 did，附和要用 neither did，不是 were。",
+"either did": "either 不能放句首倒裝，附和否定要用 neither。",
+"so did": "so did 用於肯定附和，但前句是否定。"
+},
+"g11-s1-u6.q1": {
+"the performance was": "So + 形容詞在句首，要倒裝為 was the performance。",
+"the performance did be": "be 動詞不能用 did 倒裝，did be 是錯誤用法。",
+"did the performance": "did 後面缺動詞，且 be 動詞不能用 did。"
+},
+"g11-s1-u6.trap1": {
+"He doesn't like spicy food, and I don't too.": "否定附和不能用 too，要用 either 或 neither 倒裝。"
+}
+}

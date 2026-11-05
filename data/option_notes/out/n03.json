@@ -1,0 +1,719 @@
+{
+ "quality.original.g7-s2-u6.8": {
+  "where of": "where 是地方副詞，後面不能接 of 再接 bus stops，文法不通。",
+  "how much": "how much 問數量或價格，題目要問的是哪些公車站，不是多少錢。"
+ },
+ "quality.original.g7-s2-u6.10": {
+  "An unrelated restaurant price.": "餐廳價格與路線無關，無法幫人在轉彎時找到方向。",
+  "Only the traveler’s age.": "旅客年齡不能指引路線，對照著走路線沒有幫助。"
+ },
+ "g9-s1-u1.x1": {
+  "taught": "taught 是過去式，只說過去教過，但句中 still conducts 表示至今仍在教。",
+  "is teaching": "is teaching 是現在進行式，無法表達 for over twenty-five years 的長期持續。",
+  "had taught": "had taught 是過去完成式，需要另一個更晚的過去時間，句中沒有。"
+ },
+ "g9-s1-u1.q1": {
+  "taught": "since 起點搭配過去式不通，要用現在完成式表示從搬家持續到現在。",
+  "is teaching": "is teaching 只說正在教，沒有表達自五年前搬家以來的持續。",
+  "teaches": "teaches 是一般現在式，不能和 since 引導的起點時間搭配。"
+ },
+ "g9-s1-u1.trap1": {
+  "I have lived here since 5 years.": "5 years 是一段時間，要用 for；since 後面要接過去的時間點。"
+ },
+ "k.past-perfect.1": {
+  "have visited": "last Sunday 是已結束的過去時間，不能搭配現在完成式 have visited。",
+  "have visit": "have 後面要接過去分詞 visited，visit 是原形，形式錯誤。"
+ },
+ "d.diag-0501": {
+  "lived": "lived 是過去式，只說過去住過，沒有表達自 2015 年退休至今仍住在那裡。",
+  "is living": "is living 是現在進行式，不能搭配 since 表示從過去持續到現在。",
+  "lives": "lives 是一般現在式，與 since 引導的過去起點時間不搭。"
+ },
+ "d.diag-0502": {
+  "knew": "knew 是過去式，無法表達從小學到現在認識超過十年。",
+  "know": "know 是一般現在式，不能搭配 for more than ten years 的持續期間。",
+  "are knowing": "know 是狀態動詞，一般不用進行式，are knowing 不自然。"
+ },
+ "d.diag-0503": {
+  "gone": "gone to 表示去了還沒回來，問經驗要用 been to。",
+  "went": "Have you ever 後面要接過去分詞，went 是過去式。",
+  "being": "being 不是完成式需要的過去分詞，Have you ever being 文法錯誤。"
+ },
+ "d.diag-0504": {
+  "taught": "taught 是過去式，無法表達 and he still teaches 的至今仍在授課。",
+  "teaches": "teaches 是一般現在式，不能搭配 for twenty-five years 的持續期間。",
+  "is teaching": "is teaching 是現在進行式，沒有表達二十五年的累積時間。"
+ },
+ "d.diag-0505": {
+  "did": "did 後面要接原形動詞，而題目的 had 是過去分詞，did you had 文法錯誤。",
+  "do": "do 後面要接原形動詞，題目的 had 不能接在 do you 之後。",
+  "are": "are 不能和過去分詞 had 組成完成式，應為 have。"
+ },
+ "d.diag-0506": {
+  "resided": "resided 是過去式，無法表達從畢業後一直住在倫敦到現在。",
+  "resides": "resides 是一般現在式，與 since 引導的過去時間點不搭配。",
+  "is residing": "is residing 是現在進行式，不適合搭配 since 表示持續至今。"
+ },
+ "d.diag-0509": {
+  "lived": "lived 是過去式，但句中 for five years now 表示到現在還住在那裡。",
+  "lives": "lives 是一般現在式，不能搭配 for five years now 的持續期間。",
+  "is living": "is living 是進行式，沒有表達已住滿五年的累積時間。"
+ },
+ "d.diag-0510": {
+  "was": "was 是過去式，since seventh grade 表示從七年級到現在仍是成員。",
+  "is": "is 是一般現在式，不能搭配 since 引導的起點時間。",
+  "had been": "had been 是過去完成式，需要另一個過去時間點，句中沒有。"
+ },
+ "d.diag-0521": {
+  "built": "主詞 bridge 是被建造的，要用被動 was built，單用 built 變成主動。",
+  "is built": "is built 是現在被動，與 five centuries ago 的過去時間不合。",
+  "was building": "was building 是過去進行式主動，橋不會自己去建造東西。"
+ },
+ "d.diag-0524": {
+  "discard": "bottles 是被丟棄的，要用被動，discard 是主動且缺 are。",
+  "were discarded": "were discarded 是過去被動，every single minute 表示現在經常發生。",
+  "are discarding": "are discarding 是主動進行式，瓶子不會自己丟棄。"
+ },
+ "d.diag-0525": {
+  "cleaned": "auditorium 是被打掃的，要用被動 was cleaned，cleaned 是主動。",
+  "is cleaned": "is cleaned 是現在被動，與 yesterday 的過去時間不合。",
+  "has cleaned": "has cleaned 是主動完成式，禮堂不能自己打掃，且不搭配 yesterday。"
+ },
+ "d.diag-0528": {
+  "wrote": "novels 是被寫出來的，要用被動，wrote 是主動過去式。",
+  "are written": "are written 是現在被動，與 in the nineteenth century 的過去時間不合。",
+  "were writing": "were writing 是過去進行式主動，小說不會自己寫作。"
+ },
+ "d.diag-0529": {
+  "import": "coffee beans 是被進口的，要用被動，import 是主動且缺助動詞。",
+  "were imported": "were imported 是過去被動，Every year 表示每年慣常發生，要用現在式。",
+  "are importing": "are importing 是主動進行式，咖啡豆不會自己進口。"
+ },
+ "d.diag-0531": {
+  "must": "must 後面要接原形動詞，缺 be 無法接 disposed of。",
+  "should": "should 後面直接接 disposed of，缺 be，被動結構不完整。",
+  "ought": "ought 後面要有 to，缺少 to be 才能接 disposed of。"
+ },
+ "d.diag-0532": {
+  "should not reveal": "文件是被透露的，要用被動，should not reveal 是主動語態。",
+  "is not revealing": "is not revealing 是主動進行式，文件不會自己透露祕密。",
+  "must reveal": "must reveal 是主動且語意變成必須透露，與保密文件相反。"
+ },
+ "d.diag-0533": {
+  "needs repairing to": "need 後接 V-ing 或 to be p.p.，repairing to 的語序錯誤。",
+  "is repaired": "is repaired 只是陳述被修理，沒有表達設備需要被修理且要趕緊處理。",
+  "will repair": "will repair 是主動，設備不會自己修理，也沒有表示需要。"
+ },
+ "d.diag-0534": {
+  "has submitted": "has submitted 是主動完成式，表單是被遞交的，且不表示必須。",
+  "submits": "submits 是主動現在式，表單自己不會遞交，也沒有必須的語意。",
+  "is submitting": "is submitting 是主動進行式，表單不能自己遞交。"
+ },
+ "d.diag-0535": {
+  "must not": "must not 後面直接接 touched，缺 be，被動結構不完整。",
+  "can be not": "否定詞 not 要放在 can 之後，變成 cannot be，can be not 語序錯誤。",
+  "should": "should 後面直接接 touched，缺 be，且沒有表達禁止。"
+ },
+ "d.diag-0536": {
+  "cancels": "cancels 是主動現在式，運動會是被取消的，且句中指未來。",
+  "is canceling": "is canceling 是主動進行式，運動會不會自己取消活動。",
+  "would cancel": "would cancel 是主動，且 would 是假設語氣，與 tomorrow 的事實不合。"
+ },
+ "d.diag-0537": {
+  "ought to throw": "垃圾是被丟的，要用被動 be thrown，ought to throw 是主動。",
+  "is throwing": "is throwing 是主動進行式，垃圾不會自己丟，也沒有規範的語意。",
+  "must throw": "must throw 是主動，主詞 Trash 是被丟的東西，語態錯誤。"
+ },
+ "d.diag-0538": {
+  "must wear": "安全帶是被穿戴的，要用被動 must be worn，must wear 是主動。",
+  "are wearing": "are wearing 是主動進行式，安全帶不會自己穿戴。",
+  "should wear": "should wear 是主動，安全帶是被繫上的，要用 should be worn。"
+ },
+ "d.diag-0539": {
+  "must return": "書是被歸還的，要用被動 must be returned，must return 是主動。",
+  "should return": "should return 是主動，書不能自己歸還，需要被動。",
+  "are returning": "are returning 是主動進行式，書不會自己歸還。"
+ },
+ "d.diag-0540": {
+  "should handle": "花瓶是被拿取的，要用被動 should be handled，should handle 是主動。",
+  "is handling": "is handling 是主動進行式，花瓶不能自己拿取東西。",
+  "handles": "handles 是主動現在式，花瓶不會自己搬動，也沒有應該小心的語意。"
+ },
+ "d.diag-0544": {
+  "who": "who 指人，先行詞 book 是物，不能用 who。",
+  "whom": "whom 是人的受格，先行詞是物，且關係子句缺主詞。",
+  "whose": "whose 表所有格，後面要接名詞，這裡是主詞缺口。"
+ },
+ "d.diag-0548": {
+  "who": "who 指人，先行詞 solar panels 是物，不能用 who。",
+  "whom": "whom 是人的受格，先行詞是物，且在子句中作主詞，不合。",
+  "whose": "whose 表所有格，後面要接名詞，這裡 were installed 前缺主詞。"
+ },
+ "g9-s1-u2.x1": {
+  "running; to rest": "make 和 let 後都接原形動詞，running 與 to rest 都不符。",
+  "to run; resting": "make 和 let 後都不能加 to 或用 V-ing，to run 和 resting 都錯。",
+  "ran; rested": "受詞補語要用原形動詞，ran 與 rested 是過去式，不能這樣用。"
+ },
+ "g9-s1-u2.q1": {
+  "to turn off": "使役動詞 make 後面要接原形動詞，不能加 to。",
+  "turning off": "make 後面不接 V-ing，要接原形動詞 turn off。",
+  "turned off": "turned off 是過去式或過去分詞，make 受詞後要用原形動詞。"
+ },
+ "g9-s1-u2.trap1": {
+  "He made me to clean the room.": "make 當使役動詞，後面接原形 clean，不能加 to。"
+ },
+ "d.diag-0571": {
+  "to shed": "使役動詞 make 後面接原形動詞，不能加 to。",
+  "shedding": "make 之後不接 V-ing，受詞補語要用原形 shed。",
+  "sheds": "sheds 是第三人稱單數，受詞補語要用原形，不加 s。"
+ },
+ "d.diag-0572": {
+  "to inspect": "使役動詞 have 後面接人再接原形動詞，不能加 to。",
+  "inspecting": "have + 人 + inspecting 表示讓人持續做，與表達請技師檢查不符。",
+  "inspected": "inspected 表被動，但 mechanic 是做檢查的人，要用原形主動。"
+ },
+ "d.diag-0573": {
+  "to invite": "使役動詞 let 後面接原形動詞，不能加 to。",
+  "inviting": "let 後不接 V-ing，受詞補語要用原形 invite。",
+  "invites": "invites 是第三人稱單數，let 的受詞補語要用原形，不加 s。"
+ },
+ "d.diag-0575": {
+  "to revise": "使役動詞 have 後面接人再接原形動詞，不能加 to。",
+  "revising": "have + 人 + revising 語意為讓學生持續修改，與句型不合。",
+  "revised": "revised 表被動，但 students 是修改的人，要用原形 revise。"
+ },
+ "d.diag-0576": {
+  "to stop": "使役動詞 let 後面接原形動詞，不能加 to。",
+  "stopping": "let 後不接 V-ing，受詞補語要用原形 stop。",
+  "stopped": "stopped 是過去式或過去分詞，let 受詞後要用原形動詞。"
+ },
+ "d.diag-0577": {
+  "to laugh": "使役動詞 make 後面接原形動詞，不能加 to。",
+  "laughing": "make 後不接 V-ing，受詞補語要用原形 laugh。",
+  "laughed": "laughed 是過去式，make everyone 後面要接原形動詞。"
+ },
+ "d.diag-0580": {
+  "to feel": "使役動詞 make 後面接原形動詞，不能加 to。",
+  "feeling": "make 後不接 V-ing，受詞補語要用原形 feel。",
+  "felt": "felt 是過去式，make people 後面要接原形動詞。"
+ },
+ "d.diag-0641": {
+  "is used to": "is used to 後接 V-ing，表示習慣，不是過去曾經抽菸。",
+  "was used to": "was used to 後接 V-ing 表過去習慣，後面又直接接原形 smoke，文法不合。",
+  "used": "used 單獨出現不能直接接 smoke，過去的習慣要用 used to。"
+ },
+ "d.diag-0642": {
+  "drive": "be used to 的 to 是介系詞，後面要接 V-ing，不能用原形。",
+  "to drive": "be used to 已含有 to，再加 to drive 重複，且要接 V-ing。",
+  "drove": "drove 是過去式，be used to 後面要接 V-ing，不能接過去式。"
+ },
+ "d.diag-0644": {
+  "wear": "are used to 的 to 是介系詞，後面要接 V-ing，不能用原形。",
+  "to wear": "are used to 已含有 to，不能再接 to wear，要接 V-ing。",
+  "wore": "wore 是過去式，are used to 後面要接 V-ing。"
+ },
+ "d.diag-0645": {
+  "is used to": "is used to 表示習慣，後面要接 V-ing，不是過去曾存在。",
+  "was used to": "was used to 表示過去習慣，後面接 V-ing，與 be 原形不合。",
+  "used": "used 單獨不能直接接 be，過去曾存在要用 used to。"
+ },
+ "d.diag-0646": {
+  "wake": "get used to 的 to 是介系詞，後面要接 V-ing，不能用原形。",
+  "to wake": "get used to 已含有 to，不能再接 to wake，要接 V-ing。",
+  "woke": "woke 是過去式，get used to 後面要接 V-ing。"
+ },
+ "d.diag-0647": {
+  "are used to": "are used to 表示現在習慣，後面接 V-ing，不是過去常做的事。",
+  "used": "used 單獨不能直接接原形 play，過去習慣要用 used to。",
+  "were used to": "were used to 表示適應，後面接 V-ing，而 play 是原形，不合。"
+ },
+ "d.diag-0650": {
+  "used to": "Did 疑問句中，used 要還原成 use，did you used to 文法錯。",
+  "using to": "using to 不是固定用法，過去習慣疑問句應為 Did you use to。",
+  "be used to": "be used to 表習慣於，後面接 V-ing，與 Did 的疑問句型不合。"
+ },
+ "g9-s1-u3.trap1": {
+  "The girl speaks English well is my sister.": "關係代名詞 who 當主詞不能省略，否則兩個動詞 speaks 和 is 並列不通。"
+ },
+ "g9-s1-u3.r1": {
+  "Over fifty injured bears.": "文章沒有提到受傷的熊，這個選項與原文內容無關。",
+  "The first-floor book borrowing desk and online reservation.": "這是圖書館公告的內容，與 Mr. Chang 借給作者的東西無關。"
+ },
+ "g9-s2-u4.x1": {
+  "where is the bank": "間接問句要用 where + 主詞 + 動詞，不能倒裝成 where is the bank。",
+  "where does the bank": "where does the bank 多了助動詞 does，且缺動詞，間接問句不倒裝。"
+ },
+ "g9-s2-u4.q1": {
+  "did he go": "間接問句不倒裝，did he go 保留了直接問句的助動詞語序。",
+  "does he go": "does he go 仍是直接問句語序，且時態不符 last night。",
+  "he goes": "goes 是現在式，與 last night 的過去時間不合。"
+ },
+ "g9-s2-u4.trap1": {
+  "Do you know where does he live?": "間接問句要用 where he lives，不能保留助動詞 does 倒裝。"
+ },
+ "g9-s2-u4.r1": {
+  "The first-floor book borrowing desk and online reservation.": "這是圖書館公告的內容，與專業人士為何用間接問句無關。",
+  "Practice emergency drills.": "文章沒有談到緊急演習，與間接問句的原因無關。"
+ },
+ "k.guided-discussion.1": {
+  "The school has 30 classrooms.": "有 30 間教室是可以查證的事實，不是個人意見。",
+  "The bell rings at 8:00.": "鐘聲八點響是可以查證的事實，不是個人意見。"
+ },
+ "k.guided-discussion.2": {
+  "You are wrong.": "直接說你錯了很不客氣，沒有先肯定對方，不算有禮貌。",
+  "No.": "只說 No 太直接，沒有理由也沒有尊重對方，不算有禮貌。"
+ },
+ "d.diag-0421": {
+  "is it": "前面是肯定句，附加問句要用否定，is it 是肯定形式。",
+  "doesn't it": "句中動詞是 be 動詞 is，附加問句要用 isn't，不能用 doesn't。",
+  "does it": "does it 是肯定形式，且助動詞不符 be 動詞 is。"
+ },
+ "d.diag-0422": {
+  "didn't he": "前面已經是否定 didn't go，附加問句要用肯定 did he。",
+  "does he": "does he 是現在式，但句子是過去式 didn't go，要用 did。",
+  "was he": "was he 是 be 動詞，但前面是一般動詞過去式 go，要用 did。"
+ },
+ "d.diag-0423": {
+  "can you": "前面是肯定句，附加問句要用否定，can you 是肯定形式。",
+  "don't you": "句中助動詞是 can，附加問句要沿用 can't，不能用 don't。",
+  "aren't you": "句中沒有 be 動詞，附加問句要沿用助動詞 can 變成 can't you。"
+ },
+ "d.diag-0424": {
+  "have they": "前面是肯定句，附加問句要用否定，have they 是肯定形式。",
+  "don't they": "句中是現在完成式 have finished，附加問句要用 haven't，不能用 don't。",
+  "didn't they": "句中是現在完成式，不是過去式，附加問句要用 haven't they。"
+ },
+ "d.diag-0425": {
+  "does she": "前面是肯定句，附加問句要用否定，does she 是肯定形式。",
+  "isn't she": "句中是一般動詞 walks，要用助動詞 doesn't，不能用 isn't。",
+  "is she": "is she 是肯定的 be 動詞，與一般動詞 walks 和肯定句都不合。"
+ },
+ "d.diag-0426": {
+  "are there": "前面是肯定句，附加問句要用否定，are there 是肯定形式。",
+  "aren't they": "There are 句型附加問句的主詞仍要用 there，不能換成 they。",
+  "are they": "主詞應用 there 而不是 they，且前肯後否，are they 是肯定形式。"
+ },
+ "d.diag-0427": {
+  "will you": "will you 用於一般祈使句，Let's 開頭的提議要用 shall we。",
+  "don't we": "Let's 開頭的提議附加問句固定用 shall we，不用 don't we。",
+  "can we": "Let's 開頭的提議附加問句固定用 shall we，不用 can we。"
+ },
+ "d.diag-0428": {
+  "shall we": "shall we 用於 Let's 開頭的提議，這句是請對方開窗的祈使句。",
+  "don't you": "祈使句附加問句用 will you，不用 don't you。",
+  "aren't you": "祈使句附加問句用 will you，aren't you 的 be 動詞不符。"
+ },
+ "d.diag-0429": {
+  "hasn't he": "句中有 never，已是否定句，附加問句要用肯定 has he。",
+  "is he": "句中助動詞是 has been，附加問句要用 has，不能用 is。",
+  "does he": "句中是現在完成式 has been，附加問句要用 has，不能用 does。"
+ },
+ "d.diag-0430": {
+  "won't they": "前面已是否定 won't，附加問句要用肯定 will they。",
+  "are they": "句中助動詞是 will，附加問句要用 will，不能用 are。",
+  "do they": "句中助動詞是 will，附加問句要用 will，不能用 do。"
+ },
+ "d.diag-0591": {
+  "what": "what 用來引導不確定的內容，這裡是完整事實子句，要用 that。",
+  "which": "which 用來表示選擇或關係代名詞，這裡的完整子句要用 that。",
+  "who": "who 指人，這裡引導的是完整子句，不是人，要用 that。"
+ },
+ "d.diag-0594": {
+  "what": "what 引導的子句本身缺名詞，後面 climate change demands 是完整子句，要用 that。",
+  "which": "which 表示選擇，不能引導 believe 後完整的客觀主張。",
+  "who": "who 指人，這裡引導的是完整子句，要用 that。"
+ },
+ "d.diag-0596": {
+  "what": "what 引導的子句缺主詞或受詞，這裡 hydration is vital 是完整的，要用 that。",
+  "which": "which 表示選擇，不能引導 emphasize 後完整的事實子句。",
+  "who": "who 指人，這裡引導的是完整子句，要用 that。"
+ },
+ "d.diag-0598": {
+  "what": "what 引導的子句缺名詞，這裡 temperatures will drop 已完整，要用 that。",
+  "which": "which 表示選擇，不能引導 predicts 後完整的預測子句。",
+  "who": "who 指人，這裡引導的是完整子句，要用 that。"
+ },
+ "d.diag-0599": {
+  "what": "what 引導的子句缺名詞，這裡 ancestors were artisans 已完整，要用 that。",
+  "which": "which 表示選擇，不能引導 discovered 後完整的事實子句。",
+  "who": "who 指人，這裡引導的是完整子句，要用 that。"
+ },
+ "d.diag-0601": {
+  "is it": "間接問句不倒裝，where the post office is it 多了 it，語序錯誤。",
+  "does it": "does it 保留了直接問句的助動詞，且 be 動詞句不需要 does。",
+  "be": "主詞 the post office 是單數，要用 is，原形 be 在這裡文法錯誤。"
+ },
+ "d.diag-0602": {
+  "will it take place": "間接問句不倒裝，will it 把助動詞放在主詞前，語序錯誤。",
+  "does it take place": "does it 是直接問句語序，且句中有 next week 要用未來式。",
+  "is it taking": "is it taking 是倒裝進行式，間接問句不倒裝，時態也不合。"
+ },
+ "d.diag-0604": {
+  "was he": "間接問句不倒裝，Tony 已是主詞，不需再加 he。",
+  "did he": "did he 是直接問句語序，且 absent 前需要 be 動詞。",
+  "is": "is 是現在式，但句中 yesterday 要用過去式 was。"
+ },
+ "d.diag-0606": {
+  "did make": "who 當主詞，後面直接接動詞，不能加 did 變成助動詞問句。",
+  "did he make": "who 已是主詞，did he make 又多了 he，語序錯誤。",
+  "was made": "was made 是被動，但 who 是做出發現的人，要用主動 made。"
+ },
+ "d.diag-0607": {
+  "did it cost": "間接問句不倒裝，did it cost 多了助動詞和代名詞。",
+  "does it cost": "does it cost 是直接問句，且時態不合，句中是過去式。",
+  "is it costing": "is it costing 是倒裝進行式，間接問句不倒裝。"
+ },
+ "d.diag-0608": {
+  "did I put": "間接問句不倒裝，did I put 保留了助動詞。",
+  "was I putting": "was I putting 是倒裝進行式，間接問句不倒裝，語意也不符。",
+  "have put": "have put 是現在完成式，與 last night 的過去時間不合。"
+ },
+ "d.diag-0609": {
+  "did she submit": "間接問句不倒裝，did she submit 保留了助動詞 did。",
+  "was she submitting": "was she submitting 是倒裝進行式，間接問句不倒裝。",
+  "submits": "submits 是現在式，但句中 asked 與 late 表示過去的事。"
+ },
+ "d.diag-0610": {
+  "can I": "間接問句不倒裝，can I 把助動詞放在主詞前，語序錯誤。",
+  "do I": "do I 是直接問句語序，且後面已有 can，助動詞重複。",
+  "am I": "am I 是倒裝，且與 operate 搭配不合，間接問句不倒裝。"
+ },
+ "g9-s2-u5.q1": {
+  "They will be doubled.": "公告說罰款自動免除，沒有提到加倍，這個選項與原文相反。",
+  "They must be paid online.": "公告只說線上預約服務可用，沒說罰款要線上繳，罰款已免除。",
+  "They will be charged when the library reopens.": "公告說閉館期間到期的罰款自動免除，不會在重新開放時收取。"
+ },
+ "k.listen-take-notes.1": {
+  "10:30 / main gate": "10:30 是被 sorry 更正掉的舊時間，應記最後確認的 11:00。",
+  "10:30 / 11:00 / tour": "同時記兩個時間會混淆，也沒記集合地點 main gate，筆記不清楚。"
+ },
+ "d.diag-0701": {
+  "Although": "Although 是連接詞，要接完整子句，後面卻是名詞片語 the torrential rainfall。",
+  "Because": "Because 表原因，語意不符，且後面也要接子句，不能接名詞片語。",
+  "Even though": "Even though 是連接詞，要接完整子句，後面是名詞片語，不能用。"
+ },
+ "d.diag-0702": {
+  "although": "although 是連接詞，要接完整子句，後面是名詞片語 traffic congestion。",
+  "even though": "even though 是連接詞，要接完整子句，後面是名詞片語，不能用。",
+  "because": "because 表原因，與準時抵達的轉折語意相反，且後面要接子句。"
+ },
+ "d.diag-0704": {
+  "although": "although 是連接詞，要接完整子句，後面是名詞片語 the freezing winds。",
+  "even though": "even though 是連接詞，要接完整子句，後面是名詞片語，不能用。",
+  "because": "because 表原因，語意不通，且後面要接子句，不能接名詞片語。"
+ },
+ "d.diag-0705": {
+  "Despite of": "despite 本身就是介系詞，後面不可再加 of，Despite of 是錯誤用法。",
+  "Because": "Because 表原因，語意不通，且後面要接子句，不能接動名詞片語。",
+  "Since": "Since 表原因或時間，語意不符，也不能接動名詞片語表示轉折。"
+ },
+ "d.diag-0707": {
+  "In spite": "in spite 必須加 of 才能成為介系詞片語，缺 of 文法不完整。",
+  "Because": "Because 表原因，與缺少訓練仍作曲的轉折語意相反。",
+  "Due to": "Due to 表原因，與缺少訓練仍作曲的轉折語意相反。"
+ },
+ "d.diag-0708": {
+  "although": "although 是連接詞，要接完整子句，後面是名詞片語 its very high price。",
+  "though": "though 是連接詞，要接完整子句，後面是名詞片語，不能用。",
+  "even if": "even if 是連接詞，要接子句，且表示假設，後面是名詞片語，不合。"
+ },
+ "d.diag-0710": {
+  "although": "although 是連接詞，要接完整子句，後面是名詞片語 the terrible storm。",
+  "even though": "even though 是連接詞，要接完整子句，後面是名詞片語，不能用。",
+  "because": "because 表原因，語意不通，水手是在暴風雨中仍前進，要表示轉折。"
+ },
+ "d.diag-0741": {
+  "Skeptical and dismissive": "作者帶著敬意與驚嘆描寫遺跡，不是懷疑或輕視的語氣。",
+  "Hostile and aggressive": "deep respect 表示尊敬，不是敵意或攻擊性，語氣完全相反。",
+  "Indifferent and bored": "wonder 表示驚嘆，作者很有興趣，不是冷漠或無聊。"
+ },
+ "d.diag-0743": {
+  "Instant worldwide celebration": "文中說許多科學家拒絕相信，並沒有全球立刻慶祝，與原文相反。",
+  "Financial rewards from the government": "文中沒有提到政府給予獎金，這個選項超出原文。",
+  "Complete indifference from everyone": "拒絕相信表示有反應，不是所有人都漠不關心，說法太絕對。"
+ },
+ "d.diag-0744": {
+  "To discourage people from using electricity": "作者是呼籲投資太陽能風力，不是要大家不要用電，這是曲解。",
+  "To promote fossil fuel investments": "作者主張投資太陽能與風力，不是化石燃料，與文意相反。",
+  "To praise plastic manufacturing": "文章談的是再生能源，沒有提到塑膠製造，這個選項偏離主題。"
+ },
+ "d.diag-0746": {
+  "Supportive and encouraging": "作者嘲笑名人膚淺的流行，是批評而不是支持與鼓勵。",
+  "Neutral and passive": "make fun of 表示有明確的嘲諷態度，不是中立或被動。",
+  "Fearful and timid": "嘲弄需要表達意見的態度，沒有害怕或膽小的語氣。"
+ },
+ "d.diag-0747": {
+  "Wealth is necessary for technological innovation.": "發明家出身貧困仍成功，說明財富不是必要條件，這個推論相反。",
+  "Formal degrees guarantee scientific success.": "文章沒有提到學位，也不能推論學位保證成功，說法太絕對。",
+  "Luck is the only factor in human achievement.": "文中強調從不放棄，是努力造就成就，說運氣是唯一因素不合。"
+ },
+ "d.diag-0748": {
+  "Entertain readers with biological trivia": "作者引用驚人的滅絕率是為了警示嚴重性，不是提供有趣的小知識。",
+  "Promote logging industry profits": "文章談森林破壞的危機，不是宣傳伐木業獲利。",
+  "Encourage urban expansion into forests": "文章強調破壞的後果，不會鼓勵都市擴張侵入森林。"
+ },
+ "d.diag-0749": {
+  "Chronological narrative of computer history": "文章談的是對人工智慧不同意見，不是依時間順序講電腦歷史。",
+  "Step-by-step technical instructions": "文章是探討對比的意見，不是一步一步的技術教學。",
+  "Personal emotional anecdotes": "文章探討不同觀點的對照，不是個人情緒小故事。"
+ },
+ "d.diag-0750": {
+  "Silly and lighthearted": "英雄犧牲的故事令人感動，語氣莊重，不是愚蠢或輕鬆。",
+  "Sarcastic and bitter": "作者以感人的方式描寫，不是諷刺或苦澀的語氣。",
+  "Terrifying and dreadful": "作者重點是感動而不是恐怖，氣氛是莊嚴動人而非可怕。"
+ },
+ "g9-s2-u6.x1": {
+  "4 p.m.": "4 p.m. 是舊時刻表上的時間，新通知已改為 4:30。",
+  "3:30 p.m.": "3:30 p.m. 沒有出現在任何一個通知中，是錯誤的時間。"
+ },
+ "g9-s2-u6.q1": {
+  "9:15 a.m.": "信中規定開船前 30 分鐘報到，9:15 只提前 15 分鐘，不夠。",
+  "9:30 a.m.": "9:30 是開船時間，不是報到時間，報到須提早 30 分鐘。",
+  "10:00 a.m.": "10:00 已晚於 9:30 的船班開船時間，趕不上船。"
+ },
+ "d.diag-0653": {
+  "neither": "neither 是兩者皆不，要搭配 nor，與 or 不合。",
+  "both": "both 要搭配 and，不能搭配 or，語意也不是兩者擇一。",
+  "not only": "not only 要搭配 but also，不能搭配 or。"
+ },
+ "d.diag-0654": {
+  "want": "就近原則 sister 是單數，動詞要用 wants，want 是複數形。",
+  "are wanting": "want 是狀態動詞，且 are 與單數 sister 不合。",
+  "have wanted": "have wanted 是完成式，且 have 與單數 sister 不合。"
+ },
+ "d.diag-0656": {
+  "have": "Neither of 在正式文法中視為單數，動詞要用 has，不用 have。",
+  "is having": "句中表示擁有經驗，have 是狀態動詞，不用進行式 is having。",
+  "are having": "are having 是進行式，have 表擁有時不用進行式，主詞也應視為單數。"
+ },
+ "d.diag-0658": {
+  "drink": "Neither of 在正式文法中視為單數，動詞要用 drinks，不用 drink。",
+  "are drinking": "are drinking 是進行式，且句子描述習慣不是此刻動作，主詞也應視為單數。",
+  "have drunk": "have drunk 是完成式，句意是父母的習慣，且 have 與單數看待不合。"
+ },
+ "d.diag-0660": {
+  "wants": "就近原則 teachers 是複數，動詞要用 want，wants 是單數形。",
+  "is wanting": "want 是狀態動詞，且 is 與複數 teachers 不合。",
+  "wishes": "wishes 是單數形且語意不是想要取消，與複數 teachers 不合。"
+ },
+ "d.diag-0661": {
+  "and also": "not only 要搭配 but also，and also 不是固定結構。",
+  "as well": "as well 是副詞，not only 的固定搭配是 but also。",
+  "too": "too 是副詞，not only 的固定搭配是 but also，不能用 too。"
+ },
+ "d.diag-0663": {
+  "and": "not only 要搭配 but also，只用 and 不是固定結構。",
+  "or": "or 表選擇，not only 的固定搭配是 but also，語意不符。",
+  "as well as": "as well as 的用法不同，not only 要搭配 but also，不能用 as well as。"
+ },
+ "d.diag-0664": {
+  "and too": "not only 的固定搭配是 but also，and too 不是正確用法。",
+  "as well": "as well 是副詞，not only 的固定搭配是 but also。",
+  "also": "also 只有單獨一個，not only 要搭配 but also，缺 but。"
+ },
+ "d.diag-0665": {
+  "and as well": "not only 的固定搭配是 but also，and as well 不是固定結構。",
+  "too": "too 是副詞，not only 的固定搭配是 but also，不能用 too。",
+  "so": "so 表結果，not only 的固定搭配是 but also，語意不符。"
+ },
+ "d.diag-0666": {
+  "was": "就近原則 teammates 是複數，要用 were，was 是單數。",
+  "is": "is 是現在單數，句中 praised 是過去被動，時態和單複數都不合。",
+  "has been": "has been 是現在完成式單數，與複數 teammates 和過去被動都不合。"
+ },
+ "d.diag-0667": {
+  "and so": "and so 表結果，not only 的固定搭配是 but also。",
+  "too": "too 是副詞，not only 的固定搭配是 but also，不能用 too。",
+  "as well": "as well 是副詞，not only 的固定搭配是 but also。"
+ },
+ "d.diag-0668": {
+  "and also": "not only 要搭配 but also，and also 不是固定結構。",
+  "as well": "as well 是副詞，not only 的固定搭配是 but also。",
+  "too": "too 是副詞，not only 的固定搭配是 but also，不能用 too。"
+ },
+ "d.diag-0669": {
+  "and": "not only 要搭配 but also，只用 and 不是固定結構。",
+  "or": "or 表選擇，not only 的固定搭配是 but also，語意不符。",
+  "as well": "as well 是副詞，not only 的固定搭配是 but also。"
+ },
+ "d.diag-0731": {
+  "People are encouraged to enter freely.": "告示說擅入者將被起訴，與鼓勵自由進入的意思相反。",
+  "Visitors can park here for free.": "告示沒有提到停車，說擅入者將被起訴，與免費停車無關。",
+  "The building is open for public tours.": "告示是警告擅入者，不是歡迎公眾參觀。"
+ },
+ "d.diag-0732": {
+  "Inside a library reading room": "圖書館閱覽室通常很乾燥，不太需要提醒地面濕滑。",
+  "On a bookshelf in a classroom": "書架上的書不會讓人滑倒，濕滑警告是針對地面。",
+  "On a television screen in an office": "電視螢幕不是地面，濕滑警告是用在容易滑倒的地方。"
+ },
+ "d.diag-0733": {
+  "Mechanical malfunction of the aircraft": "公告寫的是濃霧，沒有提到飛機機械故障。",
+  "Lack of airline crew members": "公告原因是濃霧，並沒有提到機組人員不足。",
+  "Security checkpoint inspection": "公告原因是濃霧，沒有提到安檢。"
+ },
+ "d.diag-0734": {
+  "Decreased steadily and slowly": "surged 是急速上升，且銷售額增加 40%，不是緩慢下降。",
+  "Remained unchanged throughout": "銷售額增加 40%，已有明顯變化，不是維持不變。",
+  "Fluctuated unpredictably": "surged 是持續大幅上升，不是起伏不定。"
+ },
+ "d.diag-0735": {
+  "Run quickly into the train car.": "Mind the gap 是提醒小心空隙，不是要快跑，快跑反而危險。",
+  "Leave your baggage on the platform.": "告示沒有說行李要留在月台，是提醒小心腳下空隙。",
+  "Do not look at the tracks below.": "告示是要小心空隙，不是叫人別看軌道。"
+ },
+ "d.diag-0736": {
+  "The food becomes poisonous immediately after October 15.": "Best before 是最佳品質期，過期不代表立刻有毒，說法太絕對。",
+  "The product was manufactured on October 15.": "Best before 是最佳賞味期限，不是製造日期。",
+  "The item cannot be opened until October 15.": "Best before 是品質期限，不是開封限制。"
+ },
+ "d.diag-0737": {
+  "Find any empty table and sit down immediately.": "Please wait to be seated 是請等候帶位，不能自己找位子坐。",
+  "Go directly to the kitchen to place an order.": "告示是請等候帶位，不是直接去廚房點餐。",
+  "Pay the bill before entering the dining area.": "告示是請等候帶位，沒有要先付帳。"
+ },
+ "d.diag-0738": {
+  "They will be repaired free of charge.": "impounded 是被扣押，不是免費修理，與違規停放的處置不符。",
+  "They will be awarded a safety certificate.": "違規停放不會獲得證書，impounded 是扣押的意思。",
+  "They will be rented to other students.": "impounded 是被扣留，不是出租給其他同學。"
+ },
+ "d.diag-0739": {
+  "Looking closely at the ancient paintings.": "禁止的是用閃光燈拍照，近看畫作並沒有被禁止。",
+  "Speaking softly with companions.": "告示只禁止閃光燈拍照，輕聲說話不在禁止範圍。",
+  "Wearing sunglasses inside the gallery.": "告示只禁止閃光燈拍照，戴太陽眼鏡與此無關。"
+ },
+ "d.diag-0740": {
+  "Go swimming in the coastal waters.": "強風警報時下海游泳很危險，這和該有的防範相反。",
+  "Open all windows wide to let wind in.": "強風來時開窗會讓物品被吹壞，應該關窗，與防範相反。",
+  "Organize a beach volleyball tournament.": "強風警報時在海邊辦比賽很危險，與應有的防範相反。"
+ },
+ "g10-s1-u1.q1": {
+  "essentially": "essentially 是副詞，consider 受詞後要接形容詞作補語，不能用副詞。",
+  "essentialness": "essentialness 是名詞，consider + O 之後要接形容詞，不接名詞。",
+  "to essentially": "to essentially 不是形容詞補語，consider 受詞後不接 to 加副詞。"
+ },
+ "g10-s1-u1.r1": {
+  "To introduce the adverse result of algorithmic feeds prioritizing sensationalism.": "這句與文章內容無關，文章談神經科學，而這題問的是句型。",
+  "Because 'to' in 'be accustomed to' is a preposition requiring a gerund.": "這是另一題文法的解釋，與這句 consider 的句型無關。"
+ },
+ "g10-s1-u2.x1": {
+  "to lock; locking": "回想過去已鎖過門要用 locking，這個選項前後順序顛倒了。",
+  "locking; locking": "第二句是提醒今晚去鎖門，還沒發生，要用 to lock。",
+  "to lock; to lock": "第一句是回想已鎖過門，要用 locking，不是 to lock。"
+ },
+ "g10-s1-u2.x2": {
+  "in; at; on": "9:00 a.m. 是時間點要用 at，不是 in；順序全部錯。",
+  "on; in; at": "9:00 a.m. 要用 at，月份 October 要用 in，這個選項全部錯位。",
+  "at; in; on": "Monday morning 要用 on，early October 要用 in，後兩個順序顛倒。"
+ },
+ "g10-s1-u2.q1": {
+  "reach": "look forward to 的 to 是介系詞，後面要接 V-ing，不能用原形。",
+  "reached": "reached 是過去式或過去分詞，look forward to 後面要接 V-ing。",
+  "have reached": "have reached 是完成式，look forward to 後面要接 V-ing。"
+ },
+ "g10-s1-u2.r1": {
+  "Because 'recommend that' requires the subjunctive mood (should + base form).": "這是另一題 recommend that 的解釋，與 accustomed to 後接動名詞無關。",
+  "The entire preceding fact that mold had dissolved surrounding staphylococcus colonies.": "這句與文章內容無關，文章談習慣養成，沒有提到黴菌。"
+ },
+ "gr.infinitives": {
+  "check": "finish 後面要接動名詞，原形 check 文法不對。",
+  "to check": "finish 後面不接不定詞 to V，要接動名詞 checking。"
+ },
+ "g10-s1-u3.x1": {
+  "to build": "橋是被建造的，要用被動，to build 是主動且沒有表達過去先發生。",
+  "to be built": "to be built 是一般被動，沒有表達建造早於被相信的先後。",
+  "having built": "having built 是主動完成分詞，橋是被建造的，且 believed 後不接分詞。"
+ },
+ "g10-s1-u3.x2": {
+  "The train was delay by rain.": "被動語態要用過去分詞 delayed，delay 是原形，形式錯誤。",
+  "The rain delaying the train.": "句中缺限定動詞，delaying 是分詞，不能單獨當句子的動詞。"
+ },
+ "g10-s1-u3.q1": {
+  "to write": "手稿是被寫出來的，要用被動，to write 是主動且沒有完成式。",
+  "to be written": "to be written 是一般被動，沒有表達寫作早於被相信的先後。",
+  "to have written": "to have written 是主動完成式，手稿不會自己寫字，要用被動。"
+ },
+ "g10-s1-u3.trap1": {
+  "The ancient fortress is believed to build in the third century.": "堡壘是被建造的，要用被動，且發生在過去，需用 to have been built。"
+ },
+ "gr.passive": {
+  "turn off": "機器是被關掉的，要用被動 be turned off，must 後面接 turn off 變成主動。",
+  "turned off": "must 後面要接原形，turned off 缺 be，被動結構不完整。"
+ },
+ "d.diag-0931": {
+  "breached": "is alleged 後面要接不定詞，breached 是過去式，不能直接接。",
+  "breaching": "is alleged 後不接 V-ing，要接不定詞，且需表示先前做過。",
+  "to breach": "to breach 沒有表達入侵發生在被指控之前，要用完成式 to have breached。"
+ },
+ "d.diag-0932": {
+  "being": "deemed 後面接不定詞 to be，不接 being。",
+  "been": "been 是過去分詞，deemed 後面要接 to be，不能只接 been。",
+  "was": "was 是限定動詞，is deemed 已有動詞，不能再接 was。"
+ },
+ "d.diag-0933": {
+  "commissioning": "was believed 後面接不定詞，不接 V-ing，且要表達過去先發生。",
+  "commissioned": "commissioned 是過去式，不能直接接在 was believed 之後。",
+  "to commission": "to commission 沒有表達下令發生在被相信之前，要用完成式 to have commissioned。"
+ },
+ "d.diag-0934": {
+  "stealing": "was reported 後面接不定詞，不接 V-ing，且要表達偷錢發生在先。",
+  "stole": "stole 是過去式，不能直接接在 was reported 之後。",
+  "to steal": "to steal 沒有表達偷錢發生在被報導之前，要用完成式 to have stolen。"
+ },
+ "d.diag-0937": {
+  "being": "expected 後面接不定詞 to be，不接 being。",
+  "been": "been 是過去分詞，expected 後面要接 to be，不能只接 been。",
+  "was": "was 是限定動詞，is expected 已有動詞，不能再接 was。"
+ },
+ "d.diag-0939": {
+  "selling": "is said 後面接不定詞，不接 V-ing，且要表達銷售發生在先。",
+  "sold": "sold 是過去式，不能直接接在 is said 之後。",
+  "to sell": "to sell 沒有表達銷售發生在據說之前，要用完成式 to have sold。"
+ },
+ "g10-s1-u4.x1": {
+  "why did she leave": "間接問句不倒裝，why did she leave 保留了直接問句的助動詞。",
+  "why she did left": "did 後面要接原形，did left 重複使用過去式，文法錯誤。"
+ },
+ "g10-s1-u4.x2": {
+  "quits": "insist 表堅持要求時，that 子句用原形，quits 加了 s 不合。",
+  "quitted": "quitted 是過去式，堅持要求的 that 子句要用原形 quit。",
+  "will quit": "will quit 是未來式，insist 要求的 that 子句要用原形，不用 will。"
+ },
+ "g10-s1-u4.trap1": {
+  "He asked me where did I buy the textbook.": "間接問句要用 where I bought，不能保留助動詞 did 倒裝。"
+ },
+ "g10-s1-u4.r1": {
+  "Because the cargo and personal valuables were left undisturbed.": "這句與文章內容無關，文章談 AI 診斷，沒有提到貨物或貴重物品。",
+  "To introduce the adverse result of algorithmic feeds prioritizing sensationalism.": "這句與文章內容無關，文章談 AI 診斷驗證，沒有講推播演算法。"
+ },
+ "gr.noun-clauses": {
+  "where is the lab": "間接問句不倒裝，where is the lab 是直接問句語序。",
+  "where does the lab": "where does the lab 多了助動詞 does，且缺動詞，間接問句不倒裝。"
+ },
+ "d.diag-0943": {
+  "which": "which 用於關係子句或選擇，同位語子句引導完整事實要用 that。",
+  "what": "what 引導的子句缺名詞，這裡 sea levels are rising 已完整，要用 that。",
+  "whose": "whose 表所有格，後面要接名詞，這裡不是所有格關係。"
+ },
+ "g10-s1-u5.x2": {
+  "in; at; on": "9:00 a.m. 是時間點要用 at，不是 in；順序全部錯。",
+  "on; in; at": "9:00 a.m. 要用 at，月份 October 要用 in，這個選項全部錯位。",
+  "at; in; on": "Monday morning 要用 on，early October 要用 in，後兩個順序顛倒。"
+ },
+ "g10-s1-u5.trap1": {
+  "The platform on that we met was crowded.": "介系詞後面不能直接接關係代名詞 that，指物時要用 on which。"
+ },
+ "g10-s1-u5.r1": {
+  "The metropolis is now believed to have supported more than one hundred thousand inhabitants.": "這句與文章內容無關，文章談 Goodall 在 Gombe 的研究，沒有提到都市居民。",
+  "Because 'to' in 'be accustomed to' is a preposition requiring a gerund.": "這是另一題 accustomed to 的解釋，與關係代名詞 which 無關。"
+ },
+ "d.diag-0553": {
+  "who": "who 指人，先行詞 cake 是物，不能用 who。",
+  "whom": "whom 是人的受格，先行詞 cake 是物，不能用 whom。",
+  "whose": "whose 表所有格，後面要接名詞，這裡 Mom baked 後缺的是受詞。"
+ },
+ "d.diag-0557": {
+  "who": "who 指人，先行詞 wallet 是物，不能用 who。",
+  "whom": "whom 是人的受格，先行詞 wallet 是物，不能用 whom。",
+  "whose": "whose 表所有格，後面要接名詞，這裡 you lost 後缺的是受詞。"
+ }
+}

@@ -2,16 +2,17 @@ import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
 import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
-import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=joy20261103';
-import * as sound from './sound.mjs?v=joy20261103';
-import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=joy20261103';
-import {labView} from './lab.mjs?v=joy20261103';
-import {recordRecall} from '../recall.mjs?v=joy20261103';
-import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=joy20261103';
-import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=joy20261103';
+import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=truth20261105';
+import * as sound from './sound.mjs?v=truth20261105';
+import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=truth20261105';
+import {labView} from './lab.mjs?v=truth20261105';
+import {mountBoosts} from './boost.mjs?v=truth20261105';
+import {recordRecall} from '../recall.mjs?v=truth20261105';
+import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=truth20261105';
+import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=truth20261105';
 import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=launch20261103r3';
 
-const V = 'joy20261103';
+const V = 'truth20261105';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
 import { courseAtlas, LEVEL_GOALS } from './atlas.mjs?v=advanced20261027';
 import {nextAdventure,sessionTrail} from './adventure.mjs?v=school20261027';
@@ -228,7 +229,7 @@ function lessonFooter(it, s) {
     const praise = PRAISE[(s.index + s.id) % PRAISE.length];
     const answer = it.type === 'match' ? it.why : it.given ? `${it.given} ${it.answer}` : it.answer;
     const ctx = feedbackContext(it, f);
-    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 一起找出線索 · 錯題解說</h2><p class="small">答錯是進步的階梯！先理解為什麼，再重試一次。</p><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${ctx.diagnosis ? `<p class="diagnosis"><b>🔍 錯在哪裡：</b>${esc(ctx.diagnosis)}</p>` : ''}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${ctx.evidence ? `<p class="evidence"><b>📖 原文線索：</b><span lang="en">${esc(ctx.evidence)}</span> <button class="say" data-act="prompt-say" data-text="${esc(ctx.evidence)}" aria-label="朗讀原文線索">🔊</button></p>` : ''}${!f.ok && !ctx.diagnosis ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}<p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div>${renderShadowingWidget(answerText(it), 'lesson-fb')}<button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
+    return `<footer class="check ${f.ok ? 'ok' : 'bad'}" role="status"><div class="check-in"><div class="verdict">${f.ok ? `<h2>✔ ${praise}</h2>${it.type !== 'match' && normalize2(f.value) !== normalize2(it.answer) && it.type !== 'choice' && it.type !== 'listen' ? `<p>標準答案：<b lang="en">${esc(it.answer)}</b></p>` : ''}` : `<h2>↻ 差一點，一起看看差在哪</h2><p class="correct-answer-banner"><b>正確答案：</b><b ${/[a-z]/i.test(answer) ? 'lang="en"' : ''}>${esc(answer)}</b></p>`}${!f.ok && it.type!=='match' ? `<p class="your-answer">❌ 你的答案：${esc(f.value)}</p>` : ''}${ctx.diagnosis ? `<p class="diagnosis"><b>🔍 錯在哪裡：</b>${esc(ctx.diagnosis)}</p>` : ''}${it.why ? `<p class="why"><b>💡 為什麼？（解析）：</b> ${esc(it.why)}</p>` : ''}${ctx.evidence ? `<p class="evidence"><b>📖 原文線索：</b><span lang="en">${esc(ctx.evidence)}</span> <button class="say" data-act="prompt-say" data-text="${esc(ctx.evidence)}" aria-label="朗讀原文線索">🔊</button></p>` : ''}${!f.ok && !ctx.diagnosis ? `<p class="correction-tip">🧠 學習法提醒：${esc(correctionTip(it, f.value))}</p>` : ''}${s.results.at(-1)?.unheard ? '<p class="small">這題未取得完整聽辨證據，不列為獨立答對。</p>' : ''}<div class="coach-controls">${f.ok ? `<button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button>${it.why ? '<button class="btn small" data-act="explain-say">💬 聽解說</button>' : ''}` : `<button class="btn small gold" data-act="explain-say">💬 聽完整解說與正解</button><button class="btn small" data-act="answer-say">🔊 聽正確答案</button><button class="btn small" data-act="answer-say" data-slow="1">🐢 慢速跟讀</button><button class="btn small" data-act="question-say">🔊 聽原題</button>`}<button class="link" data-act="stop-say">停止朗讀</button></div><details class="check-more"><summary>🗣️ 跟讀原句與回報</summary><p class="spoken-answer"><b>跟讀原句：</b><span>${esc(answerText(it))}</span></p>${renderShadowingWidget(answerText(it), 'lesson-fb')}<button class="link flag" data-act="flag" data-id="${it.id}">${game.state.flags[it.id] ? '🚩 已回報' : '🚩 這題有問題'}</button></details></div><button class="btn ${f.ok ? 'primary' : 'danger'} big" data-act="next" id="go">繼續</button></div></footer>`;
   }
   const ready = it.type==='multi'?ui.a.tokens.length===it.selectCount:it.type === 'build' ? ui.a.tokens.length > 0 : it.type === 'input' ? !!ui.a.text.trim() : it.type === 'match' ? false : !!ui.a.value;
   const canHint = !['boss', 'jump', 'placement','exam-check'].includes(s.mode);
@@ -396,7 +397,7 @@ function render(focus = false) {
   else if (!game.state.profile) html = onboarding();
   else html = layout({ learn: learnPage, school:()=>schoolHome(course,game,ui.schoolGroup), exams:()=>examsHome(course,game,ui.exam), practice: practicePage, stories: storiesPage, library: libraryPage, profile: profilePage }[ui.tab]?.() || learnPage(), { wide: ui.tab === 'profile' });
   document.body.classList.toggle('in-lesson', !!(s && !ui.paused) || !!game.result || !game.state.profile);
-  root.innerHTML = html; paintToasts();
+  root.innerHTML = html; paintToasts(); void mountBoosts(document, V);
   if (newItem) afterNewItem();
   else if (focus && !(s && !ui.paused)) { const h = document.querySelector('.modal h2, .result h1, main h1'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } }
   if (ui.modal) document.querySelector('.modal .x')?.focus();
@@ -492,7 +493,7 @@ root.addEventListener('click', async e => {
     case 'jump': ui.modal = null; await begin('jump', id); break;
     case 'practice': await begin(el.dataset.mode, id); break;
     case 'vcat': ui.vocabCat = id; render(); break;
-    case 'lab': ui.guide=id;ui.modal='guide';if(await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))){render();document.querySelector('.learning-lab')?.scrollIntoView({block:'start'});}break;
+    case 'lab': ui.guide=id;ui.modal='guide';if(await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))){render();await mountBoosts(document,V);(document.querySelector('.unit-boost:not([hidden])')||document.querySelector('.learning-lab'))?.scrollIntoView({block:'start'});}break;
     case 'guide': ui.guide = id; ui.modal = 'guide'; if (await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))) render(); break;
     case 'close': sound.stop(); ui.modal = null; render(); break;
     case 'shop': ui.modal = 'shop'; render(); break;

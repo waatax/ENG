@@ -1,0 +1,344 @@
+[
+ {
+  "id": "g4-s2-u5.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I go to school on Monday.",
+   "I go to school in Monday.",
+   "I go to school at Monday."
+  ],
+  "answer": "I go to school on Monday.",
+  "wrong": {
+   "I go to school in Monday.": "星期前面用 on，不用 in。",
+   "I go to school at Monday.": "at 用在時間點，星期要用 on。"
+  },
+  "why": "星期幾的前面要用 on，例如 on Monday。",
+  "tip": "星期前面用 on，不用 in。",
+  "say": "I go to school on Monday."
+ },
+ {
+  "id": "g4-s2-u5.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "What day it is today?",
+   "What day is it today?",
+   "What is day today?"
+  ],
+  "answer": "What day is it today?",
+  "wrong": {
+   "What day it is today?": "問句不能用陳述句的順序，要先說 is it。",
+   "What is day today?": "固定問法是 What day is it today?"
+  },
+  "why": "問今天星期幾：What day is it today?",
+  "tip": "問星期幾要用 What day。",
+  "say": "What day is it today?"
+ },
+ {
+  "id": "g4-s2-u5.b3",
+  "type": "situation",
+  "prompt": "你想問朋友中秋節要做什麼。",
+  "text": "",
+  "options": [
+   "What do you doing on Mid-Autumn Festival?",
+   "What you do at Mid-Autumn Festival?",
+   "What do you do on Mid-Autumn Festival?"
+  ],
+  "answer": "What do you do on Mid-Autumn Festival?",
+  "wrong": {
+   "What do you doing on Mid-Autumn Festival?": "do 後面要用原形 do，不是 doing。",
+   "What you do at Mid-Autumn Festival?": "問句缺少助動詞 do，節日也用 on。"
+  },
+  "why": "What do you do on + 節日？ 用來問節日做什麼。",
+  "tip": "問節日做什麼用 What do you do on…?",
+  "say": "What do you do on Mid-Autumn Festival?"
+ },
+ {
+  "id": "g4-s2-u5.b4",
+  "type": "situation",
+  "prompt": "朋友問你什麼時候有英文課，你星期三有。",
+  "text": "",
+  "options": [
+   "I have English on Wednesday.",
+   "I have English in Wednesday.",
+   "I am English on Wednesday."
+  ],
+  "answer": "I have English on Wednesday.",
+  "wrong": {
+   "I have English in Wednesday.": "星期前面要用 on，不是 in。",
+   "I am English on Wednesday.": "有課要用 have，不是 am。"
+  },
+  "why": "有課用 have，星期前面用 on。",
+  "tip": "有課 have，星期用 on。",
+  "say": "I have English on Wednesday."
+ },
+ {
+  "id": "g4-s2-u5.b5",
+  "type": "situation",
+  "prompt": "農曆新年到了，你想向朋友祝福。",
+  "text": "",
+  "options": [
+   "Happy Halloween!",
+   "Happy Lunar New Year!",
+   "Happy Birthday!"
+  ],
+  "answer": "Happy Lunar New Year!",
+  "wrong": {
+   "Happy Halloween!": "Halloween 是萬聖節，不是農曆新年。",
+   "Happy Birthday!": "Birthday 是生日，不是新年。"
+  },
+  "why": "Lunar New Year 是農曆新年。",
+  "tip": "Lunar New Year 是農曆新年。",
+  "say": "Happy Lunar New Year!"
+ },
+ {
+  "id": "g4-s2-u5.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Sunday comes after ___.",
+  "options": [
+   "Monday",
+   "Tuesday",
+   "Saturday"
+  ],
+  "answer": "Saturday",
+  "wrong": {
+   "Monday": "Monday 在 Sunday 的後面，不是前面。",
+   "Tuesday": "Tuesday 離 Sunday 比較遠，在 Monday 後面。"
+  },
+  "why": "Sunday 的前一天是 Saturday。",
+  "tip": "星期六 Saturday 在星期日前。",
+  "say": "Sunday comes after Saturday."
+ },
+ {
+  "id": "g4-s2-u5.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We eat mooncakes at the ___ Festival.",
+  "options": [
+   "Mid-Autumn",
+   "Halloween",
+   "Christmas"
+  ],
+  "answer": "Mid-Autumn",
+  "wrong": {
+   "Halloween": "Halloween 是萬聖節，不吃月餅。",
+   "Christmas": "Christmas 是聖誕節，不是吃月餅的節日。"
+  },
+  "why": "中秋節 Mid-Autumn Festival 吃月餅。",
+  "tip": "中秋節吃月餅。",
+  "say": "We eat mooncakes at the Mid-Autumn Festival."
+ },
+ {
+  "id": "g4-s2-u5.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I get up ___ seven in the morning.",
+  "options": [
+   "on",
+   "at",
+   "in"
+  ],
+  "answer": "at",
+  "wrong": {
+   "on": "on 用在日期或星期，不用在鐘點。",
+   "in": "鐘點前面用 at，不用 in。"
+  },
+  "why": "幾點鐘前面用 at。",
+  "tip": "鐘點前面用 at。",
+  "say": "I get up at seven in the morning."
+ },
+ {
+  "id": "g4-s2-u5.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "My birthday is ___ May.",
+  "options": [
+   "on",
+   "at",
+   "in"
+  ],
+  "answer": "in",
+  "wrong": {
+   "on": "月份前面用 in，on 用在日期。",
+   "at": "at 用在鐘點，不用在月份。"
+  },
+  "why": "月份前面要用 in，例如 in May。",
+  "tip": "月份前面用 in，日期用 on。",
+  "say": "My birthday is in May."
+ },
+ {
+  "id": "g4-s2-u5.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We have no school on Saturday and ___.",
+  "options": [
+   "Sunday",
+   "Friday",
+   "Monday"
+  ],
+  "answer": "Sunday",
+  "wrong": {
+   "Friday": "Friday 是星期五，這裡要放週末的另一天。",
+   "Monday": "Monday 通常要上學，不是週末。"
+  },
+  "why": "Saturday 和 Sunday 是週末，通常不用上學。",
+  "tip": "Saturday 和 Sunday 是週末。",
+  "say": "We have no school on Saturday and Sunday."
+ },
+ {
+  "id": "g4-s2-u5.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I do my homework in the ___ after school.",
+  "options": [
+   "morning",
+   "afternoon",
+   "breakfast"
+  ],
+  "answer": "afternoon",
+  "wrong": {
+   "morning": "after school 是放學後，morning 是早上。",
+   "breakfast": "breakfast 是早餐，不是時間段。"
+  },
+  "why": "after school 通常是下午 afternoon。",
+  "tip": "afternoon 是下午。",
+  "say": "I do my homework in the afternoon after school."
+ },
+ {
+  "id": "g4-s2-u5.b12",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "See you next Friday.",
+  "options": [
+   "上週五見。",
+   "每個星期五見。",
+   "下週五見。"
+  ],
+  "answer": "下週五見。",
+  "wrong": {
+   "上週五見。": "next 是下一個，不是上一個。",
+   "每個星期五見。": "next Friday 是指下一個星期五，不是每週。"
+  },
+  "why": "next 是下一個，所以是下週五見。",
+  "tip": "next 是下一個。",
+  "say": "See you next Friday."
+ },
+ {
+  "id": "g4-s2-u5.b13",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I never eat dumplings on Monday.",
+  "options": [
+   "我星期一從不吃水餃。",
+   "我星期一常吃水餃。",
+   "我星期一有時吃水餃。"
+  ],
+  "answer": "我星期一從不吃水餃。",
+  "wrong": {
+   "我星期一常吃水餃。": "never 是從不，不是常常。",
+   "我星期一有時吃水餃。": "never 是從不，sometimes 才是有時。"
+  },
+  "why": "never 表示從來沒有。",
+  "tip": "never 是從不。",
+  "say": "I never eat dumplings on Monday."
+ },
+ {
+  "id": "g4-s2-u5.b14",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "The festival is on the weekend.",
+  "options": [
+   "節日在平日。",
+   "節日在週末。",
+   "節日在下個月。"
+  ],
+  "answer": "節日在週末。",
+  "wrong": {
+   "節日在平日。": "weekend 是週末，不是平日。",
+   "節日在下個月。": "weekend 是週末，句子裡沒有提到下個月。"
+  },
+  "why": "weekend 是週末，也就是星期六和星期日。",
+  "tip": "weekend 是週末。",
+  "say": "The festival is on the weekend."
+ },
+ {
+  "id": "g4-s2-u5.b15",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I visit always my grandma on Sunday.",
+   "I am always visit my grandma on Sunday.",
+   "I always visit my grandma on Sunday."
+  ],
+  "answer": "I always visit my grandma on Sunday.",
+  "wrong": {
+   "I visit always my grandma on Sunday.": "always 要放在一般動詞前面。",
+   "I am always visit my grandma on Sunday.": "visit 是一般動詞，不需要 be 動詞 am。"
+  },
+  "why": "always 放一般動詞前面。",
+  "tip": "always 放動詞前。",
+  "say": "I always visit my grandma on Sunday."
+ },
+ {
+  "id": "g4-s2-u5.b16",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Christmas is on December 25.",
+   "Christmas is in December 25.",
+   "Christmas is at December 25."
+  ],
+  "answer": "Christmas is on December 25.",
+  "wrong": {
+   "Christmas is in December 25.": "有日期的時候用 on，不用 in。",
+   "Christmas is at December 25.": "at 用在鐘點，不用在日期。"
+  },
+  "why": "有月份加日期時，日期前面要用 on。",
+  "tip": "日期前面用 on，月份用 in。",
+  "say": "Christmas is on December 25."
+ },
+ {
+  "id": "g4-s2-u5.b17",
+  "type": "situation",
+  "prompt": "你想打電話問朋友星期六有沒有空。",
+  "text": "",
+  "options": [
+   "Do you free on Saturday?",
+   "Are you free on Saturday?",
+   "Are you free in Saturday?"
+  ],
+  "answer": "Are you free on Saturday?",
+  "wrong": {
+   "Do you free on Saturday?": "free 是形容詞，要搭配 be 動詞 are。",
+   "Are you free in Saturday?": "星期前面要用 on，不是 in。"
+  },
+  "why": "free 是形容詞，所以用 Are you free…?",
+  "tip": "free 前面用 be 動詞。",
+  "say": "Are you free on Saturday?"
+ },
+ {
+  "id": "g4-s2-u5.b18",
+  "type": "situation",
+  "prompt": "萬聖節晚上，小朋友敲門討糖果，他們會說什麼？",
+  "text": "",
+  "options": [
+   "Happy birthday!",
+   "Good night!",
+   "Trick or treat!"
+  ],
+  "answer": "Trick or treat!",
+  "wrong": {
+   "Happy birthday!": "Happy birthday 是生日時說的。",
+   "Good night!": "Good night 是晚安，不是萬聖節討糖果的話。"
+  },
+  "why": "Trick or treat 是萬聖節討糖果的說法。",
+  "tip": "萬聖節說 Trick or treat。",
+  "say": "Trick or treat!"
+ }
+]

@@ -1,0 +1,363 @@
+[
+ {
+  "id": "g5-s2-u4.b1",
+  "type": "meaning",
+  "prompt": "看到標示 EXIT，它是什麼意思？",
+  "text": "",
+  "options": [
+   "出口",
+   "入口",
+   "廁所"
+  ],
+  "answer": "出口",
+  "wrong": {
+   "入口": "入口的英文是 entrance，不是 exit。",
+   "廁所": "廁所的英文是 restroom，不是 exit。"
+  },
+  "why": "EXIT 是出口，離開時要看這個標示。",
+  "tip": "EXIT 是出口，記得看標示。",
+  "say": "Exit"
+ },
+ {
+  "id": "g5-s2-u4.b2",
+  "type": "meaning",
+  "prompt": "看到標示 KEEP OFF THE GRASS，它是什麼意思？",
+  "text": "",
+  "options": [
+   "請澆水草地",
+   "請勿踩踏草地",
+   "請在草地玩"
+  ],
+  "answer": "請勿踩踏草地",
+  "wrong": {
+   "請澆水草地": "標示沒有說要澆水，keep off 是叫人不要踩。",
+   "請在草地玩": "keep off 是不要靠近或踩踏。"
+  },
+  "why": "keep off 是不要踩，所以是不要踩草地。",
+  "tip": "keep off 是別踩。",
+  "say": "Keep off the grass."
+ },
+ {
+  "id": "g5-s2-u4.b3",
+  "type": "meaning",
+  "prompt": "看到標示 QUIET, PLEASE，它是什麼意思？",
+  "text": "",
+  "options": [
+   "請排隊",
+   "請小心",
+   "請安靜"
+  ],
+  "answer": "請安靜",
+  "wrong": {
+   "請排隊": "排隊是 line up。",
+   "請小心": "小心是 be careful。"
+  },
+  "why": "quiet 是安靜，please 是請。",
+  "tip": "quiet 是安靜。",
+  "say": "Quiet, please."
+ },
+ {
+  "id": "g5-s2-u4.b4",
+  "type": "meaning",
+  "prompt": "看到標示 WET FLOOR，它是什麼意思？",
+  "text": "",
+  "options": [
+   "小心，地板是濕的",
+   "這裡是游泳池",
+   "請關燈"
+  ],
+  "answer": "小心，地板是濕的",
+  "wrong": {
+   "這裡是游泳池": "標示只說地板是濕的。",
+   "請關燈": "標示上寫的是 wet floor，講的是地板，不是燈。"
+  },
+  "why": "wet 是濕的，floor 是地板，合起來是地板濕。",
+  "tip": "wet 是濕。",
+  "say": "Wet floor."
+ },
+ {
+  "id": "g5-s2-u4.b5",
+  "type": "situation",
+  "prompt": "圖書館有標示 NO EATING，你包包裡有點心。",
+  "text": "",
+  "options": [
+   "Eat my sandwich.",
+   "Put my snack away.",
+   "Share my lunch."
+  ],
+  "answer": "Put my snack away.",
+  "wrong": {
+   "Eat my sandwich.": "NO EATING 表示不能吃東西。",
+   "Share my lunch.": "分享食物也是吃東西，不符合標示。"
+  },
+  "why": "NO EATING 是禁止飲食。",
+  "tip": "NO EATING 是不能吃。",
+  "say": "Put my snack away."
+ },
+ {
+  "id": "g5-s2-u4.b6",
+  "type": "situation",
+  "prompt": "你想問路人廁所在哪。",
+  "text": "",
+  "options": [
+   "Excuse me, where the restroom is?",
+   "Excuse me, what is restroom?",
+   "Excuse me, where is the restroom?"
+  ],
+  "answer": "Excuse me, where is the restroom?",
+  "wrong": {
+   "Excuse me, where the restroom is?": "問句語序錯，應該是 where is。",
+   "Excuse me, what is restroom?": "what is 是問什麼，不是問地點。"
+  },
+  "why": "Where is…? 問位置。",
+  "tip": "Where is…? 問位置。",
+  "say": "Excuse me, where is the restroom?"
+ },
+ {
+  "id": "g5-s2-u4.b7",
+  "type": "situation",
+  "prompt": "有人問你：「Where is the library?」圖書館就在體育館旁邊。",
+  "text": "",
+  "options": [
+   "It's next to the gym.",
+   "It's a book place.",
+   "Yes, it is."
+  ],
+  "answer": "It's next to the gym.",
+  "wrong": {
+   "It's a book place.": "這句只說它是放書的地方，沒有回答在哪裡。",
+   "Yes, it is.": "Where 問題不能用 Yes 回答。"
+  },
+  "why": "next to 是在旁邊。",
+  "tip": "next to 是在旁邊。",
+  "say": "It's next to the gym."
+ },
+ {
+  "id": "g5-s2-u4.b8",
+  "type": "situation",
+  "prompt": "你想告訴同學福利社在樓下。",
+  "text": "",
+  "options": [
+   "The shop downstairs is.",
+   "The shop is downstairs.",
+   "The shop are downstairs."
+  ],
+  "answer": "The shop is downstairs.",
+  "wrong": {
+   "The shop downstairs is.": "語序錯誤，is 要放在主詞 shop 後面。",
+   "The shop are downstairs.": "shop 是單數，要用 is。"
+  },
+  "why": "downstairs 是樓下，不用再加 in 或 on。",
+  "tip": "downstairs 是樓下。",
+  "say": "The shop is downstairs."
+ },
+ {
+  "id": "g5-s2-u4.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The library is ___ the gym and the office.",
+  "options": [
+   "on",
+   "under",
+   "between"
+  ],
+  "answer": "between",
+  "wrong": {
+   "on": "on 是在上面，不能表示在兩個地方的中間。",
+   "under": "under 是在下面，不能表示在兩個地方的中間。"
+  },
+  "why": "between 是在兩者之間。",
+  "tip": "between 是在兩者之間。",
+  "say": "The library is between the gym and the office."
+ },
+ {
+  "id": "g5-s2-u4.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The bus stop is ___ front of the school.",
+  "options": [
+   "in",
+   "on",
+   "at"
+  ],
+  "answer": "in",
+  "wrong": {
+   "on": "「在前面」的固定說法是 in front of，不是 on front of。",
+   "at": "「在前面」的固定說法是 in front of，不是 at front of。"
+  },
+  "why": "in front of 是在前面。",
+  "tip": "in front of 是前面。",
+  "say": "The bus stop is in front of the school."
+ },
+ {
+  "id": "g5-s2-u4.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The restroom is on the second ___.",
+  "options": [
+   "flower",
+   "floor",
+   "floors"
+  ],
+  "answer": "floor",
+  "wrong": {
+   "flower": "flower 是花，不是樓層。",
+   "floors": "second 是「第二」，後面要接單數 floor，不加 s。"
+  },
+  "why": "second floor 是二樓。",
+  "tip": "second floor 是二樓。",
+  "say": "The restroom is on the second floor."
+ },
+ {
+  "id": "g5-s2-u4.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Is the art room ___ the left?",
+  "options": [
+   "in",
+   "at",
+   "on"
+  ],
+  "answer": "on",
+  "wrong": {
+   "in": "「在左邊」的固定說法是 on the left，不用 in。",
+   "at": "「在左邊」的固定說法是 on the left，不用 at。"
+  },
+  "why": "on the left 是在左邊。",
+  "tip": "on the left 是左邊。",
+  "say": "Is the art room on the left?"
+ },
+ {
+  "id": "g5-s2-u4.b13",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Turn ___ at the corner. The gym is there.",
+  "options": [
+   "left",
+   "light",
+   "leave"
+  ],
+  "answer": "left",
+  "wrong": {
+   "light": "light 是燈，不是方向，轉彎要說 left 或 right。",
+   "leave": "leave 是離開，不是方向，轉彎要說 left 或 right。"
+  },
+  "why": "turn left 是向左轉。",
+  "tip": "left 是左邊。",
+  "say": "Turn left at the corner. The gym is there."
+ },
+ {
+  "id": "g5-s2-u4.b14",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Do not run ___ the hallway.",
+  "options": [
+   "to",
+   "in",
+   "of"
+  ],
+  "answer": "in",
+  "wrong": {
+   "to": "do not run to the hallway 是「不要跑去走廊」，句意不合。",
+   "of": "of 是「的」，run of the hallway 不通順。"
+  },
+  "why": "in the hallway 是在走廊裡。",
+  "tip": "在走廊裡用 in the hallway。",
+  "say": "Do not run in the hallway."
+ },
+ {
+  "id": "g5-s2-u4.b15",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "There have a clock on the wall.",
+   "There is clock on wall.",
+   "There is a clock on the wall."
+  ],
+  "answer": "There is a clock on the wall.",
+  "wrong": {
+   "There have a clock on the wall.": "There 要搭配 is 或 are，不是 have。",
+   "There is clock on wall.": "clock 和 wall 前面都需要 a 或 the。"
+  },
+  "why": "There is + 單數名詞。",
+  "tip": "單數名詞前用 There is a…",
+  "say": "There is a clock on the wall."
+ },
+ {
+  "id": "g5-s2-u4.b16",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Where is the gym?",
+   "Where the gym?",
+   "Where is gym are?"
+  ],
+  "answer": "Where is the gym?",
+  "wrong": {
+   "Where the gym?": "少了 be 動詞 is。",
+   "Where is gym are?": "多了 are，不符合文法。"
+  },
+  "why": "Where is + 地點？",
+  "tip": "問位置用 Where is…？",
+  "say": "Where is the gym?"
+ },
+ {
+  "id": "g5-s2-u4.b17",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Can I go to restroom?",
+   "Can I go to the restroom?",
+   "Can I going to the restroom?"
+  ],
+  "answer": "Can I go to the restroom?",
+  "wrong": {
+   "Can I go to restroom?": "restroom 前面需要 the。",
+   "Can I going to the restroom?": "Can 後面接原形 go。"
+  },
+  "why": "Can I go to the restroom? 是徵求許可。",
+  "tip": "請求許可用 Can I…？",
+  "say": "Can I go to the restroom?"
+ },
+ {
+  "id": "g5-s2-u4.b18",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Please line up here.",
+  "options": [
+   "請在這裡停車。",
+   "請在這裡簽名。",
+   "請在這裡排隊。"
+  ],
+  "answer": "請在這裡排隊。",
+  "wrong": {
+   "請在這裡停車。": "line up 是排隊。",
+   "請在這裡簽名。": "line up 不是簽名。"
+  },
+  "why": "line up 是排隊，要排成一列。",
+  "tip": "line up 是排隊。",
+  "say": "Please line up here."
+ },
+ {
+  "id": "g5-s2-u4.b19",
+  "type": "meaning",
+  "prompt": "看到標示 STAFF ONLY，它是什麼意思？",
+  "text": "",
+  "options": [
+   "僅限員工",
+   "歡迎參觀",
+   "免費入場"
+  ],
+  "answer": "僅限員工",
+  "wrong": {
+   "歡迎參觀": "staff only 是限制。",
+   "免費入場": "staff only 沒有免費的意思。"
+  },
+  "why": "staff 是員工，only 是只有。",
+  "tip": "staff only 是限員工。",
+  "say": "Staff only."
+ }
+]

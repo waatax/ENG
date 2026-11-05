@@ -1,0 +1,41 @@
+id	word	pos	zh	category
+fc-to-0661	ombudsman	n.	獨立調查專員申訴申冤監察員	公司運營與行程
+fc-to-0662	mediator	n.	調停人勞資調解委員居中人	商務合約與談判
+fc-to-0663	plaintiff	n.	原告提起訴訟者起訴人	商務合約與談判
+fc-to-0664	defendant	n.	民刑事被告答辯人被起訴者	商務合約與談判
+fc-to-0665	testimony	n.	法庭證詞宣誓證明書見證	商務合約與談判
+fc-to-0666	deposition	n.	具結宣誓證詞筆錄免職	商務合約與談判
+fc-to-0667	subpoena	n. / v.	法院傳票傳訊令；傳喚出庭	商務合約與談判
+fc-to-0668	verdict	n.	陪審團正式裁決判決結論評決	商務合約與談判
+fc-to-0669	ruling	n. / adj.	法官正式裁定裁判；統治執政的	商務合約與談判
+fc-to-0670	injunction	n.	法院假處分禁制令強制命令	商務合約與談判
+fc-to-0671	monopoly	n.	市場獨占壟斷專賣獨占企業	市場營銷與品牌
+fc-to-0672	antitrust	adj.	反托拉斯反壟斷維護競爭法規的	市場營銷與品牌
+fc-to-0673	deregulation	n.	法規鬆綁解除管制市場開放	市場營銷與品牌
+fc-to-0674	privatization	n.	公營民營化私有化釋股改革	市場營銷與品牌
+fc-to-0675	subsidy	n.	政府補貼金財政補助款津貼	財務與採購
+fc-to-0676	bailout	n. / v.	緊急紓困金政府金援救市；紓困	財務與採購
+fc-to-0677	windfall	n.	意外之財橫財意外紅利收益	財務與採購
+fc-to-0678	revenue stream	n.	收入來源金流多元獲利模式	財務與採購
+fc-to-0679	grant	n. / v.	研究補助專款獎助金；准許賜予	財務與採購
+fc-to-0680	endowment	n.	永久基金捐贈基金才能天賦	財務與採購
+fc-to-0681	holding company	n.	控股公司母控股母企業股權公司	公司運營與行程
+fc-to-0682	due date	n.	帳單應繳日票據到期日截止期限	財務與採購
+fc-to-0683	overdue	adj.	逾期未繳過期未付的	財務與採購
+fc-to-0684	arrears	n.	拖欠款項遲付欠款逾期欠稅	財務與採購
+fc-to-0685	grace period	n.	繳費寬限期免息還款寬限天數	財務與採購
+fc-to-0686	installment	n.	分期付款期數分期撥款分冊	財務與採購
+fc-to-0687	standing order	n.	銀行定期自動轉帳委託常行指示	財務與採購
+fc-to-0688	direct debit	n.	直接扣款自動扣繳授權帳款	財務與採購
+fc-to-0689	escrow	n.	履約第三方保管帳戶履約保證信託	商務合約與談判
+fc-to-0690	lien	n.	法定留置權扣押權債權抵押擔保	商務合約與談判
+fc-to-0691	settlement agreement	n.	正式和解協議合意解決合約書	商務合約與談判
+fc-to-0692	liquidated damages	n.	預定違約賠償金違約罰金條款	商務合約與談判
+fc-to-0693	force majeure	n.	不可抗力條款天災戰禍不可抗免責	商務合約與談判
+fc-to-0694	jurisdiction clause	n.	合約管轄法院條款管轄權條款	商務合約與談判
+fc-to-0695	severability	n.	條款可分割性部分無效不影響效力	商務合約與談判
+fc-to-0696	counteroffer	n. / v.	還價買賣雙方反要約；還價	商務合約與談判
+fc-to-0697	best practice	n.	最佳作業實務行業典範最佳解	策略與政策執行
+fc-to-0698	feasibility study	n.	投資可行性研究評估調查報告	策略與政策執行
+fc-to-0699	cost-benefit analysis	n.	成本效益分析利弊衡量評估	策略與政策執行
+fc-to-0700	return on investment	n.	投資報酬率投報率 (ROI)	財務與採購

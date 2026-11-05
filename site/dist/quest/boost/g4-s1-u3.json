@@ -1,0 +1,363 @@
+[
+ {
+  "id": "g4-s1-u3.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Do you want some milk?",
+   "Do you wants some milk?",
+   "You want do some milk?"
+  ],
+  "answer": "Do you want some milk?",
+  "wrong": {
+   "Do you wants some milk?": "Do 後面的動詞要用原形，wants 多加了 s。",
+   "You want do some milk?": "問句要把 Do 放在句首，不能把 do 放在句中。"
+  },
+  "why": "一般問句用 Do you + 原形動詞，milk 是不可數名詞，前面用 some。",
+  "tip": "問別人要不要，用 Do you want…?",
+  "say": "Do you want some milk?"
+ },
+ {
+  "id": "g4-s1-u3.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I am want a sandwich.",
+   "I want a sandwich.",
+   "I wanting a sandwich."
+  ],
+  "answer": "I want a sandwich.",
+  "wrong": {
+   "I am want a sandwich.": "want 是一般動詞，不需要再加 be 動詞 am。",
+   "I wanting a sandwich.": "want 表示「想要」，不用 -ing，而且少了 be 動詞。"
+  },
+  "why": "主詞 I 加原形動詞 want，直接說 I want…。",
+  "tip": "想要什麼，說 I want + 東西。",
+  "say": "I want a sandwich."
+ },
+ {
+  "id": "g4-s1-u3.b3",
+  "type": "situation",
+  "prompt": "你口渴了，想向媽媽要水喝。哪一句最自然？",
+  "text": "",
+  "options": [
+   "I'm hungry. Can I have some water?",
+   "I'm thirsty. I have water you.",
+   "I'm thirsty. Can I have some water?"
+  ],
+  "answer": "I'm thirsty. Can I have some water?",
+  "wrong": {
+   "I'm hungry. Can I have some water?": "hungry 是肚子餓，口渴要用 thirsty。",
+   "I'm thirsty. I have water you.": "語序亂了，要請求時用 Can I have…?，不是 I have water you。"
+  },
+  "why": "thirsty 是口渴，Can I have some water? 是有禮貌的請求。",
+  "tip": "口渴 thirsty，肚子餓 hungry。",
+  "say": "I'm thirsty. Can I have some water?"
+ },
+ {
+  "id": "g4-s1-u3.b4",
+  "type": "situation",
+  "prompt": "朋友問你：「Do you want an apple?」你想吃，要怎麼回答？",
+  "text": "",
+  "options": [
+   "Yes, please.",
+   "You're welcome.",
+   "Nice to meet you."
+  ],
+  "answer": "Yes, please.",
+  "wrong": {
+   "You're welcome.": "You're welcome 是別人說謝謝之後的回答，不是答應要吃。",
+   "Nice to meet you.": "這句是第一次見面才說，和問你要不要吃蘋果無關。"
+  },
+  "why": "想接受別人給的東西，說 Yes, please. 最有禮貌。",
+  "tip": "想要就說 Yes, please。",
+  "say": "Yes, please."
+ },
+ {
+  "id": "g4-s1-u3.b5",
+  "type": "situation",
+  "prompt": "在餐廳，你想點一杯茶。哪一句最好？",
+  "text": "",
+  "options": [
+   "I want tea cup of a.",
+   "I'd like a cup of tea, please.",
+   "Tea is want me."
+  ],
+  "answer": "I'd like a cup of tea, please.",
+  "wrong": {
+   "I want tea cup of a.": "語序錯了，杯子要說 a cup of tea。",
+   "Tea is want me.": "Tea 不是主詞，不能這樣說「我要茶」。"
+  },
+  "why": "I'd like… 是有禮貌的點餐說法，a cup of tea 是一杯茶。",
+  "tip": "點餐用 I'd like…, please。",
+  "say": "I'd like a cup of tea, please."
+ },
+ {
+  "id": "g4-s1-u3.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I want ___ egg for breakfast.",
+  "options": [
+   "a",
+   "two",
+   "an"
+  ],
+  "answer": "an",
+  "wrong": {
+   "a": "egg 的發音以母音開頭，要用 an，不用 a。",
+   "two": "egg 在這裡是單數，two 後面要用複數 eggs。"
+  },
+  "why": "egg 以母音音開頭，單數前面用 an。",
+  "tip": "母音開頭的單數名詞用 an。",
+  "say": "I want an egg for breakfast."
+ },
+ {
+  "id": "g4-s1-u3.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Do you want ___ rice?",
+  "options": [
+   "some",
+   "a",
+   "an"
+  ],
+  "answer": "some",
+  "wrong": {
+   "a": "rice 是不可數名詞，前面不能加 a。",
+   "an": "rice 不可數，而且 rice 也不是母音開頭，an 不適合。"
+  },
+  "why": "不可數的食物用 some，問句也可以用 some 表示有禮貌地邀請。",
+  "tip": "不可數食物前面用 some。",
+  "say": "Do you want some rice?"
+ },
+ {
+  "id": "g4-s1-u3.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "My sister ___ a banana now.",
+  "options": [
+   "want",
+   "wants",
+   "wanting"
+  ],
+  "answer": "wants",
+  "wrong": {
+   "want": "my sister 是第三人稱單數，want 要加 s。",
+   "wanting": "want 一般不用進行式，也少了 be 動詞。"
+  },
+  "why": "my sister 是 she，一般動詞要加 s：wants。",
+  "tip": "第三人稱單數動詞加 s。",
+  "say": "My sister wants a banana now."
+ },
+ {
+  "id": "g4-s1-u3.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "___ you want juice?",
+  "options": [
+   "Does",
+   "Are",
+   "Do"
+  ],
+  "answer": "Do",
+  "wrong": {
+   "Does": "you 不是第三人稱單數，不能用 Does。",
+   "Are": "Are 後面不接原形動詞 want。"
+  },
+  "why": "you 搭配 Do，後面接原形動詞。",
+  "tip": "you 的問句用 Do。",
+  "say": "Do you want juice?"
+ },
+ {
+  "id": "g4-s1-u3.b10",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I'm full.",
+  "options": [
+   "我吃飽了。",
+   "我很餓。",
+   "我很渴。"
+  ],
+  "answer": "我吃飽了。",
+  "wrong": {
+   "我很餓。": "full 是「飽的」，餓是 hungry。",
+   "我很渴。": "full 和口渴無關，口渴是 thirsty。"
+  },
+  "why": "full 在吃飯的時候表示肚子很飽。",
+  "tip": "full 是飽，hungry 是餓。",
+  "say": "I'm full."
+ },
+ {
+  "id": "g4-s1-u3.b11",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Would you like some soup?",
+  "options": [
+   "你會做湯嗎？",
+   "你想要喝點湯嗎？",
+   "你有湯嗎？"
+  ],
+  "answer": "你想要喝點湯嗎？",
+  "wrong": {
+   "你會做湯嗎？": "Would you like… 是邀請對方，不是問會不會做。",
+   "你有湯嗎？": "這句不是在問對方有沒有，而是請問對方要不要。"
+  },
+  "why": "Would you like… 是有禮貌地問對方要不要。",
+  "tip": "Would you like…? 是客氣的邀請。",
+  "say": "Would you like some soup?"
+ },
+ {
+  "id": "g4-s1-u3.b12",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I want a bowl of noodles.",
+  "options": [
+   "我想要一包麵。",
+   "我想要一盤麵。",
+   "我想要一碗麵。"
+  ],
+  "answer": "我想要一碗麵。",
+  "wrong": {
+   "我想要一包麵。": "bowl 是碗，包裝是 pack 或 bag。",
+   "我想要一盤麵。": "bowl 是碗，盤子是 plate。"
+  },
+  "why": "a bowl of 是一碗，noodles 是麵。",
+  "tip": "a bowl of 一碗，a glass of 一杯。",
+  "say": "I want a bowl of noodles."
+ },
+ {
+  "id": "g4-s1-u3.b13",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I want to drink milk.",
+   "I want drink milk.",
+   "I want drinking milk."
+  ],
+  "answer": "I want to drink milk.",
+  "wrong": {
+   "I want drink milk.": "want 後面接動詞時，要加 to：want to drink。",
+   "I want drinking milk.": "want 後面不接 -ing，要用 to + 原形動詞。"
+  },
+  "why": "want to + 原形動詞 表示想要做某事。",
+  "tip": "want 後面接動詞要加 to。",
+  "say": "I want to drink milk."
+ },
+ {
+  "id": "g4-s1-u3.b14",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Do you want a water?",
+   "Do you want some water?",
+   "Do you want waters?"
+  ],
+  "answer": "Do you want some water?",
+  "wrong": {
+   "Do you want a water?": "water 是不可數名詞，不能加 a。",
+   "Do you want waters?": "water 通常不加 s，要用 some water。"
+  },
+  "why": "water 不可數，用 some water 最自然。",
+  "tip": "不可數名詞不加 a 也不加 s。",
+  "say": "Do you want some water?"
+ },
+ {
+  "id": "g4-s1-u3.b15",
+  "type": "situation",
+  "prompt": "朋友說他好餓，你想問他要不要吃麵包。",
+  "text": "",
+  "options": [
+   "You are bread hungry?",
+   "Do bread you want?",
+   "Do you want some bread?"
+  ],
+  "answer": "Do you want some bread?",
+  "wrong": {
+   "You are bread hungry?": "語序和用法都錯了，hungry 是形容詞，不能把 bread 放在中間。",
+   "Do bread you want?": "一般問句要先說 Do you，再說 want bread。"
+  },
+  "why": "問別人要不要，先 Do you want，再說東西。",
+  "tip": "Do you want + 東西？",
+  "say": "Do you want some bread?"
+ },
+ {
+  "id": "g4-s1-u3.b16",
+  "type": "situation",
+  "prompt": "你不想吃肉，要禮貌地拒絕朋友。",
+  "text": "",
+  "options": [
+   "No, thank you. I don't want meat.",
+   "No, thank you. I not want meat.",
+   "No, please. I am meat."
+  ],
+  "answer": "No, thank you. I don't want meat.",
+  "wrong": {
+   "No, thank you. I not want meat.": "否定要用 don't，不能直接用 not 放在動詞前。",
+   "No, please. I am meat.": "No, please 不自然，而且 I am meat 是說「我是肉」。"
+  },
+  "why": "拒絕時說 No, thank you.，否定句用 don't + 原形動詞。",
+  "tip": "不要用 No, thank you，否定用 don't。",
+  "say": "No, thank you. I don't want meat."
+ },
+ {
+  "id": "g4-s1-u3.b17",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We have breakfast ___ the morning.",
+  "options": [
+   "on",
+   "in",
+   "at"
+  ],
+  "answer": "in",
+  "wrong": {
+   "on": "in the morning 是固定用法，不用 on。",
+   "at": "at 用在確定的時間點，例如 at seven。"
+  },
+  "why": "早上、下午、晚上前面通常用 in the morning。",
+  "tip": "早上要說 in the morning。",
+  "say": "We have breakfast in the morning."
+ },
+ {
+  "id": "g4-s1-u3.b18",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I'd like a cup ___ tea.",
+  "options": [
+   "in",
+   "for",
+   "of"
+  ],
+  "answer": "of",
+  "wrong": {
+   "in": "a cup of tea 才是「一杯茶」，in 不是這個意思。",
+   "for": "for 是「為了」，不能表示「一杯的」。"
+  },
+  "why": "a cup of + 飲料 表示一杯。",
+  "tip": "a cup of tea 一杯茶。",
+  "say": "I'd like a cup of tea."
+ },
+ {
+  "id": "g4-s1-u3.b19",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I eat a snack after school.",
+  "options": [
+   "我放學後吃點心。",
+   "我放學後吃午餐。",
+   "我放學前吃早餐。"
+  ],
+  "answer": "我放學後吃點心。",
+  "wrong": {
+   "我放學後吃午餐。": "snack 是零食或點心，午餐是 lunch。",
+   "我放學前吃早餐。": "after school 是放學後，不是放學前，snack 也不是早餐。"
+  },
+  "why": "snack 是小點心，after school 是放學後。",
+  "tip": "snack 是點心，after 是在後面。",
+  "say": "I eat a snack after school."
+ }
+]

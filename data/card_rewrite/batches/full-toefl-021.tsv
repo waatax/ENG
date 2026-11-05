@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-tf-0207	trench	n.	海溝、深長地塹	地質天體與自然環境
+fc-tf-0208	ridge	n.	山脊、洋中脊	地質天體與自然環境
+fc-tf-0209	rift	n.	裂谷、地塹裂隙	地質天體與自然環境
+fc-tf-0210	sedimentary	adj.	沉積岩的	地質天體與自然環境
+fc-tf-0211	metamorphic	adj.	變質岩的、變態的	地質天體與自然環境
+fc-tf-0212	igneous	adj.	火成岩的	地質天體與自然環境
+fc-tf-0213	mineral	n.	礦物、無機晶體	地質天體與自然環境
+fc-tf-0214	quartz	n.	石英、結晶二氧化矽	地質天體與自然環境
+fc-tf-0215	feldspar	n.	長石（地殼最豐富礦物）	地質天體與自然環境
+fc-tf-0216	mica	n.	雲母（層狀矽酸鹽）	地質天體與自然環境
+fc-tf-0217	calcite	n.	方解石、碳酸鈣結晶	地質天體與自然環境
+fc-tf-0218	carbon dating	n.	放射性碳定年法	地質天體與自然環境
+fc-tf-0219	half-life	n.	半衰期、放射性半壽期	地質天體與自然環境
+fc-tf-0220	isotope	n.	同位素	地質天體與自然環境
+fc-tf-0221	greenhouse effect	n.	溫室效應	地質天體與自然環境
+fc-tf-0222	global warming	n.	全球暖化危機	地質天體與自然環境
+fc-tf-0223	ozone layer	n.	臭氧保護層	地質天體與自然環境
+fc-tf-0226	radiation	n.	輻射能量釋放	地質天體與自然環境
+fc-tf-0227	albedo	n.	反照率、反射比率	地質天體與自然環境
+fc-tf-0228	convection	n.	熱對流循環作用	地質天體與自然環境
+fc-tf-0229	conduction	n.	熱傳導作用	地質天體與自然環境
+fc-tf-0230	monsoon	n.	季風、季節雨季節	地質天體與自然環境
+fc-tf-0232	hurricane	n.	颶風、強烈大西洋氣旋	地質天體與自然環境
+fc-tf-0233	tornado	n.	龍捲風、漏斗雲旋風	地質天體與自然環境
+fc-tf-0234	cyclone	n.	氣旋、低氣壓系統	地質天體與自然環境
+fc-tf-0235	drought	n.	乾旱旱災、長期缺水	地質天體與自然環境
+fc-tf-0236	arid	adj.	乾旱荒蕪的	地質天體與自然環境
+fc-tf-0237	semi-arid	adj.	半乾旱氣候的	地質天體與自然環境
+fc-tf-0238	desertification	n.	沙漠化荒漠化擴散	地質天體與自然環境
+fc-tf-0239	oasis	n.	綠洲、沙漠水源地	地質天體與自然環境
+fc-tf-0240	dune	n.	沙丘、風成風積地貌	地質天體與自然環境
+fc-tf-0241	photosynthesis	n.	光合作用合成葡萄糖	生物演化與生態系統
+fc-tf-0242	symbiosis	n.	共生關係、互利共存	生物演化與生態系統
+fc-tf-0243	mutualism	n.	互利共生	生物演化與生態系統
+fc-tf-0244	commensalism	n.	片利共生	生物演化與生態系統
+fc-tf-0245	parasitism	n.	寄生危害關係	生物演化與生態系統
+fc-tf-0246	camouflage	n. / v.	偽裝保護色；偽裝隱蔽	生物演化與生態系統
+fc-tf-0247	mimicry	n.	擬態擬色防衛	生物演化與生態系統
+fc-tf-0248	speciation	n.	物種形成作用	生物演化與生態系統
+fc-tf-0249	biodiversity	n.	生物多樣性、物種豐度	生物演化與生態系統
+fc-tf-0250	plumage	n.	鳥類羽毛覆蓋總體	生物演化與生態系統
+fc-tf-0251	hibernate	v.	冬眠休眠	生物演化與生態系統
+fc-tf-0252	hibernation	n.	冬眠生理狀態	生物演化與生態系統
+fc-tf-0253	estivation	n.	夏眠休眠	生物演化與生態系統
+fc-tf-0254	microbial	adj.	微生物的、細菌的	生物演化與生態系統
+fc-tf-0255	organism	n.	生物有機體、生命系統	生物演化與生態系統
+fc-tf-0256	habitat	n.	生物棲息地、生境	生物演化與生態系統
+fc-tf-0257	niche	n.	生態棲位、特定生態定位	生物演化與生態系統
+fc-tf-0258	adaptation	n.	適應性演化特徵	生物演化與生態系統
+fc-tf-0259	adaptive	adj.	具適應性的演化優勢	生物演化與生態系統
+fc-tf-0260	forage	v. / n.	覓食搜尋；草料飼料	生物演化與生態系統
+fc-tf-0261	predator	n.	掠食者、捕食動物	生物演化與生態系統
+fc-tf-0262	predation	n.	捕食作用、掠食行為	生物演化與生態系統
+fc-tf-0263	prey	n. / v.	被捕食獵物；捕食為食	生物演化與生態系統
+fc-tf-0264	flora	n.	植物群落、全體植物誌	生物演化與生態系統
+fc-tf-0265	fauna	n.	動物群落、動物誌	生物演化與生態系統
+fc-tf-0267	reptile	n.	爬行動物	生物演化與生態系統
+fc-tf-0268	amphibian	n.	兩棲動物（蛙、蠑螈）	生物演化與生態系統
+fc-tf-0269	invertebrate	n. / adj.	無脊椎動物；無脊椎的	生物演化與生態系統
+fc-tf-0270	vertebrate	n. / adj.	脊椎動物；有脊椎的	生物演化與生態系統
+fc-tf-0271	parasite	n.	寄生蟲、寄生生物	生物演化與生態系統
+fc-tf-0272	host	n.	宿主生物體	生物演化與生態系統
+fc-tf-0273	pollination	n.	授粉花粉傳播	生物演化與生態系統
+fc-tf-0274	pollinator	n.	傳粉者（蜜蜂、蜂鳥等）	生物演化與生態系統
+fc-tf-0275	germinate	v.	發芽萌芽、開始生長	生物演化與生態系統
+fc-tf-0276	germination	n.	種子發芽生理過程	生物演化與生態系統
+fc-tf-0277	chlorophyll	n.	葉綠素（吸光色素）	生物演化與生態系統
+fc-tf-0278	chloroplast	n.	葉綠體細胞器	生物演化與生態系統
+fc-tf-0279	cellular	adj.	細胞的、多細胞的	生物演化與生態系統
+fc-tf-0280	genetics	n.	遺傳學、基因科學	生物演化與生態系統
+fc-tf-0281	mutation	n.	基因突變異變	生物演化與生態系統
+fc-tf-0282	allele	n.	等位基因	生物演化與生態系統
+fc-tf-0283	chromosome	n.	染色體遺傳結構	生物演化與生態系統
+fc-tf-0284	enzyme	n.	生物酵素、催化酶	生物演化與生態系統
+fc-tf-0285	protein	n.	蛋白質高分子	生物演化與生態系統
+fc-tf-0286	carbohydrate	n.	碳水化合物、醣類	生物演化與生態系統
+fc-tf-0287	metabolism	n.	新陳代謝生物化學	生物演化與生態系統
+fc-tf-0288	metabolic	adj.	代謝的新陳代謝的	生物演化與生態系統
+fc-tf-0289	respiration	n.	細胞呼吸作用	生物演化與生態系統
+fc-tf-0290	ecosystem	n.	生態系統、生態圈	生物演化與生態系統
+fc-tf-0291	biome	n.	生物群系（沙漠、熱帶雨林等）	生物演化與生態系統
+fc-tf-0292	deciduous	adj.	落葉性的（樹木）	生物演化與生態系統
+fc-tf-0293	coniferous	adj.	針葉樹的、毬果的	生物演化與生態系統
+fc-tf-0294	evergreen	adj. / n.	常綠的；常綠樹	生物演化與生態系統
+fc-tf-0295	canopy	n.	樹冠層、森林頂棚	生物演化與生態系統
+fc-tf-0296	understory	n.	林下灌木層	生物演化與生態系統
+fc-tf-0297	forest floor	n.	森林地表腐植層	生物演化與生態系統
+fc-tf-0298	venomous	adj.	有毒液的主動分泌毒素的	生物演化與生態系統
+fc-tf-0299	poisonous	adj.	含有毒素的被動食用有毒的	生物演化與生態系統
+fc-tf-0300	nocturnal	adj.	夜行性的	生物演化與生態系統
+fc-tf-0301	diurnal	adj.	晝行性的、日間活動的	生物演化與生態系統
+fc-tf-0302	crepuscular	adj.	黃昏黎明晨昏活動的	生物演化與生態系統
+fc-tf-0303	territorial	adj.	具強烈領域性的	生物演化與生態系統
+fc-tf-0304	dispersal	n.	種子散播、族群擴散	生物演化與生態系統
+fc-tf-0305	herbivore	n.	草食動物	生物演化與生態系統
+fc-tf-0306	carnivore	n.	肉食動物	生物演化與生態系統
+fc-tf-0307	omnivore	n.	雜食動物	生物演化與生態系統
+fc-tf-0308	detritivore	n.	食碎屑腐食生物	生物演化與生態系統
+fc-tf-0309	decomposition	n.	生物分解腐爛作用	生物演化與生態系統
+fc-tf-0310	decomposer	n.	分解者（真菌、細菌）	生物演化與生態系統
+fc-tf-0311	fungi	n.	真菌類（單數 fungus）	生物演化與生態系統
+fc-tf-0312	spore	n.	孢子生殖體	生物演化與生態系統
+fc-tf-0313	algae	n.	藻類水生光合生物	生物演化與生態系統
+fc-tf-0314	lichen	n.	地衣（藻類與真菌共生體）	生物演化與生態系統
+fc-tf-0315	moss	n.	苔蘚無維管植物	生物演化與生態系統
+fc-tf-0316	vascular	adj.	維管束的、導管系統的	生物演化與生態系統
+fc-tf-0317	xylem	n.	木質部（輸送水分與無機鹽）	生物演化與生態系統
+fc-tf-0318	phloem	n.	韌皮部（輸送光合養分）	生物演化與生態系統
+fc-tf-0319	transpiration	n.	植物蒸散水分作用	生物演化與生態系統
+fc-tf-0320	stomata	n.	植物氣孔（呼吸蒸散調節）	生物演化與生態系統
+fc-tf-0321	epidermis	n.	表皮組織、表皮層	生物演化與生態系統
+fc-tf-0322	cuticle	n.	角質層（防止水分流失）	生物演化與生態系統
+fc-tf-0323	carapace	n.	甲殼動物背甲外殼	生物演化與生態系統
+fc-tf-0324	exoskeleton	n.	外骨骼（節肢動物）	生物演化與生態系統
+fc-tf-0325	endoskeleton	n.	內骨骼（脊椎動物）	生物演化與生態系統
+fc-tf-0326	molting	n.	蛻皮換毛脫殼生理	生物演化與生態系統
+fc-tf-0327	metamorphosis	n.	完全變態發育過程	生物演化與生態系統
+fc-tf-0328	larva	n.	幼蟲、幼體階段	生物演化與生態系統
+fc-tf-0329	pupa	n.	蛹期階段	生物演化與生態系統
+fc-tf-0330	cocoon	n.	繭、保護性外囊	生物演化與生態系統
+fc-tf-0331	chrysalis	n.	蝶蛹外殼	生物演化與生態系統
+fc-tf-0332	juvenile	adj. / n.	幼年期的；幼體	生物演化與生態系統
+fc-tf-0333	feral	adj.	野生化的、野生未馴化的	生物演化與生態系統
+fc-tf-0334	domesticated	adj.	經人工馴養馴化的	生物演化與生態系統
+fc-tf-0335	selective breeding	n.	人工選育育種	生物演化與生態系統
+fc-tf-0336	natural selection	n.	天擇自然淘汰	生物演化與生態系統
+fc-tf-0337	survival of the fittest	n.	適者生存法則	生物演化與生態系統
+fc-tf-0338	genetic drift	n.	遺傳漂變	生物演化與生態系統
+fc-tf-0339	gene pool	n.	基因庫族群總基因	生物演化與生態系統
+fc-tf-0340	endangered	adj.	瀕臨絕種危機的	生物演化與生態系統
+fc-tf-0341	vulnerable	adj.	易危的、脆弱受害的	生物演化與生態系統
+fc-tf-0342	poaching	n.	非法盜獵野生動物	生物演化與生態系統
+fc-tf-0343	conservation	n.	野生生態資源保育	生物演化與生態系統
+fc-tf-0344	sanctuary	n.	自然保護區、野生庇護所	生物演化與生態系統
+fc-tf-0345	carrying capacity	n.	環境生態承載量	生物演化與生態系統
+fc-tf-0346	trophic level	n.	營養階層食物鏈位階	生物演化與生態系統
+fc-tf-0347	food web	n.	錯綜複雜的食物網	生物演化與生態系統
+fc-tf-0348	keystone species	n.	關鍵物種（決定生態穩定）	生物演化與生態系統
+fc-tf-0349	invasive species	n.	外來入侵危害物種	生物演化與生態系統
+fc-tf-0350	native species	n.	本土原生固有種	生物演化與生態系統
+fc-tf-0351	endemic	adj.	特有種的地方特有的	生物演化與生態系統
+fc-tf-0352	monoculture	n.	單一農作物栽培	生物演化與生態系統
+fc-tf-0353	polyculture	n.	多元間作生態耕作	生物演化與生態系統
+fc-tf-0354	pesticide	n.	化學殺蟲劑	生物演化與生態系統
+fc-tf-0355	herbicide	n.	除草劑農藥	生物演化與生態系統
+fc-tf-0356	fertilizer	n.	肥料促生長劑	生物演化與生態系統
+fc-tf-0357	eutrophication	n.	水體優養化富營養化	生物演化與生態系統
+fc-tf-0358	algal bloom	n.	藻華綠潮大量暴發	生物演化與生態系統
+fc-tf-0359	coral bleaching	n.	珊瑚白化死亡現象	生物演化與生態系統
+fc-tf-0360	ocean acidification	n.	海洋酸化腐蝕珊瑚	生物演化與生態系統
+fc-tf-0361	conditioning	n.	條件反射制約化學習	心理認知與社會人類
+fc-tf-0362	classical conditioning	n.	古典制約（巴夫洛夫犬）	心理認知與社會人類
+fc-tf-0363	operant conditioning	n.	操作制約（史金納箱）	心理認知與社會人類
+fc-tf-0364	reinforcement	n.	心理強化獎勵刺激	心理認知與社會人類
+fc-tf-0365	positive reinforcement	n.	正向強化積極獎勵	心理認知與社會人類
+fc-tf-0366	negative reinforcement	n.	負向強化消除厭惡刺激	心理認知與社會人類
+fc-tf-0367	cognition	n.	大腦認知知覺處理	心理認知與社會人類
+fc-tf-0368	cognitive dissonance	n.	認知失調衝突感	心理認知與社會人類
+fc-tf-0369	perception	n.	感官知覺、心理感知	心理認知與社會人類
+fc-tf-0370	sensory	adj.	感覺器官的感官的	心理認知與社會人類
+fc-tf-0371	stimulus	n.	外在刺激激發因子	心理認知與社會人類
+fc-tf-0372	response	n.	生理或行為反應	心理認知與社會人類
+fc-tf-0373	subconscious	adj. / n.	潛意識的；潛意識心智	心理認知與社會人類
+fc-tf-0374	unconscious	adj. / n.	無意識的、失去知覺的	心理認知與社會人類
+fc-tf-0375	heuristic	n. / adj.	捷思法啟發式規則；啟發的	心理認知與社會人類
+fc-tf-0376	intuition	n.	直覺敏銳洞察力	心理認知與社會人類
+fc-tf-0377	archetype	n.	原型典範、心理集體原型	心理認知與社會人類
+fc-tf-0378	instinct	n.	先天本能衝動	心理認知與社會人類
+fc-tf-0379	conformity	n.	從眾行為、順從團體規範	心理認知與社會人類
+fc-tf-0380	compliance	n.	順從服從他人要求	心理認知與社會人類
+fc-tf-0381	obedience	n.	對權威之服從行為	心理認知與社會人類
+fc-tf-0382	alienation	n.	社會疏離孤立感	心理認知與社會人類
+fc-tf-0383	anthropology	n.	人類學文明起源研究	心理認知與社會人類
+fc-tf-0384	ethnography	n.	民族誌田野調查紀錄	心理認知與社會人類
+fc-tf-0385	diaspora	n.	族群大流散流亡	心理認知與社會人類
+fc-tf-0386	hierarchy	n.	金字塔階級體系	心理認知與社會人類
+fc-tf-0387	egalitarian	adj.	平等主義的無階級的	心理認知與社會人類
+fc-tf-0388	sedentary	adj.	定居的；久坐活動量少的	心理認知與社會人類
+fc-tf-0389	nomadic	adj.	游牧逐水草而居的	心理認知與社會人類
+fc-tf-0390	pastoral	adj.	牧歌式畜牧游牧的	心理認知與社會人類
+fc-tf-0391	agrarian	adj.	農業的、土地耕作的	心理認知與社會人類
+fc-tf-0392	hunter-gatherer	n.	採集狩獵部落原始族群	心理認知與社會人類
+fc-tf-0393	forager	n.	採集野果獵食者	心理認知與社會人類
+fc-tf-0394	kinship	n.	親屬血緣關係制度	心理認知與社會人類
+fc-tf-0395	matrilineal	adj.	母系血統繼承的	心理認知與社會人類
+fc-tf-0396	patrilineal	adj.	父系繼承體系的	心理認知與社會人類
+fc-tf-0397	matriarchy	n.	母權社會統治	心理認知與社會人類
+fc-tf-0398	patriarchy	n.	父權男性主導體系	心理認知與社會人類
+fc-tf-0399	monogamy	n.	一夫一妻制度	心理認知與社會人類
+fc-tf-0400	polygamy	n.	一夫多妻或多配偶制	心理認知與社會人類
+fc-tf-0401	clan	n.	宗族氏族血親集團	心理認知與社會人類
+fc-tf-0402	tribe	n.	部落部族社會體	心理認知與社會人類
+fc-tf-0403	chieftain	n.	部落酋長頭目	心理認知與社會人類
+fc-tf-0404	ritual	n. / adj.	神聖儀式祭典；儀禮的	心理認知與社會人類
+fc-tf-0405	rite of passage	n.	成年禮、過渡成年儀式	心理認知與社會人類
+fc-tf-0406	mythology	n.	神話體系古代傳說	心理認知與社會人類
+fc-tf-0407	folklore	n.	民間傳說民間風俗	心理認知與社會人類
+fc-tf-0408	taboo	n. / adj.	禁忌避諱；嚴禁禁止的	心理認知與社會人類
+fc-tf-0409	totem	n.	圖騰信仰守護象徵	心理認知與社會人類
+fc-tf-0410	shaman	n.	薩滿巫醫通靈祭司	心理認知與社會人類

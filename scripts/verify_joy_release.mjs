@@ -7,7 +7,7 @@ const data=await response.json(),run=data.workflow_runs?.find(r=>r.name==='Deplo
 const report={sha,run:run?{id:run.id,url:run.html_url,status:run.status,conclusion:run.conclusion}:null};
 if(run?.conclusion==='success'){
   const base='https://waatax.github.io/ENG/';
-  const required=[['index.html','learning_joy.css?v=joy20261103'],['quest/index.html','view.mjs?v=joy20261103'],['flashcard_recall.mjs','renderRecallStudio'],['recall.mjs','sameDay'],['quest/missions.mjs','renderUnitMissions'],['mastery_passport.mjs','eq_recall_v1']];
+  const required=[['index.html','learning_joy.css?v=truth20261105'],['quest/index.html','view.mjs?v=truth20261105'],['flashcard_recall.mjs','renderRecallStudio'],['recall.mjs','sameDay'],['quest/missions.mjs','renderUnitMissions'],['mastery_passport.mjs','eq_recall_v1']];
   report.live=await Promise.all(required.map(async([path,marker])=>{
     const r=await fetch(`${base}${path}?release=${sha}`),body=await r.text();
     return {path,status:r.status,marker:body.includes(marker)};

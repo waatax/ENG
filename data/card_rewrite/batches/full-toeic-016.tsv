@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-to-0049	negotiate	v.	談判、協商條件	商務合約與談判
+fc-to-0050	negotiator	n.	談判代表、交涉者	商務合約與談判
+fc-to-0054	contractor	n.	承包商、訂約人	商務合約與談判
+fc-to-0055	contractual	adj.	合約規定的、契約上的	商務合約與談判
+fc-to-0056	clause	n.	合約條款、細則	商務合約與談判
+fc-to-0057	provision	n.	合約規定、條款條文	商務合約與談判
+fc-to-0058	terms	n.	交易條件、合約條款	商務合約與談判
+fc-to-0059	condition	n.	先決條件、履約現況	商務合約與談判
+fc-to-0060	conditional	adj.	附帶條件的	商務合約與談判
+fc-to-0061	binding	adj.	具法律約束力的	商務合約與談判
+fc-to-0062	bind	v.	束縛、使具約束力	商務合約與談判
+fc-to-0064	obligatory	adj.	強制的、義務性的	商務合約與談判
+fc-to-0065	obligate	v.	使負有法律義務	商務合約與談判
+fc-to-0066	breach	n. / v.	違反合約、違背條款	商務合約與談判
+fc-to-0067	violate	v.	違反法規、違背合約	商務合約與談判
+fc-to-0068	violation	n.	違法行為、違規違約	商務合約與談判
+fc-to-0069	liable	adj.	負有法律責任的、易於...的	商務合約與談判
+fc-to-0071	indemnify	v.	賠償保障、使免受損害	商務合約與談判
+fc-to-0072	indemnity	n.	損害賠償、賠償金	商務合約與談判
+fc-to-0073	settlement	n.	和解協議、結算清償	商務合約與談判
+fc-to-0074	settle	v.	解決爭端、清算款項	商務合約與談判
+fc-to-0075	dispute	n. / v.	合約爭端、商務爭議	商務合約與談判
+fc-to-0076	arbitration	n.	商務仲裁、公斷裁決	商務合約與談判
+fc-to-0077	arbitrate	v.	進行仲裁、公斷調停	商務合約與談判
+fc-to-0078	arbitrator	n.	公斷人、獨立仲裁員	商務合約與談判
+fc-to-0079	confidentiality	n.	保密義務、保密性	商務合約與談判
+fc-to-0080	disclosure	n.	揭露透露、公開資訊	商務合約與談判
+fc-to-0081	disclose	v.	揭露公開商業機密	商務合約與談判
+fc-to-0082	amendment	n.	修正條款、修訂契約	商務合約與談判
+fc-to-0083	amend	v.	修訂修改合約文字	商務合約與談判
+fc-to-0084	endorse	v.	簽署背書、贊同核准	商務合約與談判
+fc-to-0085	termination	n.	合約終止、解雇終結	商務合約與談判
+fc-to-0086	expire	v.	合約期滿失效、到期	商務合約與談判
+fc-to-0087	expiration	n.	到期日、效期屆滿	商務合約與談判
+fc-to-0088	renewal	n.	續約、換發更新	商務合約與談判
+fc-to-0089	renew	v.	延長合約、更新辦理	商務合約與談判
+fc-to-0090	comply	v.	遵從法規、符合規定	商務合約與談判
+fc-to-0091	stipulate	v.	合約明文規定、約定	商務合約與談判
+fc-to-0092	stipulation	n.	約定條件、明文條款	商務合約與談判
+fc-to-0093	minutes	n.	會議記錄、正式紀要	公司運營與行程
+fc-to-0094	adjourn	v.	休會、會議延期再議	公司運營與行程
+fc-to-0095	convene	v.	召集召開正式會議	公司運營與行程
+fc-to-0097	preside	v.	主持會議、行使職權	公司運營與行程
+fc-to-0098	quorum	n.	法定開會出席人數	公司運營與行程
+fc-to-0099	resolution	n.	會議決議案、決心	公司運營與行程
+fc-to-0100	resolve	v.	決議通過、解決難題	公司運營與行程
+fc-to-0102	ballot	n. / v.	無記名投票選票；投票表決	公司運營與行程
+fc-to-0103	branch	n.	分公司、分行、支局	公司運營與行程
+fc-to-0104	facility	n.	廠房設施、專用場所	公司運營與行程
+fc-to-0105	facilities	n.	全套設備、基礎設施	公司運營與行程
+fc-to-0106	renovation	n.	廠房裝修、整修翻新	公司運營與行程
+fc-to-0107	renovate	v.	整修翻修建築設施	公司運營與行程
+fc-to-0108	refurbish	v.	翻新粉刷、重新裝飾	公司運營與行程
+fc-to-0109	maintenance	n.	設備保養、維護檢修	公司運營與行程
+fc-to-0110	maintain	v.	維持保養、檢修設備	公司運營與行程
+fc-to-0111	relocation	n.	辦公室搬遷、調職	公司運營與行程
+fc-to-0112	relocate	v.	搬遷地址、遷移設點	公司運營與行程
+fc-to-0113	corporation	n.	大股份公司、法人機構	公司運營與行程
+fc-to-0114	corporate	adj.	企業法人的、整體的	公司運營與行程
+fc-to-0115	enterprise	n.	事業、民營企業企圖心	公司運營與行程
+fc-to-0116	conglomerate	n.	跨國大企業集團、企業混合體	公司運營與行程
+fc-to-0117	restructure	v.	企業改組重組結構	公司運營與行程
+fc-to-0118	restructuring	n.	組織重組重組改造	公司運營與行程
+fc-to-0119	acquisition	n.	公司收購、購併資產	公司運營與行程
+fc-to-0120	acquire	v.	收購併購企業資產	公司運營與行程
+fc-to-0121	takeover	n.	公司收購、經營權接管	公司運營與行程
+fc-to-0122	joint venture	n.	合資企業、共同投資案	公司運營與行程
+fc-to-0123	memorandum	n.	業務備忘錄、便箋 (memo)	公司運營與行程
+fc-to-0124	bulletin	n.	公告欄公報最新簡訊	公司運營與行程
+fc-to-0125	circular	n.	傳閱通告傳單通知	公司運營與行程
+fc-to-0127	notification	n.	正式通知書提醒通報	公司運營與行程
+fc-to-0128	notify	v.	正式通報告知訊息	公司運營與行程
+fc-to-0129	protocol	n.	商務禮儀議定書協議	公司運營與行程
+fc-to-0130	guideline	n.	指導方針作業準則	公司運營與行程
+fc-to-0131	procedure	n.	標準作業流程手續	公司運營與行程
+fc-to-0132	procedural	adj.	程序性的按步驟流程的	公司運營與行程
+fc-to-0133	policy	n.	公司政策方針保險單	公司運營與行程
+fc-to-0134	code of conduct	n.	員工行為準則專業守則	公司運營與行程
+fc-to-0135	supervision	n.	管理監督督導指導	公司運營與行程
+fc-to-0136	supervise	v.	監督掌管管理員工	公司運營與行程
+fc-to-0137	supervisor	n.	主管督導直屬長官	公司運營與行程
+fc-to-0138	procure	v.	採購獲得採買物料	財務與採購
+fc-to-0139	billing	n.	開立發票帳單、營業額	財務與採購
+fc-to-0140	receipt	n.	收據發票、收到憑據	財務與採購
+fc-to-0141	voucher	n.	現金抵用券報銷憑證	財務與採購
+fc-to-0142	quotation	n.	廠商報價單估價單	財務與採購
+fc-to-0143	quote	v. / n.	報價出價引用；報價	財務與採購
+fc-to-0145	budget	n. / v.	編列預算經費；編列	財務與採購
+fc-to-0146	budgetary	adj.	預算上的財政預算的	財務與採購
+fc-to-0147	expenditure	n.	支出開支花費金額	財務與採購
+fc-to-0148	expense	n.	公務花費報銷費用開銷	財務與採購
+fc-to-0149	reimbursement	n.	退款代墊費用報銷	財務與採購
+fc-to-0150	fiscal	adj.	財政的會計年度的	財務與採購
+fc-to-0151	shareholder	n.	公司股東持股人	財務與採購
+fc-to-0152	stockholder	n.	證券股東持股者	財務與採購
+fc-to-0153	equity	n.	股東權益淨值公平性	財務與採購
+fc-to-0154	capital	n.	資本資金股本首府	財務與採購
+fc-to-0155	assets	n.	公司總資產有價財產	財務與採購
+fc-to-0156	liabilities	n.	會計負債總負債金額	財務與採購
+fc-to-0157	balance sheet	n.	資產負債平衡表	財務與採購
+fc-to-0158	income statement	n.	損益表綜合損益表	財務與採購
+fc-to-0159	cash flow	n.	企業現金流量週轉資金	財務與採購
+fc-to-0160	profit	n. / v.	淨利利潤獲利賺錢	財務與採購
+fc-to-0161	profitable	adj.	獲利的賺錢有利潤的	財務與採購
+fc-to-0162	profitability	n.	獲利能力盈利水準	財務與採購
+fc-to-0163	loss	n.	營業虧損損失虧本	財務與採購
+fc-to-0164	auditor	n.	合格會計審計員查帳員	財務與採購
+fc-to-0165	depreciation	n.	資產折舊貨幣貶值	財務與採購
+fc-to-0166	depreciate	v.	提列折舊貶值降價	財務與採購
+fc-to-0167	amortization	n.	分期攤提無形資產攤銷	財務與採購
+fc-to-0168	amortize	v.	分期償還貸款分攤	財務與採購
+fc-to-0169	payroll	n.	員工薪資名冊薪水總額	財務與採購
+fc-to-0170	remuneration	n.	報酬酬勞工資給付	財務與採購
+fc-to-0171	allowance	n.	公務津貼補助零用金	財務與採購
+fc-to-0172	per diem	n. / adv.	出差日支津貼按日計費	財務與採購
+fc-to-0173	bonus	n.	年終獎金績效紅利	財務與採購
+fc-to-0174	deduction	n.	扣除款免稅額預扣款	財務與採購
+fc-to-0175	deduct	v.	扣除減除扣款開支	財務與採購
+fc-to-0176	taxation	n.	課稅制度納稅徵稅	財務與採購
+fc-to-0177	tax-exempt	adj.	免稅不需納稅的	財務與採購
+fc-to-0178	tariff	n.	進口關稅收費價目表	財務與採購
+fc-to-0179	duty	n.	進口關稅職責義務職務	財務與採購
+fc-to-0180	currency	n.	法定貨幣流通幣制通貨	財務與採購
+fc-to-0181	exchange rate	n.	外匯匯率兌換牌價	財務與採購
+fc-to-0182	inflation	n.	通貨膨脹物價上漲	財務與採購
+fc-to-0183	deflation	n.	通貨緊縮物價下跌	財務與採購
+fc-to-0184	depression	n.	經濟大蕭條長期蕭條	財務與採購
+fc-to-0185	supplier	n.	原物料供應商供貨商	財務與採購
+fc-to-0186	supply	v. / n.	供應提供；庫存供給品	財務與採購
+fc-to-0187	purchase order	n.	正式採購訂單 (PO)	財務與採購
+fc-to-0188	requisition	n. / v.	請購單徵用品；申請請購	財務與採購
+fc-to-0189	stock	n. / v.	公司股票存貨進貨備貨	財務與採購
+fc-to-0190	warehouse	n.	發貨倉庫貨棧庫房	財務與採購
+fc-to-0191	recruitment	n.	人才招募聘僱工作	人力資源與招募
+fc-to-0192	recruit	v. / n.	招攬聘僱人才；新進員工	人力資源與招募
+fc-to-0193	applicant	n.	應徵者職缺申請人	人力資源與招募
+fc-to-0195	candidate	n.	候選人面試應徵候選者	人力資源與招募
+fc-to-0196	interview	n. / v.	面試訪談；進行面試	人力資源與招募
+fc-to-0197	interviewer	n.	面試官訪談主持人	人力資源與招募
+fc-to-0198	interviewee	n.	受訪者受面試求職者	人力資源與招募
+fc-to-0199	resume	n.	履歷表個人履歷清單	人力資源與招募
+fc-to-0200	curriculum vitae	n.	詳細學經歷履歷 (CV)	人力資源與招募
+fc-to-0201	credentials	n.	專業資格證書資歷憑證	人力資源與招募
+fc-to-0202	qualification	n.	任職資格必備條件技能	人力資源與招募
+fc-to-0203	qualified	adj.	合格具資格勝任的	人力資源與招募
+fc-to-0204	qualify	v.	取得資格符合聘僱標準	人力資源與招募
+fc-to-0205	vacancy	n.	職務空缺職位未補	人力資源與招募
+fc-to-0206	vacant	adj.	職位空缺的房間未住的	人力資源與招募
+fc-to-0207	hire	v. / n.	僱用聘用；新員工	人力資源與招募
+fc-to-0208	onboarding	n.	新人到職到職培訓導入	人力資源與招募
+fc-to-0209	orientation	n.	新人職前培訓指導方向	人力資源與招募
+fc-to-0210	probation	n.	新進員工試用期試用	人力資源與招募
+fc-to-0211	probationary	adj.	試用期審查中的	人力資源與招募
+fc-to-0212	permanent	adj.	正職常任終身固定的	人力資源與招募
+fc-to-0213	temporary	adj.	臨時定期約聘非正職的	人力資源與招募
+fc-to-0214	part-time	adj. / adv.	兼職打工部分工時的	人力資源與招募
+fc-to-0215	full-time	adj. / adv.	全職常任正職工時的	人力資源與招募
+fc-to-0216	freelance	adj. / n. / v.	自由接案自由業從業	人力資源與招募
+fc-to-0217	intern	n. / v.	實習生見習生；擔任實習	人力資源與招募
+fc-to-0218	internship	n.	實習制度實習期職務	人力資源與招募
+fc-to-0219	mentor	n. / v.	職場導師良師；指導指導	人力資源與招募
+fc-to-0220	mentorship	n.	良師益友制度導師體系	人力資源與招募
+fc-to-0221	apprentice	n. / v.	學徒見習生；隨師學藝	人力資源與招募
+fc-to-0222	apprenticeship	n.	學徒身分學徒期	人力資源與招募
+fc-to-0223	promotion	n.	升職晉升行銷推廣	人力資源與招募
+fc-to-0224	promote	v.	晉升升遷宣傳促銷商品	人力資源與招募
+fc-to-0225	demotion	n.	降級降職職務降遷	人力資源與招募
+fc-to-0226	demote	v.	降級調降職位處分	人力資源與招募
+fc-to-0227	transfer	v. / n.	調職轉調轉帳；轉移	人力資源與招募
+fc-to-0228	resignation	n.	辭呈辭職書辭去職務	人力資源與招募
+fc-to-0229	resign	v.	請辭正式辭職離職	人力資源與招募
+fc-to-0230	retirement	n.	屆齡退休退役退休生活	人力資源與招募
+fc-to-0231	retire	v.	辦理退休退隱退休離崗	人力資源與招募
+fc-to-0232	pension	n.	勞工退休金退職年金	人力資源與招募
+fc-to-0233	severance	n.	資遣費離職補償金解約金	人力資源與招募
+fc-to-0234	layoff	n.	裁員解雇停工遣散	人力資源與招募
+fc-to-0235	downsize	v.	企業縮編裁員精簡人力	人力資源與招募
+fc-to-0236	downsizing	n.	人力縮編精簡化規模	人力資源與招募
+fc-to-0237	dismissal	n.	開除解職解雇駁回	人力資源與招募
+fc-to-0238	dismiss	v.	開除解雇免職駁回訴訟	人力資源與招募
+fc-to-0239	fire	v.	開除炒魷魚解雇釋放火	人力資源與招募
+fc-to-0240	performance	n.	工作考績績效表演表現	人力資源與招募
+fc-to-0241	evaluation	n.	績效評估評價考評報告	人力資源與招募
+fc-to-0242	feedback	n.	建設性意見考評回饋反應	人力資源與招募
+fc-to-0243	competence	n.	勝任能力職能專長勝任	人力資源與招募
+fc-to-0244	competent	adj.	有能力勝任稱職合格的	人力資源與招募
+fc-to-0245	expertise	n.	專門知識專業技能造詣	人力資源與招募
+fc-to-0246	proficiency	n.	精通熟練度語言流暢度	人力資源與招募
+fc-to-0247	proficient	adj.	精通熟練熟稔精準的	人力資源與招募
+fc-to-0248	absenteeism	n.	常態曠職慣性缺勤行為	人力資源與招募
+fc-to-0249	morale	n.	員工士氣團隊鬥志團隊精神	人力資源與招募
+fc-to-0250	headhunter	n.	高階獵人頭顧問獵才顧問	人力資源與招募
+fc-to-0251	shipping	n.	貨運海運船運出貨運費	物流與製造管理
+fc-to-0252	shipment	n.	運輸貨物一船貨託運品	物流與製造管理
+fc-to-0253	ship	v.	運送出貨託運寄送貨物	物流與製造管理
+fc-to-0254	freight	n.	貨運貨物大宗運送費運費	物流與製造管理
+fc-to-0255	cargo	n.	貨船飛機裝載貨物負載	物流與製造管理
+fc-to-0256	consignment	n.	寄售商品託運貨物承運	物流與製造管理
+fc-to-0257	consign	v.	託運交付寄賣託付	物流與製造管理
+fc-to-0258	dispatch	v. / n.	迅速派遣調度發送急件	物流與製造管理

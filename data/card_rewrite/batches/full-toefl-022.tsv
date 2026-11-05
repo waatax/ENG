@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-tf-0411	animism	n.	泛靈信仰萬物有靈論	心理認知與社會人類
+fc-tf-0412	pantheon	n.	萬神殿全體諸神	心理認知與社會人類
+fc-tf-0413	acculturation	n.	文化涵化融入適應	心理認知與社會人類
+fc-tf-0414	assimilation	n.	族群同化融合過程	心理認知與社會人類
+fc-tf-0415	indigenous	adj.	原住的土生土長的	心理認知與社會人類
+fc-tf-0416	aboriginal	adj. / n.	土著原住民族的	心理認知與社會人類
+fc-tf-0417	artifact	n.	歷史文物出土工藝品	心理認知與社會人類
+fc-tf-0418	relic	n.	歷史遺跡聖髑殘留物	心理認知與社會人類
+fc-tf-0419	excavate	v.	考古發掘出土開挖	心理認知與社會人類
+fc-tf-0420	excavation	n.	考古發掘作業工地	心理認知與社會人類
+fc-tf-0421	antiquity	n.	古老古代古典文明	心理認知與社會人類
+fc-tf-0422	ruins	n.	古代建築廢墟遺跡	心理認知與社會人類
+fc-tf-0423	monument	n.	歷史紀念碑宏偉古蹟	心理認知與社會人類
+fc-tf-0424	hieroglyphics	n.	古埃及象形文字	心理認知與社會人類
+fc-tf-0425	cuneiform	n. / adj.	楔形文字（美索不達米亞）	心理認知與社會人類
+fc-tf-0426	pictograph	n.	象形圖畫文字符號	心理認知與社會人類
+fc-tf-0427	phonology	n.	語音學音韻學規律	心理認知與社會人類
+fc-tf-0428	syntax	n.	句法語法句子架構	心理認知與社會人類
+fc-tf-0429	semantics	n.	語意學詞義邏輯	心理認知與社會人類
+fc-tf-0430	pragmatics	n.	語用學語境話語應用	心理認知與社會人類
+fc-tf-0431	dialect	n.	地方方言區域土語	心理認知與社會人類
+fc-tf-0432	lingua franca	n.	通用通用跨族群語言	心理認知與社會人類
+fc-tf-0433	pidgin	n.	洋涇浜混雜商務接觸語	心理認知與社會人類
+fc-tf-0434	creole	n.	克里奧爾母語化混合語	心理認知與社會人類
+fc-tf-0435	bilingual	adj.	雙語精通的雙語能力	心理認知與社會人類
+fc-tf-0436	monolingual	adj.	僅通單一語言的	心理認知與社會人類
+fc-tf-0437	neurosis	n.	精神官能症神經質症	心理認知與社會人類
+fc-tf-0438	psychosis	n.	思覺失調重度精神病	心理認知與社會人類
+fc-tf-0439	hallucination	n.	幻覺虛幻感官知覺	心理認知與社會人類
+fc-tf-0440	delusion	n.	妄想錯誤堅信不移	心理認知與社會人類
+fc-tf-0441	amnesia	n.	記憶喪失健忘失憶症	心理認知與社會人類
+fc-tf-0442	aphasia	n.	失語症語言中樞障礙	心理認知與社會人類
+fc-tf-0443	dementia	n.	失智症老年癡呆退化	心理認知與社會人類
+fc-tf-0444	phobia	n.	特定對象極度恐懼症	心理認知與社會人類
+fc-tf-0445	trauma	n.	重大心理心理創傷	心理認知與社會人類
+fc-tf-0446	catharsis	n.	情緒宣洩精神淨化	心理認知與社會人類
+fc-tf-0447	sublimation	n.	昇華防衛機制將本能轉化	心理認知與社會人類
+fc-tf-0448	introvert	n. / adj.	內向者；內省封閉的	心理認知與社會人類
+fc-tf-0449	extrovert	n. / adj.	外向者；好社交開朗的	心理認知與社會人類
+fc-tf-0450	empathy	n.	同理心感同身受能力	心理認知與社會人類
+fc-tf-0451	altruism	n.	無私利他主義關懷	心理認知與社會人類
+fc-tf-0452	narcissism	n.	自戀過度自我陶醉	心理認知與社會人類
+fc-tf-0453	ego	n.	自我意識精神核心	心理認知與社會人類
+fc-tf-0454	superego	n.	超我良心道德規範審查	心理認知與社會人類
+fc-tf-0455	id	n.	本我原始本能驅力	心理認知與社會人類
+fc-tf-0456	repression	n.	潛抑防衛壓抑心理痛苦	心理認知與社會人類
+fc-tf-0457	projection	n.	投射作用將缺點推給他人	心理認知與社會人類
+fc-tf-0458	rationalization	n.	合理化藉口自我辯解	心理認知與社會人類
+fc-tf-0459	displacement	n.	移位作用將怒氣轉移	心理認知與社會人類
+fc-tf-0460	placebo effect	n.	安慰劑效應心靈療效	心理認知與社會人類
+fc-tf-0461	blind spot	n.	認知盲點心理盲區	心理認知與社會人類
+fc-tf-0462	confirmation bias	n.	確認偏誤只看吻合信念者	心理認知與社會人類
+fc-tf-0463	hindsight bias	n.	事後聰明事後諸葛偏誤	心理認知與社會人類
+fc-tf-0464	halo effect	n.	月暈效應以偏概全好評	心理認知與社會人類
+fc-tf-0465	bystander effect	n.	旁觀者效應責任分散不救	心理認知與社會人類
+fc-tf-0466	groupthink	n.	團體盲思追求表面和諧盲從	心理認知與社會人類
+fc-tf-0467	social loafing	n.	社會怠惰團體中偷懶混水	心理認知與社會人類
+fc-tf-0468	peer pressure	n.	同儕群體壓力同儕認同	心理認知與社會人類
+fc-tf-0469	self-fulfilling prophecy	n.	自證預言信念驅動成真	心理認知與社會人類
+fc-tf-0470	Renaissance	n.	文藝復興人文主義運動	藝術歷史與建築文明
+fc-tf-0471	perspective	n.	透視法繪畫三度空間深淺	藝術歷史與建築文明
+fc-tf-0472	pigment	n.	繪畫顏料天然色彩粉末	藝術歷史與建築文明
+fc-tf-0473	canvas	n.	油畫布帆布畫布	藝術歷史與建築文明
+fc-tf-0474	fresco	n.	濕壁畫灰泥壁畫技巧	藝術歷史與建築文明
+fc-tf-0475	mural	n.	大型牆面壁畫	藝術歷史與建築文明
+fc-tf-0476	mosaic	n.	馬賽克鑲嵌細工藝術	藝術歷史與建築文明
+fc-tf-0477	baroque	adj. / n.	巴洛克華麗繁複風格	藝術歷史與建築文明
+fc-tf-0478	rococo	adj. / n.	洛可可優雅纖細裝飾風格	藝術歷史與建築文明
+fc-tf-0479	neoclassicism	n.	新古典主義回歸理性崇高	藝術歷史與建築文明
+fc-tf-0480	romanticism	n.	浪漫主義強調激情想像	藝術歷史與建築文明
+fc-tf-0481	realism	n.	寫實主義如實刻畫現實	藝術歷史與建築文明
+fc-tf-0482	impressionism	n.	印象派捕捉瞬間光影變化	藝術歷史與建築文明
+fc-tf-0483	post-impressionism	n.	後印象派追求結構精神	藝術歷史與建築文明
+fc-tf-0484	expressionism	n.	表現主義主觀強烈扭曲情緒	藝術歷史與建築文明
+fc-tf-0485	cubism	n.	立體派幾何解構多視角	藝術歷史與建築文明
+fc-tf-0486	surrealism	n.	超現實主義潛意識夢境	藝術歷史與建築文明
+fc-tf-0487	abstract art	n.	抽象藝術純粹形式表現	藝術歷史與建築文明
+fc-tf-0488	minimalism	n.	極簡主義簡約純淨結構	藝術歷史與建築文明
+fc-tf-0489	avant-garde	adj. / n.	前衛實驗性的；前衛先鋒派	藝術歷史與建築文明
+fc-tf-0490	aesthetics	n.	美學藝術哲學鑑賞	藝術歷史與建築文明
+fc-tf-0491	aesthetic	adj.	美感的藝術審美的	藝術歷史與建築文明
+fc-tf-0492	acoustics	n.	聲學音響效果物理	藝術歷史與建築文明
+fc-tf-0493	choreography	n.	編舞舞蹈編排藝術	藝術歷史與建築文明
+fc-tf-0494	choreographer	n.	舞蹈編排設計大師	藝術歷史與建築文明
+fc-tf-0495	patron	n.	藝術贊助人資助者	藝術歷史與建築文明
+fc-tf-0496	patronage	n.	文藝贊助資助制度	藝術歷史與建築文明
+fc-tf-0497	sculpture	n.	立體雕塑雕像作品	藝術歷史與建築文明
+fc-tf-0498	sculptor	n.	雕塑大師工匠	藝術歷史與建築文明
+fc-tf-0499	relief	n.	浮雕淺雕凸起雕刻	藝術歷史與建築文明
+fc-tf-0500	bust	n.	半身胸像雕塑	藝術歷史與建築文明
+fc-tf-0501	statuary	n.	群雕全體雕像藝術	藝術歷史與建築文明
+fc-tf-0502	pedestal	n.	雕像基座台座柱腳	藝術歷史與建築文明
+fc-tf-0503	arch	n.	拱門拱券力學承重結構	藝術歷史與建築文明
+fc-tf-0504	dome	n.	圓頂穹頂建築巨構	藝術歷史與建築文明
+fc-tf-0505	vault	n.	拱頂地下拱室交叉拱	藝術歷史與建築文明
+fc-tf-0506	column	n.	立柱石柱（多立克、科林斯）	藝術歷史與建築文明
+fc-tf-0507	capital	n.	柱頭雕刻裝飾最頂部	藝術歷史與建築文明
+fc-tf-0508	pediment	n.	三角山牆神廟山花	藝術歷史與建築文明
+fc-tf-0509	frieze	n.	帶狀浮雕橫飾帶	藝術歷史與建築文明
+fc-tf-0510	facade	n.	建築正面外觀表層	藝術歷史與建築文明
+fc-tf-0511	atrium	n.	中庭天井羅馬採光庭院	藝術歷史與建築文明
+fc-tf-0512	nave	n.	教堂正廳中央主殿長廊	藝術歷史與建築文明
+fc-tf-0513	aisle	n.	側廊走道座席夾道	藝術歷史與建築文明
+fc-tf-0514	transept	n.	十字形教堂耳堂翼殿	藝術歷史與建築文明
+fc-tf-0515	apse	n.	半圓形後殿聖壇後龕	藝術歷史與建築文明
+fc-tf-0516	buttress	n. / v.	扶壁扶牆力學支撐；支撐	藝術歷史與建築文明
+fc-tf-0517	flying buttress	n.	飛扶壁哥德教堂輕盈力學	藝術歷史與建築文明
+fc-tf-0518	spire	n.	尖塔哥德教堂刺天尖頂	藝術歷史與建築文明
+fc-tf-0519	belfry	n.	鐘樓鐘塔頂部鐘室	藝術歷史與建築文明
+fc-tf-0520	gothic	adj.	哥德式建築（高聳尖拱肋拱）	藝術歷史與建築文明
+fc-tf-0521	romanesque	adj.	羅馬式建築（厚重圓拱厚牆）	藝術歷史與建築文明
+fc-tf-0522	byzantine	adj.	拜占庭式建築（金底鑲嵌穹頂）	藝術歷史與建築文明
+fc-tf-0523	masonry	n.	石工石造磚石砌築藝術	藝術歷史與建築文明
+fc-tf-0524	mortar	n.	灰漿砂漿磚石黏合劑	藝術歷史與建築文明
+fc-tf-0525	pottery	n.	陶器製陶工藝瓦器	藝術歷史與建築文明
+fc-tf-0526	ceramics	n.	陶瓷藝術陶瓷工藝品	藝術歷史與建築文明
+fc-tf-0527	porcelain	n.	細瓷精瓷白瓷胎	藝術歷史與建築文明
+fc-tf-0528	glaze	n. / v.	陶瓷釉藥光滑釉彩；上釉	藝術歷史與建築文明
+fc-tf-0529	kiln	n.	燒窯高溫窯爐	藝術歷史與建築文明
+fc-tf-0530	terracotta	n.	紅陶赤陶兵馬俑材質	藝術歷史與建築文明
+fc-tf-0531	tapestry	n.	織錦壁毯編織掛毯	藝術歷史與建築文明
+fc-tf-0532	embroidery	n.	刺繡針織精美工藝	藝術歷史與建築文明
+fc-tf-0533	calligraphy	n.	書法毛筆手寫美學	藝術歷史與建築文明
+fc-tf-0534	parchment	n.	羊皮紙古代經典抄寫材	藝術歷史與建築文明
+fc-tf-0535	vellum	n.	精緻牛犢犢皮手抄紙	藝術歷史與建築文明
+fc-tf-0536	illumination	n.	手抄本泥金彩繪裝飾	藝術歷史與建築文明
+fc-tf-0537	manuscript	n.	古代手抄本文獻孤本	藝術歷史與建築文明
+fc-tf-0538	iconography	n.	圖像學宗教符號學	藝術歷史與建築文明
+fc-tf-0539	motif	n.	核心主題裝飾圖案母題	藝術歷史與建築文明
+fc-tf-0540	harmony	n.	和聲和諧音樂結構平衡	藝術歷史與建築文明
+fc-tf-0541	resonance	n.	共鳴共振音響渾厚度	藝術歷史與建築文明
+fc-tf-0542	timbre	n.	音色樂器獨特聲質	藝術歷史與建築文明
+fc-tf-0543	tempo	n.	樂曲節奏速度拍子	藝術歷史與建築文明
+fc-tf-0544	pitch	n.	音高頻率高低	藝術歷史與建築文明
+fc-tf-0545	melody	n.	旋律曲調動聽歌聲	藝術歷史與建築文明
+fc-tf-0546	rhythm	n.	節奏韻律拍點跳動	藝術歷史與建築文明
+fc-tf-0547	cadence	n.	樂句終止式抑揚頓挫	藝術歷史與建築文明
+fc-tf-0548	symphony	n.	交響樂大型管弦樂曲	藝術歷史與建築文明
+fc-tf-0549	concerto	n.	協奏曲獨奏與樂團競演	藝術歷史與建築文明
+fc-tf-0550	sonata	n.	奏鳴曲古典多樂章體裁	藝術歷史與建築文明
+fc-tf-0551	orchestra	n.	管弦樂團交響樂隊	藝術歷史與建築文明
+fc-tf-0552	maestro	n.	音樂大師傑出指揮家	藝術歷史與建築文明
+fc-tf-0553	virtuoso	n.	演奏技藝精湛巨匠	藝術歷史與建築文明
+fc-tf-0554	theatrical	adj.	戲劇的劇場誇張表演的	藝術歷史與建築文明
+fc-tf-0555	drama	n.	戲劇劇本衝突高潮	藝術歷史與建築文明
+fc-tf-0556	tragedy	n.	古典悲劇命運挫敗	藝術歷史與建築文明
+fc-tf-0557	comedy	n.	喜劇幽默圓滿劇目	藝術歷史與建築文明
+fc-tf-0558	protagonist	n.	戲劇主角主要推動者	藝術歷史與建築文明
+fc-tf-0559	antagonist	n.	反派角色對手敵對者	藝術歷史與建築文明
+fc-tf-0560	soliloquy	n.	獨白心靈深處內心告白	藝術歷史與建築文明
+fc-tf-0561	monologue	n.	長篇獨白單人演講段落	藝術歷史與建築文明
+fc-tf-0562	dialogue	n.	雙人對話角色交談	藝術歷史與建築文明
+fc-tf-0563	prose	n.	散文無韻律平鋪直敘文體	藝術歷史與建築文明
+fc-tf-0564	verse	n.	詩句有韻律節奏之詩篇	藝術歷史與建築文明
+fc-tf-0565	epic	n. / adj.	史詩英雄傳奇；宏偉史詩級的	藝術歷史與建築文明
+fc-tf-0566	lyric	adj. / n.	抒情詩的；歌詞抒情短詩	藝術歷史與建築文明
+fc-tf-0567	ode	n.	頌歌讚美崇高之抒情詩	藝術歷史與建築文明
+fc-tf-0568	elegy	n.	哀歌悼輓輓詩悼念詩	藝術歷史與建築文明
+fc-tf-0569	sonnet	n.	十四行詩莎翁抒情格律詩	藝術歷史與建築文明
+fc-tf-0570	satire	n.	諷刺文學以幽默揭露醜態	藝術歷史與建築文明
+fc-tf-0571	parody	n. / v.	諧仿戲仿幽默摹擬	藝術歷史與建築文明
+fc-tf-0572	allegory	n.	寓言諷喻象徵比喻小說	藝術歷史與建築文明
+fc-tf-0573	parable	n.	道德宗教啟發性小寓言	藝術歷史與建築文明
+fc-tf-0574	fable	n.	擬人動物寓言寓意故事	藝術歷史與建築文明
+fc-tf-0575	irony	n.	反諷語意反轉情境諷刺	藝術歷史與建築文明
+fc-tf-0576	metaphor	n.	隱喻暗喻深層象徵指涉	藝術歷史與建築文明
+fc-tf-0577	simile	n.	明喻直截以like或as比擬	藝術歷史與建築文明
+fc-tf-0578	hyperbole	n.	誇飾修辭誇張強化手法	藝術歷史與建築文明
+fc-tf-0579	personification	n.	擬人化賦予無生命以情感	藝術歷史與建築文明
+fc-tf-0580	alliteration	n.	頭韻押同一個字首子音	藝術歷史與建築文明
+fc-tf-0581	onomatopoeia	n.	擬聲詞摹仿大自然聲音	藝術歷史與建築文明
+fc-tf-0582	chivalry	n.	中世紀騎士精神俠義風範	藝術歷史與建築文明
+fc-tf-0583	troubadour	n.	中世紀吟遊詩人走唱樂師	藝術歷史與建築文明
+fc-tf-0584	empirical	adj.	實證的以經驗觀察為依據的	科學實驗與研究方法
+fc-tf-0585	hypothesis	n.	科學假說待驗前提假定	科學實驗與研究方法
+fc-tf-0586	variable	n. / adj.	實驗變數變因；易變動的	科學實驗與研究方法
+fc-tf-0587	independent variable	n.	自變數（研究者主動操縱）	科學實驗與研究方法
+fc-tf-0588	dependent variable	n.	應變數（隨自變數而改變）	科學實驗與研究方法
+fc-tf-0589	control group	n.	對照組（未受實驗處理對比）	科學實驗與研究方法
+fc-tf-0590	experimental group	n.	實驗組（接受受試變數處理）	科學實驗與研究方法
+fc-tf-0591	replicate	v.	重複實驗再現結果複製	科學實驗與研究方法
+fc-tf-0592	replication	n.	實驗再現性獨立重驗能力	科學實驗與研究方法
+fc-tf-0593	derive	v.	推導出由...衍生獲取公式	科學實驗與研究方法
+fc-tf-0594	apparatus	n.	整套精密實驗儀器裝置	科學實驗與研究方法
+fc-tf-0595	anomaly	n.	反常現象異常數據離群值	科學實驗與研究方法
+fc-tf-0596	anomalous	adj.	反常不合常理規律的	科學實驗與研究方法
+fc-tf-0597	correlation	n.	統計相關性相互關聯	科學實驗與研究方法
+fc-tf-0598	causation	n.	因果關係因果必然連結	科學實驗與研究方法
+fc-tf-0599	precision	n.	精密準確度多次量測一致性	科學實驗與研究方法
+fc-tf-0600	accuracy	n.	準確度接近真實理論值之程度	科學實驗與研究方法
+fc-tf-0601	calibrate	v.	校正校準精確量測儀器	科學實驗與研究方法
+fc-tf-0602	calibration	n.	校準作業刻度校正	科學實驗與研究方法
+fc-tf-0603	parameter	n.	決定性參數變數範圍界線	科學實驗與研究方法
+fc-tf-0604	specimen	n.	生物標本化學檢體取樣	科學實驗與研究方法
+fc-tf-0605	microscope	n.	顯微鏡放大觀察光學器	科學實驗與研究方法
+fc-tf-0606	centrifuge	n. / v.	離心機分層分離；離心分離	科學實驗與研究方法
+fc-tf-0607	reagent	n.	化學試劑檢驗反應物	科學實驗與研究方法
+fc-tf-0608	compound	n.	化學化合物純淨化合物質	科學實驗與研究方法
+fc-tf-0610	solute	n.	溶質（被溶解之微粒成分）	科學實驗與研究方法
+fc-tf-0611	solvent	n.	溶劑（液體溶解介質水等）	科學實驗與研究方法

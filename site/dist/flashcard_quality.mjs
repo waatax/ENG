@@ -13,8 +13,16 @@ const examples = {
   'cost-benefit analysis': ['The company used a cost-benefit analysis to compare the two plans.', '公司使用成本效益分析比較這兩個方案。', 'conduct a cost-benefit analysis'],
   'return on investment': ['The project earned a positive return on investment.', '這個專案獲得正的投資報酬。', 'a positive return on investment']
 };
+// Filler is hidden rather than shown: no tip teaches more than a tip with nothing in it.
+const fillerTip=/核心意義指向|音節分解|音節拆解|會考焦點|自然拼讀：|注意搭配詞用法|留意字母拼讀節奏|掌握搭配詞|【[^】]*】/;
+const fillerCollocation=/^(an? important |an? useful )|effectively\s*\/\s*carefully|condition\s*\/\s*outcome|\bdemonstrated\b\s*\(/i;
+const guessedIpa=/[cqxy]|[bcdfgklmnprstvz]e\/$/;
 export function teachingCard(card) {
-  if (!template.test(card.example)) return card;
+  if (!template.test(card.example)) {
+    const tip=fillerTip.test(card.memoryTip||''),col=fillerCollocation.test(card.collocation||''),ipa=guessedIpa.test(String(card.ipa||'').replace(/[ˈˌː.]/g,''));
+    if(!tip&&!col&&!ipa)return card;
+    return {...card,memoryTip:tip?'':card.memoryTip,collocation:col?'':card.collocation,ipa:ipa?'':card.ipa};
+  }
   const replacement = examples[card.word.toLowerCase()];
   return {...card, ipa:'', chunk:'', memoryTip:'', collocation:replacement?.[2]||'',
     example:replacement?.[0]||'', exampleZh:replacement?.[1]||'',

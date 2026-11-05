@@ -1,0 +1,249 @@
+[
+ {
+  "id": "g5-s2-u5.b1",
+  "type": "fix",
+  "prompt": "My name is Tom. 這句話裡，哪個字一定要大寫？",
+  "text": "My name is tom.",
+  "options": [
+   "tom",
+   "name",
+   "is"
+  ],
+  "answer": "tom",
+  "wrong": {
+   "name": "name 是普通名詞，放在句子中間不用大寫。",
+   "is": "is 是動詞，放在句子中間不用大寫。"
+  },
+  "why": "tom 是人名，人名的第一個字母要大寫，所以是 Tom。",
+  "tip": "人名開頭要大寫。",
+  "say": "My name is Tom."
+ },
+ {
+  "id": "g5-s2-u5.b2",
+  "type": "fix",
+  "prompt": "哪一句的大寫用對了？",
+  "text": "",
+  "options": [
+   "Tom and I is friends.",
+   "Tom and I are friends.",
+   "Tom and me are friends."
+  ],
+  "answer": "Tom and I are friends.",
+  "wrong": {
+   "Tom and I is friends.": "主詞是 Tom and I，兩個人，be 動詞要用 are，不能用 is。",
+   "Tom and me are friends.": "主詞位置要用 I，不能用 me；而且大寫的是 I。"
+  },
+  "why": "人名 Tom 和 I 都要大寫。",
+  "tip": "不管在哪裡，I 一律大寫。",
+  "say": "Tom and I are friends."
+ },
+ {
+  "id": "g5-s2-u5.b3",
+  "type": "fix",
+  "prompt": "問句的最後要用哪一個標點？",
+  "text": "Where is my bag_",
+  "options": [
+   "驚嘆號",
+   "句號",
+   "問號"
+  ],
+  "answer": "問號",
+  "wrong": {
+   "驚嘆號": "驚嘆號用來表示很興奮或很大聲，普通的問句不用它。",
+   "句號": "句號放在陳述句的最後，問句要用問號。"
+  },
+  "why": "Where 開頭的是問句，句尾要加問號。",
+  "tip": "問句用問號 ?。",
+  "say": "Where is my bag?"
+ },
+ {
+  "id": "g5-s2-u5.b4",
+  "type": "fix",
+  "prompt": "「We have a test on Monday.」哪個字是星期？它要怎麼寫？",
+  "text": "",
+  "options": [
+   "Monday 要大寫",
+   "monday 不用大寫",
+   "test 要大寫"
+  ],
+  "answer": "Monday 要大寫",
+  "wrong": {
+   "monday 不用大寫": "星期的名稱不管在句中哪裡，都要大寫第一個字母。",
+   "test 要大寫": "test 是普通名詞，不是星期，句中不用大寫。"
+  },
+  "why": "星期、月份的第一個字母要大寫。",
+  "tip": "星期、月份開頭要大寫。",
+  "say": "We have a test on Monday."
+ },
+ {
+  "id": "g5-s2-u5.b5",
+  "type": "situation",
+  "prompt": "你寫完「I like dogs」這句話，老師說少了東西。少了什麼？",
+  "text": "I like dogs",
+  "options": [
+   "句首的問號",
+   "句尾的句號",
+   "中間的驚嘆號"
+  ],
+  "answer": "句尾的句號",
+  "wrong": {
+   "句首的問號": "句首不放問號，而且這句是陳述句，不是問句。",
+   "中間的驚嘆號": "這句話中間不需要驚嘆號，只缺少句尾的標點。"
+  },
+  "why": "陳述句的最後要加句號，英文叫 period。",
+  "tip": "寫完一句，句尾加句號。",
+  "say": "I like dogs."
+ },
+ {
+  "id": "g5-s2-u5.b6",
+  "type": "situation",
+  "prompt": "你要寫信給好朋友 Amy，信的第一行應該怎麼寫？",
+  "text": "",
+  "options": [
+   "Dear Amy. Hi",
+   "Amy dear!",
+   "Dear Amy,"
+  ],
+  "answer": "Dear Amy,",
+  "wrong": {
+   "Dear Amy. Hi": "稱呼後面通常只加一個逗號，不用再放句號和別的字。",
+   "Amy dear!": "信的開頭常用 Dear 加名字，順序不能顛倒。"
+  },
+  "why": "信的稱呼用 Dear 加名字，後面接逗號。",
+  "tip": "信的稱呼：Dear 加名字加逗號。",
+  "say": "Dear Amy,"
+ },
+ {
+  "id": "g5-s2-u5.b7",
+  "type": "situation",
+  "prompt": "你在店裡看到一個很棒的玩具，想興奮地說「哇，好漂亮！」，哪一句最合適？",
+  "text": "",
+  "options": [
+   "Wow! It is so nice!",
+   "Wow, is it so nice?",
+   "It is so nice, wow."
+  ],
+  "answer": "Wow! It is so nice!",
+  "wrong": {
+   "Wow, is it so nice?": "這句用問號，變成在問問題，不是興奮地讚嘆。",
+   "It is so nice, wow.": "句型不像興奮的驚呼，也少了表示情緒的驚嘆號。"
+  },
+  "why": "表示驚訝或很興奮可以用驚嘆號 !。",
+  "tip": "開心驚訝，句尾用驚嘆號。",
+  "say": "Wow! It is so nice!"
+ },
+ {
+  "id": "g5-s2-u5.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的標點。",
+  "text": "What color is your bag_____",
+  "options": [
+   "句號",
+   "問號",
+   "逗號"
+  ],
+  "answer": "問號",
+  "wrong": {
+   "句號": "What 開頭的是問句，不能用句號。",
+   "逗號": "逗號是句子中間停一下用的，不是句尾標點。"
+  },
+  "why": "What color 是問句，句尾要用問號。",
+  "tip": "What 開頭的問句用問號。",
+  "say": "What color is your bag?"
+ },
+ {
+  "id": "g5-s2-u5.b9",
+  "type": "cloze",
+  "prompt": "選出空格該填的字：_____ am Lily.",
+  "text": "_____ am Lily.",
+  "options": [
+   "You",
+   "She",
+   "I"
+  ],
+  "answer": "I",
+  "wrong": {
+   "You": "am 前面的主詞是「我」I，不是 You。",
+   "She": "am 要搭配 I，She 要搭配 is。"
+  },
+  "why": "am 前面的主詞是 I，而且一定要大寫。",
+  "tip": "I 和 am 是一對。",
+  "say": "I am Lily."
+ },
+ {
+  "id": "g5-s2-u5.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的連接：I have a cat, a dog_____ a bird.",
+  "text": "I have a cat, a dog_____ a bird.",
+  "options": [
+   "and",
+   "but",
+   "or"
+  ],
+  "answer": "and",
+  "wrong": {
+   "but": "but 是「但是」，這裡是在列出三種寵物，要用 and。",
+   "or": "or 是「或者」，這句是在說都有，不是選一個。"
+  },
+  "why": "列出三樣東西時，用逗號隔開，最後一樣前面加 and。",
+  "tip": "東西一個一個列，最後加 and。",
+  "say": "I have a cat, a dog, and a bird."
+ },
+ {
+  "id": "g5-s2-u5.b11",
+  "type": "meaning",
+  "prompt": "「We need a capital letter at the start.」是什麼意思？",
+  "text": "",
+  "options": [
+   "我們在句尾需要句號。",
+   "我們在句子開頭需要大寫字母。",
+   "我們需要一支新的筆。"
+  ],
+  "answer": "我們在句子開頭需要大寫字母。",
+  "wrong": {
+   "我們在句尾需要句號。": "capital letter 是大寫字母，at the start 是在開頭，不是句尾。",
+   "我們需要一支新的筆。": "句子沒有提到筆，說的是大寫字母。"
+  },
+  "why": "capital letter 是大寫字母，at the start 是開頭。",
+  "tip": "capital 是大寫，period 是句號。",
+  "say": "We need a capital letter at the start."
+ },
+ {
+  "id": "g5-s2-u5.b12",
+  "type": "meaning",
+  "prompt": "老師說「Add a question mark.」你要做什麼？",
+  "text": "",
+  "options": [
+   "加上句號",
+   "把字母改成大寫",
+   "加上問號"
+  ],
+  "answer": "加上問號",
+  "wrong": {
+   "加上句號": "period 才是句號，question mark 是問號。",
+   "把字母改成大寫": "大寫是 capital letter，question mark 說的是標點符號。"
+  },
+  "why": "question mark 就是問號 ?。",
+  "tip": "question 是問題，mark 是記號。",
+  "say": "Add a question mark."
+ },
+ {
+  "id": "g5-s2-u5.b13",
+  "type": "meaning",
+  "prompt": "「A period comes at the end of a sentence.」哪個說法對？",
+  "text": "",
+  "options": [
+   "句號放在句子的最後面。",
+   "句號放在句子的最前面。",
+   "句號放在每個字中間。"
+  ],
+  "answer": "句號放在句子的最後面。",
+  "wrong": {
+   "句號放在句子的最前面。": "end 是結尾，不是 start 開頭。",
+   "句號放在每個字中間。": "period 只放在整句話的最後，不是每個字的中間。"
+  },
+  "why": "period 是句號，at the end 是在結尾。",
+  "tip": "end 是結尾，句號跟著它。",
+  "say": "A period comes at the end of a sentence."
+ }
+]

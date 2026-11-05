@@ -85,11 +85,25 @@ function diagnoseSpellingTrap(a, b) {
   if ((a === 'loose' && b === 'lose') || (a === 'lose' && b === 'loose')) return '拼字辨析：lose（動詞：失去、輸掉）；loose（形容詞：寬鬆的）。';
   if ((a === 'quiet' && b === 'quite') || (a === 'quite' && b === 'quiet')) return '拼字辨析：quiet（形容詞：安靜的，-et）；quite（程度副詞：相當，-te）。';
 
-  // Common vowel schwa / weak syllables
-  if (b.length >= 5 && a.length >= 4) {
-    return '非重音節的弱讀母音（/ə/）常是拼寫易錯點，可拆分音節並大聲唸出標準拼音。';
-  }
+  // Only name a cause the two spellings actually show.
+  const ops = alignLetters(a, b), missing = ops.filter(o => o.kind === 'missing').map(o => o.ch), extra = ops.filter(o => o.kind === 'extra').map(o => o.ch);
+  const vowel = /[aeiouy]/;
+  if (missing.length === 1 && !extra.length) return `只少了字母「${missing[0]}」。把單字分音節慢慢唸，每個音節都對應到字母，就不容易漏字。`;
+  if (extra.length === 1 && !missing.length) return `多打了字母「${extra[0]}」。對照正確拼字，把多的字母拿掉再唸一次。`;
+  if (missing.length === 1 && extra.length === 1 && vowel.test(missing[0]) && vowel.test(extra[0])) return `母音寫成「${extra[0]}」，應該是「${missing[0]}」。輕讀的母音聽起來很像，這類字要連拼法一起記。`;
   return '';
+}
+// Letter-level alignment (longest common subsequence), so one slip does not mark the rest of the word as wrong.
+export function alignLetters(a, b) {
+  const t = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i--) for (let j = b.length - 1; j >= 0; j--) t[i][j] = a[i] === b[j] ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
+  const out = []; let i = 0, j = 0;
+  while (i < a.length || j < b.length) {
+    if (i < a.length && j < b.length && a[i] === b[j]) { out.push({ kind: 'match', ch: a[i] }); i++; j++; }
+    else if (j < b.length && (i >= a.length || t[i][j + 1] >= t[i + 1][j])) out.push({ kind: 'missing', ch: b[j++] });
+    else out.push({ kind: 'extra', ch: a[i++] });
+  }
+  return out;
 }
 
 export function spellingFeedback(value, answer) {
@@ -99,14 +113,8 @@ export function spellingFeedback(value, answer) {
   let i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++;
   const baseText = i === a.length ? `前 ${i} 個字元相同，後面還少了「${b.slice(i)}」。對照完整拼字再試一次。` : i === b.length ? `正確拼字已經完整，後面多了「${a.slice(i)}」。` : `從第 ${i + 1} 個字元開始不同：你寫「${a[i]}」，示範是「${b[i]}」。也請核對整個字是否符合這個詞義。`;
   const tip = diagnoseSpellingTrap(a, b);
-  // Structured visual diff
-  let diffHtml = '';
-  if (i === a.length) {
-    diffHtml = `<span class="sp-match">${escapeHTML(a)}</span><span class="sp-missing">…缺少「${escapeHTML(b.slice(i))}」</span>`;
-  } else if (i === b.length) {
-    diffHtml = `<span class="sp-match">${escapeHTML(b)}</span><span class="sp-mismatch">…多出「${escapeHTML(a.slice(i))}」</span>`;
-  } else {
-    diffHtml = `<span class="sp-match">${escapeHTML(a.slice(0, i))}</span><span class="sp-mismatch">${escapeHTML(a[i])}</span>${escapeHTML(a.slice(i + 1))} <span class="sp-sep">➔ 正確為：</span><span class="sp-match">${escapeHTML(b.slice(0, i))}</span><span class="sp-target">${escapeHTML(b[i])}</span>${escapeHTML(b.slice(i + 1))}`;
-  }
+  // One row of letters: green kept, red struck out as extra, amber dashed where a letter is missing.
+  const cls = { match: 'sp-match', extra: 'sp-mismatch', missing: 'sp-missing' };
+  const diffHtml = `<span class="sp-row" aria-label="拼字比對：正確是 ${escapeHTML(b)}">${alignLetters(a, b).map(o => `<span class="${cls[o.kind]}">${escapeHTML(o.ch === ' ' ? ' ' : o.ch)}</span>`).join('')}</span><span class="sp-sep">➔ 正確為：</span><span class="sp-target">${escapeHTML(b)}</span>`;
   return {ok:false, text:baseText, tip, diffHtml};
 }

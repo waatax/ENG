@@ -1,0 +1,325 @@
+[
+ {
+  "id": "g6-s1-u3.b1",
+  "type": "fix",
+  "prompt": "哪一句問路的方式才正確？",
+  "text": "",
+  "options": [
+   "Excuse me, where is the library?",
+   "Excuse me, where the library is?",
+   "Excuse me, where library is?"
+  ],
+  "answer": "Excuse me, where is the library?",
+  "wrong": {
+   "Excuse me, where the library is?": "問句的順序要把 is 放在主詞前面：where is the library。",
+   "Excuse me, where library is?": "少了冠詞 the，而且 is 的位置也不對。"
+  },
+  "why": "問地點用 Where is ...?",
+  "tip": "Where is 加地點。",
+  "say": "Excuse me, where is the library?"
+ },
+ {
+  "id": "g6-s1-u3.b2",
+  "type": "fix",
+  "prompt": "哪一句指路才正確？",
+  "text": "",
+  "options": [
+   "Turn to left in the corner.",
+   "Turn left at the corner.",
+   "Turn at left the corner."
+  ],
+  "answer": "Turn left at the corner.",
+  "wrong": {
+   "Turn to left in the corner.": "turn left 就好，不用加 to；at the corner 才是「在轉角」。",
+   "Turn at left the corner.": "turn left 是固定說法，順序不能亂。"
+  },
+  "why": "turn left 是向左轉，at the corner 是在轉角。",
+  "tip": "turn left 向左轉。",
+  "say": "Turn left at the corner."
+ },
+ {
+  "id": "g6-s1-u3.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "The bank is next the post office.",
+   "The bank is in next to the post office.",
+   "The bank is next to the post office."
+  ],
+  "answer": "The bank is next to the post office.",
+  "wrong": {
+   "The bank is next the post office.": "next 後面一定要加 to：next to。",
+   "The bank is in next to the post office.": "next to 前面不用再加 in。"
+  },
+  "why": "next to 是在旁邊。",
+  "tip": "next to 一定要有 to。",
+  "say": "The bank is next to the post office."
+ },
+ {
+  "id": "g6-s1-u3.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "Go straight for two blocks.",
+   "Go straight two blocks.",
+   "Go straightly for two blocks."
+  ],
+  "answer": "Go straight for two blocks.",
+  "wrong": {
+   "Go straight two blocks.": "表示走多遠要加 for。",
+   "Go straightly for two blocks.": "straight 在這裡當副詞，不用加 ly。"
+  },
+  "why": "go straight 是直走，for two blocks 是走兩個街區。",
+  "tip": "go straight 不加 ly。",
+  "say": "Go straight for two blocks."
+ },
+ {
+  "id": "g6-s1-u3.b5",
+  "type": "situation",
+  "prompt": "你迷路了，想問路人火車站在哪裡，哪一句最禮貌？",
+  "text": "",
+  "options": [
+   "Where is station, tell me.",
+   "Excuse me, could you tell me how to get to the station?",
+   "Hey, you, station where?"
+  ],
+  "answer": "Excuse me, could you tell me how to get to the station?",
+  "wrong": {
+   "Where is station, tell me.": "語氣不禮貌，也少了 the。",
+   "Hey, you, station where?": "用 Hey you 很不禮貌，文法也不完整。"
+  },
+  "why": "問路先說 Excuse me，再用 could you 比較有禮貌。",
+  "tip": "問路先說 Excuse me。",
+  "say": "Excuse me, could you tell me how to get to the station?"
+ },
+ {
+  "id": "g6-s1-u3.b6",
+  "type": "situation",
+  "prompt": "路人說：Go straight and turn right at the bank. 你應該怎麼走？",
+  "text": "",
+  "options": [
+   "直走，在銀行那裡左轉。",
+   "先右轉，再直走到銀行。",
+   "直走，在銀行那裡右轉。"
+  ],
+  "answer": "直走，在銀行那裡右轉。",
+  "wrong": {
+   "直走，在銀行那裡左轉。": "right 是右邊，不是左邊。",
+   "先右轉，再直走到銀行。": "順序是先直走，到銀行才右轉。"
+  },
+  "why": "go straight 是直走，turn right 是右轉。",
+  "tip": "right 右，left 左。",
+  "say": "Go straight and turn right at the bank."
+ },
+ {
+  "id": "g6-s1-u3.b7",
+  "type": "situation",
+  "prompt": "你想問朋友「超市離學校遠嗎？」，哪一句最自然？",
+  "text": "",
+  "options": [
+   "Is the supermarket far from the school?",
+   "Is far the supermarket from school?",
+   "Does the supermarket far from the school?"
+  ],
+  "answer": "Is the supermarket far from the school?",
+  "wrong": {
+   "Is far the supermarket from school?": "形容詞 far 要放在主詞後面。",
+   "Does the supermarket far from the school?": "far 是形容詞，前面該用 be 動詞，不是 Does。"
+  },
+  "why": "問遠不遠用 Is ... far from ...?",
+  "tip": "far from 是離...很遠。",
+  "say": "Is the supermarket far from the school?"
+ },
+ {
+  "id": "g6-s1-u3.b8",
+  "type": "situation",
+  "prompt": "你想告訴外國朋友「過馬路要看紅綠燈」，哪一句最自然？",
+  "text": "",
+  "options": [
+   "You should look the traffic light when cross street.",
+   "You should look at the traffic light when you cross the street.",
+   "You should looking at the traffic light."
+  ],
+  "answer": "You should look at the traffic light when you cross the street.",
+  "wrong": {
+   "You should look the traffic light when cross street.": "look 後面要加 at，而且 cross 前面要有 you。",
+   "You should looking at the traffic light.": "should 後面要接原形動詞。"
+  },
+  "why": "look at 是看，should 加原形動詞。",
+  "tip": "should 後面接原形。",
+  "say": "You should look at the traffic light when you cross the street."
+ },
+ {
+  "id": "g6-s1-u3.b9",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "The museum is _____ the park and the bakery.",
+  "options": [
+   "behind",
+   "across",
+   "between"
+  ],
+  "answer": "between",
+  "wrong": {
+   "behind": "behind 是在後面，不是在兩者之間。",
+   "across": "across 是在對面或穿過，不是在兩者之間。"
+  },
+  "why": "between A and B 是在 A 和 B 之間。",
+  "tip": "between 用 and 連接兩者。",
+  "say": "The museum is between the park and the bakery."
+ },
+ {
+  "id": "g6-s1-u3.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "The bus stop is _____ the hospital. We can walk there in one minute.",
+  "options": [
+   "near",
+   "far from",
+   "between"
+  ],
+  "answer": "near",
+  "wrong": {
+   "far from": "走路一分鐘就到，表示很近，far from 是離得很遠。",
+   "between": "between 需要連接兩個地點，這裡只有 the hospital 一個。"
+  },
+  "why": "走路一分鐘，表示距離很近，用 near。",
+  "tip": "near 是附近。",
+  "say": "The bus stop is near the hospital."
+ },
+ {
+  "id": "g6-s1-u3.b11",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "Look at the picture. The cat is _____ the table.",
+  "options": [
+   "above",
+   "under",
+   "between"
+  ],
+  "answer": "under",
+  "wrong": {
+   "above": "above 是在上方，不是在下面。",
+   "between": "between 需要兩個東西，這裡只有一張桌子。"
+  },
+  "why": "under 是在下面。",
+  "tip": "under 下面，above 上方。",
+  "say": "The cat is under the table."
+ },
+ {
+  "id": "g6-s1-u3.b12",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "Walk along this street _____ you see a big red building.",
+  "options": [
+   "because",
+   "but",
+   "until"
+  ],
+  "answer": "until",
+  "wrong": {
+   "because": "because 是因為，語意不通。",
+   "but": "but 是但是，這裡是指走到看見為止。"
+  },
+  "why": "until 是直到，走到看到大樓為止。",
+  "tip": "until 是直到。",
+  "say": "Walk along this street until you see a big red building."
+ },
+ {
+  "id": "g6-s1-u3.b13",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "There _____ a bank and two shops on this street.",
+  "options": [
+   "are",
+   "is",
+   "am"
+  ],
+  "answer": "are",
+  "wrong": {
+   "is": "後面有 a bank 和 two shops 一共三個，要用複數 are。",
+   "am": "am 只能搭配 I。"
+  },
+  "why": "There is/are 的 be 動詞，要看後面的名詞是單數還是複數。",
+  "tip": "There are 後面接複數。",
+  "say": "There are a bank and two shops on this street."
+ },
+ {
+  "id": "g6-s1-u3.b14",
+  "type": "meaning",
+  "prompt": "「The post office is across from the school.」是什麼意思？",
+  "text": "",
+  "options": [
+   "郵局在學校的後面。",
+   "郵局在學校的對面。",
+   "郵局在學校裡面。"
+  ],
+  "answer": "郵局在學校的對面。",
+  "wrong": {
+   "郵局在學校的後面。": "behind 才是後面，across from 是對面。",
+   "郵局在學校裡面。": "in 才是「在裡面」，across from 是隔著街的對面。"
+  },
+  "why": "across from 是在...的對面。",
+  "tip": "across from 是對面。",
+  "say": "The post office is across from the school."
+ },
+ {
+  "id": "g6-s1-u3.b15",
+  "type": "meaning",
+  "prompt": "「It takes ten minutes on foot.」是什麼意思？",
+  "text": "",
+  "options": [
+   "坐車要十分鐘。",
+   "十分鐘後出發。",
+   "走路要十分鐘。"
+  ],
+  "answer": "走路要十分鐘。",
+  "wrong": {
+   "坐車要十分鐘。": "on foot 是步行，不是坐車。",
+   "十分鐘後出發。": "takes ten minutes 是花十分鐘，不是十分鐘後。"
+  },
+  "why": "on foot 是步行，takes ten minutes 是花十分鐘。",
+  "tip": "on foot 是走路。",
+  "say": "It takes ten minutes on foot."
+ },
+ {
+  "id": "g6-s1-u3.b16",
+  "type": "meaning",
+  "prompt": "「Take the second turning on your left.」該怎麼走？",
+  "text": "",
+  "options": [
+   "在左邊的第二個路口轉彎。",
+   "在右邊的第二個路口轉彎。",
+   "在左邊的第一個路口轉彎。"
+  ],
+  "answer": "在左邊的第二個路口轉彎。",
+  "wrong": {
+   "在右邊的第二個路口轉彎。": "題目說的是 left 左邊，不是右邊。",
+   "在左邊的第一個路口轉彎。": "second 是第二個，不是第一個。"
+  },
+  "why": "second 是第二個，left 是左邊。",
+  "tip": "second 第二，left 左邊。",
+  "say": "Take the second turning on your left."
+ },
+ {
+  "id": "g6-s1-u3.b17",
+  "type": "meaning",
+  "prompt": "「The pedestrian crossed at the crosswalk.」是什麼意思？",
+  "text": "",
+  "options": [
+   "汽車從斑馬線開過去。",
+   "行人從斑馬線過馬路。",
+   "行人在人行道上等車。"
+  ],
+  "answer": "行人從斑馬線過馬路。",
+  "wrong": {
+   "汽車從斑馬線開過去。": "pedestrian 是行人，不是汽車。",
+   "行人在人行道上等車。": "crossed 是通過，句子說的是過馬路。"
+  },
+  "why": "pedestrian 是行人，crosswalk 是斑馬線。",
+  "tip": "pedestrian 是行人。",
+  "say": "The pedestrian crossed at the crosswalk."
+ }
+]

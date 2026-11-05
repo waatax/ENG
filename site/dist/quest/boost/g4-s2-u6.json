@@ -1,0 +1,325 @@
+[
+ {
+  "id": "g4-s2-u6.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I can swim.",
+   "I can swims.",
+   "I can to swim."
+  ],
+  "answer": "I can swim.",
+  "wrong": {
+   "I can swims.": "can 後面動詞用原形，不加 s。",
+   "I can to swim.": "can 後面直接接原形動詞，不加 to。"
+  },
+  "why": "can 後面接原形動詞。",
+  "tip": "can 後面接原形。",
+  "say": "I can swim."
+ },
+ {
+  "id": "g4-s2-u6.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "She can sings well.",
+   "She can sing well.",
+   "She cans sing well."
+  ],
+  "answer": "She can sing well.",
+  "wrong": {
+   "She can sings well.": "can 後面的動詞不加 s。",
+   "She cans sing well.": "can 不會變成 cans。"
+  },
+  "why": "助動詞 can 不隨主詞變化。",
+  "tip": "can 不加 s。",
+  "say": "She can sing well."
+ },
+ {
+  "id": "g4-s2-u6.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Do you can play the piano?",
+   "Can you plays the piano?",
+   "Can you play the piano?"
+  ],
+  "answer": "Can you play the piano?",
+  "wrong": {
+   "Do you can play the piano?": "can 本身就是助動詞，不再加 do。",
+   "Can you plays the piano?": "can 後面動詞用原形。"
+  },
+  "why": "Can 的問句：Can + 主詞 + 原形動詞。",
+  "tip": "Can 開頭問句。",
+  "say": "Can you play the piano?"
+ },
+ {
+  "id": "g4-s2-u6.b4",
+  "type": "situation",
+  "prompt": "你頭痛，想告訴媽媽。",
+  "text": "",
+  "options": [
+   "I have a headache.",
+   "My head has a pain me.",
+   "I am headache."
+  ],
+  "answer": "I have a headache.",
+  "wrong": {
+   "My head has a pain me.": "句型不通順，頭痛的固定說法是 have a headache。",
+   "I am headache.": "headache 是名詞，不能用 I am 描述。"
+  },
+  "why": "have a headache 是頭痛。",
+  "tip": "頭痛 have a headache。",
+  "say": "I have a headache."
+ },
+ {
+  "id": "g4-s2-u6.b5",
+  "type": "situation",
+  "prompt": "朋友問你會不會騎腳踏車，你不會。",
+  "text": "",
+  "options": [
+   "No, I can.",
+   "No, I can't.",
+   "No, I don't can."
+  ],
+  "answer": "No, I can't.",
+  "wrong": {
+   "No, I can.": "No 和 can 互相矛盾。",
+   "No, I don't can.": "can 前面不能加 don't。"
+  },
+  "why": "不會時說 No, I can't.",
+  "tip": "不會說 No, I can't。",
+  "say": "No, I can't."
+ },
+ {
+  "id": "g4-s2-u6.b6",
+  "type": "situation",
+  "prompt": "醫生問你哪裡不舒服，你肚子痛。",
+  "text": "",
+  "options": [
+   "Stomach my hurts.",
+   "My stomach hurt it.",
+   "My stomach hurts."
+  ],
+  "answer": "My stomach hurts.",
+  "wrong": {
+   "Stomach my hurts.": "語序錯了，要說 My stomach。",
+   "My stomach hurt it.": "hurt 後面不需要 it，而且 stomach 是第三人稱單數，要用 hurts。"
+  },
+  "why": "stomach 是單數，所以 hurts 要加 s。",
+  "tip": "My + 身體部位 + hurts。",
+  "say": "My stomach hurts."
+ },
+ {
+  "id": "g4-s2-u6.b7",
+  "type": "situation",
+  "prompt": "老師問你用身體哪裡看東西。",
+  "text": "",
+  "options": [
+   "I see with my eyes.",
+   "I see with my ears.",
+   "I see with my nose."
+  ],
+  "answer": "I see with my eyes.",
+  "wrong": {
+   "I see with my ears.": "ears 是耳朵，聽才用耳朵。",
+   "I see with my nose.": "nose 是鼻子，用來聞。"
+  },
+  "why": "eyes 是眼睛，用來看。",
+  "tip": "眼睛 eyes 用來看。",
+  "say": "I see with my eyes."
+ },
+ {
+  "id": "g4-s2-u6.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We hear with our ___.",
+  "options": [
+   "eyes",
+   "ears",
+   "hands"
+  ],
+  "answer": "ears",
+  "wrong": {
+   "eyes": "eyes 是眼睛，用來看。",
+   "hands": "hands 是手，用來拿東西。"
+  },
+  "why": "hear 是聽，用耳朵 ears。",
+  "tip": "聽用 ears。",
+  "say": "We hear with our ears."
+ },
+ {
+  "id": "g4-s2-u6.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I can write with my right ___.",
+  "options": [
+   "ear",
+   "nose",
+   "hand"
+  ],
+  "answer": "hand",
+  "wrong": {
+   "ear": "ear 是耳朵，耳朵是用來聽的，不是用來寫字。",
+   "nose": "nose 是鼻子，鼻子是用來聞的，不是用來寫字。"
+  },
+  "why": "write 寫字用手 hand。",
+  "tip": "寫字用 hand。",
+  "say": "I can write with my right hand."
+ },
+ {
+  "id": "g4-s2-u6.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Birds ___ fly, but fish can't.",
+  "options": [
+   "can",
+   "are",
+   "is"
+  ],
+  "answer": "can",
+  "wrong": {
+   "are": "are 後面不接原形動詞 fly。",
+   "is": "Birds 是複數，而且 is 後面也不接原形動詞 fly。"
+  },
+  "why": "but fish can't 前面要用 can，表示能力。",
+  "tip": "can 和 can't 對比。",
+  "say": "Birds can fly, but fish can't."
+ },
+ {
+  "id": "g4-s2-u6.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "He ___ jump high.",
+  "options": [
+   "cans",
+   "can",
+   "is"
+  ],
+  "answer": "can",
+  "wrong": {
+   "cans": "can 沒有 cans 這種形式。",
+   "is": "is 後面不接原形動詞 jump。"
+  },
+  "why": "can 後面接原形動詞。",
+  "tip": "can 後面接原形。",
+  "say": "He can jump high."
+ },
+ {
+  "id": "g4-s2-u6.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "___ you swim? Yes, I can.",
+  "options": [
+   "Are",
+   "Do",
+   "Can"
+  ],
+  "answer": "Can",
+  "wrong": {
+   "Are": "Are 後面不接原形動詞 swim。",
+   "Do": "回答是 Yes, I can，所以問句用 Can。"
+  },
+  "why": "問句 Can，回答也用 can。",
+  "tip": "問句和回答用同一個助動詞。",
+  "say": "Can you swim? Yes, I can."
+ },
+ {
+  "id": "g4-s2-u6.b13",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I brush my ___ every morning.",
+  "options": [
+   "teeth",
+   "tooths",
+   "tooth"
+  ],
+  "answer": "teeth",
+  "wrong": {
+   "tooths": "tooth 的複數不是 tooths。",
+   "tooth": "my 後面刷牙要用複數 teeth。"
+  },
+  "why": "tooth 的複數是 teeth。",
+  "tip": "tooth 複數是 teeth。",
+  "say": "I brush my teeth every morning."
+ },
+ {
+  "id": "g4-s2-u6.b14",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Raise your hand.",
+  "options": [
+   "把你的腳舉起來。",
+   "把你的手舉起來。",
+   "把你的眼睛閉起來。"
+  ],
+  "answer": "把你的手舉起來。",
+  "wrong": {
+   "把你的腳舉起來。": "hand 是手，腳是 foot。",
+   "把你的眼睛閉起來。": "raise 是舉起，閉眼睛是 close your eyes。"
+  },
+  "why": "raise 是舉起，hand 是手。",
+  "tip": "raise 是舉起。",
+  "say": "Raise your hand."
+ },
+ {
+  "id": "g4-s2-u6.b15",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "I can't see well. I need glasses.",
+  "options": [
+   "我聽不清楚，需要助聽器。",
+   "我走不快，需要鞋子。",
+   "我看不清楚，需要眼鏡。"
+  ],
+  "answer": "我看不清楚，需要眼鏡。",
+  "wrong": {
+   "我聽不清楚，需要助聽器。": "see 是看，不是聽。",
+   "我走不快，需要鞋子。": "glasses 是眼鏡，不是鞋子。"
+  },
+  "why": "see 是看，glasses 是眼鏡。",
+  "tip": "glasses 是眼鏡。",
+  "say": "I can't see well. I need glasses."
+ },
+ {
+  "id": "g4-s2-u6.b16",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "She has long hair.",
+  "options": [
+   "她有一頭長髮。",
+   "她有一雙長腿。",
+   "她有一雙大眼睛。"
+  ],
+  "answer": "她有一頭長髮。",
+  "wrong": {
+   "她有一雙長腿。": "hair 是頭髮，腿是 legs。",
+   "她有一雙大眼睛。": "hair 是頭髮，眼睛是 eyes。"
+  },
+  "why": "long hair 是長髮。",
+  "tip": "hair 是頭髮。",
+  "say": "She has long hair."
+ },
+ {
+  "id": "g4-s2-u6.b17",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Touch your toes.",
+  "options": [
+   "摸你的鼻子。",
+   "摸你的腳趾。",
+   "摸你的膝蓋。"
+  ],
+  "answer": "摸你的腳趾。",
+  "wrong": {
+   "摸你的鼻子。": "toes 是腳趾，鼻子是 nose。",
+   "摸你的膝蓋。": "toes 是腳趾，膝蓋是 knees。"
+  },
+  "why": "toe 是腳趾，toes 是複數的腳趾。",
+  "tip": "toes 是腳趾，不是手指。",
+  "say": "Touch your toes."
+ }
+]

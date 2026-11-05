@@ -1,7 +1,7 @@
 import {ADVANCED_UNITS,RUBRIC,advancedUnit} from './advanced_content.mjs?v=advanced20261103';
 import {readAdvanced,patchAdvanced,startAdvancedAttempt,recordAdvancedAnswer,annotateAdvancedAudio,attemptScore,saveAdvancedDraft,scheduleAdvancedReview,advancedSummary} from './advanced_progress.mjs?v=advanced20261103';
 import {readMasterclass,countEnglishWords} from './masterclass.mjs?v=advanced20261103';
-import * as sound from './quest/sound.mjs?v=joy20261103';
+import * as sound from './quest/sound.mjs?v=truth20261105';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const speechState=new Map();
 let feedback=null,notice='',currentRoute='';

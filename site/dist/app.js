@@ -49,7 +49,7 @@ import { renderDisplayToolbar, renderReadingDrawer, handleDisplayToolbarClick, i
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
-import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay } from './flashcards.mjs';
+import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut } from './flashcards.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -2942,7 +2942,7 @@ readKnowledgeRoute();
 root.addEventListener('change', e => handleSchoolWordChange(e.target, render));
 root.addEventListener('submit', e => { if (e.target.matches('.word-search,.word-spelling')) { e.preventDefault(); handleSchoolWordSubmit(e.target, render); } });
 
-root.addEventListener('keydown', e => { if(e.target.id==='fc-recall-answer' && e.key==='Enter' && !e.isComposing && e.keyCode!==229){e.preventDefault();handleFlashcardEvents({dataset:{fcRecall:'check'}},render);} });
+root.addEventListener('keydown', e => { if(e.key==='Enter' && !e.isComposing && e.keyCode!==229 && ['fc-recall-answer','fc-recall-retry'].includes(e.target.id)){e.preventDefault();handleFlashcardEvents({dataset:{fcRecall:e.target.id==='fc-recall-answer'?'check':'retry'}},render);} });
 root.addEventListener('change', e => handleFullWordChange(e.target, render));
 root.addEventListener('submit', e => { if(e.target.matches('.wp-spelling')) {e.preventDefault();handleFullWordSubmit(e.target,render);} });
 
@@ -2971,6 +2971,7 @@ if (typeof window !== 'undefined' && window.addEventListener) {
 
     // 🎴 閃卡工作室快捷鍵
     if (page === 'flashcards') {
+      if (flashcardShortcut(e.code === 'Space' ? ' ' : key, render)) { e.preventDefault(); return; }
       if (e.code === 'Space' || key === 'enter') {
         e.preventDefault();
         const flipBtn = document.querySelector('[data-fc-flip="true"]');

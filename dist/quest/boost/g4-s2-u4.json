@@ -1,0 +1,325 @@
+[
+ {
+  "id": "g4-s2-u4.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "It is rainy today.",
+   "It rain today.",
+   "It is rain today."
+  ],
+  "answer": "It is rainy today.",
+  "wrong": {
+   "It rain today.": "rain 在這裡要變成形容詞 rainy，並加上 is。",
+   "It is rain today.": "is 後面要接形容詞 rainy，不是名詞 rain。"
+  },
+  "why": "描述天氣用 It is + 形容詞。",
+  "tip": "It is + 天氣形容詞。",
+  "say": "It is rainy today."
+ },
+ {
+  "id": "g4-s2-u4.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "How the weather today?",
+   "How's the weather today?",
+   "What weather is today?"
+  ],
+  "answer": "How's the weather today?",
+  "wrong": {
+   "How the weather today?": "問句缺少 be 動詞 is。",
+   "What weather is today?": "問天氣的固定說法是 How's the weather? 或 What's the weather like?"
+  },
+  "why": "問天氣用 How's the weather?",
+  "tip": "問天氣用 How's the weather?",
+  "say": "How's the weather today?"
+ },
+ {
+  "id": "g4-s2-u4.b3",
+  "type": "situation",
+  "prompt": "外面在下雨，你提醒弟弟出門前帶傘。",
+  "text": "",
+  "options": [
+   "Take your umbrella. It's sunny.",
+   "Take your umbrella. It rainy is.",
+   "Take your umbrella. It's rainy."
+  ],
+  "answer": "Take your umbrella. It's rainy.",
+  "wrong": {
+   "Take your umbrella. It's sunny.": "sunny 是晴天，晴天不需要帶雨傘。",
+   "Take your umbrella. It rainy is.": "語序錯了，要說 It is rainy。"
+  },
+  "why": "umbrella 是雨傘，rainy 表示下雨，兩者互相配合。",
+  "tip": "下雨 rainy，晴天 sunny。",
+  "say": "Take your umbrella. It's rainy."
+ },
+ {
+  "id": "g4-s2-u4.b4",
+  "type": "situation",
+  "prompt": "臺灣的夏天很熱，你想告訴外國朋友。",
+  "text": "",
+  "options": [
+   "It's hot in summer.",
+   "It's cold in summer.",
+   "It's snowy in summer."
+  ],
+  "answer": "It's hot in summer.",
+  "wrong": {
+   "It's cold in summer.": "臺灣夏天很熱，cold 是冷，不符合情境。",
+   "It's snowy in summer.": "夏天通常不下雪，snowy 不符合。"
+  },
+  "why": "summer 是夏天，通常是 hot。",
+  "tip": "summer 配 hot，winter 配 cold。",
+  "say": "It's hot in summer."
+ },
+ {
+  "id": "g4-s2-u4.b5",
+  "type": "situation",
+  "prompt": "朋友問你最喜歡哪個季節，你喜歡春天。",
+  "text": "",
+  "options": [
+   "I am spring.",
+   "I like spring best.",
+   "Spring likes I."
+  ],
+  "answer": "I like spring best.",
+  "wrong": {
+   "I am spring.": "I am spring 是說「我是春天」，不是喜歡。",
+   "Spring likes I.": "主詞和受詞放反了，要說 I like spring。"
+  },
+  "why": "I like + 季節 + best 表示最喜歡。",
+  "tip": "喜歡用 I like…",
+  "say": "I like spring best."
+ },
+ {
+  "id": "g4-s2-u4.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "It is ___ today. I need my coat.",
+  "options": [
+   "hot",
+   "sunny",
+   "cold"
+  ],
+  "answer": "cold",
+  "wrong": {
+   "hot": "hot 是熱，熱的時候不會需要外套。",
+   "sunny": "sunny 是晴朗，不一定需要外套。"
+  },
+  "why": "需要外套，代表天氣很冷 cold。",
+  "tip": "外套配冷天氣。",
+  "say": "It is cold today. I need my coat."
+ },
+ {
+  "id": "g4-s2-u4.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "It ___ windy today.",
+  "options": [
+   "is",
+   "are",
+   "am"
+  ],
+  "answer": "is",
+  "wrong": {
+   "are": "It 是單數，不能用 are。",
+   "am": "am 只能搭配 I。"
+  },
+  "why": "天氣句的主詞 It 是單數，要搭配 be 動詞 is。",
+  "tip": "It 後面用 is 不用 are。",
+  "say": "It is windy today."
+ },
+ {
+  "id": "g4-s2-u4.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Is it snowy? No, it ___.",
+  "options": [
+   "aren't",
+   "isn't",
+   "doesn't"
+  ],
+  "answer": "isn't",
+  "wrong": {
+   "aren't": "it 是單數，要用 isn't。",
+   "doesn't": "問句是 Is it…，所以回答也要用 be 動詞。"
+  },
+  "why": "問句用 Is，簡短回答也用 is：No, it isn't.",
+  "tip": "問句用什麼動詞，回答就用什麼動詞。",
+  "say": "Is it snowy? No, it isn't."
+ },
+ {
+  "id": "g4-s2-u4.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "There are four ___ in a year.",
+  "options": [
+   "season",
+   "weathers",
+   "seasons"
+  ],
+  "answer": "seasons",
+  "wrong": {
+   "season": "four 是複數，後面名詞要加 s。",
+   "weathers": "weather 是不可數，而且一年有四個季節是 seasons。"
+  },
+  "why": "four 後面接複數名詞 seasons。",
+  "tip": "four 後面接複數名詞。",
+  "say": "There are four seasons in a year."
+ },
+ {
+  "id": "g4-s2-u4.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Summer is hot, but winter is ___.",
+  "options": [
+   "cold",
+   "hot",
+   "cloud"
+  ],
+  "answer": "cold",
+  "wrong": {
+   "hot": "but 表示相反，hot 沒有轉折。",
+   "cloud": "cloud 是名詞，這裡要用形容詞 cloudy。"
+  },
+  "why": "but 表示對比，hot 的相反是 cold。",
+  "tip": "hot 的相反是 cold。",
+  "say": "Summer is hot, but winter is cold."
+ },
+ {
+  "id": "g4-s2-u4.b11",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "It's cloudy and cool.",
+  "options": [
+   "晴朗又炎熱。",
+   "多雲又涼爽。",
+   "下雪又很冷。"
+  ],
+  "answer": "多雲又涼爽。",
+  "wrong": {
+   "晴朗又炎熱。": "cloudy 是多雲，不是晴朗。",
+   "下雪又很冷。": "cool 是涼爽，沒有說下雪。"
+  },
+  "why": "cloudy 是多雲，cool 是涼爽。",
+  "tip": "cloudy 是多雲。",
+  "say": "It's cloudy and cool."
+ },
+ {
+  "id": "g4-s2-u4.b12",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Bring a raincoat.",
+  "options": [
+   "帶一副太陽眼鏡。",
+   "帶一雙手套。",
+   "帶一件雨衣。"
+  ],
+  "answer": "帶一件雨衣。",
+  "wrong": {
+   "帶一副太陽眼鏡。": "raincoat 是雨衣，太陽眼鏡是 sunglasses。",
+   "帶一雙手套。": "raincoat 是雨衣，手套是 gloves。"
+  },
+  "why": "rain 是雨，coat 是外套，合起來是雨衣。",
+  "tip": "raincoat 是雨衣。",
+  "say": "Bring a raincoat."
+ },
+ {
+  "id": "g4-s2-u4.b13",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "It's cool in autumn.",
+   "It cool in autumn.",
+   "It is coolly in autumn."
+  ],
+  "answer": "It's cool in autumn.",
+  "wrong": {
+   "It cool in autumn.": "少了 be 動詞 is。",
+   "It is coolly in autumn.": "is 後面要接形容詞 cool，coolly 是副詞。"
+  },
+  "why": "天氣用 It is + 形容詞。",
+  "tip": "天氣句用 It is + 形容詞。",
+  "say": "It's cool in autumn."
+ },
+ {
+  "id": "g4-s2-u4.b14",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Is it sunny? Yes, it's.",
+   "Is it sunny? Yes, it is.",
+   "Is it sunny? Yes, it sunny."
+  ],
+  "answer": "Is it sunny? Yes, it is.",
+  "wrong": {
+   "Is it sunny? Yes, it's.": "肯定簡短回答不能縮寫成 it's，要完整說 Yes, it is.",
+   "Is it sunny? Yes, it sunny.": "簡短回答要用 it is，不能只重複 sunny。"
+  },
+  "why": "肯定簡短回答要說完整的 Yes, it is.",
+  "tip": "Yes, it is. 不縮寫。",
+  "say": "Is it sunny? Yes, it is."
+ },
+ {
+  "id": "g4-s2-u4.b15",
+  "type": "situation",
+  "prompt": "風很大，朋友的帽子被吹走了，你想說風很大。",
+  "text": "",
+  "options": [
+   "It's very wind!",
+   "It's very windly!",
+   "It's very windy!"
+  ],
+  "answer": "It's very windy!",
+  "wrong": {
+   "It's very wind!": "wind 是名詞，要說天氣時用形容詞 windy。",
+   "It's very windly!": "windly 不是英文字，正確是 windy。"
+  },
+  "why": "wind 加 y 變成形容詞 windy。",
+  "tip": "wind 加 y 變 windy。",
+  "say": "It's very windy!"
+ },
+ {
+  "id": "g4-s2-u4.b16",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We wear shorts when it is ___.",
+  "options": [
+   "hot",
+   "snowy",
+   "cold"
+  ],
+  "answer": "hot",
+  "wrong": {
+   "snowy": "snowy 是下雪，通常不會穿短褲。",
+   "cold": "cold 是冷，冷的時候不會穿短褲。"
+  },
+  "why": "穿短褲是因為天氣熱 hot。",
+  "tip": "短褲配熱天氣。",
+  "say": "We wear shorts when it is hot."
+ },
+ {
+  "id": "g4-s2-u4.b17",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I like winter. I can play in the ___.",
+  "options": [
+   "sun",
+   "snow",
+   "rainy"
+  ],
+  "answer": "snow",
+  "wrong": {
+   "sun": "sun 是太陽，冬天玩雪才是常見的活動。",
+   "rainy": "rainy 是形容詞，the 後面要接名詞。"
+  },
+  "why": "the 後面要接名詞，snow 是雪。",
+  "tip": "the 後面接名詞 snow。",
+  "say": "I like winter. I can play in the snow."
+ }
+]

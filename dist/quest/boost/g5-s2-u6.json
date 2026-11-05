@@ -1,0 +1,238 @@
+[
+ {
+  "id": "g5-s2-u6.b1",
+  "type": "meaning",
+  "prompt": "故事裡常用 first, next, then, finally 來排順序。哪個字表示「最後」？",
+  "text": "",
+  "options": [
+   "finally",
+   "first",
+   "next",
+   "then"
+  ],
+  "answer": "finally",
+  "wrong": {
+   "first": "first 是「首先」，表示一開始。",
+   "next": "next 是「接下來」，表示緊接著的下一步。",
+   "then": "then 是「然後」，在中間的步驟用，不是最後。"
+  },
+  "why": "finally 表示故事或步驟的最後。",
+  "tip": "first 開頭，finally 收尾。",
+  "say": "Finally, they went home."
+ },
+ {
+  "id": "g5-s2-u6.b2",
+  "type": "cloze",
+  "prompt": "選出正確的順序字：_____, the bear woke up. Then he ate breakfast.",
+  "text": "_____, the bear woke up. Then he ate breakfast.",
+  "options": [
+   "Finally",
+   "First",
+   "Last night",
+   "After that"
+  ],
+  "answer": "First",
+  "wrong": {
+   "Finally": "finally 是最後，但後面還有 Then，所以這裡不是最後。",
+   "Last night": "語意是「昨晚」，不是排序的第一步。",
+   "After that": "after that 是「那之後」，前面要先有一件事才用得上。"
+  },
+  "why": "醒來是第一件事，後面才有 Then，所以用 First。",
+  "tip": "First 開頭，Then 接著說。",
+  "say": "First, the bear woke up."
+ },
+ {
+  "id": "g5-s2-u6.b3",
+  "type": "fix",
+  "prompt": "哪一組句子的事件順序最合理？",
+  "text": "",
+  "options": [
+   "Finally, Tom got up. Then he went to school. First, he ate breakfast.",
+   "Tom went to school. Then he got up. Finally, he ate breakfast.",
+   "Tom got up. Then he ate breakfast. Finally, he went to school."
+  ],
+  "answer": "Tom got up. Then he ate breakfast. Finally, he went to school.",
+  "wrong": {
+   "Finally, Tom got up. Then he went to school. First, he ate breakfast.": "Finally 放在開頭很怪，順序字和事情先後對不上。",
+   "Tom went to school. Then he got up. Finally, he ate breakfast.": "先上學才起床，生活順序不合理。"
+  },
+  "why": "起床、吃早餐、上學是自然的順序，順序字也用對。",
+  "tip": "順序字要對上事情先後。",
+  "say": "Tom got up. Then he ate breakfast. Finally, he went to school."
+ },
+ {
+  "id": "g5-s2-u6.b4",
+  "type": "situation",
+  "prompt": "你想跟朋友說這本書的書名。哪一句最自然？",
+  "text": "",
+  "options": [
+   "The title of this book is Little Fish.",
+   "The title of this book are Little Fish.",
+   "The name of this book have Little Fish."
+  ],
+  "answer": "The title of this book is Little Fish.",
+  "wrong": {
+   "The title of this book are Little Fish.": "title 只有一個，be 動詞要用 is，不用 are。",
+   "The name of this book have Little Fish.": "have 後面這樣用不通順，表示書名要用 is。"
+  },
+  "why": "title 是書名，單數就用 is。",
+  "tip": "書名叫 title。",
+  "say": "The title of this book is Little Fish."
+ },
+ {
+  "id": "g5-s2-u6.b5",
+  "type": "situation",
+  "prompt": "你想問朋友故事裡誰是主角（character），哪一句最合適？",
+  "text": "",
+  "options": [
+   "What is the main character?",
+   "Who is the main character?",
+   "Where is the main character?"
+  ],
+  "answer": "Who is the main character?",
+  "wrong": {
+   "What is the main character?": "要問「誰」，用 Who；What 是問「什麼東西」。",
+   "Where is the main character?": "Where 是問地點，不是問人物是誰。"
+  },
+  "why": "問人物用 Who，main character 是主角。",
+  "tip": "問人用 Who。",
+  "say": "Who is the main character?"
+ },
+ {
+  "id": "g5-s2-u6.b6",
+  "type": "cloze",
+  "prompt": "選出適合的字：The story is about a girl and her dog. The girl is a _____ in the story.",
+  "text": "The story is about a girl and her dog. The girl is a _____ in the story.",
+  "options": [
+   "title",
+   "character",
+   "page",
+   "picture"
+  ],
+  "answer": "character",
+  "wrong": {
+   "title": "title 是書名，不是故事裡的人物。",
+   "page": "page 是書頁，不是人物。",
+   "picture": "picture 是圖畫，女孩是人物，不是圖畫。"
+  },
+  "why": "故事裡的人或動物叫 character。",
+  "tip": "故事裡的人物叫 character。",
+  "say": "The girl is a character in the story."
+ },
+ {
+  "id": "g5-s2-u6.b7",
+  "type": "cloze",
+  "prompt": "選出合適的字：On the last page, the lost cat comes home. That is the _____ of the story.",
+  "text": "On the last page, the lost cat comes home. That is the _____ of the story.",
+  "options": [
+   "beginning",
+   "title",
+   "ending",
+   "author"
+  ],
+  "answer": "ending",
+  "wrong": {
+   "beginning": "beginning 是開頭，最後一頁是結尾。",
+   "title": "title 是書名，不是故事的結尾。",
+   "author": "author 是作者，是寫書的人。"
+  },
+  "why": "最後一頁發生的是故事的結尾 ending。",
+  "tip": "開頭 beginning，結尾 ending。",
+  "say": "That is the ending of the story."
+ },
+ {
+  "id": "g5-s2-u6.b8",
+  "type": "fix",
+  "prompt": "哪一句用對了過去式？",
+  "text": "",
+  "options": [
+   "Yesterday, the rabbit jump over the river.",
+   "Yesterday, the rabbit jumped over the river.",
+   "Yesterday, the rabbit jumps over the river."
+  ],
+  "answer": "Yesterday, the rabbit jumped over the river.",
+  "wrong": {
+   "Yesterday, the rabbit jump over the river.": "Yesterday 表示過去，jump 要加 -ed 變成 jumped。",
+   "Yesterday, the rabbit jumps over the river.": "jumps 是現在式，Yesterday 要用過去式 jumped。"
+  },
+  "why": "繪本常用過去式講故事，Yesterday 要用 jumped。",
+  "tip": "說過去的故事，動詞用過去式。",
+  "say": "Yesterday, the rabbit jumped over the river."
+ },
+ {
+  "id": "g5-s2-u6.b9",
+  "type": "meaning",
+  "prompt": "「The picture shows a boy under a big tree.」這個圖畫是什麼？",
+  "text": "",
+  "options": [
+   "一個男孩爬上一棵大樹。",
+   "一棵大樹在男孩的家裡。",
+   "一個男孩在一棵大樹下面。"
+  ],
+  "answer": "一個男孩在一棵大樹下面。",
+  "wrong": {
+   "一個男孩爬上一棵大樹。": "under 是「在...下面」，不是爬上去。",
+   "一棵大樹在男孩的家裡。": "句子說的是男孩在樹下，不是樹在家裡。"
+  },
+  "why": "under 表示在下面，所以男孩在樹下。",
+  "tip": "under 是在下面。",
+  "say": "The picture shows a boy under a big tree."
+ },
+ {
+  "id": "g5-s2-u6.b10",
+  "type": "meaning",
+  "prompt": "「What happens next?」是在問什麼？",
+  "text": "",
+  "options": [
+   "接下來發生什麼事？",
+   "故事的作者是誰？",
+   "故事是在哪裡發生的？"
+  ],
+  "answer": "接下來發生什麼事？",
+  "wrong": {
+   "故事的作者是誰？": "問作者是 Who is the author?，這句問的是事件。",
+   "故事是在哪裡發生的？": "問地點是 Where，這句的 next 是「接下來」。"
+  },
+  "why": "next 是接下來，What happens next 就是問下一步。",
+  "tip": "next 是接下來。",
+  "say": "What happens next?"
+ },
+ {
+  "id": "g5-s2-u6.b11",
+  "type": "situation",
+  "prompt": "朋友問你這本書好不好看，你想說「我最喜歡結尾」。哪一句最自然？",
+  "text": "",
+  "options": [
+   "I like the title ending.",
+   "I like the ending best.",
+   "I like the first ending."
+  ],
+  "answer": "I like the ending best.",
+  "wrong": {
+   "I like the title ending.": "title 是書名，ending 是結尾，兩個字不能這樣接在一起。",
+   "I like the first ending.": "結尾只有一個，不用說 first ending。"
+  },
+  "why": "best 是最，I like ... best 表示最喜歡。",
+  "tip": "最喜歡用 like ... best。",
+  "say": "I like the ending best."
+ },
+ {
+  "id": "g5-s2-u6.b12",
+  "type": "fix",
+  "prompt": "哪一句的順序字用得對？",
+  "text": "",
+  "options": [
+   "Then, the boy opened the box. First he saw a puppy.",
+   "Finally, the boy opened the box. Then he saw a puppy.",
+   "First, the boy opened the box. Then he saw a puppy."
+  ],
+  "answer": "First, the boy opened the box. Then he saw a puppy.",
+  "wrong": {
+   "Then, the boy opened the box. First he saw a puppy.": "Then 放在開頭、First 放在後面，順序搞反了。",
+   "Finally, the boy opened the box. Then he saw a puppy.": "Finally 是最後，但後面還有 Then，語氣互相矛盾。"
+  },
+  "why": "先開盒子才會看到小狗，所以 First 在前，Then 在後。",
+  "tip": "First 開頭，Then 接下來。",
+  "say": "First, the boy opened the box. Then he saw a puppy."
+ }
+]

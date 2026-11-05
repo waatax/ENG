@@ -1,0 +1,89 @@
+id	word	pos	zh	category
+fc-tf-0612	dissolve	v.	溶解溶化於液體中	科學實驗與研究方法
+fc-tf-0613	precipitate	v. / n.	沉澱沉降析出；沉澱結晶物	科學實驗與研究方法
+fc-tf-0614	catalyst	n.	觸媒催化劑加速化學反應	科學實驗與研究方法
+fc-tf-0615	catalysis	n.	化學催化作用催化機能	科學實驗與研究方法
+fc-tf-0616	equilibrium	n.	化學平衡力學平衡穩定態	科學實驗與研究方法
+fc-tf-0617	thermodynamics	n.	熱力學能量轉換能量守恆	科學實驗與研究方法
+fc-tf-0618	kinetic	adj.	動能的物體運動力學的	科學實驗與研究方法
+fc-tf-0619	potential energy	n.	位能重力儲能彈性位能	科學實驗與研究方法
+fc-tf-0620	velocity	n.	物理速度方向兼具向量	科學實驗與研究方法
+fc-tf-0621	acceleration	n.	加速度速率改變率	科學實驗與研究方法
+fc-tf-0622	friction	n.	摩擦力阻力接觸面抗力	科學實驗與研究方法
+fc-tf-0623	inertia	n.	慣性物體維持原有運動狀態	科學實驗與研究方法
+fc-tf-0624	momentum	n.	動量質量與速度之積	科學實驗與研究方法
+fc-tf-0625	gravity	n.	萬有引力地球重力場	科學實驗與研究方法
+fc-tf-0626	gravitation	n.	引力相互吸引物理力	科學實驗與研究方法
+fc-tf-0627	vacuum	n.	真空格局無分子虛空空間	科學實驗與研究方法
+fc-tf-0628	wavelength	n.	光電波長相鄰波峰之距離	科學實驗與研究方法
+fc-tf-0629	amplitude	n.	波幅震幅最大位移量	科學實驗與研究方法
+fc-tf-0630	spectrum	n.	光譜連續頻率分佈頻譜	科學實驗與研究方法
+fc-tf-0631	frequency	n.	頻率每秒週期波震盪次數	科學實驗與研究方法
+fc-tf-0632	refraction	n.	光線折射跨介質偏折現象	科學實驗與研究方法
+fc-tf-0633	diffraction	n.	繞射繞過障礙物波動現象	科學實驗與研究方法
+fc-tf-0634	dispersion	n.	色散三稜鏡將白光分散七彩	科學實驗與研究方法
+fc-tf-0635	polarization	n.	偏極化偏振光震盪限制	科學實驗與研究方法
+fc-tf-0636	quantum	n. / adj.	量子物理最小不連續單位	科學實驗與研究方法
+fc-tf-0637	atom	n.	原子化學元素最基底單元	科學實驗與研究方法
+fc-tf-0638	subatomic	adj.	亞原子的質子中子電子尺度	科學實驗與研究方法
+fc-tf-0639	proton	n.	質子原子核正電荷粒子	科學實驗與研究方法
+fc-tf-0640	neutron	n.	中子原子核不帶電微粒	科學實驗與研究方法
+fc-tf-0641	electron	n.	電子原子外圍負電荷粒子	科學實驗與研究方法
+fc-tf-0642	nucleus	n.	原子核核心中心結構	科學實驗與研究方法
+fc-tf-0643	molecule	n.	分子共價化學結合單元	科學實驗與研究方法
+fc-tf-0645	cation	n.	陽離子正電荷帶電離子	科學實驗與研究方法
+fc-tf-0646	anion	n.	陰離子負電荷帶電離子	科學實驗與研究方法
+fc-tf-0647	radioactivity	n.	放射性核衰變放射能力	科學實驗與研究方法
+fc-tf-0648	semiconductor	n.	半導體矽晶圓電子材料	科學實驗與研究方法
+fc-tf-0649	conductor	n.	導體容易導電熱傳輸體	科學實驗與研究方法
+fc-tf-0650	insulator	n.	絕緣體阻隔電流熱量物質	科學實驗與研究方法
+fc-tf-0651	superconductor	n.	超導體零電阻完全抗磁性	科學實驗與研究方法
+fc-tf-0652	conductivity	n.	電導率導電率材料特徵	科學實驗與研究方法
+fc-tf-0653	resistivity	n.	電阻率材料阻抗特性	科學實驗與研究方法
+fc-tf-0654	alloy	n. / v.	合金多種金屬熔合；合金化	科學實驗與研究方法
+fc-tf-0655	amalgam	n.	汞合金混合物融合綜合物	科學實驗與研究方法
+fc-tf-0656	synthetic	adj. / n.	人造化學合成的；合成物	科學實驗與研究方法
+fc-tf-0657	polymer	n.	高分子聚合物聚合鏈	科學實驗與研究方法
+fc-tf-0658	monomer	n.	單體組成聚合物基本單元	科學實驗與研究方法
+fc-tf-0659	distillation	n.	蒸餾提純化學分離操作	科學實驗與研究方法
+fc-tf-0660	fractional distillation	n.	分餾石油多沸點分層提煉	科學實驗與研究方法
+fc-tf-0661	volatile	adj.	易揮發的化學氣化迅速的	科學實驗與研究方法
+fc-tf-0662	volatility	n.	揮發性易轉化為氣態傾向	科學實驗與研究方法
+fc-tf-0663	residue	n.	殘餘物過濾後殘留物質	科學實驗與研究方法
+fc-tf-0664	combustion	n.	燃燒反應劇烈劇烈氧化放熱	科學實驗與研究方法
+fc-tf-0665	oxidation	n.	氧化反應失去電子反應過程	科學實驗與研究方法
+fc-tf-0666	reduction	n.	還原反應得到電子化合價降	科學實驗與研究方法
+fc-tf-0667	corrosion	n.	金屬鏽蝕腐蝕化學侵蝕	科學實驗與研究方法
+fc-tf-0668	rust	n. / v.	鐵鏽氧化鐵紅斑；生鏽氧化	科學實驗與研究方法
+fc-tf-0669	telemetry	n.	遙測技術遠程傳輸數據	科學實驗與研究方法
+fc-tf-0670	spectroscopy	n.	光譜學分析物質化學成分	科學實驗與研究方法
+fc-tf-0671	chromatography	n.	層析法色譜法混合物分離	科學實驗與研究方法
+fc-tf-0672	crystallization	n.	結晶作用生成對稱晶格	科學實驗與研究方法
+fc-tf-0673	crystallography	n.	結晶學X光射線晶體繞射	科學實驗與研究方法
+fc-tf-0674	diffusion	n.	擴散由高濃度往低濃度滲透	科學實驗與研究方法
+fc-tf-0675	osmosis	n.	滲透水分子穿透半透膜	科學實驗與研究方法
+fc-tf-0676	permeability	n.	通透性膜結構容許穿透率	科學實驗與研究方法
+fc-tf-0677	semipermeable	adj.	半透性的選擇性通透的	科學實驗與研究方法
+fc-tf-0678	viscosity	n.	黏稠度流體流動阻力黏度	科學實驗與研究方法
+fc-tf-0679	density	n.	密度單位體積質量比值	科學實驗與研究方法
+fc-tf-0680	buoyancy	n.	浮力阿基米德向上支撐力	科學實驗與研究方法
+fc-tf-0681	pressure	n.	壓力單位面積所受垂直力	科學實驗與研究方法
+fc-tf-0682	barometer	n.	氣壓計量測大氣壓力計	科學實驗與研究方法
+fc-tf-0683	thermometer	n.	溫度計量測冷熱溫標器	科學實驗與研究方法
+fc-tf-0684	nanotechnology	n.	奈米科技原子分子尺度工程	科學實驗與研究方法
+fc-tf-0685	quantum mechanics	n.	量子力學微觀物理運動律	科學實驗與研究方法
+fc-tf-0686	theory of relativity	n.	相對論愛因斯坦時空重力	科學實驗與研究方法
+fc-tf-0687	conservation of energy	n.	能量守恆定律能量不滅	科學實驗與研究方法
+fc-tf-0688	entropy	n.	亂度熵熱力學混亂度度量	科學實驗與研究方法
+fc-tf-0689	absolute zero	n.	絕對零度零下273.15度	科學實驗與研究方法
+fc-tf-0690	Kelvin	n.	開氏溫標絕對溫標單位	科學實驗與研究方法
+fc-tf-0691	Celsius	n.	攝氏溫標百分度溫標	科學實驗與研究方法
+fc-tf-0692	Fahrenheit	n.	華氏溫標美國常用溫標	科學實驗與研究方法
+fc-tf-0693	ultrasound	n.	超音波超過人耳聽覺頻率	科學實驗與研究方法
+fc-tf-0694	sedimentation	n.	沉積過程、淤積沉澱	地質天體與自然環境
+fc-tf-0695	bathymetry	n.	水深測量術、海底地形學	地質天體與自然環境
+fc-tf-0696	lithosphere	n.	岩石圈、地表剛性外殼	地質天體與自然環境
+fc-tf-0697	hydrology	n.	水文學、地球水循環研究	地質天體與自然環境
+fc-tf-0698	paleoclimatology	n.	古氣候學、古代氣候重建	地質天體與自然環境
+fc-tf-0699	biosphere	n.	生物圈、生命活動總區域	生物演化與生態系統
+fc-tf-0700	chlorosis	n.	植物缺綠病、葉片黃化症	生物演化與生態系統

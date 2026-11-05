@@ -1,5 +1,5 @@
-import {answerText} from './coach.mjs?v=joy20261103';
-import {readRecall, escapeHTML as esc} from '../recall.mjs?v=joy20261103';
+import {answerText} from './coach.mjs?v=truth20261105';
+import {readRecall, escapeHTML as esc} from '../recall.mjs?v=truth20261105';
 export function unitMissions(questions, excluded, unitId) {
   const pool=questions.filter(q=>!excluded.has(q.id)), count=Math.ceil(questions.length*.1);
   return Array.from({length:Math.min(count,pool.length)},(_,i)=>{

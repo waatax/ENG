@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-to-0259	expedite	v.	加快流程加速催促送達	物流與製造管理
+fc-to-0260	expedited	adj.	快捷快速加急件的	物流與製造管理
+fc-to-0261	courier	n.	快遞人員專差快遞公司	物流與製造管理
+fc-to-0262	tracking	n.	貨態追蹤查件貨品追蹤	物流與製造管理
+fc-to-0263	track	v. / n.	追蹤路徑軌道蹤跡	物流與製造管理
+fc-to-0264	waybill	n.	運送提單貨物託運清單	物流與製造管理
+fc-to-0265	bill of lading	n.	海運提單提貨憑證 (B/L)	物流與製造管理
+fc-to-0266	customs	n.	海關關稅查驗海關大樓	物流與製造管理
+fc-to-0267	clearance	n.	海關清關清倉大特賣清除	物流與製造管理
+fc-to-0268	declaration	n.	海關報關申報單宣言公約	物流與製造管理
+fc-to-0269	declare	v.	申報關稅正式宣告聲明	物流與製造管理
+fc-to-0270	manifest	n. / v. / adj.	船貨清單；顯現；顯然的	物流與製造管理
+fc-to-0271	dock	n. / v.	碼頭裝卸區船塢；靠泊扣薪	物流與製造管理
+fc-to-0272	harbor	n. / v.	港灣避風港；心懷窩藏	物流與製造管理
+fc-to-0273	port	n.	商港海港避風港通訊埠	物流與製造管理
+fc-to-0274	quay	n.	裝卸貨石砌碼頭泊位	物流與製造管理
+fc-to-0275	transit	n. / v.	運送中轉過境公共運輸	物流與製造管理
+fc-to-0276	in transit	adj.	在途中運送途中的	物流與製造管理
+fc-to-0277	fleet	n.	貨運車隊船隊機隊艦隊	物流與製造管理
+fc-to-0278	carrier	n.	運輸公司航空業者航空母艦	物流與製造管理
+fc-to-0279	forwarder	n.	貨運承攬業者貨運代行	物流與製造管理
+fc-to-0280	stevedore	n.	碼頭裝卸工人碼頭工人	物流與製造管理
+fc-to-0281	pallet	n.	貨物堆高機棧板托盤	物流與製造管理
+fc-to-0282	forklift	n.	工業堆高機鏟車	物流與製造管理
+fc-to-0283	container	n.	貨櫃集裝箱容器密封箱	物流與製造管理
+fc-to-0284	containerization	n.	貨櫃化集裝箱集運系統	物流與製造管理
+fc-to-0285	crate	n. / v.	板條木箱包裝箱；裝箱	物流與製造管理
+fc-to-0286	parcel	n.	包裹郵包一塊地產分包	物流與製造管理
+fc-to-0287	package	n. / v.	包裹包裹方案；打包包裝	物流與製造管理
+fc-to-0288	packaging	n.	包裝材料外包裝包裝設計	物流與製造管理
+fc-to-0289	assembly line	n.	工廠裝配線組裝生產線	物流與製造管理
+fc-to-0290	assemble	v.	組裝零件聚集召集成員	物流與製造管理
+fc-to-0291	assembly	n.	裝配組裝議會集會大會	物流與製造管理
+fc-to-0292	component	n. / adj.	零組件組成要素；構成的	物流與製造管理
+fc-to-0293	defective	adj.	有瑕疵故障劣質有缺陷的	物流與製造管理
+fc-to-0294	flaw	n. / v.	瑕疵裂痕缺失；使有缺陷	物流與製造管理
+fc-to-0295	flawless	adj.	完美無瑕十全十美的	物流與製造管理
+fc-to-0296	malfunction	v. / n.	運作故障失常機械當機	物流與製造管理
+fc-to-0297	breakdown	n.	機械故障拋錨細目分類表	物流與製造管理
+fc-to-0298	outage	n.	電力中斷停電停機故障期	物流與製造管理
+fc-to-0299	downtime	n.	產線停機時間停工期	物流與製造管理
+fc-to-0300	uptime	n.	系統正常運作時間可用率	物流與製造管理
+fc-to-0301	specify	v.	具體載明詳細列明規格	物流與製造管理
+fc-to-0302	specific	adj.	具體的特定的特定細節的	物流與製造管理
+fc-to-0303	tolerance	n.	機械公差容許誤差容忍度	物流與製造管理
+fc-to-0304	precision	n.	精密度精準精確度	物流與製造管理
+fc-to-0305	precise	adj.	精準精確嚴謹準確的	物流與製造管理
+fc-to-0306	calibration	n.	儀器校正校準量測度	物流與製造管理
+fc-to-0307	calibrate	v.	校準量測校正儀器度數	物流與製造管理
+fc-to-0308	inspection	n.	工廠品管檢查抽驗檢驗	物流與製造管理
+fc-to-0309	inspect	v.	檢查查驗審查稽核品質	物流與製造管理
+fc-to-0310	inspector	n.	品質檢驗員督察官督導	物流與製造管理
+fc-to-0311	quality control	n.	品質管理品保 (QC)	物流與製造管理
+fc-to-0312	quality assurance	n.	品質保證體系 (QA)	物流與製造管理
+fc-to-0313	benchmark	n. / v.	基準標竿指標；作為基準	物流與製造管理
+fc-to-0314	standardization	n.	標準化統一作業規格化	物流與製造管理
+fc-to-0315	standardize	v.	使標準化使符合規格	物流與製造管理
+fc-to-0316	capacity	n.	生產產能產量容量身分	物流與製造管理
+fc-to-0317	output	n. / v.	總產量產出電力輸出；輸出	物流與製造管理
+fc-to-0318	input	n. / v.	投入原物料輸入數據；鍵入	物流與製造管理
+fc-to-0319	throughput	n.	生產吞吐量處理能量流速	物流與製造管理
+fc-to-0320	yield	n. / v.	良率產量收益率；產生屈服	物流與製造管理
+fc-to-0321	bottleneck	n.	產能瓶頸阻塞路段塞車	物流與製造管理
+fc-to-0322	overhaul	v. / n.	徹底全面檢修大翻修改革	物流與製造管理
+fc-to-0323	retrofit	v. / n.	改造翻新升級裝配新部件	物流與製造管理
+fc-to-0324	obsolete	adj.	過時遭淘汰陳舊廢棄的	物流與製造管理
+fc-to-0325	obsolescence	n.	過時陳舊淘汰現象老化	物流與製造管理
+fc-to-0326	marketing	n.	市場行銷行銷策略推廣	市場營銷與品牌
+fc-to-0327	market share	n.	市場佔有率市佔率規模	市場營銷與品牌
+fc-to-0328	niche market	n.	利基市場分眾專屬市場	市場營銷與品牌
+fc-to-0329	demographics	n.	人口統計資料目標客群受眾	市場營銷與品牌
+fc-to-0330	consumer	n.	終端消費者一般顧客買受人	市場營銷與品牌
+fc-to-0331	consumption	n.	消費量消耗度肺病肺結核	市場營銷與品牌
+fc-to-0332	consume	v.	消費耗盡消耗吃喝使用	市場營銷與品牌
+fc-to-0333	brand	n. / v.	品牌商標烙印；打上烙印	市場營銷與品牌
+fc-to-0334	branding	n.	品牌塑造品牌營銷形象建立	市場營銷與品牌
+fc-to-0335	brand loyalty	n.	品牌忠誠度客戶指名度	市場營銷與品牌
+fc-to-0336	campaign	n. / v.	商業促銷活動競選活動；運動	市場營銷與品牌
+fc-to-0337	commercial	n. / adj.	電視廣告商務短片；商業營利	市場營銷與品牌
+fc-to-0338	advertisement	n.	商業廣告宣傳啟事 (ad)	市場營銷與品牌
+fc-to-0339	advertise	v.	刊登廣告大肆宣傳招攬	市場營銷與品牌
+fc-to-0340	publicity	n.	知名度公眾關注媒體宣傳	市場營銷與品牌
+fc-to-0341	publicize	v.	廣為宣傳公諸於世宣揚	市場營銷與品牌
+fc-to-0342	public relations	n.	公共關係企業公關 (PR)	市場營銷與品牌
+fc-to-0343	press release	n.	官方新聞發布稿新聞通訊	市場營銷與品牌
+fc-to-0344	press conference	n.	記者招待會新聞發布會	市場營銷與品牌
+fc-to-0345	spokesperson	n.	官方新聞發言人代言人	市場營銷與品牌
+fc-to-0346	sponsorship	n.	活動贊助贊助商支援合約	市場營銷與品牌
+fc-to-0347	sponsor	v. / n.	贊助出資主辦；贊助廠商	市場營銷與品牌
+fc-to-0348	flyer	n.	促銷傳單宣傳單印刷頁	市場營銷與品牌
+fc-to-0349	brochure	n.	商品型錄介紹小冊子手冊	市場營銷與品牌
+fc-to-0350	pamphlet	n.	議題宣傳小冊子小冊指南	市場營銷與品牌
+fc-to-0351	catalog	n. / v.	商品型錄清單；列入目錄	市場營銷與品牌
+fc-to-0352	sample	n. / v.	商品樣品試用品；抽樣品嚐	市場營銷與品牌
+fc-to-0353	giveaway	n.	促銷贈品免費試用品洩漏	市場營銷與品牌
+fc-to-0354	discount	n. / v.	促銷折扣打折；對消息打折	市場營銷與品牌
+fc-to-0355	rebate	n. / v.	售後現金回饋退稅折讓	市場營銷與品牌
+fc-to-0356	coupon	n.	折價券優惠兌換券息票	市場營銷與品牌
+fc-to-0357	loyalty program	n.	會員集點忠誠回饋計畫	市場營銷與品牌
+fc-to-0358	survey	n. / v.	市場調查問卷調查；調查丈量	市場營銷與品牌
+fc-to-0359	questionnaire	n.	調查問卷意見調查表清單	市場營銷與品牌
+fc-to-0360	focus group	n.	焦點訪談小組焦點團體	市場營銷與品牌
+fc-to-0361	testimonial	n.	顧客見證推薦函表彰信	市場營銷與品牌
+fc-to-0362	retail	n. / adj. / v.	零售門市零售的；零賣零售	市場營銷與品牌
+fc-to-0363	retailer	n.	零售商實體門市通路商	市場營銷與品牌
+fc-to-0364	wholesale	n. / adj. / v.	大宗批發批發價；批發批售	市場營銷與品牌
+fc-to-0365	wholesaler	n.	大宗批發商大盤批發商	市場營銷與品牌
+fc-to-0366	distributor	n.	經銷商配銷商總代理業者	市場營銷與品牌
+fc-to-0367	distribution	n.	經銷通路物流配銷分配	市場營銷與品牌
+fc-to-0368	channel	n. / v.	行銷通路頻道管道；引導	市場營銷與品牌
+fc-to-0369	outlet	n.	品牌暢銷暢貨中心專賣店插座	市場營銷與品牌
+fc-to-0370	franchisee	n.	加盟商連鎖特許加盟店東	市場營銷與品牌
+fc-to-0371	franchisor	n.	加盟連鎖總部特許發牌商	市場營銷與品牌
+fc-to-0372	merchandising	n.	商品陳列規劃行銷技巧	市場營銷與品牌
+fc-to-0373	point of sale	n.	銷售結帳端點銷售系統 (POS)	市場營銷與品牌
+fc-to-0374	e-commerce	n.	電子商務網購線上商貿	市場營銷與品牌
+fc-to-0375	m-commerce	n.	行動商務智慧型手機網購	市場營銷與品牌
+fc-to-0376	launch	v. / n.	新品上市發表發射；新發表會	市場營銷與品牌
+fc-to-0377	rollout	n. / v.	全面推出逐步鋪貨新發行	市場營銷與品牌
+fc-to-0378	unveil	v.	揭開帷幕發表首度公開亮相	市場營銷與品牌
+fc-to-0379	penetration	n.	市場滲透率深入拓展滲透	市場營銷與品牌
+fc-to-0380	market leader	n.	市場龍頭領導品牌指標企業	市場營銷與品牌
+fc-to-0381	accommodation	n.	旅館住宿膳宿安排調解通融	客戶接待與設施
+fc-to-0382	hospitality	n.	餐飲旅宿業殷勤款待招待	客戶接待與設施
+fc-to-0383	complimentary	adj.	旅館免費贈送讚賞敬贈的	客戶接待與設施
+fc-to-0384	amenities	n.	飯店便利休閒設施衛浴用品	客戶接待與設施
+fc-to-0385	reservation	n.	預約訂房預約訂席保留意見	客戶接待與設施
+fc-to-0386	reserve	v. / n.	預約預訂保留保留地儲備金	客戶接待與設施
+fc-to-0387	book	v. / n.	預約機票預訂客房；書籍帳簿	客戶接待與設施
+fc-to-0388	booking	n.	訂房紀錄預定席次預約額	客戶接待與設施
+fc-to-0389	cancellation	n.	取消預約廢止取消通知退訂	客戶接待與設施
+fc-to-0390	concierge	n.	飯店大廳禮賓接待員門房顧問	客戶接待與設施
+fc-to-0391	reception	n.	飯店接待櫃檯歡迎茶會接收度	客戶接待與設施
+fc-to-0392	receptionist	n.	櫃台接待總機服務員接線員	客戶接待與設施
+fc-to-0393	front desk	n.	飯店服務前台登記總服務台	客戶接待與設施
+fc-to-0394	bellhop	n.	飯店行李員行李搬運服務生	客戶接待與設施
+fc-to-0395	housekeeping	n.	客房清潔房務部家事管理	客戶接待與設施
+fc-to-0396	room service	n.	客房送餐服務客房專人服務	客戶接待與設施
+fc-to-0397	banquet	n.	正式盛宴慶功宴會盛大酒席	客戶接待與設施
+fc-to-0398	catering	n.	外燴餐飲承包宴席承包服務	客戶接待與設施
+fc-to-0399	caterer	n.	外燴承辦廠商餐飲外送包辦商	客戶接待與設施
+fc-to-0400	cater	v.	承辦宴席外燴迎合滿足喜好	客戶接待與設施
+fc-to-0401	buffet	n. / v.	自助餐飲吃到飽吧台；打擊衝擊	客戶接待與設施
+fc-to-0402	cuisine	n.	各國特色烹飪美食佳餚料理	客戶接待與設施
+fc-to-0403	delicacy	n.	珍饈佳餚名菜精緻細緻敏銳	客戶接待與設施
+fc-to-0404	appetizer	n.	開胃前菜前菜小碟點心	客戶接待與設施
+fc-to-0405	entree	n.	西餐主菜正餐主盤入場許可	客戶接待與設施
+fc-to-0406	beverage	n.	各式冷熱飲料飲品非水飲料	客戶接待與設施
+fc-to-0407	gratuity	n.	額外小費服務費賞錢酬金	客戶接待與設施
+fc-to-0408	tip	n. / v.	小費實用訣竅尖端；給小費傾斜	客戶接待與設施
+fc-to-0409	venue	n.	活動舉辦場地會場聚集地點	客戶接待與設施
+fc-to-0410	convention	n.	大型年度大會公約行業慣例	客戶接待與設施
+fc-to-0411	conference	n.	正式研討會議商務年會協商會	客戶接待與設施
+fc-to-0412	seminar	n.	學術研討會專題座談會講習班	客戶接待與設施
+fc-to-0413	workshop	n.	實務工作坊研習會工廠車間	客戶接待與設施
+fc-to-0414	exhibition	n.	商業博覽會展覽會展示展演	客戶接待與設施
+fc-to-0415	exhibit	v. / n.	展出展示；展覽品法庭證物	客戶接待與設施
+fc-to-0416	expo	n.	國際世界博覽會大型商展展覽會	客戶接待與設施
+fc-to-0417	trade show	n.	專業商展貿易博覽會行業展	客戶接待與設施
+fc-to-0418	shuttle	n. / v.	往返接駁車太空梭；來回接送	客戶接待與設施
+fc-to-0419	commute	v. / n.	每日通勤往返上班；通勤路程	客戶接待與設施
+fc-to-0420	commuter	n.	每日通勤族上班搭車通勤人員	客戶接待與設施
+fc-to-0421	boarding pass	n.	飛機登機證搭乘證	客戶接待與設施
+fc-to-0422	flight	n.	定期航班飛行飛行旅程空中航程	客戶接待與設施
+fc-to-0423	delay	v. / n.	班機延誤延期延遲耽擱耽擱	客戶接待與設施
+fc-to-0424	baggage	n.	航空行李隨身行李裝備行李包	客戶接待與設施
+fc-to-0425	luggage	n.	隨身皮箱旅行行李箱行李包	客戶接待與設施
+fc-to-0426	baggage claim	n.	機場行李提領行李領取轉盤區	客戶接待與設施
+fc-to-0427	carousel	n.	機場旋轉行李輸送帶旋轉木馬	客戶接待與設施
+fc-to-0428	concourse	n.	機場航廈中央大廳車站穿堂大廳	客戶接待與設施
+fc-to-0429	terminal	n. / adj.	航空客運航廈終點站；末期的	客戶接待與設施
+fc-to-0430	layover	n.	轉機短暫停留過境停靠中途停留	客戶接待與設施
+fc-to-0431	stopover	n.	中途過夜停留超過24小時停留	客戶接待與設施
+fc-to-0432	jet lag	n.	跨時區長途飛行時差疲倦反應	客戶接待與設施
+fc-to-0434	visa	n.	出入境簽證入境許可簽章	客戶接待與設施
+fc-to-0435	embassy	n.	大使館駐外使館公使全體使節	客戶接待與設施
+fc-to-0436	consulate	n.	領事館領事辦公處領事身分	客戶接待與設施
+fc-to-0437	clientele	n.	全體忠實客戶群委任主顧客戶網	客戶接待與設施
+fc-to-0438	customer service	n.	顧客服務部售後客服中心專線	客戶接待與設施
+fc-to-0439	helpline	n.	諮詢求助熱線客戶支援服務熱線	客戶接待與設施
+fc-to-0440	satisfaction	n.	顧客滿意度如願以償欣慰滿意	客戶接待與設施
+fc-to-0441	complaint	n.	投訴抗議抱怨信顧客不滿反映	客戶接待與設施
+fc-to-0442	complain	v.	提出客訴抱怨向主管投訴申訴	客戶接待與設施
+fc-to-0443	rectify	v.	矯正改正失誤補救處理問題	客戶接待與設施
+fc-to-0444	apologize	v.	向客戶誠摯致歉認錯賠罪澄清	客戶接待與設施
+fc-to-0445	courtesy	n.	禮貌謙恭有禮殷勤體貼舉動	客戶接待與設施
+fc-to-0446	courteous	adj.	彬彬有禮客氣親切周到的	客戶接待與設施
+fc-to-0447	information technology	n.	資訊科技資訊工程 (IT)	科技與現代生活
+fc-to-0449	hardware	n.	電腦實體硬體設備五金	科技與現代生活
+fc-to-0450	firmware	n.	韌體系統內嵌微代碼	科技與現代生活
+fc-to-0451	network	n. / v.	電腦網路建立人脈通訊網	科技與現代生活
+fc-to-0452	networking	n.	職場人脈拓展網路連線工程	科技與現代生活
+fc-to-0453	server	n.	伺服器主機網路伺服機侍者	科技與現代生活
+fc-to-0454	database	n.	資料庫系統數位數據庫	科技與現代生活
+fc-to-0455	cloud computing	n.	雲端運算雲端架構服務	科技與現代生活
+fc-to-0456	cybersecurity	n.	網路資訊安全資安防禦體系	科技與現代生活
+fc-to-0457	firewall	n.	網路防火牆防護阻隔系統	科技與現代生活
+fc-to-0458	encryption	n.	資訊加密技術密碼化處理	科技與現代生活
+fc-to-0459	decrypt	v.	解密破譯密碼破解加密	科技與現代生活
+fc-to-0460	authentication	n.	身分認證身分鑑別權限確認	科技與現代生活

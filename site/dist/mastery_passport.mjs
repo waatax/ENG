@@ -11,6 +11,8 @@ export const STORAGE_KEYS = [
   'english-quest-word-mp3-v1',
   'eq_flashcards_mastery_v1',
   'eq_recall_v1',
+  'eq_recall_daily_v1',
+  'eq_boost_v1',
   'eq_home_warmup_v1',
   'eq_masterclass_v1',
   'eq_advanced_course_v1',

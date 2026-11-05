@@ -115,9 +115,9 @@ test('all 141 units add a 10% phrasebook of real expressions from their own item
 test('view wires diagnosis, evidence, read-aloud and the repair tile, and every changed module uses the new cache key', () => {
   const view = fs.readFileSync('dist/quest/view.mjs', 'utf8'), html = fs.readFileSync('dist/quest/index.html', 'utf8'), lab = fs.readFileSync('dist/quest/lab.mjs', 'utf8');
   for (const needle of ['class="diagnosis"', 'class="evidence"', 'data-set="readq"', 'readAloudOn()', 'tile fixed', 'repair-win']) assert.ok(view.includes(needle), needle);
-  for (const mod of ['engine', 'sound', 'coach', 'lab']) assert.match(view, new RegExp(`${mod}\\.mjs\\?v=joy20261103`));
-  assert.match(lab, /coach\.mjs\?v=joy20261103/);
-  assert.match(html, /quest\.css\?v=joy20261103/);
-  assert.match(html, /view\.mjs\?v=joy20261103/);
+  for (const mod of ['engine', 'sound', 'coach', 'lab']) assert.match(view, new RegExp(`${mod}\\.mjs\\?v=truth20261105`));
+  assert.match(lab, /coach\.mjs\?v=truth20261105/);
+  assert.match(html, /quest\.css\?v=truth20261105/);
+  assert.match(html, /view\.mjs\?v=truth20261105/);
   assert.doesNotMatch(view + html + lab, /learn20261029/);
 });

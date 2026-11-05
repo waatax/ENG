@@ -1,0 +1,401 @@
+id	word	pos	zh	category	example
+fc-el-0217	kitten	n.	小貓	動物與寵物	The little kitten is drinking milk from a bowl.
+fc-el-0218	puppy	n.	小狗	動物與寵物	We got a puppy for my birthday.
+fc-el-0219	lamb	n.	小羊	動物與寵物	The baby lamb stays close to its mother.
+fc-el-0220	foal	n.	小馬	動物與寵物	The foal stood up soon after it was born.
+fc-el-0221	calf	n.	小牛	動物與寵物	The cow licked her new calf in the barn.
+fc-el-0222	chick	n.	小雞	動物與寵物	A yellow chick came out of the egg this morning.
+fc-el-0223	piglet	n.	小豬	動物與寵物	The pink piglet is sleeping next to its mother.
+fc-el-0224	duckling	n.	小鴨	動物與寵物	The duckling follows its mother into the pond.
+fc-el-0225	bunny	n.	小兔子	動物與寵物	The white bunny is eating a carrot.
+fc-el-0226	cub	n.	幼獸、小熊	動物與寵物	The bear cub is playing with its mother.
+fc-el-0227	goat	n.	山羊	動物與寵物	The goat on the farm likes to eat grass.
+fc-el-0228	rooster	n.	公雞	動物與寵物	The rooster wakes us up early every morning.
+fc-el-0229	hen	n.	母雞	動物與寵物	Our hen lays an egg almost every day.
+fc-el-0230	turkey	n.	火雞	動物與寵物	Many American families eat turkey on Thanksgiving.
+fc-el-0231	goose	n.	鵝	動物與寵物	A white goose chased me around the farm.
+fc-el-0232	swan	n.	天鵝	動物與寵物	A white swan is swimming on the lake.
+fc-el-0233	pigeon	n.	鴿子	動物與寵物	The children fed bread to the pigeons in the park.
+fc-el-0234	parrot	n.	鸚鵡	動物與寵物	Our parrot can say "hello" and "thank you."
+fc-el-0235	crow	n.	烏鴉	動物與寵物	A black crow is sitting on the roof.
+fc-el-0236	sparrow	n.	麻雀	動物與寵物	A small sparrow is looking for food on the ground.
+fc-el-0237	peacock	n.	孔雀	動物與寵物	The peacock opened its beautiful tail at the zoo.
+fc-el-0238	flamingo	n.	紅鶴	動物與寵物	The pink flamingo is standing on one leg.
+fc-el-0239	penguin	n.	企鵝	動物與寵物	A penguin cannot fly, but it can swim very well.
+fc-el-0240	seal	n.	海豹	動物與寵物	The seal is lying on a rock in the sun.
+fc-el-0241	walrus	n.	海象	動物與寵物	A walrus has two long white teeth.
+fc-el-0242	otter	n.	水獺	動物與寵物	The otter floats on its back in the water.
+fc-el-0243	beaver	n.	海狸	動物與寵物	A beaver uses its strong teeth to cut down trees.
+fc-el-0244	squirrel	n.	松鼠	動物與寵物	The squirrel is eating a nut in the tree.
+fc-el-0245	chipmunk	n.	花栗鼠	動物與寵物	The chipmunk put many seeds in its cheeks.
+fc-el-0246	raccoon	n.	浣熊	動物與寵物	A raccoon was looking for food in our trash can.
+fc-el-0247	badger	n.	獾	動物與寵物	The badger dug a big hole under the tree.
+fc-el-0248	hedgehog	n.	刺蝟	動物與寵物	Be careful; the hedgehog has sharp spines on its back.
+fc-el-0249	mole	n.	鼴鼠	動物與寵物	A mole lives under the ground and cannot see well.
+fc-el-0250	bat	n.	蝙蝠	動物與寵物	A bat sleeps upside down during the day.
+fc-el-0251	lizard	n.	蜥蜴	動物與寵物	A small lizard is resting on the warm rock.
+fc-el-0252	gecko	n.	壁虎	動物與寵物	A gecko is walking on the kitchen wall.
+fc-el-0253	chameleon	n.	變色龍	動物與寵物	A chameleon can change its color.
+fc-el-0254	tortoise	n.	陸龜	動物與寵物	The old tortoise walks very slowly in the garden.
+fc-el-0255	alligator	n.	短吻鱷	動物與寵物	An alligator has a wide nose and sharp teeth.
+fc-el-0256	crocodile	n.	鱷魚	動物與寵物	The crocodile opened its big mouth in the river.
+fc-el-0257	hippo	n.	河馬	動物與寵物	The hippo spends most of the day in the water.
+fc-el-0258	rhino	n.	犀牛	動物與寵物	A rhino has one or two horns on its nose.
+fc-el-0259	giraffe	n.	長頸鹿	動物與寵物	The giraffe eats leaves from the top of the tree.
+fc-el-0260	zebra	n.	斑馬	動物與寵物	A zebra has black and white stripes.
+fc-el-0261	camel	n.	駱駝	動物與寵物	A camel can walk in the desert for many days.
+fc-el-0262	llama	n.	羊駝	動物與寵物	The llama on the farm has soft, thick wool.
+fc-el-0263	deer	n.	鹿	動物與寵物	We saw a deer drinking water by the lake.
+fc-el-0264	reindeer	n.	馴鹿	動物與寵物	In the story, reindeer pull Santa's sleigh.
+fc-el-0265	moose	n.	駝鹿	動物與寵物	A moose is bigger than a horse.
+fc-el-0266	kangaroo	n.	袋鼠	動物與寵物	A baby kangaroo lives in its mother's pouch.
+fc-el-0267	koala	n.	無尾熊	動物與寵物	The koala is sleeping in the tree all day.
+fc-el-0268	panda	n.	大熊貓	動物與寵物	The panda at the zoo is eating bamboo.
+fc-el-0269	leopard	n.	花豹	動物與寵物	A leopard has dark spots on its yellow fur.
+fc-el-0270	cheetah	n.	獵豹	動物與寵物	The cheetah is the fastest animal on land.
+fc-el-0271	jaguar	n.	美洲豹	動物與寵物	A jaguar lives in the rainforest and swims well.
+fc-el-0272	panther	n.	黑豹	動物與寵物	The black panther hid quietly in the dark forest.
+fc-el-0273	wolf	n.	狼	動物與寵物	We heard a wolf howl at the moon.
+fc-el-0274	coyote	n.	郊狼	動物與寵物	A coyote looks a little like a small wolf.
+fc-el-0275	fox	n.	狐狸	動物與寵物	The red fox has a long, bushy tail.
+fc-el-0276	hyena	n.	土狼	動物與寵物	The hyena makes a sound like a laugh.
+fc-el-0277	gorilla	n.	大猩猩	動物與寵物	The big gorilla is eating a banana.
+fc-el-0278	chimpanzee	n.	黑猩猩	動物與寵物	The chimpanzee used a stick to get some food.
+fc-el-0279	baboon	n.	狒狒	動物與寵物	A baboon was sitting on the rock and eating fruit.
+fc-el-0280	sloth	n.	樹懶	動物與寵物	The sloth hangs from a tree and moves very slowly.
+fc-el-0281	armadillo	n.	犰狳	動物與寵物	An armadillo can roll into a hard ball.
+fc-el-0282	platypus	n.	鴨嘴獸	動物與寵物	A platypus has a bill like a duck.
+fc-el-0283	whale	n.	鯨魚	動物與寵物	The blue whale is the biggest animal in the world.
+fc-el-0284	dolphin	n.	海豚	動物與寵物	A dolphin jumped out of the water near our boat.
+fc-el-0285	porpoise	n.	鼠海豚	動物與寵物	A porpoise is smaller than a dolphin.
+fc-el-0286	shark	n.	鯊魚	動物與寵物	The shark has many sharp teeth.
+fc-el-0287	octopus	n.	章魚	動物與寵物	An octopus has eight long arms.
+fc-el-0288	squid	n.	烏賊	動物與寵物	The squid shot out black ink and swam away.
+fc-el-0289	jellyfish	n.	水母	動物與寵物	Don't touch the jellyfish.
+fc-el-0290	starfish	n.	海星	動物與寵物	We found a starfish on the beach.
+fc-el-0291	seahorse	n.	海馬	動物與寵物	A seahorse holds on to sea grass with its tail.
+fc-el-0292	crab	n.	螃蟹	動物與寵物	A crab walks sideways on the sand.
+fc-el-0293	lobster	n.	龍蝦	動物與寵物	Dad ordered a lobster at the seafood restaurant.
+fc-el-0294	shrimp	n.	蝦子	動物與寵物	Mom fried some shrimp for dinner.
+fc-el-0295	prawn	n.	明蝦	動物與寵物	We grilled big prawns at the barbecue.
+fc-el-0296	clam	n.	蛤蜊	動物與寵物	Grandma made clam soup with ginger.
+fc-el-0297	oyster	n.	生蠔、牡蠣	動物與寵物	Oyster omelets are a popular snack at Taiwan's night markets.
+fc-el-0298	mussel	n.	淡菜	動物與寵物	The chef cooked the mussels in garlic and butter.
+fc-el-0299	snail	n.	蝸牛	動物與寵物	A snail carries its shell on its back.
+fc-el-0300	slug	n.	蛞蝓	動物與寵物	A slug is like a snail with no shell.
+fc-el-0301	worm	n.	蠕蟲、蚯蚓	動物與寵物	After the rain, a worm came out of the ground.
+fc-el-0302	caterpillar	n.	毛毛蟲	動物與寵物	The caterpillar will turn into a butterfly.
+fc-el-0303	moth	n.	蛾	動物與寵物	A moth flew around the light at night.
+fc-el-0304	dragonfly	n.	蜻蜓	動物與寵物	A dragonfly flew over the pond.
+fc-el-0305	damselfly	n.	豆娘	動物與寵物	A damselfly is thinner than a dragonfly.
+fc-el-0306	firefly	n.	螢火蟲	動物與寵物	A little firefly glowed in the dark garden at night.
+fc-el-0307	glowworm	n.	螢火蟲幼蟲	動物與寵物	We saw a glowworm shining in the dark cave.
+fc-el-0308	grasshopper	n.	蚱蜢	動物與寵物	A green grasshopper jumped out of the grass.
+fc-el-0309	cricket	n.	蟋蟀	動物與寵物	I can hear a cricket singing outside at night.
+fc-el-0310	mantis	n.	螳螂	動物與寵物	The mantis caught a fly with its front legs.
+fc-el-0311	cockroach	n.	蟑螂	動物與寵物	Mom screamed when she saw a cockroach in the kitchen.
+fc-el-0312	beetle	n.	甲蟲	動物與寵物	My brother found a shiny black beetle under a log.
+fc-el-0313	ladybug	n.	瓢蟲	動物與寵物	A red ladybug with black spots landed on my hand.
+fc-el-0314	mosquito	n.	蚊子	動物與寵物	A mosquito bit my arm last night.
+fc-el-0315	wasp	n.	黃蜂	動物與寵物	Stay away from the wasp, or it might sting you.
+fc-el-0316	hornet	n.	虎頭蜂	動物與寵物	A hornet nest was found under the roof.
+fc-el-0317	cicada	n.	蟬	動物與寵物	The cicadas are very loud in summer.
+fc-el-0318	centipede	n.	蜈蚣	動物與寵物	A centipede has many legs and can bite.
+fc-el-0319	millipede	n.	馬陸	動物與寵物	The millipede curled up when I touched it.
+fc-el-0320	scorpion	n.	蠍子	動物與寵物	A scorpion has a stinger on its tail.
+fc-el-0321	spider	n.	蜘蛛	動物與寵物	A spider is making a web in the corner.
+fc-el-0322	strawberry	n.	草莓	食物與飲品	I love strawberry ice cream.
+fc-el-0323	blueberry	n.	藍莓	食物與飲品	She put a sweet blueberry on top of her yogurt.
+fc-el-0324	raspberry	n.	覆盆莓	食物與飲品	She made a raspberry cake for my birthday.
+fc-el-0325	blackberry	n.	黑莓	食物與飲品	Each ripe blackberry on the bush turned dark purple.
+fc-el-0326	cranberry	n.	蔓越莓	食物與飲品	Cranberry juice tastes a little sour.
+fc-el-0327	watermelon	n.	西瓜	食物與飲品	We ate cold watermelon on a hot summer day.
+fc-el-0328	melon	n.	甜瓜	食物與飲品	This melon is sweet and juicy.
+fc-el-0329	cantaloupe	n.	哈密瓜	食物與飲品	Mom cut a cantaloupe into small pieces for us.
+fc-el-0330	pineapple	n.	鳳梨	食物與飲品	Pineapple cakes are a famous gift from Taiwan.
+fc-el-0331	papaya	n.	木瓜	食物與飲品	I like to drink papaya milk for breakfast.
+fc-el-0332	mango	n.	芒果	食物與飲品	Mango shaved ice is my favorite summer dessert.
+fc-el-0333	guava	n.	芭樂	食物與飲品	Grandpa grows guavas in his backyard.
+fc-el-0334	peach	n.	桃子	食物與飲品	This peach is soft and very sweet.
+fc-el-0335	pear	n.	梨子	食物與飲品	She cut a pear in half and gave me one piece.
+fc-el-0336	plum	n.	李子	食物與飲品	The purple plums on the tree are ready to eat.
+fc-el-0337	cherry	n.	櫻桃	食物與飲品	There is a red cherry on top of the cake.
+fc-el-0338	lemon	n.	檸檬	食物與飲品	Lemons taste very sour.
+fc-el-0339	lime	n.	萊姆	食物與飲品	He added some lime juice to his drink.
+fc-el-0340	grapefruit	n.	葡萄柚	食物與飲品	I ate half a grapefruit for breakfast.
+fc-el-0341	kiwi	n.	奇異果	食物與飲品	A kiwi is brown outside and green inside.
+fc-el-0342	avocado	n.	酪梨	食物與飲品	She put some avocado in her salad.
+fc-el-0343	coconut	n.	椰子	食物與飲品	We drank coconut water on the beach.
+fc-el-0344	pomegranate	n.	石榴	食物與飲品	A pomegranate is full of small red seeds.
+fc-el-0345	fig	n.	無花果	食物與飲品	Figs are soft and sweet inside.
+fc-el-0346	apricot	n.	杏桃	食物與飲品	Grandma made apricot jam last summer.
+fc-el-0347	persimmon	n.	柿子	食物與飲品	Persimmons turn orange in the fall.
+fc-el-0348	lychee	n.	荔枝	食物與飲品	Lychees are sweet fruits that grow in summer.
+fc-el-0349	dragonfruit	n.	火龍果	食物與飲品	The inside of this dragonfruit is bright red.
+fc-el-0350	passionfruit	n.	百香果	食物與飲品	I like green tea with passionfruit.
+fc-el-0351	durian	n.	榴槤	食物與飲品	Some people love durian, but others hate its smell.
+fc-el-0352	carrot	n.	胡蘿蔔	食物與飲品	Rabbits like to eat carrots.
+fc-el-0353	onion	n.	洋蔥	食物與飲品	Cutting an onion always makes me cry.
+fc-el-0354	garlic	n.	大蒜	食物與飲品	Dad added some garlic to the fried vegetables.
+fc-el-0355	ginger	n.	生薑	食物與飲品	Mom made hot ginger tea when I had a cold.
+fc-el-0356	cucumber	n.	黃瓜	食物與飲品	She put cucumber slices in the sandwich.
+fc-el-0357	cabbage	n.	高麗菜	食物與飲品	Grandma bought a big cabbage at the market.
+fc-el-0358	lettuce	n.	萵苣	食物與飲品	I put lettuce and tomato in my burger.
+fc-el-0359	spinach	n.	菠菜	食物與飲品	Spinach is a green vegetable that is good for you.
+fc-el-0360	broccoli	n.	綠花椰菜	食物與飲品	My little brother does not like to eat broccoli.
+fc-el-0361	cauliflower	n.	白花椰菜	食物與飲品	Cauliflower looks like white broccoli.
+fc-el-0362	celery	n.	芹菜	食物與飲品	Mom cut some celery for the soup.
+fc-el-0363	asparagus	n.	蘆筍	食物與飲品	We had grilled asparagus with our steak.
+fc-el-0364	eggplant	n.	茄子	食物與飲品	Eggplant is purple on the outside.
+fc-el-0365	zucchini	n.	節瓜	食物與飲品	Dad cooked zucchini with tomatoes for lunch.
+fc-el-0366	pumpkin	n.	南瓜	食物與飲品	We carved a big pumpkin for Halloween.
+fc-el-0367	squash	n.	倭瓜	食物與飲品	Mom made sweet squash soup for dinner.
+fc-el-0368	corn	n.	玉米	食物與飲品	We ate grilled corn at the night market.
+fc-el-0369	bean	n.	豆子	食物與飲品	We planted a bean in a cup for science class.
+fc-el-0370	pea	n.	豌豆	食物與飲品	There are green peas in the fried rice.
+fc-el-0371	soybean	n.	大豆	食物與飲品	Soy milk is made from soybeans.
+fc-el-0372	lentil	n.	小扁豆	食物與飲品	She cooked lentil soup for lunch.
+fc-el-0373	chickpea	n.	鷹嘴豆	食物與飲品	Hummus is made from chickpeas.
+fc-el-0374	mushroom	n.	蘑菇	食物與飲品	Don't eat a wild mushroom you find in the forest.
+fc-el-0375	radish	n.	蘿蔔	食物與飲品	Grandma uses radish to make turnip cakes.
+fc-el-0376	turnip	n.	蕪菁	食物與飲品	Turnips grow under the ground.
+fc-el-0377	beet	n.	甜菜	食物與飲品	Beets are dark red.
+fc-el-0379	yam	n.	山藥	食物與飲品	Yam is good in soup.
+fc-el-0382	chili	n.	辣椒	食物與飲品	This chili is very hot.
+fc-el-0383	scallion	n.	青蔥	食物與飲品	Add some scallions to the soup.
+fc-el-0384	leek	n.	韭蔥	食物與飲品	Leek soup is tasty.
+fc-el-0385	olive	n.	橄欖	食物與飲品	Olive oil is healthy.
+fc-el-0386	toast	n.	吐司	食物與飲品	I eat toast with jam.
+fc-el-0387	pancake	n.	鬆餅、薄煎餅	食物與飲品	We have pancakes on Sunday.
+fc-el-0388	waffle	n.	格子鬆餅	食物與飲品	I like waffles with honey.
+fc-el-0389	muffin	n.	瑪芬鬆餅	食物與飲品	I had a blueberry muffin.
+fc-el-0390	bagel	n.	貝果	食物與飲品	I eat a bagel for breakfast.
+fc-el-0391	croissant	n.	可頌麵包	食物與飲品	She bought a croissant.
+fc-el-0392	biscuit	n.	餅乾、司康	食物與飲品	I had tea and a biscuit.
+fc-el-0393	cracker	n.	蘇打餅乾	食物與飲品	I eat crackers with cheese.
+fc-el-0394	cereal	n.	穀片、麥片	食物與飲品	I eat cereal with milk.
+fc-el-0395	oatmeal	n.	燕麥片	食物與飲品	Oatmeal is a healthy breakfast.
+fc-el-0396	porridge	n.	粥、稀飯	食物與飲品	I eat porridge when I am sick.
+fc-el-0397	dumpling	n.	水餃	食物與飲品	We make dumplings for New Year.
+fc-el-0399	bun	n.	小圓麵包、包子	食物與飲品	I ate a pork bun.
+fc-el-0401	hotdog	n.	熱狗	食物與飲品	He bought a warm hotdog at the baseball stadium.
+fc-el-0402	taco	n.	塔可捲餅	食物與飲品	Tacos are from Mexico.
+fc-el-0403	burrito	n.	墨西哥捲餅	食物與飲品	I ordered a chicken burrito.
+fc-el-0404	spaghetti	n.	義大利麵	食物與飲品	I like spaghetti with meatballs.
+fc-el-0405	pasta	n.	義大利麵食	食物與飲品	Pasta is from Italy.
+fc-el-0406	steak	n.	牛排	食物與飲品	I ordered a steak.
+fc-el-0407	chop	n.	排骨、肉排	食物與飲品	I had a pork chop for lunch.
+fc-el-0408	bacon	n.	培根	食物與飲品	Bacon and eggs, please.
+fc-el-0409	sausage	n.	香腸	食物與飲品	I like grilled sausages.
+fc-el-0410	ham	n.	火腿	食物與飲品	I put ham in my sandwich.
+fc-el-0411	butter	n.	奶油	食物與飲品	Spread butter on the bread.
+fc-el-0412	cheese	n.	乳酪、起司	食物與飲品	Mice love cheese.
+fc-el-0413	yogurt	n.	優格	食物與飲品	I eat yogurt every morning.
+fc-el-0414	cream	n.	鮮奶油	食物與飲品	I like coffee with cream.
+fc-el-0415	mayonnaise	n.	美乃滋	食物與飲品	Do you want mayonnaise?
+fc-el-0416	ketchup	n.	番茄醬	食物與飲品	Put ketchup on the fries.
+fc-el-0417	mustard	n.	芥末醬	食物與飲品	I put mustard on my hot dog.
+fc-el-0418	sauce	n.	醬汁	食物與飲品	This sauce is spicy.
+fc-el-0419	pepper	n.	胡椒粉	食物與飲品	Add salt and pepper.
+fc-el-0420	vinegar	n.	醋	食物與飲品	Vinegar tastes sour.
+fc-el-0421	oil	n.	食用油	食物與飲品	Cook it in a little oil.
+fc-el-0422	honey	n.	蜂蜜	食物與飲品	Bees make honey.
+fc-el-0423	syrup	n.	糖漿	食物與飲品	I pour syrup on my pancakes.
+fc-el-0424	jam	n.	果醬	食物與飲品	I like strawberry jam.
+fc-el-0425	peanut	n.	花生	食物與飲品	He is allergic to peanuts.
+fc-el-0426	walnut	n.	核桃	食物與飲品	Walnuts look like little brains.
+fc-el-0427	almond	n.	杏仁	食物與飲品	Almond milk is sweet.
+fc-el-0428	cashew	n.	腰果	食物與飲品	Cashews are curved.
+fc-el-0429	hazelnut	n.	榛果	食物與飲品	I like hazelnut chocolate.
+fc-el-0430	chestnut	n.	栗子	食物與飲品	We roast chestnuts in winter.
+fc-el-0431	popcorn	n.	爆米花	食物與飲品	Let's eat popcorn at the movies.
+fc-el-0432	donut	n.	甜甜圈	食物與飲品	I want a chocolate donut.
+fc-el-0433	pudding	n.	布丁	食物與飲品	The pudding is soft.
+fc-el-0434	jelly	n.	果凍	食物與飲品	Kids like jelly.
+fc-el-0435	pie	n.	派、餡餅	食物與飲品	Would you like apple pie?
+fc-el-0436	tart	n.	蛋塔、水果塔	食物與飲品	Egg tarts are sweet.
+fc-el-0437	lollipop	n.	棒棒糖	食物與飲品	The child has a lollipop.
+fc-el-0438	gum	n.	口香糖	食物與飲品	Don't chew gum in class.
+fc-el-0439	marshmallow	n.	棉花糖	食物與飲品	We toast marshmallows over the fire.
+fc-el-0440	soda	n.	汽水	食物與飲品	I drink soda at parties.
+fc-el-0441	cola	n.	可樂	食物與飲品	A cola, please.
+fc-el-0442	lemonade	n.	檸檬水	食物與飲品	We sell lemonade in summer.
+fc-el-0444	milkshake	n.	奶昔	食物與飲品	I want a chocolate milkshake.
+fc-el-0445	cocoa	n.	熱可可	食物與飲品	Hot cocoa is sweet.
+fc-el-0446	marker	n.	麥克筆、彩色筆	學校與文具	Write with a red marker.
+fc-el-0448	crayon	n.	蠟筆	學校與文具	The child draws with crayons.
+fc-el-0449	chalk	n.	粉筆	學校與文具	The teacher writes with chalk.
+fc-el-0450	scissors	n.	剪刀	學校與文具	Be careful with scissors.
+fc-el-0451	glue	n.	膠水	學校與文具	Use glue to stick the paper.
+fc-el-0452	tape	n.	膠帶	學校與文具	I need some tape.
+fc-el-0453	stapler	n.	訂書機	學校與文具	Can I use your stapler?
+fc-el-0454	staple	n.	訂書針	學校與文具	I need more staples.
+fc-el-0455	clip	n.	迴紋針	學校與文具	Use a clip to hold the papers.
+fc-el-0456	folder	n.	文件夾	學校與文具	Put the paper in your folder.
+fc-el-0457	binder	n.	活頁夾	學校與文具	My binder is full.
+fc-el-0458	calculator	n.	計算機	學校與文具	Use a calculator for this problem.
+fc-el-0459	compass	n.	圓規、指南針	學校與文具	Use a compass to draw a circle.
+fc-el-0460	globe	n.	地球儀	學校與文具	Find Taiwan on the globe.
+fc-el-0461	microscope	n.	顯微鏡	學校與文具	We use a microscope in science class.
+fc-el-0462	telescope	n.	望遠鏡	學校與文具	I look at stars with a telescope.
+fc-el-0463	bell	n.	鐘、下課鈴	學校與文具	The bell rings at noon.
+fc-el-0464	subject	n.	學科、科目	學校與文具	My favorite subject is science.
+fc-el-0465	math	n.	數學	學校與文具	Math is my favorite subject.
+fc-el-0466	science	n.	自然科學	學校與文具	We learn science at school.
+fc-el-0467	history	n.	歷史	學校與文具	I like history class.
+fc-el-0468	geography	n.	地理	學校與文具	We study maps in geography.
+fc-el-0469	music	n.	音樂	學校與文具	I listen to music every day.
+fc-el-0470	art	n.	美術、藝術	學校與文具	I would rather go to the art museum than to the movie theater.
+fc-el-0471	sports	n.	體育、運動	學校與文具	I like sports.
+fc-el-0472	gym	n.	體育館、健身房	學校與文具	We play basketball in the gym.
+fc-el-0473	stadium	n.	大型體育場	學校與文具	The stadium is full of fans.
+fc-el-0474	court	n.	球場	學校與文具	We play tennis on the court.
+fc-el-0475	pool	n.	游泳池	學校與文具	Let's swim in the pool.
+fc-el-0476	hall	n.	禮堂、走廊	學校與文具	The concert is in the hall.
+fc-el-0477	office	n.	辦公室	學校與文具	My mom works in an office.
+fc-el-0478	principal	n.	校長	學校與文具	The principal gave a speech.
+fc-el-0479	counselor	n.	輔導老師	學校與文具	I talked to the school counselor.
+fc-el-0480	librarian	n.	圖書館員	學校與文具	The librarian helped me find a book.
+fc-el-0481	uniform	n.	制服	學校與文具	We wear uniforms at school.
+fc-el-0482	diploma	n.	畢業證書	學校與文具	She got her diploma.
+fc-el-0483	certificate	n.	獎狀、證書	學校與文具	I got a certificate for reading.
+fc-el-0484	prize	n.	獎品、獎項	學校與文具	She won first prize.
+fc-el-0485	medal	n.	獎牌	學校與文具	He won a gold medal.
+fc-el-0486	trophy	n.	獎盃	學校與文具	Our team won the trophy.
+fc-el-0487	ribbon	n.	彩帶	學校與文具	She wears a red ribbon.
+fc-el-0488	recess	n.	下課休息時間	學校與文具	We play outside at recess.
+fc-el-0489	vacation	n.	假期	學校與文具	We go to the beach on vacation.
+fc-el-0490	semester	n.	學期	學校與文具	The new semester starts in September.
+fc-el-0491	term	n.	學期、期限	學校與文具	The term ends in June.
+fc-el-0492	quiz	n.	小考	學校與文具	We have a quiz today.
+fc-el-0493	exam	n.	大考、測驗	學校與文具	I have an exam tomorrow.
+fc-el-0494	score	n.	分數、得分	學校與文具	What's the score?
+fc-el-0495	mistake	n.	錯誤、過失	學校與文具	Everyone makes mistakes.
+fc-el-0496	rule	n.	校規、規則	學校與文具	Follow the school rules.
+fc-el-0497	habit	n.	習慣	學校與文具	Reading is a good habit.
+fc-el-0498	throat	n.	喉嚨	身體與健康	I have a sore throat.
+fc-el-0499	chest	n.	胸部	身體與健康	Put your hand on your chest.
+fc-el-0500	stomach	n.	胃、肚子	身體與健康	My stomach hurts.
+fc-el-0501	belly	n.	腹部	身體與健康	The baby laughed when I tickled her belly.
+fc-el-0502	waist	n.	腰部	身體與健康	These pants are too big around my waist.
+fc-el-0503	hip	n.	臀部、髖部	身體與健康	She held the baby on her hip while she cooked.
+fc-el-0504	back	n.	背部	身體與健康	My back hurts after carrying the heavy box.
+fc-el-0505	spine	n.	脊椎	身體與健康	Sit up straight to keep your spine healthy.
+fc-el-0506	shoulder	n.	肩膀	身體與健康	My little brother sat on Dad's shoulders to see the parade.
+fc-el-0507	elbow	n.	手肘	身體與健康	Please take your elbows off the dinner table.
+fc-el-0508	wrist	n.	手腕	身體與健康	She wears a pink watch on her left wrist.
+fc-el-0509	palm	n.	手掌	身體與健康	The little bird sat in the palm of my hand.
+fc-el-0510	finger	n.	手指	身體與健康	The baby held my finger with her tiny hand.
+fc-el-0511	thumb	n.	大拇指	身體與健康	He gave me a thumbs-up after my song.
+fc-el-0512	nail	n.	指甲	身體與健康	Mom told me to cut my nails before school.
+fc-el-0513	thigh	n.	大腿	身體與健康	He hurt his thigh while playing soccer.
+fc-el-0514	knee	n.	膝蓋	身體與健康	I fell off my bike and hurt my knee.
+fc-el-0515	ankle	n.	腳踝	身體與健康	She twisted her ankle while running down the stairs.
+fc-el-0516	heel	n.	腳後跟	身體與健康	My new shoes gave me a blister on my heel.
+fc-el-0517	toe	n.	腳趾	身體與健康	Ouch! I hit my toe on the table leg.
+fc-el-0518	skin	n.	皮膚	身體與健康	Wear a hat to protect your skin from the sun.
+fc-el-0519	bone	n.	骨頭	身體與健康	The dog is chewing on a big bone.
+fc-el-0520	muscle	n.	肌肉	身體與健康	Lifting weights helps you build strong muscles.
+fc-el-0521	blood	n.	血液	身體與健康	There was a little blood on his knee after he fell.
+fc-el-0522	brain	n.	大腦	身體與健康	Use your brain.
+fc-el-0523	lung	n.	肺臟	身體與健康	Smoking is very bad for your lungs.
+fc-el-0524	liver	n.	肝臟	身體與健康	Drinking too much alcohol can hurt your liver.
+fc-el-0525	kidney	n.	腎臟	身體與健康	Your kidneys help clean your blood.
+fc-el-0526	forehead	n.	額頭	身體與健康	Mom touched my forehead to see if I had a fever.
+fc-el-0527	eyebrow	n.	眉毛	身體與健康	He raised his eyebrows in surprise.
+fc-el-0528	eyelash	n.	睫毛	身體與健康	She has long, dark eyelashes.
+fc-el-0529	eyelid	n.	眼皮	身體與健康	My eyelids feel heavy because I am so sleepy.
+fc-el-0530	cheek	n.	臉頰	身體與健康	Grandma kissed me on the cheek.
+fc-el-0531	chin	n.	下巴	身體與健康	He rested his chin on his hand and listened.
+fc-el-0532	jaw	n.	顎骨	身體與健康	The boxer got hit on the jaw.
+fc-el-0533	lip	n.	嘴唇	身體與健康	My lips get dry in the winter.
+fc-el-0534	tongue	n.	舌頭	身體與健康	The hot soup burned my tongue.
+fc-el-0535	toothache	n.	牙痛	身體與健康	I ate too much candy, and now I have a toothache.
+fc-el-0536	headache	n.	頭痛	身體與健康	I have a headache, so I want to lie down.
+fc-el-0537	stomachache	n.	肚子痛	身體與健康	He got a stomachache after eating too fast.
+fc-el-0538	fever	n.	發燒	身體與健康	She has a high fever and must stay home today.
+fc-el-0539	cough	n.	咳嗽	身體與健康	Drink some warm water for your cough.
+fc-el-0540	sneeze	v. / n.	打噴嚏	身體與健康	Dust always makes me sneeze.
+fc-el-0541	bandage	n.	繃帶、OK繃	身體與健康	The nurse put a bandage on my cut finger.
+fc-el-0542	pill	n.	藥丸	身體與健康	Take one pill after each meal.
+fc-el-0543	capsule	n.	膠囊	身體與健康	Swallow the capsule with a glass of water.
+fc-el-0544	tablet	n.	藥片	身體與健康	The doctor told me to take two tablets a day.
+fc-el-0545	ointment	n.	藥膏	身體與健康	Put some ointment on the bug bite.
+fc-el-0546	thermometer	n.	體溫計	身體與健康	The nurse used a thermometer to check my temperature.
+fc-el-0547	stethoscope	n.	聽診器	身體與健康	The doctor listened to my heart with a stethoscope.
+fc-el-0548	syringe	n.	針筒	身體與健康	The nurse filled the syringe with medicine.
+fc-el-0549	wheelchair	n.	輪椅	身體與健康	My grandpa uses a wheelchair to get around.
+fc-el-0550	crutch	n.	拐杖	身體與健康	He broke his leg and walked with a crutch for a month.
+fc-el-0551	stretcher	n.	擔架	身體與健康	They carried the hurt player off the field on a stretcher.
+fc-el-0552	ambulance	n.	救護車	身體與健康	Call an ambulance! Someone is hurt!
+fc-el-0553	dentist	n.	牙醫	身體與健康	I go to the dentist twice a year to check my teeth.
+fc-el-0554	surgeon	n.	外科醫生	身體與健康	The surgeon operated on her heart for five hours.
+fc-el-0555	patient	n.	病人	身體與健康	The doctor sees many patients every day.
+fc-el-0556	clinic	n.	診所	身體與健康	I went to the clinic because I had a bad cold.
+fc-el-0557	pharmacy	n.	藥局	身體與健康	You can buy cold medicine at the pharmacy.
+fc-el-0558	sweater	n.	毛衣	服飾與配件	It's cold outside, so put on your sweater.
+fc-el-0559	hoodie	n.	連帽T恤	服飾與配件	He pulled up the hood of his hoodie in the rain.
+fc-el-0560	cardigan	n.	開襟羊毛衫	服飾與配件	Grandma knitted me a warm cardigan with big buttons.
+fc-el-0561	vest	n.	背心	服飾與配件	He wore a vest over his shirt.
+fc-el-0562	suit	n.	西裝	服飾與配件	Dad wears a suit and tie to work.
+fc-el-0563	tuxedo	n.	晚禮服、燕尾服	服飾與配件	The groom wore a black tuxedo at the wedding.
+fc-el-0564	blouse	n.	女用襯衫	服飾與配件	She wore a white blouse and a blue skirt.
+fc-el-0565	jeans	n.	牛仔褲	服飾與配件	I like to wear jeans on the weekend.
+fc-el-0566	shorts	n.	短褲	服飾與配件	It's so hot today that I'm wearing shorts.
+fc-el-0567	trousers	n.	長褲	服飾與配件	His trousers are too long, so they touch the floor.
+fc-el-0568	overalls	n.	吊帶褲	服飾與配件	The farmer wore blue overalls in the field.
+fc-el-0569	pajamas	n.	睡衣	服飾與配件	Put on your pajamas and get ready for bed.
+fc-el-0570	robe	n.	浴袍、長袍	服飾與配件	After her bath, she put on a soft robe.
+fc-el-0571	raincoat	n.	雨衣	服飾與配件	Wear your raincoat; it's raining hard.
+fc-el-0572	swimsuit	n.	泳衣	服飾與配件	Don't forget your swimsuit for the pool party.
+fc-el-0573	bikini	n.	比基尼泳裝	服飾與配件	She wore a red bikini at the beach.
+fc-el-0574	trunks	n.	泳褲	服飾與配件	He packed his swimming trunks for the beach trip.
+fc-el-0575	underwear	n.	內衣褲	服飾與配件	Pack enough clean underwear for the trip.
+fc-el-0576	boots	n.	靴子	服飾與配件	She wears warm boots when it snows.
+fc-el-0577	sneakers	n.	運動球鞋	服飾與配件	I wear sneakers to PE class.
+fc-el-0578	sandals	n.	涼鞋	服飾與配件	In summer, I wear sandals instead of shoes.
+fc-el-0579	slippers	n.	室內拖鞋	服飾與配件	Please put on your slippers when you come inside.
+fc-el-0580	flip-flops	n.	夾腳拖鞋	服飾與配件	We wore flip-flops to walk on the hot sand.
+fc-el-0581	high heels	n.	高跟鞋	服飾與配件	My feet hurt after wearing high heels all day.
+fc-el-0582	gloves	n.	手套 (五指)	服飾與配件	Wear gloves to keep your hands warm.
+fc-el-0583	mittens	n.	連指手套	服飾與配件	The little girl wore red mittens in the snow.
+fc-el-0584	scarf	n.	圍巾	服飾與配件	She wrapped a wool scarf around her neck.
+fc-el-0585	belt	n.	皮帶、腰帶	服飾與配件	These pants are loose, so I need a belt.
+fc-el-0586	tie	n.	領帶	服飾與配件	Dad wears a tie to important meetings.
+fc-el-0587	bowtie	n.	蝴蝶領結	服飾與配件	The little boy wore a bowtie to the wedding.
+fc-el-0588	ring	n.	戒指	服飾與配件	He gave her a gold ring on her birthday.
+fc-el-0589	necklace	n.	項鍊	服飾與配件	She wears a pearl necklace for special occasions.
+fc-el-0590	bracelet	n.	手鍊、手鐲	服飾與配件	My friend made me a bracelet with colorful beads.
+fc-el-0591	earring	n.	耳環	服飾與配件	She lost one of her silver earrings at school.
+fc-el-0592	purse	n.	女用手提包、錢包	服飾與配件	Mom keeps her keys and phone in her purse.
+fc-el-0593	wallet	n.	皮夾、短夾	服飾與配件	I left my wallet at home, so I have no money.
+fc-el-0594	umbrella	n.	雨傘	服飾與配件	Take an umbrella; it might rain later.
+fc-el-0595	parasol	n.	遮陽傘	服飾與配件	She carried a parasol to stay out of the sun.
+fc-el-0596	sunglasses	n.	太陽眼鏡	服飾與配件	I wear sunglasses when it's very sunny.
+fc-el-0597	glasses	n.	眼鏡	服飾與配件	Grandpa can't read without his glasses.
+fc-el-0598	pocket	n.	口袋	服飾與配件	He put his hands in his pockets to keep warm.
+fc-el-0599	button	n.	鈕扣	服飾與配件	A button fell off my shirt.
+fc-el-0600	zipper	n.	拉鍊	服飾與配件	The zipper on my jacket is stuck.
+fc-el-0601	shoelace	n.	鞋帶	服飾與配件	Tie your shoelace, or you might fall.
+fc-el-0602	collar	n.	衣領	服飾與配件	There is a coffee stain on your shirt collar.
+fc-el-0603	sleeve	n.	袖子	服飾與配件	Roll up your sleeves before you wash your hands.
+fc-el-0604	kitchen	n.	廚房	居家與生活	Mom is cooking dinner in the kitchen.
+fc-el-0605	bedroom	n.	臥室	居家與生活	My bedroom has a bed, a desk, and a big window.
+fc-el-0606	bathroom	n.	浴室、洗手間	居家與生活	Can I use your bathroom, please?
+fc-el-0607	living room	n.	客廳	居家與生活	We watch TV together in the living room.
+fc-el-0608	dining room	n.	餐廳 (房間)	居家與生活	We eat dinner together in the dining room.
+fc-el-0609	balcony	n.	陽台	居家與生活	Mom grows flowers on our balcony.
+fc-el-0610	porch	n.	門廊	居家與生活	Grandpa likes to sit on the porch and drink tea.
+fc-el-0611	hallway	n.	玄關、走廊	居家與生活	Please leave your shoes in the hallway.
+fc-el-0612	attic	n.	閣樓	居家與生活	We keep old toys and boxes in the attic.
+fc-el-0613	basement	n.	地下室	居家與生活	The washing machine is down in the basement.
+fc-el-0614	garage	n.	車庫	居家與生活	Dad parks the car in the garage.
+fc-el-0615	yard	n.	院子	居家與生活	The kids are playing ball in the yard.
+fc-el-0616	patio	n.	露台	居家與生活	We had a barbecue on the patio last night.
+fc-el-0617	roof	n.	屋頂	居家與生活	A cat is sleeping on the roof of our house.
+fc-el-0618	chimney	n.	煙囪	居家與生活	Smoke is coming out of the chimney.
+fc-el-0619	ceiling	n.	天花板	居家與生活	There is a big fan on the ceiling.
+fc-el-0620	floor	n.	地板	居家與生活	Don't leave your toys on the floor.
+fc-el-0621	wall	n.	牆壁	居家與生活	We hung a family photo on the wall.
+fc-el-0622	fence	n.	柵欄、圍籬	居家與生活	The dog jumped over the fence.
+fc-el-0623	gate	n.	大門、庭院門	居家與生活	Please close the gate so the dog can't get out.

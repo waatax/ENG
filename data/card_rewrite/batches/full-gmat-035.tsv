@@ -1,0 +1,73 @@
+id	word	pos	zh	category
+fc-gm-0629	currency devaluation	n.	貨幣人為貶值促進出口增加貿易出超	商業決策與可行性
+fc-gm-0630	currency revaluation	n.	貨幣升值重估增加進口購買力抑制通膨	商業決策與可行性
+fc-gm-0631	foreign direct investment	n.	外商直接投資FDI設立廠房實體投資	商業決策與可行性
+fc-gm-0632	hot money flow	n.	熱錢跨境短期投機套利炒作熱錢	商業決策與可行性
+fc-gm-0633	current account deficit	n.	經常帳赤字商品勞務進口支出大於出口	商業決策與可行性
+fc-gm-0634	current account surplus	n.	經常帳順差淨出口創匯累積外匯儲備	商業決策與可行性
+fc-gm-0635	terms of trade	n.	貿易條件出口物價除以進口物價比值	商業決策與可行性
+fc-gm-0636	absolute advantage	n.	絕對優勢生產某商品成本絕對最低	商業決策與可行性
+fc-gm-0637	non-tariff barrier	n.	非關稅壁壘進口配額檢驗標準限制	商業決策與可行性
+fc-gm-0638	voluntary export restraint	n.	自動出口限制雙邊妥協減少摩擦	商業決策與可行性
+fc-gm-0639	import licensing	n.	進口許可證審查制度限制非必要進口	商業決策與可行性
+fc-gm-0640	patent expiration	n.	專利到期面臨學名藥低價劇烈競爭	商業決策與可行性
+fc-gm-0641	generic drug competition	n.	學名藥競爭專利失效後毛利率暴跌	商業決策與可行性
+fc-gm-0642	brand erosion	n.	品牌價值侵蝕過度打折傷害高端形象	商業決策與可行性
+fc-gm-0643	market concentration	n.	市場集中度少數龍頭大廠控制份額	商業決策與可行性
+fc-gm-0644	Herfindahl-Hirschman Index	n.	HHI指數反壟斷審查市場集中度指標	評估與因果關係鏈
+fc-gm-0645	monopoly rent	n.	壟斷租金因缺乏競爭獲得之超額利潤	商業決策與可行性
+fc-gm-0646	contestable market	n.	可競爭市場進出無門檻迫使廠商合理定價	商業決策與可行性
+fc-gm-0647	natural monopoly	n.	自然獨占自來水電網重資產規模獨大	商業決策與可行性
+fc-gm-0648	price cap regulation	n.	價格上限管制政府限縮公用事業收費	商業決策與可行性
+fc-gm-0649	cost-plus pricing	n.	成本加成定價法生產成本外加固定利潤	商業決策與可行性
+fc-gm-0650	target costing	n.	目標成本法由市價倒推可允許生產成本	商業決策與可行性
+fc-gm-0651	activity-based costing	n.	作業基礎成本法ABC精確分攤間接費用	商業決策與可行性
+fc-gm-0652	variance analysis	n.	差異分析實務預算與實際開銷偏差檢討	評估與因果關係鏈
+fc-gm-0653	flexible budgeting	n.	彈性預算隨實際業務量動態調整之預算	商業決策與可行性
+fc-gm-0654	zero-based budgeting	n.	零基預算每年從零開始重新審核每項開銷	商業決策與可行性
+fc-gm-0655	capital rationing	n.	資本限額資金有限下挑選NPV最高專案	商業決策與可行性
+fc-gm-0656	real options valuation	n.	實質選擇權延後擴充或放棄之決策彈性	商業決策與可行性
+fc-gm-0657	financial distress	n.	財務困境現金流不足以支應借貸利息	商業決策與可行性
+fc-gm-0658	debt restructuring	n.	債務重組展延到期日或降低利息約定	商業決策與可行性
+fc-gm-0659	workout agreement	n.	債權協議非破產途徑庭外和解重組協議	商業決策與可行性
+fc-gm-0660	distressed asset	n.	不良資產嚴重受挫賤價拍賣之資產	商業決策與可行性
+fc-gm-0661	vulture fund	n.	禿鷹基金低價收購破產債權逼迫重組獲利	商業決策與可行性
+fc-gm-0662	debt covenant	n.	債券承諾條款限制借款人進一步借債	批判邏輯與前提
+fc-gm-0663	positive covenant	n.	肯定承諾條款約定維持特定流動比率	批判邏輯與前提
+fc-gm-0664	negative covenant	n.	否定限制條款禁止未經同意發放高股息	批判邏輯與前提
+fc-gm-0665	cross-default provision	n.	交叉違約條款任一債務違約即全面到期	商業決策與可行性
+fc-gm-0666	pari passu clause	n.	同等權益條款無擔保債券平起平坐受償	商業決策與可行性
+fc-gm-0667	subordination agreement	n.	次順位協議後順位清償次級債券合約	商業決策與可行性
+fc-gm-0668	senior secured debt	n.	優先有擔保債券擁有特定不動產抵押權	商業決策與可行性
+fc-gm-0669	unsecured junior bond	n.	無擔保次級債券風險高殖利率相應高	商業決策與可行性
+fc-gm-0670	convertible debenture	n.	可轉換信用債券兼具債息與股票上漲期權	商業決策與可行性
+fc-gm-0671	warrant attachment	n.	附認股權證附帶以約定價認購新股權利	商業決策與可行性
+fc-gm-0672	stock option grant	n.	認股權發放高階員工激勵激發敬業精神	商業決策與可行性
+fc-gm-0673	restricted stock unit	n.	受限股票單位RSU按服務年限分批發放	商業決策與可行性
+fc-gm-0674	vesting period	n.	既得歸屬期股票選擇權閉鎖不得變現期	商業決策與可行性
+fc-gm-0675	phantom stock	n.	虛擬股票享有股價分紅但不給予真實股權	商業決策與可行性
+fc-gm-0676	performance share	n.	績效股票達成特定業績目標才予兌現	商業決策與可行性
+fc-gm-0677	golden handshake	n.	黃金握手優退優離巨額補償金協議	商業決策與可行性
+fc-gm-0678	clawback policy	n.	追回機制財報重編時追繳高管績效獎金	商業決策與可行性
+fc-gm-0679	board independence	n.	董事會獨立性獨立董事過半監督利益	商業決策與可行性
+fc-gm-0680	audit committee	n.	審計委員會全由獨立董事組成把關財報	商業決策與可行性
+fc-gm-0681	compensation committee	n.	薪酬委員會核定經理人薪酬避免自肥	商業決策與可行性
+fc-gm-0682	nominating committee	n.	提名委員會遴選董事候選人專業背景	商業決策與可行性
+fc-gm-0683	lead independent director	n.	首席獨立董事代表外部股東主持會議	商業決策與可行性
+fc-gm-0684	shareholder derivative suit	n.	股東代表訴訟股東代公司向前高管求償	商業決策與可行性
+fc-gm-0685	piercing the corporate veil	n.	揭開公司面紗追究幕後股東無限清償責	商業決策與可行性
+fc-gm-0686	business judgment rule	n.	商業判斷法則善盡注意義務者免除賠償	商業決策與可行性
+fc-gm-0687	ultra vires act	n.	越權行為超出公司章程授權之違法合約	商業決策與可行性
+fc-gm-0688	hostile bidder	n.	敵意收購方未經董事會同意發動突襲者	商業決策與可行性
+fc-gm-0689	target company	n.	被收購目標公司遭各方角逐爭奪之標的	商業決策與可行性
+fc-gm-0690	white knight defense	n.	白武士防禦尋求友善第三方高價收購	商業決策與可行性
+fc-gm-0691	crown jewel defense	n.	皇冠明珠防禦出售最核心資產擊退惡意	商業決策與可行性
+fc-gm-0692	Pac-Man defense	n.	小精靈防禦反向收購敵意方股份制敵	商業決策與可行性
+fc-gm-0693	greenmail payment	n.	綠色勒索支付溢價購回狙擊手所持股份	商業決策與可行性
+fc-gm-0694	standby commitment	n.	備用承諾承銷商保證吃下未認購剩餘股	商業決策與可行性
+fc-gm-0695	firm commitment underwriting	n.	包銷承銷商自負滯銷風險全額買斷	商業決策與可行性
+fc-gm-0696	best efforts underwriting	n.	代銷承銷商盡力銷售不負未售完責任	商業決策與可行性
+fc-gm-0697	greenshoe option	n.	綠鞋選擇權超額配售權穩定上市首發價	商業決策與可行性
+fc-gm-0698	lock-up period	n.	IPO閉鎖期內部重大股東半年內禁止拋售	商業決策與可行性
+fc-gm-0699	roadshow	n.	法人說明巡迴路演向大戶機構簡報募資	商業決策與可行性
+fc-gm-0700	book building	n.	詢價圈購收集機構法人意向訂立承銷價	商業決策與可行性

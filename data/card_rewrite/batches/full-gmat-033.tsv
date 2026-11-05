@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-gm-0229	projection	n.	財務預測推估規劃	評估與因果關係鏈
+fc-gm-0230	projected	adj.	預估預測規劃中的	評估與因果關係鏈
+fc-gm-0231	variance	n.	統計變異數變動差異量	評估與因果關係鏈
+fc-gm-0232	outlier	n.	統計離群值極端極值	評估與因果關係鏈
+fc-gm-0233	proprietary	adj.	專有的獨家專利擁有的	商業決策與可行性
+fc-gm-0234	divestiture	n.	事業資產剝離處分	商業決策與可行性
+fc-gm-0235	subsidiary	n. / adj.	子公司附屬機構；輔助從屬的	商業決策與可行性
+fc-gm-0236	conglomerate	n.	跨行業大型綜合企業集團	商業決策與可行性
+fc-gm-0237	dividend	n.	股票股利分紅年度配息	商業決策與可行性
+fc-gm-0238	equity	n.	股東權益自有資本資產淨值	商業決策與可行性
+fc-gm-0239	liability	n.	資產負債責任法律義務	商業決策與可行性
+fc-gm-0240	asset	n.	資產有價值寶貴資產	商業決策與可行性
+fc-gm-0241	yield	n. / v.	投資報酬率殖利率；產出產生	商業決策與可行性
+fc-gm-0242	economies of scale	n.	規模經濟大量生產降低均本	商業決策與可行性
+fc-gm-0243	comparative advantage	n.	比較優勢相對生產優勢	商業決策與可行性
+fc-gm-0244	barrier to entry	n.	市場進入門檻准入壁壘	商業決策與可行性
+fc-gm-0245	predatory	adj.	掠奪性定價毀滅對手的	商業決策與可行性
+fc-gm-0246	deregulation	n.	解除政府法規管制鬆綁	商業決策與可行性
+fc-gm-0247	deregulate	v.	放寬鬆綁法律限制	商業決策與可行性
+fc-gm-0248	fiscal	adj.	政府財政的預算稅收的	商業決策與可行性
+fc-gm-0249	monetary	adj.	央行貨幣政策的金融貨幣的	商業決策與可行性
+fc-gm-0250	aggregate	adj. / n.	總體聚合的；總合總量	商業決策與可行性
+fc-gm-0251	macroeconomic	adj.	總體經濟學大局觀點的	商業決策與可行性
+fc-gm-0252	microeconomic	adj.	個體經濟廠商消費者層次的	商業決策與可行性
+fc-gm-0253	equilibrium	n.	供需平衡市場出清均衡點	商業決策與可行性
+fc-gm-0254	marginal cost	n.	邊際成本增加一產出之成本	商業決策與可行性
+fc-gm-0255	marginal revenue	n.	邊際收益增產增加之營收	商業決策與可行性
+fc-gm-0256	utility	n.	消費者效用滿足度實用性	商業決策與可行性
+fc-gm-0257	subsidy	n.	政府補貼政策性津貼	商業決策與可行性
+fc-gm-0258	subsidize	v.	給予金錢補貼支助	商業決策與可行性
+fc-gm-0259	tariff	n.	關稅進口稅貿易壁壘	商業決策與可行性
+fc-gm-0260	quota	n.	配額進口限額生產限額	商業決策與可行性
+fc-gm-0261	protectionism	n.	貿易保護主義關稅壁壘	商業決策與可行性
+fc-gm-0262	trade deficit	n.	貿易逆差進口大於出口	商業決策與可行性
+fc-gm-0263	trade surplus	n.	貿易順差出口出超獲利	商業決策與可行性
+fc-gm-0264	capital expenditure	n.	資本支出廠房設備投資	商業決策與可行性
+fc-gm-0265	operating expense	n.	營運費用日常營運開銷	商業決策與可行性
+fc-gm-0266	net present value	n.	淨現值評估投資報酬基準	商業決策與可行性
+fc-gm-0267	internal rate of return	n.	內部報酬率折現衡量率	商業決策與可行性
+fc-gm-0268	discount rate	n.	折現率未來現金流折算率	商業決策與可行性
+fc-gm-0269	cash flow	n.	現金流量營運自由現金流	商業決策與可行性
+fc-gm-0270	breakeven	n. / adj.	損益兩平點；不賺不賠的	商業決策與可行性
+fc-gm-0271	gross margin	n.	毛利率毛利佔營收比	商業決策與可行性
+fc-gm-0272	operating margin	n.	營業利益率本業獲利率	商業決策與可行性
+fc-gm-0273	overhead	n.	經常性間接管理費用攤銷	商業決策與可行性
+fc-gm-0274	variable cost	n.	變動成本隨產量等比增長	商業決策與可行性
+fc-gm-0275	fixed cost	n.	固定成本廠房租金折舊	商業決策與可行性
+fc-gm-0276	sunk cost	n.	沉沒成本已投入不可回收開銷	商業決策與可行性
+fc-gm-0277	opportunity cost	n.	機會成本放棄次佳方案價值	商業決策與可行性
+fc-gm-0278	supply chain	n.	供應鏈上中下游體系	商業決策與可行性
+fc-gm-0279	inventory	n.	庫存存貨倉儲庫存量	商業決策與可行性
+fc-gm-0280	just-in-time	adj.	即時生產零庫存管理法	商業決策與可行性
+fc-gm-0281	lead time	n.	交付前置期下單至收貨時間	商業決策與可行性
+fc-gm-0282	cycle time	n.	生產週期時間流程運轉時間	商業決策與可行性
+fc-gm-0283	capacity utilization	n.	產能利用率產線運轉效率	商業決策與可行性
+fc-gm-0284	outsourcing	n.	業務外包第三方專業承包	商業決策與可行性
+fc-gm-0285	offshoring	n.	離岸外包海外設廠降成本	商業決策與可行性
+fc-gm-0286	insourcing	n.	內包自製收回內部生產	商業決策與可行性
+fc-gm-0287	vertical integration	n.	垂直整合控制上下游	商業決策與可行性
+fc-gm-0288	horizontal integration	n.	水平整合同業併購擴大市佔	商業決策與可行性
+fc-gm-0289	due diligence	n.	實地查核盡職調查評估	商業決策與可行性
+fc-gm-0290	hostile takeover	n.	惡意收購敵意併購奪權	商業決策與可行性
+fc-gm-0291	poison pill	n.	毒藥丸防禦策略反惡意併購	商業決策與可行性
+fc-gm-0292	venture capital	n.	風險投資創投資金挹注	商業決策與可行性
+fc-gm-0293	private equity	n.	私募股權基金槓桿收購	商業決策與可行性
+fc-gm-0294	initial public offering	n.	首次公開募股上市上櫃	商業決策與可行性
+fc-gm-0295	prospectus	n.	公開說明書募股章程	商業決策與可行性
+fc-gm-0296	underwriter	n.	證券承銷商投資銀行承銷	商業決策與可行性
+fc-gm-0297	institutional investor	n.	機構法人投資人大戶基金	商業決策與可行性
+fc-gm-0298	retail investor	n.	散戶個人非專業投資人	商業決策與可行性
+fc-gm-0299	stakeholder	n.	利害關係人員工顧客股東	商業決策與可行性
+fc-gm-0300	board of directors	n.	董事會公司最高決策機關	商業決策與可行性
+fc-gm-0301	executive compensation	n.	高階經理人薪酬股權獎勵	商業決策與可行性
+fc-gm-0302	golden parachute	n.	黃金降落傘離職巨額補償	商業決策與可行性
+fc-gm-0303	conflict of interest	n.	利益衝突球員兼裁判	商業決策與可行性
+fc-gm-0304	agency problem	n.	代理人問題經理人侵蝕股東	商業決策與可行性
+fc-gm-0305	moral hazard	n.	道德風險不承擔後果轉移風險	評估與因果關係鏈
+fc-gm-0306	adverse selection	n.	逆向選擇資訊不對稱劣幣驅逐	評估與因果關係鏈
+fc-gm-0307	asymmetric information	n.	資訊不對稱買賣資訊失衡	評估與因果關係鏈
+fc-gm-0308	signalling	n.	信號發射傳遞高品質信譽	商業決策與可行性
+fc-gm-0309	screening	n.	篩選機制設計合約辨識類型	商業決策與可行性
+fc-gm-0310	game theory	n.	賽局理論策略互動分析	批判邏輯與前提
+fc-gm-0311	Nash equilibrium	n.	納許均衡無人單方有動機變更	批判邏輯與前提
+fc-gm-0312	dominant strategy	n.	優勢策略無論對手如何皆為最佳	批判邏輯與前提
+fc-gm-0313	zero-sum	adj.	零和博弈損益相抵無總增長	批判邏輯與前提
+fc-gm-0314	prisoner's dilemma	n.	囚徒困境理性個體陷入劣解	批判邏輯與前提
+fc-gm-0315	first-mover advantage	n.	先行者優勢先入市場建立壁壘	商業決策與可行性
+fc-gm-0316	switching cost	n.	轉換成本顧客換供應商代價	商業決策與可行性
+fc-gm-0317	network effect	n.	網路效應使用者愈多價值愈大	商業決策與可行性
+fc-gm-0318	commoditization	n.	大宗商品化毛利被削價侵蝕	商業決策與可行性
+fc-gm-0319	differentiation	n.	差異化策略建立獨特護城河	商業決策與可行性
+fc-gm-0320	market penetration	n.	市場滲透率現有產品擴大份額	商業決策與可行性
+fc-gm-0321	customer acquisition cost	n.	顧客獲取成本獲客行銷開銷	商業決策與可行性
+fc-gm-0322	lifetime value	n.	顧客終生價值全週期利潤貢獻	商業決策與可行性
+fc-gm-0323	churn rate	n.	顧客流失率退訂取消訂閱比	商業決策與可行性
+fc-gm-0324	retention	n.	顧客留存率長久續約穩定度	商業決策與可行性
+fc-gm-0325	cross-selling	n.	交叉銷售推薦互補周邊商品	商業決策與可行性
+fc-gm-0326	up-selling	n.	向上銷售升級高階旗艦機種	商業決策與可行性
+fc-gm-0327	market segment	n.	市場區隔特定消費者族群	商業決策與可行性
+fc-gm-0328	target audience	n.	目標受眾精準行銷對象	商業決策與可行性
+fc-gm-0329	brand positioning	n.	品牌定位市場心智獨佔空間	商業決策與可行性
+fc-gm-0330	price discrimination	n.	差別定價依支付意願區分價格	商業決策與可行性
+fc-gm-0331	price skimming	n.	吸脂定價法高價上市逐步下調	商業決策與可行性
+fc-gm-0332	penetration pricing	n.	滲透定價法超低價迅速奪市佔	商業決策與可行性
+fc-gm-0333	loss leader	n.	賠本招徠商品引流熱門促銷	商業決策與可行性
+fc-gm-0334	product bundling	n.	搭售搭組捆綁銷售提升客單	商業決策與可行性
+fc-gm-0335	distribution channel	n.	經銷通路產品鋪貨途徑	商業決策與可行性
+fc-gm-0336	consignment	n.	寄售寄賣賣出才結算分潤	商業決策與可行性
+fc-gm-0337	working capital	n.	營運資金流動資產減流動負債	商業決策與可行性
+fc-gm-0338	credit rating	n.	信用評等償債違約風險評級	商業決策與可行性
+fc-gm-0339	default risk	n.	違約風險無法按期付息還本	商業決策與可行性
+fc-gm-0340	bankruptcy	n.	宣告破產無力清償債務	商業決策與可行性
+fc-gm-0341	turnaround	n.	轉虧為盈反敗為勝策略	商業決策與可行性
+fc-gm-0342	sensitivity analysis	n.	敏感度分析變數對結果衝擊	評估與因果關係鏈
+fc-gm-0343	scenario planning	n.	情境分析推演多套未來局勢	評估與因果關係鏈
+fc-gm-0344	regression analysis	n.	迴歸分析尋找自變應變函數	評估與因果關係鏈
+fc-gm-0345	p-value	n.	顯著性檢定統計機率值	評估與因果關係鏈
+fc-gm-0346	sample size	n.	樣本數代表性抽樣樣本規模	評估與因果關係鏈
+fc-gm-0347	selection bias	n.	選擇偏誤抽樣非隨機產生偏差	批判推理削弱題型
+fc-gm-0348	survivorship bias	n.	倖存者偏誤只看成功者忽略失敗	批判推理削弱題型
+fc-gm-0349	anchoring effect	n.	錨定效應受第一印象數值制約	評估與因果關係鏈
+fc-gm-0350	framing effect	n.	框架效應文字表述方式左右決策	評估與因果關係鏈
+fc-gm-0351	loss aversion	n.	損失厭惡對損失痛苦遠大於獲益	評估與因果關係鏈
+fc-gm-0352	bounded rationality	n.	有限理性認知能力時間限制	批判邏輯與前提
+fc-gm-0353	nudge theory	n.	推力理論無形引導改善決策	商業決策與可行性
+fc-gm-0354	corporate governance	n.	公司治理權責透明監督架構	商業決策與可行性
+fc-gm-0355	whistleblowing	n.	內部吹哨揭弊揭發違法舞弊	商業決策與可行性
+fc-gm-0356	intellectual property	n.	智慧財產權專利商標保護	商業決策與可行性
+fc-gm-0357	patent infringement	n.	專利侵權仿冒抄襲技術專利	商業決策與可行性
+fc-gm-0358	trade secret	n.	營業秘密配方製程技術保密	商業決策與可行性
+fc-gm-0359	indemnity clause	n.	賠償保障條款免除責任承擔	商業決策與可行性
+fc-gm-0360	non-compete clause	n.	競業禁止條款離職不得跳槽對手	商業決策與可行性
+fc-gm-0361	key performance indicator	n.	關鍵績效指標KPI量化目標	商業決策與可行性
+fc-gm-0362	balanced scorecard	n.	平衡計分卡財務顧客內部學習	商業決策與可行性
+fc-gm-0363	scalability	n.	可擴展性業務暴增成本不激增	商業決策與可行性
+fc-gm-0364	disruptive innovation	n.	破壞性創新顛覆既有大廠常態	商業決策與可行性
+fc-gm-0365	blue ocean strategy	n.	藍海策略開創無競爭新市場	商業決策與可行性
+fc-gm-0366	red ocean	n.	紅海市場殺價血流成河飽和競爭	商業決策與可行性
+fc-gm-0367	core competency	n.	核心競爭力無可取代之專長	商業決策與可行性
+fc-gm-0368	value proposition	n.	價值主張解決顧客最大痛點	商業決策與可行性
+fc-gm-0369	value chain	n.	價值鏈各環節增值流程分析	商業決策與可行性
+fc-gm-0370	Porter's five forces	n.	波特五力分析產業競爭結構	商業決策與可行性
+fc-gm-0371	deadweight loss	n.	無謂損失市場扭曲造成社會淨損	商業決策與可行性
+fc-gm-0372	externality	n.	外部性污染或正面外溢效應	評估與因果關係鏈
+fc-gm-0373	public good	n.	公共財無排他性無敵對性消費	商業決策與可行性
+fc-gm-0374	tragedy of the commons	n.	共有財悲劇過度放牧濫捕滅絕	評估與因果關係鏈
+fc-gm-0375	free rider problem	n.	搭便車問題不付費坐享其成	商業決策與可行性
+fc-gm-0376	market failure	n.	市場失靈看不見的手無法達最佳	商業決策與可行性
+fc-gm-0377	regulatory capture	n.	監管俘虜被監管廠商反向控制法規	商業決策與可行性
+fc-gm-0378	rent-seeking	n.	尋租行為藉特權瓜分利益無產出	商業決策與可行性
+fc-gm-0379	insider trading	n.	內線交易利用未公開消息買賣	商業決策與可行性
+fc-gm-0380	systemic risk	n.	系統性風險骨牌效應全盤崩盤	商業決策與可行性
+fc-gm-0381	bank run	n.	銀行擠兌儲戶恐慌性提領現金	商業決策與可行性
+fc-gm-0382	quantitative easing	n.	量化寬鬆印鈔買債注入流動性	商業決策與可行性
+fc-gm-0383	stagflation	n.	停滯性通膨經濟蕭條伴隨高物價	商業決策與可行性
+fc-gm-0384	recession	n.	經濟衰退連續兩季GDP負成長	商業決策與可行性
+fc-gm-0385	leading indicator	n.	領先指標提早預示景氣翻轉	評估與因果關係鏈
+fc-gm-0386	lagging indicator	n.	落後指標確認景氣週期轉向	評估與因果關係鏈
+fc-gm-0387	purchasing power	n.	購買力名目貨幣實質購買價值	商業決策與可行性
+fc-gm-0388	balance of payments	n.	國際收支平衡表資金跨境流動	商業決策與可行性
+fc-gm-0389	sovereign debt	n.	主權國家公債國債信用償付	商業決策與可行性
+fc-gm-0390	inverted yield curve	n.	殖利率曲線倒掛預示經濟衰退	評估與因果關係鏈
+fc-gm-0391	junk bond	n.	垃圾債券高收益高違約率債券	商業決策與可行性
+fc-gm-0392	credit spread	n.	信用利差公司債與公債利息差	商業決策與可行性
+fc-gm-0393	securitization	n.	資產證券化將貸款包裝轉售	商業決策與可行性
+fc-gm-0394	collateral	n.	擔保抵押品貸款違約保證物	商業決策與可行性
+fc-gm-0395	derivative	n.	衍生性金融商品期貨選擇權等	商業決策與可行性
+fc-gm-0396	options contract	n.	選擇權合約買權賣權履約權利	商業決策與可行性
+fc-gm-0397	futures contract	n.	期貨合約鎖定未來特定價交割	商業決策與可行性
+fc-gm-0398	portfolio diversification	n.	投資組合多元化不把雞蛋放同籃	商業決策與可行性
+fc-gm-0399	capital allocation	n.	資本配置資源投放高報酬專案	商業決策與可行性
+fc-gm-0400	spin-off	n.	獨立分拆成立新公司掛牌	商業決策與可行性
+fc-gm-0401	joint venture	n.	合資合夥企業跨國合作專案	商業決策與可行性
+fc-gm-0402	strategic alliance	n.	策略聯盟資源互補不換股合作	商業決策與可行性
+fc-gm-0403	licensing agreement	n.	授權許可協議授權品牌技術	商業決策與可行性
+fc-gm-0404	franchising	n.	連鎖加盟授權經營模式	商業決策與可行性
+fc-gm-0405	elasticity of demand	n.	需求價格彈性對價格敏感度	商業決策與可行性
+fc-gm-0406	elasticity of supply	n.	供給價格彈性產能應變率	商業決策與可行性
+fc-gm-0407	inferior good	n.	劣等財所得增加需求反降之物	商業決策與可行性
+fc-gm-0408	normal good	n.	正常財所得增加需求隨之增加	商業決策與可行性
+fc-gm-0409	substitute good	n.	替代品他牌漲價使本牌需求增	商業決策與可行性
+fc-gm-0410	complementary good	n.	互補品配對搭售消費關聯商品	商業決策與可行性
+fc-gm-0411	Giffen good	n.	季芬財價格上漲需求反常激增	矛盾解釋與推論
+fc-gm-0412	Veblen good	n.	凡勃倫財炫耀性奢侈高價財	矛盾解釋與推論
+fc-gm-0413	diminishing returns	n.	邊際報酬遞減規律要素超載	商業決策與可行性
+fc-gm-0414	economies of scope	n.	範疇經濟多元化共用設備降本	商業決策與可行性
+fc-gm-0415	dis-economies of scale	n.	規模不經濟組織臃腫溝通阻滯	商業決策與可行性
+fc-gm-0416	operating leverage	n.	營運槓桿固定成本佔比與利潤彈性	商業決策與可行性
+fc-gm-0417	financial leverage	n.	財務槓桿負債融資放大股權報酬	商業決策與可行性
+fc-gm-0418	combined leverage	n.	總槓桿營運與財務複合風險倍率	商業決策與可行性
+fc-gm-0419	cost of capital	n.	資金成本企業融資所需最低代價	商業決策與可行性
+fc-gm-0420	weighted average cost	n.	加權平均資金成本WACC綜合成本	商業決策與可行性
+fc-gm-0421	hurdle rate	n.	投資門檻收益率專案最低合格報酬	商業決策與可行性
+fc-gm-0422	payback period	n.	投資回收期回收初期本金所需年限	商業決策與可行性
+fc-gm-0423	profitability index	n.	獲利能力指數收益現值比大於一	商業決策與可行性
+fc-gm-0424	discounted cash flow	n.	折現現金流估值法預估現值總計	商業決策與可行性
+fc-gm-0425	free cash flow	n.	自由現金流營運扣除資本支出餘額	商業決策與可行性
+fc-gm-0426	working capital cycle	n.	營運資金週期現金轉換為存貨天數	商業決策與可行性
+fc-gm-0427	inventory turnover	n.	存貨周轉率銷售成本與庫存比值	商業決策與可行性
+fc-gm-0428	days sales outstanding	n.	應收帳款回收天數回款速度指標	商業決策與可行性

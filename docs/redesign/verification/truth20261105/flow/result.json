@@ -1,0 +1,441 @@
+{
+ "passed": 87,
+ "total": 87,
+ "checks": [
+  {
+   "name": "320-light intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "320-light tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "320-light answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":39,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "320-light key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "320-light browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-light intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-light tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "390-light answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":39,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-light key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-light browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-dark intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-dark tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "390-dark answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":39,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "390-dark key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "390-dark browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "768-light intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "768-light tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "768-light answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":42,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "768-light key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "768-light browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-light intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-light tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "1280-light one navigation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":42,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-light key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-light browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-dark intro no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark intro contrast",
+   "ok": true,
+   "detail": "{\"checked\":80,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-dark tap targets",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "1280-dark one navigation",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark answer box in first screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark hint shows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark letter diff",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark miss blocks good",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark why shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark answer no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark answer contrast",
+   "ok": true,
+   "detail": "{\"checked\":42,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "1280-dark key 1 rates",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark browse no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "1280-dark browse contrast",
+   "ok": true,
+   "detail": "{\"checked\":85,\"fails\":[],\"failCount\":0}"
+  },
+  {
+   "name": "smart starts with recognition",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "summary lists misses",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "repair round",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "daily progress persists",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "booster explains the chosen wrong option",
+   "ok": true,
+   "detail": "↻ 差一點，看看差在哪\n\n你選的：Good night!\nGood night 是晚上睡覺前說的，早上不能用。\n\n正確答案：Good morning!\n\n為什麼"
+  },
+  {
+   "name": "booster no overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no page errors",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

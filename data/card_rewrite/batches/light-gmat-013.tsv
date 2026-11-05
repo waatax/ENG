@@ -1,0 +1,16 @@
+id	word	pos	zh	category	example
+fc-gm-0001	assumption	n.	未言明的前提假設 (若否定之，結論必崩潰)	批判邏輯與前提 / Logic	The marketing argument relies on the implicit assumption that consumer disposable income will not fall.
+fc-gm-0002	weaken	v.	削弱 (論證說服力、打破因果鏈)	批判推理削弱題型 / Weaken	Which of the following findings, if true, most seriously weakens the mayor's municipal economic claim?
+fc-gm-0003	strengthen	v.	加強、支持 (結論成立的機率)	批判推理加強題型 / Strengthen	The economic consultant presented competitor cost data to strengthen the viability of the joint venture.
+fc-gm-0004	evaluate	v.	評估 (論證有效性之關鍵資訊)	評估與因果關係鏈 / Evaluation	Determining whether regional rivals can replicate the patented technology is critical to evaluate the proposal.
+fc-gm-0006	premise	n.	論據、前提 (題幹中明確陳述為事實的事實依據)	批判邏輯與前提 / Argument Structure	The entire strategic plan is constructed upon the questionable premise that raw material prices will remain flat.
+fc-gm-0008	causal	adj.	因果關係的 (非純粹相關)	評估與因果關係鏈 / Causality	Epidemiologists must establish a rigorous causal mechanism before asserting that chemical exposure triggers illness.
+fc-gm-0009	paradox	n.	看似矛盾的現象、悖論 (題幹要求解釋矛盾)	矛盾解釋與推論 / Resolve the Paradox	The report presented a paradox: although average incomes rose, overall consumer discretionary spending fell.
+fc-gm-0012	boldface	n. / adj.	黑體字 (GMAT 句子角色劃分題型)	批判邏輯與前提 / Boldface	The first boldface statement introduces evidence supporting the conclusion that the second boldface statement refutes.
+fc-gm-0013	intermediate conclusion	n.	中間次要結論 (既是上一層推論的結果，又是終極結論的前提)	批判邏輯與前提 / Boldface	The analyst inferred that revenue would drop, which served as an intermediate conclusion supporting the budget cut.
+fc-gm-0023	assume	v.	假定、設想	批判邏輯與前提	Let's assume that'll happen.
+fc-gm-0025	conclusion	n.	結論、推論總結	批判邏輯與前提	Tom came to the conclusion that no matter what he did, Mary wouldn't like it.
+fc-gm-0053	imply	v.	暗示、意味著	批判邏輯與前提	I didn't mean to imply otherwise.
+fc-gm-0088	coincidence	n.	巧合、純屬偶然同時發生	評估與因果關係鏈	Tom doesn't think this is a coincidence.
+fc-gm-0110	empirically	adv.	經驗主義地、以實證方式	評估與因果關係鏈	He answered the judge's questions empirically and without hesitation.
+fc-gm-0126	inversely	adv.	反比例地、相反地	評估與因果關係鏈	The rescue team acted inversely to reach the stranded hikers before nightfall.

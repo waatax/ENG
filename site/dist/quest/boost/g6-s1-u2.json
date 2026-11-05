@@ -1,0 +1,268 @@
+[
+ {
+  "id": "g6-s1-u2.b1",
+  "type": "fix",
+  "prompt": "哪一句的過去式才正確？",
+  "text": "",
+  "options": [
+   "We went to the zoo last Sunday.",
+   "We goed to the zoo last Sunday.",
+   "We go to the zoo last Sunday."
+  ],
+  "answer": "We went to the zoo last Sunday.",
+  "wrong": {
+   "We goed to the zoo last Sunday.": "go 是不規則動詞，過去式是 went，不是 goed。",
+   "We go to the zoo last Sunday.": "last Sunday 是過去，動詞要用過去式 went。"
+  },
+  "why": "go 的過去式是 went，last Sunday 表示過去。",
+  "tip": "go 變 went，不加 ed。",
+  "say": "We went to the zoo last Sunday."
+ },
+ {
+  "id": "g6-s1-u2.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "Did you saw the rainbow?",
+   "Did you see the rainbow?",
+   "Do you saw the rainbow?"
+  ],
+  "answer": "Did you see the rainbow?",
+  "wrong": {
+   "Did you saw the rainbow?": "Did 後面動詞要回到原形 see，不再用過去式。",
+   "Do you saw the rainbow?": "saw 是過去式，Do 是現在式助動詞，兩者不能搭配。"
+  },
+  "why": "疑問句 Did 之後用原形動詞。",
+  "tip": "Did 後面用原形。",
+  "say": "Did you see the rainbow?"
+ },
+ {
+  "id": "g6-s1-u2.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "She did not ate breakfast this morning.",
+   "She not eat breakfast this morning.",
+   "She did not eat breakfast this morning."
+  ],
+  "answer": "She did not eat breakfast this morning.",
+  "wrong": {
+   "She did not ate breakfast this morning.": "did not 後面要用原形 eat，不是過去式 ate。",
+   "She not eat breakfast this morning.": "過去式的否定要用 did not，不能只說 not。"
+  },
+  "why": "did not 加原形動詞。",
+  "tip": "did not 後面接原形。",
+  "say": "She did not eat breakfast this morning."
+ },
+ {
+  "id": "g6-s1-u2.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "My dad bought a new bike for me.",
+   "My dad buyed a new bike for me.",
+   "My dad buys a new bike for me yesterday."
+  ],
+  "answer": "My dad bought a new bike for me.",
+  "wrong": {
+   "My dad buyed a new bike for me.": "buy 是不規則動詞，過去式是 bought。",
+   "My dad buys a new bike for me yesterday.": "yesterday 要搭配過去式，不能用 buys。"
+  },
+  "why": "buy 的過去式是 bought。",
+  "tip": "buy 變 bought。",
+  "say": "My dad bought a new bike for me."
+ },
+ {
+  "id": "g6-s1-u2.b5",
+  "type": "situation",
+  "prompt": "朋友問你昨天去哪裡玩，你去了河邊並烤了肉。哪一句最自然？",
+  "text": "",
+  "options": [
+   "I go to the riverside and cooked meat.",
+   "I went to the riverside and cooked meat.",
+   "I was went to the riverside and cooked meat."
+  ],
+  "answer": "I went to the riverside and cooked meat.",
+  "wrong": {
+   "I go to the riverside and cooked meat.": "前後動詞時態要一致，昨天的事，go 要變 went。",
+   "I was went to the riverside and cooked meat.": "went 是過去式，前面不能再加 was。"
+  },
+  "why": "講昨天的事，動詞全部用過去式。",
+  "tip": "敘述過去，動詞時態要一致。",
+  "say": "I went to the riverside and cooked meat."
+ },
+ {
+  "id": "g6-s1-u2.b6",
+  "type": "situation",
+  "prompt": "你想問朋友週末有沒有看到一隻漂亮的鳥，哪一句最自然？",
+  "text": "",
+  "options": [
+   "Do you saw a beautiful bird on the weekend?",
+   "Did you saw a beautiful bird on the weekend?",
+   "Did you see a beautiful bird on the weekend?"
+  ],
+  "answer": "Did you see a beautiful bird on the weekend?",
+  "wrong": {
+   "Do you saw a beautiful bird on the weekend?": "Do 和 saw 一起用是錯的，過去式的問句要用 Did you see。",
+   "Did you saw a beautiful bird on the weekend?": "Did 之後要用原形 see。"
+  },
+  "why": "問過去的事用 Did 加原形動詞。",
+  "tip": "Did 開頭，後面原形。",
+  "say": "Did you see a beautiful bird on the weekend?"
+ },
+ {
+  "id": "g6-s1-u2.b7",
+  "type": "situation",
+  "prompt": "你想說「我昨晚沒有睡好」，哪一句最自然？",
+  "text": "",
+  "options": [
+   "I did not sleep well last night.",
+   "I did not slept well last night.",
+   "I not slept well last night."
+  ],
+  "answer": "I did not sleep well last night.",
+  "wrong": {
+   "I did not slept well last night.": "did not 後面要用原形 sleep。",
+   "I not slept well last night.": "過去式的否定要用 did not。"
+  },
+  "why": "did not 後面要接動詞原形。",
+  "tip": "過去否定：did not 加原形。",
+  "say": "I did not sleep well last night."
+ },
+ {
+  "id": "g6-s1-u2.b8",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "Yesterday, I _____ a letter to my grandma.",
+  "options": [
+   "write",
+   "wrote",
+   "writed"
+  ],
+  "answer": "wrote",
+  "wrong": {
+   "write": "Yesterday 是過去，要用過去式，不是原形。",
+   "writed": "write 是不規則動詞，過去式是 wrote。"
+  },
+  "why": "write 的過去式是 wrote。",
+  "tip": "write 變 wrote。",
+  "say": "Yesterday, I wrote a letter to my grandma."
+ },
+ {
+  "id": "g6-s1-u2.b9",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "The little boy _____ down the hill and cried.",
+  "options": [
+   "fall",
+   "falled",
+   "fell"
+  ],
+  "answer": "fell",
+  "wrong": {
+   "fall": "and cried 是過去式，前面也要用過去式 fell。",
+   "falled": "fall 是不規則動詞，過去式是 fell。"
+  },
+  "why": "fall 的過去式是 fell。",
+  "tip": "fall 變 fell。",
+  "say": "The little boy fell down the hill and cried."
+ },
+ {
+  "id": "g6-s1-u2.b10",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "We _____ a big campfire at night and sang songs.",
+  "options": [
+   "made",
+   "make",
+   "maked"
+  ],
+  "answer": "made",
+  "wrong": {
+   "make": "sang 是過去式，這裡也要用過去式 made。",
+   "maked": "make 是不規則動詞，過去式是 made。"
+  },
+  "why": "make 的過去式是 made。",
+  "tip": "make 變 made。",
+  "say": "We made a big campfire at night."
+ },
+ {
+  "id": "g6-s1-u2.b11",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "_____ you take a bus to the city last week?",
+  "options": [
+   "Do",
+   "Did",
+   "Are"
+  ],
+  "answer": "Did",
+  "wrong": {
+   "Do": "last week 是過去，問句要用 Did。",
+   "Are": "take 是一般動詞，不能用 Are 開頭。"
+  },
+  "why": "last week 是過去，問句用 Did 加原形。",
+  "tip": "過去的問句用 Did。",
+  "say": "Did you take a bus to the city last week?"
+ },
+ {
+  "id": "g6-s1-u2.b12",
+  "type": "meaning",
+  "prompt": "「We explored the old castle together.」是什麼意思？",
+  "text": "",
+  "options": [
+   "我們打算去探索古老的城堡。",
+   "我們沒有進去那座城堡。",
+   "我們一起探索了那座古老的城堡。"
+  ],
+  "answer": "我們一起探索了那座古老的城堡。",
+  "wrong": {
+   "我們打算去探索古老的城堡。": "explored 是過去式，表示已經探索過，不是計畫。",
+   "我們沒有進去那座城堡。": "explored 是探索過，不是沒去。"
+  },
+  "why": "explored 是 explore 的過去式。",
+  "tip": "規則動詞加 ed 變過去式。",
+  "say": "We explored the old castle together."
+ },
+ {
+  "id": "g6-s1-u2.b13",
+  "type": "meaning",
+  "prompt": "「It was an unforgettable trip.」是什麼意思？",
+  "text": "",
+  "options": [
+   "那是一趟難忘的旅行。",
+   "那是一趟很無聊的旅行。",
+   "那趟旅行還沒有開始。"
+  ],
+  "answer": "那是一趟難忘的旅行。",
+  "wrong": {
+   "那是一趟很無聊的旅行。": "unforgettable 是難以忘記，通常是好的回憶。",
+   "那趟旅行還沒有開始。": "was 是過去式，旅行已經結束了。"
+  },
+  "why": "unforgettable 是 forget 加上否定和能力的意思，就是難忘的。",
+  "tip": "unforgettable 是難忘的。",
+  "say": "It was an unforgettable trip."
+ },
+ {
+  "id": "g6-s1-u2.b14",
+  "type": "meaning",
+  "prompt": "「Did you hear the news?」問的是什麼？",
+  "text": "",
+  "options": [
+   "你會不會聽新聞？",
+   "你有沒有聽到那個消息？",
+   "你正在聽新聞嗎？"
+  ],
+  "answer": "你有沒有聽到那個消息？",
+  "wrong": {
+   "你會不會聽新聞？": "Did 問的是過去，已經發生的事。",
+   "你正在聽新聞嗎？": "正在做的事會用 Are you listening，Did 問過去。"
+  },
+  "why": "Did you hear 是在問過去有沒有聽到。",
+  "tip": "Did 開頭問過去的事。",
+  "say": "Did you hear the news?"
+ }
+]

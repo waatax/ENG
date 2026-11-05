@@ -1,0 +1,702 @@
+{
+ "g6-s2-u8.x1": {
+  "flips; discovers": "flips 和 discovers 是現在式，但 Yesterday afternoon 指過去，時態不符。",
+  "was flipped; had discovered": "was flipped 是被動，Sarah 是翻書的人；had discovered 也多餘地用了過去完成式。",
+  "flipped; was discovered": "後半 was discovered 是被動，但 Sarah 是主動發現文憑的人，語意變成文憑發現她。"
+ },
+ "g6-s2-u8.q1": {
+  "difficult": "只有原級 difficult，句中有 than，需要比較級 more difficult。",
+  "most difficult": "most difficult 是最高級，句中用 than 比較兩個謎題，要用比較級。",
+  "difficultly": "difficultly 是不存在的副詞，這裡 is 後需要形容詞比較級。"
+ },
+ "g6-s2-u8.trap1": {
+  "Taipei 101 is more taller than this building.": "tall 是單音節，已加 -er 變 taller，再加 more 就重複比較了。"
+ },
+ "quality.original.g6-s1-u3.5": {
+  "walks": "ten-minute 當形容詞時名詞不加 s，a ten-minute walks 文法錯誤。",
+  "walking to": "walking to 後面需接地點，且與 a ten-minute ___ from here 的名詞結構不合。"
+ },
+ "quality.original.g6-s1-u3.6": {
+  "which place of": "which place of 不是間接問句的正確用法，問圖書館在哪裡要用 where。",
+  "how many": "how many 問數量，題目問圖書館的位置，意思不符。"
+ },
+ "quality.original.g6-s1-u3.10": {
+  "I have already arrived yesterday.": "這句在說已經到了，並沒有請對方重說，也不能解決沒聽清楚的問題。",
+  "The ticket is blue.": "這句只是在描述車票顏色，和沒聽清楚方向沒有關係。"
+ },
+ "quality.original.g6-s1-u4.1": {
+  "should to": "should 是助動詞，後面直接接原形動詞，不能加 to。",
+  "am should": "should 是助動詞，不能和 be 動詞 am 連用。"
+ },
+ "quality.original.g6-s1-u4.3": {
+  "many": "many 用在可數複數名詞，water 是不可數名詞，要用 much。",
+  "a": "How a water 文法不通，問水的量應該用 How much。"
+ },
+ "quality.original.g6-s1-u4.5": {
+  "feel": "主詞 He 是第三人稱單數，現在式動詞要加 s 變 feels。",
+  "is feel": "is 和 feel 不能連用，一個句子不能同時有 be 動詞和一般動詞原形。"
+ },
+ "quality.original.g6-s1-u4.6": {
+  "You must be a medicine.": "這句說「你一定是藥」，語意怪異，也不是禮貌地請人幫忙。",
+  "I am a hospital.": "這句說「我是醫院」，人不可能是醫院，也沒有在請求協助。"
+ },
+ "quality.original.g6-s1-u4.9": {
+  "many": "many 要接可數複數名詞，rest（休息）是不可數，要用 some。",
+  "a few": "a few 用在可數複數名詞，rest 在這裡不可數，所以不能用。"
+ },
+ "quality.original.g6-s2-u5.2": {
+  "differs": "can 是助動詞，後面要用原形，不能加 s 變 differs。",
+  "to differ": "can 後面直接接原形動詞，不能再加 to。"
+ },
+ "quality.original.g6-s2-u5.5": {
+  "Why does everyone in your country do this?": "這句預設一個國家的人都做同樣的事，正好是以偏概全。",
+  "Your custom must be wrong, right?": "這句直接認定對方的習俗是錯的，帶有批評，不尊重差異。"
+ },
+ "quality.original.g6-s2-u5.6": {
+  "under": "under 是「在……下面」，learn under a festival 意思不通，要用 about。",
+  "through of": "through of 不是正確搭配，介系詞不能這樣連用，了解主題用 about。"
+ },
+ "d.diag-0284": {
+  "heavy": "heavy 是原級，句中有 much 和 than，需要比較級 heavier。",
+  "heaviest": "heaviest 是最高級，這裡只比較兩個金屬條，要用比較級。",
+  "more heavy": "heavy 以子音加 y 結尾，比較級要去 y 加 -ier，不用 more。"
+ },
+ "d.diag-0286": {
+  "easy": "easy 是原級，句中有 than，需要比較級 easier。",
+  "easiest": "easiest 是最高級，句中有 than 表示兩者比較，不能用最高級。",
+  "more easy": "easy 是雙音節且字尾為 y，比較級要變 easier，不用 more easy。"
+ },
+ "g7-s1-u1.x1": {
+  "S + V + O": "Birds fly 裡 fly 後面沒有受詞，所以不是 S + V + O。",
+  "S + V + SC": "fly 不是連綴動詞，句中也沒有補語，所以不是 S + V + SC。"
+ },
+ "g7-s1-u1.x2": {
+  "brush; go": "My sister 是第三人稱單數，動詞要加 -es，brush 和 go 都沒變化。",
+  "brushs; goes": "brush 字尾是 sh，要加 -es 而不是 -s，brushs 拼錯。",
+  "brushes; gos": "go 字尾是 o，第三人稱單數要加 -es 變 goes，gos 拼錯。"
+ },
+ "g7-s1-u1.x3": {
+  "Is; is": "like 是一般動詞，問句要用 Does，不能用 be 動詞 Is。",
+  "Do; likes": "your brother 是第三人稱單數，要用 Does，而且簡答不會直接用 likes。",
+  "Does; is": "問句 Does 正確，但簡答要重複助動詞用 does，不能用 is。"
+ },
+ "g7-s1-u1.trap2": {
+  "He is speak English very well.": "is 是 be 動詞，speak 是一般動詞，兩者不能同時出現在同一個動詞位置。"
+ },
+ "gr.sentence": {
+  "受詞": "受詞是動作的承受者，good 是在描述 soup 的味道，不是受詞。",
+  "主詞": "主詞是 The soup，good 是描述它的形容詞，不是主詞。"
+ },
+ "d.diag-0472": {
+  "gym": "gym 是體育館，不是做化學實驗戴護目鏡的地方。",
+  "field": "field 是田野或運動場，不會是 chemistry 後面接的地點。",
+  "canteen": "canteen 是學校餐廳，在餐廳不需要戴護目鏡做化學實驗。"
+ },
+ "g7-s1-u2.x1": {
+  "flips; discovers": "flips 和 discovers 是現在式，但 Yesterday afternoon 指過去，時態不符。",
+  "was flipped; had discovered": "was flipped 是被動，Sarah 是翻書的人；had discovered 也多餘地用了過去完成式。",
+  "flipped; was discovered": "後半 was discovered 是被動，但 Sarah 是主動發現文憑的人，語意變成文憑發現她。"
+ },
+ "g7-s1-u2.x2": {
+  "Not runs here.": "Not 不能直接放在動詞前，而且 runs 加了 s，否定祈使句要用 Do not + 原形。",
+  "Does not run here.": "祈使句省略主詞 you，要用 Do not，Does not 用於第三人稱單數主詞。"
+ },
+ "g7-s1-u2.q1": {
+  "Not be": "否定祈使句不能只用 Not，要用 Don't 加原形動詞。",
+  "Aren't": "Aren't 是 be 動詞的否定縮寫，不能當祈使句開頭，要用 Don't be。",
+  "No be": "No 不能直接接原形 be，否定祈使句要用 Don't be。"
+ },
+ "g7-s1-u2.trap1": {
+  "No run in the hallway!": "No 後面只能接名詞或動名詞（No running!），不能接原形 run。"
+ },
+ "k.countability.2": {
+  "a few": "a few 要接可數複數名詞，time 在此不可數，而且語意偏肯定。",
+  "many": "many 用在可數複數名詞，time 是不可數，所以不能用。"
+ },
+ "gr.nouns": {
+  "an": "an 用在可數單數名詞前，information 是不可數名詞，不能加 an。",
+  "many": "many 用在可數複數名詞，information 不可數，要用 some。"
+ },
+ "d.diag-0407": {
+  "it": "it 是主格或受格代名詞，貓清洗自己要用反身代名詞 itself。",
+  "its": "its 是所有格，後面要接名詞，這裡需要表示「自己」的 itself。",
+  "it's": "it's 是 it is 的縮寫，放在 washed 後面文法不通。"
+ },
+ "d.diag-0412": {
+  "other": "other 後面要接複數名詞，slice 是單數，要用 another。",
+  "the other": "the other 指兩者中的另一個，且不能直接接單數 slice 表示再來一片。",
+  "others": "others 是代名詞，後面不能再接名詞 slice。"
+ },
+ "d.diag-0413": {
+  "the other": "the other 指兩個之中的另一個，Some students 是多人，要用 others。",
+  "another": "another 是單數，Some students 對應的是複數的 others。",
+  "other": "other 是形容詞，後面要接名詞，這裡後面直接接動詞 prefer，要用代名詞 others。"
+ },
+ "d.diag-0415": {
+  "another": "another 後面接單數名詞，questions 是複數，要用 other。",
+  "others": "others 是代名詞，後面不能再接名詞 questions。",
+  "the others": "the others 是代名詞，後面不能再接名詞 questions。"
+ },
+ "d.diag-0417": {
+  "another": "another 後面接單數名詞，people 是複數，不能用。",
+  "others": "others 是代名詞，後面已有名詞 people，不能再用 others。",
+  "the other": "the other 指特定的另一個，這裡泛指其他人，要用 other people。"
+ },
+ "d.diag-0418": {
+  "other": "other 後面要接複數名詞，one 是單數，要用 another one。",
+  "others": "others 是代名詞，後面不能再接 one。",
+  "the other": "the other 指兩者中剩下的那一個，這裡是不特定的另一件，要用 another。"
+ },
+ "d.diag-0420": {
+  "another": "another 是單數形容詞，不能單獨當「別人」，泛指他人要用 others。",
+  "other": "other 是形容詞，後面要接名詞，單獨當受詞要用 others。",
+  "the other": "the other 指兩者中的另一個，不是泛指所有其他人。"
+ },
+ "g7-s1-u3.x1": {
+  "bit /bɪt/": "bit 的音標是短母音 /ɪ/，不是題目要找的長母音 /iː/。",
+  "bet /bet/": "bet 的音標是 /e/，不是 /iː/。"
+ },
+ "g7-s1-u3.q1": {
+  "sit": "sit 的母音是短音 /ɪ/，不是長母音 /iː/。",
+  "set": "set 的母音是 /e/，不是長母音 /iː/。",
+  "sat": "sat 的母音是 /æ/，不是長母音 /iː/。"
+ },
+ "g7-s1-u3.r1": {
+  "Solar panels on the rooftop.": "這句講屋頂的太陽能板，和字典中 [T] 的意思無關，文章裡沒提到。",
+  "She is watering the potted flowers.": "這句在說某人澆花，與字典標示 [T] 無關，文章也沒有這樣說。"
+ },
+ "g7-s2-u4.x1": {
+  "is chirping": "主詞 The baby birds 是複數，be 動詞要用 are，不能用 is。",
+  "chirped": "chirped 是過去式，但 Listen! 表示此刻正在發生，要用進行式。",
+  "will chirp": "will chirp 是未來式，但 Listen! 表示現在正在叫，不是未來。"
+ },
+ "g7-s2-u4.trap1": {
+  "He playing tennis now.": "進行式需要 be 動詞，這句缺少 is，只有 playing 不完整。"
+ },
+ "g7-s2-u4.r1": {
+  "Eating, drinking, smoking, and chewing gum.": "這是禁止事項的列表，文章中沒提到，與林太太正在做的事無關。",
+  "Solar panels on the rooftop.": "文章沒提到太陽能板，林太太是在陽台澆花。"
+ },
+ "g7-s2-u5.q1": {
+  "are": "milk 是不可數名詞，視為單數，存在句要用 There is，不是 are。",
+  "have": "表示「有」某物的存在句要用 There is/are，不能用 have。",
+  "has": "存在句不用 has，要用 There is，而且 There has 文法不通。"
+ },
+ "g7-s2-u5.trap1": {
+  "There have many books on the desk.": "表示某處有某物要用 There are，不能用 There have。"
+ },
+ "g7-s2-u5.r1": {
+  "Follow the 'Drop, Cover, and Hold On' protocol.": "這是地震避難的指示，文章是在介紹公園，並沒有提到。",
+  "She is watering the potted flowers.": "文章寫的是公園中心有大池塘，沒有人在澆花。"
+ },
+ "d.diag-0272": {
+  "is usually": "drinks 已是一般動詞，不需要再加 be 動詞 is。",
+  "usually is": "drinks 已是一般動詞，多加 is 會讓句子有兩個動詞。",
+  "does usually": "drinks 是動詞，不需要 does 當助動詞，肯定句不能這樣用。"
+ },
+ "d.diag-0277": {
+  "is always": "問句已有 Does，後面是原形 eat，不能再加 be 動詞 is。",
+  "always does": "Does 已經在句首，後面不能再重複 does。",
+  "always to": "always to 後面不能接 to，eat 前面要直接放原形動詞。"
+ },
+ "d.diag-0311": {
+  "can't": "can't 是不能，不符合交通規則「必須遵守」的義務語意。",
+  "shouldn't": "shouldn't 是不應該，語意與「必須遵守規則」相反。",
+  "may not": "may not 是可能不或不被允許，和遵守規則的義務不符。"
+ },
+ "d.diag-0312": {
+  "must not": "must not 是禁止，臉色不好是建議看醫生，不是禁止看醫生。",
+  "would": "would 後面語氣不是在給建議，這裡需要表示應該的助動詞。",
+  "shall": "shall 多用於提議或詢問（Shall we...?），不是給勸告。"
+ },
+ "d.diag-0313": {
+  "must not": "must not 是禁止早起，而題意是星期天不必早起，語意相反。",
+  "should": "should 是應該早起，但題意是星期天不需要早起。",
+  "have to": "have to 是必須早起，但題意是明天放假，不必早起。"
+ },
+ "d.diag-0314": {
+  "don't have to": "don't have to 是不必，但在博物館不能碰畫是禁止，不是不必。",
+  "can": "can 是可以，但題意是館內禁止觸摸珍貴畫作。",
+  "should": "should 只是建議，禁止碰觸畫作的語氣更強，要用 must not。"
+ },
+ "d.diag-0315": {
+  "have to": "主詞 Leo 是第三人稱單數，要用 has to，不是 have to。",
+  "is having": "is having 是進行式，後面不能接 to finish 表示義務。",
+  "had to do": "had to do 是過去式，但題目說 before Friday 是未來的期限，也多了 do。"
+ },
+ "d.diag-0316": {
+  "must": "must 是必須吃垃圾食物，語意相反；題意是勸人不要吃。",
+  "have to": "have to 是必須吃，與「對健康有害，不要吃」的意思相反。",
+  "need": "need 是需要，語意不合，句子是要勸阻不要多吃垃圾食物。"
+ },
+ "d.diag-0318": {
+  "have to": "have to 是必須，但題意是不該讓小孩獨自過馬路。",
+  "must": "must 是必須過馬路，與安全忠告的意思相反。",
+  "can": "can 是可以過馬路，但題意是勸孩子不要獨自過。"
+ },
+ "d.diag-0319": {
+  "must": "Do 開頭的問句後面要接原形 have to，must 不能放在 Do we 之後。",
+  "should": "Do we 後面不能接 should，助動詞不能重複疊用。",
+  "ought": "ought 後面要加 to，而且 Do we 之後不能接 ought。"
+ },
+ "d.diag-0320": {
+  "must not": "must not 是禁止道歉，語意相反，應該道歉才合理。",
+  "needn't": "needn't 是不必道歉，但弄壞別人玩具，應該道歉。",
+  "have": "have 後面要加 to 才表示義務，單獨的 have 不能接原形 apologize。"
+ },
+ "g7-s2-u6.r1": {
+  "Eating, drinking, smoking, and chewing gum.": "這是禁止事項，文章沒提到，文章說要走過大理石庭院到紀念館。",
+  "Because they want to write their own songs.": "這是在回答原因，題目問走去哪裡，答案要是地點。"
+ },
+ "gr.prepositions": {
+  "on / at": "時刻用 at、星期用 on，這個選項把兩個介系詞順序放反了。",
+  "in / in": "nine 是時刻要用 at，Tuesday 是星期要用 on，in 用於月份年份。"
+ },
+ "d.diag-0469": {
+  "walked": "walked 是過去式，distance 前面要用形容詞性的 walking。",
+  "walk": "walk 是原形動詞，不能直接修飾 distance，固定用 walking distance。",
+  "to walk": "to walk 是不定詞，不能放在 within 和 distance 中間修飾名詞。"
+ },
+ "g8-s1-u1.trap1": {
+  "After I went home, then I took a shower.": "After 已經連接前後兩個子句，再加 then 就重複了。"
+ },
+ "d.diag-0261": {
+  "is going": "is going 後面少了 to，不能接原形動詞 rain 表示即將下雨。",
+  "was going to": "was going to 是過去的打算，但現在看到烏雲，是在說接下來的事。",
+  "rained": "rained 是過去式，但烏雲表示即將下雨，要用未來的 is going to。"
+ },
+ "d.diag-0262": {
+  "am going to": "am going to 是事先計畫，這裡是當場決定幫忙，要用 will。",
+  "was": "was 後面接原形 help 文法不通，也是過去式，不符句意。",
+  "did": "did 是過去式，但這裡是說話當下對未來的承諾。"
+ },
+ "d.diag-0263": {
+  "held": "held 是過去式，但 next Saturday 是未來，不能用過去式。",
+  "hold": "hold 是原形，主詞 We 的未來計畫要用 are going to hold。",
+  "were holding": "were holding 是過去進行式，但 next Saturday 指未來。"
+ },
+ "d.diag-0264": {
+  "am going to": "am going to 是事先計畫，門鈴剛響當場去開門要用 will。",
+  "was": "was 是過去式 be 動詞，後面接原形 get 文法不通。",
+  "am": "am 後面接原形 get 文法不通，這裡需要助動詞 will。"
+ },
+ "d.diag-0265": {
+  "fly": "next week 是未來，fly 只是原形，主詞 he 也不符，要用 is going to fly。",
+  "flew": "flew 是過去式，但 next week 是未來，時態不符。",
+  "was flying": "was flying 是過去進行式，而題目說下週，是未來的計畫。"
+ },
+ "d.diag-0266": {
+  "are going to": "are going to 用於眼前有跡象的預測，五十年後的遠期預測用 will。",
+  "did": "did 是過去式，後面接 probably do 文法不通，也不符未來預測。",
+  "were": "were 是過去式 be 動詞，後面接原形 do 文法不通。"
+ },
+ "d.diag-0267": {
+  "will be": "will be 後面不能直接接 fall，而且眼前梯子晃動的危險跡象要用 are going to。",
+  "would": "would 是 will 的過去式，語氣不是眼前立即的危險預測。",
+  "did": "did 是過去式，後面接原形 fall down 文法不通，也不符眼前的危險。"
+ },
+ "d.diag-0268": {
+  "am going to": "am going to 是事先計畫，I promise 的承諾要用 will。",
+  "did": "did 是過去式，但 tomorrow 指未來，承諾要用 will。",
+  "was": "was 後面接原形 return 文法不通，也不符未來承諾。"
+ },
+ "d.diag-0269": {
+  "will": "題目已有 going to，疑問句需要 be 動詞 are，不能再用 will。",
+  "do": "be going to 的疑問句要用 be 動詞 are，不能用 do。",
+  "did": "did 是過去式助動詞，與 going to 結構不合，要用 are。"
+ },
+ "d.diag-0270": {
+  "is being": "is being 是現在進行被動，tomorrow 的未來結果要用 will be postponed。",
+  "was": "was 是過去式，但 tomorrow 指未來，不能用 was postponed。",
+  "would be": "would be 用於假設語氣，if it rains 是真實條件，主要子句用 will be。"
+ },
+ "d.diag-0489": {
+  "another": "another 後面接單數名詞，plans 是複數，要用 other plans。",
+  "others": "others 是代名詞，後面不能再接名詞 plans。",
+  "the other": "the other 指特定的另一個，這裡是泛指其他計畫，要用 other。"
+ },
+ "g8-s1-u2.x1": {
+  "When; was ringing": "was ringing 說門鈴一直在響，但門鈴響是突然的短動作，要用 rang。",
+  "While; was rung": "was rung 是被動，門鈴是自己響的，不是被別人按響，語意不通。",
+  "Because; rings": "Because 表示原因，語意不通；rings 是現在式，與過去進行式 was cooking 不一致。"
+ },
+ "g8-s1-u2.trap1": {
+  "When it was started to rain, we ran inside.": "was started 是被動語態，下雨是自己開始，不是被開始，文法不通。"
+ },
+ "g8-s1-u2.r1": {
+  "She is watering the potted flowers.": "這句是別篇文章的內容，本文是暴風雨時家人正在吃晚餐。",
+  "Eating, drinking, smoking, and chewing gum.": "這是禁止事項的列表，與文章的暴風雨和停電無關。"
+ },
+ "d.diag-0251": {
+  "took": "took 是過去簡單式，但地震是突然發生，當時在洗澡要用過去進行式。",
+  "am taking": "am taking 是現在進行式，但 yesterday evening 是過去時間。",
+  "take": "take 是現在式原形，與過去時間 yesterday evening 不符。"
+ },
+ "d.diag-0253": {
+  "are": "are 是現在式，但 when the fire alarm rang 是過去，要用 were。",
+  "did": "did 後面要接原形動詞，不能接 doing，進行式需要 be 動詞。",
+  "was": "主詞是 you，過去進行式要用 were，不是 was。"
+ },
+ "d.diag-0259": {
+  "had": "had dinner 是過去簡單式，但停電時正在用餐，要用過去進行式。",
+  "have": "have 是現在式，與 occurred 的過去時間不符。",
+  "are having": "are having 是現在進行式，但 blackout occurred 是過去。"
+ },
+ "d.diag-0260": {
+  "was": "主詞是 you，過去進行式要用 were，不能用 was。",
+  "did": "did 後面要接原形，不能接 talking，進行式需要 be 動詞。",
+  "are": "are 是現在式，但 when I saw you yesterday 是過去。"
+ },
+ "d.diag-0382": {
+  "cost": "cost 的主詞是物品（The book cost...），這裡主詞是 Leo，後面又有 on，用 spent。",
+  "took": "took 常用在 It took time，不用於人花錢在物品上。",
+  "paid for": "paid for 後面直接接物品，不能接 on，且金額後接 on 要用 spent。"
+ },
+ "d.diag-0390": {
+  "cost": "cost 的主詞是物品，這裡主詞是 We，後面接 for，要用 paid。",
+  "took": "took 不是花錢的動詞，這裡 We 付了錢，要用 paid for。",
+  "spent": "spent 後面要接 on 而不是 for，題目後面是 for，所以用 paid。"
+ },
+ "d.diag-0451": {
+  "sell": "sell 是動詞，on 後面要接名詞，固定片語是 on sale。",
+  "sold": "sold 是過去分詞，on sold 不是片語，特價要說 on sale。",
+  "selling": "selling 是動名詞，on selling 沒有特價的意思，應用 on sale。"
+ },
+ "d.diag-0453": {
+  "birthday": "birthday card 是生日卡，不能用來付款，付款用 credit card。",
+  "paper": "paper card 不是付款方式，與刷卡付費的語意不符。",
+  "book": "book card 不是常見詞，也不能用來付款。"
+ },
+ "g8-s1-u3.x1": {
+  "will rain; will be": "if 子句不能用 will，未來條件要用現在式 rains。",
+  "rains; is being": "is being postponed 是現在進行，tomorrow 的結果要用 will be。",
+  "rained; would": "rained 和 would 是假設語氣，與真實的 tomorrow 條件不合，也缺少 be postponed。"
+ },
+ "g8-s1-u3.q1": {
+  "will miss": "if 子句不能用 will，未來的條件要用現在式。",
+  "missed": "missed 是過去式，但 tomorrow morning 是未來。",
+  "missing": "missing 是動名詞，不能當 if 子句的謂語動詞。"
+ },
+ "g8-s1-u3.trap1": {
+  "If it will rain tomorrow, I will stay home.": "if 條件子句不能用 will，要用現在式 rains 代替未來。"
+ },
+ "d.diag-0371": {
+  "will be": "if 子句不能用 will，要用現在式 is 代替未來。",
+  "was": "was 是過去式，但 tomorrow morning 是未來。",
+  "be": "be 是原形，主詞 it 是第三人稱單數，要用 is。"
+ },
+ "d.diag-0373": {
+  "will study": "if 子句不能用 will，條件要用現在式 study。",
+  "studied": "studied 是過去式，但 every day 和 will achieve 指現在與未來的條件。",
+  "are studying": "are studying 是進行式，但 every day 表示習慣，要用現在簡單式 study。"
+ },
+ "d.diag-0374": {
+  "goes": "goes 是現在式，next month 的未來結果要用 will go。",
+  "went": "went 是過去式，但 next month 是未來。",
+  "going": "going 前面沒有 be 動詞，不能單獨當謂語動詞。"
+ },
+ "d.diag-0375": {
+  "did": "did 是過去式，但 if 子句是現在式的條件，主要子句要用 will。",
+  "are": "are 後面接 do 不是進行式，未來的假設問句用 will。",
+  "have": "have 後面接 do 不構成正確的問句，這裡要用 will you do。"
+ },
+ "d.diag-0376": {
+  "will get": "if 子句不能用 will，條件要用現在式 gets。",
+  "got": "got 是過去式，但 tonight 是未來。",
+  "get": "Dad 是第三人稱單數，現在式動詞要加 s 變 gets。"
+ },
+ "d.diag-0377": {
+  "will hurry": "unless 子句不能用 will，要用現在式 hurry。",
+  "hurried": "hurried 是過去式，但 right now 是現在或未來。",
+  "don't hurry": "unless 已有「如果不」的否定意思，再加 don't 變成雙重否定。"
+ },
+ "d.diag-0378": {
+  "will wake": "if 子句不能用 will，要用現在式 wakes。",
+  "woke": "woke 是過去式，但 tomorrow 指未來。",
+  "wake": "主詞 Emily 是第三人稱單數，動詞要加 s 變 wakes。"
+ },
+ "d.diag-0379": {
+  "will come": "if 子句不能用 will，條件要用現在式 comes。",
+  "came": "came 是過去式，但 tomorrow 指未來。",
+  "come": "主詞 the typhoon 是單數，動詞要加 s 變 comes。"
+ },
+ "d.diag-0380": {
+  "were": "were 是過去式，主要子句是對未來的承諾，要用 will be。",
+  "was": "was 是過去式，但 I 對未來幫忙的承諾要用 will be。",
+  "being": "being 是動名詞，不能單獨當謂語動詞。"
+ },
+ "d.diag-0711": {
+  "will ring": "As soon as 時間子句不能用 will，要用現在式 rings。",
+  "rang": "rang 是過去式，但主要子句 will pack 是未來。",
+  "ring": "主詞 the bell 是單數，動詞要加 s 變 rings。"
+ },
+ "d.diag-0713": {
+  "will mix": "Before 時間子句不能用 will，要用現在式。",
+  "mixed": "mixed 是過去式，但 ensure 是現在的叮嚀。",
+  "are mixing": "are mixing 是進行式，Before 子句要用簡單現在式 mix。"
+ },
+ "d.diag-0714": {
+  "will reach": "the moment 時間子句不能用 will，要用現在式 reaches。",
+  "reached": "reached 是過去式，但 Tony will call 是未來。",
+  "is reaching": "is reaching 是進行式，時間子句要用簡單現在式 reaches。"
+ },
+ "d.diag-0716": {
+  "will go": "until 時間子句不能用 will，要用現在式 goes。",
+  "went": "went 是過去式，但 shouldn't cross 是現在的建議。",
+  "is going": "is going 是進行式，until 子句要用簡單現在式 goes。"
+ },
+ "d.diag-0718": {
+  "will land": "as soon as 時間子句不能用 will，要用現在式 lands。",
+  "landed": "landed 是過去式，但 I will send 是未來。",
+  "is landing": "is landing 是進行式，時間子句要用簡單現在式。"
+ },
+ "d.diag-0719": {
+  "arrives": "arrives 是現在式，但主要子句 had performed 是過去完成，時間要用過去式。",
+  "will arrive": "will arrive 是未來式，但主要子句 had performed 是過去的事。",
+  "had arrived": "had arrived 是過去完成，但 By the time 子句要用過去簡單式 arrived。"
+ },
+ "g8-s2-u4.x1": {
+  "to write; to watch": "finish 和 enjoy 後面要接動名詞，不能接不定詞 to V。",
+  "write; watch": "finish 和 enjoy 後面要接動名詞，不能直接接原形動詞。",
+  "writing; to watch": "前面 writing 正確，但 enjoy 後面也要接動名詞 watching。"
+ },
+ "g8-s2-u4.q1": {
+  "build": "finish 後面要接動名詞，不能直接接原形動詞 build。",
+  "to build": "finish 後面不接不定詞，要用動名詞 building。",
+  "built": "built 是過去式，finish 後面要接動名詞，不能接過去式。"
+ },
+ "d.diag-0290": {
+  "good": "good 是原級，句中有 than，需要比較級 better。",
+  "best": "best 是最高級，句中用 than 比較兩地，要用比較級。",
+  "more good": "good 是不規則變化，比較級是 better，不能說 more good。"
+ },
+ "d.diag-0322": {
+  "paint": "enjoy 後面要接動名詞，不能直接接原形 paint。",
+  "to paint": "enjoy 後面不接不定詞，要用動名詞 painting。",
+  "painted": "painted 是過去式，enjoy 後面要接動名詞。"
+ },
+ "d.diag-0326": {
+  "Read": "句首要當主詞，Read 是原形動詞，不能當主詞，要用動名詞 Reading。",
+  "To reading": "To reading 是 to 加動名詞，結構錯誤，主詞應該是 Reading。",
+  "Reads": "Reads 是動詞第三人稱單數，不能當主詞，後面又有 requires。"
+ },
+ "d.diag-0328": {
+  "to walk": "enjoy 後面不接不定詞，要用動名詞 walking。",
+  "walk": "enjoy 後面要接動名詞，不能直接接原形 walk。",
+  "walked": "walked 是過去式，enjoy 後面要接動名詞。"
+ },
+ "d.diag-0329": {
+  "to drink": "avoid 後面不接不定詞，要用動名詞 drinking。",
+  "drink": "avoid 後面要接動名詞，不能直接接原形 drink。",
+  "drank": "drank 是過去式，should avoid 後面要接動名詞。"
+ },
+ "d.diag-0331": {
+  "buying": "decide 後面要接不定詞 to V，不接動名詞。",
+  "buy": "decide 後面要接 to buy，不能直接接原形 buy。",
+  "bought": "bought 是過去式，decided 後面要接不定詞 to buy。"
+ },
+ "d.diag-0334": {
+  "becoming": "hope 後面要接不定詞 to V，不接動名詞。",
+  "become": "hope 後面要接 to become，不能直接接原形。",
+  "became": "became 是過去式，hopes 後面要接不定詞 to become。"
+ },
+ "d.diag-0337": {
+  "paying": "tell sb 後面要接 to V，不接動名詞。",
+  "pay": "tell sb 後面要接 to pay，不能直接接原形。",
+  "paid": "paid 是過去式，tell sb 後面要接不定詞 to pay。"
+ },
+ "d.diag-0339": {
+  "holding": "agree 後面要接不定詞 to V，不接動名詞。",
+  "hold": "agree 後面要接 to hold，不能直接接原形。",
+  "held": "held 是過去式，agreed 後面要接不定詞 to hold。"
+ },
+ "d.diag-0340": {
+  "getting": "It is + adj + for sb 後面的真主詞要用不定詞 to get。",
+  "get": "for teenagers 後面要接 to get，不能直接接原形動詞。",
+  "got": "got 是過去式，不能放在 for teenagers 後面，要用 to get。"
+ },
+ "d.diag-0342": {
+  "to watch": "remember to watch 是記得要去看，但 last year 是已看過，要用 watching。",
+  "watch": "remember 後面不能直接接原形動詞 watch。",
+  "watched": "watched 是過去式，remember 後面要接 V-ing 或 to V。"
+ },
+ "d.diag-0344": {
+  "to see": "forget to see 是忘記要去看，題意是不會忘記看過的景色，用 seeing。",
+  "see": "forget 後面不能直接接原形動詞 see。",
+  "saw": "saw 是過去式，forget 後面要接 V-ing 或 to V。"
+ },
+ "d.diag-0346": {
+  "drinking": "stop drinking 是停止喝，題意是停車去喝咖啡，要用 to drink 表目的。",
+  "drink": "stop 後面不能直接接原形動詞 drink。",
+  "drank": "drank 是過去式，stop 後面要接 V-ing 或 to V。"
+ },
+ "d.diag-0347": {
+  "to eat": "stop to eat 是停下來去吃，題意是戒掉垃圾食物，要用 eating。",
+  "eat": "stop 後面不能直接接原形動詞 eat。",
+  "ate": "ate 是過去式，stop 後面要接 V-ing 或 to V。"
+ },
+ "d.diag-0348": {
+  "buying": "remember buying 是記得買過，但 Did you remember 問的是有沒有記得去買。",
+  "buy": "remember 後面不能直接接原形動詞 buy。",
+  "bought": "bought 是過去式，remember 後面要接 to V 或 V-ing。"
+ },
+ "g8-s2-u5.q1": {
+  "sweetly": "sweetly 是副詞，smell 在這裡是連綴動詞，後面要接形容詞 sweet。",
+  "sweetness": "sweetness 是名詞，連綴動詞 smells 後面要接形容詞。",
+  "sweeter than": "sweeter than 是比較級，後面沒有比較對象，也不是單純描述味道。"
+ },
+ "g8-s2-u5.r1": {
+  "She is watering the potted flowers.": "這句與食物評論無關，文章說食物先要看起來吸引人。",
+  "Transitive verb.": "這是字典用語，文章在談美食評論家，第一件事是外觀。"
+ },
+ "d.diag-0291": {
+  "higher": "higher 是比較級，句中有 the 和 in the world，要用最高級 highest。",
+  "high": "high 是原級，句中 the...in the world 需要最高級。",
+  "most high": "high 是單音節，最高級加 -est，不用 most high。"
+ },
+ "d.diag-0292": {
+  "larger": "larger 是比較級，the ... that has ever lived 需要最高級 largest。",
+  "large": "large 是原級，這裡需要最高級 largest。",
+  "most large": "large 是單音節，最高級加 -st，不用 most large。"
+ },
+ "d.diag-0294": {
+  "hotter": "hotter 是比較級，the ... season of the year 需要最高級 hottest。",
+  "hot": "hot 是原級，這裡的最高級需要 hottest。",
+  "most hot": "hot 是單音節，最高級重複字尾 t 加 -est，不用 most hot。"
+ },
+ "d.diag-0295": {
+  "interested": "interested 指人感到有興趣，書本是令人覺得有趣，要用 interesting。",
+  "interest": "interest 是名詞或動詞，most 後面要接形容詞 interesting。",
+  "more interesting": "題目已有 most，more interesting 會重複，這裡只需 interesting。"
+ },
+ "d.diag-0296": {
+  "older": "older 是比較級，家人中最年長的要用最高級 oldest。",
+  "old": "old 是原級，這裡 the ___ person 需要最高級。",
+  "most old": "old 是單音節，最高級加 -est，不用 most old。"
+ },
+ "d.diag-0299": {
+  "hardworking": "hardworking 是原級，Of the three 比較三者需要最高級。",
+  "more hardworking": "more hardworking 是比較級，三者以上要用最高級 most hardworking。",
+  "much hardworking": "much hardworking 不是最高級的構成方式，文法錯誤。"
+ },
+ "d.diag-0301": {
+  "carefully": "carefully 是原級，句中有 much 和 than，需要比較級。",
+  "most carefully": "most carefully 是最高級，句中用 than 比較兩人，要用比較級。",
+  "careful": "careful 是形容詞，修飾動詞 drives 要用副詞，而且需要比較級。"
+ },
+ "d.diag-0302": {
+  "more beautifully": "more beautifully 是比較級，Of all 比較全體要用最高級。",
+  "beautifully": "beautifully 是原級，Of all 範圍需要最高級 most beautifully。",
+  "beautiful": "beautiful 是形容詞，修飾動詞 sings 要用副詞，也需要最高級。"
+ },
+ "d.diag-0303": {
+  "hardly": "hardly 是「幾乎不」，不是 hard 的副詞形式，語意相反。",
+  "more hardly": "hardly 意為幾乎不，more hardly 語意不通，hard 的比較級是 harder。",
+  "hardest": "hardest 是最高級，句中有 than，要用比較級。"
+ },
+ "d.diag-0304": {
+  "fluent": "fluent 是形容詞，修飾動詞 speaks 要用副詞 fluently，也要比較級。",
+  "most fluently": "most fluently 是最高級，句中有 than，要用比較級。",
+  "fluently": "fluently 是原級，句中有 much 和 than，需要比較級 more fluently。"
+ },
+ "d.diag-0305": {
+  "slowly": "slowly 是原級，句中有 than，需要比較級 more slowly。",
+  "slow": "slow 是形容詞，修飾動詞 moves 要用副詞，也需要比較級。",
+  "most slowly": "most slowly 是最高級，句中有 than，只比較兩者，要用比較級。"
+ },
+ "d.diag-0308": {
+  "more quickly": "more quickly 是比較級，Of all the students 比較全體，要用最高級。",
+  "quick": "quick 是形容詞，修飾動詞 solve 要用副詞，也需要最高級。",
+  "quicker": "quicker 是形容詞比較級，修飾動詞要用副詞，且範圍是全班需最高級。"
+ },
+ "d.diag-0309": {
+  "high": "high 是原級，句中有 than，需要比較級 higher。",
+  "highest": "highest 是最高級，句中有 than 比較兩人，要用比較級。",
+  "more high": "high 是單音節，比較級加 -er，不用 more high。"
+ },
+ "d.diag-0310": {
+  "more gracefully": "more gracefully 是比較級，of all the ballerinas 要用最高級。",
+  "graceful": "graceful 是形容詞，修飾動詞 danced 要用副詞，且要最高級。",
+  "gracefully": "gracefully 是原級，of all 範圍需要最高級 most gracefully。"
+ },
+ "d.diag-0396": {
+  "singing": "singing 是動名詞，a professional singing 意思不通，專業的歌手是 singer。",
+  "sang": "sang 是動詞過去式，sound like 後面要接名詞 singer。",
+  "singerly": "singerly 不是英文單字，sound like 後面要接名詞。"
+ },
+ "d.diag-0582": {
+  "to climb": "noticed 屬於感官動詞，後面接原形動詞，不能加 to。",
+  "climbed": "climbed 是過去式，感官動詞後受詞後面要接原形或 V-ing。",
+  "climbs": "climbs 是第三人稱單數，感官動詞後面要接原形 climb。"
+ },
+ "d.diag-0583": {
+  "to sink": "watched 是感官動詞，後面接原形動詞，不能加 to。",
+  "sunk": "sunk 是過去分詞，感官動詞後面要接原形 sink 或 sinking。",
+  "sinks": "sinks 是第三人稱單數，感官動詞後面要接原形 sink。"
+ },
+ "d.diag-0584": {
+  "knocked": "knocked 是過去式，hear 後面要接原形或 knocking，不能接過去式。",
+  "to knock": "hear 是感官動詞，後面不接不定詞 to knock。",
+  "knocks": "knocks 加了 s，hear someone 後面要接原形或 V-ing。"
+ },
+ "d.diag-0585": {
+  "gathered": "gathered 是過去式，saw 後面要接分詞 gathering 或原形。",
+  "to gather": "saw 是感官動詞，後面不接不定詞 to gather。",
+  "gathers": "gathers 是第三人稱單數，感官動詞受詞後面不會這樣用。"
+ },
+ "d.diag-0586": {
+  "to tremble": "felt 是感官動詞，後面接原形動詞，不能加 to。",
+  "trembled": "trembled 是過去式，感官動詞受詞後面要接原形或 V-ing。",
+  "trembles": "trembles 是第三人稱單數，ground 後面要接原形 tremble。"
+ },
+ "d.diag-0588": {
+  "to build": "observed 是感官動詞，後面接原形動詞，不能加 to。",
+  "built": "built 是過去式，感官動詞受詞後面要接原形 build。",
+  "builds": "builds 是第三人稱單數，感官動詞後面要接原形 build。"
+ },
+ "d.diag-0590": {
+  "to leave": "noticed 是感官動詞，後面接原形動詞，不能加 to。",
+  "left": "left 是過去式，感官動詞受詞後面要接原形 leave。",
+  "leaves": "leaves 是第三人稱單數，感官動詞後面要接原形 leave。"
+ },
+ "quality.original.g7-s1-u3.1": {
+  "The word is always negative.": "n. 是名詞的縮寫，並不代表字義總是負面。",
+  "The word has no meaning.": "n. 只是詞性標示，不是說這個字沒有意思。"
+ },
+ "quality.original.g7-s1-u3.2": {
+  "The word must begin with v.": "v. 是動詞的縮寫，不是說單字必須以 v 開頭。",
+  "The word has five syllables.": "v. 標示詞性，不是音節數，字典用別的方式標音節。"
+ },
+ "quality.original.g7-s1-u3.3": {
+  "Only the first translation, regardless of context.": "只看第一個翻譯不管語境，可能選到不合句子的意思。",
+  "The page number alone.": "頁碼只是位置，無法幫你理解單字在句子中的意思。"
+ },
+ "quality.original.g7-s1-u3.4": {
+  "catch, cat, cater": "cat 比 catch 短，且字母相同的部分，較短的應排在前面。",
+  "cater, cat, catch": "cat 要排在 cater 之前，cater 在 cat 和 catch 之後。"
+ },
+ "quality.original.g7-s1-u3.5": {
+  "assume the spelling has no pronunciation": "每個單字都有發音，不能假設拼字沒有發音。",
+  "always choose the longer recording": "錄音長短和是否適合句子無關，應看詞義與詞性。"
+ },
+ "quality.original.g7-s1-u3.6": {
+  "Guessing solely from the Chinese meaning.": "中文意思無法決定英文怎麼念，不能當作發音的直接證據。",
+  "Counting the letters only.": "字母數量不能告訴你怎麼念，不是發音的直接證據。"
+ },
+ "quality.original.g7-s1-u3.7": {
+  "prove that the word has only one meaning": "例句只展示一種用法，不能證明單字只有一個意思。",
+  "avoid reading the entry": "例句是詞條的一部分，目的是幫你讀懂詞條，不是避開它。"
+ },
+ "quality.original.g7-s1-u3.9": {
+  "choose a word only because it is the longest": "單字長短和拼字是否正確無關，不能用長度判斷。",
+  "ignore the sentence meaning": "忽略句意會失去判斷線索，要結合聲音與語意核對。"
+ },
+ "quality.original.g7-s1-u3.10": {
+  "Older sources contain no English words.": "舊資料一樣有英文單字，只是用法可能已更新，這個說法太極端。",
+  "The newest source always has the longest definitions.": "最新的資料不一定釋義最長，檢查日期是為了確認用法是否更新。"
+ },
+ "quality.original.g7-s2-u6.2": {
+  "between": "between 是在兩者之間，Go between the tunnel 意思不通，穿過隧道要用 through。",
+  "under of": "under of 不是正確用法，under 後面不接 of，也不是穿過隧道的意思。"
+ }
+}

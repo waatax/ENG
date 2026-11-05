@@ -1,0 +1,201 @@
+id	word	pos	zh	category
+fc-to-0461	credential	n.	登入憑據存取資格證明	科技與現代生活
+fc-to-0462	authorization	n.	授權許可官方批准認可	科技與現代生活
+fc-to-0463	authorize	v.	正式授權准許認可權限	科技與現代生活
+fc-to-0464	troubleshooting	n.	疑難排解故障排除故障檢修	科技與現代生活
+fc-to-0465	troubleshoot	v.	排除疑難尋找並解決故障	科技與現代生活
+fc-to-0466	system outage	n.	系統大當機伺服器服務中斷	科技與現代生活
+fc-to-0467	maintenance window	n.	系統排程維護時段	科技與現代生活
+fc-to-0468	bandwidth	n.	網路頻寬傳輸頻寬心力容量	科技與現代生活
+fc-to-0469	latency	n.	網路延遲封包回應時間潛伏期	科技與現代生活
+fc-to-0470	backup	n. / v.	資料備份備份檔案；支援備份	科技與現代生活
+fc-to-0471	restore	v.	恢復系統復原檔案修復狀態	科技與現代生活
+fc-to-0472	automation	n.	自動化生產自動化作業流程	科技與現代生活
+fc-to-0473	automate	v.	使自動化引入自動控制	科技與現代生活
+fc-to-0474	artificial intelligence	n.	人工智慧 (AI) 深度學習	科技與現代生活
+fc-to-0475	machine learning	n.	機器學習演算法模型訓練	科技與現代生活
+fc-to-0476	algorithm	n.	運算法則演算法計算程序	科技與現代生活
+fc-to-0477	interface	n. / v.	使用者介面串接介面；交接	科技與現代生活
+fc-to-0478	user-friendly	adj.	介面親切易於操作簡便的	科技與現代生活
+fc-to-0479	compatibility	n.	系統相容性軟硬體相通性	科技與現代生活
+fc-to-0480	upgrade	v. / n.	升級新版本升級配備；升級	科技與現代生活
+fc-to-0481	downgrade	v. / n.	降級調降評等；降格	科技與現代生活
+fc-to-0482	patch	n. / v.	軟體修正補丁更新檔；修補	科技與現代生活
+fc-to-0483	bug	n.	程式錯誤瑕疵小蟲竊聽器	科技與現代生活
+fc-to-0484	prototype	n.	原型樣機研發初樣第一代	科技與現代生活
+fc-to-0485	patent	n. / v.	專利權專利證書；申請專利	科技與現代生活
+fc-to-0486	proprietary	adj.	專有的獨家專利的私有的	科技與現代生活
+fc-to-0487	intellectual property	n.	智慧財產權專利著作權 (IP)	科技與現代生活
+fc-to-0488	copyright	n. / v.	著作權版權；取得版權保護	科技與現代生活
+fc-to-0489	trademark	n. / v.	註冊商標識別標誌；註冊	科技與現代生活
+fc-to-0490	infringement	n.	侵權行為侵害商標專利	科技與現代生活
+fc-to-0491	infringe	v.	侵犯著作權違反法規條款	科技與現代生活
+fc-to-0492	innovation	n.	技術創新革新突破新發明	科技與現代生活
+fc-to-0493	innovative	adj.	創新的突破性前瞻技術的	科技與現代生活
+fc-to-0494	innovator	n.	創新者技術革新先鋒	科技與現代生活
+fc-to-0495	research and development	n.	研究與開發研發部門 (R&D)	科技與現代生活
+fc-to-0496	investment	n.	資本投資投資標的投入	財務與採購
+fc-to-0497	invest	v.	投資出資投入資金心力	財務與採購
+fc-to-0498	investor	n.	投資人出資人機構法人	財務與採購
+fc-to-0499	mutual fund	n.	共同基金公募信託基金	財務與採購
+fc-to-0500	hedge fund	n.	避險基金對沖投資基金	財務與採購
+fc-to-0501	venture capital	n.	創業投資創投資金 (VC)	財務與採購
+fc-to-0502	angel investor	n.	天使投資人初創種子投資者	財務與採購
+fc-to-0503	underwriting	n.	保險承保證券包銷審核	財務與採購
+fc-to-0504	underwrite	v.	承銷證券承擔保險責任	財務與採購
+fc-to-0505	mortgage	n. / v.	房屋抵押貸款房貸；抵押借款	財務與採購
+fc-to-0506	collateral	n. / adj.	貸款抵押品擔保物；附帶的	財務與採購
+fc-to-0507	interest rate	n.	銀行利率放款利息年息	財務與採購
+fc-to-0508	principal	n. / adj.	貸款本金校長；主要的	財務與採購
+fc-to-0509	maturity	n.	債券到期日票據屆期成熟	財務與採購
+fc-to-0510	mature	v. / adj.	票券到期應兌付；成熟穩重	財務與採購
+fc-to-0511	bond	n.	政府債券企業公債羈絆契約	財務與採購
+fc-to-0512	security	n.	有價證券股票安全防護保全	財務與採購
+fc-to-0513	securities	n.	證券金融商品證券交易總稱	財務與採購
+fc-to-0514	stock exchange	n.	證券交易所股市集中市場	財務與採購
+fc-to-0515	broker	n. / v.	證券經紀人保險經紀；居中調解	財務與採購
+fc-to-0516	brokerage	n.	經紀商經紀佣金手續費	財務與採購
+fc-to-0517	commission	n. / v.	銷售佣金抽成委任委員會；委任	財務與採購
+fc-to-0518	transaction	n.	商業交易轉帳交易款項	財務與採購
+fc-to-0519	liquidity	n.	資金流動性資產變現能力	財務與採購
+fc-to-0520	liquid	adj.	具高度流動性易變現的液體	財務與採購
+fc-to-0521	insolvency	n.	無力償還債務破產狀態	財務與採購
+fc-to-0522	insolvent	adj.	無力清償破產倒閉的	財務與採購
+fc-to-0523	bankrupt	adj. / v.	破產倒閉的；使破產清盤	財務與採購
+fc-to-0524	default	v. / n.	違約債務違約不履行預設值	財務與採購
+fc-to-0525	creditworthiness	n.	信用評等信譽償債信用度	財務與採購
+fc-to-0526	credit rating	n.	信用評等信用品質等級	財務與採購
+fc-to-0527	risk management	n.	企業風險控管風控機制	財務與採購
+fc-to-0528	hedging	n.	避險操作對沖風險套期保值	財務與採購
+fc-to-0529	speculation	n.	商業投機行為投機買賣推測	財務與採購
+fc-to-0530	speculative	adj.	投機性高風險推測性的	財務與採購
+fc-to-0531	fluctuate	v.	物價波動上下起伏跳動	財務與採購
+fc-to-0532	volatility	n.	股市波動率行情震盪浮動性	財務與採購
+fc-to-0533	strategy	n.	企業戰略發展總體策略	策略與政策執行
+fc-to-0534	strategic	adj.	具戰略關鍵戰略性的方針	策略與政策執行
+fc-to-0535	strategist	n.	策略家戰略分析大師	策略與政策執行
+fc-to-0536	objective	n. / adj.	專案目標方針；客觀公正的	策略與政策執行
+fc-to-0537	milestone	n.	重要專案里程碑重大轉折點	策略與政策執行
+fc-to-0538	deliverable	n.	專案交付成果應交付成品	策略與政策執行
+fc-to-0539	feasible	adj.	切實可行做得通可落實的	策略與政策執行
+fc-to-0540	stakeholder	n.	利害關係人利益攸關者	策略與政策執行
+fc-to-0541	prioritize	v.	依優先級排序列為最優先處理	策略與政策執行
+fc-to-0542	priority	n.	優先要務優先處理權重要性	策略與政策執行
+fc-to-0543	workflow	n.	作業工作流程流程順序	策略與政策執行
+fc-to-0544	streamline	v.	精簡組織流程使簡潔高效	策略與政策執行
+fc-to-0545	optimize	v.	優化最佳化發揮最高效益	策略與政策執行
+fc-to-0546	optimization	n.	最佳化配置效益極大化	策略與政策執行
+fc-to-0547	implementation	n.	政策貫徹落實執行成效	策略與政策執行
+fc-to-0548	execution	n.	執行力依法處決實踐落實	策略與政策執行
+fc-to-0549	execute	v.	執行合約落實專案依法執行	策略與政策執行
+fc-to-0550	initiative	n.	倡議新措施主動性首創精神	策略與政策執行
+fc-to-0551	contingency plan	n.	突發狀況緊急應變預案	策略與政策執行
+fc-to-0552	scope	n.	專案範疇業務範圍眼界視野	策略與政策執行
+fc-to-0553	oversight	n.	監督管理疏忽遺漏失察	策略與政策執行
+fc-to-0554	accountability	n.	問責制負責任義務承擔職責	策略與政策執行
+fc-to-0555	accountable	adj.	負有責任須承擔後果的	策略與政策執行
+fc-to-0556	transparency	n.	營運透明度公開坦白透光性	策略與政策執行
+fc-to-0557	transparent	adj.	透明公開清楚易見無隱瞞的	策略與政策執行
+fc-to-0558	governance	n.	公司治理管理機制統治體制	策略與政策執行
+fc-to-0559	compliance officer	n.	法規遵循主管合規法務專員	策略與政策執行
+fc-to-0560	liaison	n.	聯絡人商務協調聯絡跨部門窗口	策略與政策執行
+fc-to-0561	empower	v.	授權賦能激勵自主決定	策略與政策執行
+fc-to-0562	empowerment	n.	員工賦能自主權提升	策略與政策執行
+fc-to-0563	synergy	n.	綜效加乘協同效應一加一大於二	策略與政策執行
+fc-to-0564	international trade	n.	國際貿易全球商貿跨國買賣	市場營銷與品牌
+fc-to-0565	import	v. / n.	進口輸入國外商品；進口貨物	市場營銷與品牌
+fc-to-0566	exporter	n.	出口商外銷企業外貿公司	市場營銷與品牌
+fc-to-0567	importer	n.	進口商代理引進外國商品商	市場營銷與品牌
+fc-to-0568	export	v. / n.	出口輸出外銷；出口商品總額	市場營銷與品牌
+fc-to-0569	free trade	n.	自由貿易免關稅商貿協議	市場營銷與品牌
+fc-to-0570	quota	n.	進口配額生產限額業務責任額	市場營銷與品牌
+fc-to-0571	embargo	n. / v.	禁運貿易封鎖；實施貿易禁運	市場營銷與品牌
+fc-to-0572	sanction	n. / v.	國際經濟制裁認可批准；實施制裁	市場營銷與品牌
+fc-to-0573	customs broker	n.	報關行專業報關代辦商代理人	市場營銷與品牌
+fc-to-0574	certificate of origin	n.	商品產地證明書原產地證明	市場營銷與品牌
+fc-to-0575	freight forwarder	n.	國際貨運承攬業者貨代公司	市場營銷與品牌
+fc-to-0576	consignee	n.	貨物收件人提貨受託人受貨人	市場營銷與品牌
+fc-to-0577	consignor	n.	發貨人貨物委託託運人託運商	市場營銷與品牌
+fc-to-0578	demurrage	n.	貨櫃延滯費船舶滯港延期費	市場營銷與品牌
+fc-to-0579	incoterms	n.	國際貿易術語國際商業條款規範	市場營銷與品牌
+fc-to-0580	free on board	n. / adj.	離岸價格船上交貨條件 (FOB)	市場營銷與品牌
+fc-to-0581	cost insurance freight	n.	到岸價格含保費運費條件 (CIF)	市場營銷與品牌
+fc-to-0582	letter of credit	n.	銀行信用狀付款保證書 (L/C)	市場營銷與品牌
+fc-to-0583	remittance	n.	跨國匯款匯寄款項匯款憑條	市場營銷與品牌
+fc-to-0584	wire transfer	n.	銀行電匯電子轉帳國際匯兌	市場營銷與品牌
+fc-to-0585	clearing	n.	票據交換銀行清算清結作業	市場營銷與品牌
+fc-to-0586	settlement date	n.	金融交割日款項結清付款日	市場營銷與品牌
+fc-to-0587	overseas	adj. / adv.	海外國外跨國跨海的	市場營銷與品牌
+fc-to-0588	multinational	adj. / n.	跨國全球性多國籍的；跨國集團	市場營銷與品牌
+fc-to-0589	globalization	n.	全球化全球市場整合世界一體	市場營銷與品牌
+fc-to-0590	outsourcing	n.	企業業務外包委外承攬降本	市場營銷與品牌
+fc-to-0591	outsource	v.	外包業務委外承製降低成本	市場營銷與品牌
+fc-to-0592	offshoring	n.	境外外包離岸生產海外設廠	市場營銷與品牌
+fc-to-0593	reshoring	n.	產線回流製造業回國本土生產	市場營銷與品牌
+fc-to-0594	supply chain	n.	全球供應鏈供應產業體系網絡	市場營銷與品牌
+fc-to-0595	lead time	n.	交期前置時間下單到收貨天數	市場營銷與品牌
+fc-to-0596	turnaround time	n.	作業周轉時間維修換班耗時	市場營銷與品牌
+fc-to-0597	punctuality	n.	守時精確按時準點作息美德	市場營銷與品牌
+fc-to-0598	punctual	adj.	準時守時按部就班不遲到的	市場營銷與品牌
+fc-to-0599	business casual	n.	商務休閒服裝便服上班穿著	公司運營與行程
+fc-to-0600	dress code	n.	服裝儀容規範著裝標準守則	公司運營與行程
+fc-to-0601	attire	n.	正式服裝著裝儀容衣著	公司運營與行程
+fc-to-0602	ergonomics	n.	人體工學人體工學設計工程	公司運營與行程
+fc-to-0603	cubicle	n.	辦公隔間個別辦公座位隔板	公司運營與行程
+fc-to-0604	stationery	n.	辦公文具用品信紙信封筆類	公司運營與行程
+fc-to-0605	stapler	n.	釘書機辦公裝訂工具	公司運營與行程
+fc-to-0606	paperclip	n.	迴紋針紙張夾迴形針	公司運營與行程
+fc-to-0607	whiteboard	n.	會議白板教學書寫白板	公司運營與行程
+fc-to-0608	projector	n.	多媒體投影機投影設備	公司運營與行程
+fc-to-0609	correspondence	n.	商務書信信件往返通訊	公司運營與行程
+fc-to-0610	recipient	n.	信件收件人受領人受款人	公司運營與行程
+fc-to-0611	sender	n.	發信人寄件者交寄單位	公司運營與行程
+fc-to-0612	subject line	n.	電子郵件主旨列信件標題	公司運營與行程
+fc-to-0613	attachment	n.	郵件附件附帶檔案附加配件	公司運營與行程
+fc-to-0614	disclaimer	n.	免責聲明責任拋棄條款	公司運營與行程
+fc-to-0615	cordial	adj.	熱誠親切由衷誠摯的	公司運營與行程
+fc-to-0616	promptness	n.	迅速敏捷即時處理迅速度	公司運營與行程
+fc-to-0617	prompt	adj. / v.	迅速即時的；促使激勵提示	公司運營與行程
+fc-to-0618	overnight delivery	n.	隔夜快遞次日清晨送達	物流與製造管理
+fc-to-0619	registered mail	n.	掛號郵件掛號信雙掛號	物流與製造管理
+fc-to-0620	return receipt	n.	郵件雙掛號回執送達收據	物流與製造管理
+fc-to-0621	postage	n.	郵資郵票費郵遞費用	物流與製造管理
+fc-to-0622	bulky	adj.	龐大笨重佔空間的	物流與製造管理
+fc-to-0623	fragile	adj.	易碎脆弱須小心輕放的	物流與製造管理
+fc-to-0624	perishable	adj.	易腐壞生鮮有時效保鮮的	物流與製造管理
+fc-to-0625	flammable	adj.	易燃可燃高度著火危險的	物流與製造管理
+fc-to-0626	hazardous	adj.	具危險性有害安全健康環境的	物流與製造管理
+fc-to-0627	precaution	n.	安全預防措施戒備事前準備	公司運營與行程
+fc-to-0628	safety regulations	n.	工安法規安全守則勞安規章	公司運營與行程
+fc-to-0629	hazard	n. / v.	危險危害危險源；冒險下注	公司運營與行程
+fc-to-0630	occupational safety	n.	職業安全勞工工作安全 (OSHA)	公司運營與行程
+fc-to-0631	compliance audit	n.	合規稽核內部法遵查核檢驗	公司運營與行程
+fc-to-0632	emergency exit	n.	緊急逃生出口安全門	公司運營與行程
+fc-to-0633	fire extinguisher	n.	手提滅火器消防設備	公司運營與行程
+fc-to-0634	first aid kit	n.	急救箱急救藥品包	公司運營與行程
+fc-to-0635	evacuation plan	n.	緊急疏散計畫疏散避難動線	公司運營與行程
+fc-to-0636	drill	n. / v.	防災演習演練鑽頭；鑽孔訓練	公司運營與行程
+fc-to-0637	designated area	n.	指定特定區域吸菸管制專區	公司運營與行程
+fc-to-0638	unauthorized personnel	n.	非授權無關人員外人嚴禁進入	公司運營與行程
+fc-to-0639	access badge	n.	感應通行證門禁識別證識別卡	公司運營與行程
+fc-to-0640	keycard	n.	電子門禁房卡磁卡感應卡	公司運營與行程
+fc-to-0641	lanyard	n.	識別證掛繩工作證頸掛帶	公司運營與行程
+fc-to-0642	security guard	n.	保全人員警衛安全守衛	公司運營與行程
+fc-to-0643	surveillance camera	n.	閉路監視攝影機監控鏡頭 (CCTV)	公司運營與行程
+fc-to-0644	due diligence	n.	商業實地查核盡職調查 (DD)	財務與採購
+fc-to-0645	exit strategy	n.	投資退場機制撤資策略	財務與採購
+fc-to-0646	controlling interest	n.	控股股權過半經營主導權	財務與採購
+fc-to-0647	board of directors	n.	公司全體董事會董事會議體	公司運營與行程
+fc-to-0648	chairperson	n.	董事會主席董事長大會主席	公司運營與行程
+fc-to-0649	chief executive officer	n.	執行長最高行政首長 (CEO)	公司運營與行程
+fc-to-0650	chief financial officer	n.	財務長最高財務總監 (CFO)	財務與採購
+fc-to-0651	chief operating officer	n.	營運長最高營運主管 (COO)	公司運營與行程
+fc-to-0652	chief technology officer	n.	技術長最高技術總監 (CTO)	科技與現代生活
+fc-to-0653	general manager	n.	公司總經理部門總監 (GM)	公司運營與行程
+fc-to-0654	subordinate	n. / adj. / v.	下屬部屬部下；次要的；隸屬	人力資源與招募
+fc-to-0655	peer	n. / v.	同儕同輩地位相等者；凝視	人力資源與招募
+fc-to-0656	colleague	n.	職場同事業務夥伴工作同仁	人力資源與招募
+fc-to-0657	workforce	n.	全體勞動力在職員工總人數	人力資源與招募
+fc-to-0658	headcount	n.	正式員工編制員額人數總計	人力資源與招募
+fc-to-0659	legal counsel	n.	常年法律顧問公司法務律師	商務合約與談判
+fc-to-0660	external auditor	n.	獨立外部會計審計師第三方查帳	財務與採購

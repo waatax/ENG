@@ -1,0 +1,249 @@
+[
+ {
+  "id": "g6-s2-u5.b1",
+  "type": "fix",
+  "prompt": "哪一句說明節日日期才正確？",
+  "text": "",
+  "options": [
+   "The Lantern Festival is on the fifteenth day of the first lunar month.",
+   "The Lantern Festival is in the fifteenth day of the first lunar month.",
+   "The Lantern Festival is at the fifteenth day of the first lunar month."
+  ],
+  "answer": "The Lantern Festival is on the fifteenth day of the first lunar month.",
+  "wrong": {
+   "The Lantern Festival is in the fifteenth day of the first lunar month.": "說某一天用 on，不能用 in。",
+   "The Lantern Festival is at the fifteenth day of the first lunar month.": "at 用在鐘點，說某一天用 on。"
+  },
+  "why": "某一天前面用 on。",
+  "tip": "日期用 on。",
+  "say": "The Lantern Festival is on the fifteenth day of the first lunar month."
+ },
+ {
+  "id": "g6-s2-u5.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "People celebrates the festival with their families.",
+   "People celebrate the festival with their families.",
+   "People celebrate the festival to their families."
+  ],
+  "answer": "People celebrate the festival with their families.",
+  "wrong": {
+   "People celebrates the festival with their families.": "People 是複數，動詞不加 s。",
+   "People celebrate the festival to their families.": "和家人一起要用 with，不是 to。"
+  },
+  "why": "celebrate with 是和...一起慶祝。",
+  "tip": "with 表示一起。",
+  "say": "People celebrate the festival with their families."
+ },
+ {
+  "id": "g6-s2-u5.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "We eat dumplings in during the Dragon Boat Festival.",
+   "We eat dumplings while the Dragon Boat Festival.",
+   "We eat dumplings during the Dragon Boat Festival."
+  ],
+  "answer": "We eat dumplings during the Dragon Boat Festival.",
+  "wrong": {
+   "We eat dumplings in during the Dragon Boat Festival.": "during 本身就是「在...期間」，前面不用再加 in。",
+   "We eat dumplings while the Dragon Boat Festival.": "while 後面要接一個完整句子，節日名稱要用 during。"
+  },
+  "why": "during 後面接名詞，表示在...期間。",
+  "tip": "during 加名詞。",
+  "say": "We eat dumplings during the Dragon Boat Festival."
+ },
+ {
+  "id": "g6-s2-u5.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "Many tourists visit Taiwan every year.",
+   "Many tourist visit Taiwan every year.",
+   "Many tourists visits Taiwan every year."
+  ],
+  "answer": "Many tourists visit Taiwan every year.",
+  "wrong": {
+   "Many tourist visit Taiwan every year.": "many 後面的名詞要用複數 tourists。",
+   "Many tourists visits Taiwan every year.": "tourists 是複數，動詞 visit 不加 s。"
+  },
+  "why": "many 後面接複數名詞。",
+  "tip": "many 加複數名詞。",
+  "say": "Many tourists visit Taiwan every year."
+ },
+ {
+  "id": "g6-s2-u5.b5",
+  "type": "situation",
+  "prompt": "外國朋友問你春節做什麼，你們會領紅包。哪一句最自然？",
+  "text": "",
+  "options": [
+   "We get red envelope from our elders.",
+   "We get red envelopes from our elders.",
+   "We take red envelopes at our elders."
+  ],
+  "answer": "We get red envelopes from our elders.",
+  "wrong": {
+   "We get red envelope from our elders.": "紅包不只一個，envelope 要用複數。",
+   "We take red envelopes at our elders.": "get ... from 才是「從...拿到」。"
+  },
+  "why": "get ... from 是從...得到。",
+  "tip": "from 表示來源。",
+  "say": "We get red envelopes from our elders."
+ },
+ {
+  "id": "g6-s2-u5.b6",
+  "type": "situation",
+  "prompt": "你想邀請外國朋友來看你們的中秋節月亮，哪一句最自然？",
+  "text": "",
+  "options": [
+   "Would you like see the moon with us?",
+   "Do you would like to see the moon with us?",
+   "Would you like to see the moon with us?"
+  ],
+  "answer": "Would you like to see the moon with us?",
+  "wrong": {
+   "Would you like see the moon with us?": "would you like 後面要加 to see。",
+   "Do you would like to see the moon with us?": "would 已經是助動詞，不需要再加 do。"
+  },
+  "why": "Would you like to ... 是禮貌的邀請。",
+  "tip": "邀請用 Would you like to ...?",
+  "say": "Would you like to see the moon with us?"
+ },
+ {
+  "id": "g6-s2-u5.b7",
+  "type": "situation",
+  "prompt": "朋友說他們國家有一個很有名的節日，你想問它是什麼時候，哪一句最自然？",
+  "text": "",
+  "options": [
+   "When is the festival?",
+   "When the festival is?",
+   "What time is the festival date?"
+  ],
+  "answer": "When is the festival?",
+  "wrong": {
+   "When the festival is?": "問句中 is 要放在主詞前面。",
+   "What time is the festival date?": "what time 是幾點，問日期用 when。"
+  },
+  "why": "問時間點用 When is ...?",
+  "tip": "問時間用 When。",
+  "say": "When is the festival?"
+ },
+ {
+  "id": "g6-s2-u5.b8",
+  "type": "situation",
+  "prompt": "你想告訴外國朋友「我們在耶誕節會交換禮物」，哪一句最自然？",
+  "text": "",
+  "options": [
+   "We exchange gift at Christmas.",
+   "We exchange gifts at Christmas.",
+   "We change gifts at Christmas."
+  ],
+  "answer": "We exchange gifts at Christmas.",
+  "wrong": {
+   "We exchange gift at Christmas.": "很多人交換禮物，gift 要用複數。",
+   "We change gifts at Christmas.": "change 是改變，交換禮物要用 exchange。"
+  },
+  "why": "exchange 是交換。",
+  "tip": "exchange 交換。",
+  "say": "We exchange gifts at Christmas."
+ },
+ {
+  "id": "g6-s2-u5.b9",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "The parade starts _____ ten o'clock in the morning.",
+  "options": [
+   "on",
+   "in",
+   "at"
+  ],
+  "answer": "at",
+  "wrong": {
+   "on": "on 用在日期和星期，十點鐘用 at。",
+   "in": "in 用在月份、年份，十點鐘用 at。"
+  },
+  "why": "點鐘用 at。",
+  "tip": "時間點用 at。",
+  "say": "The parade starts at ten o'clock in the morning."
+ },
+ {
+  "id": "g6-s2-u5.b10",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "We have a big dinner _____ Chinese New Year's Eve.",
+  "options": [
+   "on",
+   "at",
+   "in"
+  ],
+  "answer": "on",
+  "wrong": {
+   "at": "at 用在鐘點，除夕是一天，要用 on。",
+   "in": "in 用在月份、年份，某一天用 on。"
+  },
+  "why": "某一天（日期、節日當天）用 on。",
+  "tip": "某一天用 on。",
+  "say": "We have a big dinner on Chinese New Year's Eve."
+ },
+ {
+  "id": "g6-s2-u5.b11",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "Many people travel _____ their hometowns for the holiday.",
+  "options": [
+   "at",
+   "to",
+   "from"
+  ],
+  "answer": "to",
+  "wrong": {
+   "at": "travel to 才是前往，at 是在某處。",
+   "from": "from 是從...出發，句子要說回到老家，用 to。"
+  },
+  "why": "travel to 是旅行到某地。",
+  "tip": "travel to 表示去某地。",
+  "say": "Many people travel to their hometowns for the holiday."
+ },
+ {
+  "id": "g6-s2-u5.b12",
+  "type": "cloze",
+  "prompt": "選出適合的字。",
+  "text": "Every country has its own _____ and culture.",
+  "options": [
+   "celebrate",
+   "traditional",
+   "traditions"
+  ],
+  "answer": "traditions",
+  "wrong": {
+   "celebrate": "celebrate 是動詞「慶祝」，空格前面的 own 後面要接名詞。",
+   "traditional": "traditional 是形容詞，後面還要再接名詞，這裡 and 後面已經有 culture。"
+  },
+  "why": "tradition 是傳統，每個國家有許多傳統。",
+  "tip": "tradition 是傳統。",
+  "say": "Every country has its own traditions and culture."
+ },
+ {
+  "id": "g6-s2-u5.b13",
+  "type": "meaning",
+  "prompt": "「The festival is a time for family and friends.」是什麼意思？",
+  "text": "",
+  "options": [
+   "節日是家人和朋友聚在一起的時間。",
+   "節日是工作的時間。",
+   "節日只有大人才能參加。"
+  ],
+  "answer": "節日是家人和朋友聚在一起的時間。",
+  "wrong": {
+   "節日是工作的時間。": "a time for family and friends 是與家人朋友相處的時間。",
+   "節日只有大人才能參加。": "句子沒有說只有大人。"
+  },
+  "why": "a time for ... 是適合做...的時候。",
+  "tip": "a time for ... 是...的時刻。",
+  "say": "The festival is a time for family and friends."
+ }
+]

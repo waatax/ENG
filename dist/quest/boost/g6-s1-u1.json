@@ -1,0 +1,325 @@
+[
+ {
+  "id": "g6-s1-u1.b1",
+  "type": "fix",
+  "prompt": "哪一句的時間說法才正確？",
+  "text": "",
+  "options": [
+   "I get up at half past six.",
+   "I get up at six and half.",
+   "I get up in half past six."
+  ],
+  "answer": "I get up at half past six.",
+  "wrong": {
+   "I get up at six and half.": "「六點半」要說 half past six，不能說 six and half。",
+   "I get up in half past six.": "說幾點用 at，不用 in。"
+  },
+  "why": "「六點半」是 half past six，說時間點用 at。",
+  "tip": "幾點用 at，六點半 half past six。",
+  "say": "I get up at half past six."
+ },
+ {
+  "id": "g6-s1-u1.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "She walks usually to school.",
+   "She usually walks to school.",
+   "She usually walk to school."
+  ],
+  "answer": "She usually walks to school.",
+  "wrong": {
+   "She walks usually to school.": "usually 這類頻率副詞通常放在一般動詞前面。",
+   "She usually walk to school.": "主詞 she 是第三人稱單數，動詞要加 s：walks。"
+  },
+  "why": "頻率副詞放一般動詞前，she 搭配 walks。",
+  "tip": "頻率副詞放動詞前。",
+  "say": "She usually walks to school."
+ },
+ {
+  "id": "g6-s1-u1.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "My brother never is late.",
+   "My brother does never late.",
+   "My brother is never late."
+  ],
+  "answer": "My brother is never late.",
+  "wrong": {
+   "My brother never is late.": "頻率副詞放在 be 動詞後面，要寫 is never。",
+   "My brother does never late.": "late 是形容詞，前面該用 be 動詞 is，不是 does。"
+  },
+  "why": "頻率副詞要放在 be 動詞 is 後面。",
+  "tip": "be 動詞後面放頻率副詞。",
+  "say": "My brother is never late."
+ },
+ {
+  "id": "g6-s1-u1.b4",
+  "type": "fix",
+  "prompt": "哪一句問時間的方式才對？",
+  "text": "",
+  "options": [
+   "What time do you have lunch?",
+   "What time you have lunch?",
+   "What time are you have lunch?"
+  ],
+  "answer": "What time do you have lunch?",
+  "wrong": {
+   "What time you have lunch?": "一般問句要加助動詞 do：do you have。",
+   "What time are you have lunch?": "have 是一般動詞，不能和 are 放在一起。"
+  },
+  "why": "what time 後面接助動詞 do，再接主詞和原形動詞。",
+  "tip": "問時間：What time do you ...?",
+  "say": "What time do you have lunch?"
+ },
+ {
+  "id": "g6-s1-u1.b5",
+  "type": "situation",
+  "prompt": "朋友問你幾點上床睡覺，你每天都是九點。最自然的回答是？",
+  "text": "",
+  "options": [
+   "I go to bed on nine every night.",
+   "I go to bed at nine every night.",
+   "I am go to bed at nine every night."
+  ],
+  "answer": "I go to bed at nine every night.",
+  "wrong": {
+   "I go to bed on nine every night.": "說幾點要用 at，不是 on。",
+   "I am go to bed at nine every night.": "go 是一般動詞，前面不需要 am。"
+  },
+  "why": "幾點用 at，every night 表示習慣，用現在簡單式。",
+  "tip": "幾點鐘用 at。",
+  "say": "I go to bed at nine every night."
+ },
+ {
+  "id": "g6-s1-u1.b6",
+  "type": "situation",
+  "prompt": "你想告訴老師「我的課九點十五分開始」，哪一句最自然？",
+  "text": "",
+  "options": [
+   "My class starts at a quarter to nine.",
+   "My class start at a quarter past nine.",
+   "My class starts at a quarter past nine."
+  ],
+  "answer": "My class starts at a quarter past nine.",
+  "wrong": {
+   "My class starts at a quarter to nine.": "a quarter to nine 是八點四十五分，不是九點十五分。",
+   "My class start at a quarter past nine.": "class 是單數，starts 要加 s。"
+  },
+  "why": "past 是過幾分，a quarter past nine 就是九點十五。",
+  "tip": "past 過幾分，to 差幾分。",
+  "say": "My class starts at a quarter past nine."
+ },
+ {
+  "id": "g6-s1-u1.b7",
+  "type": "situation",
+  "prompt": "朋友問：How often do you wash your hands? 你每天吃飯前都會洗，要怎麼回答？",
+  "text": "",
+  "options": [
+   "I always wash my hands before meals.",
+   "I never wash my hands before meals.",
+   "I wash always my hands before meals."
+  ],
+  "answer": "I always wash my hands before meals.",
+  "wrong": {
+   "I never wash my hands before meals.": "never 是從不，和你每天都會洗的事實不符。",
+   "I wash always my hands before meals.": "always 要放在 wash 前面，不能放在動詞後。"
+  },
+  "why": "always 是總是，放在一般動詞前。",
+  "tip": "always 總是，never 從不。",
+  "say": "I always wash my hands before meals."
+ },
+ {
+  "id": "g6-s1-u1.b8",
+  "type": "situation",
+  "prompt": "你想邀請朋友星期六一起去公園，哪一句最自然？",
+  "text": "",
+  "options": [
+   "Let us go to the park in Saturday.",
+   "Let us go to the park on Saturday.",
+   "Let us going to the park on Saturday."
+  ],
+  "answer": "Let us go to the park on Saturday.",
+  "wrong": {
+   "Let us go to the park in Saturday.": "星期幾前面要用 on，不是 in。",
+   "Let us going to the park on Saturday.": "Let us 後面要接原形動詞 go，不能用 going。"
+  },
+  "why": "星期幾前面用 on。",
+  "tip": "星期幾用 on。",
+  "say": "Let us go to the park on Saturday."
+ },
+ {
+  "id": "g6-s1-u1.b9",
+  "type": "cloze",
+  "prompt": "選出最適合的字：We eat dinner _____ six o'clock.",
+  "text": "We eat dinner _____ six o'clock.",
+  "options": [
+   "on",
+   "in",
+   "at"
+  ],
+  "answer": "at",
+  "wrong": {
+   "on": "on 用在星期、日期，六點鐘要用 at。",
+   "in": "in 用在月份、年份、早上等較長的時間。"
+  },
+  "why": "六點鐘是一個時間點，時間點前面要用 at。",
+  "tip": "點鐘用 at。",
+  "say": "We eat dinner at six o'clock."
+ },
+ {
+  "id": "g6-s1-u1.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的字：Tom _____ his teeth every morning.",
+  "text": "Tom _____ his teeth every morning.",
+  "options": [
+   "brushes",
+   "brush",
+   "brushing"
+  ],
+  "answer": "brushes",
+  "wrong": {
+   "brush": "Tom 是第三人稱單數，動詞要加 es。",
+   "brushing": "句子沒有 be 動詞，不能單獨用 brushing。"
+  },
+  "why": "every morning 是習慣，Tom 搭配 brushes。",
+  "tip": "第三人稱單數要加 s 或 es。",
+  "say": "Tom brushes his teeth every morning."
+ },
+ {
+  "id": "g6-s1-u1.b11",
+  "type": "cloze",
+  "prompt": "選出最適合的字：School starts _____ 8:00 and ends at 3:30.",
+  "text": "School starts _____ 8:00 and ends at 3:30.",
+  "options": [
+   "on",
+   "at",
+   "for"
+  ],
+  "answer": "at",
+  "wrong": {
+   "on": "on 用在星期和日期，時間點要用 at。",
+   "for": "for 後面接一段時間，不接時間點。"
+  },
+  "why": "8:00 是時間點，用 at。",
+  "tip": "時間點用 at。",
+  "say": "School starts at 8:00."
+ },
+ {
+  "id": "g6-s1-u1.b12",
+  "type": "cloze",
+  "prompt": "選出適合的字：I do my homework _____ the evening.",
+  "text": "I do my homework _____ the evening.",
+  "options": [
+   "at",
+   "on",
+   "in"
+  ],
+  "answer": "in",
+  "wrong": {
+   "at": "在晚上固定用 in the evening，at 用在 at night 或幾點鐘。",
+   "on": "on 用在星期和日期，in the evening 才是固定說法。"
+  },
+  "why": "早上、下午、晚上固定說 in the morning／afternoon／evening。",
+  "tip": "早午晚用 in the。",
+  "say": "I do my homework in the evening."
+ },
+ {
+  "id": "g6-s1-u1.b13",
+  "type": "meaning",
+  "prompt": "「I sometimes read before bed.」是什麼意思？",
+  "text": "",
+  "options": [
+   "我有時候睡前會看書。",
+   "我每天睡前都看書。",
+   "我從來不在睡前看書。"
+  ],
+  "answer": "我有時候睡前會看書。",
+  "wrong": {
+   "我每天睡前都看書。": "every day 才是每天，sometimes 是有時候。",
+   "我從來不在睡前看書。": "從來不是 never，sometimes 是有時候。"
+  },
+  "why": "sometimes 是有時候，頻率比 always 低。",
+  "tip": "sometimes 有時候。",
+  "say": "I sometimes read before bed."
+ },
+ {
+  "id": "g6-s1-u1.b14",
+  "type": "meaning",
+  "prompt": "「It is a quarter to seven.」現在是幾點？",
+  "text": "",
+  "options": [
+   "七點十五分",
+   "六點四十五分",
+   "六點十五分"
+  ],
+  "answer": "六點四十五分",
+  "wrong": {
+   "七點十五分": "七點十五分是 a quarter past seven。",
+   "六點十五分": "六點十五分是 a quarter past six。"
+  },
+  "why": "a quarter to seven 是差一刻七點，就是六點四十五分。",
+  "tip": "to 是差，past 是過。",
+  "say": "It is a quarter to seven."
+ },
+ {
+  "id": "g6-s1-u1.b15",
+  "type": "meaning",
+  "prompt": "「Our schedule is full on Monday.」哪個說法最接近？",
+  "text": "",
+  "options": [
+   "星期一我們要去吃飯。",
+   "我們星期一不上課。",
+   "星期一我們的行程排得滿滿的。"
+  ],
+  "answer": "星期一我們的行程排得滿滿的。",
+  "wrong": {
+   "星期一我們要去吃飯。": "schedule 是日程表，句子沒有說要吃飯。",
+   "我們星期一不上課。": "full 是滿的，表示很忙，不是沒事。"
+  },
+  "why": "schedule 是時間表，full 是排滿了。",
+  "tip": "schedule 是時間表。",
+  "say": "Our schedule is full on Monday."
+ },
+ {
+  "id": "g6-s1-u1.b16",
+  "type": "meaning",
+  "prompt": "「Lucy is usually on time.」是什麼意思？",
+  "text": "",
+  "options": [
+   "Lucy 通常很準時。",
+   "Lucy 總是遲到。",
+   "Lucy 從來沒有準時過。"
+  ],
+  "answer": "Lucy 通常很準時。",
+  "wrong": {
+   "Lucy 總是遲到。": "on time 是準時，late 才是遲到。",
+   "Lucy 從來沒有準時過。": "usually 是通常，句子說她通常準時。"
+  },
+  "why": "on time 是準時，usually 是通常。",
+  "tip": "on time 是準時。",
+  "say": "Lucy is usually on time."
+ },
+ {
+  "id": "g6-s1-u1.b17",
+  "type": "fix",
+  "prompt": "哪一句的星期和時間說法才正確？",
+  "text": "",
+  "options": [
+   "We have music class at Friday on ten.",
+   "We have music class on Friday at ten.",
+   "We have music class in Friday at ten."
+  ],
+  "answer": "We have music class on Friday at ten.",
+  "wrong": {
+   "We have music class at Friday on ten.": "星期用 on，幾點用 at，介系詞放反了。",
+   "We have music class in Friday at ten.": "星期要用 on，不能用 in。"
+  },
+  "why": "on 加星期，at 加點鐘。",
+  "tip": "on 星期，at 點鐘。",
+  "say": "We have music class on Friday at ten."
+ }
+]

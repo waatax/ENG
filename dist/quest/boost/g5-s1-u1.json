@@ -1,0 +1,249 @@
+[
+ {
+  "id": "g5-s1-u1.b1",
+  "type": "meaning",
+  "prompt": "哪一個字的 a 唸成字母名稱的長音 /eɪ/？",
+  "text": "",
+  "options": [
+   "name",
+   "cat",
+   "bag"
+  ],
+  "answer": "name",
+  "wrong": {
+   "cat": "cat 的 a 唸短音 /æ/。",
+   "bag": "bag 的 a 唸短音 /æ/。"
+  },
+  "why": "name 結尾有 magic e，所以 a 唸長音 /eɪ/。",
+  "tip": "結尾 e 讓 a 唸長音。",
+  "say": "name"
+ },
+ {
+  "id": "g5-s1-u1.b2",
+  "type": "meaning",
+  "prompt": "哪一個字的 i 唸成長音 /aɪ/？",
+  "text": "",
+  "options": [
+   "big",
+   "bike",
+   "sit"
+  ],
+  "answer": "bike",
+  "wrong": {
+   "big": "big 的 i 唸短音 /ɪ/。",
+   "sit": "sit 的 i 唸短音 /ɪ/。"
+  },
+  "why": "bike 結尾有 e，i 唸長音 /aɪ/。",
+  "tip": "bike 有 magic e。",
+  "say": "bike"
+ },
+ {
+  "id": "g5-s1-u1.b3",
+  "type": "meaning",
+  "prompt": "哪一個字的 o 唸成長音 /oʊ/？",
+  "text": "",
+  "options": [
+   "hot",
+   "box",
+   "home"
+  ],
+  "answer": "home",
+  "wrong": {
+   "hot": "hot 的 o 唸短音 /ɑ/。",
+   "box": "box 的 o 唸短音 /ɑ/。"
+  },
+  "why": "home 結尾有 magic e，o 唸長音。",
+  "tip": "home 的 o 唸長音。",
+  "say": "home"
+ },
+ {
+  "id": "g5-s1-u1.b4",
+  "type": "meaning",
+  "prompt": "哪一個字的 u 唸成長音 /ju/？",
+  "text": "",
+  "options": [
+   "cute",
+   "cup",
+   "bus"
+  ],
+  "answer": "cute",
+  "wrong": {
+   "cup": "cup 的 u 唸短音 /ʌ/。",
+   "bus": "bus 的 u 唸短音 /ʌ/。"
+  },
+  "why": "cute 結尾有 e，u 唸長音。",
+  "tip": "cute 的 u 唸長音。",
+  "say": "cute"
+ },
+ {
+  "id": "g5-s1-u1.b5",
+  "type": "cloze",
+  "prompt": "在 cap 後面加 e，變成新的字。",
+  "text": "cap + e = ___",
+  "options": [
+   "cap",
+   "cape",
+   "cop"
+  ],
+  "answer": "cape",
+  "wrong": {
+   "cap": "cap 是原本的字，沒有加 e。",
+   "cop": "cop 是把 a 換成 o，不是加 e。"
+  },
+  "why": "cap 加上 e 變成 cape，a 的發音變長。",
+  "tip": "cap 加 e 變 cape。",
+  "say": "cape"
+ },
+ {
+  "id": "g5-s1-u1.b6",
+  "type": "cloze",
+  "prompt": "在 kit 後面加 e，變成新的字。",
+  "text": "kit + e = ___",
+  "options": [
+   "kit",
+   "kiss",
+   "kite"
+  ],
+  "answer": "kite",
+  "wrong": {
+   "kit": "kit 是原本的字，沒有加 e。",
+   "kiss": "kiss 是另一個字，不是 kit 加 e。"
+  },
+  "why": "kit 加上 e 變成 kite，風箏。",
+  "tip": "kit 加 e 變 kite。",
+  "say": "kite"
+ },
+ {
+  "id": "g5-s1-u1.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Amy likes to bake a ___.",
+  "options": [
+   "cake",
+   "cat",
+   "cap"
+  ],
+  "answer": "cake",
+  "wrong": {
+   "cat": "cat 是貓，不能烤。",
+   "cap": "cap 是帽子，不能烤。"
+  },
+  "why": "bake 是烘焙，cake 是蛋糕。",
+  "tip": "bake 配 cake。",
+  "say": "Amy likes to bake a cake."
+ },
+ {
+  "id": "g5-s1-u1.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I ride my ___ to school.",
+  "options": [
+   "bit",
+   "bike",
+   "big"
+  ],
+  "answer": "bike",
+  "wrong": {
+   "bit": "bit 是一點點，不是交通工具。",
+   "big": "big 是大的，是形容詞。"
+  },
+  "why": "ride 是騎，bike 是腳踏車。",
+  "tip": "騎腳踏車是 ride a bike。",
+  "say": "I ride my bike to school."
+ },
+ {
+  "id": "g5-s1-u1.b9",
+  "type": "meaning",
+  "prompt": "hop 是「跳」，加上 e 變成 hope，意思是什麼？",
+  "text": "",
+  "options": [
+   "跳",
+   "帽子",
+   "希望"
+  ],
+  "answer": "希望",
+  "wrong": {
+   "跳": "hop 才是跳，hope 加了 e 後是新字。",
+   "帽子": "帽子是 hat 或 cap。"
+  },
+  "why": "hope 的意思是希望，o 唸長音。",
+  "tip": "hop 加 e 是 hope。",
+  "say": "hope"
+ },
+ {
+  "id": "g5-s1-u1.b10",
+  "type": "meaning",
+  "prompt": "看到 kite 這個字，它是什麼意思？",
+  "text": "",
+  "options": [
+   "風箏",
+   "小孩",
+   "廚房"
+  ],
+  "answer": "風箏",
+  "wrong": {
+   "小孩": "小孩是 kid，不是 kite。",
+   "廚房": "廚房是 kitchen，不是 kite。"
+  },
+  "why": "kite 這個字的意思是風箏，i 唸長音。",
+  "tip": "kite 是風箏，也有長音 i。",
+  "say": "kite"
+ },
+ {
+  "id": "g5-s1-u1.b11",
+  "type": "fix",
+  "prompt": "哪一個是「骨頭」的正確拼法？",
+  "text": "",
+  "options": [
+   "bon",
+   "bone",
+   "bonne"
+  ],
+  "answer": "bone",
+  "wrong": {
+   "bon": "少了 magic e，發音會不同。",
+   "bonne": "多了一個 n，拼字不正確。"
+  },
+  "why": "bone 有 magic e，o 唸長音。",
+  "tip": "bone 有 magic e。",
+  "say": "bone"
+ },
+ {
+  "id": "g5-s1-u1.b12",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "The cak is on the plate.",
+   "The caek is on the plate.",
+   "The cake is on the plate."
+  ],
+  "answer": "The cake is on the plate.",
+  "wrong": {
+   "The cak is on the plate.": "cake 後面需要 magic e。",
+   "The caek is on the plate.": "e 的位置錯了，應為 cake。"
+  },
+  "why": "cake 的拼法是 c-a-k-e。",
+  "tip": "cake 要有 magic e。",
+  "say": "The cake is on the plate."
+ },
+ {
+  "id": "g5-s1-u1.b13",
+  "type": "situation",
+  "prompt": "玩押韻遊戲，哪個字和 rain 押韻？",
+  "text": "",
+  "options": [
+   "train",
+   "ran",
+   "run"
+  ],
+  "answer": "train",
+  "wrong": {
+   "ran": "ran 的母音是短音，和 rain 不押韻。",
+   "run": "run 的母音是短音，和 rain 不押韻。"
+  },
+  "why": "rain 和 train 都以 -ain 結尾，唸起來相同。",
+  "tip": "押韻看字尾發音。",
+  "say": "train"
+ }
+]

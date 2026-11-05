@@ -1,0 +1,242 @@
+[
+ {
+  "name": "full-elem_1000-001",
+  "tier": "elem_1000",
+  "count": 39
+ },
+ {
+  "name": "full-jhs_2000-002",
+  "tier": "jhs_2000",
+  "count": 200
+ },
+ {
+  "name": "full-jhs_2000-003",
+  "tier": "jhs_2000",
+  "count": 200
+ },
+ {
+  "name": "full-jhs_2000-004",
+  "tier": "jhs_2000",
+  "count": 200
+ },
+ {
+  "name": "full-jhs_2000-005",
+  "tier": "jhs_2000",
+  "count": 114
+ },
+ {
+  "name": "full-shs_3000-006",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-007",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-008",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-009",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-010",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-011",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-012",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-013",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-014",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-shs_3000-015",
+  "tier": "shs_3000",
+  "count": 200
+ },
+ {
+  "name": "full-toeic-016",
+  "tier": "toeic",
+  "count": 200
+ },
+ {
+  "name": "full-toeic-017",
+  "tier": "toeic",
+  "count": 200
+ },
+ {
+  "name": "full-toeic-018",
+  "tier": "toeic",
+  "count": 200
+ },
+ {
+  "name": "full-toeic-019",
+  "tier": "toeic",
+  "count": 40
+ },
+ {
+  "name": "full-toefl-020",
+  "tier": "toefl",
+  "count": 200
+ },
+ {
+  "name": "full-toefl-021",
+  "tier": "toefl",
+  "count": 200
+ },
+ {
+  "name": "full-toefl-022",
+  "tier": "toefl",
+  "count": 200
+ },
+ {
+  "name": "full-toefl-023",
+  "tier": "toefl",
+  "count": 88
+ },
+ {
+  "name": "full-sat-024",
+  "tier": "sat",
+  "count": 200
+ },
+ {
+  "name": "full-sat-025",
+  "tier": "sat",
+  "count": 200
+ },
+ {
+  "name": "full-sat-026",
+  "tier": "sat",
+  "count": 200
+ },
+ {
+  "name": "full-sat-027",
+  "tier": "sat",
+  "count": 69
+ },
+ {
+  "name": "full-gre-028",
+  "tier": "gre",
+  "count": 200
+ },
+ {
+  "name": "full-gre-029",
+  "tier": "gre",
+  "count": 200
+ },
+ {
+  "name": "full-gre-030",
+  "tier": "gre",
+  "count": 200
+ },
+ {
+  "name": "full-gre-031",
+  "tier": "gre",
+  "count": 65
+ },
+ {
+  "name": "full-gmat-032",
+  "tier": "gmat",
+  "count": 200
+ },
+ {
+  "name": "full-gmat-033",
+  "tier": "gmat",
+  "count": 200
+ },
+ {
+  "name": "full-gmat-034",
+  "tier": "gmat",
+  "count": 200
+ },
+ {
+  "name": "full-gmat-035",
+  "tier": "gmat",
+  "count": 72
+ },
+ {
+  "name": "light-elem_1000-001",
+  "tier": "elem_1000",
+  "count": 400
+ },
+ {
+  "name": "light-elem_1000-002",
+  "tier": "elem_1000",
+  "count": 346
+ },
+ {
+  "name": "light-jhs_2000-003",
+  "tier": "jhs_2000",
+  "count": 400
+ },
+ {
+  "name": "light-jhs_2000-004",
+  "tier": "jhs_2000",
+  "count": 400
+ },
+ {
+  "name": "light-jhs_2000-005",
+  "tier": "jhs_2000",
+  "count": 328
+ },
+ {
+  "name": "light-shs_3000-006",
+  "tier": "shs_3000",
+  "count": 400
+ },
+ {
+  "name": "light-shs_3000-007",
+  "tier": "shs_3000",
+  "count": 400
+ },
+ {
+  "name": "light-shs_3000-008",
+  "tier": "shs_3000",
+  "count": 146
+ },
+ {
+  "name": "light-toeic-009",
+  "tier": "toeic",
+  "count": 14
+ },
+ {
+  "name": "light-toefl-010",
+  "tier": "toefl",
+  "count": 12
+ },
+ {
+  "name": "light-sat-011",
+  "tier": "sat",
+  "count": 1
+ },
+ {
+  "name": "light-gre-012",
+  "tier": "gre",
+  "count": 35
+ },
+ {
+  "name": "light-gmat-013",
+  "tier": "gmat",
+  "count": 15
+ }
+]

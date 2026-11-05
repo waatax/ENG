@@ -1,0 +1,347 @@
+id	word	pos	zh	category	example
+fc-el-0624	doorbell	n.	門鈴	居家與生活	The doorbell rang, so I opened the door.
+fc-el-0625	mailbox	n.	信箱	居家與生活	I found a letter from Grandma in the mailbox.
+fc-el-0626	pillow	n.	枕頭	居家與生活	I need a soft pillow.
+fc-el-0627	cushion	n.	靠墊、坐墊	居家與生活	Sit on this cushion.
+fc-el-0628	blanket	n.	毛毯	居家與生活	I need a warm blanket.
+fc-el-0629	sheet	n.	床單	居家與生活	I changed the bed sheets.
+fc-el-0630	quilt	n.	被子、棉被	居家與生活	Grandma made a quilt.
+fc-el-0631	mattress	n.	床墊	居家與生活	This mattress is soft.
+fc-el-0632	wardrobe	n.	衣櫃	居家與生活	My clothes are in the wardrobe.
+fc-el-0633	closet	n.	壁櫥	居家與生活	Hang your coat in the closet.
+fc-el-0634	drawer	n.	抽屜	居家與生活	The pen is in the drawer.
+fc-el-0635	cupboard	n.	碗櫥、櫥櫃	居家與生活	The cups are in the cupboard.
+fc-el-0636	cabinet	n.	櫃子	居家與生活	The cabinet is full of dishes.
+fc-el-0637	shelf	n.	架子、書架	居家與生活	Put the book on the shelf.
+fc-el-0638	bookcase	n.	書架、書櫃	居家與生活	The bookcase is full.
+fc-el-0639	curtain	n.	窗簾	居家與生活	Please close the curtains.
+fc-el-0640	blind	n.	百葉窗	居家與生活	Pull down the blinds.
+fc-el-0641	carpet	n.	地毯	居家與生活	The carpet is soft.
+fc-el-0642	rug	n.	小塊地毯	居家與生活	The cat sleeps on the rug.
+fc-el-0643	refrigerator	n.	冰箱	居家與生活	Put the milk in the refrigerator.
+fc-el-0644	fridge	n.	冰箱 (口語)	居家與生活	There's juice in the fridge.
+fc-el-0645	freezer	n.	冷凍庫	居家與生活	The ice cream is in the freezer.
+fc-el-0646	oven	n.	烤箱	居家與生活	Bake the cake in the oven.
+fc-el-0647	microwave	n.	微波爐	居家與生活	Heat the soup in the microwave.
+fc-el-0648	stove	n.	爐子、爐灶	居家與生活	Don't touch the hot stove.
+fc-el-0649	toaster	n.	烤麵包機	居家與生活	The toaster is hot.
+fc-el-0650	blender	n.	果汁機、攪拌機	居家與生活	Mix the fruit in the blender.
+fc-el-0651	kettle	n.	熱水壺	居家與生活	Boil water in the kettle.
+fc-el-0652	pot	n.	鍋子	居家與生活	Put the pot on the stove.
+fc-el-0653	pan	n.	平底鍋	居家與生活	Fry the egg in a pan.
+fc-el-0654	teapot	n.	茶壺	居家與生活	The teapot is hot.
+fc-el-0655	sink	n.	水槽、洗手台	居家與生活	Put the dishes in the sink.
+fc-el-0656	faucet	n.	水龍頭	居家與生活	Turn off the faucet.
+fc-el-0657	bathtub	n.	浴缸	居家與生活	The baby is in the bathtub.
+fc-el-0658	shower	n.	淋浴間、淋浴	居家與生活	I take a shower every night.
+fc-el-0659	toilet	n.	馬桶	居家與生活	Flush the toilet.
+fc-el-0660	towel	n.	毛巾	居家與生活	Dry your hands with a towel.
+fc-el-0661	soap	n.	肥皂	居家與生活	Wash your hands with soap.
+fc-el-0662	shampoo	n.	洗髮精	居家與生活	I need some shampoo.
+fc-el-0663	toothbrush	n.	牙刷	居家與生活	I need a new toothbrush.
+fc-el-0664	toothpaste	n.	牙膏	居家與生活	Squeeze the toothpaste.
+fc-el-0665	comb	n.	扁梳	居家與生活	She keeps a comb in her bag.
+fc-el-0667	iron	n.	熨斗	居家與生活	Be careful, the iron is hot.
+fc-el-0669	dryer	n.	烘乾機	居家與生活	Put the clothes in the dryer.
+fc-el-0670	vacuum	n.	吸塵器	居家與生活	The vacuum is very loud.
+fc-el-0671	broom	n.	掃帚	居家與生活	Sweep the floor with a broom.
+fc-el-0672	mop	n.	拖把	居家與生活	The mop is behind the door.
+fc-el-0674	bucket	n.	水桶	居家與生活	Fill the bucket with water.
+fc-el-0675	sponge	n.	海綿	居家與生活	Wash the dishes with a sponge.
+fc-el-0677	flashlight	n.	手電筒	居家與生活	I need a flashlight.
+fc-el-0678	candle	n.	蠟燭	居家與生活	Blow out the candles.
+fc-el-0679	match	n.	火柴	居家與生活	Light a match.
+fc-el-0680	lighter	n.	打火機	居家與生活	Keep the lighter away from kids.
+fc-el-0681	vehicle	n.	車輛、交通工具	交通與場所	No vehicles in the park.
+fc-el-0682	motorcycle	n.	重型機車	交通與場所	He rides a motorcycle.
+fc-el-0683	scooter	n.	速克達機車、滑板車	交通與場所	My mom rides a scooter.
+fc-el-0684	van	n.	廂型車	交通與場所	We moved in a van.
+fc-el-0685	truck	n.	卡車	交通與場所	A big truck is coming.
+fc-el-0688	taxi	n.	計程車	交通與場所	Let's take a taxi.
+fc-el-0689	cab	n.	計程車 (簡稱)	交通與場所	We took a cab to the airport.
+fc-el-0690	subway	n.	地下鐵	交通與場所	I take the subway to work.
+fc-el-0691	metro	n.	捷運、地鐵	交通與場所	I take the metro to school.
+fc-el-0692	tram	n.	有軌電車	交通與場所	We rode a tram in Hong Kong.
+fc-el-0693	monorail	n.	單軌電車	交通與場所	The monorail goes to the zoo.
+fc-el-0694	ferry	n.	渡輪	交通與場所	We took a ferry to the island.
+fc-el-0695	yacht	n.	快艇、遊艇	交通與場所	They sailed on a yacht.
+fc-el-0696	canoe	n.	獨木舟	交通與場所	We paddled a canoe.
+fc-el-0697	kayak	n.	皮划艇	交通與場所	I want to try a kayak.
+fc-el-0698	raft	n.	木筏	交通與場所	They built a raft.
+fc-el-0699	submarine	n.	潛水艇	交通與場所	The submarine went deep.
+fc-el-0700	helicopter	n.	直升機	交通與場所	A helicopter is landing.
+fc-el-0702	rocket	n.	火箭	交通與場所	The rocket flew into space.
+fc-el-0703	spaceship	n.	太空船	交通與場所	The spaceship landed on the moon.
+fc-el-0704	harbor	n.	港口	交通與場所	Boats are in the harbor.
+fc-el-0705	port	n.	港口、碼頭	交通與場所	The ship arrived at the port.
+fc-el-0706	pier	n.	碼頭	交通與場所	We fished from the pier.
+fc-el-0707	dock	n.	船塢、碼頭	交通與場所	The boat is at the dock.
+fc-el-0708	runway	n.	機場跑道	交通與場所	The plane is on the runway.
+fc-el-0709	terminal	n.	機場航廈、終點站	交通與場所	We waited at Terminal 2.
+fc-el-0710	platform	n.	月台	交通與場所	The train is at Platform 3.
+fc-el-0711	avenue	n.	大道	交通與場所	Fifth Avenue is famous.
+fc-el-0712	boulevard	n.	林蔭大道	交通與場所	We walked along the boulevard.
+fc-el-0713	lane	n.	小巷、車道	交通與場所	Stay in your lane.
+fc-el-0714	alley	n.	巷弄	交通與場所	The cat ran into the alley.
+fc-el-0715	highway	n.	高速公路	交通與場所	We drove on the highway.
+fc-el-0716	freeway	n.	快速道路	交通與場所	The freeway has no traffic lights.
+fc-el-0717	bridge	n.	橋樑	交通與場所	We walked across the bridge.
+fc-el-0718	tunnel	n.	隧道	交通與場所	The train went into the tunnel.
+fc-el-0719	sidewalk	n.	人行道	交通與場所	Walk on the sidewalk.
+fc-el-0720	crosswalk	n.	斑馬線	交通與場所	Use the crosswalk.
+fc-el-0721	intersection	n.	十字路口	交通與場所	Turn left at the intersection.
+fc-el-0722	corner	n.	街角、角落	交通與場所	The shop is on the corner.
+fc-el-0724	sign	n.	標誌、牌子	交通與場所	Read the sign.
+fc-el-0725	bakery	n.	麵包店	交通與場所	I buy bread at the bakery.
+fc-el-0726	butcher	n.	肉舖	交通與場所	I buy meat at the butcher shop.
+fc-el-0727	bookstore	n.	書店	交通與場所	Let's meet at the bookstore.
+fc-el-0732	laundromat	n.	自助洗衣店	交通與場所	We wash clothes at the laundromat.
+fc-el-0734	cinema	n.	電影院	交通與場所	Let's go to the cinema.
+fc-el-0735	theater	n.	劇院	交通與場所	We saw a play at the theater.
+fc-el-0736	circus	n.	馬戲團	交通與場所	The circus has clowns.
+fc-el-0738	aquarium	n.	水族館	交通與場所	We saw sharks at the aquarium.
+fc-el-0739	planetarium	n.	天文館	交通與場所	The planetarium shows the stars.
+fc-el-0740	factory	n.	工廠	交通與場所	My uncle works in a factory.
+fc-el-0741	temple	n.	寺廟	交通與場所	We visited a temple.
+fc-el-0742	church	n.	教堂	交通與場所	They go to church on Sunday.
+fc-el-0743	castle	n.	城堡	交通與場所	The king lives in a castle.
+fc-el-0744	palace	n.	宮殿	交通與場所	The queen lives in a palace.
+fc-el-0745	tower	n.	塔	交通與場所	The tower is very tall.
+fc-el-0746	monument	n.	紀念碑	交通與場所	We visited the monument.
+fc-el-0747	fountain	n.	噴泉	交通與場所	Children play near the fountain.
+fc-el-0748	square	n.	市民廣場	交通與場所	People gather in the square.
+fc-el-0749	yawn	v.	打哈欠	常見動詞	He yawned in class.
+fc-el-0750	stretch	v.	伸展、伸懶腰	常見動詞	Stretch your arms.
+fc-el-0751	shave	v.	刮鬍子	常見動詞	Dad shaves every morning.
+fc-el-0752	bake	v.	烘烤	常見動詞	Let's bake cookies.
+fc-el-0753	fry	v.	油煎、油炸	常見動詞	Fry the eggs.
+fc-el-0754	boil	v.	煮沸、燒水	常見動詞	Boil the water first.
+fc-el-0755	steam	v.	清蒸	常見動詞	Steam the fish for ten minutes.
+fc-el-0756	roast	v.	烤肉	常見動詞	We roast a chicken for dinner.
+fc-el-0757	grill	v.	火烤	常見動詞	Grill the corn.
+fc-el-0758	slice	v.	切片	常見動詞	Cut the bread into slices.
+fc-el-0759	peel	v.	削皮	常見動詞	Peel the apple.
+fc-el-0760	pour	v.	倒水、傾倒	常見動詞	Pour the milk into the cup.
+fc-el-0761	stir	v.	攪拌	常見動詞	Stir the soup slowly.
+fc-el-0762	mix	v.	混合	常見動詞	Mix the flour and eggs.
+fc-el-0763	taste	v.	嚐味道	常見動詞	Taste the soup.
+fc-el-0764	smell	v.	聞氣味	常見動詞	I can smell flowers.
+fc-el-0765	chew	v.	咀嚼	常見動詞	Chew your food well.
+fc-el-0766	swallow	v.	吞嚥	常見動詞	Swallow the pill.
+fc-el-0767	bite	v.	咬	常見動詞	Don't bite your nails.
+fc-el-0768	lick	v.	舔	常見動詞	The dog licked my hand.
+fc-el-0769	sip	v.	啜飲	常見動詞	Take a sip of tea.
+fc-el-0770	sweep	v.	掃地	常見動詞	Sweep the floor.
+fc-el-0771	wipe	v.	擦拭	常見動詞	Wipe the table.
+fc-el-0772	dust	v.	擦拭灰塵	常見動詞	Dust the shelves.
+fc-el-0773	scrub	v.	用力刷洗	常見動詞	Scrub the pot.
+fc-el-0774	fold	v.	折疊 (衣服)	常見動詞	Fold your clothes.
+fc-el-0775	hang	v.	懸掛	常見動詞	Hang your coat here.
+fc-el-0776	organize	v.	整理、組織	常見動詞	Organize your desk.
+fc-el-0777	pack	v.	打包行李	常見動詞	Pack your bag.
+fc-el-0778	unpack	v.	拆開行李	常見動詞	Unpack your suitcase.
+fc-el-0779	lock	v.	鎖上	常見動詞	Lock the door.
+fc-el-0780	unlock	v.	開鎖	常見動詞	Unlock the door, please.
+fc-el-0784	push	v.	推	常見動詞	Push the door.
+fc-el-0785	pull	v.	拉	常見動詞	Pull the rope.
+fc-el-0786	lift	v.	舉起、抬起	常見動詞	Lift the box.
+fc-el-0787	drop	v.	掉落、扔下	常見動詞	Don't drop the glass.
+fc-el-0788	carry	v.	攜帶、扛	常見動詞	Carry this bag for me.
+fc-el-0789	hold	v.	握住、拿著	常見動詞	Hold my hand.
+fc-el-0790	catch	v.	接住、抓捕	常見動詞	Catch the ball!
+fc-el-0791	throw	v.	投擲、丟	常見動詞	Throw the ball to me.
+fc-el-0792	kick	v.	踢	常見動詞	Kick the ball.
+fc-el-0793	hit	v.	打、撞擊	常見動詞	Don't hit your brother.
+fc-el-0794	clap	v.	拍手、鼓掌	常見動詞	Clap your hands.
+fc-el-0795	wave	v.	揮手	常見動詞	Wave goodbye.
+fc-el-0796	point	v.	用手指、指向	常見動詞	Point to the picture.
+fc-el-0797	nod	v.	點頭	常見動詞	He nodded and smiled.
+fc-el-0798	shake	v.	搖頭、搖動	常見動詞	Shake the bottle.
+fc-el-0799	bow	v.	鞠躬	常見動詞	We bow to our teacher.
+fc-el-0800	hug	v.	擁抱	常見動詞	Give me a hug.
+fc-el-0801	kiss	v.	親吻	常見動詞	She kissed the baby.
+fc-el-0802	shout	v.	高聲呼喊	常見動詞	Don't shout in the library.
+fc-el-0803	whisper	v.	輕聲耳語	常見動詞	She whispered a secret.
+fc-el-0804	sing	v.	唱歌	常見動詞	Let's sing a song.
+fc-el-0805	dance	v.	跳舞	常見動詞	Can you dance?
+fc-el-0806	play	v.	玩耍、演奏	常見動詞	Let's play outside.
+fc-el-0807	draw	v.	畫畫 (線條)	常見動詞	draw a picture
+fc-el-0808	paint	v.	著色、繪畫	常見動詞	Paint the wall blue.
+fc-el-0809	build	v.	建造、搭建	常見動詞	Let's build a sandcastle.
+fc-el-0810	climb	v.	爬樹、攀爬	常見動詞	The cat climbed the tree.
+fc-el-0811	crawl	v.	爬行	常見動詞	The baby can crawl.
+fc-el-0812	slide	v.	滑行	常見動詞	The kids slide down the slide.
+fc-el-0813	swing	v.	盪鞦韆、擺動	常見動詞	Let's go on the swings.
+fc-el-0814	skip	v.	跳繩、蹦跳	常見動詞	Don't skip breakfast.
+fc-el-0815	hop	v.	單腳跳	常見動詞	Hop on one foot.
+fc-el-0816	jog	v.	慢跑	常見動詞	I jog in the park.
+fc-el-0817	sprint	v.	全力衝刺	常見動詞	Sprint to the finish line.
+fc-el-0818	skate	v.	溜冰、溜滑板	常見動詞	I can skate on ice.
+fc-el-0819	ski	v.	滑雪	常見動詞	We ski in Japan.
+fc-el-0820	surf	v.	衝浪、上網	常見動詞	He surfs in summer.
+fc-el-0821	sail	v.	揚帆航行	常見動詞	We sail on the lake.
+fc-el-0822	row	v.	划船	常見動詞	We row a boat on the lake.
+fc-el-0823	cheerful	adj.	愉快的、歡樂的	常見形容詞	She is always cheerful.
+fc-el-0824	gentle	adj.	溫柔的、溫和的	常見形容詞	Be gentle with the baby.
+fc-el-0825	polite	adj.	有禮貌的	常見形容詞	Be polite to others.
+fc-el-0827	honest	adj.	誠實的	常見形容詞	He is an honest boy.
+fc-el-0828	brave	adj.	勇敢的	常見形容詞	The firefighter is brave.
+fc-el-0829	shy	adj.	害羞的	常見形容詞	She is shy with strangers.
+fc-el-0830	proud	adj.	驕傲的、自豪的	常見形容詞	I am proud of you.
+fc-el-0831	calm	adj.	冷靜的、平靜的	常見形容詞	Everybody needs to calm down.
+fc-el-0832	nervous	adj.	緊張焦慮的	常見形容詞	I feel nervous before tests.
+fc-el-0833	lonely	adj.	孤獨寂寞的	常見形容詞	He feels lonely.
+fc-el-0834	curious	adj.	好奇的	常見形容詞	Cats are curious.
+fc-el-0835	careful	adj.	小心的、細心的	常見形容詞	You must be careful of the traffic when you cross the street.
+fc-el-0838	hardworking	adj.	勤奮努力的	常見形容詞	She is a hardworking student.
+fc-el-0839	smart	adj.	聰明的	常見形容詞	She is very smart.
+fc-el-0840	clever	adj.	伶俐機靈的	常見形容詞	What a clever idea!
+fc-el-0841	foolish	adj.	愚蠢可笑的	常見形容詞	It was a foolish mistake.
+fc-el-0843	kind	adj.	仁慈親切的	常見形容詞	She is kind to animals.
+fc-el-0844	cruel	adj.	殘忍刻薄的	常見形容詞	Don't be cruel to animals.
+fc-el-0845	friendly	adj.	友善的	常見形容詞	The dog is friendly.
+fc-el-0846	lovely	adj.	可愛討人喜歡的	常見形容詞	What a lovely day!
+fc-el-0847	pretty	adj.	漂亮的	常見形容詞	She has a pretty smile.
+fc-el-0848	ugly	adj.	難看的	常見形容詞	The ugly duckling became a swan.
+fc-el-0849	handsome	adj.	英俊帥氣的	常見形容詞	He is a handsome man.
+fc-el-0850	fat	adj.	肥胖的	常見形容詞	The cat is too fat.
+fc-el-0851	thin	adj.	瘦弱的、薄的	常見形容詞	The paper is very thin.
+fc-el-0852	strong	adj.	強壯有力的	常見形容詞	He is very strong.
+fc-el-0853	weak	adj.	虛弱無力的	常見形容詞	I feel weak today.
+fc-el-0854	healthy	adj.	健康的	常見形容詞	Eat healthy food.
+fc-el-0855	sick	adj.	生病的	常見形容詞	I am sick today.
+fc-el-0856	rich	adj.	富有的	常見形容詞	He is a rich man.
+fc-el-0857	poor	adj.	貧窮的	常見形容詞	They are poor but happy.
+fc-el-0858	expensive	adj.	昂貴的	常見形容詞	This bag is too expensive.
+fc-el-0859	cheap	adj.	便宜的	常見形容詞	These shoes are cheap.
+fc-el-0860	heavy	adj.	沉重的	常見形容詞	This box is heavy.
+fc-el-0861	light	adj.	輕盈的、明亮的	常見形容詞	This bag is very light.
+fc-el-0862	soft	adj.	柔軟溫和的	常見形容詞	The pillow is soft.
+fc-el-0863	smooth	adj.	光滑平順的	常見形容詞	The stone is smooth.
+fc-el-0864	rough	adj.	粗糙不平的	常見形容詞	The road is rough.
+fc-el-0865	sharp	adj.	鋒利的、敏銳的	常見形容詞	The knife is sharp.
+fc-el-0866	blunt	adj.	鈍的	常見形容詞	This knife is blunt.
+fc-el-0867	wide	adj.	寬闊的	常見形容詞	The river is very wide.
+fc-el-0868	narrow	adj.	狹窄的	常見形容詞	The street is narrow.
+fc-el-0869	thick	adj.	厚實濃稠的	常見形容詞	This book is thick.
+fc-el-0870	deep	adj.	深奧深邃的	常見形容詞	The lake is deep.
+fc-el-0871	shallow	adj.	水淺的、膚淺的	常見形容詞	The water is shallow here.
+fc-el-0872	high	adj.	高的	常見形容詞	The mountain is high.
+fc-el-0873	low	adj.	低矮的	常見形容詞	The chair is too low.
+fc-el-0874	safe	adj.	安全的	常見形容詞	The house is safe.
+fc-el-0875	dangerous	adj.	危險的	常見形容詞	It is dangerous to swim here.
+fc-el-0876	dirty	adj.	骯髒的	常見形容詞	My shoes are dirty.
+fc-el-0877	fresh	adj.	新鮮的	常見形容詞	The fish is fresh.
+fc-el-0878	stale	adj.	不新鮮變質的	常見形容詞	The bread is stale.
+fc-el-0879	delicious	adj.	美味可口的	常見形容詞	The cake is delicious.
+fc-el-0880	tasty	adj.	好吃的	常見形容詞	This soup is tasty.
+fc-el-0881	sour	adj.	酸的	常見形容詞	Lemons are sour.
+fc-el-0882	bitter	adj.	苦澀的	常見形容詞	The medicine tastes bitter.
+fc-el-0883	salty	adj.	鹹的	常見形容詞	The soup is too salty.
+fc-el-0884	spicy	adj.	辛辣有味的	常見形容詞	I like spicy food.
+fc-el-0885	warm	adj.	溫暖舒適的	常見形容詞	It's warm today.
+fc-el-0886	cool	adj.	涼爽酷炫的	常見形容詞	The weather is cool.
+fc-el-0887	dry	adj.	乾燥脫水的	常見形容詞	Keep the towel dry.
+fc-el-0888	wet	adj.	潮濕浸濕的	常見形容詞	My shoes are wet.
+fc-el-0889	foggy	adj.	有濃霧的	常見形容詞	It's foggy this morning.
+fc-el-0890	stormy	adj.	暴風雨的	常見形容詞	It was a stormy night.
+fc-el-0892	bright	adj.	明亮開朗的	常見形容詞	The sun is bright.
+fc-el-0894	colorful	adj.	色彩繽紛的	常見形容詞	The garden is colorful.
+fc-el-0895	shiny	adj.	閃閃發光的	常見形容詞	She has shiny hair.
+fc-el-0896	loud	adj.	大聲吵鬧的	常見形容詞	The music is too loud.
+fc-el-0897	quiet	adj.	安靜恬淡的	常見形容詞	Please be quiet.
+fc-el-0898	noisy	adj.	喧鬧吵雜的	常見形容詞	The street is noisy.
+fc-el-0899	silent	adj.	寂靜無聲的	常見形容詞	The room is silent.
+fc-el-0900	free	adj.	自由閒暇的	常見形容詞	The drinks are free.
+fc-el-0902	early	adj. / adv.	早的、及早	常見形容詞	I get up early.
+fc-el-0904	punctual	adj.	守時準時的	常見形容詞	He is always punctual.
+fc-el-0905	correct	adj.	正確無誤的	常見形容詞	Your answer is correct.
+fc-el-0906	wrong	adj.	錯誤偏差的	常見形容詞	You are wrong.
+fc-el-0908	false	adj.	虛假捏造的	常見形容詞	The news is false.
+fc-el-0909	simple	adj.	簡單樸實的	常見形容詞	The question is simple.
+fc-el-0910	difficult	adj.	困難繁瑣的	常見形容詞	This test is difficult.
+fc-el-0911	special	adj.	特別珍貴的	常見形容詞	Today is a special day.
+fc-el-0912	ordinary	adj.	普通尋常的	常見形容詞	It was an ordinary day.
+fc-el-0913	famous	adj.	著名出名的	常見形容詞	She is a famous singer.
+fc-el-0914	popular	adj.	受歡迎風行的	常見形容詞	This song is very popular.
+fc-el-0915	strange	adj.	奇怪陌生的	常見形容詞	I heard a strange sound.
+fc-el-0916	wonderful	adj.	極美妙極佳的	常見形容詞	We had a wonderful time.
+fc-el-0917	terrible	adj.	可怕糟糕的	常見形容詞	The weather is terrible.
+fc-el-0918	century	n.	世紀、百年	時間與季節	We live in the 21st century.
+fc-el-0919	decade	n.	十年	時間與季節	I have lived here for a decade.
+fc-el-0920	year	n.	年份、歲數	時間與季節	Happy New Year!
+fc-el-0921	month	n.	月份	時間與季節	There are twelve months in a year.
+fc-el-0922	week	n.	星期、週	時間與季節	I go swimming twice a week.
+fc-el-0923	weekend	n.	週末假期	時間與季節	What do you do on weekends?
+fc-el-0924	weekday	n.	工作平日	時間與季節	I study on weekdays.
+fc-el-0925	day	n.	白天、日子	時間與季節	Have a nice day!
+fc-el-0926	midnight	n.	午夜十二點	時間與季節	He went to bed at midnight.
+fc-el-0927	noon	n.	正午十二點	時間與季節	We eat lunch at noon.
+fc-el-0928	dawn	n.	黎明拂曉	時間與季節	We left at dawn.
+fc-el-0929	dusk	n.	黃昏夕陽	時間與季節	The lights come on at dusk.
+fc-el-0930	sunrise	n.	日出破曉	時間與季節	We watched the sunrise.
+fc-el-0931	sunset	n.	日落西下	時間與季節	The sunset is beautiful.
+fc-el-0932	twilight	n.	暮光薄暮	時間與季節	We walked home in the twilight.
+fc-el-0933	hour	n.	小時	時間與季節	The movie is two hours long.
+fc-el-0934	minute	n.	分鐘	時間與季節	Wait a minute.
+fc-el-0935	moment	n.	片刻瞬間	時間與季節	Just a moment, please.
+fc-el-0936	calendar	n.	日曆、月曆	時間與季節	Mark it on the calendar.
+fc-el-0937	schedule	n.	時間表、日程	時間與季節	What's your schedule today?
+fc-el-0938	tonight	n. / adv.	今晚	時間與季節	What are you doing tonight?
+fc-el-0939	now	adv.	現在此刻	時間與季節	The instructions were written now so that first-time users could follow them.
+fc-el-0940	then	adv.	那時候、隨後	時間與季節	I was ten then.
+fc-el-0941	soon	adv.	很快、不久之後	時間與季節	See you soon.
+fc-el-0942	later	adv.	稍後、遲些	時間與季節	See you later.
+fc-el-0943	already	adv.	已經完成	時間與季節	I have already finished.
+fc-el-0944	still	adv.	依然、仍然	時間與季節	It's still raining.
+fc-el-0945	always	adv.	總是、總是如此	時間與季節	She always smiles.
+fc-el-0946	usually	adv.	通常、平時	時間與季節	I usually walk to school.
+fc-el-0947	often	adv.	常常、屢次	時間與季節	I often read at night.
+fc-el-0948	sometimes	adv.	有時候、偶爾	時間與季節	Sometimes I walk to school.
+fc-el-0949	seldom	adv.	很少、極少	時間與季節	It seldom snows here.
+fc-el-0950	rarely	adv.	罕見、幾乎不	時間與季節	He rarely eats meat.
+fc-el-0951	never	adv.	從不、絕不	時間與季節	I never tell lies.
+fc-el-0952	once	adv.	一次、曾經	時間與季節	I have been to Japan once.
+fc-el-0953	twice	adv.	兩次、兩倍	時間與季節	I brush my teeth twice a day.
+fc-el-0954	thrice	adv.	三次	時間與季節	He knocked thrice.
+fc-el-0955	fourth	adj. / adv.	第四	色彩與數字	He came fourth.
+fc-el-0956	fifth	adj. / adv.	第五	色彩與數字	It's my fifth birthday.
+fc-el-0957	sixth	adj. / adv.	第六	色彩與數字	He is in sixth grade.
+fc-el-0958	seventh	adj. / adv.	第七	色彩與數字	Sunday is the seventh day.
+fc-el-0959	eighth	adj. / adv.	第八	色彩與數字	She came eighth.
+fc-el-0960	ninth	adj. / adv.	第九	色彩與數字	It's the ninth day.
+fc-el-0961	tenth	adj. / adv.	第十	色彩與數字	This is my tenth try.
+fc-el-0962	million	n. / num.	百萬	色彩與數字	A million people live here.
+fc-el-0963	billion	n. / num.	十億	色彩與數字	There are billions of stars.
+fc-el-0964	circle	n.	圓形	色彩與數字	Draw a circle.
+fc-el-0965	triangle	n.	三角形	色彩與數字	A triangle has three sides.
+fc-el-0966	rectangle	n.	長方形	色彩與數字	A door is a rectangle.
+fc-el-0967	oval	n.	橢圓形	色彩與數字	An egg is oval.
+fc-el-0968	diamond	n.	菱形、鑽石	色彩與數字	She has a diamond ring.
+fc-el-0969	heart	n.	心形、愛心	色彩與數字	She drew a heart on the card.
+fc-el-0970	line	n.	直線、線條	色彩與數字	Draw a straight line.
+fc-el-0972	stripe	n.	條紋	色彩與數字	The zebra has black stripes.
+fc-el-0973	pattern	n.	圖案、花紋	色彩與數字	I like the pattern on your shirt.
+fc-el-0974	workbook	n.	習作本	學校與文具	Do page 5 in your workbook.
+fc-el-0975	storybook	n.	故事書	學校與文具	Read me a storybook.
+fc-el-0976	handbook	n.	手冊、指南	學校與文具	Read the student handbook.
+fc-el-0977	cookbook	n.	食譜書	學校與文具	Mom has many cookbooks.
+fc-el-0978	guidebook	n.	旅遊導覽書	學校與文具	The guidebook shows the best places.
+fc-el-0979	bookmark	n.	書籤	學校與文具	I use a bookmark.
+fc-el-0980	sunlight	n.	陽光	自然與地理	Plants need sunlight.
+fc-el-0981	moonlight	n.	月光	自然與地理	We walked in the moonlight.
+fc-el-0982	daylight	n.	白晝、日光	自然與地理	We left before daylight.
+fc-el-0984	headlight	n.	車前大燈	交通與場所	Turn on the headlights.
+fc-el-0985	candlelight	n.	燭光	居家與生活	We had dinner by candlelight.
+fc-el-0986	spotlight	n.	聚光燈	運動與娛樂	The singer stood in the spotlight.
+fc-el-0987	snowball	n.	雪球	自然與地理	They had a snowball fight.
+fc-el-0988	snowman	n.	雪人	自然與地理	Let's build a snowman.
+fc-el-0989	snowstorm	n.	暴風雪	自然與地理	The snowstorm closed the roads.
+fc-el-0991	rainstorm	n.	暴風雨	自然與地理	A rainstorm is coming.
+fc-el-0992	raindrop	n.	雨滴	自然與地理	Raindrops fell on my face.
+fc-el-0993	seashore	n.	海濱海岸	自然與地理	We walked along the seashore.
+fc-el-0994	seafood	n.	海鮮	食物與飲品	I love seafood.
+fc-el-0995	seagull	n.	海鷗	動物與寵物	A seagull took my chips!
+fc-el-0996	seashell	n.	貝殼	自然與地理	She collects seashells.
+fc-el-0997	fishbowl	n.	金魚缸	居家與生活	The goldfish lives in a fishbowl.
+fc-el-0998	fisherman	n.	漁夫	家庭與身分	The fisherman caught a big fish.

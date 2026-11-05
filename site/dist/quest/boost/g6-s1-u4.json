@@ -1,0 +1,325 @@
+[
+ {
+  "id": "g6-s1-u4.b1",
+  "type": "fix",
+  "prompt": "哪一句描述身體不舒服才正確？",
+  "text": "",
+  "options": [
+   "I have a headache.",
+   "I am headache.",
+   "I have headache."
+  ],
+  "answer": "I have a headache.",
+  "wrong": {
+   "I am headache.": "headache 是名詞，不能直接接在 am 後面當形容詞；要說 have a headache。",
+   "I have headache.": "headache 是可數名詞，前面要加 a。"
+  },
+  "why": "「頭痛」說 have a headache。",
+  "tip": "生病用 have a ...",
+  "say": "I have a headache."
+ },
+ {
+  "id": "g6-s1-u4.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "My stomach hurt.",
+   "My stomach hurts.",
+   "My stomach is hurt pain."
+  ],
+  "answer": "My stomach hurts.",
+  "wrong": {
+   "My stomach hurt.": "stomach 是單數，hurt 在現在式要加 s：hurts。",
+   "My stomach is hurt pain.": "hurt 與 pain 都表示疼痛，重複使用而且文法不通。"
+  },
+  "why": "身體部位 hurts 表示哪裡痛。",
+  "tip": "哪裡痛：身體部位加 hurts。",
+  "say": "My stomach hurts."
+ },
+ {
+  "id": "g6-s1-u4.b3",
+  "type": "fix",
+  "prompt": "哪一句問別人哪裡不舒服才正確？",
+  "text": "",
+  "options": [
+   "What is matter with you?",
+   "What the matter is with you?",
+   "What is the matter with you?"
+  ],
+  "answer": "What is the matter with you?",
+  "wrong": {
+   "What is matter with you?": "the matter 前面要有 the。",
+   "What the matter is with you?": "問句的 is 要放在主詞 the matter 前面。"
+  },
+  "why": "What is the matter? 是問哪裡不對勁。",
+  "tip": "問哪裡不舒服：What is the matter?",
+  "say": "What is the matter with you?"
+ },
+ {
+  "id": "g6-s1-u4.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的？",
+  "text": "",
+  "options": [
+   "You should drink more water.",
+   "You should to drink more water.",
+   "You should drinks more water."
+  ],
+  "answer": "You should drink more water.",
+  "wrong": {
+   "You should to drink more water.": "should 後面直接接原形動詞，不加 to。",
+   "You should drinks more water.": "should 後面的動詞不加 s。"
+  },
+  "why": "should 後面接原形動詞，不加 to。",
+  "tip": "should 後面接原形。",
+  "say": "You should drink more water."
+ },
+ {
+  "id": "g6-s1-u4.b5",
+  "type": "situation",
+  "prompt": "你發燒了，想告訴老師，哪一句最自然？",
+  "text": "",
+  "options": [
+   "I am fever and I feel hot.",
+   "I have a fever, and I feel hot.",
+   "I have fever and I am feel hot."
+  ],
+  "answer": "I have a fever, and I feel hot.",
+  "wrong": {
+   "I am fever and I feel hot.": "fever 是名詞，要說 have a fever，不能用 am。",
+   "I have fever and I am feel hot.": "am 與 feel 不能一起用，feel 本身就是動詞。"
+  },
+  "why": "發燒是 have a fever。",
+  "tip": "發燒用 have a fever。",
+  "say": "I have a fever, and I feel hot."
+ },
+ {
+  "id": "g6-s1-u4.b6",
+  "type": "situation",
+  "prompt": "朋友咳嗽很厲害，你想建議他去看醫生，哪一句最自然？",
+  "text": "",
+  "options": [
+   "You should seeing a doctor.",
+   "You see a doctor should.",
+   "You should see a doctor."
+  ],
+  "answer": "You should see a doctor.",
+  "wrong": {
+   "You should seeing a doctor.": "should 後面接原形，不能用 seeing。",
+   "You see a doctor should.": "英文的助動詞 should 要放在動詞前面。"
+  },
+  "why": "should see a doctor 是建議去看醫生。",
+  "tip": "建議用 should 加原形。",
+  "say": "You should see a doctor."
+ },
+ {
+  "id": "g6-s1-u4.b7",
+  "type": "situation",
+  "prompt": "媽媽問你想吃什麼健康的點心，你想要蘋果，哪一句最自然？",
+  "text": "",
+  "options": [
+   "I would like an apple, please.",
+   "I would like a apple, please.",
+   "I like want apple, please."
+  ],
+  "answer": "I would like an apple, please.",
+  "wrong": {
+   "I would like a apple, please.": "apple 以母音開頭，前面要用 an。",
+   "I like want apple, please.": "like 和 want 不能連用，而且 apple 前面需要 an。"
+  },
+  "why": "母音開頭的名詞前面用 an。",
+  "tip": "母音開頭用 an。",
+  "say": "I would like an apple, please."
+ },
+ {
+  "id": "g6-s1-u4.b8",
+  "type": "situation",
+  "prompt": "護理師問你哪裡痛，你的牙齒很痛，哪一句最自然？",
+  "text": "",
+  "options": [
+   "My teeth hurts.",
+   "My tooth hurts.",
+   "I am tooth hurt."
+  ],
+  "answer": "My tooth hurts.",
+  "wrong": {
+   "My teeth hurts.": "teeth 是複數，不能搭配 hurts；一顆牙齒用 tooth。",
+   "I am tooth hurt.": "am 與 hurt 搭配有誤，要說 My tooth hurts。"
+  },
+  "why": "一顆牙是 tooth，hurts 表示痛。",
+  "tip": "一顆牙 tooth，很多顆 teeth。",
+  "say": "My tooth hurts."
+ },
+ {
+  "id": "g6-s1-u4.b9",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "Eating too much candy is bad for your _____.",
+  "options": [
+   "tooth",
+   "teeths",
+   "teeth"
+  ],
+  "answer": "teeth",
+  "wrong": {
+   "tooth": "for your 後面指全部牙齒，用複數 teeth。",
+   "teeths": "tooth 的複數是 teeth，不加 s。"
+  },
+  "why": "tooth 的複數是 teeth。",
+  "tip": "tooth 變 teeth。",
+  "say": "Eating too much candy is bad for your teeth."
+ },
+ {
+  "id": "g6-s1-u4.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "I feel _____ today, so I will stay home and rest.",
+  "options": [
+   "sick",
+   "happy",
+   "hungry"
+  ],
+  "answer": "sick",
+  "wrong": {
+   "happy": "happy 是開心，在家休息通常是不舒服。",
+   "hungry": "hungry 是肚子餓，和待在家休息的原因不太搭。"
+  },
+  "why": "feel sick 是覺得不舒服。",
+  "tip": "feel 後面接形容詞。",
+  "say": "I feel sick today, so I will stay home and rest."
+ },
+ {
+  "id": "g6-s1-u4.b11",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "Please take this _____ after lunch, and you will feel better.",
+  "options": [
+   "mirror",
+   "medicine",
+   "pencil"
+  ],
+  "answer": "medicine",
+  "wrong": {
+   "mirror": "mirror 是鏡子，不能吃。",
+   "pencil": "pencil 是鉛筆，不能吃。"
+  },
+  "why": "take medicine 是吃藥。",
+  "tip": "吃藥說 take medicine。",
+  "say": "Please take this medicine after lunch."
+ },
+ {
+  "id": "g6-s1-u4.b12",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "We eat vegetables and fruit every day to stay _____.",
+  "options": [
+   "health",
+   "healthily",
+   "healthy"
+  ],
+  "answer": "healthy",
+  "wrong": {
+   "health": "health 是名詞，stay 後面要接形容詞 healthy。",
+   "healthily": "healthily 是副詞，stay 後面要接形容詞。"
+  },
+  "why": "stay healthy 是保持健康。",
+  "tip": "stay 後面接形容詞。",
+  "say": "We eat vegetables and fruit every day to stay healthy."
+ },
+ {
+  "id": "g6-s1-u4.b13",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "You use your _____ to see and your ears to hear.",
+  "options": [
+   "eyes",
+   "hands",
+   "feet"
+  ],
+  "answer": "eyes",
+  "wrong": {
+   "hands": "hands 是手，用來拿東西。",
+   "feet": "feet 是腳，用來走路。"
+  },
+  "why": "eyes 是眼睛，用來看。",
+  "tip": "眼睛看，耳朵聽。",
+  "say": "You use your eyes to see."
+ },
+ {
+  "id": "g6-s1-u4.b14",
+  "type": "meaning",
+  "prompt": "「You should wash your hands before eating.」是什麼意思？",
+  "text": "",
+  "options": [
+   "你吃完東西之後應該洗手。",
+   "你吃東西之前應該洗手。",
+   "你不應該洗手。"
+  ],
+  "answer": "你吃東西之前應該洗手。",
+  "wrong": {
+   "你吃完東西之後應該洗手。": "before 是之前，after 才是之後。",
+   "你不應該洗手。": "should 是應該，句子是在建議洗手。"
+  },
+  "why": "before eating 是吃東西之前。",
+  "tip": "before 之前，after 之後。",
+  "say": "You should wash your hands before eating."
+ },
+ {
+  "id": "g6-s1-u4.b15",
+  "type": "meaning",
+  "prompt": "「The nurse took my temperature.」是什麼意思？",
+  "text": "",
+  "options": [
+   "護理師給了我藥。",
+   "護理師幫我洗頭。",
+   "護理師幫我量體溫。"
+  ],
+  "answer": "護理師幫我量體溫。",
+  "wrong": {
+   "護理師給了我藥。": "temperature 是體溫，不是藥。",
+   "護理師幫我洗頭。": "temperature 是體溫，跟洗頭沒關係。"
+  },
+  "why": "take one's temperature 是量體溫。",
+  "tip": "temperature 是體溫。",
+  "say": "The nurse took my temperature."
+ },
+ {
+  "id": "g6-s1-u4.b16",
+  "type": "meaning",
+  "prompt": "「I have a sore throat.」是什麼意思？",
+  "text": "",
+  "options": [
+   "我喉嚨痛。",
+   "我肚子痛。",
+   "我的腳扭傷了。"
+  ],
+  "answer": "我喉嚨痛。",
+  "wrong": {
+   "我肚子痛。": "stomach 才是肚子，throat 是喉嚨。",
+   "我的腳扭傷了。": "sore throat 是喉嚨痛，和腳無關。"
+  },
+  "why": "sore 是疼痛，throat 是喉嚨。",
+  "tip": "throat 是喉嚨。",
+  "say": "I have a sore throat."
+ },
+ {
+  "id": "g6-s1-u4.b17",
+  "type": "meaning",
+  "prompt": "「Beef is a kind of meat.」是什麼意思？",
+  "text": "",
+  "options": [
+   "牛奶是一種飲料。",
+   "牛肉是一種肉。",
+   "米飯是一種蔬菜。"
+  ],
+  "answer": "牛肉是一種肉。",
+  "wrong": {
+   "牛奶是一種飲料。": "beef 是牛肉，不是牛奶。",
+   "米飯是一種蔬菜。": "beef 是牛肉，不是米飯，也不是蔬菜。"
+  },
+  "why": "beef 是牛肉，meat 是肉。",
+  "tip": "beef 牛肉，rice 米飯。",
+  "say": "Beef is a kind of meat."
+ }
+]

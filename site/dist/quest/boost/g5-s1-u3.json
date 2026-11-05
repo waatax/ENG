@@ -1,0 +1,249 @@
+[
+ {
+  "id": "g5-s1-u3.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "She is reading a book.",
+   "She is read a book.",
+   "She reading a book."
+  ],
+  "answer": "She is reading a book.",
+  "wrong": {
+   "She is read a book.": "is 後面的動詞要加 -ing。",
+   "She reading a book.": "少了 be 動詞 is。"
+  },
+  "why": "現在進行式：be + 動詞-ing。",
+  "tip": "進行式要用 be + V-ing。",
+  "say": "She is reading a book."
+ },
+ {
+  "id": "g5-s1-u3.b2",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "They are play basketball.",
+   "They are playing basketball.",
+   "They is playing basketball."
+  ],
+  "answer": "They are playing basketball.",
+  "wrong": {
+   "They are play basketball.": "are 後面要用 playing。",
+   "They is playing basketball.": "They 是複數，要用 are。"
+  },
+  "why": "They 搭配 are，動詞加 ing。",
+  "tip": "They 搭配 are。",
+  "say": "They are playing basketball."
+ },
+ {
+  "id": "g5-s1-u3.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Tom is swiming in the pool.",
+   "Tom is swimin in the pool.",
+   "Tom is swimming in the pool."
+  ],
+  "answer": "Tom is swimming in the pool.",
+  "wrong": {
+   "Tom is swiming in the pool.": "swim 要重複最後一個 m，再加 ing。",
+   "Tom is swimin in the pool.": "少了 g，應該是 swimming。"
+  },
+  "why": "swim 變 swimming，要重複 m。",
+  "tip": "短母音加子音要重複。",
+  "say": "Tom is swimming in the pool."
+ },
+ {
+  "id": "g5-s1-u3.b4",
+  "type": "situation",
+  "prompt": "朋友打電話問你在做什麼，你正在寫功課。",
+  "text": "",
+  "options": [
+   "I'm doing my homework.",
+   "I'm do my homework.",
+   "I doing my homework now am."
+  ],
+  "answer": "I'm doing my homework.",
+  "wrong": {
+   "I'm do my homework.": "現在進行式要用 doing。",
+   "I doing my homework now am.": "語序錯誤，要說 I'm doing。"
+  },
+  "why": "正在做某事，用 be + doing。",
+  "tip": "正在做用 be + V-ing。",
+  "say": "I'm doing my homework."
+ },
+ {
+  "id": "g5-s1-u3.b5",
+  "type": "situation",
+  "prompt": "媽媽問你弟弟在做什麼，你看到他在畫畫。",
+  "text": "",
+  "options": [
+   "He is draw a picture.",
+   "He is drawing a picture.",
+   "He are drawing a picture."
+  ],
+  "answer": "He is drawing a picture.",
+  "wrong": {
+   "He is draw a picture.": "is 後面要接 drawing。",
+   "He are drawing a picture.": "He 是單數，要搭配 is，不能用 are。"
+  },
+  "why": "He is drawing 表示他正在畫畫。",
+  "tip": "He 搭配 is。",
+  "say": "He is drawing a picture."
+ },
+ {
+  "id": "g5-s1-u3.b6",
+  "type": "situation",
+  "prompt": "你想問朋友現在在做什麼。",
+  "text": "",
+  "options": [
+   "What do you doing?",
+   "What you are do?",
+   "What are you doing?"
+  ],
+  "answer": "What are you doing?",
+  "wrong": {
+   "What do you doing?": "doing 前面要用 be 動詞 are。",
+   "What you are do?": "語序錯誤，要說 What are you doing?"
+  },
+  "why": "What are you doing? 問現在在做什麼。",
+  "tip": "問現在做什麼用 What are you doing?",
+  "say": "What are you doing?"
+ },
+ {
+  "id": "g5-s1-u3.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Listen! The birds ___ in the tree.",
+  "options": [
+   "are singing",
+   "are sing",
+   "is singing"
+  ],
+  "answer": "are singing",
+  "wrong": {
+   "are sing": "be 動詞後面的動詞要加 -ing，不能用原形 sing。",
+   "is singing": "birds 是複數，要搭配 are，不是 is。"
+  },
+  "why": "Listen! 表示正在發生，用 are singing。",
+  "tip": "Listen 後用進行式。",
+  "say": "Listen! The birds are singing in the tree."
+ },
+ {
+  "id": "g5-s1-u3.b8",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Look! It ___ now.",
+  "options": [
+   "is rain",
+   "is raining",
+   "are raining"
+  ],
+  "answer": "is raining",
+  "wrong": {
+   "is rain": "is 後面的動詞要加 -ing，rain 要變成 raining。",
+   "are raining": "It 是單數，要搭配 is，不是 are。"
+  },
+  "why": "Look! 和 now 都表示現在正在下雨，所以用 is raining。",
+  "tip": "now 用進行式。",
+  "say": "Look! It is raining now."
+ },
+ {
+  "id": "g5-s1-u3.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Mom is ___ dinner in the kitchen.",
+  "options": [
+   "cook",
+   "cooks",
+   "cooking"
+  ],
+  "answer": "cooking",
+  "wrong": {
+   "cook": "is 後面要加 -ing。",
+   "cooks": "is 後面不接第三人稱動詞。"
+  },
+  "why": "is 後面接 cooking。",
+  "tip": "is 後面接 -ing。",
+  "say": "Mom is cooking dinner in the kitchen."
+ },
+ {
+  "id": "g5-s1-u3.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Are you ___ to music? No, I'm not.",
+  "options": [
+   "listening",
+   "listen",
+   "listens"
+  ],
+  "answer": "listening",
+  "wrong": {
+   "listen": "are 後面要加 -ing。",
+   "listens": "are 後面不接第三人稱動詞。"
+  },
+  "why": "Are you listening 是現在進行式問句。",
+  "tip": "問正在做什麼用 Are you + V-ing？",
+  "say": "Are you listening to music? No, I'm not."
+ },
+ {
+  "id": "g5-s1-u3.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "We ___ not watching TV.",
+  "options": [
+   "is",
+   "are",
+   "do"
+  ],
+  "answer": "are",
+  "wrong": {
+   "is": "We 是複數，不能用 is。",
+   "do": "進行式要用 be 動詞，不是 do。"
+  },
+  "why": "We 搭配 are。",
+  "tip": "We 搭配 are。",
+  "say": "We are not watching TV."
+ },
+ {
+  "id": "g5-s1-u3.b12",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "She is talking on the phone.",
+  "options": [
+   "她每天講電話。",
+   "她等一下要講電話。",
+   "她正在講電話。"
+  ],
+  "answer": "她正在講電話。",
+  "wrong": {
+   "她每天講電話。": "is talking 是正在，不是每天。",
+   "她等一下要講電話。": "is talking 是現在，不是未來。"
+  },
+  "why": "is talking 表示正在講。",
+  "tip": "be + V-ing 是正在。",
+  "say": "She is talking on the phone."
+ },
+ {
+  "id": "g5-s1-u3.b13",
+  "type": "meaning",
+  "prompt": "這句英文是什麼意思？",
+  "text": "Don't disturb him. He is sleeping.",
+  "options": [
+   "不要吵他，他正在睡覺。",
+   "不要吵他，他常常睡覺。",
+   "不要吵他，他剛睡醒。"
+  ],
+  "answer": "不要吵他，他正在睡覺。",
+  "wrong": {
+   "不要吵他，他常常睡覺。": "is sleeping 是現在正在睡。",
+   "不要吵他，他剛睡醒。": "sleeping 是正在睡，不是醒來。"
+  },
+  "why": "is sleeping 表示現在正在睡覺。",
+  "tip": "is sleeping 是正在睡。",
+  "say": "Don't disturb him. He is sleeping."
+ }
+]
