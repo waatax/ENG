@@ -1,0 +1,602 @@
+[
+  {
+    "id": "sem-j3a-unit.b1",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "I have known her since 2019.",
+      "I know her since 2019.",
+      "I have known her for 2019."
+    ],
+    "answer": "I have known her since 2019.",
+    "wrong": {
+      "I know her since 2019.": "since 表示從過去持續到現在，要搭配現在完成式 have known，不用現在式。",
+      "I have known her for 2019.": "for 後面接一段時間（如 five years），2019 是時間點，要用 since。"
+    },
+    "why": "從 2019 年到現在一直認識她，用現在完成式加 since 時間點。",
+    "tip": "since 接時間點，for 接一段時間。",
+    "say": "I have known her since 2019."
+  },
+  {
+    "id": "sem-j3a-unit.b2",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "The bridge was built in 1998.",
+      "The bridge built in 1998.",
+      "The bridge was build in 1998."
+    ],
+    "answer": "The bridge was built in 1998.",
+    "wrong": {
+      "The bridge built in 1998.": "橋是被建造的，要用被動語態 was built，不能只寫 built。",
+      "The bridge was build in 1998.": "被動語態要用過去分詞 built，不能用原形 build。"
+    },
+    "why": "橋不會自己蓋，所以用被動語態 be + 過去分詞。",
+    "tip": "被動語態：be 動詞加過去分詞。",
+    "say": "The bridge was built in 1998."
+  },
+  {
+    "id": "sem-j3a-unit.b3",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Have you ever been to Japan?",
+      "Did you ever been to Japan?",
+      "Have you ever went to Japan?"
+    ],
+    "answer": "Have you ever been to Japan?",
+    "wrong": {
+      "Did you ever been to Japan?": "did 後面要接原形動詞，不能接過去分詞 been；問經驗應用現在完成式。",
+      "Have you ever went to Japan?": "現在完成式要用過去分詞 been（或 gone），went 是過去式。"
+    },
+    "why": "問「曾經去過」，用 Have you ever + 過去分詞。",
+    "tip": "問經驗：Have you ever + 過去分詞。",
+    "say": "Have you ever been to Japan?"
+  },
+  {
+    "id": "sem-j3a-unit.b4",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "The woman who lives next door is a nurse.",
+      "The woman who she lives next door is a nurse.",
+      "The woman which lives next door is a nurse."
+    ],
+    "answer": "The woman who lives next door is a nurse.",
+    "wrong": {
+      "The woman who she lives next door is a nurse.": "who 已經代替了 the woman，不能再重複放代名詞 she。",
+      "The woman which lives next door is a nurse.": "先行詞是人，關係代名詞要用 who，不用 which。"
+    },
+    "why": "關係代名詞 who 代表人並當子句主詞，後面直接接動詞。",
+    "tip": "人用 who，物用 which，不再重複主詞。",
+    "say": "The woman who lives next door is a nurse."
+  },
+  {
+    "id": "sem-j3a-unit.b5",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "I used to walk to school, but now I take the bus.",
+      "I used to walking to school, but now I take the bus.",
+      "I use to walk to school, but now I take the bus."
+    ],
+    "answer": "I used to walk to school, but now I take the bus.",
+    "wrong": {
+      "I used to walking to school, but now I take the bus.": "used to 後面接原形動詞，不接 V-ing。",
+      "I use to walk to school, but now I take the bus.": "表示過去的習慣要用 used to，不是 use to。"
+    },
+    "why": "used to + 原形動詞，表示過去常做、現在不做的事。",
+    "tip": "used to 加原形動詞：過去常常，現在不了。",
+    "say": "I used to walk to school."
+  },
+  {
+    "id": "sem-j3a-unit.b6",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "She had her hair cut yesterday.",
+      "She had her hair cutting yesterday.",
+      "She had cut her hair by a barber yesterday."
+    ],
+    "answer": "She had her hair cut yesterday.",
+    "wrong": {
+      "She had her hair cutting yesterday.": "頭髮是被剪的，使役動詞 have 的受詞後面要接過去分詞 cut。",
+      "She had cut her hair by a barber yesterday.": "這是過去完成式加 by，結構錯誤，說「請人做」應使用 have + 受詞 + 過去分詞。"
+    },
+    "why": "請別人做某事，用 have + 受詞 + 過去分詞。",
+    "tip": "請人代勞：have + 物 + 過去分詞。",
+    "say": "She had her hair cut yesterday."
+  },
+  {
+    "id": "sem-j3a-unit.b7",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "It's important for citizens to vote.",
+      "It's important of citizens vote.",
+      "It's important that citizens to vote."
+    ],
+    "answer": "It's important for citizens to vote.",
+    "wrong": {
+      "It's important of citizens vote.": "important 後面用 for 引出人，之後還要接 to vote。",
+      "It's important that citizens to vote.": "that 子句裡要有完整動詞，不能放 to vote；用 for ... to 才對。"
+    },
+    "why": "句型 It is + 形容詞 + for 某人 + to V。",
+    "tip": "句型 It is important for 某人 to V，for 後接人。",
+    "say": "It's important for citizens to vote."
+  },
+  {
+    "id": "sem-j3a-unit.b8",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "My uncle has been a firefighter for ten years.",
+      "My uncle has been a firefighter since ten years.",
+      "My uncle is a firefighter for ten years ago."
+    ],
+    "answer": "My uncle has been a firefighter for ten years.",
+    "wrong": {
+      "My uncle has been a firefighter since ten years.": "ten years 是一段時間，要用 for，since 後面才接起點。",
+      "My uncle is a firefighter for ten years ago.": "ago 表示過去，不能和 for 一段時間 與現在式 is 混用。"
+    },
+    "why": "持續到現在的一段時間，用現在完成式加 for。",
+    "tip": "現在完成式加 for 一段時間。",
+    "say": "My uncle has been a firefighter for ten years."
+  },
+  {
+    "id": "sem-j3a-unit.b9",
+    "type": "situation",
+    "prompt": "你想問同學海報做完了沒有，哪句最正確？",
+    "text": "",
+    "options": [
+      "Have you finished the poster yet?",
+      "Did you finished the poster yet?",
+      "Do you finish the poster already?"
+    ],
+    "answer": "Have you finished the poster yet?",
+    "wrong": {
+      "Did you finished the poster yet?": "did 後面應接原形 finish；而且問到目前為止有沒有完成，用現在完成式更自然。",
+      "Do you finish the poster already?": "Do you finish 是問習慣，且 already 不用在疑問句詢問完成。"
+    },
+    "why": "問到現在為止是否完成，用 Have you + 過去分詞 + yet。",
+    "tip": "問完成了沒：Have you ... yet？",
+    "say": "Have you finished the poster yet?"
+  },
+  {
+    "id": "sem-j3a-unit.b10",
+    "type": "situation",
+    "prompt": "你要告訴新朋友，你蒐集郵票已經六年了。哪句正確？",
+    "text": "",
+    "options": [
+      "I have collected stamps for six years.",
+      "I collect stamps since six years.",
+      "I am collecting stamps for six years."
+    ],
+    "answer": "I have collected stamps for six years.",
+    "wrong": {
+      "I collect stamps since six years.": "six years 是一段時間，應該用 for，而且持續到現在要用現在完成式。",
+      "I am collecting stamps for six years.": "現在進行式只表示現在正在做，不適合配 for 六年這種持續一段時間。"
+    },
+    "why": "從六年前持續到現在，用現在完成式加 for。",
+    "tip": "持續到現在的興趣：have + 過去分詞 + for。",
+    "say": "I have collected stamps for six years."
+  },
+  {
+    "id": "sem-j3a-unit.b11",
+    "type": "situation",
+    "prompt": "你在向外國遊客介紹一座寺廟，想說它兩百多年前蓋好的。哪句正確？",
+    "text": "",
+    "options": [
+      "This temple was built over two hundred years ago.",
+      "This temple built over two hundred years ago.",
+      "This temple was build over two hundred years ago."
+    ],
+    "answer": "This temple was built over two hundred years ago.",
+    "wrong": {
+      "This temple built over two hundred years ago.": "寺廟是被蓋的，要用被動 was built，不能只用 built。",
+      "This temple was build over two hundred years ago.": "被動語態要用過去分詞 built，不是原形 build。"
+    },
+    "why": "ago 表示過去，寺廟被建造，所以用 was built。",
+    "tip": "過去被做的事：was／were + 過去分詞。",
+    "say": "This temple was built over two hundred years ago."
+  },
+  {
+    "id": "sem-j3a-unit.b12",
+    "type": "situation",
+    "prompt": "你要介紹一位幫助過村子的林醫師，哪句最好？",
+    "text": "",
+    "options": [
+      "Ms. Lin is the doctor who helped our village.",
+      "Ms. Lin is the doctor which helped our village.",
+      "Ms. Lin is the doctor who she helped our village."
+    ],
+    "answer": "Ms. Lin is the doctor who helped our village.",
+    "wrong": {
+      "Ms. Lin is the doctor which helped our village.": "先行詞 the doctor 是人，關係代名詞要用 who。",
+      "Ms. Lin is the doctor who she helped our village.": "who 已經是子句的主詞，不能再加 she。"
+    },
+    "why": "用 who 把「幫助村子」這個資訊接在 the doctor 後面。",
+    "tip": "介紹人物：the 人 + who + 動詞。",
+    "say": "Ms. Lin is the doctor who helped our village."
+  },
+  {
+    "id": "sem-j3a-unit.b13",
+    "type": "situation",
+    "prompt": "朋友問你還有沒有打棒球，你十歲前常打但現在不打了。哪句最好？",
+    "text": "",
+    "options": [
+      "No, I used to play it when I was ten.",
+      "No, I was used to playing it when I was ten.",
+      "No, I use to play it when I was ten."
+    ],
+    "answer": "No, I used to play it when I was ten.",
+    "wrong": {
+      "No, I was used to playing it when I was ten.": "be used to V-ing 是「習慣於」，不是「過去常常做」。",
+      "No, I use to play it when I was ten.": "表示過去習慣要用 used to，不能寫 use to。"
+    },
+    "why": "used to 表示過去常做、現在已不做。",
+    "tip": "過去常做但現在不做：used to + 原形。",
+    "say": "I used to play it when I was ten."
+  },
+  {
+    "id": "sem-j3a-unit.b14",
+    "type": "situation",
+    "prompt": "動物園入口要寫一則規定：遊客不可以餵動物。哪句最正確？",
+    "text": "",
+    "options": [
+      "Visitors must not feed the animals.",
+      "Visitors must not to feed the animals.",
+      "Visitors are must not feed the animals."
+    ],
+    "answer": "Visitors must not feed the animals.",
+    "wrong": {
+      "Visitors must not to feed the animals.": "must 是助動詞，後面直接接原形動詞，不加 to。",
+      "Visitors are must not feed the animals.": "must 前面不能再加 be 動詞，助動詞不能和 are 並用。"
+    },
+    "why": "must not 加原形動詞，表示禁止。",
+    "tip": "must not 後面直接接原形動詞。",
+    "say": "Visitors must not feed the animals."
+  },
+  {
+    "id": "sem-j3a-unit.b15",
+    "type": "situation",
+    "prompt": "朋友問你的腳踏車怎麼了，你想說「我正請人修理中」。哪句最正確？",
+    "text": "",
+    "options": [
+      "I'm having my bike repaired.",
+      "I'm having my bike repair.",
+      "I'm having repaired my bike."
+    ],
+    "answer": "I'm having my bike repaired.",
+    "wrong": {
+      "I'm having my bike repair.": "腳踏車是被修的，受詞後面要用過去分詞 repaired。",
+      "I'm having repaired my bike.": "使役句型順序是 have + 受詞 + 過去分詞，不是把分詞放在受詞前面。"
+    },
+    "why": "請別人修理，用 have + 物品 + 過去分詞。",
+    "tip": "have + 物品 + 過去分詞：請人做。",
+    "say": "I'm having my bike repaired."
+  },
+  {
+    "id": "sem-j3a-unit.b16",
+    "type": "situation",
+    "prompt": "朋友問你有沒有吃過臭豆腐，你去年夏天吃過。哪組回答最自然？",
+    "text": "",
+    "options": [
+      "Yes, I have. I tried it last summer.",
+      "Yes, I did. I have tried it last summer.",
+      "Yes, I have. I have tried it last summer."
+    ],
+    "answer": "Yes, I have. I tried it last summer.",
+    "wrong": {
+      "Yes, I did. I have tried it last summer.": "問題用 Have 開頭，簡答要用 Yes, I have；last summer 也不能搭現在完成式。",
+      "Yes, I have. I have tried it last summer.": "last summer 是明確的過去時間，要用過去式 tried，不用現在完成式。"
+    },
+    "why": "先用現在完成式回答經驗，再用過去式補充明確的時間。",
+    "tip": "明確的過去時間不用現在完成式。",
+    "say": "Yes, I have. I tried it last summer."
+  },
+  {
+    "id": "sem-j3a-unit.b17",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "Our school has held a book fair _____ 2015.",
+    "options": [
+      "since",
+      "for",
+      "in"
+    ],
+    "answer": "since",
+    "wrong": {
+      "for": "2015 是年份（時間點），不是一段時間，不能用 for。",
+      "in": "in 2015 搭配過去式；這句是現在完成式 has held，要用 since。"
+    },
+    "why": "現在完成式加時間點，用 since。",
+    "tip": "since 後面接年份或起始時間點。",
+    "say": "Our school has held a book fair since 2015."
+  },
+  {
+    "id": "sem-j3a-unit.b18",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "The letter _____ by the mayor himself last week.",
+    "options": [
+      "was signed",
+      "signed",
+      "is signing"
+    ],
+    "answer": "was signed",
+    "wrong": {
+      "signed": "信是被簽署的，要用被動語態 was signed。",
+      "is signing": "is signing 是現在進行式主動，時間也和 last week 不合。"
+    },
+    "why": "信件是被市長簽的，過去的被動語態用 was + 過去分詞。",
+    "tip": "被動語態：be 動詞 + 過去分詞。",
+    "say": "The letter was signed by the mayor himself last week."
+  },
+  {
+    "id": "sem-j3a-unit.b19",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "He is the man _____ car was stolen yesterday.",
+    "options": [
+      "whose",
+      "who",
+      "whom"
+    ],
+    "answer": "whose",
+    "wrong": {
+      "who": "who 後面要接動詞，這裡 car 是名詞，表示「他的車」要用 whose。",
+      "whom": "whom 是受格，後面接主詞加動詞，而這裡是要表示所屬。"
+    },
+    "why": "whose 表示所屬，this man's car 縮成 whose car。",
+    "tip": "whose + 名詞：表示誰的。",
+    "say": "He is the man whose car was stolen yesterday."
+  },
+  {
+    "id": "sem-j3a-unit.b20",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "The new law _____ many citizens since it was passed.",
+    "options": [
+      "has helped",
+      "helps",
+      "helped"
+    ],
+    "answer": "has helped",
+    "wrong": {
+      "helps": "since 子句說從通過到現在，主句要用現在完成式，不是現在式。",
+      "helped": "helped 只說過去的事，無法表達持續到現在的影響。"
+    },
+    "why": "since it was passed 提示從過去到現在，用現在完成式。",
+    "tip": "since 子句配現在完成式主句。",
+    "say": "The new law has helped many citizens since it was passed."
+  },
+  {
+    "id": "sem-j3a-unit.b21",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "I had my phone _____ at the shop.",
+    "options": [
+      "fixed",
+      "fix",
+      "fixing"
+    ],
+    "answer": "fixed",
+    "wrong": {
+      "fix": "手機是被修的，have 的受詞後面要用過去分詞 fixed。",
+      "fixing": "fixing 是主動進行的意思，手機自己不會修東西。"
+    },
+    "why": "have + 受詞 + 過去分詞，表示請人修理。",
+    "tip": "請人修東西：have + 物 + 過去分詞。",
+    "say": "I had my phone fixed at the shop."
+  },
+  {
+    "id": "sem-j3a-unit.b22",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "It is kind _____ you to help the old lady cross the road.",
+    "options": [
+      "of",
+      "for",
+      "to"
+    ],
+    "answer": "of",
+    "wrong": {
+      "for": "kind 描述的是人的性格，要用 of；for 用在 important 這類形容事情的字。",
+      "to": "to 不能放在形容詞後面接 you，句型要用 of。"
+    },
+    "why": "kind、nice 這類形容人品性的字，搭配 of + 人。",
+    "tip": "形容人的性格用 of，形容事情用 for。",
+    "say": "It is kind of you to help the old lady cross the road."
+  },
+  {
+    "id": "sem-j3a-unit.b23",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "Students _____ not use phones during the exam.",
+    "options": [
+      "must",
+      "are",
+      "have"
+    ],
+    "answer": "must",
+    "wrong": {
+      "are": "are not use 的結構不對，are 後面不能直接接原形動詞。",
+      "have": "have not use 的結構不對，have 後面要接過去分詞，不是原形。"
+    },
+    "why": "must not 加原形動詞表示考試時禁止使用。",
+    "tip": "禁止用 must not，後接原形動詞。",
+    "say": "Students must not use phones during the exam."
+  },
+  {
+    "id": "sem-j3a-unit.b24",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字。",
+    "text": "We _____ here for an hour. When will the bus come?",
+    "options": [
+      "have waited",
+      "wait",
+      "are waiting"
+    ],
+    "answer": "have waited",
+    "wrong": {
+      "wait": "for an hour 表示已經等了一段時間，現在式 wait 不能表達這個意思。",
+      "are waiting": "現在進行式不和 for an hour 這種一段時間搭配，應用現在完成式。"
+    },
+    "why": "從一小時前等到現在，用現在完成式 have waited。",
+    "tip": "for 一段時間，常用現在完成式。",
+    "say": "We have waited here for an hour."
+  },
+  {
+    "id": "sem-j3a-unit.b25",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "The park has been cleaned up by the neighbors.",
+    "options": [
+      "公園已經被鄰居整理乾淨了。",
+      "鄰居正在公園裡打掃。",
+      "鄰居以後會去整理公園。"
+    ],
+    "answer": "公園已經被鄰居整理乾淨了。",
+    "wrong": {
+      "鄰居正在公園裡打掃。": "has been cleaned 是已完成的被動，不是正在進行。",
+      "鄰居以後會去整理公園。": "has been cleaned 是現在完成式，指已經發生，不是未來。"
+    },
+    "why": "has been + 過去分詞是完成的被動語態，by 後面是做的人。",
+    "tip": "has been + 過去分詞：已經被完成。"
+  },
+  {
+    "id": "sem-j3a-unit.b26",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "She has lived in Tainan since she was a child.",
+    "options": [
+      "她從小就住在台南，到現在還是。",
+      "她小時候住過台南，現在搬走了。",
+      "她長大後才搬到台南。"
+    ],
+    "answer": "她從小就住在台南，到現在還是。",
+    "wrong": {
+      "她小時候住過台南，現在搬走了。": "現在完成式加 since 表示持續到現在，所以現在仍住在台南。",
+      "她長大後才搬到台南。": "since she was a child 是從小時候開始，不是長大後。"
+    },
+    "why": "since 加過去起點，表示從那時起一直住到現在。",
+    "tip": "since + 起點：一直持續到現在。"
+  },
+  {
+    "id": "sem-j3a-unit.b27",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "I'd like to thank everyone who took part in the beach cleanup.",
+    "options": [
+      "我想感謝每一位參加淨灘的人。",
+      "我想感謝每一位路過海灘的人。",
+      "我想請大家一起去淨灘。"
+    ],
+    "answer": "我想感謝每一位參加淨灘的人。",
+    "wrong": {
+      "我想感謝每一位路過海灘的人。": "took part in 是參加活動，不是路過。",
+      "我想請大家一起去淨灘。": "I'd like to thank 是道謝，不是邀請；活動已經結束。"
+    },
+    "why": "who took part in 說明被感謝的人是參加過淨灘活動的人。",
+    "tip": "take part in 是參加活動。"
+  },
+  {
+    "id": "sem-j3a-unit.b28",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "Dad had me wash the car.",
+    "options": [
+      "爸爸叫我洗車。",
+      "爸爸幫我洗車。",
+      "我叫爸爸洗車。"
+    ],
+    "answer": "爸爸叫我洗車。",
+    "wrong": {
+      "爸爸幫我洗車。": "洗車的人是 me，不是爸爸。",
+      "我叫爸爸洗車。": "主詞是 Dad，是爸爸叫我，不是我叫爸爸。"
+    },
+    "why": "have + 人 + 原形動詞，表示叫某人去做某事。",
+    "tip": "have 人 V：叫某人做事。"
+  },
+  {
+    "id": "sem-j3a-unit.b29",
+    "type": "meaning",
+    "prompt": "volunteer 在這句話裡是什麼意思？",
+    "text": "A volunteer is someone who helps without being paid.",
+    "options": [
+      "志工",
+      "老闆",
+      "顧客"
+    ],
+    "answer": "志工",
+    "wrong": {
+      "老闆": "老闆是付薪水的人，句中說的是不拿錢幫忙的人。",
+      "顧客": "顧客是買東西的人，與不拿報酬幫忙無關。"
+    },
+    "why": "helps without being paid 說明是不拿薪水而幫忙的人，就是志工。",
+    "tip": "定義句的 who 子句能幫你猜字義。"
+  },
+  {
+    "id": "sem-j3a-unit.b30",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "The speech, which was given by a young activist, inspired many students.",
+    "options": [
+      "一位年輕倡議者的演講激勵了許多學生。",
+      "許多學生為一位年輕倡議者辦了演講。",
+      "年輕倡議者聽了學生的演講很受感動。"
+    ],
+    "answer": "一位年輕倡議者的演講激勵了許多學生。",
+    "wrong": {
+      "許多學生為一位年輕倡議者辦了演講。": "給演講的是倡議者，學生是被激勵的對象，不是主辦人。",
+      "年輕倡議者聽了學生的演講很受感動。": "角色搞反了：演講者是年輕倡議者，受到激勵的是學生。"
+    },
+    "why": "which 子句補充說明演講是誰講的，主句說明演講的影響。",
+    "tip": "先找主句主詞和動詞，補充子句暫時略過。"
+  },
+  {
+    "id": "sem-j3a-unit.b31",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "I have never seen such a big crowd at the town hall.",
+    "options": [
+      "我從來沒在市政廳看過這麼多人。",
+      "我剛剛在市政廳看到一大群人。",
+      "市政廳從不讓大群人進去。"
+    ],
+    "answer": "我從來沒在市政廳看過這麼多人。",
+    "wrong": {
+      "我剛剛在市政廳看到一大群人。": "have never seen 表示到目前為止都沒有看過，不是剛剛看到。",
+      "市政廳從不讓大群人進去。": "句中是說我沒看過，不是在說市政廳的規定。"
+    },
+    "why": "have never seen 是經驗否定，such a big crowd 表示這麼多人。",
+    "tip": "have never + 過去分詞：從來沒有過。"
+  },
+  {
+    "id": "sem-j3a-unit.b32",
+    "type": "meaning",
+    "prompt": "這句話是什麼意思？",
+    "text": "Public libraries used to be quiet places, but now they also hold workshops.",
+    "options": [
+      "公共圖書館以前是安靜的地方，現在也舉辦工作坊。",
+      "公共圖書館現在變得很吵，不再舉辦活動。",
+      "公共圖書館一直都舉辦工作坊。"
+    ],
+    "answer": "公共圖書館以前是安靜的地方，現在也舉辦工作坊。",
+    "wrong": {
+      "公共圖書館現在變得很吵，不再舉辦活動。": "句子說的是現在也舉辦工作坊，並沒有說變吵或停辦。",
+      "公共圖書館一直都舉辦工作坊。": "used to 加 now 表示過去與現在不同，過去並不舉辦工作坊。"
+    },
+    "why": "used to 對照 but now，說明圖書館的功能從過去到現在有所變化。",
+    "tip": "used to ... but now ... 表示今昔不同。"
+  }
+]

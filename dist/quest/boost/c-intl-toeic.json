@@ -1,0 +1,233 @@
+[
+ {
+  "id": "c-intl-toeic.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的商務英文？",
+  "text": "",
+  "options": [
+   "Please send me the report by Friday.",
+   "Please send me the report until Friday.",
+   "Please send me the report at Friday.",
+   "Please send me the report in Friday."
+  ],
+  "answer": "Please send me the report by Friday.",
+  "wrong": {
+   "Please send me the report until Friday.": "until 表示動作一直持續到某時間，send 是一次性動作，要用 by 表示期限。",
+   "Please send me the report at Friday.": "at 用於時刻或定點（at 5 p.m.），星期要用 on 或搭配 by。",
+   "Please send me the report in Friday.": "in 用於月份、年份或一段時間之後，星期幾不用 in。"
+  },
+  "why": "by + 時間表示最晚期限，適合一次性的動作。",
+  "tip": "期限用 by，持續到用 until。",
+  "say": "Please send me the report by Friday."
+ },
+ {
+  "id": "c-intl-toeic.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The new office manager will be _____ for approving all travel expenses.",
+  "options": [
+   "responsible",
+   "responsive",
+   "respectful",
+   "respective"
+  ],
+  "answer": "responsible",
+  "wrong": {
+   "responsive": "responsive 是「反應快的」，不能和 for approving 組成「負責」。",
+   "respectful": "respectful 是「尊敬的」，用於人對人的態度，不表示職責。",
+   "respective": "respective 是「各自的」，不能作敘述補語搭配 for。"
+  },
+  "why": "be responsible for 是「負責……」，TOEIC 常考。",
+  "tip": "be responsible for + 名詞或 V-ing。",
+  "say": "The new office manager will be responsible for approving all travel expenses."
+ },
+ {
+  "id": "c-intl-toeic.b3",
+  "type": "situation",
+  "prompt": "客戶來信問貨什麼時候到，你想回覆：「出貨後我會立刻通知您。」哪一句最合適？",
+  "text": "",
+  "options": [
+   "I will notify you as soon as the order ships.",
+   "I will notify you as soon as the order will ship.",
+   "I notify you as soon as the order is shipping now.",
+   "I will be notify you as soon as the order ships."
+  ],
+  "answer": "I will notify you as soon as the order ships.",
+  "wrong": {
+   "I will notify you as soon as the order will ship.": "as soon as 引導的時間子句用現在式，不加 will。",
+   "I notify you as soon as the order is shipping now.": "主句要表示未來承諾，應用 will notify；is shipping now 也與未來時間不符。",
+   "I will be notify you as soon as the order ships.": "will be 後面不能接原形 notify，會形成錯誤的動詞組合。"
+  },
+  "why": "主句用 will 表示承諾，as soon as 的子句用現在式。",
+  "tip": "時間子句用現在式代替未來式。",
+  "say": "I will notify you as soon as the order ships."
+ },
+ {
+  "id": "c-intl-toeic.b4",
+  "type": "meaning",
+  "prompt": "這封通知最想表達什麼？",
+  "text": "Due to the system upgrade, the online portal will be unavailable from 10 p.m. to 2 a.m. on Saturday.",
+  "options": [
+   "因為系統升級，入口網站週六晚上十點到凌晨兩點無法使用。",
+   "入口網站週六全天都可以使用。",
+   "系統升級後網站會永遠關閉。",
+   "網站只有週六凌晨兩點到晚上十點無法使用。"
+  ],
+  "answer": "因為系統升級，入口網站週六晚上十點到凌晨兩點無法使用。",
+  "wrong": {
+   "入口網站週六全天都可以使用。": "unavailable 是無法使用，且有特定時段，和全天可用相反。",
+   "系統升級後網站會永遠關閉。": "通知只提到暫時時段，並沒有說會永久關閉。",
+   "網站只有週六凌晨兩點到晚上十點無法使用。": "把時間顛倒了：10 p.m. to 2 a.m. 是晚上到隔天凌晨。"
+  },
+  "why": "due to 說明原因，from ... to ... 指出無法使用的時段。",
+  "tip": "due to + 原因；unavailable = 無法使用。",
+  "say": "Due to the system upgrade, the online portal will be unavailable from 10 p.m. to 2 a.m. on Saturday."
+ },
+ {
+  "id": "c-intl-toeic.b5",
+  "type": "fix",
+  "prompt": "哪一句才是正確的商務英文？",
+  "text": "",
+  "options": [
+   "The invoice must be paid within thirty days.",
+   "The invoice must pay within thirty days.",
+   "The invoice must be paying within thirty days.",
+   "The invoice must be paid in thirty days ago."
+  ],
+  "answer": "The invoice must be paid within thirty days.",
+  "wrong": {
+   "The invoice must pay within thirty days.": "發票是被支付的，要用被動語態 be paid。",
+   "The invoice must be paying within thirty days.": "be paying 是進行式，不是被動語態，而且發票不會自己付款。",
+   "The invoice must be paid in thirty days ago.": "ago 表示過去，與 must 表示未來的要求衝突。"
+  },
+  "why": "發票被支付，所以用 must be paid；within 表示在期限內。",
+  "tip": "must be + p.p. 表示必須被做。",
+  "say": "The invoice must be paid within thirty days."
+ },
+ {
+  "id": "c-intl-toeic.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The sales team exceeded its quarterly target, _____ the company to raise its annual forecast.",
+  "options": [
+   "allowing",
+   "allowed",
+   "allows",
+   "allow"
+  ],
+  "answer": "allowing",
+  "wrong": {
+   "allowed": "allowed 作過去分詞表被動，但這裡主動使結果發生，要用 allowing。",
+   "allows": "allows 是第三人稱單數動詞，一個句子不能出現兩個主要動詞而沒有連接詞。",
+   "allow": "allow 是原形，無法作為句子後面表結果的分詞。"
+  },
+  "why": "逗號後的分詞片語表示結果，主動意義要用現在分詞 allowing。",
+  "tip": "分詞片語可補充結果：, V-ing ...",
+  "say": "The sales team exceeded its quarterly target, allowing the company to raise its annual forecast."
+ },
+ {
+  "id": "c-intl-toeic.b7",
+  "type": "situation",
+  "prompt": "你要寫電子郵件請同事追蹤供應商的回覆。哪一句最合適？",
+  "text": "",
+  "options": [
+   "Could you follow up with the supplier about the delay?",
+   "Could you following up the supplier about the delay?",
+   "Could you follow the supplier up for the delay about?",
+   "Could you to follow up with the supplier about the delay?"
+  ],
+  "answer": "Could you follow up with the supplier about the delay?",
+  "wrong": {
+   "Could you following up the supplier about the delay?": "Could you 後面接原形 follow，不能用 following；follow up 後也要用 with 接人。",
+   "Could you follow the supplier up for the delay about?": "片語順序亂掉，about 不能放在句尾。",
+   "Could you to follow up with the supplier about the delay?": "助動詞 could 後面不加 to。"
+  },
+  "why": "follow up with + 人 about + 事情，是商務郵件常用說法。",
+  "tip": "follow up with 人 about 事。",
+  "say": "Could you follow up with the supplier about the delay?"
+ },
+ {
+  "id": "c-intl-toeic.b8",
+  "type": "meaning",
+  "prompt": "這句話的意思是什麼？",
+  "text": "Profit margins improved because the company negotiated lower prices with its suppliers.",
+  "options": [
+   "因為公司和供應商談到較低價格，利潤率提高了。",
+   "因為利潤率提高，公司把價格調高。",
+   "因為公司漲價，供應商利潤提高。",
+   "公司沒有和供應商談價格，利潤率仍提高了。"
+  ],
+  "answer": "因為公司和供應商談到較低價格，利潤率提高了。",
+  "wrong": {
+   "因為利潤率提高，公司把價格調高。": "因果顛倒；原句 because 後面才是原因（談到低價）。",
+   "因為公司漲價，供應商利潤提高。": "原句談的是進貨價格降低，不是公司漲價。",
+   "公司沒有和供應商談價格，利潤率仍提高了。": "原句明確說 negotiated，有談價格。"
+  },
+  "why": "because 後面是原因：談到較低進貨價，結果是利潤率提高。",
+  "tip": "because 後面接的是原因。",
+  "say": "Profit margins improved because the company negotiated lower prices with its suppliers."
+ },
+ {
+  "id": "c-intl-toeic.b9",
+  "type": "fix",
+  "prompt": "哪一句才是正確的商務英文？",
+  "text": "",
+  "options": [
+   "We are looking forward to meeting you next week.",
+   "We are looking forward to meet you next week.",
+   "We look forward meeting you next week.",
+   "We are looking forward to meeting with you next week at."
+  ],
+  "answer": "We are looking forward to meeting you next week.",
+  "wrong": {
+   "We are looking forward to meet you next week.": "look forward to 的 to 是介系詞，後面要接 V-ing 而不是原形。",
+   "We look forward meeting you next week.": "look forward 後面需要 to，缺少介系詞。",
+   "We are looking forward to meeting with you next week at.": "句尾的 at 多餘，沒有後面的地點，結構不完整。"
+  },
+  "why": "look forward to 後面接名詞或 V-ing。",
+  "tip": "look forward to 後面接 V-ing。",
+  "say": "We are looking forward to meeting you next week."
+ },
+ {
+  "id": "c-intl-toeic.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Employees should submit their expense reports _____ the end of each month.",
+  "options": [
+   "by",
+   "since",
+   "during",
+   "among"
+  ],
+  "answer": "by",
+  "wrong": {
+   "since": "since 表示從過去某時間起，不用於未來期限。",
+   "during": "during 後接一段期間，表示期間內持續，而不是截止時間。",
+   "among": "among 是「在……之中」，不能表示時間期限。"
+  },
+  "why": "submit 是一次性動作，by the end of ... 表示最遲期限。",
+  "tip": "by the end of = 在……結束前。",
+  "say": "Employees should submit their expense reports by the end of each month."
+ },
+ {
+  "id": "c-intl-toeic.b11",
+  "type": "situation",
+  "prompt": "同事說：「如果價格下降，我們就能擴大訂單。」你想用英文確認什麼條件才算成立。哪一句最合適？",
+  "text": "",
+  "options": [
+   "What conditions would need to be true for that to work?",
+   "What conditions are need to be true for that to work?",
+   "Which condition is needed to true for working that?",
+   "What condition would needing to be true for that work?"
+  ],
+  "answer": "What conditions would need to be true for that to work?",
+  "wrong": {
+   "What conditions are need to be true for that to work?": "are need 把 be 動詞和 need 混用，條件在這裡要說 would need to be true。",
+   "Which condition is needed to true for working that?": "to true 缺少 be 動詞，for working that 的語序也不自然。",
+   "What condition would needing to be true for that work?": "would 後面不能接 needing，應為原形 need；for that work 也缺少 to。"
+  },
+  "why": "would need to be true 是假設情境中詢問必要條件的自然說法。",
+  "tip": "問條件：what would need to be true?",
+  "say": "What conditions would need to be true for that to work?"
+ }
+]

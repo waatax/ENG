@@ -1,0 +1,254 @@
+[
+ {
+  "id": "g12-s2-u10.b1",
+  "type": "situation",
+  "prompt": "文章說：「他支持這項政策，所以他一定是壞人。」這個推論犯了哪種錯誤？",
+  "text": "Writer: \"Mr. Lee supports the new tax, so he must be a bad person.\"",
+  "options": [
+   "人身攻擊：用個人評價取代對政策的討論",
+   "滑坡謬誤：認為一步會導致連鎖災難",
+   "循環論證：用結論當作理由",
+   "稻草人謬誤：曲解對方的論點再批評"
+  ],
+  "answer": "人身攻擊：用個人評價取代對政策的討論",
+  "wrong": {
+   "滑坡謬誤：認為一步會導致連鎖災難": "句中沒有連串後果的推論，只是直接批評人。",
+   "循環論證：用結論當作理由": "句子沒有拿結論當前提來證明自己。",
+   "稻草人謬誤：曲解對方的論點再批評": "句子沒有扭曲對方論點，而是直接攻擊他的人格。"
+  },
+  "why": "支持稅制只是政策立場，無法推出他是壞人；用人格評價取代論證，就是 ad hominem。",
+  "tip": "批評人而不是論點，就是人身攻擊謬誤。",
+  "say": "Supporting a tax does not make someone a bad person."
+ },
+ {
+  "id": "g12-s2-u10.b2",
+  "type": "cloze",
+  "prompt": "選出最適合的連接詞。",
+  "text": "Many people believe cities should ban cars. _____, others argue that this would hurt small businesses.",
+  "options": [
+   "However",
+   "Therefore",
+   "Similarly",
+   "For example"
+  ],
+  "answer": "However",
+  "wrong": {
+   "Therefore": "Therefore 表示結果，但後句是相反意見，不是結果。",
+   "Similarly": "Similarly 表示相似，後句與前句觀點相反。",
+   "For example": "For example 引出舉例，後句不是前句的例子。"
+  },
+  "why": "後句提出對立看法，要用表示轉折的 However 連接。",
+  "tip": "遇到相反觀點，用 However 轉折。",
+  "say": "However, others argue that this would hurt small businesses."
+ },
+ {
+  "id": "g12-s2-u10.b3",
+  "type": "meaning",
+  "prompt": "作者在這段文字中承認了什麼反方觀點？",
+  "text": "Some may argue that remote work reduces teamwork. However, regular video meetings can keep colleagues connected.",
+  "options": [
+   "遠距工作可能減少團隊合作",
+   "遠距工作一定提高薪水",
+   "視訊會議會取消",
+   "同事都喜歡辦公室"
+  ],
+  "answer": "遠距工作可能減少團隊合作",
+  "wrong": {
+   "遠距工作一定提高薪水": "文中完全沒有談到薪水，這是文章以外的內容，不能當作作者承認的反方觀點。",
+   "視訊會議會取消": "作者反而認為視訊會議能維持聯繫，沒有說會取消。",
+   "同事都喜歡辦公室": "文中沒有表達同事偏好辦公室。"
+  },
+  "why": "Some may argue that... 引出反方看法，作者承認後再用 However 提出自己的回應。",
+  "tip": "Some may argue that 後面接的是反方意見。",
+  "say": "Some may argue that remote work reduces teamwork."
+ },
+ {
+  "id": "g12-s2-u10.b4",
+  "type": "fix",
+  "prompt": "哪一句寫出最清楚的論點？",
+  "text": "",
+  "options": [
+   "Schools should start later because teenagers need more sleep.",
+   "Schools starting later is good, I think so maybe because sleep.",
+   "Start later schools teenagers need sleep so should.",
+   "Schools should start late because teenagers needs more sleeps."
+  ],
+  "answer": "Schools should start later because teenagers need more sleep.",
+  "wrong": {
+   "Schools starting later is good, I think so maybe because sleep.": "語氣含糊，使用 maybe 與 I think so，論點不夠明確。",
+   "Start later schools teenagers need sleep so should.": "語序混亂，沒有形成能清楚表達主張的完整句子。",
+   "Schools should start late because teenagers needs more sleeps.": "teenagers 是複數，要用 need；sleep 是不可數，不加 s；late 也與 later 的比較語意不同。"
+  },
+  "why": "論點句應該立場明確、有理由，這句用 should 表達主張，because 說明理由。",
+  "tip": "好的論點句有立場，也附上一個理由。",
+  "say": "Schools should start later because teenagers need more sleep."
+ },
+ {
+  "id": "g12-s2-u10.b5",
+  "type": "situation",
+  "prompt": "文章說：「如果允許學生用手機，下一步他們就會整天不上課。」這是哪種推論問題？",
+  "text": "Writer: \"If we allow phones in class, soon students will stop learning altogether.\"",
+  "options": [
+   "滑坡謬誤：沒有證據就假設會連鎖惡化",
+   "訴諸權威：只因專家說的就接受",
+   "假兩難：只給兩個極端選擇",
+   "以偏概全：只看一個樣本"
+  ],
+  "answer": "滑坡謬誤：沒有證據就假設會連鎖惡化",
+  "wrong": {
+   "訴諸權威：只因專家說的就接受": "句中沒有引用專家或權威。",
+   "假兩難：只給兩個極端選擇": "句子沒有提供「只能二選一」的選項。",
+   "以偏概全：只看一個樣本": "沒有提到樣本，而是推測極端後果。"
+  },
+  "why": "從允許帶手機直接跳到完全不再學習，缺少中間證據，是滑坡謬誤。",
+  "tip": "沒有證據就推到極端後果，就是滑坡謬誤。",
+  "say": "Allowing phones does not mean students will stop learning."
+ },
+ {
+  "id": "g12-s2-u10.b6",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "The author uses a strong _____ to show that the claim cannot be ignored.",
+  "options": [
+   "example",
+   "exam",
+   "exempt",
+   "exhaust"
+  ],
+  "answer": "example",
+  "wrong": {
+   "exam": "exam 是考試，不是用來支持主張的證據。",
+   "exempt": "exempt 是「免除」，與句意無關。",
+   "exhaust": "exhaust 是「耗盡」，用在這裡不通順。"
+  },
+  "why": "作者用有力的 example 支持論點，是寫作中常見的證據方式。",
+  "tip": "支持論點要有具體的 example 或證據。",
+  "say": "The author uses a strong example to support the claim."
+ },
+ {
+  "id": "g12-s2-u10.b7",
+  "type": "meaning",
+  "prompt": "這句話表示作者的態度是什麼？",
+  "text": "The study undermines the earlier explanation, though it does not completely overturn it.",
+  "options": [
+   "研究削弱了舊說法，但沒有完全推翻",
+   "研究完全證明舊說法正確",
+   "研究和舊說法毫無關係",
+   "研究已經被撤回"
+  ],
+  "answer": "研究削弱了舊說法，但沒有完全推翻",
+  "wrong": {
+   "研究完全證明舊說法正確": "undermine 是削弱，不是證實。",
+   "研究和舊說法毫無關係": "句子說它削弱了舊說法，顯然有關係。",
+   "研究已經被撤回": "句中沒有 withdraw 或撤回的資訊。"
+  },
+  "why": "undermine 是慢慢削弱，後面 does not completely overturn 表示尚未被完全推翻。",
+  "tip": "undermine 是削弱可信度，不是完全推翻。",
+  "say": "The study undermines the earlier explanation."
+ },
+ {
+  "id": "g12-s2-u10.b8",
+  "type": "fix",
+  "prompt": "哪一句的證據用法正確？",
+  "text": "",
+  "options": [
+   "The statistics provide strong evidence for the claim.",
+   "The statistics provides strongly evidences for claim.",
+   "The statistic provide evidence strong of the claim.",
+   "The statistics are provide strong evidence the claim."
+  ],
+  "answer": "The statistics provide strong evidence for the claim.",
+  "wrong": {
+   "The statistics provides strongly evidences for claim.": "statistics 是複數，動詞用 provide；evidence 不可數，且要用形容詞 strong。",
+   "The statistic provide evidence strong of the claim.": "strong 應放在 evidence 前面，單數 statistic 也不能搭配 provide。",
+   "The statistics are provide strong evidence the claim.": "are 與 provide 不能並用，evidence 後面缺 for。"
+  },
+  "why": "provide strong evidence for 是固定搭配，evidence 不可數，不加 s。",
+  "tip": "evidence 不可數，不加 s。",
+  "say": "The statistics provide strong evidence for the claim."
+ },
+ {
+  "id": "g12-s2-u10.b9",
+  "type": "situation",
+  "prompt": "短文說：「公園開幕後，附近商店銷量增加。」另一人說：「所以是公園讓商店賺錢。」請選出最適當的質疑。",
+  "text": "After the park opened, nearby shops sold more. A new subway station also opened that year.",
+  "options": [
+   "地鐵站也同時開通，可能是另一個原因",
+   "商店老闆都很努力，所以一定是公園",
+   "公園很漂亮，所以推論成立",
+   "沒有人去過商店，所以不能討論"
+  ],
+  "answer": "地鐵站也同時開通，可能是另一個原因",
+  "wrong": {
+   "商店老闆都很努力，所以一定是公園": "這個說法沒有排除其他原因，只是另一個沒有證據的推測。",
+   "公園很漂亮，所以推論成立": "公園漂不漂亮與銷售增加的因果無直接關係。",
+   "沒有人去過商店，所以不能討論": "文章明明說銷量增加，所以有人去過商店，這個說法與題意矛盾。"
+  },
+  "why": "同時發生不代表因果；地鐵站開通是替代解釋，足以質疑結論。",
+  "tip": "先時間後結果，不一定是因果，要找替代原因。",
+  "say": "A new subway station could also explain the increase."
+ },
+ {
+  "id": "g12-s2-u10.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "A strong essay needs good _____, so each paragraph connects smoothly to the next.",
+  "options": [
+   "cohesion",
+   "cohesive of",
+   "cohere to",
+   "coherently"
+  ],
+  "answer": "cohesion",
+  "wrong": {
+   "cohesive of": "cohesive 是形容詞，後面接 of 沒有意義，而且 good 後面需要名詞。",
+   "cohere to": "cohere 是動詞，good 後面要接名詞。",
+   "coherently": "coherently 是副詞，不能放在 good 後面修飾名詞。"
+  },
+  "why": "good 後面需要名詞，cohesion 是「連貫性」，指各段之間彼此銜接。",
+  "tip": "形容詞後面接名詞：good cohesion。",
+  "say": "A strong essay needs good cohesion."
+ },
+ {
+  "id": "g12-s2-u10.b11",
+  "type": "fix",
+  "prompt": "哪一句最適合用來反駁對方論點？",
+  "text": "",
+  "options": [
+   "While your point is valid, it overlooks the long-term cost.",
+   "Your point is stupid and I will not listen.",
+   "Your point valid but overlook the cost long-term.",
+   "While your point valid, it is overlooking costs of long."
+  ],
+  "answer": "While your point is valid, it overlooks the long-term cost.",
+  "wrong": {
+   "Your point is stupid and I will not listen.": "人身攻擊式的語氣，不符合學術辯論的禮貌與理性。",
+   "Your point valid but overlook the cost long-term.": "缺 is，overlook 要用 overlooks，long-term 也放錯位置。",
+   "While your point valid, it is overlooking costs of long.": "While 子句缺 is，of long 不是正確的搭配。"
+  },
+  "why": "先承認對方有道理，再指出忽略的部分，是學術寫作常見的禮貌反駁。",
+  "tip": "先肯定再轉折，是有禮貌的學術反駁。",
+  "say": "While your point is valid, it overlooks the long-term cost."
+ },
+ {
+  "id": "g12-s2-u10.b12",
+  "type": "meaning",
+  "prompt": "作者這句話想表達什麼？",
+  "text": "Before we accept the prediction, we should ask how competitors might respond.",
+  "options": [
+   "先考慮對手可能的反應，再接受預測",
+   "預測一定正確，不必討論",
+   "競爭對手已經退出市場",
+   "我們應該立刻照預測行動"
+  ],
+  "answer": "先考慮對手可能的反應，再接受預測",
+  "wrong": {
+   "預測一定正確，不必討論": "Before we accept 表示尚未接受，仍要檢視。",
+   "競爭對手已經退出市場": "句中仍談對手如何反應，沒有說退出。",
+   "我們應該立刻照預測行動": "before 說明要先思考，而不是立刻行動。"
+  },
+  "why": "Before we accept... 表示先審視條件，ask how competitors might respond 是要考慮對手反應。",
+  "tip": "before accept 表示先檢視，再接受。",
+  "say": "Before we accept the prediction, we should consider competitors."
+ }
+]

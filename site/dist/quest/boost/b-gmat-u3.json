@@ -1,0 +1,149 @@
+[
+ {
+  "id": "b-gmat-u3.b1",
+  "type": "meaning",
+  "prompt": "下列哪一項最能指出論證的缺陷？",
+  "text": "A farmer noticed that the rooster crows just before sunrise, so he concluded that the rooster's crowing causes the sun to rise.",
+  "options": [
+   "它把先後發生的兩件事誤認為有因果關係",
+   "它假設太陽每天都會升起",
+   "它認為公雞很早起床",
+   "它以為農夫不用工作"
+  ],
+  "answer": "它把先後發生的兩件事誤認為有因果關係",
+  "wrong": {
+   "它假設太陽每天都會升起": "太陽每天升起是事實，不是論證的錯誤。",
+   "它認為公雞很早起床": "公雞很早叫是觀察，不是缺陷。",
+   "它以為農夫不用工作": "論證沒有談到農夫的工作。"
+  },
+  "why": "先後發生不代表因果，這就是 post hoc 謬誤。",
+  "tip": "B 在 A 之後發生，不代表 A 造成 B。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u3.b2",
+  "type": "meaning",
+  "prompt": "下列哪一項是這個論證的缺陷？",
+  "text": "After the company introduced a new slogan, its stock price rose the following week. The marketing chief therefore claims the slogan lifted the stock.",
+  "options": [
+   "它忽略了股價可能因其他事件而上升",
+   "它假設口號不重要",
+   "它認為股價永遠上漲",
+   "它說公司沒有行銷部門"
+  ],
+  "answer": "它忽略了股價可能因其他事件而上升",
+  "wrong": {
+   "它假設口號不重要": "論證恰好認為口號很重要，沒有這個假設。",
+   "它認為股價永遠上漲": "論證只談一週內的變化，沒有說永遠。",
+   "它說公司沒有行銷部門": "論證由行銷主管提出，完全相反。"
+  },
+  "why": "論證只依時間先後就歸因於口號，沒有排除財報、市場等其他原因。",
+  "tip": "股價題：想一想同期有沒有其他消息。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u3.b3",
+  "type": "fix",
+  "prompt": "哪一句說明了這個論證的錯誤推論？",
+  "text": "Every employee who received a bonus attended the training. Maya attended the training, so she must have received a bonus.",
+  "options": [
+   "Attending the training is necessary for the bonus, but that does not mean it is sufficient.",
+   "Attending the training is sufficient and also unnecessary.",
+   "Maya cannot attend the training.",
+   "The bonus is smaller than the training."
+  ],
+  "answer": "Attending the training is necessary for the bonus, but that does not mean it is sufficient.",
+  "wrong": {
+   "Attending the training is sufficient and also unnecessary.": "自相矛盾，也沒有點出論證的實際錯誤。",
+   "Maya cannot attend the training.": "題目已說 Maya 參加了訓練。",
+   "The bonus is smaller than the training.": "大小比較與論證邏輯無關。"
+  },
+  "why": "領獎金的人都參加訓練是必要條件；參加訓練不一定足以得到獎金。",
+  "tip": "必要條件不等於充分條件，不能倒推。",
+  "say": "Attending the training is necessary, but not sufficient."
+ },
+ {
+  "id": "b-gmat-u3.b4",
+  "type": "meaning",
+  "prompt": "這個論證屬於哪種謬誤？",
+  "text": "All the best players in the league practice every morning. Sam practices every morning, so Sam must be one of the best players.",
+  "options": [
+   "把必要特徵當成足以證明的條件",
+   "循環論證",
+   "訴諸權威",
+   "偷換字義"
+  ],
+  "answer": "把必要特徵當成足以證明的條件",
+  "wrong": {
+   "循環論證": "結論沒有被拿來當前提，所以不是循環。",
+   "訴諸權威": "沒有引用任何權威人士的意見。",
+   "偷換字義": "practice 的意思前後一致。"
+  },
+  "why": "最佳球員都練習，並不代表練習的人都是最佳球員，這是倒推的錯誤。",
+  "tip": "「所有 A 都是 B」不能推出「B 就是 A」。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u3.b5",
+  "type": "meaning",
+  "prompt": "這個論證犯了什麼錯誤？",
+  "text": "The restaurant's menu says its fish is \"fresh\" because it is never frozen. The fish is fresh, so it must never have been frozen.",
+  "options": [
+   "用結論當作理由，形成循環",
+   "訴諸情感",
+   "以偏概全",
+   "把相關誤認為因果"
+  ],
+  "answer": "用結論當作理由，形成循環",
+  "wrong": {
+   "訴諸情感": "論證沒有試圖引發情緒。",
+   "以偏概全": "論證沒有從少數例子推到全體。",
+   "把相關誤認為因果": "論證不是在談兩個現象的因果。"
+  },
+  "why": "fresh 被定義為不曾冷凍，再用 fresh 證明不曾冷凍，等於重複結論。",
+  "tip": "理由和結論只是換個說法，就是循環論證。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u3.b6",
+  "type": "meaning",
+  "prompt": "這個論證的缺陷是什麼？",
+  "text": "A salesperson says: \"Our tires are the best because no other tire performs better than ours.\"",
+  "options": [
+   "它只是把結論換個說法重複",
+   "它訴諸大多數人的意見",
+   "它轉移了話題",
+   "它引用不可靠的專家"
+  ],
+  "answer": "它只是把結論換個說法重複",
+  "wrong": {
+   "它訴諸大多數人的意見": "論證沒有提到多數人怎麼想。",
+   "它轉移了話題": "論證始終在談輪胎的表現。",
+   "它引用不可靠的專家": "銷售員沒有引用任何專家或權威，所以不是訴諸不可靠權威的謬誤。"
+  },
+  "why": "最好與沒有更好意思相同，並沒有提供獨立證據。",
+  "tip": "沒有新證據，只換說法，就是循環。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u3.b7",
+  "type": "situation",
+  "prompt": "朋友說：「我每次考試都穿這雙幸運襪，結果都考得很好，所以襪子讓我考高分。」你最該怎麼回應？",
+  "text": "",
+  "options": [
+   "Doing well after wearing the socks does not prove the socks caused it; your studying may explain the scores.",
+   "You should buy ten pairs of socks.",
+   "Socks are never worn during exams.",
+   "Your scores must be lower than average."
+  ],
+  "answer": "Doing well after wearing the socks does not prove the socks caused it; your studying may explain the scores.",
+  "wrong": {
+   "You should buy ten pairs of socks.": "這是順著錯誤推論再做決定，沒有指出問題。",
+   "Socks are never worn during exams.": "這個說法不合事實，也與論證無關。",
+   "Your scores must be lower than average.": "沒有根據，且與朋友說考得好相矛盾。"
+  },
+  "why": "考高分在穿襪之後，並不表示襪子是原因，努力念書更可能是原因。",
+  "tip": "遇到迷信因果，找更合理的原因。",
+  "say": "Doing well after wearing the socks does not prove the socks caused it."
+ }
+]

@@ -1,0 +1,149 @@
+[
+ {
+  "id": "b-toeic-u3.b1",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The project is _____ schedule, so we expect to deliver the first version next week.",
+  "options": [
+   "on",
+   "at",
+   "to",
+   "for"
+  ],
+  "answer": "on",
+  "wrong": {
+   "at": "at schedule 不是英文片語；正確是 on schedule（準時）。",
+   "to": "to schedule 是動詞不定詞，不是形容「進度正常」的介系詞片語。",
+   "for": "for schedule 不是固定說法，無法表達進度正常。"
+  },
+  "why": "on schedule 是「按照進度、準時」。",
+  "tip": "on schedule = 準時；behind schedule = 落後。",
+  "say": "The project is on schedule, so we expect to deliver the first version next week."
+ },
+ {
+  "id": "b-toeic-u3.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Please send the meeting _____ to all participants before Monday so that everyone can prepare.",
+  "options": [
+   "agenda",
+   "agency",
+   "agent",
+   "agreement"
+  ],
+  "answer": "agenda",
+  "wrong": {
+   "agency": "agency 是「代理機構」，不是會議議程。",
+   "agent": "agent 是「代理人」，不能寄給大家準備會議。",
+   "agreement": "agreement 是「協議」，與準備會議內容的資料不同。"
+  },
+  "why": "讓大家準備會議，要先寄的是議程 agenda。",
+  "tip": "agenda = 會議議程。",
+  "say": "Please send the meeting agenda to all participants before Monday so that everyone can prepare."
+ },
+ {
+  "id": "b-toeic-u3.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的商務英文？",
+  "text": "",
+  "options": [
+   "The team has finished the first phase, and now it is moving on to testing.",
+   "The team have finished the first phase, and now it is move on to testing.",
+   "The team has finish the first phase, and now it is moving to testing on.",
+   "The team has finished the first phase, and now it moves on testing."
+  ],
+  "answer": "The team has finished the first phase, and now it is moving on to testing.",
+  "wrong": {
+   "The team have finished the first phase, and now it is move on to testing.": "is move 混用 be 動詞與原形，應為 is moving。",
+   "The team has finish the first phase, and now it is moving to testing on.": "has 後面要接過去分詞 finished，且 on 不應放在句尾。",
+   "The team has finished the first phase, and now it moves on testing.": "move on 後面要接 to 才能接下一階段，缺 to。"
+  },
+  "why": "完成用現在完成式；move on to 是進入下一階段。",
+  "tip": "move on to + 下一件事。",
+  "say": "The team has finished the first phase, and now it is moving on to testing."
+ },
+ {
+  "id": "b-toeic-u3.b4",
+  "type": "situation",
+  "prompt": "站立會議上，你想告訴大家你被一個問題卡住了，需要協助。哪一句最自然？",
+  "text": "",
+  "options": [
+   "I'm stuck on the login bug and could use some help.",
+   "I stuck on the login bug and need to help.",
+   "I'm sticking the login bug and could use helps.",
+   "I am stuck at login bug and help me could."
+  ],
+  "answer": "I'm stuck on the login bug and could use some help.",
+  "wrong": {
+   "I stuck on the login bug and need to help.": "I stuck 缺少 be 動詞，need to help 變成要去幫助別人，意思錯誤。",
+   "I'm sticking the login bug and could use helps.": "stick 的意思不是被卡住，help 作名詞時不可數，不加 s。",
+   "I am stuck at login bug and help me could.": "help me could 語序錯誤，could 應該放在主詞後。"
+  },
+  "why": "be stuck on 表示被卡在某問題；could use some help 是自然的求助說法。",
+  "tip": "could use some help = 需要一點幫忙。",
+  "say": "I'm stuck on the login bug and could use some help."
+ },
+ {
+  "id": "b-toeic-u3.b5",
+  "type": "meaning",
+  "prompt": "這句話的意思是什麼？",
+  "text": "The deadline has been pushed back by two weeks because the client changed the requirements.",
+  "options": [
+   "因為客戶更改需求，期限被延後了兩週。",
+   "客戶要求提早兩週完成。",
+   "因為團隊太慢，客戶取消了需求。",
+   "期限兩週前已經過了。"
+  ],
+  "answer": "因為客戶更改需求，期限被延後了兩週。",
+  "wrong": {
+   "客戶要求提早兩週完成。": "push back 是延後，不是提前。",
+   "因為團隊太慢，客戶取消了需求。": "原句原因是客戶更改需求，而且沒有取消。",
+   "期限兩週前已經過了。": "has been pushed back by two weeks 是延後兩週，不是過期兩週。"
+  },
+  "why": "push back 是延後；by two weeks 說明延後的幅度。",
+  "tip": "push back = 延後。",
+  "say": "The deadline has been pushed back by two weeks because the client changed the requirements."
+ },
+ {
+  "id": "b-toeic-u3.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Our key performance _____ include customer satisfaction and the number of new orders.",
+  "options": [
+   "indicators",
+   "industries",
+   "institutions",
+   "incomes"
+  ],
+  "answer": "indicators",
+  "wrong": {
+   "industries": "industries 是「產業」，不是衡量績效的指標。",
+   "institutions": "institutions 是「機構」，無法與 key performance 組成固定詞。",
+   "incomes": "incomes 是「收入」，客戶滿意度並不是收入。"
+  },
+  "why": "KPI 的全名是 key performance indicators，指關鍵績效指標。",
+  "tip": "KPI 是關鍵績效指標。",
+  "say": "Our key performance indicators include customer satisfaction and the number of new orders."
+ },
+ {
+  "id": "b-toeic-u3.b7",
+  "type": "fix",
+  "prompt": "哪一句才是正確的商務英文？",
+  "text": "",
+  "options": [
+   "Each team member is responsible for updating the task board.",
+   "Each team members are responsible for updating the task board.",
+   "Each team member is responsible to update the task board.",
+   "Every team member responsible for updating the task board."
+  ],
+  "answer": "Each team member is responsible for updating the task board.",
+  "wrong": {
+   "Each team members are responsible for updating the task board.": "each 後面要接單數名詞，動詞也用單數 is。",
+   "Each team member is responsible to update the task board.": "responsible 之後固定用 for + V-ing，不是 to + 原形。",
+   "Every team member responsible for updating the task board.": "缺少 be 動詞 is，句子沒有主要動詞。"
+  },
+  "why": "each + 單數名詞；be responsible for + V-ing。",
+  "tip": "each 後接單數名詞與單數動詞。",
+  "say": "Each team member is responsible for updating the task board."
+ }
+]

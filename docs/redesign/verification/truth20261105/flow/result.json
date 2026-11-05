@@ -425,7 +425,7 @@
   {
    "name": "booster explains the chosen wrong option",
    "ok": true,
-   "detail": "↻ 差一點，看看差在哪\n\n你選的：Good night!\nGood night 是晚上睡覺前說的，早上不能用。\n\n正確答案：Good morning!\n\n為什麼"
+   "detail": "↻ 差一點，看看差在哪\n\n你選的：免費續杯讓每杯咖啡的成本降低\n論證談的是營收增加的原因，不是成本；即使成本降低也不能推出營收因續杯而增加。\n\n正確答案：Apr"
   },
   {
    "name": "booster no overflow",

@@ -1,0 +1,75 @@
+{
+ "fc-sh-2473": {
+  "pos": "n.",
+  "gloss": "污染物",
+  "example": "Factories must reduce the pollutants they release into the river.",
+  "exampleZh": "工廠必須減少排入河流的污染物。",
+  "collocation": "air pollutant (空氣污染物)",
+  "memoryTip": "pollute 污染 + ant 表示東西：造成污染的東西"
+ },
+ "fc-sh-2491": {
+  "pos": "adv.",
+  "gloss": "不管；不顧",
+  "example": "The game continued regardless of the heavy rain.",
+  "exampleZh": "不管雨下得多大，比賽還是繼續進行。",
+  "collocation": "regardless of age (不論年齡)",
+  "memoryTip": "regard 看重 + less 不：不看重那件事，所以不管它"
+ },
+ "fc-sh-2485": {
+  "pos": "v.",
+  "gloss": "散發；輻射",
+  "example": "Heat radiates from the old stove and warms the whole room.",
+  "exampleZh": "熱氣從老爐子散發出來，讓整個房間都暖了。",
+  "collocation": "radiate heat (散發熱能)",
+  "memoryTip": "radi 是光線，和 radio 同源：像光線一樣向四周散開"
+ },
+ "fc-sh-2394": {
+  "pos": "v.",
+  "gloss": "指定；指派",
+  "example": "The teacher designated Amy as the team leader.",
+  "exampleZh": "老師指定 Amy 擔任組長。",
+  "collocation": "designate a leader (指派負責人)",
+  "memoryTip": "de + sign 記號：做上記號，指定就是你"
+ },
+ "fc-sh-2570": {
+  "pos": "n.",
+  "gloss": "戰車；雙輪馬車",
+  "example": "In ancient races, each chariot was pulled by fast horses.",
+  "exampleZh": "在古代賽事中，每輛戰車都由快馬拉動。",
+  "collocation": "a horse-drawn chariot (馬拉戰車)",
+  "memoryTip": "char 和 car 同源：古代的 car，就是馬拉的戰車"
+ },
+ "fc-sh-2461": {
+  "pos": "n.",
+  "gloss": "養分；營養素",
+  "example": "Plants take in nutrients from the soil through their roots.",
+  "exampleZh": "植物透過根部從土壤吸收養分。",
+  "collocation": "essential nutrients (必需營養素)",
+  "memoryTip": "nutri 滋養，和 nutrition 同家族：滋養身體的東西"
+ },
+ "fc-sh-2524": {
+  "gloss": "節儉的",
+  "memoryTip": "thrift 節儉，二手店叫 thrift shop：省錢買好物"
+ },
+ "fc-sh-2961": {
+  "example": "This television has a liquid crystal display, or LCD screen.",
+  "exampleZh": "這台電視使用液晶顯示器，也就是 LCD 螢幕。",
+  "collocation": "liquid crystal display screen (液晶顯示螢幕)"
+ },
+ "fc-sh-2957": {
+  "gloss": "加長型禮車"
+ },
+ "fc-jh-1355": {
+  "example": "According to the weather report, it will rain tomorrow.",
+  "exampleZh": "根據氣象報告，明天會下雨。",
+  "collocation": "according to the news (根據新聞)"
+ },
+ "fc-sh-1991": {
+  "example": "Please wring the wet towel before you hang it up.",
+  "exampleZh": "把濕毛巾掛起來之前，請先擰乾。"
+ },
+ "fc-sh-2627": {
+  "example": "Don't fling your bag on the floor when you get home.",
+  "exampleZh": "回到家時，別把書包隨手往地上一扔。"
+ }
+}

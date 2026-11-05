@@ -1,0 +1,212 @@
+[
+ {
+  "id": "c-intl-sat.b1",
+  "type": "cloze",
+  "prompt": "Which choice completes the text with the most logical and precise word?",
+  "text": "The mayor's remark was deliberately _____: it could be read as praise or as mild criticism, and she declined to clarify which she meant.",
+  "options": [
+   "ambiguous",
+   "blunt",
+   "generous",
+   "cheerful"
+  ],
+  "answer": "ambiguous",
+  "wrong": {
+   "blunt": "blunt 是「直率的」，但句子說這句話可以有兩種解讀，並不直率。",
+   "generous": "generous 是「慷慨的」，無法說明為何有兩種解讀。",
+   "cheerful": "cheerful 是「愉快的」，與讚美或批評都可能的情形不符。"
+  },
+  "why": "it could be read as praise or criticism 說明意思不明確，所以選 ambiguous。",
+  "tip": "能被兩種方式解讀就是 ambiguous。",
+  "say": "The mayor's remark was deliberately ambiguous."
+ },
+ {
+  "id": "c-intl-sat.b2",
+  "type": "meaning",
+  "prompt": "這段文字中的 corroborate 最接近下列哪一個意思？",
+  "text": "A second independent lab repeated the experiment and obtained the same result, which helped corroborate the original finding.",
+  "options": [
+   "證實",
+   "推翻",
+   "隱藏",
+   "簡化"
+  ],
+  "answer": "證實",
+  "wrong": {
+   "推翻": "第二間實驗室得到相同結果，是支持原發現，不是推翻。",
+   "隱藏": "文中沒有隱藏結果的意思；重複實驗的目的就是確認。",
+   "簡化": "結果相同並不是簡化實驗，而是增加證據。"
+  },
+  "why": "獨立實驗得到相同結果，等於為原發現提供佐證，corroborate 是證實。",
+  "tip": "corroborate = 以另一證據支持。",
+  "say": "A second independent lab repeated the experiment and obtained the same result."
+ },
+ {
+  "id": "c-intl-sat.b3",
+  "type": "fix",
+  "prompt": "Which choice conforms to the conventions of Standard English?",
+  "text": "",
+  "options": [
+   "The data suggest that the trend is real.",
+   "The data suggests that the trends is real.",
+   "The data suggest that the trend are real.",
+   "The data suggested that the trend is being real."
+  ],
+  "answer": "The data suggest that the trend is real.",
+  "wrong": {
+   "The data suggests that the trends is real.": "trends 是複數，與 is 不一致。",
+   "The data suggest that the trend are real.": "trend 是單數，需配 is，不是 are。",
+   "The data suggested that the trend is being real.": "is being real 不自然，real 是狀態形容詞，不需要進行式。"
+  },
+  "why": "that 子句中 trend 是單數，所以要用 is；data 在學術文章常視為複數，suggest 沒問題。",
+  "tip": "that 子句也要檢查主詞與動詞一致。",
+  "say": "The data suggest that the trend is real."
+ },
+ {
+  "id": "c-intl-sat.b4",
+  "type": "cloze",
+  "prompt": "Which choice completes the text with the most logical transition?",
+  "text": "The first draft of the bridge design was inexpensive but unsafe. _____, the engineers redesigned the support beams.",
+  "options": [
+   "Consequently",
+   "Similarly",
+   "For instance",
+   "Meanwhile"
+  ],
+  "answer": "Consequently",
+  "wrong": {
+   "Similarly": "similarly 表示相似的情況，但設計不安全與重新設計是因果關係。",
+   "For instance": "for instance 引出例子，下一句不是上一句的例子。",
+   "Meanwhile": "meanwhile 表示同時發生的事，語意沒有因果關係。"
+  },
+  "why": "設計不安全，因此工程師重新設計，因果關係用 Consequently。",
+  "tip": "因果關係的轉折詞：consequently、therefore。",
+  "say": "Consequently, the engineers redesigned the support beams."
+ },
+ {
+  "id": "c-intl-sat.b5",
+  "type": "meaning",
+  "prompt": "By the same token 在下面這句話裡的作用是什麼？",
+  "text": "Students should not be punished for honest mistakes. By the same token, teachers should not be blamed when a student ignores clear advice.",
+  "options": [
+   "用相同的道理，再補上另一個類似的觀點",
+   "用來反駁前一句的觀點",
+   "用來說明時間順序",
+   "用來總結整篇文章"
+  ],
+  "answer": "用相同的道理，再補上另一個類似的觀點",
+  "wrong": {
+   "用來反駁前一句的觀點": "by the same token 是順著同一個道理說，不是反駁。",
+   "用來說明時間順序": "token 在此不是指時間，這個片語表示推理的類比。",
+   "用來總結整篇文章": "這句話只是增加第二個觀點，不是總結。"
+  },
+  "why": "兩句話都在說不應該因不是故意的情況而責罰，by the same token 是「同理」。",
+  "tip": "by the same token = 同理可證。",
+  "say": "By the same token, teachers should not be blamed when a student ignores clear advice."
+ },
+ {
+  "id": "c-intl-sat.b6",
+  "type": "fix",
+  "prompt": "Which choice completes the text so that it conforms to Standard English?",
+  "text": "The scientist, along with her two assistants, _____ the samples every morning.",
+  "options": [
+   "checks",
+   "check",
+   "are checking",
+   "have checked"
+  ],
+  "answer": "checks",
+  "wrong": {
+   "check": "主詞是 the scientist，along with 片語不改變主詞數，單數主詞要用 checks。",
+   "are checking": "are 是複數，且 every morning 表示習慣，不用進行式。",
+   "have checked": "have 是複數，與單數主詞不一致，也不符合 every morning 的習慣。"
+  },
+  "why": "along with 不會讓主詞變複數，主詞仍是 the scientist，每天的習慣用 checks。",
+  "tip": "along with 不改變主詞單複數。",
+  "say": "The scientist, along with her two assistants, checks the samples every morning."
+ },
+ {
+  "id": "c-intl-sat.b7",
+  "type": "situation",
+  "prompt": "閱讀討論課上，老師問你為什麼選 B。你想說：「因為 B 直接支持作者的主張。」哪一句最合適？",
+  "text": "",
+  "options": [
+   "I chose B because it directly supports the author's claim.",
+   "I chose B because directly it supports the claim of author.",
+   "I choose B because of it directly supported the author's claim.",
+   "I chosen B because it directly support the author's claim."
+  ],
+  "answer": "I chose B because it directly supports the author's claim.",
+  "wrong": {
+   "I chose B because directly it supports the claim of author.": "副詞 directly 要放在動詞 supports 前面，claim of author 也缺少冠詞，不自然。",
+   "I choose B because of it directly supported the author's claim.": "because of 後面接名詞，不能接完整子句，時態也不一致。",
+   "I chosen B because it directly support the author's claim.": "chosen 是過去分詞，不能單獨當動詞；it 是單數，support 要加 s。"
+  },
+  "why": "because 引導完整子句，副詞 directly 放在動詞前，時態一致。",
+  "tip": "because + 子句；because of + 名詞。",
+  "say": "I chose B because it directly supports the author's claim."
+ },
+ {
+  "id": "c-intl-sat.b8",
+  "type": "cloze",
+  "prompt": "Which choice completes the text with the most logical and precise word?",
+  "text": "Although the new policy seemed _____ at first, many residents later admitted that it had made their neighborhood quieter and safer.",
+  "options": [
+   "unpopular",
+   "irrelevant",
+   "unavoidable",
+   "harmless"
+  ],
+  "answer": "unpopular",
+  "wrong": {
+   "irrelevant": "irrelevant 是「無關的」，Although 後面轉折為居民後來承認它的好處，所以前面應是負面評價。",
+   "unavoidable": "unavoidable 是「無法避免的」，與居民喜不喜歡的情況不對應。",
+   "harmless": "harmless 是「無害的」，語氣不夠明顯，無法對比後面居民改觀。"
+  },
+  "why": "Although 表示讓步，前半段是負面（一開始不受歡迎），後半段是正面（後來變好）。",
+  "tip": "although 前後的態度通常相反。",
+  "say": "Although the new policy seemed unpopular at first, many residents later admitted that it had made their neighborhood quieter and safer."
+ },
+ {
+  "id": "c-intl-sat.b9",
+  "type": "meaning",
+  "prompt": "Which reading of the sentence holds?",
+  "text": "Sales rose after the ad appeared, but other factors, such as a holiday, may also have played a role.",
+  "options": [
+   "廣告可能有影響，但不能單靠這個先後順序就斷定是廣告造成的。",
+   "廣告一定造成了銷售上升。",
+   "銷售上升和廣告毫無關係。",
+   "假期是唯一造成銷售上升的原因。"
+  ],
+  "answer": "廣告可能有影響，但不能單靠這個先後順序就斷定是廣告造成的。",
+  "wrong": {
+   "廣告一定造成了銷售上升。": "原句用 may also have played a role，表示還有別的可能，不能斷定。",
+   "銷售上升和廣告毫無關係。": "原句沒有排除廣告的影響，只是說還有其他因素。",
+   "假期是唯一造成銷售上升的原因。": "句中用 other factors ... also，表示不只一個原因，且沒有說唯一。"
+  },
+  "why": "先後發生不等於因果，句子提醒還有其他因素。",
+  "tip": "先後不等於因果。",
+  "say": "Sales rose after the ad appeared."
+ },
+ {
+  "id": "c-intl-sat.b10",
+  "type": "fix",
+  "prompt": "Which choice conforms to the conventions of Standard English?",
+  "text": "",
+  "options": [
+   "The committee reviewed the proposal; however, it requested several revisions.",
+   "The committee reviewed the proposal, but however it requested several revisions.",
+   "The committee reviewed the proposal and however, it requested several revisions.",
+   "The committee reviewed the proposal, it requested several revisions."
+  ],
+  "answer": "The committee reviewed the proposal; however, it requested several revisions.",
+  "wrong": {
+   "The committee reviewed the proposal, but however it requested several revisions.": "but 和 however 都是轉折，重複使用很累贅，標準寫作只留一個轉折詞。",
+   "The committee reviewed the proposal and however, it requested several revisions.": "and 是並列連接詞，however 是轉折副詞，兩者語意互相衝突，不能這樣疊在一起。",
+   "The committee reviewed the proposal, it requested several revisions.": "只用逗號連接兩個完整句會形成 comma splice，需要分號或連接詞。"
+  },
+  "why": "兩個完整句用分號連接，however 後面接逗號。",
+  "tip": "分號加 however 加逗號，連接兩個完整句。",
+  "say": "The committee reviewed the proposal; however, it requested several revisions."
+ }
+]

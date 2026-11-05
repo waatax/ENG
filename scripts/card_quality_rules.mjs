@@ -78,7 +78,8 @@ export function templateFrames(cards, min = 3) {
     if (!frames.has(f)) frames.set(f, []);
     frames.get(f).push(c);
   }
-  return [...frames.entries()].filter(([, list]) => new Set(list.map(c => c.word.toLowerCase())).size >= min);
+  // Very short sentences ("The soup is hot.") repeat naturally; the generated frames were long.
+  return [...frames.entries()].filter(([f, list]) => f.split(' ').length >= 6 && new Set(list.map(c => c.word.toLowerCase())).size >= min);
 }
 const isZhRun = zh => /^[一-鿿]{8,}$/.test(zh);
 export function cardFlags(cards) {

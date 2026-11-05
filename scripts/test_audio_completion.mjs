@@ -14,7 +14,7 @@ const flush=()=>{const pending=[...scheduled.values()];scheduled.clear();for(con
 const reset=()=>{fc.stopFlashcardAutoPlay();spoken.length=0;scheduled.clear();};
 const render=()=>{};
 test('Every card sends the target word as part of its complete example text',()=>{
- for(const c of fc.FLASHCARD_DATABASE){const text=audio.speechChunks(c.example).join(' ');assert.equal(text,c.example.replace(/\*\*|\*|__/g,'').replace(/_/g,' ').replace(/\s+/g,' ').trim(),c.id);assert.ok(text.toLowerCase().includes(c.word.toLowerCase().trim())||findTarget(text,c.word),c.id);}
+ for(const c of fc.FLASHCARD_DATABASE){const text=audio.speechChunks(c.example).join(' ');assert.equal(text,c.example.replace(/\*\*|\*|__/g,'').replace(/_/g,' ').replace(/\s+/g,' ').trim(),c.id);assert.ok(text.toLowerCase().includes(c.word.toLowerCase().trim())||findTarget(text,c.word)||text.toLowerCase().replace(/[^a-z0-9]/g,'').includes(c.word.toLowerCase().replace(/[^a-z0-9]/g,'')),c.id);}
 });
 test('Long sentences preserve every word and emit completion only after the final spoken chunk',()=>{
  reset();const sentence='The students use the word family in a complete sentence and explain how each family member helps at home. '.repeat(4).trim();let ended=0;

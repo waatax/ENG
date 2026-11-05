@@ -1,0 +1,750 @@
+{
+ "d.diag-1388": {
+  "that of": "that of 是單數代稱，但被比較的 structures 是複數，應用 those of。",
+  "which of": "which of 是關係詞片語，不能代替前面的名詞來做比較。",
+  "these of": "these of 指眼前的事物，不是替代 structures 的慣用寫法。"
+ },
+ "d.diag-1389": {
+  "those of": "those of 是複數代稱，但 efficiency 是單數，應用 that of。",
+  "them of": "them 是受格人稱代名詞，不能接 of 來代替前面的名詞。",
+  "this of": "this of 不是替代前面名詞的用法，比較時要用 that of。"
+ },
+ "d.diag-1390": {
+  "those of": "those of 是複數代稱，但 reliance 是單數，應用 that of。",
+  "which of": "which of 是關係詞，不能代替 reliance 來做比較對象。",
+  "them of": "them of 用受格代名詞，不符合 that of 的替代句型。"
+ },
+ "d.diag-1391": {
+  "anonymizes": "anonymizes 是第三人稱單數，mandated that 後要用原形動詞。",
+  "anonymized": "anonymized 是過去式，要求類動詞後的 that 子句要用原形。",
+  "would anonymize": "would anonymize 加了助動詞，虛擬語氣只用原形或 should＋原形。"
+ },
+ "d.diag-1392": {
+  "establishes": "establishes 加了單數字尾，stipulates that 後的虛擬語氣要用原形。",
+  "established": "established 是過去式，條約規定的內容要用原形 establish。",
+  "would establish": "would establish 不是 stipulate 後的虛擬語氣寫法，應直接用原形。"
+ },
+ "d.diag-1394": {
+  "institutes": "institutes 加了 s，It is imperative that 後要用原形動詞。",
+  "instituted": "instituted 是過去式，imperative 後的 that 子句不用過去式。",
+  "would institute": "would institute 多了 would，虛擬語氣應是原形或 should＋原形。"
+ },
+ "d.diag-1397": {
+  "will confirm": "will confirm 用在 if 子句不合，主句是 would，假設語氣要配 were to。",
+  "confirm": "confirm 是現在式，與主句 would alter 的假設語氣時態不搭。",
+  "confirms": "confirms 是單數動詞，主詞 records 是複數，也不是假設語氣。"
+ },
+ "d.diag-1398": {
+  "dons": "dons 帶 s，insists that 後的虛擬語氣要用原形動詞。",
+  "donned": "donned 是過去式，insist 後 that 子句要用原形 don。",
+  "would don": "would don 多了 would，虛擬語氣不需要 would。"
+ },
+ "d.diag-1400": {
+  "remains": "remains 帶 s，crucial that 後的虛擬語氣要用原形 remain。",
+  "remained": "remained 是過去式，it is crucial that 後不用過去式。",
+  "will remain": "will remain 用了未來式，虛擬語氣應是原形，不加 will。"
+ },
+ "d.diag-1401": {
+  "*The Book of the Courtier* was primarily composed as an athletic training manual for young Italian aristocrats.": "文章談的是 sprezzatura 的宮廷處世之道，沒有說這本書是運動訓練手冊。",
+  "Twentieth-century scholars correctly determined that Castiglione's philosophical theories lacked practical utility.": "文章是重新肯定 sprezzatura 的價值，沒有說學者認為它毫無實用。",
+  "Italian courtly life in the sixteenth century was devoid of political intrigue and social competition.": "文章強調宮廷充滿社交與政治競爭，說沒有權謀正好與原文相反。"
+ },
+ "d.diag-1402": {
+  "Photosynthesis remains the only viable energetic mechanism capable of sustaining marine fauna.": "文章說光合作用不是唯一來源，熱泉靠化學合成維生，與此選項相反。",
+  "Hydrogen sulfide is an inherently toxic compound that precludes the development of multicellular life.": "文章談熱泉生態系繁盛，沒有說硫化氫使多細胞生物無法存在。",
+  "Deep-sea ecosystems were first identified in the Atlantic Ocean during the early nineteenth century.": "文章談的是一九七〇年代的發現，不是十九世紀初在大西洋發現。"
+ },
+ "d.diag-1403": {
+  "Gutenberg's invention was immediately adopted across Europe to challenge papal authority.": "原文說印刷術的影響是漸進的，不是立刻被用來挑戰教皇。",
+  "The Protestant Reformation emerged entirely independent of changes in printing technology.": "原文只說改變較慢，沒有說宗教改革與印刷技術完全無關。",
+  "The printing press was banned by European authorities for several decades after its introduction.": "原文沒有提到印刷術被禁止數十年，這是文外加上的訊息。"
+ },
+ "d.diag-1404": {
+  "Mary Shelley argued that scientific innovation inevitably leads to monstrous ethical catastrophes.": "文章重點是社會排斥，沒有說科學創新必然導致道德災難。",
+  "The novel depicts the creature as an inherently evil being incapable of emotional vulnerability.": "文章說怪物並非天生邪惡，此選項與論點正好相反。",
+  "Nineteenth-century British society universally embraced individuals who exhibited anatomical differences.": "文章說社會對怪物充滿厭惡，而不是普遍接受外貌差異的人。"
+ },
+ "d.diag-1405": {
+  "High-productivity cities automatically experience lower housing costs due to increased supply.": "文章說高房價限制流動，沒有說高生產力城市房價會自動下降。",
+  "Internal migration in modern economies has accelerated irrespective of local residential real estate costs.": "文章指出房價阻礙勞工流動，不是說遷移與房價無關。",
+  "Regional economic divergence is solely caused by international trade imbalances rather than domestic factors.": "文章討論國內住房成本，說差異只由國際貿易造成太絕對。"
+ },
+ "d.diag-1406": {
+  "Modernist architects universally succeeded in designing equitable and socially vibrant metropolitan environments.": "文章批評現代主義破壞社區，說建築師全都成功設計出公平社區與此相反。",
+  "Mid-century urban planners prioritized pedestrian pathways over automotive transportation infrastructure.": "文章說規劃優先考慮車輛，不是優先考慮行人步道。",
+  "Egalitarian functionalism was first conceived as an ancient Roman architectural doctrine.": "古羅馬起源是文外資訊，文章談的是二十世紀中期的建築。"
+ },
+ "d.diag-1407": {
+  "Male birds developed vibrant plumage exclusively to frighten competing male rivals away from nesting sites.": "文章指出雌鳥偽裝也有作用，說雄鳥羽色只為嚇退對手太絕對。",
+  "Female birds lack the genetic capacity to express complex pigment patterns in their plumage.": "文章是說雌鳥的羽色演化是為了偽裝，不是說牠們無法表現色彩。",
+  "Predation pressure in avian ecosystems affects male and female birds with identical ecological severity.": "文章強調雌雄鳥演化壓力不同，說受到的捕食壓力完全相同與此相反。"
+ },
+ "d.diag-1408": {
+  "Merchant guilds were outlawed across Western Europe due to their anti-competitive price-fixing practices.": "文章說行會促進貿易與契約執行，沒有說行會因壟斷被禁止。",
+  "Early modern European merchants operated entirely without formalized legal or commercial institutions.": "文章說行會提供制度架構，說商人完全沒有制度與此相反。",
+  "Guild regulations systematically prevented technological innovation in maritime navigation.": "文章說行會沒有阻礙創新，說它們阻止航海技術發展與原文相反。"
+ },
+ "d.diag-1409": {
+  "Sensory organs process external environmental data without any top-down modulation from the cerebral cortex.": "文章說大腦由上而下預測感官輸入，說感官處理完全不受皮質調控相反。",
+  "Human perception is entirely determined by passive reflex arcs that bypass the central nervous system.": "文章說大腦是主動預測，說知覺只靠被動反射與原文相反。",
+  "Bayesian predictive models are incapable of explaining basic neurological sensory processing.": "文章是用貝氏預測處理來解釋感知，說它無法解釋與原文相反。"
+ },
+ "d.diag-1410": {
+  "Arendt advocates for the total elimination of public institutions in favor of private market solutions.": "文章說阿倫特擔心公共領域被消費主義侵蝕，並未主張廢除公共機構。",
+  "Economic prosperity automatically guarantees robust democratic participation and civic virtue.": "文章說經濟因素取代了公民參與，不是說繁榮保證民主。",
+  "Ancient Greek city-states suffered from an excessive focus on consumerist and commercial pursuits.": "文章談的是現代社會，沒有說古希臘城邦過度重視商業。"
+ },
+ "d.diag-1411": {
+  "Fossilized pollen records indicate that tropical rainforests in South America expanded significantly during this period.": "南美雨林花粉記錄與北大西洋淡水注入沒有因果關係，不能支持假說。",
+  "Ice cores from Antarctica show a simultaneous period of anomalous warming across the Southern Ocean.": "南極的暖化是另一半球的現象，不能證明北大西洋環流受擾。",
+  "Volcanic ash layers in Greenland ice sheets confirm a massive caldera eruption occurred exactly 8,200 years ago.": "火山噴發是另一種原因，反而與淡水注入的假說相競爭。"
+ },
+ "d.diag-1412": {
+  "Male and female *Photinus* fireflies exhibit distinct, highly coordinated pulse intervals during mating displays.": "雌雄螢火蟲協調的脈衝正好支持求偶訊號的假說，並未削弱它。",
+  "Females of the genus *Photinus* remain perched motionless on foliage while signaling to patrolling males.": "雌蟲靜止發訊號也符合求偶，與是否兼有防禦功能無關。",
+  "Bioluminescent flash duration varies predictably with ambient nocturnal temperature fluctuations.": "閃光時間隨氣溫改變，與訊號用途無關，無法削弱假說。"
+ },
+ "d.diag-1413": {
+  "Ceramic artifacts found within the pueblo display intricate geometric iconography derived from neighboring Mesa Verde cultures.": "陶器上的圖案來自鄰近文化，與乾旱導致資源枯竭無關。",
+  "The structural masonry of Sand Canyon Pueblo exhibits defensive ramparts and towers erected along the canyon rim.": "防禦工事暗示衝突，反而是另一種解釋，不能支持乾旱假說。",
+  "Pollen samples show that domesticated maize continued to flourish in riverine valley bottoms throughout the fourteenth century.": "玉米繼續生長代表糧食沒有耗盡，反而削弱了資源枯竭的說法。"
+ },
+ "d.diag-1414": {
+  "Neuroimaging scans show heightened activation in the dorsolateral prefrontal cortex during language switching.": "語言切換時前額葉活動增加，反而支持雙語者有抑制控制的假說。",
+  "Bilingual children acquire vocabulary in each language at a slightly slower pace during early toddlerhood.": "詞彙成長較慢是語言能力問題，與執行抑制控制無關。",
+  "Monolingual children exhibit greater neural plasticity when exposed to novel phonemic contrasts.": "單語兒童的音素可塑性與抑制控制無關，無法削弱假說。"
+ },
+ "d.diag-1415": {
+  "High-resolution optical spectroscopy indicates that the stars in Dragonfly 44 are predominantly ancient, metal-poor red giants.": "恆星為古老紅巨星是年齡與金屬量資料，不能說明暗物質比例。",
+  "Radio telescopes failed to detect neutral hydrogen emission lines within the interstellar medium of Dragonfly 44.": "沒偵測到中性氫只說氣體少，不能證明質量主要來自暗物質。",
+  "Dragonfly 44 exhibits a regular, symmetrical elliptical morphology devoid of active star-forming regions.": "橢圓形且不形成恆星，只是外觀，與暗物質含量沒有直接關係。"
+ },
+ "d.diag-1416": {
+  "Fossilized Australopithecus specimens possess curved phalanges indicative of significant arboreal climbing behaviors.": "彎曲指骨表示會爬樹，與散熱假說無關，甚至暗示不同的生活方式。",
+  "Savannah grass pollen frequencies remained stable throughout the late Miocene and early Pliocene epochs.": "草原花粉頻率穩定只說明環境未變，不能證明直立與散熱有關。",
+  "Quadrupedal baboons inhabit open grassland savannahs without developing heat exhaustion.": "狒狒四足卻沒有中暑，反而削弱了直立為了散熱的說法。"
+ },
+ "d.diag-1417": {
+  "Airborne ice-penetrating radar surveys detect a network of interconnected subglacial meltwater channels beneath the glacier terminus.": "冰下水道網路只是存在，沒有說明地熱與滑動速度的關係。",
+  "Oceanographic buoys measure warm circumpolar deep water welling up onto the continental shelf adjacent to the ice shelf.": "暖海水湧入是另一種原因，並未直接否定地熱是主因。",
+  "Satellite radar interferometry indicates that the grounding line of the glacier has retreated inland by twenty kilometers since 1990.": "冰川接地線後退只描述結果，沒有指出原因，無法削弱地熱假說。"
+ },
+ "d.diag-1418": {
+  "Tiger shark tracking data demonstrates that individual sharks travel thousands of nautical miles across open pelagic waters annually.": "鯊魚遷徙距離與牠們是否影響海龜覓食無關，無法支持假說。",
+  "Green sea turtles reproduce primarily on sandy beaches located hundreds of miles away from coastal seagrass feeding zones.": "海龜在遠處海灘產卵，與鯊魚帶來的恐懼景觀無關。",
+  "Dugongs exhibit a strong preference for seagrass species with high starch and nitrogen concentrations.": "儒艮偏好某種海草只是食性，沒有顯示鯊魚造成的影響。"
+ },
+ "d.diag-1419": {
+  "Gravitational wave observatories simultaneously detect a chirp signal characteristic of colliding neutron stars during a 0.5-second GRB event.": "重力波訊號正是中子星合併的證據，是支持而非挑戰該假說。",
+  "Spectroscopic follow-up of a nearby short GRB reveals kilonova emission synthesized through rapid neutron capture nucleosynthesis.": "千新星現象與中子星合併相符，沒有挑戰假說。",
+  "Short gamma-ray bursts occur with equal frequency in early-type elliptical galaxies and late-type spiral starburst galaxies.": "星系類型的比例與爆發的成因無關，不能反駁普遍性。"
+ },
+ "d.diag-1420": {
+  "Mice given access to running wheels display a two-fold increase in the proliferation of neural progenitor cells in the subgranular zone.": "跑輪使神經前驅細胞增生，卻沒有連到空間記憶的辨別能力。",
+  "Electrophysiological recordings indicate that immature granule cells exhibit lower thresholds for long-term potentiation.": "未成熟顆粒細胞閾值較低只是機制，不能證明神經新生是必需的。",
+  "Pharmacological elevation of brain-derived neurotrophic factor enhances overall synaptic plasticity across the cerebral cortex.": "BDNF 提高的是全腦突觸可塑性，不是針對神經新生的證據。"
+ },
+ "d.diag-1421": {
+  "Crop A outperformed Crop B across all tested carbon dioxide concentrations.": "資料顯示 400 ppm 時 A 是 22.4，低於 B 的 31.2，並非全面領先。",
+  "Elevated carbon dioxide levels universally inhibited the photosynthetic assimilation rates of both tested crops.": "兩種作物在 800 ppm 時數值都上升，沒有被抑制。",
+  "Crop B's photosynthetic assimilation rate doubled when the ambient concentration rose from 400 to 800 ppm.": "B 只從 31.2 增加到 33.1，並未增加一倍。"
+ },
+ "d.diag-1422": {
+  "Golden Eagle populations experienced rapid demographic expansion exceeding that of Peregrine Falcons.": "金鵰只在八到十對間波動，沒有快速成長。",
+  "Osprey populations declined precipitously following habitat fragmentation after 2015.": "魚鷹由十四對增加到四十二對，資料沒有顯示下降。",
+  "All three surveyed raptor species exhibited linear demographic declines across the ten-year monitoring period.": "魚鷹與遊隼都在增加，並非三種猛禽都下降。"
+ },
+ "d.diag-1423": {
+  "Alloy W": "合金 W 的電阻率 18.2 高於 Y 的 16.8，導電性較差。",
+  "Alloy X": "合金 X 的電阻率 24.5 明顯高於 Y，導電性較差。",
+  "Alloy Z": "合金 Z 的電阻率 31.0 最高，導電性最差。"
+ },
+ "d.diag-1424": {
+  "The Southern Sector exhibited the highest overall coral mortality rate among all surveyed zones.": "資料只有白化率，沒有死亡率，不能說南區死亡率最高。",
+  "Offshore reefs experienced greater thermal stress and subsequent bleaching than inshore northern reefs.": "外海白化率只有 12%，比北區 78% 低，熱壓力受害較輕。",
+  "All four reef sectors suffered uniform coral bleaching rates exceeding fifty percent.": "南區只有 22%、外海 12%，並非每區都超過五成。"
+ },
+ "d.diag-1425": {
+  "Sand-tempering was the primary ceramic technology utilized during the earliest settlement phase.": "最早的第一層有 85% 是貝殼摻料，主要技術是貝殼不是沙。",
+  "Shell-tempered pottery completely disappeared prior to the deposition of Layer 2.": "第二層仍有 50% 貝殼摻料，並未在此之前完全消失。",
+  "Potsherd frequency decreased progressively across successive chronological strata.": "資料給的是百分比，沒有說陶片數量逐層減少。"
+ },
+ "d.diag-1426": {
+  "Bare fallow fields retained a higher percentage of applied nitrogen fertilizer than fields planted with Hairy Vetch.": "休耕保留 23%，低於毛葉苕子的 47%，選項說反了。",
+  "Crimson Clover and Hairy Vetch both outperformed Winter Rye in preventing fertilizer runoff into groundwater aquifers.": "黑麥保留 68% 最高，三葉草與苕子不可能勝過它。",
+  "Winter Rye fields lost more than half of all applied nitrogen fertilizer to atmospheric volatilization.": "資料沒有提到揮發，且黑麥保留了 68%，不是流失過半。"
+ },
+ "d.diag-1427": {
+  "Titanium aluminide exhibited maximum fracture resistance and ductility when processed at 800°C.": "800°C 的延伸率只有 3.2%，是四組中最低，不是最佳。",
+  "Specimens annealed at 1100°C demonstrated greater ductility than those treated at 900°C and 1000°C.": "1100°C 的 4.1% 低於 900°C 的 5.8% 與 1000°C 的 8.4%。",
+  "Annealing temperature exerted no measurable influence on the plastic deformation behavior of the alloy.": "延伸率從 3.2% 變到 8.4%，說明溫度有明顯影響。"
+ },
+ "d.diag-1428": {
+  "Humanities prose contains the highest overall frequency of passive syntactic constructions.": "人文領域被動語態只有 4.2，是最低而非最高。",
+  "Engineering publications rely on active voice verbs more frequently than humanities essays do.": "資料只談被動語態，沒提主動語態，無法推出此結論。",
+  "Social sciences journals exhibit zero recorded instances of passive voice constructions.": "社會科學被動語態為 9.8，不是零。"
+ },
+ "d.diag-1429": {
+  "Zone D achieved the lowest overall per capita carbon emissions due to automotive traffic efficiency.": "Zone D 排放 8.9 噸，是四區最高，不是最低。",
+  "Zone B residents generated more than double the annual carbon footprint of Zone D commuters.": "Zone B 排放 4.8 噸，比 Zone D 的 8.9 噸還少，沒有高一倍。",
+  "Public rail transit usage showed no statistical correlation with per capita carbon footprint variations.": "軌道運輸比例高的 Zone A 排放最低，顯示兩者有關聯。"
+ },
+ "d.diag-1430": {
+  "Cohort 4 developed significantly higher humoral immunity than Cohort 1 following immunization.": "第四組 GMT 只有 110，遠低於第一組的 480。",
+  "Antibody production peaked in Cohort 3 before declining in younger study participants.": "抗體最高是第一組的 480，並非第三組達到高峰。",
+  "Vaccine efficacy was completely identical across all four chronological age groups.": "四組 GMT 從 480 一路降到 110，並非完全相同。"
+ },
+ "d.diag-1431": {
+  "By agreeing that Roman political structures vanished overnight without leaving any trace in medieval law.": "Rossi 主張轉變是漸進的，不會同意帝國制度一夕消失。",
+  "By asserting that barbarian invasions had zero impact on the economic systems of the Mediterranean basin.": "Rossi 沒有說蠻族入侵毫無影響，這個說法太絕對。",
+  "By demonstrating that the Western Roman Empire actually expanded its territorial boundaries in the fifth century.": "兩篇文章都沒有談到帝國在五世紀擴張領土。"
+ },
+ "d.diag-1432": {
+  "As definitive proof confirming that human neonates understand complex mathematical physics.": "Patel 質疑這些實驗不是證明，並未把它們當成決定性證據。",
+  "As fundamentally fraudulent data fabricated by biased researchers.": "Patel 只說解讀有誤，沒有指控資料造假。",
+  "As irrelevant to questions concerning cognitive development in early childhood.": "Patel 認為實驗反映的是知覺習慣化，並非與認知發展無關。"
+ },
+ "d.diag-1433": {
+  "It is technically impossible to implement using contemporary aerospace launch platforms.": "文章二擔心降雨與糧食安全，沒有說這在技術上不可能。",
+  "It would instantly eliminate atmospheric greenhouse gas concentrations within six months.": "文章二並未說氣溶膠能立刻消除溫室氣體，還說它無法阻止海洋酸化。",
+  "It is overwhelmingly endorsed by all international agricultural and environmental treaties.": "文章二是批評者，不會說所有條約都支持這項方案。"
+ },
+ "d.diag-1434": {
+  "As entirely accurate in classifying the novel as an academic exercise detached from real life.": "Bloom 認為 Green 的看法太狹隘，不會說它完全正確。",
+  "As flawed because Green failed to identify the classical Homeric parallels within each chapter.": "Bloom 的重點是通俗文化，而非荷馬式對應。",
+  "As revolutionary because Green was the first scholar to appreciate the complexity of Joyce's prose.": "Bloom 是在反駁 Green，而不是稱讚他是第一個理解的學者。"
+ },
+ "d.diag-1435": {
+  "Whether synthetic chemical fertilizers improve the taste of agricultural produce.": "合成肥料是否讓農產品更好吃，與土地用量和毀林的爭議無關。",
+  "Whether deforestation contributes to greenhouse gas emissions.": "毀林是否產生溫室氣體不是兩人爭論的重點。",
+  "Whether small-scale community gardens can survive in arid metropolitan environments.": "都市社區花園能否在乾旱環境生存，與有機農業全面取代無關。"
+ },
+ "d.diag-1436": {
+  "As an empirical reality that guarantees total socioeconomic equality for all disenfranchised citizens.": "Mills 認為民主多元是假象，不會說它保證社會經濟平等。",
+  "As a dangerous revolutionary doctrine that threatens the operational stability of corporate institutions.": "Mills 批評多元主義掩蓋了菁英，不是說它是革命學說。",
+  "As a flawed economic model that neglects the principles of free-market supply and demand.": "兩人討論的是權力分配，不是自由市場供需模型。"
+ },
+ "d.diag-1437": {
+  "As entirely correct in concluding that humans are incapable of navigating probabilistic risk.": "Gigerenzer 認為啟發法合理，不是說人類無法處理機率風險。",
+  "As flawed because Kahneman failed to conduct empirical laboratory experiments on human subjects.": "文章沒有指控 Kahneman 沒做實驗，這是文外的說法。",
+  "As overly supportive of neoclassical assumptions regarding omniscient economic actors.": "Gigerenzer 批評的是過度悲觀，沒有談新古典經濟學的假設。"
+ },
+ "d.diag-1438": {
+  "Whether global poverty can be completely eliminated through technological innovation alone.": "全球貧困能否靠科技消除，不是兩位哲學家爭論的重點。",
+  "Whether financial wealth is an accurate measurement of an individual's ethical character.": "財富是否衡量道德品格，與公平義務是否可偏袒親人無關。",
+  "Whether philosophical treatises should be composed in formal academic prose or accessible dialogue.": "論文寫成學術文或對話，是文體問題，與道德爭論無關。"
+ },
+ "d.diag-1439": {
+  "It overestimates the importance of European intellectual traditions in shaping early colonial governance.": "修正論者批評的是忽略原住民，不是高估歐洲思想傳統。",
+  "It demonstrates that industrial urbanization was the true primary catalyst of American democratic identity.": "修正論者沒有提工業化都市是美國民主的主要動力。",
+  "It incorrectly claims that the western frontier was closed prior to the American Civil War.": "修正論者的批評是忽略原住民，而不是邊疆關閉的時間。"
+ },
+ "d.diag-1440": {
+  "By demonstrating that *Tyrannosaurus rex* possessed binocular depth perception superior to modern raptors.": "雙眼視覺屬於外形適應，DePalma 的證據是咬痕癒合，與此無關。",
+  "By proving that scavengers are physiologically incapable of crushing dense mammalian bones.": "咬痕癒合證據談的是獵食，與食腐者能否咬碎骨頭無關。",
+  "By showing that *Tyrannosaurus rex* possessed hollow bones optimized for long-distance marathon pursuit.": "咬痕癒合與中空骨頭或長途追逐無關。"
+ },
+ "d.diag-1441": {
+  "challenge the mathematical laws governing fluid mechanics": "作者舉水黽是生物例子，不是要挑戰數學定律。",
+  "disprove the existence of hydrophobic microstructures on insect legs": "水黽用來說明表面張力，並非否定疏水微結構的存在。",
+  "recount a personal childhood memory of observing pond wildlife": "這句舉例屬於學術論述，不是回憶童年。"
+ },
+ "d.diag-1442": {
+  "demonstrate the author's personal indecision regarding aesthetic choices": "反問句是引導思考，不是表達作者猶豫不決。",
+  "scold the reader for neglecting ancient historical preservation efforts": "這個問題是引發好奇，不是責備讀者。",
+  "summarize the statistical findings presented in the preceding paragraph": "反問句是提出疑問，不是總結前一段的統計。"
+ },
+ "d.diag-1443": {
+  "criticize the observational accuracy of early telescopic optics": "引用伽利略是舉歷史先例，不是批評望遠鏡準確度。",
+  "argue that seventeenth-century astronomers were unconcerned with planetary motion": "伽利略研究天體，說明當時天文學家很在意行星運動，此項相反。",
+  "demonstrate that the Catholic Church immediately embraced heliocentric models": "教會並未立即接受日心說，史實與此選項相反。"
+ },
+ "d.diag-1444": {
+  "criticize the explorers for reckless overconsumption during an emergency": "四十袋麵粉是用數字表現規模，不是責備探險隊。",
+  "suggest that nutritional deficiencies caused the failure of the mission": "文中沒有提到營養不足，與任務失敗也無關。",
+  "compare European baking techniques with indigenous culinary practices": "麵粉數量是補給規模，與歐洲烘焙和原住民料理比較無關。"
+ },
+ "d.diag-1445": {
+  "refute the constitutionality of federal appellate jurisdiction": "引用法官的話是支持論點，不是反駁其合憲性。",
+  "entertain the audience with nineteenth-century rhetorical flourish": "引用的作用是增加權威，而不是娛樂聽眾。",
+  "expose ideological inconsistencies within the founding generation": "引用最高法院法官是為了支持論證，而不是揭露建國者矛盾。"
+ },
+ "d.diag-1446": {
+  "demonstrate that titanium is an unsuitable material for commercial aviation airframes": "句子講的是核融合反應爐，不是說鈦不適合商用飛機機身。",
+  "argue that particle accelerators produce greater radiation than stellar interiors": "句子談中子輻射使金屬劣化，與粒子加速器比較無關。",
+  "recount a catastrophic metallurgical failure in an early submarine reactor": "句子只陳述一般原則，沒有敘述潛艇反應爐的事故。"
+ },
+ "d.diag-1447": {
+  "criticize the archeological team for damaging ancient hieroglyphic inscriptions": "比喻在強調發現的價值，不是批評團隊毀損象形文字。",
+  "suggest that modern machine translation algorithms are derived from classical Egyptology": "羅塞塔石碑比喻有助解讀，與機器翻譯演算法無關。",
+  "question the authenticity of the recovered Hellenistic administrative records": "比喻是肯定這份雙語文獻的價值，不是質疑其真偽。"
+ },
+ "d.diag-1448": {
+  "dismiss the entire field of epigraphy as unscientific and unreliable": "括號是指出有學者質疑，並非全盤否定碑銘學這門學科。",
+  "accuse previous classical historians of fabricating archaeological evidence": "括號只說明假設受到挑戰，沒有指控歷史學家偽造證據。",
+  "introduce a personal digression unrelated to the central thematic argument": "括號與中心論點直接相關，並非離題的個人插話。"
+ },
+ "d.diag-1449": {
+  "distract the audience from the statistical shortcomings of the paleoclimatological data": "生動描寫是為了引出氣候影響，不是掩蓋統計缺陷。",
+  "argue that volcanic eruptions are the sole cause of mass extinction events throughout Earth history": "選項說火山是大滅絕唯一原因，太絕對，文章沒有這樣主張。",
+  "prove that geothermal energy should be avoided as a viable renewable utility": "描寫火山硫煙與地熱能源是否該用無關。"
+ },
+ "d.diag-1450": {
+  "concede that historical events are entirely random and incapable of academic interpretation": "開頭句的 rarely 表示歷史多半不對稱，而非完全隨機而無法詮釋。",
+  "criticize biographical novelists for utilizing chronological storytelling techniques": "這句針對簡化的敘事，不是批評傳記小說家。",
+  "introduce a mathematically rigorous formula for analyzing geopolitical alliances": "句子講的是敘事形式，沒有引入數學公式。"
+ },
+ "d.diag-1452": {
+  "derisive and confrontational": "作者只呈現數據與誤差，沒有嘲笑或對立的語氣。",
+  "fervent and emotional": "作者避免主觀誇飾，因此不是熱切而情緒化。",
+  "apologetic and uncertain": "作者標示誤差是客觀嚴謹，不是道歉或不確定。"
+ },
+ "d.diag-1453": {
+  "tactful and conciliatory": "so-called 與 pedestrian 帶有輕蔑，並非圓滑和解。",
+  "neutral and dispassionate": "文中有 blunders 等貶抑詞，不是中立客觀。",
+  "deferential and polite": "作者用輕蔑口吻，並不恭敬或有禮貌。"
+ },
+ "d.diag-1454": {
+  "cynical and suspicious": "作者用 marvels 與 astonishing 表達讚嘆，不是憤世嫉俗。",
+  "flippant and humorous": "句子表達驚嘆與敬佩，不是輕浮幽默。",
+  "bored and detached": "句子充滿欽佩，並非無聊或冷漠。"
+ },
+ "d.diag-1455": {
+  "hostile and belligerent": "句子溫和地說結論要等待，沒有敵意或好戰。",
+  "ecstatic and triumphant": "作者並不歡欣勝利，而是謹慎地等待。",
+  "resigned and despairing": "作者期待下一代觀測站，不是絕望放棄。"
+ },
+ "d.diag-1456": {
+  "tolerant and encouraging": "作者說 embarrassing monument，是譏諷而非寬容鼓勵。",
+  "hesitant and contemplative": "措辭強烈直接地嘲諷，並非猶豫沉思。",
+  "reverent and scholarly": "embarrassing 與 illiteracy 是貶損，不是崇敬。"
+ },
+ "d.diag-1457": {
+  "cynical and vindictive": "作者哀嘆智慧化為灰燼，沒有報復心。",
+  "jubilant and celebratory": "文中是惋惜損失，不是歡欣慶祝。",
+  "flippant and indifferent": "laments 表示惋惜，不是輕浮冷漠。"
+ },
+ "d.diag-1458": {
+  "unconditionally hostile": "評論肯定統計執行完美，所以不是一味敵視。",
+  "effusively laudatory": "評論同時指出假設不切實際，並非只有熱烈讚美。",
+  "apathetic and bored": "評論認真分析優缺點，不是冷漠無聊。"
+ },
+ "d.diag-1459": {
+  "guardedly optimistic": "hydra 與 suffocating 是強烈批評，不是審慎樂觀。",
+  "morally ambivalent": "作者明確譴責審查制度，並非道德上矛盾。",
+  "sympathetically understanding": "作者用嚴厲比喻批評，並無同情諒解。"
+ },
+ "d.diag-1460": {
+  "exaggerated and boastful": "作者用 understated 與精準數據，與誇張自誇相反。",
+  "anxious and uncertain": "語氣肯定，corroborates 表明結論確定，不是焦慮不安。",
+  "sarcastic and irreverent": "文字是嚴謹陳述，沒有諷刺或不敬。"
+ },
+ "d.diag-1471": {
+  "annually on an annual basis every year": "annually 已含「每年」，再加 on an annual basis every year 是贅述。",
+  "annually every single year": "annually 與 every single year 意思重複，造成累贅。",
+  "each year on an annual cycle": "each year 與 annual cycle 同義重複，且和 annually 也重複。"
+ },
+ "d.diag-1472": {
+  "completely identical and exactly the same": "identical 已有完全相同的意思，再加 exactly the same 是贅述。",
+  "identically duplicate twins": "identically 是副詞，放在此處詞性不符，且 duplicate twins 也累贅。",
+  "identical copies of each other with no differences": "copies of each other 與 no differences 重複 identical 的意思。"
+ },
+ "d.diag-1473": {
+  "broken apart into pieces": "broken apart 已含碎裂，再加 into pieces 是贅述，且後面已有 fragments。",
+  "broken down into split pieces": "split pieces 與 broken down 語意重複，也有分解的別義。",
+  "broken and smashed apart": "smashed apart 與 broken 同義疊用，且與 into three fragments 重複。"
+ },
+ "d.diag-1474": {
+  "summary recapitulation": "summary recapitulation 兩個同義名詞並列，造成冗贅。",
+  "summary that summarized the findings": "summary 之後再說 summarized，動詞重複，且主題是方法不是發現。",
+  "brief summary repetition": "brief 之後再加 repetition 與 summary 重複，語意累贅。"
+ },
+ "d.diag-1475": {
+  "take effect and become operational and functional": "take effect 本身已表示開始生效，後面再加 operational and functional 是贅述。",
+  "take active legal effect into practical action": "effect into practical action 搭配不自然，active legal 也多餘。",
+  "take operative legal effect starting to work": "operative 與 starting to work 重複 take effect 的意思。"
+ },
+ "d.diag-1476": {
+  "persuasive speaker capable of convincing people": "空格後已有 speaker，再寫 speaker 會重複，且 capable of convincing 多餘。",
+  "persuasive orator who persuaded listeners effectively": "空格後已有 speaker，orator 與 speaker 同義，句子變累贅。",
+  "convincing speaker full of persuasion": "convincing 之後的 full of persuasion 重複，並與 speaker 重複。"
+ },
+ "d.diag-1477": {
+  "completed a circular round orbit in a circle": "circular, round 與 in a circle 三次重複，語意累贅。",
+  "orbited around in a full complete 360-degree circle": "orbit 已含繞行，full、complete 與 360-degree 彼此重複。",
+  "finished a revolving complete cycle of orbit": "revolving、cycle 與 orbit 同義疊用，說法累贅。"
+ },
+ "d.diag-1478": {
+  "unanimous consensus of agreement where everyone agreed": "consensus 本身已有大家同意的意思，加上 unanimous 與 agreement 是贅述。",
+  "consensus of unified mutual agreement": "consensus 與 unified mutual agreement 重複，意思累贅。",
+  "consensus wherein all members were in total agreement": "consensus 已表示共識，wherein 子句又重述全體同意。"
+ },
+ "d.diag-1479": {
+  "unique and found nowhere else in the world": "unique 已有獨一無二之意，再加 found nowhere else 是贅述。",
+  "uniquely native and totally singular": "uniquely 是副詞，且 native 與 totally singular 語意重複。",
+  "exclusive and solely unique": "exclusive 與 solely unique 重複，且 solely 不應修飾 unique。"
+ },
+ "d.diag-1480": {
+  "retire and phase out and discontinue completely": "retire 已含停用，再加 phase out 與 discontinue 是三重贅述。",
+  "permanently retire and stop using forever": "retire 已含停用，permanently 與 forever 重複。",
+  "retire away into obsolescence": "away into obsolescence 多餘，且 retire away 搭配不自然。"
+ },
+ "d.diag-1481": {
+  "After sentence 1": "放在句 1 之後，句子還沒提到根與真菌，these subterranean networks 沒有指涉。",
+  "After sentence 3": "句 3 在講真菌供應養分，網絡名稱要先在句 2 點出。",
+  "After sentence 4": "句 4 是對合作的總結，菌根網絡的說明應放在前面。"
+ },
+ "d.diag-1482": {
+  "After sentence 1": "句 1 只說最初的假設，轉折 However 要先有證據支持舊說。",
+  "After sentence 3": "句 3 開頭的 Instead 已在講同位素結果，However 要在其前。",
+  "After sentence 4": "句 4 是 Consequently 的結論，放在其後推翻太晚。"
+ },
+ "d.diag-1483": {
+  "After sentence 1": "句 1 只說有星系移動，還沒說到漂向某區，異常區沒有指涉。",
+  "After sentence 3": "句 3 的 its 已指這個區域，名稱要在其前出現。",
+  "After sentence 4": "句 4 談未來調查，才命名異常區就太晚。"
+ },
+ "d.diag-1484": {
+  "After sentence 1": "句 1 只提潛水深度，尚未說明適應機制，Without these 沒有指涉。",
+  "After sentence 4": "句 4 的 These combined mechanisms 要緊接機制，插入會打斷。",
+  "After sentence 3": "放在句 4 之後才說缺少適應，順序已經太晚。"
+ },
+ "d.diag-1485": {
+  "After sentence 1": "句 1 尚未介紹館藏，these archival treasures 沒有指涉。",
+  "After sentence 3": "句 3 已在介紹大憲章，Chief among these 要放在其前。",
+  "After sentence 4": "句 4 的 It 指大憲章，在其後才引入太晚。"
+ },
+ "d.diag-1486": {
+  "After sentence 1": "句 1 只說遷徙，還沒說到不靠星辰也能定向，指涉不明。",
+  "After sentence 3": "句 3 開頭的 These biomolecules 指蛋白質，蛋白質要先提到。",
+  "After sentence 4": "句 4 是總結羅盤能力，放這裡順序不通。"
+ },
+ "d.diag-1487": {
+  "After sentence 1": "句 1 只談分子開關，還沒有說明被擋住的酶。",
+  "After sentence 2": "句 2 之後接句 3 的 This spatial blockade，插入會打斷承接。",
+  "After sentence 4": "句 4 說激酶已被釋放，Consequently 的鎖住狀態要放在前面。"
+ },
+ "d.diag-1488": {
+  "After sentence 1": "句 1 還沒有談到揮發物，these volatile compounds 無所指涉。",
+  "After sentence 2": "句 2 只談水滴，還沒出現混合的化合物，指涉不明。",
+  "After sentence 4": "句 4 的 this chemical 指 geosmin，名稱要在其前出現。"
+ },
+ "d.diag-1489": {
+  "After sentence 1": "句 1 只說最初估計，還沒有說估計依據，轉折太早。",
+  "After sentence 3": "句 3 已有鉀氬結果，However 要放在其前。",
+  "After sentence 4": "句 4 是結果，在其後才推翻估計太晚。"
+ },
+ "d.diag-1490": {
+  "After sentence 1": "句 1 還沒提到投票放逐，ostracism 無所指涉。",
+  "After sentence 2": "句 3 才說明得票最多者被流放，This redistribution 要在其後。",
+  "After sentence 4": "句 4 已在總結結果，放在其後順序不通。"
+ },
+ "d.diag-1491": {
+  "King James I had no genuine personal interest in religious translation or Christian doctrine": "文中說詹姆斯有意壓制批註，不是對翻譯沒有興趣。",
+  "the Geneva Bible was universally rejected by British Protestant congregations in the seventeenth century": "文中說日內瓦聖經非常受歡迎，不是被普遍拒絕。",
+  "seventeenth-century English readers completely ignored marginal commentary in religious books": "國王想壓制批註，說明批註很有影響力，不是被讀者忽視。"
+ },
+ "d.diag-1492": {
+  "genuinely believed that women were intellectually inferior to male clerics in biblical interpretation": "文中她仍系統性拆解教條，並不是真的相信女性較差。",
+  "abandoned her scholarly pursuits as soon as religious authorities questioned her writings": "文中沒有說她放棄學術，她仍持續寫作。",
+  "was unaware that her theological writings challenged the prevailing orthodoxies of the Spanish Viceroyalty": "她一邊自謙一邊瓦解教條，顯示她清楚自己在挑戰。"
+ },
+ "d.diag-1493": {
+  "Manchester was the only city in Europe to benefit from the advent of the steam engine.": "文章沒有說曼徹斯特是歐洲唯一受益的城市，這說法太絕對。",
+  "Factory laborers in Britain universally refused to organize trade unions to ameliorate their conditions.": "文章沒有提到工人是否組織工會。",
+  "Technological progress inevitably elevates the moral and physical well-being of the working classes.": "文章說工人壽命低於二十五歲，與技術進步提升福祉相反。"
+ },
+ "d.diag-1494": {
+  "an endorsement of traditional aristocratic gender expectations": "珍.愛強調平等，是挑戰而非支持傳統貴族性別期待。",
+  "a realistic transcription of actual historical conversations recorded in Yorkshire": "評論說這不只是對話，並未說是約克郡真實對話紀錄。",
+  "an unconvincing melodramatic contrivance that detracted from the novel's realism": "評論稱它引人入勝，並沒有說它不可信。"
+ },
+ "d.diag-1495": {
+  "the authors intended for their political essays to remain permanently unread by the public": "用筆名只是隱藏身分，不是讓文章永遠沒人讀。",
+  "Hamilton, Madison, and Jay held identical philosophical views on the scope of federal executive power": "obscuring 暗示作者想法並不相同，並非見解完全一致。",
+  "the American public was unconcerned with the identity of the authors defending the new Constitution": "文章沒有談到公眾是否在意作者身分。"
+ },
+ "d.diag-1496": {
+  "the League of Nations succeeded in preventing regional territorial conflicts in the Levant": "文章批評劃界出於利益，沒有說國際聯盟成功預防衝突。",
+  "indigenous Middle Eastern populations drafted the geographical boundaries of the mandate territories": "文中說是英法以尺筆劃界，不是當地居民繪製。",
+  "petroleum was a negligible commodity in early twentieth-century international diplomacy": "劃界依石油特許區，與石油無足輕重相反。"
+ },
+ "d.diag-1497": {
+  "a realistic medical depiction of seventeenth-century neurological and respiratory disorders": "失眠是道德罪疚的象徵，並非醫學上的疾病描寫。",
+  "a convenient dramaturgical trick to allow actors to change into different theatrical costumes": "失眠的描寫與換戲服的舞台手法無關。",
+  "an indication that Renaissance audiences were unconcerned with ethical questions of royal succession": "劇中反覆處理篡位後果，不能說明觀眾不在意王位繼承。"
+ },
+ "d.diag-1498": {
+  "the complete bankruptcy and subsequent financial liquidation of the East India Company": "文中說公司變成領土統治者，並非破產清算。",
+  "a peaceful diplomatic victory that dismantled military fortifications across the Indian subcontinent": "文章談的是收稅權與統治，不是拆除軍事要塞。",
+  "an economic policy that transferred all tax revenues directly into public welfare for Bengali villagers": "文章說稅收使公司成為統治者，沒有說用於村民福利。"
+ },
+ "d.diag-1499": {
+  "Wealth accumulation is the universal prerequisite for entering the tribal warrior class.": "文中說夸扣特爾人炫耀性地毀財或分財，不是累積財富才能成為戰士。",
+  "Indigenous Pacific Northwest communities lacked any concept of hereditary hierarchy or aristocratic status.": "文中說他們用慷慨建立貴族威望，可見有階級觀念。",
+  "The potlatch was outlawed by elders because it threatened to exhaust the salmon fisheries.": "文章沒有提到長老禁止誇富宴，也沒提鮭魚漁業。"
+ },
+ "d.diag-1500": {
+  "seventeenth-century glass manufacturing was too technologically primitive to produce clear mirror glass": "文章說鏡廳意在歌頌王權，不是鏡子技術太原始。",
+  "Louis XIV was indifferent to visual symbolism and personal monarchical aggrandizement": "文章說鏡子是太陽王光輝的隱喻，可見他重視象徵。",
+  "the Hall of Mirrors was constructed primarily to provide entertainment for foreign tourist delegations": "文章沒有說鏡廳是為了娛樂外國賓客。"
+ },
+ "c-intl-gre.p2e": {
+  "attribute A to B": "權衡利弊是 weigh the pros and cons，attribute A to B 是歸因。",
+  "in stark contrast to": "in stark contrast to 是形成強烈對比，不是權衡利弊。"
+ },
+ "c-intl-gre.p4e": {
+  "weigh the pros and cons": "weigh the pros and cons 是權衡利弊，不是歸因。",
+  "give rise to": "give rise to 是引起、導致，與歸因於某事的方向不同。"
+ },
+ "d.diag-1501": {
+  "corroborated": "corroborated 是證實，與表面和善、實則冷酷的對比不合。",
+  "presaged": "presaged 是預示，不是掩蓋表面之下的本性。",
+  "amplified": "amplified 是放大，不符合 outward veneer 與真實意圖的矛盾。"
+ },
+ "d.diag-1502": {
+  "sagacious": "sagacious 是睿智，反而像他的實際表現，不是被報導的形象。",
+  "mercenary": "mercenary 是唯利是圖，與年輕新手的對比無關。",
+  "pugnacious": "pugnacious 是好鬥，與 novice 的天真形象不符。"
+ },
+ "d.diag-1503": {
+  "laudatory": "laudatory 是讚美，不可能形成對作者自負的諷刺。",
+  "sycophantic": "sycophantic 是諂媚，語氣不是帶刺的諷刺。",
+  "deferential": "deferential 是恭敬，與對自負的尖酸暗諷不合。"
+ },
+ "d.diag-1506": {
+  "ambiguous": "ambiguous 是模糊的，與觀察家確定是入侵前奏矛盾。",
+  "anodyne": "anodyne 是無害溫和的，與入侵前奏矛盾。",
+  "inadvertent": "inadvertent 是無意的，與觀察家認為有意不合。"
+ },
+ "d.diag-1507": {
+  "inconsequentially": "inconsequentially 是不重要地，不能和 on the contrary 轉折。",
+  "superficially": "superficially 是表面上，與提供證據鞏固論點不符。",
+  "sporadically": "sporadically 是零星地，與證實論點不合。"
+ },
+ "d.diag-1508": {
+  "seraphic": "seraphic 是天使般純潔，與不是出於利他的算計相反。",
+  "quixotic": "quixotic 是不切實際，與用來分化貴族的計謀不合。",
+  "magnanimous": "magnanimous 是寬宏大量，與 not altruism 的詭計矛盾。"
+ },
+ "d.diag-1509": {
+  "monolithic": "monolithic 是鐵板一塊，與 fractured 相反。",
+  "harmonious": "harmonious 是和諧的，與派系分裂、私人爭吵不合。",
+  "placid": "placid 是平靜的，與派系分裂不合。"
+ },
+ "d.diag-1510": {
+  "verifiable": "verifiable 是可驗證的，不能表示會掩蓋破產的假象。",
+  "sustainable": "sustainable 是可持續的，與隱藏破產風險不合。",
+  "tangible": "tangible 是實在的，與隱藏破產風險相反。"
+ },
+ "d.diag-1513": {
+  "buttressed": "buttressed 是支持，與 total paradigm shift 的推翻相反。",
+  "vindicated": "vindicated 是證明正確，與引發典範轉移不合。",
+  "enshrined": "enshrined 是奉為神聖，與動搖教條相反。"
+ },
+ "d.diag-1514": {
+  "obviated": "obviated 是排除，不符合魯莽管制放鬆導致危機的因果。",
+  "ameliorated": "ameliorated 是改善，與造成災難性危機相反。",
+  "stifled": "stifled 是壓制，與 reckless deregulation 導致危機不合。"
+ },
+ "d.diag-1515": {
+  "quelled": "quelled 是平息，與揭發賄賂引發憤怒相反。",
+  "pacified": "pacified 是安撫，與公眾憤怒相反。",
+  "attenuated": "attenuated 是減弱，與揭發後輿論激憤不合。"
+ },
+ "d.diag-1516": {
+  "gainsaid": "gainsaid 是反駁，與 perfectly 支持論點相反。",
+  "debunked": "debunked 是揭穿，與碑文支持論點相反。",
+  "impugned": "impugned 是質疑，與 perfectly 支持論點相反。"
+ },
+ "d.diag-1517": {
+  "porous": "porous 是多孔的，會讓水氣滲入，達不到保護目的。",
+  "ephemeral": "ephemeral 是短暫的，無法保護藥效。",
+  "osmotic": "osmotic 是滲透的，會讓水氣進入。"
+ },
+ "d.diag-1518": {
+  "thwarted": "thwarted 是阻撓，與監控普及帶來隱私侵蝕不合。",
+  "forestalled": "forestalled 是預先阻止，與隱私被侵蝕相反。",
+  "preempted": "preempted 是搶先阻止，與隱私被侵蝕不合。"
+ },
+ "d.diag-1520": {
+  "bolstered": "bolstered 是增強，與廉價進口使工匠破產相反。",
+  "subsidized": "subsidized 是補貼，與行會破產的結果不合。",
+  "rehabilitated": "rehabilitated 是修復，與行會破產相反。"
+ },
+ "d.diag-1522": {
+  "shoddy": "shoddy 是粗劣，不能和 mathematically 的讚美搭配，轉折方向不對。",
+  "pedestrian": "pedestrian 是平庸，與讓步中讚美數學形式不合。",
+  "meretricious": "meretricious 是華而不實，不是對數學的讚美。"
+ },
+ "d.diag-1523": {
+  "conciliatory": "conciliatory 是安撫的，與企圖壓制異議不合。",
+  "lax": "lax 是寬鬆的，與壓制異議相反。",
+  "magnanimous": "magnanimous 是寬厚的，與壓制異議相反。"
+ },
+ "d.diag-1524": {
+  "monumental": "monumental 是巨大的，far from monumental 會否定文章所說的回報。",
+  "profound": "profound 是深刻的，far from profound 與讀者獲得回報矛盾。",
+  "formidable": "formidable 是令人敬畏的，far from formidable 與回報矛盾。"
+ },
+ "d.diag-1525": {
+  "candor": "candor 是坦率，與模糊讓各派投射意圖相反。",
+  "forthrightness": "forthrightness 是直率，與含糊其辭相反。",
+  "pedantry": "pedantry 是賣弄學問，與含糊其辭不合。"
+ },
+ "d.diag-1526": {
+  "inadvertently": "inadvertently 是無意地，與刻意排除爭議壁畫的轉折不合。",
+  "negligibly": "negligibly 是微不足道地，不符合學者注意到壁畫被排除。",
+  "imperceptibly": "imperceptibly 是難以察覺地，不符合學者明確指出。"
+ },
+ "d.diag-1527": {
+  "anarchic": "anarchic 是無政府狀態的，與保守財政提案相反。",
+  "subversive": "subversive 是顛覆的，與 surprisingly 的對比不合。",
+  "iconoclastic": "iconoclastic 是打破傳統的，與要的保守意思相反。"
+ },
+ "d.diag-1528": {
+  "epiphany": "epiphany 是頓悟，不是年代錯置的物品。",
+  "apotheosis": "apotheosis 是神化，與古物時代錯誤無關。",
+  "exemplar": "exemplar 是典範，不符合不該在這個地層出現的意思。"
+ },
+ "d.diag-1529": {
+  "irrefutable": "irrefutable 是無可辯駁，與經測試被推翻相反。",
+  "axiomatic": "axiomatic 是不證自明，與經測試後被質疑相反。",
+  "incontestable": "incontestable 是無可爭議，與被證明有問題相反。"
+ },
+ "d.diag-1530": {
+  "deferential": "deferential 是恭敬，與記述祖父缺點的直率相反。",
+  "sanctimonious": "sanctimonious 是偽善說教，不是形容坦率。",
+  "sycophantic": "sycophantic 是諂媚，與直言記述缺點相反。"
+ },
+ "d.diag-1531": {
+  "panegyric": "panegyric 是頌詞，與對證人的惡意攻擊相反。",
+  "encomium": "encomium 是讚辭，與毒舌攻擊相反。",
+  "accolade": "accolade 是榮譽讚賞，與攻擊證人誠信相反。"
+ },
+ "d.diag-1532": {
+  "jeremiad": "jeremiad 是長篇哀嘆斥責，不是把皇帝捧成神。",
+  "invective": "invective 是辱罵，與讚美皇帝相反。",
+  "indictment": "indictment 是控訴，與抬舉皇帝相反。"
+ },
+ "d.diag-1534": {
+  "diatribe": "diatribe 是尖刻抨擊，與讚揚醫護人員相反。",
+  "animadversion": "animadversion 是批評，與讚揚相反。",
+  "stricture": "stricture 是嚴厲指責，與讚揚相反。"
+ },
+ "d.diag-1535": {
+  "eulogy": "eulogy 是悼詞，不能表示對機構失敗的批評。",
+  "homage": "homage 是敬意，與 blistering 的批評相反。",
+  "sanction": "sanction 是制裁或認可，不符合此處的指控語意。"
+ },
+ "d.diag-1536": {
+  "plaudits": "plaudits 是喝采，不能形容毫無事實依據的指責。",
+  "tribute": "tribute 是致敬，與駁斥對手相反。",
+  "approbation": "approbation 是贊同，與 dismissed 相反。"
+ },
+ "d.diag-1537": {
+  "calumnies": "calumnies 是誹謗，教授感動不會因誹謗。",
+  "reproaches": "reproaches 是責備，與感動相反。",
+  "denouncements": "denouncements 是譴責，與感動相反。"
+ },
+ "d.diag-1538": {
+  "facetious": "facetious 是戲謔的，不合哀悼失落的語氣。",
+  "flippant": "flippant 是輕率的，與感傷語氣不合。",
+  "callous": "callous 是冷酷的，與惋惜失去純真不合。"
+ },
+ "d.diag-1540": {
+  "animadversion": "animadversion 是批評，與一致好評相反。",
+  "censure": "censure 是譴責，與一致好評相反。",
+  "disapprobation": "disapprobation 是不贊成，與一致好評相反。"
+ },
+ "d.diag-1541": {
+  "conjectural": "conjectural 是臆測的，無法說服懷疑的陪審員。",
+  "dubious": "dubious 是可疑的，不能說服陪審員。",
+  "specious": "specious 是似是而非的，不能說服陪審員。"
+ },
+ "d.diag-1543": {
+  "stolid": "stolid 是遲鈍冷靜，與情緒大起大落相反。",
+  "equable": "equable 是平穩的，與反覆起伏相反。",
+  "phlegmatic": "phlegmatic 是冷淡遲緩，與情緒起伏相反。"
+ },
+ "d.diag-1546": {
+  "trenchant": "trenchant 是犀利的，與迴避殘酷、美化詩人相反。",
+  "scathing": "scathing 是嚴厲抨擊，與美化相反。",
+  "derisive": "derisive 是嘲弄的，與美化相反。"
+ },
+ "d.diag-1548": {
+  "languish": "languish 是衰弱，與 despite 的轉折相反。",
+  "wither": "wither 是枯萎，與在乾旱中仍有生命不合。",
+  "perish": "perish 是死亡，與能在縫隙存活相反。"
+ },
+ "d.diag-1549": {
+  "impetuous": "impetuous 是衝動的，不是受讚揚的審慎舉動。",
+  "reckless": "reckless 是魯莽的，與 praised 相反。",
+  "precipitous": "precipitous 是倉促的，與 meticulous 讚揚相反。"
+ },
+ "d.diag-1551": {
+  "loquacity": "loquacity 是多話，與很少發言相反。",
+  "effusiveness": "effusiveness 是熱情洋溢，與很少發言相反。",
+  "verbosity": "verbosity 是冗長，與簡潔意見相反。"
+ },
+ "d.diag-1552": {
+  "brevity": "brevity 是簡短，與冗長兩小時相反。",
+  "succinctness": "succinctness 是簡潔，與冗長相反。",
+  "economy": "economy 是精簡，與冗長相反。"
+ },
+ "d.diag-1554": {
+  "reticent": "reticent 是沉默寡言，與愛說冗長軼事相反。",
+  "curt": "curt 是簡短生硬，與愛說相反。",
+  "laconic": "laconic 是簡潔，與愛說冗長相反。"
+ },
+ "d.diag-1555": {
+  "prodigality": "prodigality 是揮霍，與無贅飾相反。",
+  "superfluity": "superfluity 是過剩，與無填充語相反。",
+  "tautology": "tautology 是同義反覆，與沒有贅飾相反。"
+ },
+ "d.diag-1557": {
+  "circumlocution": "circumlocution 是迂迴冗長，與最大限度精簡相反。",
+  "grandiloquence": "grandiloquence 是誇張浮誇，與字數限制相反。",
+  "diffuseness": "diffuseness 是鬆散冗長，與精簡相反。"
+ },
+ "d.diag-1558": {
+  "candor": "candor 是坦率，與迴避問題相反。",
+  "forthrightness": "forthrightness 是直率，與迴避相反。",
+  "brevity": "brevity 是簡短，不是迴避問題的手法。"
+ },
+ "d.diag-1559": {
+  "prolix": "prolix 是冗長，與一句話濃縮智慧相反。",
+  "tedious": "tedious 是乏味，與格言精鍊相反。",
+  "convoluted": "convoluted 是複雜曲折，與簡潔格言相反。"
+ },
+ "d.diag-1561": {
+  "empiricism": "empiricism 是經驗主義，與只確認主觀意識相反。",
+  "pragmatism": "pragmatism 是實用主義，與只信自我相反。",
+  "positivism": "positivism 是實證主義，與只確認自身相反。"
+ },
+ "d.diag-1563": {
+  "amenable": "amenable 是順從的，與頑固不接受相反。",
+  "receptive": "receptive 是樂於接受，與教條主義相反。",
+  "susceptible": "susceptible 是易受影響，與堅持字面真理相反。"
+ },
+ "d.diag-1564": {
+  "transcendental": "transcendental 是先驗的，與由重複經驗形成相反。",
+  "categorical": "categorical 是絕對的，與經驗形成的期待不合。",
+  "axiomatic": "axiomatic 是不證自明，與由經驗養成相反。"
+ },
+ "d.diag-1565": {
+  "speculative": "speculative 是推測的，與重視實際後果相反。",
+  "transcendental": "transcendental 是超驗的，與實際後果相反。",
+  "metaphysical": "metaphysical 是形而上的，與實際後果相反。"
+ },
+ "d.diag-1566": {
+  "dogmatism": "dogmatism 是教條主義，與系統性懷疑相反。",
+  "complacency": "complacency 是自滿，與質疑每個信念相反。",
+  "orthodoxy": "orthodoxy 是正統，與質疑每個信念相反。"
+ },
+ "d.diag-1567": {
+  "profound": "profound 是深刻的，與被視為字面上沒有意義相反。",
+  "infallible": "infallible 是絕無錯誤，與被駁斥相反。",
+  "axiomatic": "axiomatic 是不證自明，與被視為無意義相反。"
+ }
+}

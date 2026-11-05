@@ -1,0 +1,149 @@
+[
+ {
+  "id": "b-gmat-u5.b1",
+  "type": "meaning",
+  "prompt": "下列哪一項最能解釋這家公司的競爭優勢？",
+  "text": "A small bakery chain holds no patents, yet customers keep returning even when cheaper bakeries open nearby. Many customers say they love the chain's friendly staff and trusted reputation.",
+  "options": [
+   "品牌信任與顧客忠誠",
+   "專利保護",
+   "政府補助",
+   "規模經濟"
+  ],
+  "answer": "品牌信任與顧客忠誠",
+  "wrong": {
+   "專利保護": "題目說明該連鎖店沒有專利，所以不是因為專利。",
+   "政府補助": "題目沒有提到任何補助。",
+   "規模經濟": "連鎖店規模不大，題目也沒有成本優勢的線索。"
+  },
+  "why": "顧客因信任與親切服務而回購，是品牌忠誠度形成的競爭優勢。",
+  "tip": "沒有專利也能靠品牌與信任建立優勢。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u5.b2",
+  "type": "meaning",
+  "prompt": "下列哪一項最能說明這個市場的進入障礙？",
+  "text": "A new company wants to enter the airline industry, but it would need to buy hundreds of aircraft, secure airport landing slots, and obtain safety certifications.",
+  "options": [
+   "龐大的初期資本與嚴格的法規門檻",
+   "產品難以模仿",
+   "顧客對價格不敏感",
+   "市場上沒有任何對手"
+  ],
+  "answer": "龐大的初期資本與嚴格的法規門檻",
+  "wrong": {
+   "產品難以模仿": "題目談的是進入所需資源，不是產品被模仿的難易度。",
+   "顧客對價格不敏感": "顧客的價格敏感度與新公司能否進入無關。",
+   "市場上沒有任何對手": "航空業有許多既有對手，且這也不是進入障礙。"
+  },
+  "why": "買飛機、取得降落時段與安全認證，都是資本與法規造成的高門檻。",
+  "tip": "進入障礙：資本、法規、技術、通路。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u5.b3",
+  "type": "meaning",
+  "prompt": "哪一項最能解釋政策的意外後果？",
+  "text": "A city capped apartment rents to make housing more affordable. Within two years, many landlords stopped maintaining their buildings, and fewer new apartments were built.",
+  "options": [
+   "租金上限降低了房東的利潤與投資意願",
+   "房客的收入大幅增加",
+   "城市人口大量減少",
+   "建築材料價格下跌"
+  ],
+  "answer": "租金上限降低了房東的利潤與投資意願",
+  "wrong": {
+   "房客的收入大幅增加": "題目沒有提到收入增加，也不能解釋房東不維修。",
+   "城市人口大量減少": "題目沒有這項資訊，且不能解釋新建減少。",
+   "建築材料價格下跌": "材料價格下跌通常會鼓勵建築，與新建減少相反。"
+  },
+  "why": "租金被壓低，房東收益下降，維修與新建的誘因因此降低，是政策的非預期後果。",
+  "tip": "價格管制常見副作用：供給與品質下降。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u5.b4",
+  "type": "meaning",
+  "prompt": "這個現象最符合哪一個概念？",
+  "text": "After a city introduced free parking downtown, so many drivers came that spots were full by 9 a.m., and shoppers who needed parking later could no longer find any.",
+  "options": [
+   "公共資源被過度使用",
+   "專利壟斷",
+   "價格歧視",
+   "規模不經濟"
+  ],
+  "answer": "公共資源被過度使用",
+  "wrong": {
+   "專利壟斷": "沒有任何專利或獨占權。",
+   "價格歧視": "題目沒有對不同顧客收取不同價格。",
+   "規模不經濟": "問題不在公司成本，而在免費公共資源被搶光。"
+  },
+  "why": "免費的公共車位誘使太多人使用，導致資源枯竭，這是共有地悲劇的現象。",
+  "tip": "免費又共用，容易被過度使用。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u5.b5",
+  "type": "situation",
+  "prompt": "某公司想阻止競爭者進入市場，哪一個做法最屬於「轉換成本」的策略？",
+  "text": "",
+  "options": [
+   "Make it costly and time-consuming for customers to move their data to another provider.",
+   "Lower prices for new customers only.",
+   "Advertise on television.",
+   "Hire more cleaners."
+  ],
+  "answer": "Make it costly and time-consuming for customers to move their data to another provider.",
+  "wrong": {
+   "Lower prices for new customers only.": "這是價格策略，不是增加顧客轉換的成本。",
+   "Advertise on television.": "廣告是提升知名度，不是轉換成本。",
+   "Hire more cleaners.": "增加清潔人員與留住顧客無關。"
+  },
+  "why": "轉換成本是顧客換到別家所需付出的時間、金錢與麻煩，資料搬遷困難就是例子。",
+  "tip": "轉換成本越高，顧客越不容易流失。",
+  "say": "It is costly for customers to move their data."
+ },
+ {
+  "id": "b-gmat-u5.b6",
+  "type": "meaning",
+  "prompt": "哪一項最能解釋這項研究的偏誤？",
+  "text": "A company claims its training program raises incomes, based on a survey of graduates who still work at the company five years later.",
+  "options": [
+   "只調查留下來的人，忽略了離開的人",
+   "樣本太大",
+   "調查太快完成",
+   "畢業生太喜歡公司"
+  ],
+  "answer": "只調查留下來的人，忽略了離開的人",
+  "wrong": {
+   "樣本太大": "題目沒有談樣本大小，大樣本也不是缺陷。",
+   "調查太快完成": "沒有時間長短的資訊。",
+   "畢業生太喜歡公司": "沒有證據說明他們喜歡公司，也不是偏誤的核心。"
+  },
+  "why": "只看留下的成功者，會高估訓練成效，這是存活者偏誤。",
+  "tip": "只看倖存者，容易高估成功率。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u5.b7",
+  "type": "meaning",
+  "prompt": "這家公司的優勢主要來自哪裡？",
+  "text": "A ride-hailing app becomes more valuable to each rider as more drivers join, and more drivers join because more riders use the app.",
+  "options": [
+   "網路效應",
+   "專利",
+   "低價策略",
+   "政府補貼"
+  ],
+  "answer": "網路效應",
+  "wrong": {
+   "專利": "題目完全沒有提到專利或技術保護，優勢來自乘客與司機互相吸引。",
+   "低價策略": "價值來自使用者互相增加，不是價格低。",
+   "政府補貼": "文中沒有任何政府補助的資訊，成長來自使用者之間的循環效應。"
+  },
+  "why": "使用者越多價值越高並吸引更多使用者，這是網路效應。",
+  "tip": "用戶越多越有價值 = 網路效應。",
+  "say": ""
+ }
+]

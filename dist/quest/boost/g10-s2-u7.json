@@ -1,0 +1,249 @@
+[
+ {
+  "id": "g10-s2-u7.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "My brother, who lives in Tainan, is a doctor.",
+   "My brother, that lives in Tainan, is a doctor.",
+   "My brother which lives in Tainan is a doctor."
+  ],
+  "answer": "My brother, who lives in Tainan, is a doctor.",
+  "wrong": {
+   "My brother, that lives in Tainan, is a doctor.": "非限定關係子句前有逗號，不能用 that，要用 who 或 which。",
+   "My brother which lives in Tainan is a doctor.": "which 不能指人，my brother 是人，要用 who。"
+  },
+  "why": "補充說明用的非限定子句，兩側用逗號隔開，並用 who。",
+  "tip": "補充說明的子句要有逗號，且不用 that。",
+  "say": "My brother, who lives in Tainan, is a doctor."
+ },
+ {
+  "id": "g10-s2-u7.b2",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "Students who cheat will fail the test.",
+  "options": [
+   "只有作弊的學生會不及格",
+   "所有學生都作弊，所以都不及格",
+   "學生不及格都是因為作弊"
+  ],
+  "answer": "只有作弊的學生會不及格",
+  "wrong": {
+   "所有學生都作弊，所以都不及格": "who cheat 是限定子句，用來指出「作弊的那一群」學生，並不表示全部學生都作弊。",
+   "學生不及格都是因為作弊": "句子只說作弊的人會不及格，沒有說所有不及格的原因都是作弊。"
+  },
+  "why": "沒有逗號的 who cheat 用來限定是哪些學生，所以只指作弊的人。",
+  "tip": "沒有逗號的子句是在限定指的是誰。",
+  "say": "Students who cheat will fail the test."
+ },
+ {
+  "id": "g10-s2-u7.b3",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The book _____ I borrowed from the library is about volcanoes.",
+  "options": [
+   "that",
+   "who",
+   "what"
+  ],
+  "answer": "that",
+  "wrong": {
+   "who": "who 用來指人，book 是物品，不能用 who。",
+   "what": "what 本身已含先行詞的意思，不能放在名詞 book 後面當關係代名詞。"
+  },
+  "why": "先行詞 book 是物，限定子句可以用 that 或 which。",
+  "tip": "限定子句中，物用 that，人用 who。",
+  "say": "The book that I borrowed from the library is about volcanoes."
+ },
+ {
+  "id": "g10-s2-u7.b4",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Jade Mountain, _____ is the highest peak in Taiwan, attracts many hikers.",
+  "options": [
+   "which",
+   "that",
+   "what"
+  ],
+  "answer": "which",
+  "wrong": {
+   "that": "逗號後面的非限定子句不能用 that，要用 which。",
+   "what": "what 不能接在先行詞 Jade Mountain 後面當關係代名詞。"
+  },
+  "why": "逗號後補充說明的子句，指物時用 which。",
+  "tip": "逗號後指物用 which，不用 that。",
+  "say": "Jade Mountain, which is the highest peak in Taiwan, attracts many hikers."
+ },
+ {
+  "id": "g10-s2-u7.b5",
+  "type": "situation",
+  "prompt": "你想介紹你的媽媽，順便說她在醫院工作。哪一句最自然？",
+  "text": "",
+  "options": [
+   "My mother, who works at a hospital, is very kind.",
+   "My mother, which works at a hospital, is very kind.",
+   "My mother, that works at a hospital, is very kind."
+  ],
+  "answer": "My mother, who works at a hospital, is very kind.",
+  "wrong": {
+   "My mother, which works at a hospital, is very kind.": "mother 是人，要用 who，which 只用來指事物。",
+   "My mother, that works at a hospital, is very kind.": "逗號後的非限定子句不能用 that。"
+  },
+  "why": "媽媽只有一位，補充說明用逗號加 who 最自然。",
+  "tip": "指人的補充說明用「逗號＋who」。",
+  "say": "My mother, who works at a hospital, is very kind."
+ },
+ {
+  "id": "g10-s2-u7.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "That is the old house _____ my grandfather was born.",
+  "options": [
+   "where",
+   "which",
+   "who"
+  ],
+  "answer": "where",
+  "wrong": {
+   "which": "which 在子句中要當主詞或受詞，但 my grandfather was born 已經完整，缺的是地點，所以要用 where。",
+   "who": "who 指人，house 是地方，不能用 who。"
+  },
+  "why": "先行詞是地點，關係子句缺地方副詞，用 where。",
+  "tip": "先行詞是地方且子句完整，用 where。",
+  "say": "That is the old house where my grandfather was born."
+ },
+ {
+  "id": "g10-s2-u7.b7",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I like the coat that you bought yesterday.",
+   "I like the coat who you bought yesterday.",
+   "I like the coat what you bought yesterday."
+  ],
+  "answer": "I like the coat that you bought yesterday.",
+  "wrong": {
+   "I like the coat what you bought yesterday.": "what 不能當關係代名詞接在名詞 coat 後面，要用 that 或 which。",
+   "I like the coat who you bought yesterday.": "who 只能指人，coat 是外套，要用 that 或 which。"
+  },
+  "why": "that you bought yesterday 限定是哪件外套，不加逗號。",
+  "tip": "that 子句不加逗號，what 不接名詞。",
+  "say": "I like the coat that you bought yesterday."
+ },
+ {
+  "id": "g10-s2-u7.b8",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "Her new phone, which she bought online, stopped working.",
+  "options": [
+   "她的新手機壞了，順帶一提那是她網購的",
+   "她有好幾支手機，壞掉的是網購的那支",
+   "她的手機是她在網路上賣掉的"
+  ],
+  "answer": "她的新手機壞了，順帶一提那是她網購的",
+  "wrong": {
+   "她有好幾支手機，壞掉的是網購的那支": "有逗號的子句只是補充說明，不是用來在好幾支手機中挑出一支。",
+   "她的手機是她在網路上賣掉的": "bought online 是「在網路上買」，不是賣掉。"
+  },
+  "why": "逗號中的 which she bought online 只是附加資訊。",
+  "tip": "逗號夾住的內容只是補充資訊。",
+  "say": "Her new phone, which she bought online, stopped working."
+ },
+ {
+  "id": "g10-s2-u7.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Mr. Lin, _____ taught me English last year, is moving to Japan.",
+  "options": [
+   "who",
+   "whom",
+   "whose"
+  ],
+  "answer": "who",
+  "wrong": {
+   "whom": "whom 是受詞，但子句中 taught 缺主詞，所以要用主詞形 who。",
+   "whose": "whose 表示「…的」，後面要接名詞，這裡 taught 前面缺的是主詞。"
+  },
+  "why": "關係子句缺主詞，指人，用 who。",
+  "tip": "關係詞當主詞，指人就用 who。",
+  "say": "Mr. Lin, who taught me English last year, is moving to Japan."
+ },
+ {
+  "id": "g10-s2-u7.b10",
+  "type": "situation",
+  "prompt": "你想說「王老師教過我們國文，她明年要退休」。哪一句正確？",
+  "text": "",
+  "options": [
+   "Ms. Wang, who taught us Chinese, will retire next year.",
+   "Ms. Wang, which taught us Chinese, will retire next year.",
+   "Ms. Wang, whom taught us Chinese, will retire next year."
+  ],
+  "answer": "Ms. Wang, who taught us Chinese, will retire next year.",
+  "wrong": {
+   "Ms. Wang, which taught us Chinese, will retire next year.": "which 不能指人，Ms. Wang 是人，要用 who。",
+   "Ms. Wang, whom taught us Chinese, will retire next year.": "whom 是受詞形，但 taught 前面缺主詞，應該用 who。"
+  },
+  "why": "人名後面補充說明，用逗號加主詞形 who。",
+  "tip": "人名後的補充說明用逗號加 who。",
+  "say": "Ms. Wang, who taught us Chinese, will retire next year."
+ },
+ {
+  "id": "g10-s2-u7.b11",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "The restaurant where we had lunch was crowded.",
+   "The restaurant which we had lunch was crowded.",
+   "The restaurant where we had lunch there was crowded."
+  ],
+  "answer": "The restaurant where we had lunch was crowded.",
+  "wrong": {
+   "The restaurant which we had lunch was crowded.": "which 在子句中要當受詞，但 had lunch 已經完整，少了介系詞 at，要用 where 或 at which。",
+   "The restaurant where we had lunch there was crowded.": "where 已經代表「在那裡」，再加 there 就重複了。"
+  },
+  "why": "where 同時是連接詞和地點副詞，不需要再加 there。",
+  "tip": "where 已含「在那裡」，不要再加 there。",
+  "say": "The restaurant where we had lunch was crowded."
+ },
+ {
+  "id": "g10-s2-u7.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Tom has two sisters, _____ are both teachers.",
+  "options": [
+   "who",
+   "that",
+   "whom"
+  ],
+  "answer": "who",
+  "wrong": {
+   "that": "句子有逗號，是補充說明，不能用 that。",
+   "whom": "子句缺的是主詞（are 的主詞），不能用受詞形 whom。"
+  },
+  "why": "逗號後補充說明，指人且當主詞，用 who。",
+  "tip": "逗號後的人當主詞，用 who。",
+  "say": "Tom has two sisters, who are both teachers."
+ },
+ {
+  "id": "g10-s2-u7.b13",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "The students, who were tired, left early.",
+  "options": [
+   "所有學生都累了，而且提早離開",
+   "只有累的學生提早離開",
+   "學生因為提早離開才覺得累"
+  ],
+  "answer": "所有學生都累了，而且提早離開",
+  "wrong": {
+   "只有累的學生提早離開": "有逗號的 who were tired 只是補充說明，並沒有把學生分成累的和不累的兩群。",
+   "學生因為提早離開才覺得累": "句子沒有說離開造成疲累，累是補充的狀態，不是結果。"
+  },
+  "why": "非限定子句是附加說明，所以指全體學生。",
+  "tip": "有逗號時，指的是全體而不是一部分。",
+  "say": "The students, who were tired, left early."
+ }
+]

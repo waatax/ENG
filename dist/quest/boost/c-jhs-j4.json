@@ -1,0 +1,233 @@
+[
+ {
+  "id": "c-jhs-j4.b1",
+  "type": "fix",
+  "prompt": "哪一句連接詞用法正確？",
+  "text": "",
+  "options": [
+   "Although it was cold, we went swimming.",
+   "Although it was cold, but we went swimming.",
+   "Because it was cold, but we stayed home.",
+   "Although it was cold so we went swimming."
+  ],
+  "answer": "Although it was cold, we went swimming.",
+  "wrong": {
+   "Although it was cold, but we went swimming.": "although 和 but 不能同時使用，中文可以，英文不行。",
+   "Because it was cold, but we stayed home.": "because 和 but 也不能一起用，而且 but 讓句意變成轉折。",
+   "Although it was cold so we went swimming.": "although 和 so 同樣不能並用，而且缺少逗號分隔兩個子句。"
+  },
+  "why": "although 已經表示「雖然」，主要子句不再加 but。",
+  "tip": "although 和 but 不能同時出現在一句話。",
+  "say": "Although it was cold, we went swimming."
+ },
+ {
+  "id": "c-jhs-j4.b2",
+  "type": "cloze",
+  "prompt": "選出最適合的連接詞。",
+  "text": "I took an umbrella _____ it might rain this afternoon.",
+  "options": [
+   "because",
+   "but",
+   "or",
+   "so"
+  ],
+  "answer": "because",
+  "wrong": {
+   "but": "but 表示轉折，帶傘與可能下雨不是轉折關係。",
+   "or": "or 表示選擇，句子不是在二選一。",
+   "so": "so 引出結果，但 it might rain 是原因，不是結果。"
+  },
+  "why": "it might rain 是帶傘的原因，所以用 because 引導原因。",
+  "tip": "because 後面接原因，so 後面接結果。",
+  "say": "I took an umbrella because it might rain this afternoon."
+ },
+ {
+  "id": "c-jhs-j4.b3",
+  "type": "situation",
+  "prompt": "你想說：「如果明天下雨，我們就待在家裡。」哪句最正確？",
+  "text": "",
+  "options": [
+   "If it rains tomorrow, we will stay at home.",
+   "If it will rain tomorrow, we will stay at home.",
+   "If it rains tomorrow, we stayed at home.",
+   "When it will rain tomorrow, we stay at home."
+  ],
+  "answer": "If it rains tomorrow, we will stay at home.",
+  "wrong": {
+   "If it will rain tomorrow, we will stay at home.": "if 子句表示條件時，用現在式代替未來式，不加 will。",
+   "If it rains tomorrow, we stayed at home.": "主要子句要用 will + 原形表示未來，不是過去式。",
+   "When it will rain tomorrow, we stay at home.": "時間或條件子句不用 will，而且主要子句也不是未來。"
+  },
+  "why": "if 條件子句用現在式，主要子句用 will + 原形動詞表示未來的結果。",
+  "tip": "if 子句不加 will，用現在式表示未來。",
+  "say": "If it rains tomorrow, we will stay at home."
+ },
+ {
+  "id": "c-jhs-j4.b4",
+  "type": "meaning",
+  "prompt": "這句話的意思是什麼？",
+  "text": "Unless you hurry, you will miss the bus.",
+  "options": [
+   "如果不快點，你會錯過公車",
+   "因為你很快，所以你會錯過公車",
+   "你會一直等公車",
+   "公車會因為你而延遲"
+  ],
+  "answer": "如果不快點，你會錯過公車",
+  "wrong": {
+   "因為你很快，所以你會錯過公車": "unless 不是因為，而是「除非、如果不」。",
+   "你會一直等公車": "句子沒有說等車，只說會錯過。",
+   "公車會因為你而延遲": "句中沒有說公車延遲。"
+  },
+  "why": "unless 等於 if not，所以句子是「如果你不快點，就會錯過公車」。",
+  "tip": "unless 的意思等於 if not。",
+  "say": "Unless you hurry, you will miss the bus."
+ },
+ {
+  "id": "c-jhs-j4.b5",
+  "type": "fix",
+  "prompt": "哪一句時間副詞子句正確？",
+  "text": "",
+  "options": [
+   "I will call you when I arrive.",
+   "I will call you when I will arrive.",
+   "I will call you when I arrived.",
+   "I call you when I will arrive."
+  ],
+  "answer": "I will call you when I arrive.",
+  "wrong": {
+   "I will call you when I will arrive.": "when 子句表示未來時間，要用現在式，不加 will。",
+   "I will call you when I arrived.": "主句是未來，when 子句不能用過去式。",
+   "I call you when I will arrive.": "when 子句有 will，而且主句也應該表達未來打電話。"
+  },
+  "why": "時間副詞子句不用 will，用現在式代替未來式。",
+  "tip": "when、before、after 子句，用現在式代替未來式。",
+  "say": "I will call you when I arrive."
+ },
+ {
+  "id": "c-jhs-j4.b6",
+  "type": "cloze",
+  "prompt": "選出最適合的詞。",
+  "text": "She was tired, _____ she finished the project.",
+  "options": [
+   "but",
+   "so",
+   "because",
+   "if"
+  ],
+  "answer": "but",
+  "wrong": {
+   "so": "so 引出結果，但累和完成之間是轉折，不是因果。",
+   "because": "because 後面應接原因，but 才能連接相反的情況。",
+   "if": "if 表示條件，句子沒有假設的意思。"
+  },
+  "why": "累了卻仍然完成，兩件事相反，要用 but 連接。",
+  "tip": "前後意思相反，就用 but。",
+  "say": "She was tired, but she finished the project."
+ },
+ {
+  "id": "c-jhs-j4.b7",
+  "type": "situation",
+  "prompt": "你想說：「我把食物蓋好，這樣才不會被雨淋濕。」哪句最合適？",
+  "text": "",
+  "options": [
+   "I covered the food so that it wouldn't get wet.",
+   "I covered the food so it didn't to get wet.",
+   "I covered the food because it wouldn't get wet.",
+   "I covered the food but it wouldn't get wet."
+  ],
+  "answer": "I covered the food so that it wouldn't get wet.",
+  "wrong": {
+   "I covered the food so it didn't to get wet.": "didn't 後面不能加 to，且 so that 比單獨 so 更清楚表示目的。",
+   "I covered the food because it wouldn't get wet.": "because 讓句子變成「因為不會濕才蓋」，邏輯顛倒。",
+   "I covered the food but it wouldn't get wet.": "but 是轉折，蓋好食物與不濕並非相反關係。"
+  },
+  "why": "so that 表示目的，後面接 wouldn't get wet，說明蓋食物的目的。",
+  "tip": "so that 表示為了……，後面接目的。",
+  "say": "I covered the food so that it wouldn't get wet."
+ },
+ {
+  "id": "c-jhs-j4.b8",
+  "type": "fix",
+  "prompt": "哪一句 and 與 or 的用法正確？",
+  "text": "",
+  "options": [
+   "Do you want tea or coffee?",
+   "Do you want tea and coffee?",
+   "Do you want tea but coffee?",
+   "Do you want tea so coffee?"
+  ],
+  "answer": "Do you want tea or coffee?",
+  "wrong": {
+   "Do you want tea and coffee?": "and 表示兩者都要，但這裡是請對方二選一。",
+   "Do you want tea but coffee?": "but 是轉折，無法表示選擇。",
+   "Do you want tea so coffee?": "so 引出結果，不能連接兩個選項。"
+  },
+  "why": "or 表示在兩個選項中選一個，用於詢問選擇。",
+  "tip": "二選一用 or，兩個都要用 and。",
+  "say": "Do you want tea or coffee?"
+ },
+ {
+  "id": "c-jhs-j4.b9",
+  "type": "cloze",
+  "prompt": "選出最適合的詞。",
+  "text": "_____ I was cooking, the power went out.",
+  "options": [
+   "While",
+   "Unless",
+   "Although",
+   "Since"
+  ],
+  "answer": "While",
+  "wrong": {
+   "Unless": "Unless 是「除非」，不符合事件的時間關係。",
+   "Although": "Although 是讓步，句子沒有轉折。",
+   "Since": "Since 是「自從」或「因為」，不適合在這裡表示同時發生。"
+  },
+  "why": "While 表示「當……的時候」，說明做菜的同時停電了。",
+  "tip": "while 引導正在進行的動作背景。",
+  "say": "While I was cooking, the power went out."
+ },
+ {
+  "id": "c-jhs-j4.b10",
+  "type": "meaning",
+  "prompt": "這句話表示什麼？",
+  "text": "Even though the forecast said sunny, those clouds look dark.",
+  "options": [
+   "預報說晴天，但雲看起來很黑",
+   "預報說下雨，所以雲很黑",
+   "天氣一定會放晴",
+   "沒有雲，天氣很好"
+  ],
+  "answer": "預報說晴天，但雲看起來很黑",
+  "wrong": {
+   "預報說下雨，所以雲很黑": "原句預報說的是 sunny（晴天）。",
+   "天氣一定會放晴": "even though 引出相反的現象，說明天氣可能不如預報。",
+   "沒有雲，天氣很好": "句子說 clouds look dark，有雲。"
+  },
+  "why": "even though 引出與預報相反的現象，所以雲看起來很黑，暗示天氣可能不好。",
+  "tip": "even though 後面的情況，與主句形成對比。",
+  "say": "Even though the forecast said sunny, those clouds look dark."
+ },
+ {
+  "id": "c-jhs-j4.b11",
+  "type": "fix",
+  "prompt": "哪一句 before 與 after 的用法正確？",
+  "text": "",
+  "options": [
+   "Wash your hands before you eat.",
+   "Wash your hands before you will eat.",
+   "Wash your hands after you ate dinner tomorrow.",
+   "Wash your hands before eat you."
+  ],
+  "answer": "Wash your hands before you eat.",
+  "wrong": {
+   "Wash your hands before you will eat.": "before 子句不用 will，用現在式。",
+   "Wash your hands after you ate dinner tomorrow.": "tomorrow 是未來，after 子句不能用過去式。",
+   "Wash your hands before eat you.": "子句語序要主詞在前：before you eat。"
+  },
+  "why": "before 子句用現在式；主詞加動詞的順序是 you eat。",
+  "tip": "before 後面接子句，用主詞加動詞。",
+  "say": "Wash your hands before you eat."
+ }
+]

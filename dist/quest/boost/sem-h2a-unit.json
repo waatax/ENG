@@ -1,0 +1,891 @@
+[
+  {
+    "id": "sem-h2a-unit.b1",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "If I were you, I would apologize first.",
+      "If I was you, I will apologize first.",
+      "If I am you, I would apologize first."
+    ],
+    "answer": "If I were you, I would apologize first.",
+    "wrong": {
+      "If I was you, I will apologize first.": "與現在事實相反的假設，主句要用 would＋原形，不用 will。",
+      "If I am you, I would apologize first.": "If I am you 是把假設當真實，與事實相反的假設應用 were。"
+    },
+    "why": "與現在事實相反的假設：If 子句用 were，主句用 would＋原形。",
+    "tip": "假設現在：If I were..., I would...。",
+    "say": "If I were you, I would apologize first."
+  },
+  {
+    "id": "sem-h2a-unit.b2",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Had I knew about the delay, I would have taken the train.",
+      "Had I known about the delay, I would have taken the train.",
+      "Did I know about the delay, I would have taken the train."
+    ],
+    "answer": "Had I known about the delay, I would have taken the train.",
+    "wrong": {
+      "Had I knew about the delay, I would have taken the train.": "Had 後面要接過去分詞 known，不能接過去式 knew。",
+      "Did I know about the delay, I would have taken the train.": "倒裝省略 if 時，過去的假設要用 Had＋p.p.，不能用 Did。"
+    },
+    "why": "與過去事實相反的假設可省略 if，把 Had 提到句首：Had I known...。",
+    "tip": "省略 if 的過去假設：Had + 主詞 + p.p.。",
+    "say": "Had I known about the delay, I would have taken the train."
+  },
+  {
+    "id": "sem-h2a-unit.b3",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "If she _____ harder last year, she would have passed the exam.",
+    "options": [
+      "studied",
+      "would study",
+      "had studied"
+    ],
+    "answer": "had studied",
+    "wrong": {
+      "studied": "與過去相反的假設，if 子句要用過去完成式 had studied。",
+      "would study": "if 子句裡不能用 would，這是假設語氣的常見錯誤。"
+    },
+    "why": "主句是 would have passed，所以 if 子句要用 had＋過去分詞。",
+    "tip": "過去假設：if + had p.p., would have p.p.。",
+    "say": "If she had studied harder last year, she would have passed the exam."
+  },
+  {
+    "id": "sem-h2a-unit.b4",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "I wish I _____ more time to finish the essay now.",
+    "options": [
+      "had",
+      "have",
+      "would have"
+    ],
+    "answer": "had",
+    "wrong": {
+      "have": "wish 表示與現在事實相反的願望，要用過去式，不是 have。",
+      "would have": "wish 後面的子句裡不用 would have 表達現在的願望。"
+    },
+    "why": "I wish 後面接過去式，表示現在無法實現的願望。",
+    "tip": "wish 現在的願望：過去式。",
+    "say": "I wish I had more time to finish the essay now."
+  },
+  {
+    "id": "sem-h2a-unit.b5",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Suppose the power _____ out during the show; what would you do?",
+    "options": [
+      "goes",
+      "went",
+      "will go"
+    ],
+    "answer": "went",
+    "wrong": {
+      "goes": "後面的問句用 would，表示假設語氣，所以 Suppose 子句要用過去式。",
+      "will go": "Suppose 子句裡不用 will，假設用過去式即可。"
+    },
+    "why": "Suppose 表示「假設」，與 would 搭配時，子句用過去式。",
+    "tip": "Suppose + 過去式, ... would...。",
+    "say": "Suppose the power went out during the show; what would you do?"
+  },
+  {
+    "id": "sem-h2a-unit.b6",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Never I have seen such a moving performance.",
+      "Never have seen I such a moving performance.",
+      "Never have I seen such a moving performance."
+    ],
+    "answer": "Never have I seen such a moving performance.",
+    "wrong": {
+      "Never I have seen such a moving performance.": "Never 放句首時，後面要倒裝為 have I seen。",
+      "Never have seen I such a moving performance.": "倒裝時只把助動詞放主詞前面，過去分詞 seen 要放在主詞後。"
+    },
+    "why": "否定副詞 never 放句首，助動詞要放在主詞之前。",
+    "tip": "Never 開頭，後面倒裝：Never have I ...。",
+    "say": "Never have I seen such a moving performance."
+  },
+  {
+    "id": "sem-h2a-unit.b7",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Not only _____ the story entertaining, but it also teaches a lesson.",
+    "options": [
+      "is",
+      "does",
+      "has"
+    ],
+    "answer": "is",
+    "wrong": {
+      "does": "句中的謂語是 be 動詞，Not only 倒裝時要用 is，不是 does。",
+      "has": "has 要接過去分詞，這裡後面是形容詞 entertaining，要用 is。"
+    },
+    "why": "Not only 放句首時要倒裝，原句 the story is entertaining 變成 is the story entertaining。",
+    "tip": "Not only 開頭要倒裝。",
+    "say": "Not only is the story entertaining, but it also teaches a lesson."
+  },
+  {
+    "id": "sem-h2a-unit.b8",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Hardly we had reached the station when the train left.",
+      "Hardly had we reached the station when the train left.",
+      "Hardly had we reached the station than the train left."
+    ],
+    "answer": "Hardly had we reached the station when the train left.",
+    "wrong": {
+      "Hardly we had reached the station when the train left.": "Hardly 放句首，後面要倒裝成 had we。",
+      "Hardly had we reached the station than the train left.": "Hardly 要搭配 when，than 是搭配 No sooner。"
+    },
+    "why": "Hardly had + 主詞 + p.p. + when ... 表示「一……就……」。",
+    "tip": "Hardly 搭配 when，No sooner 搭配 than。",
+    "say": "Hardly had we reached the station when the train left."
+  },
+  {
+    "id": "sem-h2a-unit.b9",
+    "type": "meaning",
+    "prompt": "哪一句使用第一人稱敘事視角？",
+    "text": "",
+    "options": [
+      "She could hear her heart pounding as she opened the door.",
+      "You could hear your heart pounding as you opened the door.",
+      "I could hear my heart pounding as I opened the door."
+    ],
+    "answer": "I could hear my heart pounding as I opened the door.",
+    "wrong": {
+      "She could hear her heart pounding as she opened the door.": "用 she 敘述，是第三人稱視角。",
+      "You could hear your heart pounding as you opened the door.": "用 you 敘述，是第二人稱視角。"
+    },
+    "why": "第一人稱用 I 或 we，由故事中的人物親自說出經歷。",
+    "tip": "第一人稱 I、第二人稱 you、第三人稱 he/she。",
+    "say": "I could hear my heart pounding as I opened the door."
+  },
+  {
+    "id": "sem-h2a-unit.b10",
+    "type": "meaning",
+    "prompt": "哪一句是用第三人稱敘述？",
+    "text": "",
+    "options": [
+      "He walked slowly toward the old house.",
+      "I walked slowly toward the old house.",
+      "You walked slowly toward the old house."
+    ],
+    "answer": "He walked slowly toward the old house.",
+    "wrong": {
+      "I walked slowly toward the old house.": "I 是第一人稱，不是第三人稱。",
+      "You walked slowly toward the old house.": "You 是第二人稱，不是第三人稱。"
+    },
+    "why": "第三人稱敘述用 he、she、they 或人名，由旁觀者的角度說故事。",
+    "tip": "第三人稱敘事：he / she / they。",
+    "say": "He walked slowly toward the old house."
+  },
+  {
+    "id": "sem-h2a-unit.b11",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "_____ the instructions carefully, Tom finished the experiment without mistakes.",
+    "options": [
+      "Followed",
+      "Following",
+      "Follow"
+    ],
+    "answer": "Following",
+    "wrong": {
+      "Followed": "Tom 是主動遵循指示的人，要用現在分詞 Following 表示主動。",
+      "Follow": "句首不能直接用原形動詞，要改成分詞構句。"
+    },
+    "why": "分詞構句的意思是主詞做的動作，主動關係用 V-ing。",
+    "tip": "主動用 V-ing，被動用 p.p.。",
+    "say": "Following"
+  },
+  {
+    "id": "sem-h2a-unit.b12",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The window, _____ by the storm, had to be replaced.",
+    "options": [
+      "breaking",
+      "having broken",
+      "broken"
+    ],
+    "answer": "broken",
+    "wrong": {
+      "breaking": "window 是被風暴弄壞，是被動關係，要用 broken。",
+      "having broken": "having broken 是主動完成，意思變成窗戶自己打破了風暴，不合理。"
+    },
+    "why": "window 與 break 是被動關係，用過去分詞 broken。",
+    "tip": "被動關係：過去分詞。",
+    "say": "The window, broken by the storm, had to be replaced."
+  },
+  {
+    "id": "sem-h2a-unit.b13",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Walking along the beach, I found a beautiful shell.",
+      "Walking along the beach, a beautiful shell was found by me.",
+      "Walked along the beach, I found a beautiful shell."
+    ],
+    "answer": "Walking along the beach, I found a beautiful shell.",
+    "wrong": {
+      "Walking along the beach, a beautiful shell was found by me.": "Walking 的動作者應該是 I，但主詞變成 shell，造成懸垂分詞。",
+      "Walked along the beach, I found a beautiful shell.": "I 是主動走路，要用 Walking，不用過去分詞 Walked。"
+    },
+    "why": "分詞構句的主詞要和主要子句的主詞一致，這裡都是 I。",
+    "tip": "分詞的動作者要與主詞相同。",
+    "say": "Walking along the beach, I found a beautiful shell."
+  },
+  {
+    "id": "sem-h2a-unit.b14",
+    "type": "meaning",
+    "prompt": "「an omniscient narrator」指什麼樣的敘事者？",
+    "text": "",
+    "options": [
+      "只知道自己經歷的敘事者",
+      "知道所有角色內心想法的敘事者",
+      "完全不出現在故事中的旁白"
+    ],
+    "answer": "知道所有角色內心想法的敘事者",
+    "wrong": {
+      "只知道自己經歷的敘事者": "omniscient 是「全知」，不是只知道自己的事。",
+      "完全不出現在故事中的旁白": "全知敘事者可以出現在故事外，但重點是知道所有人的想法。"
+    },
+    "why": "omniscient 的意思是「全知的」，敘事者能看到所有角色的內心。",
+    "tip": "omniscient = 全知。"
+  },
+  {
+    "id": "sem-h2a-unit.b15",
+    "type": "meaning",
+    "prompt": "「an unreliable narrator」是什麼意思？",
+    "text": "",
+    "options": [
+      "一個不願意說話的敘事者",
+      "永遠說出完全真實的敘事者",
+      "敘述的內容可能有偏見或不實，讀者不能全信"
+    ],
+    "answer": "敘述的內容可能有偏見或不實，讀者不能全信",
+    "wrong": {
+      "一個不願意說話的敘事者": "unreliable 是「不可信賴」，不是不說話。",
+      "永遠說出完全真實的敘事者": "unreliable 是 reliable 的相反，不能保證是真實的。"
+    },
+    "why": "unreliable 表示不可靠，讀者要自己判斷事實。",
+    "tip": "unreliable narrator：別全信他說的。"
+  },
+  {
+    "id": "sem-h2a-unit.b16",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The author uses a flashback to _____ the hero's childhood.",
+    "options": [
+      "reveal",
+      "reveals",
+      "revealing"
+    ],
+    "answer": "reveal",
+    "wrong": {
+      "reveals": "to 後面接原形動詞，不能加 s。",
+      "revealing": "to 在這裡是不定詞的 to，後面要接原形 reveal。"
+    },
+    "why": "use A to V 表示「用 A 來做某事」，to 後接原形。",
+    "tip": "use...to 後面接原形動詞。",
+    "say": "The author uses a flashback to reveal the hero's childhood."
+  },
+  {
+    "id": "sem-h2a-unit.b17",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "It is essential that every student submits the form by Friday.",
+      "It is essential that every student submit the form by Friday.",
+      "It is essential that every student will submit the form by Friday."
+    ],
+    "answer": "It is essential that every student submit the form by Friday.",
+    "wrong": {
+      "It is essential that every student submits the form by Friday.": "essential 後面的 that 子句要用「原形動詞」，不加 s。",
+      "It is essential that every student will submit the form by Friday.": "在表示要求或必要的形容詞後面，that 子句用原形，不用 will。"
+    },
+    "why": "essential、vital 等表示必要的形容詞，that 子句用 (should) + 原形。",
+    "tip": "It is essential that 主詞 + 原形。",
+    "say": "It is essential that every student submit the form by Friday."
+  },
+  {
+    "id": "sem-h2a-unit.b18",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The manager demanded that the report _____ rewritten.",
+    "options": [
+      "was",
+      "is",
+      "be"
+    ],
+    "answer": "be",
+    "wrong": {
+      "was": "demand 後面的 that 子句要用原形動詞，不用 was。",
+      "is": "demand 後面的 that 子句用原形 be，不用現在式 is。"
+    },
+    "why": "demand、suggest、insist（要求）後面的 that 子句用原形動詞。",
+    "tip": "demand that 主詞 + 原形。",
+    "say": "The manager demanded that the report be rewritten."
+  },
+  {
+    "id": "sem-h2a-unit.b19",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "你很後悔出門時沒帶傘，淋濕了，想說「早知道就帶傘了」。",
+    "options": [
+      "If I had known, I would have brought an umbrella.",
+      "If I knew, I would bring an umbrella.",
+      "If I had known, I would bring an umbrella."
+    ],
+    "answer": "If I had known, I would have brought an umbrella.",
+    "wrong": {
+      "If I knew, I would bring an umbrella.": "用過去式 knew 和 would bring，指的是現在或未來，不是過去的遺憾。",
+      "If I had known, I would bring an umbrella.": "if 子句對了，但主句也要用 would have brought 才能表示過去。"
+    },
+    "why": "過去的遺憾要用過去完成式的假設：if + had p.p., would have p.p.。",
+    "tip": "對過去的遺憾：had p.p. / would have p.p.。",
+    "say": "If I had known, I would have brought an umbrella."
+  },
+  {
+    "id": "sem-h2a-unit.b20",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "朋友在猶豫是否要換社團，你想用委婉的方式給建議：「如果我是你，我會再想一想。」",
+    "options": [
+      "If I am you, I will think it over.",
+      "If I were you, I would think it over.",
+      "I were you, I think it over."
+    ],
+    "answer": "If I were you, I would think it over.",
+    "wrong": {
+      "If I am you, I will think it over.": "給建議是假設語氣，要用 were 和 would。",
+      "I were you, I think it over.": "缺少 If，主句也應該用 would think。"
+    },
+    "why": "If I were you, I would... 是給建議的常用句型。",
+    "tip": "給建議：If I were you, I would...。",
+    "say": "If I were you, I would think it over."
+  },
+  {
+    "id": "sem-h2a-unit.b21",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Without your help, I could not finish the project last week.",
+      "Without you help, I could not have finished the project.",
+      "Without your help, I could not have finished the project."
+    ],
+    "answer": "Without your help, I could not have finished the project.",
+    "wrong": {
+      "Without your help, I could not finish the project last week.": "過去的假設要用 could not have finished，不是 could not finish。",
+      "Without you help, I could not have finished the project.": "you 要改成所有格 your，後面才能接 help。"
+    },
+    "why": "Without ... 可代替 If it had not been for ...，表達過去假設。",
+    "tip": "Without 可以代替過去的假設。",
+    "say": "Without your help, I could not have finished the project."
+  },
+  {
+    "id": "sem-h2a-unit.b22",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "But for the heavy rain, we _____ the match.",
+    "options": [
+      "would have won",
+      "will win",
+      "had won"
+    ],
+    "answer": "would have won",
+    "wrong": {
+      "will win": "But for the heavy rain 指過去的事實，不能用 will。",
+      "had won": "But for 後的主句要用 would have p.p.，不是 had won。"
+    },
+    "why": "But for ... 表示「要不是……」，主句用 would have + p.p.。",
+    "tip": "But for 開頭，主句用 would have p.p.。",
+    "say": "But for the heavy rain, we would have won the match."
+  },
+  {
+    "id": "sem-h2a-unit.b23",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "He is only fifteen, yet he talks as if he _____ everything about art.",
+    "options": [
+      "knows",
+      "knew",
+      "has known"
+    ],
+    "answer": "knew",
+    "wrong": {
+      "knows": "as if 用來說「好像」，與事實相反時，動詞用過去式。",
+      "has known": "as if 與現在事實相反，用過去式 knew，不用完成式。"
+    },
+    "why": "他才十五歲卻說得好像什麼都懂，是與事實相反，用過去式。",
+    "tip": "as if + 過去式：好像（其實不然）。",
+    "say": "He is only fifteen, yet he talks as if he knew everything about art."
+  },
+  {
+    "id": "sem-h2a-unit.b24",
+    "type": "meaning",
+    "prompt": "這句話的真實情況是什麼？",
+    "text": "Were it not for the noise, I could study here.",
+    "options": [
+      "這裡很安靜，所以我可以讀書",
+      "我不想在這裡讀書",
+      "這裡有噪音，所以我不能在這裡讀書"
+    ],
+    "answer": "這裡有噪音，所以我不能在這裡讀書",
+    "wrong": {
+      "這裡很安靜，所以我可以讀書": "Were it not for ... 是「要不是……」，表示事實上有噪音。",
+      "我不想在這裡讀書": "句子說的是因為噪音而不能讀，不是我不想讀。"
+    },
+    "why": "Were it not for 等於 If it were not for，表示現在事實相反的假設。",
+    "tip": "Were it not for = 要不是。"
+  },
+  {
+    "id": "sem-h2a-unit.b25",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Should you need any help, please call me.",
+      "Should you needs any help, please call me.",
+      "If should you need any help, please call me."
+    ],
+    "answer": "Should you need any help, please call me.",
+    "wrong": {
+      "Should you needs any help, please call me.": "Should 後面要接原形動詞，不能加 s。",
+      "If should you need any help, please call me.": "Should 倒裝已經代替 if，不能同時用。"
+    },
+    "why": "Should + 主詞 + 原形，是 If you should need 省略 If 後的倒裝句。",
+    "tip": "Should 開頭的條件句：Should + 主詞 + 原形。",
+    "say": "Should you need any help, please call me."
+  },
+  {
+    "id": "sem-h2a-unit.b26",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "_____ it to rain tomorrow, the match would be postponed.",
+    "options": [
+      "Was",
+      "Were",
+      "Is"
+    ],
+    "answer": "Were",
+    "wrong": {
+      "Was": "were to 的倒裝要用 Were，不用 Was。",
+      "Is": "would 表示假設，不能搭配 Is。"
+    },
+    "why": "If it were to rain 倒裝省略 if，就是 Were it to rain。",
+    "tip": "Were + 主詞 + to V，是假設的倒裝。",
+    "say": "Were it to rain tomorrow, the match would be postponed."
+  },
+  {
+    "id": "sem-h2a-unit.b27",
+    "type": "meaning",
+    "prompt": "「Time is a thief.」用了哪一種修辭？",
+    "text": "",
+    "options": [
+      "明喻（simile）",
+      "反問（rhetorical question）",
+      "暗喻（metaphor）"
+    ],
+    "answer": "暗喻（metaphor）",
+    "wrong": {
+      "明喻（simile）": "明喻會用 like 或 as 來比較；這句直接說 is，所以是暗喻。",
+      "反問（rhetorical question）": "這不是問句，沒有反問的形式。"
+    },
+    "why": "直接說 A 是 B，沒有 like 或 as，是暗喻。",
+    "tip": "直接說「是」的比喻是暗喻。",
+    "say": "Time is a thief."
+  },
+  {
+    "id": "sem-h2a-unit.b28",
+    "type": "meaning",
+    "prompt": "「He is as brave as a lion.」用了哪一種修辭？",
+    "text": "",
+    "options": [
+      "明喻（simile）",
+      "暗喻（metaphor）",
+      "諷刺（irony）"
+    ],
+    "answer": "明喻（simile）",
+    "wrong": {
+      "暗喻（metaphor）": "暗喻不用 as 或 like；這句用了 as ... as。",
+      "諷刺（irony）": "句子是在稱讚勇敢，沒有說反話。"
+    },
+    "why": "as ... as 或 like 來比較兩件事，是明喻。",
+    "tip": "as...as / like：明喻。"
+  },
+  {
+    "id": "sem-h2a-unit.b29",
+    "type": "meaning",
+    "prompt": "Tom 說這句話時，語氣是什麼？",
+    "text": "\"What lovely weather!\" said Tom, as rain poured down.",
+    "options": [
+      "誠心稱讚天氣",
+      "說反話，帶有諷刺",
+      "生氣地大聲吼叫"
+    ],
+    "answer": "說反話，帶有諷刺",
+    "wrong": {
+      "誠心稱讚天氣": "雨一直下，lovely weather 不可能是誠心稱讚。",
+      "生氣地大聲吼叫": "句子沒有生氣大吼的線索，而是用相反的話表達不滿。"
+    },
+    "why": "話語和實際情況相反，是反諷（irony）。",
+    "tip": "說的和現實相反，就是反諷。",
+    "say": "\"What lovely weather!\" said Tom, as rain poured down."
+  },
+  {
+    "id": "sem-h2a-unit.b30",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "She enjoys reading, writing, and _____ in her free time.",
+    "options": [
+      "to paint",
+      "paints",
+      "painting"
+    ],
+    "answer": "painting",
+    "wrong": {
+      "to paint": "平行結構要一致，前面是 V-ing，這裡也要 painting。",
+      "paints": "paints 是動詞，不能放在 enjoys 的受詞列舉中。"
+    },
+    "why": "enjoy 後面接 V-ing，三個並列項目要形式一致。",
+    "tip": "並列項目形式要一致。",
+    "say": "She enjoys reading, writing, and painting in her free time."
+  },
+  {
+    "id": "sem-h2a-unit.b31",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The speech was brief, clear, and _____.",
+    "options": [
+      "powerful",
+      "powerfully",
+      "power"
+    ],
+    "answer": "powerful",
+    "wrong": {
+      "powerfully": "前面的 brief、clear 是形容詞，並列時要用形容詞 powerful。",
+      "power": "power 是名詞，和前面的形容詞不平行。"
+    },
+    "why": "be 動詞後的並列成分要詞性一致，都用形容詞。",
+    "tip": "平行結構：形容詞配形容詞。",
+    "say": "The speech was brief, clear, and powerful."
+  },
+  {
+    "id": "sem-h2a-unit.b32",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Not until the lights went out we realized how late it was.",
+      "Not until the lights went out did we realize how late it was.",
+      "Not until did the lights went out we realize how late it was."
+    ],
+    "answer": "Not until the lights went out did we realize how late it was.",
+    "wrong": {
+      "Not until the lights went out we realized how late it was.": "Not until 放句首，主要子句需要倒裝成 did we realize。",
+      "Not until did the lights went out we realize how late it was.": "Not until 後面應先接完整子句 the lights went out，再接倒裝的主要子句。"
+    },
+    "why": "Not until 子句放句首，後面的主要子句要倒裝。",
+    "tip": "Not until ... 後面接倒裝句。",
+    "say": "Not until the lights went out did we realize how late it was."
+  },
+  {
+    "id": "sem-h2a-unit.b33",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "So exhausted _____ that he fell asleep at his desk.",
+    "options": [
+      "he was",
+      "he is",
+      "was he"
+    ],
+    "answer": "was he",
+    "wrong": {
+      "he was": "So + 形容詞放句首時，後面要倒裝成 was he。",
+      "he is": "這是過去的事，且 So 放句首後要倒裝。"
+    },
+    "why": "So exhausted was he that ... 是強調語氣的倒裝，原句為 He was so exhausted that ...。",
+    "tip": "So + 形容詞放句首，be 動詞要提前。",
+    "say": "So exhausted was he that he fell asleep at his desk."
+  },
+  {
+    "id": "sem-h2a-unit.b34",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "朋友邀你參加活動，你想說「我本來可以參加，可惜那天有事」。",
+    "options": [
+      "I would have joined you, but I had other plans that day.",
+      "I had joined you, but I had other plans that day.",
+      "I will have joined you, but I had other plans that day."
+    ],
+    "answer": "I would have joined you, but I had other plans that day.",
+    "wrong": {
+      "I had joined you, but I had other plans that day.": "表達「本來可以」要用 would have p.p.，不是 had joined。",
+      "I will have joined you, but I had other plans that day.": "will have joined 是未來完成式，不能表示過去的遺憾。"
+    },
+    "why": "would have + p.p. 表示過去沒有成真的事。",
+    "tip": "過去沒成真：would have p.p.。",
+    "say": "I would have joined you, but I had other plans that day."
+  },
+  {
+    "id": "sem-h2a-unit.b35",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The story is told _____ the eyes of a young girl.",
+    "options": [
+      "at",
+      "through",
+      "on"
+    ],
+    "answer": "through",
+    "wrong": {
+      "at": "at the eyes 是「在眼睛那裡」，不是敘事的視角。",
+      "on": "on 表示在表面上，和「透過某人的眼睛」不同。"
+    },
+    "why": "through the eyes of ... 表示「從……的視角」。",
+    "tip": "through the eyes of = 從某人的角度。",
+    "say": "The story is told through the eyes of a young girl."
+  },
+  {
+    "id": "sem-h2a-unit.b36",
+    "type": "meaning",
+    "prompt": "「point of view」在這句話中指什麼？",
+    "text": "From the narrator's point of view, the village had never been so quiet.",
+    "options": [
+      "景色最漂亮的位置",
+      "村莊的位置",
+      "敘事者的看法或角度"
+    ],
+    "answer": "敘事者的看法或角度",
+    "wrong": {
+      "景色最漂亮的位置": "point of view 的意思是看事情的角度，不是景點。",
+      "村莊的位置": "句中 point of view 是敘事者所持的觀點，而非地點。"
+    },
+    "why": "From ...'s point of view 表示「從某人的角度來看」。",
+    "tip": "point of view = 觀點、視角。",
+    "say": "From the narrator's point of view, the village had never been so quiet."
+  },
+  {
+    "id": "sem-h2a-unit.b37",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "The more carefully you read, the better you understand the narrator's attitude.",
+      "The more carefully you read, the better do you understand the narrator's attitude.",
+      "More carefully you read, better you understand the narrator's attitude."
+    ],
+    "answer": "The more carefully you read, the better you understand the narrator's attitude.",
+    "wrong": {
+      "The more carefully you read, the better do you understand the narrator's attitude.": "the + 比較級的句型後面不倒裝，應是 the better you understand。",
+      "More carefully you read, better you understand the narrator's attitude.": "少了兩個 the，不是正確的「越……越……」句型。"
+    },
+    "why": "The + 比較級, the + 比較級，後面照一般語序。",
+    "tip": "越……越……：兩邊都加 the。",
+    "say": "The more carefully you read, the better you understand the narrator's attitude."
+  },
+  {
+    "id": "sem-h2a-unit.b38",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The detective, _____ real name nobody knew, solved the case.",
+    "options": [
+      "who",
+      "whose",
+      "whom"
+    ],
+    "answer": "whose",
+    "wrong": {
+      "who": "who 是主格，但後面的 real name 需要所有格 whose。",
+      "whom": "whom 是受格，這裡需要所有格 whose。"
+    },
+    "why": "whose 後面接名詞，表示「他的……」。",
+    "tip": "whose + 名詞，表示所有關係。",
+    "say": "The detective, whose real name nobody knew, solved the case."
+  },
+  {
+    "id": "sem-h2a-unit.b39",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "The novel, that was written in 1920, is still popular.",
+      "The novel, was written in 1920, is still popular.",
+      "The novel, which was written in 1920, is still popular."
+    ],
+    "answer": "The novel, which was written in 1920, is still popular.",
+    "wrong": {
+      "The novel, that was written in 1920, is still popular.": "前面有逗號的補充說明子句不能用 that，要用 which。",
+      "The novel, was written in 1920, is still popular.": "少了關係代名詞，兩個動詞 was 和 is 無法連在一起。"
+    },
+    "why": "非限定的補充說明子句要用逗號隔開，並用 which 或 who。",
+    "tip": "逗號後的關係子句不用 that。",
+    "say": "The novel, which was written in 1920, is still popular."
+  },
+  {
+    "id": "sem-h2a-unit.b40",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "同學問你：「如果你是這本書的主角，你會怎麼做？」你想說你會說實話。",
+    "options": [
+      "If I were the main character, I would tell the truth.",
+      "If I was the main character, I will tell the truth.",
+      "If I be the main character, I would tell the truth."
+    ],
+    "answer": "If I were the main character, I would tell the truth.",
+    "wrong": {
+      "If I was the main character, I will tell the truth.": "假設語氣的主句要用 would，不是 will。",
+      "If I be the main character, I would tell the truth.": "If 子句的假設要用 were，不能用原形 be。"
+    },
+    "why": "對現在不真實的假設，用 If I were..., I would...。",
+    "tip": "假設自己是別人：If I were...。",
+    "say": "If I were the main character, I would tell the truth."
+  },
+  {
+    "id": "sem-h2a-unit.b41",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Had the hero _____ the map, he might have found the treasure.",
+    "options": [
+      "studying",
+      "studied",
+      "study"
+    ],
+    "answer": "studied",
+    "wrong": {
+      "studying": "Had 後面要接過去分詞 studied，不是 V-ing。",
+      "study": "Had 後面要接過去分詞，不能用原形。"
+    },
+    "why": "Had + 主詞 + p.p. 是 If 省略後的倒裝，表示過去的假設。",
+    "tip": "Had + 主詞 + p.p.：要是當時……。",
+    "say": "Had the hero studied the map, he might have found the treasure."
+  },
+  {
+    "id": "sem-h2a-unit.b42",
+    "type": "meaning",
+    "prompt": "「a sarcastic tone」是什麼意思？",
+    "text": "The narrator speaks in a sarcastic tone.",
+    "options": [
+      "溫柔安慰的語氣",
+      "非常害羞的語氣",
+      "帶有諷刺意味的語氣"
+    ],
+    "answer": "帶有諷刺意味的語氣",
+    "wrong": {
+      "溫柔安慰的語氣": "sarcastic 是諷刺的，不是安慰。",
+      "非常害羞的語氣": "sarcastic 與害羞無關，是說話帶刺。"
+    },
+    "why": "sarcastic 是「挖苦、諷刺的」，tone 是語氣。",
+    "tip": "sarcastic = 諷刺的。",
+    "say": "The narrator speaks in a sarcastic tone."
+  },
+  {
+    "id": "sem-h2a-unit.b43",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The author _____ readers to see the story through the child's eyes.",
+    "options": [
+      "invites",
+      "invite",
+      "inviting"
+    ],
+    "answer": "invites",
+    "wrong": {
+      "invite": "主詞 The author 是第三人稱單數，現在式動詞要加 s。",
+      "inviting": "inviting 不能單獨當句子的動詞。"
+    },
+    "why": "第三人稱單數主詞搭配現在式動詞，要加 s。",
+    "tip": "第三人稱單數：動詞加 s。",
+    "say": "The author invites readers to see the story through the child's eyes."
+  },
+  {
+    "id": "sem-h2a-unit.b44",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Although the plot was predictable, but the characters were memorable.",
+      "Although the plot was predictable, the characters were memorable.",
+      "Despite the plot was predictable, the characters were memorable."
+    ],
+    "answer": "Although the plot was predictable, the characters were memorable.",
+    "wrong": {
+      "Although the plot was predictable, but the characters were memorable.": "although 和 but 不能同時連接同一個句子，只留一個。",
+      "Despite the plot was predictable, the characters were memorable.": "despite 是介系詞，後面不能接完整子句，要用 although。"
+    },
+    "why": "although 引導子句；despite 後面接名詞或 V-ing。",
+    "tip": "although + 子句；despite + 名詞。",
+    "say": "Although the plot was predictable, the characters were memorable."
+  },
+  {
+    "id": "sem-h2a-unit.b45",
+    "type": "meaning",
+    "prompt": "「foreshadow」在這句話中是什麼意思？",
+    "text": "The dark clouds in the first chapter foreshadow the trouble to come.",
+    "options": [
+      "掩蓋、遮住",
+      "回憶過去",
+      "預示、暗示將要發生的事"
+    ],
+    "answer": "預示、暗示將要發生的事",
+    "wrong": {
+      "掩蓋、遮住": "foreshadow 雖然有 shadow，但意思是預告，不是遮蓋。",
+      "回憶過去": "句中說的是 trouble to come（將要發生的麻煩），不是回憶。"
+    },
+    "why": "fore- 表示「先前」，foreshadow 是在故事前面先留下伏筆。",
+    "tip": "foreshadow = 埋下伏筆。",
+    "say": "The dark clouds in the first chapter foreshadow the trouble to come."
+  },
+  {
+    "id": "sem-h2a-unit.b46",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "你在寫讀書心得，想說「這個結局讓我很意外」。",
+    "options": [
+      "The ending surprised me.",
+      "I was surprising by the ending.",
+      "The ending made me surprising."
+    ],
+    "answer": "The ending surprised me.",
+    "wrong": {
+      "I was surprising by the ending.": "表示人感到驚訝，要用 surprised，不是 surprising。",
+      "The ending made me surprising.": "made me 後面接 surprised 描述人的感受，surprising 是形容事物。"
+    },
+    "why": "事物令人驚訝用 surprising，人感到驚訝用 surprised。",
+    "tip": "人用 -ed，物用 -ing。",
+    "say": "The ending surprised me."
+  },
+  {
+    "id": "sem-h2a-unit.b47",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Looking back, I wish I _____ a different choice.",
+    "options": [
+      "made",
+      "had made",
+      "would make"
+    ],
+    "answer": "had made",
+    "wrong": {
+      "made": "wish 表示與過去事實相反，要用過去完成式 had made。",
+      "would make": "would make 說的是現在或未來，不是對過去的後悔。"
+    },
+    "why": "I wish + had p.p. 表示對過去事情的遺憾。",
+    "tip": "後悔過去：wish + had p.p.。",
+    "say": "Looking back, I wish I had made a different choice."
+  }
+]

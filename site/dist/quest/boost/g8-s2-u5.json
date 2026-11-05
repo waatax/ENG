@@ -1,0 +1,303 @@
+[
+ {
+  "id": "g8-s2-u5.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "The cake smells sweetly.",
+   "The cake smells sweet.",
+   "The cake smells sweetness."
+  ],
+  "answer": "The cake smells sweet.",
+  "wrong": {
+   "The cake smells sweetly.": "smell 在這裡是連綴動詞，後面要接形容詞 sweet，不是副詞 sweetly。",
+   "The cake smells sweetness.": "sweetness 是名詞，連綴動詞後面要接形容詞來描述主詞。"
+  },
+  "why": "感官動詞 smell 後面接形容詞，描述東西聞起來怎麼樣。",
+  "tip": "感官動詞後面接形容詞，不接副詞。",
+  "say": "The cake smells sweet."
+ },
+ {
+  "id": "g8-s2-u5.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "You look _____ today. Did you sleep well?",
+  "options": [
+   "happy",
+   "happily",
+   "happiness",
+   "to happy"
+  ],
+  "answer": "happy",
+  "wrong": {
+   "happily": "look 在這裡是連綴動詞，後面要接形容詞，不能用副詞 happily。",
+   "happiness": "happiness 是名詞，描述『看起來的樣子』要用形容詞。",
+   "to happy": "look to 後面的搭配不符，且 happy 不需要加 to。"
+  },
+  "why": "look + 形容詞，表示『看起來……』。",
+  "tip": "look、sound、feel 後面接形容詞。",
+  "say": "You look happy today."
+ },
+ {
+  "id": "g8-s2-u5.b3",
+  "type": "situation",
+  "prompt": "朋友彈了一首歌，你想稱讚「聽起來真棒！」哪一句最自然？",
+  "text": "",
+  "options": [
+   "That sounds great!",
+   "That sounds greatly!",
+   "That sounds a great!"
+  ],
+  "answer": "That sounds great!",
+  "wrong": {
+   "That sounds greatly!": "sound 後面接形容詞 great，不能用副詞 greatly。",
+   "That sounds a great!": "great 不是名詞，前面不能加 a，直接用 sounds great。"
+  },
+  "why": "sound 是連綴動詞，後面接形容詞描述聽起來的感覺。",
+  "tip": "sounds + 形容詞，表示聽起來怎麼樣。",
+  "say": "That sounds great!"
+ },
+ {
+  "id": "g8-s2-u5.b4",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "This is the _____ mountain in Taiwan, and many people want to climb it.",
+  "options": [
+   "high",
+   "higher",
+   "highest",
+   "most high"
+  ],
+  "answer": "highest",
+  "wrong": {
+   "high": "原級不能表示『最高』。",
+   "higher": "higher 是比較級，只比較兩者，這裡是整個台灣中最高。",
+   "most high": "high 是短形容詞，最高級是 highest。"
+  },
+  "why": "在整個範圍裡比較，用最高級 the highest。",
+  "tip": "短形容詞最高級：the + -est。",
+  "say": "This is the highest mountain in Taiwan."
+ },
+ {
+  "id": "g8-s2-u5.b5",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "She is the most smart girl in our class.",
+   "She is the smartest girl in our class.",
+   "She is the smarter girl in our class."
+  ],
+  "answer": "She is the smartest girl in our class.",
+  "wrong": {
+   "She is the most smart girl in our class.": "smart 是短形容詞，最高級要加 -est，變成 smartest。",
+   "She is the smarter girl in our class.": "smarter 是比較級，in our class 指全班，要用最高級。"
+  },
+  "why": "短形容詞最高級加 -est，句型是 the + 最高級 + in + 範圍。",
+  "tip": "一音節的形容詞，最高級加 -est。",
+  "say": "She is the smartest girl in our class."
+ },
+ {
+  "id": "g8-s2-u5.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The rabbit runs _____ than the turtle.",
+  "options": [
+   "fast",
+   "faster",
+   "fastest",
+   "more fast"
+  ],
+  "answer": "faster",
+  "wrong": {
+   "fast": "fast 是原級，和 than 一起使用時要變成比較級。",
+   "fastest": "fastest 是最高級，有 than 就是比較兩者。",
+   "more fast": "fast 是短字，比較級是 faster。"
+  },
+  "why": "兩個對象比較，用比較級 faster + than。",
+  "tip": "有 than 就用比較級。",
+  "say": "The rabbit runs faster than the turtle."
+ },
+ {
+  "id": "g8-s2-u5.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The old man walks very _____ because his legs hurt.",
+  "options": [
+   "slow",
+   "slowly",
+   "slowness",
+   "slower"
+  ],
+  "answer": "slowly",
+  "wrong": {
+   "slow": "walks 是一般動詞，要用副詞 slowly 來修飾動作。",
+   "slowness": "slowness 是名詞，不能修飾動詞。",
+   "slower": "slower 是比較級，這裡沒有比較對象，不需要比較級。"
+  },
+  "why": "修飾一般動詞要用副詞，形容詞 slow 加 -ly 變成副詞。",
+  "tip": "形容詞修飾名詞，副詞修飾動詞。",
+  "say": "The old man walks very slowly."
+ },
+ {
+  "id": "g8-s2-u5.b8",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I saw him to cross the street.",
+   "I saw him cross the street.",
+   "I saw him crossed the street."
+  ],
+  "answer": "I saw him cross the street.",
+  "wrong": {
+   "I saw him to cross the street.": "see 是感官動詞，後面接原形動詞時不加 to。",
+   "I saw him crossed the street.": "受詞後面的動詞要用原形 cross，不用過去式。"
+  },
+  "why": "感官動詞 see＋受詞＋原形動詞，表示看到他完整做了這個動作。",
+  "tip": "see／hear 受詞後面接原形，不加 to。",
+  "say": "I saw him cross the street."
+ },
+ {
+  "id": "g8-s2-u5.b9",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "I heard someone _____ in the next room, so I went to check.",
+  "options": [
+   "cry",
+   "to cry",
+   "cried",
+   "be cry"
+  ],
+  "answer": "cry",
+  "wrong": {
+   "to cry": "hear 這類感官動詞後面接原形，不加 to。",
+   "cried": "cried 是過去式，受詞後面的動詞要用原形或 V-ing。",
+   "be cry": "be 後面不能直接接原形動詞，文法不正確。"
+  },
+  "why": "hear＋受詞＋原形動詞，表示聽到有人哭。",
+  "tip": "感官動詞＋受詞＋原形（或 V-ing）。",
+  "say": "I heard someone cry in the next room."
+ },
+ {
+  "id": "g8-s2-u5.b10",
+  "type": "meaning",
+  "prompt": "『I saw him crossing the street.』和『I saw him cross the street.』的差別是？",
+  "text": "",
+  "options": [
+   "前者強調看到他正在過馬路，後者強調看到整個過程",
+   "前者表示他已經過完，後者表示他還沒過",
+   "前者是過去，後者是現在",
+   "兩句意思完全不同"
+  ],
+  "answer": "前者強調看到他正在過馬路，後者強調看到整個過程",
+  "wrong": {
+   "前者表示他已經過完，後者表示他還沒過": "兩句都是看到他過馬路，差別是強調進行中或整個過程，不是完成與否。",
+   "前者是過去，後者是現在": "兩句都用 saw，都是過去發生的事。",
+   "兩句意思完全不同": "兩句意思很接近，只有強調的重點略有不同。"
+  },
+  "why": "V-ing 強調動作進行的過程，原形強調看到動作的整個經過。",
+  "tip": "V-ing 看到過程，原形看到全部。",
+  "say": "I saw him crossing the street."
+ },
+ {
+  "id": "g8-s2-u5.b11",
+  "type": "situation",
+  "prompt": "同學拿給你一碗湯，你聞了一下，想說「聞起來好香！」哪一句最自然？",
+  "text": "",
+  "options": [
+   "It smells really good!",
+   "It smells really well!",
+   "It smells really goodly!"
+  ],
+  "answer": "It smells really good!",
+  "wrong": {
+   "It smells really well!": "well 是副詞，smell 在這裡是連綴動詞，要接形容詞 good。",
+   "It smells really goodly!": "goodly 並不是常見的說法，要用形容詞 good。"
+  },
+  "why": "smells 後面接形容詞 good，表示聞起來很好。",
+  "tip": "聞起來好：smell good，不是 smell well。",
+  "say": "It smells really good!"
+ },
+ {
+  "id": "g8-s2-u5.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Leo is the _____ of the three brothers, so he always helps his younger brothers.",
+  "options": [
+   "old",
+   "older",
+   "oldest",
+   "most old"
+  ],
+  "answer": "oldest",
+  "wrong": {
+   "old": "原級不能表示三人中最年長。",
+   "older": "older 是比較級，只比較兩者，三個人要用最高級。",
+   "most old": "old 是短形容詞，最高級是 oldest。"
+  },
+  "why": "of the three 表示三者中比較，用最高級 the oldest。",
+  "tip": "三者以上比較，用最高級。",
+  "say": "Leo is the oldest of the three brothers."
+ },
+ {
+  "id": "g8-s2-u5.b13",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "This is the most beautiful flower I have ever saw.",
+   "This is the most beautiful flower I have ever seen.",
+   "This is the more beautiful flower I have ever seen."
+  ],
+  "answer": "This is the most beautiful flower I have ever seen.",
+  "wrong": {
+   "This is the most beautiful flower I have ever saw.": "have 後面要接過去分詞 seen，saw 是過去式，不能跟 have 連用。",
+   "This is the more beautiful flower I have ever seen.": "『我看過最美的』要用最高級 most beautiful，不是比較級 more。"
+  },
+  "why": "最高級常搭配 I have ever seen，表示到現在為止最……的。",
+  "tip": "最高級＋I have ever + p.p.，意思是有史以來最。",
+  "say": "This is the most beautiful flower I have ever seen."
+ },
+ {
+  "id": "g8-s2-u5.b14",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The milk tastes _____. Please don't drink it.",
+  "options": [
+   "bad",
+   "badly",
+   "badness",
+   "to bad"
+  ],
+  "answer": "bad",
+  "wrong": {
+   "badly": "taste 當連綴動詞時，後面接形容詞 bad，不接副詞 badly。",
+   "badness": "badness 是名詞，描述味道要用形容詞。",
+   "to bad": "to 在這裡多餘，文法不正確。"
+  },
+  "why": "tastes 後面接形容詞，表示嚐起來的味道。",
+  "tip": "嚐起來怎樣：taste + 形容詞。",
+  "say": "The milk tastes bad."
+ },
+ {
+  "id": "g8-s2-u5.b15",
+  "type": "situation",
+  "prompt": "弟弟一直打哈欠，你想說「你看起來很累。」哪一句最合適？",
+  "text": "",
+  "options": [
+   "You look tired.",
+   "You look tiredly.",
+   "You look tire."
+  ],
+  "answer": "You look tired.",
+  "wrong": {
+   "You look tiredly.": "look 後面要接形容詞 tired，不接副詞 tiredly。",
+   "You look tire.": "tire 是動詞或名詞，描述狀態要用形容詞 tired。"
+  },
+  "why": "look + 形容詞，表示看起來的樣子。",
+  "tip": "看起來累：look tired。",
+  "say": "You look tired."
+ }
+]

@@ -69,6 +69,8 @@ test('9,500 Flashcards Comprehensive Database Audit', async () => {
     assert.ok(card.id.startsWith(prefix), `Card ID ${card.id} must start with expected tier prefix ${prefix}`);
 
     for (const k of requiredKeys) {
+      // A memory tip may be empty: a forced or unsafe hook is removed rather than replaced with filler.
+      if (k === 'memoryTip') { assert.equal(typeof card[k], 'string', card.id); continue; }
       assert.ok(card[k] !== undefined && card[k] !== null && String(card[k]).trim().length > 0,
         `Card ${card.id} (${card.word}) missing required attribute ${k}`);
     }

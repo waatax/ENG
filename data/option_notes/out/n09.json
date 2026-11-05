@@ -1,0 +1,752 @@
+{
+ "d.diag-1792": {
+  "Electric buses require recharging infrastructure that draws electricity from the regional grid.": "充電用電可能來自發電廠排放，這反而可能削弱結論，不是加強。",
+  "The initial capital purchase price of electric buses is thirty percent higher than clean diesel models.": "購車價格與空氣品質無關，無法說明微粒下降是電動巴士造成的。",
+  "Bus passengers reported that electric vehicles provided a significantly quieter commuter ride.": "乘客覺得安靜只是舒適度，與空氣中微粒減少的因果無關。"
+ },
+ "d.diag-1793": {
+  "The retailer expanded its product catalog by introducing three hundred new casual clothing items.": "新增三百件商品與退貨率下降的原因無關，沒有支持虛擬試衣的作用。",
+  "Competitor apparel brands reported return rates consistent with industry historical averages.": "別家品牌退貨率沒變，只是比較對象，沒有說明本公司退貨為何下降。",
+  "The mobile application was downloaded by over two million smartphone users within sixty days.": "下載量只代表有人用，沒說明用了之後尺寸不合的退貨減少。"
+ },
+ "d.diag-1794": {
+  "The software algorithm was developed by an Israeli cybersecurity startup founded by intelligence veterans.": "軟體開發者的背景與軟體是否真的攔截詐騙無關。",
+  "Commercial wire transfers account for sixty percent of the bank's annual transaction volume.": "匯款占交易量六成只是背景數字，無法說明詐騙下降的原因。",
+  "Customers surveyed praised the bank's customer service helpline responsiveness.": "客戶稱讚客服只是滿意度，與攔截詐騙匯款沒有關係。"
+ },
+ "d.diag-1795": {
+  "The coastal site also contained fossilized shells of shallow-water intertidal mollusks.": "淺水貝殼只說明有人採集近岸食物，無法證明有出海深水捕魚的船。",
+  "Archaeologists recovered obsidian flakes that had been fashioned into scrapers and projectile points.": "黑曜石刮刀屬於石器工具，與航海或深海捕魚沒有關聯。",
+  "Global sea levels around 40,000 BCE were tens of meters lower than they are today.": "海平面較低會讓海岸線離遺址更遠，不能證明當時有船隻出海。"
+ },
+ "d.diag-1796": {
+  "Surgical pauses were timed using an electronic countdown clock mounted on the operating room wall.": "倒數計時器只是計時工具，沒說明暫停核對為何使錯誤歸零。",
+  "The hospital was awarded an 'A' safety rating by an independent national healthcare watchdog.": "獲得安全評等是院方整體成績，未指出手術前暫停是原因。",
+  "Surgeons who participated in the trial had an average of fifteen years of clinical experience.": "醫師年資高也可能是錯誤少的原因，反而讓暫停的功勞更不清楚。"
+ },
+ "d.diag-1797": {
+  "Polyethylene tubing costs forty percent less to install per linear foot than copper piping.": "安裝成本較低只談價錢，與細菌能否附著管壁無關。",
+  "The five municipal districts evaluated contain a combined residential population of two hundred thousand.": "居民人口數與管材是否抑制細菌附著沒有關係。",
+  "The municipal water supply originates from a pristine mountain reservoir.": "水源乾淨可能才是污染歸零的原因，反而削弱管材的功勞。"
+ },
+ "d.diag-1798": {
+  "Conductive silver adhesive cures within twenty minutes when exposed to ultraviolet radiation.": "紫外線下二十分鐘固化是製程速度，與抗震減震能力無關。",
+  "Circuit boards assembled using the silver adhesive were installed in commercial satellite guidance systems.": "裝在衛星導引系統只是應用場合，沒有證明銀膠吸收震動較好。",
+  "The cost of silver adhesive fluctuated with global precious metal commodity markets.": "銀膠價格隨貴金屬市場波動，與電路板抗震無關。"
+ },
+ "d.diag-1799": {
+  "Prickly buffer vegetation can be harvested by local villagers to produce medicinal herbal extracts.": "村民可採收藥用萃取物是額外好處，與大象改道無關。",
+  "Elephant populations within the sanctuary grew by five percent over the duration of the project.": "大象數量增加不能說明牠們被帶離農田，若有影響反而更易衝突。",
+  "Villagers were compensated financially by conservation organizations for previous crop damages.": "賠償村民損失只是補償措施，與荊棘植被是否擋住大象無關。"
+ },
+ "d.diag-1800": {
+  "Pink noise emitters cost the facility management department five thousand dollars to install.": "安裝花費五千元只是成本，與是否減少干擾和提高隱私無關。",
+  "Employees were allowed to personalize their cubicle decor following the installation of the emitters.": "員工可布置座位只影響心情，沒有說明噪音遮蔽如何減少錯誤。",
+  "The call center handles billing inquiries for an international telecommunications provider.": "呼叫中心處理帳單詢問只是背景，與遮蔽噪音的效果無關。"
+ },
+ "d.diag-1801": {
+  "Aboriginal rock art depicts stylized ancestral figures holding hunting spears.": "岩畫描繪持矛人像，只暗示文化，不能證明獵殺造成滅絕。",
+  "Australia was colonized by maritime modern human populations navigating from Southeast Asia.": "人類從東南亞航海抵達，只說明何時到達，沒說明滅絕原因。",
+  "Fossilized marsupial lion teeth display wear patterns consistent with consuming large herbivores.": "袋獅牙齒磨損顯示牠吃大型草食動物，與滅絕原因是人或氣候無關。"
+ },
+ "d.diag-1802": {
+  "John Harrison was awarded a financial monetary prize by the British Board of Longitude.": "哈里森獲得獎金只是獎勵的事實，與海難減少或貿易革新無關。",
+  "Scurvy continued to afflict sailors on transatlantic voyages well into the nineteenth century.": "壞血病持續困擾水手與航海儀器無關，不能支持沉船率下降。",
+  "Wooden sailing vessels required frequent dry-dock maintenance to eliminate shipworms.": "木船需除蛀蟲維修是另一個問題，與計時儀降低海難無關。"
+ },
+ "d.diag-1803": {
+  "Cholera is caused by the waterborne bacterium *Vibrio cholerae*, which produces severe dehydrating diarrhea.": "霍亂由霍亂弧菌引起只是病因背景，無法比較衛生與醫藥哪個有效。",
+  "Dr. John Snow mapped cholera cases in the Soho district during the 1854 Broad Street pump outbreak.": "約翰·斯諾繪製病例圖說明水源問題，但沒比較醫藥介入的作用。",
+  "London’s metropolitan sewer network was engineered by Chief Engineer Joseph Bazalgette.": "巴札爾傑特設計下水道是事實背景，沒有證明死亡率下降歸因於它。"
+ },
+ "d.diag-1804": {
+  "Anglerfish reproduce via extreme sexual parasitism, where dwarf males permanently fuse to females.": "侏儒雄魚寄生繁殖是生殖方式，與發光是為引誘獵物無關。",
+  "The light organ of the anglerfish, known as the esca, contains millions of symbiotic bioluminescent bacteria.": "發光器內有共生細菌說明發光來源，不能證明目的是引誘獵物。",
+  "Deep-sea hydrothermal vents emit geothermal infrared radiation detectable by specialized crustaceans.": "熱泉紅外線被甲殼類偵測，與鮟鱇魚為何發光毫無關係。"
+ },
+ "d.diag-1805": {
+  "The algorithmic trading servers are connected via high-speed transoceanic fiber-optic communications conduits.": "光纖連線只是設備細節，不能證明獲利穩定或沒有市場風險。",
+  "High-frequency algorithmic trading represents over fifty percent of all daily US equity market trading volume.": "高頻交易占一半成交量說明產業規模，不能證明這家基金的策略有效。",
+  "The investment fund employs thirty quantitative mathematicians with PhDs in theoretical physics.": "員工有物理博士顯示專業，但不是實際獲利與風險的證據。"
+ },
+ "d.diag-1806": {
+  "The portrait depicts an Italian noblewoman wearing a silk velvet dress embroidered with floral motifs.": "畫中貴婦的服飾題材，學徒也可能畫出，無法判定是達文西本人。",
+  "Da Vinci spent several months in Milan during the exact period to which the portrait is chronologically dated.": "達文西當時在米蘭只是行程吻合，學徒也能在同一時期作畫。",
+  "The wooden poplar panel upon which the portrait is painted was sourced from trees grown in northern Tuscany.": "木板產地在托斯卡尼，與誰握筆作畫無關，無法排除學徒。"
+ },
+ "d.diag-1807": {
+  "Brain wave recordings during non-REM sleep are characterized by slow-wave delta activity and sleep spindles.": "非快速動眼期腦波特徵只描述睡眠腦波，沒說明與動作技能鞏固的關係。",
+  "Dreams reported during waking from non-REM sleep contain fewer vivid sensory narratives than REM dreams.": "非快速動眼期夢較不生動，只比較夢的內容，未涉及技能學習。",
+  "The human sleep architecture consists of repeating ninety-minute ultradian cycles throughout the night.": "睡眠有九十分鐘週期只是睡眠結構，不能證明做夢能鞏固技能。"
+ },
+ "d.diag-1808": {
+  "Mount Pinatubo ejected an estimated ten cubic kilometers of tephra and ash into the atmosphere.": "噴出十立方公里火山灰是噴發規模，沒說明硫酸鹽氣膠造成降溫。",
+  "Satellite instrumentation measured ash clouds spreading westward across the Indian Ocean.": "灰雲向西擴散是描述灰雲移動，不涉及二氧化硫造成降溫的機制。",
+  "The eruption forced the evacuation of tens of thousands of residents from surrounding municipalities.": "居民撤離是人道影響，與全球降溫是否由二氧化硫引起無關。"
+ },
+ "d.diag-1809": {
+  "Microfinance interest rates are typically higher than rates offered by commercial urban banks.": "小額貸款利率較高是借貸成本，與貸給女性才促進所得成長無關。",
+  "Over eighty percent of microfinance institutions globally utilize group-lending peer accountability frameworks.": "八成機構採團體連帶貸款，說明做法普遍，沒有比較男女借款人。",
+  "The average size of an initial microfinance loan in rural agricultural districts is under two hundred dollars.": "首筆貸款不到兩百美元只是金額大小，沒有比較男女使用方式。"
+ },
+ "d.diag-1810": {
+  "Khoisan languages distinguish up to five basic click types, produced through tongue suction.": "有五種點擊音只描述語言特徵，不能證明這些音最古老。",
+  "Rock engravings across southern Africa depict hunter-gatherer bands from the Middle Stone Age.": "岩畫描繪中石器時代狩獵採集者，與點擊音是否最古老無關。",
+  "Click consonants are absent from the vast majority of the world's languages outside southern and eastern Africa.": "點擊音在其他地區罕見只說明分布，未證明起源最早。"
+ },
+ "d.diag-1811": {
+  "Whether neighboring suburban municipalities also offer solar panel purchase subsidies.": "鄰近城市是否也補貼，只是比較別處做法，無法判斷本市能否減少燃煤。",
+  "Whether solar panel silicon photovoltaic cells are manufactured domestically or imported.": "太陽能電池在國內製造或進口，與是否減少燃煤發電無關。",
+  "Whether coal miners in the regional electrical utility are unionized.": "煤礦工人有沒有工會，與補貼能否降低化石燃料依賴無關。"
+ },
+ "d.diag-1812": {
+  "Whether hydrogenated palm oil requires refrigerated storage facilities identical to dairy butter.": "棕櫚油是否需要冷藏只是儲存問題，不影響成本節省是否划算。",
+  "Whether the price of refined white flour is projected to fluctuate over the upcoming calendar year.": "白麵粉價格波動與奶油改用棕櫚油的計畫無關。",
+  "Whether competing artisanal bakeries utilize unpasteurized dairy cream in their cakes.": "競爭者是否用未殺菌鮮奶油，無法判斷本店改配方是否可行。"
+ },
+ "d.diag-1813": {
+  "Whether the streaming platform produces more original drama series than original documentary films.": "戲劇與紀錄片製作數量，和共享帳號者是否轉為付費無關。",
+  "Whether the engineering team can deploy the password detection algorithm without server downtime.": "能否不停機部署偵測演算法是技術問題，不影響訂閱收入預測。",
+  "Whether competing streaming networks license their archived film libraries to broadcast television.": "競爭對手是否授權影片給電視台，與本公司用戶是否付費無關。"
+ },
+ "d.diag-1814": {
+  "Whether body-worn cameras utilize rechargeable lithium-ion battery packs or disposable cells.": "電池是鋰電池或一次性電池是設備細節，不影響能否減少過度執法。",
+  "Whether the police union supported the initial purchase tender for the recording devices.": "工會是否支持採購招標只是採購過程，無法評估攝影機的實際效果。",
+  "Whether neighboring county sheriffs’ departments utilize drone surveillance in hostage standoffs.": "鄰近縣警在人質對峙用無人機，與密錄器能否減少過度武力無關。"
+ },
+ "d.diag-1815": {
+  "Whether the genetically engineered corn stalks grow six inches taller than traditional non-GMO corn.": "玉米長得比較高是外觀特徵，不影響農藥支出是否減少。",
+  "Whether European regulatory agencies permit the importation of the engineered corn harvest.": "歐洲是否允許進口收成，屬於貿易規定，與農藥支出無關。",
+  "Whether the seed corporation holds patent protection on the genetic sequencing vectors.": "公司有無專利保護是商業權利問題，不影響農民能否省下農藥費。"
+ },
+ "d.diag-1816": {
+  "Whether the touchscreen kiosks are illuminated by energy-efficient LED display panels.": "螢幕是否用省電LED只是設備細節，不影響人力成本是否減少三成。",
+  "Whether the restaurant chain offers plant-based vegetarian burger alternatives on its menu.": "是否供應植物肉漢堡是菜單問題，與自助點餐省人力無關。",
+  "Whether competing burger chains introduced mobile app drive-thru pickup lanes.": "對手有無手機得來速是別家策略，不能判斷本公司人事成本變化。"
+ },
+ "d.diag-1817": {
+  "Whether soft drink bottling manufacturers employ unionized transport logistics drivers.": "軟飲瓶裝廠司機有無工會，與課稅能否減少肥胖無關。",
+  "Whether sugar cane farmers receive federal agricultural price-support subsidies.": "甘蔗農是否獲政府價格補貼，屬於農業政策，與肥胖率無關。",
+  "Whether artificial non-caloric sweeteners leave a metallic aftertaste on the palate.": "人工甜味劑是否有金屬餘味是口感問題，不影響稅是否降低肥胖。"
+ },
+ "d.diag-1818": {
+  "Whether electric vehicle batteries can be recycled at the end of their operational lifecycle.": "電池可否回收是環保議題，不影響租車公司的營運利潤。",
+  "Whether corporate car rental loyalty program members prefer luxury sedans over compact SUVs.": "忠誠會員偏好豪華轎車或休旅車，無法評估全面改電動車是否划算。",
+  "Whether rental branch offices are located adjacent to international airport passenger terminals.": "分店是否靠近機場航廈，與電動車能否提高利潤無關。"
+ },
+ "d.diag-1819": {
+  "Whether university libraries archive digital copies of historical master's theses.": "圖書館典藏碩士論文數位檔，與學生買教科書的總成本無關。",
+  "Whether students prefer highlighting physical textbook pages with fluorescent markers.": "學生喜歡用螢光筆畫紙本教科書，是偏好問題，與總成本無關。",
+  "Whether tenure-track professors are granted sabbatical leaves to author academic monographs.": "教授是否有休假寫專書，與學生的教育費用無關。"
+ },
+ "d.diag-1820": {
+  "Whether local supermarkets print promotional weekly discount coupons on recycled paper.": "超市折價券用再生紙印刷，與購物袋禁令能否減少垃圾無關。",
+  "Whether plastic bags are composed of low-density polyethylene or high-density polymers.": "塑膠袋是低密度或高密度聚乙烯，無法判斷掩埋垃圾量是否減少。",
+  "Whether municipal landfill incinerators operate below regulatory emission standards.": "焚化爐排放是否符合標準，是空氣污染問題，不涉及掩埋場垃圾量。"
+ },
+ "d.diag-1821": {
+  "The manufacturer outsourced its mechanical movement assembly to a state-of-the-art facility in Switzerland.": "把機芯組裝外包到瑞士，沒說明漲價四成為何銷量反而增加。",
+  "The global production of stainless steel remained constant across the identical five-year period.": "全球不鏽鋼產量不變，與手錶漲價後銷量增加無關。",
+  "Competitor brands of quartz watches lowered their retail prices by fifteen percent.": "競爭石英錶降價會讓這家更難賣，不能解釋銷量為何增加。"
+ },
+ "d.diag-1822": {
+  "The highway corridor connects two agricultural towns with populations of fewer than twenty thousand residents.": "連接兩個小鎮只是路段背景，不能說明提高限速為何事故減少。",
+  "Highway patrol officers issued twenty percent more speeding citations in the first month following the change.": "多開二成超速罰單反映執法，不能說明事故為何下降。",
+  "The price of regular unleaded gasoline increased by fifteen cents per gallon over the year.": "汽油漲價可能使人少開車，但並未針對提速後事故減少的矛盾。"
+ },
+ "d.diag-1823": {
+  "Unlimited PTO policies are predominantly adopted by high-growth software and financial technology startups.": "無限休假多為新創公司採用，只說明誰採用，沒解釋為何休假變少。",
+  "Employees at firms with capped allowances must request vacation approvals at least two weeks in advance.": "有限額者需提前兩週申請，說明限額公司的手續，沒解釋無限者為何休得少。",
+  "State labor laws require corporations to pay out unused capped vacation days upon employee termination.": "勞動法規定限額休假離職時要折現，不能解釋無限休假者為何少休。"
+ },
+ "d.diag-1824": {
+  "Allergy symptoms in the target demographic are most severe during early spring tree-pollination cycles.": "過敏症狀在早春最嚴重只是季節背景，不能說明新噴劑為何賣不好。",
+  "The competitor allergy spray has been available on pharmacy shelves for over fifteen consecutive years.": "對手已上市十五年也許有品牌優勢，但不如灼熱感能直接解釋銷量低。",
+  "Over-the-counter allergy medications are categorized as non-prescription medical devices.": "非處方過敏藥分類為醫療器材只是法規分類，不能說明銷量差。"
+ },
+ "d.diag-1825": {
+  "The public library system added twenty thousand new physical hardcover titles to its catalog during the period.": "新增兩萬本精裝書卻借閱減少，反而更不能解釋借閱量為何下降。",
+  "Digital e-book downloads through the library’s mobile application increased by five percent annually.": "電子書下載增加五成只是小幅增加，不足以說明來館人次創紀錄。",
+  "Surrounding suburban municipal libraries faced severe municipal budget cuts that restricted weekend operating hours.": "鄰近圖書館縮減週末開放時間可能讓人移來，但無法解釋借書量下降。"
+ },
+ "d.diag-1826": {
+  "Organic milk contains higher concentrations of omega-3 fatty acids than conventional pasteurized milk.": "奧米加三含量是營養成分，無法解釋營收為何下跌三成。",
+  "The dairy cooperative distributes its products through regional organic grocery store networks.": "透過有機超市通路銷售只是銷售管道，無法說明營收下跌。",
+  "Glass milk bottling packaging was replaced with recyclable cardboard cartons to reduce freight costs.": "改用紙盒是為降低運費，與牛奶銷售收入下降無關。"
+ },
+ "d.diag-1827": {
+  "Fuel consumption per passenger mile increased marginally due to the weight of the suite partitions.": "每人每哩耗油略增會減少利潤，無法解釋獲利為何提高。",
+  "Economy-class tickets on transcontinental routes include one free checked luggage allowance.": "經濟艙含託運行李是原本就有的福利，不能說明獲利增加。",
+  "The airline operates fifteen daily departures along its primary transcontinental hub corridor.": "每日十五班起飛只是航班數量，沒說明少二十個座位為何獲利更高。"
+ },
+ "d.diag-1828": {
+  "The fitness application offers customizable workout routines for strength training and cardiovascular exercise.": "提供肌力與有氧課程是功能介紹，無法說明提醒後流失率為何倍增。",
+  "App store customer ratings for mobile health applications average 4.2 out of five stars.": "應用程式平均四點二顆星是行業平均，與更新後流失增加無關。",
+  "The update included ten newly recorded high-definition instructional yoga videos.": "新增十部瑜伽影片是吸引用戶的因素，反而更不能解釋流失暴增。"
+ },
+ "d.diag-1829": {
+  "The highway construction was completed six months ahead of schedule and three million dollars under budget.": "提前完工又省三百萬是工程績效，與通勤時間為何變長無關。",
+  "The municipal speed limit on the newly constructed expressway was set at fifty-five miles per hour.": "限速五十五英里只是設定，沒說明新路為何讓通勤更慢。",
+  "Local property values in residential neighborhoods adjacent to highway exits rose by eight percent.": "出口附近房價上漲是結果，不能解釋通勤時間增加。"
+ },
+ "d.diag-1830": {
+  "The electric SUV interior features vegan leather upholstery and a panoramic tempered glass roof.": "真素皮與全景玻璃車頂是內裝配備，不能解釋租車公司為何不買。",
+  "Rental car agencies generate sixty percent of their annual revenues from airport terminal locations.": "租車公司六成營收來自機場據點，無法說明為何不採購這款車。",
+  "The startup’s CEO frequently appears on national business television broadcasts to discuss renewable energy.": "創辦人常上電視談再生能源是宣傳，反而不能解釋沒訂單。"
+ },
+ "d.diag-1831": {
+  "The first is the main conclusion; the second provides contextual background information.": "第一句黑體只是支持理由，不是主要結論；真正結論是開頭否決的建議。",
+  "Both boldface portions are intermediate conclusions used to support a third unstated thesis.": "兩段黑體並非都是中間結論，第一句是事實證據，且主結論有明確說出。",
+  "The first provides evidence supporting a claim that the argument seeks to refute; the second is that refutation.": "論證沒有要反駁地質調查，第二句也不是反駁，而是風險結論。"
+ },
+ "d.diag-1832": {
+  "The first is the main conclusion of the argument; the second is a premise supporting it.": "第一段是證據，不是主要結論；主要結論是不該給生質能源補貼。",
+  "The first is an objection raised against the author’s position; the second is the author’s refutation of that objection.": "第一段不是反對意見，第二段也不是作者的反駁，而是作者自己的論證。",
+  "Both boldface portions are premises offered in support of the author's primary conclusion.": "第二段黑體是中間結論，不是單純前提，兩段黑體角色不同。"
+ },
+ "d.diag-1833": {
+  "The first is a premise that the argument seeks to establish; the second is the main conclusion of the argument.": "第一句黑體是作者反對對方的立場，不是要被證明的前提；主結論是投資大眾運輸。",
+  "The first introduces background context; the second is a counterexample undermining the author's thesis.": "第二句是中間結論，不是主要結論；真正結論是應投資大眾運輸。",
+  "Both boldface portions represent opposing claims that the argument systematically disproves.": "第一句不是背景，第二句支持作者論點，不是反例。"
+ },
+ "d.diag-1834": {
+  "The first is an intermediate conclusion; the second is the main conclusion.": "第一句才是主要結論，第二句是支持它的中間結論，順序顛倒了。",
+  "The first is background context; the second is an empirical premise.": "第一句不是背景，第二句也不是實證前提，而是由證據得出的結論。",
+  "The first provides evidence supporting a claim the author opposes; the second refutes that claim.": "文章沒有支持作者反對的主張，第二句也不是反駁。"
+ },
+ "d.diag-1835": {
+  "The first is the main conclusion of the argument; the second is a factual premise supporting that conclusion.": "第一句是作者要反駁的高層假設，不是主要結論；真正結論是節省被誇大。",
+  "The first introduces an empirical finding; the second is a concession to a rival argument.": "第一句不是實證發現，第二句也不是讓步，而是作者自己的推論。",
+  "Both boldface portions are intermediate conclusions that support the opening premise.": "第一句不是中間結論，而是被質疑的假設，且第二句不是支持開頭前提。"
+ },
+ "d.diag-1836": {
+  "The first is an intermediate conclusion; the second is the main conclusion.": "第二句不是主要結論，真正的主要結論是應優先提供聯邦貸款擔保。",
+  "The first is an objection that the argument refutes; the second is the refutation.": "文章沒有反駁任何異議，第二句也不是反駁，而是比較性證據。",
+  "Both boldface portions are background premises supporting a rival energy policy.": "兩句黑體都在支持小型模組反應爐，不是支持對立能源政策。"
+ },
+ "d.diag-1837": {
+  "The first is the primary conclusion of the argument; the second provides contextual evidence supporting it.": "第一句是批評者的說法，作者要反駁它，不是主要結論；第二句是中間結論。",
+  "The first is an intermediate conclusion; the second is an unproven assumption.": "第一句不是中間結論，第二句也不是未證明的假設，而是由證據支持的結論。",
+  "Both boldface portions are concessions made by the author to appease critics.": "第一句是對方立場，作者並未讓步以安撫批評者。"
+ },
+ "d.diag-1838": {
+  "The first is an intermediate conclusion; the second is an empirical counterexample to the main thesis.": "第一句是主要結論，不是中間結論；第二句是支持它的前提，不是反例。",
+  "The first introduces background context; the second is the primary conclusion.": "第一句不是背景，第二句也不是主要結論，主結論是央行應停止加息。",
+  "Both boldface portions are rival claims that the central bank considers equally valid.": "兩段黑體不是彼此對立的主張，而是同一論證中的結論與前提。"
+ },
+ "d.diag-1839": {
+  "The first is the main conclusion of the argument; the second is a premise offered to defend it.": "第一句是被承認的調查結果，不是主要結論；第二句才是中間結論。",
+  "The first is a refuted fallacy; the second is an ungrounded speculation.": "第一句不是被駁倒的謬誤，第二句也不是無根據臆測，而是作者的論點。",
+  "Both boldface portions represent intermediate steps leading to an unstated conclusion.": "兩段黑體角色不同，且最終結論「拒絕全遠端」已明確說出。"
+ },
+ "d.diag-1840": {
+  "The first is the main conclusion of the argument; the second is an intermediate finding.": "第一句是反方擔憂的證據，主要結論是開頭「應核准風場」。",
+  "The first introduces an unverified assumption; the second is an irrelevant digression.": "第一句是有調查支持的發現，不是未經證實的假設，第二句也非離題。",
+  "Both boldface portions are premises supporting the opening policy recommendation.": "第一句不支持開頭建議，而是反對者的論據，兩段角色不同。"
+ },
+ "d.diag-1841": {
+  "The first is the main conclusion; the second provides factual evidence supporting it.": "第一句是環保人士的論點，作者將反駁，主要結論是第二句。",
+  "The first is an objection that completely invalidates the author’s argument; the second is an irrelevant concession.": "第一句並未推翻作者論點，第二句也是核心結論，不是無關讓步。",
+  "Both boldface portions are premises used to defend the opening claim.": "第一句是被質疑方的前提，不是作者用來支持開頭主張的前提。"
+ },
+ "d.diag-1842": {
+  "The first is the main conclusion of the argument; the second is an empirical premise.": "第一句是對租金管制的讓步，不是主要結論；主要結論是廢除管制。",
+  "The first is a premise supporting rent control; the second is a premise opposing housing development.": "第一句是支持管制的讓步，第二句是針對未來房客傷害的結論，不是反對開發。",
+  "Both boldface portions are intermediate conclusions supporting a compromise policy.": "兩段黑體並非支持折衷政策，作者明確主張廢除租金管制。"
+ },
+ "d.diag-1843": {
+  "The first is the main conclusion of the argument; the second is an intermediate claim.": "第一句是反對者的前提，不是主要結論；最後一句才是主要結論。",
+  "The first is a concession made by the author; the second is an unverified assumption.": "第一句是反方論點，作者並未同意；第二句也是主要結論，不是未證實假設。",
+  "Both boldface portions are claims that the author attempts to disprove.": "第一句是對方論據，作者承認描述正確但不接受推論，沒有要駁倒第二句。"
+ },
+ "d.diag-1844": {
+  "The first is the main conclusion of the argument; the second provides evidence in its defense.": "第一句是航空公司的異議，不是主要結論；第二句是作者對異議的判斷。",
+  "The first is an empirical finding that validates the author's policy; the second is an irrelevant digression.": "第一句不是支持作者政策的發現，而是反方異議，第二句也不是離題。",
+  "Both boldface portions are intermediate conclusions that support the airlines' position.": "第二句是作者批評航空公司，不是支持航空公司立場的中間結論。"
+ },
+ "d.diag-1845": {
+  "The first is the author's main conclusion; the second provides empirical data supporting it.": "第一句是反對的論點，作者要駁斥；第二句才是結論，順序顛倒。",
+  "The first is an unverified assumption; the second is a concession to economic orthodoxy.": "第一句是作者要質疑的看法，不是未證實假設；第二句也不是對正統經濟學讓步。",
+  "Both boldface portions are intermediate claims supporting a radical increase in minimum wages.": "作者反對的是過度悲觀的論點，並未主張大幅調高最低工資。"
+ },
+ "d.diag-1846": {
+  "The first is the main conclusion; the second provides empirical evidence supporting it.": "第一句是作者讓步承認的效益，不是主要結論；第二句是預測而非證據。",
+  "The first is an objection that disproves the author's thesis; the second is an irrelevant afterthought.": "第一句不是推翻作者論點的反對意見，而是被承認的前提，第二句也非離題。",
+  "Both boldface portions are intermediate conclusions that support the robotaxi industry.": "兩段黑體並未支持無人計程車產業，作者結論是會加劇壅塞。"
+ },
+ "d.diag-1847": {
+  "The first is the main conclusion; the second provides factual evidence supporting that conclusion.": "第一句是反對作者建議的論點，不是主要結論；第二句是價值判斷。",
+  "The first is an intermediate conclusion; the second is an empirical premise.": "第一句不是中間結論，第二句也不是單純事實前提，而是價值判斷。",
+  "Both boldface portions represent concessions made by the archaeological service.": "兩段黑體並非考古單位的讓步，而是對立論點與作者的價值判斷。"
+ },
+ "d.diag-1848": {
+  "The first is the main conclusion; the second is an empirical premise supporting it.": "第一句是承認的好處，不是主要結論；第二句才是整體結論。",
+  "The first is an unverified assumption; the second is a refutation of the opening premise.": "第一句是承認的益處，不是未經證實的假設，第二句也不是反駁開頭前提。",
+  "Both boldface portions are intermediate claims advocating the deregulation of agricultural biotechnology.": "兩段黑體不是主張放寬農業生物技術規定，作者在指出種子壟斷風險。"
+ },
+ "d.diag-1849": {
+  "The first is an intermediate conclusion; the second is the main conclusion.": "順序顛倒：第一句才是主要結論，第二句是支持它的中間結論。",
+  "The first is background context; the second is an objection raised by organic farming proponents.": "第一句才是主要結論，且第二句不是有機農業支持者的反對。",
+  "Both boldface portions are concessions acknowledging the ecological benefits of synthetic fertilizers.": "第二句不是讓步，而是作者自己推論出的生態災難。"
+ },
+ "d.diag-1850": {
+  "The first is the main conclusion of the argument; the second is a supporting premise.": "第一句是作者要批評的對立分析，不是主要結論；第二句才是作者判斷。",
+  "The first introduces an empirical finding; the second is an unverified speculation.": "第一句是對方的說法，不是單純實證發現，第二句也非未證實的臆測。",
+  "Both boldface portions represent concessions made by the central bank.": "兩段黑體不是央行的讓步，第一句是央行的理由，第二句是作者的結論。"
+ },
+ "d.diag-1851": {
+  "relies on an unrepresentative sample of violent crime statistics from a single weekend": "題目是單次事件的因果推論，不是談單一週末的樣本不具代表性。",
+  "presupposes the truth of the very claim that it sets out to prove": "市長沒有用結論證明結論，並非循環論證，問題在因果推論。",
+  "confuses a necessary condition for crime reduction with a sufficient condition": "題目沒有涉及必要條件與充分條件的混淆，而是時間先後被當因果。"
+ },
+ "d.diag-1852": {
+  "It attacks the personal integrity of pharmaceutical rheumatologists rather than addressing their clinical data.": "文章沒有人身攻擊風濕科醫師，與推論缺陷不符。",
+  "It draws an inference based on the assumption that what is true of a part of the body is necessarily true of the whole.": "沒有以部分推論整體的情況，問題是把先後當因果並忽略自然緩解。",
+  "It treats a condition that is sufficient to alleviate pain as one that is necessary for doing so.": "文章沒有把充分條件當必要條件，而是把先後順序當作因果。"
+ },
+ "d.diag-1853": {
+  "It relies on equivocation by using the term 'deal' in two fundamentally incompatible senses.": "不需要詞義雙關，錯誤在把領帶與簽約成功當因果，與雙關無關。",
+  "It creates a false dichotomy by presenting only two extreme contractual alternatives.": "題目沒有把選項簡化為兩種極端，與假二分法無關。",
+  "It assumes that a strategy that works for a competitor will work identically for his own firm.": "題目沒有拿競爭對手作類比，而是把迷信的巧合當因果。"
+ },
+ "d.diag-1854": {
+  "kale contains high concentrations of vitamin K and dietary fiber": "羽衣甘藍含維生素 K 屬實，但這不是邏輯缺陷，也不是質疑推論的點。",
+  "not all students enrolled in the school consume meals provided by the cafeteria": "不是所有學生都在學校用餐是另一問題，沒指出分數可能由其他原因提升。",
+  "standardized exams test verbal aptitude in addition to mathematical reasoning": "測驗內容包含語文和數學，無法指出分數提高為何不能歸因於冰沙。"
+ },
+ "d.diag-1855": {
+  "It relies on the assumption that website crashes are inherently detrimental to customer brand loyalty.": "網站當機損害品牌忠誠度是無關的假設，不是結論的缺陷。",
+  "It assumes that advertising campaigns on social media are less cost-effective than billboard displays.": "社群廣告與看板的成本效益比較，與當機原因無關。",
+  "It draws a conclusion regarding server capacity without consulting the firm’s chief technology officer.": "是否諮詢技術長不影響因果判斷，缺陷在忽略其他流量來源。"
+ },
+ "d.diag-1856": {
+  "assumes that what is true of dawn during the summer solstice is true of dawn during the winter solstice": "夏至與冬至的曉日差別，不是此推論的缺陷，錯在把先後當因果。",
+  "relies on expert meteorological testimony that has been thoroughly discredited": "題目沒有涉及專家氣象證詞，與該推論無關。",
+  "concludes that the sun rises because of the rooster without establishing that roosters are native to the region": "雞是否原生於當地與日出原因無關，錯在把時間順序當因果。"
+ },
+ "d.diag-1857": {
+  "assumes that all equity investors watch international soccer broadcasts": "不是所有投資人都看足球與因果錯誤無關，問題是把巧合當成因果。",
+  "fails to specify whether the soccer match was decided in regular time or penalty shootouts": "勝負決定於正規賽或點球大戰，無法說明為何不能有因果關係。",
+  "relies on historical economic data spanning fewer than ten trading days": "不到十個交易日的資料量問題，不是題目要指出的核心缺陷。"
+ },
+ "d.diag-1858": {
+  "assumes that yellow paint is more toxic to inhale than industrial gray enamel": "油漆毒性與罰單減少無關，題目談的是顏色的因果解釋。",
+  "relies on survey data collected exclusively from transit maintenance workers": "題目沒有使用維修工人的問卷資料，這是無依據的選項。",
+  "concludes that ticket compliance increased without defining what constitutes transit fare evasion": "罰單減少已有數據，沒必要先定義逃票，缺陷在因果機制缺乏說明。"
+ },
+ "d.diag-1859": {
+  "assumes that iron is an insulator that repels electrostatic discharge": "鐵會排斥靜電放電是物理假設，題目缺陷不在此。",
+  "fails to interview electrical engineering professors from regional technical institutes": "是否訪談電機教授是調查方式，不是推論的邏輯錯誤。",
+  "concludes that lightning never strikes residential structures located in urban zones": "屋主沒有說都市住宅絕不會遭雷擊，他的錯誤是把沒被雷擊當作馬蹄鐵的功勞。"
+ },
+ "d.diag-1860": {
+  "Mozart composed his symphonies in the late eighteenth century rather than the modern era": "莫札特的創作年代與銷售增加無關。",
+  "shoppers in the retail store possessed diverse musical genre preferences": "顧客音樂偏好不同並未提供另一種導致購買增加的原因。",
+  "the volume of the store speakers was set below sixty-five decibels": "喇叭音量是否低於六十五分貝，沒說明是否有其他因素導致銷售增加。"
+ },
+ "d.diag-1861": {
+  "attacking Leo’s personal character rather than evaluating his academic credentials": "沒有攻擊李奧的人格，錯誤在把必要條件當成充分條件。",
+  "relying on an ambiguous definition of the term 'cumulative'": "「累積」一詞並不含糊，缺陷不是歧義。",
+  "assuming that what is true of a single student is true of the entire graduating class": "題目沒有把個別學生的情況推到全體，而是條件關係的混淆。"
+ },
+ "d.diag-1862": {
+  "fails to specify whether Marcus completed his eye examination with or without corrective lenses": "戴不戴矯正鏡片是細節，不是邏輯缺陷，缺陷在必要與充分條件。",
+  "assumes that commercial trucking regulations are identical across all state jurisdictions": "各州法規是否相同不是推論的錯誤，錯誤在視力檢查通過就代表取得執照。",
+  "draws a conclusion about Marcus based on statistical averages of other commercial drivers": "結論是針對馬可一人，沒有用統計平均推論，與題意不符。"
+ },
+ "d.diag-1863": {
+  "assumes that revenue diversification can be achieved without incurring initial capital costs": "初期資本成本不是題目缺陷，缺陷在特徵共通就保證成功。",
+  "ignores the competitive advantage enjoyed by single-product artisanal monopolies": "單一產品的工藝壟斷與推論缺陷無關。",
+  "fails to define whether 'diversification' encompasses foreign currency hedging operations": "外匯避險算不算多角化是定義細節，不是此論證的邏輯錯誤。"
+ },
+ "d.diag-1864": {
+  "relies on hearsay testimony from corporate compliance auditors": "不是靠聽聞的稽核證詞，缺陷是把解僱的充分原因當作唯一原因。",
+  "presupposes that insider trading is defined identically under federal and state penal codes": "聯邦與州法定義內線交易是否一致，不是推論缺陷。",
+  "treats David’s dismissal as an isolated incident unrepresentative of company culture": "大衛的解僱並未被當成孤立事件，缺陷是倒置了條件。"
+ },
+ "d.diag-1865": {
+  "assumes that synthetic nitrogen fertilizer possesses chemical properties identical to organic compost": "人工氮肥與有機堆肥是否相同，並不是推論的邏輯缺陷。",
+  "ignores the fact that wild orchids thrive in tropical rainforest canopies without soil": "野生蘭花在雨林樹冠生長與本題的氮肥推論無關。",
+  "draws a conclusion about orchids based on the physiological behavior of desert cacti": "沒有用沙漠仙人掌推論蘭花，錯誤是忽略還有其他開花條件。"
+ },
+ "d.diag-1866": {
+  "assumes that municipal building inspectors are susceptible to bribery and personal influence": "假設檢查員會受賄是無根據的攻擊，缺陷不在此。",
+  "overlooks the aesthetic impact of exterior metal fire escapes on urban architectural character": "外露金屬逃生梯的美觀與是否發給許可無關。",
+  "fails to specify whether the fire escape stairwells are constructed from reinforced steel or aluminum": "逃生梯用鋼或鋁是材質細節，不影響必要條件被誤當充分條件。"
+ },
+ "d.diag-1867": {
+  "ignores the fact that MFA software occasionally generates user login delays": "多因子驗證造成登入延遲與推論缺陷無關。",
+  "relies on cybersecurity survey data that was self-reported by IT managers": "自我申報的調查資料不是題目論證的來源，缺陷在於把必要條件當成充分條件。",
+  "treats ransomware as the only malware threat confronting corporate digital networks": "並未把勒索軟體當作唯一的威脅，缺陷是把消除單一弱點等於絕對安全。"
+ },
+ "d.diag-1868": {
+  "fails to consider that seventeenth-century Dutch painters utilized pigments sourced from lapis lazuli": "青金石顏料與推論缺陷無關，缺陷是把必要條件當成充分條件。",
+  "assumes that Rembrandt worked without employing apprentices or workshop assistants in Amsterdam": "是否有學徒協助不是推論的重點，缺陷在於證據不足以確認真跡。",
+  "draws a definitive judgment based on radiocarbon dating techniques that carry experimental margins of error": "題目沒有質疑放射性碳定年的誤差，缺陷是邏輯而非測量誤差。"
+ },
+ "d.diag-1869": {
+  "overlooks the impact of dividend reinvestment programs in long-term mutual fund portfolios": "股利再投資與推論缺陷無關，缺陷是把必要條件當成充分條件。",
+  "fails to state Julian’s exact current annual salary and anticipated career trajectory": "朱利安的薪資與職涯不是邏輯錯誤，缺陷是把共通行為當作保證。",
+  "presupposes that retirement age will remain fixed at sixty-five years across the next four decades": "退休年齡是否固定為六十五歲並非論證的假設，缺陷在條件關係。"
+ },
+ "d.diag-1870": {
+  "fails to account for differences in barometric pressure between high altitude and sea level": "氣壓差異是生理細節，不是推論的邏輯缺陷。",
+  "assumes that all Olympic track-and-field events require identical physiological endurance profiles": "並未假設所有田徑項目耐力需求相同，缺陷是必要訓練不等於保證達標。",
+  "relies on biographical testimonies provided by former Olympic gold medalists": "並未依賴金牌得主的證詞，而是誤用必要條件。"
+ },
+ "d.diag-1871": {
+  "It overlooks the possibility that tenured faculty members might occasionally express unpopular scholarly opinions.": "終身職教師偶爾發表不受歡迎意見，與推論缺陷無關。",
+  "It presumes without justification that non-tenured lecturers desire permanent career advancement within the university.": "官員沒有假設講師想要永久升遷，缺陷是把言論自由權等同於特定聘雇身分。",
+  "It assumes that academic tenure has been completely abolished across peer research universities.": "題目沒有說終身職制已被廢除，與缺陷無關。"
+ },
+ "d.diag-1872": {
+  "It ignores that public television networks receive statutory funding from government bodies.": "公共電視獲政府補助與本題的詞義混淆無關。",
+  "It assumes that commercial television networks never produce documentary journalism.": "並未假設商業電視從不製作紀錄片，缺陷是兩種「公共利益」的詞義混淆。",
+  "It takes for granted that democratic societies are the only governance systems that value commercial entertainment.": "並未假設民主社會獨有重視商業娛樂，缺陷是詞義偷換。"
+ },
+ "d.diag-1873": {
+  "It presumes that enterprise clients place zero economic value on color customization.": "企業客戶是否看重顏色自訂是另一回事，缺陷是「免費」的詞義轉換。",
+  "It fails to consider that open-source operating platforms are developed by volunteer engineers.": "開源平台由志工開發與本公司的論證無關。",
+  "It relies on the unsupported premise that custom color palettes reduce computer monitor energy consumption.": "自訂顏色與螢幕耗電無關，且文章沒有這個前提。"
+ },
+ "d.diag-1874": {
+  "Assumes that dramatic actors earn higher salaries than corporate compliance officers.": "演員與合規主管的薪資比較與論證缺陷無關。",
+  "Neglects to specify whether comedic performances are more harmful than tragic performances.": "喜劇與悲劇哪個傷害較大無關，缺陷是「說謊」的詞義含糊。",
+  "Fails to acknowledge that classic theatrical plays were originally composed in verse.": "經典戲劇原本用詩體寫成，與說謊是否不道德無關。"
+ },
+ "d.diag-1875": {
+  "It presumes that all wealthy individuals suffer from chronic psychiatric conditions.": "並未假設富人都有精神疾病，缺陷是把脫貧簡化為累積財富。",
+  "It relies on survey data gathered exclusively from developing agrarian economies.": "並未依賴農業經濟體的調查，缺陷是忽略基本資源能解決具體困境。",
+  "It assumes that spiritual contentment can be measured through algorithmic biometric sensors.": "並未假設心靈滿足能用生物感測器量測，缺陷是概念混淆。"
+ },
+ "d.diag-1876": {
+  "Fails to cite specific biochemical pathways involved in cellular apoptosis.": "是否引用細胞凋亡的生化路徑不是論證缺陷，缺陷是細胞層次不能類推到戰爭。",
+  "Assumes that national treaties have never succeeded in mitigating armed warfare.": "條約是否成功減少戰爭並非論證所假設的內容。",
+  "Overlooks that military defense budgets have expanded exponentially across sovereign states.": "軍事預算增加與論證缺陷無關，錯誤是跨層次類比。"
+ },
+ "d.diag-1877": {
+  "Fails to demonstrate that acrylic paints have lower toxicity than oil-based paints.": "油漆毒性高低是細節，缺陷是把綠色顏色當成環保。",
+  "Assumes that buyers in luxury subdivisions commute solely via electric trains.": "通勤方式是無關的假設，題目缺陷是詞義混淆。",
+  "Ignores that municipal zoning regulations mandate concrete sidewalk construction.": "分區法規要求水泥人行道與環保的詞義混淆無關。"
+ },
+ "d.diag-1878": {
+  "Assumes that ancient marble sculptures require more craftsmanship than contemporary digital art.": "古代大理石雕與數位藝術的工藝高低與論證缺陷無關。",
+  "Ignores that museum ticket prices fluctuate based on seasonal tourist demand.": "博物館票價隨旅遊季節變動與藝術評價能否客觀無關。",
+  "Fails to define whether emotional expressions must be pleasant to be deemed artistic.": "情感表達是否需要愉悅不是缺陷，缺陷是情感來源與技術評價被當作不相容。"
+ },
+ "d.diag-1879": {
+  "Overlooks that organic sea salt contains trace levels of magnesium and calcium.": "海鹽含鎂鈣不是邏輯缺陷，缺陷是把化合物當成組成元素。",
+  "Presumes that toxic gases cannot be safely isolated in glass containers.": "毒氣可否裝入玻璃容器與氯化鈉是否有毒的推論無關。",
+  "Ignores that excessive sodium consumption is correlated with elevated blood pressure.": "過量鈉與血壓有關，但這不是指出論證謬誤的原因。"
+ },
+ "d.diag-1880": {
+  "It presumes that all social media platforms are incorporated within the same sovereign jurisdiction.": "各平台是否在同一管轄區並非論證的缺陷。",
+  "It fails to note that newspaper circulations have plummeted over the past twenty years.": "報紙發行量下降與平台管理規範是否違憲無關。",
+  "It takes for granted that election candidates never utilize digital platforms for legitimate campaigning.": "候選人是否使用社群平台競選與推論缺陷無關。"
+ },
+ "d.diag-1881": {
+  "Fails to benchmark the consulting firm's performance against publicly traded competitors.": "並未談與上市對手的績效比較，缺陷是循環論證。",
+  "Presumes that all management consulting engagements result in positive shareholder value.": "顧問諮詢是否都帶來股東價值，並非論證的缺陷。",
+  "Ignores that proprietary methodologies must be registered with patent regulatory authorities.": "方法論是否需註冊專利，不影響論證是否循環。"
+ },
+ "d.diag-1882": {
+  "It neglects to provide an archaeological timeline for when the text was inscribed.": "缺少經文刻寫的考古時間表，不是此論證的邏輯缺陷。",
+  "It fails to compare the text's moral doctrines with contemporary secular jurisprudence.": "與世俗法理比較教義並不是論證缺陷，缺陷是循環論證。",
+  "It presupposes that ancient languages cannot be translated into modern vernaculars.": "古代語言能否翻譯，與結論用結論證明自己無關。"
+ },
+ "d.diag-1883": {
+  "It overlooks the existence of state-subsidized universal healthcare programs in overseas markets.": "海外有公費醫療並非論證的缺陷，缺陷是定義循環。",
+  "It fails to document the precise research expenditures required to discover new chemical entities.": "研發費用是否記錄，與「市場價值」被定義成藥廠定價的循環無關。",
+  "It presumes that generic drug manufacturers have lower operating profit margins.": "學名藥廠利潤率不影響論證是否循環。"
+ },
+ "d.diag-1884": {
+  "It fails to analyze the box office receipts of the director's cinematic debut.": "首部電影票房與論證缺陷無關，缺陷是定義使主張不可反駁。",
+  "It assumes that cinematic auteurs must write their own musical scores.": "導演是否自製配樂與論證缺陷無關。",
+  "It relies on interview testimonials from actors who worked on low-budget independent films.": "演員的訪談證詞並非論證依據，缺陷是循環定義。"
+ },
+ "d.diag-1885": {
+  "It confuses a necessary condition for fiscal solvency with a sufficient condition.": "州長的錯誤不是必要與充分條件的混淆，而是循環論證。",
+  "It assumes that passenger rail patronage will exceed airline passenger volumes.": "並未涉及乘客量與航空旅客比較，缺陷是把結論換句話說。",
+  "It overlooks the environmental impact of tunnel excavation through granite bedrock.": "隧道開挖的環境影響與推論形式無關。"
+ },
+ "d.diag-1886": {
+  "Fails to specify whether two-factor authentication is mandatory for administrative logins.": "雙因子驗證是否必要是技術細節，缺陷是自我指涉的循環推論。",
+  "Assumes that malicious hackers utilize only brute-force cryptographic cracking techniques.": "並未假設駭客只用暴力破解，缺陷是循環。",
+  "Ignores that hardware routers require firmware updates to prevent denial-of-service disruptions.": "路由器韌體更新與論證缺陷無關。"
+ },
+ "d.diag-1887": {
+  "It takes for granted that marginal propensity to consume is uniform across income brackets.": "邊際消費傾向是否一致不是此推論的缺陷，缺陷是循環論證。",
+  "It assumes that central banks will raise interest rates simultaneously.": "央行是否同時升息並非論證假設，缺陷是自我證明。",
+  "It fails to account for international balance of trade deficits in manufacturing.": "製造業貿易逆差與推論缺陷無關。"
+ },
+ "d.diag-1888": {
+  "It assumes that test questions contain cultural biases against bilingual test-takers.": "測驗題帶有文化偏見是另一種批評，不是此論證的循環缺陷。",
+  "It fails to calculate the standard deviation across differing geographical testing centers.": "地區測驗中心標準差與推論缺陷無關。",
+  "It overlooks that test-takers who review preparation manuals show improved timing performance.": "準備手冊提升答題時間是另一種批評，與循環無關。"
+ },
+ "d.diag-1889": {
+  "It ignores that constitutional monarchies share power with elected parliamentary assemblies.": "君主立憲制與議會分享權力不是此論證的缺陷，缺陷是循環。",
+  "It relies on historical anecdotes drawn exclusively from medieval European kingdoms.": "題目沒有談中世紀歐洲軼事，缺陷在於互相證明。",
+  "It assumes that democratic republics experience higher rates of civil insurrection.": "民主共和國內亂率較高是題目沒有的假設。"
+ },
+ "d.diag-1890": {
+  "It assumes that forensic accounting algorithms can detect fraudulent double-entry transactions.": "鑑識會計演算法無關，缺陷是財報與誠實相互證明的循環。",
+  "It fails to review the depreciation schedules applied to heavy commercial industrial machinery.": "折舊表與設備無關，不是此論證缺陷。",
+  "It ignores that external audit partners are rotated once every seven financial quarters.": "外部稽核合夥人輪調與此論證缺陷無關。"
+ },
+ "d.diag-1891": {
+  "It fails to specify which foreign adversaries currently possess amphibious naval landing vessels.": "敵國有沒有兩棲登陸艦，不是此論證的缺陷。",
+  "It assumes that doubling procurement would eliminate all domestic budget deficits.": "並未假設加倍採購能消除赤字，缺陷是假二分。",
+  "It presumes that civilian manufacturing facilities cannot be requisitioned during wartime.": "民間工廠能否徵用與推論缺陷無關。"
+ },
+ "d.diag-1892": {
+  "Fails to acknowledge that humanities graduates achieve high acceptance rates to law schools.": "人文系畢業生的法學院錄取率，不是此論證的邏輯缺陷。",
+  "Assumes that artificial intelligence researchers never read classical historical literature.": "並未假設AI研究者不讀古典文學，缺陷是假二分法。",
+  "Ignores that private philanthropy donations to universities fluctuate with stock market cycles.": "私人捐款隨股市波動與推論缺陷無關。"
+ },
+ "d.diag-1893": {
+  "It presumes that venture capital syndicates require board representation in every financing round.": "創投董事席位與論證缺陷無關，缺陷是只列兩種極端結果。",
+  "It fails to cite specific accounting definitions of operational working capital.": "營運資金的會計定義不是此論證的邏輯缺陷。",
+  "It ignores that corporate trademark registrations grant legal exclusivity in international jurisdictions.": "商標登記的國際獨占性與推論缺陷無關。"
+ },
+ "d.diag-1894": {
+  "Fails to project the impact of pedestrianization on local retail boutique revenues.": "零售精品店營收是額外考量，不是論證缺陷，缺陷是忽略折衷方案。",
+  "Assumes that delivery trucks require the same road space as passenger sedans.": "送貨卡車與轎車的路面占用，不是此論證的缺陷。",
+  "Ignores that electric vehicle market penetration will reach twenty percent within five years.": "電動車市占率未來是否達兩成無關，缺陷是假二分。"
+ },
+ "d.diag-1895": {
+  "Assumes that nuclear reactors require three decades of engineering construction.": "核電廠需要三十年建造，不是此論證的缺陷。",
+  "Fails to quantify the exact megawatt capacity of offshore wind turbine arrays.": "離岸風機容量不是論證缺陷，缺陷是假二分。",
+  "Ignores that coal mining labor unions negotiate multi-year collective bargaining agreements.": "煤礦工會的集體協商與推論缺陷無關。"
+ },
+ "d.diag-1896": {
+  "It neglects to provide recipes for preparing lean poultry cuts.": "不提供瘦肉食譜不是邏輯缺陷，缺陷是假二分。",
+  "It assumes that exercise routines burn calories at identical rates across gender cohorts.": "運動消耗熱量的性別差異與此論證缺陷無關。",
+  "It fails to cite the international market price of grass-fed bovine tallow.": "草飼牛油的國際價格與論證缺陷無關。"
+ },
+ "d.diag-1897": {
+  "Fails to analyze juvenile recidivism statistics across municipal detention centers.": "少年再犯統計不是此論證缺陷，缺陷是只列兩種極端教養方式。",
+  "Assumes that children who practice classical violin never experience emotional tantrums.": "古典小提琴學生的情緒與推論缺陷無關。",
+  "Ignores that secondary school curricula incorporate civics education classes.": "中學公民教育課程與論證缺陷無關。"
+ },
+ "d.diag-1898": {
+  "It fails to benchmark compilation speed between static and dynamic typing runtimes.": "靜態與動態型別編譯速度，不是此論證的邏輯缺陷。",
+  "It presumes that new programming languages require specialized integrated development environments.": "新語言需要專用開發環境與推論缺陷無關。",
+  "It takes for granted that database queries consume more memory than frontend rendering engines.": "資料庫查詢與前端畫面的記憶體比較無關，缺陷是假二分。"
+ },
+ "d.diag-1899": {
+  "Assumes that Renaissance paintings require atmospheric humidity control systems.": "文藝復興畫作需要濕度控制無關，缺陷是只給兩個極端選項。",
+  "Fails to disclose whether the paintings were donated with legally binding donor covenants.": "畫作是否有捐贈契約不是論證缺陷，缺陷是假二分。",
+  "Presumes that modern art exhibitions attract younger demographic audiences.": "現代藝術展吸引年輕觀眾與推論缺陷無關。"
+ },
+ "d.diag-1900": {
+  "It presumes that freight container shipping rates will double over the subsequent fiscal quarter.": "貨櫃運費翻倍的預測並非論證假設，缺陷是假二分。",
+  "It overlooks that domestic patent litigation has increased among industrial robotics manufacturers.": "機器人製造商的專利訴訟增加是另一件事，與論證缺陷無關。",
+  "It assumes that consumer goods packaging relies predominantly on virgin corrugated cardboard.": "消費品包裝用原生紙板與推論缺陷無關。"
+ },
+ "d.diag-1901": {
+  "Jason has completed at least five hundred commercial flight hours.": "五百飛行小時不能由前提推出，題目只談安全許可與詐欺前科。",
+  "Jason holds an advanced university degree in aviation safety management.": "航空安全管理碩士學位沒有被前提提及，不能必然推出。",
+  "AirGlobal has never hired an individual who failed a routine medical examination.": "公司從未僱用體檢不合格者，前提沒有提供這項資訊。"
+ },
+ "d.diag-1902": {
+  "Flight TS-402 was carrying twice its certified maximum cargo weight.": "貨運超載兩倍沒有被前提提及，無法必然推出。",
+  "AeroTech will be forced to recall all commercial airliners currently in global operation.": "召回全球客機是誇大的後果，不是前提推出的結論。",
+  "TransSky Airlines will immediately cease all transatlantic route schedules.": "航空公司立即停飛所有航線，同樣是過度推論，前提沒有說。"
+ },
+ "d.diag-1903": {
+  "Elena was formerly an associate attorney at Sterling & Cross.": "艾蓮娜是否曾任副手，前提沒有提及，不能必然推出。",
+  "The litigation against the corporate client will be dismissed with prejudice.": "訴訟是否被駁回與前提無關，不能推出。",
+  "All associate attorneys at Sterling & Cross are permitted to sue any corporate entity.": "資深助理律師可任意控告企業與前提不符，不能必然推出。"
+ },
+ "d.diag-1904": {
+  "The Logistics Division incurred fewer operating expenses than any other division of OmniCorp.": "營運費用比其他部門低不能由前提推出。",
+  "OmniCorp will dismiss the head of accounting for the Logistics Division.": "開除會計主管是前提沒提到的後果。",
+  "Every financial division of OmniCorp completed its annual audit ahead of schedule.": "所有財務部門提前完成稽核與前提無關，不能必然推出。"
+ },
+ "d.diag-1905": {
+  "Blueprint Model Alpha will be granted a permanent municipal zoning variance.": "獲得永久分區變更豁免沒有被前提提及，不能必然推出。",
+  "Active geothermal heating is legally prohibited in commercial buildings in Greenfield.": "禁止商辦建築使用地熱沒有被前提提及，過度推論。",
+  "Passive solar heating is cheaper to install than geothermal heat pump infrastructure.": "被動式太陽能比地熱便宜是成本比較，前提沒說。"
+ },
+ "d.diag-1906": {
+  "Marcus has worked in culinary restaurants for at least fifteen years.": "做過十五年餐廳工作不能由前提推出，前提只談通過品酒考試。",
+  "No chef at the Grand Palate Restaurant is permitted to cook without tasting ingredients.": "廚師不得不試味道是題目沒有的新規定，不能必然推出。",
+  "The Level Four Master tasting examination includes thirty vintage French Bordeaux wines.": "考試是否含三十瓶波爾多紅酒是額外細節，前提沒提。"
+ },
+ "d.diag-1907": {
+  "The reactor operated at an internal temperature of precisely 250 degrees Celsius.": "反應器溫度剛好二百五十度是特定數值，無法由前提必然推出。",
+  "The chemical manufacturer will install automated backup heating coils immediately.": "安裝備用加熱線圈是前提沒說的後續行動，不能推出。",
+  "Brittle plastic polymers can be recycled into high-grade automotive bumpers.": "脆化塑膠可回收成保險桿，是新資訊，與前提無關。"
+ },
+ "d.diag-1908": {
+  "Rachel is the chief architect and technical supervisor of Project Zephyr.": "拉雪兒是專案首席架構師，前提沒有說明職位，不能推出。",
+  "Cryptographic clearance keys are reset and reissued every ninety days.": "金鑰每九十天重置是前提沒有的資訊。",
+  "Project Zephyr documentation contains confidential military defense patents.": "文件包含軍事專利是前提沒說的內容，不能推出。"
+ },
+ "d.diag-1909": {
+  "Gomez has completely recovered from his elective orthopedic surgical procedure.": "戈麥斯已完全康復不能由前提推出，前提只談手術前的限制。",
+  "Medication Delta is the most potent anti-inflammatory prescription available at the hospital.": "藥物德爾塔是最強消炎藥，題目沒有說明，不能推出。",
+  "Orthopedic surgeons are legally liable for any elevated liver enzyme complications.": "外科醫生須負擔肝酵素升高併發症責任，前提沒有提及。"
+ },
+ "d.diag-1910": {
+  "Liam believes the robotics startup will achieve profitability within one year.": "利亞姆相信獲利時程是推測，前提沒有提及，不能必然推出。",
+  "The robotics startup secured financing from a competing venture capital syndicate.": "新創公司取得對手資金是額外事實，前提沒說。",
+  "Apex Capital has never invested in an early-stage artificial intelligence robotics firm.": "公司從未投資機器人新創是過度推論，前提未提及。"
+ },
+ "d.diag-1911": {
+  "The settlement was an empire's capital city that dominated maritime trade routes.": "稱它是壟斷貿易路線的首都，是缺乏證據的過度推論。",
+  "Bronze Age metallurgists had direct contact with Mediterranean sea merchants.": "與地中海商人直接接觸是臆測，證據只顯示技術出現較早。",
+  "The ceremonial daggers were used exclusively in royal coronation ceremonies.": "匕首只用於加冕典禮是臆測，證據沒有說明用途。"
+ },
+ "d.diag-1912": {
+  "School boards in the Midwestern state deliberately misappropriate education budget funds.": "說學校董事會刻意挪用預算是無根據的指控，調查只顯示教師自掏腰包。",
+  "High school teachers in private schools never spend personal money on classroom supplies.": "私立學校教師從不自費是推到調查範圍以外，調查對象是公立學校。",
+  "Public high schools will experience widespread teacher strikes in the subsequent school year.": "預測明年罷工是超出資料的推測，調查沒有提到。"
+ },
+ "d.diag-1913": {
+  "Gray wolves are the sole environmental determinant regulating white-tailed deer mortality.": "狼是唯一決定鹿死亡的因素是過度推論，資料只顯示同時發生的變化。",
+  "Eliminating gray wolves would permanently cause the starvation of all local herbivores.": "消滅狼會讓所有草食動物餓死是誇大的推論，資料沒有支持。",
+  "Browse vegetation grew more rapidly due to increased nitrogen deposition from wolf excretions.": "草類成長是因狼排泄物提供氮肥是臆測，資料沒有說明原因。"
+ },
+ "d.diag-1914": {
+  "Diet X will extend human life expectancy by six years if adopted in clinical trials.": "把小鼠實驗推到人類壽命延長六年，是資料無法支持的跨物種推論。",
+  "Diet Y contains synthetic carcinogenic preservatives that induce cellular senescence.": "飼料Y含致癌防腐劑是無根據的猜測，實驗只顯示壽命差異。",
+  "Mice fed diet X experienced zero cases of age-related cardiovascular degeneration.": "飼料X組沒有心血管退化是過度推論，研究只比較平均壽命。"
+ },
+ "d.diag-1915": {
+  "Sleeping exactly nine hours per night guarantees immunity from viral respiratory infections.": "睡九小時就保證不得呼吸道感染是誇大，調查只有睡眠不足的相關。",
+  "Workplace stress causes individuals to develop chronic neurological sleep disorders.": "工作壓力導致睡眠障礙是因果猜測，資料沒有提到。",
+  "All managers who slept eight hours received faster career promotions than short sleepers.": "睡八小時的經理升遷較快與病假資料無關，過度推論。"
+ },
+ "d.diag-1916": {
+  "Lead coffin burial was universally accessible to all social strata in the eighteenth century.": "鉛棺所有社會階層都用得起是無根據的概括，只說明這個墓穴。",
+  "Embalming herbs used in the crypt possessed greater antibacterial potency than modern penicillin.": "防腐香草抗菌力勝過盤尼西林是誇大推論，沒有證據。",
+  "The monarch interred in the crypt died of acute environmental heavy metal poisoning.": "君主死於重金屬中毒是臆測，資料只說遺體保存完好。"
+ },
+ "d.diag-1917": {
+  "Unsecured personal loans will be permanently eradicated from the commercial banking sector.": "無擔保貸款永遠消失是誇大預測，資料只顯示違約率上升。",
+  "Borrowers who defaulted on auto loans surrendered their residential real estate titles.": "汽車貸款違約者交出住宅權狀是題目沒有的資訊。",
+  "The bank incurred catastrophic operating losses across its retail operations in 2023.": "全面營運慘重虧損是過度推論，資料只談違約率。"
+ },
+ "d.diag-1918": {
+  "Separated bicycle lanes eliminate all roadway traffic hazards for urban cyclists.": "自行車道消除所有危險是誇大，數據只顯示事故減少一成二。",
+  "Automobile drivers in the municipality received advanced safety awareness training.": "駕駛接受安全訓練是題目沒有的原因，屬於臆測。",
+  "Every municipal cyclist now uses separated bike lanes exclusively during commutes.": "每位騎士都只走專用道是題目沒有的推論。"
+ },
+ "d.diag-1919": {
+  "Blue LED wavelengths enhance the sugar sweetness of mature harvestable tomatoes.": "藍光使成熟番茄更甜是題外的推論，實驗只量測莖的粗細。",
+  "Red LED lighting disrupts chlorophyll synthesis in all horticultural plant species.": "紅光干擾所有植物葉綠素是過度概括，實驗只比較番茄幼苗。",
+  "Farmers who cultivate greenhouse tomatoes should eliminate natural sunlight completely.": "農民應完全捨棄日光是離題的建議，實驗沒有談溫室日照。"
+ },
+ "d.diag-1920": {
+  "Spaced-repetition software guarantees native-level conversational fluency within six months.": "保證半年內達到母語流利是誇大，實驗只量測詞彙記憶。",
+  "Studying for two hours consecutively damages long-term cognitive synaptic memory pathways.": "兩小時連續學習損害記憶路徑是無根據的說法，實驗只顯示分數較低。",
+  "Learners using spaced repetition never need to review grammatical syntactic structures.": "不需要複習文法是題外的推論，實驗只測詞彙。"
+ },
+ "d.diag-1921": {
+  "Motor vehicle carjackings in Metropolis increased by fifteen percent during the identical timeframe.": "汽車劫案增加與自行車失竊風險計算無關，沒有指出統計缺陷。",
+  "The retail purchase price of anti-theft bicycle chain locks increased by eight percent.": "防盜鎖價格上漲是價格資訊，與失竊率無關。",
+  "Metropolis allocated three hundred thousand dollars to create public bicycle lock stations.": "編列預算設立鎖車站只是投入，不能指出風險計算的缺陷。"
+ },
+ "d.diag-1922": {
+  "Hospital A employs twice as many registered nurses as Hospital B.": "護理師人數較多不能指出感染人數比較的缺陷，需要看手術總數。",
+  "Hospital B specialized in outpatient cosmetic dental procedures.": "B醫院做牙科美容門診不能直接說明感染率比較為何不公平。",
+  "The average length of patient hospitalization at Hospital A was three days.": "住院天數三天不能說明感染數的比較問題，缺少手術總量。"
+ },
+ "d.diag-1923": {
+  "Allergic reactions are typically characterized by nasal congestion and skin urticaria.": "過敏反應的典型症狀是鼻塞和蕁麻疹，與安全性結論無關。",
+  "The spray was developed in partnership with a European biotechnology institute.": "與歐洲機構合作研發與安全性是否被誇大無關。",
+  "The retail cost of the spray is covered by prescription drug insurance formularies.": "保險給付處方藥與安全性比較無關。"
+ },
+ "d.diag-1924": {
+  "The airline operates turboprop regional planes on short-haul mountain routes.": "在山區跑短程渦輪螺旋槳飛機並不能直接削弱延誤比例的說法。",
+  "Commercial jet fuel costs increased by four percent across global supply hubs.": "噴射燃料漲價與延誤比例的主張無關。",
+  "The airline's customer service hotline received sixty thousand phone inquiries.": "客服電話六萬通詢問與延誤占比的主張沒有關係。"
+ },
+ "d.diag-1925": {
+  "The tutoring initiative met for two hours every Tuesday and Thursday afternoon.": "每週兩次輔導時段只描述方案內容，不能指出人數翻倍的問題。",
+  "Standardized state exam formats were transitioned from paper to digital terminals.": "考試由紙本改電腦與榮譽生人數翻倍的比較沒有關聯。",
+  "The school district hired three additional certified mathematics instructors.": "聘請三名數學老師無法指出入學人數大增這個比較的缺陷。"
+ },
+ "d.diag-1926": {
+  "The factory manufactured hydraulic industrial valves for agricultural irrigation systems.": "工廠生產水閥不能指出事故數減少是否真代表更安全。",
+  "OSHA inspectors conducted an unannounced walkthrough inspection in November.": "勞工署檢查十一月到訪不能說明事故減少是否因為工時下降。",
+  "The factory spent fifty thousand dollars upgrading its emergency eye-wash stations.": "花五萬元升級洗眼設備反而支持安全改進，沒有削弱工廠主張。"
+ },
+ "d.diag-1927": {
+  "It assumes that venture capital funding rounds occur on fixed quarterly schedules.": "創投輪次的時間表與倒閉率比較無關。",
+  "It overlooks that Biotech patents have a statutory duration of twenty years.": "生技專利有效二十年與倒閉機率比較無關。",
+  "It fails to define whether software development costs exceed laboratory reagent costs.": "軟體開發與實驗試劑成本的比較無法指出倒閉數比較的缺陷。"
+ },
+ "d.diag-1928": {
+  "It ignores that sports car insurance premiums are fifteen percent higher on average.": "保費高一成五只是價格資訊，無法指出與死亡事故數比較的缺陷。",
+  "It assumes that sports cars possess smaller braking calipers than commercial pickup trucks.": "煞車卡鉗較小是無根據的假設，與比較的統計缺陷無關。",
+  "It takes for granted that sports car owners drive exclusively on interstate highways.": "跑車車主只上州際高速公路是臆測，不是統計遺漏。"
+ },
+ "d.diag-1929": {
+  "The police precinct purchased thirty new electric patrol cruisers.": "購買三十輛電動巡邏車是設備，不能說明犯罪比例下降是否代表更安全。",
+  "Neighborhood watch volunteers held weekly community safety briefings.": "鄰里守望相助說明會是社區活動，不能指出比例的誤導。",
+  "Municipal court judges increased bail requirements for repeat felony offenders.": "法官提高累犯保釋金是司法措施，與犯罪比例是否誤導無關。"
+ },
+ "d.diag-1930": {
+  "Employee dental insurance benefits were outsourced to a regional provider.": "牙科保險外包與離職率減半的結論沒有關聯。",
+  "The human resources department introduced an anonymous digital suggestion box.": "匿名意見箱是士氣措施，不能指出離職率計算的缺陷。",
+  "The company relocated its corporate headquarters to an adjacent suburban office park.": "總部搬遷郊區辦公園區，無法指出離職率下降的比較缺陷。"
+ },
+ "d.diag-1931": {
+  "It assumes that blood samples were compromised by laboratory cross-contamination during centrifuging.": "血液樣本交叉污染是臆測，題目重點是基本盤的忽略。",
+  "It overlooks that false negatives are clinically more dangerous than false positives in acute epidemiology.": "偽陰性較危險是另一個議題，不能說明為何陽性不代表九成九患病。",
+  "It presumes that asymptomatic patients have higher immune antibody titers than symptomatic individuals.": "無症狀者抗體濃度較高是無根據的前提，與機率計算無關。"
+ },
+ "d.diag-1932": {
+  "Because fugitives frequently alter their biometric appearance via non-surgical disguise.": "逃犯用非手術偽裝是臆測，並非題目所說警報不準的原因。",
+  "Because airport security personnel do not receive uniform algorithmic audit training.": "安檢人員訓練不一致是另一個問題，無法解釋誤報遠多於真逃犯。",
+  "Because the facial-recognition cameras rely on low-resolution ambient terminal lighting.": "攝影機畫質不佳是題目沒有的前提，核心是基本盤。"
+ },
+ "d.diag-1933": {
+  "Fraudulent transactions cost commercial banks less than five hundred dollars on average.": "詐欺損失低於五百元是金額資訊，與被標記的交易是否多為合法無關。",
+  "Online e-commerce merchants bear the full liability for fraudulent payment chargebacks.": "商家負擔拒付責任是法律分擔問題，與標記結果的比例無關。",
+  "Credit cardholders review their digital banking transaction statements twice weekly.": "持卡人每週檢查帳單兩次是行為，與標記比例無關。"
+ },
+ "d.diag-1934": {
+  "It assumes that heart rate is unaffected by chronic physiological anxiety or caffeine consumption.": "心跳受焦慮和咖啡因影響是儀器問題，不是這個錯誤的核心。",
+  "It overlooks that polygraph exams are inadmissible in criminal jury trials in federal courts.": "測謊結果在聯邦刑事審判不被採信是法律議題，不涉及機率誤用。",
+  "It fails to calibrate the pneumatic chest sensor straps according to body mass index.": "胸帶感測器依BMI校準是儀器細節，與機率錯誤無關。"
+ },
+ "d.diag-1935": {
+  "Because malicious hackers encrypt intrusion payloads with quantum-resistant keys.": "駭客用抗量子金鑰加密是臆測，不是警報多半被忽略的理由。",
+  "Because IT security personnel work eight-hour rotating shifts across operations centers.": "資安人員輪班與警報可信度無關。",
+  "Because legitimate packets are processed through secondary proxy caching servers.": "合法封包經二線快取伺服器處理，與誤報比例無關。"
+ },
+ "d.diag-1936": {
+  "The individual is guaranteed complete physiological immunity against myocardial infarction.": "完全免疫心肌梗塞是誇大，檢測陽性不保證帶有突變。",
+  "The individual must repeat the assay using identical polymerase chain reaction primers.": "重複使用相同引子是無根據的做法，與陽性機率的數學無關。",
+  "The genetic assay is invalid because the false-positive rate exceeds the mutation prevalence.": "偽陽性率高於盛行率不代表檢測無效，只是陽性後驗機率低。"
+ },
+ "d.diag-1937": {
+  "Precisely ten percent, corresponding exactly to the algorithmic misclassification rate.": "剛好百分之十只對應誤判率，沒考慮標準組人數遠多於高潛力組。",
+  "Zero percent, because machine learning models calibrate feature vectors iteratively.": "零百分比說不通，標準組有一成被誤判，一定會出現在被標記者中。",
+  "Fifty percent, assuming equal distribution of male and female professional applicants.": "百分之五十憑空假設男女平均，與機率計算無關。"
+ },
+ "d.diag-1938": {
+  "The breathalyzer internal infrared spectroscopic fuel cell has suffered physical corrosion.": "紅外線燃料電池腐蝕是儀器猜測，與陽性結果的統計意義無關。",
+  "The police officer is legally mandated to impound the motor vehicle on the spot.": "警察必須扣車不是由統計推出，而是題目沒有的規定。",
+  "The driver's blood alcohol concentration must exceed 0.08 grams per deciliter.": "血液酒精濃度必定超過 0.08 是錯誤的，因為陽性很可能是誤報。"
+ },
+ "d.diag-1939": {
+  "Under one percent, because the scanner's detection accuracy exceeds ninety-eight percent.": "低於百分之一錯誤，因為被標記的晶片中完好晶片遠比瑕疵晶片多。",
+  "Fifty percent, because industrial sensors produce symmetrical Gaussian distribution errors.": "百分之五十的對稱高斯誤差沒有依據，應依基本盤計算。",
+  "One hundred percent, because silicon wafer defects cannot be identified by optical scanners.": "百分之百說法荒謬，光學掃描器能偵測瑕疵，題目也給出偵測率。"
+ },
+ "d.diag-1940": {
+  "The retail sales figures of major video game console manufacturers over the preceding decade.": "遊戲主機銷售數字與暴力遊戲是否增加犯罪機率無關。",
+  "The average sentence duration served by petty burglary convicts in state correctional facilities.": "竊盜犯的平均刑期與暴力遊戲是否導致犯罪無關。",
+  "Whether the convicted inmates completed secondary educational general equivalency diplomas.": "受刑人是否取得同等學歷與暴力遊戲和竊盜的關係無關。"
+ },
+ "d.diag-1941": {
+  "The coffee chain introduced two new organic herbal iced tea options on its seasonal menu.": "兩款新有機花草茶不能說明折扣策略為何讓毛利下降。",
+  "A competing bakery chain expanded its morning breakfast sandwich promotional offerings.": "對手早餐三明治促銷是外部因素，沒有說明折扣的成本問題。",
+  "Corporate headquarter office rent increased by three percent due to commercial inflation indexation.": "總部租金增加三成屬小幅，不能說明折扣導致獲利惡化。"
+ }
+}

@@ -1,0 +1,720 @@
+{
+ "c-voc-v2.p4e": {
+  "resistant to": "resistant to 是「抗……的；耐……的」，形容材質耐受，不是把螺栓鎖緊的動作。",
+  "measure up to": "measure up to 是「達到（標準）」，講的是符合期待，跟旋緊零件無關。"
+ },
+ "c-voc-v3.p2e": {
+  "carry out": "carry out 是「執行；實施」，例如執行計畫，不是機器故障的意思。",
+  "look into": "look into 是「調查」，是人去查原因，不是機器自己拋錨。"
+ },
+ "c-voc-v3.p4e": {
+  "break down": "break down 是機器「故障」或把東西「拆解分析」，不是調查的意思。",
+  "troubleshoot": "troubleshoot 是「排除故障」，重點在修好問題，不是單純調查研究。"
+ },
+ "gr.technical": {
+  "Replace the cable.": "Replace the cable. 是祈使句，在下指令要人換電纜，並沒有記錄已完成。",
+  "The cable may fail.": "may fail 表示「可能會壞」，是推測未來，不是已完成的維修。"
+ },
+ "c-voc-v4.p1e": {
+  "connect with": "connect with 是「與……連接」，指線路或人連上，不是參考資料。",
+  "according to": "according to 是「根據」，用來交代消息或規定的出處，不是動作上的查閱參考。"
+ },
+ "c-voc-v4.p2e": {
+  "refer to": "refer to 是「參考；查閱」，是動作，題目的「依據；按照」是介系詞片語。",
+  "connect with": "connect with 是「與……連接」，意思是接上，跟依照規定無關。"
+ },
+ "c-voc-v4.p4e": {
+  "refer to": "refer to 是「參考」，是查閱資料，不是把兩個東西接在一起。",
+  "line up": "line up 是「排隊；排成一列」，不是連接的意思。"
+ },
+ "c-voc-v5.p2e": {
+  "as per your request": "as per your request 是「按照您的要求」，說明依據，不是跟進進度。",
+  "get back to": "get back to 是「回覆；回頭聯絡」，重點在答覆對方，不是追蹤事情進度。"
+ },
+ "c-voc-v5.p3e": {
+  "get back to": "get back to 是「回覆某人」，沒有「在方便時儘速」的禮貌時間語氣。",
+  "follow up on": "follow up on 是「跟進」，是追蹤事情，不是請對方儘早方便時處理。"
+ },
+ "c-voc-v5.p4e": {
+  "follow up on": "follow up on 是「跟進；追蹤」，不是說明依照對方要求辦理。",
+  "at your earliest convenience": "at your earliest convenience 是「在您方便時儘速」，講時間，不是依照要求。"
+ },
+ "k.voc-workplace-listening.1": {
+  "Use Elevator 2 now.": "廣播說在另行通知前不要使用 2 號電梯，Use Elevator 2 now 正好相反。",
+  "Wait in Elevator 2.": "Wait in Elevator 2 還是待在被禁用的電梯裡，違反廣播指示。"
+ },
+ "k.voc-intro-picture.1": {
+  "Car. Man. Tools.": "Car. Man. Tools. 只是零散單字，不是完整句子，無法說出修理引擎的動作。",
+  "I like cars.": "I like cars. 說的是個人喜好，沒有描述圖片中技師在修車。"
+ },
+ "k.voc-intro-picture.2": {
+  "She said me that the client would arrive at 2.": "said 後面不能直接加 me，要用 told me 或 said to me，這句文法錯誤。",
+  "Client 2.": "Client 2. 只有兩個詞，不是完整的轉述句，也沒有時態變化。"
+ },
+ "c-voc-v6.p1e": {
+  "play an essential role": "play an essential role 是「扮演關鍵角色」，不是「除了……之外」。",
+  "depend on": "depend on 是「依賴；取決於」，不是表示附加的「除了……還有」。"
+ },
+ "c-voc-v6.p2e": {
+  "in addition to": "in addition to 是「除了……之外」，是附加資訊，不是跟上進度。",
+  "play an essential role": "play an essential role 是「扮演關鍵角色」，沒有跟上腳步的意思。"
+ },
+ "c-voc-v6.p4e": {
+  "in addition to": "in addition to 是「除了……還有」，是補充，不是依賴某事。",
+  "play an essential role": "play an essential role 是「扮演重要角色」，並不是依賴或取決於。"
+ },
+ "c-voc-v7.p1e": {
+  "in accordance with": "in accordance with 是「依照」，是依據規定，不是主動批准簽署。",
+  "walk through": "walk through 是「逐步帶領檢視」，不是正式簽核同意。"
+ },
+ "c-voc-v7.p2e": {
+  "in accordance with": "in accordance with 是「依照；符合」，是介系詞片語，不是帶人逐步演練。",
+  "wrap up": "wrap up 是「結束；收尾」，是完成工作，不是逐步說明審查。"
+ },
+ "c-voc-v7.p3e": {
+  "wrap up": "wrap up 是「收尾；結束」，是動作，不是「依照規定」。",
+  "sign off on": "sign off on 是「正式批准」，是簽核動作，不是與規定一致的意思。"
+ },
+ "c-voc-v7.p4e": {
+  "walk through": "walk through 是「逐步帶領檢視」，是過程中的說明，不是結束。",
+  "sign off on": "sign off on 是「簽署批准」，雖然常在結尾，但意思是核准而不是收尾。"
+ },
+ "k.voc-global-learning.1": {
+  "I will study English sometimes.": "sometimes 太模糊，沒有具體內容、時間或數量，不符合 SMART 的明確可衡量。",
+  "English is important.": "English is important. 只是一個看法，不是可執行、可檢查的學習目標。"
+ },
+ "k.voc-global-learning.2": {
+  "making products more expensive": "Reduce, reuse, recycle 是減量與回收，目的在省資源，不是讓商品變貴。",
+  "working longer hours": "口號講的是減少浪費與環保，跟延長工時沒有關係。"
+ },
+ "k.voc-songs-stories-media.1": {
+  "Cooking dinner": "副歌 Don't give up 是「不要放棄」，沒有任何煮晚餐的內容。",
+  "Buying a car": "歌詞鼓勵持續前進，並沒有提到買車，這個選項與歌詞無關。"
+ },
+ "k.voc-songs-stories-media.2": {
+  "I listened.": "I listened. 只說聽過，沒有記下人物、問題和結局，不算好的筆記。",
+  "Story good.": "Story good. 只是簡短評價，沒有記錄故事重點，不夠具體。"
+ },
+ "d.diag-1009": {
+  "liability": "liability 是名詞「責任」，held ___ 後要接形容詞 liable，不能用名詞。",
+  "liably": "liably 不是常用單字，而且 be held 後面需要形容詞，不是副詞。",
+  "liaise": "liaise 是動詞「聯絡」，詞形和意思都不同，放進 held 後不通順。"
+ },
+ "c-intl-toefl.p1e": {
+  "keep in mind": "keep in mind 是「記住」，是提醒，不是「就……而言」。",
+  "come up with": "come up with 是「想出」，指提出點子，不是限定討論範圍。"
+ },
+ "c-intl-toefl.p2e": {
+  "keep in mind": "keep in mind 是「記在心裡」，不是想出辦法的意思。",
+  "in terms of": "in terms of 是「就……而言」，用來限定範圍，不是想出解決方案。"
+ },
+ "c-intl-toeic.p1e": {
+  "in accordance with": "in accordance with 是「依照」，不是追蹤進度的動作。",
+  "run out of": "run out of 是「用完」，指資源耗盡，不是跟進事情。"
+ },
+ "c-intl-toeic.p2e": {
+  "run out of": "run out of 是「用完；耗盡」，跟時間上的禮貌用語無關。",
+  "follow up on": "follow up on 是「跟進」，不是請對方在方便時儘速處理。"
+ },
+ "c-intl-toeic.p3e": {
+  "at your earliest convenience": "at your earliest convenience 是「在您方便時儘速」，講時間，不是依規定辦理。",
+  "follow up on": "follow up on 是「追蹤；跟進」，並沒有符合規定的意思。"
+ },
+ "c-intl-toeic.p4e": {
+  "at your earliest convenience": "at your earliest convenience 是「在您方便時儘速」，與物資用完無關。",
+  "in accordance with": "in accordance with 是「依照」，不是庫存用盡或短缺。"
+ },
+ "d.diag-1017": {
+  "disruption": "has severely 後要接過去分詞，disruption 是名詞，不能當動詞用。",
+  "disruptive": "disruptive 是形容詞「破壞性的」，has severely 後面需要動詞過去分詞。",
+  "disrupting": "disrupting 是現在分詞，不能與 has 組成完成式，要用 disrupted。"
+ },
+ "d.diag-1020": {
+  "front of": "front of 不能直接接 schedule，in front of 是「在……前面」，意思也不對。",
+  "prior": "prior 後要加 to 才能接受詞，prior schedule 不成立。",
+  "beforehand": "beforehand 是副詞，後面不能直接接名詞 schedule。"
+ },
+ "d.diag-1053": {
+  "regulate": "regulate 是動詞「規範」，adhere to 後面要接名詞，這裡需要名詞 regulations。",
+  "regulatory": "regulatory 是形容詞，後面要有名詞才行，而空格後已無名詞。",
+  "regulator": "regulator 是「監管者」，指人或機構，不是被遵守的規定，且單數不合 goods regulations。"
+ },
+ "d.diag-1067": {
+  "crucially": "crucially 是副詞，is 後面要接形容詞當補語，不能用副詞。",
+  "crucialness": "crucialness 雖是名詞，但極少用，且 is crucialness to 搭配不自然。",
+  "crux": "crux 是名詞「關鍵」，is crux to 文法不通，不能直接當補語。"
+ },
+ "d.diag-1077": {
+  "amicable": "amicable 是形容詞，這裡要修飾動詞 resolve，需要副詞 amicably。",
+  "amicableness": "amicableness 是名詞，放在動詞 resolve conflicts 後不能修飾動作。",
+  "amity": "amity 是名詞「友好」，不能修飾 resolve，也不是副詞。"
+ },
+ "d.diag-1080": {
+  "unauthorizing": "unauthorizing 不是正確詞形，修飾 technician 要用 unauthorized。",
+  "unauthorizedly": "unauthorizedly 是副詞，an ___ technician 需要形容詞修飾名詞。",
+  "unauthorization": "unauthorization 是名詞，不能放在 an 和 technician 之間修飾人。"
+ },
+ "d.diag-1081": {
+  "downside": "downside 是「缺點」，不是系統無法運作的停機時間。",
+  "downpour": "downpour 是「大雨」，與伺服器維護和系統狀況無關。",
+  "downfall": "downfall 是「垮台；衰落」，不是指系統停機。"
+ },
+ "d.diag-1099": {
+  "depository": "depository 是「存放處」，不是 bank deposit 這個固定搭配。",
+  "depositing": "depositing 是動名詞或現在分詞，direct bank 後需要名詞 deposit。",
+  "deposited": "deposited 是過去分詞，放在 bank 後面不能構成名詞片語。"
+ },
+ "d.diag-1116": {
+  "symposia": "symposia 是複數，前面有 a recent，需要單數名詞。",
+  "symposiums": "symposiums 是複數，a recent 後要用單數，不能用複數。",
+  "symposiast": "symposiast 不是標準字，放在這裡意思和詞形都不對。"
+ },
+ "d.diag-1128": {
+  "disrupt": "disrupt 是動詞，operational 後要接名詞，需要 disruptions。",
+  "disruptive": "disruptive 是形容詞，operational ___ 空格需要名詞，不能再接形容詞。",
+  "disruptively": "disruptively 是副詞，不能放在 operational 後當名詞。"
+ },
+ "d.diag-1129": {
+  "through": "through 是介系詞，monitor real-time 後需要名詞，不能接介系詞。",
+  "throughout": "throughout 是介系詞「遍及」，不是名詞，不能當 monitor 的受詞。",
+  "thru": "thru 是 through 的非正式拼法，詞性仍是介系詞，不符空格需求。"
+ },
+ "d.diag-1133": {
+  "lateral": "lateral 是形容詞「側面的」，與擔保品無關，且 as 後需要名詞。",
+  "collateralize": "collateralize 是動詞「抵押」，as 後面要名詞，不能用動詞。",
+  "collaterally": "collaterally 是副詞，as 後需要名詞 collateral。"
+ },
+ "d.diag-1135": {
+  "indebted": "indebted 是形容詞「負債的」，其後 service its outstanding 需要名詞。",
+  "debtor": "debtor 是「債務人」，指人，不是被償付的債務本身。",
+  "debtless": "debtless 是「無債的」形容詞，與償還未償債務的語意相反。"
+ },
+ "d.diag-1143": {
+  "deposited": "deposited 是過去分詞，security 後需要名詞 deposit。",
+  "depositing": "depositing 是動名詞形式，不是 security deposit 的固定搭配名詞。",
+  "depositor": "depositor 是「存款人」，指人，不是押金。"
+ },
+ "d.diag-1148": {
+  "codify": "codify 是動詞「編纂」，fire safety 後需要名詞 codes。",
+  "coding": "coding 是「編碼」，與消防安全規範（codes）的意思不同。",
+  "coded": "coded 是過去分詞，fire safety 後需要名詞，不能用。"
+ },
+ "d.diag-1150": {
+  "indices": "indices 是 index 的複數，consumer price 後固定用單數 index（消費者物價指數）。",
+  "indexer": "indexer 是「編索引的人」，不是物價指數。",
+  "indexing": "indexing 是動名詞「編入索引」，不是 consumer price index 這個固定名詞。"
+ },
+ "d.diag-1164": {
+  "deadlocked": "deadlocked 是過去分詞，an unfortunate 後需要名詞 deadlock。",
+  "deadlocking": "deadlocking 是現在分詞，前面有 an unfortunate，需要單數名詞。",
+  "deadlocks": "deadlocks 是複數，an unfortunate 前有 a/an，應接單數 deadlock。"
+ },
+ "d.diag-1168": {
+  "insightful": "insightful 是形容詞，psychological 後要接名詞 insight。",
+  "insightfully": "insightfully 是副詞，psychological 後需要名詞，不能用副詞。",
+  "incite": "incite 是動詞「煽動」，拼字像但意思不同，也不是名詞。"
+ },
+ "d.diag-1176": {
+  "thresh": "thresh 是「打穀」動詞，不是門檻，也不符 dollar 後的名詞用法。",
+  "thresholds": "thresholds 是複數，the seventy-five-dollar 前有 the，應接單數 threshold。",
+  "threshing": "threshing 是「脫粒」，與免運門檻無關。"
+ },
+ "d.diag-1186": {
+  "filed": "prior to 後面要接名詞或動名詞，filed 是過去分詞，不能直接用。",
+  "file": "file 是原形動詞，prior to 後要接 filing，不能接原形。",
+  "filer": "filer 是「歸檔者」，指人，而不是申請專利這個動作。"
+ },
+ "d.diag-1189": {
+  "NDA": "NDA 是單數，sign ___ 前沒有冠詞，這句話需要複數 NDAs（每人簽署）。",
+  "non-disclosure": "non-disclosure 是形容詞，缺少 agreements，不能單獨當 sign 的受詞。",
+  "disclosing": "disclosing 是動名詞「揭露」，與簽署保密協議的意思相反。"
+ },
+ "d.diag-1193": {
+  "builder": "builder 是「建造者」，指人，不是綠建築這個物件。",
+  "build": "build 是動詞原形，green 後需要名詞 building。",
+  "buildup": "buildup 是「累積；增強」，不是綠建築。"
+ },
+ "d.diag-1199": {
+  "green": "green 只是「綠色的」，無法指誤導性環保宣傳這個專有名詞。",
+  "whitewash": "whitewash 是「粉飾；掩蓋」，不是專指假環保宣傳的 greenwashing。",
+  "washing": "washing 只是「清洗」，缺少 green，意思完全無關。"
+ },
+ "d.diag-1202": {
+  "crises": "crises 是複數，a ___ 前有 a，需要單數 crisis。",
+  "critical": "critical 是形容詞，a 後需要名詞，不能用形容詞。",
+  "critique": "critique 是「評論」，與危機事件的意思不同。"
+ },
+ "d.diag-1203": {
+  "trustful": "trustful 是形容詞，and 前面是名詞 confidence，後面需要同為名詞 trust。",
+  "trustingly": "trustingly 是副詞，and 後要接與 confidence 並列的名詞。",
+  "trustworthy": "trustworthy 是形容詞「值得信賴的」，無法與名詞 confidence 並列。"
+ },
+ "d.diag-1210": {
+  "allege": "allege 是動詞，the defamatory 後面需要名詞 allegations。",
+  "alleged": "alleged 是過去分詞或形容詞，the defamatory 後需要名詞。",
+  "allegedly": "allegedly 是副詞，不能放在 defamatory 之後當被反駁的對象。"
+ },
+ "d.diag-1216": {
+  "licensing": "licensing 是動名詞，the franchise 後需要名詞 license。",
+  "licensed": "licensed 是過去分詞，franchise 後需要名詞，不能當被撤銷的對象。",
+  "licensee": "licensee 是「被授權者」，指人，撤銷的是 license 不是人。"
+ },
+ "d.diag-1244": {
+  "penalty": "penalty 是單數，severe statutory 後 including imprisonment 搭配複數 penalties。",
+  "penal": "penal 是形容詞「刑罰的」，statutory 後需要名詞。",
+  "penalizing": "penalizing 是動名詞，statutory 後需要名詞，不能用動詞形式。"
+ },
+ "k.reading-evidence.1": {
+  "All participants slept better.": "原文說「有些」參與者睡得較好，不是全部，All 把範圍說得太大。",
+  "The program certainly cured insomnia.": "原文只說睡眠變好，沒有說治癒失眠，certainly cured 說過頭了。"
+ },
+ "k.reading-evidence.2": {
+  "The ad caused the rise.": "原文只說廣告出現之後銷量上升，先後不等於因果，caused 推論過度。",
+  "No other factor affected sales.": "只憑這句話無法排除別的因素，說沒有其他因素是過度推論。"
+ },
+ "d.diag-1255": {
+  "robust": "robust 是「穩固的」，與 Despite 的讓步語氣相反，批評者不會說連貫性強。",
+  "indisputable": "indisputable 是「無可爭議的」，與批評者提出質疑相矛盾。",
+  "monumental": "monumental 是「巨大的」，不能描述 coherence 的鬆散，語意不合。"
+ },
+ "d.diag-1256": {
+  "aloof": "aloof 是「冷淡疏遠的」，與長期侍奉皇帝的御醫所寫的貼身紀錄矛盾。",
+  "anonymous": "anonymous 是「匿名的」，但題目說作者是御醫，身分明確。",
+  "incomprehensible": "incomprehensible 是「無法理解的」，與提供詳細生活紀錄的語氣不符。"
+ },
+ "d.diag-1257": {
+  "stifle": "stifle 是「抑制」，與 rather than foster 的轉折不合，語意相反。",
+  "extinguish": "extinguish 是「撲滅」，會讓泡沫消失，而句意是助長泡沫。",
+  "counteract": "counteract 是「抵消」，語意是對抗，與過量資金助長泡沫相反。"
+ },
+ "d.diag-1260": {
+  "passionate": "passionate 是「熱情的」，與 failing to move the audience 互相矛盾。",
+  "vibrant": "vibrant 是「生氣勃勃的」，與無法打動觀眾的語意相反。",
+  "evocative": "evocative 是「引人聯想的」，會感動人，與 failing to move 矛盾。"
+ },
+ "d.diag-1262": {
+  "Accordingly": "Accordingly 表示順理成章的結果，但後句是與預期相反的發現。",
+  "In addition": "In addition 是補充同方向的資訊，而這裡是推翻先前看法。",
+  "For instance": "For instance 是舉例，後句不是前句的例子，而是推翻前句。"
+ },
+ "d.diag-1268": {
+  "Hence": "Hence 表示「因此」的結果，但前面是質疑，後面反而成功，是轉折。",
+  "Specifically": "Specifically 是「具體而言」，用來補充細節，不是轉折。",
+  "Accordingly": "Accordingly 是「因此」，不合前後對比的邏輯。"
+ },
+ "d.diag-1291": {
+  "While Neanderthals made Mousterian tools, Homo sapiens made Aurignacian blades.": "這句對比兩族群使用的工具，題目要強調相似處，而不是差異。",
+  "Homo sapiens inhabited Europe during the Upper Paleolithic.": "這句只談智人的居住地，沒有和尼安德塔人比較，無法表達相似。",
+  "Neanderthals developed sophisticated lithic traditions.": "這句只描述尼安德塔人，沒有提到智人，無法呈現兩者相似。"
+ },
+ "d.diag-1292": {
+  "Tikal's Temple IV stands over sixty-five meters high in the jungle canopy.": "這句只寫第四號神廟的高度，是細節，不足以向不熟悉的讀者介紹提卡爾。",
+  "Excavations at Tikal revealed stelae inscribed with hieroglyphic king lists.": "這句講考古發現的石碑，是特定細節，不是對提卡爾的整體介紹。",
+  "The decline of Tikal coincided with the broader Classic Maya collapse.": "這句談衰落，已預設讀者認識提卡爾，無法當作介紹。"
+ },
+ "d.diag-1293": {
+  "The Geysers is located in California, whereas renewable energy is expanding globally.": "這句拿間歇泉和全球再生能源比，沒有對比兩座地熱電廠。",
+  "Both facilities generate baseload electricity with zero carbon emissions.": "這句說兩者都零碳排，是強調相同，而不是對比不同。",
+  "The Nesjavellir plant was constructed to supply district heating to Reykjavik.": "這句只講內薩山谷電廠的用途，沒有與另一座電廠對照。"
+ },
+ "d.diag-1294": {
+  "Dr. Lin led a three-month research cruise aboard the RV Atlantis.": "這句只說航程時間與船名，是研究背景，不是主要發現。",
+  "The team deployed autonomous underwater vehicles to depths exceeding four thousand meters.": "這句講使用的設備與深度，是研究方法，並非研究的主要結果。",
+  "Samples of seawater were collected at twelve distinct hydrothermal sites.": "這句只描述採樣地點，是過程細節，沒有說出主要發現。"
+ },
+ "d.diag-1295": {
+  "The Iberian lynx is an apex feline predator native to the Mediterranean woodland.": "這句只描述山貓的棲地，沒有解釋族群為何回升。",
+  "By 2002, fewer than one hundred individual lynxes remained in Andalusia.": "這句講過去數量稀少，是回升前的背景，不是回升的原因。",
+  "Conservationists released tracking collars to monitor juvenile lynx dispersal patterns.": "這句談追蹤項圈，是監測手段，無法解釋族群為何回升。"
+ },
+ "d.diag-1296": {
+  "Edmonia Lewis completed the monumental marble sculpture *The Death of Cleopatra* in 1876.": "這句只說明完成年份，是事實陳述，沒有說明作品的藝術意義。",
+  "The sculpture was exhibited at the Centennial Exposition in Philadelphia before disappearing for decades.": "這句講展出和失蹤的經歷，是作品歷史，不是藝術意義。",
+  "Carved from white marble, the statue weighs well over a ton.": "這句寫材質與重量，是物理描述，沒有強調藝術意義。"
+ },
+ "d.diag-1297": {
+  "Dr. Alvarez examined twelve medieval codices housed in the Vatican Library.": "這句只說研究了十二本抄本，是樣本資訊，沒有指出方法上的創新。",
+  "The study was published in the *Journal of Cultural Heritage* in autumn 2023.": "這句只提到發表期刊與時間，與方法創新無關。",
+  "Medieval inks frequently contained iron gall and oak extracts.": "這句講墨水成分，是背景知識，沒有說明研究如何創新。"
+ },
+ "d.diag-1298": {
+  "Predatory bats hunt nocturnally using high-frequency echolocation calls.": "這句只描述蝙蝠的捕食方式，沒有定義聲納干擾。",
+  "Tiger moths belong to the family Erebidae and exhibit vibrant wing pigmentation.": "這句講虎蛾的科別與翅膀顏色，沒有解釋什麼是聲納干擾。",
+  "Ultrasound frequencies exceed twenty kilohertz, beyond human auditory perception.": "這句解釋超音波頻率，是旁支背景，沒有說明聲納干擾這個概念。"
+ },
+ "d.diag-1299": {
+  "The novelist was born in Montreal in 1968 and attended McGill University.": "這句只寫出生地與就讀學校，沒有說明背景如何影響文風。",
+  "Her debut novel received the Governor General’s Award for Fiction in 2004.": "這句講得獎紀錄，只是成就，沒有連結到成長背景對文風的影響。",
+  "She frequently lectures on modern North American diaspora narratives.": "這句講演講主題，與作者背景如何形塑風格無關。"
+ },
+ "d.diag-1300": {
+  "Mars has polar ice caps composed of water and frozen carbon dioxide.": "這句只講火星極冠，沒有比較火星與金星的地表氣壓。",
+  "Venus experiences a runaway greenhouse effect resulting in surface temperatures exceeding 450 degrees Celsius.": "這句講金星的溫度，不是氣壓，也沒有和火星對照。",
+  "Planetary scientists utilize orbiter spectrometers to analyze atmospheric gases across the solar system.": "這句說科學家用光譜儀分析氣體，沒有比較兩顆行星的氣壓。"
+ },
+ "d.diag-1302": {
+  "whales, and": "whales, and 的逗號會把 and 後的子句硬分開，這句 and 只是連接兩個動詞，不需要逗號。",
+  "whales; and": "whales; and 的分號用於連接獨立子句，這裡後半沒有主詞，不能用分號。",
+  "whales, they": "whales, they 會形成逗號連接兩個子句的錯誤（comma splice），也多出主詞。"
+ },
+ "d.diag-1303": {
+  "centuries, consequently": "centuries, consequently 逗號不能單獨連接兩個獨立子句，且缺少 consequently 後的逗號。",
+  "centuries, consequently,": "centuries, consequently, 用逗號連接兩個獨立子句，造成逗號連接錯誤，應用分號。",
+  "centuries; consequently": "centuries; consequently 分號正確，但 consequently 後面少了逗號。"
+ },
+ "d.diag-1304": {
+  "microscope, thus,": "microscope, thus, 用逗號連接兩個獨立子句，造成逗號連接錯誤，應改用分號。",
+  "microscope thus": "microscope thus 兩個獨立子句直接相連，中間沒有任何標點，是連寫句。",
+  "microscope, thus": "microscope, thus 逗號不能單獨連接獨立子句，且 thus 後面缺少逗號。"
+ },
+ "d.diag-1305": {
+  "nursery; which": "nursery; which 的分號後面不是獨立子句，which 引導的是關係子句，不能用分號。",
+  "nursery which": "nursery which 少了逗號，非限定補充說明需要逗號隔開。",
+  "nursery, that": "nursery, that 的 that 不能用在有逗號的非限定關係子句。"
+ },
+ "d.diag-1306": {
+  "bricks, their": "bricks, their 以逗號連接兩個獨立子句，形成逗號連接錯誤。",
+  "bricks their": "bricks their 兩個獨立子句直接相連，沒有任何標點，是連寫句錯誤。",
+  "bricks and, their": "bricks and, their 在 and 後加逗號，標點位置亂，仍連接不了兩個獨立子句。"
+ },
+ "d.diag-1307": {
+  "Latin, specifically": "Latin, specifically 逗號不能單獨連接兩個獨立子句，且 specifically 後缺逗號。",
+  "Latin, specifically,": "Latin, specifically, 以逗號連接兩個獨立子句，形成逗號連接錯誤。",
+  "Latin; specifically": "Latin; specifically 分號正確，但 specifically 後面缺少逗號。"
+ },
+ "d.diag-1308": {
+  "temperatures, accordingly,": "temperatures, accordingly, 用逗號連接兩個獨立子句，造成逗號連接錯誤。",
+  "temperatures; accordingly": "temperatures; accordingly 分號正確，但 accordingly 後面缺少逗號。",
+  "temperatures accordingly": "temperatures accordingly 沒有標點，兩個獨立子句連在一起，是連寫句。"
+ },
+ "d.diag-1309": {
+  "monsoon, the": "monsoon, the 以逗號連接兩個獨立子句，形成逗號連接錯誤。",
+  "monsoon the": "monsoon the 兩個獨立子句直接相連，中間沒有任何標點，是連寫句。",
+  "monsoon; and the": "monsoon; and the 分號後又接 and，兩種連接方式重複，用法多餘。"
+ },
+ "d.diag-1310": {
+  "sonnet, instead,": "sonnet, instead, 以逗號連接兩個獨立子句，是逗號連接錯誤。",
+  "sonnet; instead": "sonnet; instead 分號正確，但 instead 後面缺少逗號。",
+  "sonnet instead,": "sonnet instead, 兩個獨立子句之間沒有分號或句號，是連寫句。"
+ },
+ "d.diag-1312": {
+  "1990": "1990 沒有逗號，which 子句是補充說明，需要前後各一個逗號夾住，這裡少了結尾逗號。",
+  "1990;": "1990; 分號不能用來結束插入的關係子句，主詞和動詞會被硬切開。",
+  "1990—": "1990— 破折號與前面的逗號不成對，非限定子句要用成對的逗號。"
+ },
+ "d.diag-1313": {
+  "provides": "provides 是單數動詞，主詞 tablets 是複數，主謂不一致。",
+  "providing": "providing 是現在分詞，句中缺少主要動詞，句子不完整。",
+  "to provide": "to provide 是不定詞，不能當主要動詞，句子沒有謂語。"
+ },
+ "d.diag-1315": {
+  "Luc": "Jean Luc 後少了逗號，插入語 overseen by... 需要結尾逗號與開頭逗號成對。",
+  "Luc;": "Luc; 分號不能結束插入語，把主詞和動詞分隔開了。",
+  "Luc—": "Luc— 破折號與開頭的逗號不成對，插入語標點要一致。"
+ },
+ "d.diag-1317": {
+  "self-interest,": "self-interest, 逗號不能與前面開頭的破折號配對，插入語要用成對破折號。",
+  "self-interest;": "self-interest; 分號不能結束破折號插入語，破折號要成對。",
+  "self-interest": "self-interest 少了結尾破折號，that 子句沒有被關起來，主詞與動詞連不起來。"
+ },
+ "d.diag-1319": {
+  "mobility": "mobility 後面沒有逗號，whose 子句插入語少了結尾逗號，主詞與動詞黏在一起。",
+  "mobility;": "mobility; 分號不能結束非限定關係子句，主詞與動詞被切斷。",
+  "mobility—": "mobility— 破折號和開頭的逗號不成對，標點不一致。"
+ },
+ "d.diag-1320": {
+  "polyps": "polyps 後少了逗號，補充說明的 a delicate... ecosystem 需要成對逗號。",
+  "polyps;": "polyps; 分號不能用來結束插入語，會切斷主詞與動詞 faces。",
+  "polyps—": "polyps— 破折號與前面的逗號不成對，標點不一致。"
+ },
+ "d.diag-1321": {
+  "inducer, and": "inducer, and 的逗號與前面的破折號不成對，插入語要用成對破折號。",
+  "inducer; and": "inducer; and 分號不能結束破折號插入語，標點不成對。",
+  "inducer and": "inducer and 少了結尾破折號，插入語沒有被關閉，主詞與動詞黏在一起。"
+ },
+ "d.diag-1323": {
+  "space, to": "space, to 的逗號與前面的破折號不成對，破折號插入語要用成對破折號。",
+  "space; to": "space; to 分號不能結束破折號插入語，標點不成對。",
+  "space to": "space to 少了結尾破折號，插入語未結束，句子結構混亂。"
+ },
+ "d.diag-1324": {
+  "malaise,": "malaise, 逗號與前面的破折號不成對，破折號插入語要成對。",
+  "malaise;": "malaise; 分號不能結束破折號插入語，標點不成對。",
+  "malaise": "malaise 少了結尾破折號，插入語沒有被關閉，主詞與動詞黏在一起。"
+ },
+ "d.diag-1325": {
+  "radiation; whose": "radiation; whose 分號後面 whose 引導的不是獨立子句，不能用分號。",
+  "radiation, whose,": "radiation, whose, 多了第二個逗號，會把 whose 與後面的 origin 分開，位置錯誤。",
+  "radiation. Whose": "radiation. Whose 句號使 whose 子句變成殘缺的片段句。"
+ },
+ "d.diag-1326": {
+  "Hellenistic,": "Hellenistic, 逗號與前面的破折號不成對，破折號插入語要成對。",
+  "Hellenistic;": "Hellenistic; 分號不能結束破折號插入語，標點不成對。",
+  "Hellenistic": "Hellenistic 少了結尾破折號，插入語沒有被關閉，主詞與動詞黏在一起。"
+ },
+ "d.diag-1327": {
+  "qanats,": "qanats, 逗號與前面的破折號不成對，破折號插入語要成對。",
+  "qanats;": "qanats; 分號不能結束破折號插入語，標點不成對。",
+  "qanats": "qanats 少了結尾破折號，插入語沒有被關閉，主詞與動詞黏在一起。"
+ },
+ "d.diag-1328": {
+  "drainage, to": "drainage, to 的逗號與前面的破折號不成對，插入語要用成對破折號。",
+  "drainage; to": "drainage; to 分號不能結束破折號插入語，標點不成對。",
+  "drainage to": "drainage to 少了結尾破折號，插入語沒有被關閉，句子結構不清。"
+ },
+ "d.diag-1329": {
+  "transitions,": "transitions, 逗號與前面的破折號不成對，破折號插入語要成對。",
+  "transitions;": "transitions; 分號不能結束破折號插入語，標點不成對。",
+  "transitions": "transitions 少了結尾破折號，插入語沒有被關閉，主詞與動詞黏在一起。"
+ },
+ "d.diag-1330": {
+  "rationality,": "rationality, 逗號與前面的破折號不成對，破折號插入語要成對。",
+  "rationality;": "rationality; 分號不能結束破折號插入語，標點不成對。",
+  "rationality": "rationality 少了結尾破折號，插入語沒有被關閉，arguing 接得太突兀。"
+ },
+ "d.diag-1331": {
+  "lies": "lies 是單數動詞，倒裝句真正的主詞是複數 geoglyphs，要用 lie。",
+  "lying": "lying 是現在分詞，句子缺少主要動詞，句子不完整。",
+  "to lie": "to lie 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1333": {
+  "are": "are 搭配複數主詞，但倒裝句真正的主詞是單數 pressure，要用 is。",
+  "being": "being 是動名詞或分詞，不能當主要動詞，句子缺謂語。",
+  "to be": "to be 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1335": {
+  "were": "were 是複數動詞，真正主詞是單數 moat，要用 was。",
+  "being": "being 不能當主要動詞，句子缺少謂語。",
+  "to be": "to be 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1336": {
+  "contradict": "contradict 是原形複數動詞，主詞 discovery 是單數，要加 -s。",
+  "contradicting": "contradicting 是現在分詞，單獨使用時句子缺少謂語。",
+  "to contradict": "to contradict 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1337": {
+  "is": "is 是單數動詞，倒裝句真正的主詞是複數 bubbles，要用 are。",
+  "being": "being 不能當主要動詞，句子缺少謂語。",
+  "to be": "to be 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1338": {
+  "were": "were 是複數動詞，主詞是單數 catalog，要用 was。",
+  "being": "being 不能當主要動詞，句子缺少謂語。",
+  "to be": "to be 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1339": {
+  "was": "was 是單數動詞，倒裝句真正的主詞是複數 antennae，要用 were。",
+  "being": "being 不能當主要動詞，句子缺少謂語。",
+  "to be": "to be 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1340": {
+  "deter": "deter 是複數或原形動詞，neither...nor 靠近動詞的主詞 volatility 是單數，要用 deters。",
+  "deterring": "deterring 是現在分詞，單獨使用時句子缺少謂語。",
+  "to deter": "to deter 是不定詞，不能當句子的謂語動詞。"
+ },
+ "d.diag-1341": {
+  "proposes": "proposes 是現在式，與 1912 這個過去時間矛盾。",
+  "has proposed": "has proposed 是現在完成式，不能與明確過去年份 1912 連用，也不能表示更早。",
+  "was proposing": "was proposing 是過去進行式，表示當時正在進行，不符「早於 1960 年代」的過去完成。"
+ },
+ "d.diag-1343": {
+  "maintained": "maintained 是過去式，If 子句描述過去相反事實，應用過去完成式 had maintained。",
+  "would maintain": "would maintain 不能放在 if 子句裡，if 子句不用 would。",
+  "maintain": "maintain 是原形動詞，時態不合過去相反事實的假設。"
+ },
+ "d.diag-1344": {
+  "is": "is 是現在式，與 prior to 過去事件和 for millions of years 的語意矛盾。",
+  "has been": "has been 是現在完成式，與已發生過的潮汐瓦解（過去事件）不合。",
+  "will be": "will be 是未來式，與 prior to 已經發生的事件矛盾。"
+ },
+ "d.diag-1345": {
+  "will emit": "will emit 是未來式，與 Prior to 過去事件矛盾。",
+  "have emitted": "have emitted 是現在完成式，與已過去的協定生效之前不合。",
+  "emit": "emit 是現在式，不符合「在協定實施之前」的過去時間。"
+ },
+ "d.diag-1346": {
+  "did not leak": "did not leak 是過去式，倒裝 Had... 的假設需搭配 would have 的結果。",
+  "would not leak": "would not leak 是現在或未來假設，與過去相反事實的 Had 不合。",
+  "had not leaked": "had not leaked 是假設子句用法，主句的結果要用 would have + 過去分詞。"
+ },
+ "d.diag-1347": {
+  "eradicated": "eradicated 是過去式，By 某過去時間點之前的動作要用過去完成式。",
+  "have eradicated": "have eradicated 是現在完成式，與 By the dawn of the twentieth century 的過去時間不合。",
+  "eradicate": "eradicate 是原形動詞，時態和主謂都不合。"
+ },
+ "d.diag-1348": {
+  "serve": "serve 是現在式，與 centuries before being converted 的過去時間矛盾。",
+  "have served": "have served 是現在完成式，不符合「早於被改為軍事碉堡」的過去更早時間。",
+  "were serving": "were serving 是過去進行式，沒有表示更早發生的完成概念。"
+ },
+ "d.diag-1349": {
+  "decoded": "decoded 是過去式，If 子句描述過去相反事實，應用 had decoded。",
+  "would decode": "would decode 不能放在 if 子句裡，if 子句不用 would。",
+  "decodes": "decodes 是現在式，與 could have evaded 的過去假設不合。"
+ },
+ "d.diag-1351": {
+  "a conserved protein domain essential for DNA repair was identified by the computational biologists": "分詞片語 Having analyzed 的主詞應是人（生物學家），被動句主詞是結構域，形成懸垂修飾。",
+  "the identification of a conserved protein domain was achieved": "這句主詞是 identification，不是做分析的人，造成懸垂分詞。",
+  "it was discovered that a protein domain facilitates DNA repair": "it 是虛主詞，不是 Having analyzed 的動作者，造成懸垂分詞。"
+ },
+ "d.diag-1352": {
+  "centuries of severe earthquakes failed to destroy the Inca fortress": "主詞 centuries 不是被石塊建造的對象，Constructed 修飾對象錯誤。",
+  "the architectural brilliance of the Inca fortress was demonstrated": "主詞 brilliance 不是被建造的東西，Constructed 的修飾對象錯誤。",
+  "earthquakes could not dismantle the Inca fortress": "主詞 earthquakes 不是被建造的東西，Constructed 的修飾對象錯誤。"
+ },
+ "d.diag-1353": {
+  "the hexagonal capsid of the novel bacteriophage was observed by the virologist": "Peering 的動作者是病毒學家，被動句主詞是 capsid，變成懸垂修飾。",
+  "observations of the bacteriophage capsid were carefully recorded": "主詞是 observations，不是用顯微鏡看的人，造成懸垂分詞。",
+  "it was possible to discern the hexagonal structure of the virus": "it 是虛主詞，不是窺看的動作者，造成懸垂分詞。"
+ },
+ "d.diag-1354": {
+  "instruments for spectrometry are calibrated before every flight by atmospheric scientists": "To measure 的動作者應是科學家，被動句主詞是 instruments，邏輯不合。",
+  "calibration of the airborne spectrometry instruments is required": "主詞 calibration 不是測量的人，不定詞的動作者不明。",
+  "it is necessary to calibrate airborne spectrometry instruments": "it 是虛主詞，不是測量的人，動作者不清楚。"
+ },
+ "d.diag-1355": {
+  "the divers were astounded by the delicate astronomical inscriptions on the bronze astrolabe": "Although heavily damaged 修飾的應是 astrolabe，主詞卻是 divers，修飾錯對象。",
+  "inscriptions on the bronze astrolabe were still legible to the diving team": "主詞 inscriptions 並非被腐蝕破壞的主體，修飾對象不一致。",
+  "it was still possible to read the astronomical markings on the astrolabe": "it 是虛主詞，沒有指出受損的 astrolabe，修飾對象不清。"
+ },
+ "d.diag-1356": {
+  "a monumental compendium on rainforest pharmacopeia was published by the ethnobotanist": "After spending 的動作者應是民族植物學家，被動句主詞是 compendium，變成懸垂修飾。",
+  "the publication of a monumental compendium on herbal remedies occurred": "主詞 publication 不是花了幾十年的人，修飾對象錯誤。",
+  "it took decades for the herbal remedies to be compiled into a compendium": "主詞 it 並非花幾十年編目的人，造成懸垂分詞。"
+ },
+ "d.diag-1357": {
+  "archaeologists excavated an ancient Macedonian tomb containing gold jewelry": "Unearthed 修飾的應是被挖出的墓，但這句主詞是 archaeologists，修飾錯對象。",
+  "historians were astonished by the gold jewelry inside an ancient Macedonian tomb": "主詞 historians 不是被挖出的東西，Unearthed 的修飾對象錯誤。",
+  "the discovery of an ancient Macedonian tomb astonished historians": "主詞 discovery 不是被挖出的東西，Unearthed 的修飾對象錯誤。"
+ },
+ "d.diag-1358": {
+  "micro-subsidence across the metropolitan aquifer was mapped by geophysicists": "By combining 的動作者應是地球物理學家，被動句主詞是 micro-subsidence，變成懸垂修飾。",
+  "the mapping of micro-subsidence across the aquifer was completed": "主詞 mapping 不是結合資料的人，動作者錯誤。",
+  "it became feasible to detect millimeter-scale ground displacement": "it 是虛主詞，結合兩種資料的動作者不明。"
+ },
+ "d.diag-1359": {
+  "crowds of thousands were addressed by the pioneering orator across the industrial north": "Widely revered 修飾的應是女演說家，被動句主詞是 crowds，修飾錯對象。",
+  "addresses were delivered to crowds of thousands across the industrial north": "主詞 addresses 不是受人推崇的人，修飾對象錯誤。",
+  "the industrial north welcomed speeches by the pioneering orator": "主詞 the industrial north 不是受推崇的人，修飾對象錯誤。"
+ },
+ "d.diag-1360": {
+  "fossilized Cretaceous tree stumps were discovered by the field geologists": "While hiking 的動作者是地質學家，被動句主詞是樹樁，變成懸垂修飾。",
+  "the discovery of Cretaceous fossils surprised the field team": "主詞 discovery 不是健行的人，造成懸垂分詞。",
+  "it was possible to observe fossilized tree stumps scattered across the permafrost": "it 是虛主詞，沒有指出健行的人，造成懸垂分詞。"
+ },
+ "d.diag-1361": {
+  "their": "their 是複數所有格，Each 是單數，要用單數 its。",
+  "they're": "they're 是 they are 的縮寫，不是所有格，空格需要所有格。",
+  "it's": "it's 是 it is 的縮寫，不是所有格，空格需要 its。"
+ },
+ "d.diag-1364": {
+  "themselves": "themselves 是複數反身代名詞，主詞 species 前有 Every，要用單數 itself。",
+  "oneself": "oneself 是泛指「自己」，用在指代特定物種不恰當。",
+  "themself": "themself 不是標準用法，主詞是單數物種，要用 itself。"
+ },
+ "d.diag-1365": {
+  "its": "its 指物，但主詞 a researcher 是人，不能用 its。",
+  "his or her": "his or her 把代名詞限成兩個性別、較冗長，本題標準答案用中性的 their。",
+  "one's": "one's 指泛稱的「人」，與具體的 researcher 指代不一致。"
+ },
+ "d.diag-1366": {
+  "their": "their 是複數，Neither of 後面通常搭配單數 its，此處指代 models 各自。",
+  "theirs": "theirs 是所有格代名詞，後面不能再接名詞 primary benchmarks。",
+  "it's": "it's 是 it is 的縮寫，不是所有格。"
+ },
+ "d.diag-1367": {
+  "their": "their 對應複數，但 faculty 在此視為一個團體，用單數 its。",
+  "they're": "they're 是 they are 的縮寫，不是所有格，空格要填 its。",
+  "it's": "it's 是 it is 的縮寫，不是 faculty 的所有格。"
+ },
+ "d.diag-1368": {
+  "one": "one 太正式籠統，與前面的 students 不一致，應該用 they。",
+  "you": "you 是第二人稱，與前面第三人稱的 students 人稱不一致。",
+  "he or she": "he or she 是單數，指代複數 students，數不一致。"
+ },
+ "d.diag-1370": {
+  "their": "their 是複數，coalition 視為一個團體，用單數 its。",
+  "they're": "they're 是 they are 的縮寫，不是所有格。",
+  "theirs": "theirs 是所有格代名詞，後面不能再接名詞 commitment。"
+ },
+ "d.diag-1371": {
+  "but also accelerating": "but also accelerating 的詞性是動名詞，與前面的不定詞 to reduce 結構不平行。",
+  "and to accelerate": "and to accelerate 與 not only 搭配不成對，應用 but also。",
+  "as well as accelerate": "as well as accelerate 與 not only 搭配錯誤，且動詞形式不平行。"
+ },
+ "d.diag-1372": {
+  "or its": "or its 與 neither 搭配錯誤，neither 要與 nor 成對。",
+  "nor it's": "nor it's 的 it's 是 it is 縮寫，不是所有格 its。",
+  "and its": "and its 與 neither 搭配錯誤，neither 要與 nor 成對。"
+ },
+ "d.diag-1373": {
+  "as well as its": "as well as its 與 both 搭配錯誤，both 要與 and 成對。",
+  "along with its": "along with its 與 both 搭配錯誤，both 要與 and 成對。",
+  "but also its": "but also its 與 both 搭配錯誤，but also 是 not only 的搭配。"
+ },
+ "d.diag-1374": {
+  "or for its": "or for its 與 both 搭配錯誤，both 要與 and 成對。",
+  "nor for its": "nor for its 與 both 搭配錯誤，nor 是 neither 的搭配。",
+  "as well as": "as well as 與 both 不能一起用，且缺少 for its 的平行結構。"
+ },
+ "d.diag-1375": {
+  "and on the": "and on the 與 not simply 搭配錯誤，應該用 but also。",
+  "but also the": "but also the 缺少介系詞 on，與前面 based on 的結構不平行。",
+  "as well as": "as well as 與 not simply 搭配錯誤，應該用 but also。"
+ },
+ "d.diag-1376": {
+  "and also for": "and also for 與 not only 搭配不完整，應該用 but also。",
+  "but also it's": "but also it's 的 it's 是 it is 縮寫，不是所有格，且缺 for。",
+  "as well as": "as well as 與 not only 搭配錯誤，應該用 but also。"
+ },
+ "d.diag-1377": {
+  "and to optimize": "and to optimize 與 either 搭配錯誤，either 要與 or 成對。",
+  "or optimizing": "or optimizing 動名詞與前面的不定詞 to synthesize 結構不平行。",
+  "and optimizing": "and optimizing 與 either 搭配錯誤，且形式不平行。"
+ },
+ "d.diag-1378": {
+  "as well as late": "as well as late 與 both 搭配錯誤，且少了 his，不平行。",
+  "and also his late": "and also his late 多了 also，與 both...and 固定搭配不合。",
+  "together with his": "together with his 與 both 搭配錯誤，both 要與 and 成對。"
+ },
+ "d.diag-1379": {
+  "and because of": "and because of 與 not 搭配錯誤，not...but 才是成對。",
+  "but because": "but because 後面缺少 of，與前面 because of 結構不平行。",
+  "rather due to": "rather due to 與 not 搭配錯誤，應該用 but because of。"
+ },
+ "d.diag-1381": {
+  "those of": "those of 是複數，但 tensile strength 是單數，要用 that of。",
+  "these of": "these of 不是正確的代名詞用法，of 前不能用 these。",
+  "them of": "them of 是受格代名詞，不能用在比較結構中代替名詞。"
+ },
+ "d.diag-1382": {
+  "that of": "that of 是單數，但 acoustic adaptations 是複數，要用 those of。",
+  "which of": "which of 是疑問或關係詞，不能用在比較結構中。",
+  "them of": "them of 是受格代名詞，不能用在比較結構中代替名詞。"
+ },
+ "d.diag-1383": {
+  "those of": "those of 是複數，但 carbon sequestration potential 是單數，要用 that of。",
+  "them of": "them of 是受格代名詞，不能用在比較結構中代替名詞。",
+  "this of": "this of 不是正確用法，比較結構中代替名詞用 that of。"
+ },
+ "d.diag-1384": {
+  "that of": "that of 是單數，但 glazing techniques 是複數，要用 those of。",
+  "them of": "them of 是受格代名詞，不能用在比較結構中代替名詞。",
+  "these of": "these of 不是正確用法，比較結構中代替名詞用 those of。"
+ },
+ "d.diag-1385": {
+  "those of": "those of 是複數，但 orbital eccentricity 是單數，要用 that of。",
+  "which of": "which of 是疑問或關係詞，不能用在比較結構中。",
+  "this of": "this of 不是正確用法，比較結構中代替名詞用 that of。"
+ },
+ "d.diag-1386": {
+  "that of their": "that of their 是單數，但 wing pigmentation patterns 是複數，要用 those of。",
+  "them of their": "them of their 的 them 是受格代名詞，不能用在比較結構中。",
+  "which of their": "which of their 是疑問或關係詞，不能用在比較結構中。"
+ },
+ "d.diag-1387": {
+  "those of": "those of 是複數，但 energy consumption 是單數，要用 that of。",
+  "them of": "them of 是受格代名詞，不能用在比較結構中代替名詞。",
+  "which of": "which of 是疑問或關係詞，不能用在比較結構中。"
+ }
+}

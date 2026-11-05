@@ -65,6 +65,6 @@ Full batch input: `fc-gr-0001  hamper  v.  妨礙阻礙牽制進展  語境詞�
 fc-gr-0001	Heavy snow hampered rescue teams trying to reach the village.	大雪阻礙了設法抵達村莊的救援隊。	hamper progress (妨礙進展)	hamper 也是有蓋的籃子，大籃子擋路，走不動	/ˈhæmpɚ/	ham - per	妨礙；阻礙進展
 ```
 
-If a card's `zh` is simply wrong for the word (for example cope given as 競爭), teach the correct meaning, put it in `gloss`, and list the id with the correct meaning in your final reply.
+If a card's `zh` or `pos` gives a rare or wrong sense, teach the most common meaning a learner needs instead, and do not build the sentence around the rare sense. If a card's `zh` is simply wrong for the word (for example cope given as 競爭), teach the correct meaning, put it in `gloss`, and list the id with the correct meaning in your final reply.
 
 When you finish, reply with one line: the batch name and `OK`, or what could not be fixed, plus any wrong-meaning ids.

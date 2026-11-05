@@ -1,14 +1,246 @@
 [
-{"id":"g7-s1-u1.b1","type":"fix","prompt":"哪一句才是正確的英文？","text":"","options":["My brother play basketball on Sundays.","My brother plays basketball on Sundays.","My brother is play basketball on Sundays."],"answer":"My brother plays basketball on Sundays.","wrong":{"My brother play basketball on Sundays.":"my brother 是第三人稱單數，現在簡單式的動詞要加 -s，不能用原形 play。","My brother is play basketball on Sundays.":"is 和 play 不能放在一起；一般動詞前面不需要再加 be 動詞。"},"why":"on Sundays 表示固定習慣，用現在簡單式；主詞 my brother 是第三人稱單數，所以 play 要變成 plays。","tip":"he／she／my brother 當主詞，一般動詞加 s。","say":"My brother plays basketball on Sundays."},
-{"id":"g7-s1-u1.b2","type":"cloze","prompt":"選出最適合填入空格的字。","text":"Lily _____ eleven years old, and her sister is thirteen.","options":["is","are","am","does"],"answer":"is","wrong":{"are":"are 用在 you、we、they 或複數主詞，Lily 是單數，不能搭配 are。","am":"am 只能搭配 I，Lily 不是 I。","does":"does 是助動詞，後面要接原形動詞，不能直接用來表示「是」多少歲。"},"why":"說年齡用 be 動詞；Lily 是第三人稱單數，所以用 is。","tip":"說年齡、職業、身分，要用 be 動詞。","say":"Lily is eleven years old, and her sister is thirteen."},
-{"id":"g7-s1-u1.b3","type":"fix","prompt":"哪一句是正確的否定句？","text":"","options":["He doesn't likes spicy food.","He don't like spicy food.","He doesn't like spicy food."],"answer":"He doesn't like spicy food.","wrong":{"He doesn't likes spicy food.":"doesn't 已經帶有第三人稱單數的 -s 了，後面的動詞要回到原形 like。","He don't like spicy food.":"he 是第三人稱單數，要用 doesn't，不能用 don't。"},"why":"第三人稱單數的否定句用 doesn't + 原形動詞。","tip":"doesn't 後面的動詞一律用原形。","say":"He doesn't like spicy food."},
-{"id":"g7-s1-u1.b4","type":"situation","prompt":"你想問同學：「你有養寵物嗎？」哪一句最自然？","text":"","options":["Do you have any pets?","Are you have any pets?","You have any pets do?","Have you any pets are?"],"answer":"Do you have any pets?","wrong":{"Are you have any pets?":"have 是一般動詞，疑問句要用 do 開頭，不能把 are 和 have 放在一起。","You have any pets do?":"英文的 do 要放在句子最前面，不能像中文一樣放在句尾。","Have you any pets are?":"這句把兩個動詞硬湊在一起，文法錯誤，意思也不通。"},"why":"一般動詞 have 的 Yes/No 問句，用 Do + 主詞 + 原形動詞。","tip":"一般動詞的問句，先放 Do 或 Does。","say":"Do you have any pets?"},
-{"id":"g7-s1-u1.b5","type":"cloze","prompt":"選出正確答案完成對話。","text":"A: Does Mia walk to school?\nB: No, she _____. She takes the bus.","options":["doesn't","don't","isn't","not"],"answer":"doesn't","wrong":{"don't":"Mia 是第三人稱單數，簡短回答要用 doesn't，don't 用在 I、you、we、they。","isn't":"問句用的是 Does，簡答要跟著用 does／doesn't，不能換成 be 動詞。","not":"只說 not 不完整，簡短否定回答要有助動詞 doesn't。"},"why":"問句以 Does 開頭，簡短回答也用 does；否定就是 she doesn't。","tip":"Does 開頭的問句，答 does 或 doesn't。","say":"No, she doesn't. She takes the bus."},
-{"id":"g7-s1-u1.b6","type":"fix","prompt":"哪一句的 be 動詞用對了？","text":"","options":["They is in the music room.","They am in the music room.","They are in the music room."],"answer":"They are in the music room.","wrong":{"They is in the music room.":"they 是複數，be 動詞要用 are，is 用在單數主詞。","They am in the music room.":"am 只跟 I 一起用，they 要搭配 are。"},"why":"they 是複數主詞，be 動詞用 are。","tip":"I am，he／she／it is，you／we／they are。","say":"They are in the music room."},
-{"id":"g7-s1-u1.b7","type":"situation","prompt":"朋友問你：「你週末通常做什麼？」你想說「我通常和家人去公園。」","text":"","options":["I usually go to the park with my family.","I usually going to the park with my family.","I am usually go to the park with my family.","I usually goes to the park with my family."],"answer":"I usually go to the park with my family.","wrong":{"I usually going to the park with my family.":"going 是 V-ing，不能單獨當動詞；表示習慣要用現在簡單式 go。","I am usually go to the park with my family.":"am 和 go 重複使用了兩個動詞，一個句子只需要一個主要動詞。","I usually goes to the park with my family.":"主詞是 I，不是第三人稱單數，動詞要用原形 go，不能加 es。"},"why":"usually 表示習慣，用現在簡單式；主詞 I 搭配原形動詞 go。","tip":"usually 是習慣，動詞用現在簡單式。","say":"I usually go to the park with my family."},
-{"id":"g7-s1-u1.b8","type":"meaning","prompt":"這句話的意思是什麼？","text":"The bus doesn't stop near my house.","options":["公車不會停在我家附近。","公車停在我家附近。","公車不應該停下來。","我家附近沒有公車站牌，所以我不搭公車。"],"answer":"公車不會停在我家附近。","wrong":{"公車停在我家附近。":"句子裡有 doesn't，是否定句，意思剛好相反。","公車不應該停下來。":"doesn't 是描述事實，不是 shouldn't（不應該）的意思。","我家附近沒有公車站牌，所以我不搭公車。":"句子只說公車不停在附近，並沒有說我不搭公車，這是多加的推測。"},"why":"doesn't stop 表示「不會停」，near my house 是「在我家附近」。","tip":"doesn't + 原形動詞 = 事實上不會做某事。","say":"The bus doesn't stop near my house."},
-{"id":"g7-s1-u1.b9","type":"fix","prompt":"哪一句的句子結構正確？","text":"","options":["Tom every morning drinks milk.","Tom drinks milk every morning.","Every morning drinks Tom milk.","Tom drinks every morning milk."],"answer":"Tom drinks milk every morning.","wrong":{"Tom every morning drinks milk.":"every morning 通常放在句尾或句首，不會插在主詞和動詞中間。","Every morning drinks Tom milk.":"句首放了時間後，仍要是「主詞 + 動詞」，不能把動詞放在主詞前面。","Tom drinks every morning milk.":"受詞 milk 要緊跟在動詞後面，時間副詞放在最後。"},"why":"基本句型是「主詞 + 動詞 + 受詞」，時間詞 every morning 放最後。","tip":"句型順序：主詞、動詞、受詞，再放時間。","say":"Tom drinks milk every morning."},
-{"id":"g7-s1-u1.b10","type":"cloze","prompt":"選出最適合的答案。","text":"My parents _____ at a hospital. My mother is a nurse.","options":["work","works","working","is work"],"answer":"work","wrong":{"works":"my parents 是複數，動詞不加 s。","working":"V-ing 前面需要 be 動詞才能當動詞，這裡沒有 be 動詞。","is work":"is 和 work 不能連用，而且 parents 是複數，不能用 is。"},"why":"my parents 是複數主詞，現在簡單式用原形動詞 work。","tip":"複數主詞搭配原形動詞，不加 s。","say":"My parents work at a hospital."},
-{"id":"g7-s1-u1.b11","type":"situation","prompt":"老師問：「你喜歡數學嗎？」你不太喜歡，要怎麼回答才完整？","text":"","options":["No, I don't. It's difficult for me.","No, I'm not. It's difficult for me.","No, I doesn't. It's difficult for me."],"answer":"No, I don't. It's difficult for me.","wrong":{"No, I'm not. It's difficult for me.":"問句用 Do you like，簡答要用 do／don't，不能改用 be 動詞 am not。","No, I doesn't. It's difficult for me.":"I 搭配 don't，doesn't 只給第三人稱單數用。"},"why":"Do you like ...? 的否定簡答是 No, I don't.","tip":"問句用什麼助動詞，簡答就用什麼。","say":"No, I don't. It's difficult for me."},
-{"id":"g7-s1-u1.b12","type":"fix","prompt":"哪一個疑問句是正確的？","text":"","options":["Where does your uncle lives?","Where does your uncle live?","Where your uncle lives?","Where is your uncle live?"],"answer":"Where does your uncle live?","wrong":{"Where does your uncle lives?":"does 已經表示第三人稱單數，後面的動詞要用原形 live，不加 s。","Where your uncle lives?":"疑問詞後面還要放助動詞 does，才能構成疑問句。","Where is your uncle live?":"is 和 live 不能同時當動詞；問「住哪裡」要用 does + 原形。"},"why":"Wh- 問句的順序：疑問詞 + does + 主詞 + 原形動詞。","tip":"疑問詞 + do／does + 主詞 + 原形動詞。","say":"Where does your uncle live?"}
+ {
+  "id": "g7-s1-u1.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "My brother play basketball on Sundays.",
+   "My brother plays basketball on Sundays.",
+   "My brother is play basketball on Sundays."
+  ],
+  "answer": "My brother plays basketball on Sundays.",
+  "wrong": {
+   "My brother play basketball on Sundays.": "my brother 是第三人稱單數，現在簡單式的動詞要加 -s，不能用原形 play。",
+   "My brother is play basketball on Sundays.": "is 和 play 不能放在一起；一般動詞前面不需要再加 be 動詞。"
+  },
+  "why": "on Sundays 表示固定習慣，用現在簡單式；主詞 my brother 是第三人稱單數，所以 play 要變成 plays。",
+  "tip": "he／she／my brother 當主詞，一般動詞加 s。",
+  "say": "My brother plays basketball on Sundays."
+ },
+ {
+  "id": "g7-s1-u1.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Lily _____ eleven years old, and her sister is thirteen.",
+  "options": [
+   "is",
+   "are",
+   "am",
+   "does"
+  ],
+  "answer": "is",
+  "wrong": {
+   "are": "are 用在 you、we、they 或複數主詞，Lily 是單數，不能搭配 are。",
+   "am": "am 只能搭配 I，Lily 不是 I。",
+   "does": "does 是助動詞，後面要接原形動詞，不能直接用來表示「是」多少歲。"
+  },
+  "why": "說年齡用 be 動詞；Lily 是第三人稱單數，所以用 is。",
+  "tip": "說年齡、職業、身分，要用 be 動詞。",
+  "say": "Lily is eleven years old, and her sister is thirteen."
+ },
+ {
+  "id": "g7-s1-u1.b3",
+  "type": "fix",
+  "prompt": "哪一句是正確的否定句？",
+  "text": "",
+  "options": [
+   "He doesn't likes spicy food.",
+   "He don't like spicy food.",
+   "He doesn't like spicy food."
+  ],
+  "answer": "He doesn't like spicy food.",
+  "wrong": {
+   "He doesn't likes spicy food.": "doesn't 已經帶有第三人稱單數的 -s 了，後面的動詞要回到原形 like。",
+   "He don't like spicy food.": "he 是第三人稱單數，要用 doesn't，不能用 don't。"
+  },
+  "why": "第三人稱單數的否定句用 doesn't + 原形動詞。",
+  "tip": "doesn't 後面的動詞一律用原形。",
+  "say": "He doesn't like spicy food."
+ },
+ {
+  "id": "g7-s1-u1.b4",
+  "type": "situation",
+  "prompt": "你想問同學：「你有養寵物嗎？」哪一句最自然？",
+  "text": "",
+  "options": [
+   "Do you have any pets?",
+   "Are you have any pets?",
+   "You have any pets do?",
+   "Have you any pets are?"
+  ],
+  "answer": "Do you have any pets?",
+  "wrong": {
+   "Are you have any pets?": "have 是一般動詞，疑問句要用 do 開頭，不能把 are 和 have 放在一起。",
+   "You have any pets do?": "英文的 do 要放在句子最前面，不能像中文一樣放在句尾。",
+   "Have you any pets are?": "這句把兩個動詞硬湊在一起，文法錯誤，意思也不通。"
+  },
+  "why": "一般動詞 have 的 Yes/No 問句，用 Do + 主詞 + 原形動詞。",
+  "tip": "一般動詞的問句，先放 Do 或 Does。",
+  "say": "Do you have any pets?"
+ },
+ {
+  "id": "g7-s1-u1.b5",
+  "type": "cloze",
+  "prompt": "選出正確答案完成對話。",
+  "text": "A: Does Mia walk to school?\nB: No, she _____. She takes the bus.",
+  "options": [
+   "doesn't",
+   "don't",
+   "isn't",
+   "not"
+  ],
+  "answer": "doesn't",
+  "wrong": {
+   "don't": "Mia 是第三人稱單數，簡短回答要用 doesn't，don't 用在 I、you、we、they。",
+   "isn't": "問句用的是 Does，簡答要跟著用 does／doesn't，不能換成 be 動詞。",
+   "not": "只說 not 不完整，簡短否定回答要有助動詞 doesn't。"
+  },
+  "why": "問句以 Does 開頭，簡短回答也用 does；否定就是 she doesn't。",
+  "tip": "Does 開頭的問句，答 does 或 doesn't。",
+  "say": "No, she doesn't. She takes the bus."
+ },
+ {
+  "id": "g7-s1-u1.b6",
+  "type": "fix",
+  "prompt": "哪一句的 be 動詞用對了？",
+  "text": "",
+  "options": [
+   "They is in the music room.",
+   "They am in the music room.",
+   "They are in the music room."
+  ],
+  "answer": "They are in the music room.",
+  "wrong": {
+   "They is in the music room.": "they 是複數，be 動詞要用 are，is 用在單數主詞。",
+   "They am in the music room.": "am 只跟 I 一起用，they 要搭配 are。"
+  },
+  "why": "they 是複數主詞，be 動詞用 are。",
+  "tip": "be 動詞配對：I am，he／she／it is，you／we／they are。",
+  "say": "They are in the music room."
+ },
+ {
+  "id": "g7-s1-u1.b7",
+  "type": "situation",
+  "prompt": "朋友問你：「你週末通常做什麼？」你想說「我通常和家人去公園。」",
+  "text": "",
+  "options": [
+   "I usually go to the park with my family.",
+   "I usually going to the park with my family.",
+   "I am usually go to the park with my family.",
+   "I usually goes to the park with my family."
+  ],
+  "answer": "I usually go to the park with my family.",
+  "wrong": {
+   "I usually going to the park with my family.": "going 是 V-ing，不能單獨當動詞；表示習慣要用現在簡單式 go。",
+   "I am usually go to the park with my family.": "am 和 go 重複使用了兩個動詞，一個句子只需要一個主要動詞。",
+   "I usually goes to the park with my family.": "主詞是 I，不是第三人稱單數，動詞要用原形 go，不能加 es。"
+  },
+  "why": "usually 表示習慣，用現在簡單式；主詞 I 搭配原形動詞 go。",
+  "tip": "usually 是習慣，動詞用現在簡單式。",
+  "say": "I usually go to the park with my family."
+ },
+ {
+  "id": "g7-s1-u1.b8",
+  "type": "meaning",
+  "prompt": "這句話的意思是什麼？",
+  "text": "The bus doesn't stop near my house.",
+  "options": [
+   "公車不會停在我家附近。",
+   "公車停在我家附近。",
+   "公車不應該停下來。",
+   "我家附近沒有公車站牌，所以我不搭公車。"
+  ],
+  "answer": "公車不會停在我家附近。",
+  "wrong": {
+   "公車停在我家附近。": "句子裡有 doesn't，是否定句，意思剛好相反。",
+   "公車不應該停下來。": "doesn't 是描述事實，不是 shouldn't（不應該）的意思。",
+   "我家附近沒有公車站牌，所以我不搭公車。": "句子只說公車不停在附近，並沒有說我不搭公車，這是多加的推測。"
+  },
+  "why": "doesn't stop 表示「不會停」，near my house 是「在我家附近」。",
+  "tip": "doesn't + 原形動詞 = 事實上不會做某事。",
+  "say": "The bus doesn't stop near my house."
+ },
+ {
+  "id": "g7-s1-u1.b9",
+  "type": "fix",
+  "prompt": "哪一句的句子結構正確？",
+  "text": "",
+  "options": [
+   "Tom every morning drinks milk.",
+   "Tom drinks milk every morning.",
+   "Every morning drinks Tom milk.",
+   "Tom drinks every morning milk."
+  ],
+  "answer": "Tom drinks milk every morning.",
+  "wrong": {
+   "Tom every morning drinks milk.": "every morning 通常放在句尾或句首，不會插在主詞和動詞中間。",
+   "Every morning drinks Tom milk.": "句首放了時間後，仍要是「主詞 + 動詞」，不能把動詞放在主詞前面。",
+   "Tom drinks every morning milk.": "受詞 milk 要緊跟在動詞後面，時間副詞放在最後。"
+  },
+  "why": "基本句型是「主詞 + 動詞 + 受詞」，時間詞 every morning 放最後。",
+  "tip": "句型順序：主詞、動詞、受詞，再放時間。",
+  "say": "Tom drinks milk every morning."
+ },
+ {
+  "id": "g7-s1-u1.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的答案。",
+  "text": "My parents _____ at a hospital. My mother is a nurse.",
+  "options": [
+   "work",
+   "works",
+   "working",
+   "is work"
+  ],
+  "answer": "work",
+  "wrong": {
+   "works": "my parents 是複數，動詞不加 s。",
+   "working": "V-ing 前面需要 be 動詞才能當動詞，這裡沒有 be 動詞。",
+   "is work": "is 和 work 不能連用，而且 parents 是複數，不能用 is。"
+  },
+  "why": "my parents 是複數主詞，現在簡單式用原形動詞 work。",
+  "tip": "複數主詞搭配原形動詞，不加 s。",
+  "say": "My parents work at a hospital."
+ },
+ {
+  "id": "g7-s1-u1.b11",
+  "type": "situation",
+  "prompt": "老師問：「你喜歡數學嗎？」你不太喜歡，要怎麼回答才完整？",
+  "text": "",
+  "options": [
+   "No, I don't. It's difficult for me.",
+   "No, I'm not. It's difficult for me.",
+   "No, I doesn't. It's difficult for me."
+  ],
+  "answer": "No, I don't. It's difficult for me.",
+  "wrong": {
+   "No, I'm not. It's difficult for me.": "問句用 Do you like，簡答要用 do／don't，不能改用 be 動詞 am not。",
+   "No, I doesn't. It's difficult for me.": "I 搭配 don't，doesn't 只給第三人稱單數用。"
+  },
+  "why": "Do you like ...? 的否定簡答是 No, I don't.",
+  "tip": "問句用什麼助動詞，簡答就用什麼。",
+  "say": "No, I don't. It's difficult for me."
+ },
+ {
+  "id": "g7-s1-u1.b12",
+  "type": "fix",
+  "prompt": "哪一個疑問句是正確的？",
+  "text": "",
+  "options": [
+   "Where does your uncle lives?",
+   "Where does your uncle live?",
+   "Where your uncle lives?",
+   "Where is your uncle live?"
+  ],
+  "answer": "Where does your uncle live?",
+  "wrong": {
+   "Where does your uncle lives?": "does 已經表示第三人稱單數，後面的動詞要用原形 live，不加 s。",
+   "Where your uncle lives?": "疑問詞後面還要放助動詞 does，才能構成疑問句。",
+   "Where is your uncle live?": "is 和 live 不能同時當動詞；問「住哪裡」要用 does + 原形。"
+  },
+  "why": "Wh- 問句的順序：疑問詞 + does + 主詞 + 原形動詞。",
+  "tip": "疑問詞 + do／does + 主詞 + 原形動詞。",
+  "say": "Where does your uncle live?"
+ }
 ]

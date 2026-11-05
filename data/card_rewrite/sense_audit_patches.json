@@ -1,0 +1,2682 @@
+{
+ "fc-jh-0176": {
+  "pos": "n.",
+  "gloss": "選擇",
+  "example": "You have a choice between tea and milk.",
+  "exampleZh": "你可以在茶和牛奶之間做選擇。",
+  "collocation": "a good choice (好的選擇)",
+  "memoryTip": ""
+ },
+ "fc-jh-0195": {
+  "pos": "v.",
+  "gloss": "選舉、選出",
+  "example": "We elect a new class leader every term.",
+  "exampleZh": "我們每學期選出新的班長。",
+  "collocation": "elect a leader (選出領袖)",
+  "memoryTip": "elect 的 lect 像「勒課」，投票選出一個領袖"
+ },
+ "fc-jh-0200": {
+  "pos": "v.",
+  "gloss": "表達",
+  "example": "Words can express how we feel.",
+  "exampleZh": "文字可以表達我們的感受。",
+  "collocation": "express your feelings (表達感受)",
+  "memoryTip": "ex 是向外，press 是擠壓，把心情擠出來就是表達"
+ },
+ "fc-jh-0199": {
+  "pos": "n.",
+  "gloss": "專家",
+  "example": "My uncle is an expert on birds.",
+  "exampleZh": "我叔叔是鳥類專家。",
+  "collocation": "an expert in math (數學專家)",
+  "memoryTip": ""
+ },
+ "fc-jh-0229": {
+  "pos": "n.",
+  "gloss": "關節",
+  "example": "My knee joint hurts after the game.",
+  "exampleZh": "比賽後我的膝關節很痠。",
+  "collocation": "a knee joint (膝關節)",
+  "memoryTip": "joint 來自 join 連接，兩根骨頭接在一起能轉動"
+ },
+ "fc-jh-0235": {
+  "pos": "n.",
+  "gloss": "魔法",
+  "example": "The magician uses magic to make a bird appear.",
+  "exampleZh": "魔術師用魔法變出一隻鳥。",
+  "collocation": "do magic tricks (變魔術)",
+  "memoryTip": ""
+ },
+ "fc-jh-0240": {
+  "pos": "prep.",
+  "gloss": "減、減去",
+  "example": "Five minus two is three.",
+  "exampleZh": "五減二等於三。",
+  "collocation": "ten minus four (十減四)",
+  "memoryTip": ""
+ },
+ "fc-jh-0253": {
+  "pos": "n.",
+  "gloss": "小說",
+  "example": "I read a long novel last week.",
+  "exampleZh": "我上週讀了一本長篇小說。",
+  "collocation": "read a novel (讀小說)",
+  "memoryTip": ""
+ },
+ "fc-jh-0264": {
+  "pos": "prep.",
+  "gloss": "加、加上",
+  "example": "Two plus three is five.",
+  "exampleZh": "二加三等於五。",
+  "collocation": "four plus six (四加六)",
+  "memoryTip": ""
+ },
+ "fc-jh-0267": {
+  "pos": "n.",
+  "gloss": "禮物",
+  "example": "I got a nice present on my birthday.",
+  "exampleZh": "我生日收到一份很棒的禮物。",
+  "collocation": "a birthday present (生日禮物)",
+  "memoryTip": ""
+ },
+ "fc-jh-0276": {
+  "pos": "v.",
+  "gloss": "挑選、選擇",
+  "example": "Please select one color from the list.",
+  "exampleZh": "請從清單中選一個顏色。",
+  "collocation": "select a color (選顏色)",
+  "memoryTip": "select 和 elect 都有選的意思，慢慢選一個放進籃子"
+ },
+ "fc-jh-0303": {
+  "pos": "n.",
+  "gloss": "影片",
+  "example": "We watched a funny video in class.",
+  "exampleZh": "我們在課堂上看了有趣的影片。",
+  "collocation": "a music video (音樂影片)",
+  "memoryTip": "video 的 vid 是看，看到的動態畫面就是影片"
+ },
+ "fc-jh-0311": {
+  "pos": "n.",
+  "gloss": "幫助、援助",
+  "example": "The nurse gave first aid to the boy.",
+  "exampleZh": "護理師替男孩做急救。",
+  "collocation": "first aid (急救)",
+  "memoryTip": ""
+ },
+ "fc-jh-0313": {
+  "pos": "n.",
+  "gloss": "警報、鬧鐘",
+  "example": "The alarm rang at six in the morning.",
+  "exampleZh": "鬧鐘在早上六點響了。",
+  "collocation": "an alarm clock (鬧鐘)",
+  "memoryTip": ""
+ },
+ "fc-jh-0314": {
+  "pos": "n.",
+  "gloss": "數量、總額",
+  "example": "A small amount of milk is left.",
+  "exampleZh": "只剩下一點牛奶了。",
+  "collocation": "a large amount of (大量的)",
+  "memoryTip": "amount 裡有 mount 山，數量堆得像一座山"
+ },
+ "fc-jh-0317": {
+  "pos": "n.",
+  "gloss": "手臂",
+  "example": "He broke his arm when he fell down.",
+  "exampleZh": "他跌倒時弄傷了手臂。",
+  "collocation": "raise your arm (舉起手臂)",
+  "memoryTip": "arm 的樣子像手臂彎起來的字母 m，記成小手臂"
+ },
+ "fc-jh-0325": {
+  "pos": "n.",
+  "gloss": "烤肉",
+  "example": "We had a barbecue at the beach.",
+  "exampleZh": "我們在海邊烤肉。",
+  "collocation": "have a barbecue (烤肉)",
+  "memoryTip": ""
+ },
+ "fc-jh-0327": {
+  "pos": "n.",
+  "gloss": "戰鬥、比賽",
+  "example": "The movie shows a big battle between two teams.",
+  "exampleZh": "電影演出兩隊之間的大對戰。",
+  "collocation": "a big battle (一場大戰)",
+  "memoryTip": "battle 裡有 bat，揮球棒比賽像一場對戰"
+ },
+ "fc-jh-0328": {
+  "pos": "n.",
+  "gloss": "烤肉",
+  "example": "We have a BBQ in the park every summer.",
+  "exampleZh": "我們每年夏天都在公園烤肉。",
+  "collocation": "a BBQ party (烤肉派對)",
+  "memoryTip": "BBQ 三個字母像烤肉架上的三串肉"
+ },
+ "fc-jh-0329": {
+  "pos": "n.",
+  "gloss": "珠子",
+  "example": "She made a bracelet with a red bead.",
+  "exampleZh": "她用一顆紅珠子做了裝飾。",
+  "collocation": "a glass bead (玻璃珠)",
+  "memoryTip": "bead 裡有 bed，把小珠子放上床排排睡"
+ },
+ "fc-jh-0334": {
+  "pos": "n.",
+  "gloss": "帳單",
+  "example": "Dad paid the bill after dinner.",
+  "exampleZh": "爸爸晚餐後付了帳單。",
+  "collocation": "pay the bill (付帳)",
+  "memoryTip": ""
+ },
+ "fc-jh-0338": {
+  "pos": "n.",
+  "gloss": "老闆",
+  "example": "My mother's boss is very kind.",
+  "exampleZh": "我媽媽的老闆人很好。",
+  "collocation": "the boss of a shop (店老闆)",
+  "memoryTip": ""
+ },
+ "fc-jh-0340": {
+  "pos": "n.",
+  "gloss": "樹枝、分店",
+  "example": "A bird sat on the branch.",
+  "exampleZh": "一隻鳥停在樹枝上。",
+  "collocation": "a tree branch (樹枝)",
+  "memoryTip": "branch 的 ran 像跑出去，從樹幹跑出去的就是樹枝"
+ },
+ "fc-jh-0341": {
+  "pos": "n.",
+  "gloss": "品牌",
+  "example": "This is my favorite shoe brand.",
+  "exampleZh": "這是我最喜歡的鞋子品牌。",
+  "collocation": "a famous brand (有名品牌)",
+  "memoryTip": ""
+ },
+ "fc-jh-0345": {
+  "pos": "n.",
+  "gloss": "電纜、電線",
+  "example": "The cable connects the TV to the wall.",
+  "exampleZh": "這條電纜把電視接到牆上。",
+  "collocation": "a TV cable (電視線)",
+  "memoryTip": ""
+ },
+ "fc-jh-0347": {
+  "pos": "n.",
+  "gloss": "手推車",
+  "example": "Mom pushed the cart in the store.",
+  "exampleZh": "媽媽在店裡推著手推車。",
+  "collocation": "a shopping cart (購物推車)",
+  "memoryTip": ""
+ },
+ "fc-jh-0348": {
+  "pos": "n.",
+  "gloss": "卡通、漫畫",
+  "example": "My little brother loves this cartoon.",
+  "exampleZh": "我弟弟很愛這部卡通。",
+  "collocation": "watch a cartoon (看卡通)",
+  "memoryTip": "cartoon 唸起來就是「卡通」，一聽就會"
+ },
+ "fc-jh-0349": {
+  "pos": "n.",
+  "gloss": "現金",
+  "example": "I paid in cash at the store.",
+  "exampleZh": "我在店裡付現金。",
+  "collocation": "pay in cash (付現金)",
+  "memoryTip": ""
+ },
+ "fc-jh-0350": {
+  "pos": "n.",
+  "gloss": "洞穴",
+  "example": "Bats live in the dark cave.",
+  "exampleZh": "蝙蝠住在黑暗的洞穴裡。",
+  "collocation": "a deep cave (深洞穴)",
+  "memoryTip": ""
+ },
+ "fc-jh-0355": {
+  "pos": "n.",
+  "gloss": "爪子",
+  "example": "The cat has a sharp claw.",
+  "exampleZh": "貓有尖尖的爪子。",
+  "collocation": "a cat's claw (貓爪)",
+  "memoryTip": ""
+ },
+ "fc-jh-0357": {
+  "pos": "n.",
+  "gloss": "小丑",
+  "example": "The clown made the children laugh.",
+  "exampleZh": "小丑逗得孩子們哈哈大笑。",
+  "collocation": "a circus clown (馬戲團小丑)",
+  "memoryTip": "clown 裡有 own，紅鼻子小丑是馬戲團自己的明星"
+ },
+ "fc-jh-0358": {
+  "pos": "n.",
+  "gloss": "社團、俱樂部",
+  "example": "I joined the music club at school.",
+  "exampleZh": "我參加了學校的音樂社團。",
+  "collocation": "join a club (加入社團)",
+  "memoryTip": ""
+ },
+ "fc-jh-0359": {
+  "pos": "n.",
+  "gloss": "教練",
+  "example": "Our coach teaches us to play basketball.",
+  "exampleZh": "教練教我們打籃球。",
+  "collocation": "a soccer coach (足球教練)",
+  "memoryTip": ""
+ },
+ "fc-jh-0360": {
+  "pos": "n.",
+  "gloss": "硬幣",
+  "example": "I found a coin under the sofa.",
+  "exampleZh": "我在沙發下找到一枚硬幣。",
+  "collocation": "a gold coin (金幣)",
+  "memoryTip": ""
+ },
+ "fc-jh-0371": {
+  "pos": "n.",
+  "gloss": "一對、夫婦",
+  "example": "A couple walked in the park.",
+  "exampleZh": "一對夫婦在公園散步。",
+  "collocation": "a married couple (已婚夫婦)",
+  "memoryTip": ""
+ },
+ "fc-jh-0372": {
+  "pos": "n.",
+  "gloss": "鶴、起重機",
+  "example": "A white crane stood by the lake.",
+  "exampleZh": "一隻白鶴站在湖邊。",
+  "collocation": "a crane bird (鶴)",
+  "memoryTip": "crane 的長脖子和工地的吊車一樣長長的"
+ },
+ "fc-jh-0374": {
+  "pos": "n.",
+  "gloss": "農作物",
+  "example": "Rice is an important crop in Taiwan.",
+  "exampleZh": "稻米是臺灣重要的農作物。",
+  "collocation": "a rice crop (稻米作物)",
+  "memoryTip": "crop 裡有 rop，田裡長出一排排作物"
+ },
+ "fc-jh-0376": {
+  "pos": "n.",
+  "gloss": "人群",
+  "example": "A big crowd waited at the station.",
+  "exampleZh": "一大群人在車站等待。",
+  "collocation": "a big crowd (一大群人)",
+  "memoryTip": ""
+ },
+ "fc-jh-0385": {
+  "pos": "n.",
+  "gloss": "沙漠",
+  "example": "Camels can live in the desert.",
+  "exampleZh": "駱駝可以生活在沙漠裡。",
+  "collocation": "a hot desert (炎熱的沙漠)",
+  "memoryTip": "desert 只有一個 s，沙漠少水；dessert 兩個 s 是甜點"
+ },
+ "fc-jh-0395": {
+  "pos": "n.",
+  "gloss": "距離",
+  "example": "The distance from home to school is short.",
+  "exampleZh": "從家到學校的距離很短。",
+  "collocation": "a long distance (長距離)",
+  "memoryTip": ""
+ },
+ "fc-jh-0400": {
+  "pos": "n.",
+  "gloss": "鼓",
+  "example": "He plays the drum in the band.",
+  "exampleZh": "他在樂團裡打鼓。",
+  "collocation": "play the drum (打鼓)",
+  "memoryTip": ""
+ },
+ "fc-jh-0410": {
+  "pos": "n.",
+  "gloss": "過錯、錯誤",
+  "example": "It is not your fault.",
+  "exampleZh": "這不是你的錯。",
+  "collocation": "It's my fault (是我的錯)",
+  "memoryTip": ""
+ },
+ "fc-jh-0412": {
+  "pos": "n.",
+  "gloss": "數字、人影",
+  "example": "Write the figure on the board.",
+  "exampleZh": "把數字寫在黑板上。",
+  "collocation": "a figure on the page (頁面上的數字)",
+  "memoryTip": ""
+ },
+ "fc-jh-0413": {
+  "pos": "n.",
+  "gloss": "電影、底片",
+  "example": "We watched a film about animals.",
+  "exampleZh": "我們看了一部動物電影。",
+  "collocation": "watch a film (看電影)",
+  "memoryTip": ""
+ },
+ "fc-jh-0415": {
+  "pos": "n.",
+  "gloss": "旗子",
+  "example": "The red flag waves in the wind.",
+  "exampleZh": "紅旗在風中飄揚。",
+  "collocation": "raise a flag (升旗)",
+  "memoryTip": ""
+ },
+ "fc-jh-0417": {
+  "pos": "n.",
+  "gloss": "洪水、水災",
+  "example": "The flood covered the road.",
+  "exampleZh": "洪水淹沒了道路。",
+  "collocation": "a big flood (大洪水)",
+  "memoryTip": "flood 裡有兩個 o 像兩個泡泡，水多得浮起來"
+ },
+ "fc-jh-0418": {
+  "pos": "n.",
+  "gloss": "麵粉",
+  "example": "Mom uses flour to make bread.",
+  "exampleZh": "媽媽用麵粉做麵包。",
+  "collocation": "a bag of flour (一袋麵粉)",
+  "memoryTip": "flour 和 flower 同音，花瓣磨成白白粉粉的麵粉"
+ },
+ "fc-jh-0420": {
+  "pos": "n.",
+  "gloss": "長笛",
+  "example": "She plays the flute in the school band.",
+  "exampleZh": "她在學校樂隊吹長笛。",
+  "collocation": "play the flute (吹長笛)",
+  "memoryTip": ""
+ },
+ "fc-jh-0428": {
+  "pos": "n.",
+  "gloss": "高爾夫球",
+  "example": "My grandpa plays golf on Sundays.",
+  "exampleZh": "我爺爺星期天打高爾夫球。",
+  "collocation": "play golf (打高爾夫球)",
+  "memoryTip": ""
+ },
+ "fc-jh-0430": {
+  "pos": "n.",
+  "gloss": "年級、成績",
+  "example": "I am in the sixth grade.",
+  "exampleZh": "我讀六年級。",
+  "collocation": "sixth grade (六年級)",
+  "memoryTip": ""
+ },
+ "fc-jh-0433": {
+  "pos": "n.",
+  "gloss": "鐵鎚、榔頭",
+  "example": "Dad used a hammer to fix the chair.",
+  "exampleZh": "爸爸用鐵鎚修理椅子。",
+  "collocation": "a hammer and nails (鐵鎚和釘子)",
+  "memoryTip": ""
+ },
+ "fc-jh-0445": {
+  "pos": "n.",
+  "gloss": "墨水",
+  "example": "The pen is out of ink.",
+  "exampleZh": "這支筆沒墨水了。",
+  "collocation": "black ink (黑墨水)",
+  "memoryTip": ""
+ },
+ "fc-jh-0447": {
+  "pos": "n.",
+  "gloss": "例子",
+  "example": "Give me an instance of a fruit.",
+  "exampleZh": "請給我一個水果的例子。",
+  "collocation": "for instance (例如)",
+  "memoryTip": "instance 裡有 stance，舉個例子站出來說明"
+ },
+ "fc-jh-0452": {
+  "pos": "n.",
+  "gloss": "爵士樂",
+  "example": "My dad likes to listen to jazz.",
+  "exampleZh": "我爸爸喜歡聽爵士樂。",
+  "collocation": "play jazz (演奏爵士樂)",
+  "memoryTip": ""
+ },
+ "fc-jh-0458": {
+  "pos": "n.",
+  "gloss": "圓木、原木",
+  "example": "The fire burned a big log.",
+  "exampleZh": "火燒著一根大木頭。",
+  "collocation": "a log cabin (木屋)",
+  "memoryTip": ""
+ },
+ "fc-jh-0462": {
+  "pos": "n.",
+  "gloss": "面具",
+  "example": "He wore a funny mask at the party.",
+  "exampleZh": "他在派對上戴著有趣的面具。",
+  "collocation": "wear a mask (戴面具)",
+  "memoryTip": ""
+ },
+ "fc-jh-0463": {
+  "pos": "n.",
+  "gloss": "伙伴、朋友",
+  "example": "My classmate is my best mate.",
+  "exampleZh": "我的同學是我最好的朋友。",
+  "collocation": "a school mate (同學)",
+  "memoryTip": "mate 和 team 都有伙伴的感覺，mate 像「妹特」"
+ },
+ "fc-jh-0465": {
+  "pos": "pron.",
+  "gloss": "我的(東西)",
+  "example": "This book is mine.",
+  "exampleZh": "這本書是我的。",
+  "collocation": "a friend of mine (我的一位朋友)",
+  "memoryTip": ""
+ },
+ "fc-jh-0466": {
+  "pos": "n.",
+  "gloss": "鏡子",
+  "example": "I look at myself in the mirror.",
+  "exampleZh": "我在鏡子裡看自己。",
+  "collocation": "look in the mirror (照鏡子)",
+  "memoryTip": "mirror 中間有兩個 r，像兩個一樣的你在鏡子裡"
+ },
+ "fc-jh-0467": {
+  "pos": "n.",
+  "gloss": "模型、模特兒",
+  "example": "He built a model of a plane.",
+  "exampleZh": "他做了一架飛機模型。",
+  "collocation": "a model plane (飛機模型)",
+  "memoryTip": ""
+ },
+ "fc-jh-0468": {
+  "pos": "n.",
+  "gloss": "運動、動作",
+  "example": "The motion of the boat is slow.",
+  "exampleZh": "船的移動很慢。",
+  "collocation": "slow motion (慢動作)",
+  "memoryTip": "motion 的 mo 像 move，動起來就是 motion"
+ },
+ "fc-jh-0470": {
+  "pos": "n.",
+  "gloss": "針",
+  "example": "Mom used a needle to sew the button.",
+  "exampleZh": "媽媽用針縫釦子。",
+  "collocation": "a needle and thread (針和線)",
+  "memoryTip": ""
+ },
+ "fc-jh-0471": {
+  "pos": "n.",
+  "gloss": "鳥巢、窩",
+  "example": "A bird built a nest in the tree.",
+  "exampleZh": "一隻鳥在樹上築了一個巢。",
+  "collocation": "a bird's nest (鳥巢)",
+  "memoryTip": "nest 像 best 少了 b，鳥最棒的家就是巢"
+ },
+ "fc-jh-0472": {
+  "pos": "n.",
+  "gloss": "網子",
+  "example": "The fisherman caught fish in a net.",
+  "exampleZh": "漁夫用網子捕魚。",
+  "collocation": "a fishing net (漁網)",
+  "memoryTip": ""
+ },
+ "fc-jh-0479": {
+  "pos": "n.",
+  "gloss": "包裹",
+  "example": "A big package came to my house today.",
+  "exampleZh": "今天有一個大包裹送到我家。",
+  "collocation": "send a package (寄包裹)",
+  "memoryTip": "package 裡有 age，包裹寄了好多天才到"
+ },
+ "fc-jh-0480": {
+  "pos": "n.",
+  "gloss": "疼痛、痛苦",
+  "example": "I feel a pain in my tooth.",
+  "exampleZh": "我的牙齒很痛。",
+  "collocation": "a sharp pain (劇痛)",
+  "memoryTip": ""
+ },
+ "fc-jh-0484": {
+  "pos": "n.",
+  "gloss": "電話",
+  "example": "My phone is on the table.",
+  "exampleZh": "我的電話在桌上。",
+  "collocation": "a cell phone (手機)",
+  "memoryTip": "phone 的 ph 發 f，像「風」，風聲和電話聲都傳很遠"
+ },
+ "fc-jh-0485": {
+  "pos": "n.",
+  "gloss": "照片",
+  "example": "I took a photo of the sunset.",
+  "exampleZh": "我拍了一張夕陽的照片。",
+  "collocation": "take a photo (拍照)",
+  "memoryTip": "photo 的 ph 發 f，像「佛頭」，拍下來變成照片"
+ },
+ "fc-jh-0486": {
+  "pos": "n.",
+  "gloss": "照片",
+  "example": "She keeps a photograph of her family.",
+  "exampleZh": "她保存著一張全家福照片。",
+  "collocation": "an old photograph (舊照片)",
+  "memoryTip": "photograph 是 photo 的長版，兩個字都是照片"
+ },
+ "fc-jh-0487": {
+  "pos": "n.",
+  "gloss": "片語、詞組",
+  "example": "Learn this new phrase today.",
+  "exampleZh": "今天學這個新片語。",
+  "collocation": "a useful phrase (有用的片語)",
+  "memoryTip": ""
+ },
+ "fc-jh-0489": {
+  "pos": "n.",
+  "gloss": "野餐",
+  "example": "We had a picnic by the lake.",
+  "exampleZh": "我們在湖邊野餐。",
+  "collocation": "go on a picnic (去野餐)",
+  "memoryTip": ""
+ },
+ "fc-jh-0490": {
+  "pos": "n.",
+  "gloss": "一堆",
+  "example": "There is a pile of books on my desk.",
+  "exampleZh": "我桌上有一堆書。",
+  "collocation": "a pile of books (一堆書)",
+  "memoryTip": ""
+ },
+ "fc-jh-0491": {
+  "pos": "n.",
+  "gloss": "別針、圖釘",
+  "example": "She put a pin on the paper.",
+  "exampleZh": "她用別針別住紙。",
+  "collocation": "a safety pin (安全別針)",
+  "memoryTip": ""
+ },
+ "fc-jh-0492": {
+  "pos": "n.",
+  "gloss": "管子",
+  "example": "Water flows through the pipe.",
+  "exampleZh": "水從管子裡流過。",
+  "collocation": "a water pipe (水管)",
+  "memoryTip": ""
+ },
+ "fc-jh-0494": {
+  "pos": "n.",
+  "gloss": "盤子",
+  "example": "Please put the cake on the plate.",
+  "exampleZh": "請把蛋糕放在盤子上。",
+  "collocation": "a plate of food (一盤食物)",
+  "memoryTip": "plate 裡有 late，晚餐遲到了，盤子都空了"
+ },
+ "fc-jh-0495": {
+  "pos": "n.",
+  "gloss": "毒、毒藥",
+  "example": "The queen gave her an apple with poison.",
+  "exampleZh": "王后給了她一顆有毒的蘋果。",
+  "collocation": "a poison apple (毒蘋果)",
+  "memoryTip": ""
+ },
+ "fc-jh-0498": {
+  "pos": "n.",
+  "gloss": "磅(重量單位)",
+  "example": "The bag weighs one pound.",
+  "exampleZh": "這袋東西重一磅。",
+  "collocation": "a pound of meat (一磅肉)",
+  "memoryTip": ""
+ },
+ "fc-jh-0503": {
+  "pos": "n.",
+  "gloss": "驕傲、自豪",
+  "example": "She felt pride in her work.",
+  "exampleZh": "她為自己的作品感到自豪。",
+  "collocation": "take pride in (以…為榮)",
+  "memoryTip": ""
+ },
+ "fc-jh-0506": {
+  "pos": "n.",
+  "gloss": "專題、計畫",
+  "example": "Our class has a science project.",
+  "exampleZh": "我們班有一個科學專題。",
+  "collocation": "a school project (學校專題)",
+  "memoryTip": ""
+ },
+ "fc-jh-0511": {
+  "pos": "n.",
+  "gloss": "幫浦、打氣筒",
+  "example": "He used a pump to fill the ball.",
+  "exampleZh": "他用打氣筒替球打氣。",
+  "collocation": "a bicycle pump (腳踏車打氣筒)",
+  "memoryTip": ""
+ },
+ "fc-jh-0513": {
+  "pos": "n.",
+  "gloss": "謎題、拼圖",
+  "example": "We did a puzzle on the floor.",
+  "exampleZh": "我們在地板上玩拼圖。",
+  "collocation": "a jigsaw puzzle (拼圖)",
+  "memoryTip": ""
+ },
+ "fc-jh-0514": {
+  "pos": "n.",
+  "gloss": "四分之一、一刻鐘",
+  "example": "I ate a quarter of the pizza.",
+  "exampleZh": "我吃了四分之一的披薩。",
+  "collocation": "a quarter of an hour (十五分鐘)",
+  "memoryTip": "quarter 的 quar 像 four，四塊分之一"
+ },
+ "fc-jh-0515": {
+  "pos": "n.",
+  "gloss": "範圍、種類",
+  "example": "This shop sells a wide range of toys.",
+  "exampleZh": "這家店賣各種各樣的玩具。",
+  "collocation": "a wide range of (各式各樣)",
+  "memoryTip": ""
+ },
+ "fc-jh-0525": {
+  "pos": "n.",
+  "gloss": "岩石、搖滾樂",
+  "example": "He sat on a big rock.",
+  "exampleZh": "他坐在一塊大岩石上。",
+  "collocation": "a rock band (搖滾樂團)",
+  "memoryTip": ""
+ },
+ "fc-jh-0527": {
+  "pos": "n.",
+  "gloss": "樣品、試吃品",
+  "example": "The shop gave us a free sample.",
+  "exampleZh": "店家給我們免費樣品。",
+  "collocation": "a free sample (免費樣品)",
+  "memoryTip": ""
+ },
+ "fc-jh-0528": {
+  "pos": "n.",
+  "gloss": "三明治",
+  "example": "I had a sandwich for lunch.",
+  "exampleZh": "我午餐吃了一個三明治。",
+  "collocation": "a ham sandwich (火腿三明治)",
+  "memoryTip": "sandwich 唸起來就是「三明治」，一聽就會"
+ },
+ "fc-jh-0530": {
+  "pos": "n.",
+  "gloss": "螢幕、銀幕",
+  "example": "The TV screen is very big.",
+  "exampleZh": "這台電視的螢幕很大。",
+  "collocation": "a computer screen (電腦螢幕)",
+  "memoryTip": ""
+ },
+ "fc-jh-0532": {
+  "pos": "n.",
+  "gloss": "部分、區段",
+  "example": "Read the first section of the book.",
+  "exampleZh": "請讀這本書的第一部分。",
+  "collocation": "the sports section (體育版)",
+  "memoryTip": "section 的 sect 是切開，切成一段一段的部分"
+ },
+ "fc-jh-0535": {
+  "pos": "n.",
+  "gloss": "貝殼、外殼",
+  "example": "I found a pretty shell on the beach.",
+  "exampleZh": "我在沙灘上撿到一個漂亮的貝殼。",
+  "collocation": "a sea shell (貝殼)",
+  "memoryTip": ""
+ },
+ "fc-jh-0538": {
+  "pos": "n.",
+  "gloss": "沉默、寂靜",
+  "example": "There was silence in the room.",
+  "exampleZh": "房間裡一片寂靜。",
+  "collocation": "in silence (默默地)",
+  "memoryTip": ""
+ },
+ "fc-jh-0539": {
+  "pos": "n.",
+  "gloss": "裙子",
+  "example": "She wore a red skirt to school.",
+  "exampleZh": "她穿紅色裙子上學。",
+  "collocation": "a long skirt (長裙)",
+  "memoryTip": ""
+ },
+ "fc-jh-0541": {
+  "pos": "n.",
+  "gloss": "點心、零食",
+  "example": "I eat a snack after school.",
+  "exampleZh": "我放學後吃點心。",
+  "collocation": "a healthy snack (健康的點心)",
+  "memoryTip": ""
+ },
+ "fc-jh-0545": {
+  "pos": "n.",
+  "gloss": "斑點、地點",
+  "example": "The dog has a black spot on its back.",
+  "exampleZh": "這隻狗背上有一個黑斑點。",
+  "collocation": "a spot of paint (一個顏料點)",
+  "memoryTip": ""
+ },
+ "fc-jh-0546": {
+  "pos": "n.",
+  "gloss": "舞台",
+  "example": "The singer is on the stage.",
+  "exampleZh": "歌手站在舞台上。",
+  "collocation": "on the stage (在舞台上)",
+  "memoryTip": ""
+ },
+ "fc-jh-0547": {
+  "pos": "n.",
+  "gloss": "郵票",
+  "example": "I put a stamp on the letter.",
+  "exampleZh": "我在信上貼了一張郵票。",
+  "collocation": "a postage stamp (郵票)",
+  "memoryTip": ""
+ },
+ "fc-jh-0548": {
+  "pos": "n.",
+  "gloss": "鋼、鋼鐵",
+  "example": "The bridge is made of steel.",
+  "exampleZh": "這座橋是鋼鐵做的。",
+  "collocation": "made of steel (鋼製的)",
+  "memoryTip": ""
+ },
+ "fc-jh-0549": {
+  "pos": "n.",
+  "gloss": "棍子、樹枝",
+  "example": "The boy picked up a stick.",
+  "exampleZh": "男孩撿起一根棍子。",
+  "collocation": "a walking stick (拐杖)",
+  "memoryTip": ""
+ },
+ "fc-jh-0550": {
+  "pos": "n.",
+  "gloss": "暴風雨",
+  "example": "A storm is coming tonight.",
+  "exampleZh": "今晚有暴風雨要來了。",
+  "collocation": "a big storm (大暴風雨)",
+  "memoryTip": ""
+ },
+ "fc-jh-0551": {
+  "pos": "n.",
+  "gloss": "小溪、溪流",
+  "example": "We play by the stream.",
+  "exampleZh": "我們在小溪邊玩。",
+  "collocation": "a clear stream (清澈的小溪)",
+  "memoryTip": "stream 裡有 team，一群小魚像一隊在溪裡游"
+ },
+ "fc-jh-0554": {
+  "pos": "n.",
+  "gloss": "繩子、線",
+  "example": "Tie the string around the box.",
+  "exampleZh": "把繩子綁在盒子上。",
+  "collocation": "a piece of string (一條繩子)",
+  "memoryTip": ""
+ },
+ "fc-jh-0560": {
+  "pos": "n.",
+  "gloss": "表面、水面",
+  "example": "The surface of the lake is calm.",
+  "exampleZh": "湖面很平靜。",
+  "collocation": "on the surface (在表面上)",
+  "memoryTip": "surface 的 face 是臉，臉就是最外面的表面"
+ },
+ "fc-jh-0562": {
+  "pos": "n.",
+  "gloss": "目標、靶子",
+  "example": "He hit the target with the ball.",
+  "exampleZh": "他用球擊中了目標。",
+  "collocation": "hit the target (擊中目標)",
+  "memoryTip": "target 裡有 get，要 get 到的就是目標"
+ },
+ "fc-jh-0563": {
+  "pos": "n.",
+  "gloss": "任務、工作",
+  "example": "My task is to clean the room.",
+  "exampleZh": "我的任務是打掃房間。",
+  "collocation": "a hard task (困難的任務)",
+  "memoryTip": ""
+ },
+ "fc-jh-0564": {
+  "pos": "n.",
+  "gloss": "隊、團隊",
+  "example": "Our team won the game.",
+  "exampleZh": "我們的隊伍贏了比賽。",
+  "collocation": "a school team (校隊)",
+  "memoryTip": ""
+ },
+ "fc-jh-0568": {
+  "pos": "n.",
+  "gloss": "雷、雷聲",
+  "example": "We heard thunder last night.",
+  "exampleZh": "我們昨晚聽到雷聲。",
+  "collocation": "loud thunder (大雷聲)",
+  "memoryTip": ""
+ },
+ "fc-jh-0569": {
+  "pos": "n.",
+  "gloss": "小費、提示",
+  "example": "Dad left a tip for the waiter.",
+  "exampleZh": "爸爸給服務生小費。",
+  "collocation": "a useful tip (有用的提示)",
+  "memoryTip": ""
+ },
+ "fc-jh-0570": {
+  "pos": "n.",
+  "gloss": "標題、頭銜",
+  "example": "The title of the book is easy to remember.",
+  "exampleZh": "這本書的書名很好記。",
+  "collocation": "the title of a song (歌名)",
+  "memoryTip": ""
+ },
+ "fc-jh-0571": {
+  "pos": "n.",
+  "gloss": "旅行、旅遊",
+  "example": "We went on a tour of the city.",
+  "exampleZh": "我們去了市區一日遊。",
+  "collocation": "a city tour (市區旅遊)",
+  "memoryTip": ""
+ },
+ "fc-jh-0572": {
+  "pos": "n.",
+  "gloss": "軌道、足跡",
+  "example": "The train runs on the track.",
+  "exampleZh": "火車在軌道上行駛。",
+  "collocation": "a running track (跑道)",
+  "memoryTip": ""
+ },
+ "fc-jh-0574": {
+  "pos": "n.",
+  "gloss": "交通、車流",
+  "example": "There is a lot of traffic at five.",
+  "exampleZh": "五點時車子很多。",
+  "collocation": "heavy traffic (繁忙的交通)",
+  "memoryTip": ""
+ },
+ "fc-jh-0575": {
+  "pos": "n.",
+  "gloss": "陷阱",
+  "example": "The mouse ran into a trap.",
+  "exampleZh": "老鼠跑進了陷阱。",
+  "collocation": "set a trap (設陷阱)",
+  "memoryTip": ""
+ },
+ "fc-jh-0577": {
+  "pos": "n.",
+  "gloss": "寶藏、珍寶",
+  "example": "The pirates hid the treasure.",
+  "exampleZh": "海盜把寶藏藏起來。",
+  "collocation": "a treasure box (寶箱)",
+  "memoryTip": ""
+ },
+ "fc-jh-0579": {
+  "pos": "n.",
+  "gloss": "把戲、惡作劇",
+  "example": "He played a trick on his sister.",
+  "exampleZh": "他對他姊姊開了個小玩笑。",
+  "collocation": "a magic trick (魔術)",
+  "memoryTip": ""
+ },
+ "fc-jh-0580": {
+  "pos": "n.",
+  "gloss": "小號",
+  "example": "He plays the trumpet in the band.",
+  "exampleZh": "他在樂隊吹小號。",
+  "collocation": "play the trumpet (吹小號)",
+  "memoryTip": ""
+ },
+ "fc-jh-0583": {
+  "pos": "n.",
+  "gloss": "價值、價格",
+  "example": "The value of this coin is high.",
+  "exampleZh": "這枚硬幣的價值很高。",
+  "collocation": "a high value (高價值)",
+  "memoryTip": ""
+ },
+ "fc-jh-0586": {
+  "pos": "n.",
+  "gloss": "輪子",
+  "example": "The bike has one wheel in front.",
+  "exampleZh": "前面有一個輪子。",
+  "collocation": "a bike wheel (腳踏車輪)",
+  "memoryTip": ""
+ },
+ "fc-jh-0588": {
+  "pos": "n.",
+  "gloss": "翅膀",
+  "example": "The bird has a wing on each side.",
+  "exampleZh": "鳥的兩邊各有一隻翅膀。",
+  "collocation": "spread your wing (展開翅膀)",
+  "memoryTip": ""
+ },
+ "fc-jh-0589": {
+  "pos": "n.",
+  "gloss": "電線、金屬線",
+  "example": "Do not touch the wire.",
+  "exampleZh": "不要碰那條電線。",
+  "collocation": "a long wire (長電線)",
+  "memoryTip": ""
+ },
+ "fc-jh-0591": {
+  "pos": "n.",
+  "gloss": "傷口",
+  "example": "The nurse cleaned the wound.",
+  "exampleZh": "護理師清理了傷口。",
+  "collocation": "a deep wound (深傷口)",
+  "memoryTip": "wound 讀 /wuːnd/，嗚嗚，傷口好痛"
+ },
+ "fc-jh-0605": {
+  "pos": "pron.",
+  "gloss": "沒有一個、毫無",
+  "example": "None of the kids were late.",
+  "exampleZh": "沒有一個孩子遲到。",
+  "collocation": "none of them (他們都沒有)",
+  "memoryTip": ""
+ },
+ "fc-jh-0614": {
+  "pos": "prep.",
+  "gloss": "沒有、缺少",
+  "example": "I cannot live without water.",
+  "exampleZh": "沒有水我活不下去。",
+  "collocation": "without a word (一句話也沒說)",
+  "memoryTip": "with 是有，加上 out 跑掉，就變成沒有"
+ },
+ "fc-jh-0659": {
+  "pos": "n.",
+  "gloss": "番茄醬",
+  "example": "I put catsup on my French fries.",
+  "exampleZh": "我在薯條上加了番茄醬。",
+  "collocation": "a bottle of catsup (一瓶番茄醬)",
+  "memoryTip": "catsup 是 ketchup 的另一種拼法，紅紅的番茄醬"
+ },
+ "fc-jh-0660": {
+  "pos": "n.",
+  "gloss": "細胞",
+  "example": "Every cell in your body is very small.",
+  "exampleZh": "你身體裡的每個細胞都很小。",
+  "collocation": "a blood cell (血球細胞)",
+  "memoryTip": ""
+ },
+ "fc-jh-0701": {
+  "pos": "n.",
+  "gloss": "導演、主任",
+  "example": "The director made a movie about dogs.",
+  "exampleZh": "導演拍了一部關於狗的電影。",
+  "collocation": "a movie director (電影導演)",
+  "memoryTip": "director 的 direct 是指揮，指揮演員的人就是導演"
+ },
+ "fc-jh-0741": {
+  "pos": "adj.",
+  "gloss": "一般的、普通的",
+  "example": "In general, the weather is warm here.",
+  "exampleZh": "一般來說這裡天氣很溫暖。",
+  "collocation": "in general (一般來說)",
+  "memoryTip": ""
+ },
+ "fc-jh-0821": {
+  "pos": "pron.",
+  "gloss": "沒有人",
+  "example": "Nobody is in the classroom now.",
+  "exampleZh": "現在教室裡沒有人。",
+  "collocation": "nobody knows (沒有人知道)",
+  "memoryTip": "nobody 是 no 加 body，沒有身體在這裡，就是沒人"
+ },
+ "fc-jh-0931": {
+  "pos": "prep.",
+  "gloss": "在…上方",
+  "example": "The bird flies above the house.",
+  "exampleZh": "鳥在房子上方飛。",
+  "collocation": "above the clouds (在雲之上)",
+  "memoryTip": ""
+ },
+ "fc-jh-0932": {
+  "pos": "n.",
+  "gloss": "成人、大人",
+  "example": "An adult must go with the child.",
+  "exampleZh": "大人必須陪著小孩。",
+  "collocation": "an adult ticket (成人票)",
+  "memoryTip": ""
+ },
+ "fc-jh-0946": {
+  "pos": "n.",
+  "gloss": "底部、最下面",
+  "example": "There is a toy at the bottom of the box.",
+  "exampleZh": "盒子底部有一個玩具。",
+  "collocation": "at the bottom (在底部)",
+  "memoryTip": ""
+ },
+ "fc-jh-0957": {
+  "pos": "adv.",
+  "gloss": "向下、往下",
+  "example": "Please sit down.",
+  "exampleZh": "請坐下。",
+  "collocation": "sit down (坐下)",
+  "memoryTip": ""
+ },
+ "fc-jh-0965": {
+  "pos": "n.",
+  "gloss": "英語、英文",
+  "example": "I study English every day.",
+  "exampleZh": "我每天學英語。",
+  "collocation": "speak English (說英語)",
+  "memoryTip": ""
+ },
+ "fc-jh-0979": {
+  "pos": "n.",
+  "gloss": "前面、前方",
+  "example": "The teacher stands at the front of the class.",
+  "exampleZh": "老師站在教室前面。",
+  "collocation": "in the front (在前面)",
+  "memoryTip": ""
+ },
+ "fc-jh-0983": {
+  "pos": "n.",
+  "gloss": "黃金、金子",
+  "example": "The ring is made of gold.",
+  "exampleZh": "這枚戒指是黃金做的。",
+  "collocation": "a gold medal (金牌)",
+  "memoryTip": ""
+ },
+ "fc-jh-0995": {
+  "pos": "prep.",
+  "gloss": "在…裡面",
+  "example": "The cat is in the box.",
+  "exampleZh": "貓在盒子裡。",
+  "collocation": "in the box (在盒子裡)",
+  "memoryTip": "in 就是進去，in 像「一」，一腳踏進去就在裡面"
+ },
+ "fc-jh-0997": {
+  "pos": "adv.",
+  "gloss": "剛剛、只是",
+  "example": "I just finished my homework.",
+  "exampleZh": "我剛剛寫完功課。",
+  "collocation": "just now (剛才)",
+  "memoryTip": ""
+ },
+ "fc-jh-0998": {
+  "pos": "n.",
+  "gloss": "鑰匙",
+  "example": "I lost my house key.",
+  "exampleZh": "我弄丟了我家的鑰匙。",
+  "collocation": "a house key (家門鑰匙)",
+  "memoryTip": ""
+ },
+ "fc-jh-1004": {
+  "pos": "n.",
+  "gloss": "程度、水平",
+  "example": "My English level is good.",
+  "exampleZh": "我的英語程度很好。",
+  "collocation": "a high level (高水準)",
+  "memoryTip": "level 左右對稱像水平尺，水平就是 level"
+ },
+ "fc-jh-1007": {
+  "pos": "v.",
+  "gloss": "居住、生活",
+  "example": "I live in Taipei.",
+  "exampleZh": "我住在臺北。",
+  "collocation": "live in a house (住在房子裡)",
+  "memoryTip": "live 的 i 短短的，像「力」，用力生活住下來"
+ },
+ "fc-jh-1011": {
+  "pos": "v.",
+  "gloss": "意思是、意指",
+  "example": "What does this word mean?",
+  "exampleZh": "這個字是什麼意思？",
+  "collocation": "What do you mean? (你是什麼意思？)",
+  "memoryTip": ""
+ },
+ "fc-jh-1024": {
+  "pos": "adv.",
+  "gloss": "關掉、離開",
+  "example": "Please turn off the light.",
+  "exampleZh": "請把燈關掉。",
+  "collocation": "turn off the light (關燈)",
+  "memoryTip": ""
+ },
+ "fc-jh-1040": {
+  "pos": "n.",
+  "gloss": "鹽",
+  "example": "Please pass me the salt.",
+  "exampleZh": "請把鹽遞給我。",
+  "collocation": "salt and pepper (鹽和胡椒)",
+  "memoryTip": ""
+ },
+ "fc-jh-1051": {
+  "pos": "n.",
+  "gloss": "聲音",
+  "example": "I hear a sound outside.",
+  "exampleZh": "我聽到外面有聲音。",
+  "collocation": "a loud sound (大聲音)",
+  "memoryTip": ""
+ },
+ "fc-jh-1064": {
+  "pos": "n.",
+  "gloss": "頂端、最上面",
+  "example": "The cat sits on the top of the table.",
+  "exampleZh": "貓坐在桌子的最上面。",
+  "collocation": "at the top (在頂端)",
+  "memoryTip": ""
+ },
+ "fc-jh-1068": {
+  "pos": "adv.",
+  "gloss": "向上、起來",
+  "example": "Please stand up.",
+  "exampleZh": "請站起來。",
+  "collocation": "stand up (站起來)",
+  "memoryTip": ""
+ },
+ "fc-jh-1071": {
+  "pos": "v.",
+  "gloss": "歡迎",
+  "example": "We welcome the new student.",
+  "exampleZh": "我們歡迎新同學。",
+  "collocation": "Welcome to Taiwan (歡迎來到臺灣)",
+  "memoryTip": "welcome 是 well 加 come，好好地來，就是歡迎"
+ },
+ "fc-jh-1072": {
+  "pos": "adv.",
+  "gloss": "好、很好地",
+  "example": "She sings well.",
+  "exampleZh": "她唱得很好。",
+  "collocation": "do well (做得好)",
+  "memoryTip": ""
+ },
+ "fc-jh-1074": {
+  "pos": "pron.",
+  "gloss": "什麼",
+  "example": "What is your name?",
+  "exampleZh": "你叫什麼名字？",
+  "collocation": "What time is it? (現在幾點？)",
+  "memoryTip": ""
+ },
+ "fc-jh-1075": {
+  "pos": "pron.",
+  "gloss": "哪一個",
+  "example": "Which book do you want?",
+  "exampleZh": "你想要哪一本書？",
+  "collocation": "which one (哪一個)",
+  "memoryTip": ""
+ },
+ "fc-jh-1083": {
+  "pos": "n.",
+  "gloss": "地址",
+  "example": "Write your address on the card.",
+  "exampleZh": "請把你的地址寫在卡片上。",
+  "collocation": "a home address (家庭地址)",
+  "memoryTip": ""
+ },
+ "fc-jh-1084": {
+  "pos": "n.",
+  "gloss": "年齡、年紀",
+  "example": "What is your age?",
+  "exampleZh": "你幾歲？",
+  "collocation": "at the age of ten (十歲時)",
+  "memoryTip": ""
+ },
+ "fc-jh-1088": {
+  "pos": "n.",
+  "gloss": "猿猴、類人猿",
+  "example": "The ape climbed up the tree.",
+  "exampleZh": "那隻猿猴爬上了樹。",
+  "collocation": "a big ape (一隻大猿)",
+  "memoryTip": ""
+ },
+ "fc-jh-1092": {
+  "pos": "n.",
+  "gloss": "球",
+  "example": "He kicked the ball.",
+  "exampleZh": "他踢了那顆球。",
+  "collocation": "a ball game (球賽)",
+  "memoryTip": ""
+ },
+ "fc-jh-1093": {
+  "pos": "n.",
+  "gloss": "氣球",
+  "example": "The child holds a red balloon.",
+  "exampleZh": "孩子拿著一個紅氣球。",
+  "collocation": "a red balloon (紅氣球)",
+  "memoryTip": "balloon 中間有兩個 o 像兩個圓圓的氣球"
+ },
+ "fc-jh-1094": {
+  "pos": "n.",
+  "gloss": "銀行",
+  "example": "Mom goes to the bank on Monday.",
+  "exampleZh": "媽媽星期一去銀行。",
+  "collocation": "a bank account (銀行帳戶)",
+  "memoryTip": ""
+ },
+ "fc-jh-1095": {
+  "pos": "n.",
+  "gloss": "長條、酒吧",
+  "example": "He ate a chocolate bar.",
+  "exampleZh": "他吃了一條巧克力棒。",
+  "collocation": "a chocolate bar (巧克力棒)",
+  "memoryTip": ""
+ },
+ "fc-jh-1102": {
+  "pos": "n.",
+  "gloss": "積木、街區",
+  "example": "The baby plays with a toy block.",
+  "exampleZh": "寶寶玩著一塊積木。",
+  "collocation": "a toy block (一塊積木)",
+  "memoryTip": ""
+ },
+ "fc-jh-1103": {
+  "pos": "n.",
+  "gloss": "書",
+  "example": "I read a book every week.",
+  "exampleZh": "我每個星期讀一本書。",
+  "collocation": "a story book (故事書)",
+  "memoryTip": "book 有兩個 o 像兩隻眼睛在讀書"
+ },
+ "fc-jh-1104": {
+  "pos": "n.",
+  "gloss": "蟲子、小蟲",
+  "example": "I found a bug on the leaf.",
+  "exampleZh": "我在葉子上發現一隻小蟲。",
+  "collocation": "a small bug (一隻小蟲)",
+  "memoryTip": ""
+ },
+ "fc-jh-1105": {
+  "pos": "n.",
+  "gloss": "籠子",
+  "example": "The bird is in the cage.",
+  "exampleZh": "鳥在籠子裡。",
+  "collocation": "a bird cage (鳥籠)",
+  "memoryTip": ""
+ },
+ "fc-jh-1109": {
+  "pos": "n.",
+  "gloss": "帽子、蓋子",
+  "example": "He wears a red cap.",
+  "exampleZh": "他戴著一頂紅帽子。",
+  "collocation": "a baseball cap (棒球帽)",
+  "memoryTip": ""
+ },
+ "fc-jh-1111": {
+  "pos": "n.",
+  "gloss": "箱子、情況",
+  "example": "Put the pen in the pencil case.",
+  "exampleZh": "把筆放進鉛筆盒。",
+  "collocation": "a pencil case (鉛筆盒)",
+  "memoryTip": ""
+ },
+ "fc-jh-1113": {
+  "pos": "n.",
+  "gloss": "中心、中央",
+  "example": "The park is in the center of the town.",
+  "exampleZh": "公園在鎮中心。",
+  "collocation": "the city center (市中心)",
+  "memoryTip": ""
+ },
+ "fc-jh-1114": {
+  "pos": "n.",
+  "gloss": "機會",
+  "example": "This is a good chance to learn.",
+  "exampleZh": "這是一個學習的好機會。",
+  "collocation": "have a chance (有機會)",
+  "memoryTip": ""
+ },
+ "fc-jh-1115": {
+  "pos": "n.",
+  "gloss": "圖表、表格",
+  "example": "The chart shows our scores.",
+  "exampleZh": "圖表顯示了我們的分數。",
+  "collocation": "a pie chart (圓餅圖)",
+  "memoryTip": ""
+ },
+ "fc-jh-1118": {
+  "pos": "n.",
+  "gloss": "班級、課",
+  "example": "Our class starts at eight.",
+  "exampleZh": "我們班八點開始上課。",
+  "collocation": "in class (在班上)",
+  "memoryTip": ""
+ },
+ "fc-jh-1119": {
+  "pos": "n.",
+  "gloss": "雲、雲朵",
+  "example": "There is a white cloud in the sky.",
+  "exampleZh": "天空中有一朵白雲。",
+  "collocation": "a white cloud (白雲)",
+  "memoryTip": "cloud 裡有 loud，打雷很大聲就是雲在吵"
+ },
+ "fc-jh-1120": {
+  "pos": "n.",
+  "gloss": "顏色",
+  "example": "Red is my favorite color.",
+  "exampleZh": "紅色是我最喜歡的顏色。",
+  "collocation": "a bright color (鮮豔的顏色)",
+  "memoryTip": ""
+ },
+ "fc-jh-1124": {
+  "pos": "n.",
+  "gloss": "課程、路線",
+  "example": "I take an English course.",
+  "exampleZh": "我上一門英語課程。",
+  "collocation": "an English course (英語課程)",
+  "memoryTip": ""
+ },
+ "fc-jh-1127": {
+  "pos": "n.",
+  "gloss": "日期",
+  "example": "What is today's date?",
+  "exampleZh": "今天是幾號？",
+  "collocation": "today's date (今天日期)",
+  "memoryTip": ""
+ },
+ "fc-jh-1133": {
+  "pos": "n.",
+  "gloss": "盤子、菜餚",
+  "example": "Mom cooked a nice dish.",
+  "exampleZh": "媽媽煮了一道好菜。",
+  "collocation": "a side dish (配菜)",
+  "memoryTip": ""
+ },
+ "fc-jh-1135": {
+  "pos": "n.",
+  "gloss": "夢、夢想",
+  "example": "I had a good dream last night.",
+  "exampleZh": "我昨晚做了一個好夢。",
+  "collocation": "a sweet dream (美夢)",
+  "memoryTip": "dream 裡有 ream，睡著時眼前出現的夢"
+ },
+ "fc-jh-1137": {
+  "pos": "n.",
+  "gloss": "邊緣、邊",
+  "example": "Do not stand at the edge of the table.",
+  "exampleZh": "不要站在桌子邊緣。",
+  "collocation": "the edge of a cliff (懸崖邊)",
+  "memoryTip": ""
+ },
+ "fc-jh-1141": {
+  "pos": "n.",
+  "gloss": "臉",
+  "example": "Wash your face every morning.",
+  "exampleZh": "每天早上要洗臉。",
+  "collocation": "wash your face (洗臉)",
+  "memoryTip": ""
+ },
+ "fc-jh-1142": {
+  "pos": "n.",
+  "gloss": "風扇、迷",
+  "example": "Turn on the fan, please.",
+  "exampleZh": "請打開風扇。",
+  "collocation": "an electric fan (電風扇)",
+  "memoryTip": ""
+ },
+ "fc-jh-1143": {
+  "pos": "n.",
+  "gloss": "農場",
+  "example": "My uncle has a farm.",
+  "exampleZh": "我叔叔有一座農場。",
+  "collocation": "a dairy farm (乳牛場)",
+  "memoryTip": ""
+ },
+ "fc-jh-1149": {
+  "pos": "n.",
+  "gloss": "火、火災",
+  "example": "The fire is hot.",
+  "exampleZh": "火很燙。",
+  "collocation": "make a fire (生火)",
+  "memoryTip": ""
+ },
+ "fc-jh-1150": {
+  "pos": "n.",
+  "gloss": "霧",
+  "example": "There is thick fog this morning.",
+  "exampleZh": "今天早上有濃霧。",
+  "collocation": "thick fog (濃霧)",
+  "memoryTip": ""
+ },
+ "fc-jh-1153": {
+  "pos": "n.",
+  "gloss": "叉子",
+  "example": "I eat noodles with a fork.",
+  "exampleZh": "我用叉子吃麵。",
+  "collocation": "a knife and fork (刀叉)",
+  "memoryTip": ""
+ },
+ "fc-jh-1154": {
+  "pos": "n.",
+  "gloss": "瓦斯、氣體",
+  "example": "Turn off the gas after cooking.",
+  "exampleZh": "煮完飯要關瓦斯。",
+  "collocation": "a gas stove (瓦斯爐)",
+  "memoryTip": ""
+ },
+ "fc-jh-1156": {
+  "pos": "n.",
+  "gloss": "地面、土地",
+  "example": "The ball fell on the ground.",
+  "exampleZh": "球掉在地上。",
+  "collocation": "on the ground (在地面上)",
+  "memoryTip": ""
+ },
+ "fc-jh-1157": {
+  "pos": "n.",
+  "gloss": "團體、一組",
+  "example": "Our group has five students.",
+  "exampleZh": "我們這組有五個學生。",
+  "collocation": "a group of friends (一群朋友)",
+  "memoryTip": ""
+ },
+ "fc-jh-1159": {
+  "pos": "n.",
+  "gloss": "客人",
+  "example": "We have a guest at home.",
+  "exampleZh": "我們家有一位客人。",
+  "collocation": "a hotel guest (旅館房客)",
+  "memoryTip": ""
+ },
+ "fc-jh-1161": {
+  "pos": "n.",
+  "gloss": "槍",
+  "example": "The police officer carries a gun at work.",
+  "exampleZh": "警察上班時會帶著槍。",
+  "collocation": "a toy gun (玩具槍)",
+  "memoryTip": "玩具槍砰砰響，gun 一聲就記住"
+ },
+ "fc-jh-1166": {
+  "pos": "n.",
+  "gloss": "洞、孔",
+  "example": "There is a hole in my sock.",
+  "exampleZh": "我的襪子有一個洞。",
+  "collocation": "dig a hole (挖洞)",
+  "memoryTip": ""
+ },
+ "fc-jh-1168": {
+  "pos": "n.",
+  "gloss": "英吋",
+  "example": "The pencil is one inch long.",
+  "exampleZh": "這支鉛筆長一英寸。",
+  "collocation": "one inch (一英寸)",
+  "memoryTip": ""
+ },
+ "fc-jh-1169": {
+  "pos": "n.",
+  "gloss": "興趣、利息",
+  "example": "Music is my interest.",
+  "exampleZh": "音樂是我的興趣。",
+  "collocation": "an interest in art (對藝術的興趣)",
+  "memoryTip": ""
+ },
+ "fc-jh-1173": {
+  "pos": "n.",
+  "gloss": "小孩、孩子",
+  "example": "The kid plays with a ball.",
+  "exampleZh": "這個小孩玩著一顆球。",
+  "collocation": "a happy kid (快樂的小孩)",
+  "memoryTip": ""
+ },
+ "fc-jh-1175": {
+  "pos": "n.",
+  "gloss": "刀子",
+  "example": "Use a knife to cut the apple.",
+  "exampleZh": "用刀子切蘋果。",
+  "collocation": "a knife and fork (刀叉)",
+  "memoryTip": "knife 的 k 不發音，像「耐夫」，刀子要小心耐用"
+ },
+ "fc-jh-1177": {
+  "pos": "n.",
+  "gloss": "土地、陸地",
+  "example": "The farmer works on his land.",
+  "exampleZh": "農夫在他的土地上工作。",
+  "collocation": "on land and sea (陸地和海上)",
+  "memoryTip": ""
+ },
+ "fc-jh-1179": {
+  "pos": "n.",
+  "gloss": "葉子",
+  "example": "A green leaf fell from the tree.",
+  "exampleZh": "一片綠葉從樹上掉下來。",
+  "collocation": "a green leaf (綠葉)",
+  "memoryTip": ""
+ },
+ "fc-jh-1183": {
+  "pos": "n.",
+  "gloss": "清單、名單",
+  "example": "Make a shopping list.",
+  "exampleZh": "列一張購物清單。",
+  "collocation": "a shopping list (購物清單)",
+  "memoryTip": ""
+ },
+ "fc-jh-1186": {
+  "pos": "n.",
+  "gloss": "機器",
+  "example": "The machine can wash clothes.",
+  "exampleZh": "這台機器可以洗衣服。",
+  "collocation": "a washing machine (洗衣機)",
+  "memoryTip": ""
+ },
+ "fc-jh-1189": {
+  "pos": "n.",
+  "gloss": "男人、人類",
+  "example": "The man is a teacher.",
+  "exampleZh": "那位男士是老師。",
+  "collocation": "a tall man (高個子男人)",
+  "memoryTip": ""
+ },
+ "fc-jh-1190": {
+  "pos": "n.",
+  "gloss": "地圖",
+  "example": "I look at the map to find the park.",
+  "exampleZh": "我看地圖找公園。",
+  "collocation": "a world map (世界地圖)",
+  "memoryTip": ""
+ },
+ "fc-jh-1191": {
+  "pos": "n.",
+  "gloss": "市場",
+  "example": "Mom buys fruit at the market.",
+  "exampleZh": "媽媽在市場買水果。",
+  "collocation": "a night market (夜市)",
+  "memoryTip": ""
+ },
+ "fc-jh-1198": {
+  "pos": "n.",
+  "gloss": "名字",
+  "example": "My name is Amy.",
+  "exampleZh": "我的名字叫艾美。",
+  "collocation": "What's your name? (你叫什麼名字？)",
+  "memoryTip": ""
+ },
+ "fc-jh-1201": {
+  "pos": "n.",
+  "gloss": "筆記、便條",
+  "example": "I wrote a note on the paper.",
+  "exampleZh": "我在紙上寫了一張便條。",
+  "collocation": "take a note (做筆記)",
+  "memoryTip": ""
+ },
+ "fc-jh-1203": {
+  "pos": "n.",
+  "gloss": "數字、號碼",
+  "example": "My phone number is easy to remember.",
+  "exampleZh": "我的電話號碼很好記。",
+  "collocation": "a phone number (電話號碼)",
+  "memoryTip": ""
+ },
+ "fc-jh-1205": {
+  "pos": "n.",
+  "gloss": "一雙、一對",
+  "example": "I bought a pair of shoes.",
+  "exampleZh": "我買了一雙鞋。",
+  "collocation": "a pair of shoes (一雙鞋)",
+  "memoryTip": "pair 和 pear 同音，一對梨子就是一雙"
+ },
+ "fc-jh-1206": {
+  "pos": "n.",
+  "gloss": "紙",
+  "example": "Please give me a piece of paper.",
+  "exampleZh": "請給我一張紙。",
+  "collocation": "a piece of paper (一張紙)",
+  "memoryTip": ""
+ },
+ "fc-jh-1207": {
+  "pos": "n.",
+  "gloss": "部分、零件",
+  "example": "This part of the book is fun.",
+  "exampleZh": "書的這一部分很有趣。",
+  "collocation": "a part of (…的一部分)",
+  "memoryTip": ""
+ },
+ "fc-jh-1208": {
+  "pos": "n.",
+  "gloss": "派對、聚會",
+  "example": "We have a party on Friday.",
+  "exampleZh": "我們星期五有一場派對。",
+  "collocation": "a birthday party (生日派對)",
+  "memoryTip": ""
+ },
+ "fc-jh-1210": {
+  "pos": "n.",
+  "gloss": "寵物",
+  "example": "I have a pet dog.",
+  "exampleZh": "我有一隻寵物狗。",
+  "collocation": "a pet dog (寵物狗)",
+  "memoryTip": ""
+ },
+ "fc-jh-1211": {
+  "pos": "n.",
+  "gloss": "圖畫、照片",
+  "example": "She drew a picture of her cat.",
+  "exampleZh": "她畫了一張貓的圖。",
+  "collocation": "draw a picture (畫圖)",
+  "memoryTip": ""
+ },
+ "fc-jh-1212": {
+  "pos": "n.",
+  "gloss": "一塊、一片",
+  "example": "Give me a piece of cake.",
+  "exampleZh": "給我一塊蛋糕。",
+  "collocation": "a piece of cake (一塊蛋糕)",
+  "memoryTip": "piece 和 peace 同音，一片蛋糕帶來和平"
+ },
+ "fc-jh-1213": {
+  "pos": "n.",
+  "gloss": "地方、地點",
+  "example": "This is a nice place to play.",
+  "exampleZh": "這是一個玩耍的好地方。",
+  "collocation": "a nice place (好地方)",
+  "memoryTip": ""
+ },
+ "fc-jh-1215": {
+  "pos": "n.",
+  "gloss": "植物、工廠",
+  "example": "The plant needs water.",
+  "exampleZh": "這株植物需要水。",
+  "collocation": "a house plant (室內植物)",
+  "memoryTip": ""
+ },
+ "fc-jh-1217": {
+  "pos": "n.",
+  "gloss": "警察、警方",
+  "example": "Call the police for help.",
+  "exampleZh": "請打電話叫警察幫忙。",
+  "collocation": "call the police (報警)",
+  "memoryTip": ""
+ },
+ "fc-jh-1218": {
+  "pos": "n.",
+  "gloss": "位置",
+  "example": "My seat is in a good position.",
+  "exampleZh": "我的座位位置很好。",
+  "collocation": "in a good position (在好位置)",
+  "memoryTip": "position 的 sit 在中間，坐的位置"
+ },
+ "fc-jh-1219": {
+  "pos": "n.",
+  "gloss": "力量、電力",
+  "example": "The robot has great power.",
+  "exampleZh": "機器人有很大的力量。",
+  "collocation": "electric power (電力)",
+  "memoryTip": ""
+ },
+ "fc-jh-1222": {
+  "pos": "n.",
+  "gloss": "價格、價錢",
+  "example": "What is the price of this bag?",
+  "exampleZh": "這個包包的價格多少？",
+  "collocation": "a low price (低價)",
+  "memoryTip": ""
+ },
+ "fc-jh-1225": {
+  "pos": "n.",
+  "gloss": "比賽、賽跑",
+  "example": "I will run in the race.",
+  "exampleZh": "我要參加賽跑。",
+  "collocation": "win a race (贏得比賽)",
+  "memoryTip": ""
+ },
+ "fc-jh-1226": {
+  "pos": "n.",
+  "gloss": "收音機",
+  "example": "Dad listens to the radio in the car.",
+  "exampleZh": "爸爸在車上聽收音機。",
+  "collocation": "listen to the radio (聽收音機)",
+  "memoryTip": ""
+ },
+ "fc-jh-1234": {
+  "pos": "n.",
+  "gloss": "根、樹根",
+  "example": "The tree has a long root.",
+  "exampleZh": "這棵樹有一條很長的根。",
+  "collocation": "the root of a tree (樹根)",
+  "memoryTip": ""
+ },
+ "fc-jh-1235": {
+  "pos": "n.",
+  "gloss": "繩子",
+  "example": "He tied the boat with a rope.",
+  "exampleZh": "他用繩子綁住船。",
+  "collocation": "a long rope (長繩)",
+  "memoryTip": ""
+ },
+ "fc-jh-1237": {
+  "pos": "n.",
+  "gloss": "沙、沙子",
+  "example": "The children play in the sand.",
+  "exampleZh": "孩子們在沙裡玩。",
+  "collocation": "sand on the beach (海灘上的沙)",
+  "memoryTip": ""
+ },
+ "fc-jh-1239": {
+  "pos": "v.",
+  "gloss": "看見(see 的過去式)",
+  "example": "I saw a rainbow yesterday.",
+  "exampleZh": "我昨天看見了一道彩虹。",
+  "collocation": "saw a movie (看了一部電影)",
+  "memoryTip": "saw 是 see 的過去式，看了就是 saw"
+ },
+ "fc-jh-1241": {
+  "pos": "n.",
+  "gloss": "座位、椅子",
+  "example": "Please take a seat.",
+  "exampleZh": "請坐。",
+  "collocation": "take a seat (就座)",
+  "memoryTip": ""
+ },
+ "fc-jh-1242": {
+  "pos": "n.",
+  "gloss": "種子",
+  "example": "Plant the seed in the soil.",
+  "exampleZh": "把種子種在土裡。",
+  "collocation": "a seed grows (種子發芽)",
+  "memoryTip": ""
+ },
+ "fc-jh-1244": {
+  "pos": "n.",
+  "gloss": "蹺蹺板",
+  "example": "The kids play on the seesaw.",
+  "exampleZh": "孩子們在玩蹺蹺板。",
+  "collocation": "play on a seesaw (玩蹺蹺板)",
+  "memoryTip": ""
+ },
+ "fc-jh-1246": {
+  "pos": "n.",
+  "gloss": "感覺、意義",
+  "example": "This sentence makes sense.",
+  "exampleZh": "這個句子很合理。",
+  "collocation": "make sense (有道理)",
+  "memoryTip": ""
+ },
+ "fc-jh-1247": {
+  "pos": "n.",
+  "gloss": "句子",
+  "example": "Please read this sentence.",
+  "exampleZh": "請讀這個句子。",
+  "collocation": "a short sentence (短句)",
+  "memoryTip": ""
+ },
+ "fc-jh-1249": {
+  "pos": "n.",
+  "gloss": "服務、服務業",
+  "example": "The service in this shop is good.",
+  "exampleZh": "這家店的服務很好。",
+  "collocation": "good service (好服務)",
+  "memoryTip": ""
+ },
+ "fc-jh-1251": {
+  "pos": "n.",
+  "gloss": "形狀",
+  "example": "A circle is a round shape.",
+  "exampleZh": "圓形是圓圓的形狀。",
+  "collocation": "a heart shape (心形)",
+  "memoryTip": ""
+ },
+ "fc-jh-1253": {
+  "pos": "n.",
+  "gloss": "船",
+  "example": "The ship is big.",
+  "exampleZh": "這艘船很大。",
+  "collocation": "a big ship (大船)",
+  "memoryTip": ""
+ },
+ "fc-jh-1256": {
+  "pos": "n.",
+  "gloss": "視力、景象",
+  "example": "Her sight is very good.",
+  "exampleZh": "她的視力很好。",
+  "collocation": "out of sight (看不見)",
+  "memoryTip": ""
+ },
+ "fc-jh-1257": {
+  "pos": "n.",
+  "gloss": "尺寸、大小",
+  "example": "What size are your shoes?",
+  "exampleZh": "你的鞋子是什麼尺寸？",
+  "collocation": "shoe size (鞋子尺寸)",
+  "memoryTip": ""
+ },
+ "fc-jh-1261": {
+  "pos": "n.",
+  "gloss": "太空、空間",
+  "example": "There is no space in the box.",
+  "exampleZh": "盒子裡沒有空間了。",
+  "collocation": "outer space (外太空)",
+  "memoryTip": ""
+ },
+ "fc-jh-1263": {
+  "pos": "n.",
+  "gloss": "湯匙",
+  "example": "I eat soup with a spoon.",
+  "exampleZh": "我用湯匙喝湯。",
+  "collocation": "a spoon and fork (湯匙和叉子)",
+  "memoryTip": "spoon 的兩個 o 像湯匙的圓圓勺子"
+ },
+ "fc-jh-1264": {
+  "pos": "n.",
+  "gloss": "運動",
+  "example": "My favorite sport is tennis.",
+  "exampleZh": "我最喜歡的運動是網球。",
+  "collocation": "play a sport (進行運動)",
+  "memoryTip": ""
+ },
+ "fc-jh-1266": {
+  "pos": "n.",
+  "gloss": "州、狀態",
+  "example": "California is a state in America.",
+  "exampleZh": "加州是美國的一個州。",
+  "collocation": "in good state (狀態良好)",
+  "memoryTip": ""
+ },
+ "fc-jh-1267": {
+  "pos": "n.",
+  "gloss": "車站",
+  "example": "The bus station is near my house.",
+  "exampleZh": "公車站離我家很近。",
+  "collocation": "a train station (火車站)",
+  "memoryTip": ""
+ },
+ "fc-jh-1269": {
+  "pos": "n.",
+  "gloss": "步驟、腳步",
+  "example": "Take one step forward.",
+  "exampleZh": "向前走一步。",
+  "collocation": "step by step (一步一步)",
+  "memoryTip": ""
+ },
+ "fc-jh-1270": {
+  "pos": "n.",
+  "gloss": "石頭",
+  "example": "He threw a stone into the lake.",
+  "exampleZh": "他把一顆石頭丟進湖裡。",
+  "collocation": "a small stone (一顆小石頭)",
+  "memoryTip": ""
+ },
+ "fc-jh-1273": {
+  "pos": "n.",
+  "gloss": "糖",
+  "example": "I put some sugar in my tea.",
+  "exampleZh": "我在茶裡加了一些糖。",
+  "collocation": "a bowl of sugar (一碗糖)",
+  "memoryTip": ""
+ },
+ "fc-jh-1275": {
+  "pos": "n.",
+  "gloss": "尾巴",
+  "example": "The dog wags its tail.",
+  "exampleZh": "小狗搖著尾巴。",
+  "collocation": "a long tail (長尾巴)",
+  "memoryTip": ""
+ },
+ "fc-jh-1278": {
+  "pos": "n.",
+  "gloss": "票",
+  "example": "I bought a movie ticket.",
+  "exampleZh": "我買了一張電影票。",
+  "collocation": "a bus ticket (公車票)",
+  "memoryTip": ""
+ },
+ "fc-jh-1279": {
+  "pos": "n.",
+  "gloss": "時間",
+  "example": "What time is it?",
+  "exampleZh": "現在幾點？",
+  "collocation": "What time is it? (現在幾點？)",
+  "memoryTip": ""
+ },
+ "fc-jh-1281": {
+  "pos": "n.",
+  "gloss": "工具",
+  "example": "A hammer is a useful tool.",
+  "exampleZh": "鐵鎚是很有用的工具。",
+  "collocation": "a useful tool (有用的工具)",
+  "memoryTip": ""
+ },
+ "fc-jh-1283": {
+  "pos": "n.",
+  "gloss": "玩具",
+  "example": "The baby has a new toy.",
+  "exampleZh": "寶寶有一個新玩具。",
+  "collocation": "a toy car (玩具車)",
+  "memoryTip": ""
+ },
+ "fc-jh-1284": {
+  "pos": "n.",
+  "gloss": "旅行、旅程",
+  "example": "We took a trip to Tainan.",
+  "exampleZh": "我們去了臺南一趟旅行。",
+  "collocation": "a school trip (校外旅行)",
+  "memoryTip": ""
+ },
+ "fc-jh-1285": {
+  "pos": "n.",
+  "gloss": "麻煩、困難",
+  "example": "I have trouble with math.",
+  "exampleZh": "我數學有困難。",
+  "collocation": "in trouble (有麻煩)",
+  "memoryTip": ""
+ },
+ "fc-jh-1289": {
+  "pos": "n.",
+  "gloss": "景色、風景",
+  "example": "The view from the hill is beautiful.",
+  "exampleZh": "從山丘看出去的景色很美。",
+  "collocation": "a nice view (好景色)",
+  "memoryTip": ""
+ },
+ "fc-jh-1291": {
+  "pos": "n.",
+  "gloss": "聲音、嗓音",
+  "example": "She has a sweet voice.",
+  "exampleZh": "她有甜美的嗓音。",
+  "collocation": "a loud voice (大聲音)",
+  "memoryTip": ""
+ },
+ "fc-jh-1294": {
+  "pos": "n.",
+  "gloss": "戰爭",
+  "example": "People want peace, not war.",
+  "exampleZh": "人們想要和平，不要戰爭。",
+  "collocation": "a long war (長期戰爭)",
+  "memoryTip": "war 與 water 相反，大家都想要和平"
+ },
+ "fc-jh-1300": {
+  "pos": "n.",
+  "gloss": "風",
+  "example": "The wind is strong today.",
+  "exampleZh": "今天風很大。",
+  "collocation": "a strong wind (強風)",
+  "memoryTip": "wind 當風唸 /wɪnd/，風吹過我的頭髮"
+ },
+ "fc-jh-1301": {
+  "pos": "n.",
+  "gloss": "葡萄酒",
+  "example": "Dad cooks with a little wine.",
+  "exampleZh": "爸爸用一點葡萄酒來煮菜。",
+  "collocation": "red wine (紅酒)",
+  "memoryTip": ""
+ },
+ "fc-jh-1303": {
+  "pos": "n.",
+  "gloss": "字、單字",
+  "example": "I learn a new word every day.",
+  "exampleZh": "我每天學一個新單字。",
+  "collocation": "a new word (新單字)",
+  "memoryTip": ""
+ },
+ "fc-jh-1306": {
+  "pos": "num.",
+  "gloss": "零",
+  "example": "Five minus five is zero.",
+  "exampleZh": "五減五等於零。",
+  "collocation": "zero degrees (零度)",
+  "memoryTip": ""
+ },
+ "fc-jh-1327": {
+  "pos": "prep.",
+  "gloss": "在旁邊、藉由",
+  "example": "The cat sits by the window.",
+  "exampleZh": "貓坐在窗戶旁邊。",
+  "collocation": "by the window (在窗邊)",
+  "memoryTip": ""
+ },
+ "fc-jh-1326": {
+  "pos": "conj.",
+  "gloss": "但是",
+  "example": "I like tea, but I do not like coffee.",
+  "exampleZh": "我喜歡茶，但不喜歡咖啡。",
+  "collocation": "but not (但不)",
+  "memoryTip": ""
+ },
+ "fc-jh-1335": {
+  "pos": "prep.",
+  "gloss": "在…上",
+  "example": "The book is on the desk.",
+  "exampleZh": "書在桌上。",
+  "collocation": "on the desk (在桌上)",
+  "memoryTip": ""
+ },
+ "fc-jh-1340": {
+  "pos": "prep.",
+  "gloss": "自從",
+  "example": "I have lived here since 2020.",
+  "exampleZh": "我從二○二○年起就住在這裡。",
+  "collocation": "since last year (自去年以來)",
+  "memoryTip": ""
+ },
+ "fc-jh-1343": {
+  "pos": "conj.",
+  "gloss": "雖然",
+  "example": "Though it rained, we played outside.",
+  "exampleZh": "雖然下雨，我們還是在外面玩。",
+  "collocation": "even though (即使)",
+  "memoryTip": ""
+ },
+ "fc-jh-1544": {
+  "pos": "pron.",
+  "gloss": "某人、有人",
+  "example": "Someone is at the door.",
+  "exampleZh": "有人在門口。",
+  "collocation": "someone else (別人)",
+  "memoryTip": "someone 是 some 加 one，某一個人"
+ },
+ "fc-jh-1545": {
+  "pos": "pron.",
+  "gloss": "某事、某物",
+  "example": "I want something to drink.",
+  "exampleZh": "我想喝點東西。",
+  "collocation": "something to eat (吃的東西)",
+  "memoryTip": "something 是 some 加 thing，某個東西"
+ },
+ "fc-jh-1466": {
+  "pos": "interj.",
+  "gloss": "哈囉、你好",
+  "example": "Hello, my name is Tom.",
+  "exampleZh": "哈囉，我叫湯姆。",
+  "collocation": "say hello (打招呼)",
+  "memoryTip": ""
+ },
+ "fc-jh-1412": {
+  "pos": "interj.",
+  "gloss": "再見、掰掰",
+  "example": "Bye, see you tomorrow.",
+  "exampleZh": "掰掰，明天見。",
+  "collocation": "say bye (說再見)",
+  "memoryTip": ""
+ },
+ "fc-jh-1584": {
+  "pos": "n.",
+  "gloss": "算術、算數",
+  "example": "I like arithmetic class.",
+  "exampleZh": "我喜歡算術課。",
+  "collocation": "learn arithmetic (學算術)",
+  "memoryTip": ""
+ },
+ "fc-jh-1597": {
+  "pos": "n.",
+  "gloss": "首都、大寫字母",
+  "example": "Taipei is the capital of Taiwan.",
+  "exampleZh": "臺北是臺灣的首都。",
+  "collocation": "the capital city (首都)",
+  "memoryTip": ""
+ },
+ "fc-jh-1642": {
+  "pos": "n.",
+  "gloss": "仙女、小精靈",
+  "example": "The fairy has small wings.",
+  "exampleZh": "小精靈有小小的翅膀。",
+  "collocation": "a fairy tale (童話故事)",
+  "memoryTip": ""
+ },
+ "fc-jh-1707": {
+  "pos": "n.",
+  "gloss": "塑膠",
+  "example": "This bottle is made of plastic.",
+  "exampleZh": "這個瓶子是塑膠做的。",
+  "collocation": "a plastic bag (塑膠袋)",
+  "memoryTip": ""
+ },
+ "fc-jh-1199": {
+  "pos": "n.",
+  "gloss": "脖子、頸部",
+  "example": "The giraffe has a long neck.",
+  "exampleZh": "長頸鹿有一條長脖子。",
+  "collocation": "a long neck (長脖子)",
+  "memoryTip": ""
+ },
+ "fc-jh-1260": {
+  "pos": "n.",
+  "gloss": "土壤、泥土",
+  "example": "Plants grow in rich soil.",
+  "exampleZh": "植物在肥沃的土壤裡生長。",
+  "collocation": "rich soil (肥沃的土壤)",
+  "memoryTip": ""
+ },
+ "fc-jh-1280": {
+  "pos": "n.",
+  "gloss": "輪胎",
+  "example": "The bike has a flat tire.",
+  "exampleZh": "這輛腳踏車的輪胎沒氣了。",
+  "collocation": "a flat tire (爆胎)",
+  "memoryTip": ""
+ },
+ "fc-jh-1298": {
+  "pos": "conj.",
+  "gloss": "當…的時候、而",
+  "example": "Please be quiet while I read.",
+  "exampleZh": "我讀書的時候請安靜。",
+  "collocation": "while you wait (在你等待時)",
+  "memoryTip": ""
+ },
+ "fc-el-0679": {
+  "pos": "n.",
+  "gloss": "比賽",
+  "example": "Our class won the soccer match.",
+  "exampleZh": "我們班贏了足球比賽。",
+  "collocation": "a soccer match (足球賽)",
+  "memoryTip": ""
+ },
+ "fc-el-0667": {
+  "pos": "n.",
+  "gloss": "鐵",
+  "example": "The gate is made of iron.",
+  "exampleZh": "大門是鐵做的。",
+  "collocation": "an iron gate (鐵門)",
+  "memoryTip": ""
+ },
+ "fc-el-0640": {
+  "pos": "adj.",
+  "gloss": "盲的、看不見的",
+  "example": "The blind man uses a cane.",
+  "exampleZh": "那位盲人用手杖走路。",
+  "collocation": "a blind man (盲人)",
+  "memoryTip": ""
+ },
+ "fc-jh-1780": {
+  "pos": "n.",
+  "gloss": "帳戶、說明",
+  "example": "I have a bank account.",
+  "exampleZh": "我有一個銀行帳戶。",
+  "collocation": "a bank account (銀行帳戶)",
+  "memoryTip": "account 的 count 是數，帳戶裡的錢要數一數"
+ },
+ "fc-jh-1798": {
+  "pos": "n.",
+  "gloss": "作者",
+  "example": "The author wrote many children's books.",
+  "exampleZh": "這位作者寫了很多童書。",
+  "collocation": "a famous author (有名的作者)",
+  "memoryTip": ""
+ },
+ "fc-jh-1800": {
+  "pos": "n.",
+  "gloss": "獎、獎項",
+  "example": "She won an award for her story.",
+  "exampleZh": "她的故事得了獎。",
+  "collocation": "win an award (得獎)",
+  "memoryTip": ""
+ },
+ "fc-jh-1801": {
+  "pos": "n.",
+  "gloss": "斧頭",
+  "example": "He cut wood with an ax.",
+  "exampleZh": "他用斧頭劈木頭。",
+  "collocation": "a sharp ax (鋒利的斧頭)",
+  "memoryTip": ""
+ },
+ "fc-jh-1802": {
+  "pos": "n.",
+  "gloss": "斧頭",
+  "example": "The man cut a tree with an axe.",
+  "exampleZh": "那個人用斧頭砍樹。",
+  "collocation": "a sharp axe (鋒利的斧頭)",
+  "memoryTip": "axe 是 ax 加 e 的另一種拼法，都是斧頭"
+ },
+ "fc-jh-1812": {
+  "pos": "n.",
+  "gloss": "靴子",
+  "example": "She put on one boot.",
+  "exampleZh": "她穿上了一隻靴子。",
+  "collocation": "a rain boot (雨鞋)",
+  "memoryTip": "boot 的兩個 o 像一雙靴子的圓圓鞋頭"
+ },
+ "fc-jh-1813": {
+  "pos": "n.",
+  "gloss": "邊界、邊緣",
+  "example": "The border between the two countries is a river.",
+  "exampleZh": "兩國的邊界是一條河。",
+  "collocation": "cross the border (越過邊界)",
+  "memoryTip": ""
+ },
+ "fc-jh-1815": {
+  "pos": "n.",
+  "gloss": "煞車",
+  "example": "Use the brake to stop the bike.",
+  "exampleZh": "用煞車讓腳踏車停下來。",
+  "collocation": "hit the brake (踩煞車)",
+  "memoryTip": "brake 和 break 同音，煞車時東西差點壞掉"
+ },
+ "fc-jh-1817": {
+  "pos": "n.",
+  "gloss": "微風",
+  "example": "A cool breeze comes from the sea.",
+  "exampleZh": "一陣涼爽的微風從海上吹來。",
+  "collocation": "a cool breeze (涼爽的微風)",
+  "memoryTip": ""
+ },
+ "fc-jh-1818": {
+  "pos": "n.",
+  "gloss": "泡泡",
+  "example": "The baby blows a bubble.",
+  "exampleZh": "寶寶吹了一個泡泡。",
+  "collocation": "blow a bubble (吹泡泡)",
+  "memoryTip": "bubble 中間有兩個 b 像兩個泡泡"
+ },
+ "fc-jh-1820": {
+  "pos": "n.",
+  "gloss": "預算",
+  "example": "We have a small budget for the trip.",
+  "exampleZh": "我們的旅行預算不多。",
+  "collocation": "a low budget (低預算)",
+  "memoryTip": ""
+ },
+ "fc-jh-1828": {
+  "pos": "n.",
+  "gloss": "鏈子、一連串",
+  "example": "The dog has a long chain.",
+  "exampleZh": "那隻狗有一條長鏈子。",
+  "collocation": "a gold chain (金鏈子)",
+  "memoryTip": ""
+ },
+ "fc-jh-1829": {
+  "pos": "n.",
+  "gloss": "挑戰",
+  "example": "The math test is a big challenge.",
+  "exampleZh": "這次數學考試是個大挑戰。",
+  "collocation": "take a challenge (接受挑戰)",
+  "memoryTip": ""
+ },
+ "fc-jh-1830": {
+  "pos": "n.",
+  "gloss": "頻道、管道",
+  "example": "I like this TV channel.",
+  "exampleZh": "我喜歡這個電視頻道。",
+  "collocation": "a TV channel (電視頻道)",
+  "memoryTip": ""
+ },
+ "fc-jh-1834": {
+  "pos": "n.",
+  "gloss": "洋芋片、晶片",
+  "example": "Each chip is thin and crispy.",
+  "exampleZh": "每片洋芋片都又薄又脆。",
+  "collocation": "potato chips (洋芋片)",
+  "memoryTip": ""
+ },
+ "fc-jh-1844": {
+  "pos": "n.",
+  "gloss": "條件、狀況",
+  "example": "The car is in good condition.",
+  "exampleZh": "這輛車狀況很好。",
+  "collocation": "in good condition (狀況良好)",
+  "memoryTip": ""
+ },
+ "fc-jh-1846": {
+  "pos": "n.",
+  "gloss": "合約、契約",
+  "example": "Mom signed the contract.",
+  "exampleZh": "媽媽簽了合約。",
+  "collocation": "sign a contract (簽合約)",
+  "memoryTip": ""
+ },
+ "fc-jh-1847": {
+  "pos": "n.",
+  "gloss": "長沙發",
+  "example": "The cat sleeps on the couch.",
+  "exampleZh": "貓睡在長沙發上。",
+  "collocation": "a couch potato (整天窩在沙發的人)",
+  "memoryTip": ""
+ },
+ "fc-jh-1852": {
+  "pos": "n.",
+  "gloss": "王冠",
+  "example": "The queen wears a crown.",
+  "exampleZh": "女王戴著王冠。",
+  "collocation": "a gold crown (金王冠)",
+  "memoryTip": ""
+ },
+ "fc-jh-1853": {
+  "pos": "n.",
+  "gloss": "循環、自行車",
+  "example": "The water cycle is important.",
+  "exampleZh": "水的循環很重要。",
+  "collocation": "a life cycle (生命週期)",
+  "memoryTip": ""
+ },
+ "fc-jh-1854": {
+  "pos": "n.",
+  "gloss": "水壩、堤壩",
+  "example": "The dam holds back the water.",
+  "exampleZh": "水壩攔住了水。",
+  "collocation": "a big dam (大水壩)",
+  "memoryTip": ""
+ },
+ "fc-jh-1862": {
+  "pos": "n.",
+  "gloss": "細節",
+  "example": "Please tell me every detail.",
+  "exampleZh": "請告訴我每一個細節。",
+  "collocation": "in detail (詳細地)",
+  "memoryTip": ""
+ },
+ "fc-jh-1868": {
+  "pos": "n.",
+  "gloss": "折扣",
+  "example": "The shop gives a 20% discount.",
+  "exampleZh": "這家店打八折。",
+  "collocation": "a big discount (大折扣)",
+  "memoryTip": "discount 的 count 是算，算完就有折扣"
+ },
+ "fc-jh-1890": {
+  "pos": "n.",
+  "gloss": "實驗",
+  "example": "We did an experiment in science class.",
+  "exampleZh": "我們在自然課做了一個實驗。",
+  "collocation": "do an experiment (做實驗)",
+  "memoryTip": ""
+ },
+ "fc-jh-1894": {
+  "pos": "n.",
+  "gloss": "時尚、流行",
+  "example": "Short skirts are in fashion.",
+  "exampleZh": "短裙正在流行。",
+  "collocation": "in fashion (流行)",
+  "memoryTip": ""
+ },
+ "fc-jh-1897": {
+  "pos": "n.",
+  "gloss": "特色、特徵",
+  "example": "The phone has a new feature.",
+  "exampleZh": "這支手機有一項新功能。",
+  "collocation": "a special feature (特色)",
+  "memoryTip": ""
+ },
+ "fc-jh-1898": {
+  "pos": "n.",
+  "gloss": "檔案、文件夾",
+  "example": "Save the file on the computer.",
+  "exampleZh": "把檔案存在電腦裡。",
+  "collocation": "a computer file (電腦檔案)",
+  "memoryTip": ""
+ },
+ "fc-jh-1899": {
+  "pos": "n.",
+  "gloss": "拳頭",
+  "example": "He shows his fist and smiles.",
+  "exampleZh": "他握起拳頭，笑了笑。",
+  "collocation": "make a fist (握拳)",
+  "memoryTip": ""
+ },
+ "fc-jh-1900": {
+  "pos": "n.",
+  "gloss": "火焰",
+  "example": "The candle has a small flame.",
+  "exampleZh": "蠟燭有一小簇火焰。",
+  "collocation": "a candle flame (燭火)",
+  "memoryTip": ""
+ },
+ "fc-jh-1901": {
+  "pos": "n.",
+  "gloss": "口味、味道",
+  "example": "My favorite ice cream flavor is mango.",
+  "exampleZh": "我最喜歡的冰淇淋口味是芒果。",
+  "collocation": "a new flavor (新口味)",
+  "memoryTip": ""
+ },
+ "fc-jh-1906": {
+  "pos": "n.",
+  "gloss": "基金、資金",
+  "example": "The school raised a fund for books.",
+  "exampleZh": "學校為買書籌了一筆基金。",
+  "collocation": "raise a fund (募款)",
+  "memoryTip": ""
+ },
+ "fc-jh-1909": {
+  "pos": "n.",
+  "gloss": "手勢、姿態",
+  "example": "He made a gesture to say goodbye.",
+  "exampleZh": "他做了個手勢說再見。",
+  "collocation": "a friendly gesture (友善的手勢)",
+  "memoryTip": ""
+ },
+ "fc-jh-1921": {
+  "pos": "n.",
+  "gloss": "頭條新聞、標題",
+  "example": "The headline is on the front page.",
+  "exampleZh": "頭條新聞在第一頁。",
+  "collocation": "a news headline (新聞標題)",
+  "memoryTip": "headline 是 head 加 line，頭上的一行就是標題"
+ },
+ "fc-jh-1927": {
+  "pos": "n.",
+  "gloss": "榮譽、尊敬",
+  "example": "It is an honor to meet you.",
+  "exampleZh": "很榮幸見到你。",
+  "collocation": "an honor to (…的榮幸)",
+  "memoryTip": "honor 的 h 不發音，像「歐那」，歐那(哦那)是榮譽"
+ },
+ "fc-jh-1936": {
+  "pos": "n.",
+  "gloss": "監獄",
+  "example": "The thief was put in jail.",
+  "exampleZh": "小偷被關進監獄。",
+  "collocation": "go to jail (坐牢)",
+  "memoryTip": ""
+ },
+ "fc-jh-1937": {
+  "pos": "n.",
+  "gloss": "噴射機、噴流",
+  "example": "A jet flew over the sea.",
+  "exampleZh": "一架噴射機飛過海面。",
+  "collocation": "a jet plane (噴射機)",
+  "memoryTip": ""
+ },
+ "fc-jh-1938": {
+  "pos": "n.",
+  "gloss": "垃圾、破舊的東西",
+  "example": "Do not keep junk in your room.",
+  "exampleZh": "不要在房間裡留垃圾。",
+  "collocation": "junk food (垃圾食物)",
+  "memoryTip": ""
+ },
+ "fc-jh-1940": {
+  "pos": "n.",
+  "gloss": "騎士",
+  "example": "The knight rode a white horse.",
+  "exampleZh": "騎士騎著一匹白馬。",
+  "collocation": "a brave knight (勇敢的騎士)",
+  "memoryTip": "knight 的 k 不發音，和 night 同音，夜晚的騎士"
+ },
+ "fc-jh-1942": {
+  "pos": "n.",
+  "gloss": "結、繩結",
+  "example": "Tie a knot in the rope.",
+  "exampleZh": "在繩子上打一個結。",
+  "collocation": "tie a knot (打結)",
+  "memoryTip": "knot 的 k 不發音，和 not 同音，不能解開的結"
+ },
+ "fc-jh-1943": {
+  "pos": "n.",
+  "gloss": "標籤、標示",
+  "example": "Read the label on the bottle.",
+  "exampleZh": "看看瓶子上的標籤。",
+  "collocation": "a price label (價格標籤)",
+  "memoryTip": ""
+ },
+ "fc-jh-1948": {
+  "pos": "n.",
+  "gloss": "垃圾、亂丟的東西",
+  "example": "Please do not leave litter on the beach.",
+  "exampleZh": "請不要把垃圾留在海灘。",
+  "collocation": "pick up litter (撿垃圾)",
+  "memoryTip": ""
+ },
+ "fc-jh-1951": {
+  "pos": "n.",
+  "gloss": "搖籃曲",
+  "example": "Mom sings a lullaby to the baby.",
+  "exampleZh": "媽媽對寶寶唱搖籃曲。",
+  "collocation": "sing a lullaby (唱搖籃曲)",
+  "memoryTip": ""
+ },
+ "fc-jh-1958": {
+  "pos": "n.",
+  "gloss": "凌亂、一團糟",
+  "example": "My room is a mess.",
+  "exampleZh": "我的房間一團亂。",
+  "collocation": "in a mess (亂七八糟)",
+  "memoryTip": ""
+ },
+ "fc-jh-1959": {
+  "pos": "n.",
+  "gloss": "磨坊、工廠",
+  "example": "The old mill makes flour.",
+  "exampleZh": "這座老磨坊在磨麵粉。",
+  "collocation": "a rice mill (碾米廠)",
+  "memoryTip": ""
+ },
+ "fc-jh-1960": {
+  "pos": "n.",
+  "gloss": "薄霧",
+  "example": "A light mist covers the hill.",
+  "exampleZh": "薄薄的霧籠罩著山丘。",
+  "collocation": "a morning mist (晨霧)",
+  "memoryTip": ""
+ },
+ "fc-jh-1964": {
+  "pos": "n.",
+  "gloss": "綽號",
+  "example": "His nickname is Tiger.",
+  "exampleZh": "他的綽號叫老虎。",
+  "collocation": "a funny nickname (好笑的綽號)",
+  "memoryTip": "nickname 是 nick 加 name，另外加的名字"
+ },
+ "fc-jh-1966": {
+  "pos": "n.",
+  "gloss": "場合、時刻",
+  "example": "It was a special occasion.",
+  "exampleZh": "那是個特別的場合。",
+  "collocation": "on this occasion (在這個場合)",
+  "memoryTip": ""
+ },
+ "fc-jh-1967": {
+  "pos": "n.",
+  "gloss": "孤兒",
+  "example": "The orphan has no parents.",
+  "exampleZh": "這位孤兒沒有父母。",
+  "collocation": "a kind orphan (善良的孤兒)",
+  "memoryTip": ""
+ },
+ "fc-jh-1968": {
+  "pos": "n.",
+  "gloss": "大綱、輪廓",
+  "example": "Write an outline for your story.",
+  "exampleZh": "為你的故事寫一個大綱。",
+  "collocation": "an outline of a story (故事大綱)",
+  "memoryTip": "outline 是 out 加 line，畫出外面的線條就是輪廓"
+ },
+ "fc-jh-1970": {
+  "pos": "n.",
+  "gloss": "便條本、墊子",
+  "example": "I wrote my name on the pad.",
+  "exampleZh": "我把名字寫在便條本上。",
+  "collocation": "a note pad (便條本)",
+  "memoryTip": ""
+ },
+ "fc-jh-1971": {
+  "pos": "n.",
+  "gloss": "恐慌、驚慌",
+  "example": "Do not panic in a fire drill.",
+  "exampleZh": "消防演習時不要慌張。",
+  "collocation": "in a panic (驚慌失措)",
+  "memoryTip": ""
+ },
+ "fc-jh-1972": {
+  "pos": "n.",
+  "gloss": "遊行",
+  "example": "We watched the parade on the street.",
+  "exampleZh": "我們在街上看遊行。",
+  "collocation": "a Christmas parade (耶誕遊行)",
+  "memoryTip": ""
+ },
+ "fc-jh-1973": {
+  "pos": "n.",
+  "gloss": "包裹、小包",
+  "example": "A parcel arrived at the door.",
+  "exampleZh": "一個包裹送到門口。",
+  "collocation": "a parcel from Japan (來自日本的包裹)",
+  "memoryTip": ""
+ },
+ "fc-jh-1977": {
+  "pos": "n.",
+  "gloss": "動物的腳掌",
+  "example": "The dog hurt its paw.",
+  "exampleZh": "那隻狗的腳掌受傷了。",
+  "collocation": "a cat's paw (貓掌)",
+  "memoryTip": ""
+ },
+ "fc-jh-1978": {
+  "pos": "n.",
+  "gloss": "山頂、頂點",
+  "example": "They climbed to the peak of the mountain.",
+  "exampleZh": "他們爬到山頂。",
+  "collocation": "a mountain peak (山峰)",
+  "memoryTip": ""
+ },
+ "fc-jh-1983": {
+  "pos": "n.",
+  "gloss": "醃菜、酸黃瓜",
+  "example": "I like a pickle on my burger.",
+  "exampleZh": "我喜歡漢堡裡有酸黃瓜。",
+  "collocation": "a pickle (一條酸黃瓜)",
+  "memoryTip": ""
+ },
+ "fc-jh-1984": {
+  "pos": "n.",
+  "gloss": "飛行員、領航員",
+  "example": "The pilot flies the plane.",
+  "exampleZh": "飛行員駕駛飛機。",
+  "collocation": "an airline pilot (航空公司飛行員)",
+  "memoryTip": ""
+ },
+ "fc-jh-1985": {
+  "pos": "n.",
+  "gloss": "坑洞、核",
+  "example": "A big pit is in the garden.",
+  "exampleZh": "花園裡有一個大坑。",
+  "collocation": "a cherry pit (櫻桃核)",
+  "memoryTip": ""
+ },
+ "fc-jh-1986": {
+  "pos": "n.",
+  "gloss": "憐憫、可惜",
+  "example": "What a pity!",
+  "exampleZh": "真可惜！",
+  "collocation": "take pity on (憐憫)",
+  "memoryTip": ""
+ },
+ "fc-jh-1987": {
+  "pos": "n.",
+  "gloss": "插頭、塞子",
+  "example": "Pull the plug out of the wall.",
+  "exampleZh": "把插頭從牆上拔下來。",
+  "collocation": "pull the plug (拔插頭)",
+  "memoryTip": ""
+ },
+ "fc-jh-1988": {
+  "pos": "n.",
+  "gloss": "民意調查、投票",
+  "example": "The poll shows most kids like pizza.",
+  "exampleZh": "民調顯示大多數孩子喜歡披薩。",
+  "collocation": "an opinion poll (民意調查)",
+  "memoryTip": "poll 和 pole 同音，投票時排成一長排"
+ },
+ "fc-jh-1992": {
+  "pos": "n.",
+  "gloss": "粉、粉末",
+  "example": "Add some milk powder to the cup.",
+  "exampleZh": "在杯子裡加一點奶粉。",
+  "collocation": "milk powder (奶粉)",
+  "memoryTip": ""
+ },
+ "fc-jh-1993": {
+  "pos": "n.",
+  "gloss": "壓力、氣壓",
+  "example": "Too much homework gives me pressure.",
+  "exampleZh": "太多功課讓我有壓力。",
+  "collocation": "under pressure (有壓力)",
+  "memoryTip": "pressure 的 press 是壓，壓下去就是壓力"
+ },
+ "fc-jh-1996": {
+  "pos": "n.",
+  "gloss": "過程、步驟",
+  "example": "Making bread is a long process.",
+  "exampleZh": "做麵包是一個很長的過程。",
+  "collocation": "a long process (漫長的過程)",
+  "memoryTip": ""
+ },
+ "fc-jh-1997": {
+  "pos": "n.",
+  "gloss": "利潤、好處",
+  "example": "The shop made a big profit.",
+  "exampleZh": "這家店賺了很多利潤。",
+  "collocation": "make a profit (獲利)",
+  "memoryTip": ""
+ },
+ "fc-jh-1998": {
+  "pos": "n.",
+  "gloss": "節目、程式",
+  "example": "I watch a TV program after school.",
+  "exampleZh": "我放學後看電視節目。",
+  "collocation": "a TV program (電視節目)",
+  "memoryTip": ""
+ }
+}

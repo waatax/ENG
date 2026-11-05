@@ -1,0 +1,149 @@
+[
+ {
+  "id": "b-gmat-u1.b1",
+  "type": "meaning",
+  "prompt": "下列哪一項是這段論證所依賴的假設？",
+  "text": "A coffee shop began offering free refills in March, and its monthly revenue rose in April. The owner concludes that free refills caused the revenue increase.",
+  "options": [
+   "April 的營收增加並非由其他同時發生的因素造成",
+   "免費續杯讓每杯咖啡的成本降低",
+   "四月的顧客比三月更喜歡咖啡",
+   "其他咖啡店都沒有提供續杯"
+  ],
+  "answer": "April 的營收增加並非由其他同時發生的因素造成",
+  "wrong": {
+   "免費續杯讓每杯咖啡的成本降低": "論證談的是營收增加的原因，不是成本；即使成本降低也不能推出營收因續杯而增加。",
+   "四月的顧客比三月更喜歡咖啡": "這是另一個可能原因，若成立反而削弱論證，並非論證所需的假設。",
+   "其他咖啡店都沒有提供續杯": "競爭對手的做法與本店營收是否因續杯而升無必然關係，也不是論證必須成立的前提。"
+  },
+  "why": "因果論證必須排除其他可能原因，才能把營收增加歸因於免費續杯。",
+  "tip": "因果題常見假設：沒有別的原因造成同樣結果。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u1.b2",
+  "type": "meaning",
+  "prompt": "下列哪一項最能削弱這個結論？",
+  "text": "After a school replaced its cafeteria desserts with fruit, students' average test scores rose. The principal concludes that the healthier menu improved scores.",
+  "options": [
+   "同一學期，學校還增聘了數名新老師並縮小班級人數",
+   "學生們普遍喜歡吃水果",
+   "學校的甜點供應商因此損失了生意",
+   "水果比甜點便宜"
+  ],
+  "answer": "同一學期，學校還增聘了數名新老師並縮小班級人數",
+  "wrong": {
+   "學生們普遍喜歡吃水果": "喜歡水果不能解釋成績，也沒有提供其他原因，對因果論證沒有削弱。",
+   "學校的甜點供應商因此損失了生意": "供應商的損失與成績沒有關係。",
+   "水果比甜點便宜": "價格差異與成績無關，沒有提出替代解釋。"
+  },
+  "why": "增聘老師與縮小班級是另一個可能使成績上升的原因，使「菜單造成進步」受到質疑。",
+  "tip": "削弱因果：提出同時發生的替代原因。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u1.b3",
+  "type": "meaning",
+  "prompt": "這個論證最可能的假設是什麼？",
+  "text": "A survey of readers of a hiking magazine found that most of them own expensive boots. The magazine concludes that most hikers own expensive boots.",
+  "options": [
+   "該雜誌讀者的裝備情況能代表一般登山者",
+   "一般登山者都會訂閱此雜誌",
+   "昂貴的靴子比便宜的靴子更好走",
+   "沒有登山者會購買便宜靴子"
+  ],
+  "answer": "該雜誌讀者的裝備情況能代表一般登山者",
+  "wrong": {
+   "一般登山者都會訂閱此雜誌": "論證不需要所有登山者都訂閱，只需要訂閱者具有代表性。",
+   "昂貴的靴子比便宜的靴子更好走": "靴子好不好走與調查結論「多數登山者有昂貴靴子」無關。",
+   "沒有登山者會購買便宜靴子": "這太極端，也不是結論所需。"
+  },
+  "why": "由樣本推論全體時，必須假設樣本具代表性。",
+  "tip": "樣本推全體：先問樣本是否有代表性。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u1.b4",
+  "type": "fix",
+  "prompt": "哪一句最能表達上述論證「推論過度」的問題？",
+  "text": "A bakery noticed that cakes with more frosting sold better, so it concluded that adding frosting increases sales of any pastry.",
+  "options": [
+   "It assumes that a pattern found in cakes applies to all pastries.",
+   "It assumes that bakeries sell more cakes than pastries.",
+   "It assumes frosting is the cheapest ingredient.",
+   "It assumes customers dislike plain pastries."
+  ],
+  "answer": "It assumes that a pattern found in cakes applies to all pastries.",
+  "wrong": {
+   "It assumes that bakeries sell more cakes than pastries.": "論證沒有比較蛋糕與其他糕點的銷量。",
+   "It assumes frosting is the cheapest ingredient.": "論證完全沒談到成本，糖霜便宜與否不影響「從蛋糕推到所有糕點」這個推論。",
+   "It assumes customers dislike plain pastries.": "論證沒有談到顧客是否討厭原味糕點。"
+  },
+  "why": "由蛋糕的觀察推論到所有糕點，必須假設其他糕點的情況相同。",
+  "tip": "局部推全體：檢查類別是否真的相同。",
+  "say": "It assumes that a pattern found in cakes applies to all pastries."
+ },
+ {
+  "id": "b-gmat-u1.b5",
+  "type": "meaning",
+  "prompt": "下列哪一項是這項論證必須排除的另一種解釋？",
+  "text": "Cities that built more bike lanes saw fewer traffic accidents. A planner concludes that bike lanes reduce accidents.",
+  "options": [
+   "本來就比較重視交通安全的城市，才會多蓋自行車道並同時改善其他設施",
+   "自行車道需要的維護費用很高",
+   "有些城市沒有任何自行車",
+   "事故數字在不同城市計算方式相同"
+  ],
+  "answer": "本來就比較重視交通安全的城市，才會多蓋自行車道並同時改善其他設施",
+  "wrong": {
+   "自行車道需要的維護費用很高": "維護費與事故是否減少無關。",
+   "有些城市沒有任何自行車": "這和因果解釋無關，只是描述情況。",
+   "事故數字在不同城市計算方式相同": "這是支持比較的前提，並非替代解釋。"
+  },
+  "why": "安全意識高的城市可能同時做了很多改善，事故減少不一定是自行車道造成的。",
+  "tip": "留意第三因素同時影響兩件事。",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u1.b6",
+  "type": "meaning",
+  "prompt": "論證成立所需的假設是哪一項？",
+  "text": "A language app reports that users who practiced daily for a month improved their quiz scores. The app concludes that daily practice improved the scores.",
+  "options": [
+   "沒有每天練習的使用者不會因其他原因而同樣進步",
+   "每位使用者都很喜歡這個應用程式",
+   "測驗題目每個月都會更換",
+   "練習時間越長，使用者越快樂"
+  ],
+  "answer": "沒有每天練習的使用者不會因其他原因而同樣進步",
+  "wrong": {
+   "每位使用者都很喜歡這個應用程式": "喜歡與否不是分數進步原因的必要條件。",
+   "測驗題目每個月都會更換": "題目更換與因果無直接關係，也可能反而干擾比較。",
+   "練習時間越長，使用者越快樂": "快樂與成績進步的因果沒有被論證使用。"
+  },
+  "why": "要說明每日練習造成進步，需假設進步並非其他因素所致，且不練習者不會同樣進步。",
+  "tip": "每個因果結論都要想：對照組呢？",
+  "say": ""
+ },
+ {
+  "id": "b-gmat-u1.b7",
+  "type": "situation",
+  "prompt": "同事說：「我們換了新的網站設計，下個月會員人數就增加，所以設計成功。」你最該提出哪個質疑？",
+  "text": "",
+  "options": [
+   "Was there a major advertising campaign running that month?",
+   "Do members like the color blue?",
+   "Is the website cheaper to host?",
+   "Does the logo look modern?"
+  ],
+  "answer": "Was there a major advertising campaign running that month?",
+  "wrong": {
+   "Do members like the color blue?": "顏色偏好不能檢驗設計是否造成會員增加。",
+   "Is the website cheaper to host?": "主機費用與會員增長是否因設計而生無關。",
+   "Does the logo look modern?": "外觀好不好看無法檢驗因果。"
+  },
+  "why": "同月的大型廣告活動可能才是增加會員的原因，是最直接的替代解釋。",
+  "tip": "質疑因果：問有沒有同期的其他事件。",
+  "say": "Was there a major advertising campaign running that month?"
+ }
+]

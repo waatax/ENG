@@ -1,0 +1,661 @@
+{
+ "g11-s1-u6.r1": {
+  "Past perfect subjunctive (unreal past).": "這是假設語氣的文法名稱，和 So profound 之後的倒裝語序無關。",
+  "Travelers seldom witness a spectacle as transcendent...": "這是另一個句子的片段，並沒有回答 So profound 後語序的變化。"
+ },
+ "d.diag-0894": {
+  "meticulous": "meticulous 是形容詞，不能修飾分詞 organized，要用副詞 meticulously。",
+  "in a meticulous way": "介系詞片語和前面單字形容詞結構不平行，也讓句子變得冗長。",
+  "with meticulousness": "with meticulousness 是介系詞片語，與前面 spacious 等單字結構不平行。"
+ },
+ "d.diag-0895": {
+  "unwaveringly": "unwaveringly 是副詞，不能修飾名詞 commitment，這裡要用形容詞。",
+  "she is unwavering": "多了主詞和動詞變成子句，與前面的名詞片語並列不平行。",
+  "to be unwavering": "不定詞片語不能放在名詞 commitment 前當修飾語，也破壞平行。"
+ },
+ "d.diag-0897": {
+  "profoundly": "profoundly 是副詞，不能修飾名詞片語 character development。",
+  "it has profound": "多了主詞和動詞變成子句，與前面 plot、dialogue 的名詞並列不平行。",
+  "profoundness": "profoundness 是名詞，不能放在 character development 前當修飾語。"
+ },
+ "d.diag-0898": {
+  "interact": "前面 speaking、guiding 都是 V-ing，原形 interact 與它們不平行。",
+  "to interact": "to interact 是不定詞，和前面的 V-ing 並列形式不一致。",
+  "interacted": "interacted 是過去式或過去分詞，與前面 V-ing 不平行，時態也不合。"
+ },
+ "d.diag-0899": {
+  "fostering": "aims to 後面並列 reduce、promote，fostering 是 V-ing，形式不平行。",
+  "to fostering": "to 後面不能直接接 V-ing 這種寫法，且與前面的原形動詞不平行。",
+  "fostered": "fostered 是過去式，無法與 aims to 後的原形動詞 reduce、promote 並列。"
+ },
+ "d.diag-0900": {
+  "stretching": "instructed players to 後並列 warm up、hydrate，stretching 形式不平行。",
+  "to stretching": "to stretching 寫法錯誤，to 後面的並列動詞應用原形。",
+  "stretched": "stretched 是過去式，不能與 to 後的原形動詞 warm up、hydrate 並列。"
+ },
+ "d.diag-0905": {
+  "broad": "The more...the... 後面要接比較級，broad 是原級。",
+  "broadest": "broadest 是最高級，The more...the... 句型需要比較級而不是最高級。",
+  "more broad": "broad 是單音節形容詞，比較級是 broader，不用 more broad。"
+ },
+ "g11-s2-u7.x1": {
+  "It was Columbus that reached the Americas in 1492.": "這句用 that 強調的是 Columbus（人），不是年份。",
+  "It was the Americas that Columbus reached in 1492.": "這句強調的是 the Americas（地點），不是年份 1492。",
+  "It is 1492 when Columbus reached the Americas.": "It is 1492 when 不是 cleft 句型，時態也從過去改成現在。"
+ },
+ "g11-s2-u7.x2": {
+  "What I need are a quiet place to study.": "What I need 當主詞視為單數，補語 a quiet place 也是單數，不能用 are。",
+  "That I need is a quiet place to study.": "擬分裂句要以 What 開頭，不能用 That 引導主詞子句。",
+  "What do I need is a quiet place to study.": "What 子句在擬分裂句中是陳述語序，不能倒裝成疑問句 What do I need。"
+ },
+ "g11-s2-u8.x1": {
+  "Although difficult": "讓步倒裝已有 as，再加 Although 就重複了，形成 Although difficult as 的錯誤。",
+  "Difficulty": "Difficulty 是名詞，不能放在 as 前組成「形容詞 + as」的讓步結構。",
+  "How difficult": "How difficult 是疑問或感嘆用語，後面加 as 不能構成讓步子句。"
+ },
+ "g11-s2-u8.x2": {
+  "is it": "固定用法是 be it A or B，is it 的語序不是這個片語。",
+  "being it": "being it 是分詞形式，不是表示「無論是」的固定用法。",
+  "it be": "it be 語序相反，固定說法應該是 be it。"
+ },
+ "g11-s2-u8.q1": {
+  "A novice": "讓步倒裝「名詞 + as + 主詞」中名詞前不加冠詞，A novice 多餘。",
+  "Novices": "Novices 是複數，與單數主詞 he、the apprentice 不一致，也不合倒裝結構。",
+  "The novice": "讓步倒裝中 as 前的名詞不加冠詞，The novice 不符這個句型。"
+ },
+ "g11-s2-u8.r1": {
+  "Our collective ethical wisdom.": "這個片語與題目要改寫的軍事戰役句子無關，不是用 Although 的改寫。",
+  "Past perfect subjunctive (unreal past).": "這是文法名稱，不是把 Difficult as 句型改成 Although 的完整句子。"
+ },
+ "g11-s2-u9.x1": {
+  "This study aims to examine how AI tutors affect writing accuracy.": "這句是研究目的（aims to examine），不是研究發現。",
+  "We surveyed 300 students across five high schools.": "這句說明調查了多少學生，屬於研究方法，不是發現。",
+  "These results suggest that schools should combine AI and teacher feedback.": "這句是根據結果提出建議，屬於結論與建議，不是發現本身。"
+ },
+ "g11-s2-u9.x2": {
+  "unable to be used": "re- 表示「再次」，reusable 是「能再用」，unable to be used 剛好相反。",
+  "used only once": "used only once 是「只用一次」，與 reusable 的「能重複使用」相反。"
+ },
+ "g11-s2-u9.q1": {
+  "System hardware overheating": "文章談的是訓練資料造成的偏見和捏造，沒有提到硬體過熱。",
+  "Faster computation degradation": "文章沒有提到運算變慢，問題出在輸出內容的偏見與假資料。",
+  "Inability to parse syntax": "文章一開始說模型語言很流暢，問題不是無法解析句法。"
+ },
+ "g11-s2-u11.x1": {
+  "However, rivers are important for farming.": "However 表示轉折，且突然談農業，沒有接續 Dr. Evans 的清理專案。",
+  "They are also popular among tourists.": "They 指代不明，內容談旅遊也偏離了清理河川專案的主題。",
+  "For example, the weather was sunny.": "For example 是舉例，但天氣晴朗與清理河川專案並無關係。"
+ },
+ "g11-s2-u11.q1": {
+  "It was used primarily to store olive oil and vintage wine.": "這句說的是儲存橄欖油和酒，與下一句運水、供水的工程成就不連貫。",
+  "However, the inhabitants frequently suffered from severe water shortages.": "However 轉折說缺水，與後句「確保可靠淡水」互相矛盾。",
+  "Archaeologists consequently abandoned the excavation site due to flooding.": "放棄遺址與淹水的說法在前文沒有根據，也和後句供水穩定不合。"
+ },
+ "g11-s2-u11.r1": {
+  "If Captain Sullenberger had hesitated.": "這是別題的句子，沒有說明希臘文字對研究者的作用。",
+  "Our collective ethical wisdom.": "這個片語與羅塞塔石碑及研究者如何解讀文字無關。"
+ },
+ "d.diag-0991": {
+  "Solar panels are usually rectangular and black.": "這只是太陽能板外觀的小細節，不足以統領整段再生能源的論述。",
+  "Wind was mentioned in ancient Greek mythology.": "古希臘神話與再生能源轉型無關，無法當作主題句。",
+  "My neighbor installed a small battery yesterday.": "鄰居裝電池是個人小事，不能概括整個段落的主旨。"
+ },
+ "d.diag-0992": {
+  "Many students enjoy wearing running shoes.": "穿跑鞋是個人喜好，與運動提升學業成績沒有證據關聯。",
+  "The gym was repainted during summer vacation.": "體育館重新粉刷與運動是否提升成績無關。",
+  "Exercise equipment can be quite costly.": "器材昂貴談的是花費，沒有支持運動提升學業的主張。"
+ },
+ "d.diag-0993": {
+  "Laptops have varied screen resolutions.": "筆電螢幕解析度是瑣碎細節，沒有總結數位素養的重點。",
+  "Internet speed increased last year.": "網速提升與數位素養的結論無關，也不是總結。",
+  "Some students prefer tablets over desktop computers.": "偏好平板勝過桌機只是個人選擇，沒有歸納全文數位素養的主旨。"
+ },
+ "d.diag-0994": {
+  "To repeat word-for-word the introductory hook.": "過渡句的功能是連接段落，不是逐字重複開頭的引言。",
+  "To introduce unrelated biographical trivia.": "無關的傳記瑣事會打斷論述，過渡句應該銜接前後段。",
+  "To list technical glossary definitions in alphabetical order.": "按字母列詞彙定義是詞彙表的功能，不是連接兩個段落。"
+ },
+ "d.diag-0995": {
+  "Urban sprawl leads to habitat fragmentation and biodiversity loss.": "這句談棲地破碎與生物多樣性流失，是蔓延的缺點，與主題相關。",
+  "Suburban commuters often spend ninety minutes daily navigating highway congestion.": "通勤塞車是都市蔓延的缺點，與段落主題相關，不該排除。",
+  "Sprawling infrastructure increases municipal maintenance expenditures.": "維護費用增加也是蔓延的缺點，與主題相關。"
+ },
+ "d.diag-0996": {
+  "At the very end of the bibliography citation list.": "放在參考書目最後，讀者看不到，無法與主要論點互相對照和反駁。",
+  "In the footnote of page one.": "放在第一頁腳註太不顯眼，無法有力地反駁。",
+  "Hidden inside parentheses within the title.": "把反方論點藏在標題的括號裡根本無法展開論述。"
+ },
+ "d.diag-0997": {
+  "By the way, did you know that paper is made from trees?": "By the way 是閒聊語氣的離題，不是學術結論的總結轉折。",
+  "Anyway, I have to go now.": "Anyway 加上要離開，是口語的收尾，不是總結研究結果。",
+  "As I was saying earlier, cats are cute.": "As I was saying 是口語重述，且貓可愛與學術總結無關。"
+ },
+ "d.diag-0998": {
+  "To prove statistical validity beyond any doubt.": "軼事開頭是引起興趣，不能證明統計上的有效性。",
+  "To fulfill minimum word count requirements.": "引言鉤子的功能是吸引讀者，不是為了湊字數。",
+  "To summarize the entire conclusion prematurely.": "鉤子是吸引注意，總結結論應放在最後，不是在引言就提前說出。"
+ },
+ "d.diag-0999": {
+  "Only the price of seafood in local markets.": "海鮮價格與海洋酸化的成因及生態後果無關。",
+  "The life story of a fictional fisherman.": "虛構漁夫的生平不是論點，無法說明成因與後果。",
+  "A list of famous beach resort hotels.": "著名海灘度假旅館與海洋酸化的因果論述無關。"
+ },
+ "d.diag-1000": {
+  "By making sentences as long and convoluted as possible.": "連接詞是讓論述邏輯清楚，並不是把句子變得又長又複雜。",
+  "By hiding grammatical mistakes within the paragraph.": "連接詞標示論點的邏輯關係，不能用來掩蓋文法錯誤。",
+  "By replacing all verbs with nouns.": "連接詞和把動詞換成名詞無關，也不會提升連貫性。"
+ },
+ "g11-s2-u12.x1": {
+  "Read every word carefully from the beginning.": "逐字細讀很耗時，只找年份不需要全部讀完。",
+  "Look up every unfamiliar word first.": "先查生字很浪費時間，題目只要找出年份。",
+  "Read only the last paragraph.": "年份不一定出現在最後一段，只讀最後一段可能找不到答案。"
+ },
+ "g11-s2-u12.q1": {
+  "would remain": "would remain 是現在或未來假設，與 Had...not 的過去完成假設不搭。",
+  "remained": "remained 是單純過去式，無法對應 Had 的過去相反事實假設。",
+  "had remained": "主要子句不用過去完成式，應該用 would have + p.p.。"
+ },
+ "quality.original.g11-s2-u7.2": {
+  "are being": "What 子句當主詞視為單數，are being 是複數，且進行式語意也不合。",
+  "does": "does 後面要接原形動詞，不能直接接 a larger sample。"
+ },
+ "quality.original.g11-s2-u7.4": {
+  "The schedule was the only thing that changed.": "句子強調的是預算而不是進度表，此選項說反了。",
+  "Neither changed.": "句中明說預算改變了，不是兩者都沒變。"
+ },
+ "quality.original.g11-s2-u7.5": {
+  "the font used in the report": "句子焦點是證據怎麼收集，和報告字體無關。",
+  "the researcher’s surname": "句子焦點是證據收集的方法，與研究者姓氏無關。"
+ },
+ "quality.original.g11-s2-u7.6": {
+  "It was in the final interview what the discrepancy emerged.": "cleft 句型要用 that 引導，不能用 what，且 what 在此語意也不通。",
+  "It in the final interview that was emerged.": "語序混亂，emerge 是不及物動詞，不能用 was emerged 的被動。"
+ },
+ "quality.original.g11-s2-u7.8": {
+  "It Lin was identified who the error.": "語序混亂，cleft 句型是 It was + 焦點 + who/that + 其餘部分。",
+  "It was who Lin the error identified.": "who 不能緊接 was，語序也不是正常的 cleft 句型。"
+ },
+ "quality.original.g11-s2-u7.9": {
+  "an immediate permanent policy": "句中說是 a small pilot, not a permanent policy，此選項與原句相反。",
+  "no action of any kind": "提出的是小型試行，並不是「完全沒有行動」。"
+ },
+ "quality.original.g11-s2-u7.10": {
+  "To guarantee that a claim is true.": "cleft 句只是強調某部分，並不能保證論點一定為真。",
+  "To eliminate the need for evidence.": "強調某個資訊不代表可以省略證據。"
+ },
+ "g12-s1-u1.x2": {
+  "protects": "主詞 data 是被保護的對象，應用被動，protects 是主動語態。",
+  "was protecting": "was protecting 是主動過去進行式，與被動語意及現在式不合。",
+  "has protected": "has protected 是主動語態，但資料是被保護的，應該用被動。"
+ },
+ "g12-s1-u1.r1": {
+  "By 65%.": "By 65% 是文中的一個數字，不是兩項都市農場好處的答案。",
+  "'Had I not learned to unplug from virtual networks regularly, my intellectual autonomy would have been subsumed...'": "這句是別篇文章談數位的引文，與屋頂農場的好處無關。"
+ },
+ "d.diag-0878": {
+  "invisible": "invisible 是看不見，與 showed signs（表現出跡象）語意矛盾。",
+  "futile": "futile 是徒勞的，不能形容恢復的跡象。",
+  "trivial": "trivial 是微不足道的，與新型免疫療法帶來的明顯恢復不搭。"
+ },
+ "d.diag-0961": {
+  "out-of-date": "out-of-date 是過時，與 newly installed 和早期偵測腫瘤的新設備矛盾。",
+  "worn-out": "worn-out 是破舊，與 newly installed 剛安裝的設備矛盾。",
+  "second-hand": "second-hand 是二手的，與新近安裝的先進掃描系統語意不合。"
+ },
+ "d.diag-0962": {
+  "short-lived": "short-lived 是短暫的，與鼓舞人心的紀錄片造成的深遠影響不符。",
+  "narrow-minded": "narrow-minded 是心胸狹窄，用來形容人，不能形容影響。",
+  "broken-hearted": "broken-hearted 是心碎的，形容人的情緒，不能修飾 impact。"
+ },
+ "d.diag-0963": {
+  "home-made": "home-made 是自製的，不能形容學術權威。",
+  "short-tempered": "short-tempered 是脾氣暴躁，與語言學上的權威地位無關。",
+  "half-baked": "half-baked 是不成熟的，與 authority 的權威語意相矛盾。"
+ },
+ "d.diag-0965": {
+  "easy-going": "easy-going 是隨和的，用來形容人，也和得來不易的和平矛盾。",
+  "absent-minded": "absent-minded 是心不在焉，形容人，不能修飾 peace。",
+  "cold-blooded": "cold-blooded 是冷血的，與和平條約帶來的和平語意不合。"
+ },
+ "d.diag-0966": {
+  "sleep-inducing": "sleep-inducing 是令人想睡，與引發全國辯論的批評矛盾。",
+  "light-hearted": "light-hearted 是輕鬆的，與社會不平等這種嚴肅批判不合。",
+  "quick-witted": "quick-witted 是機智的，用來形容人，不是形容批判。"
+ },
+ "d.diag-0970": {
+  "well-behaved": "well-behaved 是守規矩的，與造成大家尷尬的言論矛盾。",
+  "kind-hearted": "kind-hearted 是心地善良，不會讓人在莊嚴典禮上感到尷尬。",
+  "good-natured": "good-natured 是脾氣好的，與引起尷尬的言論矛盾。"
+ },
+ "d.diag-0972": {
+  "disheartening": "disheartening 是令人沮喪，與機構加速核准疫苗的結果矛盾。",
+  "ambiguous": "ambiguous 是含糊不清的，結果不明確不會讓機構加速核准。",
+  "trivial": "trivial 是微不足道，不足以讓國際衛生機構加快核准疫苗。"
+ },
+ "d.diag-0974": {
+  "In spite of": "In spite of 表示儘管，語氣轉折，但這裡是補充說明。",
+  "Regardless of": "Regardless of 是不論，與投資太陽能再加補貼的並列補充不合。",
+  "Due to": "Due to 表示因為，語意是因果而不是補充。"
+ },
+ "d.diag-0976": {
+  "and also": "not only...but also 的 but 不能換成 and also，這是固定搭配。",
+  "as well": "as well 不是 not only 的對應詞，不能連接兩個動詞。",
+  "too": "too 通常放句尾，不能對應 not only 連接兩個並列動詞。"
+ },
+ "d.diag-0977": {
+  "Tragically": "Tragically 是悲慘地，但後面是她獲得投資的好結果，語意相反。",
+  "Similarly": "Similarly 是同樣地，前後句並非類比關係。",
+  "Consequently": "Consequently 是因此，獲得投資並不是瀕臨破產的結果。"
+ },
+ "d.diag-0980": {
+  "Because of": "Because of 是因為，但沒有因為沒入選而放棄的意思。",
+  "In spite of": "In spite of 是儘管，語意變成「儘管放棄」，與後面加倍訓練矛盾。",
+  "Due to": "Due to 是由於，語意不通，他並不是因為放棄才加倍訓練。"
+ },
+ "g12-s1-u2.x2": {
+  "The battery was painted blue without other changes.": "電池被漆成藍色與前後句談續航力改善無關。",
+  "Travelers disliked every improvement.": "「旅客討厭所有改進」與後句 helped travelers 矛盾。"
+ },
+ "g12-s1-u2.q1": {
+  "immensely": "immensely 是副詞，不能修飾名詞 water pressure。",
+  "immensity": "immensity 是名詞，不能放在 water pressure 前當形容詞。",
+  "to immense": "to immense 的形式錯誤，不能放在名詞前修飾。"
+ },
+ "g12-s1-u2.r1": {
+  "Two days per working week.": "每週工作兩天與色素細胞如何控制伸縮無關。",
+  "The capacity to comprehend diverse human hearts, dismantle barriers of prejudice, and articulate profound truths.": "這句談理解人心、打破偏見，與章魚皮膚細胞的控制機制無關。"
+ },
+ "g12-s1-u3.x1": {
+  "Find the paragraph with the most numbers.": "數字多寡不能決定主旨，主旨要看開頭、結尾與各段首句。",
+  "Choose the option with the hardest vocabulary.": "字彙難度與文章主旨無關，並不是選項正確的依據。",
+  "Pick a detail mentioned only in the last sentence.": "只在最後一句出現的細節，通常不是整篇的主旨。"
+ },
+ "g12-s1-u3.x2": {
+  "Give one personal opinion.": "題目要求原文中的兩個理由，個人意見沒有依據原文。",
+  "Copy the entire passage.": "抄整篇文章超過字數限制，也沒有挑出兩個理由。"
+ },
+ "g12-s1-u3.q1": {
+  "Solar subsidies, coal expansion, and international carbon credits": "文章談的是減排政策，擴張燃煤與減排互相矛盾，也不是文中的因素。",
+  "Population decrease, industrial relocation, and agricultural decline": "人口減少與農業衰退不是文中提到的政策因素。",
+  "Hydroelectric dams, foreign loans, and gasoline bans": "水力發電、外債與汽油禁令不是文中所列的三個因素。"
+ },
+ "k.notes-letters-forms-hs.1": {
+  "Bye!": "Bye! 太口語、隨便，不適合寫給教授的正式信件。",
+  "See ya,": "See ya 是俚語，太隨便，不適合正式電子郵件。"
+ },
+ "k.notes-letters-forms-hs.2": {
+  "Please line up.": "Please line up 是請排隊，與機器故障的 OUT OF ORDER 不同。",
+  "Staff only.": "Staff only 是限工作人員，不是說機器壞了。"
+ },
+ "g12-s1-u5.x1": {
+  "Use the same seconds for every question in every exam.": "各部分的分值和難度不同，每題花同樣秒數並不合理。",
+  "Skip all reading instructions.": "跳過說明可能漏掉時間與作答規則，不利於規劃時間。"
+ },
+ "g12-s1-u5.x2": {
+  "The technician fixed the machine it now works well.": "兩個子句直接相連沒有關係代名詞，句子不通順。",
+  "The machine that fixed the technician now works well.": "此句說機器修理了技師，主詞和受詞顛倒了。"
+ },
+ "g12-s1-u5.q1": {
+  "Never mind": "Never mind 是不要緊，用在客人要求退款而被拒絕時語氣不當。",
+  "Don't mention it": "Don't mention it 是回應道謝的用語，不能用來道歉。",
+  "It's my pleasure": "It's my pleasure 是回應道謝，這裡店員拒絕退款應該表達歉意。"
+ },
+ "g12-s1-u6.x1": {
+  "taught": "taught 是單純過去式，無法表示從過去持續到現在的狀態。",
+  "is teaching": "is teaching 是現在進行式，與 for over twenty-five years 不搭。",
+  "had taught": "had taught 是過去完成式，指過去更早的事，但他現在仍在教。"
+ },
+ "g12-s1-u6.x2": {
+  "Yes, because the timetable lists it.": "公告已取消四點後的班次，不能因為時刻表有列就搭。",
+  "Yes, because all notices are optional.": "公告不是可忽略的，題目說取消適用，所以不能搭。"
+ },
+ "g12-s2-u7.x1": {
+  "Fascinating": "Fascinating 是主動，遊客是被極光迷住，要用被動意味的 Fascinated。",
+  "To fascinate": "To fascinate 是不定詞，表示目的，不是遊客被迷住的狀態。",
+  "Having fascinated": "Having fascinated 是主動完成式，變成遊客讓極光著迷，主被動錯了。"
+ },
+ "g12-s2-u7.x2": {
+  "Studying alone.": "只是重複 Studying alone，並沒有說出喜歡獨自讀書的理由。",
+  "It is a preference.": "It is a preference 只說是偏好，沒有給出具體原因。"
+ },
+ "g12-s2-u7.q1": {
+  "Although bad weather, the rescue team gave up hope.": "Although 後面需要完整子句，且 gave up hope 與原意「拒絕放棄」相反。",
+  "Because of bad weather, but the rescue team continued.": "Because of 是因為，與中文「儘管」的讓步語意相反，也不能和 but 並用。",
+  "In spite of the weather was bad, the rescue team refused to abandon hope.": "In spite of 後面接名詞，不能接 the weather was bad 這個完整子句。"
+ },
+ "g12-s2-u7.r1": {
+  "Early carbon taxation.": "早期碳稅與祖先口述故事傳承的智慧無關。",
+  "The capacity to comprehend diverse human hearts, dismantle barriers of prejudice, and articulate profound truths.": "這句談理解人心與破除偏見，不是祖先敘事傳承的兩類智慧。"
+ },
+ "g12-s2-u8.x2": {
+  "$180": "$180 只算了一台的十分之一折扣價，沒有算兩台的總價。",
+  "$400": "$400 是兩台的原價，沒有扣掉整筆訂單的 10% 折扣。",
+  "$380": "$380 只扣了 $20，等於只打折一台，沒有對整筆訂單打九折。"
+ },
+ "g12-s2-u9.x1": {
+  "A word-for-word transcript of the lecture": "逐字稿不屬於左欄，左欄是放關鍵字和提示問題。",
+  "A 50-word summary of the whole lecture": "整場摘要寫在筆記底部，不是左欄的內容。",
+  "Drawings unrelated to the topic": "與主題無關的圖畫無法幫助複習，也不是左欄的內容。"
+ },
+ "g12-s2-u9.x2": {
+  "Thank you; that ends my talk.": "Thank you; that ends my talk 是結束報告，不是進入下一部分。",
+  "Could you repeat the question?": "請對方重複問題是在問答時間，不是轉入下一個簡報段落。"
+ },
+ "g12-s2-u9.q1": {
+  "Okay, now I want to talk about another thing.": "Okay, now I want to talk about another thing 太口語、不夠正式。",
+  "Forget what I just said, look at this next slide.": "Forget what I just said 是否定前面所說，不是銜接新主題的過渡語。",
+  "Anyway, moving on because time is running out.": "Anyway, moving on because time is running out 太隨便，也顯得倉促。"
+ },
+ "k.accents-media-listening.1": {
+  "Only one accent is correct.": "英語有許多通行的口音，說只有一種正確是錯誤的觀念。",
+  "Accents never matter.": "口音會影響聽懂程度，說口音完全不重要是錯的。"
+ },
+ "k.accents-media-listening.2": {
+  "Copy every word.": "轉述新聞應該用自己的話歸納，不是逐字照抄。",
+  "I watched news.": "I watched news 只說看了新聞，沒說內容，也沒指出消息來源。"
+ },
+ "g12-s2-u10.x1": {
+  "Straw man": "稻草人謬誤是扭曲對方論點，此句沒有扭曲，是推測一路惡化。",
+  "Ad hominem": "人身攻擊是攻擊說話的人，此句沒有攻擊任何人。",
+  "No fallacy": "這句從允許用手機直接跳到教育崩壞，是不合理的滑坡，不是無謬誤。"
+ },
+ "g12-s2-u10.x2": {
+  "Repeating the installation cost": "However 表示轉折，第二句談的是降低維護成本，不是重複安裝成本。",
+  "Proving there are no costs": "句子只說降低維護成本，並沒有說完全沒有任何成本。"
+ },
+ "g12-s2-u11.x1": {
+  "Translate every word before finding any verb.": "先逐字翻譯會拖慢速度，應先找出主詞和動詞再看修飾語。",
+  "Choose the longest answer automatically.": "選最長的答案沒有依據，與看懂長句結構無關。"
+ },
+ "g12-s2-u11.q1": {
+  "will never ignite": "will never ignite 是未來式，與 Had...not 的過去假設不合。",
+  "would never ignite": "would never ignite 少了 have + p.p.，無法對應過去相反事實。",
+  "had never ignited": "主要子句不用過去完成式，應該是 would have + p.p.。"
+ },
+ "g12-s2-u12.x1": {
+  "Memorize 100 words a day without using them.": "背單字但不使用，缺少合成、輸出和回饋。",
+  "Watch English movies with Chinese subtitles only.": "只看中文字幕的電影缺少輸出與回饋，沒有完整的循環。",
+  "Take one practice test a year.": "一年只考一次，回饋太少，也沒有輸入、合成與輸出的循環。"
+ },
+ "g12-s2-u12.x2": {
+  "Write my essay about climate change.": "請 AI 直接寫作文是代寫，不是讓 AI 擔任學習教練。",
+  "Translate my Chinese essay into perfect English.": "請 AI 把中文作文譯成完美英文，也是代勞而非訓練自己。",
+  "Give me the answers to tomorrow's quiz.": "要考試答案是作弊，不是把 AI 當學習教練。"
+ },
+ "g12-s2-u12.q1": {
+  "eliminate all historical misunderstandings immediately": "文章沒有說學會語言能立刻消除所有歷史誤會，這太誇大。",
+  "guarantee immediate material wealth across industries": "文章沒有提到學會語言就保證各行業立刻致富。",
+  "replace their native cultural identity entirely": "文中說是獲得第二個靈魂，不是完全取代原有文化認同。"
+ },
+ "g12-s2-u12.r1": {
+  "'Had I not learned to unplug from virtual networks regularly, my intellectual autonomy would have been subsumed...'": "這句是別篇談網路使用的引文，與語言的真正力量無關。",
+  "Survival wisdom about dangers, and collective normative values fostering social cooperation.": "這句談祖先敘事的生存智慧，不是這篇文章談的語言力量。"
+ },
+ "k.project-planning-hs.1": {
+  "How can we save the planet?": "How can we save the planet 太大，兩週內做不完。",
+  "Is food good?": "Is food good 太模糊，答案只有是或否，不夠具體可研究。"
+ },
+ "k.project-planning-hs.2": {
+  "A random blog": "隨機部落格沒有可靠來源，不適合引用人口統計。",
+  "An anonymous comment": "匿名留言無法查證來源，不能當作人口統計的可靠依據。"
+ },
+ "quality.dialogue.14hrl6f": {
+  "當然，請進。我讀了你的第一段——你的開場引言很吸引人，但主旨句稍微太寬泛了。": "這是教授的回應，評論引言和主旨句，不是學生開口請教授幫忙。",
+  "我應該把範圍縮小到「公共圖書館如何縮短偏鄉數位落差」嗎？": "這是學生詢問是否縮小主題，不是請教授撥時間看草稿。",
+  "這個焦點不錯。第二段試著用具體例子支持你的主張。": "這是教授稱讚焦點並給建議，不是請求協助的第一句話。"
+ },
+ "quality.dialogue.15bv5if": {
+  "不好意思，Miller 教授。請問您有幾分鐘可以幫我檢視一下作文草稿嗎？": "這是學生開口請教授幫忙看草稿，不是教授說「當然，請進」。",
+  "我應該把範圍縮小到「公共圖書館如何縮短偏鄉數位落差」嗎？": "這是學生問縮小範圍的問題，不是教授評論第一段。",
+  "這個焦點不錯。第二段試著用具體例子支持你的主張。": "這是教授稱讚聚焦並建議第二段，不是邀請進來和評論第一段。"
+ },
+ "quality.dialogue.kp945a": {
+  "不好意思，Miller 教授。請問您有幾分鐘可以幫我檢視一下作文草稿嗎？": "這是學生請教授撥空看草稿，不是詢問是否縮小主題範圍。",
+  "當然，請進。我讀了你的第一段——你的開場引言很吸引人，但主旨句稍微太寬泛了。": "這是教授的回應，不是學生提出縮小範圍的問題。",
+  "這個焦點不錯。第二段試著用具體例子支持你的主張。": "這是教授的稱讚與建議，不是學生提問。"
+ },
+ "k.voc-reading-thinking.1": {
+  "This tool is amazing.": "This tool is amazing 是個人感受的看法，不是可以驗證的事實。",
+  "Everyone should buy this drill.": "Everyone should buy this drill 是主觀建議，不是事實。"
+ },
+ "k.voc-reading-thinking.2": {
+  "Welding is dangerous.": "故事沒有提到焊接危險，主旨是努力練習而達成目標。",
+  "Tests are in the summer.": "考試在夏天只是不重要的細節，不是故事主旨。"
+ },
+ "quality.original.g12-s2-u9.1": {
+  "I already understand everything, so do not explain.": "說已經完全懂了，是假裝理解，不是請對方澄清。",
+  "Your term must be wrong because it is unfamiliar.": "指責對方用語一定錯誤，不是禮貌地請求澄清。"
+ },
+ "quality.original.g12-s2-u9.2": {
+  "The finding is a final universal law.": "preliminary 是初步的，不是最終、普遍適用的定律。",
+  "The finding has no relation to the topic.": "初步發現與主題有關，說完全無關是錯的。"
+ },
+ "quality.original.g12-s2-u9.3": {
+  "Everyone must know, ...": "Everyone must know 沒有指出具體的資料來源。",
+  "It is true because I say so, ...": "以「我說的」當依據，是個人權威，不是引用來源。"
+ },
+ "quality.original.g12-s2-u9.4": {
+  "The effect occurs in every real-world setting.": "原句說只在實驗室條件下觀察到，此選項說每個現實情境都有，意思相反。",
+  "The study ruled out all laboratory effects.": "原句沒有說研究排除所有實驗室效應，此選項改變了原意。"
+ },
+ "quality.original.g12-s2-u9.5": {
+  "every association proves a cause": "把相關當成因果，正是講者要區分的錯誤。",
+  "causal explanations never need evidence": "因果解釋仍然需要證據，說從不需要是錯的。"
+ },
+ "quality.original.g12-s2-u9.6": {
+  "The survey proves our preferred explanation beyond doubt.": "說證據證明偏好的解釋無庸置疑，把詮釋當成證據。",
+  "The explanation is a measurement itself.": "解釋是對數據的詮釋，不是測量本身。"
+ },
+ "quality.original.g12-s2-u9.7": {
+  "What color is the lecturer’s notebook?": "筆記本的顏色與技術例子如何呼應主要論點無關。",
+  "Can we skip the meaning of every term?": "要求跳過每個術語的意思，無法幫助理解不熟悉的例子。"
+ },
+ "quality.original.g12-s2-u9.8": {
+  "You must understand the first explanation.": "要求對方一次就懂，是責備，沒有調整說明方式。",
+  "No one is allowed to ask questions.": "禁止任何人發問會阻礙溝通，不是配合對方放慢。"
+ },
+ "quality.original.g12-s2-u9.9": {
+  "Only first-year students were included.": "原句是排除一年級生，此選項說只有一年級生，意思相反。",
+  "Every year group was equally represented.": "原句說排除一年級生，此選項說各年級均等，與排除矛盾。"
+ },
+ "quality.original.g12-s2-u9.10": {
+  "All discussion is pointless.": "說所有討論都沒意義是終結討論，不是邀請聚焦討論。",
+  "The proposal cannot have assumptions.": "說提案不可能有假設，是封閉的說法，無法引導討論。"
+ },
+ "quality.original.g12-s2-u12.1": {
+  "Become perfect at English immediately.": "立刻完美無法在一週後檢查，目標不具體。",
+  "Never make a mistake again.": "永不犯錯無法衡量，也不現實，不能一週後檢查。"
+ },
+ "quality.original.g12-s2-u12.2": {
+  "Only reread the answer more quickly.": "只是更快重讀仍是辨識，無法練習不看答案的提取。",
+  "Treat recognition as proof of independent recall.": "把辨識當成獨立回想的證據，正是題目描述的問題。"
+ },
+ "quality.original.g12-s2-u12.3": {
+  "Only the file’s color.": "檔案顏色與寫作修改內容無關，無助於複習。",
+  "Only the number of times the document was opened.": "開啟次數無法顯示改了什麼、為何修改，對複習沒有幫助。"
+ },
+ "quality.original.g12-s2-u12.4": {
+  "As guaranteed independent mastery.": "有提示完成不能算獨立精熟，還要檢查獨立表現。",
+  "As evidence that no further practice is possible.": "需要提示不代表不能再練習，說無須再練是過度結論。"
+ },
+ "quality.original.g12-s2-u12.5": {
+  "Repeat only within one uninterrupted minute and never return.": "一分鐘內重複且不再回來，沒有分隔多日，不是間隔練習。",
+  "Avoid reviewing errors at all.": "不檢討錯誤無法針對弱點，也不是間隔練習。"
+ },
+ "quality.original.g12-s2-u12.6": {
+  "Whether the title uses the largest font.": "標題字體大小與說法是否有證據無關。",
+  "Whether the author agrees with every personal belief.": "作者是否同意個人信念，不能檢驗事實主張是否可靠。"
+ },
+ "quality.original.g12-s2-u12.7": {
+  "To prove that improvement is impossible.": "錯誤紀錄用來找出模式並改進，不是證明無法進步。",
+  "To replace all future attempts with copied answers.": "錯誤紀錄不是用來抄答案，而是找出弱點後再練習。"
+ },
+ "quality.original.g12-s2-u12.8": {
+  "Request only a vague compliment.": "只要求空泛的稱讚，沒有指出可修改的地方。",
+  "Remove every sentence the reviewer did not mention.": "刪掉評論者沒提到的每個句子過度，也沒有說明原因。"
+ },
+ "quality.original.g12-s2-u12.9": {
+  "Make the same unrealistic promise again.": "重複同樣不切實際的承諾，沒有解決時間不夠的問題。",
+  "Delete every progress record.": "刪除所有進度紀錄，會讓人無法檢查進步和調整計畫。"
+ },
+ "quality.original.g12-s2-u12.10": {
+  "Only a higher count of clicks.": "只有點擊次數變多，不代表獨立表現真的進步。",
+  "Only remembering the location of an answer on the screen.": "只記得答案在螢幕上的位置，不代表能獨立完成新任務。"
+ },
+ "c-jhs-j1.p1e": {
+  "be going to + V": "be going to + V 的意思是「打算、將要」，不是題目要的「過去習慣於（現在已不）」。",
+  "right now": "right now 的意思是「現在、立刻」，不是題目要的「過去習慣於（現在已不）」。"
+ },
+ "c-jhs-j1.p2e": {
+  "used to + V": "used to + V 的意思是「過去習慣於（現在已不）」，不是題目要的「打算；將要」。",
+  "right now": "right now 的意思是「現在、立刻」，不是題目要的「打算；將要」。"
+ },
+ "c-jhs-j2.p1e": {
+  "by oneself": "by oneself 的意思是「獨自、靠自己」，不是題目要的「大量的（可數/不可數皆可）」。",
+  "each other": "each other 的意思是「彼此、互相」，不是題目要的「大量的（可數/不可數皆可）」。"
+ },
+ "c-jhs-j2.p2e": {
+  "each other": "each other 的意思是「彼此、互相」，不是題目要的「一張；一片；一則」。",
+  "a lot of / lots of": "a lot of / lots of 的意思是「大量的」，不是題目要的「一張；一片；一則」。"
+ },
+ "c-jhs-j2.p3e": {
+  "a lot of / lots of": "a lot of / lots of 的意思是「大量的」，不是題目要的「獨自；靠自己」。",
+  "a piece of": "a piece of 的意思是「一張、一片、一則」，不是題目要的「獨自；靠自己」。"
+ },
+ "c-jhs-j2.p4e": {
+  "a piece of": "a piece of 的意思是「一張、一片、一則」，不是題目要的「彼此；互相」。",
+  "by oneself": "by oneself 的意思是「獨自、靠自己」，不是題目要的「彼此；互相」。"
+ },
+ "c-jhs-j4.p1e": {
+  "so that + S + can/may": "so that + S + can/may 的意思是「以便、為了讓」，不是題目要的「一……就……」。",
+  "even though": "even though 的意思是「儘管、雖然」，不是題目要的「一……就……」。"
+ },
+ "c-jhs-j4.p2e": {
+  "so that + S + can/may": "so that + S + can/may 的意思是「以便、為了讓」，不是題目要的「儘管；雖然（語氣比 although 強）」。",
+  "either... or...": "either... or... 的意思是「不是……就是……」，不是題目要的「儘管；雖然（語氣比 although 強）」。"
+ },
+ "c-jhs-j4.p4e": {
+  "as soon as": "as soon as 的意思是「一……就……」，不是題目要的「不是……就是……（兩者擇一）」。",
+  "even though": "even though 的意思是「儘管、雖然」，不是題目要的「不是……就是……（兩者擇一）」。"
+ },
+ "c-jhs-j5.p1e": {
+  "free of charge": "free of charge 的意思是「免費」，不是題目要的「期待；盼望」。",
+  "sign up for": "sign up for 的意思是「報名參加」，不是題目要的「期待；盼望」。"
+ },
+ "c-jhs-j5.p2e": {
+  "sign up for": "sign up for 的意思是「報名參加」，不是題目要的「免費」。",
+  "look forward to + V-ing/N": "look forward to + V-ing/N 的意思是「期待、盼望」，不是題目要的「免費」。"
+ },
+ "c-jhs-j5.p3e": {
+  "due to + N": "due to + N 的意思是「因為、由於」，不是題目要的「報名參加……」。",
+  "look forward to + V-ing/N": "look forward to + V-ing/N 的意思是「期待、盼望」，不是題目要的「報名參加……」。"
+ },
+ "c-jhs-j5.p4e": {
+  "look forward to + V-ing/N": "look forward to + V-ing/N 的意思是「期待、盼望」，不是題目要的「因為；由於」。",
+  "sign up for": "sign up for 的意思是「報名參加」，不是題目要的「因為；由於」。"
+ },
+ "c-jhs-j6.p1e": {
+  "run out of": "run out of 的意思是「用盡、耗盡」，不是題目要的「注意；專注於」。",
+  "catch up with": "catch up with 的意思是「趕上、跟上進度」，不是題目要的「注意；專注於」。"
+ },
+ "c-jhs-j6.p2e": {
+  "catch up with": "catch up with 的意思是「趕上、跟上進度」，不是題目要的「結帳；辦理退房」。",
+  "pay attention to": "pay attention to 的意思是「注意、專注於」，不是題目要的「結帳；辦理退房」。"
+ },
+ "c-jhs-j6.p3e": {
+  "check out": "check out 的意思是「結帳、退房」，不是題目要的「用盡；耗盡」。",
+  "pay attention to": "pay attention to 的意思是「注意、專注於」，不是題目要的「用盡；耗盡」。"
+ },
+ "c-jhs-j6.p4e": {
+  "check out": "check out 的意思是「結帳、退房」，不是題目要的「趕上；跟上進度」。",
+  "run out of": "run out of 的意思是「用盡、耗盡」，不是題目要的「趕上；跟上進度」。"
+ },
+ "c-jhs-j7.p1e": {
+  "keep in mind that": "keep in mind that 的意思是「記住」，不是題目要的「就……而言；在……方面」。",
+  "make sense": "make sense 的意思是「說得通、合理」，不是題目要的「就……而言；在……方面」。"
+ },
+ "c-sh-s1.p1e": {
+  "no sooner... than...": "no sooner... than... 的意思是「剛……就……」，不是題目要的「絕不；無論如何都不（句首須倒裝）」。",
+  "were it not for + N": "were it not for + N 的意思是「若非……」，不是題目要的「絕不；無論如何都不（句首須倒裝）」。"
+ },
+ "c-sh-s1.p2e": {
+  "no sooner... than...": "no sooner... than... 的意思是「剛……就……」，不是題目要的「若非……（與現在事實相反）」。",
+  "as if / as though": "as if / as though 的意思是「彷彿、好像」，不是題目要的「若非……（與現在事實相反）」。"
+ },
+ "c-sh-s1.p3e": {
+  "under no circumstances": "under no circumstances 的意思是「絕不」，不是題目要的「剛……就……（前句倒裝用 had + p.p.）」。",
+  "as if / as though": "as if / as though 的意思是「彷彿、好像」，不是題目要的「剛……就……（前句倒裝用 had + p.p.）」。"
+ },
+ "c-sh-s1.p4e": {
+  "under no circumstances": "under no circumstances 的意思是「絕不」，不是題目要的「彷彿；好像」。",
+  "were it not for + N": "were it not for + N 的意思是「若非……」，不是題目要的「彷彿；好像」。"
+ },
+ "c-sh-s2.p1e": {
+  "by the same token": "by the same token 的意思是「同樣地」，不是題目要的「相反地；反之」。",
+  "in light of": "in light of 的意思是「有鑑於、考慮到」，不是題目要的「相反地；反之」。"
+ },
+ "c-sh-s2.p2e": {
+  "on the contrary": "on the contrary 的意思是「相反地」，不是題目要的「有鑑於；考慮到」。",
+  "nevertheless": "nevertheless 的意思是「然而、儘管如此」，不是題目要的「有鑑於；考慮到」。"
+ },
+ "c-sh-s3.p2e": {
+  "play a vital role in": "play a vital role in 的意思是「在……扮演關鍵角色」，不是題目要的「將 A 歸因於 B」。",
+  "shed light on": "shed light on 的意思是「闡明、使人明白」，不是題目要的「將 A 歸因於 B」。"
+ },
+ "c-sh-s5.p1e": {
+  "with regard to": "with regard to 的意思是「關於」，不是題目要的「為……鋪平道路；促進」。",
+  "lead to / result in": "lead to / result in 的意思是「導致」，不是題目要的「為……鋪平道路；促進」。"
+ },
+ "c-sh-s5.p2e": {
+  "be capable of + V-ing": "be capable of + V-ing 的意思是「有能力做……」，不是題目要的「關於；就……而論」。",
+  "lead to / result in": "lead to / result in 的意思是「導致」，不是題目要的「關於；就……而論」。"
+ },
+ "c-sh-s5.p4e": {
+  "with regard to": "with regard to 的意思是「關於」，不是題目要的「有能力做……」。",
+  "pave the way for": "pave the way for 的意思是「為……鋪路」，不是題目要的「有能力做……」。"
+ },
+ "c-sh-s6.p1e": {
+  "weigh the pros and cons": "weigh the pros and cons 的意思是「權衡利弊」，不是題目要的「就我而言；依我看」。",
+  "strike a balance between": "strike a balance between 的意思是「在……之間取得平衡」，不是題目要的「就我而言；依我看」。"
+ },
+ "c-sh-s6.p2e": {
+  "it is widely acknowledged that": "it is widely acknowledged that 的意思是「大家普遍公認」，不是題目要的「權衡利弊得失」。",
+  "strike a balance between": "strike a balance between 的意思是「在……之間取得平衡」，不是題目要的「權衡利弊得失」。"
+ },
+ "c-sh-s6.p3e": {
+  "weigh the pros and cons": "weigh the pros and cons 的意思是「權衡利弊」，不是題目要的「大家普遍公認……」。",
+  "strike a balance between": "strike a balance between 的意思是「在……之間取得平衡」，不是題目要的「大家普遍公認……」。"
+ },
+ "c-sh-s6.p4e": {
+  "as far as I am concerned": "as far as I am concerned 的意思是「就我而言」，不是題目要的「在……之間取得平衡」。",
+  "it is widely acknowledged that": "it is widely acknowledged that 的意思是「大家普遍公認」，不是題目要的「在……之間取得平衡」。"
+ },
+ "c-sh-s7.p3e": {
+  "keep track of": "keep track of 的意思是「持續追蹤、掌握」，不是題目要的「堅守；遵守」。",
+  "in advance": "in advance 的意思是「事先、預先」，不是題目要的「堅守；遵守」。"
+ },
+ "c-voc-v1.p2e": {
+  "put on / take off": "put on / take off 的意思是「穿上與脫下」，不是題目要的「關閉（機器/電力）」。",
+  "comply with": "comply with 的意思是「遵守、符合」，不是題目要的「關閉（機器/電力）」。"
+ },
+ "c-voc-v1.p3e": {
+  "put on / take off": "put on / take off 的意思是「穿上與脫下」，不是題目要的「在緊急情況下」。",
+  "shut down": "shut down 的意思是「關閉」，不是題目要的「在緊急情況下」。"
+ },
+ "c-voc-v1.p4e": {
+  "in case of emergency": "in case of emergency 的意思是「在緊急情況下」，不是題目要的「遵守；符合（安全規定）」。",
+  "shut down": "shut down 的意思是「關閉」，不是題目要的「遵守；符合（安全規定）」。"
+ },
+ "k.passive-instructions.2": {
+  "The inspection is a future plan.": "原句是過去式 were inspected，說的是昨天的事，不是未來計畫。",
+  "The parts inspected the worker.": "原句主詞是零件被檢查，不是零件去檢查工人。"
+ },
+ "c-voc-v2.p2e": {
+  "measure up to": "measure up to 的意思是「達到（標準）」，不是題目要的「由……組成」。",
+  "resistant to": "resistant to 的意思是「對……有抵抗力的」，不是題目要的「由……組成」。"
+ },
+ "c-voc-v2.p3e": {
+  "be composed of": "be composed of 的意思是「由……組成」，不是題目要的「對……有抵抗力的；抗……的」。",
+  "measure up to": "measure up to 的意思是「達到（標準）」，不是題目要的「對……有抵抗力的；抗……的」。"
+ }
+}

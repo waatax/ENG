@@ -1,0 +1,230 @@
+[
+ {
+  "id": "g10-s2-u9.b1",
+  "type": "cloze",
+  "prompt": "選出最適合的連接語。",
+  "text": "The tickets were sold out. _____, we watched the game at home.",
+  "options": [
+   "As a result",
+   "However",
+   "For example"
+  ],
+  "answer": "As a result",
+  "wrong": {
+   "However": "however 表示轉折，但票賣完與在家看比賽是因果關係，不是對比。",
+   "For example": "for example 用來舉例，後面這句不是前一句的例子，而是結果。"
+  },
+  "why": "票賣光是原因，在家看比賽是結果，用 as a result。",
+  "tip": "表示結果用 as a result。",
+  "say": "The tickets were sold out. As a result, we watched the game at home."
+ },
+ {
+  "id": "g10-s2-u9.b2",
+  "type": "cloze",
+  "prompt": "選出最適合的連接語。",
+  "text": "Some students like online classes. _____, others prefer face-to-face ones.",
+  "options": [
+   "On the other hand",
+   "Therefore",
+   "In addition"
+  ],
+  "answer": "On the other hand",
+  "wrong": {
+   "Therefore": "therefore 表示因此，但兩種偏好並非因果關係。",
+   "In addition": "in addition 表示「此外」，用來補充同方向的資訊，而這句是在說相反的偏好。"
+  },
+  "why": "兩句談相反的偏好，用 on the other hand 表示對比。",
+  "tip": "另一方面用 on the other hand。",
+  "say": "Some students like online classes. On the other hand, others prefer face-to-face ones."
+ },
+ {
+  "id": "g10-s2-u9.b3",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Besides studying, she works part-time.",
+   "Besides of studying, she works part-time.",
+   "Beside studying, she works part-time."
+  ],
+  "answer": "Besides studying, she works part-time.",
+  "wrong": {
+   "Besides of studying, she works part-time.": "besides 本身就是介系詞，後面不需要再加 of。",
+   "Beside studying, she works part-time.": "beside 是「在…旁邊」，要表示「除了…還有」要用 besides。"
+  },
+  "why": "besides 表示「除了…之外還有」，後面接 V-ing。",
+  "tip": "besides 是除了還有，beside 是旁邊。",
+  "say": "Besides studying, she works part-time."
+ },
+ {
+  "id": "g10-s2-u9.b4",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "In short, the plan failed.",
+  "options": [
+   "總之，這個計畫失敗了",
+   "首先，這個計畫失敗了",
+   "舉例來說，這個計畫失敗了"
+  ],
+  "answer": "總之，這個計畫失敗了",
+  "wrong": {
+   "首先，這個計畫失敗了": "first 或 first of all 才是「首先」，in short 不是用來開頭列點。",
+   "舉例來說，這個計畫失敗了": "for example 才是「舉例來說」，in short 是做總結。"
+  },
+  "why": "in short 表示「簡單來說、總之」，用來概括前面的內容。",
+  "tip": "in short 用來做簡短總結。",
+  "say": "In short, the plan failed."
+ },
+ {
+  "id": "g10-s2-u9.b5",
+  "type": "cloze",
+  "prompt": "選出最適合的連接語。",
+  "text": "Exercise keeps us healthy. _____, it helps us sleep better.",
+  "options": [
+   "Moreover",
+   "Nevertheless",
+   "Instead"
+  ],
+  "answer": "Moreover",
+  "wrong": {
+   "Nevertheless": "nevertheless 表示儘管如此，但這裡是補充另一個好處，沒有轉折。",
+   "Instead": "instead 表示「取而代之」，這句沒有替代的意思。"
+  },
+  "why": "兩句都在說運動的好處，用 moreover 追加說明。",
+  "tip": "追加同方向的理由用 moreover。",
+  "say": "Exercise keeps us healthy. Moreover, it helps us sleep better."
+ },
+ {
+  "id": "g10-s2-u9.b6",
+  "type": "situation",
+  "prompt": "你正在寫作文的最後一句，想說「總而言之，手機有好處也有壞處」。哪一句最適合？",
+  "text": "",
+  "options": [
+   "To sum up, phones have both benefits and drawbacks.",
+   "For instance, phones have both benefits and drawbacks.",
+   "By contrast, phones have both benefits and drawbacks."
+  ],
+  "answer": "To sum up, phones have both benefits and drawbacks.",
+  "wrong": {
+   "For instance, phones have both benefits and drawbacks.": "for instance 是舉例，但這句是整篇的結論，不是某個例子。",
+   "By contrast, phones have both benefits and drawbacks.": "by contrast 用來對比，前面沒有相對的內容，不適合放在結尾。"
+  },
+  "why": "to sum up 用在結尾，表示總結全文。",
+  "tip": "結尾總結用 to sum up。",
+  "say": "To sum up, phones have both benefits and drawbacks."
+ },
+ {
+  "id": "g10-s2-u9.b7",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "He was tired; however, he kept working.",
+   "He was tired, but however he kept working.",
+   "He was tired, although however he kept working."
+  ],
+  "answer": "He was tired; however, he kept working.",
+  "wrong": {
+   "He was tired, but however he kept working.": "but 和 however 都表示轉折，重複使用，英文只需要擇一。",
+   "He was tired, although however he kept working.": "although 和 however 重複表示轉折，而且 although 引導的子句不能這樣連接。"
+  },
+  "why": "however 連接兩個完整句子時，前面用分號或句點，後面加逗號。",
+  "tip": "however 前用分號或句點，後加逗號。",
+  "say": "He was tired; however, he kept working."
+ },
+ {
+  "id": "g10-s2-u9.b8",
+  "type": "cloze",
+  "prompt": "選出最適合的連接語。",
+  "text": "First, we need a plan. _____, we should find a team.",
+  "options": [
+   "Next",
+   "Instead",
+   "Otherwise"
+  ],
+  "answer": "Next",
+  "wrong": {
+   "Instead": "instead 表示取代，不是依序的下一步。",
+   "Otherwise": "otherwise 表示「否則」，會讓句子變成威脅或警告，與按順序列出步驟不符。"
+  },
+  "why": "first 之後接 next，表示按順序進行的下一步。",
+  "tip": "列出順序用 first、next、finally。",
+  "say": "First, we need a plan. Next, we should find a team."
+ },
+ {
+  "id": "g10-s2-u9.b9",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "Take the bus. Otherwise, you will be late.",
+  "options": [
+   "搭公車吧，否則你會遲到",
+   "搭公車吧，其他人也會遲到",
+   "你搭公車的話就會遲到"
+  ],
+  "answer": "搭公車吧，否則你會遲到",
+  "wrong": {
+   "搭公車吧，其他人也會遲到": "otherwise 在這裡是「否則」，不是 others（其他人）。",
+   "你搭公車的話就會遲到": "句意相反，otherwise 的意思是「不搭的話」才會遲到。"
+  },
+  "why": "otherwise 表示「否則、不然」，指前面做法的反面。",
+  "tip": "otherwise 是否則，後面接不好的結果。",
+  "say": "Take the bus. Otherwise, you will be late."
+ },
+ {
+  "id": "g10-s2-u9.b10",
+  "type": "cloze",
+  "prompt": "選出最適合的字。",
+  "text": "Many teens use phones late at night. For _____, Amy checks messages until 1 a.m.",
+  "options": [
+   "example",
+   "short",
+   "result"
+  ],
+  "answer": "example",
+  "wrong": {
+   "short": "in short 才是「總之」，for short 不是固定連接語。",
+   "result": "as a result 才表示結果，for result 不是固定說法。"
+  },
+  "why": "Amy 是前一句的具體例子，用 for example 舉例。",
+  "tip": "舉例用 for example 或 for instance。",
+  "say": "For example, Amy checks messages until 1 a.m."
+ },
+ {
+  "id": "g10-s2-u9.b11",
+  "type": "situation",
+  "prompt": "你想說「我姊姊愛派對。相反地，我哥哥喜歡待在家」。哪一句最適合？",
+  "text": "",
+  "options": [
+   "My sister loves parties. In contrast, my brother likes staying home.",
+   "My sister loves parties. Therefore, my brother likes staying home.",
+   "My sister loves parties. For example, my brother likes staying home."
+  ],
+  "answer": "My sister loves parties. In contrast, my brother likes staying home.",
+  "wrong": {
+   "My sister loves parties. Therefore, my brother likes staying home.": "therefore 表示因果，但哥哥喜歡待在家並不是因為姊姊愛派對。",
+   "My sister loves parties. For example, my brother likes staying home.": "for example 是舉例，但待在家和愛派對是相反的，不是例子。"
+  },
+  "why": "兩人喜好相反，用 in contrast 表示對照。",
+  "tip": "相反對照用 in contrast。",
+  "say": "My sister loves parties. In contrast, my brother likes staying home."
+ },
+ {
+  "id": "g10-s2-u9.b12",
+  "type": "meaning",
+  "prompt": "這個句子的意思是什麼？",
+  "text": "Admittedly, the idea is risky; still, it is worth trying.",
+  "options": [
+   "雖然得承認這想法有風險，仍值得一試",
+   "這想法沒有風險，所以值得一試",
+   "這想法有風險，所以不該嘗試"
+  ],
+  "answer": "雖然得承認這想法有風險，仍值得一試",
+  "wrong": {
+   "這想法沒有風險，所以值得一試": "句中明說 the idea is risky，是有風險的。",
+   "這想法有風險，所以不該嘗試": "still 表示轉折，後面說仍值得試，與選項的結論相反。"
+  },
+  "why": "admittedly 先承認缺點，still 再轉到支持的看法。",
+  "tip": "admittedly 先讓步，still 再轉折。",
+  "say": "Admittedly, the idea is risky; still, it is worth trying."
+ }
+]

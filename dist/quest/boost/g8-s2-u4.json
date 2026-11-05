@@ -1,0 +1,303 @@
+[
+ {
+  "id": "g8-s2-u4.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "My bag is more heavy than yours.",
+   "My bag is heavier than yours.",
+   "My bag is more heavier than yours."
+  ],
+  "answer": "My bag is heavier than yours.",
+  "wrong": {
+   "My bag is more heavy than yours.": "heavy 是短形容詞，比較級要把 y 改成 i 再加 -er，變成 heavier，不用 more。",
+   "My bag is more heavier than yours.": "more 和 -er 不能同時使用，這樣就變成雙重比較級。"
+  },
+  "why": "短的形容詞用 -er 表示比較級，heavy 要變成 heavier。",
+  "tip": "短字加 -er，長字前面加 more，兩者不重複。",
+  "say": "My bag is heavier than yours."
+ },
+ {
+  "id": "g8-s2-u4.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "This movie is _____ than the one we saw last week.",
+  "options": [
+   "more exciting",
+   "excitinger",
+   "most exciting",
+   "exciting"
+  ],
+  "answer": "more exciting",
+  "wrong": {
+   "excitinger": "exciting 是長形容詞，比較級不能加 -er，要用 more exciting。",
+   "most exciting": "most 是最高級，但句中有 than，表示兩者比較，要用比較級。",
+   "exciting": "原級不能和 than 一起比較，需要變成比較級 more exciting。"
+  },
+  "why": "兩個東西比較用比較級，長形容詞前加 more。",
+  "tip": "有 than 就用比較級。",
+  "say": "This movie is more exciting than the one we saw last week."
+ },
+ {
+  "id": "g8-s2-u4.b3",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Of all the students in my class, Ellie is the _____ runner.",
+  "options": [
+   "fast",
+   "faster",
+   "fastest",
+   "most fast"
+  ],
+  "answer": "fastest",
+  "wrong": {
+   "fast": "fast 是原級，要表示『全班最快』需要用最高級。",
+   "faster": "faster 是比較級，用來比較兩個人；這裡是全班同學中最快，要用最高級。",
+   "most fast": "fast 是短形容詞，最高級是 fastest，不是 most fast。"
+  },
+  "why": "Of all ... 表示在全體中比較，短形容詞最高級用 the + -est。",
+  "tip": "最高級前面通常要加 the。",
+  "say": "Ellie is the fastest runner in my class."
+ },
+ {
+  "id": "g8-s2-u4.b4",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I enjoy to swim in the summer.",
+   "I enjoy swimming in the summer.",
+   "I enjoy swim in the summer."
+  ],
+  "answer": "I enjoy swimming in the summer.",
+  "wrong": {
+   "I enjoy to swim in the summer.": "enjoy 後面要接動名詞 V-ing，不能接 to 不定詞。",
+   "I enjoy swim in the summer.": "enjoy 後面不能直接接原形動詞，要改成 swimming。"
+  },
+  "why": "enjoy 是要接動名詞（V-ing）的動詞。",
+  "tip": "enjoy、mind、finish 後面接 V-ing。",
+  "say": "I enjoy swimming in the summer."
+ },
+ {
+  "id": "g8-s2-u4.b5",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "My sister wants _____ a doctor when she grows up.",
+  "options": [
+   "to be",
+   "being",
+   "be",
+   "been"
+  ],
+  "answer": "to be",
+  "wrong": {
+   "being": "want 後面要接不定詞 to V，不能直接接 V-ing。",
+   "be": "want 和原形動詞之間要有 to，不能直接接 be。",
+   "been": "been 是完成式用的過去分詞，不能直接放在 want 後面。"
+  },
+  "why": "want 後面接 to + 原形動詞。",
+  "tip": "want、hope、decide 後面接 to V。",
+  "say": "My sister wants to be a doctor when she grows up."
+ },
+ {
+  "id": "g8-s2-u4.b6",
+  "type": "situation",
+  "prompt": "你想有禮貌地請對方「關掉音樂」，哪一句最適合？",
+  "text": "",
+  "options": [
+   "Would you mind turning off the music?",
+   "Would you mind turn off the music?",
+   "Would you mind to turn off the music?"
+  ],
+  "answer": "Would you mind turning off the music?",
+  "wrong": {
+   "Would you mind turn off the music?": "mind 後面要接動名詞，turn 要改成 turning。",
+   "Would you mind to turn off the music?": "mind 後面不接 to 不定詞，要接 V-ing。"
+  },
+  "why": "Would you mind + V-ing 是有禮貌的請求用法。",
+  "tip": "Would you mind 後面接 V-ing。",
+  "say": "Would you mind turning off the music?"
+ },
+ {
+  "id": "g8-s2-u4.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "_____ books is a good way to learn new words.",
+  "options": [
+   "Read",
+   "Reading",
+   "To reading",
+   "Reads"
+  ],
+  "answer": "Reading",
+  "wrong": {
+   "Read": "句子的主詞位置不能放原形動詞，要變成動名詞。",
+   "To reading": "to 後面接原形，to reading 搭配錯誤。",
+   "Reads": "reads 是第三人稱單數動詞，不能直接當主詞。"
+  },
+  "why": "動名詞（V-ing）可以當句子的主詞，表示『做某事』這件事。",
+  "tip": "要把動作當主詞，就用 V-ing。",
+  "say": "Reading books is a good way to learn new words."
+ },
+ {
+  "id": "g8-s2-u4.b8",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "He is the tallest than all his friends.",
+   "He is the tallest of all his friends.",
+   "He is taller of all his friends."
+  ],
+  "answer": "He is the tallest of all his friends.",
+  "wrong": {
+   "He is the tallest than all his friends.": "最高級不搭配 than，要用 of 或 in 表示範圍。",
+   "He is taller of all his friends.": "of all 表示在全體中比，要用最高級 the tallest，不是比較級。"
+  },
+  "why": "最高級 the tallest 後面用 of 或 in 表示範圍。",
+  "tip": "最高級用 of／in，比較級用 than。",
+  "say": "He is the tallest of all his friends."
+ },
+ {
+  "id": "g8-s2-u4.b9",
+  "type": "meaning",
+  "prompt": "『I stopped to drink water.』的意思是？",
+  "text": "",
+  "options": [
+   "我停下來去喝水",
+   "我停止喝水",
+   "我喝水喝到停",
+   "我停下來看別人喝水"
+  ],
+  "answer": "我停下來去喝水",
+  "wrong": {
+   "我停止喝水": "停止做某事要說 stop drinking，不是 stop to drink。",
+   "我喝水喝到停": "stop to drink 的 to 是『為了』的意思，後面接停下來要做的事，不是『喝到停』這種說法。",
+   "我停下來看別人喝水": "drink water 的主詞是 I，是我自己要喝水，不是看別人喝。"
+  },
+  "why": "stop to V 是『停下來去做另一件事』，stop V-ing 才是『不再做』。",
+  "tip": "stop to V 停下來去做；stop V-ing 停止。",
+  "say": "I stopped to drink water."
+ },
+ {
+  "id": "g8-s2-u4.b10",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Tom is _____ than his brother, so he can reach the top shelf.",
+  "options": [
+   "tall",
+   "taller",
+   "tallest",
+   "more tall"
+  ],
+  "answer": "taller",
+  "wrong": {
+   "tall": "原級不能和 than 一起用。",
+   "tallest": "最高級是三者以上比較，這句有 than，要用比較級。",
+   "more tall": "tall 是短形容詞，比較級要用 taller。"
+  },
+  "why": "兩人比較用比較級，tall 變 taller。",
+  "tip": "短字加 -er，後面再接 than。",
+  "say": "Tom is taller than his brother."
+ },
+ {
+  "id": "g8-s2-u4.b11",
+  "type": "situation",
+  "prompt": "朋友問你想不想去看電影，你想說「我喜歡看電影，但今天想待在家」。哪一句最自然？",
+  "text": "",
+  "options": [
+   "I like watching movies, but I'd like to stay home today.",
+   "I like watch movies, but I'd like staying home today.",
+   "I like to watching movies, but I'd like stay home today."
+  ],
+  "answer": "I like watching movies, but I'd like to stay home today.",
+  "wrong": {
+   "I like watch movies, but I'd like staying home today.": "like 後面要接 V-ing 或 to V，不能直接接 watch；而 would like 後面要接 to V。",
+   "I like to watching movies, but I'd like stay home today.": "to 和 -ing 不能混用，would like 後面也要接 to stay。"
+  },
+  "why": "like 可接 V-ing 表示一般喜好；would like 後面要接 to V。",
+  "tip": "like 接 V-ing；would like 接 to V。",
+  "say": "I like watching movies, but I'd like to stay home today."
+ },
+ {
+  "id": "g8-s2-u4.b12",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Mia was not good at _____ the piano, so she practiced every day.",
+  "options": [
+   "play",
+   "to play",
+   "playing",
+   "played"
+  ],
+  "answer": "playing",
+  "wrong": {
+   "play": "介系詞 at 後面不能直接接原形動詞。",
+   "to play": "介系詞後面要接名詞或 V-ing，不接 to V。",
+   "played": "介系詞後面不能接過去式。"
+  },
+  "why": "介系詞後面的動詞要改成動名詞（V-ing）。",
+  "tip": "介系詞後面的動詞用 V-ing。",
+  "say": "Mia was not good at playing the piano."
+ },
+ {
+  "id": "g8-s2-u4.b13",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "This soup is more delicious as that one.",
+   "This soup is more delicious than that one.",
+   "This soup is delicious than that one."
+  ],
+  "answer": "This soup is more delicious than that one.",
+  "wrong": {
+   "This soup is more delicious as that one.": "比較級要搭配 than，不是 as。",
+   "This soup is delicious than that one.": "delicious 是長形容詞，要變成 more delicious 才能和 than 一起用。"
+  },
+  "why": "比較級的固定結構是 more + 形容詞 + than。",
+  "tip": "比較級後面用 than，別用 as。",
+  "say": "This soup is more delicious than that one."
+ },
+ {
+  "id": "g8-s2-u4.b14",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The weather is getting _____ and colder as winter comes.",
+  "options": [
+   "cold",
+   "colder",
+   "coldest",
+   "more cold"
+  ],
+  "answer": "colder",
+  "wrong": {
+   "cold": "and 前後要用相同形式，前面已經是 colder，後面也要用 colder。",
+   "coldest": "『越來越』用比較級 and 比較級，不是最高級。",
+   "more cold": "cold 是短形容詞，比較級是 colder。"
+  },
+  "why": "比較級 + and + 比較級表示『越來越……』。",
+  "tip": "越來越：比較級 and 比較級。",
+  "say": "The weather is getting colder and colder."
+ },
+ {
+  "id": "g8-s2-u4.b15",
+  "type": "situation",
+  "prompt": "老師說：「請記得明天帶課本。」你想表示會記得去做這件事，哪一句最合適？",
+  "text": "",
+  "options": [
+   "I will remember to bring my textbook.",
+   "I will remember bringing my textbook.",
+   "I will remember bring my textbook."
+  ],
+  "answer": "I will remember to bring my textbook.",
+  "wrong": {
+   "I will remember bringing my textbook.": "remember V-ing 是『記得做過某事』，說的是過去，不是記得去做。",
+   "I will remember bring my textbook.": "remember 後面不能直接接原形動詞，要用 to bring。"
+  },
+  "why": "remember to V 是『記得要去做』，用於還沒做的事。",
+  "tip": "remember to V 是記得去做；V-ing 是記得做過。",
+  "say": "I will remember to bring my textbook."
+ }
+]

@@ -1,0 +1,748 @@
+{
+ "d.diag-1570": {
+  "affirmation": "affirmation 是肯定，epoché 正是暫不下判斷，意思剛好相反。",
+  "declaration": "declaration 是公開宣告立場，與擱置判斷的懷疑論態度不合。",
+  "imposition": "imposition 是強加於人，和 of judgment 搭配沒有「擱置」的意思。"
+ },
+ "d.diag-1571": {
+  "iconoclastic": "iconoclastic 是打破傳統，帶有創新意味，與「抄襲舊作」相反。",
+  "seminal": "seminal 是開創性的，屬於讚美，與 uninspired copies 的批評矛盾。",
+  "revolutionary": "revolutionary 是革命性的，讚美創新，和評論家貶低作品不合。"
+ },
+ "d.diag-1572": {
+  "boredom": "boredom 是無聊，無聊不會與敬畏交織成崇高感。",
+  "mirth": "mirth 是歡笑，崇高論強調的是令人震撼的不安，不是歡樂。",
+  "complacency": "complacency 是安逸自滿，不是與敬畏並存的強烈情緒。"
+ },
+ "d.diag-1573": {
+  "validate": "validate 是認可，與刻意打破觀眾期待的目的相反。",
+  "reinforce": "reinforce 是強化，前衛作曲家要挑戰期待，不是加強它。",
+  "codify": "codify 是把規則整理成條文，不是前衛作曲要對期待做的事。"
+ },
+ "d.diag-1574": {
+  "derivative": "derivative 是缺乏原創，正是 Far from a servile imitator 要否定的。",
+  "slavish": "slavish 是盲目模仿，和 Far from a servile imitator 直接矛盾。",
+  "subservient": "subservient 是唯命是從，與敢違背傳統比例的米開朗基羅不合。"
+ },
+ "d.diag-1575": {
+  "panegyric": "panegyric 是頌詞，只有讚美，沒有 scathing 的尖銳批判。",
+  "endorsement": "endorsement 是背書支持，與 scathing 的語氣相反。",
+  "homage": "homage 是致敬，語氣正面，不能和 scathing 並列。"
+ },
+ "d.diag-1577": {
+  "frivolity": "frivolity 是輕浮，與厚重冷峻的混凝土建築氣質相反。",
+  "delicacy": "delicacy 是纖細精緻，不符合 massive 的巨大粗獷柱子。",
+  "whimsicality": "whimsicality 是異想天開，和 austere、forbidding 的嚴肅感矛盾。"
+ },
+ "d.diag-1578": {
+  "hedonism": "hedonism 是享樂主義，與剝除多餘事物的克制相反。",
+  "luxuriance": "luxuriance 是繁茂華麗，與 stripped of superfluous 的描述相反。",
+  "prodigality": "prodigality 是揮霍浪費，與極簡克制的鏡頭語言相反。"
+ },
+ "d.diag-1580": {
+  "microscopic": "microscopic 是微小，無法與渺小人物形成對比。",
+  "pedestrian": "pedestrian 是平淡無奇，不能營造崇高感。",
+  "domestic": "domestic 是家庭的，與浩大壯闊的自然景觀無關。"
+ },
+ "d.diag-1581": {
+  "anachronistic": "anachronistic 是時代錯置，不是指向最終目標的偏見。",
+  "synchronic": "synchronic 是同一時間點的橫切面研究，與一路進步的敘事無關。",
+  "relativistic": "relativistic 是相對主義，主張沒有絕對進步，與凱旋進軍史觀相反。"
+ },
+ "d.diag-1582": {
+  "iconoclasm": "iconoclasm 是破除偶像，是修正史家在做的事，不是被挑戰的對象。",
+  "scandal": "scandal 是醜聞，不是對開國元勳的傳統美化敘事。",
+  "diatribe": "diatribe 是激烈抨擊，與把人物神化的吹捧方向相反。"
+ },
+ "d.diag-1583": {
+  "passivity": "passivity 是被動，與強調個人的決定性作用相反。",
+  "inertia": "inertia 是惰性，說不出個人所發揮的影響力。",
+  "fatality": "fatality 指死亡或宿命，與強調偶然和個人選擇的主張不合。"
+ },
+ "d.diag-1585": {
+  "venerate": "venerate 是崇敬，與批評歐洲中心敘事的語氣相反。",
+  "canonize": "canonize 是封為經典，反而是抬高，不是忽視成就。",
+  "aggrandize": "aggrandize 是誇大抬高，歐洲中心敘事是壓低南方成就。"
+ },
+ "d.diag-1586": {
+  "subversive": "subversive 是顛覆性的，被迫讚美君王的史官不會寫出這種記載。",
+  "iconoclastic": "iconoclastic 是反傳統，與歌功頌德的編年史相反。",
+  "dispassionate": "dispassionate 是客觀冷靜，與受壓力而諂媚的記載不符。"
+ },
+ "d.diag-1589": {
+  "tribe": "tribe 是部落，不是被官方統一的政治疆域。",
+  "commune": "commune 是公社，不是古埃及被統一的政治單位。",
+  "nomad": "nomad 是遊牧民，指人不是領土，無法接在 unification of the 之後。"
+ },
+ "d.diag-1591": {
+  "anarchy": "anarchy 是無政府狀態，與統治階級維持支配相反。",
+  "insurgency": "insurgency 是叛亂，是對統治的反抗，不是統治手段。",
+  "pluralism": "pluralism 是多元主義，與統治階級單方面製造共識不合。"
+ },
+ "d.diag-1593": {
+  "ennoble": "ennoble 是使高尚，不是緊縮政策對弱勢社區的作用。",
+  "emancipate": "emancipate 是解放，與批判緊縮政策的語氣相反。",
+  "vindicate": "vindicate 是平反，不是緊縮政策造成的負面結果。"
+ },
+ "d.diag-1595": {
+  "plebiscite": "plebiscite 是公民投票，屬民主手段，不是寡頭統治的菁英。",
+  "consensus": "consensus 是共識，與少數人統治相反。",
+  "majority": "majority 是多數，與 oligarchy 寡頭是少數統治矛盾。"
+ },
+ "d.diag-1597": {
+  "solidarity": "solidarity 是團結，不是被 exacerbated 加劇的差距。",
+  "harmony": "harmony 是和諧，與菁英和零工之間的對立不合。",
+  "congruence": "congruence 是一致，與兩者之間的懸殊差距相反。"
+ },
+ "d.diag-1598": {
+  "defiance": "defiance 是反抗，規訓權力要培養的是自我約束，不是反抗。",
+  "rebellion": "rebellion 是造反，與 internalized 內化的順從相反。",
+  "mutiny": "mutiny 是兵變，傅柯的論點是被統治者自我監視。"
+ },
+ "d.diag-1599": {
+  "humility": "humility 是謙遜，炫耀性消費是為了公開誇示財力。",
+  "bankruptcy": "bankruptcy 是破產，富人不會炫耀自己破產。",
+  "destitution": "destitution 是赤貧，與購買奢侈品誇示財富相反。"
+ },
+ "d.diag-1600": {
+  "aggrandizement": "aggrandizement 是擴張壯大，不是窮人被迫離開的結果。",
+  "empowerment": "empowerment 是賦權，屬正面詞，與 involuntary 非自願不合。",
+  "enfranchisement": "enfranchisement 是賦予投票權，與仕紳化造成的迫遷無關。"
+ },
+ "d.diag-1601": {
+  "intentions": "intentions 是意圖，拱肩是無目的的副產物，不是意圖。",
+  "desires": "desires 是慾望，結構約束不是生物的慾望。",
+  "teleologies": "teleologies 是目的論，與 non-adaptive 副產物的主張相反。"
+ },
+ "d.diag-1602": {
+  "empirical": "empirical 是實證的，演化生物學家重視實證，不會避免。",
+  "mechanistic": "mechanistic 是機械論的，正是句中 operates mechanically 的主張。",
+  "materialistic": "materialistic 是唯物的，與無目的的對比不成立。"
+ },
+ "d.diag-1603": {
+  "stagnation": "stagnation 是停滯，與骨頭被轉作新用途相反。",
+  "atavism": "atavism 是返祖現象，指古老特徵重現，不是功能轉用。",
+  "involution": "involution 是內縮退化，沒有「轉作新功能」的意思。"
+ },
+ "d.diag-1604": {
+  "ossification": "ossification 是骨化，與物種形成的爆發無關。",
+  "extinction": "extinction 是滅絕，是物種消失，不是快速新生。",
+  "regression": "regression 是退步，與間斷平衡中的快速演化不合。"
+ },
+ "d.diag-1606": {
+  "deliberation": "deliberation 是深思熟慮，暗示有意識，但基因漂變是隨機的。",
+  "foresight": "foresight 是遠見，演化沒有預見性，漂變靠隨機。",
+  "intention": "intention 是意圖，基因頻率改變沒有任何意圖。"
+ },
+ "d.diag-1607": {
+  "divergent": "divergent 是分歧演化，指親緣物種變得不同，這裡是不相關物種變相似。",
+  "regressive": "regressive 是退化的，不是描述外型相似的演化術語。",
+  "vestigial": "vestigial 是痕跡器官，不是指外型相似的演化。"
+ },
+ "d.diag-1610": {
+  "anomalous": "anomalous 是異常的，不能表示連接魚與四足類的橋梁。",
+  "regressive": "regressive 是退化的，與 bridging 橋接演化轉變不符。",
+  "vestigial": "vestigial 是殘跡的，指退化器官，不是過渡化石。"
+ },
+ "d.diag-1612": {
+  "hoard": "hoard 是囤積，與「付錢買」這個對比動作不合。",
+  "retain": "retain 是保留，不是買家為了取得物品所做的動作。",
+  "confiscate": "confiscate 是沒收，不是付費購買。"
+ },
+ "d.diag-1613": {
+  "complacency": "complacency 是自滿，認知失調帶來的是痛苦不安。",
+  "euphoria": "euphoria 是狂喜，與信念和行為矛盾的感受相反。",
+  "indifference": "indifference 是冷漠，失調理論說人會不適，而非無感。"
+ },
+ "d.diag-1614": {
+  "diffidence": "diffidence 是缺乏自信，鄧寧克魯格效應是能力低卻過度自信。",
+  "circumspection": "circumspection 是謹慎，與盲目自信相反。",
+  "humility": "humility 是謙虛，與對自己能力 gross 過度評價相反。"
+ },
+ "d.diag-1615": {
+  "escalates": "escalates 是上升，但旁觀者越多，施救機率是下降。",
+  "stabilizes": "stabilizes 是穩定，不符合 precipitously 急劇變化。",
+  "rebounds": "rebounds 是反彈回升，旁觀者效應是機率驟降。"
+ },
+ "d.diag-1616": {
+  "penury": "penury 是赤貧，捐款換取聲望的人不是想要貧困。",
+  "anonymity": "anonymity 是匿名，與追求 prestige 聲望相反。",
+  "oblivion": "oblivion 是被遺忘，與想要名聲和權勢相反。"
+ },
+ "d.diag-1618": {
+  "cerebral": "cerebral 是理智的，與快速潛意識的情緒反應相反。",
+  "deliberative": "deliberative 是深思熟慮，與 fast-acting 迅速自動相反。",
+  "pedantic": "pedantic 是賣弄學問，不是形容情緒反應。"
+ },
+ "d.diag-1620": {
+  "grief": "grief 是悲痛，是負面情緒，與贏錢的正面感受不合。",
+  "remorse": "remorse 是悔恨，不是贏得金錢帶來的感受。",
+  "despair": "despair 是絕望，贏錢不會帶來絕望。"
+ },
+ "d.diag-1621": {
+  "monolith": "monolith 是單一整體，與無限詮釋相反。",
+  "literalism": "literalism 是字面主義，只接受一種意思，與多義相反。",
+  "univalence": "univalence 指單一價值，與 infinite 的詮釋可能性相反。"
+ },
+ "d.diag-1624": {
+  "euphoria": "euphoria 是狂喜，與戰後砲彈休克世代的心理不符。",
+  "complacency": "complacency 是自滿，支離破碎的敘事反映的是不安。",
+  "tranquility": "tranquility 是寧靜，與破碎的意識流寫法相反。"
+ },
+ "d.diag-1626": {
+  "unifications": "unifications 是統一，解構批評是找出文本自我矛盾。",
+  "harmonies": "harmonies 是和諧，無法讓文本自我拆台。",
+  "truisms": "truisms 是老生常談，不是文本內部語意的衝突。"
+ },
+ "d.diag-1627": {
+  "perfection": "perfection 是完美，模糊的倫理困境反映的是人的缺陷。",
+  "infallibility": "infallibility 是絕不犯錯，與悲劇探討人性弱點相反。",
+  "omnipotence": "omnipotence 是全能，悲劇人物是脆弱的，不是全能。"
+ },
+ "d.diag-1629": {
+  "anarchy": "anarchy 是無政府，狂歡節對抗的是教會教條，不是無政府。",
+  "chaos": "chaos 是混亂，教會代表嚴格秩序，要填的是其正統教條。",
+  "secularism": "secularism 是世俗主義，不是教會自己的體系。"
+ },
+ "d.diag-1630": {
+  "purity": "purity 是純粹，與魔幻寫實和歷史寫實混合相反。",
+  "monotony": "monotony 是單調，與開拓新領域的創新不合。",
+  "uniformity": "uniformity 是一致，無法表示風格融合。"
+ },
+ "d.diag-1631": {
+  "empiricism": "empiricism 是經驗主義，是學術立場，不是被批評的缺點。",
+  "pragmatism": "pragmatism 是實用主義，不帶有輕視他人的批評意味。",
+  "rigor": "rigor 是嚴謹，是優點，不會被當成否定理由。"
+ },
+ "d.diag-1632": {
+  "impeccable": "impeccable 是無懈可擊，與被迫歸還贓物矛盾。",
+  "unimpeachable": "unimpeachable 是無可置疑，來源可信就不必歸還。",
+  "irrefutable": "irrefutable 是不容反駁，與非法走私的出處不合。"
+ },
+ "d.diag-1633": {
+  "monotonies": "monotonies 是單調，季節遷徙是為了適應變化。",
+  "permanences": "permanences 是永久不變，不需要遷徙來適應。",
+  "stagnations": "stagnations 是停滯，遷徙適應的是變動，不是停滯。"
+ },
+ "d.diag-1636": {
+  "isolation": "isolation 是孤立，遠方的黑曜石正好證明有往來。",
+  "sedentarism": "sedentarism 是定居生活，無法解釋石材遠距離出現。",
+  "quarantine": "quarantine 是隔離，與流通交流相反。"
+ },
+ "d.diag-1637": {
+  "genealogies": "genealogies 是世系，屬王朝史，與 rather than 的對比矛盾。",
+  "coronations": "coronations 是加冕，屬王朝政治史，不是早期學者的假設。",
+  "alliances": "alliances 是結盟，是政治史內容，與 rather than 的對比不合。"
+ },
+ "d.diag-1638": {
+  "egalitarianism": "egalitarianism 是平等主義，與財富累積所證明的不平等相反。",
+  "anarchy": "anarchy 是無政府，王陵不能證明這個。",
+  "communism": "communism 是共產主義，主張財產共有，與財富集中不合。"
+ },
+ "d.diag-1639": {
+  "imperialist": "imperialist 是帝國主義的，與反對強加西方觀念相反。",
+  "chauvinistic": "chauvinistic 是沙文主義的偏見，不是客觀方法。",
+  "prescriptive": "prescriptive 是規範性的，指規定該如何，不符合客觀描述。"
+ },
+ "d.diag-1641": {
+  "interchangeable": "interchangeable 是可互換，不同詞彙與標準的典範並不相同。",
+  "identical": "identical 是相同，與 divergent 分歧矛盾。",
+  "harmonious": "harmonious 是和諧，競爭典範之間無法互通，不是和諧。"
+ },
+ "d.diag-1643": {
+  "ratification": "ratification 是批准確認，與嘗試推翻假說的否證相反。",
+  "canonization": "canonization 是封聖，不是科學檢驗的方法。",
+  "sanctification": "sanctification 是神聖化，與科學驗證無關。"
+ },
+ "d.diag-1644": {
+  "revolution": "revolution 是革命，句中 rather than 已排除革命。",
+  "iconoclasm": "iconoclasm 是破除偶像，屬革命性行為，與 rather than 矛盾。",
+  "subversion": "subversion 是顛覆，不屬於常規科學的細節工作。"
+ },
+ "d.diag-1645": {
+  "stagnation": "stagnation 是停滯，物理學在重新定義時空，不是停滯。",
+  "regression": "regression 是倒退，愛因斯坦的理論是進步。",
+  "compromise": "compromise 是妥協，不足以描述重新定義時空的全面改變。"
+ },
+ "d.diag-1648": {
+  "enshrinement": "enshrinement 是奉為神聖，與燃素說被推翻相反。",
+  "corroboration": "corroboration 是佐證，氧氣理論不是在支持燃素說。",
+  "rehabilitation": "rehabilitation 是平反，與燃素說被拋棄相反。"
+ },
+ "d.diag-1651": {
+  "hyperbole": "hyperbole 是誇大，這句話是輕描淡寫，方向相反。",
+  "bombast": "bombast 是浮誇言詞，與低調陳述相反。",
+  "pleonasm": "pleonasm 是贅詞，指用詞冗餘，不是低調說法。"
+ },
+ "d.diag-1653": {
+  "succinctness": "succinctness 是簡潔，與 bloated 臃腫浮誇相反。",
+  "brevity": "brevity 是簡短，與演說的冗長空話不合。",
+  "reticence": "reticence 是沉默寡言，與滿口烏托邦承諾相反。"
+ },
+ "d.diag-1654": {
+  "hyperbole": "hyperbole 是誇大，說莎翁僅有些天分是貶低，不是誇張。",
+  "fabrication": "fabrication 是捏造，這句話不是編造事實。",
+  "distortion": "distortion 是扭曲，不如 understatement 精準對應輕描淡寫。"
+ },
+ "d.diag-1655": {
+  "understatement": "understatement 是輕描淡寫，與說全國陷入饑荒的極端說法相反。",
+  "euphemism": "euphemism 是委婉語，把話說得柔和，不是誇大。",
+  "meiosis": "meiosis 是縮小語氣的淡化，與誇張相反。"
+ },
+ "d.diag-1659": {
+  "homage": "homage 是致敬，建議吃嬰兒是為了諷刺，不是致敬。",
+  "eulogy": "eulogy 是悼詞，不是批判政策的文章。",
+  "testimony": "testimony 是證詞，作品是虛構的反諷，不是見證。"
+ },
+ "d.diag-1660": {
+  "humility": "humility 是謙遜，是假謙虛所假裝的，不是掩蓋的東西。",
+  "meekness": "meekness 是溫順，是假裝出來的外表，不是藏在底下的。",
+  "diffidence": "diffidence 是缺乏自信，與 immense 巨大的自負相反。"
+ },
+ "d.diag-1663": {
+  "extinction": "extinction 是滅絕，與幸福至善相反。",
+  "asceticism": "asceticism 是禁欲，不是亞里斯多德所追求的幸福。",
+  "mortification": "mortification 是苦行，與 eudaimonia 的幸福繁盛相反。"
+ },
+ "d.diag-1664": {
+  "mandates": "mandates 是命令，義務論此處強調的是禁止殺人，不是要求。",
+  "permissions": "permissions 是允許，與絕對禁止相反。",
+  "incentives": "incentives 是誘因，義務論講義務，不是誘因。"
+ },
+ "d.diag-1668": {
+  "karma": "bad karma 不是沙特的術語，他談的是自欺。",
+  "conscience": "bad conscience 不是沙特指逃避責任的概念。",
+  "virtue": "bad virtue 不是成詞組，也不是沙特的概念。"
+ },
+ "d.diag-1672": {
+  "augmentation": "augmentation 是增加，移除頂級掠食者造成的是減少。",
+  "perfection": "perfection 是完善，與生態失衡的結果相反。",
+  "elevation": "elevation 是提升，與生物多樣性受損不合。"
+ },
+ "d.diag-1676": {
+  "regulation": "regulation 是管制，預防原則主張行動，不是不作為。",
+  "intervention": "intervention 是介入，預防原則正是支持介入。",
+  "vigilance": "vigilance 是警戒，是支持行動的態度，不是怠惰藉口。"
+ },
+ "d.diag-1679": {
+  "expansion": "expansion 是擴大，不會造成破壞性影響。",
+  "preservation": "preservation 是保育，屬正面，不需要廊道來對抗。",
+  "reforestation": "reforestation 是造林，是修復，不是棲地問題。"
+ },
+ "d.diag-1682": {
+  "stagnation": "stagnation 是停滯，與語義大幅改變相反。",
+  "fossilization": "fossilization 是僵化，詞義沒變就不會變成反義。",
+  "rigidity": "rigidity 是僵硬，與演變成相反意思矛盾。"
+ },
+ "d.diag-1684": {
+  "laudatory": "laudatory 是讚美，詞義貶降是變壞，不是變好。",
+  "reverent": "reverent 是崇敬，與貶義相反。",
+  "complimentary": "complimentary 是恭維，屬正面，與 pejoration 貶降相反。"
+ },
+ "d.diag-1685": {
+  "intrinsic": "intrinsic 是內在固有，句中說沒有內在聯繫，剛好相反。",
+  "immutable": "immutable 是不可改變，與語言符號的任意性無關。",
+  "deterministic": "deterministic 是決定論，與沒有必然連結相反。"
+ },
+ "d.diag-1687": {
+  "incompatible": "incompatible 是不相容，無法用來重構共同祖語。",
+  "unrelated": "unrelated 是無關的，語音對應需要同源關係。",
+  "invented": "invented 是人造的，比較法適用自然演變的語言。"
+ },
+ "d.diag-1689": {
+  "extinction": "extinction 是滅絕，與文化對某情緒的理解方式無關。",
+  "annihilation": "annihilation 是毀滅，這裡說的是看法，不是毀滅。",
+  "paralysis": "paralysis 是癱瘓，無法描述概念化。"
+ },
+ "d.diag-1690": {
+  "inarticulate": "inarticulate 是口齒不清，不是語言類型的術語。",
+  "monosyllabic": "monosyllabic 是單音節，屬孤立語特徵，與多詞素的複綜語相對。",
+  "mute": "mute 是啞的，不能形容語言的構詞方式。"
+ },
+ "d.diag-1692": {
+  "anarchies": "anarchies 是無政府狀態，與穩定一致的法院相反。",
+  "speculations": "speculations 是推測，不是法院要遵循的依據。",
+  "whims": "whims 是一時興起，與要求一致性的先例相反。"
+ },
+ "d.diag-1693": {
+  "infallibilities": "infallibilities 是絕不犯錯，法律現實主義談的是偏好。",
+  "omnisciences": "omnisciences 是全知，不是影響判決的政治因素。",
+  "paralyses": "paralyses 是癱瘓，不是法官的政治傾向。"
+ },
+ "d.diag-1694": {
+  "stagnations": "stagnations 是停滯，與動態演進相反。",
+  "regressions": "regressions 是倒退，不是需要回應的新情勢。",
+  "petrifications": "petrifications 是僵化，與動態演進相反。"
+ },
+ "d.diag-1696": {
+  "corrupt": "corrupt law 不是自然法學者的說法，語意也不通。",
+  "tyrannical": "tyrannical law 是暴虐的法律，講的卻是缺乏約束力。",
+  "arbitrary": "arbitrary law 是任意的法律，不是失去效力的說法。"
+ },
+ "d.diag-1697": {
+  "subversion": "subversion 是顛覆，法律效力不是來自顛覆。",
+  "defiance": "defiance 是反抗，與主權者制定法律相反。",
+  "rebellion": "rebellion 是叛亂，與法律的合法來源相反。"
+ },
+ "d.diag-1698": {
+  "liberation": "liberation 是釋放，不是人身保護令所抵擋的行政行為。",
+  "enfranchisement": "enfranchisement 是賦予投票權，與拘禁無關。",
+  "election": "election 是選舉，與無限期拘留不合。"
+ },
+ "d.diag-1699": {
+  "harmonious": "harmonious 是和諧，法院判斷隔離教育本質上不平等。",
+  "identical": "identical 是相同，隔離設施不可能相同。",
+  "egalitarian": "egalitarian 是平等主義，與 Repudiating 否定的意思相反。"
+ },
+ "d.diag-1700": {
+  "corrupt": "corrupt 是腐敗，even if 要接程序上沒問題的描述。",
+  "unconstitutional": "unconstitutional 是違憲，與 even if 的讓步語意不通。",
+  "tyrannical": "tyrannical 是專制，even if 的讓步語氣不通。"
+ },
+ "d.diag-1702": {
+  "thermal": "thermal 是熱效應，暗物質不發出熱輻射。",
+  "chemical": "chemical 是化學效應，暗物質不參與化學反應。",
+  "auditory": "auditory 是聽覺的，太空與聲音無關。"
+ },
+ "d.diag-1704": {
+  "entropy": "entropy 是熵，不是暴脹理論解決的佯謬之一。",
+  "neutrino": "neutrino 是微中子，是粒子，不是佯謬。",
+  "pulsar": "pulsar 是脈衝星，是天體，不是宇宙學佯謬。"
+ },
+ "d.diag-1705": {
+  "solid": "false solid 不是物理學詞組，也無法形成泡泡宇宙。",
+  "crystal": "false crystal 不是物理學術語。",
+  "monolith": "monolith 是巨石，不是物理名詞，也無法形成泡泡。"
+ },
+ "d.diag-1706": {
+  "birth": "birth 是誕生，與物質衰變、黑洞蒸發相反。",
+  "rebound": "rebound 是反彈，指大反彈宇宙，與無限膨脹不同。",
+  "compression": "compression 是收縮，永遠膨脹的宇宙不會收縮。"
+ },
+ "d.diag-1707": {
+  "contraction": "contraction 是收縮，暗能量的排斥壓力使宇宙加速膨脹。",
+  "implosion": "implosion 是內爆，與排斥壓力相反。",
+  "crystallization": "crystallization 是結晶，不是宇宙尺度的過程。"
+ },
+ "d.diag-1708": {
+  "extinction": "extinction 是滅絕，背景輻射發生在宇宙起源之後。",
+  "evaporation": "evaporation 是蒸發，是黑洞的未來，不是起點。",
+  "decay": "decay 是衰變，不是作為計時原點的事件。"
+ },
+ "d.diag-1710": {
+  "extinction": "extinction 是滅絕，觀察者存在要求宇宙容許我們存在。",
+  "annihilation": "annihilation 是湮滅，與觀察者的存在矛盾。",
+  "collapse": "collapse 是崩潰，與觀察者存在矛盾。"
+ },
+ "d.diag-1711": {
+  "stagnation": "stagnation 是停滯，可塑性指改變，不是停滯。",
+  "petrification": "petrification 是石化，與腦可塑性相反。",
+  "paralysis": "paralysis 是癱瘓，不是結構重組。"
+ },
+ "d.diag-1713": {
+  "amnesia": "amnesia 是失憶，割裂腦造成意識分離，不是失憶。",
+  "insensibility": "insensibility 是無知覺，兩個獨立領域仍有意識。",
+  "paralysis": "paralysis 是癱瘓，不是意識領域。"
+ },
+ "d.diag-1716": {
+  "paralysis": "paralysis 是癱瘓，布洛卡失語症不是運動麻痺。",
+  "blindness": "blindness 是失明，與語言理解無關。",
+  "deafness": "deafness 是失聰，患者聽得懂，只是說話不流暢。"
+ },
+ "d.diag-1717": {
+  "cells": "cells 是細胞，突觸修剪修掉的是連結，不是細胞。",
+  "tumors": "tumors 是腫瘤，不是修剪的對象。",
+  "toxins": "toxins 是毒素，與突觸無關。"
+ },
+ "d.diag-1719": {
+  "escalation": "escalation 是升級，不是壓力調節功能的說法。",
+  "inflation": "inflation 是膨脹，不是壓力的生理調節。",
+  "multiplication": "multiplication 是倍增，不是指調節功能。"
+ },
+ "d.diag-1723": {
+  "animosity": "animosity 是敵意，與冷靜、dispassionate 相反。",
+  "partisanship": "partisanship 是黨派偏見，與 dispassionate 相反。",
+  "venom": "venom 是惡毒，與冷靜公正的語氣相反。"
+ },
+ "d.diag-1726": {
+  "panegyric": "panegyric 是頌辭，是讚美，不是人身攻擊。",
+  "encomium": "encomium 是讚詞，同樣是讚美。",
+  "accolade": "accolade 是榮譽讚譽，不是 ad hominem 的攻擊。"
+ },
+ "d.diag-1729": {
+  "grandiose": "grandiose 是浮誇，與嘲弄自己相反。",
+  "pompous": "pompous 是自負，與 poking fun at himself 不合。",
+  "arrogant": "arrogant 是傲慢，與自嘲相反。"
+ },
+ "d.diag-1730": {
+  "reverence": "reverence 是崇敬，修正主義傳記是在拆除偶像。",
+  "orthodoxy": "orthodoxy 是正統，與推翻既有偶像相反。",
+  "piety": "piety 是虔敬，與 tearing down 不合。"
+ },
+ "d.diag-1732": {
+  "palaces": "palaces 是宮殿，屬富人，不是被忽視的對象。",
+  "citadels": "citadels 是城堡，與貧窮邊緣區相反。",
+  "mansions": "mansions 是豪宅，屬富人，不是貧窮社區。"
+ },
+ "d.diag-1733": {
+  "integration": "integration 是融合，redlining 反而造成種族隔離。",
+  "amalgamation": "amalgamation 是合併，與 redlining 的效果相反。",
+  "cohesion": "cohesion 是凝聚，不是歧視性借貸的結果。"
+ },
+ "d.diag-1734": {
+  "botany": "botany 是植物學，是學科名稱，不能修飾 franchise。",
+  "geology": "geology 是地質學，與連鎖門市無關。",
+  "meteorology": "meteorology 是氣象學，與連鎖企業無關。"
+ },
+ "d.diag-1737": {
+  "expansion": "expansion 是擴張，shrinking 說明旅行時間是被壓縮。",
+  "stagnation": "stagnation 是停滯，鐵路使旅行時間大幅縮短。",
+  "paralysis": "paralysis 是癱瘓，與交通縮短時間相反。"
+ },
+ "d.diag-1738": {
+  "erosion": "erosion 是侵蝕，屬物理過程，不是意識形態文本的層次。",
+  "geology": "geology 是地質，landscape 不只是物理背景。",
+  "vacuum": "vacuum 是真空，與 layers 層次相反。"
+ },
+ "d.diag-1740": {
+  "affluence": "affluence 是富裕，有錢社區不會被設汙染設施。",
+  "privilege": "privilege 是特權，與被邊緣化的社群相反。",
+  "royalty": "royalty 是王室，與環境種族主義無關。"
+ },
+ "d.diag-1741": {
+  "hermits": "hermits 是隱士，不會收費販賣修辭。",
+  "martyrs": "martyrs 是殉道者，不是賣辯才的人。",
+  "ascetics": "ascetics 是苦行者，不會販售說服術換錢。"
+ },
+ "d.diag-1743": {
+  "disproved": "disproved 是被駁斥，被視為常識的前提才會被省略。",
+  "celebrated": "celebrated 是被讚頌，與省略前提的概念不合。",
+  "condemned": "condemned 是被譴責，因被視為常識才省略，不是被譴責。"
+ },
+ "d.diag-1749": {
+  "appetite": "appetite 是食慾，廚藝取悅的是味覺，修辭腐化的對象是靈魂。",
+  "tongue": "tongue 是舌頭，類比中被敗壞的是靈魂。",
+  "teeth": "teeth 是牙齒，不是被修辭敗壞的對象。"
+ },
+ "c-intl-gmat.p2e": {
+  "pave the way for": "pave the way for 是「為……鋪平道路」，不是解釋原因。",
+  "lead to": "lead to 是「導致」，不是解釋原因或占比例。"
+ },
+ "c-intl-gmat.p3e": {
+  "lead to": "lead to 是「導致」，不是為後續鋪路。",
+  "account for": "account for 是「解釋原因；占比例」，不是鋪平道路。"
+ },
+ "c-intl-gmat.p4e": {
+  "on the assumption that": "on the assumption that 是「在假定……的前提下」，不是導致。",
+  "pave the way for": "pave the way for 是鋪平道路，是創造條件，不是導致。"
+ },
+ "k.argument-assumptions.1": {
+  "The buses are blue.": "公車顏色與載客量預測無關，無法削弱預測。",
+  "Some riders carry backpacks.": "乘客是否背背包，與公車預測無關。"
+ },
+ "d.diag-1751": {
+  "Private automobile registrations in the municipality decreased by exactly twenty percent over the six months.": "汽車登記數剛好減少兩成太精確，論證並不需要這種數字。",
+  "Bus fares were doubled immediately following the installation of the dedicated express lanes.": "票價翻倍反而會降低搭乘意願，不是結論所需的前提。",
+  "The express bus routes experienced zero mechanical breakdowns throughout the evaluation period.": "零故障太極端，結論不需要這種假設。"
+ },
+ "d.diag-1752": {
+  "The retailer's competitor declared bankruptcy during the same quarter.": "對手破產是另一種解釋，若成立反而削弱結論，不是必要假設。",
+  "Smartphone ownership among the retailer's customers reached one hundred percent.": "手機普及率百分之百太絕對，論證不需要。",
+  "Print coupons cost twice as much to distribute as digital notifications.": "印刷優惠券成本是否較高，與推播效果無關。"
+ },
+ "d.diag-1753": {
+  "Every employee used the standing function of their desk for at least four hours daily.": "每人每天站立四小時太絕對，不是論證非有不可的前提。",
+  "The cost of the ergonomic furniture was completely offset by productivity gains within six months.": "家具成本是否被抵銷，與健康和缺勤的因果無關。",
+  "Absenteeism rates in competing firms increased over the same chronological timeframe.": "對手缺勤增加與本公司因果無關。"
+ },
+ "d.diag-1754": {
+  "Surgeons who meditated slept an average of two hours longer each night.": "外科醫師多睡兩小時是另一種解釋，反而削弱結論。",
+  "Postoperative complications were entirely eradicated following the introduction of the policy.": "併發症完全消失太極端，下降三成就足以成立。",
+  "Patients were informed of their surgeon's meditation practice prior to anesthesia.": "病人是否被告知冥想，與手術精準度的因果無關。"
+ },
+ "d.diag-1755": {
+  "Snack boxes cost the airline forty percent less to provision than hot catering.": "零食盒成本低，論點談的是乘客偏好，不是成本。",
+  "Every passenger on short-haul flights consumed the entirety of their snack box.": "每位乘客都吃完整盒太絕對，論證不需要。",
+  "Hot meals will be permanently discontinued across all transcontinental international routes.": "取消洲際航班熱食超出短程航班的論證範圍。"
+ },
+ "d.diag-1756": {
+  "Annual reviews caused severe psychological distress among all engineering staff.": "年度考核造成心理壓力不是連續回饋提升產出的必要前提。",
+  "Developers worked forty percent more overtime hours following the policy change.": "加班多四成是另一種解釋，反而削弱結論。",
+  "Software bug density doubled as a consequence of faster deployments.": "錯誤密度加倍是副作用，與是否為因果無關。"
+ },
+ "d.diag-1757": {
+  "Desktop computers were completely obsolete and incapable of browsing the internet.": "桌機完全過時不是論證必要前提，也太極端。",
+  "Students spend an average of six consecutive hours studying in the library daily.": "平均停留六小時是細節，不是結論所需。",
+  "University tuition was reduced following the removal of the desktop computers.": "學費降低是另一種可能原因，反而削弱結論。"
+ },
+ "d.diag-1758": {
+  "Fleet maintenance costs increased by fifteen percent due to transmission wear.": "維修成本增加與油耗下降的原因無關。",
+  "Left turns are responsible for ninety percent of all municipal traffic collisions.": "左轉占事故九成談的是事故，不是油耗。",
+  "The algorithm increased the total mileage driven per delivery route by fifty miles.": "里程增加五十英里會抵銷油耗下降，與結論相反。"
+ },
+ "d.diag-1759": {
+  "Every seventh-grade student had high-speed broadband internet access at home.": "每位學生家中有高速網路太絕對，不是必要假設。",
+  "Standardized math exams were identical in difficulty to those administered five years prior.": "考試難度完全相同要求太嚴格，只需沒有大幅變動即可。",
+  "Paper textbooks were completely eradicated from the school district.": "紙本教科書消失與數位工具的效果無關。"
+ },
+ "d.diag-1760": {
+  "Blister packs are impossible for elderly individuals to puncture.": "水泡包裝完全無法戳破與包裝方便長者的論點矛盾。",
+  "Customer allergies became substantially more severe following the packaging alteration.": "過敏更嚴重與回購率上升無關，甚至互相衝突。",
+  "The active chemical formulation of the allergy medication was completely redesigned.": "配方重新設計是另一種解釋，反而削弱結論。"
+ },
+ "d.diag-1761": {
+  "Physical knobs are thirty percent cheaper to fabricate than integrated digital touchscreens.": "旋鈕較便宜談的是製造成本，不是消費者偏好。",
+  "Gasoline-powered vehicles will be entirely phased out of the American market within five years.": "汽油車淘汰與消費者偏好調查無關。",
+  "Every surveyed participant owned at least two luxury automobiles.": "每位受訪者擁有兩輛豪車不是前提，也會讓樣本更偏。"
+ },
+ "d.diag-1762": {
+  "Hypertension is exclusively diagnosed in young athletic individuals.": "高血壓只在年輕運動員身上出現，是荒謬的說法。",
+  "Adverse events will occur in precisely ten percent of female clinical trial participants.": "女性參與者有一成不良事件，與零不良事件的結果矛盾。",
+  "The experimental drug costs less than conventional beta-blockers.": "藥價是否比傳統藥便宜，與藥物是否安全無關。"
+ },
+ "d.diag-1763": {
+  "Every corporate client employs at least twenty software engineers.": "客戶都雇用二十位工程師不是必要前提。",
+  "Internal software engineers worked without taking breaks during the trial.": "工程師不休息不是結論需要的假設。",
+  "The user interface code was written entirely in Python.": "程式語言用 Python 與工作速度無關。"
+ },
+ "d.diag-1764": {
+  "Library attendance on Friday night equals library attendance on Tuesday morning.": "週五晚與週二早上人數相同，與學生意見是否代表全體無關。",
+  "The fee hike will generate exactly one million dollars in municipal revenue.": "金額剛好一百萬與學生是否支持無關。",
+  "Students surveyed were enrolled exclusively in doctoral humanities programs.": "受訪者全是博士班人文學生會讓樣本更偏頗，削弱結論。"
+ },
+ "d.diag-1765": {
+  "Vehicular traffic congestion in the municipality decreased over the preceding decade.": "市區壅塞是否減少，與訂閱者意見是否代表居民無關。",
+  "Bicycle manufacturing costs have declined due to foreign import subsidies.": "自行車製造成本下降與支持度調查無關。",
+  "Every survey respondent commuted to work exclusively by bicycle year-round.": "受訪者全都全年騎車通勤會讓樣本更偏頗，削弱結論。"
+ },
+ "d.diag-1766": {
+  "Dark chocolate contains fewer calories per serving than commercial milk chocolate.": "熱量較低與調查樣本是否代表全國無關。",
+  "Milk chocolate production will be halted by international trade embargoes.": "牛奶巧克力被禁運是外部事件，與調查代表性無關。",
+  "Every supermarket customer sampled exactly two pieces of dark chocolate.": "每位顧客各試吃兩片只是細節，不是前提。"
+ },
+ "d.diag-1767": {
+  "Chronic work stress is the sole medical cause of insomnia worldwide.": "壓力是失眠唯一成因太極端，推論全部失眠並不需要它。",
+  "Cognitive behavioral therapy takes twice as long to administer as pharmacological sedatives.": "療程耗時兩倍與療效能否推廣無關。",
+  "Executives in the trial slept an average of eight hours nightly following the intervention.": "受試者睡滿八小時只是結果細節，不是前提。"
+ },
+ "d.diag-1768": {
+  "Smartphones running the beta operating system never experienced battery drainage.": "電池耗電與介面是否受歡迎無關。",
+  "Everyday consumers update their smartphone operating systems within twenty-four hours of release.": "一般用戶多快更新系統與結論無關。",
+  "The beta operating system was tested on five different hardware architectures.": "在五種硬體測試只是測試範圍，不是前提。"
+ },
+ "d.diag-1769": {
+  "Park admission fees have remained frozen for over fifty consecutive years.": "費用凍結五十年不是推論全國民意所需的前提。",
+  "Every visitor surveyed possessed a college degree in environmental ecology.": "受訪者都有生態學位會讓樣本更偏頗，削弱結論。",
+  "Conservation projects funded by park fees will eliminate forest wildfire risk entirely.": "消除野火風險與民意是否代表全國無關。"
+ },
+ "d.diag-1770": {
+  "Every registered voter in the municipality possesses an active residential landline.": "每位選民都有市話太絕對，只需要接電話者具代表性。",
+  "The municipal tax levy would fund construction of an international sports stadium.": "稅金用途與民調是否具代表性無關。",
+  "Voters who oppose taxes never participate in municipal school board elections.": "反對者是否參加學校董事會選舉與稅案投票無關。"
+ },
+ "d.diag-1771": {
+  "The speed cameras issued an average of three hundred citations daily during their first week of operation.": "每日三百張罰單只顯示相機有運作，沒有提供其他原因。",
+  "Fatal collisions on neighboring rural secondary roads remained unchanged over the same timeframe.": "鄉間道路傷亡不變可當對照組，反而支持警察局長。",
+  "The cost of installing and maintaining the cameras was entirely financed by municipal traffic fines.": "經費靠罰款支付與死亡人數下降的原因無關。"
+ },
+ "d.diag-1772": {
+  "The organic raw food cleanse consisted primarily of cold-pressed kale juice and raw almond butter.": "羽衣甘藍汁只是描述內容，無法質疑成效。",
+  "Blood tests were conducted by an independent certified diagnostic pathology laboratory.": "獨立實驗室檢驗增加可信度，是強化而非削弱。",
+  "Ten of the fifty participants reported mild gastrointestinal discomfort during the first two days.": "十人輕微腸胃不適是副作用，與發炎指標下降無關。"
+ },
+ "d.diag-1773": {
+  "The number of product search queries conducted on the site remained stable after the redesign.": "搜尋次數持平沒有提供營收上升的另一種解釋。",
+  "Mobile shoppers accounted for sixty-five percent of all completed transactions during the period.": "行動購物占六成五與雜亂減少是否有效無關。",
+  "Competitors in the same retail vertical did not modify their website navigation layouts.": "對手沒有改版排除了外部因素，反而支持主任。"
+ },
+ "d.diag-1774": {
+  "Park maintenance expenditures increased by twenty-five percent following the installation of the new walking trails.": "維護支出增加是成本問題，沒有說明犯罪下降的另一種原因。",
+  "Nearby residential neighborhoods experienced a modest five percent increase in property crime rates.": "鄰近財產犯罪只增加五個百分點，沒有說明公園暴力犯罪下降的原因。",
+  "The walking trails were constructed using eco-friendly permeable recycled rubber pavers.": "鋪面材質是否環保，與公園犯罪下降的原因無關。"
+ },
+ "d.diag-1775": {
+  "Professors received computerized summaries of mid-semester feedback within forty-eight hours.": "四十八小時內收到摘要代表教授有機會回應，反而支持院長。",
+  "Student attendance in lecture halls remained virtually unchanged across both semesters.": "出席率不變沒有提供不及格率下降的其他原因。",
+  "Course evaluation completion rates exceeded ninety percent across all academic divisions.": "評量完成率超過九成只顯示學生有參與，沒有削弱論點。"
+ },
+ "d.diag-1776": {
+  "The cost of organic, antibiotic-free poultry feed was twenty percent higher than standard feed.": "飼料成本較高與死亡率下降的原因無關。",
+  "Flock mortality rates among competitors utilizing antibiotics remained consistent over the period.": "對手死亡率不變當對照，反而支持獸醫的主張。",
+  "Antibiotic residues in processed chicken breast meat fell to undetectable levels.": "抗生素殘留量降低與雞隻免疫力無關。"
+ },
+ "d.diag-1777": {
+  "Employees were required to complete an hour-long webinar demonstrating how to query the AI tool.": "一小時培訓只是使用說明，沒有提供生產力上升的另一原因。",
+  "Workstation IT support ticket volumes remained constant throughout the testing period.": "IT 工單持平沒有說明生產力提升的其他原因。",
+  "The AI-driven knowledge retrieval tool cost three times as much per user license as standard search engines.": "授權費用高是成本問題，與生產力因果無關。"
+ },
+ "d.diag-1778": {
+  "The trial participants were recruited through targeted advertisements on public subway lines.": "招募方式不能說明症狀為何改善。",
+  "The molecular structure of the antidepressant binds selectively to serotonin receptors.": "藥物結合血清素受體說明作用機制，是強化而非削弱。",
+  "Participants in the trial attended thirty-minute clinical assessment sessions once every fortnight.": "每兩週三十分鐘評估與藥效無關。"
+ },
+ "d.diag-1779": {
+  "Subway operating expenditures increased by four percent due to wage adjustments for track maintenance crews.": "營運支出增加是成本，不影響需求是否缺乏價格彈性。",
+  "The municipal bus system maintained its fares at previous levels throughout the entire year.": "公車票價不變不能說明地鐵需求，沒有削弱官員結論。",
+  "The transit authority introduced mobile contactless payment gates at all stations.": "行動支付閘門只改變付款方式，與需求彈性無關。"
+ },
+ "d.diag-1780": {
+  "Predatory nematodes cost thirty percent more to purchase per acre than standard chemical insecticides.": "線蟲成本較高談的是花費，不是產量。",
+  "The orchardist planted sixty new heirloom apple saplings along the western boundary of the property.": "新種六十棵樹苗數量有限，難以解釋整體增產十五成。",
+  "Nematode populations naturally declined as ambient autumn temperatures dropped below freezing.": "線蟲數量秋天減少是後續結果，無法解釋產量增加。"
+ },
+ "d.diag-1781": {
+  "Volunteer programs that focus on environmental cleanup report higher volunteer retention than those addressing food insecurity.": "環保志工留任率較高是比較不同類型，與因果方向無關。",
+  "Many municipal governments offer tax credits to citizens who complete fifty hours of certified community volunteer service.": "稅額抵免只是誘因，沒有說明幸福感與志工的因果。",
+  "The sociological study surveyed twelve hundred adults across six distinct metropolitan districts.": "受訪一千兩百位成人是樣本規模，不削弱結論。"
+ },
+ "d.diag-1782": {
+  "Chess clubs in the school district meet for ninety minutes twice weekly after formal classes conclude.": "社團每週活動時間只是細節，與因果無關。",
+  "Standardized mathematical exams place heavy emphasis on algebra and planar geometry.": "考試重視代數和幾何，沒有說明為何棋手分數較高。",
+  "Several master chess players in the state failed to graduate from four-year universities.": "幾位大師沒畢業是個案，無法推翻整體差異。"
+ },
+ "d.diag-1783": {
+  "Green tea contains caffeine, which temporarily elevates resting heart rate in sensitive individuals.": "咖啡因提高心跳是另一個效果，沒有削弱多酚保護的主張。",
+  "Black tea and oolong tea contain chemical polyphenols in concentrations comparable to green tea.": "紅茶烏龍茶多酚相近，沒有說明綠茶族群的差異來源。",
+  "Cardiovascular disease remains the leading cause of adult mortality in Western industrialized nations.": "心血管疾病為死因第一是背景資訊，不影響因果。"
+ },
+ "d.diag-1784": {
+  "Ergonomic furniture typically lasts five years longer than budget office furnishings.": "家具耐用年限與獲利因果方向無關。",
+  "Employees in the corporate headquarters reported high satisfaction with the ergonomic seating.": "員工對座椅滿意，沒有說明獲利的原因。",
+  "The survey evaluated two hundred technology firms across Silicon Valley.": "調查兩百家公司是樣本規模，不削弱結論。"
+ },
+ "d.diag-1785": {
+  "Reading non-fiction historical biographies requires comparable levels of vocabulary and concentration.": "非小說需要相似詞彙與專注力，沒說明小說讀者為何同理心高。",
+  "Audiobook listeners demonstrated emotional recognition scores identical to print book readers.": "有聲書聽眾與讀者分數相同，不削弱結論。",
+  "Many critically acclaimed literary novelists struggled with turbulent personal relationships.": "小說家人際關係動盪是個案，無法推翻調查結果。"
+ },
+ "d.diag-1786": {
+  "Public parks require regular municipal maintenance, including trash collection and lawn mowing.": "公園需要維護是額外資訊，與少年犯罪的因果無關。",
+  "Juvenile delinquency rates across the entire metropolitan area have decreased by five percent over the decade.": "全市整體下降五個百分點，沒有區分有公園與沒公園的社區。",
+  "Children who visit parks engage in team sports like soccer and basketball.": "孩子在公園打球，反而支持公園有益的說法。"
+ },
+ "d.diag-1787": {
+  "The study was conducted across three distinct corporate offices in Chicago.": "研究地點在芝加哥三個辦公室，只是範圍限制，不是反向因果。",
+  "Messy desks contained an average of forty more paper documents than tidy desks.": "桌面紙張多四十份只是描述差異，沒有質疑因果。",
+  "Executives with tidy desks reported drinking fewer cups of espresso daily.": "整潔桌面主管少喝濃縮咖啡是另一變項，沒有直接反駁。"
+ },
+ "d.diag-1788": {
+  "Sunlight exposure catalyzes the synthesis of vitamin D in human skin.": "維生素 D 與陽光有關，反而支持小兒科醫師。",
+  "Standardized tests of divergent thinking measure multiple potential uses for common household objects.": "發散思考測驗的形式不影響因果推論。",
+  "Children in urban settings had fewer opportunities to visit forested public reserves.": "都市孩子較少機會去森林保護區，與結論因果無關。"
+ },
+ "d.diag-1789": {
+  "Venture capital investments carry higher portfolio risk than government municipal bonds.": "創投風險高於市政債券，與創新來源無關。",
+  "Patents registered in technology sectors typically expire twenty years after filing.": "專利二十年到期是無關的制度細節。",
+  "The survey evaluated patent registry statistics across thirty-two OECD member states.": "調查三十二個經合組織會員國是樣本資訊，不削弱結論。"
+ },
+ "d.diag-1790": {
+  "Shift workers in manufacturing plants earn hourly wages rather than annual salaries.": "輪班工人領時薪，與睡眠是否影響薪資的因果無關。",
+  "Sleep deprivation is known to elevate daytime cortisol concentrations in laboratory subjects.": "睡眠不足提高皮質醇，反而支持睡眠影響表現。",
+  "The study tracked five thousand adults over an eight-year longitudinal monitoring period.": "追蹤五千人八年是研究設計優點，不削弱結論。"
+ },
+ "d.diag-1791": {
+  "The inland taipan is native exclusively to the arid interior river basins of eastern Australia.": "蛇的分布地區與抗體是否專一結合神經毒素無關。",
+  "Murine biological models possess renal filtration systems structurally similar to human kidneys.": "老鼠腎臟與人類相似和抗體結合神經毒素無關。",
+  "The synthesis of monoclonal antibodies requires advanced recombinant bioreactor fermentation technology.": "單株抗體要用生物反應器製造是製程資訊，不能證明專一結合。"
+ }
+}

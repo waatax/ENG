@@ -1,0 +1,282 @@
+[
+ {
+  "id": "g8-s1-u3.b1",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "If it will rain tomorrow, we will stay home.",
+   "If it rains tomorrow, we will stay home.",
+   "If it rained tomorrow, we will stay home."
+  ],
+  "answer": "If it rains tomorrow, we will stay home.",
+  "wrong": {
+   "If it will rain tomorrow, we will stay home.": "if 子句表示未來的條件時，要用現在式 rains，不能在 if 後面用 will。",
+   "If it rained tomorrow, we will stay home.": "rained 是過去式，但 tomorrow 是未來，而且主要子句用 will，if 子句應該用現在式。"
+  },
+  "why": "表示未來可能發生的事，if 子句用現在式，主要子句用 will。",
+  "tip": "if 子句用現在式代替未來，主句才用 will。",
+  "say": "If it rains tomorrow, we will stay home."
+ },
+ {
+  "id": "g8-s1-u3.b2",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "If you _____ hard, you will pass the English exam.",
+  "options": [
+   "study",
+   "will study",
+   "studied",
+   "are study"
+  ],
+  "answer": "study",
+  "wrong": {
+   "will study": "if 子句裡不用 will，未來的條件用現在式 study。",
+   "studied": "studied 是過去式，這裡說的是將來可能的情況，要用現在式。",
+   "are study": "are 後面不能直接接原形動詞 study，文法不正確。"
+  },
+  "why": "If + 現在式，主要子句 + will + 原形動詞，是未來條件句的基本結構。",
+  "tip": "If 後面用現在式，後面主句用 will。",
+  "say": "If you study hard, you will pass the English exam."
+ },
+ {
+  "id": "g8-s1-u3.b3",
+  "type": "situation",
+  "prompt": "朋友說他不想爬山，你想說：「如果你不想去，我們就待在家。」哪一句最適合？",
+  "text": "",
+  "options": [
+   "If you don't want to go, we will stay home.",
+   "If you won't want to go, we stay home.",
+   "Unless you don't want to go, we will stay home."
+  ],
+  "answer": "If you don't want to go, we will stay home.",
+  "wrong": {
+   "If you won't want to go, we stay home.": "if 子句不用 will，而且主句應用 will stay 表示將要做的事。",
+   "Unless you don't want to go, we will stay home.": "unless 本身已經有『除非不』的意思，再加 don't 會變成雙重否定，意思反而變成『除非你不想去，否則我們待在家』。"
+  },
+  "why": "用 if 表示條件，if 子句用現在式否定，主句用 will。",
+  "tip": "if not 可以改用 unless，但 unless 後面不用 not。",
+  "say": "If you don't want to go, we will stay home."
+ },
+ {
+  "id": "g8-s1-u3.b4",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "_____ you hurry, you will miss the last bus.",
+  "options": [
+   "Unless",
+   "If",
+   "Although",
+   "Because"
+  ],
+  "answer": "Unless",
+  "wrong": {
+   "If": "If you hurry 是『如果你趕快』，卻接『會錯過末班車』，前後邏輯矛盾。",
+   "Although": "Although 表示轉折（雖然），這裡不是轉折而是條件。",
+   "Because": "Because 表示原因，但這句話是在說條件，不是原因。"
+  },
+  "why": "Unless you hurry 等於 If you don't hurry，意思是『除非你趕快，否則會錯過』，和後面的 miss 邏輯一致。",
+  "tip": "unless 等於 if ... not，後面不再加 not。",
+  "say": "Unless you hurry, you will miss the last bus."
+ },
+ {
+  "id": "g8-s1-u3.b5",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Unless you don't leave now, you will be late.",
+   "Unless you leave now, you will be late.",
+   "Unless you will leave now, you will be late."
+  ],
+  "answer": "Unless you leave now, you will be late.",
+  "wrong": {
+   "Unless you don't leave now, you will be late.": "unless 已經帶有否定意思，不能再加 don't，否則變成雙重否定。",
+   "Unless you will leave now, you will be late.": "unless 子句和 if 子句一樣，表示未來時要用現在式，不用 will。"
+  },
+  "why": "Unless you leave now 等於 If you don't leave now，意思是『除非你現在離開』。",
+  "tip": "Unless = If ... not，不要重複否定。",
+  "say": "Unless you leave now, you will be late."
+ },
+ {
+  "id": "g8-s1-u3.b6",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "The ground is wet _____ it rained last night.",
+  "options": [
+   "because",
+   "so",
+   "but",
+   "unless"
+  ],
+  "answer": "because",
+  "wrong": {
+   "so": "so 後面接的是結果，但 it rained last night 是原因，不是結果。",
+   "but": "but 表示轉折，這裡下雨和地面濕是因果關係，不是對立。",
+   "unless": "unless 表示『除非』，不是說明原因。"
+  },
+  "why": "地面濕是結果，昨晚下雨是原因，用 because 引導原因。",
+  "tip": "because 後面接原因，so 後面接結果。",
+  "say": "The ground is wet because it rained last night."
+ },
+ {
+  "id": "g8-s1-u3.b7",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "_____ Mia was very tired, she finished her homework.",
+  "options": [
+   "Although",
+   "Because",
+   "If",
+   "So"
+  ],
+  "answer": "Although",
+  "wrong": {
+   "Because": "累是原因，但她還是寫完作業，是出乎意料的轉折，不是因果關係。",
+   "If": "If 是假設條件，但 Mia was tired 是已經發生的事實。",
+   "So": "So 連接結果，不能放在句首開頭引導這個子句。"
+  },
+  "why": "累了卻還是完成，前後意思相反，用 Although（雖然）表示讓步。",
+  "tip": "although 後面接完整句子，不可再加 but。",
+  "say": "Although Mia was very tired, she finished her homework."
+ },
+ {
+  "id": "g8-s1-u3.b8",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "Although it was cold, but we went swimming.",
+   "Although it was cold, we went swimming.",
+   "Because it was cold, but we went swimming."
+  ],
+  "answer": "Although it was cold, we went swimming.",
+  "wrong": {
+   "Although it was cold, but we went swimming.": "although 和 but 不能同時使用，中文可以說『雖然……但是』，英文只能擇一。",
+   "Because it was cold, but we went swimming.": "because 表示原因，天氣冷不會是去游泳的原因，而且也不能和 but 連用。"
+  },
+  "why": "although 已經表示轉折，不需要再加 but。",
+  "tip": "although 和 but 擇一，英文不能同時出現。",
+  "say": "Although it was cold, we went swimming."
+ },
+ {
+  "id": "g8-s1-u3.b9",
+  "type": "situation",
+  "prompt": "你想說「如果我有時間，我會幫你。」哪一句最自然？",
+  "text": "",
+  "options": [
+   "If I have time, I will help you.",
+   "If I will have time, I help you.",
+   "If I had time, I will help you."
+  ],
+  "answer": "If I have time, I will help you.",
+  "wrong": {
+   "If I will have time, I help you.": "if 子句裡不用 will，主句也應該用 will help 表示將來要做的事。",
+   "If I had time, I will help you.": "had 是過去式，if 子句的時態和主句 will 不搭配，會讓意思混亂。"
+  },
+  "why": "表示有可能發生的條件，if 用現在式，主句用 will。",
+  "tip": "可能發生的事：If + 現在式，will + 原形。",
+  "say": "If I have time, I will help you."
+ },
+ {
+  "id": "g8-s1-u3.b10",
+  "type": "meaning",
+  "prompt": "『Unless it stops raining, we can't play baseball.』的意思是？",
+  "text": "",
+  "options": [
+   "除非雨停，否則我們不能打棒球",
+   "只要下雨，我們就打棒球",
+   "雨停了，所以我們不能打棒球",
+   "因為下雨，所以我們打棒球"
+  ],
+  "answer": "除非雨停，否則我們不能打棒球",
+  "wrong": {
+   "只要下雨，我們就打棒球": "句子說的是不能打棒球，而且 unless 是『除非』，不是『只要』。",
+   "雨停了，所以我們不能打棒球": "it stops 是條件，不是已經發生的事實，而且因果關係也不對。",
+   "因為下雨，所以我們打棒球": "主句是 can't，表示不能打，意思完全相反。"
+  },
+  "why": "Unless 相當於 if ... not，意思是『如果雨沒有停，我們就不能打棒球』。",
+  "tip": "unless 就是『除非』，等於 if 加 not。",
+  "say": "Unless it stops raining, we can't play baseball."
+ },
+ {
+  "id": "g8-s1-u3.b11",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "If I _____ you, I would study harder for the test.",
+  "options": [
+   "were",
+   "am",
+   "will be",
+   "was being"
+  ],
+  "answer": "were",
+  "wrong": {
+   "am": "這是和現實相反的假設，不是事實，不能用 am。",
+   "will be": "if 子句不用 will，而且這裡是假設語氣，用 were。",
+   "was being": "was being 是進行式，不是假設語氣的標準用法。"
+  },
+  "why": "If I were you 是假設語氣，說的是不可能成真的事，be 動詞一律用 were。",
+  "tip": "If I were you 是給建議的常用句型。",
+  "say": "If I were you, I would study harder for the test."
+ },
+ {
+  "id": "g8-s1-u3.b12",
+  "type": "situation",
+  "prompt": "朋友問你該不該把秘密告訴弟弟，你想給建議：「如果我是你，我會告訴他。」哪一句最合適？",
+  "text": "",
+  "options": [
+   "If I were you, I would tell him.",
+   "If I am you, I will tell him.",
+   "If I was you, I tell him."
+  ],
+  "answer": "If I were you, I would tell him.",
+  "wrong": {
+   "If I am you, I will tell him.": "我不可能真的是你，這是假設，不是事實，所以不能用 am 和 will。",
+   "If I was you, I tell him.": "主句缺少助動詞 would，而且假設語氣的 be 動詞用 were。"
+  },
+  "why": "與現實不符的假設，用 If I were ..., I would ...。",
+  "tip": "給建議：If I were you, I would ...。",
+  "say": "If I were you, I would tell him."
+ },
+ {
+  "id": "g8-s1-u3.b13",
+  "type": "fix",
+  "prompt": "哪一句才是正確的英文？",
+  "text": "",
+  "options": [
+   "I can't go out because it rain heavily.",
+   "I can't go out because it is raining heavily.",
+   "I can't go out because of it is raining heavily."
+  ],
+  "answer": "I can't go out because it is raining heavily.",
+  "wrong": {
+   "I can't go out because it rain heavily.": "it 是第三人稱單數，現在式動詞要加 s，或用 is raining 表示正在下雨。",
+   "I can't go out because of it is raining heavily.": "because of 後面接名詞，不接完整句子；接句子要用 because。"
+  },
+  "why": "because 後面接完整句子；because of 後面才接名詞。",
+  "tip": "because 接句子，because of 接名詞。",
+  "say": "I can't go out because it is raining heavily."
+ },
+ {
+  "id": "g8-s1-u3.b14",
+  "type": "cloze",
+  "prompt": "選出最適合填入空格的字。",
+  "text": "Mom will make a cake for us _____ we help her clean the kitchen.",
+  "options": [
+   "if",
+   "unless",
+   "although",
+   "because of"
+  ],
+  "answer": "if",
+  "wrong": {
+   "unless": "unless 是『除非不』，會變成『除非我們幫忙，媽媽才不做蛋糕』，意思反了。",
+   "although": "although 是轉折，這裡是條件，不是對立。",
+   "because of": "because of 後面要接名詞，不能接 we help her。"
+  },
+  "why": "幫忙打掃是做蛋糕的條件，用 if 引導。",
+  "tip": "條件用 if，除非不用 unless。",
+  "say": "Mom will make a cake for us if we help her clean the kitchen."
+ }
+]

@@ -1,0 +1,297 @@
+{
+ "d.diag-1942": {
+  "The SaaS vendor increased its customer service headcount by five junior support representatives.": "多雇五名客服新人與提價決策是否成功無關，無法反駁CEO說的失策。",
+  "Competing CRM software platforms experienced minor server latency downtime during the third quarter.": "競爭對手伺服器當機只是旁枝，沒有說明漲價後營收或獲利如何。",
+  "The vendor's chief marketing officer presented a keynote speech at a major technology summit.": "行銷長在高峰會演講只是公關活動，無法證明漲價帶來的結果。"
+ },
+ "d.diag-1943": {
+  "The watchmaker's master horologists receive specialized apprenticeships in the Swiss Jura canton.": "師傅在瑞士受訓屬於工藝背景，沒回答產量減半為何不會毀掉獲利。",
+  "Stainless steel commodity spot market prices fluctuated by five percent during the year.": "不鏽鋼價格波動五%與漲價三倍、減產一半的效應無關。",
+  "The watchmaker opened a single boutique showroom in central Tokyo.": "在東京開一間展示店太小，無法解釋整體營收與成本的變化。"
+ },
+ "d.diag-1944": {
+  "The airline operated a fleet comprised exclusively of modern Boeing 737 aircraft.": "機隊全是波音737只描述設備，沒比較行李費收入與流失的票收。",
+  "Flight attendants attended weekend workshops on de-escalating customer baggage disputes.": "空服員參加化解行李糾紛的工作坊，與行李費是否侵蝕盈餘無關。",
+  "Jet fuel consumption remained stable despite marginally lighter passenger luggage weights.": "燃油用量穩定只談成本，並未顯示行李費收入超過損失的票收。"
+ },
+ "d.diag-1945": {
+  "The television series received three nominations at an international entertainment awards ceremony.": "影集獲得三項提名只說明獎項，沒提供營收成長的其他來源。",
+  "The streaming service redesigned its mobile user interface to support portrait video playback.": "手機介面改成支援直式影片是產品功能，不是營收成長的替代解釋。",
+  "Competitor streaming platforms also introduced original science-fiction documentary programming.": "對手也推出科幻紀錄片只是市場現象，沒解釋該公司營收為何成長。"
+ },
+ "d.diag-1946": {
+  "The franchise launched a national television advertising campaign featuring animated mascots.": "電視廣告雖會增加成本，但題目問的是客人改點便宜餐點，廣告並非最佳解釋。",
+  "Local minimum wage regulations in three states increased by twenty-five cents per hour.": "基本工資每小時只調高二十五美分，幅度太小，不足以讓淨利歸零。",
+  "The franchise sourced paper beverage cups from a certified sustainable forestry supplier.": "改用永續林業的紙杯沒說成本是否改變，與營收創高利潤歸零無關。"
+ },
+ "d.diag-1947": {
+  "Because generic inhaler alternatives entered the market upon chemical patent expiry.": "學名藥上市是外部因素，題目強調降價使每件利潤由390降到90。",
+  "Because the corporate public relations department spent five million dollars on goodwill advertisements.": "公關花五百萬做公益廣告是另一筆支出，不是降價造成毛利下降的原因。",
+  "Because medical clinics stocked thirty days of inventory in warehouse distribution freezers.": "診所囤三十天存貨與單位毛利無關，也無法說明為何毛利減半。"
+ },
+ "d.diag-1948": {
+  "That raw lithium carbonate commodity prices will remain completely frozen for the next five years.": "鋰價五年凍結是不必要且不實際的假設，創辦人靠的是規模經濟壓低成本。",
+  "That state environmental emission credits can be auctioned to overseas diesel truck builders.": "排放權賣給柴油卡車廠與產量加倍能否獲利沒有關係。",
+  "That all sixty thousand manufactured vehicles will be painted in metallic pearl white.": "車子都漆成珍珠白只是外觀細節，與成本和獲利假設無關。"
+ },
+ "d.diag-1949": {
+  "Headphone consumers prioritize wireless Bluetooth codec latency above industrial design.": "藍牙延遲與設計的偏好無法說明降價後銷量增四成、毛利增三成的需求彈性。",
+  "Raw titanium driver components became fifteen percent cheaper on global commodity exchanges.": "鈦振膜變便宜是成本因素，題目問的是顧客需求對價格的反應。",
+  "Competitor headphone brands ceased all digital display banner advertising campaigns.": "對手停止橫幅廣告與題目提到的降價需求彈性無關。"
+ },
+ "d.diag-1950": {
+  "Because organic produce distribution hubs require specialized refrigerated climate lockers.": "有機蔬菜需要冷藏櫃是營運細節，沒說明LTV低於CAC為何不可持續。",
+  "Because recipe development chefs demand royalty bonuses for vegan dinner recipe cards.": "主廚要求食譜卡的版稅是小額成本，並非LTV低於CAC的核心原因。",
+  "Because packaging cardboard costs fluctuate during peak holiday e-commerce shipping seasons.": "紙箱價格在旺季波動只是成本波動，沒說明獲客成本高過客戶終身貢獻。"
+ },
+ "d.diag-1951": {
+  "Because international shipping container freight rates are projected to increase by five percent.": "海運運費上漲五%對所有業者都一樣，無法說明這種布料的優勢為何不持久。",
+  "Because consumer fashion trends consistently favor down-filled parkas over waterproof shells.": "消費者偏好羽絨外套是題外假設，原文沒提，也與防水面料專利無關。",
+  "Because synthetic polyester is derived from non-renewable petrochemical petroleum feedstocks.": "聚酯纖維來自石油只談原料，沒說明競爭者為何能輕易模仿。"
+ },
+ "d.diag-1952": {
+  "Metropolitan municipal authorities mandated that all ride-hailing vehicles pass annual smog tests.": "要求叫車通過年度排氣檢驗是法規，沒說明補貼停止後客人為何立刻離開。",
+  "Smartphone manufacturers released updated mobile operating system location protocols.": "手機系統更新定位協定是技術變動，不能解釋市占跌回百分之二十。",
+  "Automobile leasing finance companies increased interest rates on commercial fleet loans.": "租車公司調高車隊貸款利率是成本面，並非轉換成本為零的暴露。"
+ },
+ "d.diag-1953": {
+  "The startup's robotic surgical arms are fabricated from aircraft-grade anodized aluminum.": "機械手臂由航空級鋁製成屬於材料細節，不是進入醫院市場的障礙。",
+  "Surgical nurse unions bargain collectively for mandatory overtime rest provisions.": "護理師工會爭取加班休息權是勞資議題，與醫院更換設備的障礙無關。",
+  "Federal patent renewal fees must be paid to the patent office every four fiscal years.": "專利每四年繳一次續展費金額不大，也不是阻擋新進者的結構性障礙。"
+ },
+ "d.diag-1954": {
+  "Digital mobile advertising spending accounts for fifty percent of global marketing allocations.": "行動廣告占全球行銷一半是產業統計，無法說明複製品為何難以搶市占。",
+  "Server cloud hosting providers charge tiered bandwidth fees based on gigabyte throughput.": "雲端主機按流量收費是成本，不是用戶都在原平台的網路效應。",
+  "Social media algorithms prioritize short-form vertical video over textual discussion boards.": "演算法偏好短影片是內容趨勢，與模仿者缺乏既有用戶無關。"
+ },
+ "d.diag-1955": {
+  "The chemotherapy medication was originally discovered in deep-sea marine sponges.": "藥物最初發現於深海海綿只是來源故事，不能說明為何十五年沒有對手。",
+  "Oncologists prescribe chemotherapy combinations alongside oral corticosteroid pills.": "與口服類固醇搭配使用是臨床用法，與競爭護城河無關。",
+  "Hospital oncology suites are sterilized with gaseous hydrogen peroxide vapors.": "用過氧化氫蒸氣消毒病房是衛生作業，不能阻擋競爭者進入市場。"
+ },
+ "d.diag-1956": {
+  "Extreme ultraviolet lithography relies on mirrors polished with deuterium vapor deposition.": "極紫外光微影用氘氣拋光鏡面屬製程細節，沒解釋資本差距如何擴大優勢。",
+  "Cleanroom technicians wear electrostatic discharge suits fabricated from carbon filaments.": "無塵室技術員穿碳纖維防靜電衣是工作細節，與投資規模優勢無關。",
+  "Semiconductor silicon ingots are sliced into wafers using high-speed diamond wire saws.": "用鑽石線鋸切晶圓是製造步驟，不是資本規模滾動優勢的機制。"
+ },
+ "d.diag-1957": {
+  "The ERP software suite was originally coded in the C++ object-oriented programming language.": "系統最初用C++寫成屬於技術歷史，不能說明客戶為何很難離開。",
+  "Fortune 500 corporations maintain branch offices across at least four international continents.": "客戶在四大洲設有分公司是公司規模，不是更換系統的成本障礙。",
+  "Human resources managers conduct annual performance appraisals every December.": "人資每年十二月做績效考核只是例行事務，與客戶黏著度無關。"
+ },
+ "d.diag-1958": {
+  "Crushed limestone possesses a calcium carbonate purity rating exceeding ninety-five percent.": "碳酸鈣純度超過九十五%是品質特色，沒說明遠方採石場為何無法搶客戶。",
+  "Highway asphalt contractors use pneumatic-tired rollers to compact the roadbed.": "瀝青承包商用氣胎壓路機整平路基是施工細節，與運費門檻無關。",
+  "Quarry workers must complete federal mine safety health administration training modules.": "採石工要完成礦場安全訓練是人員規定，與市場區域性無關。"
+ },
+ "d.diag-1959": {
+  "Athletic shoe midsoles are molded from expanded thermoplastic polyurethane foam pellets.": "中底以發泡熱塑聚氨酯製成屬材料資訊，題目說鞋子品質相同，所以不是護城河。",
+  "Rubber sole vulcanization ovens operate at temperatures of 150 degrees Celsius.": "硫化橡膠大底的烤箱溫度是製程細節，不能解釋三成溢價為何維持。",
+  "Container ships transport manufactured footwear across transpacific commercial trade lanes.": "貨櫃船跨太平洋運鞋只是運輸，與品牌地位帶來的溢價無關。"
+ },
+ "d.diag-1960": {
+  "Because professional translators frequently possess academic certification in literary translation.": "譯者有文學翻譯證照是人才資歷，無法解釋免手續費平台為何難以搶走市場。",
+  "Because corporate purchase orders must be approved by internal accounts payable controllers.": "採購單須由應付帳款主管核准是內部流程，與平台的雙邊流動性無關。",
+  "Because internet translation platforms utilize cloud-based neural machine translation APIs.": "平台使用雲端機器翻譯API是技術，並非留住買賣雙方的原因。"
+ },
+ "d.diag-1961": {
+  "Moral hazard induced by asymmetric information between commercial banks and mortgage underwriters.": "道德風險談銀行與房貸承銷人的資訊落差，與租金管制導致房源減少無關。",
+  "Monopolistic price-gouging by regional municipal electric utility providers.": "題目是租金管制，不是公用電力公司的獨占哄抬價格。",
+  "Hyperinflation driven by municipal bond issuances for civic stadium construction.": "惡性通膨與球場公債無關，題目的現象是房東退出或不維修。"
+ },
+ "d.diag-1962": {
+  "Regulatory capture by environmental sustainability non-governmental lobbying organizations.": "環保團體遊說的監管俘虜與銀行投機衍生性商品的動機無關。",
+  "Adverse selection among elderly depositors seeking tax-free municipal retirement accounts.": "逆向選擇講的是老年存款人與免稅帳戶，並不解釋銀行冒險行為。",
+  "Technological disruption from decentralized cryptocurrency mining operations.": "加密貨幣挖礦的技術衝擊與銀行因保險而冒險投資沒有關係。"
+ },
+ "d.diag-1963": {
+  "Labor unions mandated that corporate apprentices complete four years of mechanical training.": "工會要求學徒受訓四年與臨時工合約暴增四成沒有直接因果。",
+  "The municipality reduced corporate income tax rates on multinational software conglomerates.": "降低軟體企業所得稅不會說明為何僱主改用短期合約取代正職。",
+  "Workers voluntarily forfeited healthcare insurance benefits to seek flexible freelancing.": "員工自願放棄健保去當自由工作者與題意不合，原因是僱主解僱成本變高。"
+ },
+ "d.diag-1964": {
+  "Polypropylene bags emit chlorofluorocarbons when composted in commercial municipal landfills.": "聚丙烯袋堆肥釋出氟氯碳化物是不實科學說法，也不是用量增加的原因。",
+  "Supermarket chains purchased automated checkout scanning kiosks manufactured overseas.": "超市買進自助結帳機與塑膠用量增加二成無關。",
+  "Consumers substituted organic cotton produce mesh bags during suburban farmers' markets.": "改用有機棉網袋只是小規模替代，沒說明為何塑膠總用量反而上升。"
+ },
+ "d.diag-1965": {
+  "Subsidized irrigation water was contaminated with trace agricultural chemical runoff.": "灌溉水遭農藥污染是水質問題，不是地下水位下降三倍的行為扭曲。",
+  "Farmers sold surplus electrical kilowatt-hours back to regional power grid distributors.": "農民把多餘電力賣回電網不會導致超抽地下水，題目重點是電價補貼。",
+  "Provincial agricultural extension agents distributed hybrid drought-resistant wheat grains.": "推廣抗旱小麥品種反而應減少用水，無法解釋水位加速下降。"
+ },
+ "d.diag-1966": {
+  "Hospital cafeterias switched to offering organic plant-based patient recovery broths.": "醫院餐廳改供有機植物性湯品與心臟手術的死亡率指標無關。",
+  "Cardiac operating theaters were upgraded with robotic automated bypass heart-lung pumps.": "手術室升級機器人人工心肺機是設備進步，不是鑽指標漏洞。",
+  "Postoperative nurses were required to complete annual continuing cardiology coursework.": "護理師每年上心臟病學進修課屬訓練，不是為了美化死亡率指標。"
+ },
+ "d.diag-1967": {
+  "Small enterprises systematically underpaid corporate payroll taxes across provincial regions.": "小企業少繳薪資稅是逃稅，無法解釋四十九人處聚集、五十至七十人幾乎沒有。",
+  "Multinational industrial corporations purchased domestic enterprise patent assets.": "跨國公司購買專利資產與員工人數落在四十九人沒有關係。",
+  "Employees in forty-nine-person firms formed unauthorized independent labor bargaining councils.": "員工組成獨立工會議事會與規模門檻造成的分布缺口無關。"
+ },
+ "d.diag-1968": {
+  "A negative Pigouvian environmental consumption externality on suburban housing.": "皮古稅的負外部性講環境消耗，沒有描述人們為領賞金而養眼鏡蛇。",
+  "The prisoner's dilemma in non-cooperative game theoretic trade negotiations.": "囚徒困境講的是談判者的賽局，不是賞金鼓勵反效果。",
+  "Schumpeterian creative destruction in agricultural municipal economies.": "熊彼得的創造性破壞講新技術取代舊產業，與賞金政策的反效果不同。"
+ },
+ "d.diag-1969": {
+  "Adverse selection among bicycle lock manufacturers utilizing substandard magnesium alloys.": "逆向選擇指鎖廠商用劣質鎂合金？這是生產問題，不是投保人行為改變。",
+  "Municipal police forces reallocated patrolling officers away from downtown transit hubs.": "警察調走巡邏人力是外部因素，無法解釋保戶竊案理賠為何增三倍。",
+  "Bicycle thieves utilized hydraulic angle grinders capable of cutting hardened boron steel.": "賊用液壓砂輪機切硬化鋼是犯案工具，不說明為何只有保戶理賠暴增。"
+ },
+ "d.diag-1970": {
+  "Global commercial airline passenger ticket prices increased by fifteen percent on long-haul flights.": "長程機票漲價十五%不是原文提到的後果，也不是砍林的國際性連鎖效應。",
+  "Diesel automobile engine fuel injection nozzles suffered chronic particulate clog degradation.": "柴油噴嘴因微粒堵塞是引擎技術問題，不是題目問的國際性災難。",
+  "Domestic freight locomotives were replaced with electric high-speed passenger rail sets.": "貨運火車改成電動客運高鐵與生質柴油規定無關。"
+ },
+ "d.diag-1971": {
+  "Publication bias in peer-reviewed clinical medicine journals.": "發表偏誤講期刊偏愛正面結果，與參與者因噁心退出而剩下耐受者無關。",
+  "The trial did not mandate a daily caloric deficit of five hundred calories.": "沒有規定每天少攝取五百大卡是試驗設計問題，並非減重數字失真的原因。",
+  "Placebo control participants were not provided with digital weighing scales.": "安慰劑組沒有體重計不影響退出率造成的偏誤，也與減重數據失真無關。"
+ },
+ "d.diag-1972": {
+  "Migraine headaches are biologically correlated with cranial vascular constriction.": "偏頭痛與腦血管收縮有關是醫學背景，不是實驗設計的缺陷。",
+  "The trial enrolled participants diagnosed with episodic tension headaches.": "招收緊縮型頭痛的患者是受試者問題，題目指出的缺陷是沒有雙盲。",
+  "The experimental drug was synthesized from synthetic ergot alkaloid compounds.": "藥物由麥角鹼合成是製藥來源，不能推翻研究結論。"
+ },
+ "d.diag-1973": {
+  "Commercial coffee roasters utilize robusta beans imported from equatorial nations.": "咖啡豆用羅布斯塔種是烘焙商細節，與運動等生活習慣的混淆無關。",
+  "Caffeine binds antagonistically to adenosine neuro-receptors in the cerebral cortex.": "咖啡因與腺苷受體結合是機制，不是會混淆因果的生活型態因素。",
+  "Non-coffee drinkers in the cohort consumed bottled sparkling mineral water.": "不喝咖啡者喝氣泡礦泉水沒有說明為何喝咖啡者較健康。"
+ },
+ "d.diag-1974": {
+  "Recall bias among women completing retrospective pregnancy wellness questionnaires.": "回憶偏誤是問卷中靠記憶作答，診所挑選年輕健康病患才是主因。",
+  "Observer-expectancy bias during microscopic embryological cleavage inspections.": "觀察者期望偏誤講的是檢查時的主觀，與診所只挑易受孕病患無關。",
+  "Attrition bias resulting from couples relocating out of state during ovulation cycles.": "流失偏誤是中途退出，診所的問題是一開始就拒收困難病患。"
+ },
+ "d.diag-1975": {
+  "Eczema flares are triggered by psychological stress and environmental dry humidity.": "濕疹受壓力與乾燥影響是背景知識，不能反駁成分有效的結論。",
+  "The trial enrolled six hundred pediatric patients across fifteen academic medical centers.": "招收六百名兒童、分布十五個醫學中心是樣本規模，不是推翻理由。",
+  "The active pharmaceutical ingredient inhibited Janus kinase enzymatic signaling pathways.": "藥物抑制JAK訊號是機制說明，並沒有解釋基底乳霜效果為何相同。"
+ },
+ "d.diag-1976": {
+  "Multivitamin capsules contain synthetic water-soluble B-complex vitamins.": "維生素含合成水溶性B群是成分資訊，不能質疑長壽的因果結論。",
+  "Elderly individuals require calcium supplementation to maintain bone mineral density.": "老人需要鈣補充骨質密度與維生素和壽命的因果無關。",
+  "Multivitamins are manufactured under current Good Manufacturing Practice guidelines.": "符合良好製造規範只是品質保證，不能說明富裕等因素造成差異。"
+ },
+ "d.diag-1977": {
+  "Sampling bias resulting from surveying students residing exclusively in freshman dormitories.": "只調查大一宿舍屬抽樣偏誤，但題目的重點是症狀最高時被選入而自然好轉。",
+  "Observer bias among counselors conducting semi-structured diagnostic intake interviews.": "諮商師訪談時的觀察者偏誤與症狀自行回落的現象不同。",
+  "Hawthorne effects generated by students knowing they were enrolled in a longitudinal study.": "霍桑效應是被觀察而改變行為，並非症狀極端後自然回到平均。"
+ },
+ "d.diag-1978": {
+  "Survivorship bias among elderly arthritis patients surviving past age eighty.": "存活者偏誤是只看到活下來的人，不是病人高估童年吃糖量。",
+  "Hindsight bias among orthopedic surgeons reviewing radiographic knee joint images.": "醫師事後諸葛看X光屬於後見之明偏誤，與病人回想飲食無關。",
+  "Selection bias driven by recruiting arthritis patients through television infomercials.": "透過電視廣告招募病人是選樣偏誤，不是病人誇大過去飲食的回憶偏誤。"
+ },
+ "d.diag-1979": {
+  "Immunotherapy mechanisms utilize chimeric antigen receptor modified cytotoxic T-cells.": "CAR-T細胞的作用機制是醫學說明，沒有指出對照組的不公平。",
+  "The clinical trial was conducted across six comprehensive National Cancer Institute centers.": "在六個癌症中心進行是試驗規模，不是削弱對照組比較的混淆因素。",
+  "Participating oncologists had completed medical fellowship training at tertiary clinics.": "腫瘤醫師曾受專科訓練是資歷，與歷史對照組的時代差異無關。"
+ },
+ "d.diag-1980": {
+  "Low-density lipoprotein is synthesized primarily within human hepatocytes in the liver.": "低密度脂蛋白在肝細胞合成是生理知識，不是FDA質疑的試驗缺陷。",
+  "Participants were compensated with a nominal travel reimbursement stipend for clinical visits.": "給受試者交通補助屬於小額補償，與外部效度和代表性無關。",
+  "The medication was administered as a once-monthly subcutaneous automated injection pen.": "每月一次皮下注射筆是給藥方式，不影響成人族群的代表性。"
+ },
+ "d.diag-1981": {
+  "A supply-side monopoly orchestrating artificial shortages to drive up wholesale sushi prices.": "供給方壟斷會人為製造短缺，但漁場開放取用，每艘船各自多捕才是問題。",
+  "Adverse selection among boatbuilders fabricating lightweight fiber-reinforced hulls.": "造船業逆向選擇與資源被過度捕撈無關，原因是公共資源無人管理。",
+  "Excessive government price controls capping retail market fish prices at seafood markets.": "政府限制魚價與漁獲量下降無關，題目的問題是開放資源被過度利用。"
+ },
+ "d.diag-1982": {
+  "Moral hazard arising from municipal utility debt restructuring.": "道德風險講的是債務重整的誘因，與工廠排放二氧化硫的外部成本不同。",
+  "The base rate fallacy in industrial engineering risk modeling.": "基準率謬誤是機率推理錯誤，不是市場失靈。",
+  "A natural monopoly requiring government-mandated price-ceiling interventions.": "自然獨占需要價格上限管制，與酸雨傷及下風處無關。"
+ },
+ "d.diag-1983": {
+  "Predatory pricing by regional fertilizer and agricultural seed wholesalers.": "掠奪性訂價是批發商壓低價格擠走對手，與鄰居不願分攤成本不同。",
+  "Information asymmetry between organic farmers and urban grocery cooperatives.": "資訊不對稱講買賣雙方資訊落差，不是鄰居坐享其成的問題。",
+  "Diseconomies of scale in suburban agricultural farm parcel layouts.": "規模不經濟談農地配置，無法說明為何鄰居不肯出錢。"
+ },
+ "d.diag-1984": {
+  "Subsidizing the paper mill's purchase of commercial timber logging land.": "補貼買林地不會讓造紙廠負擔污染成本，反而鼓勵生產。",
+  "Imposing an import tariff on finished recycled printer paper reams.": "對再生紙課進口關稅保護市場，卻沒有讓污染者付出代價。",
+  "Eradicating municipal water quality testing standards for river basin water.": "取消水質檢測標準只會讓污染更難被發現，無法讓成本內部化。"
+ },
+ "d.diag-1985": {
+  "A government price floor fixing the wholesale market price of aged Gruyere cheese.": "乳酪價格下限保障的是批發價，不是管理牧場的共同規則。",
+  "International intellectual property protection over artisanal cheese cultivation cultures.": "智慧財產權保護的是乳酪菌種，與限制每戶放牧頭數無關。",
+  "Vertical integration of dairy distribution cooperatives across alpine cantons.": "酪農合作社垂直整合是供應鏈做法，不是社區監督放牧的制度。"
+ },
+ "d.diag-1986": {
+  "The municipal government must expropriate the refinery and operate it as a state-owned utility.": "政府徵收煉油廠改為國營是另一種解法，不是寇斯定理的談判條件。",
+  "The price of crude oil futures contracts must remain stable on international commodities exchanges.": "原油期貨價格穩定與談判能否有效率沒有關係。",
+  "Residents must unanimously consent to relocate fifty miles outside the metropolitan zone.": "居民一致同意搬遷五十英里不是寇斯定理的前提。"
+ },
+ "d.diag-1987": {
+  "Factory B will sue Factory A in civil court for anti-competitive industrial collusion.": "B工廠控告A工廠聯合壟斷不合理，A、B是互相交易減排的關係。",
+  "Both factories will immediately shut down manufacturing operations and declare bankruptcy.": "兩家工廠倒閉並不是交易結果，A減排便宜，B可以購買排放許可。",
+  "The municipal government will double corporate franchise taxes on both factories.": "政府把兩家公司特許稅加倍與排放權交易的結果不符。"
+ },
+ "d.diag-1988": {
+  "Monopsonistic market dominance in regional raw honey wholesale purchasing.": "買方獨占講的是壟斷採購蜂蜜，不是養蜂人讓鄰居花園受惠。",
+  "The free-rider problem bankrupting urban honey-harvesting entrepreneurs.": "搭便車問題是不付費卻享受，題目是養蜂人替鄰居帶來免費利益。",
+  "Adverse selection among commercial horticulture nursery suppliers.": "逆向選擇講園藝苗圃的資訊落差，與蜜蜂授粉的外溢利益無關。"
+ },
+ "d.diag-1989": {
+  "A complete lack of certified commercial airline pilots in the regional labor market.": "缺少合格飛行員不是屋主不去賄賂航空公司的原因，真正障礙是協調成本。",
+  "Federal noise pollution regulations mandating decibel meters on residential street corners.": "聯邦噪音法規要求裝分貝計，沒有說明為何屋主無法協商。",
+  "The airline's corporate charter prohibiting financial transactions with non-corporate entities.": "航空公司章程禁止與非企業交易是額外編造的假設，原文並未提到。"
+ },
+ "d.diag-1990": {
+  "Marine satellite transponders cannot penetrate oceanic seawater beneath ten meters depth.": "衛星應答器無法穿透十公尺海水不影響公海漁業的執法問題。",
+  "International shipping corridors are exempt from maritime navigation radar protocols.": "航運航道免用導航雷達與公海非排他性共享資源無關。",
+  "Bottom trawling vessels consume twenty percent less marine bunker fuel than longline boats.": "拖網船比延繩釣船少耗二十%燃油是成本差，與管制失效無關。"
+ },
+ "d.diag-1991": {
+  "A sudden global shortage of silver halide emulsion chemicals used in photo development.": "銀鹽乳劑短缺是原料問題，題目說的是對數位感光元件的態度。",
+  "Hostile antitrust litigation brought by domestic consumer protection enforcement commissions.": "反壟斷訴訟與傳統客戶導向導致低估新技術無關。",
+  "Macroeconomic currency hyperinflation eroding consumer disposable entertainment spending.": "貨幣惡性通膨是總體環境，無法說明這家公司為何破產。"
+ },
+ "d.diag-1992": {
+  "Automotive dealership franchises require certified service technicians to replace spark plugs.": "汽車經銷商要有技師換火星塞，與電池技術商業化瓶頸無關。",
+  "Consumer automotive financing loans have average amortization durations of sixty months.": "購車貸款平均六十個月是融資條件，不是電池量產的障礙。",
+  "Highway toll transponder systems are incompatible with carbon-fiber vehicle chassis.": "高速公路電子收費不相容碳纖維底盤是無關的小問題，不是技術商業化瓶頸。"
+ },
+ "d.diag-1993": {
+  "Refusing to settle intellectual property patent disputes with microprocessor chip designers.": "拒絕與晶片設計商和解專利糾紛，不是不願發展公有雲的策略失敗。",
+  "Authorizing excessive employee stock option dilution during a private equity takeover bid.": "員工股票選擇權稀釋與私募收購是財務議題，與雲端轉型決策無關。",
+  "Underestimating the electricity cooling consumption required by server liquid cooling tubes.": "低估伺服器水冷管耗電是營運細節，不是CEO不蠶食自家營收的錯誤。"
+ },
+ "d.diag-1994": {
+  "A linear regression model driven by continuous incremental advertising spending adjustments.": "線性迴歸與廣告支出逐步調整無法描述先慢、再暴增、後趨緩的採用曲線。",
+  "The boom-and-bust Austrian capital investment cycle driven by central bank interest manipulation.": "奧地利學派的景氣循環講利率扭曲投資，與技術採用曲線不同。",
+  "Predatory price undercutting designed to drive brick-and-mortar retail competitors into liquidation.": "掠奪性降價是削價戰略，並非技術採用的S形曲線。"
+ },
+ "d.diag-1995": {
+  "Because minicomputer operating systems were written in rudimentary assembly code.": "迷你電腦作業系統用組合語言寫成是技術細節，與八吋硬碟被忽略的致命原因無關。",
+  "Because 14-inch drive spindles were lubricated with synthetic fluoro-chemical oils.": "十四吋硬碟轉軸使用氟化油潤滑是製造細節，不是被顛覆的原因。",
+  "Because mainframe computer leases were negotiated on multi-year institutional procurement schedules.": "大型主機租約多年期是採購方式，並非破壞性創新的路徑。"
+ },
+ "d.diag-1996": {
+  "Overspending corporate cash reserves on regional commercial warehouse leases.": "倉庫租約花太多錢是支出問題，題目的錯誤是以現況限制評估新技術。",
+  "Failing to patent plastic clamshell protective cassette tape storage cases.": "沒有為塑膠卡匣盒申請專利，與寬頻變快導致破產沒有關聯。",
+  "Mandating that store managers enforce forty-eight-hour movie return deadlines.": "要求四十八小時內還片是營運規則，不是策略規劃失誤的核心。"
+ },
+ "d.diag-1997": {
+  "Physical mechanical keyboard switches cost sixty percent more to fabricate than capacitive glass.": "機械鍵盤開關成本比電容式玻璃高六成屬製造成本，不是領導層的認知陷阱。",
+  "Enterprise email servers required proprietary encryption firewall connection tokens.": "電子郵件伺服器要加密防火牆權杖是技術需求，與迷戀實體按鍵的盲點無關。",
+  "Corporate IT directors signed multi-year corporate telecommunication enterprise mobile contracts.": "IT主管簽多年期電信合約是客戶採購，並非公司固守舊特色的認知錯誤。"
+ },
+ "d.diag-1998": {
+  "Commercial office real estate lease documents require physical notarized signatures.": "辦公室租約需要實體公證簽名是行政程序，律師事務所面臨的威脅是演算法自動化。",
+  "Law school graduates must pass state bar examinations to represent clients in litigation.": "律師須通過州律師考試是執業資格，不是演算法對合夥人的競爭威脅。",
+  "Corporate general counsels retain outside litigation attorneys on billable hourly retainers.": "總顧問以時薪聘請外部律師是收費方式，沒說明為何會被取代。"
+ },
+ "d.diag-1999": {
+  "Rooftop solar panels utilize polycrystalline photovoltaic silicon wafer arrays.": "屋頂太陽能板使用多晶矽是材料資訊，不是電力公司的防禦動作。",
+  "Electric power transformers step down high-voltage transmission power to 120-volt current.": "變壓器降到一百二十伏特是電力技術，與電力公司設置障礙無關。",
+  "Nuclear power reactors undergo mandatory refuelling outages every eighteen months.": "核反應爐每十八個月停機換料與公用事業的防禦手段沒有關係。"
+ },
+ "d.diag-2000": {
+  "Quartz crystal oscillators vibrate at precisely 32,768 hertz when stimulated by electric current.": "石英振盪器每秒震動32768次說明的是石英錶技術，不是機械錶品牌的轉型策略。",
+  "Watchmakers in Switzerland export eighty percent of finished chronometers to Asian luxury boutiques.": "瑞士手錶八成出口亞洲是銷售資訊，無法說明品牌如何轉向奢華定位。",
+  "Mechanical watch mainsprings are coiled using specialized cobalt-nickel-chromium alloys.": "發條使用鈷鎳鉻合金是零件材料，不是價值主張的策略轉變。"
+ }
+}

@@ -28,6 +28,14 @@ for (const part of fs.readdirSync(OUT).filter(f => f.endsWith('.tsv')).sort()) {
 }
 // Meanings that were simply wrong in the source. zh stays because the MP3 speaks it; the screen shows the corrected gloss.
 for (const [id, gloss] of Object.entries(JSON.parse(fs.readFileSync('data/card_rewrite/gloss_overrides.json', 'utf8')))) if (byId.has(id)) byId.get(id).gloss = gloss;
+// Cards whose source sense was rare or wrong: teach the common meaning instead.
+const patches = { ...(fs.existsSync('data/card_rewrite/sense_audit_patches.json') ? JSON.parse(fs.readFileSync('data/card_rewrite/sense_audit_patches.json', 'utf8')) : {}), ...JSON.parse(fs.readFileSync('data/card_rewrite/card_patches.json', 'utf8')) };
+for (const [id, patch] of Object.entries(patches)) if (byId.has(id)) Object.assign(byId.get(id), patch);
+// Forced sound-alikes built on death or killing are not child-safe hooks; an empty tip is better (real roots such as mort stay).
+const UNSAFE_TIP = /死|殺|血腥|打死/;
+let unsafe = 0;
+for (const c of db) if (UNSAFE_TIP.test(c.memoryTip || '') && !/mort|mori|死水|死板/.test(c.memoryTip)) { c.memoryTip = ''; unsafe++; }
+stats.unsafeTipsRemoved = unsafe;
 const src = fs.readFileSync(FILE, 'utf8');
 const startMark = 'export const FLASHCARD_DATABASE = [';
 const a = src.indexOf(startMark);

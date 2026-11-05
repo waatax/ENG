@@ -1,0 +1,233 @@
+[
+ {
+  "id": "c-jhs-j6.b1",
+  "type": "meaning",
+  "prompt": "你聽到這句話，意思是什麼？",
+  "text": "Sorry, was that thirteen or thirty?",
+  "options": [
+   "請問是十三還是三十",
+   "請問是三還是三十",
+   "請問是十三還是十",
+   "請問是十三還是三百"
+  ],
+  "answer": "請問是十三還是三十",
+  "wrong": {
+   "請問是三還是三十": "thirteen 是十三，不是三。",
+   "請問是十三還是十": "thirty 是三十，不是十。",
+   "請問是十三還是三百": "thirty 是三十，不是三百。"
+  },
+  "why": "thirteen 重音在後面（thir-TEEN），thirty 重音在前面（THIR-ty），聽重音才能分辨。",
+  "tip": "-teen 重音在後，-ty 重音在前。",
+  "say": "Was that thirteen or thirty?"
+ },
+ {
+  "id": "c-jhs-j6.b2",
+  "type": "situation",
+  "prompt": "你沒聽清楚店員說的價格，想請對方再說一次，哪句最有禮貌？",
+  "text": "",
+  "options": [
+   "Sorry, could you say that again, please?",
+   "What? Say again!",
+   "I no hear. Again.",
+   "You speak too fast, repeat."
+  ],
+  "answer": "Sorry, could you say that again, please?",
+  "wrong": {
+   "What? Say again!": "語氣太直接，像命令對方，不夠禮貌。",
+   "I no hear. Again.": "否定句要用 didn't hear，也不夠禮貌。",
+   "You speak too fast, repeat.": "直接責備對方，也沒有請求的語氣。"
+  },
+  "why": "Sorry, could you ... please 是禮貌請對方重複的標準說法。",
+  "tip": "沒聽懂就說 Could you say that again?",
+  "say": "Sorry, could you say that again, please?"
+ },
+ {
+  "id": "c-jhs-j6.b3",
+  "type": "cloze",
+  "prompt": "聽力常見連音：選出 want to 在口語中常聽成的樣子。",
+  "text": "I _____ go home now.",
+  "options": [
+   "wanna",
+   "wonder",
+   "wander",
+   "winner"
+  ],
+  "answer": "wanna",
+  "wrong": {
+   "wonder": "wonder 是「想知道」，發音和 want to 的連音不同。",
+   "wander": "wander 是「漫步」，句意不合。",
+   "winner": "winner 是「贏家」，句意不合。"
+  },
+  "why": "口語中 want to 常連讀成 wanna，意思仍是「想要」。",
+  "tip": "want to = wanna，是常見的口語連音。",
+  "say": "I want to go home now."
+ },
+ {
+  "id": "c-jhs-j6.b4",
+  "type": "meaning",
+  "prompt": "你聽到：The train leaves at two fifteen。火車幾點開？",
+  "text": "",
+  "options": [
+   "2:15",
+   "2:50",
+   "12:15",
+   "5:12"
+  ],
+  "answer": "2:15",
+  "wrong": {
+   "2:50": "fifty 是五十，fifteen 才是十五。",
+   "12:15": "聽到的是 two，不是 twelve。",
+   "5:12": "順序顛倒，應該是先聽到兩點。"
+  },
+  "why": "two fifteen 就是兩點十五分。",
+  "tip": "fifteen 與 fifty 重音位置不同，要聽清楚。",
+  "say": "The train leaves at two fifteen."
+ },
+ {
+  "id": "c-jhs-j6.b5",
+  "type": "fix",
+  "prompt": "哪一個字的 b 不發音？",
+  "text": "",
+  "options": [
+   "lamb",
+   "baby",
+   "table",
+   "bag"
+  ],
+  "answer": "lamb",
+  "wrong": {
+   "baby": "baby 的 b 要發音，/ˈbeɪbi/。",
+   "table": "table 的 b 要發音。",
+   "bag": "bag 的 b 在字首，要發音。"
+  },
+  "why": "lamb 結尾的 mb，b 不發音，念成 /læm/。",
+  "tip": "-mb 結尾的 b 常不發音：lamb、comb、climb。",
+  "say": "The lamb is white."
+ },
+ {
+  "id": "c-jhs-j6.b6",
+  "type": "situation",
+  "prompt": "廣播說：The next train will arrive in ten minutes。你應該怎麼理解？",
+  "text": "",
+  "options": [
+   "下一班火車十分鐘後到",
+   "火車十分鐘前到了",
+   "火車會在十點到",
+   "火車已經離開"
+  ],
+  "answer": "下一班火車十分鐘後到",
+  "wrong": {
+   "火車十分鐘前到了": "will arrive 是未來，不是過去。",
+   "火車會在十點到": "in ten minutes 是「十分鐘後」，不是十點。",
+   "火車已經離開": "will arrive 表示還沒到。"
+  },
+  "why": "in + 一段時間，表示從現在起多久之後。",
+  "tip": "in ten minutes = 十分鐘後。",
+  "say": "The next train will arrive in ten minutes."
+ },
+ {
+  "id": "c-jhs-j6.b7",
+  "type": "cloze",
+  "prompt": "選出最適合的片語。",
+  "text": "Please _____ at the front desk before ten o'clock tomorrow morning.",
+  "options": [
+   "check out",
+   "check in on",
+   "check on of",
+   "check up with"
+  ],
+  "answer": "check out",
+  "wrong": {
+   "check in on": "check in on 是去關心某人，不是辦理退房。",
+   "check on of": "check on of 不是正確片語。",
+   "check up with": "check up with 是向某人確認，不是辦退房。"
+  },
+  "why": "check out 是辦理退房，常出現在旅館相關聽力題。",
+  "tip": "飯店：check in 入住，check out 退房。",
+  "say": "Please check out before ten o'clock."
+ },
+ {
+  "id": "c-jhs-j6.b8",
+  "type": "meaning",
+  "prompt": "你聽到 Can I have a cup of tea? 對方的需求是什麼？",
+  "text": "",
+  "options": [
+   "想要一杯茶",
+   "想要一杯咖啡",
+   "想要一個杯子",
+   "想要茶葉"
+  ],
+  "answer": "想要一杯茶",
+  "wrong": {
+   "想要一杯咖啡": "聽到的是 tea，不是 coffee。",
+   "想要一個杯子": "a cup of tea 是一杯茶，不是只要杯子。",
+   "想要茶葉": "a cup of tea 指泡好的一杯，不是茶葉。"
+  },
+  "why": "a cup of tea 就是一杯茶，是向別人請求飲料。",
+  "tip": "a cup of 後面接飲料。",
+  "say": "Can I have a cup of tea?"
+ },
+ {
+  "id": "c-jhs-j6.b9",
+  "type": "fix",
+  "prompt": "哪一句與聽到的「I can't go」意思一致？",
+  "text": "",
+  "options": [
+   "I am not able to go.",
+   "I am able to go.",
+   "I want to go.",
+   "I must go."
+  ],
+  "answer": "I am not able to go.",
+  "wrong": {
+   "I am able to go.": "這是肯定句，與 can't 相反。",
+   "I want to go.": "want to go 是「想去」，表達意願，並沒有說不能去，和 can't go 的意思不同。",
+   "I must go.": "must 是「必須去」，與 can't go 相反。"
+  },
+  "why": "can't 是 cannot 的縮寫，意思與 not able to 相同。",
+  "tip": "can't 與 can 的差別要聽尾音 t。",
+  "say": "I can't go."
+ },
+ {
+  "id": "c-jhs-j6.b10",
+  "type": "situation",
+  "prompt": "朋友在電話中說：I'll catch up with you later。他的意思是什麼？",
+  "text": "",
+  "options": [
+   "晚點我會追上你",
+   "我會把你抓起來",
+   "我會遲到所以不去",
+   "我在趕上你的車"
+  ],
+  "answer": "晚點我會追上你",
+  "wrong": {
+   "我會把你抓起來": "catch 在這裡不是抓人，catch up with 是追上。",
+   "我會遲到所以不去": "句子沒有說不去，只是之後會趕上。",
+   "我在趕上你的車": "句中沒有提到車，catch 在這裡是「趕上、追上」，不是搭車的意思。"
+  },
+  "why": "catch up with 的意思是追上、跟上，I'll 是 I will 的縮寫，表示之後會做。",
+  "tip": "catch up with = 追上、跟上進度。",
+  "say": "I'll catch up with you later."
+ },
+ {
+  "id": "c-jhs-j6.b11",
+  "type": "fix",
+  "prompt": "哪一句與「It's a quarter past three」表示同一個時間？",
+  "text": "",
+  "options": [
+   "It's three fifteen.",
+   "It's three forty-five.",
+   "It's two forty-five.",
+   "It's three fifty."
+  ],
+  "answer": "It's three fifteen.",
+  "wrong": {
+   "It's three forty-five.": "a quarter past 是過幾分，不是差一刻。",
+   "It's two forty-five.": "兩點四十五是差一刻三點，不是過一刻。",
+   "It's three fifty.": "fifty 是五十分，quarter 是十五分。"
+  },
+  "why": "a quarter 是十五分鐘，a quarter past three 就是三點十五分。",
+  "tip": "quarter past = 過一刻（十五分）。",
+  "say": "It's a quarter past three."
+ }
+]

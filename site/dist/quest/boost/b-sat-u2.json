@@ -1,0 +1,149 @@
+[
+ {
+  "id": "b-sat-u2.b1",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "The lighthouse was built in 1850 _____ it still guides ships safely into the harbor today.",
+  "options": [
+   "; remarkably, it",
+   "which remarkably it",
+   "and remarkably still guiding it",
+   "so remarkable that it"
+  ],
+  "answer": "; remarkably, it",
+  "wrong": {
+   "which remarkably it": "which 引導形容子句，後面卻又接完整主詞 it，結構重複，句子無法成立。",
+   "and remarkably still guiding it": "and 後面接 guiding 會讓兩部分不對等，且後面的 it 變成多餘。",
+   "so remarkable that it": "so remarkable that 要搭配形容詞結果句型，這裡語意變成「如此驚人以致於」，與前一句的因果關係不符。"
+  },
+  "why": "兩個獨立子句可以用分號連接，轉折副詞 remarkably 後面接逗號。",
+  "tip": "獨立子句 + ; 副詞, + 獨立子句。",
+  "say": "The lighthouse was built in 1850; remarkably, it still guides ships safely into the harbor today."
+ },
+ {
+  "id": "b-sat-u2.b2",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "The museum has three permanent galleries _____ sculpture, textiles, and photography.",
+  "options": [
+   "devoted to",
+   "devoted of",
+   "devote to",
+   "devoting for"
+  ],
+  "answer": "devoted to",
+  "wrong": {
+   "devoted of": "be devoted to 的介系詞是 to，不能用 of。",
+   "devote to": "galleries 在這裡要用過去分詞 devoted 修飾，原形 devote 文法不對。",
+   "devoting for": "devoting 的主動語意不對，展廳不會主動投入，而且介系詞也不是 for。"
+  },
+  "why": "devoted to 是「專門用於」的過去分詞片語，用來修飾 galleries。",
+  "tip": "devoted to 是專門用於某事的意思。",
+  "say": "The museum has three permanent galleries devoted to sculpture, textiles, and photography."
+ },
+ {
+  "id": "b-sat-u2.b3",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "Maria Torres, _____ studies coral reefs, will speak at the conference.",
+  "options": [
+   "who",
+   "which",
+   "whose she",
+   "whom she"
+  ],
+  "answer": "who",
+  "wrong": {
+   "which": "which 用於事物，Maria Torres 是人，要用 who。",
+   "whose she": "whose 是所有格，不能再接主詞 she。",
+   "whom she": "whom 是受詞，這裡 studies 缺主詞，需要主格 who。"
+  },
+  "why": "關係代名詞指人且作主詞，用 who。",
+  "tip": "指人且當主詞：who。",
+  "say": "Maria Torres, who studies coral reefs, will speak at the conference."
+ },
+ {
+  "id": "b-sat-u2.b4",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "The expedition's supplies, _____ included food, tents, and medicine, were stored in a cave.",
+  "options": [
+   "which",
+   "what",
+   "that were",
+   "who"
+  ],
+  "answer": "which",
+  "wrong": {
+   "what": "what 不能作非限定關係代名詞引導補充說明。",
+   "that were": "逗號後面的補充說明不能用 that，且 that were included 會使 included 多餘。",
+   "who": "supplies 是物品，不是人，不能用 who。"
+  },
+  "why": "逗號之後的補充說明用 which，指物品。",
+  "tip": "逗號後補充說明：which，不是 that。",
+  "say": "The expedition's supplies, which included food, tents, and medicine, were stored in a cave."
+ },
+ {
+  "id": "b-sat-u2.b5",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "Of all the instruments in the orchestra, the cello _____ the closest to the human voice.",
+  "options": [
+   "sounds",
+   "sound",
+   "have sounded",
+   "are sounding"
+  ],
+  "answer": "sounds",
+  "wrong": {
+   "sound": "主詞 the cello 是單數，現在式動詞應加 s。",
+   "have sounded": "have 是複數助動詞，與單數主詞不一致。",
+   "are sounding": "are 是複數，and 進行式不用於描述一般特性。"
+  },
+  "why": "The cello 是單數主詞，一般特性用現在簡單式 sounds。",
+  "tip": "主詞不是 instruments，而是 cello。",
+  "say": "Of all the instruments in the orchestra, the cello sounds the closest to the human voice."
+ },
+ {
+  "id": "b-sat-u2.b6",
+  "type": "fix",
+  "prompt": "Which choice conforms to the conventions of Standard English?",
+  "text": "",
+  "options": [
+   "The researchers measured three variables: temperature, humidity, and wind speed.",
+   "The researchers measured three variables are temperature, humidity, and wind speed.",
+   "The researchers measured three variables, which temperature, humidity, and wind speed.",
+   "The researchers measured three variables that being temperature, humidity, and wind speed."
+  ],
+  "answer": "The researchers measured three variables: temperature, humidity, and wind speed.",
+  "wrong": {
+   "The researchers measured three variables are temperature, humidity, and wind speed.": "measured 後面已有受詞 variables，再加 are 會出現兩個動詞，句子結構錯誤。",
+   "The researchers measured three variables, which temperature, humidity, and wind speed.": "which 後面缺動詞，temperature... 只是名詞清單，無法組成子句。",
+   "The researchers measured three variables that being temperature, humidity, and wind speed.": "that being 不是標準寫法，that 子句需要主詞與動詞，這裡沒有。"
+  },
+  "why": "完整句子之後，用冒號引出清單，最簡潔也最符合標準寫法。",
+  "tip": "完整句子後面，用冒號引出清單。",
+  "say": "The researchers measured three variables: temperature, humidity, and wind speed."
+ },
+ {
+  "id": "b-sat-u2.b7",
+  "type": "cloze",
+  "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "text": "The telescope's mirror, polished for months, _____ nearly flawless.",
+  "options": [
+   "is",
+   "are",
+   "being",
+   "to be"
+  ],
+  "answer": "is",
+  "wrong": {
+   "are": "主詞 mirror 是單數，不是 months，所以不能用 are。",
+   "being": "being 不能單獨作為主要動詞，句子需要完整動詞。",
+   "to be": "to be 是不定詞，不能當句子的主要動詞。"
+  },
+  "why": "插入語 polished for months 不影響主詞 mirror 是單數，所以用 is。",
+  "tip": "跳過插入語，找真正的主詞。",
+  "say": "The telescope's mirror, polished for months, is nearly flawless."
+ }
+]

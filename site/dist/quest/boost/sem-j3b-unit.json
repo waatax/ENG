@@ -1,0 +1,737 @@
+[
+  {
+    "id": "sem-j3b-unit.b1",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Could you tell me where the station is?",
+      "Could you tell me where is the station?",
+      "Could you tell me where the station?"
+    ],
+    "answer": "Could you tell me where the station is?",
+    "wrong": {
+      "Could you tell me where is the station?": "間接問句要用「陳述句語序」，where 後面應是 the station is，不能把 is 提前。",
+      "Could you tell me where the station?": "句子少了動詞 is，where 子句不完整。"
+    },
+    "why": "放在 Could you tell me 後面的是間接問句，語序是疑問詞＋主詞＋動詞。",
+    "tip": "間接問句不倒裝：where ＋ 主詞 ＋ be。",
+    "say": "Could you tell me where the station is?"
+  },
+  {
+    "id": "sem-j3b-unit.b2",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Both the email and the poster says the concert starts at 7:00.",
+      "Both the email and the poster say the concert starts at 7:00.",
+      "Both the email and the poster say the concert starting at 7:00."
+    ],
+    "answer": "Both the email and the poster say the concert starts at 7:00.",
+    "wrong": {
+      "Both the email and the poster says the concert starts at 7:00.": "Both A and B 表示兩者，是複數主詞，動詞要用 say，不能加 s。",
+      "Both the email and the poster say the concert starting at 7:00.": "say 後面的子句需要完整動詞，starting 單獨出現不能當子句動詞，要用 starts。"
+    },
+    "why": "Both ... and ... 當主詞是複數，後面的 that 子句也要有完整動詞 starts。",
+    "tip": "Both A and B 當主詞，動詞用複數。",
+    "say": "Both the email and the poster say the concert starts at 7:00."
+  },
+  {
+    "id": "sem-j3b-unit.b3",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "海報寫星期六，但朋友的訊息寫星期日，你想問哪一個才對。",
+    "options": [
+      "The poster says Saturday, but your message says Sunday. Which is correctly?",
+      "The poster saying Saturday, but your message say Sunday. Which one correct?",
+      "The poster says Saturday, but your message says Sunday. Which one is correct?"
+    ],
+    "answer": "The poster says Saturday, but your message says Sunday. Which one is correct?",
+    "wrong": {
+      "The poster says Saturday, but your message says Sunday. Which is correctly?": "correctly 是副詞；is 後面要接形容詞 correct，不能接副詞。",
+      "The poster saying Saturday, but your message say Sunday. Which one correct?": "saying 不能單獨當動詞，message 是單數要用 says，Which one 後面也漏了 is。"
+    },
+    "why": "兩份資料不一致時，用 but 連接對比，再用 Which one is correct? 詢問。",
+    "tip": "資料不一致，用 Which one is correct? 確認。",
+    "say": "The poster says Saturday, but your message says Sunday. Which one is correct?"
+  },
+  {
+    "id": "sem-j3b-unit.b4",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "I read two reviews. One says the food is great; _____ says it is too salty.",
+    "options": [
+      "the other",
+      "other",
+      "others"
+    ],
+    "answer": "the other",
+    "wrong": {
+      "other": "other 前面少了 the；只剩一個特定對象時要說 the other。",
+      "others": "others 是複數，但這裡兩篇評論只剩下一篇，要用單數的 the other。"
+    },
+    "why": "一共兩篇，第一篇用 one，剩下的那一篇就是 the other。",
+    "tip": "兩個中的另一個用 the other。",
+    "say": "One says the food is great; the other says it is too salty."
+  },
+  {
+    "id": "sem-j3b-unit.b5",
+    "type": "meaning",
+    "prompt": "圖表和文章的內容不同時，這句話在說什麼？",
+    "text": "The text and the chart do not agree with each other.",
+    "options": [
+      "文字和圖表的內容完全一樣",
+      "文字和圖表的內容互相矛盾",
+      "圖表是文字的翻譯版本"
+    ],
+    "answer": "文字和圖表的內容互相矛盾",
+    "wrong": {
+      "文字和圖表的內容完全一樣": "do not agree 是「不一致」，不是「完全一樣」。",
+      "圖表是文字的翻譯版本": "句中沒有翻譯的意思；agree with each other 說的是兩者的資訊是否相符。"
+    },
+    "why": "agree with 表示「與……一致」，加 not 就是兩者的資訊互相矛盾。",
+    "tip": "do not agree 表示資訊對不上，要再查證。"
+  },
+  {
+    "id": "sem-j3b-unit.b6",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "If it will rain tomorrow, we will move the picnic indoors.",
+      "If it rains tomorrow, we moved the picnic indoors.",
+      "If it rains tomorrow, we will move the picnic indoors."
+    ],
+    "answer": "If it rains tomorrow, we will move the picnic indoors.",
+    "wrong": {
+      "If it will rain tomorrow, we will move the picnic indoors.": "if 引導的條件句，即使說的是未來，也用現在式 rains，不用 will rain。",
+      "If it rains tomorrow, we moved the picnic indoors.": "主要子句說的是明天的計畫，要用 will move，不能用過去式 moved。"
+    },
+    "why": "條件句用現在式代替未來，主要子句用 will＋原形。",
+    "tip": "if 子句用現在式，主句用 will。",
+    "say": "If it rains tomorrow, we will move the picnic indoors."
+  },
+  {
+    "id": "sem-j3b-unit.b7",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The notice on the board was written _____ the school librarian.",
+    "options": [
+      "by",
+      "with",
+      "for"
+    ],
+    "answer": "by",
+    "wrong": {
+      "with": "with 表示「用某工具」，寫公告的人要用 by 引出。",
+      "for": "for 是「為了」，無法表示「由誰寫的」。"
+    },
+    "why": "被動語態中，做動作的人用 by 引出。",
+    "tip": "被動句的做事者用 by。",
+    "say": "by"
+  },
+  {
+    "id": "sem-j3b-unit.b8",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "你在圖書館，旁邊的同學講話太大聲，你想禮貌地請他小聲一點。",
+    "options": [
+      "Shut up now.",
+      "Could you keep your voice down, please?",
+      "Your voice is bigger, please."
+    ],
+    "answer": "Could you keep your voice down, please?",
+    "wrong": {
+      "Shut up now.": "雖然意思看得懂，但語氣非常不禮貌，不適合對同學或在公共場所使用。",
+      "Your voice is bigger, please.": "bigger 不能形容聲音大小，要說 loud 或 keep your voice down。"
+    },
+    "why": "Could you ... please? 是客氣的請求句型，keep your voice down 是「小聲一點」的慣用說法。",
+    "tip": "想請人小聲，用 keep your voice down。",
+    "say": "Could you keep your voice down, please?"
+  },
+  {
+    "id": "sem-j3b-unit.b9",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "According to the chart, the number of visitors _____ from 200 to 350 last year.",
+    "options": [
+      "rises",
+      "has rise",
+      "rose"
+    ],
+    "answer": "rose",
+    "wrong": {
+      "rises": "last year 表示過去，不能用現在式 rises。",
+      "has rise": "has 後面要接過去分詞 risen，而且 last year 也不適合用現在完成式。"
+    },
+    "why": "last year 是明確的過去時間，所以用過去式 rose。",
+    "tip": "看到 last year 就用過去式。",
+    "say": "rose"
+  },
+  {
+    "id": "sem-j3b-unit.b10",
+    "type": "meaning",
+    "prompt": "「不要被舊資料騙了」是什麼意思？",
+    "text": "Judging by the date, this chart is out of date.",
+    "options": [
+      "從日期來看，這張圖表已經過時了",
+      "從日期來看，這張圖表是最新的",
+      "圖表上沒有寫日期"
+    ],
+    "answer": "從日期來看，這張圖表已經過時了",
+    "wrong": {
+      "從日期來看，這張圖表是最新的": "out of date 是「過時的」，不是「最新的」。",
+      "圖表上沒有寫日期": "句中說的是 judging by the date，表示有日期可以判斷，而不是沒有日期。"
+    },
+    "why": "Judging by ... 是「從……來判斷」，out of date 則是資料太舊、不再適用。",
+    "tip": "out of date 就是資料過期了。"
+  },
+  {
+    "id": "sem-j3b-unit.b11",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "She asked me what time did the meeting start.",
+      "She asked me what time the meeting started.",
+      "She asked me what time the meeting start."
+    ],
+    "answer": "She asked me what time the meeting started.",
+    "wrong": {
+      "She asked me what time did the meeting start.": "間接問句不用助動詞 did 倒裝，要改成 what time the meeting started。",
+      "She asked me what time the meeting start.": "這是過去的事，動詞要改成過去式 started。"
+    },
+    "why": "asked me what time 後面接間接問句，要用主詞＋動詞，時態配合過去。",
+    "tip": "間接問句不倒裝，時態要一致。",
+    "say": "She asked me what time the meeting started."
+  },
+  {
+    "id": "sem-j3b-unit.b12",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Neither the poster nor the flyer _____ the price of the tickets.",
+    "options": [
+      "mention",
+      "mentioning",
+      "mentions"
+    ],
+    "answer": "mentions",
+    "wrong": {
+      "mention": "Neither ... nor ... 的動詞跟靠近的主詞一致，flyer 是單數，所以要加 s。",
+      "mentioning": "mentioning 不能單獨當句子的動詞，需要 mentions。"
+    },
+    "why": "neither A nor B 的動詞配合離它最近的 B；the flyer 是單數，用 mentions。",
+    "tip": "neither...nor 的動詞看後面那個主詞。",
+    "say": "mentions"
+  },
+  {
+    "id": "sem-j3b-unit.b13",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "朋友問你有沒有看完第二篇文章，你還沒看完，正在讀。",
+    "options": [
+      "Not yet. I'm still reading the second one.",
+      "Not yet. I still read the second one.",
+      "No yet. I'm still reading second one."
+    ],
+    "answer": "Not yet. I'm still reading the second one.",
+    "wrong": {
+      "Not yet. I still read the second one.": "still read 是現在簡單式，表示習慣；說正在進行的動作要用 am still reading。",
+      "No yet. I'm still reading second one.": "No yet 是錯的，要說 Not yet；second one 前面還要加 the。"
+    },
+    "why": "正在進行的動作用現在進行式，Not yet 是「還沒」的慣用回答。",
+    "tip": "還沒做完：Not yet, I'm still ...ing。",
+    "say": "Not yet. I'm still reading the second one."
+  },
+  {
+    "id": "sem-j3b-unit.b14",
+    "type": "meaning",
+    "prompt": "作者對制服的態度是什麼？",
+    "text": "I believe uniforms save time in the morning and make everyone feel equal.",
+    "options": [
+      "作者反對穿制服",
+      "作者贊成穿制服",
+      "作者沒有表達任何意見"
+    ],
+    "answer": "作者贊成穿制服",
+    "wrong": {
+      "作者反對穿制服": "save time 與 feel equal 都是正面理由，所以作者是贊成而不是反對。",
+      "作者沒有表達任何意見": "I believe 明確表示作者有自己的想法，並不是沒有意見。"
+    },
+    "why": "I believe 後面列出制服的優點，可以判斷作者支持制服。",
+    "tip": "看 I believe 後面的理由判斷立場。",
+    "say": "I believe uniforms save time in the morning and make everyone feel equal."
+  },
+  {
+    "id": "sem-j3b-unit.b15",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Text A is about a school trip, _____ Text B is about a class party.",
+    "options": [
+      "because",
+      "so",
+      "while"
+    ],
+    "answer": "while",
+    "wrong": {
+      "because": "because 表示原因，但兩篇文章是對照關係，不是因果。",
+      "so": "so 表示結果，前後兩句沒有「所以」的關係。"
+    },
+    "why": "while 可以連接兩個對比的內容，意思是「而」。",
+    "tip": "對比兩件事用 while。",
+    "say": "while"
+  },
+  {
+    "id": "sem-j3b-unit.b16",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Each of the students has to hand in a short report.",
+      "Each of the students have to hand in a short report.",
+      "Each of the student has to hand in a short report."
+    ],
+    "answer": "Each of the students has to hand in a short report.",
+    "wrong": {
+      "Each of the students have to hand in a short report.": "Each of 後面雖是複數名詞，但 each 本身是單數，動詞要用 has。",
+      "Each of the student has to hand in a short report.": "Each of 後面要接複數名詞 students，不能漏掉 s。"
+    },
+    "why": "each of + 複數名詞，主詞視為單數，所以用 has to。",
+    "tip": "each of 後面接複數名詞，動詞用單數。",
+    "say": "Each of the students has to hand in a short report."
+  },
+  {
+    "id": "sem-j3b-unit.b17",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "同學問你覺得哪一篇比較有用，你覺得第二篇比較好，因為有例子。",
+    "options": [
+      "I think the second one is most useful because it gives example.",
+      "I think the second one is more useful because it gives examples.",
+      "I think second one more useful because it give examples."
+    ],
+    "answer": "I think the second one is more useful because it gives examples.",
+    "wrong": {
+      "I think the second one is most useful because it gives example.": "只比較兩篇時用 more，不是 most；examples 也要用複數。",
+      "I think second one more useful because it give examples.": "缺少 the 和 is，give 也要配合 it 加 s。"
+    },
+    "why": "比較兩個東西用 more＋形容詞，because 後面接完整的句子。",
+    "tip": "兩者比較用 more，不用 most。",
+    "say": "I think the second one is more useful because it gives examples."
+  },
+  {
+    "id": "sem-j3b-unit.b18",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The more you read, _____ you learn.",
+    "options": [
+      "more",
+      "the most",
+      "the more"
+    ],
+    "answer": "the more",
+    "wrong": {
+      "more": "「越……越……」的句型兩邊都要有 the，這裡漏掉了 the。",
+      "the most": "the most 是最高級，這個句型要用比較級 the more。"
+    },
+    "why": "The + 比較級 ..., the + 比較級 ... 表示「越……就越……」。",
+    "tip": "越……越……：the more ..., the more ...。",
+    "say": "The more you read, the more you learn."
+  },
+  {
+    "id": "sem-j3b-unit.b19",
+    "type": "meaning",
+    "prompt": "「這篇文章大概在講什麼？」",
+    "text": "Judging from the title, this article is probably about sleep.",
+    "options": [
+      "從標題判斷，這篇文章可能和睡眠有關",
+      "作者把標題寫錯了",
+      "這篇文章一定是在談睡眠"
+    ],
+    "answer": "從標題判斷，這篇文章可能和睡眠有關",
+    "wrong": {
+      "作者把標題寫錯了": "句中沒有提到標題有錯，judging from 是「從……判斷」。",
+      "這篇文章一定是在談睡眠": "probably 只是「可能」，不是「一定」。"
+    },
+    "why": "probably 表示「大概、可能」，語氣不是百分之百肯定。",
+    "tip": "probably 是可能，certainly 才是一定。"
+  },
+  {
+    "id": "sem-j3b-unit.b20",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "I'm used to take the MRT to school.",
+      "I'm used to taking the MRT to school.",
+      "I used to taking the MRT to school."
+    ],
+    "answer": "I'm used to taking the MRT to school.",
+    "wrong": {
+      "I'm used to take the MRT to school.": "be used to 的 to 是介系詞，後面要接 V-ing，不能接原形。",
+      "I used to taking the MRT to school.": "used to 後面接原形；而 be used to 才接 V-ing，這句兩邊都用錯了。"
+    },
+    "why": "be used to + V-ing 表示「習慣於」，to 是介系詞。",
+    "tip": "習慣於做某事：be used to + V-ing。",
+    "say": "I'm used to taking the MRT to school."
+  },
+  {
+    "id": "sem-j3b-unit.b21",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "朋友約你週六去看電影，但你那天要補習，想禮貌拒絕並提另一天。",
+    "options": [
+      "No. I do not like movies with you.",
+      "Yes, I will go, but I will not be there.",
+      "I'm sorry, but I have cram school that day. How about Sunday?"
+    ],
+    "answer": "I'm sorry, but I have cram school that day. How about Sunday?",
+    "wrong": {
+      "No. I do not like movies with you.": "太直接又傷人，不是禮貌的拒絕方式。",
+      "Yes, I will go, but I will not be there.": "前後矛盾：說會去，又說不會在那裡。"
+    },
+    "why": "先道歉、說明原因，再提出另一個時間，是客氣的拒絕方式。",
+    "tip": "拒絕時：先道歉，再給原因與替代方案。",
+    "say": "I'm sorry, but I have cram school that day. How about Sunday?"
+  },
+  {
+    "id": "sem-j3b-unit.b22",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Please read the instructions _____ before you start the test.",
+    "options": [
+      "carefully",
+      "careful",
+      "care"
+    ],
+    "answer": "carefully",
+    "wrong": {
+      "careful": "careful 是形容詞，不能修飾動詞 read，要用副詞 carefully。",
+      "care": "care 是名詞或動詞，放在這裡文法不通。"
+    },
+    "why": "修飾動詞 read 要用副詞 carefully。",
+    "tip": "修飾動詞用副詞，字尾常是 -ly。",
+    "say": "carefully"
+  },
+  {
+    "id": "sem-j3b-unit.b23",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "There are too much people in the room, so it is hard to hear.",
+      "There are too many people in the room, so it is hard to hear.",
+      "There are too many people in the room, so hard hear."
+    ],
+    "answer": "There are too many people in the room, so it is hard to hear.",
+    "wrong": {
+      "There are too much people in the room, so it is hard to hear.": "people 是可數的複數，要用 many，不能用 much。",
+      "There are too many people in the room, so hard hear.": "so 後面是完整句子，需要 it is hard to hear，不能省略。"
+    },
+    "why": "people 是可數名詞，修飾要用 many；so 後面接結果的完整句子。",
+    "tip": "可數用 many，不可數用 much。",
+    "say": "There are too many people in the room, so it is hard to hear."
+  },
+  {
+    "id": "sem-j3b-unit.b24",
+    "type": "meaning",
+    "prompt": "這句話想告訴你什麼？",
+    "text": "It says here that the shop is closed on Mondays.",
+    "options": [
+      "那家店只有星期一營業",
+      "那家店星期一開始裝修",
+      "這裡寫著那家店星期一不營業"
+    ],
+    "answer": "這裡寫著那家店星期一不營業",
+    "wrong": {
+      "那家店只有星期一營業": "closed 是「關門」，與「營業」相反。",
+      "那家店星期一開始裝修": "句中沒有說裝修，只說星期一是 closed。"
+    },
+    "why": "be closed on Mondays 的意思是每週一都休息、不營業。",
+    "tip": "closed 是關門，open 才是營業。"
+  },
+  {
+    "id": "sem-j3b-unit.b25",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "電話裡你沒聽清楚對方說的話，想請對方再說一次。",
+    "options": [
+      "Sorry, could you say that again?",
+      "What you say?",
+      "Say again, I am not hear."
+    ],
+    "answer": "Sorry, could you say that again?",
+    "wrong": {
+      "What you say?": "疑問句語序不對，而且沒有禮貌用語，聽起來很突兀。",
+      "Say again, I am not hear.": "文法錯誤：am not hear 要改成 could not hear，也缺少禮貌語氣。"
+    },
+    "why": "Sorry, could you ...? 是禮貌請對方重說一次的常用說法。",
+    "tip": "沒聽清楚：Sorry, could you say that again?",
+    "say": "Sorry, could you say that again?"
+  },
+  {
+    "id": "sem-j3b-unit.b26",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "By the time we arrived, the tickets _____.",
+    "options": [
+      "have sold out",
+      "had sold out",
+      "will sell out"
+    ],
+    "answer": "had sold out",
+    "wrong": {
+      "have sold out": "by the time we arrived 是過去的時間點，不能用現在完成式 have sold out。",
+      "will sell out": "will 說的是未來，但這句話已經是過去發生的事。"
+    },
+    "why": "在過去某時間點之前已經完成的事，用過去完成式 had sold out。",
+    "tip": "過去之前已完成的事用 had + p.p.。",
+    "say": "had sold out"
+  },
+  {
+    "id": "sem-j3b-unit.b27",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "The teacher told us be quiet.",
+      "The teacher told to us to be quiet.",
+      "The teacher told us to be quiet."
+    ],
+    "answer": "The teacher told us to be quiet.",
+    "wrong": {
+      "The teacher told us be quiet.": "tell sb to V，要在原形動詞前加 to。",
+      "The teacher told to us to be quiet.": "tell 後面直接接人，不用加 to 再接 us。"
+    },
+    "why": "tell + 人 + to V 是「告訴某人去做某事」。",
+    "tip": "tell 某人 to V，人前面不加 to。",
+    "say": "The teacher told us to be quiet."
+  },
+  {
+    "id": "sem-j3b-unit.b28",
+    "type": "meaning",
+    "prompt": "「however」在這裡的功能是什麼？",
+    "text": "The park is free. However, parking costs $50 an hour.",
+    "options": [
+      "表示前後兩句內容有轉折或對比",
+      "表示後面是前面的原因",
+      "表示事情的結果"
+    ],
+    "answer": "表示前後兩句內容有轉折或對比",
+    "wrong": {
+      "表示後面是前面的原因": "原因通常用 because；however 帶有轉折的意思。",
+      "表示事情的結果": "表示結果會用 so 或 therefore，however 不是這個功能。"
+    },
+    "why": "公園免費，但停車要錢，後句和前句形成對比，所以用 however。",
+    "tip": "however 引出轉折，翻成「然而」。",
+    "say": "The park is free. However, parking costs $50 an hour."
+  },
+  {
+    "id": "sem-j3b-unit.b29",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The poster says the park opens at 8:00. _____, the website says 9:00.",
+    "options": [
+      "Therefore",
+      "However",
+      "Because"
+    ],
+    "answer": "However",
+    "wrong": {
+      "Therefore": "therefore 表示因此，但兩份資料是互相矛盾，不是因果。",
+      "Because": "Because 要連接原因子句，這裡不是原因，而且放句首語意不通。"
+    },
+    "why": "兩個來源的時間不同，要用 However 表示轉折。",
+    "tip": "資料矛盾時，用 however 帶出對比。",
+    "say": "The poster says the park opens at 8:00. However, the website says 9:00."
+  },
+  {
+    "id": "sem-j3b-unit.b30",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "老師問誰同意這個計畫，你同意，因為可以省錢。",
+    "options": [
+      "I agree to the plan because it save money.",
+      "I am agree with the plan because it saves money.",
+      "I agree with the plan because it saves money."
+    ],
+    "answer": "I agree with the plan because it saves money.",
+    "wrong": {
+      "I agree to the plan because it save money.": "it 是單數，動詞要用 saves；agree with 才是同意某個想法。",
+      "I am agree with the plan because it saves money.": "agree 本身是動詞，不能再加 am。"
+    },
+    "why": "agree 是一般動詞，agree with 表示同意；because 後面接理由。",
+    "tip": "agree 不加 be 動詞。",
+    "say": "I agree with the plan because it saves money."
+  },
+  {
+    "id": "sem-j3b-unit.b31",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Which of the two articles do you think is better?",
+      "Which of the two articles do you think it is better?",
+      "Which of the two articles you think is better?"
+    ],
+    "answer": "Which of the two articles do you think is better?",
+    "wrong": {
+      "Which of the two articles do you think it is better?": "think 後面的疑問詞 which 已經是主詞，不能再加 it。",
+      "Which of the two articles you think is better?": "疑問句要有助動詞 do，要說 do you think。"
+    },
+    "why": "含 do you think 的疑問句，疑問詞放最前面，後面直接接動詞。",
+    "tip": "Which ... do you think is ...? 不要多加 it。",
+    "say": "Which of the two articles do you think is better?"
+  },
+  {
+    "id": "sem-j3b-unit.b32",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "The students were asked to compare the ad _____ the news report.",
+    "options": [
+      "on",
+      "with",
+      "at"
+    ],
+    "answer": "with",
+    "wrong": {
+      "on": "compare 常搭配 with 或 to，不搭配 on。",
+      "at": "at 表示地點或時間，和 compare 搭配不通。"
+    },
+    "why": "compare A with B 表示「把 A 和 B 做比較」。",
+    "tip": "比較兩者時用 compare A with B。",
+    "say": "with"
+  },
+  {
+    "id": "sem-j3b-unit.b33",
+    "type": "meaning",
+    "prompt": "這句話提醒讀者什麼？",
+    "text": "Keep in mind that the survey only asked 20 students.",
+    "options": [
+      "調查結果非常準確",
+      "20 個學生全部同意",
+      "調查人數很少，下結論要小心"
+    ],
+    "answer": "調查人數很少，下結論要小心",
+    "wrong": {
+      "調查結果非常準確": "只有 20 人的調查樣本很小，不能說非常準確。",
+      "20 個學生全部同意": "句中並沒有說他們的答案是否相同。"
+    },
+    "why": "Keep in mind 是「記住」，後面提醒樣本只有 20 人，結論有限。",
+    "tip": "樣本越少，結論越要保守。"
+  },
+  {
+    "id": "sem-j3b-unit.b34",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "Thanks for waiting. I'm sorry I'm late.",
+      "Thanks for wait. I'm sorry I late.",
+      "Thanks for waiting. I'm sorry I'm lately."
+    ],
+    "answer": "Thanks for waiting. I'm sorry I'm late.",
+    "wrong": {
+      "Thanks for wait. I'm sorry I late.": "for 後面要接 V-ing，late 前面也需要 be 動詞 am。",
+      "Thanks for waiting. I'm sorry I'm lately.": "lately 是「最近」，表示遲到的是 late。"
+    },
+    "why": "Thanks for + V-ing 表示感謝；late 是形容詞「遲到的」。",
+    "tip": "late 是遲到，lately 是最近。",
+    "say": "Thanks for waiting. I'm sorry I'm late."
+  },
+  {
+    "id": "sem-j3b-unit.b35",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "Would you mind _____ the window? It is cold.",
+    "options": [
+      "to close",
+      "closing",
+      "close"
+    ],
+    "answer": "closing",
+    "wrong": {
+      "to close": "mind 後面接 V-ing，不接不定詞。",
+      "close": "mind 是動詞，後面接動詞要用 V-ing，不能用原形。"
+    },
+    "why": "Would you mind + V-ing? 是客氣請求對方做某事的句型。",
+    "tip": "mind 後面接 V-ing。",
+    "say": "closing"
+  },
+  {
+    "id": "sem-j3b-unit.b36",
+    "type": "situation",
+    "prompt": "哪一句英文最適合這個情境？",
+    "text": "你在餐廳想請服務生再給你一點水。",
+    "options": [
+      "Give me more water now.",
+      "I want water more, please.",
+      "Could I have some more water, please?"
+    ],
+    "answer": "Could I have some more water, please?",
+    "wrong": {
+      "Give me more water now.": "命令語氣，在餐廳對服務生說很不禮貌。",
+      "I want water more, please.": "more 的位置錯了，應該是 some more water，也不夠自然。"
+    },
+    "why": "Could I have ...? 是禮貌地向人要東西的說法。",
+    "tip": "要東西：Could I have ..., please?",
+    "say": "Could I have some more water, please?"
+  },
+  {
+    "id": "sem-j3b-unit.b37",
+    "type": "meaning",
+    "prompt": "「summary」在這句話中是什麼意思？",
+    "text": "Here is a summary of the main points in the article.",
+    "options": [
+      "摘要、重點整理",
+      "廣告",
+      "作者簡介"
+    ],
+    "answer": "摘要、重點整理",
+    "wrong": {
+      "廣告": "廣告是 advertisement；summary 是整理重點。",
+      "作者簡介": "作者簡介是 author profile；summary 是對文章內容的簡短整理。"
+    },
+    "why": "a summary of the main points 就是「重點的摘要」。",
+    "tip": "summary 是摘要，把重點縮短整理。"
+  },
+  {
+    "id": "sem-j3b-unit.b38",
+    "type": "fix",
+    "prompt": "哪一句才是正確的英文？",
+    "text": "",
+    "options": [
+      "My brother is good at draw, but he is not interested in music.",
+      "My brother is good at drawing, but he is not interested in music.",
+      "My brother is good at drawing, but he is not interest in music."
+    ],
+    "answer": "My brother is good at drawing, but he is not interested in music.",
+    "wrong": {
+      "My brother is good at draw, but he is not interested in music.": "at 是介系詞，後面要接 V-ing（drawing），不能用原形。",
+      "My brother is good at drawing, but he is not interest in music.": "be interested in 是固定用法，要用過去分詞 interested，不是名詞 interest。"
+    },
+    "why": "be good at + V-ing；be interested in + 名詞。",
+    "tip": "介系詞後面的動詞用 V-ing。",
+    "say": "My brother is good at drawing, but he is not interested in music."
+  },
+  {
+    "id": "sem-j3b-unit.b39",
+    "type": "cloze",
+    "prompt": "選出最適合填入空格的字詞。",
+    "text": "To know more, please click the link _____ the bottom of the page.",
+    "options": [
+      "in",
+      "for",
+      "at"
+    ],
+    "answer": "at",
+    "wrong": {
+      "in": "in 通常指在某空間內部，「頁面底部」固定說 at the bottom。",
+      "for": "for 表示為了或給某人，不表示位置。"
+    },
+    "why": "at the bottom of ... 是固定搭配，表示「在……的底部」。",
+    "tip": "位置的固定搭配：at the bottom of。",
+    "say": "at"
+  }
+]
