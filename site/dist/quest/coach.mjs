@@ -63,7 +63,7 @@ const GROUPS = [
   [['to', 'for', 'with', 'of', 'from', 'by', 'about', 'into', 'out', 'off', 'up', 'down', 'over', 'under', 'through', 'across', 'between', 'among', 'without', 'against', 'toward', 'towards', 'upon', 'in', 'on', 'at'], '介系詞與搭配詞需看前後動詞、形容詞或名詞的固定搭配（例如方向用 to、原因或對象用 for、工具或伴隨用 with、所屬用 of、來源用 from）。'],
   [['this', 'that', 'these', 'those'], '指示詞：this／that 接單數，these／those 接複數；this／these 指近的，that／those 指遠的。'],
   [['much', 'many', 'few', 'little', 'a few', 'a little', 'lot', 'lots', 'plenty', 'several'], '數量詞看名詞是否可數：many／few／several 接可數複數名詞；much／little 接不可數名詞。'],
-  [['some', 'any', 'no', 'none', 'every', 'each', 'all', 'both', 'either', 'neither'], '限定詞看語氣與數量：some 多用肯定句、any 多用否定與疑問句；both 指兩者都、all 指三者以上、neither 指兩者皆非、each／every 後接單數。'],
+  [['some', 'any', 'no', 'none', 'every', 'each', 'all', 'both', 'either', 'neither', 'everyone', 'everybody', 'someone', 'somebody', 'anyone', 'anybody', 'no one', 'nobody'], '限定詞看語氣與數量：some 多用肯定句、any 多用否定與疑問句；both 指兩者都、all 指三者以上、neither 指兩者皆非；everyone／each 等代名詞視為單數（搭配 is/has）。'],
   [['other', 'another', 'others', 'the other', 'the others'], '不定代名詞：another 指「不特定的另一個（單數）」；the other 指「兩者中的另一個」；others 指「其他的人事物（複數）」。'],
   [['will', 'would', 'can', 'could', 'shall', 'should', 'may', 'might', 'must', 'ought'], '情態助動詞需依語氣與時態選擇：can／could 表能力或請求、will／would 表意願或未來、should／ought to 表建議、must 表必須或強烈推測、may／might 表可能。'],
   [['because', 'since', 'as', 'so', 'therefore', 'thus', 'hence', 'consequently', 'because of', 'due to', 'owing to'], '因果銜接詞：because／since／as 後接完整子句表「原因」；because of／due to 後接名詞片語；so／therefore／consequently 表「結果」。'],
@@ -74,7 +74,25 @@ const GROUPS = [
   [['too', 'either', 'also', 'neither', 'as well'], '「也」的用法：肯定句尾用 too／as well、句中用 also；否定句尾用 either。'],
   [['already', 'yet', 'still', 'ever', 'never', 'just'], '時間副詞：already 多用於肯定句表「已經」；yet 多用於否定與疑問句尾表「尚未／已經」；still 表「仍然」；ever／never 常搭配完成式。'],
   [['always', 'usually', 'often', 'sometimes', 'seldom', 'rarely', 'hardly', 'never'], '頻率副詞代表不同發生頻率（always 總是 > usually 通常 > often 經常 > sometimes 有時 > seldom／rarely／hardly 很少 > never 從不），放在一般動詞前、be 動詞後。'],
-  [['good', 'well', 'better', 'best', 'bad', 'badly', 'worse', 'worst'], '詞性與級別：good／bad 是形容詞（修飾名詞或放連綴動詞後）；well／badly 是副詞（修飾動作）；better／worse 是比較級；best／worst 是最高級。']
+  [['good', 'well', 'better', 'best', 'bad', 'badly', 'worse', 'worst'], '詞性與級別：good／bad 是形容詞（修飾名詞或放連綴動詞後）；well／badly 是副詞（修飾動作）；better／worse 是比較級；best／worst 是最高級。'],
+  [['interested', 'interesting'], '情緒分詞辨析：-ed 形容詞（interested）修飾人「感到有興趣的」；-ing 形容詞（interesting）修飾事物「令人感興趣的」。'],
+  [['excited', 'exciting'], '情緒分詞辨析：-ed 形容詞（excited）修飾人「感到興奮的」；-ing 形容詞（exciting）修飾事物「令人興奮的」。'],
+  [['tired', 'tiring'], '情緒分詞辨析：-ed 形容詞（tired）修飾人「感到疲累的」；-ing 形容詞（tiring）修飾事物「令人疲累的」。'],
+  [['bored', 'boring'], '情緒分詞辨析：-ed 形容詞（bored）修飾人「感到無聊的」；-ing 形容詞（boring）修飾事物「令人感到無聊的」。'],
+  [['surprised', 'surprising'], '情緒分詞辨析：-ed 形容詞（surprised）修飾人「感到驚訝的」；-ing 形容詞（surprising）修飾事物「令人驚訝的」。'],
+  [['affect', 'effect'], '詞性辨析：affect 常為動詞（影響）；effect 常為名詞（效果、影響）。空格依句型位置決定是動詞還是名詞。'],
+  [['borrow', 'lend'], '動作方向辨析：borrow 是向他人「借入」；lend 是把東西「借出」給別人。'],
+  [['rise', 'raise'], '及物與不及物辨析：rise（不及物：上升、增加，無受詞）；raise（及物：舉起、飼養、募款，後面須接名詞受詞）。'],
+  [['lie', 'lay'], '動詞三態與及物性：lie（不及物：躺、位於）；lay（及物：放置、下蛋，後面須接受詞）。'],
+  [['sensible', 'sensitive'], '形容詞語意辨析：sensible 是「明智的、通情達理的」；sensitive 是「敏感的、易受傷的」。'],
+  [['hard', 'hardly'], '副詞語意辨析：hard 當副詞是「努力地、辛苦地」；hardly 是否定副詞「幾乎不」。'],
+  [['late', 'lately'], '時間副詞辨析：late 是「遲到、晚」；lately 是「最近（= recently）」。'],
+  [['high', 'highly'], '副詞語意辨析：high 指具體「高度高」；highly 是抽象程度副詞「非常、極度讚譽」。'],
+  [['near', 'nearly'], '副詞語意辨析：near 是「接近、靠近」；nearly 是程度副詞「幾乎（= almost）」。'],
+  [['advice', 'advise'], '詞性與拼字辨析：advice 是不可數名詞（建議）；advise 是動詞（建議、勸告）。'],
+  [['lose', 'loose'], '拼字與詞性辨析：lose（動詞：失去、輸掉）；loose（形容詞：寬鬆的、鬆散的）。'],
+  [['quiet', 'quite'], '拼字與詞性辨析：quiet（形容詞：安靜的）；quite（程度副詞：相當、非常）。'],
+  [['everyone', 'everybody', 'someone', 'somebody', 'anyone', 'anybody', 'no one', 'nobody'], '不定代名詞文法：everyone / someone 等代名詞視為「單數」，動詞要用單數形式（is / has / 單數動詞加 -s）。']
 ];
 const CASE = { i: 'subj', he: 'subj', she: 'subj', we: 'subj', they: 'subj', me: 'obj', him: 'obj', us: 'obj', them: 'obj', my: 'poss', his: 'poss', our: 'poss', their: 'poss', your: 'poss', its: 'poss', mine: 'pron', hers: 'pron', ours: 'pron', theirs: 'pron', yours: 'pron', myself: 'refl', yourself: 'refl', himself: 'refl', herself: 'refl', itself: 'refl', ourselves: 'refl', yourselves: 'refl', themselves: 'refl', her: 'obj/poss', you: 'subj/obj', it: 'subj/obj' };
 const CASE_RULE = '代名詞要看位置：主格（I／he／she／we／they）當主詞；受格（me／him／her／us／them）放在動詞或介系詞後；所有格（my／his／her／our／their）放在名詞前；mine／yours／hers 單獨使用，後面不接名詞；反身代名詞（-self）用於主詞與受詞同一人時。';

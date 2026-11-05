@@ -25,16 +25,31 @@ family('ment','字尾','動作、結果或狀態（名詞）', [['develop','發�
 family('er','字尾','做某事的人／事物', [['teach','教導'],['work','工作'],['read','閱讀'],['sing','唱歌'],['farm','耕作'],['paint','繪畫'],['play','玩；演奏'],['write','寫','writer'],['drive','駕駛','driver'],['run','跑','runner'],['swim','游泳','swimmer']]);
 family('ly','字尾','以…方式（副詞）', [['quick','快速'],['slow','緩慢'],['careful','小心'],['final','最後'],['usual','通常'],['sudden','突然'],['clear','清楚'],['happy','快樂','happily'],['easy','容易','easily']]);
 family('able','字尾','可以…的', [['read','閱讀'],['predict','預測'],['accept','接受'],['understand','理解'],['comfort','安慰'],['rely','依賴','reliable']]);
+family('im','字首','不；向內', [['possible','可能'],['patient','有耐心'],['polite','有禮貌'],['perfect','完美']]);
+family('in','字首','不；相反', [['visible','可見的'],['direct','直接的'],['correct','正確的'],['formal','正式的'],['active','活躍的']]);
+family('en','字首','使成為；放入', [['courage','勇氣','encourage'],['large','巨大'],['able','能夠','enable'],['rich','豐富']]);
+family('anti','字首','反對；對抗', [['body','身體','antibody'],['freeze','冰凍','antifreeze'],['social','社交的']]);
+family('inter','字首','在…之間；相互', [['national','國家的'],['net','網路','internet'],['act','行動','interact'],['view','看待','interview']]);
+family('sub','字首','在…下方；次要', [['way','道路','subway'],['title','標題','subtitle'],['marine','海洋的','submarine']]);
+family('ion','字尾','動作或狀態（名詞）', [['act','行動','action'],['direct','指引','direction'],['protect','保護','protection'],['connect','連接','connection']]);
+family('ous','字尾','充滿…的（形容詞）', [['danger','危險'],['fame','名聲','famous'],['nerve','神經','nervous'],['courage','勇氣','courageous']]);
+family('ive','字尾','具…特性的（形容詞）', [['act','行動','active'],['create','創造','creative'],['attract','吸引','attractive'],['protect','保護','protective']]);
 for (const [word, left, a, right, b] of [
- ['classroom','class','班級','room','房間'],['bedroom','bed','床','room','房間'],['bathroom','bath','洗澡','room','房間'],['homework','home','家','work','工作'],['notebook','note','筆記','book','本子'],['raincoat','rain','雨','coat','外套'],['sunlight','sun','太陽','light','光'],['toothbrush','tooth','牙齒','brush','刷子'],['football','foot','腳','ball','球'],['schoolbag','school','學校','bag','袋子'],['airport','air','空中','port','港口'],['bookshelf','book','書','shelf','架子']
+ ['classroom','class','班級','room','房間'],['bedroom','bed','床','room','房間'],['bathroom','bath','洗澡','room','房間'],['homework','home','家','work','工作'],['notebook','note','筆記','book','本子'],['raincoat','rain','雨','coat','外套'],['sunlight','sun','太陽','light','光'],['toothbrush','tooth','牙齒','brush','刷子'],['football','foot','腳','ball','球'],['schoolbag','school','學校','bag','袋子'],['airport','air','空中','port','港口'],['bookshelf','book','書','shelf','架子'],
+ ['sunflower','sun','太陽','flower','花'],['earthquake','earth','地球','quake','震動'],['waterfall','water','水','fall','落下'],['butterfly','butter','奶油','fly','蒼蠅/飛行'],['keyboard','key','鍵','board','板子'],['pancake','pan','平底鍋','cake','蛋糕'],['seafood','sea','海','food','食物']
 ]) entries.set(word,{parts:[part(left,'組合詞',a),part(right,'組合詞',b)],note:'這是複合字：兩個詞組合成新的意思。'});
 for (const [word, parts, note] of [
  ['transport',[['trans','字首','跨越'],['port','字根','搬運']],'跨越地方搬運 → 運輸。'],
  ['portable',[['port','字根','搬運'],['able','字尾','可以…的']],'能被搬動 → 可攜帶的。'],
+ ['export',[['ex','字首','向外'],['port','字根','搬運']],'搬運出國門 → 出口。'],
+ ['import',[['im','字首','向內'],['port','字根','搬運']],'搬運進國門 → 進口。'],
  ['predict',[['pre','字首','預先'],['dict','字根','說']],'預先說出 → 預測。'],
+ ['dictation',[['dict','字根','說'],['ion','字尾','名詞字尾']],'說出字句讓他人寫下 → 聽寫。'],
  ['inspect',[['in','字首','向內'],['spect','字根','看']],'往裡仔細看 → 檢查。'],
+ ['spectator',[['spect','字根','看'],['or','字尾','做…的人']],'在場觀看比賽或表演的人 → 觀眾。'],
  ['biography',[['bio','組合形式','生命'],['graph','字根','寫'],['y','字尾','名詞結尾']],'書寫一個人的人生 → 傳記。'],
  ['telephone',[['tele','組合形式','遠'],['phone','組合形式','聲音']],'讓聲音傳到遠方 → 電話。'],
+ ['telescope',[['tele','組合形式','遠'],['scope','組合形式','觀察儀器']],'觀察遠方天體的儀器 → 望遠鏡。'],
  ['microscope',[['micro','組合形式','微小'],['scope','組合形式','觀察儀器']],'觀察微小事物的儀器 → 顯微鏡。']
 ]) entries.set(word,{parts:parts.map(p=>part(...p)),note});
 // Reuse the guide's explicitly taught examples without inferring unseen words.
