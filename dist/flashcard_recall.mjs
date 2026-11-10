@@ -168,6 +168,20 @@ export function recallShortcut(key, cards, render) {
 }
 if(typeof globalThis.document?.addEventListener==='function'){
   let start=null;
+  globalThis.document.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const active = globalThis.document.activeElement;
+      if (active?.id === 'fc-recall-answer' && !session?.revealed) {
+        e.preventDefault();
+        const btn = globalThis.document.querySelector('[data-fc-recall="check"]');
+        if (btn && !btn.disabled) btn.click();
+      } else if (active?.id === 'fc-recall-retry' && session?.revealed) {
+        e.preventDefault();
+        const btn = globalThis.document.querySelector('[data-fc-recall="retry"]');
+        if (btn && !btn.disabled) btn.click();
+      }
+    }
+  });
   globalThis.document.addEventListener('touchstart',e=>{const t=e.target?.closest?.('.recall-answer');start=t&&session?.revealed&&!e.target.closest('input,details,button')?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null;},{passive:true});
   globalThis.document.addEventListener('touchend',e=>{
     if(!start||!lastCards||!lastRender)return;

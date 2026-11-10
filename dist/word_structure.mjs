@@ -40,7 +40,8 @@ family('auto','字首','自己；自動', [['mobile','可移動的','automobile'
 for (const [word, left, a, right, b] of [
  ['classroom','class','班級','room','房間'],['bedroom','bed','床','room','房間'],['bathroom','bath','洗澡','room','房間'],['homework','home','家','work','工作'],['notebook','note','筆記','book','本子'],['raincoat','rain','雨','coat','外套'],['sunlight','sun','太陽','light','光'],['toothbrush','tooth','牙齒','brush','刷子'],['football','foot','腳','ball','球'],['schoolbag','school','學校','bag','袋子'],['airport','air','空中','port','港口'],['bookshelf','book','書','shelf','架子'],
  ['sunflower','sun','太陽','flower','花'],['earthquake','earth','地球','quake','震動'],['waterfall','water','水','fall','落下'],['butterfly','butter','奶油','fly','蒼蠅/飛行'],['keyboard','key','鍵','board','板子'],['pancake','pan','平底鍋','cake','蛋糕'],['seafood','sea','海','food','食物'],
- ['playground','play','玩耍','ground','場地'],['skyscraper','sky','天空','scraper','刮擦物/高樓'],['lighthouse','light','光線','house','房屋'],['firefighter','fire','火災','fighter','戰鬥員'],['background','back','後方','ground','背景/地面'],['masterpiece','master','大師','piece','作品'],['breakthrough','break','突破','through','穿透'],['landmark','land','陸地','mark','標誌']
+ ['playground','play','玩耍','ground','場地'],['skyscraper','sky','天空','scraper','刮擦物/高樓'],['lighthouse','light','光線','house','房屋'],['firefighter','fire','火災','fighter','戰鬥員'],['background','back','後方','ground','背景/地面'],['masterpiece','master','大師','piece','作品'],['breakthrough','break','突破','through','穿透'],['landmark','land','陸地','mark','標誌'],
+ ['railway','rail','鐵軌','way','道路'],['cupboard','cup','杯子','board','櫃子/板子'],['moonlight','moon','月亮','light','光線'],['sunshine','sun','太陽','shine','照耀'],['rainstorm','rain','雨','storm','暴風雨'],['waterproof','water','水','proof','防護'],['headline','head','主要/頭部','line','文字行/標題'],['heartbeat','heart','心臟','beat','跳動'],['lifestyle','life','生活','style','風格'],['download','down','向下','load','載入'],['upload','up','向上','load','載入'],['network','net','網狀','work','運作網絡'],['passcode','pass','通行','code','密碼代碼'],['workbook','work','練習工作','book','書本'],['ecosystem','eco','生態環境','system','系統'],['biodiversity','bio','生物生命','diversity','多樣性']
 ]) entries.set(word,{parts:[part(left,'組合詞',a),part(right,'組合詞',b)],note:'這是複合字：兩個詞組合成新的意思。'});
 for (const [word, parts, note] of [
  ['transport',[['trans','字首','跨越'],['port','字根','搬運']],'跨越地方搬運 → 運輸。'],
@@ -54,7 +55,26 @@ for (const [word, parts, note] of [
  ['biography',[['bio','組合形式','生命'],['graph','字根','寫'],['y','字尾','名詞結尾']],'書寫一個人的人生 → 傳記。'],
  ['telephone',[['tele','組合形式','遠'],['phone','組合形式','聲音']],'讓聲音傳到遠方 → 電話。'],
  ['telescope',[['tele','組合形式','遠'],['scope','組合形式','觀察儀器']],'觀察遠方天體的儀器 → 望遠鏡。'],
- ['microscope',[['micro','組合形式','微小'],['scope','組合形式','觀察儀器']],'觀察微小事物的儀器 → 顯微鏡。']
+ ['microscope',[['micro','組合形式','微小'],['scope','組合形式','觀察儀器']],'觀察微小事物的儀器 → 顯微鏡。'],
+ ['construct',[['con','字首','共同'],['struct','字根','建造']],'共同堆疊建造 → 建設、構建。'],
+ ['structure',[['struct','字根','建造'],['ure','字尾','名詞字尾']],'建造出來的型態 → 結構、構造。'],
+ ['destruction',[['de','字首','向下/破壞'],['struct','字根','建造'],['ion','字尾','名詞字尾']],'把建造好的事物拆除 → 破壞、毀滅。'],
+ ['attract',[['at','字首','朝向'],['tract','字根','拉引']],'朝向自己拉過來 → 吸引。'],
+ ['distract',[['dis','字首','分散'],['tract','字根','拉引']],'把注意力拉開分散 → 分心。'],
+ ['contract',[['con','字首','共同'],['tract','字根','拉引']],'拉在一起相互約束／拉緊 → 合約；收縮。'],
+ ['reject',[['re','字首','向後/回頭'],['ject','字根','投擲']],'扔擲回去 → 拒絕。'],
+ ['inject',[['in','字首','向內'],['ject','字根','投擲']],'注射打入體內 → 注射。'],
+ ['project',[['pro','字首','向前'],['ject','字根','投擲']],'向前投射／向前規畫 → 投射；專案。'],
+ ['describe',[['de','字首','向下/詳細'],['scribe','字根','寫']],'詳細寫下特徵 → 描述、描繪。'],
+ ['manuscript',[['manu','組合形式','手'],['script','字根','寫']],'親手寫下的原稿 → 手稿、底稿。'],
+ ['audience',[['aud','字根','聽'],['ience','字尾','名詞字尾']],'聚集前來傾聽的人群 → 聽眾、觀眾。'],
+ ['audible',[['aud','字根','聽'],['ible','字尾','可以…的']],'聽得清楚的、可聽見的。'],
+ ['visible',[['vis','字根','看'],['ible','字尾','可以…的']],'看得見的、顯著的。'],
+ ['vision',[['vis','字根','看'],['ion','字尾','名詞字尾']],'眼光、視力、未來願景。'],
+ ['chronology',[['chrono','組合形式','時間'],['logy','字尾','學問/記錄']],'依時間先後記錄的年表或歷史順序。'],
+ ['geography',[['geo','組合形式','地球/土地'],['graphy','字尾','描繪/記錄']],'描繪地球地貌與人文環境的學問 → 地理學。'],
+ ['geology',[['geo','組合形式','地球/土地'],['logy','字尾','學問/研究']],'研究地質與岩層結構的學問 → 地質學。'],
+ ['biology',[['bio','組合形式','生命'],['logy','字尾','學問/研究']],'研究生命與生物體的學問 → 生物學。']
 ]) entries.set(word,{parts:parts.map(p=>part(...p)),note});
 // Reuse the guide's explicitly taught examples without inferring unseen words.
 for (const lesson of AFFIX_LESSONS) for (const example of lesson.examples) {

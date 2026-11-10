@@ -9636,7 +9636,42 @@ function getBatchCards() {
 const quickTierLabels = { elem_1000: '國小', jhs_2000: '國中', shs_3000: '高中', toeic: 'TOEIC 多益', toefl: 'TOEFL 托福', sat: 'SAT', gre: 'GRE', gmat: 'GMAT' };
 const quickMp3GroupIds = { elem_1000: 'elementary-001', jhs_2000: 'junior-001', shs_3000: 'senior-001', toeic: 'toeic-001', toefl: 'toefl-001', sat: 'sat-001', gre: 'gre-001', gmat: 'gmat-001' };
 export function flashcardShortcut(key, render) {
-  return recallShortcut(key, FLASHCARD_DATABASE.filter(c => c.tier === currentTier), render);
+  if (recallActive(currentTier)) {
+    return recallShortcut(key, FLASHCARD_DATABASE.filter(c => c.tier === currentTier), render);
+  }
+  const activeInput = globalThis.document?.activeElement;
+  if (activeInput && ['input', 'textarea', 'select'].includes(activeInput.tagName?.toLowerCase())) return false;
+  const batchCards = getBatchCards();
+  if (!batchCards.length) return false;
+  if (key === ' ' || key === 'Enter') {
+    isFlipped = !isFlipped;
+    render();
+    return true;
+  }
+  if (key === 'ArrowRight' || key === 'n' || key === 'N') {
+    if (currentCardIndex < batchCards.length - 1) {
+      currentCardIndex++;
+      isFlipped = false;
+      render();
+      return true;
+    }
+  }
+  if (key === 'ArrowLeft' || key === 'p' || key === 'P') {
+    if (currentCardIndex > 0) {
+      currentCardIndex--;
+      isFlipped = false;
+      render();
+      return true;
+    }
+  }
+  if (key === 's' || key === 'S') {
+    const card = batchCards[currentCardIndex];
+    if (card) {
+      playWord(card.word, false);
+      return true;
+    }
+  }
+  return false;
 }
 export function renderFlashcardQuickPlay() {
   return `<section class="card flashcard-quick-play" aria-labelledby="flashcard-quick-title">

@@ -293,5 +293,60 @@
   "Quartz crystal oscillators vibrate at precisely 32,768 hertz when stimulated by electric current.": "石英振盪器每秒震動32768次說明的是石英錶技術，不是機械錶品牌的轉型策略。",
   "Watchmakers in Switzerland export eighty percent of finished chronometers to Asian luxury boutiques.": "瑞士手錶八成出口亞洲是銷售資訊，無法說明品牌如何轉向奢華定位。",
   "Mechanical watch mainsprings are coiled using specialized cobalt-nickel-chromium alloys.": "發條使用鈷鎳鉻合金是零件材料，不是價值主張的策略轉變。"
+ },
+ "g3-s2-u6.trap2": {
+  "Yes, I like.": "以「Do you ...?」開頭的一般疑問句，肯定簡答時助動詞要前後一致，必須回答「Yes, I do.」。英文中不能單獨說「Yes, I like.」，因為 like 是及物動詞，後面必須接受詞（如 Yes, I like it.）或用助動詞 do 代替整個動詞片語。"
+ },
+ "u3-q2-5": {
+  "is like": "「is like」的意思是「像……一樣」（如 She is like an angel.），其中 like 是介系詞；這裡的句意是「我妹妹喜歡音樂」，主詞 My sister 是第三人稱單數，一般動詞現在式應直接用「likes」，不需要也不可加上 be 動詞 is。",
+  "like": "主詞「My sister」是第三人稱單數，在現在簡單式中一般動詞字尾必須加 -s 寫成「likes」；原形動詞「like」用於主詞為 I/you/we/they 或複數名詞時。"
+ },
+ "g5-s1-u2.x2": {
+  "is like": "句意是「我最好的朋友喜歡漫畫書」。主詞 My best friend 是第三人稱單數，一般動詞現在式直接加 -s 寫為「likes」；若寫成「is like」則變成介系詞用法「像……一樣」，文法與句意皆不合。",
+  "like": "主詞「My best friend」為第三人稱單數，現在簡單式的一般動詞需加 -s 變為「likes」，原形「like」用於主詞為複數或 I/you 時。",
+  "liking": "「liking」是 V-ing 形式（現在分詞或動名詞），不能單獨作為句子的主要謂語動詞；此處需要現在簡單式第三人稱單數動詞「likes」。"
+ },
+ "d.diag-0717": {
+  "will finish": "在由 after、when、before 等引導的時間副詞子句中，英文文法習慣「以現在簡單式代替未來式」。主要子句雖用未來的 will be permitted，但在 after 子句中主詞 Emily 是單數，動詞必須用現在式「finishes」，不能重複使用 will finish。",
+  "is finishing": "時間子句表示「在做完某事之後」這個完成的條件，強調動作完成後的時序銜接，應使用現在簡單式「finishes」；「is finishing」是現在進行式（正在完成中），與句意「在作業完成之後才被允許看電視」的邏輯矛盾。",
+  "finished": "主要子句使用未來式「will be permitted」，表示這是一件尚未發生的未來約定；時間子句應使用現在簡單式「finishes」代替未來式，不能用過去式「finished」。"
+ },
+ "quality.original.g10-s1-u1.1": {
+  "the committee": "「the committee（委員會）」是執行批准動作的主體，在句子中擔任「主詞（Subject）」；而動作承受者「the proposal（提案）」才是 approved 的「受詞（Object）」。",
+  "approved": "「approved（批准）」是句子的主要及物動詞（Verb），描述主詞所執行的動作；題目問的是受詞（Object），即被批准的對象「the proposal」。"
+ },
+ "quality.original.g10-s1-u1.2": {
+  "The speaker explained the rule.": "在「The speaker explained the rule」中，explained 是一般及物動詞，the rule 是受詞（S + V + O 結構），並非連綴動詞與主詞補語；正確答案的 seems 是連綴動詞，後接形容詞 reasonable 當主詞補語（S + V + SC）。",
+  "The audience applauded.": "在「The audience applauded」中，applauded 是不及物動詞，句子結構為 S + V，完全沒有連綴動詞或補語；正確答案中的 seems 才是連綴動詞，銜接主詞補語 reasonable。"
+ },
+ "c-jhs-j3.p1e": {
+  "would like to + V": "「would like to + V」意思是「想要……（客氣表達個人意願）」（例：I would like to have tea.）；若要向對方提出建議、詢問意向「……如何？」，應用「how about + V-ing」或「what about + V-ing」。",
+  "help yourself to": "「help yourself to + 名詞」意思是「請自行取用（食物、飲料等）」（例：Please help yourself to some cookies.），是用於招待客人的客套話，並非向對方提出活動建議的「……如何？」。"
+ },
+ "c-jhs-j3.p2e": {
+  "how about + V-ing": "「how about + V-ing」是用於提出提議或建議「……如何？／……怎麼樣？」（例：How about going to the park?）；若要禮貌表達自己想要什麼，應使用「would like to + V」。",
+  "never mind": "「never mind」意思是「沒關係；算了吧；不要緊」，用於安慰他人或請對方不必在意某事，並非表達個人意願「想要……」。"
+ },
+ "c-jhs-j7.p3e": {
+  "keep in mind that": "「keep in mind that」意思是「牢記；記住……」（例：Keep in mind that practice makes perfect.）；表示透過思考、計算或探索而「想出、弄明白」，應使用「figure out」。",
+  "make sense": "「make sense」意思是「講得通；有道理；合邏輯」（例：His explanation doesn't make sense.），通常以事情為主詞，表示事情本身合乎邏輯，並非表示主動去「想出、搞懂」的動作。"
+ },
+ "c-jhs-j7.p4e": {
+  "figure out": "「figure out」意思是「想出、搞清楚、弄明白」；若要提醒對方「牢記、請記住……」，應使用「keep in mind that + 子句」。",
+  "in terms of": "「in terms of」是介系詞片語，意思是「就……而言；從……的角度來看」（例：In terms of cost, this plan is better.），不能作為表達「牢記」的動詞片語。"
+ },
+ "c-intl-toefl.p3e": {
+  "figure out": "「figure out」意為「解決、想通、弄明白」；而托福學術演講中常用於提醒核心原則或注意事項的「牢記、放在心上」，應使用「keep in mind」。",
+  "in terms of": "「in terms of」是片語介系詞，意為「在……方面；就……而言」，不能取代表示「記住、謹記」的動詞片語 keep in mind。"
+ },
+ "d.diag-1137": {
+  "ratable": "「ratable」是形容詞，意思是「可評估的、可課稅的」；此處前面已有名詞 credit，需要名詞「rating」組合成商務高頻複合名詞「credit rating（信用評等）」，在句中當 downgraded 的受詞。",
+  "rated": "「rated」是動詞過去式或過去分詞（評定、評價）；空格前已有名詞 credit，後接介系詞片語 to BBB minus，需要名詞「rating」構成商務固定名詞片語「credit rating（信用評級）」。",
+  "rate": "「rate」在此可作動詞或名詞（比率、速度），但指金融評級機構給予企業的「信用評級結果」時，標準專有名詞片語是「credit rating」，不可使用單獨的 credit rate。"
+ },
+ "d.diag-1686": {
+  "pathologies": "「pathologies」意思是「病理、病態現象」；語境討論社會語言學的多語者在不同社交場合進行語碼轉換，切換的是「語言語域／語體（linguistic registers）」，與疾病或病態無關。",
+  "stagnations": "「stagnations」意思是「停滯、不景氣」；文意指說話者在不同社交領域靈活轉換使用不同的「語體／語域風格（linguistic registers）」，而非停滯。",
+  "limitations": "「limitations」意思是「限制、局限性」；語碼轉換（code-switching）是多語者在不同社交語境切換語言語域（registers）的能力展現，並非切換「局限」。"
  }
 }

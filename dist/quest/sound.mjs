@@ -41,6 +41,7 @@ export function sfx(kind) {
   if (!effects) return;
   try {
     ctx ||= new (globalThis.AudioContext || globalThis.webkitAudioContext)();
+    if (ctx && ctx.state === 'suspended') { ctx.resume?.().catch(() => {}); }
     const notes = {
       correct: [[660, 0], [880, 0.09]],
       wrong: [[220, 0], [180, 0.12]],

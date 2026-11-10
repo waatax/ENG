@@ -28,9 +28,9 @@ export function boostIntro(unitId, items, doneCount) {
 }
 export function boostQuestion(run) {
   const it = run.queue[run.index], order = shuffled(it.options, `${it.id}:${run.index}`), picked = run.picked;
-  const options = order.map(o => {
+  const options = order.map((o, idx) => {
     const state = picked === null ? '' : o === it.answer ? 'right' : o === picked ? 'wrong' : 'dim';
-    return `<button class="boost-opt ${state}" data-boost="pick" data-value="${esc(o)}"${langOf(o)} ${picked !== null ? 'disabled' : ''}>${esc(o)}</button>`;
+    return `<button class="boost-opt ${state}" data-boost="pick" data-value="${esc(o)}"${langOf(o)} ${picked !== null ? 'disabled' : ''}><kbd class="boost-kbd">${idx + 1}</kbd><span>${esc(o)}</span></button>`;
   }).join('');
   let feedback = '';
   if (picked !== null) {
@@ -65,6 +65,18 @@ export async function mountBoosts(root = globalThis.document, version = '') {
     const unit = box.dataset.boostUnit;
     if (!box.dataset.boostBound) {
       box.dataset.boostBound = '1';
+      box.addEventListener('keydown', event => {
+        const run = runs.get(unit);
+        if (!run || run.index >= run.queue.length) return;
+        if (['1', '2', '3', '4'].includes(event.key) && run.picked === null) {
+          const idx = Number(event.key) - 1;
+          const opts = box.querySelectorAll('.boost-opt');
+          if (opts[idx] && !opts[idx].disabled) opts[idx].click();
+        } else if ((event.key === ' ' || event.key === 'Enter') && run.picked !== null) {
+          const nextBtn = box.querySelector('.boost-next');
+          if (nextBtn) { event.preventDefault(); nextBtn.click(); }
+        }
+      });
       box.addEventListener('click', event => {
         const b = event.target.closest('[data-boost]'); if (!b) return;
         const action = b.dataset.boost, items = cache.get(unit) || [], run = runs.get(unit);
