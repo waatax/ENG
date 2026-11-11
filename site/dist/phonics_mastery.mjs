@@ -458,13 +458,229 @@ export const PHONICS_DECODER_SAMPLES = [
   { word: 'elephant', chunks: ['el', 'e', 'phant'], rules: ['ph 發 /f/ 雙字母音', '首音節短母音 /ɛ/', 'ant 弱讀'], ipa: '/ˈɛl.ɪ.fənt/', zh: '大象' },
   { word: 'pronunciation', chunks: ['pro', 'nun', 'ci', 'a', 'tion'], rules: ['5音節超長詞分解', 'ci 軟音 /si/', 'tion 發 /ʃən/ 經典名詞字尾'], ipa: '/prəˌnʌn.siˈeɪ.ʃən/', zh: '發音' },
   { word: 'celebration', chunks: ['cel', 'e', 'bra', 'tion'], rules: ['c 遇 e 發軟音 /s/', 'bra 為 R-Blend 開音節 /eɪ/', 'tion 發 /ʃən/'], ipa: '/ˌsɛl.əˈbreɪ.ʃən/', zh: '慶祝活動' },
-  { word: 'vocabulary', chunks: ['vo', 'cab', 'u', 'lar', 'y'], rules: ['5音節學術詞', 'cab 閉音節短音 /æ/', 'lar R控制母音弱讀'], ipa: '/voʊˈkæb.jəˌlɛr.i/', zh: '詞彙、字彙量' }
+  { word: 'vocabulary', chunks: ['vo', 'cab', 'u', 'lar', 'y'], rules: ['5音節學術詞', 'cab 閉音節短音 /æ/', 'lar R控制母音弱讀'], ipa: '/voʊˈkæb.jəˌlɛr.i/', zh: '詞彙、字彙量' },
+  { word: 'temperature', chunks: ['tem', 'per', 'a', 'ture'], rules: ['tem 為 CVC 短母音 /ɛ/', 'per 為 Bossy R /ɚ/', 'ture 發 /tʃɚ/ 常見字尾'], ipa: '/ˈtɛm.pɚ.ə.tʃɚ/', zh: '溫度、氣溫' },
+  { word: 'environment', chunks: ['en', 'vi', 'ron', 'ment'], rules: ['vi 為開音節長音 /vaɪ/', 'ron 弱讀為 /rən/', 'ment 為抽象名詞字尾'], ipa: '/ɪnˈvaɪ.rən.mənt/', zh: '自然環境' },
+  { word: 'adventure', chunks: ['ad', 'ven', 'ture'], rules: ['ven 為 CVC 閉音節短母音 /vɛn/', 'ture 發 /tʃɚ/ 固定音塊'], ipa: '/ədˈvɛn.tʃɚ/', zh: '冒險旅程' }
 ];
+
+// 各模組專屬「聽音辨字＆拼讀診斷快測」（錯誤時提供逐項發音盲點解說）
+export const PHONICS_MODULE_QUIZZES = {
+  letters: [
+    {
+      id: 'pq-letters-1',
+      audioWord: 'apple',
+      q: '字母 Aa 的「字母名 (Letter Name)」是 /eɪ/，但它在單字 apple 開頭真正發出的「字母音 (Letter Sound)」是什麼？',
+      options: ['/æ/（大口短音，如 apple, ant）', '/eɪ/（直接唸字母名 A）', '/ɑː/（如 father 的後母音）'],
+      answer: 0,
+      wrong: {
+        1: '這是把「字母名 /eɪ/」當成「字母自然音 /æ/」的常見誤區；apple 開頭是短母音 /æ/，不是 /eɪ.pəl/。',
+        2: '美式英語 apple 開頭是嘴角向兩側張大的前母音 /æ/，而非口腔後方的 /ɑː/。'
+      },
+      why: '自然拼讀第一步是區分 Letter Name (/eɪ/) 與 Letter Sound (/æ/)；apple, ant, cat 中的 a 皆發短母音 /æ/。'
+    },
+    {
+      id: 'pq-letters-2',
+      audioWord: 'van',
+      q: '比較 fan (/f/) 與 van (/v/) 的字首發音，兩者最關鍵的口腔動作差異是什麼？',
+      options: ['發 /v/ 時上門牙輕觸下唇且「聲帶必須振動」；/f/ 則只送氣不振動聲帶', '發 /v/ 時雙唇要完全緊閉如 /b/', '兩個字母在英文中發音完全相同'],
+      answer: 0,
+      wrong: {
+        1: '雙唇緊閉爆破會變成 /b/（把 van 唸成 ban）；/v/ 是「上齒輕觸下唇」的唇齒摩擦濁音。',
+        2: '/f/ 是無聲清音、/v/ 是有聲濁音，區分兩者才不會把 fan（風扇）與 van（廂型車）混淆。'
+      },
+      why: '/f/ 與 /v/ 嘴型相同（上牙輕咬下唇），差別只在聲帶是否振動（清濁成對）。'
+    }
+  ],
+  short_vowels: [
+    {
+      id: 'pq-cvc-1',
+      audioWord: 'pan',
+      q: '聽到美式發音 /pæn/（平底鍋，嘴張大三指寬），應該拼成哪一個 CVC 單字？',
+      options: ['pan (p-a-n)', 'pen (p-e-n)', 'pin (p-i-n)'],
+      answer: 0,
+      wrong: {
+        1: 'pen 發 /pɛn/（嘴張約兩指寬，意為原子筆），母音 e 比 a (/æ/) 開口小。',
+        2: 'pin 發 /pɪn/（意為大頭針），母音是短促的 /ɪ/，與大口音 /æ/ 不同。'
+      },
+      why: '大口短母音 /æ/ 對應字母 a，因此 /p/-/æ/-/n/ 拼為 pan。'
+    },
+    {
+      id: 'pq-cvc-2',
+      audioWord: 'cup',
+      q: '單字 cup, sun, bug 中間的字母 u 都被後面的子音關住（閉音節 CVC），它們共同發哪一個短母音？',
+      options: ['/ʌ/（放鬆中央短音）', '/juː/（字母名 U）', '/uː/（圓唇長音）'],
+      answer: 0,
+      wrong: {
+        1: '/juː/ 是開音節或 Magic E（如 cute /kjuːt/）才發的長母音。',
+        2: '/uː/ 是圓唇長音（如 food），而閉音節 CVC 中的 u 發短促放鬆的 /ʌ/。'
+      },
+      why: '閉音節 CVC 中字母 u 發短促有力的中央母音 /ʌ/（c-u-p ➔ /kʌp/）。'
+    }
+  ],
+  magic_e: [
+    {
+      id: 'pq-magice-1',
+      audioWord: 'kite',
+      q: '當短母音單字 kit (/kɪt/ 工具組) 字尾加上不發音的 e 變成 kite 時，發音會如何變化？',
+      options: ['結尾 e 不發音，中間的 i 變成自身字母名長音 /aɪ/ (/kaɪt/)', '結尾多唸一個 /ɛ/ 變成兩個音節 /ˈkɪt.ɛ/', '發音完全不變，仍唸 /kɪt/'],
+      answer: 0,
+      wrong: {
+        1: 'Magic E 字尾的 e 是「靜音 e (Silent E)」，絕對不能單獨唸出 /ɛ/ 或 /i/。',
+        2: '加上字尾 e 後形成 CVCe 開音節效果，母音 i 會從短音 /ɪ/ 變成長音 /aɪ/。'
+      },
+      why: 'Magic E 規則：CVCe 字尾的 e 不發音，但讓前面的母音唸出自己的字母名（i ➔ /aɪ/）。'
+    },
+    {
+      id: 'pq-magice-2',
+      audioWord: 'hope',
+      q: '想拼出 /hoʊp/（希望，中間母音發字母 O 的名字 /oʊ/），正確的拼法是？',
+      options: ['hope (CVCe)', 'hop (CVC)', 'happ (CVCC)'],
+      answer: 0,
+      wrong: {
+        1: 'hop 沒有字尾 Magic E，是閉音節短母音 /hɒp/（單腳跳）。',
+        2: 'happ 的母音是短音 a /æ/，與 /oʊ/ 完全不同。'
+      },
+      why: '要讓 o 發出字母名長音 /oʊ/，需在字尾加上靜音 e，拼成 hope。'
+    }
+  ],
+  vowel_teams: [
+    {
+      id: 'pq-vt-1',
+      audioWord: 'rain',
+      q: '在母音團隊（Vowel Teams）中，rain 與 play 都發出長音 /eɪ/。為什麼一個用 ai、一個用 ay？',
+      options: ['ai 常出現在單字中間（子音前，如 r-ai-n），ay 常出現在單字結尾（如 pl-ay）', 'ai 發短音，ay 才發長音', '兩者毫無位置規律，只能死背'],
+      answer: 0,
+      wrong: {
+        1: 'ai 與 ay 都是發長母音 /eɪ/ 的母音團隊（如 rain /reɪn/, day /deɪ/）。',
+        2: '英語拼字規律中，英文單字不愛以字母 i 結尾，因此字中用 ai、字尾改用 ay！'
+      },
+      why: '記住位置口訣：「字中 ai（rain, train, wait），字尾 ay（day, play, stay）」，拼字不再搞混！'
+    },
+    {
+      id: 'pq-vt-2',
+      audioWord: 'boat',
+      q: '看到單字 boat, coat, road 中的母音組合 oa，應該怎麼發音？',
+      options: ['第一個字母 o 說話發長音 /oʊ/，第二個字母 a 不發音', '把 o 和 a 分開唸成兩個音節 /oʊ.æ/', '發短母音 /ʌ/'],
+      answer: 0,
+      wrong: {
+        1: 'oa 是「雙母音字母發單一長音（Vowel Digraph）」，不能拆成兩個音節唸。',
+        2: 'oa 遵循「兩個母音去散步，第一個母音說話」原則，發長音 /oʊ/。'
+      },
+      why: 'oa 組合中由第一個字母 o 發出自身字母名 /oʊ/（b-oa-t ➔ /boʊt/）。'
+    }
+  ],
+  digraphs_blends: [
+    {
+      id: 'pq-db-1',
+      audioWord: 'phone',
+      q: '看到單字 phone, photo, elephant 中的雙字母組合 ph，它的發音等同於哪一個字母？',
+      options: ['/f/（同字母 f 的唇齒摩擦音）', '/p/（送氣雙唇爆破音）', '/h/（呵氣音）'],
+      answer: 0,
+      wrong: {
+        1: 'ph 是雙字母單音（Digraph），合起來發一個新音 /f/，不能只唸 p 的 /p/。',
+        2: 'ph 在源於希臘文的單字中固定發 /f/，而非 /h/。'
+      },
+      why: '雙字母子音 ph 永遠合併發 /f/（如 phone /foʊn/, elephant /ˈɛl.ɪ.fənt/）。'
+    },
+    {
+      id: 'pq-db-2',
+      audioWord: 'ship',
+      q: '如何區分 ship (sh /ʃ/) 與 chip (ch /tʃ/) 的字首發音？',
+      options: ['sh (/ʃ/) 是持續氣流摩擦音（像噓聲 shh）；ch (/tʃ/) 則是舌尖先堵住氣流再瞬間破擦而出', 'sh 要咬舌尖，ch 不用', '兩個字發音一模一樣'],
+      answer: 0,
+      wrong: {
+        1: '咬舌尖是 th (/θ/ 或 /ð/) 的動作；sh 與 ch 舌尖都不伸出齒外。',
+        2: 'ship（船 /ʃɪp/）氣流可拉長持續；chip（洋芋片 /tʃɪp/）有短促爆破起點。'
+      },
+      why: 'sh /ʃ/ 為延續摩擦音，ch /tʃ/ 為短促破擦音，掌握氣流是否先阻斷即可一秒聽辨！'
+    }
+  ],
+  bossy_r: [
+    {
+      id: 'pq-br-1',
+      audioWord: 'bird',
+      q: 'her (er)、bird (ir)、nurse (ur) 三個字的母音字母不同，但在美式英語中它們的「R 控制母音」聽起來如何？',
+      options: ['三者皆發出相同的捲舌中央音 /ɝː/（er = ir = ur 三胞胎同音）', '三個字母音完全不同：/ɛr/、/ɪr/、/ʊr/', 'r 完全不發音'],
+      answer: 0,
+      wrong: {
+        1: '在 Bossy R 規則中，e, i, u 遇到後面的 r 都會被「R 老大」統一成相同的捲舌音 /ɝː/。',
+        2: '美式英語極重視捲舌音 r，舌尖需向上捲起且不碰觸上顎。'
+      },
+      why: 'Bossy R 黃金定律：er (her)、ir (bird)、ur (nurse) 是發音三胞胎，同發 /ɝː/！'
+    },
+    {
+      id: 'pq-br-2',
+      audioWord: 'star',
+      q: '區分 car / star 中的 ar 與 corn / fork 中的 or，發音口型有何差別？',
+      options: ['ar (/ɑːr/) 先張大嘴發 /ɑː/ 再捲舌；or (/ɔːr/) 則是雙唇收圓發 /ɔː/ 再捲舌', 'ar 要閉嘴，or 要張大嘴', '兩者都發 /ɝː/'],
+      answer: 0,
+      wrong: {
+        1: '恰好相反！ar 如看牙醫張大嘴「啊～」再捲舌；or 則是圓唇音。',
+        2: '發 /ɝː/ 的是 er/ir/ur；ar (/ɑːr/) 與 or (/ɔːr/) 各自保留清楚的大口與圓唇特色。'
+      },
+      why: 'ar 張大嘴發 /ɑːr/（star, park），or 收圓唇發 /ɔːr/（fork, storm）。'
+    }
+  ],
+  soft_hard_cg: [
+    {
+      id: 'pq-cg-1',
+      audioWord: 'city',
+      q: '為什麼字母 c 在 cat, cup 中發硬音 /k/，但在 city, cent, cycle 中卻發軟音 /s/？',
+      options: ['因為 c 後面緊接著 e, i, y 三個字母時，會觸發「軟音規則」變讀為 /s/', '因為 city 是動詞所以發 /s/', '完全沒有規則'],
+      answer: 0,
+      wrong: {
+        1: 'city 與 cat 同樣都是名詞，發音差異取決於 c 後面緊鄰的母音字母，與詞性無關。',
+        2: '這是超實用的「軟硬音黃金定律」：c 遇到 e, i, y 發 /s/，遇到 a, o, u 或子音發 /k/！'
+      },
+      why: '字母 C 遇到 e (cent)、i (city)、y (cycle) 時發軟音 /s/；其餘情況多發硬音 /k/。'
+    },
+    {
+      id: 'pq-cg-2',
+      audioWord: 'giant',
+      q: '依據軟硬音規則，下列哪一個單字開頭的 g 發「軟音 /dʒ/」而非硬音 /ɡ/？',
+      options: ['giant（g 後面接 i）', 'garden（g 後面接 a）', 'gold（g 後面接 o）'],
+      answer: 0,
+      wrong: {
+        1: 'garden 中 g 後面接 a，發硬音 /ɡ/ (/ˈɡɑːr.dən/)。',
+        2: 'gold 中 g 後面接 o，發硬音 /ɡ/ (/ɡoʊld/)。'
+      },
+      why: '字母 G 遇到 e (gem)、i (giant)、y (gym) 時常發軟音 /dʒ/；遇到 a, o, u 發硬音 /ɡ/。'
+    }
+  ],
+  syllables: [
+    {
+      id: 'pq-syl-1',
+      audioWord: 'rabbit',
+      q: '切分雙音節單字 rabbit (VC/CV 結構：兩個母音中間夾著兩個子音 b-b) 時，音節分界線應該切在哪裡？',
+      options: ['rab · bit（從兩個子音中間切開，形成兩個閉音節）', 'ra · bbit（把兩個 b 都推到後面）', 'rabb · it（把兩個 b 都留在前面）'],
+      answer: 0,
+      wrong: {
+        1: '若切成 ra·bbit，第一音節 ra 會變成開音節唸成 /reɪ/，不符合 /ˈræb.ɪt/ 的短母音！',
+        2: '英語 VC/CV 切音節規則是「雙子音從正中間對切 (VC / CV)」。'
+      },
+      why: 'VC/CV 黃金切分法：兩個子音一人一邊（rab·bit, nap·kin, fan·tas·tic），前音節被關住自然讀短母音！'
+    },
+    {
+      id: 'pq-syl-2',
+      audioWord: 'table',
+      q: '看到以「子音 + le」結尾的單字 table, apple, little，最後一個音節該如何切分與發音？',
+      options: ['倒數三個字母「子音 + le」自成一個音節（ta · ble, ap · ple），結尾 e 不單獨發音，只發暗 /əl/', '把 le 當成獨立音節，唸成 /leɪ/', '整個字只算單音節'],
+      answer: 0,
+      wrong: {
+        1: 'C-le 音節中結尾的 e 不發音，只用來幫助子音滑向舌側音 /əl/（如 ble 發 /bəl/）。',
+        2: 'C-le 本身含有母音化的舌側音 /əl/，因此 ta·ble 是標準的雙音節詞！'
+      },
+      why: 'C-le 穩定字尾規則：看到字尾 -ble, -ple, -tle, -cle，直接往前抓一個子音切成獨立音節！'
+    }
+  ]
+};
 
 // 當前選取的自然拼讀模組標籤
 let activePhonicsTab = 'letters';
 let customDecoderInput = '';
 let customDecoderResult = null;
+let phonicsQuizSelections = {};
 
 // 口腔器官圖示 SVG
 function renderMouthDiagramSvg() {
@@ -598,6 +814,7 @@ export function renderPhonicsMasteryView() {
 
       <!-- 依據不同模組渲染專屬內容 -->
       ${renderModuleSpecificContent(currentMod)}
+      ${renderPhonicsModuleQuiz(currentMod)}
     </div>
 
     <!-- 🔍 互動式長單字音節解碼器 (Interactive Multisyllable Phonics Decoder) -->
@@ -920,6 +1137,58 @@ function renderModuleSpecificContent(mod) {
   return '';
 }
 
+function renderPhonicsModuleQuiz(mod) {
+  const items = PHONICS_MODULE_QUIZZES[mod.id] || [];
+  if (!items.length) return '';
+  return `
+    <section class="phonics-quiz-box" style="margin-top:22px;padding:18px;border-radius:14px;background:linear-gradient(180deg,#f0fdf4 0%,#ffffff 100%);border:2px solid #86efac">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+        <div>
+          <span class="pill" style="background:#047857;color:#fff;font-weight:700;font-size:11px">⚡ 聽音辨字＆拼讀即測即診斷</span>
+          <h3 style="margin:4px 0 0;font-size:17px;color:#065f46">動手驗證「${esc(mod.title)}」拼讀規律（答錯附發音盲點解析）</h3>
+        </div>
+      </div>
+      <div style="display:grid;gap:14px">
+        ${items.map((item, idx) => {
+          const picked = phonicsQuizSelections[item.id];
+          const isAnswered = picked !== undefined;
+          const isOk = isAnswered && picked === item.answer;
+          const wrongReason = (!isOk && isAnswered && item.wrong) ? item.wrong[picked] : '';
+          return `
+            <article style="background:#fff;border:1px solid #bbf7d0;border-radius:12px;padding:14px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+                <strong style="color:#0f172a;font-size:15px">Q${idx + 1}. ${esc(item.q)}</strong>
+                ${item.audioWord ? `<button type="button" class="btn small primary" data-phonics-speak="${esc(item.audioWord)}">🔊 聽示範字 (${esc(item.audioWord)})</button>` : ''}
+              </div>
+              <div style="display:grid;gap:8px">
+                ${item.options.map((opt, oIdx) => {
+                  const isThisPicked = picked === oIdx;
+                  const isRightOpt = oIdx === item.answer;
+                  let btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:1px solid #cbd5e1;background:#f8fafc;color:#1e293b;font-weight:600;';
+                  if (isAnswered && isRightOpt) btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:2px solid #10b981;background:#ecfdf5;color:#065f46;font-weight:700;';
+                  else if (isAnswered && isThisPicked && !isRightOpt) btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:2px solid #ef4444;background:#fef2f2;color:#991b1b;font-weight:700;';
+                  return `<button type="button" class="btn" style="${btnStyle}" data-phonics-quiz-id="${esc(item.id)}" data-phonics-quiz-pick="${oIdx}">
+                    ${String.fromCharCode(65 + oIdx)}. ${esc(opt)}
+                  </button>`;
+                }).join('')}
+              </div>
+              ${isAnswered ? `
+                <div class="phonics-quiz-feedback ${isOk ? 'is-ok' : 'is-wrong'}" style="margin-top:10px;padding:12px 14px;border-radius:10px;border-left:4px solid ${isOk ? '#10b981' : '#ef4444'};background:${isOk ? '#ecfdf5' : '#fef2f2'};font-size:13.5px;line-height:1.6">
+                  <div style="font-weight:800;color:${isOk ? '#065f46' : '#991b1b'};margin-bottom:4px">
+                    ${isOk ? '✅ 答對了！發音與拼字規律完全掌握！' : `❌ 答錯了！正確答案是 (${String.fromCharCode(65 + item.answer)}) ${esc(item.options[item.answer])}`}
+                  </div>
+                  ${!isOk && wrongReason ? `<div class="phonics-wrong-diagnosis" style="color:#991b1b;margin-bottom:6px"><strong>🔍 錯在哪裡：</strong>${esc(wrongReason)}</div>` : ''}
+                  <div style="color:#065f46"><strong>💡 自然拼讀規律：</strong>${esc(item.why)}</div>
+                </div>
+              ` : ''}
+            </article>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `;
+}
+
 // 渲染解碼結果卡片
 function renderDecoderResultCard(item) {
   if (!item) return '';
@@ -1033,6 +1302,13 @@ export function handlePhonicsEvents(target, renderCallback) {
   // 切換模組標籤
   if (d.phonicsTab) {
     activePhonicsTab = d.phonicsTab;
+    renderCallback();
+    return true;
+  }
+
+  // 自然拼讀隨堂診斷快測作答
+  if (d.phonicsQuizId !== undefined && d.phonicsQuizPick !== undefined) {
+    phonicsQuizSelections[d.phonicsQuizId] = Number(d.phonicsQuizPick);
     renderCallback();
     return true;
   }

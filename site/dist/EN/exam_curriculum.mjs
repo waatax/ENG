@@ -705,7 +705,8 @@ export const examWordAndPhraseSets = [
       ['for instance', '/fɔːr ˈɪn.stəns/', 'transition phr.', 'used to introduce a specific concrete example that illustrates a preceding general claim', 'Think: Must follow a broader claim that the second sentence exemplifies.', 'Many alpine plants have evolved heat-retaining structures; cushion plants, for instance, grow in dense low mats.'],
       ['in contrast', '/ɪn ˈkɑːn.træst/', 'transition phr.', 'used to set up a direct opposition between the preceding claim and the current clause', 'Think: Equivalent to "however" or "conversely" when contrasting two subjects.', 'Early telegraph cables carried only a few words per minute; modern fiber-optic lines, in contrast, transmit terabits per second.'],
       ['far from', '/fɑːr frʌm/', 'prep. phr.', 'used to emphasize that the true situation is the exact opposite of what follows', 'Think: Polarity inverter ("Far from being random, X was carefully planned").', 'Far from being a passive barrier, the cell membrane actively regulates nutrient transport.'],
-      ['call into question', '/kɔːl ˈɪn.tuː ˈkwes.tʃən/', 'v. phr.', 'to raise serious doubts about the validity of a traditional assumption or theory', 'Think: Paraphrases "undermine" or "challenge" in SAT Reading.', 'The discovery of Bronze Age glass beads in northern Europe called into question earlier models of isolated trade networks.']
+      ['call into question', '/kɔːl ˈɪn.tuː ˈkwes.tʃən/', 'v. phr.', 'to raise serious doubts about the validity of a traditional assumption or theory', 'Think: Paraphrases "undermine" or "challenge" in SAT Reading.', 'The discovery of Bronze Age glass beads in northern Europe called into question earlier models of isolated trade networks.'],
+      ['by the same token', '/baɪ ðə seɪm ˈtoʊ.kən/', 'transition phr.', 'in the same way or for the same logical reason', 'Think: Signals parallel reasoning between two closely related claims.', 'High humidity slows evaporative cooling in humans; by the same token, it reduces transpiration efficiency in leaves.']
     ]
   },
   {
@@ -737,7 +738,8 @@ export const examWordAndPhraseSets = [
       ['confounding factor', '/kənˈfaʊn.dɪŋ ˈfæk.tɚ/', 'n. phr.', 'an outside variable that changes alongside the studied variables and makes causation hard to determine', 'Think: Whenever two things happen at once, the second change is a confounding factor.', 'Seasonal holiday demand acted as a confounding factor during the December marketing trial.'],
       ['break even', '/breɪk ˈiː.vən/', 'v. phr.', 'to reach a point in business where total revenue exactly equals total costs, resulting in neither profit nor loss', 'Think: Revenue = Total Cost (Fixed Overhead + Variable Cost).', 'At current subscription prices, the streaming platform needs forty thousand active users to break even.'],
       ['percentage point', '/pɚˈsen.tɪdʒ pɔɪnt/', 'n. phr.', 'the arithmetic unit for the simple difference between two percentages', 'Think: 15% to 20% = 5 percentage points (whereas relative change is 5/15 = 33.3%).', 'The firm’s operating margin rose by five percentage points, from fifteen percent to twenty percent.'],
-      ['relative change', '/ˈrel.ə.tɪv tʃeɪndʒ/', 'n. phr.', 'the amount of increase or decrease divided by the original starting value', 'Think: Depends entirely on the baseline denominator.', 'Because the baseline was small, an increase of ten units represented a large relative change.']
+      ['relative change', '/ˈrel.ə.tɪv tʃeɪndʒ/', 'n. phr.', 'the amount of increase or decrease divided by the original starting value', 'Think: Depends entirely on the baseline denominator.', 'Because the baseline was small, an increase of ten units represented a large relative change.'],
+      ['rule out', '/ruːl aʊt/', 'v. phr.', 'to eliminate a competing possibility or alternative explanation using evidence', 'Think: Ruling out an alternative cause strengthens the main causal claim.', 'Controlled laboratory trials allowed engineers to rule out metal fatigue as the cause of the valve failure.']
     ]
   },
   {
@@ -769,7 +771,8 @@ export const examWordAndPhraseSets = [
       ['in context', '/ɪn ˈkɑːn.tekst/', 'prep. phr.', 'considered together with the surrounding words, logic, and rhetorical purpose', 'Think: A word’s meaning in context overrides casual dictionary associations.', 'Interpreted in context, the reviewer’s remark expresses ironic skepticism rather than praise.'],
       ['far from being', '/fɑːr frʌm ˈbiː.ɪŋ/', 'prep. phr.', 'used to reject a plausible misconception and assert the opposite quality', 'Think: Strong GRE contrast structure ("Far from being derivative, the work is original").', 'Far from being an uncritical admirer, the biographer documents several of the diplomat’s miscalculations.'],
       ['at odds with', '/æt ɑːdz wɪð/', 'adj. phr.', 'in conflict or disagreement with established evidence, expectations, or principles', 'Think: Signals negative polarity / contradiction between two claims.', 'The newly excavated inscriptions are at odds with the assumption that the settlement was abandoned early.'],
-      ['to the extent that', '/tuː ðə ɪkˈstent ðæt/', 'conj. phr.', 'insofar as; used to specify the exact degree or condition under which a claim holds true', 'Think: Classic GRE analytical qualifier.', 'Public subsidies are effective to the extent that they target underserved transit corridors.']
+      ['to the extent that', '/tuː ðə ɪkˈstent ðæt/', 'conj. phr.', 'insofar as; used to specify the exact degree or condition under which a claim holds true', 'Think: Classic GRE analytical qualifier.', 'Public subsidies are effective to the extent that they target underserved transit corridors.'],
+      ['insofar as', '/ˌɪn.soʊˈfɑːr æz/', 'conj. phr.', 'to the degree or extent that a specified condition is met', 'Think: Introduces a precise boundary condition in analytical arguments.', 'Historical analogies are useful insofar as they illuminate structural constraints rather than predict exact outcomes.']
     ]
   },
   {
@@ -1052,6 +1055,83 @@ export const examSubtopicDrills = [
     answer: 'To qualify the proponents’ claim by showing that the program’s net reduction in car emissions was more limited than assumed',
     step0Hint: 'The first sentence reports an "unqualified environmental triumph" view; "Yet" introduces evidence that tempers (qualifies) how much car traffic was actually replaced.',
     explanation: 'By noting that 70% of trips replaced walking or transit rather than car trips, the author challenges the claim of "unqualified" triumph without claiming the program had zero value.'
+  },
+  {
+    id: 'drill-toefl-4',
+    track: 'toefl',
+    subtopic: 'Integrated Writing: Lecture vs. Reading Synthesis',
+    type: 'single',
+    stem: 'Reading claim: "Ancient Roman concrete harbors survived for two millennia primarily because builders mixed volcanic ash with lime in exact proportions." Lecture point: "Recent mineralogical scans show that seawater percolating through the concrete dissolved volcanic ash and grew interlocking crystal fibers that healed micro-cracks over time." How does the lecture relate to the reading claim?',
+    options: [
+      'It deepens the explanation by identifying a dynamic chemical reaction with seawater rather than static mixing ratios alone.',
+      'It proves that ancient Roman harbors were actually constructed out of modern steel rather than volcanic ash.',
+      'It confirms that seawater rapidly destroys all volcanic ash structures within a few decades.'
+    ],
+    answer: 'It deepens the explanation by identifying a dynamic chemical reaction with seawater rather than static mixing ratios alone.',
+    step0Hint: 'Compare the reading’s focus ("mixed volcanic ash... in exact proportions") with the lecture’s added mechanism ("seawater... grew interlocking crystal fibers").',
+    explanation: 'The lecture refines the reading’s static recipe explanation by showing that ongoing chemical interaction with seawater actively strengthened the concrete.'
+  },
+  {
+    id: 'drill-toeic-4',
+    track: 'toeic',
+    subtopic: 'Part 6: Discourse Conditional & Policy Notice',
+    type: 'single',
+    stem: 'Notice: "_______ any employee need to access the main server room outside standard operating hours, a signed authorization form must be presented to the security desk."',
+    options: [
+      'Should',
+      'Unless',
+      'Because',
+      'Despite'
+    ],
+    answer: 'Should',
+    step0Hint: 'Look at the base-form verb "need" with the singular subject "any employee". Which word forms an inverted formal conditional ("If any employee should need...")?',
+    explanation: '"Should + subject + base verb" is a formal inverted conditional equivalent to "If any employee should need..." frequently tested in TOEIC Part 5 and Part 6.'
+  },
+  {
+    id: 'drill-sat-4',
+    track: 'sat',
+    subtopic: 'Expression of Ideas: Rhetorical Synthesis',
+    type: 'single',
+    stem: 'Research notes: (1) Oyster reefs filter suspended sediment from estuarine water. (2) Clearer water allows sunlight to reach submerged eelgrass beds. (3) Eelgrass beds provide nursery habitat for juvenile blue crabs. A student wants to explain the indirect chain linking oyster reefs to juvenile blue crabs. Which sentence best accomplishes this goal?',
+    options: [
+      'By filtering sediment and increasing water clarity, oyster reefs promote the growth of sunlight-dependent eelgrass beds that shelter juvenile blue crabs.',
+      'Oyster reefs and juvenile blue crabs both live in estuaries where suspended sediment is sometimes present.',
+      'Submerged eelgrass beds require sunlight, which is why juvenile blue crabs eat oysters.'
+    ],
+    answer: 'By filtering sediment and increasing water clarity, oyster reefs promote the growth of sunlight-dependent eelgrass beds that shelter juvenile blue crabs.',
+    step0Hint: 'Connect all three steps in causal order: Oyster filtration → Water clarity / Sunlight → Eelgrass growth → Blue crab nursery.',
+    explanation: 'This choice accurately synthesizes the three-step ecological chain without distorting the relationship or dropping the intermediate eelgrass link.'
+  },
+  {
+    id: 'drill-gmat-4',
+    track: 'gmat',
+    subtopic: 'Critical Reasoning: Boldface / Role of Statement',
+    type: 'single',
+    stem: 'Argument: "Some retail analysts argue that opening a flagship downtown store will boost our brand prestige. However, downtown foot traffic has declined by 18% over the past three years, and commercial lease rates there are triple our suburban average. Therefore, opening the downtown store would likely reduce our net operating margin." What role does the first sentence play in the argument?',
+    options: [
+      'It states a position that the argument as a whole seeks to challenge.',
+      'It presents the main conclusion drawn by the author of the argument.',
+      'It supplies statistical evidence that directly supports the author’s final conclusion.'
+    ],
+    answer: 'It states a position that the argument as a whole seeks to challenge.',
+    step0Hint: 'Notice the attribution ("Some retail analysts argue...") followed immediately by the author’s pivot ("However... Therefore, opening the downtown store would likely reduce...").',
+    explanation: 'The first sentence introduces a reported viewpoint ("Some retail analysts argue..."), which the author then counters using traffic and lease evidence.'
+  },
+  {
+    id: 'drill-gre-5',
+    track: 'gre',
+    subtopic: 'Text Completion: Double-Pivot Nuance',
+    type: 'single',
+    stem: 'Far from being an uncritical celebration of technological progress, the historian’s new volume offers a decidedly _______ account that weighs productivity gains against the displacement of artisan guilds.',
+    options: [
+      'nuanced',
+      'unqualified',
+      'verbose',
+      'evasive'
+    ],
+    answer: 'nuanced',
+    step0Hint: '"Far from being an uncritical celebration" rejects one-sided praise, and "weighs productivity gains against displacement" defines a balanced, subtle analysis.',
+    explanation: '"Nuanced" (recognizing subtle distinctions and trade-offs) directly matches an account that weighs both productivity gains and social costs.'
   }
 ];
 

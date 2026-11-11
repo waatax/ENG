@@ -58,6 +58,18 @@ let revealedMaskItems=new Set();
 let activeDrillTrack='all',activeDrillSubtopic='all',activeDrillIndex=0,drillHintShown={},drillMultiSelection={};
 let activeDialoguePlaying=-1;
 let activeCommuteTrack='all',activeCommuteId=examCommuteDialogues[0].id,activeCommuteLine=-1,commuteRecallShown={};
+let cardQuizChoice=null;
+
+function diagnoseEnglishDistractor(chosenText,correctText,stemOrPrompt){
+  const c=String(chosenText||'');
+  if(/\b(all|every|never|completely|always|only|sole|permanently|impossible|none)\b/i.test(c)){
+    return `Your choice ("${c}") introduces an extreme or universal quantifier that goes beyond the hedged scope of the evidence, whereas the verified answer ("${correctText}") stays strictly within the stated boundary.`;
+  }
+  if(/^(approve|efficient|efficiency|reliably|reliability|approvingly|approved)$/i.test(c.trim())){
+    return `Your choice ("${c}") belongs to the right word family but fails the syntactic slot check; the grammatical position requires "${correctText}".`;
+  }
+  return `Your choice ("${c}") conflicts with the logical relationship or scope established in "${stemOrPrompt}", whereas "${correctText}" directly matches the textual evidence and Step-0 rule.`;
+}
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const id=(t,i)=>`${t.id}/${i}`;
@@ -735,6 +747,7 @@ function renderSingleDrillItem(item,totalCount){
           <strong>${isCorrect?'Correct reasoning.':'Review the Step-0 reasoning.'}</strong>
           <p><strong>Your answer:</strong> ${esc(Array.isArray(userAns)?userAns.join(' + '):userAns)}</p>
           <p><strong>Verified answer:</strong> ${esc(Array.isArray(item.answer)?item.answer.join(' + '):item.answer)}</p>
+          ${!isCorrect?`<div class="en-wrong-diagnosis"><strong>Why Your Choice Failed (Distractor Diagnosis):</strong><p>${esc(diagnoseEnglishDistractor(Array.isArray(userAns)?userAns.join(' + '):userAns,Array.isArray(item.answer)?item.answer.join(' + '):item.answer,item.subtopic))}</p>${item.step0Hint?`<p><strong>Step-0 Recovery Rule:</strong> ${esc(item.step0Hint)}</p>`:''}</div>`:''}
           <p>${esc(item.explanation)}</p>
           <div class="actions">
             <button type="button" data-drill-retry="${esc(item.id)}">Retry this question</button>
@@ -938,7 +951,43 @@ function renderMode(){
 
   if(mode==='cards'){
     const w=l.words[index];
-    body.innerHTML=`<section class="card flash"><p class="eyebrow">Card ${index+1} of ${l.words.length}</p><h2>${esc(w[0])}</h2>${revealed?`<p>${esc(w[1])}</p><p class="muted">${esc(w[2])}</p>`:'<p>Recall the meaning and say an example before revealing.</p>'}<div class="actions"><button data-action="reveal">${revealed?'Hide meaning':'Reveal meaning'}</button><button data-say="${index}">Hear word & definition</button>${revealed?`<button data-action="known">${saved.known.includes(current.key+'/'+index)?'Marked as recalled ✓':'I recalled this'}</button><button data-action="again">Practice again</button>`:''}</div></section><div class="actions"><button data-action="previous" ${index===0?'disabled':''}>← Previous</button><button class="primary" data-action="next" ${index===l.words.length-1?'disabled':''}>Next →</button></div>`;
+    const distractors=l.words.filter((_, idx)=>idx!==index).slice(0,3);
+    const quizPool=[w,...distractors];
+    const shift=(index+current.n)%quizPool.length;
+    const orderedQuiz=[...quizPool.slice(shift),...quizPool.slice(0,shift)];
+    const pickedWord=cardQuizChoice!==null?orderedQuiz[cardQuizChoice]:null;
+    const isCardCorrect=pickedWord&&pickedWord[0]===w[0];
+    body.innerHTML=`
+      <div class="en-flash-deck">
+        <section class="card flash">
+          <p class="eyebrow">Card ${index+1} of ${l.words.length} · Active Recall Deck</p>
+          <h2>${esc(w[0])}</h2>
+          ${revealed?`<p><strong>Definition:</strong> ${esc(w[1])}</p><p class="muted"><strong>Context Example:</strong> ${esc(w[2])}</p>`:'<p>Recall the meaning and say an example before revealing, or test yourself in the 4-option check below.</p>'}
+          <div class="actions">
+            <button data-action="reveal">${revealed?'Hide meaning':'Reveal meaning'}</button>
+            <button data-say="${index}">Hear word &amp; definition</button>
+            ${revealed?`<button data-action="known">${saved.known.includes(current.key+'/'+index)?'Marked as recalled ✓':'I recalled this'}</button><button data-action="again">Practice again</button>`:''}
+          </div>
+        </section>
+      </div>
+      <section class="card en-instant-quiz" aria-label="Instant Flashcard Retrieval Check">
+        <p class="eyebrow">Instant Retrieval Check</p>
+        <h3>Select the accurate English definition for "${esc(w[0])}":</h3>
+        <div class="answers">
+          ${orderedQuiz.map((opt,qIdx)=>`
+            <button type="button" class="${cardQuizChoice===qIdx?(opt[0]===w[0]?'correct-pick':'wrong-pick'):''}" data-en-card-quiz="${qIdx}">
+              ${esc(opt[1])}
+            </button>
+          `).join('')}
+        </div>
+        ${pickedWord?`
+          <div class="feedback ${isCardCorrect?'':'incorrect'}" role="status">
+            <strong>${isCardCorrect?`Exact match! "${esc(w[0])}" means "${esc(w[1])}".`:'Not quite — review the contrast below:'}</strong>
+            ${!isCardCorrect?`<div class="en-wrong-diagnosis"><p><strong>Why your choice failed:</strong> The definition "${esc(pickedWord[1])}" actually belongs to the term <strong>"${esc(pickedWord[0])}"</strong> (Example: <em>${esc(pickedWord[2])}</em>).</p><p><strong>Target card ("${esc(w[0])}"):</strong> ${esc(w[1])} (Example: <em>${esc(w[2])}</em>).</p></div>`:`<p class="muted">Context example: ${esc(w[2])}</p>`}
+          </div>
+        `:''}
+      </section>
+      <div class="actions"><button data-action="previous" ${index===0?'disabled':''}>← Previous</button><button class="primary" data-action="next" ${index===l.words.length-1?'disabled':''}>Next →</button></div>`;
     return;
   }
 
@@ -1006,7 +1055,8 @@ function renderQuestion(){
   const order=q[1].map((a,i)=>({a,i}));
   const offset=(current.n+question+current.track.id.length)%order.length;
   order.push(...order.splice(0,offset));
-  body.innerHTML=`<section class="card"><p class="eyebrow">Question ${question+1} of ${l.questions.length}</p><h2>${esc(q[0])}</h2><div class="answers">${order.map(({a,i})=>`<button data-answer="${i}" ${answer!==null?'disabled':''}>${esc(a)}</button>`).join('')}</div>${answer!==null?`<div class="feedback ${q[1][answer]===q[2]?'':'incorrect'}" role="status"><strong>${q[1][answer]===q[2]?'Correct.':'Review the reasoning.'}</strong><p>Answer: ${esc(q[2])}</p><p>${esc(q[3])}</p><button class="primary" data-action="question-next">${question+1===l.questions.length?'Finish practice':'Next question'}</button></div>`:''}</section>`;
+  const isRight=answer!==null&&q[1][answer]===q[2];
+  body.innerHTML=`<section class="card"><p class="eyebrow">Question ${question+1} of ${l.questions.length}</p><h2>${esc(q[0])}</h2><div class="answers">${order.map(({a,i})=>`<button data-answer="${i}" ${answer!==null?'disabled':''}>${esc(a)}</button>`).join('')}</div>${answer!==null?`<div class="feedback ${isRight?'':'incorrect'}" role="status"><strong>${isRight?'Correct.':'Review the reasoning.'}</strong><p>Answer: ${esc(q[2])}</p>${!isRight?`<div class="en-wrong-diagnosis"><strong>Why Your Choice Failed:</strong><p>${esc(diagnoseEnglishDistractor(q[1][answer],q[2],q[0]))}</p></div>`:''}<p>${esc(q[3])}</p><button class="primary" data-action="question-next">${question+1===l.questions.length?'Finish practice':'Next question'}</button></div>`:''}</section>`;
 }
 
 document.querySelector('header.top')?.addEventListener('click',e=>{
@@ -1199,6 +1249,11 @@ main.addEventListener('click',e=>{
     return;
   }
 
+  if(d.enCardQuiz!==undefined&&current){
+    cardQuizChoice=Number(d.enCardQuiz);
+    renderMode();
+    return;
+  }
   if(d.answer!==undefined&&current&&answer===null){
     answer=Number(d.answer);
     const q=current.lesson.questions[question],k=`${current.key}/${question}`;
@@ -1303,6 +1358,7 @@ main.addEventListener('click',e=>{
     stop();
     index=Math.max(0,Math.min(current.lesson.words.length-1,index+(a==='next'?1:-1)));
     revealed=false;
+    cardQuizChoice=null;
     saved.position[current.key]=index;
     persist();
     renderMode();

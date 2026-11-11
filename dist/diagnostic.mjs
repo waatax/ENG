@@ -692,9 +692,14 @@ function renderReportView() {
                     🎯 ${esc(q.subtopic)}
                   </span>
                 </div>
-                <button class="btn secondary" data-toggle-explain-item="${esc(q.id)}" style="font-size:12px;padding:4px 8px">
-                  ${showExp ? '收合詳解' : '展開詳解 📖'}
-                </button>
+                <div style="display:flex;gap:6px;align-items:center">
+                  <button class="btn secondary" data-speak="${esc(q.prompt.replace(/_+/g, Array.isArray(q.answer) ? q.answer.map(i => q.options[i]).join(' ') : (q.options[q.answer] || '')))}" style="font-size:12px;padding:4px 8px">
+                    🔊 聽完整句
+                  </button>
+                  <button class="btn secondary" data-toggle-explain-item="${esc(q.id)}" style="font-size:12px;padding:4px 8px">
+                    ${showExp ? '收合詳解' : '展開詳解 📖'}
+                  </button>
+                </div>
               </div>
 
               ${q.passage ? `
@@ -733,6 +738,23 @@ function renderReportView() {
                   `;
                 }).join('')}
               </div>
+
+              ${!isCorrect ? (() => {
+                const pickedLabel = userChoice === undefined || userChoice === null
+                  ? '未作答'
+                  : Array.isArray(userChoice)
+                    ? userChoice.map(idx => `${String.fromCharCode(65 + idx)}. ${q.options[idx] || ''}`).join(' / ')
+                    : `${String.fromCharCode(65 + userChoice)}. ${q.options[userChoice] || ''}`;
+                const rightLabel = Array.isArray(q.answer)
+                  ? q.answer.map(idx => `${String.fromCharCode(65 + idx)}. ${q.options[idx] || ''}`).join(' / ')
+                  : `${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer] || ''}`;
+                return `
+                  <div class="diag-user-wrong-box" style="background:#fff1f2;border:1px solid #fecdd3;border-left:4px solid #e11d48;border-radius:8px;padding:10px 14px;margin-bottom:12px;color:#881337;font-size:13.5px;line-height:1.6">
+                    <strong>🔍 錯在哪裡（您的選擇：${esc(pickedLabel)}）：</strong>
+                    本題考點為「${esc(q.subtopic)}」。您所選的「${esc(pickedLabel)}」掉入了常見誘答陷阱（${esc(q.trapExplanation)}）；此處正確應選「<strong>${esc(rightLabel)}</strong>」，因為：${esc(q.coreConcept)}
+                  </div>
+                `;
+              })() : ''}
 
               <!-- 展開的名師黃金五維詳解區塊 -->
               ${showExp ? `

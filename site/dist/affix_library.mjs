@@ -1,4 +1,5 @@
 import {AFFIX_LIBRARY} from './affix_library_data.mjs';
+import {setAffixQuizAnswer} from './affix_guide.mjs';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let query='',kind='all',page=0;
 const pageSize=24;
@@ -15,6 +16,11 @@ export function handleAffixInput(target,render){
  page=0;render();const input=document.getElementById(target.id);input?.focus();if(target.id==='affix-query'&&caret!==null)input?.setSelectionRange?.(caret,caret);return true;
 }
 export function handleAffixClick(target,render){
+ if(target.dataset.affixQuizId && target.dataset.affixQuizPick !== undefined){
+  setAffixQuizAnswer(target.dataset.affixQuizId, target.dataset.affixQuizPick);
+  render();
+  return true;
+ }
  if(!target.dataset.affixPage)return false;
  const max=Math.max(0,Math.ceil(selectAffixRows().length/pageSize)-1);
  page=Math.max(0,Math.min(max,page+(target.dataset.affixPage==='next'?1:-1)));render();document.getElementById('affix-library')?.scrollIntoView({block:'start'});return true;

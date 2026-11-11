@@ -277,3 +277,75 @@ test('Loop 8: Universal +10% Useful Content & Wrong-Answer Explanations Across A
     assert.ok(u.diagnosticCheck && u.diagnosticCheck.wrong, `${u.id} diagnosticCheck`);
   }
 });
+
+test('Loop 9: Phonics Mastery, Affix Studio, Commute Dialogues & Diagnostic Error Explanations (+10% Useful Content)', async () => {
+  const { PHONICS_MODULES, PHONICS_DECODER_SAMPLES, PHONICS_MODULE_QUIZZES, renderPhonicsMasteryView, handlePhonicsEvents } = await import('../dist/phonics_mastery.mjs');
+  const { AFFIX_LESSONS, AFFIX_DIAGNOSTIC_QUIZ, renderAffixGuide } = await import('../dist/affix_guide.mjs');
+  const { handleAffixClick } = await import('../dist/affix_library.mjs');
+  const { ALL_COMMUTE_DIALOGUES, renderCommuteDialogueStudio, handleCommuteDialogueClick } = await import('../dist/commute_dialogues.mjs');
+
+  // 1. Phonics Mastery: 10 decoder samples (+42.8%) & 16 interactive module quiz questions with wrong explanations
+  assert.equal(PHONICS_DECODER_SAMPLES.length, 10);
+  for (const mod of PHONICS_MODULES) {
+    const qList = PHONICS_MODULE_QUIZZES[mod.id];
+    assert.ok(Array.isArray(qList) && qList.length === 2, `${mod.id} must have 2 interactive phonics quiz questions`);
+    for (const q of qList) {
+      assert.ok(q.wrong && Object.keys(q.wrong).length === 2, `${q.id} must have wrong explanations for both distractors`);
+    }
+  }
+  handlePhonicsEvents({ dataset: { phonicsQuizId: 'pq-letters-1', phonicsQuizPick: '1' } }, () => {});
+  const phonicsHtml = renderPhonicsMasteryView();
+  assert.ok(phonicsHtml.includes('phonics-quiz-box'), 'Phonics view must render interactive quiz box');
+  assert.ok(phonicsHtml.includes('phonics-wrong-diagnosis'), 'Phonics quiz must diagnose wrong option');
+
+  // 2. Affix Studio: all 35 lessons have contextSentence & contextZh (+25% useful context) + 6 diagnostic quizzes
+  assert.equal(AFFIX_LESSONS.length, 35);
+  for (const l of AFFIX_LESSONS) {
+    assert.ok(l.contextSentence && l.contextSentence.length > 15, `${l.affix} must have contextSentence`);
+    assert.ok(l.contextZh && l.contextZh.length > 4, `${l.affix} must have contextZh`);
+  }
+  assert.equal(AFFIX_DIAGNOSTIC_QUIZ.length, 6);
+  handleAffixClick({ dataset: { affixQuizId: 'aq-1', affixQuizPick: '1' } }, () => {});
+  const affixHtml = renderAffixGuide();
+  assert.ok(affixHtml.includes('affix-quiz-section'), 'Affix view must render morphology diagnostic quiz');
+  assert.ok(affixHtml.includes('affix-wrong-diagnosis'), 'Affix quiz must diagnose wrong option');
+
+  // 3. Commute Dialogues: all 154 dialogues have compCheck (+20% useful content) with wrong explanations
+  assert.equal(ALL_COMMUTE_DIALOGUES.length, 154);
+  for (const d of ALL_COMMUTE_DIALOGUES) {
+    assert.ok(d.compCheck && Array.isArray(d.compCheck.options) && d.compCheck.options.length === 3, `${d.id} must have 3-option compCheck`);
+    assert.ok(d.compCheck.wrong && Object.keys(d.compCheck.wrong).length >= 2, `${d.id} compCheck must explain wrong choices`);
+  }
+  handleCommuteDialogueClick({ dataset: { cdQuizPick: '1' } }, () => {});
+  const cdHtml = renderCommuteDialogueStudio();
+  assert.ok(cdHtml.includes('commute-comp-quiz'), 'Commute dialogue view must render listening comprehension check');
+  assert.ok(cdHtml.includes('commute-wrong-diagnosis'), 'Commute dialogue quiz must diagnose wrong option');
+
+  // 4. Diagnostic report & Recall Studio repair steps
+  const diagSrc = fs.readFileSync('dist/diagnostic.mjs', 'utf8');
+  assert.ok(diagSrc.includes('diag-user-wrong-box'), 'Diagnostic report must include per-choice wrong diagnosis box');
+  const recallSrc = fs.readFileSync('dist/flashcard_recall.mjs', 'utf8');
+  assert.ok(recallSrc.includes('recall-repair-steps'), 'Recall Studio must include 3-step memory repair guide on missed cards');
+  assert.ok(recallSrc.includes('data-fc-speak-sentence-slow'), 'Recall Studio must include slow sentence audio button');
+});
+
+test('Loop 10: Pure-English Academy (dist/EN/) +50% Practice Questions, +31% Exam Drills, 3D Flashcards & Distractor Diagnosis', async () => {
+  const { tracks } = await import('../dist/EN/content.mjs');
+  const { examWordAndPhraseSets, examSubtopicDrills } = await import('../dist/EN/exam_curriculum.mjs');
+
+  const lessons = tracks.flatMap(t => t.lessons);
+  assert.equal(lessons.length, 20);
+  for (const l of lessons) {
+    assert.equal(l.questions.length, 3, `${l.id} must have 3 practice questions (+50% useful content)`);
+  }
+  assert.equal(examWordAndPhraseSets.length, 10);
+  for (const s of examWordAndPhraseSets) {
+    assert.ok(s.items.length >= 7, `${s.id} must have at least 7 items`);
+  }
+  assert.equal(examSubtopicDrills.length, 21, 'examSubtopicDrills must have 21 drills (+31.25%)');
+
+  const enAcademySrc = fs.readFileSync('dist/EN/academy.mjs', 'utf8');
+  assert.ok(enAcademySrc.includes('en-flash-deck'), 'Pure-English flashcards must render 3D tactile deck');
+  assert.ok(enAcademySrc.includes('en-instant-quiz'), 'Pure-English flashcards must render 4-option instant retrieval check');
+  assert.ok(enAcademySrc.includes('en-wrong-diagnosis'), 'Pure-English quizzes and drills must render distractor error diagnosis');
+});

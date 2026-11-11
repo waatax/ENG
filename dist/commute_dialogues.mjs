@@ -1178,13 +1178,40 @@ function buildAllCommuteDialogues() {
     }
   }
 
-  for(const d of list) {
+  for(let i = 0; i < list.length; i++) {
+    const d = list[i];
     const revised = d.id.startsWith('unit:') ? UNIT_DIALOGUE_REVISIONS[d.id.slice(5)] : d.id.startsWith('chapter:') ? CHAPTER_DIALOGUE_REVISIONS[d.id.slice(8)] : FEATURED_LINE_REVISIONS[d.id];
     if(revised) {
       d.keyPatterns = d.lines.slice(0,2).map(l=>`${l.en}（${l.zh}）`);
       d.recallPrompt = '先不看字幕，用自己的資訊改寫本段的一問一答，再跟讀核對。';
       d.recallAnswer = d.lines.slice(0,2).map(l=>l.en).join(' ');
       if(d.id.startsWith('unit:')) d.scenario = '把本課主題用在一問一答中：'+d.title.replace(/（[^）]*）/g,'')+'。先聽懂雙方目的，再換成自己的資訊練習。';
+    }
+    if (d.lines.length >= 2) {
+      const alt1 = list[(i + 7) % list.length]?.lines[1] || list[(i + 1) % list.length]?.lines[0];
+      const alt2 = list[(i + 19) % list.length]?.lines[1] || list[(i + 2) % list.length]?.lines[0];
+      const opts = [
+        { en: d.lines[1].en, zh: d.lines[1].zh, isRight: true },
+        { en: alt1.en, zh: alt1.zh, isRight: false },
+        { en: alt2.en, zh: alt2.zh, isRight: false }
+      ];
+      const shift = i % 3;
+      const ordered = [...opts.slice(shift), ...opts.slice(0, shift)];
+      const ansIdx = ordered.findIndex(o => o.isRight);
+      const wrong = {};
+      ordered.forEach((o, idx) => {
+        if (!o.isRight) {
+          wrong[idx] = `這句英文的意思是「${o.zh}」，屬於其他情境的回答，無法直接回應「${d.lines[0].zh}」。`;
+        }
+      });
+      d.compCheck = {
+        q: `當 ${d.lines[0].speaker} 說：「${d.lines[0].en}」時，最符合本篇情境的英文回應是？`,
+        promptZh: d.lines[0].zh,
+        options: ordered.map(o => o.en),
+        answer: ansIdx,
+        wrong,
+        why: `「${d.lines[1].en}」意思是「${d.lines[1].zh}」，直接承接前句並推進對話。${d.lines[1].note || ''}`
+      };
     }
   }
   return list;
@@ -1250,6 +1277,7 @@ let playTimer = null;
 let revealedLines = new Set();
 let showRecallAnswer = false;
 let externalRerender = null;
+let commuteQuizSelections = {};
 
 export function getFilteredCommuteDialogues(cat = state.category, query = state.search) {
   let list = cat === 'all'
@@ -1868,6 +1896,44 @@ export function renderCommuteDialogueStudio() {
             ` : ''}
           </div>
         ` : ''}
+
+        <!-- 7. 聽後理解與情境應對快測 (含錯誤解說) -->
+        ${dlg.compCheck ? (() => {
+          const picked = commuteQuizSelections[dlg.id];
+          const isAnswered = picked !== undefined;
+          const isOk = isAnswered && picked === dlg.compCheck.answer;
+          const wrongReason = (!isOk && isAnswered && dlg.compCheck.wrong) ? dlg.compCheck.wrong[picked] : '';
+          return `
+            <div class="commute-comp-quiz" style="margin-top:14px;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #cbd5e1">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+                <strong style="color:#0f172a">🎯 聽後理解與情境接話快測（答錯附語境解析）</strong>
+                <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">+10% 語用實戰</span>
+              </div>
+              <p style="margin:0 0 10px;font-weight:600;color:#1e293b">${esc(dlg.compCheck.q)}</p>
+              <div style="display:grid;gap:8px">
+                ${dlg.compCheck.options.map((opt, oIdx) => {
+                  const isThisPicked = picked === oIdx;
+                  const isRightOpt = oIdx === dlg.compCheck.answer;
+                  let btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:1px solid #cbd5e1;background:#fff;color:#0f172a;';
+                  if (isAnswered && isRightOpt) btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:2px solid #10b981;background:#ecfdf5;color:#065f46;font-weight:700;';
+                  else if (isAnswered && isThisPicked && !isRightOpt) btnStyle = 'text-align:left;justify-content:flex-start;padding:10px 14px;border-radius:10px;border:2px solid #ef4444;background:#fef2f2;color:#991b1b;font-weight:700;';
+                  return `<button type="button" class="btn quiet" style="${btnStyle}" data-cd-quiz-pick="${oIdx}">
+                    ${String.fromCharCode(65 + oIdx)}. <span lang="en">${esc(opt)}</span>
+                  </button>`;
+                }).join('')}
+              </div>
+              ${isAnswered ? `
+                <div class="commute-quiz-feedback ${isOk ? 'is-ok' : 'is-wrong'}" style="margin-top:10px;padding:12px 14px;border-radius:10px;border-left:4px solid ${isOk ? '#10b981' : '#ef4444'};background:${isOk ? '#ecfdf5' : '#fef2f2'};font-size:13.5px;line-height:1.6">
+                  <div style="font-weight:800;color:${isOk ? '#065f46' : '#991b1b'};margin-bottom:4px">
+                    ${isOk ? '✅ 接話精準！完全掌握這段會話的語境！' : `❌ 接話有誤！正確回應是 (${String.fromCharCode(65 + dlg.compCheck.answer)}) ${esc(dlg.compCheck.options[dlg.compCheck.answer])}`}
+                  </div>
+                  ${!isOk && wrongReason ? `<div class="commute-wrong-diagnosis" style="color:#991b1b;margin-bottom:6px"><strong>🔍 錯在哪裡：</strong>${esc(wrongReason)}</div>` : ''}
+                  <div style="color:#065f46"><strong>💡 語用解析：</strong>${esc(dlg.compCheck.why)}</div>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        })() : ''}
       </div>
 
       <!-- 手機直式底部單手常駐快播列 (Mobile Commute Dock) -->
@@ -2023,6 +2089,15 @@ export function handleCommuteDialogueClick(button, rerender) {
   if (d.cdRevealLine) {
     revealedLines.add(d.cdRevealLine);
     rerender?.();
+    return true;
+  }
+
+  if (d.cdQuizPick !== undefined) {
+    const dlg = getActiveCommuteDialogue();
+    if (dlg) {
+      commuteQuizSelections[dlg.id] = Number(d.cdQuizPick);
+      rerender?.();
+    }
     return true;
   }
 

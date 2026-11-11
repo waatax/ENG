@@ -37,3 +37,18 @@
 | **Cycle 5** | 全系統單元 `+10%` 實用學習內容擴充 | `dist/quest/lab.mjs`, `dist/unit_useful_boost.mjs`, `dist/curriculum_unified.mjs`, `dist/advanced_content.mjs` | 141 闖關單元新增 1,483 組診斷卡；79 課綱單元、27 章節、20 文法、8 進階單元全數擴充 `>=10%` |
 | **Cycle 6** | 全站 UI/UX 視覺美感、深色模式與無障礙優化 | `dist/flashcard_studio.css`, `dist/learning_joy.css`, `dist/quest/quest.css`, `dist/advanced_academy.css` | 統一錯題診斷色系、立體卡片陰影、RWD 手機單手操作與深色模式對比 |
 | **Cycle 7** | 全套自動化測試、Byte-Parity 同步與部署驗證 | `scripts/test_aesthetic_and_diagnostics_r7.mjs`, `scripts/sync_dist_to_site.mjs` | 16 套 CI 測試全數通過，`dist/` 與 `site/dist/` 100% 位元組一致 |
+
+---
+
+## 第二波七輪科學迭代紀錄 (`Wave 2: 7 Cycles × 7 Steps` — 全站專項實驗室與純英學院全面深化)
+
+| 輪次 | 核心主題 | 關鍵執行檔案 | 量化驗證指標 |
+| :--- | :--- | :--- | :--- |
+| **Wave 2 · Cycle 1** | 純英學院 (`dist/EN/`) `+50%` 課堂題庫、`+31%` 大考專項演練、3D 閃卡與干擾項診斷 | `dist/EN/content.mjs`, `dist/EN/extended.mjs`, `dist/EN/exam_curriculum.mjs`, `dist/EN/academy.mjs`, `dist/EN/academy.css` | 20 堂純英課每課擴充至 3 題 (`+50%`)、大考專項演練由 16 組增至 21 組 (`+31.25%`)、純英閃卡新增 3D 牌組與 4 選 1 快測及 `Why Your Choice Failed` 解說 |
+| **Wave 2 · Cycle 2** | 自然拼讀大師課 (`dist/phonics_mastery.mjs`) `+42.8%` 解碼字庫與 8 模組互動聽音辨字快測 | `dist/phonics_mastery.mjs` | 長單字解碼示範擴充至 10 字 (`+42.8%`)；8 大拼讀模組新增 16 道互動診斷題，答錯即時解析發音與口型盲點 (`.phonics-wrong-diagnosis`) |
+| **Wave 2 · Cycle 3** | 字首字尾構詞館 (`dist/affix_guide.mjs` & `dist/affix_library.mjs`) `+25%` 語境例句與構詞防呆快測 | `dist/affix_guide.mjs`, `dist/affix_library.mjs` | 35 個字首字尾單元全數新增雙語語境例句 (`contextSentence` + `🔊 聽例句`，`+25%` 實用內容) 與 6 道構詞診斷題 (`.affix-wrong-diagnosis`) |
+| **Wave 2 · Cycle 4** | 通勤雙語對話館 (`dist/commute_dialogues.mjs`) 154 組對話 `+20%` 聽力理解隨堂快測與誤選診斷 | `dist/commute_dialogues.mjs` | 154 組通勤情境對話全數新增 3 選 1 聽力理解與語用快測 (`compCheck`)，答錯顯示針對該選項的 `🔍 錯在哪裡` 解析 |
+| **Wave 2 · Cycle 5** | 學力診斷報告 (`dist/diagnostic.mjs`) 個人化誤選診斷卡與完整句語音朗讀 | `dist/diagnostic.mjs` | 答錯題目頂部自動顯示 `.diag-user-wrong-box`（「🔍 錯在哪裡：您的選擇 vs. 正確答案」），並新增 `🔊 聽完整句` 語音按鈕 |
+| **Wave 2 · Cycle 6** | 雙向回想練習室 (`dist/flashcard_recall.mjs`) 記憶修復三步法與慢速例句跟讀 + 全域樣式打磨 | `dist/flashcard_recall.mjs`, `dist/learning_joy.css` | 答錯字卡自動顯示「🔬 記憶修復三步法（拍音節 ➔ 綁搭配 ➔ 慢速例句跟讀）」與 `🐢 慢速例句` 按鈕 |
+| **Wave 2 · Cycle 7** | 全站 17 套測試套件（122 項測試）校驗、Byte-Parity 同步與 Git 遠端推送 | `scripts/test_aesthetic_and_diagnostics_r7.mjs`, `scripts/sync_dist_to_site.mjs` | 122 項單元與整合測試 `100% PASS (0 fail)`，`dist/` 與 `site/dist/`（含 `EN/`）100% 位元組完全一致 |
+
