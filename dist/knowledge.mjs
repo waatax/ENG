@@ -12,7 +12,9 @@ import { createKnowledgeProgress } from './knowledge_progress.mjs';
 import { renderStandardsCard } from './standards_view.mjs';
 import { renderKeyPoints, keyPointsForKnowledge } from './key_points.mjs';
 import { standardsPoints } from './knowledge_standards.mjs';
+import { enrichKnowledgePoints } from './unit_useful_boost.mjs';
 export const points = [...foundations.slice(0,2), ...originalPoints, foundations[2], ...standardsPoints];
+enrichKnowledgePoints(points);
 const progress = createKnowledgeProgress(points);
 let query = '', stage = '全部', domain = '全部';
 const catalog = learningCatalog(points);
@@ -75,7 +77,7 @@ export function searchKnowledge(target) {
 function checkHtml(p, i) {
   const q = p.questions[i], a = progress.answer(p.id,i), answered = a && a.latest !== null;
   return `<fieldset class="lesson-check" id="kp-check-${i}"><legend>${i+1}. ${e(q[0])}</legend>${q[1].map((o,j)=>`<button class="btn quiet lesson-option" data-kp-answer="${p.id}:${i}:${j}" ${answered?'disabled':''}>${String.fromCharCode(65+j)}. ${e(o)}</button>`).join('')}
-    <div class="kp-feedback" role="status" tabindex="-1">${answered?`<p><strong>${a.latest===q[2]?'答對':'需要訂正'}</strong> · 你的答案：${e(q[1][a.latest])}<br>正解：${e(q[1][q[2]])}</p><div class="clue-box"><strong>💡 題眼分析與破題思維：</strong><br>${e(q[3])}</div><p class="small">首次答案：${e(q[1][a.first])} · 已作答 ${a.attempts} 次。重做不會覆蓋首次紀錄。</p><button class="btn quiet" data-kp-retry="${p.id}:${i}">再練一次</button>`:''}</div></fieldset>`;
+    <div class="kp-feedback" role="status" tabindex="-1">${answered?`<p><strong>${a.latest===q[2]?'答對':'需要訂正'}</strong> · 你的答案：${e(q[1][a.latest])}<br>正解：${e(q[1][q[2]])}</p>${a.latest!==q[2]?`<p class="kp-wrong-diagnosis"><strong>🔍 錯在哪裡：</strong>你選的「${e(q[1][a.latest])}」違反了【${e(p.title)}】的判斷條件（${e(p.trap||'')}）。</p>`:''}<div class="clue-box"><strong>💡 題眼分析與破題思維：</strong><br>${e(q[3])}</div><p class="small">首次答案：${e(q[1][a.first])} · 已作答 ${a.attempts} 次。重做不會覆蓋首次紀錄。</p><button class="btn quiet" data-kp-retry="${p.id}:${i}">再練一次</button>`:''}</div></fieldset>`;
 }
 export function knowledgePage(id) {
   const p = points.find(x=>x.id===id);

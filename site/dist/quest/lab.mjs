@@ -44,7 +44,43 @@ export function unitLab(course, unitId) {
       kind
     };
   });
-  return {baseline:questions.length,cards,phrases:unitPhrases(questions,count),missions:unitMissions(questions,new Set(cards.map(c=>c.source)),unitId)};
+  const missions = unitMissions(questions, new Set(cards.map(c => c.source)), unitId);
+  const clinic = unitClinic(questions, new Set([...cards.map(c => c.source), ...missions.map(m => m.source)]), unitId, count);
+  return {baseline:questions.length,cards,phrases:unitPhrases(questions,count),missions,clinic};
+}
+
+export function unitClinic(questions, excluded = new Set(), unitId = '', count = Math.ceil(questions.length / 10)) {
+  if (!questions.length || count <= 0) return [];
+  const primary = questions.filter(q => !excluded.has(q.id) && Array.isArray(q.options) && q.options.length >= 2);
+  const fallback = questions.filter(q => !primary.includes(q));
+  const pool = [...primary, ...fallback];
+  return Array.from({ length: count }, (_, i) => {
+    const q = pool[Math.floor(i * pool.length / count)] || questions[i % questions.length];
+    const right = answerText(q);
+    let trap = '';
+    let trapWhy = '';
+    if (Array.isArray(q.options) && q.options.length >= 2) {
+      const ansIdx = typeof q.answer === 'number' ? q.answer : q.options.indexOf(right);
+      const wrongIdx = q.options.findIndex((opt, idx) => idx !== ansIdx && String(opt) !== String(right));
+      if (wrongIdx >= 0) {
+        trap = String(q.options[wrongIdx]);
+        trapWhy = (q.wrong && q.wrong[wrongIdx]) || (q.optionNotes && q.optionNotes[trap]) || `「${trap}」在詞義搭配、時態或主詞一致性上與題幹線索不合。`;
+      }
+    }
+    if (!trap) {
+      trap = '直譯或忽略詞性變化';
+      trapWhy = '作答時若只看單字表面意思而忽略前後文時態與固定搭配，容易失分。';
+    }
+    return {
+      id: `${unitId}:clinic:${q.id}:${i + 1}`,
+      source: q.id,
+      prompt: q.prompt || '',
+      right,
+      trap,
+      trapWhy,
+      why: q.why || '請核對正確答案的句型結構與語境線索。'
+    };
+  });
 }
 
 // 實用表達: "situation or meaning → how to say it", taken only from this unit's own items (never invented).
@@ -72,12 +108,13 @@ export function unitPhrases(questions,count){
 }
 
 export function labView(course,unitId) {
-  const {baseline,cards,phrases,missions}=unitLab(course,unitId);if(!cards.length)return '';
+  const {baseline,cards,phrases,missions,clinic}=unitLab(course,unitId);if(!cards.length)return '';
   let storage;try{storage=globalThis.localStorage;}catch{}
   const phraseBlock=phrases.length?`<section class="lab-phrases"><h4>🗣️ 本單元實用表達（${phrases.length} 句）</h4><p class="small muted">從本單元題目整理出來、生活中真的用得到的說法。先看中文想英文，再按 🔊 核對並跟讀。</p><div class="coach-controls"><button class="btn small gold" data-act="prompt-say" data-text="${esc(phrases.map(p=>[p.zh,p.en].filter(Boolean).join('。')).join('。'))}">▶ 全部播放（中＋英）</button><button class="link" data-act="stop-say">停止朗讀</button></div><ol>${phrases.map(p=>`<li><span class="ph-zh">${esc(p.tag)}${p.zh?` · ${esc(p.zh)}`:''}</span><span class="ph-en" lang="en">${esc(p.en)}</span><button class="say" data-act="prompt-say" data-text="${esc(p.en)}" aria-label="朗讀英文">🔊</button><button class="say slow" data-act="prompt-say" data-slow="1" data-text="${esc(p.en)}" aria-label="慢速朗讀">🐢</button></li>`).join('')}</ol></section>`:'';
+  const clinicBlock=clinic?.length?`<section class="lab-clinic"><h4>🔬 易錯盲點與干擾項診斷卡（${clinic.length} 組 · 10% 實用內容擴充）</h4><p class="small muted">針對本單元最常選錯的干擾項進行正誤對比，先想為什麼錯誤選項不能選，再展開核對。</p><div class="lab-clinic-list">${clinic.map(( item, idx )=>`<details class="lab-clinic-item"><summary>${idx + 1}. 題目焦點：${esc(item.prompt)} （✗ 易混：${esc(item.trap)} vs ✓ 正解：${esc(item.right)}）</summary><div class="lab-clinic-body"><p><strong>🔍 為什麼「${esc(item.trap)}」是錯的？</strong> ${esc(item.trapWhy)}</p><p><strong>✓ 正解錨點「${esc(item.right)}」：</strong> ${esc(item.why)}</p><div class="coach-controls"><button class="btn small" data-act="prompt-say" data-text="${esc(item.right)}">🔊 聽正解發音</button><button class="btn small" data-act="prompt-say" data-text="${esc(item.trapWhy)}">💬 聽錯因解說</button></div></div></details>`).join('')}</div></section>`:'';
   return `<section class="unit-boost" data-boost-unit="${esc(unitId)}" hidden></section><section class="learning-lab"><p class="eyebrow">實用加練 · 每次選一張</p><h3>🧭 把會選，練成會用（10% 實用內容擴充）</h3><p>新增 ${cards.length} 張回想與運用卡（以本單元 ${baseline} 道不同練習的 10% 向上取整）。沿用本單元知識，增加開口與解釋任務，非新增計分題。</p><div class="lab-route"><span>① 自己想</span><span>② 聽與核對</span><span>③ 換你運用</span><span>④ 實用延伸</span></div><p class="small muted">剛開始：先看示範再遮住重說。已熟悉：直接回想，再做運用。每次 2–3 分鐘；不扣愛心、不以速度評價。</p>${phraseBlock}${cards.map((c,i)=>{
     const promptSpeech = c.audio || [c.prompt,c.text].filter(Boolean).join('。');
     const walkthrough = [promptSpeech, `正確答案是：${c.answer}`, `為什麼？${c.why}`].filter(Boolean).join('。');
     return `<details class="lab-card"><summary>${i+1}. ${esc(c.title)} · ${esc(c.prompt)}</summary><p class="lab-recall-prompt">${esc(c.recall)}</p>${c.text?`<p class="lab-context">${esc(c.text)}</p>`:''}<div class="coach-controls"><button class="btn small" data-act="prompt-say" data-text="${esc(promptSpeech)}">🔊 聽題目${c.audio?'原音':''}</button><button class="btn small gold" data-act="prompt-say" data-text="${esc(walkthrough)}">🎧 語音導讀（題＋答＋解）</button></div><details class="lab-model"><summary>我想過了，展開參考答案與解說</summary><p class="lab-ans"><b>✔ 正解：${esc(c.answer)}</b></p><p class="lab-why">💡 <b>為什麼？</b>${esc(c.why)}</p><div class="coach-controls"><button class="btn small" data-act="prompt-say" data-text="${esc(c.answer)}">🔊 聽答案</button><button class="btn small" data-act="prompt-say" data-text="${esc(c.why)}">💬 聽解說</button></div></details><h4>換你運用</h4><p class="lab-transfer">${esc(c.transfer)}</p><p class="small muted">自我檢查：${esc(c.check)}</p>${c.tip?`<p class="lab-tip small">${esc(c.tip)}</p>`:''}<p class="lab-return">🌱 明天回來先遮住示範，再試一次。口說與開放回答為自評，不自動判分。</p></details>`;
-  }).join('')}<button class="link" data-act="stop-say">停止朗讀</button>${renderUnitMissions(missions,baseline,storage)}</section>`;
+  }).join('')}${clinicBlock}<button class="link" data-act="stop-say">停止朗讀</button>${renderUnitMissions(missions,baseline,storage)}</section>`;
 }

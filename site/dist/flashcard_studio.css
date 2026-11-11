@@ -1289,3 +1289,278 @@ body:has(.fcx) .level-top-entry { display: none; }
   .is-flipping { animation: none !important; }
   .fcx .btn { transition: none !important; }
 }
+
+/* ============================================================================
+ * 2026-11-11 Cycle 2: Tactile Deck Depth, Science Grid & Instant Diagnostic Quiz
+ * ============================================================================ */
+.fc-studio-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--x-accent);
+  background: var(--x-accent-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.fc-card-deck {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 10px;
+}
+.fc-card-deck::before,
+.fc-card-deck::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 100%;
+  border-radius: 26px;
+  background: var(--x-raised);
+  border: 1px solid var(--x-line);
+  pointer-events: none;
+  transition: transform 0.28s ease;
+}
+.fc-card-deck::before {
+  top: 6px;
+  z-index: -1;
+  opacity: 0.72;
+  transform: scale(0.985);
+}
+.fc-card-deck::after {
+  top: 12px;
+  left: 26px;
+  right: 26px;
+  z-index: -2;
+  opacity: 0.45;
+  transform: scale(0.968);
+}
+
+.fc-top-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fc-rhythm-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--x-gold);
+  background: var(--x-gold-soft);
+  border: 1px solid rgba(196, 122, 14, 0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.fc-thinking-prompt {
+  font-size: 0.86rem;
+  color: var(--x-muted);
+  margin: 4px 0 10px;
+  font-weight: 600;
+}
+
+.fc-kbd {
+  display: inline-block;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  margin-left: 4px;
+}
+
+.fc-science-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fc-inline-ipa {
+  font-family: "Charis SIL", "Doulos SIL", "Segoe UI", system-ui, sans-serif;
+  color: var(--x-accent);
+  font-weight: 600;
+  font-size: 0.92em;
+}
+
+.fc-instant-quiz {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--x-raised);
+  border: 1.5px solid var(--x-line-strong);
+  box-shadow: var(--x-shadow-sm);
+}
+
+.fc-instant-quiz-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fc-instant-badge {
+  display: inline-block;
+  background: var(--x-accent-soft);
+  color: var(--x-accent);
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
+.fc-instant-hint {
+  font-size: 0.82rem;
+  color: var(--x-muted);
+}
+
+.fc-instant-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fc-instant-opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--x-soft);
+  border: 1.5px solid var(--x-line);
+  color: var(--x-ink);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+}
+
+.fc-instant-opt:hover {
+  border-color: var(--x-accent);
+  background: var(--x-soft-hover);
+  transform: translateY(-1px);
+}
+
+.fc-instant-opt.is-correct {
+  background: var(--x-accent-soft);
+  border-color: var(--x-accent);
+  color: var(--x-ink);
+}
+
+.fc-instant-opt.is-wrong {
+  background: var(--x-coral-soft);
+  border-color: var(--x-coral);
+  color: var(--x-ink);
+}
+
+.fc-instant-opt.is-dim {
+  opacity: 0.65;
+}
+
+.fc-opt-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--x-raised);
+  border: 1px solid var(--x-line-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.fc-opt-text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+}
+
+.fc-opt-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.fc-opt-tag.ok {
+  background: var(--x-accent);
+  color: #fff;
+}
+.fc-opt-tag.bad {
+  background: var(--x-coral);
+  color: #fff;
+}
+
+.fc-instant-feedback {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border-left: 5px solid var(--x-accent);
+  background: var(--x-soft);
+  line-height: 1.6;
+}
+.fc-instant-feedback.is-ok {
+  border-left-color: var(--x-accent);
+  background: var(--x-accent-soft);
+}
+.fc-instant-feedback.is-wrong {
+  border-left-color: var(--x-coral);
+  background: var(--x-coral-soft);
+}
+
+.fc-fb-title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--x-ink);
+}
+
+.fc-fb-contrast {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--x-raised);
+  border: 1px solid var(--x-line);
+}
+
+.fc-fb-contrast-row.bad strong {
+  color: var(--x-coral);
+}
+.fc-fb-contrast-row.good strong {
+  color: var(--x-accent);
+}
+
+.fc-fb-repair p,
+.fc-fb-detail,
+.fc-recall-anatomy p {
+  margin: 5px 0;
+  font-size: 0.93rem;
+}
+
+.fc-fb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .fc-instant-options {
+    grid-template-columns: 1fr;
+  }
+}

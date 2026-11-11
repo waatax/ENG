@@ -204,3 +204,76 @@ test('Loop 6: Gamification audio synthesis without crashes', () => {
     sfx('streak');
   });
 });
+
+test('Loop 7: 100% Flashcard Corpus Completion & Instant Studio Quiz with Error Explanations', async () => {
+  const { FLASHCARD_DATABASE, renderFlashcardsStudioView, handleFlashcardEvents } = await import('../dist/flashcards.mjs');
+  const { teachingCard } = await import('../dist/flashcard_quality.mjs');
+
+  assert.equal(FLASHCARD_DATABASE.length, 9500);
+  const shown = FLASHCARD_DATABASE.map(teachingCard);
+  assert.equal(shown.filter(c => !c.ipa).length, 0, 'Every card must have valid American IPA');
+  assert.equal(shown.filter(c => !c.collocation).length, 0, 'Every card must have a natural collocation');
+  assert.equal(shown.filter(c => !c.memoryTip).length, 0, 'Every card must have a scientific memoryTip');
+  assert.equal(shown.filter(c => !c.example).length, 0, 'Every card must have an example sentence');
+
+  let html = renderFlashcardsStudioView();
+  assert.ok(html.includes('fc-card-deck'), 'Flashcard studio must render physical deck depth');
+  assert.ok(html.includes('fc-instant-quiz'), 'Flashcard studio must render instant 4-option quiz');
+  assert.ok(html.includes('data-fc-quiz-pick="0"'), 'Instant quiz must render 4 option buttons');
+
+  // Trigger a quiz option and verify feedback renders
+  handleFlashcardEvents({ dataset: { fcQuizPick: '0' } }, () => {});
+  html = renderFlashcardsStudioView();
+  assert.ok(html.includes('fc-instant-feedback'), 'Instant quiz must display diagnostic feedback');
+  handleFlashcardEvents({ dataset: { fcQuizReset: 'true' } }, () => {});
+});
+
+test('Loop 8: Universal +10% Useful Content & Wrong-Answer Explanations Across All Unit Systems', async () => {
+  const { createCourse } = await import('../dist/quest/engine.mjs');
+  const { unitLab, labView } = await import('../dist/quest/lab.mjs');
+  const { UNIFIED_GRADES } = await import('../dist/curriculum_unified.mjs');
+  const { GRAMMAR_EXTRA } = await import('../dist/practice_extra.mjs');
+  const { grammarTopics } = await import('../dist/grammar_content.mjs');
+  const { ADVANCED_UNITS } = await import('../dist/advanced_content.mjs');
+  await import('../dist/grammar.mjs');
+
+  // 1. 141 Quest units: clinic >= 10%
+  const index = JSON.parse(fs.readFileSync('dist/quest/course/index.json', 'utf8'));
+  const course = createCourse(index);
+  for (const t of [...index.sections, ...index.branches]) {
+    course.register(JSON.parse(fs.readFileSync(`dist/quest/course/${t.id}.json`, 'utf8')));
+  }
+  let totalClinic = 0;
+  for (const u of course.units.values()) {
+    const lab = unitLab(course, u.id);
+    assert.equal(lab.clinic.length, Math.ceil(lab.baseline * 0.1), `${u.id} clinic must be >= 10%`);
+    totalClinic += lab.clinic.length;
+  }
+  assert.equal(totalClinic, 1483);
+  const firstUnitId = [...course.units.keys()][0];
+  assert.ok(labView(course, firstUnitId).includes('易錯盲點與干擾項診斷卡'));
+
+  // 2. 79 Unified 108 Curriculum units: usefulChunks & wrong explanations
+  const units = UNIFIED_GRADES.flatMap(g => g.semesters.flatMap(s => s.units));
+  assert.equal(units.length, 79);
+  for (const u of units) {
+    assert.ok(Array.isArray(u.usefulChunks) && u.usefulChunks.length >= 1, `${u.id} usefulChunks`);
+    for (const fq of u.formativeQuiz) {
+      assert.ok(fq.wrong && Object.keys(fq.wrong).length >= fq.options.length - 1, `${u.id} formativeQuiz wrong map`);
+    }
+  }
+
+  // 3. 20 Grammar topics: GRAMMAR_EXTRA >= 3 items with wrong explanations
+  for (const t of grammarTopics) {
+    assert.ok(GRAMMAR_EXTRA[t.id].length >= 3, `${t.id} GRAMMAR_EXTRA length`);
+    for (const item of GRAMMAR_EXTRA[t.id]) {
+      assert.ok(item.wrong, `${t.id} GRAMMAR_EXTRA wrong map`);
+    }
+  }
+
+  // 4. 8 C1->C2 Advanced units: collocations & diagnosticCheck with wrong map
+  for (const u of ADVANCED_UNITS) {
+    assert.ok(Array.isArray(u.collocations) && u.collocations.length >= 2, `${u.id} collocations`);
+    assert.ok(u.diagnosticCheck && u.diagnosticCheck.wrong, `${u.id} diagnosticCheck`);
+  }
+});

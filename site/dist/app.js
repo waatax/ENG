@@ -1193,6 +1193,21 @@ function curriculum108Page() {
               <div style="margin-top:4px;line-height:1.6">${u.step0Clue}</div>
             </div>
 
+            ${u.usefulChunks && u.usefulChunks.length > 0 ? `
+              <div class="unit-useful-chunks" style="background:var(--card-bg, #fff);border:1px solid var(--line, #e2e8f0);border-left:4px solid #0d9488;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:13.5px">
+                <strong style="font-size:14.5px;color:#0f766e">🚀 10% 實用表達與語塊擴充（${u.usefulChunks.length} 組）：</strong>
+                <div style="display:grid;gap:8px;margin-top:8px">
+                  ${u.usefulChunks.map(ch => `
+                    <div style="background:var(--paper, #f8fafc);padding:8px 12px;border-radius:8px;border:1px solid var(--line, #e2e8f0)">
+                      <div><strong lang="en" style="color:#0f172a">${ch.en}</strong></div>
+                      <div style="color:#334155;margin-top:2px">${ch.zh}</div>
+                      <div style="color:#0f766e;font-size:12.5px;margin-top:2px">💡 ${ch.tip}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
             <!-- 7. 鷹架式形成性檢測題 (Scaffolding Formative Quiz) -->
             ${u.formativeQuiz && u.formativeQuiz.length > 0 ? `
               <div style="border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px;background:var(--paper, #f8fafc)">
@@ -1207,49 +1222,72 @@ function curriculum108Page() {
                   </div>
                 </div>
 
-                ${u.formativeQuiz.map((q, qi) => `
+                ${u.formativeQuiz.map((q, qi) => {
+                  const qKey = `${u.id}-${qi}`;
+                  const qChoice = userQuizChoices[qKey] !== undefined ? userQuizChoices[qKey] : (qi === 0 ? userChoice : undefined);
+                  const hasAnswered = qChoice !== undefined;
+                  const answeredRight = hasAnswered && qChoice === q.ans;
+                  return `
                   <div style="background:var(--card-bg, #fff);border:1px solid var(--line-strong, #cbd5e1);padding:12px 14px;border-radius:8px;margin-bottom:8px">
                     <div style="font-size:14px;font-weight:600;color:var(--text-primary, #1e293b);margin-bottom:8px">
                       ${qi + 1}. <span lang="en">${q.q}</span>
                     </div>
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
                       ${q.options.map((opt, oi) => {
-                        const isChosen = userChoice === oi;
+                        const isChosen = qChoice === oi;
                         const isCorrect = oi === q.ans;
                         let btnStyle = 'background:var(--paper, #f8fafc);border:1px solid var(--line, #e2e8f0);text-align:left;padding:8px 12px;color:var(--text-primary)';
                         if (isChosen) {
                           btnStyle = isCorrect ? 'background:#ecfdf5;border:2px solid #10b981;color:#047857;font-weight:700' : 'background:#fff1f2;border:2px solid #f43f5e;color:#be123c;font-weight:700';
+                        } else if (hasAnswered && isCorrect) {
+                          btnStyle = 'background:#f0fdf4;border:1.5px dashed #10b981;color:#047857;font-weight:600';
                         }
                         return `
-                          <button class="btn small" style="${btnStyle}" data-quiz-unit="${u.id}" data-quiz-choice="${oi}" data-quiz-ans="${q.ans}">
+                          <button class="btn small" style="${btnStyle}" data-quiz-unit="${u.id}" data-quiz-qidx="${qi}" data-quiz-choice="${oi}" data-quiz-ans="${q.ans}">
                             ${String.fromCharCode(65 + oi)}) <span lang="en">${opt}</span>
                           </button>
                         `;
                       }).join('')}
                     </div>
 
+                    ${hasAnswered && !answeredRight ? `
+                      <div class="quiz-error-diagnosis" role="alert" style="background:#fff1f2;border-left:4px solid #f43f5e;border:1px solid #fecdd3;padding:10px 14px;border-radius:8px;font-size:13px;color:#881337;margin-top:8px;line-height:1.6">
+                        <div><strong>❌ 答錯了！你選了 (${String.fromCharCode(65 + qChoice)}) <span lang="en">${q.options[qChoice]}</span>，正解為 (${String.fromCharCode(65 + q.ans)}) <span lang="en">${q.options[q.ans]}</span>。</strong></div>
+                        <div style="margin-top:4px"><strong>🔍 錯在哪裡（排除與對比診斷）：</strong> ${q.wrong?.[qChoice] || q.hint2 || ''}</div>
+                        <div style="margin-top:4px"><strong>💡 語法規律提示：</strong> ${q.hint1 || ''}</div>
+                        <div style="margin-top:4px;color:#065f46;background:#ecfdf5;padding:6px 10px;border-radius:6px"><strong>⭐ 完整解析：</strong> ${q.solution || ''}</div>
+                      </div>
+                    ` : ''}
+
+                    ${hasAnswered && answeredRight ? `
+                      <div class="quiz-ok-diagnosis" role="status" style="background:#ecfdf5;border:1px solid #a7f3d0;padding:10px 14px;border-radius:8px;font-size:13px;color:#065f46;margin-top:8px;line-height:1.6">
+                        <strong>✅ 答對了！(${String.fromCharCode(65 + q.ans)}) <span lang="en">${q.options[q.ans]}</span>：</strong> ${q.solution || ''}
+                      </div>
+                    ` : ''}
+
                     <!-- 鷹架提示 1 (語法線索) -->
-                    ${hints.includes(1) || hints.includes('all') ? `
+                    ${!hasAnswered && (hints.includes(1) || hints.includes('all')) ? `
                       <div style="background:#fef3c7;border:1px solid #fde68a;padding:8px 12px;border-radius:6px;font-size:13px;color:#92400e;margin-top:6px">
                         <strong>💡 鷹架提示 1 (語法規律)：</strong> ${q.hint1}
                       </div>
                     ` : ''}
 
                     <!-- 鷹架提示 2 (排除法則) -->
-                    ${hints.includes(2) || hints.includes('all') ? `
+                    ${!hasAnswered && (hints.includes(2) || hints.includes('all')) ? `
                       <div style="background:#fef3c7;border:1px solid #fde68a;padding:8px 12px;border-radius:6px;font-size:13px;color:#92400e;margin-top:6px">
                         <strong>🔍 鷹架提示 2 (排除法則)：</strong> ${q.hint2}
                       </div>
                     ` : ''}
 
                     <!-- 完整詳解剖析 -->
-                    ${isSolutionOpen || hints.includes('all') ? `
+                    ${!hasAnswered && (isSolutionOpen || hints.includes('all')) ? `
                       <div style="background:#ecfdf5;border:1px solid #a7f3d0;padding:10px 14px;border-radius:6px;font-size:13px;color:#065f46;margin-top:6px">
                         <strong>⭐ 精熟思維解析：</strong> ${q.solution}
                       </div>
                     ` : ''}
                   </div>
-                `).join('')}
+                `;
+                }).join('')}
               </div>
             ` : ''}
 
@@ -2579,6 +2617,9 @@ root.addEventListener('click', e => {
     const unitId = d.quizUnit;
     const choice = Number(d.quizChoice);
     const ans = Number(d.quizAns);
+    if (d.quizQidx !== undefined) {
+      userQuizChoices[`${unitId}-${d.quizQidx}`] = choice;
+    }
     userQuizChoices[unitId] = choice;
     const isCorrect = choice === ans;
     if (isCorrect) {

@@ -89,4 +89,191 @@ export const RUBRIC=[
  {id:'organisation',title:'組織與連貫',levels:['資訊零散，關係不容易辨認。','有段落，但比較、因果或轉折仍不清楚。','段落與論證順序清楚，連接自然。','能靈活重組資訊，讓複雜論點清楚且有說服力。']},
  {id:'language',title:'語言與精準度',levels:['語法或用詞常妨礙理解。','意思可理解，但有不自然或含糊表達。','語法與用詞大致受控，語氣與範圍準確。','用詞、句構與細微差異靈活自然；需評閱者核對。']}
 ];
+
+export const ADVANCED_BOOSTERS = {
+  'synthesis': {
+    collocations: [
+      { frame: 'While X accounts for short-term gains, it overlooks…', zh: '儘管 X 解釋了短期效益，卻忽略了……', usage: '在同一個句子裡同時完成「承認對方合理處」與「指出盲點」。' },
+      { frame: 'Taken together, these studies indicate that… only insofar as…', zh: '綜合來看，這些研究顯示……僅在……條件下成立', usage: '整合多篇文獻並加上成立邊界，展現 C2 等級的綜合力。' }
+    ],
+    diagnosticCheck: {
+      q: 'Smith (2023) 發現遠距工作提升專注度；Lee (2024) 發現遠距使新進人員協作變慢。哪一句最能「綜合」兩者？',
+      options: [
+        'Smith (2023) says remote work is good, and Lee (2024) says remote work is bad.',
+        'Whereas remote work can enhance individual focus (Smith, 2023), its benefits depend on structured onboarding so novice collaboration does not suffer (Lee, 2024).',
+        'Lee (2024) completely destroys Smith (2023) because collaboration is more important.',
+        'Remote work has pros and cons according to different researchers.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '只將兩篇研究並列為 good / bad，沒有說明兩者為何出現差異。',
+        2: 'completely destroys 過度簡化，兩篇研究觀察的是不同對象與維度（個人專注 vs 新手協作）。',
+        3: 'pros and cons 空泛套話，未呈現具體條件與研究證據。'
+      },
+      why: '同時保留兩篇研究的有效面，並以任務類型與年資條件（individual focus vs novice onboarding）整合出更高層結論。'
+    }
+  },
+  'argument': {
+    collocations: [
+      { frame: 'Admittedly, X poses a valid concern; nevertheless, this can be mitigated by…', zh: '誠然 X 是合理的顧慮；然而可透過……加以緩解', usage: '在實質讓步後立刻提出可操作的解決機制，強化論點韌性。' },
+      { frame: 'In contexts where individual accountability is paramount,…', zh: '在個人責任至關重要的情境下……', usage: '精準界定政策主張的適用邊界，避免全稱命題漏洞。' }
+    ],
+    diagnosticCheck: {
+      q: '主張「大學課程應納入同儕互評」時，面對「學生可能打人情分」的反駁，哪一句是最佳的 C2 讓步與回應？',
+      options: [
+        'Students never give unfair scores to their friends.',
+        'While biased scoring is a legitimate risk, calibrating peer grades against an instructor-moderated rubric prevents inflation.',
+        'Opponents of peer review simply dislike modern education.',
+        'Peer review is good and also has some bad parts.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '直接否認真實存在的偏誤風險，缺乏說服力。',
+        2: '對反方進行稻草人與動機攻擊，未解決評分信度問題。',
+        3: '空泛承認好壞參半，沒有提出具體制度設計來處理例外。'
+      },
+      why: '先以 legitimate risk 承認反方合理顧慮，再提出「教師校準規準（instructor-moderated rubric）」作為具體防範機制。'
+    }
+  },
+  'register': {
+    collocations: [
+      { frame: 'To ensure data integrity before the Friday review, I will deliver the verified figures by…', zh: '為確保週五審查前的資料完整性，我將於……前交付核實數據', usage: '對管理層交代延誤時，先對齊共同目標並給出明確新期限。' },
+      { frame: 'Given the current resource constraints, we can realistically deliver Phase 1 by Friday.', zh: '考量目前的資源限制，我們可務實地於週五前交付第一階段', usage: '兼顧專業禮貌與明確時程承諾，不誇大亦不閃躲。' }
+    ],
+    diagnosticCheck: {
+      q: '客戶要求在兩天內新增整個付款模組，但工程上至少需兩週。哪一封回覆最符合「語域得體且承諾精確」？',
+      options: [
+        'Your request is impossible because nobody can build a payment module in two days.',
+        'Yes, we will try our best to see what happens in two days.',
+        'To ensure payment security and full testing, the complete module requires two weeks; however, we can deliver a clickable checkout prototype by Friday for your review.',
+        'Maybe we could possibly think about doing part of it later if you do not mind.'
+      ],
+      answer: 2,
+      wrong: {
+        0: 'Your request is impossible 語氣生硬對立，缺乏替代方案。',
+        1: 'try our best 迴避明確時程，會造成不切實際的期待與後續違約風險。',
+        3: 'Maybe / possibly / if you do not mind 過度閃躲，未提供任何具體交付承諾。'
+      },
+      why: '清楚說明完整模組需兩週的專業理由（安全性與測試），同時提供週五可交付的具體替代方案（原型）。'
+    }
+  },
+  'nuance': {
+    collocations: [
+      { frame: 'The findings lend cautious support to the view that…', zh: '研究結果審慎支持……的觀點', usage: '當樣本有限但趨勢一致時，比 proves 更符合學術誠信。' },
+      { frame: 'It remains open to question whether…', zh: '……是否成立仍有待商榷', usage: '用於點出既有研究的未解問題，自然引出下文論證。' }
+    ],
+    diagnosticCheck: {
+      q: '一項僅針對 40 名大學生的睡眠調查顯示晚睡與焦慮正相關。哪一句最符合 C1/C2 審慎立場（Hedging）？',
+      options: [
+        'Late sleep undeniably causes severe anxiety in all young adults.',
+        'The survey suggests a possible association between late sleep and anxiety among the sampled students.',
+        'It is maybe true that sleeping late makes everyone anxious.',
+        'Obviously, no student can avoid anxiety if they sleep late.'
+      ],
+      answer: 1,
+      wrong: {
+        0: 'undeniably causes 與 all young adults 把小樣本相關性誇大為普遍因果。',
+        2: 'It is maybe true 屬於口語鬆散堆疊，makes everyone anxious 亦過度推論。',
+        3: 'Obviously 與無條件全稱判斷違反實證寫作的範圍控制。'
+      },
+      why: '以 suggests a possible association 與 among the sampled students 精準限定推論強度與樣本範圍。'
+    }
+  },
+  'listening': {
+    collocations: [
+      { frame: 'While the initial turnout is encouraging, we cannot yet infer long-term retention.', zh: '儘管初期參與度令人鼓舞，我們尚無法推論長期留任率', usage: '聽力摘要時精準區分「已觀察到的短期指標」與「尚未測量的長期結果」。' },
+      { frame: 'Rather than abandoning the trial altogether, the speaker proposes calibrating…', zh: '講者並非主張全面放棄試辦，而是建議校準……', usage: '精確捕捉講者以 Rather than 排除極端方案後的真正折衷建議。' }
+    ],
+    diagnosticCheck: {
+      q: '講者說：「The new onboarding workshop received high satisfaction scores, though we have yet to track six-month performance.」最精準的聽力筆記為何？',
+      options: [
+        'The workshop permanently improved six-month job performance.',
+        'Participants liked the workshop, but its effect on six-month performance remains unmeasured.',
+        'The speaker wants to cancel the onboarding workshop immediately.',
+        'Satisfaction scores and six-month performance were both terrible.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '把尚未追蹤（have yet to track）誤聽為已證實永久改善。',
+        2: '講者肯定滿意度並指出待追蹤項目，並未建議取消。',
+        3: '與原文 high satisfaction scores 完全相反。'
+      },
+      why: '精準保留正面評價（high satisfaction）與證據限制（six-month performance unmeasured）。'
+    }
+  },
+  'mediation': {
+    collocations: [
+      { frame: 'Because the survey relied on self-selected volunteers, the results may not reflect…', zh: '由於調查依賴自願填答者，結果未必反映……', usage: '不用艱深統計術語，直接向非專業決策者說明抽樣限制。' },
+      { frame: 'Reporting higher satisfaction does not automatically translate into higher grades.', zh: '回報較高滿意度並不自動等於成績提升', usage: '為一般讀者清楚區分「主觀感受」與「客觀成效」兩項不同指標。' }
+    ],
+    diagnosticCheck: {
+      q: '向沒有統計背景的校務代表解釋「confounding variable（混淆變項）」時，哪一句轉述最清楚且不失真？',
+      options: [
+        'Heteroscedastic endogeneity invalidates the regression coefficient.',
+        'Students who chose the extra workshop may already have had stronger study habits, so the score gain might not come from the workshop alone.',
+        'The study is 100% fake and useless.',
+        'The workshop guaranteed higher grades for every student.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '堆砌更高階的統計術語，非專業讀者無法理解以做出決策。',
+        2: '把方法論限制簡化為「完全造假無用」，失去轉述的精確度。',
+        3: '忽略混淆變項限制，直接誇大為因果保證。'
+      },
+      why: '用日常語言說明「自願參加者原本讀書習慣可能較好」，準確傳達混淆變項對因果推論的影響。'
+    }
+  },
+  'debate': {
+    collocations: [
+      { frame: 'Let me clarify the scope of my proposal: it applies specifically to…, not…', zh: '請容我澄清提案範圍：本方案僅適用於……，而非……', usage: '當提問者把局部試辦誤解為全面禁令時，冷靜界定適用邊界。' },
+      { frame: 'That is a valid concern, which is why the pilot includes an exemption for…', zh: '這是合理的顧慮，因此試辦方案特別納入針對……的豁免機制', usage: '先承接質疑，再說明方案中已設計的配套條款。' }
+    ],
+    diagnosticCheck: {
+      q: '口頭答辯時，評審問：「Does your policy ban all digital devices for disabled students as well?」最佳的即席回應為何？',
+      options: [
+        'You clearly did not read my proposal carefully.',
+        'That is an important point—let me clarify that assistive technologies are explicitly exempted, and the device-free rule applies only to general discussion blocks.',
+        'Yes, everyone must follow the exact same ban without exception.',
+        'I do not know, maybe we should cancel the whole proposal.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '指責提問者沒有讀懂，破壞答辯互動氛圍。',
+        2: '放棄無障礙例外條款，使政策變得僵化且不具可行性。',
+        3: '面對質疑直接放棄整個提案，缺乏有條件修正的論辯能力。'
+      },
+      why: '先肯定問題的重要性，再明確澄清無障礙輔具豁免與適用時段範圍。'
+    }
+  },
+  'capstone': {
+    collocations: [
+      { frame: 'Given that the 420 visits were concentrated among 90 repeat users before exams,…', zh: '鑑於 420 人次集中在考前 90 名重複使用者……', usage: '綜合提案中同時交代總量與結構分佈，支持「精準試辦而非全面擴張」的結論。' },
+      { frame: 'Continuation beyond the six-week trial will be contingent upon meeting two benchmarks:…', zh: '六週試辦後是否續辦，將取決於是否達成兩項指標：……', usage: '為提案設定明確的檢核指標與退場條件（stopping rule）。' }
+    ],
+    diagnosticCheck: {
+      q: '撰寫學院夜間開放綜合提案時，哪一項決策條款最符合 C2 證據導向精神？',
+      options: [
+        'We should keep the building open 24 hours a day forever regardless of cost.',
+        'We propose extending opening hours on Tuesdays and Thursdays during weeks 8–14, paired with the late accessible shuttle, and will review unique user counts and staffing costs at week 15.',
+        'Because 420 students visited, every student in the college wants late hours.',
+        'We should do nothing because bus schedules are complicated.'
+      ],
+      answer: 1,
+      wrong: {
+        0: '不計成本全面永久開放，忽略使用時段集中與預算限制。',
+        2: '把 420 總訪次誤讀為 420 位不同學生，且過度推論至全院學生。',
+        3: '因交通配套需協調就直接放棄改善，未提出整合解方。'
+      },
+      why: '結合選定時段、無障礙接駁配套、不重複使用人數指標與第 15 週檢討機制，構成完整可驗證的提案。'
+    }
+  }
+};
+
+for (const u of ADVANCED_UNITS) {
+  if (ADVANCED_BOOSTERS[u.id]) {
+    u.collocations = ADVANCED_BOOSTERS[u.id].collocations;
+    u.diagnosticCheck = ADVANCED_BOOSTERS[u.id].diagnosticCheck;
+  }
+}
+
 export const advancedUnit=id=>ADVANCED_UNITS.find(u=>u.id===id)||ADVANCED_UNITS[0];

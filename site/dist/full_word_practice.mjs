@@ -2,6 +2,7 @@ import {renderWordStructure} from './word_structure.mjs';
 import {FLASHCARD_DATABASE as cards, FLASHCARD_TIERS as tiers} from './flashcards.mjs';
 import {teachingCard} from './flashcard_quality.mjs';
 import {createWordProgress} from './school_word_progress.mjs';
+import {spellingFeedback} from './recall.mjs';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const FULL_WORD_STORE='english-quest-7700-practice-v1';
 export const normalizeWord=s=>String(s).normalize('NFKC').trim().toLowerCase().replace(/[‘’]/g,"'").replace(/[‐‑–—]/g,'-').replace(/\s+/g,' ');
@@ -47,7 +48,11 @@ export function createFullWordPractice(database=cards,storage=globalThis.localSt
   if(mode==='spell'&&!normalizeWord(value))return false;
   const right=mode==='spell'?normalizeWord(value)===normalizeWord(card.word):options[value].right;
   progress.record(card.id,right);if(right)rightCount++;
-  feedback={right};return true;
+  const pickedText=mode==='meaning'?options[value]?.text:'';
+  const pickedCard=!right&&pickedText?pool().find(x=>x.id!==card.id&&x.zh===pickedText):null;
+  const wrongNote=!right&&mode==='meaning'?(pickedCard?`你選的「${pickedText}」其實是英文單字「${pickedCard.word}」${pickedCard.ipa?` (${pickedCard.ipa})`:''} 的意思；本題「${card.word}」是「${card.zh}」。`:`「${card.word}」在本卡的意思是「${card.zh}」，不是「${pickedText}」。`):'';
+  const spell=!right&&mode==='spell'?spellingFeedback(String(value),card.word):null;
+  feedback={right,wrongNote,spell};return true;
  }
  function action(d){
   if(d.wpStart){start();return true;}
@@ -86,7 +91,7 @@ export function createFullWordPractice(database=cards,storage=globalThis.localSt
     ${mode==='meaning'?`<fieldset class="lesson-check"><legend>選出本卡記錄的中文意思</legend>${options.map((o,i)=>`<button class="btn quiet lesson-option" data-wp-choice="${i}" ${feedback?'disabled':''}>${esc(o.text)}</button>`).join('')}</fieldset>`:''}
     ${mode==='recall'&&!reveal?'<p>先回想中文意思，再翻卡核對。</p><button class="btn primary" data-wp-reveal="true">翻卡查看答案</button>':''}
     ${feedback?`<div class="answer-toolbar"><span>已完成 ${index+1} / ${session.length} 題</span>${nextButton}</div>`:''}
-    ${feedback||reveal?`<div class="word-feedback" role="status"><h3>${feedback?(feedback.right?'✓ 已記錄答對':'再記一次'):'核對答案'}：<span lang="en">${esc(c.word)}</span></h3><p>${esc(c.pos)} · ${esc(c.zh)}</p><div style="display:flex;gap:6px;margin-bottom:8px"><button class="btn quiet small" data-speak-word="${esc(c.word)}">🔊 聽單字</button>${word.example?`<button class="btn quiet small" data-speak-sentence="${esc(word.example)}">🔊 聽例句</button><button class="btn quiet small" data-speak-sentence="${esc(word.example)}" data-slow="true">🐢 慢速例句</button>`:''}</div>${word.example?`<blockquote lang="en">${esc(word.example)}</blockquote><p>${esc(word.exampleZh)}</p>`:''}${renderWordStructure(c)}<p>記憶練習：看「${esc(c.zh)}」→ 遮住英文 → 說出並寫下 <span lang="en">${esc(c.word)}</span> → 隔天再測。</p>${feedback?`<p>下次複習：${new Date(progress.get(c.id).due).toLocaleString('zh-TW')}</p>`:''}</div>`:''}
+    ${feedback||reveal?`<div class="word-feedback" role="status"><h3>${feedback?(feedback.right?'✓ 已記錄答對':'再記一次'):'核對答案'}：<span lang="en">${esc(c.word)}</span></h3><p>${esc(c.pos)} · ${esc(c.zh)}</p>${feedback&&!feedback.right&&feedback.wrongNote?`<p class="word-wrong-diagnosis">🔍 <strong>錯在哪裡：</strong>${esc(feedback.wrongNote)}</p>`:''}${feedback&&!feedback.right&&feedback.spell?`<div class="sp-diff-box">${feedback.spell.diffHtml}<p>🔍 <strong>拼字診斷：</strong>${esc(feedback.spell.tip)}</p></div>`:''}<div style="display:flex;gap:6px;margin-bottom:8px"><button class="btn quiet small" data-speak-word="${esc(c.word)}">🔊 聽單字</button>${word.example?`<button class="btn quiet small" data-speak-sentence="${esc(word.example)}">🔊 聽例句</button><button class="btn quiet small" data-speak-sentence="${esc(word.example)}" data-slow="true">🐢 慢速例句</button>`:''}</div>${word.example?`<blockquote lang="en">${esc(word.example)}</blockquote><p>${esc(word.exampleZh)}</p>`:''}${renderWordStructure(c)}<p>記憶練習：看「${esc(c.zh)}」→ 遮住英文 → 說出並寫下 <span lang="en">${esc(c.word)}</span> → 隔天再測。</p>${feedback?`<p>下次複習：${new Date(progress.get(c.id).due).toLocaleString('zh-TW')}</p>`:''}</div>`:''}
     ${mode==='recall'&&reveal&&!feedback?'<div class="lesson-links"><button class="btn quiet" data-wp-rate="no">想不起來</button><button class="btn primary" data-wp-rate="yes">遮住後能回想</button></div>':''}
     ${feedback?nextButton:''}<button class="btn quiet" data-wp-home="true">返回清單（保留已答進度）</button></section>`;
   }

@@ -407,3 +407,11 @@ body.reduce *,body.reduce *:before,body.reduce *:after{animation:none!important;
 /* The explanation can be long, so Continue stays pinned and the panel scrolls beneath it. */
 .check{max-height:80dvh;overflow-y:auto;overscroll-behavior:contain}.check .check-in{display:flex;flex-direction:column;align-items:stretch}.check #go{position:sticky;bottom:0;z-index:3;width:100%;margin-top:10px;flex:none}.check-more{margin:6px 0;font-size:14px}.check-more>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
 @media(min-width:769px){.check .check-in{max-width:760px;margin-inline:auto}}
+
+/* 易錯盲點與干擾項診斷卡 (10% 實用內容擴充) */
+.lab-clinic{margin:16px 0;padding:14px 16px;border-radius:16px;background:var(--soft);border:1.5px solid var(--line-d)}
+.lab-clinic h4{margin:0 0 6px;font-size:16px}
+.lab-clinic-list{display:grid;gap:8px;margin-top:10px}
+.lab-clinic-item{background:var(--card);border:1px solid var(--line-d);border-radius:12px;padding:10px 14px}
+.lab-clinic-item summary{cursor:pointer;font-weight:700;line-height:1.5}
+.lab-clinic-body{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-d);line-height:1.65;font-size:14px}

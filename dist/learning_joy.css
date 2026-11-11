@@ -128,3 +128,48 @@
 @media(prefers-reduced-motion:reduce){
   .recall-studio *,.unit-missions *,.flashcard-studio .fc-card-stage{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
+
+/* ============================================================================
+ * 2026-11-11 Cycle 6: Universal Error Diagnostic & +10% Useful Chunk Polish
+ * ============================================================================ */
+.lesson-wrong-diagnosis,
+.grammar-wrong-diagnosis,
+.kp-wrong-diagnosis,
+.word-wrong-diagnosis {
+  background: var(--joy-wrong-bg, #fef2f2);
+  border-left: 4px solid var(--joy-wrong, #dc2626);
+  color: #7f1d1d;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.unit-useful-chunks {
+  border-left: 5px solid var(--joy-emerald, #1f7a4c);
+}
+
+.useful-chunk-item {
+  background: var(--joy-cream, #f9f6ef);
+  border: 1px solid var(--joy-border, #e5dec9);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 8px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-wrong-diagnosis,
+  .grammar-wrong-diagnosis,
+  .kp-wrong-diagnosis,
+  .word-wrong-diagnosis {
+    background: #351a1d;
+    border-left-color: #f87171;
+    color: #fecaca;
+  }
+  .useful-chunk-item {
+    background: #1c2924;
+    border-color: #2c3e35;
+    color: #ecf1e8;
+  }
+}

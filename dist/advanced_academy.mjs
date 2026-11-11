@@ -4,6 +4,7 @@ import {readMasterclass,countEnglishWords} from './masterclass.mjs?v=advanced202
 import * as sound from './quest/sound.mjs?v=truth20261105';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const speechState=new Map();
+const diagChoices=new Map();
 let feedback=null,notice='',currentRoute='';
 const getStore=()=>{try{return globalThis.localStorage;}catch{return null;}};
 const url=(id='',stage='learn')=>`#advanced${id?`/${id}/${stage}`:''}`;
@@ -16,8 +17,25 @@ function sourcePanel(u,form='practice',hide=false){
 }
 function badges(s){return [['觀念探索者',s.read>=1],['證據偵探',s.checks>=3],['修訂實踐者',s.revised>=1],['作品集同行者',s.loops===8]].map(([name,earned])=>`<span class="advanced-badge ${earned?'earned':''}">${earned?'✦':'◇'} ${name}<small>${earned?'已取得':'尚未取得'}</small></span>`).join('');}
 function dashboard(store){const s=advancedSummary(store);return `<section class="advanced-dashboard"><div class="advanced-hero"><div><p class="home-label">ADVANCED ENGLISH / THINK · EXPLAIN · REVISE</p><h1>C1 → C2 精進課程</h1><p class="home-intro">不只選出答案，更能整合、說清楚，<br>再把自己的第一稿變好。</p><a class="home-btn primary" href="${url(s.next)}">${s.due?'接續到期複習':'開始／接續我的課程'} →</a></div><div class="advanced-evidence"><span class="home-tag">我的學習證據</span><strong>${s.loops}<small> / 8 個學習循環</small></strong><meter min="0" max="8" value="${s.loops}" aria-label="完成教學、檢核與修訂的單元數"></meter><p>看過教學 ${s.read} · 做完檢核 ${s.checks}<br>留下修訂 ${s.revised} · 到期複習 ${s.due}</p><small>這是完成紀錄，不是 CEFR 程度分數。</small></div></div><div class="advanced-course-facts"><span><b>8</b> 能力單元</span><span><b>48</b> 原創檢核題</span><span><b>4</b> 作品自評面向</span><span><b>2</b> 初稿／修訂版本</span></div><p class="advanced-boundary">以高階能力為目標的自學模組；不是完整 C2 認證課程。作品與口說品質仍需要教師或同儕回饋。你可以自由選單元。</p><div class="advanced-badges" aria-label="學習流程徽章">${badges(s)}</div><section aria-labelledby="advanced-map-title"><div class="home-section-heading"><div><p class="home-label">YOUR COURSE MAP</p><h2 id="advanced-map-title">從讀懂觀點，到提出自己的觀點。</h2></div><a class="home-text-link" href="#masterclass">查看原本四份作品草稿 →</a></div><ol class="advanced-map">${ADVANCED_UNITS.map(u=>{const row=s.rows.find(r=>r.id===u.id);return `<li><a href="${url(u.id)}"><div><span class="advanced-unit-number">0${u.number}</span><span aria-hidden="true">${u.icon}</span></div><small>${u.skill} · 約 ${u.minutes} 分鐘</small><h3>${u.title}</h3><p>${u.canDo}</p><span class="advanced-map-status">${row.loop?'✓ 已留下完整循環紀錄':row.revised?'✎ 已留下修訂':row.practice?'✓ 已做檢核':row.read?'✓ 已讀教學':'開始這一單元 →'}</span></a></li>`;}).join('')}</ol></section></section>`;}
-function lesson(u,r){return `<section class="advanced-lesson"><p class="home-tag">本單元可以做到</p><h2>${u.canDo}</h2>${u.lesson.map(p=>`<p>${esc(p)}</p>`).join('')}<figure class="advanced-diagram"><div>${u.diagram.map(([term,label],i)=>`<span><b lang="en">${esc(term)}</b><small>${esc(label)}</small></span>${i<2?'<i aria-hidden="true">→</i>':''}`).join('')}</div><figcaption>先抓關係，再檢查來源與自己的表達。</figcaption></figure><div class="concept-table-wrap" tabindex="0" role="region" aria-label="${u.title}策略對照表"><table><caption>${u.title} · 策略對照</caption><thead><tr><th scope="col">重點</th><th scope="col">語句／線索</th><th scope="col">怎麼用</th></tr></thead><tbody>${u.table.map(row=>`<tr><th scope="row">${esc(row[0])}</th><td>${esc(row[1])}</td><td>${esc(row[2])}</td></tr>`).join('')}</tbody></table></div>${sourcePanel(u,'practice',!!u.listening)}<div class="advanced-task-brief"><h3>你的作品任務</h3><p>${u.target}</p><ol>${u.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div><button type="button" class="home-btn primary" data-advanced-read>${r.read?'再看一次，前往檢核':'我已閱讀，開始獨立檢核'} →</button></section>`;}
-function explanation(item,selected){return `<div class="advanced-feedback ${selected===item.answer?'good':''}" role="status"><strong>${selected===item.answer?'✓ 判斷正確':selected===-1?'一起看證據':'再看一次判斷依據'}</strong><p>正解：${esc(item.options[item.answer])}</p><p>${esc(item.why)}</p></div>`;}
+function diagnoseAdvWrong(item,selected){
+ if(selected===undefined||selected===null||selected===-1||selected===item.answer)return '';
+ if(item.wrong&&item.wrong[selected])return item.wrong[selected];
+ const picked=item.options[selected]||'';
+ return `你選的「${picked}」在證據範圍控制、語域正式度或訊息推進順序上與題幹條件不合；請對照下方正解解析。`;
+}
+function boosterPanel(u){
+ if(!u.collocations&&!u.diagnosticCheck)return '';
+ const picked=diagChoices.get(u.id);
+ const dc=u.diagnosticCheck;
+ return `<section class="advanced-booster-card" aria-label="C1-C2 學術語塊與錯題診斷擴充">
+  <span class="home-tag">✦ C1→C2 進階語塊與盲點診斷 (+15% 實用內容擴充)</span>
+  <h3>高階學術寫作句型框架與即時診斷</h3>
+  ${u.collocations?`<div class="advanced-collocation-grid">${u.collocations.map(c=>`<article class="adv-collocation-item"><p lang="en"><strong>${esc(c.frame)}</strong></p><p>${esc(c.zh)}</p><small>💡 用法時機：${esc(c.usage)}</small></article>`).join('')}</div>`:''}
+  ${dc?`<div class="advanced-diag-box"><p><strong>🔬 觀念盲點快測：</strong>${esc(dc.q)}</p><div class="advanced-options">${dc.options.map((opt,oi)=>`<button type="button" data-advanced-diag-opt="${oi}" class="${picked===undefined?'':oi===dc.answer?'correct':oi===picked?'incorrect':''}"><span>${String.fromCharCode(65+oi)}</span><b lang="en">${esc(opt)}</b></button>`).join('')}</div>${picked!==undefined?explanation(dc,picked):''}</div>`:''}
+ </section>`;
+}
+function lesson(u,r){return `<section class="advanced-lesson"><p class="home-tag">本單元可以做到</p><h2>${u.canDo}</h2>${u.lesson.map(p=>`<p>${esc(p)}</p>`).join('')}<figure class="advanced-diagram"><div>${u.diagram.map(([term,label],i)=>`<span><b lang="en">${esc(term)}</b><small>${esc(label)}</small></span>${i<2?'<i aria-hidden="true">→</i>':''}`).join('')}</div><figcaption>先抓關係，再檢查來源與自己的表達。</figcaption></figure><div class="concept-table-wrap" tabindex="0" role="region" aria-label="${u.title}策略對照表"><table><caption>${u.title} · 策略對照</caption><thead><tr><th scope="col">重點</th><th scope="col">語句／線索</th><th scope="col">怎麼用</th></tr></thead><tbody>${u.table.map(row=>`<tr><th scope="row">${esc(row[0])}</th><td>${esc(row[1])}</td><td>${esc(row[2])}</td></tr>`).join('')}</tbody></table></div>${boosterPanel(u)}${sourcePanel(u,'practice',!!u.listening)}<div class="advanced-task-brief"><h3>你的作品任務</h3><p>${u.target}</p><ol>${u.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div><button type="button" class="home-btn primary" data-advanced-read>${r.read?'再看一次，前往檢核':'我已閱讀，開始獨立檢核'} →</button></section>`;}
+function explanation(item,selected){const wrongMsg=diagnoseAdvWrong(item,selected);return `<div class="advanced-feedback ${selected===item.answer?'good':''}" role="status"><strong>${selected===item.answer?'✓ 判斷正確':selected===-1?'一起看證據':'再看一次判斷依據'}</strong>${wrongMsg?`<p class="advanced-wrong-diagnosis">🔍 <strong>錯在哪裡：</strong>${esc(wrongMsg)}</p>`:''}<p>正解：${esc(item.options[item.answer])}</p><p>${esc(item.why)}</p></div>`;}
 function quiz(u,r,form){
  const bank=u[form==='transfer'?'transfer':'checks'],active=r.active,last=r.attempts?.filter(a=>a.form===form).at(-1);
  if(active&&active.form!==form)return `<div class="advanced-empty"><h2>還有一組未完成的檢核</h2><p>已保存 ${active.answers.length} / 3 題。先接續它，再開另一組。</p><a class="home-btn primary" href="${url(u.id,active.form==='transfer'?'review':'practice')}">接續作答 →</a></div>`;
@@ -52,6 +70,7 @@ export function bindAdvancedCourse(root,render=()=>{root.querySelector('.main').
   const anchor=event.target.closest('a');if(anchor){flush();sound.stop();feedback=null;notice='';return;}
   const b=event.target.closest('button');if(!b||b.disabled)return;const d=b.dataset;if(!Object.keys(d).some(k=>k.startsWith('advanced')))return;
   const store=getStore(),u=advancedUnit(id),r=readAdvanced(store).units[id]||{};
+  if('advancedDiagOpt'in d){diagChoices.set(id,Number(d.advancedDiagOpt));redraw();return;}
   if('advancedRead'in d){if(patchAdvanced(id,{read:true},store))location.hash=url(id,'practice');else{notice='無法儲存進度，請確認瀏覽器儲存空間。';redraw();}return;}
   if(d.advancedStart){const form=d.advancedStart;feedback=null;notice='';const audio=speechState.get(`${id}:${form}`)||{};if(!startAdvancedAttempt(id,form,store,{heard:audio.heard,transcript:audio.transcript||audio.seenText}))notice='尚有其他組檢核未完成，或目前無法儲存作答。';redraw();return;}
   if('advancedAnswer'in d){const next=recordAdvancedAnswer(id,d.run,Number(d.index),Number(d.advancedAnswer),store);if(next){if(next.answers.length===3)speechState.delete(`${id}:${next.form}`);feedback={run:next.id,index:next.answers.length-1};notice='';redraw();root.querySelector('[data-advanced-next],.advanced-quiz-result h2')?.focus({preventScroll:true});}else{notice='作答未儲存；請確認儲存空間或重新整理以載入最新進度。';redraw();}return;}
