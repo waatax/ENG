@@ -50,6 +50,7 @@ import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
 // Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
 import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs';
+import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage } from './ultralearning_engine.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -1536,14 +1537,20 @@ function jhPage() {
     </div>
 
     <!-- JH 分類切換 -->
-    <div style="display:flex;gap:10px;margin:20px 0;border-bottom:1px solid var(--line);padding-bottom:12px">
+    <div style="display:flex;gap:10px;margin:20px 0;border-bottom:1px solid var(--line);padding-bottom:12px;flex-wrap:wrap">
+      <button class="btn ${activeJhTab === 'ultralearning' ? 'primary' : 'quiet'}" data-select-jh-tab="ultralearning">⚡ 超速學習實戰 (See·Do·Feedback)</button>
       <button class="btn ${activeJhTab === 'units' ? 'primary' : 'quiet'}" data-select-jh-tab="units">📖 16大課綱單元綱要</button>
       <button class="btn ${activeJhTab === 'cases' ? 'primary' : 'quiet'}" data-select-jh-tab="cases">🗣️ 16大語言生活情境案例</button>
       <button class="btn ${activeJhTab === 'cap' ? 'primary' : 'quiet'}" data-select-jh-tab="cap">👑 109-115 會考考點大數據</button>
       <button class="btn ${activeJhTab === 'handouts' ? 'primary' : 'quiet'}" data-select-jh-tab="handouts">📑 16份主題會考手冊</button>
     </div>
 
+    ${activeJhTab === 'ultralearning' ? `
+      ${renderUltralearningMasteryHub({ forceStage: 'junior' })}
+    ` : ''}
+
     ${activeJhTab === 'units' ? `
+      ${renderUltralearningMasteryHub({ forceStage: 'junior', compact: true })}
       ${renderJhCapMasteryTable()}
       <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:16px">
         ${jhUnits.map(u => `
@@ -1557,10 +1564,14 @@ function jhPage() {
               <p style="font-size:14px;color:#475569;margin:0 0 12px;line-height:1.6">${u.summary}</p>
             </div>
             <div>
-              <div style="background:#f8fafc;padding:8px 12px;border-radius:6px;font-size:12px;color:#1e293b;margin-bottom:10px">
-                <strong>例句範例：</strong> ${u.exampleSentence}
+              <details class="jh-retrieval-box">
+                <summary>🧠 閉書提取挑戰（Ultralearning Retrieval）：遮住例句自己造一句！</summary>
+                <p><strong>示範例句核對：</strong><span lang="en">${esc(u.exampleSentence)}</span><br><small>口頭唸出後，把主詞或時間換成自己的生活情境再說一次（Variability）。</small></p>
+              </details>
+              <div style="display:flex;gap:8px">
+                <button class="btn small primary" style="flex:1" data-speak-sentence="${esc(u.exampleSentence)}">🔊 朗讀例句</button>
+                <button class="btn small secondary" style="flex:1" data-start-quiz="true" data-quiz-cat="cap" data-quiz-count="10">⚡ 會考直練</button>
               </div>
-              <button class="btn small primary" style="width:100%" data-speak-sentence="${esc(u.exampleSentence)}">🔊 朗讀示範例句</button>
             </div>
           </div>
         `).join('')}
@@ -2281,6 +2292,7 @@ function examPage() {
       </p>
     </div>
 
+    ${renderUltralearningMasteryHub()}
     ${renderExamSolvingFlowchartDiagram()}
     ${renderExamTracksComparisonTable()}
 
@@ -2348,6 +2360,8 @@ function progress() {
         <div style="font-size:13px;color:var(--text-muted);margin-top:4px">🔥 連續學習天數</div>
       </div>
     </div>
+
+    ${renderAllStagesReadinessOverview()}
 
     <div class="card">
       <h3 style="margin:0 0 14px">🏅 12 枚核心素養徽章解鎖狀態</h3>
@@ -2770,6 +2784,7 @@ root.addEventListener('click', e => {
 
   // 20,000 題旗艦模考題庫測驗互動
   if (d.startQuiz) {
+    if (page !== 'exams') page = 'exams';
     if (d.quizCat) quizCategory = d.quizCat;
     quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || 'all';
     const parsedCount = parseInt(d.quizCount || (document.querySelector('#quiz-count-select')?.value), 10);
@@ -2957,6 +2972,31 @@ root.addEventListener('click', e => {
       onError: () => b.classList.remove('active')
     });
     return;
+  }
+
+  // Ultralearning × See-Do-Feedback 互動事件
+  if (d.ulStage) {
+    setUltralearningStage(d.ulStage);
+    render();
+    return;
+  }
+  if (d.ulAnswer && d.ulChoice !== undefined) {
+    recordUltralearningAnswer(d.ulAnswer, Number(d.ulChoice));
+    render();
+    return;
+  }
+  if (d.ulResetStage) {
+    resetUltralearningStage(d.ulResetStage);
+    render();
+    return;
+  }
+});
+
+root.addEventListener('change', e => {
+  const el = e.target;
+  if (el?.dataset?.ulExposure && el.dataset.ulExpIdx !== undefined) {
+    toggleExposureStep(el.dataset.ulExposure, Number(el.dataset.ulExpIdx));
+    render();
   }
 });
 
