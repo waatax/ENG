@@ -1557,6 +1557,8 @@ th { font-weight: 700; color: var(--text-muted); background: var(--hover-bg); }
 .lesson-table table{border-collapse:collapse;width:100%;min-width:480px}
 .lesson-table th,.lesson-table td{text-align:left;vertical-align:top;border:1px solid #d5e0e7;padding:12px;font-size:16px}
 .lesson-page pre{overflow:auto;padding:16px;background:var(--tag-bg);font-size:14px;color:var(--text-primary)}
+/* Pre-formatted diagrams from textBlocks() also appear outside .lesson-page (e.g. #sixth); keep them inside the column on phones. */
+.main pre{max-width:100%;overflow-x:auto}
 .lesson-page textarea{display:block;width:100%;margin:12px 0;padding:14px;border:1px solid var(--line-strong);border-radius:8px;resize:vertical;font:inherit;background:var(--card-bg);color:var(--text-primary)}
 .lesson-check{min-width:0;border:1px solid #b8cdd8;border-radius:10px;padding:18px;margin:20px 0}
 .lesson-check legend{font-weight:700;font-size:18px;padding:0 7px;max-width:100%}

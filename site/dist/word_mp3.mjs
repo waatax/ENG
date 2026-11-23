@@ -30,12 +30,13 @@ function buildMp3Quiz(words,groupId){
     const d1=words[(targetIdx+7)%words.length];
     const d2=words[(targetIdx+19)%words.length];
     const opts=[{idx:targetIdx,w:target},{idx:(targetIdx+7)%words.length,w:d1},{idx:(targetIdx+19)%words.length,w:d2}];
-    const shift=(targetIdx+qNo)%3;
+    // Mix in the group id so the correct answer is not in the same slot for question N in every group.
+    const shift=(targetIdx+qNo+[...groupId].reduce((sum,ch)=>sum+ch.charCodeAt(0),0))%3;
     const ordered=[...opts.slice(shift),...opts.slice(0,shift)];
     const userPick=picks[qNo];
     const pickedObj=userPick!==undefined?ordered.find(o=>o.idx===userPick):null;
     const isOk=pickedObj?.idx===targetIdx;
-    return `<article class="mp3-quiz-item"><div class="mp3-quiz-head"><strong>⚡ 聽音抽測 #${qNo+1}：</strong><span lang="en" class="mp3-quiz-word">${e(target.en)}</span> <button type="button" class="btn quiet small" data-mp3-seek="${targetIdx}">🔊 聽本字</button></div><div class="mp3-quiz-opts">${ordered.map(o=>{const cls=userPick===undefined?'':o.idx===targetIdx?'is-correct':o.idx===userPick?'is-wrong':'';return `<button type="button" class="btn small mp3-quiz-opt ${cls}" data-mp3-qno="${qNo}" data-mp3-qpick="${o.idx}">${e(o.w.zh)}</button>`;}).join('')}</div>${pickedObj?(isOk?`<p class="mp3-quiz-fb good" role="status">✅ 答對了！<strong lang="en">${e(target.en)}</strong> 就是「${e(target.zh)}」。</p>`:`<p class="mp3-quiz-fb bad" role="alert">❌ <strong>🔍 錯在哪裡：</strong>你選的「${e(pickedObj.w.zh)}」其實是本組單字 <code lang="en">${e(pickedObj.w.en)}</code> 的意思；本題 <code lang="en">${e(target.en)}</code> 是「<strong>${e(target.zh)}</strong>」！</p>`):''}</article>`;
+    return `<article class="mp3-quiz-item"><div class="mp3-quiz-head"><strong>⚡ 字義抽測 #${qNo+1}：</strong><span lang="en" class="mp3-quiz-word">${e(target.en)}</span> <button type="button" class="btn quiet small" data-mp3-seek="${targetIdx}">🔊 聽本字</button></div><div class="mp3-quiz-opts">${ordered.map(o=>{const cls=userPick===undefined?'':o.idx===targetIdx?'is-correct':o.idx===userPick?'is-wrong':'';return `<button type="button" class="btn small mp3-quiz-opt ${cls}" data-mp3-qno="${qNo}" data-mp3-qpick="${o.idx}">${e(o.w.zh)}</button>`;}).join('')}</div>${pickedObj?(isOk?`<p class="mp3-quiz-fb good" role="status">✅ 答對了！<strong lang="en">${e(target.en)}</strong> 就是「${e(target.zh)}」。</p>`:`<p class="mp3-quiz-fb bad" role="alert">❌ <strong>🔍 錯在哪裡：</strong>你選的「${e(pickedObj.w.zh)}」其實是本組單字 <code lang="en">${e(pickedObj.w.en)}</code> 的意思；本題 <code lang="en">${e(target.en)}</code> 是「<strong>${e(target.zh)}</strong>」！</p>`):''}</article>`;
   }).join('');
 }
 try{const saved=JSON.parse(localStorage.getItem(STORE)||'null');if(saved&&/^(elementary|junior|senior|toeic|toefl|sat|gre|gmat)-\d{3}$/.test(saved.group)){selected=saved.group;resumeTime=Number.isFinite(saved.time)&&saved.time>=0?saved.time:0;}if([.75,1,1.25,1.5].includes(saved?.rate))rate=saved.rate;if(typeof saved?.playOnSelect==='boolean')playOnSelect=saved.playOnSelect;if(['bilingual','recall','en_think'].includes(saved?.thinkingMode))thinkingMode=saved.thinkingMode;}catch{}
@@ -56,7 +57,7 @@ function englishThinkingHint(en){
 }
 function wordListHtml(words,start){
   const quizHtml=buildMp3Quiz(words,selected);
-  return `${quizHtml?`<section class="mp3-quick-quiz-box" aria-label="本組 10% 隨堂聽音快測"><h3>🎯 本組 +10% 隨堂聽音辨義快測（選錯即時對比易混字）</h3><div class="mp3-quiz-grid">${quizHtml}</div></section>`:''}<ol class="mp3-word-list ${thinkingMode==='recall'?'is-recall-mode':''}" start="${start}">${words.map((w,i)=>{
+  return `${quizHtml?`<section class="mp3-quick-quiz-box" aria-label="本組隨堂字義快測"><h3>🎯 本組隨堂字義快測（看字選意思，選錯即時對比易混字）</h3><div class="mp3-quiz-grid">${quizHtml}</div></section>`:''}<ol class="mp3-word-list ${thinkingMode==='recall'?'is-recall-mode':''}" start="${start}">${words.map((w,i)=>{
     const isRevealed=revealedWords.has(i);
     const maskZh=thinkingMode==='recall'&&!isRevealed;
     return `<li data-mp3-word="${i}" class="${maskZh?'is-masked':''}"><button type="button" data-mp3-seek="${i}" aria-label="播放 ${e(w.en)}，${e(w.zh)}"><span lang="en">${e(w.en)}</span><span class="mp3-zh-text">${maskZh?'🔒 先聽英文想意思（點此揭曉並播放）':e(w.zh)}</span>${thinkingMode==='en_think'?`<small class="mp3-think-cue" lang="en">💡 ${e(englishThinkingHint(w.en))}</small>`:''}<small>${formatDuration(w.start)} →</small></button></li>`;

@@ -880,7 +880,7 @@ export function handleDuolingoClick(button, rerender) {
       duolingoState.hearts--;
       duolingoState.combo = 0;
       const s5Reasons = {
-        1: '🔍 錯在哪裡：你選了 (B) "I finish my homework tomorrow afternoon..." — Alex 問的是 right now（現在正在做什麼），這句卻在講明天下午的安排；而且個人計畫要用 will / be going to（如 I will finish...），不用現在簡單式 finish！',
+        1: '🔍 錯在哪裡：你選了 (B) "I finish my homework tomorrow afternoon..." — Alex 問的是 right now（現在正在做什麼），這句卻在講明天下午的安排；而且個人安排要用 be going to 或現在進行式（如 I’m going to finish… / I’m finishing… tomorrow），不用現在簡單式 finish！',
         2: '🔍 錯在哪裡：你選了 (C) "I was finishing my English homework right now." — 過去進行式 was finishing 與現在時間副詞 right now 時態嚴重衝突！應改為現在進行式 I am finishing (A)。'
       };
       duolingoState.drawer = {

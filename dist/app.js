@@ -2784,7 +2784,11 @@ root.addEventListener('click', e => {
 
   // 20,000 題旗艦模考題庫測驗互動
   if (d.startQuiz) {
-    if (page !== 'exams') page = 'exams';
+    // Quiz buttons also live on other pages (e.g. #jh); record the switch to #exams so refresh and Back behave.
+    if (page !== 'exams') {
+      page = 'exams';
+      if (location.hash !== '#exams') history.pushState(null, '', location.pathname + location.search + '#exams');
+    }
     if (d.quizCat) quizCategory = d.quizCat;
     quizSubtopic = d.quizSubtopic || (document.querySelector('#exam-subtopic-select')?.value) || 'all';
     const parsedCount = parseInt(d.quizCount || (document.querySelector('#quiz-count-select')?.value), 10);

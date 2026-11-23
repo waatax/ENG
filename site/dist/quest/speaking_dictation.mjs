@@ -15,7 +15,7 @@ export const MINIMAL_PAIRS = [
       ['bad', '壞的', 'bed', '床', 'It is bad to eat snacks right before going to bed.'],
       ['man', '男人', 'men', '男人們', 'One man stood by the door while three men waited outside.'],
       ['sat', '坐下(過去式)', 'set', '擺設／設定', 'She sat down after she set the alarm clock.'],
-      ['bat', '球棒／蝙蝠', 'bet', '打賭', 'I bet he can hit the ball with that wooden bat.']
+      ['bat', '球棒／蝙蝠', 'bet', '打賭；我敢說（I bet）', 'I bet he can hit the ball with that wooden bat.']
     ]
   },
   {
@@ -65,7 +65,7 @@ export const MINIMAL_PAIRS = [
     pairs: [
       ['they', '他們', 'day', '日子／白天', 'They practice English every single day.'],
       ['then', '然後', 'den', '獸穴／小書房', 'First we cleaned the living room, and then the den.'],
-      ['breathe', '呼吸(動詞)', 'breed', '培育／品種', 'Take time to breathe deeply and relax.'],
+      ['breathe', '呼吸(動詞)', 'breed', '培育／品種', 'Breathe slowly as you learn how farmers breed sheep.'],
       ['though', '雖然', 'dough', '麵團', 'She kneaded the bread dough even though she was tired.'],
       ['there', '那裡', 'dare', '敢', 'Would you dare to sing up there on the big stage?']
     ]
@@ -119,7 +119,7 @@ export const MINIMAL_PAIRS = [
       ['clock', '時鐘', 'cloak', '斗篷', 'He hung his warm cloak beside the wall clock.'],
       ['cost', '花費', 'coast', '海岸', 'Living along the coast can cost a lot of money.'],
       ['rod', '釣竿／長桿', 'road', '道路', 'He carried his fishing rod down the quiet road.'],
-      ['hop', '單腳跳', 'hope', '希望', 'I hope the little frog can hop across the pond.']
+      ['hop', '跳躍；單腳跳', 'hope', '希望', 'I hope the little frog can hop across the pond.']
     ]
   },
   {
@@ -145,12 +145,12 @@ export const MINIMAL_PAIRS = [
       ['hat', '帽子', 'had', '有(過去式)', 'She had a warm wool hat last winter.'],
       ['back', '背部／後面', 'bag', '袋子／書包', 'Put the heavy bag on the back seat.'],
       ['rope', '繩索', 'robe', '長袍／浴袍', 'Tie the cotton robe with this soft rope.'],
-      ['bet', '打賭', 'bed', '床鋪', 'I bet you want to rest in a warm bed tonight.']
+      ['bet', '打賭；我敢說（I bet）', 'bed', '床鋪', 'I bet you want to rest in a warm bed tonight.']
     ]
   },
   {
     id: 'mp-12',
-    contrast: '子音群 /pl, gl, kl/ vs /pr, gr, kr/',
+    contrast: '子音群 /pl, gl, kl, fl/ vs /pr, gr, kr, fr/',
     title: '雙子音連綴（避免插入多餘母音）',
     tip: '第一個子音 /p, g, k/ 釋放的瞬間，舌頭已經在 /l/（頂齒齦）或 /r/（微捲舌）的位置，中間不可夾入「ㄜ」音。',
     pairs: [
@@ -216,7 +216,7 @@ export const DICTATION_ITEMS = [
   {
     id: 'dic-b1-2',
     cefr: 'B1',
-    text: 'Please review the attached schedule before Friday meeting.',
+    text: "Please review the attached schedule before Friday's meeting.",
     zh: '請在週五會議前審閱附件的行程表。',
     speechNote: '職場節奏：attached schedule 中間的 -ed (/t/) 輕觸即過，重音清楚落在 review、schedule、meeting。'
   },
@@ -266,34 +266,37 @@ export function tokenizeWords(text) {
 export function scoreDictation(target, input) {
   const targetTokens = tokenizeWords(target);
   const inputTokens = tokenizeWords(input);
-  const WEAK_WORDS = new Set(['a', 'an', 'the', 'to', 'of', 'for', 'and', 'at', 'in', 'on', 'that', 'with', 'can', 'was', 'were', 'are', 'some', 'from', 'than', 'or', 'but', 'as']);
+  const WEAK_WORDS = new Set(['a', 'an', 'the', 'to', 'of', 'for', 'and', 'at', 'in', 'on', 'that', 'with', 'can', 'was', 'were', 'are', 'some', 'from', 'than', 'or', 'but', 'as', 'is', 'am', 'be', 'been', 'do', 'does', 'has', 'have', 'had', 'will', 'would', 'could', 'should', 'me', 'you', 'your', 'him', 'her', 'his', 'them', 'us', 'our']);
+  const isInflection = (a, b) => {
+    if (!a || !b || a === b) return false;
+    const [long, short] = a.length > b.length ? [a, b] : [b, a];
+    return short.length >= 3 && ['s', 'es', 'ed', 'd'].some(suf => long === short + suf);
+  };
+  // take/takes cost less than take/the, so ties pair a dropped ending with its own word, not a neighbouring article.
+  const subCost = (a, b) => (a === b ? 0 : isInflection(a, b) ? 0.5 : 1);
   // Align target and input words (edit distance) so a skipped word is reported as missing,
   // not as a "wrong word" against whatever the learner wrote in that slot.
   const n = targetTokens.length, m = inputTokens.length;
   const dp = Array.from({ length: n + 1 }, (_, i) => Array.from({ length: m + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)));
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= m; j++) {
-      const same = targetTokens[i - 1].clean === inputTokens[j - 1].clean ? 0 : 1;
+      const same = subCost(targetTokens[i - 1].clean, inputTokens[j - 1].clean);
       dp[i][j] = Math.min(dp[i - 1][j - 1] + same, dp[i - 1][j] + 1, dp[i][j - 1] + 1);
     }
   }
   const aligned = new Array(n).fill(null); // index of the input word paired with each target word, or null if skipped
   for (let i = n, j = m; i > 0;) {
-    if (j > 0 && dp[i][j] === dp[i - 1][j - 1] + (targetTokens[i - 1].clean === inputTokens[j - 1].clean ? 0 : 1)) { aligned[i - 1] = j - 1; i--; j--; }
+    if (j > 0 && dp[i][j] === dp[i - 1][j - 1] + subCost(targetTokens[i - 1].clean, inputTokens[j - 1].clean)) { aligned[i - 1] = j - 1; i--; j--; }
     else if (dp[i][j] === dp[i - 1][j] + 1) { i--; }
     else { j--; }
   }
-  const isInflection = (a, b) => {
-    if (!a || !b || a === b) return false;
-    const [long, short] = a.length > b.length ? [a, b] : [b, a];
-    return short.length >= 3 && ['s', 'es', 'ed', 'd'].some(suf => long === short + suf);
-  };
   const shown = tok => tok.raw.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, '') || tok.raw;
   const tokens = targetTokens.map((t, idx) => {
     const actual = inputTokens[idx]?.clean || '';
     const exactPos = actual === t.clean;
     const nearMatch = !exactPos && inputTokens.some((inp, j) => Math.abs(j - idx) <= 2 && inp.clean === t.clean);
-    const ok = exactPos || nearMatch;
+    // Also correct when the alignment pairs it with the same word (an extra or missing word earlier only shifts its index).
+    const ok = exactPos || nearMatch || (aligned[idx] !== null && inputTokens[aligned[idx]].clean === t.clean);
     let errorReason = '';
     if (!ok) {
       const pair = aligned[idx] === null ? null : inputTokens[aligned[idx]];

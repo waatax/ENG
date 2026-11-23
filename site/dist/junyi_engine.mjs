@@ -424,7 +424,7 @@ export const FATAL_TRAPS = [
     topic: '介系詞片語 prior to / despite 與連接詞 before / although 詞性混淆',
     wrong: 'Despite the shipment arrived late, the warehouse team completed inventory on time. ❌',
     correct: 'Although the shipment arrived late (or: Despite the late shipment), the warehouse team completed inventory on time. ✔️',
-    explanation: 'despite / in spite of / prior to 是「介系詞」，後方只能接名詞片語或 V-ing；若後方有完整子句 (S + V)，必須用連接詞 although / even though！',
+    explanation: 'despite / in spite of / prior to 是「介系詞」，後方只能接名詞片語或 V-ing；若後方有完整子句 (S + V)，despite / in spite of 改用連接詞 although / even though，prior to 改用 before！',
     step0Clue: '先看空格後面有沒有「主詞＋動詞」：有動詞選 Although，只有名詞片語選 Despite！'
   },
   {

@@ -203,17 +203,19 @@ export function evaluateWritingDraft(promptSpec, rawText) {
     grammarNotes.push('⚠️ 不可數名詞盲點：information, advice, homework, furniture, equipment 為不可數名詞，字尾不可加複數 -s！');
   }
   // "more larger rooms" (= more rooms that are larger) is fine, so only flag "more + -er" before than / punctuation / end.
-  if (/\bmore\s+(?:better|worse|faster|easier|cheaper|higher|larger|smaller|bigger|happier)\b(?=\s*(?:than\b|[.,!?;:]|$))/i.test(text)) {
+  if (/\bmore\s+(?:better|worse|faster|easier|cheaper|higher|larger|smaller|bigger|happier|taller|shorter|older|younger|longer|stronger|heavier|hotter|colder|busier|earlier|later|nicer|prettier|smarter|louder|quieter|lower|closer|safer|warmer|darker)\b(?=\s*(?:than\b|[.,!?;:]|$))/i.test(text)) {
     grammarNotes.push('⚠️ 雙重比較級盲點：已經是比較級的形容詞（如 better, faster, easier），前面不可再加 more！');
   }
-  if (/\blook(?:s|ed|ing)?\s+forward\s+to\s+(?:see|meet|hear|go|have|work|visit|be|get|talk|play|join)\b/i.test(text)) {
+  if (/\blook(?:s|ed|ing)?\s+forward\s+to\s+(?:see|meet|hear|go|have|work|visit|be|get|talk|play|join|attend|receive|watch|come|start|learn|help|share|travel|read|study)\b/i.test(text)) {
     grammarNotes.push('⚠️ 介系詞 to 盲點：look forward to 的 to 是介系詞，後方動詞請改用動名詞 V-ing（如 looking forward to seeing / hearing）。');
   }
-  // "She is very like her mother" (= very similar to) is correct, so skip "very like" right after be / look / seem.
-  if (/(?<!\b(?:am|is|are|was|were|be|been|looks?|looked|seems?|seemed)\s+)\bvery\s+(?:like|likes|enjoy|enjoys|love|loves)\b/i.test(text)) {
+  // "She is very like her mother" (= very similar to) is correct, so skip "very like" after be / look / seem / become,
+  // contractions (I'm, she's, they're) and negatives (isn't, is not) included.
+  if (/(?<!(?:\b(?:am|is|are|was|were|be|been|looks?|looked|seems?|seemed|became|become)|['’](?:m|s|re)|\b(?:is|are|was|were)n['’]t)(?:\s+not)?\s+)\bvery\s+(?:like|likes|enjoy|enjoys|love|loves)\b/i.test(text)) {
     grammarNotes.push('⚠️ 副詞修飾動詞盲點：英文不能用 very 直接修飾動詞 like / enjoy / love，請改為 really like / enjoy ... very much。');
   }
-  if (/\b(?:discuss(?:es|ed|ing)?\s+about|marr(?:y|ies|ying)\s+with|enter(?:s|ed|ing)?\s+into\s+the\s+(?:room|classroom|house|building))\b/i.test(text)) {
+  // "discussed about ten ideas" (about = roughly) and "is married with two children" are correct and must not be flagged.
+  if (/\bdiscuss(?:es|ed|ing)?\s+about\b(?!\s+(?:\d|(?:one|two|three|four|five|six|seven|eight|nine|ten|twenty|half)\b))|(?<!\b(?:am|is|are|was|were|be|been|get|gets|got|getting)\s+)\bmarr(?:y|ies|ied|ying)\s+with\b|\benter(?:s|ed|ing)?\s+into\s+the\s+(?:room|classroom|house|building)\b/i.test(text)) {
     grammarNotes.push('⚠️ 及物動詞贅加介系詞：discuss（討論）、marry（與…結婚）、enter（進入某地方）在英文中是及物動詞，後面直接接名詞受詞，不必加 about / with / into。');
   }
 
@@ -280,6 +282,10 @@ export function renderGradedReaderModal(course, storyId, uiState = {}, gloss = n
   // stories.json always lists the answer first; show a stable per-story order so "option 1" is not a giveaway.
   // data-idx keeps the original option index, so a pick stays tied to the same option.
   const quizOrder = quizStep ? quizStep.options.map((_, idx) => idx) : [];
+  // In scenario/commute stories `why` is often a scene-level note unrelated to this sentence, so lead with the sentence itself.
+  const readerQuizNote = !quizStep ? '' : quizStep.text
+    ? `「${quizStep.text}」＝「${quizStep.answer}」` + (quizStep.why ? `（本篇提示：${quizStep.why}）` : '')
+    : (quizStep.why || '');
   if (quizOrder.length) {
     let seed = 0;
     for (const ch of String(storyId)) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
@@ -359,8 +365,8 @@ export function renderGradedReaderModal(course, storyId, uiState = {}, gloss = n
       </div>
       ${pickedIdx !== null ? `<div class="reader-quiz-feedback ${isQuizOk ? 'good' : 'bad'}" role="status">
         ${isQuizOk
-          ? `<p><b>✅ 答對了！</b> ${esc(quizStep.why || '')}</p>`
-          : `<p class="reader-wrong-diagnosis"><b>❌ 答錯了！</b> ${esc(wrongReason)}</p><p><b>💡 解析：</b>${esc(quizStep.why || '')}</p>`}
+          ? `<p><b>✅ 答對了！</b> ${esc(readerQuizNote)}</p>`
+          : `<p class="reader-wrong-diagnosis"><b>❌ 答錯了！</b> ${esc(wrongReason)}</p><p><b>💡 解析：</b>${esc(readerQuizNote)}</p>`}
       </div>` : ''}
     </section>` : ''}
   </article>`;
