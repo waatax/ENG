@@ -472,7 +472,7 @@ function renderExamSolvingFlowchartDiagram() {
         <strong style="color:#0f172a;font-size:15px">🎯 大考實戰解題「三層排雷」黃金思維流程圖</strong>
         <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">答題命中率提升 40%</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:12px">
         <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px">
           <div style="font-weight:700;color:#1e40af;font-size:13px;margin-bottom:6px">【第 1 層：圈出題眼】</div>
           <div style="font-size:12px;color:#334155;line-height:1.5">
@@ -822,7 +822,7 @@ function curriculum108Page() {
     </div>
 
     <!-- 🔤 自然拼讀大師課 & 🗂️ 全階記憶閃卡館 核心雙擎橫幅 -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:16px;margin-bottom:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr));gap:16px;margin-bottom:20px">
       <!-- 自然拼讀大師課 -->
       <div class="card" style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);border:2px solid #fde68a;display:flex;flex-direction:column;justify-content:space-between;border-radius:12px;padding:20px">
         <div>
@@ -868,7 +868,7 @@ function curriculum108Page() {
         <span style="font-size:20px">🧭</span>
         <strong style="font-size:16px;color:#0f172a">三大教育階段快速直達館（點擊按鍵切換對應課程）：</strong>
       </div>
-      <div class="stage-hub-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px">
+      <div class="stage-hub-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));gap:16px">
         <!-- 國小卡 -->
         <div class="card stage-hub-card ${activeGradeId === 'g6' ? 'hub-card-active' : ''}" style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);border:2px solid ${activeGradeId === 'g6' ? '#16a34a' : '#86efac'};border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between">
           <div>
@@ -1085,7 +1085,7 @@ function curriculum108Page() {
                 <h3 style="margin:0 0 10px;font-size:15px;color:#0f766e;display:flex;align-items:center;gap:6px">
                   <span>🔤</span> 語音聲學與核心字彙卡 (點讀發音與 IPA 標音)
                 </h3>
-                <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:10px">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 280px), 1fr));gap:10px">
                   ${u.phonicsVocab.map(v => `
                     <div style="background:#f0fdfa;border:1px solid #ccfbf1;padding:12px;border-radius:10px;display:flex;flex-direction:column;justify-content:space-between">
                        <div>
@@ -1310,7 +1310,7 @@ function curriculum108Page() {
             ${u.checklist && u.checklist.length > 0 ? `
               <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;font-size:13px">
                 <strong style="color:#0f172a">📋 考前自主檢核清單：</strong>
-                <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));gap:6px;margin-top:6px">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 260px), 1fr));gap:6px;margin-top:6px">
                   ${u.checklist.map(chk => `
                     <label style="display:flex;align-items:center;gap:6px;color:#334155;cursor:pointer">
                       <input type="checkbox"> <span>${chk}</span>
@@ -1552,7 +1552,7 @@ function jhPage() {
     ${activeJhTab === 'units' ? `
       ${renderUltralearningMasteryHub({ forceStage: 'junior', compact: true })}
       ${renderJhCapMasteryTable()}
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:16px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr));gap:16px">
         ${jhUnits.map(u => `
           <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
             <div>
@@ -1619,7 +1619,7 @@ function jhPage() {
     ` : ''}
 
     ${activeJhTab === 'handouts' ? `
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:16px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 280px), 1fr));gap:16px">
         ${jhHandouts.map(h => `
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
@@ -1672,7 +1672,7 @@ function archPage() {
     ${activeArchModule === 'basic-tenses-passive' ? `
       <div class="card" style="margin-bottom:20px">
         <h2 style="margin:0 0 12px">五大核心時態與被動語態矩陣</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:16px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr));gap:16px">
           ${(archTenseModules || []).map(m => `
             <div style="border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
@@ -1686,7 +1686,7 @@ function archPage() {
               <div style="display:grid;gap:4px">
                 ${(m.rules || []).slice(0, 2).map(r => `
                   <div style="font-size:12px;color:var(--text-primary, #334155);background:var(--tag-bg, #f1f5f9);padding:6px 8px;border-radius:4px">
-                    • <strong>${r.title}</strong>: ${r.content}
+                    • <strong>${r.title}</strong>：${r.desc ?? r.content ?? ''}
                   </div>
                 `).join('')}
               </div>
@@ -1703,16 +1703,18 @@ function archPage() {
           ${(archSentencePillars || []).map(p => `
             <div style="border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-                <h3 style="margin:0;color:#1e40af;font-size:17px">${p.title} (${p.titleEn})</h3>
+                <h3 style="margin:0;color:#1e40af;font-size:17px">${p.nameZh ?? p.title} (${p.nameEn ?? p.titleEn})</h3>
                 <span class="chip" style="background:#e0e7ff;color:#3730a3">${p.badge}</span>
               </div>
               <p style="font-size:14px;color:var(--text-primary, #334155);margin:0 0 10px">${p.description}</p>
-              <div style="background:var(--card-bg, #fff);padding:10px 14px;border-radius:8px;border:1px solid var(--line-strong, #cbd5e1);font-family:monospace;margin-bottom:10px">
+              <div style="background:var(--card-bg, #fff);padding:10px 14px;border-radius:8px;border:1px solid var(--line-strong, #cbd5e1);font-family:monospace;margin-bottom:10px;overflow-x:auto">
                 <strong>結構公式：</strong> ${p.formula}
               </div>
-              <div style="font-size:13px;color:var(--text-muted, #475569)">
-                <strong>關鍵引導詞：</strong> ${(p.signals || []).join(', ')}
+              <div style="display:grid;gap:4px;margin-bottom:8px">
+                ${(p.rules || []).map(r => `<div style="font-size:13px;color:var(--text-primary, #334155)">• <strong>${r.title}</strong>：${r.desc ?? ''}</div>`).join('')}
               </div>
+              ${(p.examples || []).slice(0, 2).map(x => `<p style="font-size:13px;margin:4px 0"><span lang="en">${x.en}</span> <button class="btn small quiet" data-speak-sentence="${esc(x.en)}" aria-label="朗讀例句">🔊</button><br><span style="color:var(--text-muted, #475569)">${x.zh}</span></p>`).join('')}
+              ${p.punctuationRule ? `<div style="font-size:13px;color:var(--text-muted, #475569)"><strong>標點規則：</strong>${p.punctuationRule}</div>` : ''}
             </div>
           `).join('')}
         </div>
@@ -1722,17 +1724,18 @@ function archPage() {
     ${activeArchModule === 'parts-of-speech' ? `
       <div class="card" style="margin-bottom:20px">
         <h2 style="margin:0 0 12px">八大詞性與字尾衍生構詞法</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:14px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 280px), 1fr));gap:14px">
           ${(archPartsOfSpeech || []).map(pos => `
             <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card-bg, #fff)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-                <strong style="color:var(--ink, #0f172a);font-size:15px">${pos.nameZh} (${pos.code})</strong>
+                <strong style="color:var(--ink, #0f172a);font-size:15px">${pos.nameZh}</strong>
                 <span class="chip" style="background:#e0e7ff;color:#3730a3">${pos.nameEn}</span>
               </div>
-              <p style="font-size:13px;color:var(--text-muted, #475569);margin:0 0 8px">${pos.definition}</p>
-              <div style="font-size:12px;color:#2563eb">
-                <strong>句中主要功能：</strong> ${(pos.functions || []).join(', ')}
+              <p style="font-size:13px;color:var(--text-muted, #475569);margin:0 0 8px">${pos.definition ?? pos.role ?? ''}${pos.analogy ? `<br>${pos.analogy}` : ''}</p>
+              <div style="display:grid;gap:4px;font-size:12px;color:var(--text-primary, #334155)">
+                ${(pos.types || []).map(t => `<div>• <strong>${t.title}</strong>：${t.desc}</div>`).join('')}
               </div>
+              ${pos.examples?.[0] ? `<p style="font-size:12px;margin:8px 0 0;color:#2563eb"><span lang="en">${pos.examples[0].en}</span><br>${pos.examples[0].zh}</p>` : ''}
             </div>
           `).join('')}
         </div>
@@ -1742,19 +1745,24 @@ function archPage() {
     ${activeArchModule === 'phonetics-dictionary' ? `
       <div class="card" style="margin-bottom:20px">
         <h2 style="margin:0 0 12px">KK 音標發音符號體系與查字典核心代碼</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:12px">
-          ${(archPhoneticItems || []).slice(0, 12).map(ph => `
+        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 220px), 1fr));gap:12px">
+          ${(archPhoneticItems || []).map(ph => `
             <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--paper, #f8fafc)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-                <span style="font-size:20px;font-family:monospace;font-weight:700;color:#2563eb">${ph.ipa}</span>
-                <span class="chip" style="font-size:11px">${ph.type}</span>
+                <span style="font-size:20px;font-family:monospace;font-weight:700;color:#2563eb">[${ph.ipa ?? ph.sym}]</span>
+                <span class="chip" style="font-size:11px">${ph.type === 'vowel' ? '母音' : ph.type === 'consonant' ? '子音' : ph.type}・${ph.name ?? ''}</span>
               </div>
-              <div style="font-size:12px;color:var(--text-muted, #475569);margin-bottom:6px">${ph.desc}</div>
-              <div style="background:var(--card-bg, #fff);padding:4px 8px;border-radius:4px;font-size:12px;color:var(--text-primary, #334155)">
-                例字：<strong lang="en">${ph.examples.join(', ')}</strong>
+              <div style="font-size:12px;color:var(--text-muted, #475569);margin-bottom:6px">${ph.desc ?? ph.tip ?? ''}</div>
+              <div style="background:var(--card-bg, #fff);padding:4px 8px;border-radius:4px;font-size:12px;color:var(--text-primary, #334155);display:flex;justify-content:space-between;align-items:center;gap:6px">
+                <span>例字：<strong lang="en">${ph.examples ? ph.examples.join(', ') : ph.word}</strong> ${ph.kk ?? ''} ${ph.zh ?? ''}</span>
+                ${ph.word ? `<button class="btn small quiet" data-speak-word="${esc(ph.word)}" aria-label="朗讀 ${esc(ph.word)}">🔊</button>` : ''}
               </div>
             </div>
           `).join('')}
+        </div>
+        <h3 style="margin:18px 0 8px">查字典常見代碼</h3>
+        <div style="display:grid;gap:6px">
+          ${(archDictCodes || []).map(c => `<div style="font-size:13px"><strong style="font-family:monospace;color:#2563eb">${c.code}</strong> ${c.title}：${c.desc}</div>`).join('')}
         </div>
       </div>
     ` : ''}
@@ -1763,29 +1771,37 @@ function archPage() {
       <div class="card" style="margin-bottom:20px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
           <h2 style="margin:0">本站基礎詞彙集</h2>
-          <input type="text" id="vocab-search" placeholder="🔍 搜尋單字或中文..." value="${vocab1200Search}" style="padding:6px 12px;border-radius:8px;border:1px solid var(--line)">
+          <input type="text" id="vocab-search" placeholder="🔍 搜尋單字或中文..." value="${esc(vocab1200Search)}" style="padding:6px 12px;border-radius:8px;border:1px solid var(--line)">
         </div>
 
         <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px">
-          ${['all', 'travel', 'food', 'family', 'academic', 'technology'].map(cat => `
-            <button class="btn small ${vocab1200Category === cat ? 'primary' : 'quiet'}" data-vocab-cat="${cat}">
-              ${cat === 'all' ? '全部類別' : cat}
+          ${[{ id: 'all', name: '全部類別' }, ...(archVocabCategories || [])].map(cat => `
+            <button class="btn small ${vocab1200Category === String(cat.id) ? 'primary' : 'quiet'}" data-vocab-cat="${cat.id}" aria-pressed="${vocab1200Category === String(cat.id)}" style="white-space:nowrap">
+              ${cat.icon ? cat.icon + ' ' : ''}${cat.name}
             </button>
           `).join('')}
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:10px">
-          ${(archVocabCategories || []).flatMap(c => c.words).slice(0, 36).map(w => `
-            <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card-bg, #fff);display:flex;justify-content:space-between;align-items:center">
+        ${(() => {
+          const q = vocab1200Search.trim().toLowerCase();
+          const words = (archVocabCategories || [])
+            .filter(c => vocab1200Category === 'all' || String(c.id) === vocab1200Category)
+            .flatMap(c => c.words)
+            .filter(w => !q || w.en.toLowerCase().includes(q) || w.zh.includes(q));
+          return words.length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 220px), 1fr));gap:10px">
+          ${words.map(w => `
+            <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card-bg, #fff);display:flex;justify-content:space-between;align-items:center;gap:8px">
               <div>
-                <strong style="color:var(--ink, #0f172a)" lang="en">${w.word}</strong>
-                <span style="font-size:11px;color:var(--text-muted, #64748b);margin-left:4px">${w.pos}</span>
+                <strong style="color:var(--ink, #0f172a)" lang="en">${w.en ?? w.word}</strong>
+                <span style="font-size:11px;color:var(--text-muted, #64748b);margin-left:4px">${w.kk ?? w.pos ?? ''}</span>
                 <div style="font-size:12px;color:var(--text-muted, #475569)">${w.zh}</div>
+                ${w.ex ? `<div style="font-size:12px;color:var(--text-muted, #64748b)" lang="en">${w.ex}</div>` : ''}
               </div>
-              <button class="btn small quiet" data-speak-word="${esc(w.word)}">🔊</button>
+              <button class="btn small quiet" data-speak-word="${esc(w.en ?? w.word)}" aria-label="朗讀 ${esc(w.en ?? w.word)}">🔊</button>
             </div>
           `).join('')}
-        </div>
+        </div>` : '<p class="muted">找不到符合的單字，換個關鍵字或類別試試。</p>';
+        })()}
       </div>
     ` : ''}
 
@@ -1794,15 +1810,16 @@ function archPage() {
         ${archSemesters.map(sem => `
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-              <h3 style="margin:0;color:#1e3a8a">${sem.title} (${sem.titleEn})</h3>
+              <h3 style="margin:0;color:#1e3a8a">${sem.semesterTitle ?? sem.title}</h3>
               <button class="btn small primary" data-print-handout="${sem.id}">🖨️ 列印學期複習手冊</button>
             </div>
-            <p style="font-size:14px;color:#334155;margin:0 0 12px">${sem.description}</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:12px">
+            <p style="font-size:14px;color:var(--text-primary, #334155);margin:0 0 6px"><strong>${sem.subtitle ?? ''}</strong></p>
+            <p style="font-size:13px;color:var(--text-muted, #475569);margin:0 0 12px">${sem.curriculumScope ?? sem.description ?? ''}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 280px), 1fr));gap:12px">
               ${sem.chapters.map(c => `
-                <div style="background:#f8fafc;padding:12px;border-radius:8px;border:1px solid #e2e8f0">
-                  <strong style="font-size:14px;color:#0f172a">${c.title}</strong>
-                  <div style="font-size:12px;color:#475569;margin-top:4px">${c.titleEn}</div>
+                <div style="background:var(--paper, #f8fafc);padding:12px;border-radius:8px;border:1px solid var(--line, #e2e8f0)">
+                  <strong style="font-size:14px;color:var(--ink, #0f172a)">第 ${c.chapterNo} 章　${c.title}</strong>
+                  <div style="font-size:12px;color:var(--text-muted, #475569);margin-top:4px">${(c.coreConcepts || []).map(x => x.heading).join('、')}</div>
                 </div>
               `).join('')}
             </div>
@@ -1913,7 +1930,7 @@ function handoutsPage() {
       <!-- 核心語音字彙表 (帶音標) -->
       <div style="margin-bottom:20px">
         <h3 style="margin:0 0 10px;font-size:16px;color:#0f766e;border-left:4px solid #0d9488;padding-left:8px">🔤 必背核心字彙與音標</h3>
-        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:8px;font-size:12px">
+        <div style="display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:8px;font-size:12px;overflow-wrap:anywhere">
           ${targetSem.units.flatMap(u => u.phonicsVocab || []).slice(0, 15).map(v => `
             <div style="background:#f0fdfa;border:1px solid #ccfbf1;padding:6px 10px;border-radius:6px">
               <strong lang="en">${v.word}</strong> <span style="font-family:monospace;color:#0f766e">${v.ipa}</span>
@@ -1966,7 +1983,7 @@ function studioPage() {
 
     <div class="card" style="margin-top:20px">
       <h3 style="margin:0 0 12px">🔤 核心單字點讀卡庫 (${allVocab.length} 個字詞)</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:10px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 220px), 1fr));gap:10px">
         ${allVocab.slice(0, 48).map(v => `
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:#f8fafc;display:flex;justify-content:space-between;align-items:center">
             <div>
@@ -2270,7 +2287,7 @@ function examPage() {
     <div class="card" style="margin-top:20px">
       <div style="display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
         <label><strong>選擇考制進行抽題測驗：</strong></label>
-        <select id="exam-cat-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
+        <select id="exam-cat-select" style="max-width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
           ${tracksList.map(t => `
             <option value="${t.id}" ${quizCategory === t.id ? 'selected' : ''}>${t.icon} ${t.title} (${t.count})</option>
           `).join('')}
@@ -2296,7 +2313,7 @@ function examPage() {
     ${renderExamSolvingFlowchartDiagram()}
     ${renderExamTracksComparisonTable()}
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin-top:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));gap:16px;margin-top:20px">
       ${tracksList.map(t => `
         <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;border-top:4px solid ${t.color}">
           <div>
@@ -2346,7 +2363,7 @@ function progress() {
       </p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin:20px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:16px;margin:20px 0">
       <div class="card" style="text-align:center">
         <div style="font-size:32px;font-weight:800;color:var(--green-core)">${summary.xp}</div>
         <div style="font-size:13px;color:var(--text-muted);margin-top:4px">✨ 累計經驗值 (XP)</div>
@@ -2365,7 +2382,7 @@ function progress() {
 
     <div class="card">
       <h3 style="margin:0 0 14px">🏅 12 枚核心素養徽章解鎖狀態</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));gap:12px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 260px), 1fr));gap:12px">
         ${JUNYI_BADGES.map(b => {
           const unlocked = junyi.data.earnedBadges.includes(b.id);
           return `
@@ -2440,10 +2457,15 @@ function bindEvents() {
 
   const vocabSearch = document.querySelector('#vocab-search');
   if (vocabSearch) {
-    vocabSearch.addEventListener('input', e => {
-      vocab1200Search = e.target.value;
+    // Re-rendering replaces the input, so restore focus and caret; skip while an IME (注音/倉頡) is composing.
+    const applyVocabSearch = value => {
+      vocab1200Search = value;
       render();
-    });
+      const next = document.querySelector('#vocab-search');
+      if (next) { next.focus(); next.setSelectionRange(next.value.length, next.value.length); }
+    };
+    vocabSearch.addEventListener('input', e => { if (!e.isComposing) applyVocabSearch(e.target.value); });
+    vocabSearch.addEventListener('compositionend', e => applyVocabSearch(e.target.value));
   }
 
   const fcSearch = document.querySelector('#fc-search-input');
@@ -3037,6 +3059,9 @@ function readKnowledgeRoute() {
   else if (parts[0] === 'advanced') { page='advanced'; render(); window.scrollTo(0,0); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }
+  // Bare #chapter / #junyi come from the side menu: open the last chapter or unit instead of ignoring the click.
+  else if (parts[0] === 'chapter') { navigate('chapter'); }
+  else if (parts[0] === 'junyi' || parts[0] === 'unit') { navigate('junyi'); }
   else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
 }
 window.addEventListener('hashchange', readKnowledgeRoute);

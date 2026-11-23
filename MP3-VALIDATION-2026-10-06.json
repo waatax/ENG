@@ -4,8 +4,8 @@
   "words": 9500,
   "wordPairs": 28500,
   "speechSegments": 57000,
-  "seconds": 159123.02,
-  "bytes": 795736022,
+  "seconds": 159128.081,
+  "bytes": 795761222,
   "allDecoded": true,
   "files": [
     {
@@ -346,16 +346,16 @@
     },
     {
       "id": "junior-029",
-      "duration": 675.95,
-      "bytes": 3380388,
-      "sha256": "5c39cf2bb147a256f5268137047335e862b5289dfffffe54e60d634c73dc999a",
+      "duration": 676.097,
+      "bytes": 3381108,
+      "sha256": "46f1015315d4680897c7366f168a58845c126d02b7de15d63cc902aa0374bdc0",
       "decoded": true
     },
     {
       "id": "junior-030",
-      "duration": 674.942,
-      "bytes": 3375348,
-      "sha256": "ee34b377ea7b6ca8a4c47b5f299b98950f4a73373d9bed30bc759b5f9f74024e",
+      "duration": 675.305,
+      "bytes": 3377148,
+      "sha256": "2051cb1d2147800cd170311cd62b4ecde1552ca9c2157d76e26c44841c4589b7",
       "decoded": true
     },
     {
@@ -402,9 +402,9 @@
     },
     {
       "id": "junior-037",
-      "duration": 748.742,
-      "bytes": 3744348,
-      "sha256": "810d412cd0c090b1a1100b433d2978ee67b11592bde01859ef72dc1413470376",
+      "duration": 749.105,
+      "bytes": 3746148,
+      "sha256": "c24fbe8495c0da1683651f2f12083045b6bbaaf051be47f381448ea296f4cd74",
       "decoded": true
     },
     {
@@ -479,9 +479,9 @@
     },
     {
       "id": "senior-008",
-      "duration": 758.462,
-      "bytes": 3792944,
-      "sha256": "e5259b627d12e015257a4012c3f41ab015ac3156cb0985300462087abda88388",
+      "duration": 758.033,
+      "bytes": 3790784,
+      "sha256": "ad2e36d86b9b6f3cfa9b1d84a09462ca4d336c65125ef39719145332bce887a5",
       "decoded": true
     },
     {
@@ -549,9 +549,9 @@
     },
     {
       "id": "senior-018",
-      "duration": 794.75,
-      "bytes": 3974384,
-      "sha256": "38182be23281c22cc7d54482413f4369ea54e31ffbda8f8b85eb302f2be8c11a",
+      "duration": 794.321,
+      "bytes": 3972224,
+      "sha256": "3ee1082bff5c5f147b9d07d028854a9f21aee98fb35229ae6a1d7e8361ba6cbc",
       "decoded": true
     },
     {
@@ -752,9 +752,9 @@
     },
     {
       "id": "senior-047",
-      "duration": 815.846,
-      "bytes": 4079868,
-      "sha256": "f378bd0b075aa5db2f65545b1c9e47007f0043213eff28c143e8dbb3aaa562ca",
+      "duration": 818.873,
+      "bytes": 4094988,
+      "sha256": "fd9c2f7694185dcead3313b6f7dd60bc43bcf93722261b54e8815bf2fe6d5d76",
       "decoded": true
     },
     {
@@ -843,9 +843,9 @@
     },
     {
       "id": "senior-060",
-      "duration": 871.934,
-      "bytes": 4360308,
-      "sha256": "5676549b0c320bf83847c1a92ef1d68f562306405daacd96258c365a97af4253",
+      "duration": 873.953,
+      "bytes": 4370388,
+      "sha256": "26d84c94980a5e8bef556a92e6aff596a4c1ee31c354b7b82c1ddd35dc683b75",
       "decoded": true
     },
     {

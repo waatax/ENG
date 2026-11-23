@@ -76,3 +76,44 @@ test('audited explanations and quiz layout stay corrected', async () => {
   const rw = fs.readFileSync('dist/quest/reading_writing.mjs', 'utf8');
   assert.match(rw, /const readerQuizNote = /);
 });
+
+// 2026-11-24 browser crawl: #arch printed "undefined" on every tab and the KK tab threw.
+test('#arch reads the field names that arch_prerequisites.mjs and arch_semesters.mjs really have', async () => {
+  const p = await import('../dist/arch_prerequisites.mjs');
+  const { archSemesters } = await import('../dist/arch_semesters.mjs');
+  const app = fs.readFileSync('dist/app.js', 'utf8');
+  assert.ok(p.archTenseModules.every(m => m.rules.every(r => r.desc)), 'tense rules use desc');
+  assert.match(app, /\$\{r\.desc \?\? r\.content \?\? ''\}/);
+  assert.ok(p.archSentencePillars.every(x => x.nameZh && x.nameEn));
+  assert.match(app, /\$\{p\.nameZh \?\? p\.title\}/);
+  assert.ok(p.archPhoneticItems.every(x => x.sym && x.word && !x.examples), 'phonetic items have sym/word, not examples');
+  assert.doesNotMatch(app, /\$\{ph\.examples\.join/, 'unguarded ph.examples.join crashed the KK tab');
+  assert.ok(p.archVocabCategories.every(c => c.words.every(w => w.en && w.zh)));
+  assert.doesNotMatch(app, /\['all', 'travel', 'food', 'family', 'academic', 'technology'\]/, 'category buttons must come from the data');
+  assert.ok(archSemesters.every(s => s.semesterTitle && s.chapters.every(c => c.chapterNo && c.title)));
+  assert.match(app, /\$\{sem\.semesterTitle \?\? sem\.title\}/);
+});
+
+test('side-menu entries #junyi and #chapter open a page, and lesson grids cannot overflow phones', () => {
+  const app = fs.readFileSync('dist/app.js', 'utf8');
+  assert.match(app, /else if \(parts\[0\] === 'chapter'\) \{ navigate\('chapter'\); \}/);
+  assert.match(app, /else if \(parts\[0\] === 'junyi' \|\| parts\[0\] === 'unit'\) \{ navigate\('junyi'\); \}/);
+  assert.doesNotMatch(app, /minmax\(\d{3}px, ?1fr\)/, 'use minmax(min(100%, Npx), 1fr) so narrow screens do not overflow');
+  assert.match(fs.readFileSync('dist/ultralearning_mastery.css', 'utf8'), /\.ul-card-head h3 \{[^}]*flex: 1 1 14rem/);
+  for (const f of ['mnemonics/index.html', 'roots/index.html', 'EN/index.html', 'quest/simulation.html']) {
+    assert.match(fs.readFileSync('dist/' + f, 'utf8'), /rel="icon"/, f + ' needs an icon link (avoids favicon.ico 404)');
+  }
+});
+
+// 2026-11-24: seven cards had an English word as their "Chinese" meaning (axe = "ax", km = "kilometer"…),
+// and the word MP3s read those English words in a Chinese voice.
+test('every card meaning is Chinese, and the MP3 cue data speaks the same meaning', async () => {
+  const { FLASHCARD_DATABASE } = await import('../dist/flashcards.mjs');
+  const englishOnly = FLASHCARD_DATABASE.filter(c => /^[A-Za-z\s.,'-]+$/.test(c.zh));
+  assert.deepEqual(englishOnly.map(c => c.id), []);
+  const byId = new Map(FLASHCARD_DATABASE.map(c => [c.id, c]));
+  for (const group of ['junior-029', 'junior-030', 'junior-037', 'senior-008', 'senior-018', 'senior-047', 'senior-060']) {
+    const cues = JSON.parse(fs.readFileSync(`dist/audio/words/${group}.json`, 'utf8'));
+    for (const w of cues.words) assert.equal(w.zh, byId.get(w.id).zh, `${group} ${w.id}`);
+  }
+});

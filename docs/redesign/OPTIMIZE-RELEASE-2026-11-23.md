@@ -86,3 +86,23 @@
 - mp-06「lead」單獨朗讀時，合成語音可能讀成 /lɛd/（鉛）；未實機確認。
 - 「片語與搭配詞集」篩選把每張卡都算成片語（每張卡都有兩字以上搭配詞），等於沒有篩選；若改嚴格定義，國中級只剩 7 張、SAT/GRE 為 0，需要內容決策。
 - Ultralearning 新功能未做逐項內容稽核。
+
+---
+
+## 第三段（2026-11-24）：全站瀏覽器巡檢後的修正
+
+以 headless 瀏覽器在 390px 與 1280px 巡檢 36 條路由（72 次載入）＋實際操作（字卡回想、全字庫練習、闖關作答、程度檢定），找到 8 項，修正 7 項：
+
+- `#arch`（高中先修講義館）：6 個分頁全部讀錯資料欄位，畫面出現 72 處「undefined」，KK 音標分頁點了會拋錯而打不開。改讀資料實際欄位（`desc`、`nameZh/nameEn`、`role/types`、`sym/word/kk`、`en/kk/ex`、`semesterTitle/subtitle/curriculumScope`）；KK 音標由 12 個補齊為 38 個並附查字典代碼；基礎詞彙的類別按鈕原本寫死成不存在的 travel/food…、搜尋框也沒有作用，現在改用資料的 12 個類別並可搜尋（輸入時保留游標，注音輸入法組字中不重繪）。
+- 側欄「單元微課」(`#junyi`)、「核心教學章節」(`#chapter`)：點了網址會變但頁面不動，現在會開啟最近的單元／章節。
+- 手機版裁切：`#exams` 題庫下拉選單、`#curriculum108` 高中分頁卡片、`#handouts` 三欄單字表；`app.js` 內 14 處 `minmax(NNNpx, 1fr)` 改為 `minmax(min(100%, NNNpx), 1fr)`（寬螢幕不變）。
+- Ultralearning「DO」卡片標題在手機上被擠成一個字寬（`flex: 1` 零基準）；改為 `flex: 1 1 14rem`。
+- `mnemonics/`、`roots/`、`EN/`、`quest/simulation.html` 缺圖示連結，瀏覽器去抓 `favicon.ico` 得到 404；補上與首頁相同的內嵌圖示。
+- 7 張字卡的「中文意思」其實是英文（axe＝"ax"、km＝"kilometer"、email＝"electronicmail"、vigor＝"vigor"…），其中 3 張畫面直接顯示英文，且 7 組單字 MP3 用中文語音念英文字。改為中文（斧頭、公里、電子郵件、活力；精力…），並重錄這 7 組 MP3。
+
+未改：`#today`（側欄寫「每日練習」）實際顯示學年課程地圖——是要改名稱還是做真正的每日練習，需要產品決定。
+
+### 檢查
+
+- headless Edge 390px：`#arch` 6 個分頁「undefined」0 處、無水平溢出；詞彙類別篩選與搜尋正確且游標保留；`#junyi`→單元頁、`#chapter`→章節頁；`#exams`、`#curriculum108`、`#handouts`、`#jh` 無溢出；Ultralearning 標題寬 250px；console 無錯誤。
+- `scripts/test_release_fixes_20261123.mjs` 再加 3 項（`#arch` 欄位、側欄路由與手機格線、字卡中文意思與 MP3 一致）。
