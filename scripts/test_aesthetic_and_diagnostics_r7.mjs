@@ -349,3 +349,80 @@ test('Loop 10: Pure-English Academy (dist/EN/) +50% Practice Questions, +31% Exa
   assert.ok(enAcademySrc.includes('en-instant-quiz'), 'Pure-English flashcards must render 4-option instant retrieval check');
   assert.ok(enAcademySrc.includes('en-wrong-diagnosis'), 'Pure-English quizzes and drills must render distractor error diagnosis');
 });
+
+test('Loop 11 (Wave 3): 12 Semesters, Duolingo Quest, Ear Trainer/Dictation, Writing Studio, Graded Readers, Home Warmup, Mnemonics/Roots & Word MP3 (+5%~+25% Useful Content & Error Explanations)', async () => {
+  const { SEMESTERS } = await import('../dist/quest/semesters.mjs');
+  const { schoolGuide, recordSemesterQuickCheck } = await import('../dist/quest/school_view.mjs');
+  const { duolingoState, resetDuolingoGame, handleDuolingoClick, renderDuolingoGameView } = await import('../dist/duolingo_game.mjs');
+  const { MINIMAL_PAIRS, scoreDictation } = await import('../dist/quest/speaking_dictation.mjs');
+  const { WRITING_PROMPTS, evaluateWritingDraft, renderGradedReaderModal } = await import('../dist/quest/reading_writing.mjs');
+  const { WARMUP_ITEMS } = await import('../dist/home_experience.mjs');
+  const { FATAL_TRAPS } = await import('../dist/junyi_engine.mjs');
+
+  // 1. 12 Semesters: usefulPhrases (+15%) and quickCheck with distractor explanations
+  assert.equal(SEMESTERS.length, 12);
+  for (const s of SEMESTERS) {
+    assert.ok(Array.isArray(s.usefulPhrases) && s.usefulPhrases.length === 3, `${s.id} must have 3 usefulPhrases`);
+    assert.ok(s.quickCheck && Array.isArray(s.quickCheck.options) && s.quickCheck.options.length === 3, `${s.id} must have quickCheck`);
+    assert.ok(s.quickCheck.wrong && Object.keys(s.quickCheck.wrong).length === 2, `${s.id} quickCheck must explain both wrong options`);
+  }
+  recordSemesterQuickCheck('j1a', 1); // wrong option for j1a (answer is 0)
+  const j1aGuideHtml = schoolGuide(SEMESTERS[0], { units: new Map() });
+  assert.ok(j1aGuideHtml.includes('sem-wrong-diagnosis'), 'Semester guide must render wrong-choice diagnosis');
+
+  // 2. Duolingo Quest (J1): specific error explanations on Stage 1, 2, 3, 4, 5 + bonus useful phrases
+  resetDuolingoGame();
+  assert.equal(duolingoState.s2BonusUsefulPhrases.length, 3);
+  duolingoState.s1Selected = ['Actions', 'speaks'];
+  handleDuolingoClick({ dataset: { duoAction: 's1-check' } }, () => {});
+  assert.match(duolingoState.drawer.message, /錯在哪裡.*speaks/);
+
+  // 3. Minimal Pairs: 5 pairs per contrast (+25% useful content = 60 pairs) & Dictation errorNotes
+  assert.equal(MINIMAL_PAIRS.length, 12);
+  for (const mp of MINIMAL_PAIRS) {
+    assert.equal(mp.pairs.length, 5, `${mp.id} must have 5 minimal pairs (+25% useful content)`);
+  }
+  const dicScore = scoreDictation('Good morning, nice to meet you.', 'Good morning nice meet you');
+  assert.ok(Array.isArray(dicScore.errorNotes) && dicScore.errorNotes.length >= 1, 'Dictation must generate specific errorNotes for missed weak/content words');
+
+  // 4. Writing Studio: expanded scaffolds (+25%) & 5 new grammar trap diagnostics
+  for (const wp of WRITING_PROMPTS) {
+    assert.ok(wp.scaffolds.length >= 4, `${wp.id} must have >= 4 sentence scaffolds`);
+  }
+  const writeCheck = evaluateWritingDraft(WRITING_PROMPTS[0], 'I have many informations and it is more better. I look forward to see you.');
+  assert.ok(writeCheck.grammarNotes.some(n => n.includes('不可數名詞盲點')));
+  assert.ok(writeCheck.grammarNotes.some(n => n.includes('雙重比較級盲點')));
+  assert.ok(writeCheck.grammarNotes.some(n => n.includes('介系詞 to 盲點')));
+
+  // 5. Graded Reader Modal: patterns & comprehension quick-check with wrong diagnosis
+  const storiesData = JSON.parse(fs.readFileSync('dist/quest/course/stories.json', 'utf8'));
+  const firstStory = storiesData.stories['story-prea1-01'];
+  const mockCourse = {
+    stories: new Map([['story-prea1-01', firstStory]]),
+    item: id => firstStory.steps.find(st => st.id === id)
+  };
+  const readerHtml = renderGradedReaderModal(mockCourse, 'story-prea1-01', { readerQuizStory: 'story-prea1-01', readerQuizPick: 1 });
+  assert.ok(readerHtml.includes('reader-patterns-box'), 'Graded reader must render +15% key patterns box');
+  assert.ok(readerHtml.includes('reader-quick-check'), 'Graded reader must render interactive comprehension quick-check');
+  assert.ok(readerHtml.includes('reader-wrong-diagnosis'), 'Graded reader quiz must diagnose wrong choices');
+
+  // 6. Home Warmup: per-choice wrong map across all 12 items
+  for (const band of Object.values(WARMUP_ITEMS)) {
+    for (const item of band) {
+      assert.ok(item.wrong && Object.keys(item.wrong).length === 2, `${item.prompt} must have wrong explanations for both distractors`);
+    }
+  }
+
+  // 7. Junyi Fatal Traps expanded from 42 to 48 (+14.3% useful traps)
+  assert.equal(FATAL_TRAPS.length, 48);
+
+  // 8. Mnemonics, Roots, Word MP3 & Simulation View error diagnosis markers
+  const mnemApp = fs.readFileSync('dist/mnemonics/app.mjs', 'utf8');
+  assert.ok(mnemApp.includes('mnem-quick-quiz') && mnemApp.includes('錯在哪裡'));
+  const rootsApp = fs.readFileSync('dist/roots/app.mjs', 'utf8');
+  assert.ok(rootsApp.includes('buildRootChoices') && rootsApp.includes('錯在哪裡'));
+  const wordMp3Src = fs.readFileSync('dist/word_mp3.mjs', 'utf8');
+  assert.ok(wordMp3Src.includes('mp3-quick-quiz-box') && wordMp3Src.includes('錯在哪裡'));
+  const simViewSrc = fs.readFileSync('dist/quest/simulation_view.mjs', 'utf8');
+  assert.ok(simViewSrc.includes('simWrongDiagnosis') && simViewSrc.includes('sim-wrong-diagnosis'));
+});

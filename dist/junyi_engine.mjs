@@ -415,6 +415,62 @@ export const FATAL_TRAPS = [
     correct: 'All the students are looking forward to graduating next summer. ✔️',
     explanation: 'look forward to, be used to (習慣於), devote oneself to, object to (反對) 中的 to 是「介系詞」，後面必須接「動名詞 V-ing」或名詞，而非原形動詞！',
     step0Clue: '看到 look forward to / object to，後面的動詞閉著眼睛選 V-ing！'
+  },
+
+  // === TOEIC / SAT / GRE / GMAT 國際考試高階陷阱 (43-48, +14.3% 實用避雷擴充) ===
+  {
+    id: 'trap-43',
+    gradeBand: 'TOEIC 國際商務',
+    topic: '介系詞片語 prior to / despite 與連接詞 before / although 詞性混淆',
+    wrong: 'Despite the shipment arrived late, the warehouse team completed inventory on time. ❌',
+    correct: 'Although the shipment arrived late (or: Despite the late shipment), the warehouse team completed inventory on time. ✔️',
+    explanation: 'despite / in spite of / prior to 是「介系詞」，後方只能接名詞片語或 V-ing；若後方有完整子句 (S + V)，必須用連接詞 although / even though！',
+    step0Clue: '先看空格後面有沒有「主詞＋動詞」：有動詞選 Although，只有名詞片語選 Despite！'
+  },
+  {
+    id: 'trap-44',
+    gradeBand: 'TOEIC 國際商務',
+    topic: '人稱主詞與事物主詞的情緒分詞 (-ed vs. -ing) 顛倒',
+    wrong: 'The board members were very encouraging by the quarterly revenue report. ❌',
+    correct: 'The board members were very encouraged by the quarterly revenue report. ✔️',
+    explanation: '人「感到受鼓舞、感興趣、滿意」必須用過去分詞 (-ed: encouraged, interested, satisfied)；事物「令人鼓舞的」才用現在分詞 (-ing: an encouraging report)！',
+    step0Clue: '看主詞是「人」且後接 by / in / with 時，情緒形容詞優先選 -ed！'
+  },
+  {
+    id: 'trap-45',
+    gradeBand: 'Digital SAT 語法',
+    topic: '主詞與動詞之間夾入長介系詞片語導致單複數誤判',
+    wrong: 'The collection of medieval manuscripts and rare legal codices were preserved in the vault. ❌',
+    correct: 'The collection of medieval manuscripts and rare legal codices was preserved in the vault. ✔️',
+    explanation: '介系詞片語 (of medieval manuscripts and rare legal codices) 只是修飾語，句子的真正核心主詞是單數名詞 The collection，故動詞必須用單數 was！',
+    step0Clue: '把介系詞 of / with / along with 到動詞前的名詞全部括號遮住，只看最前面的核心主詞單複數！'
+  },
+  {
+    id: 'trap-46',
+    gradeBand: 'Digital SAT 閱讀',
+    topic: '實證支持題誤選「主題相關但未觸及核心變數」的干擾項',
+    wrong: '假說主張「遮蔭幼苗獲菌根輸送較多磷」，卻選「北方森林整體氮含量高於熱帶森林」。 ❌',
+    correct: '選擇直接比較「遮蔭幼苗 vs. 全日照幼苗所獲同位素標記磷轉移率」的實驗數據。 ✔️',
+    explanation: 'SAT Command of Evidence 要求實證數據必須同時包含假說的「自變數（遮蔭程度）」與「依變數（磷元素分配速率）」，僅提及森林土壤背景屬無效證據。',
+    step0Clue: '在題幹假說圈出「原因 A」與「結果 B」，正確選項必須同時出現 A 與 B 的直接關係！'
+  },
+  {
+    id: 'trap-47',
+    gradeBand: 'GRE Verbal 語意',
+    topic: '雙重否定或 Far from being 反差結構看反語意極性',
+    wrong: 'Far from being ___, her lecture was remarkably lucid. 誤填 clear / eloquent。 ❌',
+    correct: 'Far from being inscrutable (or opaque), her lecture was remarkably lucid. ✔️',
+    explanation: 'Far from being（遠非…）構成強烈反義轉折；後半句說演講極其清晰 (lucid)，空格必須填入清晰度相反的「晦澀難懂 (inscrutable / opaque)」！',
+    step0Clue: '看到 Far from / Hardly / Anything but，立刻在空格旁畫一個「≠」負號，提醒自己選反義詞！'
+  },
+  {
+    id: 'trap-48',
+    gradeBand: 'GMAT 批判推理',
+    topic: '因果推論忽略「基數分母變化」或「自選擇偏差」',
+    wrong: '因為遲到包裹總數下降，就斷定新包裝服務提升了配送可靠度（忽略總寄件量也大幅減少）。 ❌',
+    correct: '比較「遲到包裹下降百分比」是否大於「總寄件量下降百分比」（檢驗比率而非絕對數量）。 ✔️',
+    explanation: 'GMAT Evaluate / Weaken 經典考點：當總量（分母）改變時，單看絕對數量（分子）增減無法證明比率改善；必須查核比例 (proportion / percentage)。',
+    step0Clue: '看到數量上升或下降就推論效率改變，立刻檢查「母體總數（分母）」有沒有同時改變！'
   }
 ];
 

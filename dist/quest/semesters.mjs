@@ -94,6 +94,21 @@ export const SEMESTERS = [
     ],
     "build": "We share books after class",
     "buildWhy": "share 是一般動詞；after class 補充分享的時間。",
+    "usefulPhrases": [
+      ["Nice to meet you!", "很高興認識你！（初次見面打招呼必備）"],
+      ["Our club meets on Friday.", "我們的社團在星期五聚會。（搭配星期介系詞用 on）"],
+      ["Please bring a pencil.", "請帶一枝鉛筆。（祈使句以原形動詞開頭）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：Look! The new student ___ in Room 203.",
+      "options": ["is", "are", "am"],
+      "answer": 0,
+      "why": "主詞 the new student 是第三人稱單數（一個人），現在式 be 動詞必須用 is。",
+      "wrong": {
+        "1": "🔍 錯在哪裡：are 用於複數主詞（如 students）或第二人稱 you；此處 student 沒有加 -s，是單數。",
+        "2": "🔍 錯在哪裡：am 只能搭配第一人稱單數主詞 I（I am），不能搭配第三人稱單數。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ac-Ⅳ-2",
@@ -195,6 +210,21 @@ export const SEMESTERS = [
     ],
     "build": "Please bring your own cup",
     "buildWhy": "祈使句用原形動詞 bring；your own cup 表達攜帶自己的杯子。",
+    "usefulPhrases": [
+      ["Walk past the bank and turn left.", "走過銀行然後左轉。（問路指引核心句構）"],
+      ["across from the library", "在圖書館對面（表達正對面方位）"],
+      ["There are two bicycles beside the gate.", "大門旁有兩輛腳踏車。（There be 依後方名詞單複數決定）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：Look! Some volunteers ___ trash in the park right now.",
+      "options": ["pick up", "is picking up", "are picking up"],
+      "answer": 2,
+      "why": "句首 Look! 與句尾 right now 提示動作正在進行，且主詞 Some volunteers 為複數，故用 are picking up。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：pick up 是現在簡單式，表示日常習慣，無法搭配 right now（此刻正在進行）。",
+        "1": "🔍 錯在哪裡：volunteers 字尾有 -s 為複數主詞，be 動詞不可用單數 is，必須改為 are。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ac-Ⅳ-3",
@@ -296,6 +326,21 @@ export const SEMESTERS = [
     ],
     "build": "We were waiting when the rain started",
     "buildWhy": "were waiting 是背景，started 是後來發生的事件。",
+    "usefulPhrases": [
+      ["was waiting for the bus when it began to rain", "正在等公車時開始下雨（過去進行式背景 + when 突發過去事件）"],
+      ["took the train instead", "改搭火車（instead 表替代原方案）"],
+      ["If it rains tomorrow, we will stay inside.", "如果明天下雨，我們就待在室內。（條件副詞子句以現在式代替未來式）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：While Leo ___ for his phone, a worker found it under a bench.",
+      "options": ["was looking", "will look", "looks"],
+      "answer": 0,
+      "why": "While 引導過去持續進行的背景動作（當時正在找手機），搭配主要子句過去式 found，故用過去進行式 was looking。",
+      "wrong": {
+        "1": "🔍 錯在哪裡：主要子句 found 為過去式，整段為過去事件敘事，不能用未來式 will look。",
+        "2": "🔍 錯在哪裡：looks 是現在簡單式，與後半句過去式 found 時態不一致。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ad-Ⅳ-1",
@@ -396,6 +441,21 @@ export const SEMESTERS = [
     ],
     "build": "I want to join the reading club",
     "buildWhy": "want 接 to join，reading 在此修飾 club，並不是 enjoy 的受詞。",
+    "usefulPhrases": [
+      ["cheaper than the train, but takes longer", "比火車便宜，但花較長時間（雙條件比較權衡）"],
+      ["enjoy reading stories to children", "喜歡讀故事給孩子聽（enjoy + V-ing 動名詞）"],
+      ["gets us there thirty minutes earlier", "讓我們提早三十分鐘抵達（thirty minutes 放在比較級副詞 earlier 前，說明早多少）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：The bus is ___ than the train, so Nora can save fifteen dollars.",
+      "options": ["more cheaper", "cheaper", "cheapest"],
+      "answer": 1,
+      "why": "單音節形容詞 cheap 的比較級直接加 -er 為 cheaper，搭配後方 than the train。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：cheaper 已經是比較級，前面絕對不能再疊加 more（雙重比較級語法錯誤）。",
+        "2": "🔍 錯在哪裡：cheapest 是三者以上比較的最高級（需加 the），但句中有 than 且僅比較公車與火車兩者。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ae-Ⅳ-2",
@@ -498,6 +558,21 @@ export const SEMESTERS = [
     ],
     "build": "The books were donated by our classmates",
     "buildWhy": "books 是接受捐贈的物品，使用複數過去被動 were donated。",
+    "usefulPhrases": [
+      ["have volunteered here since September", "從九月起一直在這裡當志工（現在完成式 + since 起始時間點）"],
+      ["The books that we collected were given to a school.", "我們募集的書被送給一所學校。（關係子句 + 過去被動語態）"],
+      ["listen before offering help", "在提供協助前先傾聽（介系詞 before + 動名詞 V-ing）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：The working lamps ___ by students last Friday.",
+      "options": ["have donated", "were donated", "donated"],
+      "answer": 1,
+      "why": "主詞 lamps（檯燈）是被捐贈的物品，且搭配明確過去時間點 last Friday，必須使用過去被動語態 were donated。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：have donated 是主動現在完成式（檯燈不會自己捐東西），且現在完成式不可與過去時間點 last Friday 連用。",
+        "2": "🔍 錯在哪裡：donated 缺少 be 動詞，變成主動過去式「檯燈捐了…」，主被動語態完全顛倒。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ad-Ⅳ-1",
@@ -599,6 +674,21 @@ export const SEMESTERS = [
     ],
     "build": "Could you tell me where the station is",
     "buildWhy": "間接問句 the station 在 is 前，整句是禮貌詢問。",
+    "usefulPhrases": [
+      ["Could you tell me whether materials are provided?", "請問您能告訴我是否會提供材料嗎？（whether 引導是否之間接問句）"],
+      ["arrive fifteen minutes early to collect materials", "提早十五分鐘抵達以領取材料（不定詞 to V 表目的）"],
+      ["Check-in closes at 10:45.", "報到於 10:45 截止。（時刻表與公告規定常用現在簡單式）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：Could you tell me when ___?",
+      "options": ["does check-in close", "check-in closes", "will check-in close"],
+      "answer": 1,
+      "why": "間接問句嵌入 Could you tell me 後方時，必須恢復為「疑問詞 + 主詞 + 動詞 (check-in closes)」的平鋪直敘語序。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：保留了直接問句的助動詞 does 倒裝，違反間接問句不倒裝原則。",
+        "2": "🔍 錯在哪裡：將助動詞 will 放在主詞 check-in 之前構成倒裝；間接問句應為 when check-in will close。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ae-Ⅳ-2",
@@ -703,6 +793,21 @@ export const SEMESTERS = [
     ],
     "build": "Although the room is small it serves an important purpose",
     "buildWhy": "雖然省略逗號仍可排句核對，語意包含讓步與獨立主句；完整書寫可在 small 後加逗號。",
+    "usefulPhrases": [
+      ["students who need a quiet place between classes", "下課期間需要安靜空間的學生（who 引導限定關係子句修飾人）"],
+      ["most respondents supported the proposal", "多數受訪者支持這項提案（精確限定為回覆者 respondents，不誇大為全校）"],
+      ["ask more classes before making a final decision", "在做最終決定前詢問更多班級（擴大樣本以降低取樣偏差）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：___ only thirty volunteers answered the survey, we cannot claim the whole school agrees.",
+      "options": ["Because of", "Because", "Although"],
+      "answer": 1,
+      "why": "前半句「只有三十名志願者填答問卷」是後半句「我們不能宣稱全校都同意」的原因，且後接完整子句（S + V），故用連接詞 Because。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：Because of 是介系詞片語，後面只能接名詞片語，不能直接接完整子句（only thirty volunteers answered...）。",
+        "2": "🔍 錯在哪裡：Although 表「雖然（讓步反差）」，但「樣本只有 30 人」與「不能代表全校」是順向因果關係，並非反差。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ad-Ⅴ-1",
@@ -807,6 +912,21 @@ export const SEMESTERS = [
     ],
     "build": "The number increased but the proportion stayed the same",
     "buildWhy": "but 連結數量增加與比例不變的對比，避免把兩個不同指標混為一談。",
+    "usefulPhrases": [
+      ["the participation rate stayed the same", "參與率維持不變（區分絕對人數 number 與比例 rate / proportion）"],
+      ["suggest wider reach, not necessarily stronger interest", "顯示觸及範圍更廣，但未必代表興趣更強烈（審慎限定推論邊界）"],
+      ["may move indoors if the wind gets stronger", "若風勢增強可能會移至室內（情態助動詞 may 表尚未確定的可能性）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：The number of participants rose from 120 to 160, and the total student population grew from 300 to 400, ___.",
+      "options": ["so the proportion increased", "but the proportion remained 40%", "which proves 50% joined"],
+      "answer": 1,
+      "why": "分子由 120 增至 160，但分母總人數也由 300 增至 400，比例皆為 40%（120/300 = 160/400 = 40%），故比例維持不變。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：忽略了分母（全校總人數）也同步放大，誤把「人數增加」當成「比例增加」。",
+        "2": "🔍 錯在哪裡：160 除以 400 是 40% 而非 50%，計算與證據判讀不符。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ae-Ⅴ-2",
@@ -911,6 +1031,21 @@ export const SEMESTERS = [
     ],
     "build": "If I had checked the message I would have arrived earlier",
     "buildWhy": "had checked 與 would have arrived 對應過去未實現的條件與結果。",
+    "usefulPhrases": [
+      ["If I had checked my messages earlier, I would have arrived on time.", "如果我早點查看訊息，我就會準時抵達了。（與過去事實相反的假設語氣）"],
+      ["evaluate the same event from different perspectives", "從不同視角評估同一個事件（多視角敘事分析核心語塊）"],
+      ["attach different meanings to that fact", "對同一個事實賦予不同意義（區分客觀事實與主觀詮釋）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：If the team ___ answering questions before the presentation, Jay would have felt more confident.",
+      "options": ["would have practiced", "had practiced", "practiced tomorrow"],
+      "answer": 1,
+      "why": "與過去事實相反的假設語氣中，if 條件子句必須用過去完成式 had + p.p. (had practiced)，主要子句搭配 would have + p.p.。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：if 條件子句內部絕對不可使用 would have p.p.；would have 只能放在主要結果子句。",
+        "2": "🔍 錯在哪裡：practiced tomorrow 時態矛盾（過去式動詞搭配明天），且無法對應後半句過去反事實 would have felt。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ae-Ⅴ-11",
@@ -1016,6 +1151,21 @@ export const SEMESTERS = [
     ],
     "build": "The results suggest a link rather than prove a cause",
     "buildWhy": "suggest 與 prove 的證據強度不同；rather than 明確界定主張。",
+    "usefulPhrases": [
+      ["suggests an association rather than proving a cause", "顯示相關性而非證明因果關係（科學論證必備語氣限定）"],
+      ["a wider trial with a comparison group", "包含對照組的更廣泛試辦（排除干擾變因的實驗設計）"],
+      ["isolate the containers' effect from snack purchases", "將環保容器的效果與點心購買量變動分離（控制混淆因素）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：Because the volunteer class also bought fewer packaged snacks during the trial, the drop in waste ___.",
+      "options": ["proves the containers alone reduced waste", "cannot be attributed solely to the reusable containers", "shows the containers increased waste"],
+      "answer": 1,
+      "why": "同時發生「減少購買包裝點心」這項混淆變因，因此垃圾量減少不能單獨歸因於環保餐盒（cannot be attributed solely to...）。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：忽略了同時減少購買包裝點心的替代解釋，誤把混雜變因下的結果當成單一因果證明。",
+        "2": "🔍 錯在哪裡：原文明確指出垃圾量下降（Waste fell during the trial），並非增加。"
+      }
+    },
     "extensions": [],
     "contentCodes": [
       "Ae-Ⅴ-9",
@@ -1118,6 +1268,21 @@ export const SEMESTERS = [
     ],
     "build": "Both sources recognize the benefit but disagree about the cost",
     "buildWhy": "both 與 but 同時保留共識及分歧，符合多文本摘要原意。",
+    "usefulPhrases": [
+      ["One report emphasizes access, whereas another focuses on cost.", "一份報告強調使用機會，而另一份則關注成本。（whereas 對比兩方焦點）"],
+      ["preserve the main claim and important qualifications", "保留核心主張與重要的保留限制條件（學術摘要核心原則）"],
+      ["measure whether the staffing cost is sustainable", "衡量人力成本是否可長期維持（小規模試辦評估指標）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：Source A highlights student demand for evening library hours; ___, Source B points out that staffing costs exceeded estimates.",
+      "options": ["by contrast", "for instance", "consequently"],
+      "answer": 0,
+      "why": "Source A 強調學生需求效益，Source B 則指出人力成本超支，兩者呈現不同面向的權衡對比，故用 by contrast。",
+      "wrong": {
+        "1": "🔍 錯在哪裡：for instance 用於舉例說明前一分句的主張，但 Source B 的成本問題並非「學生需求」的例子。",
+        "2": "🔍 錯在哪裡：consequently 表「因此（因果推論）」，但成本超支並非因為 Source A 提出需求才導致的結論。"
+      }
+    },
     "extensions": [
       "g12-s1-u5",
       "g12-s1-u6"
@@ -1224,6 +1389,21 @@ export const SEMESTERS = [
     ],
     "build": "We revised our plan after reviewing the feedback",
     "buildWhy": "reviewing feedback 說明修訂的依據，讓自主學習形成可檢核循環。",
+    "usefulPhrases": [
+      ["avoid assuming that everyone from one country behaves alike", "避免假設來自同一國家的人行為都一樣（跨文化溝通防刻板印象）"],
+      ["Could you clarify what you mean by that term?", "請問您能釐清那個詞的意思嗎？（禮貌確認語意、避免誤讀）"],
+      ["checked our interpretation with participants and revised the slide", "向受訪者查核我們的詮釋並修訂簡報（研究倫理與回饋循環）"]
+    ],
+    "quickCheck": {
+      "prompt": "⚡ 學期盲點快測：After interviewing two exchange students from the same country who gave different answers, the presenter should ___.",
+      "options": ["describe their country as having one uniform style", "delete one interview to keep the slide simple", "report the individual differences without overgeneralizing to the whole country"],
+      "answer": 2,
+      "why": "兩位同國籍受訪者偏好不同，應如實呈現個別差異並避免以偏概全（without overgeneralizing to the whole country）。",
+      "wrong": {
+        "0": "🔍 錯在哪裡：將兩位不同意見的受訪者強行概括為單一國家風格，犯了以偏概全與文化刻板印象錯誤。",
+        "1": "🔍 錯在哪裡：為了簡化論點而刪除不符合預設的反例，違反資料誠信與證據完整性。"
+      }
+    },
     "extensions": [
       "g12-s2-u7",
       "g12-s2-u8",

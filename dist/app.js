@@ -11,7 +11,6 @@ import { renderLessonAudio, handleLessonAudioClick, handleLessonAudioChange, syn
 import { listeningPage, handleListeningClick, handleListeningChange, handleListeningInput } from './listening.mjs';
 import { renderCommuteDialogueStudio, startCommuteDialogue, stopCommuteDialogue } from './commute_dialogues.mjs';
 import { grammarPage, grammarRoute, setGrammarTopic, handleGrammarClick } from './grammar.mjs';
-import {renderFullWordPractice,handleFullWordClick,handleFullWordChange,handleFullWordSubmit} from './full_word_practice.mjs';
 import { renderTeachingAid } from './teaching_aids.mjs';
 import { renderSchoolWords, handleSchoolWordClick, handleSchoolWordChange, handleSchoolWordSubmit } from './school_words.mjs';
 import { knowledgeHome, knowledgePage, searchKnowledge, answerKnowledge } from './knowledge.mjs';
@@ -43,13 +42,14 @@ import {
 } from './arch_prerequisites.mjs';
 import { archSemesters, englishS1Review, englishS2Review, englishS3Review, englishS4Review } from './arch_semesters.mjs';
 import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine.mjs';
-import { teachingChapter, microLesson, handleLessonClick, handleLessonInput } from './lesson_pages.mjs';
+import { teachingChapter, microLesson, handleLessonClick, handleLessonInput, cleanText, textBlocks } from './lesson_pages.mjs';
 import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
 import { renderDisplayToolbar, renderReadingDrawer, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
-import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut } from './flashcards.mjs';
+// Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
+import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -1335,6 +1335,24 @@ function junyiPage() {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 3. Sixth 專案完整移植 (6上 · 6下)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Sixth notes and audio keep the imported project's own shape (coreConcepts/keyFormulas/examPitfalls, readAloudPassage).
+function sixthNotePoints(notes) {
+  if (!notes) return [];
+  if (Array.isArray(notes.keyPoints)) return notes.keyPoints;
+  const NL = String.fromCharCode(10);
+  return [
+    ...(notes.keyFormulas || []).map(f => ({ title: '🧪 ' + cleanText(f.name), summary: cleanText(f.formula + (f.detail ? NL + f.detail : '')) })),
+    ...(notes.coreConcepts || []).map((c, i) => ({ title: `🔑 核心觀念 ${i + 1}`, summary: cleanText(c) })),
+    ...((notes.examPitfalls || []).length ? [{ title: '⚠️ 考試陷阱', summary: notes.examPitfalls.map(cleanText).join(NL) }] : []),
+    ...((notes.selfChecklist || []).length ? [{ title: '✅ 考前自我檢核', summary: notes.selfChecklist.map(x => '□ ' + cleanText(x)).join(NL) }] : [])
+  ];
+}
+function sixthAudioLines(audio) {
+  if (!audio) return [];
+  if (Array.isArray(audio.dialogue)) return audio.dialogue;
+  return (audio.readAloudPassage?.paragraphs || []).map((p, i) => ({ speaker: `第 ${i + 1} 段`, en: p.text, zh: p.zh || '' }));
+}
+
 function sixthPage() {
   const lesson = sixthLessons[activeSixthUnit] || sixthLessons['eng-u1'];
   const audio = sixthAudioData[activeSixthUnit];
@@ -1363,7 +1381,7 @@ function sixthPage() {
       }).join('')}
     </div>
 
-    <div class="layout" style="display:grid;grid-template-columns:2fr 1fr;gap:24px">
+    <div class="layout">
       <div>
         ${renderTeachingAid(lesson.title, lesson.concepts || [])}
         ${renderSixthBridgeTable()}
@@ -1372,7 +1390,7 @@ function sixthPage() {
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div>
               <span class="chip" style="background:#e0e7ff;color:#3730a3;font-weight:700">${lesson.semesterZh}</span>
-              <span class="chip" style="background:#ecfdf5;color:#047857">${lesson.indicator}</span>
+              <span class="chip" style="background:#ecfdf5;color:#047857">${cleanText(lesson.indicator)}</span>
               <h2 style="margin:8px 0">${lesson.title}</h2>
             </div>
             <button class="btn small" style="background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe" data-print-handout="${lesson.semester === '6A' ? 'g6-s1' : 'g6-s2'}">
@@ -1384,7 +1402,7 @@ function sixthPage() {
           <div style="background:#f8fafc;padding:14px;border-radius:10px;margin:16px 0">
             <strong style="color:var(--text-primary);font-size:14px">🎯 本單元四大精熟目標：</strong>
             <ol style="margin:8px 0 0 20px;padding:0;color:#334155;font-size:14px;line-height:1.7">
-              ${lesson.objectives.map(o => `<li>${o.replace(/^\d+\.\s*/, '')}</li>`).join('')}
+              ${lesson.objectives.map(o => `<li>${cleanText(o).replace(/^\d+\.\s*/, '')}</li>`).join('')}
             </ol>
           </div>
 
@@ -1392,19 +1410,19 @@ function sixthPage() {
           ${lesson.contextStory ? `
             <div style="background:#fffbeb;border:1px solid #fef3c7;padding:14px;border-radius:10px;margin-bottom:20px">
               <strong style="color:#b45309">📖 生活情境導引：為什麼要學這個？</strong>
-              <p style="margin:6px 0 0;font-size:14px;color:#78350f;line-height:1.6">${lesson.contextStory}</p>
+              <p style="margin:6px 0 0;font-size:14px;color:#78350f;line-height:1.6;white-space:pre-line">${cleanText(lesson.contextStory)}</p>
             </div>
           ` : ''}
 
           <!-- 核心觀念解析 -->
-          <div style="display:grid;gap:18px;margin-top:20px">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:20px">
             ${lesson.concepts.map((c, i) => `
               <div style="border:1px solid var(--line);border-radius:12px;padding:16px">
                 <h3 style="margin:0 0 10px;color:var(--brand-dark);font-size:16px">
                   🔑 核心觀念 ${i + 1}：${c.title}
                 </h3>
-                <div style="font-size:14px;line-height:1.7;color:#334155;white-space:pre-line">
-                  ${c.content}
+                <div style="font-size:14px;line-height:1.7;color:#334155;">
+                  ${textBlocks(c.content)}
                 </div>
               </div>
             `).join('')}
@@ -1434,7 +1452,7 @@ function sixthPage() {
             </button>
           </div>
 
-          <div style="display:grid;gap:16px">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">
             ${questions.map((q, idx) => {
               const userAns = sixthQuizAnswers[q.id];
               const isCorrect = userAns === q.answerIndex;
@@ -1469,9 +1487,9 @@ function sixthPage() {
         <!-- 考前 10 分鐘速記筆記卡 -->
         <div class="card" style="margin-bottom:20px;background:var(--paper, #f8fafc)">
           <h3 style="margin:0 0 12px;color:var(--brand-dark)">📌 考前 10 分鐘速記筆記</h3>
-          ${notes ? `
+          ${sixthNotePoints(notes).length ? `
             <div style="display:grid;gap:12px">
-              ${notes.keyPoints.map(p => `
+              ${sixthNotePoints(notes).map(p => `
                 <div style="background:var(--card-bg, #fff);padding:10px 12px;border-radius:8px;border:1px solid var(--line, #e2e8f0);font-size:13px">
                   <strong style="color:#1d4ed8;display:block;margin-bottom:4px">${p.title}</strong>
                   <div style="color:var(--text-muted, #334155);white-space:pre-line">${p.summary}</div>
@@ -1484,9 +1502,9 @@ function sixthPage() {
         <!-- 語音情境朗讀庫 -->
         <div class="card">
           <h3 style="margin:0 0 12px;color:var(--brand-dark)">🔊 單元情境對話朗讀</h3>
-          ${audio && audio.dialogue ? `
+          ${sixthAudioLines(audio).length ? `
             <div style="display:grid;gap:8px">
-              ${audio.dialogue.map((d, di) => `
+              ${sixthAudioLines(audio).map((d, di) => `
                 <div style="padding:10px;border-radius:8px;background:#f1f5f9;font-size:13px">
                   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
                     <strong style="color:#475569">${d.speaker}:</strong>
@@ -2978,6 +2996,12 @@ function readKnowledgeRoute() {
   else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
 }
 window.addEventListener('hashchange', readKnowledgeRoute);
+// When the lazily loaded card bundle arrives, redraw the page that was waiting for it.
+document.addEventListener(FLASHCARDS_READY_EVENT, () => { if (['flashcards', 'wordpractice'].includes(page)) render(); });
+// Start downloading the cards as soon as a learner shows intent, so playback can begin right after the tap.
+const FLASHCARD_INTENT = '[data-fc-quick-play],[data-fc-phrase-play],[data-nav="flashcards"],[data-nav="wordpractice"],a[href="#flashcards"],a[href="#wordpractice"]';
+root.addEventListener('pointerdown', e => { if (e.target.closest?.(FLASHCARD_INTENT)) loadFlashcards().catch(() => {}); }, { passive: true });
+root.addEventListener('toggle', e => { if (e.target.matches?.('.quick-review-options') && e.target.open) loadFlashcards().catch(() => {}); }, true);
 readKnowledgeRoute();
 
 root.addEventListener('change', e => handleSchoolWordChange(e.target, render));

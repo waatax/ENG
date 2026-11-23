@@ -1,7 +1,7 @@
 import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
 import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
-import { schoolHome, schoolGuide, semesterIntro, semesterProject } from './school_view.mjs?v=school20261027';
+import { schoolHome, schoolGuide, semesterIntro, semesterProject, recordSemesterQuickCheck } from './school_view.mjs?v=school20261027';
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=truth20261105';
 import * as sound from './sound.mjs?v=truth20261105';
 import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=truth20261105';
@@ -483,6 +483,16 @@ root.addEventListener('click', async e => {
     case 'exam-select': ui.exam=id;location.hash='#exams/'+id;render(true);break;
     case 'exam-home': game.clearResult();ui.exam=id;ui.tab='exams';location.hash='#exams/'+id;await ensure(['exams']);render(true);break;
     case 'school-group': ui.schoolGroup=id; render(true); break;
+    case 'sem-qc-pick': {
+      const semId = el.dataset.sem, pick = Number(el.dataset.idx), sem = semesterOf(semId);
+      recordSemesterQuickCheck(semId, pick);
+      sound.sfx(sem?.quickCheck ? (pick === sem.quickCheck.answer ? 'correct' : 'wrong') : 'tap');
+      render();
+      // the guide lives in a <details> that re-renders closed; reopen it so the verdict stays visible
+      const qc = [...document.querySelectorAll('.semester-quick-check')].find(x => x.dataset.semQc === semId);
+      if (qc) { qc.closest('details')?.setAttribute('open', ''); qc.querySelector('.semester-qc-feedback')?.scrollIntoView({ block: 'nearest' }); qc.querySelector(`[data-idx="${pick}"]`)?.focus({ preventScroll: true }); }
+      break;
+    }
     case 'tracks': ui.modal = 'tracks'; render(); break;
     case 'advanced-track': game.clearResult();
     case 'unit-select':
@@ -560,7 +570,9 @@ root.addEventListener('click', async e => {
       const ok = guess === secret;
       const stStore = readStudioStore(storage);
       if (ok) writeStudioStore({ minimalPairsDone: (Number(stStore.minimalPairsDone) || 0) + 1 }, storage);
-      ui.mpFeedback = { ok, msg: ok ? `✔ 聽辨正確！神秘音是「${secret === 0 ? pr[0] : pr[2]}」（${secret === 0 ? pr[1] : pr[3]}）。` : `↻ 再聽一次！剛才播放的是「${secret === 0 ? pr[0] : pr[2]}」，留意${grp.contrast}的嘴型差異。` };
+      const pickedWord = guess === 0 ? pr[0] : pr[2], pickedZh = guess === 0 ? pr[1] : pr[3];
+      const secretWord = secret === 0 ? pr[0] : pr[2], secretZh = secret === 0 ? pr[1] : pr[3];
+      ui.mpFeedback = { ok, msg: ok ? `✔ 聽辨正確！神秘音是「${secretWord}」（${secretZh}）。` : `🔍 錯在哪裡：你選的「${pickedWord}」（${pickedZh}）與剛才播放的「${secretWord}」（${secretZh}）構成 ${grp.contrast} 對立音！訣竅：${grp.tip}` };
       sound.sfx(ok ? 'correct' : 'wrong');
       render();
       break;
@@ -630,6 +642,7 @@ root.addEventListener('click', async e => {
       if (!await ensure(['stories'])) break;
       ui.readerStory = id;
       ui.readerWord = '';
+      delete ui.readerQuizStory; delete ui.readerQuizPick;
       ui.modal = 'reader';
       const stStore = readStudioStore(storage);
       const readMap = { ...(stStore.readStories || {}), [id]: Date.now() };
@@ -639,6 +652,16 @@ root.addEventListener('click', async e => {
     }
     case 'reader-toggle-zh': ui.readerShowZh = ui.readerShowZh === false; render(); break;
     case 'reader-word': ui.readerWord = el.dataset.word || ''; playItem(ui.readerWord, '', false); render(); break;
+    case 'reader-quiz-pick': {
+      ui.readerQuizStory = el.dataset.story || ui.readerStory; ui.readerQuizPick = Number(el.dataset.idx);
+      const fresh = course.stories.get(ui.readerQuizStory), q = fresh?.steps?.map(x => course.item(x)).find(x => x?.type === 'choice' && x.options?.length >= 3);
+      sound.sfx(q ? (q.options[ui.readerQuizPick] === q.answer ? 'correct' : 'wrong') : 'tap');
+      render();
+      // the modal re-renders scrolled to its close button; bring the verdict back into view
+      const fb = document.querySelector('.reader-quick-check .reader-quiz-feedback');
+      if (fb) { fb.scrollIntoView({ block: 'nearest' }); document.querySelector(`.reader-quick-check [data-idx="${ui.readerQuizPick}"]`)?.focus({ preventScroll: true }); }
+      break;
+    }
     case 'write-select': ui.writingId = id; delete ui.writingText; ui.writingSavedMsg = ''; render(); break;
     case 'write-model-toggle': ui.writingShowModel = !ui.writingShowModel; render(); break;
     case 'write-insert': {

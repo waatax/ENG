@@ -78,10 +78,13 @@ test('9,500 Flashcards Comprehensive Database Audit', async () => {
 
   // 4. Studio UI Rendering Check
   const html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('全階記憶閃卡館'), 'Studio view must render title');
-  assert.ok(html.includes('完整 9,500 張字卡'), 'Studio view must show 9,500 total cards banner');
-  assert.ok(html.includes('(1000)'), 'Studio view must show 1000 in tabs');
-  assert.ok(html.includes('(2000)'), 'Studio view must show 2000 in tabs');
-  assert.ok(html.includes('(3000)'), 'Studio view must show 3000 in tabs');
-  assert.ok(html.includes('(700)'), 'Studio view must show 700 in tabs');
+  assert.match(html, /<h2 class="fc-title"[^>]*>🗂️ 9,500 單字與片語閃卡館<\/h2>/, 'Studio view must render title with the 9,500 total');
+  assert.ok(html.includes(`內容狀態：${fc.FLASHCARD_DATABASE.length} 張字卡`), 'Studio view must show the computed 9,500 total cards note');
+  // Every tier tab must state the size that the database really holds (1,000 / 2,000 / 3,000 / 700).
+  for (const [tier, count] of Object.entries(tierCounts)) {
+    const tab = html.match(new RegExp(`<button[^>]*class="[^"]*fc-tier-btn[^"]*"[^>]*data-fc-tier="${tier}"[^>]*>([\\s\\S]*?)</button>`));
+    assert.ok(tab, `Studio view must render a tier tab for ${tier}`);
+    assert.ok(tab[1].replace(/<[^>]+>/g, '').includes(count.toLocaleString('en-US')), `Tier tab ${tier} must show ${count}`);
+  }
+  assert.ok(html.includes('data-fc-tier="elem_1000" aria-pressed="true"'), 'Current tier tab must be shown as selected');
 });

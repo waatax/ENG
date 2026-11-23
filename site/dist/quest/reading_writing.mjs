@@ -33,7 +33,8 @@ export const WRITING_PROMPTS = [
     scaffolds: [
       'Hello, my name is ____.',
       'I like ____ and ____.',
-      'Every morning / day, I ____.'
+      'Every morning / day, I ____.',
+      'Nice to meet you!'
     ],
     model: 'Hello, my name is Leo. I like music and basketball. Every afternoon, I practice English with my friend.',
     modelZh: '哈囉，我的名字是 Leo。我喜歡音樂和籃球。每天下午，我和朋友一起練習英文。'
@@ -50,7 +51,8 @@ export const WRITING_PROMPTS = [
     scaffolds: [
       'On weekends, I usually ____ with my ____.',
       'In the afternoon, we ____.',
-      'I feel happy because ____.'
+      'I feel happy because ____.',
+      'After dinner, we enjoy talking together.'
     ],
     model: 'On weekends, I usually ride a bicycle in the park with my brother. In the afternoon, we help our mother cook dinner at home. I feel very happy because we can talk and laugh together.',
     modelZh: '週末時，我通常和哥哥去公園騎腳踏車。下午我們在家幫媽媽煮晚餐。我覺得非常開心，因為我們可以一起聊天說笑。'
@@ -68,6 +70,7 @@ export const WRITING_PROMPTS = [
       'Hi ____, would you like to ____ with me this Saturday?',
       'We can meet at ____ at ____ o’clock.',
       'I want to go there because ____.',
+      'After the visit, we can have lunch nearby.',
       'Please let me know if you can come.'
     ],
     model: 'Hi Amy, would you like to visit the science museum with me this Saturday? We can meet at the metro station at ten o’clock in the morning. I want to see the new space exhibition because it looks very exciting. Please let me know if you can come.',
@@ -85,6 +88,7 @@ export const WRITING_PROMPTS = [
     scaffolds: [
       'In my opinion, daily exercise is essential for students.',
       'First, regular physical activity ____. For example, ____.',
+      'In addition, exercising outdoors helps us stay energetic.',
       'However, some students feel too busy to ____.',
       'Therefore, schools and families should encourage ____.'
     ],
@@ -104,6 +108,7 @@ export const WRITING_PROMPTS = [
       'Although flexible schedules offer clear benefits, they also require strong self-discipline.',
       'On the one hand, working remotely saves commuting time and ____.',
       'Furthermore, digital tools allow teams to ____. For instance, ____.',
+      'On the other hand, delayed replies can slow down urgent decisions.',
       'Consequently, organizations should establish clear communication guidelines so that ____.'
     ],
     model: 'Although flexible hybrid schedules offer clear benefits, they also require strong coordination. On the one hand, working from home twice a week reduces commuting fatigue and allows employees to focus on deep tasks. Furthermore, cloud platforms make it easy to share project updates across time zones. For instance, our design team cut revision delays by thirty percent after adopting shared checklists. Consequently, companies should combine remote flexibility with regular in-person workshops to maintain team trust.',
@@ -121,6 +126,7 @@ export const WRITING_PROMPTS = [
     scaffolds: [
       'Rapid advances in automated information retrieval have transformed how students approach research.',
       'Nevertheless, effortless access to summaries cannot substitute for rigorous source evaluation.',
+      'When learners accept claims uncritically, subtle methodological flaws go unnoticed.',
       'Moreover, empirical studies indicate that active questioning deepens long-term comprehension.',
       'Ultimately, universities must design assessments that reward analytical reasoning rather than rote synthesis.'
     ],
@@ -193,6 +199,23 @@ export function evaluateWritingDraft(promptSpec, rawText) {
   if (/,[a-zA-Z]/.test(text)) {
     grammarNotes.push('💡 標點排版提醒：英文逗號「,」後面建議留一個半形空格再接下一個單字。');
   }
+  if (/\b(informations|advices|homeworks|furnitures|equipments)\b/i.test(text)) {
+    grammarNotes.push('⚠️ 不可數名詞盲點：information, advice, homework, furniture, equipment 為不可數名詞，字尾不可加複數 -s！');
+  }
+  // "more larger rooms" (= more rooms that are larger) is fine, so only flag "more + -er" before than / punctuation / end.
+  if (/\bmore\s+(?:better|worse|faster|easier|cheaper|higher|larger|smaller|bigger|happier)\b(?=\s*(?:than\b|[.,!?;:]|$))/i.test(text)) {
+    grammarNotes.push('⚠️ 雙重比較級盲點：已經是比較級的形容詞（如 better, faster, easier），前面不可再加 more！');
+  }
+  if (/\blook(?:s|ed|ing)?\s+forward\s+to\s+(?:see|meet|hear|go|have|work|visit|be|get|talk|play|join)\b/i.test(text)) {
+    grammarNotes.push('⚠️ 介系詞 to 盲點：look forward to 的 to 是介系詞，後方動詞請改用動名詞 V-ing（如 looking forward to seeing / hearing）。');
+  }
+  // "She is very like her mother" (= very similar to) is correct, so skip "very like" right after be / look / seem.
+  if (/(?<!\b(?:am|is|are|was|were|be|been|looks?|looked|seems?|seemed)\s+)\bvery\s+(?:like|likes|enjoy|enjoys|love|loves)\b/i.test(text)) {
+    grammarNotes.push('⚠️ 副詞修飾動詞盲點：英文不能用 very 直接修飾動詞 like / enjoy / love，請改為 really like / enjoy ... very much。');
+  }
+  if (/\b(?:discuss(?:es|ed|ing)?\s+about|marr(?:y|ies|ying)\s+with|enter(?:s|ed|ing)?\s+into\s+the\s+(?:room|classroom|house|building))\b/i.test(text)) {
+    grammarNotes.push('⚠️ 及物動詞贅加介系詞：discuss（討論）、marry（與…結婚）、enter（進入某地方）在英文中是及物動詞，後面直接接名詞受詞，不必加 about / with / into。');
+  }
 
   const minW = promptSpec?.minWords || 20;
   const maxW = promptSpec?.maxWords || 150;
@@ -246,9 +269,38 @@ export function evaluateWritingDraft(promptSpec, rawText) {
 export function renderGradedReaderModal(course, storyId, uiState = {}, gloss = null) {
   const meta = course.stories.get(storyId);
   if (!meta) return `<p>找不到這篇故事。</p>`;
-  const lines = (meta.steps || [])
-    .map(id => course.item(id))
-    .filter(it => it && it.type === 'line');
+  // Loaded courses keep step ids (engine.mjs); raw stories.json keeps the step objects inline — accept both.
+  const stepItems = (meta.steps || [])
+    .map(step => (step && typeof step === 'object') ? (course.item?.(step.id) || step) : course.item(step))
+    .filter(Boolean);
+  const lines = stepItems.filter(it => it.type === 'line');
+  const quizStep = stepItems.find(it => it.type === 'choice' && Array.isArray(it.options) && it.options.length >= 3 && it.options.includes(it.answer));
+  const rawPick = uiState.readerQuizStory === storyId ? Number(uiState.readerQuizPick) : NaN;
+  const pickedIdx = quizStep && Number.isInteger(rawPick) && rawPick >= 0 && rawPick < quizStep.options.length ? rawPick : null;
+  // stories.json always lists the answer first; show a stable per-story order so "option 1" is not a giveaway.
+  // data-idx keeps the original option index, so a pick stays tied to the same option.
+  const quizOrder = quizStep ? quizStep.options.map((_, idx) => idx) : [];
+  if (quizOrder.length) {
+    let seed = 0;
+    for (const ch of String(storyId)) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+    for (let i = quizOrder.length - 1; i > 0; i--) {
+      seed = (seed * 1103515245 + 12345) >>> 0;
+      const j = seed % (i + 1);
+      [quizOrder[i], quizOrder[j]] = [quizOrder[j], quizOrder[i]];
+    }
+  }
+  const pickedOpt = (quizStep && pickedIdx !== null) ? quizStep.options[pickedIdx] : null;
+  const isQuizOk = quizStep && pickedOpt !== null ? pickedOpt === quizStep.answer : false;
+  const wrongLineMatch = (quizStep && pickedOpt && !isQuizOk)
+    ? lines.find(l => l.en === pickedOpt || l.zh === pickedOpt)
+    : null;
+  const wrongReason = (quizStep && pickedOpt && !isQuizOk)
+    ? (wrongLineMatch
+      ? (wrongLineMatch.en === pickedOpt
+        ? `🔍 錯在哪裡：你選的「${pickedOpt}」確實出現在故事裡（${wrongLineMatch.zh}），但不是本題要找的那一句；正解為「${quizStep.answer}」。`
+        : `🔍 錯在哪裡：你選的「${pickedOpt}」是文中另一句「${wrongLineMatch.en}」的意思，不是${quizStep.text ? `「${quizStep.text}」` : '本題這句'}；正解為「${quizStep.answer}」。`)
+      : `🔍 錯在哪裡：你選的「${pickedOpt}」與本文情境不符；正解為「${quizStep.answer}」。`)
+    : '';
 
   const showZh = uiState.readerShowZh !== false;
   const activeWord = uiState.readerWord ? lookupWordGloss(uiState.readerWord, gloss) : null;
@@ -293,6 +345,24 @@ export function renderGradedReaderModal(course, storyId, uiState = {}, gloss = n
         ${renderShadowingWidget(l.en, `story-${storyId}-${idx}`)}
       </section>`).join('')}
     </div>
+    ${Array.isArray(meta.patterns) && meta.patterns.length ? `<section class="reader-patterns-box card"><h3>🚀 +15% 本篇核心句型與語塊提取</h3><ul>${meta.patterns.map(pt => `<li>${esc(pt)}</li>`).join('')}</ul></section>` : ''}
+    ${quizStep ? `<section class="reader-quick-check card" data-reader-quiz="${esc(storyId)}">
+      <h3>⚡ 讀後理解隨堂快測（+10% 檢索練習）</h3>
+      <p><b>${quizStep.text ? '這句話是什麼意思？' : esc(quizStep.prompt)}</b> ${quizStep.text ? `<span lang="en">“${esc(quizStep.text)}”</span>` : ''}</p>
+      ${showZh ? `<p class="small muted">挑戰版：先按上方「🙈 隱藏中文翻譯」再作答。</p>` : ''}
+      <div class="options">
+        ${quizOrder.map((idx, pos) => {
+          const opt = quizStep.options[idx];
+          const cls = pickedIdx === null ? '' : opt === quizStep.answer ? 'right' : idx === pickedIdx ? 'wrong' : '';
+          return `<button type="button" class="opt ${cls}" data-act="reader-quiz-pick" data-story="${esc(storyId)}" data-idx="${idx}" aria-pressed="${idx === pickedIdx}"><kbd>${pos + 1}</kbd><span>${esc(opt)}</span></button>`;
+        }).join('')}
+      </div>
+      ${pickedIdx !== null ? `<div class="reader-quiz-feedback ${isQuizOk ? 'good' : 'bad'}" role="status">
+        ${isQuizOk
+          ? `<p><b>✅ 答對了！</b> ${esc(quizStep.why || '')}</p>`
+          : `<p class="reader-wrong-diagnosis"><b>❌ 答錯了！</b> ${esc(wrongReason)}</p><p><b>💡 解析：</b>${esc(quizStep.why || '')}</p>`}
+      </div>` : ''}
+    </section>` : ''}
   </article>`;
 }
 

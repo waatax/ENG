@@ -8,7 +8,6 @@ import {maskTarget} from './word_mask.mjs';
 
 import { teachingCard, qualityCounts } from './flashcard_quality.mjs';
 import { playWord, playSentence, playChinese, stopAudio } from './audio.mjs';
-import { renderCommuteQuickPlayStrip } from './commute_dialogues.mjs';
 
 function esc(str) {
   return String(str ?? '').replace(/[&<>"']/g, c => ({
@@ -20,17 +19,9 @@ function esc(str) {
   }[c]));
 }
 
-// 閃卡分級定義
-export const FLASHCARD_TIERS = [
-  { id: 'elem_1000', name: '🎒 國小基礎 1,000 字', cefr: 'Pre-A1~A1', count: '1,000 字', color: '#16a34a', desc: '日常生活、家庭學校、基礎動詞、顏色數字動物時間' },
-  { id: 'jhs_2000', name: '🏫 國中會考 2,000 字', cefr: 'A1~B1', count: '2,000 字', color: '#0284c7', desc: '教育部常用 2,000 參考字彙、會考情境句、詞性與KK音標' },
-  { id: 'shs_3000', name: '🎓 高中大考 3,000 字', cefr: 'B1~B2', count: '3,000 字+片語', color: '#7c3aed', desc: '大考 4,500/7,000 核心詞、關鍵動詞片語與學術搭配詞' },
-  { id: 'toeic', name: '💼 TOEIC 國際商務實戰', cefr: 'B2', count: '商務核心 700 字', color: '#d97706', desc: '商務會議、合約談判、採購預算、辦公通訊高頻詞' },
-  { id: 'toefl', name: '🌐 TOEFL 托福學術精熟', cefr: 'B2~C1', count: '學術核心 700 字', color: '#059669', desc: '北美學術演講、校園生活、地質天文、生態演化與人文科學' },
-  { id: 'sat', name: '🏛️ Digital SAT 語境學術詞', cefr: 'B2~C1', count: '學術核心 700 字', color: '#4f46e5', desc: 'Words in Context、學術對比詞、歷史社會科學閱讀必背' },
-  { id: 'gre', name: '🎭 GRE Verbal 孿生詞群', cefr: 'C1~C2', count: '核心等價 700 詞', color: '#e11d48', desc: '句子等價題孿生詞對 (capricious/fickle 等)、哲學社科精微詞' },
-  { id: 'gmat', name: '📊 GMAT 批判邏輯推理詞', cefr: 'C2', count: '批判邏輯 700 詞', color: '#0891b2', desc: 'Assumption, Weaken, Strengthen, Corroborate 等商業決策詞' }
-];
+// 閃卡分級定義與快選列放在 flashcard_tiers.mjs（不含字卡資料，課程頁可先顯示）
+import { FLASHCARD_TIERS, quickTierLabels, renderFlashcardQuickPlay } from './flashcard_tiers.mjs';
+export { FLASHCARD_TIERS, renderFlashcardQuickPlay };
 
 export const FLASHCARD_DATABASE = [
   {"id":"fc-el-0001","tier":"elem_1000","category":"家庭與身分","word":"family","chunk":"fam - i - ly","ipa":"/ˈfæm.əl.i/","pos":"n.","icon":"👨‍👩‍👧","zh":"家庭、家人","collocation":"family member (家庭成員)","example":"My family eats dinner together.","exampleZh":"我的家人一起吃晚餐。","memoryTip":"fam (/fæm/ 短母音 a) + 弱讀 /ə/ + ly (/li/)"},
@@ -9634,7 +9625,6 @@ function getBatchCards() {
 }
 
 // 閃卡館主頁渲染函數
-const quickTierLabels = { elem_1000: '國小', jhs_2000: '國中', shs_3000: '高中', toeic: 'TOEIC 多益', toefl: 'TOEFL 托福', sat: 'SAT', gre: 'GRE', gmat: 'GMAT' };
 const quickMp3GroupIds = { elem_1000: 'elementary-001', jhs_2000: 'junior-001', shs_3000: 'senior-001', toeic: 'toeic-001', toefl: 'toefl-001', sat: 'sat-001', gre: 'gre-001', gmat: 'gmat-001' };
 export function flashcardShortcut(key, render) {
   if (recallActive(currentTier)) {
@@ -9681,30 +9671,6 @@ export function flashcardShortcut(key, render) {
     }
   }
   return false;
-}
-export function renderFlashcardQuickPlay() {
-  return `<section class="card flashcard-quick-play" aria-labelledby="flashcard-quick-title">
-    <div class="pill">📱 手機直式單手快選 · 單字集 / 片語集一鍵即播</div>
-    <h2 id="flashcard-quick-title">9,500 張閃卡與片語集，點選就開始聽讀</h2>
-    <p>針對手機直式單手操作優化：點選下方任一<strong>分級單字集</strong>或<strong>高頻片語搭配集</strong>，立即啟動語音連播（每組 20 張，支援思考式純英與雙語模式）。</p>
-    <div class="flashcard-quick-grid">${FLASHCARD_TIERS.map(t => `<button class="btn" data-fc-quick-play="${t.id}" aria-label="自動播放${quickTierLabels[t.id]}閃卡"><strong>▶ ${quickTierLabels[t.id]}</strong><span>${FLASHCARD_DATABASE.filter(c => c.tier === t.id).length.toLocaleString('en-US')} 張</span></button>`).join('')}</div>
-    <div class="quick-phrase-sets" role="group" aria-label="高頻片語與英英思考語音集快選">
-      <span class="quick-phrase-label">🔗 片語與搭配詞集即點即播：</span>
-      <button class="btn quiet small" data-fc-phrase-play="shs_3000">▶ 高中核心動詞片語集</button>
-      <button class="btn quiet small" data-fc-phrase-play="toeic">▶ TOEIC 商務片語搭配集</button>
-      <button class="btn quiet small" data-fc-phrase-play="toefl">▶ TOEFL 學術轉折片語集</button>
-      <button class="btn quiet small" data-fc-phrase-play="sat">▶ SAT 語境邏輯搭配集</button>
-      <button class="btn quiet small" data-fc-phrase-play="gre">▶ GRE 雙選等價片語集</button>
-      <button class="btn quiet small" data-fc-phrase-play="gmat">▶ GMAT 商業論證搭配集</button>
-    </div>
-    ${renderCommuteQuickPlayStrip()}
-    <div class="learning-actions" style="margin-top:12px;margin-bottom:0">
-      <button class="btn quiet" data-nav="flashcards">搜尋字卡與自訂複習</button>
-      <a class="btn quiet" href="#listening">🎧 112 組通勤教學會話電台</a>
-      <a class="btn quiet" href="#wordaudio/elementary-001">🎵 190 組 MP3 離線音檔</a>
-      <a class="btn primary" href="EN/">🇬🇧 EN 純英檢定教學與英英語音 (TOEFL/TOEIC/SAT/GMAT/GRE) ↗</a>
-    </div>
-  </section>`;
 }
 export function startFlashcardQuickPlay(tier, renderCallback, phraseOnly = false) {
   if (!FLASHCARD_TIERS.some(t => t.id === tier)) return false;

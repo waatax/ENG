@@ -76,9 +76,12 @@ test('2. Graded Memory Flashcards Studio Audit', async () => {
 
   // Test HTML View
   const fcHtml = fc.renderFlashcardsStudioView();
-  assert.ok(fcHtml.includes('全階記憶閃卡館'), 'View should render title');
+  assert.ok(fcHtml.includes('9,500 單字與片語閃卡館'), 'View should render title');
   assert.ok(fcHtml.includes('fc-card-stage'), 'View should render 3D flip card stage');
   assert.ok(fcHtml.includes('fc-card-face'), 'View should render card faces');
+  // The stylesheet hides a face through .fc-card-face[aria-hidden="true"]; both faces need that hook.
+  assert.ok(fcHtml.includes('fc-card-face fc-front" aria-hidden="false"'), 'Front face should be the visible card face');
+  assert.ok(fcHtml.includes('fc-card-face fc-back" inert aria-hidden="true"'), 'Back face should stay hidden until flipped');
   assert.ok(fcHtml.includes('data-fc-flip="true"'), 'View should support flipping');
 });
 

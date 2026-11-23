@@ -1,4 +1,5 @@
 // Accessible single-card studio view with physical deck depth, scientific memory breakdown, and instant 4-option diagnostic check.
+import { wordStructure, renderWordStructure } from './word_structure.mjs';
 const meaning = c => c ? (c.gloss || c.zh) : '';
 
 function buildInstantQuizOptions(card, pool) {
@@ -42,61 +43,70 @@ export function renderBrowse(s) {
   const quizOk = pickedCard && card ? pickedCard.id === card.id : false;
 
   const syllableCount = card?.chunk ? card.chunk.split(/[·\-]+/).filter(Boolean).length : 1;
+  // Selected options must be visible and announced, not only marked with an unstyled class.
+  const pill = (on, cls, attr, label, extra = '') => `<button type="button" class="btn small ${on ? 'primary' : 'quiet'} ${cls}${on ? ' active' : ''}" ${attr} aria-pressed="${on}" ${extra}>${label}</button>`;
+  // Which words of the current list this batch covers, e.g. 第 11 ~ 20 字.
+  const rangeStart = batchSize > 0 ? batchIndex * batchSize + 1 : 1;
+  const rangeEnd = rangeStart + Math.max(0, batchCards.length - 1);
+  const range = `第 ${rangeStart} ~ ${rangeEnd} 字`;
+  const tierShort = String(tierInfo.name || tierInfo.label || '').replace(/^[^\p{L}\p{N}]+/u, '').split(' ')[0];
+  const counter = `第 ${cardIndex + 1} / ${batchCards.length} 張`;
+  const stateClass = isMastered ? 'is-mastered' : isNeedReview ? 'is-review' : '';
 
-  return `
-    <div class="fc-header">
+  return `<section class="fcx-browse" aria-labelledby="fc-browse-title">
+    <div class="fc-header fcx-browse-head">
       <div>
         <div class="fc-studio-eyebrow">✨ 科學雙面記憶 × 語境檢索 × 錯題即時診斷</div>
-        <h2 class="fc-title">🗂️ 9,500 單字與片語閃卡館</h2>
+        <h2 class="fc-title" id="fc-browse-title">🗂️ 9,500 單字與片語閃卡館</h2>
         <p class="fc-subtitle">先看英文與音節回想詞義，再翻卡對照語塊與科學記憶法；下方支援<strong>隨堂 4 選 1 混淆快測</strong>，選錯立即解析干擾項真身。</p>
       </div>
-      <div class="fc-stats-badge">
-        <span>本級進度 (${esc((tierInfo.name || tierInfo.label || '').split(' ')[0])})</span>
+      <div class="fc-stats-badge fcx-mastery">
+        <span>本級進度（${esc(tierShort)}）</span>
         <strong>${mastered} / ${allTierCards.length} 已熟記 (${percent}%)</strong>
         <a class="btn quiet small" href="#wordaudio/${mp3Group}">🎵 下載本級 MP3</a>
       </div>
     </div>
     <p class="fc-audit-note" role="note">📋 內容狀態：${esc(audit)}</p>
     ${audioFailure ? `<div class="fc-audio-alert" role="alert"><strong>⚠️ 語音播放中斷：</strong>${esc(audioFailure)}</div>` : ''}
-    <div class="fc-tiers">${s.tiers ? '' : ''}${tierButtons(s)}</div>
-    <div class="fc-toolbar">
+    <div class="fc-tiers fcx-pills" role="group" aria-label="選擇級別">${tierButtons(s, pill)}</div>
+    <div class="fc-toolbar fcx-toolbar">
       <div class="fc-search-box">
         <input type="search" id="fc-search-input" aria-label="搜尋單字、中文意思、搭配詞或主題分類" placeholder="🔍 搜尋單字、中文意思、搭配詞或主題分類..." value="${esc(keyword)}">
       </div>
-      <div class="fc-filter-group" role="group" aria-label="閃卡內容類型">
-        <button class="fc-filter-btn ${setType === 'all' ? 'active' : ''}" data-fc-set-type="all">📚 全部詞彙 (${allTierCards.length})</button>
-        <button class="fc-filter-btn ${setType === 'phrases' ? 'active' : ''}" data-fc-set-type="phrases">🔗 片語與搭配詞集 (${phraseCount})</button>
+      <div class="fc-filter-group fcx-pills" role="group" aria-label="閃卡內容類型">
+        ${pill(setType === 'all', 'fc-filter-btn', 'data-fc-set-type="all"', `📚 全部詞彙 (${allTierCards.length})`)}
+        ${pill(setType === 'phrases', 'fc-filter-btn', 'data-fc-set-type="phrases"', `🔗 片語與搭配詞集 (${phraseCount})`)}
       </div>
-      <div class="fc-filter-group" role="group" aria-label="熟練度篩選">
-        <button class="fc-filter-btn ${filterStatus === 'all' ? 'active' : ''}" data-fc-filter="all">全部 (${allTierCards.length})</button>
-        <button class="fc-filter-btn ${filterStatus === 'need_review' ? 'active' : ''}" data-fc-filter="need_review">📌 待複習 (${reviewCount})</button>
-        <button class="fc-filter-btn ${filterStatus === 'mastered' ? 'active' : ''}" data-fc-filter="mastered">✅ 已熟記 (${mastered})</button>
+      <div class="fc-filter-group fcx-pills" role="group" aria-label="熟練度篩選">
+        ${pill(filterStatus === 'all', 'fc-filter-btn', 'data-fc-filter="all"', `全部 (${allTierCards.length})`)}
+        ${pill(filterStatus === 'need_review', 'fc-filter-btn', 'data-fc-filter="need_review"', `📌 待複習 (${reviewCount})`)}
+        ${pill(filterStatus === 'mastered', 'fc-filter-btn', 'data-fc-filter="mastered"', `✅ 已熟記 (${mastered})`)}
       </div>
-      <div class="fc-action-group">
+      <div class="fc-action-group fcx-tools">
         <button class="btn primary small" data-fc-recall="start">⚡ 10 卡快測</button>
         <button class="btn quiet small" data-fc-shuffle="true" title="隨機抽卡">🔀 隨機抽卡</button>
         <button class="btn ${autoPlaying ? 'primary' : 'quiet'} small" data-fc-toggle-autoplay="true">${autoPlaying ? '⏸ 停止輪播' : '▶ 自動輪播聽讀'}</button>
       </div>
     </div>
     <div class="fc-batch-bar">
-      <div class="fc-batch-group"><span>📦 每組張數：</span>${[10, 20, 30, 50, 100, 0].map(n => `<button class="fc-chip-btn ${batchSize === n ? 'active' : ''}" data-fc-batch-size="${n}">${n === 0 ? '全部' : n + '張'}</button>`).join('')}</div>
-      <div class="fc-batch-group"><span>🎧 輪播語音：</span>
-        <button class="fc-chip-btn ${voiceMode === 'word_zh_sentence' ? 'active' : ''}" data-fc-voice-mode="word_zh_sentence">單字+中文+例句</button>
-        <button class="fc-chip-btn ${voiceMode === 'word_en_thinking' ? 'active' : ''}" data-fc-voice-mode="word_en_thinking">🧠 思考式純英</button>
-        <button class="fc-chip-btn ${voiceMode === 'word_zh' ? 'active' : ''}" data-fc-voice-mode="word_zh">⚡ 單字+中文</button>
-        <button class="fc-chip-btn ${voiceMode === 'word_sentence' ? 'active' : ''}" data-fc-voice-mode="word_sentence">🇬🇧 純英單字+例句</button>
+      <div class="fc-batch-group fcx-pills" role="group" aria-label="每組張數"><span class="fc-batch-label">📦 每組張數：</span>${[10, 20, 30, 50, 100, 0].map(n => pill(batchSize === n, 'fc-chip-btn', `data-fc-batch-size="${n}"`, n === 0 ? `全部 (${filteredCards.length})` : n + '張')).join('')}</div>
+      <div class="fc-batch-group fcx-pills" role="group" aria-label="輪播語音順序"><span class="fc-batch-label">🎧 輪播語音：</span>
+        ${pill(voiceMode === 'word_zh_sentence', 'fc-chip-btn', 'data-fc-voice-mode="word_zh_sentence"', '單字+中文+例句', 'title="依序朗讀英文單字、中文釋義與完整英文例句"')}
+        ${pill(voiceMode === 'word_en_thinking', 'fc-chip-btn', 'data-fc-voice-mode="word_en_thinking"', '🧠 思考式純英', 'title="先聽單字，停頓思考，再聽英文搭配與例句"')}
+        ${pill(voiceMode === 'word_zh', 'fc-chip-btn', 'data-fc-voice-mode="word_zh"', '⚡ 單字+中文', 'title="只朗讀英文單字與中文釋義，適合快速複習"')}
+        ${pill(voiceMode === 'word_sentence', 'fc-chip-btn', 'data-fc-voice-mode="word_sentence"', '🇬🇧 純英單字+例句', 'title="只聽英文單字與完整英文例句"')}
       </div>
-      ${batchSize > 0 && filteredCards.length > 0 ? `<div class="fc-batch-Pager"><button class="btn quiet small" data-fc-batch-prev="true" ${batchIndex === 0 ? 'disabled' : ''}>◀ 上一組</button><span class="fc-batch-indicator">第 <strong>${batchIndex + 1}</strong> / ${totalBatches} 組 (${batchCards.length} 張)</span><button class="btn quiet small" data-fc-batch-next="true" ${batchIndex >= totalBatches - 1 ? 'disabled' : ''}>下一組 ▶</button></div>` : ''}
+      ${batchSize > 0 && filteredCards.length > 0 ? `<div class="fc-batch-pager"><button class="btn quiet small" data-fc-batch-prev="true" ${batchIndex === 0 ? 'disabled' : ''}>◀ 上一組</button><span class="fc-batch-indicator">第 <strong>${batchIndex + 1}</strong> / ${totalBatches} 組 · ${range}（共 ${filteredCards.length.toLocaleString('en-US')} 字）</span><button class="btn quiet small" data-fc-batch-next="true" ${batchIndex >= totalBatches - 1 ? 'disabled' : ''}>下一組 ▶</button></div>` : ''}
     </div>
-    ${batchCompleted && batchCards.length > 0 ? `<div class="fc-batch-complete-banner"><div><strong>🎉 太棒了！已完成第 ${batchIndex + 1} 組（共 ${batchCards.length} 張）閃卡輪播學習！</strong></div><div class="fc-batch-complete-actions"><button class="btn quiet small" data-fc-replay-batch="true">🔄 重播本組</button>${batchIndex < totalBatches - 1 ? `<button class="btn primary small" data-fc-batch-next="true">▶ 進入下一組</button>` : `<button class="btn primary small" data-fc-restart-first-batch="true">🏁 回到第 1 組</button>`}</div></div>` : ''}
+    ${batchCompleted && batchCards.length > 0 ? `<div class="fc-batch-complete-banner" role="status"><strong>🎉 本組 ${batchCards.length} 個單字已完成自動輪播聽讀！</strong><p>第 ${batchIndex + 1} / ${totalBatches} 組 · ${range}。聽過之後，試著不看卡片回想，才知道真正記住多少。</p><div class="fc-batch-complete-actions"><button class="btn quiet small" data-fc-replay-batch="true">🔄 重播本組</button>${batchIndex < totalBatches - 1 ? `<button class="btn primary small" data-fc-batch-next="true">▶ 進入下一組</button>` : `<button class="btn primary small" data-fc-restart-first-batch="true">🏁 回到第 1 組</button>`}</div></div>` : ''}
     ${!card ? `<div class="fc-empty"><p>找不到符合條件的閃卡。請嘗試切換篩選條件或清除搜尋關鍵字。</p></div>` : `
-      <div class="fc-progress-line"><div class="fc-progress-fill" style="width:${((cardIndex + 1) / batchCards.length) * 100}%"></div></div>
+      <div class="fc-progress-line" aria-hidden="true"><div class="fc-progress-fill" style="width:${((cardIndex + 1) / batchCards.length) * 100}%"></div></div>
       <div class="fc-stage">
-        <button class="fc-nav-arrow" data-fc-prev="true" aria-label="上一張字卡" ${cardIndex === 0 ? 'disabled' : ''}>❮</button>
+        <button class="btn quiet fc-nav-arrow" data-fc-prev="true" aria-label="上一張字卡" ${cardIndex === 0 ? 'disabled' : ''}>❮</button>
         <div class="fc-card-wrapper">
           <div class="fc-card-deck">
-            <article class="fc-card ${flipped ? 'is-flipped' : ''} ${justFlipped ? 'just-flipped' : ''}" aria-label="單字閃卡 ${esc(card.word)}">
-              <section class="fc-face fc-front" ${frontFace}>
+            <article class="fc-card fc-card-stage ${stateClass} ${flipped ? 'is-flipped' : ''} ${justFlipped ? 'just-flipped' : ''}" aria-label="單字閃卡 ${esc(card.word)}">
+              <section class="fc-face fc-card-face fc-front" ${frontFace}>
                 <div class="fc-card-top">
                   <span class="fc-cat-tag">${esc(card.category)}</span>
                   <div class="fc-top-badges">
@@ -105,7 +115,7 @@ export function renderBrowse(s) {
                   </div>
                 </div>
                 <div class="fc-card-center">
-                  <div class="fc-word-hero">${esc(card.word)}</div>
+                  <div class="fc-word-hero" lang="en">${esc(card.word)}</div>
                   ${card.chunk ? `<div class="fc-chunk-line">🧩 結構拆解：<span>${esc(card.chunk)}</span></div>` : ''}
                   ${card.ipa ? `<div class="fc-ipa-line">${esc(card.ipa)}</div>` : ''}
                   <div class="fc-thinking-prompt">💭 先在腦中回想中文意思與常見搭配，再翻卡驗證</div>
@@ -117,11 +127,11 @@ export function renderBrowse(s) {
                   </div>
                 </div>
                 <div class="fc-card-bottom">
-                  <span>第 ${cardIndex + 1} / ${batchCards.length} 張 ${isMastered ? '· ✅ 已熟記' : isNeedReview ? '· 📌 待複習' : ''}</span>
+                  <span class="fc-card-count">${counter} ${isMastered ? '· ✅ 已熟記' : isNeedReview ? '· 📌 待複習' : ''}</span>
                   <button class="btn primary" data-fc-flip="true">翻卡看答案 <kbd class="fc-kbd">Space</kbd></button>
                 </div>
               </section>
-              <section class="fc-face fc-back" ${backFace}>
+              <section class="fc-face fc-card-face fc-back" ${backFace}>
                 <div class="fc-card-top">
                   <span class="fc-cat-tag">${esc(card.category)} · ${esc(card.word)} ${card.ipa ? esc(card.ipa) : ''}</span>
                   <button class="btn quiet small" data-fc-speak-zh="${esc(meaning(card))}">🔊 唸中文</button>
@@ -143,16 +153,17 @@ export function renderBrowse(s) {
                     <p class="fc-ex-en">${esc(card.example)}</p>
                     <p class="fc-ex-zh">${esc(card.exampleZh)}</p>
                   </div>` : ''}
+                  ${wordStructure(card.word) ? `<div class="fc-info-block fc-morphology-block">${renderWordStructure(card)}</div>` : ''}
                 </div>
                 <div class="fc-card-bottom">
-                  <span>自己想出來了嗎？選擇下方熟練度或挑戰隨堂快測</span>
+                  <span><span class="fc-card-count">${counter}</span> · 自己想出來了嗎？選擇下方熟練度或挑戰隨堂快測</span>
                   <button class="btn quiet small" data-fc-flip="true">翻回正面 <kbd class="fc-kbd">Space</kbd></button>
                 </div>
               </section>
             </article>
           </div>
         </div>
-        <button class="fc-nav-arrow" data-fc-next="true" aria-label="下一張字卡" ${cardIndex >= batchCards.length - 1 ? 'disabled' : ''}>❯</button>
+        <button class="btn quiet fc-nav-arrow" data-fc-next="true" aria-label="下一張字卡" ${cardIndex >= batchCards.length - 1 ? 'disabled' : ''}>❯</button>
       </div>
       <div class="fc-srs-bar" role="group" aria-label="記憶熟練度評分">
         <button class="btn ${isNeedReview ? 'primary' : 'quiet'} fc-srs-again" data-fc-rate="again">🔁 還不熟（加入待複習）</button>
@@ -221,11 +232,19 @@ export function renderBrowse(s) {
         `) : ''}
       </section>
       ` : ''}
-    `}`;
+    `}
+  </section>`;
 }
 
-function tierButtons(s) {
-  return (s.tierList || []).map(t => `<button class="fc-tier-btn ${s.tierInfo.id === t.id ? 'active' : ''}" data-fc-tier="${t.id}"><span class="fc-tier-label">${s.esc(t.name || t.label || '')}</span><span class="fc-tier-badge">${s.esc(t.count || t.badge || '')}</span></button>`).join('');
+function tierButtons(s, pill) {
+  return (s.tierList || []).map(t => {
+    const name = String(t.name || t.label || '');
+    const count = String(t.count || t.badge || '');
+    // Names such as "國小基礎 1,000 字" already state the size; only add the badge when it says something new.
+    const size = count.match(/\d[\d,]*/)?.[0];
+    const badge = count && !(size && name.includes(size)) ? `<span class="fc-tier-badge">${s.esc(count)}</span>` : '';
+    return pill(s.tierInfo.id === t.id, 'fc-tier-btn', `data-fc-tier="${t.id}"`, `<span class="fc-tier-label">${s.esc(name)}</span>${badge}`);
+  }).join('');
 }
 export function applyRate(rate, card, masteryState) {
   if (!card) return false;

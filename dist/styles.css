@@ -1462,8 +1462,9 @@ th { font-weight: 700; color: var(--text-muted); background: var(--hover-bg); }
 }
 
 @media (max-width: 1024px) {
-  .layout { grid-template-columns: 1fr; }
-  .grid2, .grid3 { grid-template-columns: 1fr; }
+  /* minmax(0, 1fr): wide tables scroll inside .lesson-table instead of stretching the page sideways on phones. */
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 768px) {

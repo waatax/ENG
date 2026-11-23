@@ -1,5 +1,7 @@
 # English Quest 七輪科學迭代優化報告 (2026-11-11)
 
+> **2026-11-23 更正：** 本文 Wave 2／Wave 3「Cycle 7」所寫的「全站測試 100% PASS、已推送至 GitHub Pages」與實際不符。11/10–11/11 三次部署在 GitHub Actions 全部失敗（測試步驟未通過），線上網站一直停在 11/5 版本；本機全套測試當時有 7 項失敗，Wave 3 為未提交狀態。修正、重新驗證與重新上線的紀錄見 [OPTIMIZE-RELEASE-2026-11-23.md](OPTIMIZE-RELEASE-2026-11-23.md)。
+
 **執行工作流：** `( 深度思考 ➔ 規劃 ➔ 優化規劃 ➔ 迭代規劃 ➔ 開始執行 ➔ 確認效果 ➔ 優化 ) × 7`
 
 ---
@@ -51,4 +53,18 @@
 | **Wave 2 · Cycle 5** | 學力診斷報告 (`dist/diagnostic.mjs`) 個人化誤選診斷卡與完整句語音朗讀 | `dist/diagnostic.mjs` | 答錯題目頂部自動顯示 `.diag-user-wrong-box`（「🔍 錯在哪裡：您的選擇 vs. 正確答案」），並新增 `🔊 聽完整句` 語音按鈕 |
 | **Wave 2 · Cycle 6** | 雙向回想練習室 (`dist/flashcard_recall.mjs`) 記憶修復三步法與慢速例句跟讀 + 全域樣式打磨 | `dist/flashcard_recall.mjs`, `dist/learning_joy.css` | 答錯字卡自動顯示「🔬 記憶修復三步法（拍音節 ➔ 綁搭配 ➔ 慢速例句跟讀）」與 `🐢 慢速例句` 按鈕 |
 | **Wave 2 · Cycle 7** | 全站 17 套測試套件（122 項測試）校驗、Byte-Parity 同步與 Git 遠端推送 | `scripts/test_aesthetic_and_diagnostics_r7.mjs`, `scripts/sync_dist_to_site.mjs` | 122 項單元與整合測試 `100% PASS (0 fail)`，`dist/` 與 `site/dist/`（含 `EN/`）100% 位元組完全一致 |
+
+---
+
+## 第三波七輪科學迭代紀錄 (`Wave 3: 7 Cycles × 7 Steps` — 12 學期路徑、多鄰國闖關、聽寫寫作工坊、分級故事、聯想字根卡與擬真模考全覆蓋)
+
+| 輪次 | 核心主題 | 關鍵執行檔案 | 量化驗證指標 |
+| :--- | :--- | :--- | :--- |
+| **Wave 3 · Cycle 1** | 108 課綱 12 學期自學路徑 (`dist/quest/semesters.mjs`) 與第 1 章 Duolingo 闖關引擎 (`dist/duolingo_game.mjs`) `+15%~+25%` 實用內容與專屬錯題解說 | `dist/quest/semesters.mjs`, `dist/quest/school_view.mjs`, `dist/quest/view.mjs`, `dist/duolingo_game.mjs` | 12 個學期單元各新增 3 組核心活用語塊 (`usefulPhrases`) 與互動式「⚡ 學期盲點快測 (`quickCheck`)」含各干擾項錯因；Duolingo 5 大關卡全數實裝針對誤選詞的「🔍 錯在哪裡」動態診斷與通關句型速記卡 |
+| **Wave 3 · Cycle 2** | 最小對立音聽辨、三速連音聽寫 (`dist/quest/speaking_dictation.mjs`) 與 CEFR 分級寫作工坊 (`dist/quest/reading_writing.mjs`) `+25%` 擴充與錯誤診斷 | `dist/quest/speaking_dictation.mjs`, `dist/quest/reading_writing.mjs`, `dist/quest/view.mjs` | 12 組對立音每組由 4 對擴充至 5 對 (`+25%`，共 60 對) 且盲聽答錯即時對比發音嘴型；三速聽寫新增連音／弱讀虛詞／字尾詞形漏聽診斷 (`errorNotes`)；6 級寫作工坊擴充 `+25%` 句型鷹架與 5 大高頻中式盲點自動偵測（不可數名詞、雙重比較級、`look forward to V-ing` 等） |
+| **Wave 3 · Cycle 3** | 51 篇分級故事點字即查共讀館 (`renderGradedReaderModal`) 與首頁 4 級暖身 (`dist/home_experience.mjs`) `+20%` 內容與誤選解析 | `dist/quest/reading_writing.mjs`, `dist/home_experience.mjs` | 51 篇故事共讀視窗新增「🚀 +15% 本篇核心句型提取」與「⚡ 讀後理解隨堂快測」（選錯指出該句在文中的實際語意）；首頁 4 級暖身 12 題全數補齊 `wrong` 干擾項對比解說，4 大圖解觀念表各擴充 `+33%` 對照列 |
+| **Wave 3 · Cycle 4** | 1,000 字國語諧音聯想卡 (`dist/mnemonics/`) 與 500 組字根字族卡 (`dist/roots/`) 翻卡前隨堂快測、錯題解說與深色模式質感升級 | `dist/mnemonics/app.mjs`, `dist/mnemonics/style.css`, `dist/roots/app.mjs` | 1,000 張諧音卡與 500 組字根卡正面新增「⚡ 翻卡前 3 選 1 快測」，選錯立即揭露所選干擾項對應之單字／字根真身與記憶口訣，並支援完整 Dark Mode 與立體懸浮卡片動效 |
+| **Wave 3 · Cycle 5** | 9,500 單字閃卡館背面構詞拆解整合 (`dist/flashcard_browse.mjs`) 與 190 組單字 MP3 電台 (`dist/word_mp3.mjs`) `+10%` 隨堂聽音快測 | `dist/flashcard_browse.mjs`, `dist/flashcard_studio.css`, `dist/word_mp3.mjs` | 9,500 閃卡背面自動嵌入 `renderWordStructure` 字首／字根／字尾拆解圖卡；190 組（每組 50 字）MP3 電台新增 5 題（`+10%`）「🎯 本組隨堂聽音辨義快測」，答錯即時對照本組易混字 |
+| **Wave 3 · Cycle 6** | 7 大擬真模考 (`dist/quest/simulation_view.mjs`)、考試遠征 (`dist/quest/exam_view.mjs`) 錯題診斷與自主精熟雷達 (`dist/junyi_engine.mjs`) `+14.3%` 避雷圖譜 | `dist/quest/simulation_view.mjs`, `dist/quest/simulation.css`, `dist/quest/exam_view.mjs`, `dist/junyi_engine.mjs`, `dist/quest/quest.css`, `dist/learning_joy.css` | 擬真模考與考試遠征交卷報告新增 `simWrongDiagnosis`（針對單選、GRE 雙選等價、多空連動與未作答提供具體錯因）；精熟引擎致命陷阱雷達由 42 項擴充至 48 項（`+14.3%`，涵蓋 TOEIC/SAT/GRE/GMAT） |
+| **Wave 3 · Cycle 7** | 全站 18 套自動化測試（123+ 項斷言）驗證、`dist/` ⇄ `site/dist/` 100% Byte-Parity 同步與 GitHub 遠端部署 | `scripts/test_aesthetic_and_diagnostics_r7.mjs`, `scripts/sync_dist_to_site.mjs` | 全站測試套件 `100% PASS (0 fail)`，`dist/` 與 `site/dist/` 100% 位元組完全一致並推送至 GitHub Pages |
 

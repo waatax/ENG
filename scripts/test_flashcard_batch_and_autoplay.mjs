@@ -70,17 +70,23 @@ test('1. Batch size selection and batch navigation UI rendering', async () => {
 
   // Verify render produces batch options
   const html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('🎯 一次練習字數：'), 'Must show batch size control label');
+  assert.ok(html.includes('📦 每組張數：'), 'Must show batch size control label');
   for (const sz of [10, 20, 30, 50, 100, 0]) {
     assert.ok(html.includes(`data-fc-batch-size="${sz}"`), `Must contain batch button for size ${sz}`);
   }
+  assert.ok(html.includes('data-fc-batch-size="20" aria-pressed="true"'), 'Default batch size 20 must be shown as selected');
+  assert.equal((html.match(/data-fc-batch-size="\d+" aria-pressed="true"/g) || []).length, 1, 'Exactly one batch size is selected');
 
   // Verify voice mode switcher options
-  assert.ok(html.includes('🎙️ 語音輪播順序：'), 'Must display voice mode switcher');
+  assert.ok(html.includes('🎧 輪播語音：'), 'Must display voice mode switcher');
   assert.ok(html.includes('data-fc-voice-mode="word_zh"'), 'Must contain word + zh mode option');
-  assert.ok(html.includes('⚡ 簡易複習：英文 ➔ 中文'), 'Must display simple review option label');
+  assert.match(html, /data-fc-voice-mode="word_zh"[^>]*>⚡ 單字\+中文</, 'Must display simple review option label');
   assert.ok(html.includes('data-fc-voice-mode="word_zh_sentence"'), 'Must contain word + zh + sentence mode option');
-  assert.ok(html.includes('🌟 完整聽讀：英文 ➔ 中文 ➔ 完整例句'), 'Must display full listening option label');
+  assert.match(html, /data-fc-voice-mode="word_zh_sentence"[^>]*>單字\+中文\+例句</, 'Must display full listening option label');
+  for (const mode of ['word_sentence', 'word_en_thinking']) {
+    assert.ok(html.includes(`data-fc-voice-mode="${mode}"`), `Must contain ${mode} option`);
+  }
+  assert.ok(html.includes('data-fc-voice-mode="word_zh_sentence" aria-pressed="true"'), 'Default full listening mode must be shown as selected');
 });
 
 test('2. Batch size event handling and pagination calculation', async () => {
@@ -92,25 +98,36 @@ test('2. Batch size event handling and pagination calculation', async () => {
   fc.handleFlashcardEvents({ dataset: { fcBatchSize: '10' } }, mockRender);
   assert.ok(renderCount > 0, 'Render callback should fire on batch size change');
 
+  // Assert on what the learner reads, not on the inline markup around it.
+  const view = () => fc.renderFlashcardsStudioView().replace(/<[^>]+>/g, '');
+  const elem = fc.FLASHCARD_DATABASE.filter(c => c.tier === 'elem_1000');
   let html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('第 1 / 100 組'), '1000 cards divided by 10 should produce 100 batches');
-  assert.ok(html.includes('卡片 1 / 10 (第 1/100 組)'), 'Card counter should show 1 / 10 and batch 1/100');
+  let text = view();
+  assert.ok(text.includes('第 1 / 100 組'), '1000 cards divided by 10 should produce 100 batches');
+  assert.ok(text.includes('第 1 ~ 10 字'), 'Batch 1 should cover cards 1 to 10');
+  assert.ok(text.includes('第 1 / 10 張'), 'Card counter should show 1 / 10');
+  assert.ok(html.includes(`aria-label="單字閃卡 ${elem[0].word}"`), 'Batch 1 starts with the first card');
 
   // Navigate to Next Batch
   fc.handleFlashcardEvents({ dataset: { fcBatchNext: 'true' } }, mockRender);
   html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('第 2 / 100 組'), 'Should advance to batch 2');
-  assert.ok(html.includes('第 11 ~ 20 字'), 'Should show cards 11 to 20 range');
+  text = view();
+  assert.ok(text.includes('第 2 / 100 組'), 'Should advance to batch 2');
+  assert.ok(text.includes('第 11 ~ 20 字'), 'Should show cards 11 to 20 range');
+  assert.ok(text.includes('第 1 / 10 張'), 'Card counter restarts at 1 / 10 in the new batch');
+  assert.ok(html.includes(`aria-label="單字閃卡 ${elem[10].word}"`), 'Batch 2 starts with the 11th card');
 
   // Navigate to Prev Batch
   fc.handleFlashcardEvents({ dataset: { fcBatchPrev: 'true' } }, mockRender);
-  html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('第 1 / 100 組'), 'Should return to batch 1');
+  text = view();
+  assert.ok(text.includes('第 1 / 100 組'), 'Should return to batch 1');
+  assert.ok(text.includes('第 1 ~ 10 字'), 'Should show cards 1 to 10 range again');
 
   // Change batch size to 50
   fc.handleFlashcardEvents({ dataset: { fcBatchSize: '50' } }, mockRender);
-  html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('第 1 / 20 組'), '1000 cards divided by 50 should produce 20 batches');
+  text = view();
+  assert.ok(text.includes('第 1 / 20 組'), '1000 cards divided by 50 should produce 20 batches');
+  assert.ok(text.includes('第 1 / 50 張'), 'Card counter should show 1 / 50');
 });
 
 test('3. Card back face provides Chinese speech synthesis button', async () => {
@@ -121,8 +138,11 @@ test('3. Card back face provides Chinese speech synthesis button', async () => {
   // Flip card
   fc.handleFlashcardEvents({ dataset: { fcFlip: 'true' } }, mockRender);
   const html = fc.renderFlashcardsStudioView();
-  assert.ok(html.includes('data-fc-speak-zh='), 'Back of card must have Chinese audio button');
-  assert.ok(html.includes('🔊 聽中文'), 'Button should display 🔊 聽中文');
+  const back = html.indexOf('fc-back" aria-hidden="false"');
+  assert.ok(back > 0, 'Flipping must reveal the back face');
+  const backHtml = html.slice(back, html.indexOf('</article>', back));
+  assert.ok(backHtml.includes('data-fc-speak-zh='), 'Back of card must have Chinese audio button');
+  assert.match(backHtml, /data-fc-speak-zh="[^"]+">🔊 唸中文</, 'Button should display 🔊 唸中文');
 
   // Trigger Chinese speech
   speechCalls.length = 0;

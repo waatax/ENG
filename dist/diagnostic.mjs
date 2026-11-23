@@ -108,7 +108,8 @@ function finishDiagnostic(renderCallback) {
       scaledScore: diagSessionTier === null ? diagEvaluation.scaledScore : Math.round(diagEvaluation.rawCorrect / diagQuestions.length * 100),
       rawCorrect: diagEvaluation.rawCorrect,
       cefr: diagSessionTier === null ? diagEvaluation.cefr : levelName(diagSessionTier),
-      badge: diagSessionTier === null ? diagEvaluation.honoraryBadge.title : '指定程度練習',
+      // evaluateDiagnostic() no longer returns honoraryBadge; reading .title on it threw and history was never saved.
+      badge: diagSessionTier === null ? (diagEvaluation.honoraryBadge?.title || diagEvaluation.cefr || '程度檢定') : '指定程度練習',
       stallTier: diagSessionTier === null ? diagEvaluation.stallTierLabel : levelName(diagSessionTier)
     };
     diagHistory.unshift(summaryRecord);

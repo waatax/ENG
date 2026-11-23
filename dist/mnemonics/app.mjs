@@ -4,7 +4,22 @@ import {directionRecord,recordRecall,cleanRecord} from './mnemonic_recall.mjs?v=
 import {createMnemonicPlaylist,AUDIO_VERSION} from './mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-mnemonics-v1',esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const METHODS=['諧音聯想','外來語借音','英文同音','構詞拆字','對比聯想','情境圖像'];
-let cards=[],progress={},custom={},page=0,order=null;const SIZE=12;const revealed=new Set();
+let cards=[],progress={},custom={},page=0,order=null;const SIZE=12;const revealed=new Set(),quizPicks=new Map();
+function buildMnemonicChoices(c){
+ if(!cards.length)return [];
+ const targetZh=recallMeaning(c);
+ const pool=cards.filter(x=>x.id!==c.id&&recallMeaning(x)!==targetZh&&(x.displayWord||x.word)!==(c.displayWord||c.word));
+ if(pool.length<2)return [];
+ let h=0;for(let i=0;i<c.id.length;i++)h=((h<<5)-h+c.id.charCodeAt(i))|0;
+ const abs=Math.abs(h);
+ // keep the two distractors distinct from each other (several cards share a meaning)
+ const d1=pool[abs%pool.length];let d2=null;
+ for(let k=0;k<pool.length&&!d2;k++){const x=pool[(abs+37+k)%pool.length];if(recallMeaning(x)!==recallMeaning(d1)&&(x.displayWord||x.word)!==(d1.displayWord||d1.word))d2=x;}
+ if(!d2)return [];
+ const opts=[c,d1,d2];
+ const pos=abs%3;[opts[0],opts[pos]]=[opts[pos],opts[0]];
+ return opts;
+}
 try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');if(saved&&typeof saved==='object'){progress=saved.progress||{};custom=saved.custom||{};}}catch{$('#notice').textContent='無法讀取舊進度，仍可使用字卡。';}
 const player=new Audio();player.preload='none';let active=null;
 const recallMeaning=c=>c.zh.replace(/（[^）]*[a-zA-Z][^）]*）|\([^)]*[a-zA-Z][^)]*\)/g,'').trim();
@@ -40,9 +55,11 @@ function cueHtml(c){const cue=custom[c.id]||c.cue;if(custom[c.id]||!c.hook||!cue
 function stressText(p){return p?`${p.syllables} 音節 · ${p.syllables===1?'單音節':'第 '+p.primaryStress+' 音節重讀'}`:'';}
 function familyLinks(c){return c.families?.length?`<p class="families">字族：${c.families.map(f=>`<a href="../roots/index.html#${esc(f.id)}">${esc(f.type)} ${esc(f.key)}（${esc(f.meaning)}）</a>`).join('')}</p>`:'';}
 function cardHtml(c){const open=revealed.has(c.id),saved=recallRecord(c),reverse=direction()==='reverse',word=c.displayWord||c.word;
+const qOpts=buildMnemonicChoices(c),pickedId=quizPicks.get(c.id)||null,pickedCard=pickedId?cards.find(x=>x.id===pickedId):null,qOk=pickedCard?.id===c.id;
+const quizBox=!open&&qOpts.length===3?`<div class="mnem-quick-quiz" role="group" aria-label="翻卡前隨堂 3 選 1 快測"><span class="mnem-quiz-label">⚡ 翻卡前快測：選出正確${reverse?'英文單字':'中文意思'}</span><div class="mnem-quiz-opts">${qOpts.map(o=>{const isPicked=pickedId===o.id,isRight=o.id===c.id,cls=pickedId===null?'':isRight?'is-correct':isPicked?'is-wrong':'';return `<button type="button" class="mnem-quiz-btn ${cls}" data-mquiz="${esc(c.id)}" data-pick="${esc(o.id)}">${esc(reverse?(o.displayWord||o.word):recallMeaning(o))}</button>`;}).join('')}</div>${pickedCard?(qOk?`<div class="mnem-quiz-fb good" role="status">✅ 答對了！<strong>${esc(word)}</strong> 就是「${esc(recallMeaning(c))}」${c.hook?`（口訣鉤子：${esc(c.hook)}）`:''}。</div>`:`<div class="mnem-quiz-fb bad" role="alert">❌ <strong>🔍 錯在哪裡：</strong>你選的「${esc(reverse?(pickedCard.displayWord||pickedCard.word):recallMeaning(pickedCard))}」其實是 <code>${esc(pickedCard.displayWord||pickedCard.word)}</code>（${esc(recallMeaning(pickedCard))}）！本卡 <code>${esc(word)}</code> 是「<strong>${esc(recallMeaning(c))}</strong>」— 記憶提示：${esc(custom[c.id]||c.cue)}</div>`):''}</div>`:'';
 return `<article class="word-card" data-id="${esc(c.id)}"><div class="topline"><span>${esc(c.category)}</span><span class="method method-${METHODS.indexOf(c.method)}">${esc(c.method)}</span></div>
 <div class="card-front" ${open?'hidden':''}><p class="recall-prompt">${reverse?"看中文，先說英文並拼字":"看英文，先說中文意思"}</p><h2 lang="${reverse?"zh-Hant":"en"}">${esc(reverse?recallMeaning(c):word)}</h2>${reverse?"":`<p class="phonetic" lang="en">音素：${esc(c.sounds)}</p><p class="pronunciation">${esc(stressText(c.pronunciation))}</p>`}
-<div class="card-picture" aria-hidden="true">${esc(c.icon)}</div></div>
+<div class="card-picture" aria-hidden="true">${esc(c.icon)}</div>${quizBox}</div>
 <div class="actions"><button class="play" data-play="${esc(c.id)}" aria-label="${reverse?"聽答案提示":"播放 "+esc(word)} 的四段聯想 MP3" aria-pressed="false">▶ 四段聯想 MP3</button><a class="download" href="${trioUrl(c)}?v=${AUDIO_VERSION}" download="${esc(c.word)}-聯想.mp3" aria-label="${reverse?"下載答案音訊":"下載 "+esc(word)+" MP3"}">↓ MP3</a></div>
 <p class="audio-order">英文 → ${c.method==='諧音聯想'?'近音口訣':'聯想提示'} → 中文意思 → 英文</p>
 <button data-reveal="${esc(c.id)}" aria-expanded="${open}" aria-controls="answer-${esc(c.id)}">${open?'翻回正面，再回想':'翻卡：看意思與聯想'}</button>
@@ -56,7 +73,8 @@ function render(){stop();const filtered=list();page=Math.max(0,Math.min(page,Mat
 $('#cards').innerHTML=filtered.slice(page*SIZE,(page+1)*SIZE).map(cardHtml).join('')||'<p>沒有符合條件的字卡。可清除搜尋或切換篩選。</p>';
 playlist.refresh();$('#prev').disabled=page===0;$('#next').disabled=(page+1)*SIZE>=filtered.length;$('#page').textContent=`${filtered.length?page+1:0} / ${Math.ceil(filtered.length/SIZE)} 頁`;
 }
-$('#cards').addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset,id=d.play||d.reveal||d.grade||d.save||d.reset,c=cards.find(c=>c.id===id);if(!c)return;
+$('#cards').addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset,id=d.play||d.reveal||d.grade||d.save||d.reset||d.mquiz,c=cards.find(c=>c.id===id);if(!c)return;
+if(d.mquiz){quizPicks.set(id,d.pick);render();return;}
 if(d.play){playlist.stop();if(active===id&&!player.paused){player.pause();b.textContent='▶ 繼續播放';b.setAttribute('aria-pressed','false');return;}if(active!==id){stop();active=id;player.src=new URL(trioUrl(c)+'?v='+AUDIO_VERSION,import.meta.url).href;}try{await player.play();if(active===id){b.textContent='Ⅱ 暫停';b.setAttribute('aria-pressed','true');}}catch{if(active!==id)return;stop();$('#notice').textContent='無法開始播放，請重試或使用 MP3 下載。';}return;}
 if(d.reveal){revealed.has(id)?revealed.delete(id):revealed.add(id);const answer=$('#answer-'+id);answer.hidden=!revealed.has(id);b.closest('.word-card').querySelector('.card-front').hidden=!answer.hidden;b.setAttribute('aria-expanded',String(!answer.hidden));b.textContent=answer.hidden?'翻卡：看意思與聯想':'遮住答案，再回想';return;}
 if(d.grade){const ok=d.correct==='true',old=progress[id];progress[id]=recordRecall(old,ok,direction());save();revealed.delete(id);render();$('#notice').textContent=`${c.displayWord||c.word} 已記錄；${ok?'依此方向的回想進度安排下次複習。':'十分鐘後再試一次。'}`;}

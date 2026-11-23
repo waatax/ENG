@@ -156,7 +156,7 @@ export const duolingoState = {
   s1Pool: ['Actions', 'speak', 'louder', 'than', 'words.', 'speaks', 'loud', 'is'],
   s1Selected: [],
 
-  // Stage 2: Match Pairs
+  // Stage 2: Match Pairs (6 core pairs)
   s2Pairs: [
     { en: 'sentence', zh: '句子；判決' },
     { en: 'action', zh: '動作；行動' },
@@ -165,9 +165,15 @@ export const duolingoState = {
     { en: 'yesterday', zh: '昨天' },
     { en: 'tomorrow', zh: '明天' }
   ],
+  s2BonusUsefulPhrases: [
+    ['Actions speak louder than words.', '行動勝於空談（複數名詞搭配原形動詞 speak）'],
+    ['Water boils at 100°C.', '水在攝氏一百度沸騰（科學真理永遠維持現在簡單式 boils）'],
+    ['What are you doing right now?', '你現在正在做什麼？（right now 搭配現在進行式 be + V-ing）']
+  ],
   s2Tiles: [],
   s2SelectedCard: null,
   s2MatchedPairs: [],
+  s2WrongNotice: '',
 
   // Stage 3: Listen & Build
   s3Target: ['The', 'teacher', 'told', 'us', 'that', 'water', 'boils', 'at', '100°C.'],
@@ -196,6 +202,7 @@ function initMatchTiles() {
   duolingoState.s2Tiles = tiles;
   duolingoState.s2SelectedCard = null;
   duolingoState.s2MatchedPairs = [];
+  duolingoState.s2WrongNotice = '';
 }
 
 export function resetDuolingoGame() {
@@ -383,9 +390,10 @@ function renderStage2MatchPairs() {
         <span class="pill" style="background:#fef3c7;color:#92400e">關卡 2 / 5 · 連連看急速配對 (Quizlet & Duolingo Match)</span>
         <h3 style="margin:8px 0 4px;font-size:18px;color:#0f172a">第 01 章 核心字彙形音義配對消除</h3>
         <p style="color:#64748b;font-size:14px;margin:0">
-          點選英文單字與對應中文釋義，完成 6 組配對消除（已消除：${duolingoState.s2MatchedPairs.length} / 6）：
+          點選英文單字與對應中文釋義，完成 ${duolingoState.s2Pairs.length} 組配對消除（已消除：${duolingoState.s2MatchedPairs.length} / ${duolingoState.s2Pairs.length}）：
         </p>
       </div>
+      ${duolingoState.s2WrongNotice ? `<div class="duo-match-wrong-banner" role="alert" style="background:#fef2f2;border:1.5px solid #f87171;color:#991b1b;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13.5px;line-height:1.5">${duolingoState.s2WrongNotice}</div>` : ''}
 
       <!-- 12 塊打亂卡片網格 -->
       <div class="duo-match-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin-bottom:20px">
@@ -561,6 +569,12 @@ function renderVictoryScreen() {
         </div>
       </div>
 
+      <!-- +20% 實用核心句型溫習卡 -->
+      <div class="duo-victory-review" style="text-align:left;background:#ffffff;border:1px solid #d1fae5;border-radius:12px;padding:14px 16px;margin-bottom:20px">
+        <div style="font-size:13px;font-weight:800;color:#047857;margin-bottom:8px">🚀 本章 +20% 實用奪分句型速記卡：</div>
+        ${(duolingoState.s2BonusUsefulPhrases || []).map(([en, zh]) => `<div style="font-size:13px;padding:4px 0;border-bottom:1px dashed #e2e8f0"><strong lang="en" style="color:#0f172a">${en}</strong> <span style="color:#475569">— ${zh}</span></div>`).join('')}
+      </div>
+
       <div style="display:flex;justify-content:center;gap:12px">
         <button class="btn primary" data-duo-action="replay" style="background:#10b981;font-weight:700;padding:12px 24px;border-radius:24px">
           🔁 再挑戰一次 (+20 XP)
@@ -674,10 +688,20 @@ export function handleDuolingoClick(button, rerender) {
       playDuolingoSound('wrong');
       duolingoState.hearts--;
       duolingoState.combo = 0;
+      const hasSpeaks = duolingoState.s1Selected.includes('speaks');
+      const hasLoud = duolingoState.s1Selected.includes('loud');
+      const hasIs = duolingoState.s1Selected.includes('is');
+      const specificReason = hasSpeaks
+        ? '🔍 錯在哪裡：你選了單數動詞 "speaks"，但主詞 Actions 字尾有 -s 是複數名詞，現在簡單式必須用原形動詞 "speak"！'
+        : hasLoud
+          ? '🔍 錯在哪裡：後面有比較級連接詞 "than"，前面必須用比較級 "louder"（更大聲），不能用原級 "loud"！'
+          : hasIs
+            ? '🔍 錯在哪裡：speak 是一般動詞，現在簡單式不需要再加 be 動詞 "is"！'
+            : `🔍 錯在哪裡：你的排詞「${userStr || '（未選完）'}」語序或字數不完整。Actions（複數主詞）+ speak（原形動詞）+ louder than words（比較級結構）。`;
       duolingoState.drawer = {
         isCorrect: false,
         title: '需要注意喔！',
-        message: `正確組裝為："${targetStr}"。Actions 是複數主詞，不可加 -s！`
+        message: `${specificReason} 正確組裝為："${targetStr}"。`
       };
     }
     rerender();
@@ -701,6 +725,7 @@ export function handleDuolingoClick(button, rerender) {
           playDuolingoSound('match');
           duolingoState.s2MatchedPairs.push(tile.pairId);
           duolingoState.s2SelectedCard = null;
+          duolingoState.s2WrongNotice = '';
           duolingoState.combo++;
           if (duolingoState.s2MatchedPairs.length === duolingoState.s2Pairs.length) {
             playDuolingoSound('correct');
@@ -716,6 +741,9 @@ export function handleDuolingoClick(button, rerender) {
           playDuolingoSound('wrong');
           duolingoState.hearts--;
           duolingoState.combo = 0;
+          const pA = duolingoState.s2Pairs[duolingoState.s2SelectedCard.pairId];
+          const pB = duolingoState.s2Pairs[tile.pairId];
+          duolingoState.s2WrongNotice = `🔍 錯在哪裡：你點了「${duolingoState.s2SelectedCard.text}」與「${tile.text}」，但 <b>${pA.en}</b> 的意思是「${pA.zh}」，而 <b>${pB.en}</b> 的意思是「${pB.zh}」喔！`;
           duolingoState.s2SelectedCard = null;
         }
       }
@@ -774,10 +802,20 @@ export function handleDuolingoClick(button, rerender) {
       playDuolingoSound('wrong');
       duolingoState.hearts--;
       duolingoState.combo = 0;
+      const hasBoiled = duolingoState.s3Selected.includes('boiled');
+      const hasWill = duolingoState.s3Selected.includes('will');
+      const hasBareBoil = duolingoState.s3Selected.includes('boil');
+      const s3Why = hasBoiled
+        ? '🔍 錯在哪裡：你選了過去式 "boiled"（誤受前面 told 影響），但「水在 100°C 沸騰」是科學客觀真理，永遠用現在簡單式 "boils"！'
+        : hasWill
+          ? '🔍 錯在哪裡：will boil 是未來式，但水在 100°C 沸騰是一直成立的科學事實，不是「將來才會發生」的事，要用現在簡單式 "boils"！'
+          : hasBareBoil
+            ? '🔍 錯在哪裡：water 是不可數名詞，當主詞時視為第三人稱單數，現在簡單式動詞要加 -s，所以是 "boils" 而不是原形 boil！'
+            : `🔍 錯在哪裡：你的排詞「${userStr || '（未選完）'}」與原音有出入。`;
       duolingoState.drawer = {
         isCorrect: false,
         title: '聽力有疏漏喔！',
-        message: `正確句子為："${targetStr}"。注意水是第三人稱不可數單數，且為客觀真理，動詞必須用 boils！`
+        message: `${s3Why} 正確句子為："${targetStr}"。`
       };
     }
     rerender();
@@ -803,10 +841,15 @@ export function handleDuolingoClick(button, rerender) {
       playDuolingoSound('wrong');
       duolingoState.hearts--;
       duolingoState.combo = 0;
+      const s4Reasons = {
+        1: '🔍 錯在哪裡：你選了 (B) melted — 誤受主句過去式 told 影響而把子句改成過去式。請牢記：科學真理與自然物理法則永遠維持現在簡單式 melts！',
+        2: '🔍 錯在哪裡：你選了 (C) was melting — 句首 Look at 讓人想到「正在進行」，主句 told yesterday 又讓人想用過去式，於是拼成過去進行式；但 that 子句陳述的是「冰在 0°C 以上會融化」的恆常物理定律，應選 melts！',
+        3: '🔍 錯在哪裡：你選了 (D) will melt — 客觀科學真理與物理常律一律使用現在簡單式 melts，不需加未來助動詞 will！'
+      };
       duolingoState.drawer = {
         isCorrect: false,
         title: '踩到陷阱啦！',
-        message: '常考誘答陷阱：看到前面 told 就選過去式 melted。請牢記：科學真理與自然物理現象永遠維持現在式 melts！'
+        message: s4Reasons[idx] || '常考誘答陷阱：看到前面 told 就選過去式 melted。請牢記：科學真理與自然物理現象永遠維持現在式 melts！'
       };
     }
     rerender();
@@ -836,10 +879,14 @@ export function handleDuolingoClick(button, rerender) {
       playDuolingoSound('wrong');
       duolingoState.hearts--;
       duolingoState.combo = 0;
+      const s5Reasons = {
+        1: '🔍 錯在哪裡：你選了 (B) "I finish my homework tomorrow afternoon..." — Alex 問的是 right now（現在正在做什麼），這句卻在講明天下午的安排；而且個人計畫要用 will / be going to（如 I will finish...），不用現在簡單式 finish！',
+        2: '🔍 錯在哪裡：你選了 (C) "I was finishing my English homework right now." — 過去進行式 was finishing 與現在時間副詞 right now 時態嚴重衝突！應改為現在進行式 I am finishing (A)。'
+      };
       duolingoState.drawer = {
         isCorrect: false,
         title: '時態搭配不和諧！',
-        message: '選項 (B) 現在簡單式配 tomorrow 矛盾；選項 (C) was finishing 與 right now 衝突。唯一正解為 (A)！'
+        message: s5Reasons[idx] || '選項 (B) 現在簡單式配 tomorrow 矛盾；選項 (C) was finishing 與 right now 衝突。唯一正解為 (A)！'
       };
     }
     rerender();

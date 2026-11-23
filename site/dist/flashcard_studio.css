@@ -1559,8 +1559,123 @@ body:has(.fcx) .level-top-entry { display: none; }
   margin-top: 10px;
 }
 
+.fc-morphology-block .word-structure {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  padding: 4px 0 0;
+}
+
+/* Browse layout for the 2026-11-11 card markup (header, batch bar, card faces) */
+.flashcard-studio.fcx .fc-face[aria-hidden="true"] { display: none !important; }
+.flashcard-studio.fcx .fc-face { transform: none !important; }
+.fcx .fc-kbd { position: static; }
+.fc-stats-badge { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.fc-audit-note { margin: 0 0 12px; font-size: 13px; color: var(--x-muted); }
+.fc-audio-alert {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--x-bad-soft);
+  color: var(--x-ink);
+  border: 1px solid var(--x-bad);
+}
+.fc-tiers { margin-bottom: 14px; }
+.fc-tier-badge { font-size: 12px; font-weight: 600; opacity: .8; }
+.fc-batch-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0;
+  margin-bottom: 14px;
+  border-top: 1px dashed var(--x-line);
+  border-bottom: 1px dashed var(--x-line);
+}
+.fc-batch-group { align-items: center; }
+.fc-batch-label { font-size: 13.5px; font-weight: 700; color: var(--x-muted); }
+.fc-batch-pager { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.fc-batch-indicator { font-size: 14px; color: var(--x-ink); }
+.fc-batch-indicator strong { color: var(--x-accent); font-size: 16px; }
+.fc-batch-complete-banner {
+  text-align: center;
+  background: var(--x-accent-soft);
+  color: var(--x-ink);
+  border: 1.5px solid var(--x-accent);
+  border-radius: 20px;
+  padding: 18px 16px;
+  margin-bottom: 16px;
+}
+.fc-batch-complete-banner > strong { font-size: 17px; }
+.fc-batch-complete-banner p { margin: 6px 0 12px; color: var(--x-muted); font-size: 14px; }
+.fc-batch-complete-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.fc-progress-line { height: 6px; border-radius: 999px; background: var(--x-soft); overflow: hidden; margin-bottom: 12px; }
+.fc-progress-fill { height: 100%; background: var(--x-accent); border-radius: inherit; }
+.fc-stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.fcx .fc-nav-arrow { min-width: 44px; padding: 8px; font-size: 18px; }
+.fc-card-top,
+.fc-card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.fc-card-bottom { font-size: 13px; color: var(--x-muted); }
+.fc-cat-tag,
+.fc-pos-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--x-muted);
+  background: var(--x-soft);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.fc-card-center,
+.fc-back-body { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.fc-card-center { align-items: center; justify-content: center; text-align: center; }
+.fc-word-hero {
+  font-size: clamp(32px, 6vw, 46px);
+  font-weight: 850;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+.fc-zh-hero { font-size: clamp(24px, 4.6vw, 32px); font-weight: 800; line-height: 1.3; }
+.fc-chunk-line { font-weight: 700; color: var(--x-blue); }
+.fc-ipa-line { color: var(--x-muted); }
+.fc-en-clue-box {
+  width: 100%;
+  text-align: left;
+  background: var(--x-soft);
+  border-left: 4px solid var(--x-accent);
+  border-radius: 12px;
+  padding: 8px 14px;
+}
+.fc-en-clue-box p { margin: 4px 0 0; overflow-wrap: anywhere; }
+.fc-en-clue-tag { font-size: 12px; font-weight: 700; color: var(--x-accent); }
+.fc-audio-row,
+.fc-example-audio-btns,
+.fc-srs-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.fc-info-block {
+  background: var(--x-soft);
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+.fc-info-block p { margin: 4px 0 0; overflow-wrap: anywhere; }
+.fc-example-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.fc-ex-zh { color: var(--x-muted); }
+.fc-empty { text-align: center; color: var(--x-muted); padding: 24px 12px; }
+
 @media (max-width: 640px) {
   .fc-instant-options {
     grid-template-columns: 1fr;
   }
+  .fc-stage { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .fc-stage .fc-card-wrapper { grid-column: 1 / -1; grid-row: 1; }
+  .fc-header .fc-stats-badge { width: 100%; }
 }

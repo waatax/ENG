@@ -3,7 +3,23 @@ import {showVocabularyCard,hideVocabularyCard} from '../vocabulary_card.mjs';
 import {createMnemonicPlaylist,AUDIO_VERSION} from '../mnemonics/mnemonic_playlist.mjs?v=keyword6r2';
 const $=s=>document.querySelector(s),KEY='eq-word-families-v1',SIZE=12,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const TYPES=['複合詞字族','字首','字尾','字根'];
-let groups=[],timing=new Map(),progress={},page=0,order=null,cardWords=new Set();
+// The quick-quiz classes are styled in mnemonics/style.css, which this page does not load.
+if(!document.getElementById('roots-quiz-style')){const st=document.createElement('style');st.id='roots-quiz-style';st.textContent='.mnem-quick-quiz{margin:12px 0 8px;padding:12px 14px;border-radius:14px;background:#f4f9f5;border:1px solid #c7ddd0;text-align:left}.mnem-quiz-label{display:block;font-size:12.5px;font-weight:750;color:#136c5b;margin-bottom:8px}.mnem-quiz-opts{display:flex;flex-wrap:wrap;gap:6px}.mnem-quiz-btn{flex:1 1 auto;padding:7px 10px;border-radius:10px;font-size:13px;font-weight:650;background:#fff;border:1.5px solid #bfd3c7;color:#193b3c;cursor:pointer}.mnem-quiz-btn:hover{border-color:#136c5b;background:#eaf6ee}.mnem-quiz-btn.is-correct{background:#dcfce7;border-color:#15803d;color:#14532d;font-weight:750}.mnem-quiz-btn.is-wrong{background:#fee2e2;border-color:#b91c1c;color:#7f1d1d;font-weight:750}.mnem-quiz-fb{margin-top:9px;padding:9px 11px;border-radius:10px;font-size:12.8px;line-height:1.55}.mnem-quiz-fb.good{background:#ecfdf5;border-left:4px solid #10b981;color:#065f46}.mnem-quiz-fb.bad{background:#fef2f2;border-left:4px solid #ef4444;color:#991b1b}.rq-pending{filter:blur(6px);transition:filter .15s}.rq-pending:hover{filter:none}';document.head.append(st);}
+let groups=[],timing=new Map(),progress={},page=0,order=null,cardWords=new Set(),rootQuizPicks=new Map();
+function buildRootChoices(g){
+ if(!groups.length)return [];
+ const pool=groups.filter(x=>x.id!==g.id&&x.meaning!==g.meaning);
+ if(pool.length<2)return [];
+ let h=0;for(let i=0;i<g.id.length;i++)h=((h<<5)-h+g.id.charCodeAt(i))|0;
+ const abs=Math.abs(h);
+ // several families share a meaning (e.g. 球、水), so make sure the two distractors read differently
+ const d1=pool[abs%pool.length];let d2=null;
+ for(let k=0;k<pool.length&&!d2;k++){const x=pool[(abs+29+k)%pool.length];if(x.meaning!==d1.meaning)d2=x;}
+ if(!d2)return [];
+ const opts=[g,d1,d2];
+ const pos=abs%3;[opts[0],opts[pos]]=[opts[pos],opts[0]];
+ return opts;
+}
 try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');if(saved&&typeof saved==='object'&&saved.progress)progress=saved.progress;}catch{$('#notice').textContent='無法讀取舊進度，仍可使用字族。';}
 function save(){try{localStorage.setItem(KEY,JSON.stringify({version:1,progress}));}catch{$('#notice').textContent='無法儲存到此瀏覽器；請匯出備份。';}}
 const fileFor=g=>'audio/'+g.id+'.mp3';const url=g=>new URL(fileFor(g)+'?v='+AUDIO_VERSION,import.meta.url).href;
@@ -35,8 +51,12 @@ function list(){const q=$('#search').value.trim().toLowerCase(),type=$('#type').
  let result=groups.filter(g=>(!q||haystack(g).includes(q))&&(!type||g.typeLabel===type)&&(mode==='all'||(mode==='new'?!progress[g.id]:mode==='known'?Number(progress[g.id]?.step)>=1:Number(progress[g.id]?.due)<=now)));
  if(order){const rank=new Map(order.map((id,i)=>[id,i]));result.sort((a,b)=>rank.get(a.id)-rank.get(b.id));}return result;}
 function groupHtml(g){const saved=progress[g.id];
+ const qOpts=buildRootChoices(g),pickedId=rootQuizPicks.get(g.id)||null,pickedGroup=pickedId?groups.find(x=>x.id===pickedId):null,qOk=pickedGroup?.id===g.id;
+ const quizPending=qOpts.length===3&&!pickedGroup;
+ const quizBox=qOpts.length===3?`<div class="mnem-quick-quiz" role="group" aria-label="字族構詞快測"><span class="mnem-quiz-label">⚡ 字根構詞快測：看下方例字猜猜看，「${esc(g.display)}」的核心語意是？</span><div class="mnem-quiz-opts">${qOpts.map(o=>{const isPicked=pickedId===o.id,isRight=o.id===g.id,cls=pickedId===null?'':isRight?'is-correct':isPicked?'is-wrong':'';return `<button type="button" class="mnem-quiz-btn ${cls}" data-rquiz="${esc(g.id)}" data-pick="${esc(o.id)}">${esc(o.meaning)}</button>`;}).join('')}</div>${pickedGroup?(qOk?`<div class="mnem-quiz-fb good" role="status">✅ 答對了！<strong>${esc(g.display)}</strong> 表示「${esc(g.meaning)}」— ${esc(g.tip)}</div>`:`<div class="mnem-quiz-fb bad" role="alert">❌ <strong>🔍 錯在哪裡：</strong>你選的「${esc(pickedGroup.meaning)}」其實是${esc(pickedGroup.typeLabel)} <code>${esc(pickedGroup.display)}</code>（如 ${esc(pickedGroup.members?.[0]?.word||'')}）的意思！本組 <code>${esc(g.display)}</code> 的真正意思是「<strong>${esc(g.meaning)}</strong>」— ${esc(g.tip)}</div>`):''}</div>`:'';
  return `<article class="family type-${TYPES.indexOf(g.typeLabel)}" id="${g.id}" data-id="${g.id}"><div class="topline"><span class="type">${esc(g.typeLabel)}</span><span>${g.id.replace('wf-','#')}</span></div>
-<h2 lang="en">${esc(g.display)}</h2><p class="meaning">${esc(g.meaning)}</p><p class="tip">${esc(g.tip)}</p>
+<h2 lang="en">${esc(g.display)}</h2>
+${quizBox}<p class="meaning${quizPending?' rq-pending':''}">${esc(g.meaning)}</p><p class="tip${quizPending?' rq-pending':''}">${esc(g.tip)}</p>
 <div class="actions"><button class="play" data-play="${g.id}" aria-pressed="false" aria-label="播放 ${esc(g.display)} 整組 MP3">▶ 整組 MP3</button><a class="download" href="${fileFor(g)}?v=${AUDIO_VERSION}" download="${g.id}-${esc(g.variants[0])}.mp3" aria-label="下載 ${esc(g.display)} MP3">↓ MP3</a></div>
 <ol class="members">${g.members.map((m,i)=>`<li><button class="member" type="button" data-group="${g.id}" data-member="${i}" aria-label="播放 ${esc(m.word)}"><span class="w" lang="en">${esc(m.word)}</span><span class="zh">${esc(m.zh)}</span></button><span class="parts">${esc(m.parts)}</span>${cardWords.has(m.word.toLowerCase())?`<a class="card-link" href="../mnemonics/index.html?q=${encodeURIComponent(m.word.toLowerCase())}#cards">聯想卡</a>`:''}</li>`).join('')}</ol>
 <div class="grade"><button data-grade="${g.id}" data-correct="false">還不熟</button><button data-grade="${g.id}" data-correct="true">記住了</button></div>
@@ -49,7 +69,8 @@ function render(){stop();const filtered=list(),pages=Math.max(1,Math.ceil(filter
 async function start(button,g,from=0,until=null){playlist.stop();if(active!==g.id){stop();active=g.id;player.src=url(g);}clipEnd=until;
  const seek=()=>{player.currentTime=from;};if(player.readyState>=1)seek();else player.addEventListener('loadedmetadata',seek,{once:true});
  try{await player.play();if(button){button.textContent='Ⅱ 暫停';button.setAttribute('aria-pressed','true');}}catch{if(active!==g.id)return;stop();$('#notice').textContent='無法開始播放，請重試或使用 MP3 下載。';}}
-$('#families').addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset,id=d.play||d.group||d.grade,g=groups.find(g=>g.id===id);if(!g)return;
+$('#families').addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset,id=d.play||d.group||d.grade||d.rquiz,g=groups.find(g=>g.id===id);if(!g)return;
+ if(d.rquiz){rootQuizPicks.set(id,d.pick);render();return;}
  if(d.play){if(active===id&&!player.paused&&clipEnd===null){player.pause();b.textContent='▶ 繼續播放';b.setAttribute('aria-pressed','false');return;}if(active===id&&player.paused&&clipEnd===null&&player.currentTime>0){await start(b,g,player.currentTime);return;}stop();await start(b,g,0);return;}
  if(d.member!==undefined){b.classList.add('revealed');const parts=(timing.get(id)||[]).filter(p=>p.member===Number(d.member));if(!parts.length){$('#notice').textContent='這組音檔的時間資料尚未載入。';return;}stop();await start(null,g,Math.max(0,parts[0].start-.05),parts[parts.length-1].end+.15);return;}
  if(d.grade){const ok=d.correct==='true',old=progress[id],step=ok?Math.min((Number(old?.step)||0)+1,4):0;progress[id]={step,reviews:(Number(old?.reviews)||0)+1,due:Date.now()+(ok?[0,1,3,7,14][step]*86400000:600000)};save();render();$('#notice').textContent=`${g.display} 已記錄；${ok?'依進度安排下次複習。':'十分鐘後再練一次。'}`;}

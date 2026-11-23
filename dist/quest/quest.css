@@ -415,3 +415,11 @@ body.reduce *,body.reduce *:before,body.reduce *:after{animation:none!important;
 .lab-clinic-item{background:var(--card);border:1px solid var(--line-d);border-radius:12px;padding:10px 14px}
 .lab-clinic-item summary{cursor:pointer;font-weight:700;line-height:1.5}
 .lab-clinic-body{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-d);line-height:1.65;font-size:14px}
+
+/* Wave 3: Semester Quick Check, Graded Reader Check, Dictation & Exam Error Diagnosis */
+.semester-quick-check,.reader-quick-check,.reader-patterns-box{margin:14px 0;padding:14px 16px;border-radius:16px;background:var(--soft);border:1.5px solid var(--line-d)}
+.semester-quick-check h3,.reader-quick-check h3,.reader-patterns-box h3{margin:0 0 8px;font-size:16px}
+.semester-qc-feedback,.reader-quiz-feedback{margin-top:10px;padding:10px 14px;border-radius:12px;line-height:1.6;font-size:14px}
+.semester-qc-feedback.good,.reader-quiz-feedback.good{background:var(--green-l);border-left:4px solid var(--green,#2fb36b)}
+.semester-qc-feedback.bad,.reader-quiz-feedback.bad,.dic-error-diagnosis,.exam-wrong-diagnosis{background:var(--red-l,#ffe3e3);border-left:4px solid var(--red,#e5484d);padding:10px 14px;border-radius:10px;margin:8px 0;line-height:1.6}
+.dic-error-diagnosis ul{margin:6px 0 0;padding-left:18px}

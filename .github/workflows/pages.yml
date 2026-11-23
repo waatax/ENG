@@ -48,6 +48,10 @@ jobs:
       - name: Verify all vocabulary cards and MP3 boundaries
         run: node --test scripts/test_word_queue.mjs scripts/test_vocabulary_platform.mjs scripts/test_word_mp3.mjs scripts/test_audio_completion.mjs scripts/test_english_academy.mjs
 
+      # Every test file must pass before deploy; release notes may only claim "all tests pass" when this step is green.
+      - name: Run the complete automated test suite
+        run: node --test scripts/test_*.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

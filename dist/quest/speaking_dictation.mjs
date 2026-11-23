@@ -14,7 +14,8 @@ export const MINIMAL_PAIRS = [
       ['pan', '平底鍋', 'pen', '原子筆', 'Put the pan on the stove, and keep the pen on the desk.'],
       ['bad', '壞的', 'bed', '床', 'It is bad to eat snacks right before going to bed.'],
       ['man', '男人', 'men', '男人們', 'One man stood by the door while three men waited outside.'],
-      ['sat', '坐下(過去式)', 'set', '擺設／設定', 'She sat down after she set the alarm clock.']
+      ['sat', '坐下(過去式)', 'set', '擺設／設定', 'She sat down after she set the alarm clock.'],
+      ['bat', '球棒／蝙蝠', 'bet', '打賭', 'I bet he can hit the ball with that wooden bat.']
     ]
   },
   {
@@ -26,7 +27,8 @@ export const MINIMAL_PAIRS = [
       ['ship', '大船', 'sheep', '綿羊', 'The big ship carried hundreds of white sheep.'],
       ['bit', '一點點', 'beat', '節拍／打敗', 'Wait a bit and listen to the drum beat.'],
       ['live', '居住', 'leave', '離開', 'Where will you live after you leave this city?'],
-      ['sit', '坐', 'seat', '座位', 'Please sit down in your own seat.']
+      ['sit', '坐', 'seat', '座位', 'Please sit down in your own seat.'],
+      ['slip', '滑倒', 'sleep', '睡覺', 'Do not slip on the wet floor before you go to sleep.']
     ]
   },
   {
@@ -38,7 +40,8 @@ export const MINIMAL_PAIRS = [
       ['fan', '電風扇', 'van', '廂型車', 'We loaded the electric fan into the delivery van.'],
       ['fine', '良好的', 'vine', '藤蔓', 'The grapes on the vine look fine today.'],
       ['leaf', '樹葉(單數)', 'leave', '離開', 'A green leaf fell just as we were about to leave.'],
-      ['safe', '安全的', 'save', '拯救／儲蓄', 'Keep your password safe to save your account.']
+      ['safe', '安全的', 'save', '拯救／儲蓄', 'Keep your password safe to save your account.'],
+      ['fast', '快速的', 'vast', '廣闊的', 'The fast train crossed the vast green plain.']
     ]
   },
   {
@@ -50,7 +53,8 @@ export const MINIMAL_PAIRS = [
       ['think', '思考', 'sink', '水槽／下沉', 'I think the dishes are still in the kitchen sink.'],
       ['thank', '感謝', 'sank', '下沉(過去式)', 'Thank goodness nobody was hurt when the boat sank.'],
       ['path', '小徑', 'pass', '通過', 'Walk along this mountain path to pass the gate.'],
-      ['mouth', '嘴巴', 'mouse', '老鼠', 'The cat opened its mouth when it saw a mouse.']
+      ['mouth', '嘴巴', 'mouse', '老鼠', 'The cat opened its mouth when it saw a mouse.'],
+      ['thick', '厚的', 'sick', '生病的', 'He read a thick book while staying home sick.']
     ]
   },
   {
@@ -62,7 +66,8 @@ export const MINIMAL_PAIRS = [
       ['they', '他們', 'day', '日子／白天', 'They practice English every single day.'],
       ['then', '然後', 'den', '獸穴／小書房', 'First we cleaned the living room, and then the den.'],
       ['breathe', '呼吸(動詞)', 'breed', '培育／品種', 'Take time to breathe deeply and relax.'],
-      ['though', '雖然', 'dough', '麵團', 'She kneaded the bread dough even though she was tired.']
+      ['though', '雖然', 'dough', '麵團', 'She kneaded the bread dough even though she was tired.'],
+      ['there', '那裡', 'dare', '敢', 'Would you dare to sing up there on the big stage?']
     ]
   },
   {
@@ -74,7 +79,8 @@ export const MINIMAL_PAIRS = [
       ['light', '燈光／輕的', 'right', '右邊／正確的', 'Turn on the light on your right side.'],
       ['glass', '玻璃杯', 'grass', '草地', 'Do not leave a glass cup on the green grass.'],
       ['long', '長的', 'wrong', '錯誤的', 'We walked a long way before realizing it was the wrong road.'],
-      ['fly', '飛', 'fry', '油煎', 'Birds fly in the sky while we fry eggs in the pan.']
+      ['fly', '飛', 'fry', '油煎', 'Birds fly in the sky while we fry eggs in the pan.'],
+      ['lead', '引領', 'read', '閱讀', 'Good teachers lead students to read widely.']
     ]
   },
   {
@@ -86,7 +92,8 @@ export const MINIMAL_PAIRS = [
       ['thin', '薄的／瘦的', 'thing', '事物', 'This thin notebook is the most useful thing in my bag.'],
       ['win', '贏得', 'wing', '翅膀', 'The eagle spread its wing to win the race against the wind.'],
       ['ran', '跑(過去式)', 'rang', '響起(過去式)', 'He ran to the door when the doorbell rang.'],
-      ['sun', '太陽', 'sung', '唱(過去分詞)', 'The morning song was sung as the sun rose.']
+      ['sun', '太陽', 'sung', '唱(過去分詞)', 'The morning song was sung as the sun rose.'],
+      ['ban', '禁止', 'bang', '巨響', 'They voted to ban fireworks that make a loud bang.']
     ]
   },
   {
@@ -98,7 +105,8 @@ export const MINIMAL_PAIRS = [
       ['share', '分享', 'chair', '椅子', 'Can we share this long wooden chair?'],
       ['ship', '大船', 'chip', '洋芋片／晶片', 'He ate a potato chip while watching the cruise ship.'],
       ['wash', '清洗', 'watch', '手錶／觀看', 'Take off your watch before you wash your hands.'],
-      ['cash', '現金', 'catch', '接住／趕上', 'Bring some cash so we can catch the last bus.']
+      ['cash', '現金', 'catch', '接住／趕上', 'Bring some cash so we can catch the last bus.'],
+      ['shoe', '鞋子', 'chew', '咀嚼', 'The puppy tried to chew on my old running shoe.']
     ]
   },
   {
@@ -110,7 +118,8 @@ export const MINIMAL_PAIRS = [
       ['not', '不', 'note', '筆記／紙條', 'Do not forget to read the note on the table.'],
       ['clock', '時鐘', 'cloak', '斗篷', 'He hung his warm cloak beside the wall clock.'],
       ['cost', '花費', 'coast', '海岸', 'Living along the coast can cost a lot of money.'],
-      ['rod', '釣竿／長桿', 'road', '道路', 'He carried his fishing rod down the quiet road.']
+      ['rod', '釣竿／長桿', 'road', '道路', 'He carried his fishing rod down the quiet road.'],
+      ['hop', '單腳跳', 'hope', '希望', 'I hope the little frog can hop across the pond.']
     ]
   },
   {
@@ -122,7 +131,8 @@ export const MINIMAL_PAIRS = [
       ['cup', '杯子', 'cop', '警察(口語)', 'The friendly cop held a warm cup of coffee.'],
       ['luck', '運氣', 'lock', '鎖', 'With a little luck, this key will open the old lock.'],
       ['hut', '小屋', 'hot', '炎熱的', 'We rested inside the wooden hut on a hot afternoon.'],
-      ['nut', '堅果', 'not', '不', 'This snack is a healthy nut, not candy.']
+      ['nut', '堅果', 'not', '不', 'This snack is a healthy nut, not candy.'],
+      ['duck', '鴨子', 'dock', '碼頭', 'A white duck swam near the wooden boat dock.']
     ]
   },
   {
@@ -134,7 +144,8 @@ export const MINIMAL_PAIRS = [
       ['cap', '棒球帽', 'cab', '計程車', 'He left his blue cap inside the yellow cab.'],
       ['hat', '帽子', 'had', '有(過去式)', 'She had a warm wool hat last winter.'],
       ['back', '背部／後面', 'bag', '袋子／書包', 'Put the heavy bag on the back seat.'],
-      ['rope', '繩索', 'robe', '長袍／浴袍', 'Tie the cotton robe with this soft rope.']
+      ['rope', '繩索', 'robe', '長袍／浴袍', 'Tie the cotton robe with this soft rope.'],
+      ['bet', '打賭', 'bed', '床鋪', 'I bet you want to rest in a warm bed tonight.']
     ]
   },
   {
@@ -146,7 +157,8 @@ export const MINIMAL_PAIRS = [
       ['play', '玩耍／演奏', 'pray', '祈禱', 'The children play outside while their grandparents pray.'],
       ['glow', '發光', 'grow', '成長／種植', 'Fireflies glow where tall wildflowers grow.'],
       ['cloud', '雲朵', 'crowd', '人群', 'A cheering crowd looked up at the bright cloud.'],
-      ['flame', '火焰', 'frame', '畫框／結構', 'Keep the candle flame away from the wooden picture frame.']
+      ['flame', '火焰', 'frame', '畫框／結構', 'Keep the candle flame away from the wooden picture frame.'],
+      ['clue', '線索', 'crew', '工作團隊', 'The film crew found an important clue on the island.']
     ]
   }
 ];
@@ -254,25 +266,67 @@ export function tokenizeWords(text) {
 export function scoreDictation(target, input) {
   const targetTokens = tokenizeWords(target);
   const inputTokens = tokenizeWords(input);
+  const WEAK_WORDS = new Set(['a', 'an', 'the', 'to', 'of', 'for', 'and', 'at', 'in', 'on', 'that', 'with', 'can', 'was', 'were', 'are', 'some', 'from', 'than', 'or', 'but', 'as']);
+  // Align target and input words (edit distance) so a skipped word is reported as missing,
+  // not as a "wrong word" against whatever the learner wrote in that slot.
+  const n = targetTokens.length, m = inputTokens.length;
+  const dp = Array.from({ length: n + 1 }, (_, i) => Array.from({ length: m + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)));
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= m; j++) {
+      const same = targetTokens[i - 1].clean === inputTokens[j - 1].clean ? 0 : 1;
+      dp[i][j] = Math.min(dp[i - 1][j - 1] + same, dp[i - 1][j] + 1, dp[i][j - 1] + 1);
+    }
+  }
+  const aligned = new Array(n).fill(null); // index of the input word paired with each target word, or null if skipped
+  for (let i = n, j = m; i > 0;) {
+    if (j > 0 && dp[i][j] === dp[i - 1][j - 1] + (targetTokens[i - 1].clean === inputTokens[j - 1].clean ? 0 : 1)) { aligned[i - 1] = j - 1; i--; j--; }
+    else if (dp[i][j] === dp[i - 1][j] + 1) { i--; }
+    else { j--; }
+  }
+  const isInflection = (a, b) => {
+    if (!a || !b || a === b) return false;
+    const [long, short] = a.length > b.length ? [a, b] : [b, a];
+    return short.length >= 3 && ['s', 'es', 'ed', 'd'].some(suf => long === short + suf);
+  };
+  const shown = tok => tok.raw.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, '') || tok.raw;
   const tokens = targetTokens.map((t, idx) => {
     const actual = inputTokens[idx]?.clean || '';
     const exactPos = actual === t.clean;
     const nearMatch = !exactPos && inputTokens.some((inp, j) => Math.abs(j - idx) <= 2 && inp.clean === t.clean);
+    const ok = exactPos || nearMatch;
+    let errorReason = '';
+    if (!ok) {
+      const pair = aligned[idx] === null ? null : inputTokens[aligned[idx]];
+      if (!pair) {
+        errorReason = WEAK_WORDS.has(t.clean)
+          ? `漏聽弱讀虛詞「${shown(t)}」：自然語速下這類功能詞常讀得又輕又短（母音常弱化成 /ə/），並和前後字連在一起。`
+          : `漏寫「${shown(t)}」：點「🐢 ② 慢速切分」再聽一次，留意這個字的重音。`;
+      } else if (pair.clean === t.clean) {
+        errorReason = `語序位置：「${shown(t)}」有寫到，但位置和原句不同，請再聽一次句子的順序。`;
+      } else if (isInflection(t.clean, pair.clean)) {
+        errorReason = `字尾詞形漏聽：應為「${shown(t)}」（你寫了「${shown(pair)}」），注意字尾 -s / -ed 常讀得很輕，或和下一個字連在一起。`;
+      } else {
+        errorReason = `聽辨或拼字差異：目標字為「${shown(t)}」，你輸入了「${shown(pair)}」。`;
+      }
+    }
     return {
       target: t.raw,
       clean: t.clean,
       actual: inputTokens[idx]?.raw || '',
-      ok: exactPos || nearMatch
+      ok,
+      errorReason
     };
   });
   const matchedCount = tokens.filter(t => t.ok).length;
   const totalCount = Math.max(1, targetTokens.length);
   const accuracy = Math.round((matchedCount / totalCount) * 100);
+  const errorNotes = tokens.filter(t => !t.ok && t.errorReason).map(t => t.errorReason);
   return {
     accuracy,
     matchedCount,
     totalCount: targetTokens.length,
     tokens,
+    errorNotes,
     isExact: matchedCount === targetTokens.length && inputTokens.length === targetTokens.length
   };
 }
@@ -445,6 +499,7 @@ export function renderSpeakingDictationStudio(uiState = {}, storage = globalThis
             <div class="dic-token-diff" lang="en">
               ${dicResult.tokens.map(t => `<span class="dic-tok ${t.ok ? 'ok' : 'miss'}" title="${t.ok ? '正確' : `你輸入：${esc(t.actual || '缺漏')}`}">${esc(t.target)}</span>`).join(' ')}
             </div>
+            ${dicResult.errorNotes?.length ? `<div class="dic-error-diagnosis"><p><b>🔍 錯在哪裡（連音與弱讀診斷）：</b></p><ul>${dicResult.errorNotes.slice(0, 4).map(note => `<li>${esc(note)}</li>`).join('')}</ul></div>` : ''}
           </div>` : ''}
           ${renderShadowingWidget(dicItem.text, 'dictation-main')}
         </div>

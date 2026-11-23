@@ -33,6 +33,7 @@ test('Full and simple modes finish exactly ten cards in the required language/te
  for(const mode of ['word_zh_sentence','word_zh']){
   reset();fc.handleFlashcardEvents({dataset:{fcTier:'elem_1000'}},render);fc.handleFlashcardEvents({dataset:{fcBatchSize:'10'}},render);fc.handleFlashcardEvents({dataset:{fcVoiceMode:mode}},render);
   fc.startFlashcardAutoPlay(render);
+  assert.doesNotMatch(fc.renderFlashcardsStudioView(),/個單字已完成/,'no completion banner while the batch is still playing');
   let completed=0,safety=0;
   while((completed<spoken.length||scheduled.size)&&safety++<2000){if(completed<spoken.length)spoken[completed++].onend();else flush();}
   assert.ok(safety<2000);const expected=[];
@@ -40,7 +41,10 @@ test('Full and simple modes finish exactly ten cards in the required language/te
    for(const [text,lang] of [[c.word,'en-US'],[c.zh,'zh-TW'],...(mode==='word_zh'?[]:[[c.example,'en-US']])])for(const chunk of audio.speechChunks(text))expected.push({text:chunk,lang});
   }
   assert.deepEqual(spoken.map(u=>({text:u.text,lang:u.lang})),expected);
-  assert.match(fc.renderFlashcardsStudioView(),/本組 10 個單字已完成/);
+  const done=fc.renderFlashcardsStudioView();
+  assert.match(done,/role="status"><strong>🎉 本組 10 個單字已完成自動輪播聽讀！/);
+  assert.match(done,/第 1 \/ 100 組 · 第 1 ~ 10 字。/,'the banner names the finished batch and its word range');
+  assert.match(done,/data-fc-replay-batch="true"/);assert.match(done,/data-fc-batch-next="true">▶ 進入下一組/);
  }
  reset();
 });
@@ -52,7 +56,11 @@ test('Speech errors stop the batch without skipping, and mode changes cancel pen
 test('All requested batch sizes exist and navigation stops the autoplay owner',()=>{
  for(const size of [10,20,30,50,100,0]){
   fc.handleFlashcardEvents({dataset:{fcBatchSize:String(size)}},render);
-  const html=fc.renderFlashcardsStudioView();assert.ok(html.includes(`data-fc-batch-size="${size}"`));assert.ok(html.includes(`卡片 1 / ${size||1000}`));
+  const html=fc.renderFlashcardsStudioView(),text=html.replace(/<[^>]+>/g,'');
+  assert.ok(html.includes(`data-fc-batch-size="${size}" aria-pressed="true"`),`batch size ${size} is shown as selected`);
+  assert.ok(text.includes(`第 1 / ${size||1000} 張`),`card counter for batch size ${size}`);
+  if(size)assert.ok(text.includes(`第 1 / ${Math.ceil(1000/size)} 組 · 第 1 ~ ${size} 字`),`batch pager for size ${size}`);
+  else assert.ok(!html.includes('data-fc-batch-prev'),'no batch pager when all cards are one list');
  }
  assert.match(readFileSync('dist/app.js','utf8'),/function navigate\(p\) \{\s*stopFlashcardAutoPlay\(\)/);
  for(const f of ['audio.mjs','app.js','flashcards.mjs'])assert.equal(readFileSync('dist/'+f,'utf8'),readFileSync('site/dist/'+f,'utf8'));
