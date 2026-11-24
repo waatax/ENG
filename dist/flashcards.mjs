@@ -20,7 +20,7 @@ function esc(str) {
 }
 
 // 閃卡分級定義與快選列放在 flashcard_tiers.mjs（不含字卡資料，課程頁可先顯示）
-import { FLASHCARD_TIERS, quickTierLabels, renderFlashcardQuickPlay } from './flashcard_tiers.mjs';
+import { FLASHCARD_TIERS, quickTierLabels, renderFlashcardQuickPlay, isPhraseCard } from './flashcard_tiers.mjs';
 export { FLASHCARD_TIERS, renderFlashcardQuickPlay };
 
 export const FLASHCARD_DATABASE = [
@@ -9562,9 +9562,8 @@ function saveMastery() {
   } catch (e) {}
 }
 
-function isPhraseOrCollocationCard(c) {
-  return c.word.includes(' ') || c.word.includes('-') || /片語|搭配|慣用/.test(c.category || '') || (c.collocation && c.collocation.trim().split(/\s+/).length >= 2);
-}
+// Levels without multi-word cards (國中, SAT, GRE) do not offer the phrase set at all.
+const tierHasPhrases = tier => (FLASHCARD_TIERS.find(t => t.id === tier)?.phrases || 0) > 0;
 
 function buildEnglishThinkingClue(card) {
   if (!card) return '';
@@ -9585,8 +9584,7 @@ function getFilteredCards() {
   let list = FLASHCARD_DATABASE.filter(c => c.tier === currentTier);
 
   if (cardSetType === 'phrases') {
-    const phraseList = list.filter(isPhraseOrCollocationCard);
-    if (phraseList.length > 0) list = phraseList;
+    list = list.filter(isPhraseCard);
   }
 
   if (cardSearchKeyword) {
@@ -9678,7 +9676,7 @@ export function startFlashcardQuickPlay(tier, renderCallback, phraseOnly = false
   currentTier = tier;
   cardSearchKeyword = '';
   cardFilterStatus = 'all';
-  cardSetType = phraseOnly ? 'phrases' : 'all';
+  cardSetType = phraseOnly && tierHasPhrases(tier) ? 'phrases' : 'all';
   currentBatchIndex = 0;
   currentCardIndex = 0;
   practiceBatchSize = 20;
@@ -9709,7 +9707,7 @@ export function renderFlashcardsStudioView() {
     flipped: isFlipped, justFlipped: justFlippedNow, autoPlaying: isAutoPlaying, voiceMode: autoPlayVoiceMode, audioFailure, batchCompleted,
     filterStatus: cardFilterStatus, setType: cardSetType, keyword: cardSearchKeyword,
     audit: `${contentAudit.total} 張字卡；例句與搭配詞由 AI 撰寫並經規則校驗，尚未經人類教師審核。發現錯誤歡迎回報。`,
-    phraseCount: allTierCards.filter(isPhraseOrCollocationCard).length,
+    phraseCount: allTierCards.filter(isPhraseCard).length,
     reviewCount: allTierCards.filter(c => masteryState[c.id] === 'need_review').length,
     mp3Group: quickMp3GroupIds[currentTier] || 'elementary-001',
     quizChoice: currentCardQuizChoice
@@ -9766,6 +9764,7 @@ export function handleFlashcardEvents(target, renderCallback) {
   // 切換級別
   if (d.fcTier) {
     currentTier = d.fcTier;
+    if (!tierHasPhrases(currentTier)) cardSetType = 'all';
     currentBatchIndex = 0;
     currentCardIndex = 0;
     batchCompleted = false;
@@ -9777,7 +9776,7 @@ export function handleFlashcardEvents(target, renderCallback) {
 
   // 切換單字集 / 片語與搭配集
   if (d.fcSetType) {
-    if (['all', 'phrases'].includes(d.fcSetType)) {
+    if (d.fcSetType === 'all' || (d.fcSetType === 'phrases' && tierHasPhrases(currentTier))) {
       cardSetType = d.fcSetType;
       currentBatchIndex = 0;
       currentCardIndex = 0;

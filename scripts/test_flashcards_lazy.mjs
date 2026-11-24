@@ -66,3 +66,31 @@ test('app.js redraws the waiting page when the bundle arrives and prefetches on 
   const html = fs.readFileSync('dist/index.html', 'utf8');
   assert.match(html, /"\.\/flashcards\.mjs":"\.\/flashcards\.mjs\?v=lazy20261123"/);
 });
+
+// 2026-11-24 (user decision): the phrase set holds only multi-word headwords, and levels without any do not offer it.
+test('phrase set holds only multi-word cards and is offered only where such cards exist', async () => {
+  const { FLASHCARD_TIERS, isPhraseCard, renderFlashcardQuickPlay } = await import('../dist/flashcard_tiers.mjs');
+  const fc = await import('../dist/flashcards.mjs');
+  for (const tier of FLASHCARD_TIERS) {
+    assert.equal(tier.phrases, fc.FLASHCARD_DATABASE.filter(c => c.tier === tier.id && isPhraseCard(c)).length, tier.id + ' phrase count');
+  }
+  assert.equal(isPhraseCard({ word: 'come up with' }), true);
+  assert.equal(isPhraseCard({ word: 'ping-pong' }), false, 'hyphenated single words are not phrases');
+  assert.equal(isPhraseCard({ word: 'family', collocation: 'family member' }), false, 'a two-word collocation does not make a phrase card');
+  const quick = renderFlashcardQuickPlay();
+  assert.deepEqual([...quick.matchAll(/data-fc-phrase-play="([^"]+)"/g)].map(m => m[1]), FLASHCARD_TIERS.filter(t => t.phrases).map(t => t.id));
+  const render = () => {};
+  fc.handleFlashcardEvents({ dataset: { fcTier: 'shs_3000' } }, render);
+  fc.handleFlashcardEvents({ dataset: { fcBatchSize: '0' } }, render);
+  fc.handleFlashcardEvents({ dataset: { fcSetType: 'phrases' } }, render);
+  let html = fc.renderFlashcardsStudioView();
+  assert.match(html, /🔗 多字片語與術語 \(17\)/);
+  assert.match(html, /第 1 \/ 17 張/, 'phrase set for 高中 has exactly 17 cards');
+  fc.handleFlashcardEvents({ dataset: { fcTier: 'jhs_2000' } }, render);
+  html = fc.renderFlashcardsStudioView();
+  assert.doesNotMatch(html, /data-fc-set-type="phrases"/, '國中 has no multi-word cards, so no phrase filter');
+  assert.match(html, /第 1 \/ 2,?000 張/, 'switching to a level without phrases falls back to all cards');
+  fc.handleFlashcardEvents({ dataset: { fcSetType: 'phrases' } }, render);
+  assert.match(fc.renderFlashcardsStudioView(), /第 1 \/ 2,?000 張/, 'phrases request is ignored where none exist');
+  fc.stopFlashcardAutoPlay();
+});

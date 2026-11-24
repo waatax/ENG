@@ -106,3 +106,9 @@
 
 - headless Edge 390px：`#arch` 6 個分頁「undefined」0 處、無水平溢出；詞彙類別篩選與搜尋正確且游標保留；`#junyi`→單元頁、`#chapter`→章節頁；`#exams`、`#curriculum108`、`#handouts`、`#jh` 無溢出；Ultralearning 標題寬 250px；console 無錯誤。
 - `scripts/test_release_fixes_20261123.mjs` 再加 3 項（`#arch` 欄位、側欄路由與手機格線、字卡中文意思與 MP3 一致）。
+
+## 第四段（2026-11-24）：依使用者決定處理的兩項
+
+- `#today`：側欄「每日練習」與標題「每日精熟挑戰練習」改為「課程地圖：挑今天的單元」／「學年課程地圖・挑今天要學的單元」，因為頁面實際顯示課程地圖（使用者選擇「改名」，不另做每日練習）。
+- 「片語與搭配詞集」：原本把每張有兩字以上搭配詞的卡都算成片語，等於沒有篩選。使用者選擇「只保留真正的片語」：改為只收**多字詞條**（ice cream、come up with、economies of scale）；連字號單字（ping-pong、e-mail）與一般單字不算。各級張數：國小 23、國中 0、高中 17、TOEIC 105、TOEFL 51、SAT 0、GRE 0、GMAT 397。沒有多字詞條的級別（國中、SAT、GRE）不再顯示篩選鈕與快選；快選名稱改為實際內容並附張數（例如 TOEFL 原寫「學術轉折片語集」，實際是 black hole、continental drift 等學術術語，改為「TOEFL 學術術語（51 組）」）。
+- 檢查：`node --test scripts/test_*.mjs` 361 / 361 通過；瀏覽器實測從課程頁按「高中動詞片語（17 組）」→ 跳到字卡頁、朗讀第一張 come up with、顯示「共 17 字」；切到國中時篩選鈕消失、回到全部 2,000 字。

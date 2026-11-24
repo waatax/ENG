@@ -75,7 +75,7 @@ export function renderBrowse(s) {
       </div>
       <div class="fc-filter-group fcx-pills" role="group" aria-label="閃卡內容類型">
         ${pill(setType === 'all', 'fc-filter-btn', 'data-fc-set-type="all"', `📚 全部詞彙 (${allTierCards.length})`)}
-        ${pill(setType === 'phrases', 'fc-filter-btn', 'data-fc-set-type="phrases"', `🔗 片語與搭配詞集 (${phraseCount})`)}
+        ${phraseCount ? pill(setType === 'phrases', 'fc-filter-btn', 'data-fc-set-type="phrases"', `🔗 多字片語與術語 (${phraseCount})`) : ''}
       </div>
       <div class="fc-filter-group fcx-pills" role="group" aria-label="熟練度篩選">
         ${pill(filterStatus === 'all', 'fc-filter-btn', 'data-fc-filter="all"', `全部 (${allTierCards.length})`)}
