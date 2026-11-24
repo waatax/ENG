@@ -117,3 +117,12 @@ test('every card meaning is Chinese, and the MP3 cue data speaks the same meanin
     for (const w of cues.words) assert.equal(w.zh, byId.get(w.id).zh, `${group} ${w.id}`);
   }
 });
+
+// #today shows the curriculum map (today() returns curriculum108Page()), so its labels must not promise a daily drill.
+test('#today is labelled as the curriculum map, not a daily practice', () => {
+  const app = fs.readFileSync('dist/app.js', 'utf8');
+  assert.match(app, /function today\(\) \{\s*return curriculum108Page\(\);/);
+  assert.doesNotMatch(app, /\['today', '15', '每日練習'\]/);
+  assert.doesNotMatch(app, /today: '每日精熟挑戰練習'/);
+  assert.match(app, /\['today', '15', '課程地圖：挑今天的單元'\]/);
+});

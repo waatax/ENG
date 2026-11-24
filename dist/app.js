@@ -685,7 +685,7 @@ function shell(body) {
     ['affixes', '12b', '字首・字尾學習館'],
     ['studio', '13', '合成語音練習'],
     ['exams', '14', '考試練習與資源'],
-    ['today', '15', '每日練習'],
+    ['today', '15', '課程地圖：挑今天的單元'],
     ['progress', '16', '學習紀錄']
   ];
 
@@ -713,7 +713,7 @@ function shell(body) {
     chapter: '考制核心課綱與 CEFR 教學模組 (Duolingo 示範章節 J1)',
     studio: '單字會話合成語音點讀館',
     exams: '考試練習與官方試題資源',
-    today: '每日精熟挑戰練習',
+    today: '學年課程地圖・挑今天要學的單元',
     progress: '我的學習軌跡、經驗值與素養勳章'
   };
   const currentTitle = pageTitles[page] || '108 課綱英語旗艦平台';
