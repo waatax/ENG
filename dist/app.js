@@ -1,4 +1,5 @@
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=advanced20261103';
+import {renderJhPath, bindJhPath} from './jh_path.mjs?v=jh20261126';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=jh20261126';
 import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=advanced20261103';
 import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=practice20261126';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
@@ -50,7 +51,7 @@ import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
 // Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
 import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs?v=practice20261126';
-import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage, computeStageReadiness, evaluateSweetSpot } from './ultralearning_engine.mjs';
+import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage, evaluateSweetSpot } from './ultralearning_engine.mjs?v=jh20261126';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -87,7 +88,7 @@ let activeSixthUnit = 'eng-u1';
 let sixthQuizAnswers = {};
 let sixthQuizSubmitted = false;
 
-let activeJhTab = 'units';
+let activeJhTab = 'path';
 let activeJhUnit = 'u1';
 let activeJhTerm = 'all';
 let jhUnitSearch = '';
@@ -709,7 +710,7 @@ function shell(body) {
     standards: '108 課綱學習重點地圖',
     junyi: '自主微課與鷹架館 (42 致命陷阱避雷雷達)',
     sixth: '國小六年級小升初 (8 單元名師講義)',
-    jh: '國中會考衝刺館 (16 主題全案精通)',
+    jh: '國中英語學習路線與備考',
     arch: '高中先修專題 (5 大核心矩陣)',
     handouts: 'A4 考前講義列印庫 (14 學期全收錄)',
     chapter: '考制核心課綱與 CEFR 教學模組 (Duolingo 示範章節 J1)',
@@ -1529,7 +1530,6 @@ function sixthPage() {
 // 4. JH 國中會考衝刺館 (JH Project Port)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function jhPage() {
-  const jhReady = computeStageReadiness('junior');
   const termList = ['all', '7上', '7下', '8上', '8下', '9上', '9下'];
   const qNorm = jhUnitSearch.trim().toLowerCase();
   const filteredJhUnits = jhUnits.filter(u => {
@@ -1540,34 +1540,36 @@ function jhPage() {
 
   return `
     <div class="header-block">
-      <div class="pill">🎓 JH 專案完整移植</div>
-      <h1 style="margin:8px 0">國中 7–9 年級 108 課綱英語教育與會考題庫</h1>
+      <div class="pill">國中英語｜六學期</div>
+      <h1 style="margin:8px 0">國中英語學習與考前練習</h1>
       <p style="color:var(--text-muted);margin:0;font-size:15px">
-        涵蓋 16 個國中主題單元、生活溝通案例、英語聽讀練習與考前複習資料。歷屆試題請以正式考試機構公布版本為準。
+        從自己的起點練聽讀與表達，再用新情境檢查。十六個主題、生活案例、考點與手冊可隨時回查。
       </p>
     </div>
 
-    <!-- JH 分類切換 -->
-    <div style="display:flex;gap:10px;margin:20px 0;border-bottom:1px solid var(--line);padding-bottom:12px;flex-wrap:wrap">
-      <button class="btn ${activeJhTab === 'ultralearning' ? 'primary' : 'quiet'}" data-select-jh-tab="ultralearning">⚡ 超速學習實戰 (See·Do·Feedback)</button>
-      <button class="btn ${activeJhTab === 'units' ? 'primary' : 'quiet'}" data-select-jh-tab="units">📖 16大課綱單元綱要</button>
-      <button class="btn ${activeJhTab === 'cases' ? 'primary' : 'quiet'}" data-select-jh-tab="cases">🗣️ 16大語言生活情境案例</button>
-      <button class="btn ${activeJhTab === 'cap' ? 'primary' : 'quiet'}" data-select-jh-tab="cap">👑 109-115 會考考點大數據</button>
-      <button class="btn ${activeJhTab === 'handouts' ? 'primary' : 'quiet'}" data-select-jh-tab="handouts">📑 16份主題會考手冊</button>
-    </div>
+    <nav class="jhp-navigation" aria-label="國中英語導覽">
+      <button type="button" class="btn ${activeJhTab === 'path' ? 'primary' : 'quiet'}" data-select-jh-tab="path" aria-pressed="${activeJhTab === 'path'}">六學期學習路線</button>
+      <details ${activeJhTab === 'path' ? '' : 'open'}>
+        <summary>教材、示範與考點</summary>
+        <div>${[['ultralearning','學習方法與示範'],['units','16 個主題教材'],['cases','生活情境案例'],['cap','109–115 年會考考點'],['handouts','主題會考手冊']].map(([id,label]) =>
+          `<button type="button" class="btn ${activeJhTab === id ? 'primary' : 'quiet'}" data-select-jh-tab="${id}" aria-pressed="${activeJhTab === id}">${label}</button>`).join('')}</div>
+      </details>
+    </nav>
+
+    ${activeJhTab === 'path' ? renderJhPath() : ''}
 
     ${activeJhTab === 'ultralearning' ? `
       ${renderUltralearningMasteryHub({ forceStage: 'junior' })}
     ` : ''}
 
     ${activeJhTab === 'units' ? `
-      <div class="jh-readiness-strip" role="region" aria-label="國中會考就緒度快覽">
+      <div class="jh-readiness-strip" role="region" aria-label="主題教材練習">
         <div class="jh-strip-info">
-          <strong>🎯 國中會考 A++ 超速學習就緒度：${jhReady.readiness}%（${esc(jhReady.sweetSpot.label)}）</strong>
-          <span>先用下方 16 單元做「閉書提取」，再進入 See·Do·Feedback 實戰藍圖或直接抽 10 題會考真題型！</span>
+          <strong>先選一項要練的技能</strong>
+          <span>先關起筆記試一題，答錯時回到示範，再換情境檢查。</span>
         </div>
         <div class="jh-strip-actions">
-          <button class="btn small secondary" data-select-jh-tab="ultralearning">⚡ 開啟超速學習藍圖</button>
+          <button class="btn small secondary" data-select-jh-tab="path">開啟六學期學習路線</button>
           <button class="btn small primary" data-start-quiz="true" data-quiz-cat="jhs" data-quiz-count="10">🚀 10 題會考直練</button>
         </div>
       </div>
@@ -2509,6 +2511,7 @@ function render() {
   bindLearningHub(root);
   bindMasterclass(root);
   bindAdvancedCourse(root,render);
+  bindJhPath(root);
   enhanceLearningPage(root);
   syncLessonAudio();
   bindWordAudio(root,render);
@@ -3180,6 +3183,7 @@ function readKnowledgeRoute() {
   else if (parts[0] === 'standards') { navigate('standards'); }
   else if (parts[0] === 'diagnostic') { navigate('diagnostic'); }
   else if (parts[0] === 'masterclass') { navigate('masterclass'); }
+  else if (parts[0] === 'jh' && parts[1] === 'path') { activeJhTab='path'; page='jh'; render(); window.scrollTo(0,0); }
   else if (parts[0] === 'advanced') { page='advanced'; render(); window.scrollTo(0,0); }
   else if (parts[0] === 'knowledge') { knowledgeId = parts[1] || ''; navigate(knowledgeId ? 'knowledgePoint' : 'knowledge'); }
   else if (parts[0] === 'chapter' && parts.length === 3) { openChapterId = parts[1] + ':' + parts[2]; navigate('chapter'); }

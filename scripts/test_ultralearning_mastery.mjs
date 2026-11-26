@@ -97,7 +97,8 @@ test('Ultralearning engine is wired into JH, Exams, Progress, School, Home, HTML
   assert.match(questHtml, /ultralearning_mastery\.css/);
   assert.match(appJs, /renderUltralearningMasteryHub/);
   assert.match(appJs, /renderAllStagesReadinessOverview/);
-  assert.match(appJs, /data-select-jh-tab="ultralearning"/);
+  assert.match(appJs, /\['ultralearning','學習方法與示範'\]/);
+  assert.match(appJs, /renderUltralearningMasteryHub\(\{ forceStage: 'junior' \}\)/);
   assert.match(appJs, /jh-retrieval-box/);
   assert.match(schoolView, /school-sdf-banner/);
   assert.match(homeJs, /SEE · DO · FEEDBACK · RETAIN/);

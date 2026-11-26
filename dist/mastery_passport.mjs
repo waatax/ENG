@@ -19,7 +19,8 @@ export const STORAGE_KEYS = [
   'english-quest-school-words-v1',
   'english-quest-7700-practice-v1',
   'english-quest-studio-v1',
-  'eq_ultralearning_v1'
+  'eq_ultralearning_v1',
+  'eq_jh_path_v1'
 ];
 
 export const ALL_LEVEL_BANDS = [

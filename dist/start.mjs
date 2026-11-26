@@ -1,9 +1,9 @@
 // Launch the homepage and advanced course without downloading the legacy lesson/flashcard bundle.
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=advanced20261103';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=jh20261126';
 let legacy=false,advancedApi,routeVersion=0;
 const root=document.querySelector('#app');
 const wide=window.matchMedia('(min-width:769px)');
-function shell(content){return `<div class="shell"><aside class="side"><a class="brand" href="#home" style="color:white;text-decoration:none">English<span> Quest.</span></a><details class="site-menu"${wide.matches?' open':''}><summary>學習導覽</summary><nav class="nav"><a href="#home">⌂ 首頁</a><a href="#words">Aa 學單字</a><a href="quest/">✦ 玩遊戲</a><a href="#advanced">◇ C1→C2 精進課程</a><a href="#wordaudio">♫ MP3 聽讀</a><a href="mnemonics/">💡 聯想記憶</a><a href="roots/">🌱 字根字族</a><a href="#knowledge">▤ 教材與工具</a></nav></details></aside><div class="main-wrapper"><main class="main" id="main-content">${content}</main></div></div>`;}
+function shell(content){return `<div class="shell"><aside class="side"><a class="brand" href="#home" style="color:white;text-decoration:none">English<span> Quest.</span></a><details class="site-menu"${wide.matches?' open':''}><summary>學習導覽</summary><nav class="nav"><a href="#home">⌂ 首頁</a><a href="#words">Aa 學單字</a><a href="quest/">✦ 玩遊戲</a><a href="#jh/path">國中英語</a><a href="#advanced">◇ C1→C2 精進課程</a><a href="#wordaudio">♫ MP3 聽讀</a><a href="mnemonics/">💡 聯想記憶</a><a href="roots/">🌱 字根字族</a><a href="#knowledge">▤ 教材與工具</a></nav></details></aside><div class="main-wrapper"><main class="main" id="main-content">${content}</main></div></div>`;}
 function renderAdvanced(){const main=root.querySelector('.main');main.innerHTML=advancedApi.renderAdvancedCourse();advancedApi.bindAdvancedCourse(root,renderAdvanced);}
 async function route(){
  if(legacy)return;
@@ -16,7 +16,7 @@ async function route(){
  }
  if(page&&!['home','words'].includes(page)){
   legacy=true;root.innerHTML='<main class="learning-hub" style="padding:28px"><p role="status">正在開啟教材…</p></main>';
-  try{await import('./app.js?v=uiux20261126');}catch{legacy=false;root.innerHTML='<main style="padding:28px"><h1>教材暫時無法開啟</h1><p>請重新整理，或回首頁再試一次。</p><a href="#home">回首頁</a></main>';}
+  try{await import('./app.js?v=jh20261126');}catch{legacy=false;root.innerHTML='<main style="padding:28px"><h1>教材暫時無法開啟</h1><p>請重新整理，或回首頁再試一次。</p><a href="#home">回首頁</a></main>';}
   return;
  }
  document.title=(page==='words'?'學單字':'從第一句 Hello，到自信表達自己')+'｜English Quest';

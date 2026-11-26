@@ -1,7 +1,7 @@
 // One-click lesson entry preserves existing profiles and unfinished sessions.
 export function requestedLearningTrack(hash,course){
  const [tab,id]=String(hash).replace(/^#/,'').split('/');
- return tab==='learn'&&course.index.sections.some(s=>s.id===id)?id:null;
+ return tab==='learn' && ['section','semester'].includes(course.track(id)?.kind) ? id : null;
 }
 export async function startQuickLesson(game, course, ensure) {
   if (!game.state.profile) game.setup({goal:'casual',why:'life',start:'s1'});

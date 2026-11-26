@@ -113,15 +113,15 @@ export const STAGE_EXAM_BLUEPRINTS = [
   },
   {
     id: 'junior',
-    stage: '國中 JH 階段（會考 A++ 衝刺）',
+    stage: '國中英語階段',
     cefr: 'A1 → B1',
-    exams: '國中教育會考 (CAP) 精熟 A++ · 全民英檢 GEPT 初級',
+    exams: '國中教育會考與全民英檢 GEPT 初級',
     targetHref: '#jh',
     questHref: 'quest/#school',
     examHref: '#exams',
     accent: '#2563eb',
     metalearning: {
-      benchmark: '熟練 1,200 基本字彙＋800 延伸字、國中 6 學期核心文法與 45% 素養圖表閱讀，聽力 21 題與閱讀 43 題達 88%+ 穩拿會考 A++。',
+      benchmark: '掌握國中六學期核心字詞、句型、聽力與閱讀。用官方近期題本分別檢查答題與時間，依各年度說明核對。',
       concepts: ['六大核心時態（含現在完成式 since/for）', '被動語態、感官/使役動詞、不定詞與動名詞', '形容詞子句（關代）與名詞子句（間接問句）'],
       facts: ['108 課綱 1,200 必考字與高頻片語（look forward to, be used to, spend...V-ing）', '會考圖表常見資訊字（discount, valid until, departure, refund）'],
       procedures: ['單選題 30 秒掃時間詞與結構（15 題省時）', '圖表題「先讀題幹條件→再回圖定位」', '克漏字讀前後句邏輯轉折，閱讀題找同義替換證據'],
@@ -132,10 +132,10 @@ export const STAGE_EXAM_BLUEPRINTS = [
       prompt: 'Although it rained heavily yesterday, ___ we still went hiking.',
       steps: [
         '① 辨識連接詞配對：句首已出現從屬連接詞 Although（雖然）。',
-        '② 啟動去學習雷達：中文常說「雖然…但是…」，但英文一個句子只能有一個連接詞，絕不可再加 but！',
+        '② 啟動去學習雷達：although 已將讓步子句連到主句。這個結構不要再用 but 引出主句。',
         '③ 確認正解：空格直接留空（填 ✕ / 不填連接詞），保留主子句 we still went hiking。'
       ],
-      feynman: '英文連接詞像「橋梁」：兩座島（兩個子句）只需要一座橋（Although 或 but 擇一），蓋兩座橋就會撞在一起！'
+      feynman: 'Compare: Although it rained, we went hiking. / It rained, but we went hiking. 兩種說法都能表達轉折，句子結構不同。'
     },
     unlearnTraps: [
       { wrong: 'Although he was tired, but he finished it.', why: '中文「雖然…但是…」干擾，英文 Although 與 but 不可並存。', right: 'Although he was tired, he finished it.' },
@@ -145,7 +145,7 @@ export const STAGE_EXAM_BLUEPRINTS = [
     exposureLadder: [
       '階段 1（已解範例）：先看 3 步拆題再做同結構仿寫',
       '階段 2（交錯變異）：混合時態＋子句＋花費動詞 10 題不分類快測',
-      '階段 3（真實暴露）：會考 1.0×/1.15× 聽力＋限時 20 題模擬考達 85%+'
+      '階段 3（真實暴露）：依官方題本安排一回閱讀與聽力實戰並記錄結果'
     ],
     drills: [
       {
@@ -560,6 +560,8 @@ export function renderUltralearningMasteryHub(options = {}) {
   const stageId = options.forceStage || state.activeStage || 'junior';
   const bp = STAGE_EXAM_BLUEPRINTS.find((b) => b.id === stageId) || STAGE_EXAM_BLUEPRINTS[1];
   const metrics = computeStageReadiness(bp.id, state);
+  const junior = bp.id === 'junior';
+  const drillProgress = Math.round(100 * metrics.correct / Math.max(1,metrics.totalDrills));
   const compact = !!options.compact;
 
   const stageTabs = options.forceStage ? '' : `
@@ -570,7 +572,7 @@ export function renderUltralearningMasteryHub(options = {}) {
         return `<button type="button" role="tab" aria-selected="${active}" class="ul-stage-tab ${active ? 'is-active' : ''}" data-ul-stage="${s.id}" style="--stage-accent:${s.accent}">
           <span class="ul-tab-cefr">${esc(s.cefr)}</span>
           <strong>${esc(s.stage)}</strong>
-          <small>${m.readiness}% 就緒</small>
+          <small>${s.id === 'junior' ? `${m.correct}/${m.totalDrills} 示範題答對` : `${m.readiness}% 就緒`}</small>
         </button>`;
       }).join('')}
     </div>
@@ -632,12 +634,12 @@ export function renderUltralearningMasteryHub(options = {}) {
           <h2>${esc(bp.stage)}（${esc(bp.cefr)}）通關藍圖</h2>
           <p class="ul-exams-line">🎯 對應檢定考試：<strong>${esc(bp.exams)}</strong></p>
         </div>
-        <div class="ul-readiness-gauge" aria-label="階段考試就緒度 ${metrics.readiness}%">
+        <div class="ul-readiness-gauge" aria-label="${junior ? '國中示範練習紀錄' : `階段考試就緒度 ${metrics.readiness}%`}">
           <div class="ul-gauge-top">
-            <span>考試就緒度</span>
-            <strong>${metrics.readiness}%</strong>
+            <span>${junior ? '示範題答對' : '考試就緒度'}</span>
+            <strong>${junior ? `${metrics.correct}/${metrics.totalDrills}` : `${metrics.readiness}%`}</strong>
           </div>
-          <div class="ul-gauge-bar"><i style="width:${metrics.readiness}%"></i></div>
+          <div class="ul-gauge-bar"><i style="width:${junior ? drillProgress : metrics.readiness}%"></i></div>
           <small class="ul-sweet-tag zone-${metrics.sweetSpot.zone}">${esc(metrics.sweetSpot.label)}</small>
         </div>
       </header>
@@ -645,10 +647,10 @@ export function renderUltralearningMasteryHub(options = {}) {
       ${stageTabs}
       ${pillarsStrip}
 
-      <div class="ul-sweet-banner zone-${metrics.sweetSpot.zone}">
+      ${junior ? '<p class="ul-sweet-banner">這裡的幾道題用來示範學習方法。可到六學期路線做隔日變式，並記錄官方練習卷的聽讀結果。</p>' : `<div class="ul-sweet-banner zone-${metrics.sweetSpot.zone}">
         <strong>🎯 甜蜜難度區教練建議（85% 精熟門檻）：</strong>
         <span>${esc(metrics.sweetSpot.advice)}</span>
-      </div>
+      </div>`}
 
       <div class="ul-blueprint-grid">
         <!-- 1. Metalearning Map -->
@@ -741,12 +743,12 @@ export function renderAllStagesReadinessOverview(state = readUltralearningState(
           return `<article class="ul-ov-item" style="--stage-accent:${bp.accent}">
             <div class="ul-ov-top">
               <span class="ul-tab-cefr">${esc(bp.cefr)}</span>
-              <strong>${m.readiness}%</strong>
+              <strong>${bp.id === 'junior' ? `${m.correct}/${m.totalDrills}` : `${m.readiness}%`}</strong>
             </div>
             <h4>${esc(bp.stage)}</h4>
             <p>${esc(bp.exams)}</p>
-            <div class="ul-gauge-bar"><i style="width:${m.readiness}%"></i></div>
-            <small>${m.passedGate ? '👑 已達 85% 精熟門檻' : esc(m.sweetSpot.label)}</small>
+            <div class="ul-gauge-bar"><i style="width:${bp.id === 'junior' ? Math.round(100*m.correct/Math.max(1,m.totalDrills)) : m.readiness}%"></i></div>
+            <small>${bp.id === 'junior' ? '示範題答對' : m.passedGate ? '👑 已達 85% 精熟門檻' : esc(m.sweetSpot.label)}</small>
           </article>`;
         }).join('')}
       </div>

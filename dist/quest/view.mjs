@@ -1,7 +1,7 @@
 import {EXAMS,campaign,isAssessment} from './exams.mjs?v=exams20261027';
 import {examsHome,examResult} from './exam_view.mjs?v=simulation20261027r2';
 import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
-import { schoolHome, schoolGuide, semesterIntro, semesterProject, recordSemesterQuickCheck } from './school_view.mjs?v=school20261027';
+import { schoolHome, schoolGuide, semesterIntro, semesterProject, recordSemesterQuickCheck } from './school_view.mjs?v=jh20261126';
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=truth20261105';
 import * as sound from './sound.mjs?v=truth20261105';
 import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=practice20261126';
@@ -10,7 +10,7 @@ import {mountBoosts} from './boost.mjs?v=truth20261105';
 import {recordRecall} from '../recall.mjs?v=truth20261105';
 import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=truth20261105';
 import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=truth20261105';
-import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=launch20261103r3';
+import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=jh20261126';
 
 const V = 'truth20261105';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';
