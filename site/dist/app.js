@@ -50,7 +50,7 @@ import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
 // Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
 import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs?v=practice20261126';
-import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage } from './ultralearning_engine.mjs';
+import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage, computeStageReadiness, evaluateSweetSpot } from './ultralearning_engine.mjs';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -89,6 +89,8 @@ let sixthQuizSubmitted = false;
 
 let activeJhTab = 'units';
 let activeJhUnit = 'u1';
+let activeJhTerm = 'all';
+let jhUnitSearch = '';
 
 let activeArchModule = 'basic-tenses-passive';
 let vocab1200Category = 'all';
@@ -210,8 +212,8 @@ function render108GradesTable() {
   return `
     <div class="lesson-table card" tabindex="0" role="region" aria-label="108 課綱各學年英語學習指標與升學考試對照總表" style="margin:20px 0;padding:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">📊 108 課綱各學年英語學習指標與升學考試對照總表</strong>
-        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">G6–G12 全景圖</span>
+        <strong class="table-card-title">📊 108 課綱各學年英語學習指標與升學考試對照總表</strong>
+        <span class="pill table-card-pill good">G6–G12 全景圖</span>
       </div>
       <table>
         <caption>教育部 108 課綱英語各年級學習重點、單字量規準與大考升學對標</caption>
@@ -353,8 +355,8 @@ function renderJhCapMasteryTable() {
   return `
     <div class="lesson-table card" tabindex="0" role="region" aria-label="國中教育會考英語科 A++ 滿分考點雙向細目總覽表" style="margin:20px 0;padding:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">👑 國中教育會考 (CAP) 英語科 A++ 滿分考點雙向細目總覽表</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">會考頂標秘笈</span>
+        <strong class="table-card-title">👑 國中教育會考 (CAP) 英語科 A++ 滿分考點雙向細目總覽表</strong>
+        <span class="pill table-card-pill">會考頂標秘笈</span>
       </div>
       <table>
         <caption>心測中心教育會考題型分佈、素養考察方向與秒殺破題心訣</caption>
@@ -414,8 +416,8 @@ function renderArchPrerequisiteTable() {
   return `
     <div class="lesson-table card" tabindex="0" role="region" aria-label="高中先修 5 大核心矩陣速查表" style="margin:20px 0;padding:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">🏛️ 高中先修 5 大核心矩陣速查表 (High School Prerequisite Matrix)</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">銜接高中學測頂標</span>
+        <strong class="table-card-title">🏛️ 高中先修 5 大核心矩陣速查表 (High School Prerequisite Matrix)</strong>
+        <span class="pill table-card-pill">銜接高中學測頂標</span>
       </div>
       <table>
         <caption>高中先修核心模組、學測指標與自主檢核規準</caption>
@@ -501,8 +503,8 @@ function renderExamTracksComparisonTable() {
   return `
     <div class="lesson-table card" tabindex="0" role="region" aria-label="七大考制題型難度、命題核心與解題破局策略全景對照表" style="margin:20px 0;padding:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong style="color:#0f172a;font-size:15px">📊 七大考制題型難度、命題核心與解題破局策略全景對照表</strong>
-        <span class="pill" style="font-size:11px;background:#e0e7ff;color:#3730a3">考科全景速覽</span>
+        <strong class="table-card-title">📊 七大考制題型難度、命題核心與解題破局策略全景對照表</strong>
+        <span class="pill table-card-pill">考科全景速覽</span>
       </div>
       <table>
         <caption>國際考制與國家大考核心結構、考察能力與答題致勝關鍵</caption>
@@ -1527,6 +1529,15 @@ function sixthPage() {
 // 4. JH 國中會考衝刺館 (JH Project Port)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function jhPage() {
+  const jhReady = computeStageReadiness('junior');
+  const termList = ['all', '7上', '7下', '8上', '8下', '9上', '9下'];
+  const qNorm = jhUnitSearch.trim().toLowerCase();
+  const filteredJhUnits = jhUnits.filter(u => {
+    const termOk = activeJhTerm === 'all' || u.termCode === activeJhTerm;
+    const textOk = !qNorm || `${u.title} ${u.summary} ${u.exampleSentence} ${u.termCode} ${u.unitId}`.toLowerCase().includes(qNorm);
+    return termOk && textOk;
+  });
+
   return `
     <div class="header-block">
       <div class="pill">🎓 JH 專案完整移植</div>
@@ -1550,52 +1561,80 @@ function jhPage() {
     ` : ''}
 
     ${activeJhTab === 'units' ? `
-      ${renderUltralearningMasteryHub({ forceStage: 'junior', compact: true })}
-      ${renderJhCapMasteryTable()}
-      <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr));gap:16px">
-        ${jhUnits.map(u => `
-          <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-                <span class="chip" style="background:#e0e7ff;color:#3730a3;font-weight:700">${u.termCode} (${u.termEn})</span>
-                <span style="font-size:12px;color:var(--text-muted)">${u.unitId}</span>
-              </div>
-              <h3 style="margin:0 0 8px;font-size:17px">${u.title}</h3><details><summary>觀念圖解與對照表</summary>${renderTeachingAid(u.title, [], [u.exampleSentence])}</details>
-              <p style="font-size:14px;color:#475569;margin:0 0 12px;line-height:1.6">${u.summary}</p>
-            </div>
-            <div>
-              <details class="jh-retrieval-box">
-                <summary>🧠 閉書提取挑戰（Ultralearning Retrieval）：遮住例句自己造一句！</summary>
-                <p><strong>示範例句核對：</strong><span lang="en">${esc(u.exampleSentence)}</span><br><small>口頭唸出後，把主詞或時間換成自己的生活情境再說一次（Variability）。</small></p>
-              </details>
-              <div style="display:flex;gap:8px">
-                <button class="btn small primary" style="flex:1" data-speak-sentence="${esc(u.exampleSentence)}">🔊 朗讀例句</button>
-                <button class="btn small secondary" style="flex:1" data-start-quiz="true" data-quiz-cat="cap" data-quiz-count="10">⚡ 會考直練</button>
-              </div>
-            </div>
-          </div>
-        `).join('')}
+      <div class="jh-readiness-strip" role="region" aria-label="國中會考就緒度快覽">
+        <div class="jh-strip-info">
+          <strong>🎯 國中會考 A++ 超速學習就緒度：${jhReady.readiness}%（${esc(jhReady.sweetSpot.label)}）</strong>
+          <span>先用下方 16 單元做「閉書提取」，再進入 See·Do·Feedback 實戰藍圖或直接抽 10 題會考真題型！</span>
+        </div>
+        <div class="jh-strip-actions">
+          <button class="btn small secondary" data-select-jh-tab="ultralearning">⚡ 開啟超速學習藍圖</button>
+          <button class="btn small primary" data-start-quiz="true" data-quiz-cat="jhs" data-quiz-count="10">🚀 10 題會考直練</button>
+        </div>
       </div>
+
+      <div class="jh-filter-bar" role="region" aria-label="國中課綱學期與關鍵字篩選">
+        <div class="jh-term-pills" role="group" aria-label="學期篩選">
+          ${termList.map(t => `
+            <button type="button" class="jh-term-pill ${activeJhTerm === t ? 'is-active' : ''}" data-jh-term="${t}" aria-pressed="${activeJhTerm === t}">
+              ${t === 'all' ? `全部 (${jhUnits.length})` : t}
+            </button>
+          `).join('')}
+        </div>
+        <input id="jh-unit-search" class="jh-search-input" type="search" value="${esc(jhUnitSearch)}" placeholder="🔍 搜尋單元、文法或例句（如：完成式、被動）…" aria-label="搜尋國中英語單元">
+      </div>
+
+      ${filteredJhUnits.length ? `
+        <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr));gap:16px">
+          ${filteredJhUnits.map(u => `
+            <div class="card jh-unit-card">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <span class="chip jh-term-chip">${u.termCode} (${u.termEn})</span>
+                  <span style="font-size:12px;color:var(--text-muted)">${u.unitId}</span>
+                </div>
+                <h3 style="margin:0 0 8px;font-size:17px">${u.title}</h3><details><summary>觀念圖解與對照表</summary>${renderTeachingAid(u.title, [], [u.exampleSentence])}</details>
+                <p class="jh-unit-summary">${u.summary}</p>
+              </div>
+              <div>
+                <details class="jh-retrieval-box">
+                  <summary>🧠 閉書提取挑戰（Ultralearning Retrieval）：遮住例句自己造一句！</summary>
+                  <p><strong>示範例句核對：</strong><span lang="en">${esc(u.exampleSentence)}</span><br><small>口頭唸出後，把主詞或時間換成自己的生活情境再說一次（Variability）。</small></p>
+                </details>
+                <div style="display:flex;gap:8px">
+                  <button class="btn small primary" style="flex:1" data-speak-sentence="${esc(u.exampleSentence)}">🔊 朗讀例句</button>
+                  <button class="btn small secondary" style="flex:1" data-start-quiz="true" data-quiz-cat="jhs" data-quiz-count="10">⚡ 會考直練</button>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      ` : `
+        <div class="card" style="text-align:center;padding:32px 16px">
+          <p style="margin:0 0 12px;color:var(--text-muted)">找不到符合「${esc(jhUnitSearch)}」的國中單元。</p>
+          <button type="button" class="btn small secondary" data-jh-term="all" data-jh-reset-search="true">清除篩選條件</button>
+        </div>
+      `}
+      ${renderJhCapMasteryTable()}
     ` : ''}
 
     ${activeJhTab === 'cases' ? `
       <div style="display:grid;gap:14px">
         ${Object.keys(jhCases).map(k => `
-          <div class="card" style="border-left:4px solid #3b82f6">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-              <strong style="color:#1d4ed8;font-size:15px">情境案例：${k}</strong>
+          <div class="card jh-case-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px">
+              <strong class="jh-case-title">情境案例：${k}</strong>
               <button class="btn small quiet" data-speak-sentence="${esc(jhCases[k])}">🔊 語音朗讀</button>
             </div>
-            <p style="margin:0;font-size:14px;color:#334155;line-height:1.6">${jhCases[k]}</p>
+            <p class="jh-case-body">${jhCases[k]}</p>
           </div>
         `).join('')}
       </div>
     ` : ''}
 
     ${activeJhTab === 'cap' ? `
-      <div class="card" style="margin-bottom:20px;background:#f8fafc">
+      <div class="card jh-cap-intro">
         <h3 style="margin:0 0 10px">📊 國中教育會考英語科命題雙向細目分析</h3>
-        <p style="font-size:14px;color:#64748b;margin:0">
+        <p>
           根據心理與教育測驗研究發展中心 (CAP) 統計，英語科閱讀題平均 40-43 題，聽力題 21 題。近年素養題型（圖表、時刻表、多文本對照）佔比已超過 45%。
         </p>
       </div>
@@ -1603,14 +1642,14 @@ function jhPage() {
       <div style="display:grid;gap:16px">
         ${jhCapAnalysis.map(c => `
           <div class="card">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-              <div>
-                <span class="chip" style="background:#ecfdf5;color:#047857;font-weight:700">${c.year}年 會考英語真題試卷</span>
-                <span class="chip" style="background:#eff6ff;color:#1e40af">${c.pages} 頁完整分析報告</span>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px">
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="chip jh-chip-good">${c.year}年 會考英語真題試卷</span>
+                <span class="chip jh-chip-blue">${c.pages} 頁完整分析報告</span>
               </div>
-              <a href="${c.sourceUrl}" target="_blank" class="btn small primary">📄 線上閱覽官方 PDF</a>
+              <a href="${c.sourceUrl}" target="_blank" rel="noopener" class="btn small primary">📄 線上閱覽官方 PDF</a>
             </div>
-            <div style="font-size:13px;color:#475569">
+            <div class="jh-meta-line">
               <strong>檔案名稱：</strong> ${c.label} (${(c.bytes / 1024 / 1024).toFixed(2)} MB)
             </div>
           </div>
@@ -1623,8 +1662,8 @@ function jhPage() {
         ${jhHandouts.map(h => `
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-              <span class="chip" style="background:#e0e7ff;color:#3730a3">${h.grade}年級第${h.term}學期</span>
-              <span style="font-size:12px;color:#64748b">${h.pages} 頁 A4</span>
+              <span class="chip jh-term-chip">${h.grade}年級第${h.term}學期</span>
+              <span class="jh-meta-line" style="font-size:12px">${h.pages} 頁 A4</span>
             </div>
             <h4 style="margin:6px 0 10px">${h.title}</h4>
             <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">單元代碼: ${h.unitId}</div>
@@ -1985,11 +2024,11 @@ function studioPage() {
       <h3 style="margin:0 0 12px">🔤 核心單字點讀卡庫 (${allVocab.length} 個字詞)</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 220px), 1fr));gap:10px">
         ${allVocab.slice(0, 48).map(v => `
-          <div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:#f8fafc;display:flex;justify-content:space-between;align-items:center">
+          <div class="studio-vocab-item">
             <div>
-              <strong style="color:#0f172a" lang="en">${v.word}</strong>
-              <span style="font-family:monospace;font-size:11px;color:#2563eb;margin-left:4px">${v.ipa}</span>
-              <div style="font-size:12px;color:#64748b">${v.pos} ${v.zh}</div>
+              <strong class="studio-vocab-word" lang="en">${v.word}</strong>
+              <span class="studio-vocab-ipa">${v.ipa}</span>
+              <div class="studio-vocab-zh">${v.pos} ${v.zh}</div>
             </div>
             <button class="btn small quiet" data-speak-word="${esc(v.word)}">🔊</button>
           </div>
@@ -2017,75 +2056,106 @@ function examPage() {
     `;
   }
 
+  function isExamItemCorrect(item, choice) {
+    if (choice === undefined) return false;
+    const multi = item.selectCount === 2 || Array.isArray(item.answer) || item.questionType === 'sentence_equivalence';
+    const ans = Array.isArray(item.answer) ? item.answer : [item.answer];
+    return multi
+      ? (Array.isArray(choice) && choice.length === ans.length && choice.every(v => ans.includes(v)))
+      : choice === item.answer;
+  }
+
   if (currentQuizQuestions.length > 0) {
     const q = currentQuizQuestions[currentQuizIdx];
     const totalQ = currentQuizQuestions.length;
     const answeredCount = Object.keys(userQuizAnswers).length;
+    const correctCount = currentQuizQuestions.filter(item => isExamItemCorrect(item, userQuizAnswers[item.id])).length;
+    const wrongQuestions = currentQuizQuestions.filter(item => userQuizAnswers[item.id] !== undefined && !isExamItemCorrect(item, userQuizAnswers[item.id]));
+    const wrongCount = wrongQuestions.length;
+    const allFinished = answeredCount === totalQ && totalQ > 0;
+    const sweet = evaluateSweetSpot(correctCount, answeredCount);
     const userChoice = userQuizAnswers[q.id];
     const isAnswered = userChoice !== undefined;
     const isMultiSelect = q.selectCount === 2 || Array.isArray(q.answer) || q.questionType === 'sentence_equivalence';
     const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
-    const isCorrect = isAnswered && (
-      isMultiSelect
-        ? (Array.isArray(userChoice) && userChoice.length === correctAnswers.length && userChoice.every(v => correctAnswers.includes(v)))
-        : userChoice === q.answer
-    );
+    const isCorrect = isExamItemCorrect(q, userChoice);
     const showHint = !!quizRevealedHints[q.id];
     const showExplain = !!quizRevealedExplains[q.id] || isAnswered;
     const pendingMulti = quizPendingMultiChoices[q.id] || [];
 
     return `
-      <div class="header-block" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div class="header-block exam-arena-header">
         <div>
           <div class="pill">📑 模擬實戰測驗 (${CATEGORY_META[quizCategory]?.name || '綜合題庫'})</div>
           <h2 style="margin:6px 0">第 ${currentQuizIdx + 1} / ${totalQ} 題</h2>
         </div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <span style="font-size:14px;color:var(--text-muted)">已作答: ${answeredCount}/${totalQ}</span>
-          <button class="btn" data-exit-quiz="true" style="padding:6px 14px">✕ 結束並返回題庫</button>
+        <div class="exam-arena-stats">
+          <span class="exam-stat-pill">進度 ${answeredCount}/${totalQ}</span>
+          <span class="exam-stat-pill good">✓ ${correctCount}</span>
+          ${wrongCount ? `<span class="exam-stat-pill bad">✕ ${wrongCount}</span>` : ''}
+          <button class="btn small" data-exit-quiz="true">✕ 結束並返回題庫</button>
         </div>
       </div>
       ${quizNotice ? `<p class="quiz-notice" role="status">${esc(quizNotice)}</p>` : ''}
 
-      <div style="width:100%;height:6px;background:var(--line);border-radius:3px;margin:16px 0;overflow:hidden">
+      <div style="width:100%;height:7px;background:var(--line);border-radius:999px;margin:12px 0 8px;overflow:hidden">
         <div style="width:${((currentQuizIdx + 1) / totalQ) * 100}%;height:100%;background:var(--green-core);transition:width 0.3s ease"></div>
       </div>
 
-      <div class="card" style="margin-top:16px">
-        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+      <nav class="exam-q-nav" aria-label="題號快速導覽">
+        ${currentQuizQuestions.map((item, idx) => {
+          const ans = userQuizAnswers[item.id];
+          const stateCls = ans === undefined ? '' : isExamItemCorrect(item, ans) ? 'is-right' : 'is-wrong';
+          const curCls = idx === currentQuizIdx ? 'is-current' : '';
+          return `<button type="button" class="exam-q-dot ${stateCls} ${curCls}" data-jump-quiz-q="${idx}" aria-label="跳至第 ${idx + 1} 題" aria-current="${idx === currentQuizIdx ? 'step' : 'false'}">${idx + 1}</button>`;
+        }).join('')}
+      </nav>
+
+      ${allFinished ? `
+        <section class="exam-summary-banner zone-${sweet.zone}" role="region" aria-label="本回合模考結算與超速學習診斷">
+          <div class="exam-summary-top">
+            <div>
+              <span class="ul-eyebrow">ROUND COMPLETE · ULTRALEARNING FEEDBACK</span>
+              <div class="exam-summary-score">本回合成績：${correctCount} / ${totalQ}（${Math.round((correctCount / totalQ) * 100)}%）</div>
+            </div>
+            <span class="ul-sweet-tag zone-${sweet.zone}">${esc(sweet.label)}</span>
+          </div>
+          <p style="margin:0;font-size:13.5px;color:var(--ul-body);line-height:1.6">${esc(sweet.advice)}</p>
+          <div class="exam-summary-actions">
+            ${wrongCount > 0 ? `<button type="button" class="btn primary" data-retry-quiz-mistakes="true">🔁 專攻 ${wrongCount} 道錯題（Direct → Drill）</button>` : ''}
+            <button type="button" class="btn secondary" data-start-quiz="true">🚀 再抽一組新題</button>
+            <button type="button" class="btn quiet" data-exit-quiz="true">返回分科題庫總覽</button>
+          </div>
+        </section>
+      ` : ''}
+
+      <div class="card exam-arena-card">
+        <div class="exam-meta-row">
           <span class="pill" style="font-size:12px">${esc(q.categoryLabel || q.category.toUpperCase())}</span>
-          <span style="font-size:12px;color:var(--text-muted);background:var(--bg);padding:3px 8px;border-radius:6px;border:1px solid var(--line)">
-            🎯 ${esc(q.subtopic || '綜合考點')}
-          </span>
-          <span style="font-size:12px;color:#d97706;background:#fef3c7;padding:3px 8px;border-radius:6px">
-            題庫標示難度: ⭐ ${q.difficulty}/5
-          </span>
+          <span class="exam-meta-tag">🎯 ${esc(q.subtopic || '綜合考點')}</span>
+          <span class="exam-meta-diff">題庫標示難度: ⭐ ${q.difficulty}/5</span>
         </div>
 
         ${q.passage ? `
-          <div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:14px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:14px;line-height:1.6;white-space:pre-line">
+          <div class="exam-passage-box" lang="en">
             ${esc(q.passage)}
           </div>
         ` : ''}
 
-        <div style="font-size:17px;font-weight:600;line-height:1.6;margin-bottom:20px;color:var(--text)">
+        <div class="exam-prompt-text" lang="en">
           ${esc(q.prompt)}
         </div>
 
         ${isMultiSelect ? `
-          <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-            <span style="font-weight:700;color:#1e40af;font-size:14px">
-              🧩 【GRE 句子等價雙選題】請選出 2 個填入空格後使全句語意等價的同義詞 (Twin Synonyms)
-            </span>
-            <span class="pill" style="background:#dbeafe;color:#1e40af;font-weight:700">
-              已選取 ${isAnswered ? (Array.isArray(userChoice) ? userChoice.length : 1) : pendingMulti.length} / 2
-            </span>
+          <div class="exam-multi-banner">
+            <span>🧩 【GRE 句子等價雙選題】請選出 2 個填入空格後使全句語意等價的同義詞 (Twin Synonyms)</span>
+            <span class="pill" style="font-weight:700">已選取 ${isAnswered ? (Array.isArray(userChoice) ? userChoice.length : 1) : pendingMulti.length} / 2</span>
           </div>
         ` : ''}
 
-        ${isAnswered ? `<div class="answer-toolbar"><span role="status">${isCorrect ? "✓ 答對了" : "再看一次答案，找出關鍵"}</span><button class="btn primary" data-next-quiz-q="true" ${currentQuizIdx === totalQ - 1 ? "disabled" : ""}>${currentQuizIdx === totalQ - 1 ? "已是最後一題" : "下一題 →"}</button></div>` : ""}
+        ${isAnswered ? `<div class="answer-toolbar"><span role="status">${isCorrect ? "✓ 答對了 (+15 XP)" : "再看一次答案，找出關鍵錯因"}</span><button class="btn primary" data-next-quiz-q="true" ${currentQuizIdx === totalQ - 1 ? "disabled" : ""}>${currentQuizIdx === totalQ - 1 ? "已是最後一題" : "下一題 →"}</button></div>` : ""}
         ${isAnswered && isMultiSelect ? `
-          <div style="background:${isCorrect ? '#ecfdf5' : '#fff1f2'};border:1px solid ${isCorrect ? '#a7f3d0' : '#fecdd3'};color:${isCorrect ? '#065f46' : '#9f1239'};padding:12px 16px;border-radius:8px;margin-bottom:16px;font-weight:600;display:flex;align-items:center;gap:8px">
+          <div class="exam-multi-result ${isCorrect ? 'good' : 'bad'}">
             <span>${isCorrect ? '🎉 雙選完全正確！(+25 XP)' : '⚠️ 雙選未完全命中！'}</span>
             <span style="font-size:13px;font-weight:normal">
               ${isCorrect ? '精準鎖定 GRE 孿生同義詞組，句意完全等價。' : 'GRE 六選二句子等價題需同時選出 2 個使句意完全等價之詞彙（全對才計分）。請參閱下方考點剖析與搭配用法。'}
@@ -2093,10 +2163,10 @@ function examPage() {
           </div>
         ` : ''}
 
-        <div style="display:grid;gap:10px;margin-bottom:20px">
+        <div class="exam-options-grid">
           ${q.options.map((opt, oIdx) => {
             const optLetter = String.fromCharCode(65 + oIdx);
-            let optStyle = 'background:var(--bg);border:1px solid var(--line);color:var(--text);';
+            let cls = '';
             let icon = '';
 
             if (isMultiSelect) {
@@ -2104,59 +2174,52 @@ function examPage() {
               if (isAnswered) {
                 const userSelected = Array.isArray(userChoice) && userChoice.includes(oIdx);
                 if (isCorrectOpt && userSelected) {
-                  optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
-                  icon = ' ✅ 正確雙選';
+                  cls = 'is-right';
+                  icon = '✅ 正確雙選';
                 } else if (isCorrectOpt && !userSelected) {
-                  optStyle = 'background:#f0fdf4;border:2px dashed #10b981;color:#065f46;font-weight:600;';
-                  icon = ' 💡 正確雙選 (遺漏)';
+                  cls = 'is-missed';
+                  icon = '💡 正確雙選 (遺漏)';
                 } else if (!isCorrectOpt && userSelected) {
-                  optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
-                  icon = ' ❌ 您的選擇 (非等價詞)';
+                  cls = 'is-wrong';
+                  icon = '❌ 您的選擇 (非等價詞)';
                 } else {
-                  optStyle = 'opacity:0.5;border:1px solid var(--line);';
+                  cls = 'is-dim';
                 }
               } else {
                 const isPending = pendingMulti.includes(oIdx);
-                if (isPending) {
-                  optStyle = 'background:#eff6ff;border:2px solid #3b82f6;color:#1e40af;font-weight:600;';
-                  icon = ' 🔘 已選取';
-                } else {
-                  icon = ' ⚪ 點擊選取';
-                }
+                cls = isPending ? 'is-pending' : '';
+                icon = isPending ? '🔘 已選取' : '⚪ 點擊選取';
               }
 
               return `
-                <button class="btn" ${isAnswered ? '' : `data-quiz-toggle-multi="${oIdx}"`} ${isAnswered ? 'disabled' : ''}
-                  style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
-                  <div>
-                    <strong style="margin-right:10px">${optLetter}.</strong>
-                    <span>${esc(opt)}</span>
-                  </div>
-                  <span style="font-size:13px">${icon}</span>
+                <button type="button" class="exam-opt-btn ${cls}" ${isAnswered ? '' : `data-quiz-toggle-multi="${oIdx}"`} ${isAnswered ? 'disabled' : ''}>
+                  <span class="exam-opt-lead">
+                    <span class="exam-opt-key">${optLetter}</span>
+                    <span lang="en">${esc(opt)}</span>
+                  </span>
+                  <span class="exam-opt-badge">${icon}</span>
                 </button>
               `;
             } else {
-              // Single Select (4 choices)
               if (isAnswered) {
                 if (oIdx === q.answer) {
-                  optStyle = 'background:#ecfdf5;border:2px solid #10b981;color:#065f46;font-weight:600;';
-                  icon = ' ✅ 正確答案';
+                  cls = 'is-right';
+                  icon = '✅ 正確答案';
                 } else if (oIdx === userChoice) {
-                  optStyle = 'background:#fef2f2;border:2px solid #ef4444;color:#991b1b;';
-                  icon = ' ❌ 您的選擇';
+                  cls = 'is-wrong';
+                  icon = '❌ 您的選擇';
                 } else {
-                  optStyle = 'opacity:0.6;border:1px solid var(--line);';
+                  cls = 'is-dim';
                 }
               }
 
               return `
-                <button class="btn" data-quiz-answer="${oIdx}" ${isAnswered ? 'disabled' : ''}
-                  style="text-align:left;padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;cursor:${isAnswered ? 'default' : 'pointer'};font-size:15px;line-height:1.4;${optStyle}">
-                  <div>
-                    <strong style="margin-right:10px">${optLetter}.</strong>
-                    <span>${esc(opt)}</span>
-                  </div>
-                  <span>${icon}</span>
+                <button type="button" class="exam-opt-btn ${cls}" data-quiz-answer="${oIdx}" ${isAnswered ? 'disabled' : ''}>
+                  <span class="exam-opt-lead">
+                    <span class="exam-opt-key">${optLetter}</span>
+                    <span lang="en">${esc(opt)}</span>
+                  </span>
+                  <span class="exam-opt-badge">${icon}</span>
                 </button>
               `;
             }
@@ -2173,28 +2236,28 @@ function examPage() {
         ` : ''}
 
         <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
-          <button class="btn secondary" data-toggle-quiz-hint="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
+          <button class="btn secondary small" data-toggle-quiz-hint="${esc(q.id)}">
             💡 ${showHint ? '隱藏破題線索' : '查看思考引導提示'}
           </button>
-          <button class="btn secondary" data-toggle-quiz-explain="${esc(q.id)}" style="font-size:13px;padding:6px 12px">
+          <button class="btn secondary small" data-toggle-quiz-explain="${esc(q.id)}">
             📖 ${showExplain ? '隱藏考點解析' : '展開考點解析'}
           </button>
         </div>
 
         ${showHint ? `
-          <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:14px;color:#92400e">
+          <div class="exam-hint-box">
             <strong>💡 解題關鍵引導：</strong>${esc(q.hint)}
           </div>
         ` : ''}
 
         ${showExplain ? `
-          <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:14px;color:#166534;line-height:1.6">
+          <div class="exam-explain-box">
             <strong style="display:block;margin-bottom:4px">📖 考點解析與選項檢查：</strong>
             ${esc(q.explain)}
           </div>
         ` : ''}
 
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;border-top:1px solid var(--line);padding-top:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;border-top:1px solid var(--line);padding-top:16px">
           <button class="btn" data-prev-quiz-q="true" ${currentQuizIdx === 0 ? 'disabled' : ''}>
             ⬅ 上一題
           </button>
@@ -2204,6 +2267,12 @@ function examPage() {
           <button class="btn ${currentQuizIdx === totalQ - 1 ? 'secondary' : 'primary'}" data-next-quiz-q="true" ${currentQuizIdx === totalQ - 1 ? 'disabled' : ''}>
             下一題 ➡
           </button>
+        </div>
+        <div class="exam-kbd-bar" aria-hidden="true">
+          <span><kbd>1</kbd>–<kbd>4</kbd> / <kbd>A</kbd>–<kbd>D</kbd> 作答</span>
+          <span><kbd>←</kbd> <kbd>→</kbd> 切題</span>
+          <span><kbd>H</kbd> 破題提示</span>
+          <span><kbd>E</kbd> 考點解析</span>
         </div>
       </div>
     `;
@@ -2248,7 +2317,7 @@ function examPage() {
     subtopicSelectorHtml = `
       <div style="display:inline-flex;align-items:center;gap:6px">
         <label><strong>題型篩選：</strong></label>
-        <select id="exam-subtopic-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--bg)">
+        <select id="exam-subtopic-select" class="exam-launcher-select">
           ${greSubs.map(s => `<option value="${s.id}" ${quizSubtopic === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
         </select>
       </div>
@@ -2267,7 +2336,7 @@ function examPage() {
     subtopicSelectorHtml = `
       <div style="display:inline-flex;align-items:center;gap:6px">
         <label><strong>題型篩選：</strong></label>
-        <select id="exam-subtopic-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--bg)">
+        <select id="exam-subtopic-select" class="exam-launcher-select">
           ${gmatSubs.map(s => `<option value="${s.id}" ${quizSubtopic === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
         </select>
       </div>
@@ -2287,7 +2356,7 @@ function examPage() {
     <div class="card" style="margin-top:20px">
       <div style="display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
         <label><strong>選擇考制進行抽題測驗：</strong></label>
-        <select id="exam-cat-select" style="max-width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
+        <select id="exam-cat-select" class="exam-launcher-select">
           ${tracksList.map(t => `
             <option value="${t.id}" ${quizCategory === t.id ? 'selected' : ''}>${t.icon} ${t.title} (${t.count})</option>
           `).join('')}
@@ -2295,7 +2364,7 @@ function examPage() {
         ${subtopicSelectorHtml}
         <div style="display:inline-flex;align-items:center;gap:6px">
           <label><strong>測驗長度：</strong></label>
-          <select id="quiz-count-select" style="padding:10px 14px;border-radius:8px;border:1px solid var(--line);font-size:15px;background:var(--bg)">
+          <select id="quiz-count-select" class="exam-launcher-select">
             <option value="10" ${quizQuestionCount === 10 ? 'selected' : ''}>⚡ 10 題極速快測 (約 8 分鐘)</option>
             <option value="20" ${quizQuestionCount === 20 ? 'selected' : ''}>🎯 20 題標準模考 (約 15 分鐘)</option>
             <option value="30" ${quizQuestionCount === 30 ? 'selected' : ''}>📐 30 題進階測驗 (約 25 分鐘)</option>
@@ -2326,7 +2395,7 @@ function examPage() {
             ${t.subtopics ? `
               <div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px">
                 ${t.subtopics.map(sub => `
-                  <button type="button" class="btn quiet small" data-start-quiz="true" data-quiz-cat="${t.id}" data-quiz-subtopic="${sub.filter}" style="font-size:11px;padding:4px 8px;border-radius:12px;background:#f1f5f9;border:1px solid #cbd5e1">
+                  <button type="button" class="btn quiet small exam-subtopic-chip" data-start-quiz="true" data-quiz-cat="${t.id}" data-quiz-subtopic="${sub.filter}">
                     ${sub.label}
                   </button>
                 `).join('')}
@@ -2473,11 +2542,25 @@ function bindEvents() {
     fcSearch.addEventListener('input', e => handleFlashcardInput(e.target, render));
   }
 
+  const jhSearch = document.querySelector('#jh-unit-search');
+  if (jhSearch) {
+    const applyJhSearch = value => {
+      jhUnitSearch = value;
+      render();
+      const next = document.querySelector('#jh-unit-search');
+      if (next) { next.focus(); next.setSelectionRange(next.value.length, next.value.length); }
+    };
+    jhSearch.addEventListener('input', e => { if (!e.isComposing) applyJhSearch(e.target.value); });
+    jhSearch.addEventListener('compositionend', e => applyJhSearch(e.target.value));
+  }
+
   const examCatSelect = document.querySelector('#exam-cat-select');
   if (examCatSelect) {
     examCatSelect.addEventListener('change', e => {
       quizCategory = e.target.value;
       quizSubtopic = 'all';
+      const stageMap = { jhs: 'junior', shs: 'senior', gaokao: 'senior', toeic: 'career', sat: 'academic', gre: 'academic', gmat: 'academic' };
+      if (stageMap[quizCategory]) setUltralearningStage(stageMap[quizCategory]);
       render();
     });
   }
@@ -2762,6 +2845,13 @@ root.addEventListener('click', e => {
     return;
   }
 
+  if (d.jhTerm) {
+    activeJhTerm = d.jhTerm;
+    if (d.jhResetSearch) jhUnitSearch = '';
+    render();
+    return;
+  }
+
   // JH 開啟單元
   if (d.openJhUnit) {
     activeJhUnit = d.openJhUnit;
@@ -2926,6 +3016,40 @@ root.addEventListener('click', e => {
   if (d.prevQuizQ) {
     if (currentQuizIdx > 0) {
       currentQuizIdx--;
+      render();
+    }
+    return;
+  }
+
+  if (d.jumpQuizQ !== undefined) {
+    const targetIdx = Number(d.jumpQuizQ);
+    if (Number.isInteger(targetIdx) && targetIdx >= 0 && targetIdx < currentQuizQuestions.length) {
+      currentQuizIdx = targetIdx;
+      render();
+    }
+    return;
+  }
+
+  if (d.retryQuizMistakes) {
+    const missed = currentQuizQuestions.filter(item => {
+      const choice = userQuizAnswers[item.id];
+      if (choice === undefined) return false;
+      const multi = item.selectCount === 2 || Array.isArray(item.answer) || item.questionType === 'sentence_equivalence';
+      const ans = Array.isArray(item.answer) ? item.answer : [item.answer];
+      const ok = multi
+        ? (Array.isArray(choice) && choice.length === ans.length && choice.every(v => ans.includes(v)))
+        : choice === item.answer;
+      return !ok;
+    });
+    if (missed.length) {
+      currentQuizQuestions = missed;
+      currentQuizIdx = 0;
+      userQuizAnswers = {};
+      quizPendingMultiChoices = {};
+      quizRevealedHints = {};
+      quizRevealedExplains = {};
+      quizSubmitted = false;
+      quizNotice = `🎯 Direct → Drill 錯題專攻模式：已鎖定本回合 ${missed.length} 道錯題，集中爆破！`;
       render();
     }
     return;
@@ -3177,11 +3301,28 @@ if (typeof window !== 'undefined' && window.addEventListener) {
 
     // 🏛️ 題型測驗快捷鍵
     if (page === 'exams') {
-      if (['1','2','3','4','a','b','c','d'].includes(key)) {
-        const idx = ['1','a'].includes(key) ? 0 : ['2','b'].includes(key) ? 1 : ['3','c'].includes(key) ? 2 : 3;
-        const opt = document.querySelector(`[data-quiz-choice="${idx}"]`);
-        if (opt && !opt.disabled) { e.preventDefault(); opt.click(); }
+      if (['1','2','3','4','5','6','a','b','c','d','e','f'].includes(key)) {
+        const keyMap = { '1':0,'a':0,'2':1,'b':1,'3':2,'c':2,'4':3,'d':3,'5':4,'e':4,'6':5,'f':5 };
+        const idx = keyMap[key];
+        const opt = document.querySelector(`[data-quiz-answer="${idx}"]`) || document.querySelector(`[data-quiz-toggle-multi="${idx}"]`);
+        if (opt && !opt.disabled && !(key === 'e' && document.querySelector('[data-toggle-quiz-explain]') && !document.querySelector('[data-quiz-toggle-multi="4"]'))) {
+          e.preventDefault();
+          opt.click();
+          return;
+        }
+      }
+      if (key === 'h') {
+        const hintBtn = document.querySelector('[data-toggle-quiz-hint]');
+        if (hintBtn) { e.preventDefault(); hintBtn.click(); return; }
+      } else if (key === 'e') {
+        const expBtn = document.querySelector('[data-toggle-quiz-explain]');
+        if (expBtn) { e.preventDefault(); expBtn.click(); return; }
+      } else if (e.code === 'ArrowLeft') {
+        const prevBtn = document.querySelector('[data-prev-quiz-q="true"]');
+        if (prevBtn && !prevBtn.disabled) { e.preventDefault(); prevBtn.click(); return; }
       } else if (key === 'enter' || e.code === 'ArrowRight') {
+        const submitMulti = document.querySelector('[data-submit-multi-quiz="true"]:not([disabled])');
+        if (key === 'enter' && submitMulti) { e.preventDefault(); submitMulti.click(); return; }
         const nextBtn = document.querySelector('[data-next-quiz-q="true"]');
         if (nextBtn && !nextBtn.disabled) { e.preventDefault(); nextBtn.click(); }
       }

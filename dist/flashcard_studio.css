@@ -29,6 +29,60 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
 }
 
+:root[data-theme="warm"] .fcx {
+  --x-paper: #fffdf6;
+  --x-page-bg: #f8f2e4;
+  --x-raised: #fffef9;
+  --x-soft: #f3ead8;
+  --x-soft-hover: #eadcc4;
+  --x-ink: #2c2118;
+  --x-muted: #6f5d4b;
+  --x-line: #dfd2bc;
+  --x-line-focus: #9a4f16;
+  --x-accent: #9a4f16;
+  --x-accent-hover: #7c3e10;
+  --x-accent-ink: #ffffff;
+  --x-accent-soft: #f6e7cf;
+  --x-gold: #8a5600;
+  --x-gold-soft: #f8ebd0;
+  --x-blue: #1f4d7a;
+  --x-blue-soft: #e9eff5;
+  --x-bad: #b4233f;
+  --x-bad-soft: #fae8ec;
+  --x-mark: #f6df98;
+  --x-shadow-sm: 0 2px 4px rgba(44, 33, 24, 0.05);
+  --x-shadow: 0 4px 12px rgba(44, 33, 24, 0.06), 0 20px 44px -6px rgba(44, 33, 24, 0.09);
+  --x-shadow-elevated: 0 8px 24px rgba(44, 33, 24, 0.09), 0 28px 60px -8px rgba(44, 33, 24, 0.13);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="warm"]) .fcx {
+    --x-paper: #13201a;
+    --x-page-bg: #0d1712;
+    --x-raised: #1a2c24;
+    --x-soft: #22372e;
+    --x-soft-hover: #294238;
+    --x-ink: #eef5ee;
+    --x-muted: #9fb5a6;
+    --x-line: #30473a;
+    --x-line-focus: #6de2a4;
+    --x-accent: #6be3a3;
+    --x-accent-hover: #82ebb3;
+    --x-accent-ink: #0d2017;
+    --x-accent-soft: #1c3c2e;
+    --x-gold: #f2ce79;
+    --x-gold-soft: #382e18;
+    --x-blue: #98c4f9;
+    --x-blue-soft: #1c324c;
+    --x-bad: #ff8097;
+    --x-bad-soft: #3f1b23;
+    --x-mark: #614e13;
+    --x-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --x-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), 0 24px 54px rgba(0, 0, 0, 0.45);
+    --x-shadow-elevated: 0 8px 28px rgba(0, 0, 0, 0.4), 0 32px 72px rgba(0, 0, 0, 0.55);
+  }
+}
+
 :root[data-theme="dark"] .fcx {
   --x-paper: #13201a;
   --x-page-bg: #0d1712;
