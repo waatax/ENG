@@ -10,6 +10,9 @@ const getStore=()=>{try{return globalThis.localStorage;}catch{return null;}};
 const url=(id='',stage='learn')=>`#advanced${id?`/${id}/${stage}`:''}`;
 const dateLabel=n=>new Date(n).toLocaleDateString('zh-TW');
 const STAGES=[['learn','看懂觀念'],['practice','獨立檢核'],['write','初稿與修訂'],['review','隔天再練']];
+import {renderExtraPractice} from './extra_practice.mjs?v=practice20261126';
+import {advancedExtraPractice} from './advanced_extra_practice.mjs?v=practice20261126';
+
 function route(){const parts=(globalThis.location?.hash||'#advanced').slice(1).split('/');return {id:ADVANCED_UNITS.some(u=>u.id===parts[1])?parts[1]:'',stage:STAGES.some(([id])=>id===parts[2])?parts[2]:'learn'};}
 function sourcePanel(u,form='practice',hide=false){
  const sources=form==='transfer'&&u.transferSources?u.transferSources:u.sources,key=`${u.id}:${form}`,state=speechState.get(key)||{};
@@ -21,7 +24,7 @@ function diagnoseAdvWrong(item,selected){
  if(selected===undefined||selected===null||selected===-1||selected===item.answer)return '';
  if(item.wrong&&item.wrong[selected])return item.wrong[selected];
  const picked=item.options[selected]||'';
- return `你選的「${picked}」在證據範圍控制、語域正式度或訊息推進順序上與題幹條件不合；請對照下方正解解析。`;
+ return `你選的「${picked}」是你的選項。用下方解析，回到情境找一條支持正解的線索。`;
 }
 function boosterPanel(u){
  if(!u.collocations&&!u.diagnosticCheck)return '';
@@ -34,7 +37,7 @@ function boosterPanel(u){
   ${dc?`<div class="advanced-diag-box"><p><strong>🔬 觀念盲點快測：</strong>${esc(dc.q)}</p><div class="advanced-options">${dc.options.map((opt,oi)=>`<button type="button" data-advanced-diag-opt="${oi}" class="${picked===undefined?'':oi===dc.answer?'correct':oi===picked?'incorrect':''}"><span>${String.fromCharCode(65+oi)}</span><b lang="en">${esc(opt)}</b></button>`).join('')}</div>${picked!==undefined?explanation(dc,picked):''}</div>`:''}
  </section>`;
 }
-function lesson(u,r){return `<section class="advanced-lesson"><p class="home-tag">本單元可以做到</p><h2>${u.canDo}</h2>${u.lesson.map(p=>`<p>${esc(p)}</p>`).join('')}<figure class="advanced-diagram"><div>${u.diagram.map(([term,label],i)=>`<span><b lang="en">${esc(term)}</b><small>${esc(label)}</small></span>${i<2?'<i aria-hidden="true">→</i>':''}`).join('')}</div><figcaption>先抓關係，再檢查來源與自己的表達。</figcaption></figure><div class="concept-table-wrap" tabindex="0" role="region" aria-label="${u.title}策略對照表"><table><caption>${u.title} · 策略對照</caption><thead><tr><th scope="col">重點</th><th scope="col">語句／線索</th><th scope="col">怎麼用</th></tr></thead><tbody>${u.table.map(row=>`<tr><th scope="row">${esc(row[0])}</th><td>${esc(row[1])}</td><td>${esc(row[2])}</td></tr>`).join('')}</tbody></table></div>${boosterPanel(u)}${sourcePanel(u,'practice',!!u.listening)}<div class="advanced-task-brief"><h3>你的作品任務</h3><p>${u.target}</p><ol>${u.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div><button type="button" class="home-btn primary" data-advanced-read>${r.read?'再看一次，前往檢核':'我已閱讀，開始獨立檢核'} →</button></section>`;}
+function lesson(u,r){return `<section class="advanced-lesson"><p class="home-tag">本單元可以做到</p><h2>${u.canDo}</h2>${u.lesson.map(p=>`<p>${esc(p)}</p>`).join('')}<figure class="advanced-diagram"><div>${u.diagram.map(([term,label],i)=>`<span><b lang="en">${esc(term)}</b><small>${esc(label)}</small></span>${i<2?'<i aria-hidden="true">→</i>':''}`).join('')}</div><figcaption>先抓關係，再檢查來源與自己的表達。</figcaption></figure><div class="concept-table-wrap" tabindex="0" role="region" aria-label="${u.title}策略對照表"><table><caption>${u.title} · 策略對照</caption><thead><tr><th scope="col">重點</th><th scope="col">語句／線索</th><th scope="col">怎麼用</th></tr></thead><tbody>${u.table.map(row=>`<tr><th scope="row">${esc(row[0])}</th><td>${esc(row[1])}</td><td>${esc(row[2])}</td></tr>`).join('')}</tbody></table></div>${renderExtraPractice(advancedExtraPractice(u.id))}${boosterPanel(u)}${sourcePanel(u,'practice',!!u.listening)}<div class="advanced-task-brief"><h3>你的作品任務</h3><p>${u.target}</p><ol>${u.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div><button type="button" class="home-btn primary" data-advanced-read>${r.read?'再看一次，前往檢核':'我已閱讀，開始獨立檢核'} →</button></section>`;}
 function explanation(item,selected){const wrongMsg=diagnoseAdvWrong(item,selected);return `<div class="advanced-feedback ${selected===item.answer?'good':''}" role="status"><strong>${selected===item.answer?'✓ 判斷正確':selected===-1?'一起看證據':'再看一次判斷依據'}</strong>${wrongMsg?`<p class="advanced-wrong-diagnosis">🔍 <strong>錯在哪裡：</strong>${esc(wrongMsg)}</p>`:''}<p>正解：${esc(item.options[item.answer])}</p><p>${esc(item.why)}</p></div>`;}
 function quiz(u,r,form){
  const bank=u[form==='transfer'?'transfer':'checks'],active=r.active,last=r.attempts?.filter(a=>a.form===form).at(-1);

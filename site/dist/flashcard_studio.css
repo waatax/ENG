@@ -107,13 +107,13 @@ body:has(.fcx) .level-top-entry { display: none; }
   box-shadow: none;
 }
 .fcx .btn.primary {
-  background: linear-gradient(180deg, var(--x-accent) 0%, var(--x-accent-hover) 100%);
+  background: var(--x-accent);
   border-color: var(--x-accent);
   color: var(--x-accent-ink);
   box-shadow: 0 4px 12px rgba(23, 111, 76, 0.25);
 }
 :root[data-theme="dark"] .fcx .btn.primary {
-  background: linear-gradient(180deg, var(--x-accent) 0%, #4bc786 100%);
+  background: var(--x-accent);
   box-shadow: 0 4px 16px rgba(107, 227, 163, 0.2);
 }
 .fcx .btn.primary:hover:not(:disabled) {
@@ -127,7 +127,7 @@ body:has(.fcx) .level-top-entry { display: none; }
   box-shadow: none !important;
 }
 .fcx .btn.small {
-  min-height: 38px;
+  min-height: 44px;
   padding: 6px 13px;
   font-size: 13px;
   border-radius: 10px;
@@ -731,37 +731,9 @@ body:has(.fcx) .level-top-entry { display: none; }
   font-size: 13.5px;
   color: var(--x-muted);
 }
-.fcx-retry {
-  margin-top: 12px;
-  border-top: 1px dashed var(--x-line);
-  padding-top: 12px;
-}
-.fcx-retry label {
-  font-size: 13.5px;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 8px;
-}
-.fcx-retry > div {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.fcx #fc-recall-retry {
-  flex: 1 1 180px;
-  width: auto;
-  font-size: 16px;
-  text-align: left;
-}
 .fcx-retry-ok {
   color: var(--x-accent);
   font-weight: 750;
-  margin-top: 6px;
-}
-.fcx-retry-miss {
-  color: var(--x-bad);
-  font-size: 13.5px;
-  font-weight: 650;
   margin-top: 6px;
 }
 
@@ -809,6 +781,7 @@ body:has(.fcx) .level-top-entry { display: none; }
   left: 7px;
   font: 700 10.5px ui-monospace, Consolas, monospace;
   background: var(--x-soft);
+  color: var(--x-ink);
   border: 1px solid var(--x-line);
   border-radius: 4px;
   padding: 1px 5px;
@@ -1670,6 +1643,37 @@ body:has(.fcx) .level-top-entry { display: none; }
 .fc-example-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .fc-ex-zh { color: var(--x-muted); }
 .fc-empty { text-align: center; color: var(--x-muted); padding: 24px 12px; }
+
+.fcx .fcx-input-note {
+  min-block-size: 1.5em;
+  color: var(--x-bad);
+  margin-block: .35rem .5rem;
+  font-size: .9rem;
+}
+.fcx .fcx-input-note:empty { display: none; }
+.fcx .fcx-retry-card {
+  background: var(--x-soft);
+  border-inline-start: 4px solid var(--x-accent);
+}
+.fcx .recall-studio.is-session { scroll-margin-block-start: 5rem; }
+.fcx .fcx-retry-card h3 { font-size: clamp(1.4rem, 4vw, 2rem); }
+.fcx .fcx-retry-cue { overflow-wrap: anywhere; }
+.fcx #fc-recall-retry {
+  box-sizing: border-box;
+  width: min(100%, 32rem);
+  min-height: 48px;
+  padding: .65rem .85rem;
+  font: inherit;
+  border: 1.5px solid var(--x-line-focus);
+  border-radius: .8rem;
+  background: var(--x-paper);
+  color: var(--x-ink);
+}
+.fcx .fcx-form-note {
+  background: var(--x-accent-soft);
+  border-radius: .7rem;
+  padding: .55rem .75rem;
+}
 
 @media (max-width: 640px) {
   .fc-instant-options {

@@ -10,13 +10,13 @@ async function route(){
  const version=++routeVersion,page=location.hash.slice(1).split('/')[0];advancedApi?.disposeAdvancedCourse(root);
  if(page==='advanced'){
   root.innerHTML=shell('<p role="status">正在開啟精進課程…</p>');
-  try{advancedApi=await import('./advanced_academy.mjs?v=advanced20261103');if(version!==routeVersion)return;document.title='C1→C2 精進課程｜English Quest';renderAdvanced();}
+  try{advancedApi=await import('./advanced_academy.mjs?v=practice20261126');if(version!==routeVersion)return;document.title='C1→C2 精進課程｜English Quest';renderAdvanced();}
   catch{if(version===routeVersion)root.innerHTML=shell('<h1>課程暫時無法開啟</h1><p>請確認網路後重新整理，或<a href="#home">回學習首頁</a>。</p>');}
   window.scrollTo(0,0);return;
  }
  if(page&&!['home','words'].includes(page)){
   legacy=true;root.innerHTML='<main class="learning-hub" style="padding:28px"><p role="status">正在開啟教材…</p></main>';
-  try{await import('./app.js?v=advanced20261103');}catch{legacy=false;root.innerHTML='<main style="padding:28px"><h1>教材暫時無法開啟</h1><p>請重新整理，或回首頁再試一次。</p><a href="#home">回首頁</a></main>';}
+  try{await import('./app.js?v=practice20261126');}catch{legacy=false;root.innerHTML='<main style="padding:28px"><h1>教材暫時無法開啟</h1><p>請重新整理，或回首頁再試一次。</p><a href="#home">回首頁</a></main>';}
   return;
  }
  document.title=(page==='words'?'學單字':'從第一句 Hello，到自信表達自己')+'｜English Quest';

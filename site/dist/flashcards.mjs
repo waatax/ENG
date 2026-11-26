@@ -1,5 +1,5 @@
 import {renderWordStructure} from './word_structure.mjs';
-import {renderRecallStudio, handleRecallAction, recallActive, recallShortcut} from './flashcard_recall.mjs?v=truth20261105';
+import {renderRecallStudio, handleRecallAction, recallActive, recallShortcut} from './flashcard_recall.mjs?v=practice20261126';
 import {renderBrowse} from './flashcard_browse.mjs';
 import {maskTarget} from './word_mask.mjs';
 // flashcards.mjs - 全階程度單字與片語記憶閃卡館 (Graded Memory Flashcards Studio)

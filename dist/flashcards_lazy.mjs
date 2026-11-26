@@ -15,7 +15,7 @@ function track(promise, keep) {
   return promise.then(mod => { keep(mod); failed = false; announce(); return mod; }, err => { failed = true; announce(); throw err; });
 }
 export function loadFlashcards() {
-  fcLoading ||= track(import('./flashcards.mjs'), mod => { fc = mod; });
+  fcLoading ||= track(import('./flashcards.mjs?v=practice20261126'), mod => { fc = mod; });
   fcLoading.catch(() => { fcLoading = null; });
   return fcLoading;
 }

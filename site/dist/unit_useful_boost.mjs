@@ -1,12 +1,12 @@
 // +10% to +25% useful learning content & per-option error explanation enrichment across all school units, chapters, grammar topics, and knowledge points.
 
-function buildWrongMapForQuiz(options, ansIdx, stem, ruleHint) {
+function buildWrongMapForQuiz(options, ansIdx) {
   const wrong = {};
   const right = String(options[ansIdx] ?? '');
   options.forEach((opt, idx) => {
     if (idx === ansIdx) return;
     const picked = String(opt ?? '');
-    wrong[idx] = `你選的「${picked}」在詞性、時態或前後文搭配上與題幹「${stem.slice(0, 48)}」不合；本題應根據「${ruleHint || '核心句型規則'}」選「${right}」。`;
+    wrong[idx] = `你選的「${picked}」先把這個選項和正解「${right}」分別放回題目，對照下方解析。`;
   });
   return wrong;
 }
@@ -30,10 +30,9 @@ export function enrichUnifiedGrades(UNIFIED_GRADES) {
         u._enrichedUseful10 = true;
 
         // 1. Add per-option wrong explanations to all existing formativeQuiz items
-        const ruleRef = u.concepts?.[0]?.title || u.title;
         for (const fq of u.formativeQuiz || []) {
           if (!fq.wrong) {
-            fq.wrong = buildWrongMapForQuiz(fq.options, fq.ans, fq.q, fq.hint1 || ruleRef);
+            fq.wrong = buildWrongMapForQuiz(fq.options, fq.ans);
           }
         }
 
@@ -111,11 +110,11 @@ export function enrichChapters(curriculum, workshops, CHAPTER_EXTRA) {
 
       // Add per-option wrong explanations to workshop question and CHAPTER_EXTRA
       if (w.question && !w.question.wrong) {
-        w.question.wrong = buildWrongMapForQuiz(w.question.options, w.question.answer, w.question.prompt, w.rule);
+        w.question.wrong = buildWrongMapForQuiz(w.question.options, w.question.answer);
       }
       for (const eq of CHAPTER_EXTRA[c.id] || []) {
         if (!eq.wrong) {
-          eq.wrong = buildWrongMapForQuiz(eq.options, eq.answer, eq.prompt, w.rule);
+          eq.wrong = buildWrongMapForQuiz(eq.options, eq.answer);
         }
       }
 
@@ -159,7 +158,7 @@ export function enrichGrammarExtra(grammarTopics, GRAMMAR_EXTRA) {
     // Add per-option wrong map to existing GRAMMAR_EXTRA items
     for (const item of list) {
       if (!item.wrong) {
-        item.wrong = buildWrongMapForQuiz(item.options, item.answer, item.q, t.rule);
+        item.wrong = buildWrongMapForQuiz(item.options, item.answer);
       }
     }
 
@@ -173,7 +172,7 @@ export function enrichGrammarExtra(grammarTopics, GRAMMAR_EXTRA) {
         q: `【10% 進階盲點診斷】對照「${t.title}」的規則（${r0[0] || '核心句型'}），哪一個選項完全符合「${t.flow?.[0] || t.rule}」？ — ${t.question}`,
         options: opts,
         answer: ans,
-        wrong: buildWrongMapForQuiz(opts, ans, t.question, t.trap || t.rule),
+        wrong: buildWrongMapForQuiz(opts, ans),
         explanation: `依【${t.title}】判斷步驟：${t.flow?.join(' → ') || t.rule}。${t.explanation}`
       });
     }

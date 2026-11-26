@@ -3,6 +3,7 @@ import { speak as speakAmerican, stopAudio as stopAmericanAudio } from '../audio
 import {tracks} from './content.mjs';
 import {renderReasoningMap} from './reasoning_map.mjs?v=lessons20261020';
 import {examFrameworks, examWordAndPhraseSets, examSubtopicDrills, examCommuteDialogues} from './exam_curriculum.mjs';
+import {extraCount, renderExtraPractice, vocabularyPractice} from '../extra_practice.mjs?v=practice20261126';
 
 const main=document.querySelector('main'),status=document.querySelector('#audio-status'),toggle=document.querySelector('#listen-toggle');
 const KEY='english-quest-academy-v1';
@@ -1019,6 +1020,8 @@ function renderMode(){
       <button data-action="example">Listen to the example</button>
     </section>
     ${renderReasoningMap(l,current.track,current.key)}
+    ${renderExtraPractice(vocabularyPractice(l.words.map(([word, meaning, example]) => ({word, meaning, example})),
+      extraCount(l.words.length), 'en'), 'Vocabulary in context', 3, 'en')}
     ${relatedChapter?`
       <section class="card">
         <p class="eyebrow">Step-0 Strategy &amp; Structural Formula</p>

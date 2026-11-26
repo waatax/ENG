@@ -244,7 +244,9 @@ const ZH_CUE_PAIRS = [
 export function diagnose(it, value, { gloss } = {}) {
   if (!it || it.type === 'match' || it.type === 'info' || value == null || String(value).trim() === '') return '';
   const chosen = String(value).trim();
-  if (it.wrong?.[chosen]) return it.wrong[chosen];
+  const optionIndex = it.options?.indexOf(chosen) ?? -1;
+  const edited = it.wrong?.[chosen] || (optionIndex >= 0 ? it.wrong?.[optionIndex] : '') || it.optionNotes?.[chosen];
+  if (typeof edited === 'string' && edited.trim()) return edited.trim();
   if (it.type === 'multi') {
     const picked = chosen.split(' || '), right = it.correctAnswers || [];
     const extra = picked.filter(x => !right.includes(x)), missed = right.filter(x => !picked.includes(x));

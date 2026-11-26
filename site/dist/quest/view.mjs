@@ -4,8 +4,8 @@ import { SEMESTERS, semesterOf } from './school.mjs?v=school20261027';
 import { schoolHome, schoolGuide, semesterIntro, semesterProject, recordSemesterQuickCheck } from './school_view.mjs?v=school20261027';
 import { createCourse, createGame, isScored, shuffle, GOALS, XP, FREEZE_COST, MAX_FREEZES, BADGES, HEARTS } from './engine.mjs?v=truth20261105';
 import * as sound from './sound.mjs?v=truth20261105';
-import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=truth20261105';
-import {labView} from './lab.mjs?v=truth20261105';
+import { answerText, correctionTip, feedbackText, questionText, questionAndOptionsText, errorFeedbackSpeechText, diagnose, evidenceFor, makeGlossary, joinSpeech } from './coach.mjs?v=practice20261126';
+import {labView} from './lab.mjs?v=practice20261126';
 import {mountBoosts} from './boost.mjs?v=truth20261105';
 import {recordRecall} from '../recall.mjs?v=truth20261105';
 import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=truth20261105';
@@ -125,7 +125,7 @@ function popover(n, status, u) {
   if (status === 'locked') body = n.kind === 'boss' ? `<p>先完成本單元的課程，就能挑戰金冠。</p>` : game.trackUnlocked(n.track) ? `<p>先完成前面的關卡，這一關就會打開。</p>` : `<p>這一段還沒開啟。完成上一段，或通過跳級測驗。</p><button class="btn gold" data-act="jump" data-id="${n.track}">⏩ 跳級測驗</button>`;
   else if (n.kind === 'boss') body = `<p>從整個單元混合出題，共 ${n.size} 題，有 ${HEARTS} 顆 ❤️，錯 ${HEARTS} 題就結束；通過還需至少 80% 獨立答對，可以馬上再挑戰。通過可以得到金冠 👑 和寶箱 💎。</p><button class="btn gold" data-act="start" data-mode="boss" data-id="${n.id}">${status === 'crowned' ? '再挑戰一次' : '開始挑戰'} +${firstXp} XP</button>`;
   else body = `<p>${n.capacity ? (n.capacity.words?`題池 ${n.capacity.words} 個不同單字；`:`題池 ${n.capacity.targets} 個不同內容；`) : ''}${KIND_TEXT[n.kind] || '課程'} · 約 ${n.size} 題${status === 'tested' ? ' · 已測過，也可以練習' : ''}</p><button class="btn primary" data-act="start" data-mode="lesson" data-id="${n.id}">${status === 'done' ? `重練 +${replay}` : `開始 +${firstXp}`} XP</button>`;
-  return `<div class="pop c-${u.color}" role="dialog" aria-label="${esc(n.title)}"><p class="eyebrow">${esc(u.title)} · 第 ${nodeIndex} 關</p><h3>${n.icon} ${esc(n.title)}</h3>${body}<div class="pop-sub-actions"><button class="btn ghost small" data-act="lab" data-id="${u.id}">🧭 實用加練 (10%)</button></div></div>`;
+  return `<div class="pop c-${u.color}" role="dialog" aria-label="${esc(n.title)}"><p class="eyebrow">${esc(u.title)} · 第 ${nodeIndex} 關</p><h3>${n.icon} ${esc(n.title)}</h3>${body}<div class="pop-sub-actions"><button class="btn ghost small" data-act="lab" data-id="${u.id}">🧭 實用加練</button></div></div>`;
 }
 
 // ---------- guide ----------
@@ -503,7 +503,17 @@ root.addEventListener('click', async e => {
     case 'jump': ui.modal = null; await begin('jump', id); break;
     case 'practice': await begin(el.dataset.mode, id); break;
     case 'vcat': ui.vocabCat = id; render(); break;
-    case 'lab': ui.guide=id;ui.modal='guide';if(await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))){render();await mountBoosts(document,V);(document.querySelector('.unit-boost:not([hidden])')||document.querySelector('.learning-lab'))?.scrollIntoView({block:'start'});}break;
+    case 'lab': {
+      ui.guide = id;
+      ui.modal = 'guide';
+      if (await ensure(game.filesFor('lesson', course.units.get(id)?.nodes[0]?.id))) {
+        render();
+        const practice = document.querySelector('.learning-lab .extra-practice');
+        practice?.scrollIntoView({block:'start'});
+        practice?.querySelector('summary')?.focus({preventScroll:true});
+      }
+      break;
+    }
     case 'guide': ui.guide = id; ui.modal = 'guide'; if (await ensure(game.filesFor('lesson',course.units.get(id)?.nodes[0]?.id))) render(); break;
     case 'close': sound.stop(); ui.modal = null; render(); break;
     case 'shop': ui.modal = 'shop'; render(); break;

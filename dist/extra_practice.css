@@ -1,0 +1,82 @@
+.extra-practice {
+  --practice-ink: #203b35;
+  --practice-paper: #f4faf6;
+  --practice-card: #fff;
+  --practice-line: #bed9cb;
+  --practice-accent: #17664e;
+  margin-block: 1.4rem;
+  padding: clamp(0.9rem, 3vw, 1.5rem);
+  border: 1px solid var(--practice-line);
+  border-radius: 1.25rem;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+  overflow-wrap: anywhere;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .extra-practice {
+    --practice-ink: #edf9f3;
+    --practice-paper: #192e27;
+    --practice-card: #213b32;
+    --practice-line: #4e7464;
+    --practice-accent: #a6e6ca;
+  }
+}
+:root[data-theme="dark"] .extra-practice {
+  --practice-ink: #edf9f3;
+  --practice-paper: #192e27;
+  --practice-card: #213b32;
+  --practice-line: #4e7464;
+  --practice-accent: #a6e6ca;
+}
+.extra-practice-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .35rem 1rem;
+  justify-content: space-between;
+}
+.extra-practice-head h3, .extra-practice-head h4 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(1.125rem, 3vw, 1.4rem);
+}
+.extra-practice-head span {
+  color: var(--practice-accent);
+  font-size: .875rem;
+  font-weight: 700;
+}
+.extra-practice :is(p, summary) { line-height: 1.65; }
+.extra-practice-list { display: grid; gap: .5rem; }
+.extra-practice-card {
+  background: var(--practice-card);
+  border: 1px solid var(--practice-line);
+  border-radius: .85rem;
+}
+.extra-practice summary {
+  align-content: center;
+  min-block-size: 44px;
+  padding: .625rem .8rem;
+  color: var(--practice-accent);
+  cursor: pointer;
+  font-weight: 700;
+}
+.extra-practice summary:focus-visible {
+  outline: 2px solid var(--practice-accent);
+  outline-offset: -3px;
+  border-radius: .75rem;
+}
+.extra-practice-body { padding: 0 .8rem .8rem; }
+.extra-practice-context {
+  padding: .6rem .8rem;
+  background: var(--practice-paper);
+  border-inline-start: 3px solid var(--practice-line);
+  white-space: pre-line;
+}
+.extra-practice-cue { font-size: .9375rem; }
+.extra-practice-answer {
+  margin-top: .75rem;
+  border-block-start: 1px solid var(--practice-line);
+}
+.extra-practice-answer > div { padding-inline: .8rem; white-space: pre-line; }
+.modal.guide .extra-practice { scroll-margin-block-start: 3.5rem; }
+.modal.guide .x { min-width: 44px; min-height: 44px; z-index: 1; }

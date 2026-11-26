@@ -60,14 +60,24 @@ const tapAudit = sel => [...document.querySelectorAll(sel + ' button:not([disabl
       const inView = await page.evaluate(() => { const r = document.querySelector('#fc-recall-answer').getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight; });
       check(`${tag} answer box in first screen`, inView);
       await page.screenshot({ path: path.join(out, `produce-${tag}.png`) });
+      await page.click('[data-fc-recall="check"]');
+      check(`${tag} empty input keeps answer hidden`, await page.locator('.recall-answer').count() === 0);
+      await page.fill('#fc-recall-answer', 'famly');
       await page.click('[data-fc-recall="hint"]');
       check(`${tag} hint shows`, await page.locator('.fcx-hint').isVisible());
-      await page.fill('#fc-recall-answer', 'famly');
+      check(`${tag} hint keeps input`, await page.inputValue('#fc-recall-answer') === 'famly');
       await page.keyboard.press('Enter');
       await page.waitForSelector('.recall-answer');
       check(`${tag} letter diff`, await page.locator('.sp-missing').count() === 1);
       check(`${tag} miss blocks good`, await page.locator('[data-fc-recall="good"]').isDisabled());
       check(`${tag} why shown`, /少了字母|默音|為什麼/.test(await page.locator('.recall-diagnosis').innerText()));
+      await page.click('[data-fc-recall="retry-start"]');
+      check(`${tag} retry masks answer and rating`, await page.locator('.recall-answer,.recall-ratings').count() === 0);
+      const retryInput = await page.locator('#fc-recall-retry').boundingBox();
+      check(`${tag} retry field fits a single line`, retryInput.height >= 44 && retryInput.height <= 64);
+      if (tag === '390-light') await page.screenshot({ path: path.join(out, 'retry-390-light.png') });
+      await page.fill('#fc-recall-retry', 'famly'); await page.keyboard.press('Enter');
+      check(`${tag} retry explains the difference without revealing`, /第 4/.test(await page.locator('#fc-recall-retry-note').innerText()));
       await page.fill('#fc-recall-retry', 'family'); await page.keyboard.press('Enter');
       await page.waitForSelector('.fcx-retry-ok');
       check(`${tag} answer no overflow`, !(await over()));
@@ -105,6 +115,26 @@ const tapAudit = sel => [...document.querySelectorAll(sel + ' button:not([disabl
     check('repair round', (await page.locator('.recall-progress').innerText()).includes('再練一輪'));
     await page.reload(); await page.waitForSelector('.recall-studio');
     check('daily progress persists', (await page.locator('.fcx-ring b').innerText()) === '10');
+    const routes = [
+      ['Quest', 'quest/#learn/s1', '[data-act="lab"][data-id="u1"]'],
+      ['School', '#unit/g5-s1-u1'],
+      ['Advanced', '#advanced/synthesis'],
+      ['EN Academy', 'EN/#lesson/gre/0/learn']
+    ];
+    for (const [name, route, entrance] of routes) {
+      await page.goto(base + route);
+      if (entrance) await page.locator(entrance).first().click();
+      const extra = page.locator('.extra-practice').first();
+      await extra.waitFor();
+      const card = extra.locator('.extra-practice-card').first();
+      await card.locator(':scope > summary').click();
+      const answer = card.locator('.extra-practice-answer');
+      check(`${name} model starts closed`, await answer.locator('> div').isHidden());
+      await answer.locator('summary').click();
+      check(`${name} model and explanation can be revealed`, await answer.locator('> div').isVisible());
+      check(`${name} practice fits phone`, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+      if (name === 'Quest') await extra.screenshot({path:path.join(out, 'quest-practice-390.png')});
+    }
     await ctx.close();
     // Booster, mounted on a bare page so the check does not depend on game progress.
     const units = fs.existsSync('dist/quest/boost') ? fs.readdirSync('dist/quest/boost').map(f => f.replace('.json', '')) : [];

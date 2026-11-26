@@ -64,7 +64,7 @@ test('app.js redraws the waiting page when the bundle arrives and prefetches on 
   assert.match(app, /addEventListener\(FLASHCARDS_READY_EVENT/);
   assert.match(app, /pointerdown[\s\S]{0,120}FLASHCARD_INTENT[\s\S]{0,60}loadFlashcards\(\)/);
   const html = fs.readFileSync('dist/index.html', 'utf8');
-  assert.match(html, /"\.\/flashcards\.mjs":"\.\/flashcards\.mjs\?v=lazy20261123"/);
+  assert.match(html, /"\.\/flashcards\.mjs":"\.\/flashcards\.mjs\?v=practice20261126"/);
 });
 
 // 2026-11-24 (user decision): the phrase set holds only multi-word headwords, and levels without any do not offer it.

@@ -53,7 +53,7 @@ test('Loop 2: Flashcard vocabulary learning & intelligent spelling error diagnos
   // Double consonant
   const tomorrowErr = spellingFeedback('tomorow', 'tomorrow');
   assert.ok(!tomorrowErr.ok);
-  assert.match(tomorrowErr.tip, /雙重子音/);
+  assert.match(tomorrowErr.tip, /連續兩個「r」/);
 
   // Silent p (receipt)
   const receiptErr = spellingFeedback('receit', 'receipt');

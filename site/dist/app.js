@@ -1,6 +1,6 @@
 import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=advanced20261103';
 import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=advanced20261103';
-import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=advanced20261103';
+import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=practice20261126';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
 import { handleHomeConversationClick, handleHomeConversationInput } from './conversation_home.mjs';
 import { renderWordAudio, prepareWordAudio, wordAudioRoute, setWordAudioGroup, stopWordAudio, handleWordAudioClick, handleWordAudioChange, bindWordAudio } from './word_mp3.mjs';
@@ -42,14 +42,14 @@ import {
 } from './arch_prerequisites.mjs';
 import { archSemesters, englishS1Review, englishS2Review, englishS3Review, englishS4Review } from './arch_semesters.mjs';
 import { junyi, MASTERY_LEVELS, JUNYI_BADGES, FATAL_TRAPS } from './junyi_engine.mjs';
-import { teachingChapter, microLesson, handleLessonClick, handleLessonInput, cleanText, textBlocks } from './lesson_pages.mjs';
+import { teachingChapter, microLesson, handleLessonClick, handleLessonInput, cleanText, textBlocks } from './lesson_pages.mjs?v=practice20261126';
 import { diagnosticPage, handleDiagnosticClick } from './diagnostic.mjs';
 import { renderDisplayToolbar, renderReadingDrawer, handleDisplayToolbarClick, initDisplaySettings } from './display_settings.mjs';
 import { renderCurriculumMatrixView, handleMatrixEvents } from './curriculum_matrix.mjs';
 import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
 // Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
-import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs';
+import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs?v=practice20261126';
 import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage } from './ultralearning_engine.mjs';
 
 const KEY = 'english-quest-v5';

@@ -41,7 +41,7 @@ function diagnoseSpellingTrap(a, b) {
   if (!a || !b) return '';
   // Vowel digraph rules: ie vs ei
   if ((b.includes('ie') && a.includes('ei')) || (b.includes('ei') && a.includes('ie'))) {
-    return '記憶口訣：「i before e except after c」（在 c 後寫 ei，如 receive、ceiling；其餘多拼 ie，如 believe、piece）。';
+    return '對照這個字裡 i 和 e 的順序。「i before e except after c」對 piece、receive 有幫助，也有例外，例如 their、weird。';
   }
   // Adjacent transposition detection
   if (a.length === b.length) {
@@ -56,15 +56,19 @@ function diagnoseSpellingTrap(a, b) {
   if (b.startsWith('wr') && !a.startsWith('wr')) return 'wr- 開頭的 w 為默音字母（不發音，如 write, wrong），發音為 /r/。';
   if (/(?:mb|bt)$/.test(b) && !/(?:mb|bt)$/.test(a)) return '字尾的 b 為默音字母（如 climb, thumb, doubt, debt），不發 /b/ 音。';
   if (/gn/.test(b) && !/gn/.test(a)) return 'gn 中的 g 為默音字母（如 sign, foreign, design），常發 /n/。';
-  if (/(?:talk|walk|half|calm|could|would|should)/.test(b) && !/l/.test(a)) return '單字中的 l 為默音字母，發長母音而不發 /l/ 音。';
-  if (/(?:listen|castle|whistle|often|soften)/.test(b) && !/t/.test(a)) return '單字中的 t 為默音字母（如 listen, castle, whistle, often），不發 /t/ 音。';
-  if (/(?:honest|hour|honor|ghost|echo|rhythm)/.test(b) && !/h/.test(a)) return '單字中的 h 為默音字母（如 honest, hour, honor, ghost, rhythm），不發 /h/ 音。';
+  if (/^(talk|walk|half|calm|could|would|should)$/.test(b) && a === b.replace('l', '')) return '這個字的 l 是默音字母，拼寫時要保留。';
+  if (/^(listen|castle|whistle|soften)$/.test(b) && !a.includes('t')) return '這個字的 t 通常是默音字母，拼寫時要保留。';
+  if (/^(honest|hour|honor)$/.test(b) && a === b.slice(1)) return '這個字開頭的 h 不發音，拼寫時要保留。';
   if (/(?:receipt|psychology|pneumonia)/.test(b) && !/p/.test(a)) return '單字中的 p 為默音字母（如 receipt, psychology），不發 /p/ 音。';
 
   // Double consonants trap
   const doubles = ['tomorrow', 'recommend', 'accommodate', 'embarrass', 'necessary', 'separate', 'committee', 'success', 'occurred', 'beginning', 'parallel', 'disappoint', 'business', 'interrupt', 'address', 'possess'];
   for (const d of doubles) {
-    if (b.includes(d)) return `注意雙重子音：「${d}」含有特別的雙字母拼寫規則，依音節分段記憶更不易出錯。`;
+    if (b !== d) continue;
+    for (const repeated of b.matchAll(/([b-df-hj-np-tv-z])\1/g)) {
+      const shorter = b.slice(0, repeated.index) + b.slice(repeated.index + 1);
+      if (a === shorter) return `「${b}」這裡有連續兩個「${repeated[1]}」，你少寫了一個。`;
+    }
   }
 
   // -able vs -ible suffix trap
@@ -88,7 +92,7 @@ function diagnoseSpellingTrap(a, b) {
   // Only name a cause the two spellings actually show.
   const ops = alignLetters(a, b), missing = ops.filter(o => o.kind === 'missing').map(o => o.ch), extra = ops.filter(o => o.kind === 'extra').map(o => o.ch);
   const vowel = /[aeiouy]/;
-  if (missing.length === 1 && !extra.length) return `只少了字母「${missing[0]}」。把單字分音節慢慢唸，每個音節都對應到字母，就不容易漏字。`;
+  if (missing.length === 1 && !extra.length) return `只少了字母「${missing[0]}」。先看少字的位置，再遮住整個單字拼一次。`;
   if (extra.length === 1 && !missing.length) return `多打了字母「${extra[0]}」。對照正確拼字，把多的字母拿掉再唸一次。`;
   if (missing.length === 1 && extra.length === 1 && vowel.test(missing[0]) && vowel.test(extra[0])) return `母音寫成「${extra[0]}」，應該是「${missing[0]}」。輕讀的母音聽起來很像，這類字要連拼法一起記。`;
   return '';
@@ -108,7 +112,7 @@ export function alignLetters(a, b) {
 
 export function spellingFeedback(value, answer) {
   const a = normalizeRecall(value), b = normalizeRecall(answer);
-  if (a === b) return {ok:true, text:'拼字正確！再用例句確認這個意思。', tip:'自然發音與拼字完美對齊！建議出聲跟讀一次，鞏固大腦發音記憶。'};
+  if (a === b) return {ok:true, text:'拼字正確！再用例句確認這個意思。', tip:'有空可出聲跟讀，再試著用這個字說一句話。'};
   if (!a) return {ok:false, text:'還想不起來也沒關係。先聽示範、看搭配，再遮住答案重說。', tip:'啟動主動提取：先聽發音拆解音節，再遮住重說一次。'};
   let i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++;
   const baseText = i === a.length ? `前 ${i} 個字元相同，後面還少了「${b.slice(i)}」。對照完整拼字再試一次。` : i === b.length ? `正確拼字已經完整，後面多了「${a.slice(i)}」。` : `從第 ${i + 1} 個字元開始不同：你寫「${a[i]}」，示範是「${b[i]}」。也請核對整個字是否符合這個詞義。`;
