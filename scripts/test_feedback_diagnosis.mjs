@@ -119,6 +119,6 @@ test('view wires diagnosis, evidence, read-aloud and the repair tile, and every 
   for (const mod of ['coach', 'lab']) assert.match(view, new RegExp(`${mod}\\.mjs\\?v=practice20261126`));
   assert.match(lab, /coach\.mjs\?v=practice20261126/);
   assert.match(html, /quest\.css\?v=truth20261105/);
-  assert.match(html, /view\.mjs\?v=jh20261126/);
+  assert.match(html, /view\.mjs\?v=bench20261128/);
   assert.doesNotMatch(view + html + lab, /learn20261029/);
 });

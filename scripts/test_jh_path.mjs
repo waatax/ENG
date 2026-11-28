@@ -83,10 +83,12 @@ test('exam practice totals are validated, separated by goal, escaped, and backed
   assert.equal(submitJhAnswer(blocked,'english-1','practice',0,false,base).saved,false);
 });
 
-test('direct Quest links select every school term and reject unrelated branch links', () => {
+test('direct Quest links select every school term and exam branch, and reject other tabs or unknown ids', () => {
   const course = createCourse(JSON.parse(readFileSync('dist/quest/course/index.json','utf8')));
   for (const term of JH_TERMS) assert.equal(requestedLearningTrack(`#learn/sem-${term.id}`,course),`sem-${term.id}`);
   assert.equal(requestedLearningTrack('#learn/s1',course),'s1');
-  assert.equal(requestedLearningTrack('#learn/b-cap',course),null);
+  // Exam branches are always unlocked; the exam benchmark plan links straight to them (2026-11-28).
+  assert.equal(requestedLearningTrack('#learn/b-cap',course),'b-cap');
+  assert.equal(requestedLearningTrack('#learn/b-unknown',course),null);
   assert.equal(requestedLearningTrack('#school/sem-j1a',course),null);
 });

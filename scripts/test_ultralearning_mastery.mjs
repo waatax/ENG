@@ -104,5 +104,7 @@ test('Ultralearning engine is wired into JH, Exams, Progress, School, Home, HTML
   assert.match(homeJs, /SEE · DO · FEEDBACK · RETAIN/);
 
   const overview = renderAllStagesReadinessOverview();
-  assert.match(overview, /五階段檢定就緒儀表板/);
+  assert.match(overview, /五階段示範練習總覽/);
+  assert.doesNotMatch(overview, /就緒/, 'Three demo items must not be presented as exam readiness');
+  assert.match(overview, /href="#benchmark"/);
 });

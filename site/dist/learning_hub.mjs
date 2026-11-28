@@ -1,7 +1,7 @@
 import {vocabularyCatalog,esc} from './vocabulary_card.mjs';
-import {renderHomeHero,renderHomeDiscovery,bindHomeExperience,homeIcon} from './home_experience.mjs?v=advanced20261103';
-import {computeMasteryPassport} from './mastery_passport.mjs?v=jh20261126';
-import {ALL_LEVEL_BANDS,renderMasteryPassportSection,exportFullSiteBackup,restoreFullSiteBackup} from './mastery_passport.mjs?v=jh20261126';
+import {renderHomeHero,renderHomeDiscovery,bindHomeExperience,homeIcon} from './home_experience.mjs?v=bench20261128';
+import {computeMasteryPassport} from './mastery_passport.mjs?v=bench20261128';
+import {ALL_LEVEL_BANDS,renderMasteryPassportSection,exportFullSiteBackup,restoreFullSiteBackup} from './mastery_passport.mjs?v=bench20261128';
 export const levels=[['','全部程度'],['elem_1000','國小'],['jhs_2000','國中'],['shs_3000','高中'],['toeic','TOEIC'],['toefl','TOEFL'],['sat','SAT'],['gre','GRE'],['gmat','GMAT']];
 let tier='',query='',items=null,limit=20,loadError=false,selectedBand='starter';
 export function renderLearningHub(){

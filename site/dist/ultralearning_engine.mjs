@@ -43,7 +43,7 @@ export const STAGE_EXAM_BLUEPRINTS = [
     examHref: '#exams',
     accent: '#059669',
     metalearning: {
-      benchmark: '掌握 300–600 生活高頻字、自然發音直覺拼讀與基礎 Be / 一般動詞直述問答，達 85% 正確率即具備升國中先備力。',
+      benchmark: '掌握 300–600 生活高頻字、自然發音直覺拼讀與基礎 Be / 一般動詞直述問答；練習正確率穩定在八成以上時再加深難度。',
       concepts: ['主詞＋be 動詞 / 一般動詞基本語序', '可數名詞單複數與 a / an / the', '現在進行式與時間介系詞 (in/on/at)'],
       facts: ['300–600 教室、家庭、食物、交通、天氣生活核心字彙', '26 字母音與 44 常見自然發音組合'],
       procedures: ['看圖→聽音→跟讀→不看字拼出核心句', '先找主詞「誰」，再決定 be 動詞或一般動詞'],
@@ -191,15 +191,15 @@ export const STAGE_EXAM_BLUEPRINTS = [
   },
   {
     id: 'senior',
-    stage: '高中 SH 階段（學測頂標 / 統測）',
+    stage: '高中階段（學測・統測）',
     cefr: 'B1 → B2',
-    exams: '高中學測 (GSAT) 頂標 · 技專統測 (TVE) · GEPT 中級',
+    exams: '學測英文 · 統測共同英文 · GEPT 中級',
     targetHref: '#arch',
     questHref: 'quest/#school',
     examHref: '#exams',
     accent: '#7c3aed',
     metalearning: {
-      benchmark: '精通 4,500–7,000 字彙精準搭配、分詞構句與假設語氣、篇章結構與混合題證據提取，學測選擇題穩拿 85%+ 並寫出 15+ 分兩段式作文。',
+      benchmark: '熟練高中字彙搭配、分詞構句與假設語氣、篇章結構與混合題證據提取；用大考中心與測驗中心公布的近年試卷，分題型檢查答對率與作答時間。',
       concepts: ['分詞構句與獨立分詞（主詞一致檢驗）', '假設語氣（與現在/過去事實相反、倒裝省略 if）', '轉折語與篇章指代（However / Nevertheless / Hence）'],
       facts: ['大考中心 Level 3–5 高頻動詞搭配（account for, give rise to, cope with）', '易混詞族與字根字首（adapt/adopt, affect/effect, compose/comprise）'],
       procedures: ['文意選填：先標註選項詞性 (n./v./adj./adv.) 再依空格語法篩選', '篇章結構：鎖定段首代名詞（this/such/these）與邏輯轉折詞', '學測作文：主題句 (Topic Sentence) → 具體細節 → 因果/反思收尾'],
@@ -269,15 +269,15 @@ export const STAGE_EXAM_BLUEPRINTS = [
   },
   {
     id: 'career',
-    stage: '大學與職場階段（TOEIC 860+ / GEPT 中高級）',
+    stage: '大學與職場階段（TOEIC・GEPT 中高級）',
     cefr: 'B1+ → B2+',
-    exams: '多益 TOEIC 金色證書 (860+) · 全民英檢 GEPT 中高級',
+    exams: 'TOEIC Listening & Reading · 全民英檢 GEPT 中高級',
     targetHref: '#exams',
     questHref: 'quest/#exams/toeic',
     examHref: '#exams',
     accent: '#0284c7',
     metalearning: {
-      benchmark: 'Part 5 單句填空每題 ≤ 20 秒、Part 7 雙/三篇商務文件交叉定位零遺漏，聽力適應美/英/加/澳口音與同義改寫，總分衝刺 860+ 金色證書。',
+      benchmark: 'Part 5 單句填空求快且準、Part 7 多篇文件交叉定位，聽力適應不同口音與同義改寫；用 ETS 官方練習測驗核對進度（ETS 的 B2 最低總分為 785，金色證書為 860 分以上）。',
       concepts: ['詞性快速辨識（名詞/形容詞/副詞/動詞字尾）', '商務條件句、分詞修飾與主詞動詞遠距一致', 'Part 7 跨文本交叉比對（Email + Invoice + Schedule）'],
       facts: ['商務高頻核心字（reimburse, itinerary, compliance, tentative, expedite, discrepancy）', '聽力同義替換對照（postpone = put off / reschedule; out of stock = unavailable）'],
       procedures: ['Part 5：先看選項！同字根考詞性直接看空格前後 3 字秒殺', 'Part 3/4 聽力：音檔播放前 5 秒先讀題幹關鍵字（Who/Where/Next）', 'Part 7：先看題目類型，細節題找專有名詞與數字，推論題對照兩篇日期與附註'],
@@ -349,7 +349,7 @@ export const STAGE_EXAM_BLUEPRINTS = [
     id: 'academic',
     stage: '國際學術與留學階段（SAT / GRE / GMAT / IELTS）',
     cefr: 'B2+ → C1+',
-    exams: 'Digital SAT · GRE Verbal · GMAT Focus · IELTS / TOEFL',
+    exams: 'SAT Reading and Writing · GRE Verbal · GMAT Verbal · IELTS / TOEFL',
     targetHref: '#advanced',
     questHref: 'quest/#exams/sat',
     examHref: '#exams',
@@ -572,7 +572,7 @@ export function renderUltralearningMasteryHub(options = {}) {
         return `<button type="button" role="tab" aria-selected="${active}" class="ul-stage-tab ${active ? 'is-active' : ''}" data-ul-stage="${s.id}" style="--stage-accent:${s.accent}">
           <span class="ul-tab-cefr">${esc(s.cefr)}</span>
           <strong>${esc(s.stage)}</strong>
-          <small>${s.id === 'junior' ? `${m.correct}/${m.totalDrills} 示範題答對` : `${m.readiness}% 就緒`}</small>
+          <small>${m.correct}/${m.totalDrills} 示範題答對</small>
         </button>`;
       }).join('')}
     </div>
@@ -634,23 +634,20 @@ export function renderUltralearningMasteryHub(options = {}) {
           <h2>${esc(bp.stage)}（${esc(bp.cefr)}）通關藍圖</h2>
           <p class="ul-exams-line">🎯 對應檢定考試：<strong>${esc(bp.exams)}</strong></p>
         </div>
-        <div class="ul-readiness-gauge" aria-label="${junior ? '國中示範練習紀錄' : `階段考試就緒度 ${metrics.readiness}%`}">
+        <div class="ul-readiness-gauge" aria-label="示範練習紀錄 ${metrics.correct}/${metrics.totalDrills}">
           <div class="ul-gauge-top">
-            <span>${junior ? '示範題答對' : '考試就緒度'}</span>
-            <strong>${junior ? `${metrics.correct}/${metrics.totalDrills}` : `${metrics.readiness}%`}</strong>
+            <span>示範題答對</span>
+            <strong>${metrics.correct}/${metrics.totalDrills}</strong>
           </div>
-          <div class="ul-gauge-bar"><i style="width:${junior ? drillProgress : metrics.readiness}%"></i></div>
-          <small class="ul-sweet-tag zone-${metrics.sweetSpot.zone}">${esc(metrics.sweetSpot.label)}</small>
+          <div class="ul-gauge-bar"><i style="width:${drillProgress}%"></i></div>
+          <small class="ul-sweet-tag">3 題示範，不是程度判定</small>
         </div>
       </header>
 
       ${stageTabs}
       ${pillarsStrip}
 
-      ${junior ? '<p class="ul-sweet-banner">這裡的幾道題用來示範學習方法。可到六學期路線做隔日變式，並記錄官方練習卷的聽讀結果。</p>' : `<div class="ul-sweet-banner zone-${metrics.sweetSpot.zone}">
-        <strong>🎯 甜蜜難度區教練建議（85% 精熟門檻）：</strong>
-        <span>${esc(metrics.sweetSpot.advice)}</span>
-      </div>`}
+      ${junior ? '<p class="ul-sweet-banner">這裡的幾道題用來示範學習方法。可到六學期路線做隔日變式，並記錄官方練習卷的聽讀結果。</p>' : `<p class="ul-sweet-banner">這裡的 3 道題用來示範學習方法，不是程度判定。要對標考試，請用<a href="#benchmark">考試對標羅盤</a>的 A／B 卷快篩、把握度校準與錯題回收。</p>`}
 
       <div class="ul-blueprint-grid">
         <!-- 1. Metalearning Map -->
@@ -729,13 +726,13 @@ export function renderUltralearningMasteryHub(options = {}) {
 
 export function renderAllStagesReadinessOverview(state = readUltralearningState()) {
   return `
-    <section class="ul-overview-card card" aria-label="全階段英文與檢定考試 85% 精熟總覽">
+    <section class="ul-overview-card card" aria-label="五階段學習方法示範總覽">
       <div class="ul-overview-head">
         <div>
-          <span class="ul-eyebrow">MASTERY GATE · 85% 精熟門檻總覽</span>
-          <h3>從國小到國際留學：五階段檢定就緒儀表板</h3>
+          <span class="ul-eyebrow">SEE · DO · FEEDBACK 示範</span>
+          <h3>從國小到國際留學：五階段示範練習總覽</h3>
         </div>
-        <a class="btn primary small" href="#exams">進入超速學習引擎 →</a>
+        <a class="btn primary small" href="#benchmark">打開考試對標羅盤 →</a>
       </div>
       <div class="ul-overview-grid">
         ${STAGE_EXAM_BLUEPRINTS.map((bp) => {
@@ -743,12 +740,12 @@ export function renderAllStagesReadinessOverview(state = readUltralearningState(
           return `<article class="ul-ov-item" style="--stage-accent:${bp.accent}">
             <div class="ul-ov-top">
               <span class="ul-tab-cefr">${esc(bp.cefr)}</span>
-              <strong>${bp.id === 'junior' ? `${m.correct}/${m.totalDrills}` : `${m.readiness}%`}</strong>
+              <strong>${m.correct}/${m.totalDrills}</strong>
             </div>
             <h4>${esc(bp.stage)}</h4>
             <p>${esc(bp.exams)}</p>
-            <div class="ul-gauge-bar"><i style="width:${bp.id === 'junior' ? Math.round(100*m.correct/Math.max(1,m.totalDrills)) : m.readiness}%"></i></div>
-            <small>${bp.id === 'junior' ? '示範題答對' : m.passedGate ? '👑 已達 85% 精熟門檻' : esc(m.sweetSpot.label)}</small>
+            <div class="ul-gauge-bar"><i style="width:${Math.round(100*m.correct/Math.max(1,m.totalDrills))}%"></i></div>
+            <small>示範題答對</small>
           </article>`;
         }).join('')}
       </div>

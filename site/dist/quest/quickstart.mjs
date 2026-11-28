@@ -1,7 +1,8 @@
 // One-click lesson entry preserves existing profiles and unfinished sessions.
+// Exam branches (b-cap, b-gsat, b-voc…) are always unlocked, so the benchmark plan can link straight to them.
 export function requestedLearningTrack(hash,course){
  const [tab,id]=String(hash).replace(/^#/,'').split('/');
- return tab==='learn' && ['section','semester'].includes(course.track(id)?.kind) ? id : null;
+ return tab==='learn' && ['section','semester','branch'].includes(course.track(id)?.kind) ? id : null;
 }
 export async function startQuickLesson(game, course, ensure) {
   if (!game.state.profile) game.setup({goal:'casual',why:'life',start:'s1'});

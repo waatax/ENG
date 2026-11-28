@@ -10,7 +10,7 @@ import {mountBoosts} from './boost.mjs?v=truth20261105';
 import {recordRecall} from '../recall.mjs?v=truth20261105';
 import { MINIMAL_PAIRS, DICTATION_ITEMS, scoreDictation, evaluateSpokenMatch, readStudioStore, writeStudioStore, hasSpeechRecognition, renderShadowingWidget, renderSpeakingDictationStudio } from './speaking_dictation.mjs?v=truth20261105';
 import { WRITING_PROMPTS, renderGradedReaderModal, renderWritingStudio } from './reading_writing.mjs?v=truth20261105';
-import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=jh20261126';
+import {startQuickLesson,requestedLearningTrack} from './quickstart.mjs?v=bench20261128';
 
 const V = 'truth20261105';
 import { ADVANCED_TRACKS } from './advanced_placement.mjs?v=advanced20261027';

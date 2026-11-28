@@ -1,5 +1,6 @@
 import {renderJhPath, bindJhPath} from './jh_path.mjs?v=jh20261126';
-import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=jh20261126';
+import {renderExamBenchmark, bindExamBenchmark} from './exam_benchmark.mjs?v=bench20261128';
+import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=bench20261128';
 import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=advanced20261103';
 import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=practice20261126';
 import {hideVocabularyCard} from './vocabulary_card.mjs';
@@ -51,7 +52,7 @@ import { resetDuolingoGame, duolingoState } from './duolingo_game.mjs';
 import { renderPhonicsMasteryView, handlePhonicsEvents } from './phonics_mastery.mjs';
 // Flashcards and full word practice load on first use (9,500 cards ≈ 1.4 MB gzipped); see flashcards_lazy.mjs.
 import { renderFlashcardQuickPlay, startFlashcardQuickPlay, renderFlashcardsStudioView, handleFlashcardEvents, handleFlashcardInput, stopFlashcardAutoPlay, flashcardShortcut, renderFullWordPractice, handleFullWordClick, handleFullWordChange, handleFullWordSubmit, loadFlashcards, FLASHCARDS_READY_EVENT } from './flashcards_lazy.mjs?v=practice20261126';
-import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage, evaluateSweetSpot } from './ultralearning_engine.mjs?v=jh20261126';
+import { renderUltralearningMasteryHub, renderAllStagesReadinessOverview, setUltralearningStage, recordUltralearningAnswer, toggleExposureStep, resetUltralearningStage, evaluateSweetSpot } from './ultralearning_engine.mjs?v=bench20261128';
 
 const KEY = 'english-quest-v5';
 let state = initialState(), storageFailed = false;
@@ -473,7 +474,7 @@ function renderExamSolvingFlowchartDiagram() {
     <div class="lesson-visual-diagram card" style="background:#f8fafc;border:1px solid #cbd5e1;padding:18px;margin:20px 0;border-radius:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
         <strong style="color:#0f172a;font-size:15px">🎯 大考實戰解題「三層排雷」黃金思維流程圖</strong>
-        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">答題命中率提升 40%</span>
+        <span class="pill" style="font-size:11px;background:#ecfdf5;color:#047857">作答習慣檢查表</span>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:12px">
         <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px">
@@ -502,18 +503,18 @@ function renderExamSolvingFlowchartDiagram() {
 // 7. 七大考制題型難度、命題核心與解題破局策略全景對照表
 function renderExamTracksComparisonTable() {
   return `
-    <div class="lesson-table card" tabindex="0" role="region" aria-label="七大考制題型難度、命題核心與解題破局策略全景對照表" style="margin:20px 0;padding:16px">
+    <div class="lesson-table card" tabindex="0" role="region" aria-label="七大考制官方格式、命題核心與解題策略對照表" style="margin:20px 0;padding:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-        <strong class="table-card-title">📊 七大考制題型難度、命題核心與解題破局策略全景對照表</strong>
+        <strong class="table-card-title">📊 七大考制官方格式、命題核心與解題策略對照表</strong>
         <span class="pill table-card-pill">考科全景速覽</span>
       </div>
       <table>
-        <caption>國際考制與國家大考核心結構、考察能力與答題致勝關鍵</caption>
+        <caption>官方格式於 2026-11-28 查核；策略為本站教學建議。詳細來源與得分地圖見「考試對標羅盤」。</caption>
         <thead>
           <tr>
             <th scope="col">考科考制</th>
             <th scope="col">適用對象與目標</th>
-            <th scope="col">核心題型架構</th>
+            <th scope="col">官方格式</th>
             <th scope="col">命題思維與能力考察</th>
             <th scope="col">破局思維與答題策略</th>
           </tr>
@@ -522,51 +523,51 @@ function renderExamTracksComparisonTable() {
           <tr>
             <th scope="row">國中會考 (CAP)</th>
             <td>國三畢業生 · 升高中職</td>
-            <td>單選語法 (15題) + 題組閱讀 (28題) + 聽力 (21題)</td>
-            <td>1,200 基礎文法時態、生活情境非連續圖表</td>
-            <td>文法題 30 秒秒殺；圖表題先看題幹關鍵字再回文定位</td>
-          </tr>
-          <tr>
-            <th scope="row">高中學測 (GSAT)</th>
-            <td>高三畢業生 · 大學多元入學</td>
-            <td>詞彙題 + 綜合測驗 + 文意選填 + 篇章結構 + 閱讀 + 混合題 + 作文</td>
-            <td>高中 4,500-7,000 單字精準搭配、篇章組織邏輯、跨文本論證</td>
-            <td>掌握「先判斷詞性再選填」；篇章結構緊抓段首代名詞與 However 等轉折詞</td>
+            <td>閱讀 4 選 1 共 40–45 題（60 分鐘）＋聽力 3 選 1 共 20–30 題（25 分鐘）；閱讀分精熟／基礎／待加強，聽力分基礎／待加強</td>
+            <td>國中常用字詞與句型、生活情境、圖表與非連續文本</td>
+            <td>單題先圈時間詞與連接詞；圖表題先讀題目條件再回圖定位</td>
           </tr>
           <tr>
             <th scope="row">技專統測 (TVE)</th>
-            <td>技術型高三生 · 科技大學</td>
-            <td>共同科目英文 + 專業科目(二) 英文閱讀與寫作</td>
-            <td>職場商務英文、圖表說明書、工程安全規範、中翻英</td>
-            <td>熟記技術規格詞彙與商務書信固定格式；翻譯力求主謂緊鄰無錯拼</td>
+            <td>技術型高中 · 四技二專</td>
+            <td>共同科目英文 100 分鐘：字彙 10、對話 10、綜合測驗 8、閱讀 14（各 2 分）＋非選擇題 16 分（填充、句子重組、中譯英）</td>
+            <td>生活與職場情境、對話應答、公告與電郵閱讀、基本句型產出</td>
+            <td>對話題看空格下一句；重組先找主詞與主要動詞，再套句型</td>
           </tr>
           <tr>
-            <th scope="row">多益測驗 (TOEIC)</th>
-            <td>大學畢業門檻 · 跨國職場晉升</td>
-            <td>Part 5 單句填空 + Part 6 段落填空 + Part 7 雙篇/三篇長文閱讀</td>
-            <td>高頻商務情境 (合約、會議、物流、差旅)、極速閱讀反應</td>
-            <td>Part 5 看到空格前後 3 秒判斷詞性；Part 7 注意交叉對照兩篇信件日期與附款</td>
+            <th scope="row">高中學測 (GSAT)</th>
+            <td>高三 · 大學申請</td>
+            <td>100 分鐘：選擇題 46 題 62%（詞彙、綜合、文意選填、篇章結構 4 空 5 選項、閱讀）＋混合題 10%＋中譯英 8%＋作文 20%；15 級分</td>
+            <td>高中字彙與搭配、篇章組織、跨段落與圖文整合、寫作</td>
+            <td>文意選填先判斷詞性；篇章結構看空格前後句，5 選 4 一定有一句放不進去</td>
           </tr>
           <tr>
-            <th scope="row">Digital SAT</th>
-            <td>美加名校大學申請</td>
-            <td>Module 1/2 自適應：Craft & Structure, Info & Ideas, Standard English</td>
-            <td>高級學術詞彙語境義、短篇論證假設、修辭綜合題</td>
-            <td>文法題遵循最簡原則 (Economy of Expression)；修辭題嚴格對應題目明確目標</td>
+            <th scope="row">多益測驗 (TOEIC L&amp;R)</th>
+            <td>大學畢業門檻 · 職場</td>
+            <td>聽力 100 題 45 分鐘（Part 1–4）＋閱讀 100 題 75 分鐘（Part 5–7）；10–990 分</td>
+            <td>職場與日常情境、同義改寫、多篇文件交叉比對</td>
+            <td>Part 5 先看空格修飾誰；Part 7 把題目條件逐條對回文件</td>
+          </tr>
+          <tr>
+            <th scope="row">SAT Reading and Writing</th>
+            <td>美國大學申請</td>
+            <td>兩模組各 27 題 32 分鐘，第二模組依表現選路；200–800</td>
+            <td>字義與文本結構、證據與推論、標準英語規範、轉折與修辭</td>
+            <td>先寫出兩句關係再選轉折；標點題先數完整句子</td>
           </tr>
           <tr>
             <th scope="row">GRE Verbal</th>
-            <td>全球頂尖研究所碩博士</td>
-            <td>Text Completion (單雙三空) + Sentence Equivalence (雙選等價) + RC</td>
-            <td>極高階學術詞彙、語意正反極性判斷、邏輯矛盾與讓步</td>
-            <td>等價題先找「孿生同義詞組」；填空題根據轉折詞 (despite, whereas) 鎖定正負極性</td>
+            <td>研究所申請</td>
+            <td>12 題 18 分鐘＋15 題 23 分鐘；Text Completion、Sentence Equivalence（六選二）、閱讀；130–170</td>
+            <td>學術詞彙在語境中的意思、轉折與讓步、論證閱讀</td>
+            <td>先自己填一個詞再看選項；選二題要兩個字放進去意思相同</td>
           </tr>
           <tr>
-            <th scope="row">GMAT Focus</th>
-            <td>全球頂級商學院 MBA/MS</td>
-            <td>Critical Reasoning (削弱/加強/假設/黑體字) + RC 商業長文</td>
-            <td>商業決策邏輯、因果推論破綻、隱含未言假設、利益關係分析</td>
-            <td>假設題必用「否定測試法」；警惕偷換概念與因果倒置等經典邏輯謬誤</td>
+            <th scope="row">GMAT Verbal</th>
+            <td>商學院申請</td>
+            <td>23 題 45 分鐘：Critical Reasoning＋Reading Comprehension；60–90（總分 205–805 另含 Quant 與 Data Insights）</td>
+            <td>因果推論、隱含假設、對照組、作者立場與限制</td>
+            <td>假設題用否定測試；因果結論先找替代原因</td>
           </tr>
         </tbody>
       </table>
@@ -687,7 +688,8 @@ function shell(body) {
     ['flashcards', '12a', '搜尋全部字卡'],
     ['affixes', '12b', '字首・字尾學習館'],
     ['studio', '13', '合成語音練習'],
-    ['exams', '14', '考試練習與資源'],
+    ['benchmark', '14', '🧭 考試對標羅盤'],
+    ['exams', '14a', '考試練習與資源'],
     ['today', '15', '課程地圖：挑今天的單元'],
     ['progress', '16', '學習紀錄']
   ];
@@ -715,6 +717,7 @@ function shell(body) {
     handouts: 'A4 考前講義列印庫 (14 學期全收錄)',
     chapter: '考制核心課綱與 CEFR 教學模組 (Duolingo 示範章節 J1)',
     studio: '單字會話合成語音點讀館',
+    benchmark: '考試對標羅盤：會考、統測、學測到 TOEIC・SAT・GRE・GMAT',
     exams: '考試練習與官方試題資源',
     today: '學年課程地圖・挑今天要學的單元',
     progress: '我的學習軌跡、經驗值與素養勳章'
@@ -2293,7 +2296,7 @@ function examPage() {
       ]
     },
     { 
-      id: 'gmat', title: 'GMAT Focus 批判推理與商業邏輯', count: '20 道不同題面', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2',
+      id: 'gmat', title: 'GMAT Verbal 批判推理與商業邏輯', count: '20 道不同題面', icon: '📊', desc: 'Weaken/Strengthen, Assumption 否定測試, Evaluate, Boldface, 商業經濟閱讀。', color: '#0891b2',
       subtopics: [
         { label: '🛡️ CR 削弱/加強', filter: 'the Argument' },
         { label: '🔍 CR 假設/評價', filter: 'Assumption' },
@@ -2302,7 +2305,7 @@ function examPage() {
       ]
     },
     { id: 'gaokao', title: '高考方向原創練習', count: '60 道不同題面', icon: '📜', desc: '原創語法與閱讀練習；不標作官方歷屆試題。', color: '#059669' },
-    { id: 'shs', title: '高中大學學測與統測英文', count: '8 道不同題面', icon: '🏫', desc: '高中詞彙、篇章與閱讀題型練習；不標作官方歷屆試題。', color: '#9333ea' },
+    { id: 'shs', title: '高中大學學測與統測英文', count: '8 道不同題面', icon: '🏫', desc: '此題庫題面少，只適合暖身。學測、統測請改用考試對標羅盤快篩，以及闖關的「學測統測衝刺」「技高職場英語」分支。', color: '#9333ea' },
     { id: 'jhs', title: '國中教育會考英語能力線', count: '183 道不同題面', icon: '🎒', desc: '1,200 基礎文法時態、生活情境對話、資訊圖表與會考衝刺精選題。', color: '#16a34a' }
   ];
 
@@ -2354,6 +2357,12 @@ function examPage() {
       </p>
     </div>
     ${quizNotice ? `<p class="quiz-notice" role="status">${esc(quizNotice)}</p>` : ''}
+
+    <aside class="card exam-bench-entry" style="margin-top:20px;border-left:5px solid var(--green-core)">
+      <strong style="font-size:16px">🧭 不知道從哪裡開始？先用考試對標羅盤</strong>
+      <p style="margin:6px 0 10px;color:var(--text-muted);line-height:1.6">會考、統測、學測、TOEIC、SAT、GRE、GMAT：看官方格式與分數從哪裡來，做 6 題快篩（含把握度），錯題隔天回收，再照週計畫練。</p>
+      <a class="btn" href="#benchmark">打開考試對標羅盤 →</a>
+    </aside>
 
     <div class="card" style="margin-top:20px">
       <div style="display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
@@ -2501,6 +2510,7 @@ function render() {
     handouts: handoutsPage,
     chapter: chapterPage,
     studio: studioPage,
+    benchmark: renderExamBenchmark,
     exams: examPage,
     today,
     progress
@@ -2512,6 +2522,7 @@ function render() {
   bindMasterclass(root);
   bindAdvancedCourse(root,render);
   bindJhPath(root);
+  bindExamBenchmark(root);
   enhanceLearningPage(root);
   syncLessonAudio();
   bindWordAudio(root,render);
@@ -3190,7 +3201,7 @@ function readKnowledgeRoute() {
   // Bare #chapter / #junyi come from the side menu: open the last chapter or unit instead of ignoring the click.
   else if (parts[0] === 'chapter') { navigate('chapter'); }
   else if (parts[0] === 'junyi' || parts[0] === 'unit') { navigate('junyi'); }
-  else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
+  else if (['curriculum108','phonics','sixth','jh','arch','handouts','studio','benchmark','exams','today','progress'].includes(parts[0])) { navigate(parts[0]); }
 }
 window.addEventListener('hashchange', readKnowledgeRoute);
 // When the lazily loaded card bundle arrives, redraw the page that was waiting for it.
