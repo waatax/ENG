@@ -214,9 +214,12 @@
 .bench-legend li { display: flex; gap: .5rem; align-items: center; }
 .bench-legend i { --bench-exam: var(--bn-accent); width: 1.6rem; height: 1rem; border-radius: .3rem; flex: none; }
 
-.bench-forms { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .7rem; margin-bottom: .8rem; }
+.bench-forms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin-bottom: .8rem; }
+@media (max-width: 560px) { .bench-forms { grid-template-columns: 1fr; } }
 .bench-form { border: 1px solid var(--bn-line); border-radius: .9rem; padding: .8rem; display: grid; gap: .3rem; align-content: start; }
 .bench-form p { margin: 0 0 .3rem; color: var(--bn-muted); font-size: .9rem; }
+.bench-form.is-next { border-color: var(--bn-accent); box-shadow: inset 0 0 0 1px var(--bn-accent); }
+.bench-when { display: inline-block; margin-left: .45rem; font-size: .8rem; font-weight: 700; color: var(--bn-accent); }
 .bench-review-box { border-radius: .9rem; padding: .8rem; background: var(--bn-soft); }
 .bench-review-box p { margin: .2rem 0 .5rem; }
 .bench-message { font-weight: 700; color: var(--bn-good-ink); background: var(--bn-good-bg); border-radius: .7rem; padding: .55rem .8rem; }
@@ -278,6 +281,25 @@
 .bench-bucket.b-lucky { background: var(--bn-warn-bg); }
 .bench-next { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .bench-compare-list li { display: flex; justify-content: space-between; gap: .5rem; padding: .45rem .6rem; border-radius: .6rem; background: var(--bn-soft); }
+.bench-steps { list-style: none; margin: 0 0 .7rem; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.bench-steps li { display: inline-flex; flex-wrap: wrap; gap: .35rem; align-items: baseline; border-radius: .6rem; padding: .35rem .6rem; font-size: .88rem; }
+.bench-steps li.is-valid { background: var(--bn-good-bg); color: var(--bn-good-ink); }
+.bench-steps li.is-practice { background: var(--bn-warn-bg); color: var(--bn-warn-ink); }
+.bench-trend-wrap { overflow-x: auto; margin-bottom: .5rem; }
+.bench-trend { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.bench-trend :is(th, td) { padding: .45rem .55rem; border-bottom: 1px solid var(--bn-line); text-align: center; background: transparent; color: var(--bn-ink); }
+.bench-trend :is(thead th, tbody th) { font-weight: 700; }
+.bench-trend tbody th { text-align: left; }
+.bench-trend-total :is(th, td) { background: var(--bn-soft); border-bottom: 0; }
+.bench-older > summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.bench-older[open] > summary { margin-bottom: .6rem; }
+.bench-official { margin-top: .9rem; padding: .8rem; border-radius: .9rem; border: 1px dashed var(--bn-line); }
+.bench-official h3 { margin: 0 0 .3rem; }
+.bench-official p { margin: 0 0 .5rem; color: var(--bn-muted); }
+.bench-official ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.bench-official li { display: grid; gap: .1rem; }
+.bench-official small { color: var(--bn-muted); }
+.bench-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
 
 .bench-plan-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .7rem; }
 .bench-plan-form label { display: grid; gap: .3rem; font-weight: 700; font-size: .9rem; }

@@ -1,5 +1,5 @@
 // Network-first Service Worker for English Quest (caches core HTML/CSS/MJS/JSON shell; never bulk-caches MP3s).
-const CACHE_NAME = 'english-quest-shell-v20261128-bench';
+const CACHE_NAME = 'english-quest-shell-v20261128-benchcd';
 
 self.addEventListener('install', () => {
   self.skipWaiting();

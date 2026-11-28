@@ -1,5 +1,5 @@
 import {renderJhPath, bindJhPath} from './jh_path.mjs?v=jh20261126';
-import {renderExamBenchmark, bindExamBenchmark} from './exam_benchmark.mjs?v=bench20261128';
+import {renderExamBenchmark, bindExamBenchmark} from './exam_benchmark.mjs?v=benchcd20261128';
 import {renderLearningHub,renderWordPicker,bindLearningHub} from './learning_hub.mjs?v=bench20261128';
 import {renderMasterclass,bindMasterclass} from './masterclass.mjs?v=advanced20261103';
 import {renderAdvancedCourse,bindAdvancedCourse} from './advanced_academy.mjs?v=practice20261126';
